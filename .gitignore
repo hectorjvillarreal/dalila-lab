@@ -1,0 +1,22 @@
+# Claude Code local settings
+.claude/settings.local.json
+**/.claude/settings.local.json
+
+# Raw and large data
+datos/raw/
+datos/microdatos/
+*.jld2
+*.h5
+
+# Computation outputs
+modelo/simulaciones/resultados_intermedios/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
