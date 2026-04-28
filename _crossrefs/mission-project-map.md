@@ -22,3 +22,16 @@
 | IM-6 | Watch item: capital cohort structure (long-horizon theoretical extension) |
 
 **Status:** Initial scaffold complete (3 methodology entries, 1 watch item, LAC placeholder). Vector store integration pending Debb's installation. LAC entries pending acquisition.
+
+---
+
+## Infrastructure (cross-cutting)
+
+**Location:** `_crossrefs/protocols/`, `_crossrefs/_build_instructions/`
+**Owner:** Debb
+**Date registered:** 2026-04-28
+
+| Artifact | Connection |
+|---|---|
+| PROTO-RAG-001 | Corpus entry and build instruction protocol; governs all corpus subdomains and project-scoped corpora |
+| _build_instructions/ archive | Provenance layer for the team's intellectual infrastructure; retained indefinitely |
