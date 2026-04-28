@@ -154,6 +154,10 @@ The master register is `Missions/_index.md`.
 - Next document: CROSS-TAR-001
 - Corpus lives in `GrandPlan/RF/` and `GrandPlan/DFD/`
 
+### Inequality corpus (`_crossrefs/corpus/inequality/`)
+
+Cross-cutting methodological corpus on income and wealth inequality measurement. Initial scaffold April 2026. Three primary entries from JEP Spring 2025 symposium (Clarke & Kopczuk, Gomez, Auerbach). Shared across DFD, BDH, RF; not duplicated in project subfolders. See `_crossrefs/corpus/inequality/README.md` for organization and standing principles. Open watch item: "automated life for capital" — Hicksian symmetry implication for OLG capital cohort structure.
+
 ---
 
 ## 8. Core Team
