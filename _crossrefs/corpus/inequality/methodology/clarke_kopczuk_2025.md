@@ -9,6 +9,8 @@ venue: "Journal of Economic Perspectives, 39(2), 103–126"
 doi: "10.1257/jep.20241424"
 date_added: 2026-04-28
 added_by: Anne
+endorsed_by: Cath
+build_instruction: "_crossrefs/_build_instructions/2026-04-28_inequality_corpus_initial.md"
 ---
 
 # Clarke & Kopczuk (2025) — Measuring Income and Income Inequality
@@ -81,3 +83,4 @@ Clarke, C. & Kopczuk, W. (2025). "Measuring Income and Income Inequality." *Jour
 - → `latam/` — Alvaredo et al. (2024) inequality bands methodology (pending)
 - → DFD calibration log (Cath)
 - → Fiscal dominance Paper 2 calibration plan (Héctor)
+- → Build instruction: `_crossrefs/_build_instructions/2026-04-28_inequality_corpus_initial.md`

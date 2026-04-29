@@ -9,6 +9,8 @@ venue: "Journal of Economic Perspectives, 39(2), 149–170"
 doi: "10.1257/jep.20241421"
 date_added: 2026-04-28
 added_by: Anne
+endorsed_by: Cath
+build_instruction: "_crossrefs/_build_instructions/2026-04-28_inequality_corpus_initial.md"
 ---
 
 # Auerbach (2025) — Public Finance Implications of Economic Inequality
@@ -103,3 +105,4 @@ Auerbach, A. J. (2025). "Public Finance Implications of Economic Inequality." *J
 - → Diamond & Saez (2011) — already staged optimal taxation reference
 - → Cath's calibration log — fiscal block instrument catalog
 - → BDH health-financing distributional analysis (Beth)
+- → Build instruction: `_crossrefs/_build_instructions/2026-04-28_inequality_corpus_initial.md`

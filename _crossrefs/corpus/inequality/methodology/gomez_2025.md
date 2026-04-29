@@ -9,6 +9,8 @@ venue: "Journal of Economic Perspectives, 39(2), 127–148"
 doi: "10.1257/jep.20241435"
 date_added: 2026-04-28
 added_by: Anne
+endorsed_by:
+build_instruction: "_crossrefs/_build_instructions/2026-04-28_inequality_corpus_initial.md"
 ---
 
 # Gomez (2025) — Macro Perspectives on Income Inequality
@@ -100,3 +102,4 @@ Gomez, M. (2025). "Macro Perspectives on Income Inequality." *Journal of Economi
 - → Fiscal dominance Paper 2 calibration plan (λ distribution)
 - → **TO ACQUIRE:** Fagereng, Gomez, Gouin-Bonenfant, Holm, Moll & Natvik (2024), "Asset-Price Redistribution," World Inequality Lab WP 2024/14
 - → Auclert, Malmberg, Rognlie & Straub (2025) shift-share machinery [tier-1 reference, already staged]
+- → Build instruction: `_crossrefs/_build_instructions/2026-04-28_inequality_corpus_initial.md`

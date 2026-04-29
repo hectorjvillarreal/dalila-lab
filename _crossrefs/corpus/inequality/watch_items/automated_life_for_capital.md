@@ -3,8 +3,12 @@ type: research_watch_item
 status: open
 date_opened: 2026-04-28
 opened_by: [Héctor, Anne]
+endorsed_by: Héctor
+promoted_by:
+date_promoted:
 related_corpus: [methodology/gomez_2025.md]
 related_projects: [DFD/IM-6, fiscal_dominance_paper]
+build_instruction: "_crossrefs/_build_instructions/2026-04-28_inequality_corpus_initial.md"
 ---
 
 # Watch item: "Automated life for capital"
@@ -53,3 +57,4 @@ Does the Hicksian critique of factor income propagate to the equilibrium structu
 - → Fiscal dominance Paper 2 plan
 - → IM-6 architecture notes (Cath, Anne)
 - → **TO ACQUIRE:** Fagereng et al. (2024) "Asset-Price Redistribution"
+- → Build instruction: `_crossrefs/_build_instructions/2026-04-28_inequality_corpus_initial.md`

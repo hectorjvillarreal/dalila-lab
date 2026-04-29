@@ -8,9 +8,10 @@ corpus_affected:
   - CLAUDE.md
 triggered_by: "Héctor–Anne conversation 2026-04-28 on building a dedicated inequality corpus from the JEP Spring 2025 symposium (Clarke & Kopczuk, Gomez, Auerbach), with the watch-item framing for the 'automated life for capital' thread."
 agents_involved: [Héctor, Anne, Debb]
-status: pending_execution
+status: executed
 sequence_position: legacy_pre_protocol
-notes: "First corpus build instruction written, predating formalization of PROTO-RAG-001. Retrofitted to protocol convention by build 2026-04-28_protocol_foundation. Body content preserved as drafted; minor frontmatter conformity additions only."
+protocol_conformed_via: "_crossrefs/_build_instructions/2026-04-29_inequality_corpus_retrofit.md"
+notes: "First corpus build instruction written, predating formalization of PROTO-RAG-001. Retrofitted to protocol convention by build 2026-04-28_protocol_foundation (folder structure and naming) and 2026-04-29_inequality_corpus_retrofit (artifact frontmatter and back-links). Body content preserved as drafted; minor frontmatter conformity additions only."
 ---
 
 # Inequality Corpus — Build Instructions for Claude Code
