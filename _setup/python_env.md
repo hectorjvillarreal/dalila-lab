@@ -98,18 +98,22 @@ falls back to pip when not.
 Mixing conda and pip in one env is acceptable for the scientific stack but
 keep notes: pip installs can shadow conda packages and break solver state.
 When pip-installing, prefer wheels with explicit CUDA tags (e.g., the
-PyTorch cu126 index) so the install matches the GPU driver.
+PyTorch cu130 index) so the install matches the GPU driver.
 
 ---
 
 ## Standing pins
 
-- **PyTorch** is installed from `https://download.pytorch.org/whl/cu126`.
-  The cu126 wheels ship Blackwell (sm_120) kernels — required for the
-  RTX PRO 2000 Blackwell. Do not switch to the default `cu124` wheels
-  silently; they may not include sm_120 and will fail or fall back at
-  runtime. The `tests/gpu_check.py` smoke test (1024×1024 matmul on cuda:0)
-  is the canonical check.
+- **PyTorch** is installed from `https://download.pytorch.org/whl/cu130`
+  (verified 2026-05-16: `torch-2.12.0+cu130`, built with CUDA 13.0, cudnn
+  9.20, cublas 13.1.1). The cu130 wheels ship Blackwell (sm_120) kernels
+  — required for the RTX PRO 2000 Blackwell. **Do not use cu126 or earlier
+  wheels:** they were tried on 2026-05-16 and fail at runtime with
+  `torch.AcceleratorError: CUDA error: no kernel image is available for
+  execution on the device` (`cudaErrorNoKernelImageForDevice`). PyTorch's
+  own warning explicitly directs Blackwell users to CUDA 13.0 or 13.2.
+  The `tests/gpu_check.py` smoke test (1024×1024 matmul on cuda:0) is the
+  canonical check.
 - **JAX** when installed: use `pip install -U "jax[cuda12]"` for matching
   CUDA 12 support.
 
@@ -122,7 +126,7 @@ If the env is corrupted or you want a clean rebuild:
 ```bash
 ~/miniforge3/bin/conda env remove -y -n dalila
 ~/miniforge3/bin/conda create -y -n dalila python=3.12 pip
-~/miniforge3/envs/dalila/bin/pip install torch --index-url https://download.pytorch.org/whl/cu126
+~/miniforge3/envs/dalila/bin/pip install torch --index-url https://download.pytorch.org/whl/cu130
 # ... plus whatever else
 ```
 
