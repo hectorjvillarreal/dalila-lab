@@ -1,4 +1,5 @@
 iso3,name,tfr_obs,tfr_year,tfr_src,pop_2023_M,pop_2050_UN_medium_M,pop_2050_TFR_obs_stable_M,gap_M,gap_pct
+MEX,México,1.6,2023,"INEGI · ENADID 2023 (Comunicado 305/24, may 2024)",129.74,148.95,143.19,5.76,3.9
 CRI,Costa Rica,1.12,2024,INEC Costa Rica · Indicadores demográficos 2024 (nov 2025),5.11,5.35,4.69,0.67,12.5
 PAN,Panamá,1.8,2023,INEC Panamá / Contraloría · Estadísticas Vitales 2023 (ene 2025),4.46,5.63,5.01,0.62,11.1
 COL,Colombia,1.1,2024,DANE · Boletín EEVV Nacimientos 2024pr (mar 2025),52.32,59.39,49.99,9.4,15.8
