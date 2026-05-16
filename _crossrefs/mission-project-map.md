@@ -38,7 +38,7 @@
 | BDH     | Old-age health-expenditure projections; morbidity-compression vs. expansion under life-expectancy gains; health-system financing pressure from age-structure shifts |
 | Aurora  | Long-run structural demographic forces (population decline, labor-force contraction, intergenerational asset transmission); Four Pillars demographic-transmission channels |
 
-**Status:** Initial scaffold (2026-05-16). Folder tree, README, acquisition queue, provisional scenario_anchors, Anne's inbox, and project cross-reference stubs created. Scenario anchors awaiting Anne's source-pinning (follow-up build instruction sequence_position 2_of_2).
+**Status:** Initial scaffold (2026-05-16). Folder tree, README, acquisition queue, provisional scenario_anchors, Anne's inbox, and project cross-reference stubs created. Scenario anchors sourced and endorsed 2026-05-16 (5 of 5 rows confirmed; CELADE Observatorio Demográfico 2025 designated as comparator baseline; see seq 2_of_2 build instruction `2026-05-16_demographics_scenario_anchors_sourced.md`).
 
 ---
 

@@ -9,8 +9,8 @@ Format:
 
 ## Pending
 
-- 2026-05-16 — `anne_scenario_anchors_brief.md` — [DFD, BDH, Aurora] — TFR anchors source-pinning (load-bearing for skill §Step 2a) — MEX/CRI/COL/CHL/PAN
+*(none)*
 
 ## Endorsed and moved (recent — last 30 days)
 
-*(none at scaffold creation)*
+- 2026-05-16 — `anne_scenario_anchors_brief.md` — [DFD, BDH, Aurora] — TFR anchors source-pinning (load-bearing for skill §Step 2a) — MEX/CRI/COL/CHL/PAN — endorsed 2026-05-16; recorded in seq 2_of_2 build instruction
