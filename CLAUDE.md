@@ -137,10 +137,12 @@ The master register is `Missions/_index.md`.
 - Miniforge (base environment manager) at `~/miniforge3/`; active env `dalila` (Python 3.12) — see `_setup/python_env.md` for activation patterns, package install conventions, and the cu126-wheels-required-for-Blackwell pin
 - NumPy · SciPy · Pandas · Matplotlib · Statsmodels
 - PyTorch with CUDA 13.0 wheels (`https://download.pytorch.org/whl/cu130`; this is the index that ships sm_120 / Blackwell kernels — `cu126` wheels lack them and fail at runtime with `cudaErrorNoKernelImageForDevice`)
-- JAX with CUDA 12 backend
+- JAX (`jax[cuda13]`) with the cuda13 plugin — reuses the cu13 NVIDIA libs installed by PyTorch; verified sm_120 dispatch via `tests/gpu_check.py`
 
 ### Julia ecosystem
-- CUDA.jl · Plots.jl · Turing.jl
+- Julia 1.11.7 at `/usr/local/bin/julia`; default env at `~/.julia/environments/v1.11/`
+- CUDA.jl 6.1 (CUDA toolchain 13.2 via JLLs; cuBLAS 13.4) — verified sm_120 dispatch via `tests/gpu_check.jl`
+- Plots.jl · Turing.jl (per project Project.toml; not in default env)
 - Primary language for OLG/DSGE simulation engine
 
 ### Local LLM

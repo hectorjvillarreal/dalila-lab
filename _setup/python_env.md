@@ -114,8 +114,14 @@ PyTorch cu130 index) so the install matches the GPU driver.
   own warning explicitly directs Blackwell users to CUDA 13.0 or 13.2.
   The `tests/gpu_check.py` smoke test (1024×1024 matmul on cuda:0) is the
   canonical check.
-- **JAX** when installed: use `pip install -U "jax[cuda12]"` for matching
-  CUDA 12 support.
+- **JAX** is installed via `pip install "jax[cuda13]"` (verified 2026-05-16:
+  `jax 0.10.0`, `jax-cuda13-plugin 0.10.0`, `jax-cuda13-pjrt 0.10.0`,
+  `nvidia-cuda-nvcc 13.2.78`). The cuda13 plugin reuses the cu13 NVIDIA
+  libs already installed by PyTorch (cudnn-cu13, cublas, etc.), so the
+  install is incremental — only the JAX core and a few CUDA 13 helpers
+  (cuda-nvcc, nvvm, cuda-crt) need to come down fresh. **Do not use
+  `jax[cuda12]`:** it pulls a duplicate cu12 NVIDIA stack and would hit
+  the same sm_120 incompatibility as torch cu126.
 
 ---
 
@@ -126,7 +132,9 @@ If the env is corrupted or you want a clean rebuild:
 ```bash
 ~/miniforge3/bin/conda env remove -y -n dalila
 ~/miniforge3/bin/conda create -y -n dalila python=3.12 pip
+~/miniforge3/bin/conda install -n dalila -y numpy scipy pandas matplotlib
 ~/miniforge3/envs/dalila/bin/pip install torch --index-url https://download.pytorch.org/whl/cu130
+~/miniforge3/envs/dalila/bin/pip install "jax[cuda13]"
 # ... plus whatever else
 ```
 

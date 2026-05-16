@@ -20,20 +20,27 @@ function run_nvidia_smi()
     end
 end
 
+# Top-level CUDA load. Top-level use of `using` advances the world age before
+# any function defined after it is compiled, so the methods (e.g.
+# CUDA.functional) are visible by the time main() runs. A function-internal
+# `Base.eval(Main, :(using CUDA))` hits world-age MethodError.
+const CUDA_AVAILABLE = try
+    @eval using CUDA
+    true
+catch err
+    global CUDA_LOAD_ERR = err
+    false
+end
+
 function check_cuda_jl()
     section("CUDA.jl")
-    cuda_loaded = try
-        Base.eval(Main, :(using CUDA))
-        true
-    catch err
+    if !CUDA_AVAILABLE
         println("SKIP  CUDA.jl not installed in active env.")
         println("      To install: `import Pkg; Pkg.add(\"CUDA\")` then re-run.")
-        println("      Underlying error: ", err)
-        false
+        println("      Underlying error: ", CUDA_LOAD_ERR)
+        return false
     end
-    cuda_loaded || return false
 
-    CUDA = Main.CUDA
     println("      CUDA.jl version: ", pkgversion(CUDA))
     if !CUDA.functional()
         println("FAIL  CUDA.functional() == false")
