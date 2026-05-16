@@ -25,6 +25,23 @@
 
 ---
 
+## Demographics Corpus (cross-cutting)
+
+**Location:** `_crossrefs/corpus/demographics/`
+**Governing skill:** `_crossrefs/_skills/dfd-demographics-monitor/SKILL.md` (v0.2)
+**Owner:** Anne (domain authority); drafted by Claude Code; executed by Debb
+**Date registered:** 2026-05-16
+
+| Project | Connection |
+|---|---|
+| DFD     | Fast-transition TFR scenario; dependency-ratio path for IM-6 pension contribution rate; OLG survival-probability block; coupling/partnership formation as fertility driver |
+| BDH     | Old-age health-expenditure projections; morbidity-compression vs. expansion under life-expectancy gains; health-system financing pressure from age-structure shifts |
+| Aurora  | Long-run structural demographic forces (population decline, labor-force contraction, intergenerational asset transmission); Four Pillars demographic-transmission channels |
+
+**Status:** Initial scaffold (2026-05-16). Folder tree, README, acquisition queue, provisional scenario_anchors, Anne's inbox, and project cross-reference stubs created. Scenario anchors awaiting Anne's source-pinning (follow-up build instruction sequence_position 2_of_2).
+
+---
+
 ## Infrastructure (cross-cutting)
 
 **Location:** `_crossrefs/protocols/`, `_crossrefs/_build_instructions/`
