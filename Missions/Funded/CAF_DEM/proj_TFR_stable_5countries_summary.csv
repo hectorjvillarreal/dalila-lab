@@ -1,0 +1,6 @@
+iso3,name,tfr_obs,tfr_year,tfr_src,pop_2023_M,pop_2050_UN_medium_M,pop_2050_TFR_obs_stable_M,gap_M,gap_pct
+CRI,Costa Rica,1.12,2024,INEC Costa Rica · Indicadores demográficos 2024 (nov 2025),5.11,5.35,4.69,0.67,12.5
+PAN,Panamá,1.8,2023,INEC Panamá / Contraloría · Estadísticas Vitales 2023 (ene 2025),4.46,5.63,5.01,0.62,11.1
+COL,Colombia,1.1,2024,DANE · Boletín EEVV Nacimientos 2024pr (mar 2025),52.32,59.39,49.99,9.4,15.8
+BRA,Brasil,1.5,2023,IBGE estimación 2023 (pendiente source-pin Anne),211.14,217.49,210.78,6.71,3.1
+CHL,Chile,1.03,2024,INE Chile · Boletín Estadísticas Vitales Provisional 2024 (may 2025),19.66,20.32,16.99,3.33,16.4
