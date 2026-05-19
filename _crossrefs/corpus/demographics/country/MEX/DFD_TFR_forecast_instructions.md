@@ -94,23 +94,32 @@ not empirically grounded for LAC in the current context.
 The fast-transition scenario — anchored to observed 2024 TFR values and the
 coupling rate decline — is the DFD central scenario.
 
-**Three-scenario structure for Mexico forecasts:**
+**Four-scenario structure for Mexico forecasts:**
 
-| Scenario | TFR anchor — Mexico | Rationale |
-|----------|---------------------|-----------|
-| Optimistic | CELADE medium-variant (TFR ≈ 1.6→1.7) | Fertility stabilization and partial rebound |
-| Central (fast-transition) | TFR = 1.5, stable from ~2026 | Structural drivers unabated; coupling rate decline embedded |
-| Stress | TFR → 1.0 by 2030, stable thereafter | Overshooting accelerates; current LAC floor anchored to Chile 1.03 (2024) |
+| Scenario | TFR anchor — Mexico | Status | Rationale |
+|----------|---------------------|--------|-----------|
+| Optimistic | CELADE medium-variant (TFR ≈ 1.6→1.7) | operational | Fertility stabilization and partial rebound |
+| **Central (fast-transition)** | **TFR = 1.5, stable from ~2026** | **operational (baseline)** | Structural drivers unabated; coupling rate decline embedded |
+| Tempo-corrected | TFR = 1.6 stable (Central + 0.10 Fischer-Dattani lift) | reported, not operational | Defensive sensitivity against the period-TFR-vs-completed-cohort objection (see §1) |
+| Stress | TFR → 1.0 by 2030, stable thereafter | operational | Overshooting accelerates; current LAC floor anchored to Chile 1.03 (2024) |
 
 **Central scenario note (Mexico):** TFR = 1.5 stable is the DFD central scenario,
-confirmed by the 2026-Q2 replicate. It implies a Mexico population of ~140.4M by
-2050 — 8.5M below the UN medium-variant. The dominant driver of the gap is TFR,
-not mortality or migration assumptions.
+confirmed by the 2026-Q2 replicate. It implies a Mexico population of **140.4 M
+by 2050** — 4.2 M below the optimistic (TFR=1.65 UN-like) approximation. The
+dominant driver of the gap is TFR, not mortality or migration assumptions.
+
+**Tempo-corrected scenario note:** TFR = 1.60 stable approximates the
+Fischer-Dattani correction (+0.10 on Central) for completed cohort fertility.
+2026-Q2 replicate gives **143.2 M by 2050** — a +2.79 M (+2.0%) lift over
+Central. Reported defensively against the most likely reviewer objection;
+not promoted to operational. Promotion conditions: Mexico-specific Fischer-
+Dattani correction > +0.15, or ENOE evidence of coupling-rate stabilization
+(see standing considerations §1).
 
 **Stress scenario note:** TFR → 1.0 by 2030 is a stress scenario, not a forecast.
 Chile at 1.03 (2024) is the current observed LAC floor. The stress scenario is
-anchored to this floor, not to an arbitrary assumption. It implies ~128.9M by 2050
-— a 20.1M gap (13.5%) relative to the UN medium-variant.
+anchored to this floor, not to an arbitrary assumption. It implies **128.9 M
+by 2050** — a 15.7 M gap (10.9%) relative to the optimistic approximation.
 
 ---
 
@@ -158,11 +167,24 @@ for reform. Claude Code must identify and report:
 - An explicit flag: *"This is the reform window. Policy interventions that
   require fiscal space are most feasible during this interval."*
 
-**2026-Q2 reference values (Mexico, central scenario TFR=1.5):**
-- Fiscal window minimum: approximately 2038–2043
-- TDR at minimum: approximately 39–40 per 100 working-age
-- Window duration: approximately 8–10 years
-- After 2043: TDR rises sharply as old-age dependency accumulates
+**2026-Q2 reference values (Mexico, all four scenarios; refined v1.3):**
+
+| Scenario | Year of TDR min | TDR at min | Window (years within +2.0 of min) |
+|----------|----------------|------------|------------------------------------|
+| Optimistic (TFR=1.65) | ~2033 | 44.1 | 2028–2038 (≈10 yr) |
+| **Central (TFR=1.50)** | **~2038** | **42.0** | **2033–2038 (≈5 yr)** |
+| Tempo-corrected (TFR=1.60) | ~2033–2038 (tied) | 43.6 | 2028–2038 (≈10 yr) |
+| Stress (TFR→1.0) | ~2038 | 36.3 | 2038–2043 (≈5 yr) |
+
+Source: `_crossrefs/corpus/demographics/country/MEX/quarterly/2026-Q2_demographic_replicate.md`.
+After the TDR minimum (in all scenarios), the ratio rises sharply as old-age
+dependency accumulates — reaching ~49–51 by 2050 in the upper three scenarios
+and ~43 in the stress scenario (where old-age dependency is partially offset
+by collapsed youth share). The Central scenario's window is the operational
+reference for reform-feasibility analysis.
+
+*v1.2 placeholder values (2038–2043, TDR ≈ 39–40, 8–10 yr) are superseded by
+the refined values above.*
 
 ---
 
@@ -263,7 +285,7 @@ The 2026-Q2 replicate should additionally include:
 
 ---
 
-*These instructions are versioned. This is v1.2, May 2026.*
+*These instructions are versioned. This is v1.3, May 2026.*
 *v1.0 → v1.1 changes: (1) central scenario pinned to TFR=1.5 stable for Mexico
 with confirmed 2026-Q2 population implied values; (2) stress scenario floor
 anchored to Chile 1.03 (2024) as current LAC observed minimum; (3) fiscal window
@@ -275,4 +297,11 @@ hierarchy, quarterly inputs, output path, 2026-Q2 additional items). Output
 path relocated to `_crossrefs/corpus/demographics/country/MEX/quarterly/`.
 Other LAC countries will be reintroduced in a later version after the Mexico
 replicate stabilizes.*
+*v1.2 → v1.3 changes: (1) fourth scenario column added — Tempo-corrected
+(TFR=1.60 stable), reported defensively against the Fischer-Dattani
+period-vs-cohort objection but not promoted to operational; (2) fiscal-window
+reference values refined to match the 2026-Q2 replicate (Central: TDR_min=42.0
+at 2038, ≈5-yr window) — supersedes the v1.1/v1.2 placeholder values; (3)
+population implications for all four scenarios pinned to the replicate output
+(140.4M central / 143.2M tempo-corrected / 128.9M stress at 2050).*
 *Next review: 2026-Q3 replicate, July 2026.*
