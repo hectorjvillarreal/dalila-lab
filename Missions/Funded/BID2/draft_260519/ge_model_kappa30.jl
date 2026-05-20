@@ -116,12 +116,17 @@ const η_grid    = zeros(Nη)
 const π_η       = zeros(Nη, Nη)
 const π_η_erg   = zeros(Nη)
 
-const ial_buf      = Array{Int64}(undef, 1)
-const iar_buf      = Array{Int64}(undef, 1)
-const varphi_a_buf = zeros(1)
-const ihl_buf      = Array{Int64}(undef, 1)
-const ihr_buf      = Array{Int64}(undef, 1)
-const varphi_h_buf = zeros(1)
+# Per-thread scratch buffers for the bilinear interpolation routines below.
+# linint_Grow writes the index/weight outputs into these length-1 arrays; if
+# they were shared across threads (the original implementation), concurrent
+# calls from inside `Threads.@threads` loops would race. Each Julia thread
+# now owns its own slot indexed by `Threads.threadid()`.
+const ial_buf_per_thread      = [Array{Int64}(undef, 1) for _ in 1:Threads.nthreads()]
+const iar_buf_per_thread      = [Array{Int64}(undef, 1) for _ in 1:Threads.nthreads()]
+const varphi_a_buf_per_thread = [zeros(1)               for _ in 1:Threads.nthreads()]
+const ihl_buf_per_thread      = [Array{Int64}(undef, 1) for _ in 1:Threads.nthreads()]
+const ihr_buf_per_thread      = [Array{Int64}(undef, 1) for _ in 1:Threads.nthreads()]
+const varphi_h_buf_per_thread = [zeros(1)               for _ in 1:Threads.nthreads()]
 
 # ─── Policy and distribution storage ─────────────────────────────────────────
 const aplus_pol = OffsetArray(zeros(J, NA+1, NH+1, Nη, Nθ), 1:J, 0:NA, 0:NH, 1:Nη, 1:Nθ)
@@ -231,7 +236,11 @@ end
 
 # ─── Bilinear interp ─────────────────────────────────────────────────────────
 function asset_interp(a_prime::Float64)
-    ial, iar, φ_a = linint_Grow(a_prime, a_l, a_u, a_grow, NA, ial_buf, iar_buf, varphi_a_buf)
+    tid = Threads.threadid()
+    ial, iar, φ_a = linint_Grow(a_prime, a_l, a_u, a_grow, NA,
+                                 ial_buf_per_thread[tid],
+                                 iar_buf_per_thread[tid],
+                                 varphi_a_buf_per_thread[tid])
     ial = max(min(ial, NA - 1), 0)
     iar = max(min(iar, NA), 1)
     φ_a = clamp(φ_a, 0.0, 1.0)
@@ -239,7 +248,11 @@ function asset_interp(a_prime::Float64)
 end
 
 function health_interp(h::Float64)
-    ihl, ihr, φ_h = linint_Grow(h, h_l, h_u, h_grow, NH, ihl_buf, ihr_buf, varphi_h_buf)
+    tid = Threads.threadid()
+    ihl, ihr, φ_h = linint_Grow(h, h_l, h_u, h_grow, NH,
+                                 ihl_buf_per_thread[tid],
+                                 ihr_buf_per_thread[tid],
+                                 varphi_h_buf_per_thread[tid])
     ihl = max(min(ihl, NH - 1), 0)
     ihr = max(min(ihr, NH), 1)
     φ_h = clamp(φ_h, 0.0, 1.0)
