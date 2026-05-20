@@ -1,0 +1,1715 @@
+\documentclass[12pt,a4paper]{article}
+
+%% --- Encoding and fonts ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+%% --- Language ---
+\usepackage[english]{babel}
+
+%% --- Mathematics ---
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools}
+
+%% --- Layout ---
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+%% --- Figures and tables ---
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+
+%% --- Appendix ---
+\usepackage[title,titletoc]{appendix}
+
+%% --- Cross-references and links ---
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+%% --- Bibliography ---
+\usepackage{natbib}
+\bibliographystyle{apalike}
+
+%% --- Draft tools ---
+\usepackage{xcolor}
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{[TODO: #1]}}}
+\newcommand{\note}[1]{\textcolor{blue}{\textit{[Note: #1]}}}
+% --- Custom Math Commands ---
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\cA}{\mathcal{A}}          % asset space
+\newcommand{\cH}{\mathcal{H}}          % productivity space
+\newcommand{\cM}{\mathcal{M}}          % health space
+\newcommand{\cF}{\mathcal{F}}          % formality space
+\newcommand{\cQ}{\mathcal{Q}}          % pension-counter space
+\newcommand{\ind}{\mathbf{1}}           % indicator function
+\newcommand{\phij}{\phi_j}             % cohort weight
+\newcommand{\jR}{j_R}                  % retirement age
+% Type-specific shortcuts
+\newcommand{\tL}{\theta_L}
+\newcommand{\tH}{\theta_H}
+
+%% --- Theorem environments ---
+\newtheorem{assumption}{Assumption}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+%% ====================================================================
+\begin{document}
+
+%% --- Title block ---
+\title{\textbf{Spending Smarter under Demographic Pressure:}\\[6pt]
+Fiscal Efficiency, Health, and Gender Dynamics\\
+in Latin America\thanks{The work was financed with the support of the Latin America and the Caribbean Research Network of the Inter-American Development Bank. The opinions expressed in this publication are those of the authors and do not necessarily reflect the views of the Inter-American Development Bank, its Board of Directors, or the countries they represent.}}
+
+\author{
+Diego Ascarza-Mendoza\textsuperscript{1} \quad Hermilo Cort\'es\textsuperscript{1}\\[3pt]
+Judith M\'endez\textsuperscript{1} \quad H\'ector J.\ Villarreal\textsuperscript{1}
+\\[6pt]
+\textsuperscript{1}Iniciativa para la Transici\'on Econ\'omica y Demogr\'afica (ITED),\\
+Escuela de Gobierno y Transformaci\'on P\'ublica,\\
+Tecnol\'ogico de Monterrey
+}
+
+\date{%
+Prepared for the Inter-American Development Bank,\\
+Fiscal Division\\[12pt]
+\textit{Preliminary draft -- April 2026}\\
+\textit{Please do not cite or circulate without permission}
+}
+
+\maketitle
+
+%% --- Abstract ---
+\begin{abstract}
+Latin America and the Caribbean are undergoing an accelerated and heterogeneous demographic transition. Fertility has fallen below replacement in several countries, and longevity continues to rise, compressing the window of the demographic dividend and doubling old-age dependency ratios within two decades. This transition will impose unprecedented fiscal and social pressure on health, long-term care, and pension systems---precisely when fiscal space remains constrained, labor informality persists at high levels, and inequality remains entrenched.
+
+This paper develops a stochastic overlapping-generations model with endogenous health investment, heterogeneous agents, and a pay-as-you-go pension system, calibrated for M\'exico, Costa Rica, and Panam\'a. Health capital is a continuous state variable that depreciates with age, affects survival probabilities, labor productivity, and the amenity value of consumption, and can be partially restored through medical spending subject to diminishing returns. The pension contribution rate adjusts endogenously to balance the system each period, creating a fiscal amplification loop: health investment that extends lives simultaneously improves productivity and raises the dependency ratio, with ambiguous net fiscal effects that only a calibrated general-equilibrium model can resolve. The model is used to study the fiscal consequences of demographic aging under policy inaction, evaluate a battery of tax and pension reform counterfactuals, and quantify the competing fiscal effects of labor formalization programs that expand the contributory base using observed income and health profiles from national household surveys. A calibration-based gender extension, exploiting sex-differentiated earnings trajectories and survival probabilities, decomposes fiscal sustainability pressures by sex within the existing equilibrium framework.
+\end{abstract}
+
+\noindent\textbf{Keywords:} demographic transition; fiscal sustainability; health expenditure; overlapping generations; labor informality; Latin America
+
+\noindent\textbf{JEL codes:} E62, H51, I13, J11, O17
+
+%% ====================================================================
+%% SECTION 1 — INTRODUCTION
+%% ====================================================================
+\section{Introduction}
+\label{sec:intro}
+
+Latin America is aging. Yet it is doing so under conditions that distinguish the region sharply from the experience of high-income countries: fertility decline is rapid, formal labor markets remain incomplete, fiscal space is tight, and public health systems are chronically underfunded. The conjunction of these forces creates a structural dilemma that is at once demographic, fiscal, and institutional. The central question this paper addresses is how countries in the region can reallocate public health resources---spending \textit{smarter}---to meet the growing burden of aging populations without compromising fiscal sustainability or weakening the social security institutions on which workers depend.
+
+The demographic challenge is well documented but its fiscal dimensions remain incompletely understood. By 2045, old-age dependency ratios in M\'exico, Costa Rica, and Panam\'a---our three country cases---are projected to at least double relative to their 2020 levels \citep{ECLAC2022}. Unlike the transitions observed in Western Europe or East Asia, this aging is occurring before these societies have achieved high-income status---a phenomenon often described as \textit{growing old before growing rich}. The implication is that the fiscal base from which health and pension commitments must be financed is narrower, and the informal sector, which contributes little to social security revenues, remains large. Critically, the aging that took Europe roughly 70 years to accomplish will take Latin America approximately 25 years, leaving far less time to legislate and implement the fiscal adjustments that demographic change demands \citep{WorldBankInformalizing2025}.
+
+M\'exico illustrates the challenge in its starkest form. Between 2015 and 2024, our estimates show that Mexico's fiscal health gap widened from 3.0 to 4.8 percent of GDP: actual public health expenditure, held at roughly 2.8 percent of GDP, now covers barely more than a third of demographically projected requirements. Costa Rica and Panam\'a present a more favorable picture---both countries currently spend approximately in line with estimated needs---but demographic projections imply rising pressures in both cases as population aging accelerates over the next two decades. The cross-country variation in fiscal gaps, institutional architectures, and informality profiles is precisely why a comparative analysis of three countries is essential: it reveals which features of health-system design are structurally protective and which are artifacts of a particular country's fiscal position at a given moment. M\'exico's combination of high informality and a deteriorating fiscal gap identifies the most severe case; Costa Rica's historically generous contributory system through the CCSS (\textit{Caja Costarricense de Seguro Social}) shows the trajectory of a system approaching the limits of its fiscal surplus in health; and Panam\'a's institutional fragmentation between the CSS and the Ministry of Health illustrates efficiency losses from dual-system design. Together, the three cases span the relevant policy space and allow us to distinguish between country-specific and structural determinants of fiscal sustainability under aging.
+
+A distinctive feature of the Latin American demographic transition, one that separates it analytically from high-income country experience, is the \textit{premature health crossing point}. In M\'exico, the proportion of the population in poor health crosses 50 percent at approximately age 60---a decade earlier than the 70--75 age range observed in high-income countries. This implies that the health system faces peak expenditure pressure precisely at the moment when workers are exiting the labor force and the contribution base is contracting. Skill differentials compound this pattern: among low-skilled workers, the health crossing point occurs even earlier, with rapid deterioration beginning in the late 40s, while high-skilled workers maintain good health status on average into their late 60s. This 20-year gap in healthy longevity between skill groups is the central empirical fact around which our model is built. Health is not one dimension of fiscal pressure among many---it is the first-order driver of the sustainability problem, and it is the analytical center of this paper.
+
+We construct a stochastic overlapping-generations economy with endogenous health investment, heterogeneous agents who differ by skill type, and a government sector that operates a pay-as-you-go pension system. Health capital is a continuous state variable that depreciates with age and can be partially restored through medical spending, subject to diminishing returns. Health simultaneously affects survival probabilities, labor productivity, and the amenity value of consumption---making it a state variable that propagates through every margin of household decision-making. The model is solved as a stationary competitive equilibrium in which factor prices are determined endogenously through firm optimization and market clearing. We calibrate the model for M\'exico, Costa Rica, and Panam\'a using data from the Global Burden of Disease \citep{GBD2021}, the OECD Taxing Wages series \citep{OECDTaxingWages2026}, the WHO Global Health Expenditure Database \citep{WHOGHED2024}, and national household surveys.
+
+The model's health formation technology generates a \textit{longevity channel} that operates as a macroeconomic transmission mechanism \citep{Carrasco2026}. When households invest in health, they live longer, which strengthens the life-cycle savings motive, raises the aggregate capital stock, and alters the equilibrium interest rate and wage. This channel operates asymmetrically across skill groups: low-skilled workers, who face earlier and steeper health depreciation, have shorter effective planning horizons and accumulate less precautionary savings, reinforcing the health-income divergence that the premature health crossing point generates. In high-income countries, where health deterioration begins later and proceeds more gradually, the longevity channel operates more uniformly across the skill distribution. In Latin America, it amplifies inequality.
+
+The longevity channel interacts with the pension system through a fiscal amplification mechanism. The pension contribution rate $\tau^p$ adjusts endogenously to balance the system each period, equaling the replacement rate $\kappa$ scaled by the dependency ratio $N^R/N^W$---the ratio of retirees to workers. As the population ages and the dependency ratio rises, $\tau^p$ increases mechanically, widening the tax wedge on formal labor income. Health investment that extends productive working lives partially offsets this pressure by keeping workers in the labor force longer and by improving their productivity while active. But the offset is partial: healthier workers who survive into retirement also draw pension benefits for more periods, raising $N^R$. The net fiscal effect of improved population health is therefore ambiguous in sign and quantitatively important---precisely the kind of question that requires a calibrated general-equilibrium model to resolve.
+
+The model's structure generates several classes of quantitative results. First, lifecycle profiles of health capital, consumption, and savings by skill type, where the interaction of age-dependent health depreciation with endogenous investment produces divergent trajectories: high-skilled households maintain health longer, save more through the longevity channel, and arrive at retirement with substantially larger asset buffers. Second, the fiscal gap decomposition---applying age-expenditure profiles to the model's stationary population distribution yields country-specific estimates of the divergence between demographically projected health needs and actual public spending. Third, the equilibrium pension contribution rate responds endogenously to the dependency ratio, feeding back into household savings and labor supply decisions. Fourth, unlike partial-equilibrium analysis, this model allows health-driven changes in aggregate savings to move the interest rate and the wage, so that a deterioration in population health affects all agents through factor prices, not only the households directly hit. Fifth, the government budget closure produces an implied debt-to-output ratio for each country's baseline demographic structure---a direct fiscal sustainability diagnostic that identifies where adjustment pressures will be most severe.
+
+The baseline model is calibrated to the formal-sector population. To study the fiscal consequences of expanding the contributory base, we design a formalization experiment. The total population $A$ is partitioned into formal workers $B$ and informal workers $C$, with high-skilled workers overrepresented in $B$ and low-skilled workers overrepresented in $C$. The experiment simulates a formalization program that incorporates a fraction of $C$ into $B$, using observed income and health profiles from national household surveys---ENOE for M\'exico, ENAHO for Costa Rica, and the Encuesta de Hogares for Panam\'a. The skill composition of the newly formalized cohort---predominantly low-skilled, with earlier health depreciation and lower lifetime earnings---generates competing fiscal effects: a broader contribution base that reduces the equilibrium pension rate $\tau^p$, against higher per-capita health expenditure claims and lower average productivity. The model quantifies the net fiscal impact and identifies, for each country, the threshold formalization rate at which the contribution-base effect dominates the expenditure-cost effect.
+
+Beyond the formalization experiment, we examine a battery of policy counterfactuals that vary the fiscal instruments and institutional design parameters of the health and pension systems. These include: (i)~expansion of public health coverage through contributory versus tax-financed channels, with explicit tracking of effects on the tax wedge and the equilibrium contribution rate; (ii)~preventive health interventions targeted at ages 25--35, where the model's lifecycle profiles suggest the welfare return is steepest; (iii)~modified pension vesting requirements that alter the cumulative contribution threshold; and (iv)~joint experiments that combine health and pension reforms to identify complementarities. The joint experiments are essential because these instruments interact: a reduction in the pension vesting threshold raises the value of formal employment for workers most likely to be deterred by high contribution rates, and this effect is amplified when combined with preventive health investments that keep those workers productive longer. Both independent and joint counterfactuals are reported, addressing directly the question of whether policy complementarities are quantitatively important.
+
+The model's architecture supports a natural extension toward gender-differentiated analysis. Rather than constructing a separate household bargaining module, we exploit the fact that sex-differentiated income profiles and survival probabilities already embed the cumulative effects of labor market discrimination, career interruptions from child-bearing, gendered sorting into formal and informal employment, and differences in care responsibilities. By expanding the skill-type space from two types ($\theta_L$, $\theta_H$) to four ($\theta_L^M$, $\theta_H^M$, $\theta_L^F$, $\theta_H^F$), calibrated with sex-specific earnings trajectories and the survival differentials documented in our data section---where women outlive men by 6--7 years across all three countries---the model can decompose fiscal sustainability by sex within the existing equilibrium framework. This decomposition asks: what fraction of the pension system's fiscal pressure comes from women's longer survival (drawing benefits for more periods) versus their lower contribution base (reflecting lower lifetime earnings)? The health expenditure decomposition operates analogously---women's later health crossing point but longer post-retirement survival generates a fiscal profile distinct from men's earlier deterioration but shorter lifespan. This calibration-based approach to gender lets the data carry the information that a structural bargaining model would generate endogenously, at a fraction of the computational cost and with direct empirical grounding.
+
+The paper is structured as follows. Section~\ref{sec:lit} reviews the relevant literature on health financing, OLG models of aging, the longevity channel, formalization incentives, and gender heterogeneity in lifecycle models. Section~\ref{sec:model} presents the theoretical framework---a stochastic OLG economy with endogenous health investment, heterogeneous agents, and a PAYG pension system. Section~\ref{sec:calibration} describes the Mexico calibration. Section~\ref{sec:data} documents the data sources. Section~\ref{sec:baseline} presents the baseline stationary equilibrium for Mexico, and Section~\ref{sec:experiments} reports two policy experiments---a pension reform and a health subsidy---against that baseline. Section~\ref{sec:conclusion} concludes by summarizing the model's analytical contributions and presenting the research plan for the remaining phases of the project.
+
+%% ====================================================================
+%% SECTION 2 — LITERATURE REVIEW
+%% ====================================================================
+\section{Literature Review}
+\label{sec:lit}
+
+This paper connects five strands of literature: the economics of health financing and social insurance, the quantitative OLG literature on health and aging, the emerging work on endogenous health investment and longevity as macroeconomic channels, the empirical literature on informality and formalization incentives in Latin America, and the nascent efforts to incorporate gender heterogeneity into lifecycle fiscal models.
+
+%% --------------------------------------------------------------------
+\subsection{Health Financing, Social Insurance, and the Tax Wedge}
+\label{subsec:lit_health}
+
+The economics of health insurance in developing economies builds on the foundational insight that health shocks are both large and poorly insurable through private markets, generating welfare losses that can be substantially mitigated by pooling arrangements \citep{Arrow1963}. In Latin America, the design question is not whether to pool health risk but through what institutional channel. Systems organized around contributory social security---the Bismarckian tradition---link coverage to formal employment; systems organized around general taxation---the Beveridgean tradition---link coverage to residency or citizenship. In practice, as emphasized by \citet{Levy2008}, most countries in the region operate hybrid systems in which both channels coexist, often with fragmentation, duplication, and unequal benefit packages.
+
+\citet{Summers1989} showed that the welfare implications of mandated benefits depend critically on whether workers value those benefits enough to accept compensating wage reductions. When they do, mandated contributions are essentially priced into wages and generate no net distortion; when they do not---either because benefits are not credible or because workers discount future benefits heavily---contributions function as a tax on formal labor, raising the cost of compliance and reducing formalization. \citet{WorldBankInformalizing2025} formalize this logic through the concept of the Formalization Tax Rate (FTR), which captures the net fiscal cost of formal employment including both mandatory contributions and foregone non-contributory benefits. Their simulations for a range of LAC countries demonstrate that the FTR is highest for low-income workers, precisely the group with the weakest attachment to the formal sector. The FTR framework provides the conceptual bridge between our model's tax wedge---the gap between gross labor cost and net take-home pay for formal versus informal workers---and the observed persistence of informality across the earnings distribution.
+
+The empirical measurement of the tax wedge is provided by the OECD's \textit{Taxing Wages} series. \citet{OECDTaxingWages2026} report that in 2025 the total tax wedge for a single worker earning the average wage in Mexico was 21.7 percent of labour costs---composed of 11.8 percent income tax, 1.4 percent employee social security contributions, and approximately 8.5 percent employer contributions---compared with an OECD average of 35.1 percent. Costa Rica's tax wedge, at 9.8 percent, is among the lowest in the OECD. Two features of the Mexican data are particularly relevant for our calibration. First, the 2021 Social Security Law reform introduced a graduated employer contribution schedule for discharge and old-age insurance (\textit{Cesant\'ia en Edad Avanzada y Vejez}) that scales from 3.15 percent at one minimum wage to 11.875 percent at 4.5 UMAs by 2030, creating a progressive structure in which the marginal cost of formalizing a worker depends on the wage level. Second, the OECD's new progressivity indicator---which measures how the marginal tax wedge varies from 50 to 500 percent of the average wage---places Mexico and Costa Rica at the bottom of the OECD ranking, confirming that the tax system's interaction with informality operates not only through the level of the wedge but through its incidence across the wage distribution.
+
+A central insight from this literature, and one that directly motivates our model's structure, is the asymmetry between health and pension benefits in workers' valuations. Health coverage generates immediate, tangible protection against catastrophic expenditure shocks; pension benefits, by contrast, deliver returns far in the future and are subject to credibility discounts that grow with institutional opacity and long vesting periods. \citet{BaezaPackard2006} argue that health coverage is the social insurance benefit that workers learn most about and value most highly---making health financing design a first-order determinant of compliance behavior. This asymmetry implies that the institutional channel through which health coverage is provided---contributory or tax-financed---has direct consequences for formalization incentives that are larger, per unit of fiscal cost, than those of pension design.
+
+%% --------------------------------------------------------------------
+\subsection{OLG Models of Fiscal Sustainability, Health, and Aging}
+\label{subsec:lit_olg}
+
+The quantitative OLG literature provides the methodological foundation for this paper. Since \citet{AuerbachKotlikoff1987}, the workhorse framework for analyzing the intergenerational fiscal effects of demographic change has been the multi-period OLG model with a government sector. The health-augmented extensions most relevant to this paper include the work of \citet{DeNardi2010}, who show that uncertain medical expenses are a primary driver of late-life savings among older households in the United States, and \citet{KuhnFeichtinger2015}, who analyze optimal health and retirement choices over the life cycle in a framework where health capital depreciates with age and can be partially restored through investment.
+
+The Grossman tradition of modeling health as a depreciable capital stock---in which individuals invest to maintain or restore a stock that deteriorates with age---provides the theoretical foundation for our health formation equation. \citet{DalgaardStrulik2014} extend this framework to show how optimal aging and mortality patterns emerge endogenously from the interaction of health investment decisions with biological depreciation, yielding a structural interpretation of the Preston curve. \citet{Fioroni2010} analyzes optimal savings and health spending jointly over the life cycle, demonstrating that the interaction between precautionary savings motives and health investment generates consumption-savings profiles that differ substantially from models without endogenous health. \citet{FrankovicWrzaczek2020} study how medical progress interacts with overlapping-generations dynamics, showing that improvements in health technology alter not only individual life-cycle profiles but also aggregate capital accumulation and factor prices through general-equilibrium channels. \citet{YewZhang2018} introduce longevity externalities into a lifecycle-dynastic model, demonstrating that health spending decisions by one generation affect the survival and savings behavior of subsequent generations---a mechanism that, while not directly present in our stationary-equilibrium framework, underscores the importance of modeling health as an endogenous state variable rather than an exogenous process.
+
+For the Latin American context, \citet{CortesEtAl2024} develop a partial-equilibrium OLG model for M\'exico in which agents differ by skill and face stochastic health transitions, health-dependent productivity, and age-varying out-of-pocket expenditure profiles. Their results---consumption gaps of 40--70 percent between good and poor health groups, and a 20-year gap in healthy longevity by skill level---form the empirical backbone of the present paper. The primary extension in this work is the move to general equilibrium with endogenous wages, an explicit pension system with endogenous contribution rates, and a continuous health capital stock with diminishing-returns investment technology. \citet{Lim2020} analyzes the case of South Korea, showing that public provision of health insurance alters aggregate saving behavior in an OLG framework with endogenous health risk---a result that resonates with our model's mechanism, in which the scope of public health coverage affects both household savings decisions and the fiscal cost of the pension system through the contribution base.
+
+%% --------------------------------------------------------------------
+\subsection{Endogenous Health Investment and the Longevity Channel}
+\label{subsec:lit_longevity}
+
+A recent and rapidly developing strand of the literature studies health investment not merely as a household choice but as a macroeconomic transmission channel. \citet{Carrasco2026} provides a particularly relevant contribution for our framework. In his model, households' health investments endogenously determine longevity, which in turn affects aggregate savings, capital accumulation, and the effectiveness of macroeconomic policy. The key insight is that health investment creates a \textit{longevity channel}: when households invest more in health, they live longer, which strengthens the life-cycle savings motive, raises the aggregate capital stock, and alters the equilibrium interest rate. This channel operates in our model through the interaction of the health formation equation---where health investment $m_j$ augments the stock $h$ that governs both survival probabilities and labor productivity---and the capital market clearing condition, which equates domestic household savings to the aggregate capital stock plus government debt.
+
+The relevance of the longevity channel for Latin America is amplified by two structural features. First, the premature health crossing point documented in Section~\ref{sec:intro}---the fact that health deterioration begins a decade earlier than in high-income countries---implies that the longevity channel operates asymmetrically across skill groups: low-skilled workers, who face earlier and steeper health depreciation, have shorter effective planning horizons and accumulate less precautionary savings, reinforcing the health-income poverty trap that our simulations identify. Second, the interaction between endogenous longevity and the PAYG pension system creates a fiscal amplification mechanism: healthier workers who live longer draw pension benefits for more periods, raising the system dependency ratio $N^R/N^W$ and the endogenous contribution rate $\tau^p$, which in turn increases the tax wedge on formal labor income. This feedback loop---from health investment to longevity to pension costs to the fiscal wedge---is the channel through which spending smarter on health can yield fiscal dividends beyond the direct reduction in out-of-pocket expenditures.
+
+%% --------------------------------------------------------------------
+\subsection{Informality, Formalization Incentives, and Social Security}
+\label{subsec:lit_informality}
+
+The empirical literature on formalization incentives in Latin America documents a robust negative relationship between social security contribution rates and formal employment, particularly at the lower end of the wage distribution. \citet{Kugler2017} estimate payroll tax elasticities in Colombia ranging between 0.4 and 1.0; similar magnitudes have been found in studies of Turkey \citep{AcarTansel2019}, Brazil, and Mexico. The perceived actuarial value of pension contributions---not just their cost---shapes formalization decisions: evidence from Colombia shows that an increase in the vesting period required to qualify for the minimum pension reduced formal employment by approximately 3 percentage points, illustrating that workers respond to the expected return on their contributions, not merely to the contribution rate itself.\footnote{This result is consistent with the ``social security wealth'' concept developed by \citet{WorldBankInformalizing2025}, which measures the actuarial present value of the benefit stream a worker expects to receive conditional on maintaining formal-sector contributions. Where social security wealth is low---because of long vesting periods, benefit opacity, or low institutional trust---the FTR rises and formalization incentives weaken.}
+
+The non-contributory benefit channel operates in the opposite direction: policies that make health or income transfers available outside formal employment raise the opportunity cost of formalization and tend to shift labor toward the informal sector. \citet{BoschCampos2014} and \citet{AteridoEtAl2011} document significant informality effects from Mexico's Seguro Popular program, though results are not uniform---\citet{AzuaraMarinescu2013} find smaller or negligible effects, suggesting that institutional context and program design mediate the relationship. \citet{CamachoConoverHoyos2013} find analogous results for Colombia's subsidized health insurance expansion, with informality increasing by approximately 4 percentage points. \citet{CalderonMarinescu2012} present a more nuanced picture for Colombia, finding that regulations unifying health and pension payment systems partially offset the informality-inducing effects of coverage expansion. The general lesson, consistent with the analytical framework of this paper, is that the design of the health benefit package---in particular the degree to which it is tied to formal contributions versus financed through general taxation---is a first-order determinant of formalization equilibria.
+
+The broader structural context is provided by \citet{PerryEtAl2007}, who argue that widespread informality reflects a mass opting out of state institutions---a ``blunt societal indictment of the quality of the State's services provision.'' \citet{WorldBankInformalizing2025} extend this line of analysis to its most comprehensive treatment to date, arguing that three dimensions must move together for formalization to improve: market competitiveness (the tax wedge must not exceed what firms can absorb), workers' valuation of contributory benefits (``social security wealth'' must be perceived as positive), and enforcement credibility (compliance must be monitored and sanctioned). Their reform roadmap emphasizes that LAC countries face a compressed timeline---the aging that took Europe 70 years will take Latin America approximately 25---leaving far less room for incremental adjustment. The report's conclusion that the ``crisis is not yet averted'' provides the institutional backdrop against which our model's policy counterfactuals should be read. \citet{BoschMelguizoPages2013} document how pension design interacts with labor market outcomes across the region, showing that systems with tighter benefit-contribution links generate stronger formalization incentives.
+
+Our model contributes to this literature by calibrating the baseline to the formal-sector population and studying informality through a structured policy experiment: a formalization program that incorporates a fraction of the informal population into the contributory system, using observed income and health profiles from national household surveys. This design allows us to quantify the competing fiscal effects of a broader contribution base against higher per-capita health expenditure claims from newly formalized low-skilled workers, within the general-equilibrium discipline of endogenous factor prices and pension clearing.
+
+%% --------------------------------------------------------------------
+\subsection{Gender Heterogeneity in Lifecycle Fiscal Models}
+\label{subsec:lit_gender}
+
+The incorporation of gender into quantitative OLG models remains at an early stage. \citet{FehrKindermann2018} provide the most widely used pedagogical framework, constructing a two-person household in which the female member's labor force participation decision is modeled as a function of human capital accumulation, care responsibilities, and the relative returns to market work versus home production. Their model demonstrates the basic mechanism---female participation responds to policy instruments such as childcare subsidies, parental leave, and joint versus individual taxation---but operates in a substantially simpler economic environment than the one developed in this paper: health is not a state variable, there is no endogenous health investment or survival risk, no longevity channel, and no formalization margin.
+
+The computational obstacle to combining household bargaining with rich health dynamics is severe. \citet{DeNardi2010} and subsequent work in the same line have extended models of medical expense risk to two-person households---singles and couples---but in a partial-equilibrium setting, with factor prices treated as exogenous. Embedding such a two-person household structure in a general-equilibrium framework, where wages and the interest rate respond endogenously to aggregate savings and labor supply, raises the computational burden substantially: the curse of dimensionality compounds with the fixed-point problem in factor prices. With the continuous health capital, age-dependent depreciation, endogenous survival, and endogenous factor prices that characterize our model, a structural household bargaining extension would be computationally challenging and, to our knowledge, has not been attempted in the published literature.
+
+Our approach to gender is different. Rather than modeling the household decision-making process, we exploit the fact that sex-differentiated income profiles and survival probabilities already embed---in reduced form---the cumulative effects of labor market discrimination, career interruptions from child-bearing, gendered sorting into formal and informal employment, and the unequal distribution of care responsibilities. By expanding the agent-type space from two skill types $(\theta_L, \theta_H)$ to four $(\theta_L^M, \theta_H^M, \theta_L^F, \theta_H^F)$, calibrated with sex-specific earnings trajectories from household surveys and the survival differentials documented in national life tables, the model can decompose fiscal sustainability pressures by sex within the existing equilibrium framework. This calibration-based strategy lets the data carry the information that a structural bargaining model would generate endogenously, at a fraction of the computational cost and with direct empirical grounding. The structural household model remains a natural extension for future research, but it is not a prerequisite for the first-order fiscal decomposition that this paper's policy questions require.
+
+\bigskip
+%% --------------------------------------------------------------------
+
+\section{Model}
+\label{sec:model}
+
+\bigskip
+
+Section~\ref{sec:model} presents the theoretical framework that integrates these five strands. The model is a stochastic OLG economy with endogenous health investment, heterogeneous agents, and an explicit PAYG pension system; it extends the ITED baseline \citep{CortesEtAl2024} to incorporate general equilibrium factor pricing, a continuous health capital stock with age-dependent depreciation, and a contribution-rate rule that endogenously links demographic aging to the fiscal wedge on formal labor.
+\subsection{Environment and Demographics}
+\label{subsec:environment}
+
+Time is discrete. The economy is populated by $J$ overlapping generations indexed by $j = 1, \ldots, J$, where $j = 1$ corresponds to age~20 and each model period spans five years. Households enter economic life at $j = 1$, retire exogenously at age $j_R$, and may live until $j = J$ (age~100).
+
+\paragraph{Agent types.}
+The economy contains households of two permanent skill types, $\theta \in \{\theta_L, \theta_H\}$, where $\theta_L$ denotes low-skilled and $\theta_H$ high-skilled. Skill type is drawn at birth and remains fixed over the life cycle. It governs labor productivity through the exposure parameter $\varrho(\theta)$ in the productivity function~\eqref{eq:labor_productivity}. There is a unit mass of newborns of each type each period and the population grows at gross rate $(1 + n_p)$.
+
+\paragraph{Idiosyncratic risk.}
+Households face two sources of individual uncertainty: (i)~mortality risk, depending on health, and (ii)~idiosyncratic labor-productivity risk, summarized by an AR(1) shock $\eta$. Health $h$ is endogenous: it evolves deterministically given current health and chosen medical spending. There is no aggregate uncertainty.
+
+\paragraph{Individual state.}
+The individual state of a household at the beginning of a period is
+\begin{equation}
+\label{eq:state}
+s = (a,\, h,\, \eta),
+\end{equation}
+where $a \in \mathcal{A} = [0, \bar{a}]$ are beginning-of-period assets, $h \in \mathcal{H}_h = [0, \bar{h}]$ is health capital, and $\eta \in \mathcal{H}_\eta = \{\eta_1, \ldots, \eta_{N_\eta}\}$ is the idiosyncratic productivity component (discretized from an AR(1) process; see Section~\ref{subsubsec:productivity}). Skill type $\theta$ and age $j$ are deterministic indices that label the value and policy functions.
+
+\paragraph{Cohort weights.}
+Let $\phi_j(\theta)$ denote the stationary measure of age-$j$ households of type~$\theta$, normalized so that $\sum_\theta \sum_{j=1}^{J} \phi_j(\theta) = 1$ and $\phi_1(\theta) = \phi_1$ for both types (equal birth shares). These weights satisfy
+\begin{equation}
+\label{eq:cohort_weights}
+\phi_{j+1}(\theta) \;=\; \frac{\bar{\psi}_{j+1}(\theta)}{1 + n_p}\, \phi_j(\theta), \qquad j = 1, \ldots, J-1,
+\end{equation}
+% CORRECTION: The original definition averaged survival over an EXOGENOUS
+% Markov kernel \pi_j^m for health. But health is endogenous in this model,
+% so the average must be taken over the equilibrium distribution. The correct
+% formula is:
+where the population-weighted average survival is
+\begin{equation}
+\label{eq:avg_survival}
+\bar{\psi}_{j+1}(\theta)
+\;=\;
+\frac{1}{\phi_j(\theta)} \int \psi_{j+1}\bigl(h'(s; j, \theta)\bigr)\, d\tilde\mu_j^\theta(s),
+\end{equation}
+with $h'(s; j, \theta) = (1-\delta_j^h)h + H_j(m(s; j, \theta))$ the endogenous next-period health and $\tilde\mu_j^\theta$ the unconditional age-$j$ population mass for type $\theta$ (so that $\int d\tilde\mu_j^\theta = \phi_j(\theta)$). $\psi_J(h) \equiv 0$ for all $h$ (certain death at the terminal age).
+% CORRECTION: Made the integrating measure unconditional so the formula is
+% well-defined (and consistent with the law of motion below, where the
+% measure mu carries cohort mass directly rather than being a conditional
+% probability).
+ 
+
+\paragraph{Within-period timing.}
+The timing within each period is:
+\begin{enumerate}
+\item The household observes its current state $(a, h, \eta)$.
+\item Working-age households choose $(c, \ell, a', m)$. Retired households choose $(c, a', m)$.
+\item End-of-period assets are $a'$. Survival to next period is realized with probability $\psi_{j+1}(h')$, where $h' = (1-\delta_j^h) h + H_j(m)$ is determined by the chosen $m$. We assume that assets of agents who die are voided (do not enter aggregate capital next period; do not flow to survivors).
+\end{enumerate}
+
+
+\subsection{Preferences}
+\label{subsec:preferences}
+
+Households rank streams of consumption, leisure, and health by expected discounted lifetime utility. The lifetime objective of a newborn household of type~$\theta$ is
+\begin{equation}
+\label{eq:lifetime_utility}
+\E_1 \left[\sum_{j=1}^{J} \beta^{j-1} \left(\prod_{i=2}^{j} \psi_i(h_{i-1}')\right) u(c_j,\, \ell_j,\, h_j)\right],
+\end{equation}
+where $\beta \in (0,1)$, the survival probability $\psi_i(h_{i-1}')$ is the probability of being alive at age $i$ given that next-period health entering age $i$ is $h_{i-1}' = h_i$, and the expectation is taken over the path of $\eta$ realizations.
+ 
+The period utility function is GHH-augmented with a health amenity:
+\begin{equation}
+\label{eq:utility}
+u(c, \ell, h) \;\equiv\; \frac{\bigl(c + s(h) - v(\ell)\bigr)^{1-\gamma} - 1}{1 - \gamma},
+\qquad
+v(\ell) \equiv \Psi \frac{\ell^{1+\nu}}{1+\nu},
+\end{equation}
+\begin{equation}
+    s(h) \equiv
+\begin{cases}
+\Xi \dfrac{h^{1-\xi}}{1-\xi} & \xi \neq 1,\\[6pt]
+\Xi \log(h) & \xi = 1,
+\end{cases}
+\end{equation}
+
+with $\Psi > 0$, $\Xi \geq 0$, $\nu > 0$, $\gamma > 0$. Here $c \geq 0$ is consumption, $\ell \in [0, 1]$ is hours worked ($1-\ell$ is leisure), and $h$ is the contemporaneous stock of health capital that simultaneously affects survival, productivity, and the amenity value of consumption.
+
+\begin{remark}[Retirees]
+\label{rem:retirees}
+For retirees ($j \geq j_R$), $\ell_j = 0$ and the period utility reduces to $u(c, 0; h) = \frac{(c + s(h))^{1-\gamma} - 1}{1-\gamma}$.
+\end{remark}
+
+
+\subsection{Technology}
+\label{subsec:technology}
+
+A representative, competitive firm produces the single consumption good using capital $K$ and aggregate effective labor $L$ according to the Cobb-Douglas technology
+\begin{equation}
+\label{eq:production}
+Y = A\, K^\alpha\, L^{1-\alpha}, \qquad \alpha \in (0,1),
+\end{equation}
+with $A > 0$ total factor productivity. Capital depreciates at rate $\delta \in (0,1)$. Because the production function has constant returns to scale, the firm's first-order conditions depend only on the ratio $K/L$ and so are invariant to the choice of units. We will write $K$ and $L$ in stationary per-cohort-mass units throughout (see notation block in Section~\ref{subsec:markets}); this convention is consistent with the firm's optimization.
+ 
+\paragraph{Firm's problem.}
+The firm takes factor prices $(r, w)$ as given and maximizes static profits:
+\begin{equation}
+\label{eq:firm_problem}
+\max_{K, L} \bigl\{A K^\alpha L^{1-\alpha} - (r+\delta)\,K - w\,L\bigr\}.
+\end{equation}
+The first-order conditions yield
+\begin{align}
+r &= \alpha A \left(\frac{K}{L}\right)^{\alpha-1} - \delta, \label{eq:foc_r} \\
+w &= (1-\alpha)\, A \left(\frac{K}{L}\right)^{\alpha}. \label{eq:foc_w}
+\end{align}
+where $\delta \in (0,1)$ is the rate of capital depreciation.
+
+\paragraph{Factor prices.}
+Both $r$ and $w$ are determined endogenously in equilibrium. Given aggregate capital $K$ and aggregate labor $L$, equations~\eqref{eq:foc_r} and \eqref{eq:foc_w} determine factor prices. Equivalently, the capital-to-labor ratio $K/L$ pins both prices simultaneously:
+\begin{align}
+r &= \alpha A \left(\frac{K}{L}\right)^{\alpha - 1} - \delta, \label{eq:interest_rate} \\
+w &= (1-\alpha)\, A \left(\frac{K}{L}\right)^{\alpha}. \label{eq:wage}
+\end{align}
+The equilibrium interest rate is the object that adjusts to clear the capital market.
+
+
+\subsection{Exogenous Processes}
+\label{subsec:exogenous}
+
+\subsubsection{Mortality}
+\label{subsubsec:mortality}
+
+Conditional survival probabilities depend on age and current health. The probability of surviving from age $j-1$ to age $j$, known at the start of age $j-1$, is $\psi_j(m_{j-1})$, with $\psi_J(m) = 0$ for all $m$ (certain death at the terminal age).
+
+\subsubsection{Labor Productivity}
+\label{subsubsec:productivity}
+
+Effective labor productivity of a working-age household ($j < j_R$) is
+\begin{equation}
+\label{eq:labor_productivity}
+\nu_j(h, \eta;\, \theta) \;=\; e_j \exp\bigl(\theta + \eta - \varrho(\theta)\, h\bigr),
+\end{equation}
+where $e_j > 0$ is a deterministic age-efficiency profile and $\varrho(\theta) \geq 0$ is a health-productivity penalty. Productivity is zero for retirees ($j \geq j_R$).
+
+The idiosyncratic component $\eta$ follows the AR(1) process
+\begin{equation}
+\label{eq:ar1}
+\eta_{j+1} = \rho\, \eta_j + \varepsilon_{j+1}, \qquad \varepsilon_{j+1} \sim \mathcal{N}(0, \sigma_\varepsilon^2),
+\end{equation}
+with $|\rho| < 1$. 
+
+\subsubsection{Health Formation and Health Investment}
+\label{subsubsec:health}
+
+Health evolves deterministically given the chosen medical spending:
+\begin{equation}
+\label{eq:health_formation}
+h' = \min\bigl\{(1 - \delta_j^h)\, h + H_j(m),\; \bar h\bigr\},
+\end{equation}
+where the depreciation rate $\delta_j^h \in (0, 1)$ is age-dependent and $H_j: \mathbb{R}_+ \to \mathbb{R}_+$ satisfies $H_j(0) = 0$, $H_j' > 0$, $H_j'' < 0$ (diminishing returns to medical spending). A specific functional form (e.g., $H_j(m) = \xi_j m^{\zeta}$ with $\zeta \in (0,1)$) must be committed to before computation.
+
+
+\subsection{Government}
+\label{subsec:government}
+
+The government provides three programs: general fiscal policy (taxes, public goods, and a consumption floor), and a pay-as-you-go (PAYG) pension system. We describe each in turn.
+
+\subsubsection{Fiscal Policy}
+\label{subsubsec:fiscal}
+The government taxes consumption at rate $\tau^c$, labor income at rate $\tau^\omega$, capital income at rate $\tau^k$, and medical spending at rate $\tau^m$. It purchases public goods $G = g_y Y$ and may issue one-period debt $B$. All aggregate quantities ($C$, $K$, $L$, $M$, $Y$, $G$, $B$) are in stationary per-cohort-mass units (see notation block in Section~\ref{subsec:markets}); $C$, $L$, $M$, $Y$, $G$ are per-period flows and $K$, $B$ are stocks. The flow budget is:
+\begin{equation}
+\label{eq:gov_budget}
+\tau^c C + \tau^m M + \tau^\omega w L + \tau^k r K + B' \;=\; G + (1+r)B,
+\end{equation}
+where $C$ is aggregate consumption, $K$ is the aggregate capital stock, $M$ is aggregate health investments, and $B'$ denotes next-period government debt.
+
+\paragraph{Fiscal closure.}
+$(\tau^c, \tau^\omega, \tau^k, \tau^m, g_y)$ are exogenous policy parameters. In the stationary equilibrium $B' = B$, so debt service $r B$ equals the primary surplus:
+\begin{equation}
+\label{eq:gov_stationary}
+r\, B \;=\; \tau^c\, C + \tau^\omega\, w\, L + \tau^k\, r\, K + \tau^m\, M - G.
+\end{equation}
+$B$ is the residual that closes the budget. (In counterfactual exercises, the user must verify whether $B$ is the appropriate clearing instrument; alternatives include adjusting one tax rate or $g_y$.)
+
+\subsubsection{Pension System}
+\label{subsubsec:pension}
+A PAYG pension is financed by a payroll tax $\tau^p$ on workers' labor income. The system balances each period:
+\begin{equation}
+\label{eq:pension_balance}
+\tau^p\, w\, L \;=\; \overline{pen}\, N^R,
+\end{equation}
+where $N^R = \sum_\theta \sum_{j=j_R}^{J} \phi_j(\theta)$ is the mass of retirees. The pension benefit is the replacement-rate parameter $\kappa$ times average per-worker labor income:
+\begin{equation}
+\label{eq:pension_benefit}
+\overline{pen} \;=\; \kappa \cdot \frac{w L}{N^W},
+\end{equation}
+where $N^W = \sum_\theta \sum_{j=1}^{j_R - 1} \phi_j(\theta)$ is the mass of working-age individuals.
+
+\paragraph{Pension closure.}
+The replacement rate $\kappa$ is an exogenous policy parameter. The contribution rate $\tau^p$ adjusts endogenously to balance the pension system each period. Substituting \eqref{eq:pension_benefit} into \eqref{eq:pension_balance} yields
+\begin{equation}
+\label{eq:pension_contribution}
+\tau^p \;=\; \kappa\, \frac{N^R}{N^L},
+\end{equation}
+so the contribution rate equals the replacement rate scaled by the ratio of pension-eligible retirees to formal workers (the system dependency ratio). This relationship pins down $\tau^p$ once the stationary distribution is known.
+
+
+\subsection{Markets}
+\label{subsec:markets}
+\par Throughout this section we work in \emph{stationary per-cohort-mass} units. Specifically: aggregates are integrals of individual quantities against the stationary population measure $\mu_j^\theta$, with $\sum_\theta \sum_j \phi_j(\theta) = 1$. Population growth $n_p$ is already absorbed into the cohort-weight recursion~\eqref{eq:cohort_weights}; the aggregates defined below therefore do \emph{not} grow with the actual population. A symbol such as $K$ in the Markets and Equilibrium sections refers to the stationary capital stock per unit of cohort mass, related to the absolute capital stock $K^{\mathrm{abs}}_t$ at calendar time $t$ by $K^{\mathrm{abs}}_t = K \cdot N_t$, where $N_t$ is total population at $t$ growing at gross rate $1+n_p$. We further distinguish stocks from per-period flows. \emph{Stocks} (units: goods, or units of agent-mass): $K$, $A_{\mathrm{dom}}$, $B$, $N^W$, $N^R$. \emph{Per-period flows} (units: goods per period, or efficiency units of labor per period): $Y$, $C$, $M$, $G$, $\delta K$, $L$, $\Lambda_{\mathrm{void}}$, $\overline{pen}$. The goods-market identity~\eqref{eq:goods_market} is a flow identity: every term has units of goods per period.
+
+\par Asset markets are incomplete. Households can save in a single non-contingent asset $a$ and are not allowed to borrow, so
+\begin{equation}
+\label{eq:borrowing_constraint}
+a' \;\geq\; 0.
+\end{equation}
+Both factor prices $(r, w)$ are determined endogenously by equations~\eqref{eq:interest_rate}--\eqref{eq:wage}. Markets clear when the following conditions hold:
+
+\paragraph{Labor markets.}
+\begin{equation}
+\label{eq:labor_market}
+L \;=\; \sum_\theta\, \sum_{j=1}^{j_R - 1}\, \int \nu_j(h, \eta;\, \theta)\, \ell(s;\, j, \theta)\, d\mu_j^\theta(s),
+\end{equation}
+\paragraph{Capital market.}
+Domestic household savings finance the entire capital stock and government debt:
+\begin{equation}
+\label{eq:capital_market}
+K \;=\; A_{\mathrm{dom}} - B,
+\qquad
+A_{\mathrm{dom}} \;=\; \sum_\theta\, \sum_{j=1}^{J}\, \int a\, d\mu_j^\theta(s).
+\end{equation}
+This condition, together with the firm's FOC \eqref{eq:interest_rate}, determines the equilibrium interest rate.
+
+\paragraph{Goods market.}
+\begin{equation}
+\label{eq:goods_market}
+Y \;=\; C + M + \delta\, K + G + \Lambda_{\mathrm{void}},
+\end{equation}
+where every term is a flow (goods per period in stationary per-cohort-mass units), and the voided-asset flow is
+\begin{equation}
+\label{eq:leakage_voided}
+\Lambda_{\mathrm{void}}
+\;\equiv\;
+\sum_\theta\, \sum_{j=1}^{J}\, \bigl(1 - \bar\psi_{j+1}(\theta)\bigr)
+\int a'(s;\, j, \theta)\, d\mu_j^\theta(s).
+\end{equation}
+\paragraph{Government bond market.}
+By construction the government issues exactly $B$ bonds; households' aggregate asset holdings finance both $K$ and $B$:
+\begin{equation}
+A_{\mathrm{dom}} = K + B,
+\end{equation}
+which is~\eqref{eq:capital_market} rearranged.
+
+\subsection{Optimization Problems}
+\label{subsec:optimization}
+
+\subsubsection{Net Labor Income}
+\label{subsubsec:net_income}
+
+Define net labor income as
+\begin{equation}
+\label{eq:net_labor_income}
+y(h, \eta, \ell;\, \theta) \;=\; w\, \nu(h, \eta;\, \theta)\, \ell\, \bigl(1 - \tau^\omega - \tau^p\bigr).
+\end{equation}
+Formal workers pay labor income tax $\tau^\omega$ and pension contributions $\tau^p$; informal workers pay neither.
+
+\subsubsection{Workers' Problem}
+\label{subsubsec:worker}
+
+Individuals observe their productivity shock and then choose consumption, savings, labor supply, and health investment. Given labor supply $\ell$, define household resources as
+\begin{equation}
+\label{eq:resources_worker}
+x(a, h, \eta, \ell;\, \theta) \;=\; \bigl(1 + r(1 - \tau^k)\bigr) a + y(h, \eta, \ell;\, \theta).
+\end{equation}
+The worker's Bellman equation is
+\begin{equation}
+\label{eq:worker_bellman}
+V_j(a, h, \eta;\, \theta)
+\;=\;
+\max_{\substack{c \geq 0,\, a' \geq 0 \\ \ell \in [0,1],\, m \geq 0}}
+\Bigl\{
+u(c, \ell, h)
++ \beta\, \psi_{j+1}(h')\,
+\E\bigl[V_{j+1}(a', h', \eta';\, \theta) \mid \eta\bigr]
+\Bigr\}
+\end{equation}
+subject to
+\begin{align}
+(1 + \tau^c)\, c + (1 + \tau^m)\, m + a' &= x(a, h, \eta, \ell;\, \theta), \label{eq:worker_budget}\\
+h' &= \min\bigl\{(1 - \delta_j^h)\, h + H_j(m),\, \bar h\bigr\}, \label{eq:worker_health}\\
+a' &\geq 0,\quad m \geq 0,\quad \ell \in [0,1]. \label{eq:worker_borrow}
+\end{align}
+Let the optimal savings policy be denoted by $a_j'(a, h, \eta;\, \theta)$.
+
+\subsubsection{Retiree's Problem}
+\label{subsubsec:retiree}
+\begin{equation}
+\label{eq:resources_retiree}
+x(a; \theta) \;=\; \bigl(1 + r(1-\tau^k)\bigr) a + \overline{pen}.
+\end{equation}
+The Bellman equation is
+\begin{equation}
+\label{eq:retiree_bellman}
+V_j(a, h, \eta;\, \theta)
+\;=\;
+\max_{c \geq 0,\, a' \geq 0,\, m \geq 0}
+\Bigl\{
+u(c, 0, h)
++ \beta\, \psi_{j+1}(h')\,
+\E\bigl[V_{j+1}(a', h', \eta';\, \theta) \mid \eta\bigr]
+\Bigr\}
+\end{equation}
+subject to
+\begin{align}
+(1 + \tau^c)\, c + (1 + \tau^m)\, m + a' &= x(a; \theta), \label{eq:retiree_budget}\\
+h' &= \min\bigl\{(1 - \delta_j^h)\, h + H_j(m),\, \bar h\bigr\}, \label{eq:retiree_health}\\
+a' &\geq 0,\quad m \geq 0. \label{eq:retiree_borrow}
+\end{align}
+At the terminal age $j = J$, $\psi_{J+1}(h') = 0$, so the continuation value vanishes and the optimum is $a'_J = 0$, $m_J = 0$ (no point investing in health when survival probability is zero).
+
+\subsubsection{First-Order Conditions}
+\label{subsubsec:focs}
+
+Let $\lambda_j$ denote the multiplier on the budget constraint. The interior FOCs are:
+\begin{align}
+\text{Consumption:} \quad & u_c(c, \ell, h) \;=\; \lambda_j (1 + \tau^c), \label{eq:foc_c}\\
+\text{Labor:} \quad & -u_\ell(c, \ell, h) \;=\; \lambda_j\, w\, \nu_j(h, \eta; \theta)(1-\tau^\omega-\tau^p), \label{eq:foc_l}\\
+\text{Savings:} \quad & \lambda_j \;=\; \beta\, \psi_{j+1}(h')\, \E\bigl[V_{a, j+1}(a', h', \eta'; \theta) \mid \eta\bigr], \label{eq:foc_a}\\
+\text{Medical spending:} \quad & \lambda_j (1 + \tau^m)
+\;=\; \beta\, H_j'(m)\,\Bigl\{
+\psi_{j+1}'(h')\, \E[V_{j+1}(a', h', \eta'; \theta) \mid \eta] \notag\\
+&\qquad\qquad\qquad\qquad +\, \psi_{j+1}(h')\, \E[V_{h, j+1}(a', h', \eta'; \theta) \mid \eta]
+\Bigr\}. \label{eq:foc_m}
+\end{align}
+
+\paragraph{Envelope conditions.} For the worker's problem,
+\begin{align}
+V_{a, j}(a, h, \eta; \theta) &\;=\; \lambda_j \cdot \bigl(1 + r(1-\tau^k)\bigr), \label{eq:env_a}\\
+V_{h, j}(a, h, \eta; \theta) &\;=\; u_h(c, \ell, h) + \lambda_j\, w\, \nu_{j,h}(h, \eta; \theta)\, \ell\, (1-\tau^\omega-\tau^p) \notag\\
+&\qquad +\, \beta\, (1-\delta_j^h)\, \psi_{j+1}'(h')\, \E[V_{j+1}(a', h', \eta'; \theta) \mid \eta] \notag\\
+&\qquad +\, \beta\, (1-\delta_j^h)\, \psi_{j+1}(h')\, \E[V_{h, j+1}(a', h', \eta'; \theta) \mid \eta]. \label{eq:env_h}
+\end{align}
+
+\paragraph{Euler equation.} Combining \eqref{eq:foc_a} with \eqref{eq:env_a} (one period ahead) and \eqref{eq:foc_c}:
+\begin{equation}
+\label{eq:euler}
+u_c(c, \ell, h) \;=\; \beta\, \bigl(1 + r(1-\tau^k)\bigr)\, \psi_{j+1}(h')\, \E\bigl[u_c(c', \ell', h') \mid \eta\bigr].
+\end{equation}
+ 
+\paragraph{Consumption--leisure condition.} Combining \eqref{eq:foc_c} and \eqref{eq:foc_l}:
+\begin{equation}
+\label{eq:cons_leisure}
+\frac{-u_\ell(c, \ell, h)}{u_c(c, \ell, h)}
+\;=\;
+\frac{w\, \nu_j(h, \eta; \theta)(1-\tau^\omega-\tau^p)}{1 + \tau^c}.
+\end{equation}
+ 
+\paragraph{Kuhn-Tucker for the borrowing constraint.}
+\begin{equation}
+\bigl(\lambda_j - \beta\, \psi_{j+1}(h')\, \E[V_{a, j+1}(a', h', \eta'; \theta) \mid \eta]\bigr)\, a' = 0,\quad a' \geq 0.
+\end{equation}
+ 
+
+
+\subsection{Stationary Competitive Equilibrium}
+\label{subsec:equilibrium}
+
+Let $\mu_j^\theta$ denote the time-invariant population measure of age-$j$ households of type $\theta$ over the state space $\mathcal{S} = \mathcal{A} \times [0, \bar h] \times \mathcal{H}_\eta$. The convention is that $\mu_j^\theta$ is \textbf{unconditional}: $\int d\mu_j^\theta = \phi_j(\theta)$. Aggregates are integrals over this measure (no extra $\phi_j$ outside).
+ 
+\subsubsection{Aggregate Objects}
+ 
+\begin{align}
+C &\;=\; \sum_\theta\, \sum_{j=1}^{J}\, \int c(s; j, \theta)\, d\mu_j^\theta(s), \label{eq:agg_C}\\
+M &\;=\; \sum_\theta\, \sum_{j=1}^{J}\, \int m(s; j, \theta)\, d\mu_j^\theta(s), \label{eq:agg_M}\\
+L &\;=\; \sum_\theta\, \sum_{j=1}^{j_R - 1}\, \int \nu_j(h, \eta; \theta)\, \ell(s; j, \theta)\, d\mu_j^\theta(s), \label{eq:agg_L}\\
+A_{\mathrm{dom}} &\;=\; \sum_\theta\, \sum_{j=1}^{J}\, \int a\, d\mu_j^\theta(s), \label{eq:agg_A}\\
+N^W &\;=\; \sum_\theta\, \sum_{j=1}^{j_R - 1}\, \phi_j(\theta), \qquad N^R \;=\; \sum_\theta\, \sum_{j=j_R}^{J}\, \phi_j(\theta), \label{eq:agg_NWR}\\
+\Lambda_{\mathrm{void}} &\;=\; \sum_\theta\, \sum_{j=1}^{J}\, \bigl(1 - \bar\psi_{j+1}(\theta)\bigr) \int a'(s; j, \theta)\, d\mu_j^\theta(s). \label{eq:agg_Lvoided}
+\end{align}
+
+\subsubsection{Law of Motion for the Distribution}
+ 
+For each measurable set $\mathcal{B} \subseteq \mathcal{S}$ and each age $j = 1, \ldots, J-1$ and type $\theta$:
+\begin{equation}
+\label{eq:lom}
+\mu_{j+1}^\theta(\mathcal{B})
+\;=\;
+\frac{1}{1 + n_p}
+\int
+\psi_{j+1}\bigl(h'(s; j, \theta)\bigr)\,
+\Bigl[\sum_{\eta' \in \mathcal{H}_\eta}
+\Pi^\eta(\eta, \eta')\,
+\mathbf{1}\bigl[\bigl(a'(s; j, \theta),\, h'(s; j, \theta),\, \eta'\bigr) \in \mathcal{B}\bigr]
+\Bigr]
+\, d\mu_j^\theta(s).
+\end{equation}
+The initial condition for newborns is
+\begin{equation}
+\label{eq:initial_dist}
+\mu_1^\theta(\mathcal{B})
+\;=\;
+\phi_1(\theta) \cdot
+\sum_{\eta_1 \in \mathcal{H}_\eta} \pi^\eta_{\mathrm{erg}}(\eta_1)\,
+\mathbf{1}[(0, h_0, \eta_1) \in \mathcal{B}],
+\end{equation}
+where $\pi^\eta_{\mathrm{erg}}$ is the ergodic distribution of $\Pi^\eta$ and $h_0$ is initial health (a parameter, e.g.\ $h_0 = \bar h$).
+
+\subsubsection{Definition}
+ 
+\begin{definition}[Stationary Recursive Competitive Equilibrium]
+\label{def:equilibrium}
+Given exogenous policy $(\tau^c, \tau^\omega, \tau^k, \tau^m, g_y, \kappa)$, parameters of preferences, technology, and demographic processes, a \textbf{stationary recursive competitive equilibrium} consists of
+\begin{enumerate}
+\item value functions $\{V_j(\cdot; \theta)\}_{j = 1, \ldots, J;\, \theta}$ and policy functions $\{c_j(\cdot; \theta), \ell_j(\cdot; \theta), m_j(\cdot; \theta), a'_j(\cdot; \theta)\}$ defined on $\mathcal{S}$;
+\item factor prices $(r, w)$;
+\item endogenous fiscal/pension variables $(B, \tau^p, \overline{pen})$;
+\item aggregates $(K, L, C, M, A_{\mathrm{dom}}, N^W, N^R, \Lambda_{\mathrm{void}})$ in stationary per-cohort-mass units (see notation block in Section~\ref{subsec:markets});
+\item cohort weights $\{\phi_j(\theta)\}_{j, \theta}$ and population-average survivals $\{\bar\psi_{j+1}(\theta)\}_{j, \theta}$;
+\item stationary distributions $\{\mu_j^\theta\}_{j, \theta}$;
+\end{enumerate}
+such that:
+\begin{enumerate}
+\item \textbf{Worker optimality.} For each $\theta$ and $j < j_R$, $V_j$ solves the worker's Bellman~\eqref{eq:worker_bellman}--\eqref{eq:worker_borrow}, with policy functions $(c_j, \ell_j, m_j, a'_j)$.
+\item \textbf{Retiree optimality.} For each $\theta$ and $j \geq j_R$, $V_j$ solves the retiree's Bellman~\eqref{eq:retiree_bellman}--\eqref{eq:retiree_borrow}, with policy functions $(c_j, m_j, a'_j)$ and $\ell_j \equiv 0$.
+\item \textbf{Firm optimality.} $(r, w)$ satisfy~\eqref{eq:foc_r}--\eqref{eq:foc_w} given $(K, L)$.
+\item \textbf{Government budget.} $B$ satisfies~\eqref{eq:gov_stationary}.
+\item \textbf{Pension balance.} $\tau^p$ satisfies~\eqref{eq:pension_contribution} and $\overline{pen}$ satisfies~\eqref{eq:pension_benefit}.
+\item \textbf{Market clearing.}
+\begin{itemize}
+\item Labor:~\eqref{eq:labor_market}.
+\item Capital:~\eqref{eq:capital_market}.
+\item Goods:~\eqref{eq:goods_market} (holds as a Walras-law identity).
+\end{itemize}
+\item \textbf{Cohort weights.} $\phi_j(\theta)$ satisfy~\eqref{eq:cohort_weights} with $\bar\psi_{j+1}(\theta)$ given by~\eqref{eq:avg_survival}, normalized so that $\sum_\theta \sum_j \phi_j(\theta) = 1$.
+\item \textbf{Stationarity of the distribution.} For each $j$ and $\theta$, $\mu_j^\theta$ satisfies the law of motion~\eqref{eq:lom}, with the newborn condition~\eqref{eq:initial_dist}.
+\item \textbf{Aggregate consistency.} $(C, M, L, A_{\mathrm{dom}}, N^W, N^R, \Lambda_{\mathrm{void}})$ are computed from~\eqref{eq:agg_C}--\eqref{eq:agg_Lvoided}, all in stationary per-cohort-mass units.
+\end{enumerate}
+\end{definition}
+
+
+%% ====================================================================
+\section{Calibration}
+\label{sec:calibration}
+
+The model is calibrated to the Mexican economy. Parameters are organized
+into three categories: (A) preference and technology parameters drawn
+from standard public finance calibrations and from a partial-equilibrium
+(PE) household pass that disciplines the curvature of preferences and
+the health amenity; (B) health and demographic parameters calibrated to
+Mexican data---survival from CONAPO and UISP life tables, age-varying
+health depreciation from the Global Burden of Disease study, productivity
+penalties calibrated to ENOE skill premia; and (C) fiscal parameters
+matching the Mexican tax and pension system. Two parameters---$\Psi$
+(labor disutility scale) and $H_{\text{scale}}$ (health-production
+scale)---are pinned down internally to hit targeted moments on average
+hours and aggregate health expenditure. All other parameters are
+externally identified. Time is measured in five-year periods; rates
+expressed at annual frequency are noted explicitly.
+
+\subsection{Parameter Table}
+\label{subsec:param_table}
+
+Table~\ref{tab:calibration} reports the full parameter vector used in
+the Mexico baseline. The same set of values produces the equilibrium
+documented in Section~\ref{sec:baseline}.
+
+\begin{table}[H]
+\centering
+\caption{Model Parameters --- Mexico Calibration}
+\label{tab:calibration}
+\begin{tabular}{llll}
+\hline\hline
+\textbf{Parameter} & \textbf{Symbol} & \textbf{Value} & \textbf{Source / Target} \\
+\hline
+\multicolumn{4}{l}{\textit{A. Preferences and Technology}} \\
+Risk aversion (GHH curvature) & $\gamma$    & 2.0        & Standard public finance \\
+Inverse Frisch                & $\nu$       & 2.0        & \citet{FehrKindermann2018} \\
+Discount factor (5-yr)        & $\beta$     & $0.998^{5}$ & $r \approx 5\%$ annual \\
+Labor disutility scale        & $\Psi$      & 14.0       & Target $\bar{\ell}\approx 1/3$ \\
+Health amenity scale          & $\Xi$       & 0.50       & PE pass (VSL anchor) \\
+Health amenity curvature      & $\xi$       & 0.50       & PE pass \\
+Capital share                 & $\alpha$    & 0.36       & National accounts \\
+Depreciation (annual)         & $\delta$    & 8.23\%     & PWT 10.01 \\
+TFP                           & $A$         & 1.60       & Normalization \\
+\hline
+\multicolumn{4}{l}{\textit{B. Health and Demographics}} \\
+Health production scale       & $H_{\text{scale}}$ & 0.30  & Target $M/Y\approx 5\%$ \\
+Health production curvature   & $H_{\text{curv}}$  & 0.50  & Diminishing returns \\
+Health depreciation (age $j$) & $\delta^{h}_{j}$   & 0.02--0.70 & GBD 2021, age-varying \\
+Productivity penalty (skill)  & $\varrho(\theta)$  & $(0.30, 0.20)$ & GBD DALYs by skill \\
+Skill types                   & $\theta$           & $(-0.20, 0.20)$ & ENOE wage premia \\
+Initial health                & $h_{0}$            & 1.00       & Full health at age 20 \\
+Survival schedule (base)      & $\psi_{j}$         & Table~\ref{tab:survival_mx} & CONAPO / UISP 2019 \\
+Population growth (annual)    & $n_{p}$            & 1\%        & CONAPO projections \\
+AR(1) persistence             & $\rho$             & 0.98       & 5-yr frequency \\
+AR(1) innovation s.d.         & $\sigma_{\varepsilon}$ & 0.05   & 5-yr frequency \\
+\hline
+\multicolumn{4}{l}{\textit{C. Fiscal Parameters --- Mexico}} \\
+Consumption tax               & $\tau^{c}$      & 16\% & IVA rate (SAT) \\
+Labor income tax              & $\tau^{\omega}$ & 20\% & OECD Taxing Wages 2026 \\
+Capital income tax            & $\tau^{k}$      & 20\% & Effective average rate \\
+Medical spending tax/subsidy  & $\tau^{m}$      & 0\%  & Baseline (policy instrument) \\
+Government spending / GDP     & $g_{y}$         & 19\% & SHCP \\
+Pension replacement rate      & $\kappa$        & 0.50 & IMSS stylized \\
+\hline\hline
+\end{tabular}
+\begin{minipage}{\linewidth}
+\smallskip
+\footnotesize
+\textit{Notes:} Block A parameters $\Psi$, $\Xi$, $\xi$ are set in a
+partial-equilibrium household pass and held fixed for the GE solve;
+$\gamma$, $\nu$, $\alpha$, $\delta$, $A$ are external. Block B
+parameters $\rho$, $\sigma_{\varepsilon}$, and the survival schedule
+are external; $H_{\text{scale}}$ and $H_{\text{curv}}$ are pinned to
+hit aggregate $M/Y$ and the lifecycle medical-spending profile.
+Block C parameters are external. The full survival schedule is
+reported in Appendix~\ref{app:supplementary}.
+\end{minipage}
+\end{table}
+
+\subsection{Key Calibration Targets}
+\label{subsec:targets}
+
+Five choices warrant brief justification.
+
+\paragraph{(1) GHH curvature $\gamma = 2.0$.}
+Standard in the public finance OLG literature
+\citep{AuerbachKotlikoff1987, DeNardi2010}. Under GHH preferences with
+a health amenity, $\gamma > 1$ ensures that longer life is
+welfare-improving, making health investment privately rational. The
+resulting $M/Y = 4.82\%$ in the baseline (Section~\ref{sec:baseline})
+sits inside the Mexican range.
+
+\paragraph{(2) Labor disutility scale $\Psi = 14.0$.}
+Calibrated in the PE household pass to produce average labor supply
+$\bar{\ell} \approx 1/3$ of available time, consistent with Mexican
+labor force survey data: ENOE 2022 reports average weekly hours of
+about 43 against a 60-hour potential. $\Psi$ has no independent
+economic content; it is a normalization, but the model is
+identification-stable because the labor-leisure FOC under GHH is free
+of wealth effects.
+
+\paragraph{(3) Health production scale $H_{\text{scale}} = 0.30$.}
+Chosen so that aggregate health expenditure $M/Y$ falls in the 4--6\%
+range, matching Mexico's total health expenditure share of GDP: WHO
+GHED reports 5.4\% total and approximately 2.8\% public for
+2022 \citep{WHOGHED2024}. The curvature parameter $H_{\text{curv}} = 0.5$
+imposes strict diminishing returns to medical spending.
+
+\paragraph{(4) Health depreciation schedule $\delta^{h}_{j}$.}
+Age-varying, rising from approximately 2\% per five-year period at age 20
+to 70\% by age 95, with intermediate values calibrated to reproduce
+the premature health crossing point documented in
+Section~\ref{sec:intro}: the proportion of the Mexican population in
+poor health crosses 50\% at approximately age 60 \citep{GBD2021}.
+The depreciation curve, together with the productivity penalty
+$\varrho(\theta)$, is the structural object that maps the GBD
+disability-adjusted life year profile into the model's lifecycle
+trajectory of $h$.
+
+\paragraph{(5) Tax wedge $\tau^{c} = 16\%$, $\tau^{\omega} = 20\%$, $\tau^{k} = 20\%$.}
+The IVA rate is the statutory consumption tax. The labor and capital
+income tax rates are effective average rates consistent with the OECD
+\textit{Taxing Wages 2026} treatment of Mexico; the labor income
+component combines the personal income tax (ISR) and employee social
+security contributions outside the PAYG pension contribution $\tau^{p}$.
+The resulting tax wedge $\tau^{\omega} + \tau^{p} \approx 34\%$ in the
+baseline is within the OECD-documented range for Mexico
+\citep{OECDTaxingWages2026}.
+
+
+\section{Data}\label{sec:data}
+
+This section documents the empirical foundations of our quantitative
+analysis. We rely on a combination of international databases and
+national statistical sources to parameterize the model for the three
+countries under study: Mexico, Costa Rica, and Panama. Together, these
+countries offer a compelling comparative setting within Latin America:
+they share institutional features---territorial proximity,
+predominantly Spanish-speaking populations, and mixed public-private
+health architectures---yet differ meaningfully in demographic
+trajectories, fiscal capacity, health financing structures, and labour
+market outcomes by gender. These contrasts make the three-country
+framework particularly well suited for identifying how fiscal policy
+interacts with health investment and gender dynamics within an
+overlapping generations framework.
+
+Our data compilation draws primarily from the WHO Global Health
+Expenditure Database \citep{WHOGHED2024}, the OECD Health at a Glance
+series \citep{OECDHaG2023}, the World Bank World Development
+Indicators \citep{WorldBankWDI2024}, the Pan American Health
+Organization platform \citep{PAHOHIA2024}, ECLAC and ILO joint labour
+market reports \citep{ECLACILO2023}, and national tax policy summaries
+\citep{PwCWWTS2024, OECDRevStats2024}. All monetary variables are
+expressed in current USD unless otherwise indicated. Health expenditure
+data refer to the 2022 reference year, the most recent for which
+WHO-GHED provides complete cross-national data, while labour market
+and fiscal indicators are drawn from 2022-2023 sources.
+
+\subsection{Demographics and Health Status}\label{subsec:demog}
+
+The three countries display heterogeneous demographic profiles that
+shape life-cycle savings incentives and the public financing needs of
+health and pension systems. Life expectancy at birth in 2023 was 75.1
+years in Mexico, 81.0 years in Costa Rica, and 78.1 years in Panama
+\citep{PAHOHIA2024, WHOGHO2024}. Costa Rica's longevity indicators are,
+remarkably, on par with many high-income OECD economies, a reflection
+of its longstanding single-payer insurance system and historically
+strong primary care network. In all three countries, substantial gender
+gaps in survival persist: females outlive males by approximately 6--7
+years across the three settings, a pattern central to the gendered
+saving and labour supply dynamics our model seeks to capture.
+
+Fertility rates reveal a distinct divergence. Mexico's total fertility
+rate was 1.82 births per woman in 2023, Costa Rica's stands at
+1.51---below replacement level and among the lowest in Central
+America---while Panama's is 2.30, reflecting relatively younger
+demographic dynamics \citep{WorldBankWDI2024}. These trajectories imply
+different paces of population ageing and, consequently, different
+fiscal pressures on pension and health systems over the model horizon.
+
+Non-communicable disease burdens are substantial in all three countries
+and constitute a key driver of both public and out-of-pocket health
+expenditures. Diabetes prevalence is particularly striking: Mexico
+registers 16.9\% of its adult population living with diabetes---among
+the highest rates globally---compared to 9.8\% in Costa Rica and
+11.0\% in Panama \citep{OECDHaG2023}. These figures translate directly
+into lifecycle health cost trajectories that are substantially higher
+in Mexico than in the comparators, a pattern our model accommodates
+through age- and health-state-dependent medical expenditure profiles.
+
+Table~\ref{tab:demog} summarises the key demographic and health status
+indicators that may serve as reference for parametrising the
+demographic block of the model.
+
+\begin{table}[htbp]
+\centering
+\caption{Demographic and Health Status Indicators}
+\label{tab:demog}
+\begin{tabular}{lccc}
+\hline\hline
+\textbf{Indicator} & \textbf{Mexico} & \textbf{Costa Rica} & \textbf{Panama} \\
+\hline
+Life expectancy at birth, total (2023)           & 75.1 & 81.0 & 78.1 \\
+Life expectancy, male (2023)                     & 72.1 & 78.6 & 75.4 \\
+Life expectancy, female (2023)                   & 78.3 & 83.5 & 80.9 \\
+Fertility rate (births per woman, 2023)          & 1.82 & 1.51 & 2.30 \\
+Infant mortality (per 1{,}000 live births, 2022) & 12.4 & 8.7  & 14.5 \\
+Population aged 65+ (\% of total, 2023)          & 8.1  & 10.4 & 8.9  \\
+Diabetes prevalence (\% of adults)               & 16.9 & 9.8  & 11.0 \\
+\hline\hline
+\end{tabular}
+\begin{minipage}{\linewidth}
+\smallskip
+\footnotesize
+\textit{Sources:} \citet{PAHOHIA2024}; \citet{WHOGHO2024};
+\citet{WorldBankWDI2024}; \citet{OECDHaG2023}.
+\end{minipage}
+\end{table}
+
+\subsection{Health Expenditure}\label{subsec:health_exp}
+
+Health financing structures differ markedly across the three countries
+and are critical for calibrating both the subsidy rate on medical
+expenditures and the government budget constraint in the model. Current
+health expenditure as a share of GDP in 2022 was approximately 5.5\%
+in Mexico, 7.1\% in Costa Rica, and 7.8\% in Panama \citep{WHOGHED2024}.
+These aggregate magnitudes, however, conceal substantial differences in
+how expenditure is financed.
+
+Costa Rica's health system is anchored by the \textit{Caja
+Costarricense de Seguro Social} (CCSS), a compulsory social insurance
+scheme that finances approximately 71\% of total health expenditure
+through mandatory contributions; government and compulsory schemes
+together account for close to 69\% of current health expenditure, while
+out-of-pocket (OOP) spending represents 22.4\% of current health
+expenditure (CHE)---equivalent to USD~220 per capita at current prices
+\citep{OECDHaG2023, WHOGHO2024}. OOP spending as a share of final
+household consumption was estimated at 2.6\% in 2022, reflecting the
+strong financial protection that Costa Rica's system provides to
+households.
+
+Mexico presents a considerably different picture. Despite recent
+reforms---including the phasing out of \textit{Seguro Popular} and the
+introduction of IMSS-Bienestar---the share of health expenditure
+financed out of pocket remained elevated, at approximately 41\% of
+total health expenditure in 2021, down modestly from 44\% in 2010
+\citep{WHOGHED2024}. This level substantially exceeds the WHO's
+recommended threshold of 15--20\% for financial protection, implying
+significant exposure to catastrophic health spending risk, particularly
+among lower-income households. Mexico's per capita public health
+spending---at roughly USD~626 PPP---is approximately half that of
+Chile, Colombia, Costa Rica, or Panama \citep{OECDHaG2023}.
+
+Finally, Panama's health financing is more mixed. Its public health system
+encompasses the Ministry of Health (MINSA) and the Social Security Fund
+(\textit{Caja de Seguro Social}, CSS), which together account for
+approximately 72\% of current health expenditure. The OOP share hovers
+around 26\% of CHE, placing Panama between Costa Rica and Mexico in
+terms of household financial protection.
+
+These financing structures may serve as empirical reference for
+calibrating parameters related to the public financing of health care,
+such as a potential subsidy rate on medical expenses borne by
+households. Countries with
+lower OOP ratios, Costa Rica most prominently, imply higher effective
+subsidisation across the lifecycle, compressing the precautionary
+savings motive relative to Mexico. The government budget constraint
+must therefore accommodate not only demographic transitions but also
+changes in the fiscal cost of these subsidy regimes.
+
+Table~\ref{tab:health_exp} presents the health expenditure indicators
+that may serve as reference for the calibration exercise.
+
+\begin{table}[htbp]
+\centering
+\caption{Health Expenditure Indicators (Reference Year: 2022)}
+\label{tab:health_exp}
+\begin{tabular}{lccc}
+\hline\hline
+\textbf{Indicator} & \textbf{Mexico} & \textbf{Costa Rica} & \textbf{Panama} \\
+\hline
+Current health expenditure (\% of GDP)       & 5.5          & 7.1   & 7.8   \\
+Public health expenditure (\% of CHE)        & $\approx$51  & $\approx$69 & $\approx$72 \\
+Out-of-pocket expenditure (\% of CHE)        & $\approx$41$^{a}$ & 22.4 & $\approx$26 \\
+OOP per capita, USD current                  & $\approx$253 & 220   & $\approx$290 \\
+Total health exp.\ per capita, USD PPP       & $\approx$1{,}100 & 1{,}658 & $\approx$1{,}450 \\
+OOP as \% of household final consumption     & $\approx$5.0 & 2.6   & $\approx$3.5 \\
+\hline\hline
+\end{tabular}
+\begin{minipage}{\linewidth}
+\smallskip
+\footnotesize
+\textit{Sources:} \citet{WHOGHED2024}; \citet{OECDHaG2023};
+\citet{WHOGHO2024}. CHE = Current Health Expenditure; OOP =
+Out-of-pocket; PPP = Purchasing Power Parity. Values marked
+($\approx$) are approximations. $^{a}$~Mexico's OOP share
+corresponds to the 2021 data vintage, the most recent available.
+\end{minipage}
+\end{table}
+
+\subsection{Fiscal Parameters}\label{subsec:fiscal}
+
+The fiscal block of the model is parameterised using statutory tax
+rates and revenue aggregates from official sources. Three main fiscal
+instruments enter the government's budget constraint: labour income
+taxes ($\tau^{\ell}$), consumption taxes embedded in the value-added
+tax (VAT), and social security contributions that finance both the
+health and pension systems.
+
+Consumption taxes vary considerably across the three countries. Mexico
+imposes a standard VAT (\textit{Impuesto al Valor Agregado}, IVA) of
+16\%, with exemptions covering basic food staples and medicines. Costa
+Rica introduced its own IVA at a standard rate of 13\% following the
+2018 fiscal reform (Law~9635), replacing an earlier general sales tax;
+reduced rates of 4\% and 2\% apply to certain categories including
+medicines and basic food. Panama's \textit{Impuesto de Transferencia de
+Bienes Corporales Muebles y la Prestaci\'{o}n de Servicios} (ITBMS)
+operates at a standard rate of 7\%, substantially lower than its
+neighbours, with medicines and health services generally exempt
+\citep{PwCWWTS2024}.
+
+Progressive personal income tax schedules apply in all three countries,
+with top marginal rates of 35\% in Mexico, 25\% in Costa Rica, and
+25\% in Panama \citep{PwCWWTS2024}. These rates interact with social
+security payroll contributions: total payroll contributions (employer
+plus employee) amount to approximately 30\% of gross wages in Mexico
+(IMSS), around 37\% in Costa Rica (CCSS), and roughly 19\% in Panama
+(CSS) \citep{CCSS2023, PwCWWTS2024}. These contributions fund the
+compulsory health insurance underpinning the social insurance schemes
+described in Section~\ref{subsec:health_exp}.
+
+Tax revenue as a share of GDP is estimated at approximately 17\% in
+Mexico, 14\% in Costa Rica, and 12\% in Panama for 2022
+\citep{OECDRevStats2024, WorldBankWDI2024}. Mexico's relatively higher
+tax-to-GDP ratio conceals important structural weaknesses: a large
+informal economy reduces the effective tax base, contributing to the
+segmented access to social insurance that characterises its health
+system. These parameters may serve as empirical reference for potential policy scenarios related to fiscal instruments such as labour income taxes, health subsidies, and pension transfers, particularly in the context of analysing government responses to demographic pressures.
+
+Table~\ref{tab:fiscal} in Appendix~\ref{app:fiscal_table} presents the key fiscal indicators by country.
+
+\subsection{Labour Market}\label{subsec:labour}
+
+The labour market block of the model requires data on lifecycle
+earnings profiles, participation rates by gender, the distribution of
+income across skill groups, and the extent of informality. Gender
+dynamics are of particular interest given the paper's focus: persistent
+gender gaps in labour force participation and wages generate
+differentiated savings trajectories and health expenditure patterns
+that an OLG model with heterogeneous agents is well positioned to
+capture.
+
+Labour force participation rates reveal pronounced gender gaps across
+all three countries. In 2022, male participation rates were 76.7\% in
+Mexico, 72.4\% in Costa Rica, and 77.6\% in Panama, while female rates
+stood at 45.4\%, 50.7\%, and 51.8\%, respectively \citep{ECLACILO2023,
+ILOILOSTAT2023}. The male-to-female participation ratio was 1.69 in
+Mexico, 1.43 in Costa Rica, and 1.50 in Panama. Mexico's gap is the
+largest of the three and one of the widest in Latin America, a
+structural feature linked to high informality, limited access to
+childcare, and cultural norms around the sexual division of domestic
+labour \citep{IMF2023, ECLAC2023}.
+
+Gender wage gaps are significant in all three countries. Mexico's
+gender wage gap was estimated at approximately 14\% of male earnings in
+2021, slightly above the OECD average of 11.9\% \citep{IMF2023}. Costa
+Rica and Panama face gaps in the range of 18--19\% of male wages
+\citep{ILOILOSTAT2023, WEFGGR2024}. These gaps compound over the
+lifecycle: women's lower lifetime earnings translate into lower pension
+entitlements and a weaker capacity to self-insure against health
+expenditure risk in old age, a mechanism central to the model's welfare
+analysis.
+
+Informality is a defining feature of all three labour markets.
+Approximately 55\% of employed workers in Mexico operate informally,
+compared to roughly 43\% in Costa Rica and 47\% in Panama
+\citep{ECLACILO2023}. Workers in the informal sector typically lack
+access to social-security-financed health insurance, implying that a
+large fraction of the population must finance health care out of
+pocket. 
+
+Table~\ref{tab:labour} in Appendix~\ref{app:labour_table} summarises the main labour market indicators.
+
+%% ====================================================================
+%% SECTION 6 — BASELINE EQUILIBRIUM
+%% ====================================================================
+\section{Baseline Equilibrium}
+\label{sec:baseline}
+
+The model is solved as a stationary competitive equilibrium under the
+parameter values documented in Section~\ref{sec:calibration} and the
+empirical inputs from Section~\ref{sec:data}. The baseline uses the
+Mexican demographic structure and fiscal parameters as point estimates;
+Costa Rica and Panam\'a calibrations and the cross-country comparison
+are deferred to the companion draft prepared for the September synthesis.
+The general-equilibrium solver converges in 13 outer iterations
+(damped fixed point on $(K, L)$ at relaxation $0.5$, tolerance $10^{-4}$
+on goods-market residual scaled by $Y$). The inner partial-equilibrium
+household problem is solved by endogenous grid method on a $30$-point
+log-spaced grid in normalized wealth $m$, with Rouwenhorst discretization
+of the persistent productivity shock $\eta$. Convergence diagnostics are
+reported in Appendix~\ref{app:diagnostics} and the goods-market residual
+$|Y - C - M - \delta K - G - \Lambda_{\text{void}}|/Y$ falls below
+$3.3 \times 10^{-5}$ at convergence.
+
+\subsection{Aggregate Equilibrium}
+\label{subsec:agg_eq}
+
+Table~\ref{tab:social_accounts} reports the social accounts of the
+baseline stationary equilibrium in the style of \citet{FehrKindermann2018}:
+each entry is shown in levels and as a share of output $Y$.
+
+\begin{table}[H]
+\centering
+\caption{Social Accounts --- Mexico Baseline Stationary Equilibrium}
+\label{tab:social_accounts}
+\begin{tabular}{lrr}
+\hline\hline
+\textbf{Variable} & \textbf{Level} & \textbf{\% of $Y$} \\
+\hline
+\multicolumn{3}{l}{\textit{Capital and assets}} \\
+Capital stock $K$            & 15.237 & 56.98 \\
+Domestic asset holdings $A^{\text{dom}}$ & 22.592 & 84.49 \\
+Government debt $B$          & 7.355  & 27.50 \\
+\hline
+\multicolumn{3}{l}{\textit{Production and uses of output}} \\
+Output $Y$                   & 26.740 & 100.00 \\
+Aggregate consumption $C$    & 13.027 & 48.72 \\
+Medical spending $M$         & 1.289  & 4.82 \\
+Capital depreciation $\delta K$ & 5.320 & 19.89 \\
+Government purchases $G$     & 5.081  & 19.00 \\
+Resource leakage $\Lambda_{\text{void}}$ & 1.247 & 4.66 \\
+\hline
+\multicolumn{3}{l}{\textit{Factor markets}} \\
+Effective labor $L$          & 17.604 & --- \\
+Wage rate $w$                & 0.972  & --- \\
+Capital-output ratio $K/Y$ (annual) & --- & 11.40 \\
+Interest rate $r$ (annual)   & 5.10\% & --- \\
+\hline
+\multicolumn{3}{l}{\textit{Fiscal block}} \\
+Consumption tax $\tau^{c}$   & 16.00\% & --- \\
+Labor income tax $\tau^{\omega}$ & 20.00\% & --- \\
+Capital income tax $\tau^{k}$ & 20.00\% & --- \\
+Medical tax/subsidy $\tau^{m}$ & 0.00\% & --- \\
+Pension contribution $\tau^{p}$ (endogenous) & 13.81\% & --- \\
+\hline
+\multicolumn{3}{l}{\textit{Pension block}} \\
+Pension benefit $\overline{\text{pen}}$ & 1.163 & --- \\
+Working mass $N^{W}$         & 7.357 & --- \\
+Retired mass $N^{R}$         & 2.032 & --- \\
+Dependency ratio $N^{R}/N^{W}$ & 0.276 & --- \\
+\hline\hline
+\end{tabular}
+\begin{minipage}{\linewidth}
+\smallskip
+\footnotesize
+\textit{Source:} \texttt{ge\_summary.csv} and \texttt{ge\_run.log} from
+the converged baseline GE solve. The capital--output ratio in the table
+is reported at annual frequency; in five-year units $K/Y = 0.570$.
+$\Lambda_{\text{void}}$ is the resource flow that is consumed by agents
+who die holding positive assets and is included to close the
+goods-market identity exactly. The pension contribution rate
+$\tau^{p}$ is determined by the closure
+$\tau^{p} = \kappa \cdot \overline{\text{pen}} \cdot N^{R} / (w L)$
+under $\kappa = 0.50$.
+\end{minipage}
+\end{table}
+
+Three features of the baseline deserve emphasis.
+
+First, the capital--output ratio at annual frequency, $K/Y = 11.4\%$,
+is low by OECD standards but plausible for an economy in the middle
+of its demographic transition. The mechanism is straightforward: the
+working-age population is large relative to the retired population
+($N^{R}/N^{W} = 0.276$), and the average household has not yet
+accumulated the asset stock that a steady state with higher dependency
+would require. Capital scarcity raises the marginal product of capital
+and yields the annual real interest rate $r = 5.10\%$ reported in the
+table---above the population growth rate $n_{p} = 1\%$, confirming
+that the baseline equilibrium is dynamically efficient.
+
+Second, aggregate medical spending at $M/Y = 4.82\%$ is within the
+2--8\% range that the WHO Global Health Expenditure Database documents
+for Latin American and Caribbean economies, and close to Mexico's own
+2022 total of 5.4\% of GDP. This match is not an accident: the
+health-production scale $H_{\text{scale}}$ was the parameter chosen to
+hit this target. Total consumption $C/Y = 48.72\%$ and the implied
+investment rate $\delta K / Y = 19.89\%$ are likewise within the range
+of plausible Mexican macroeconomic shares, conditional on the
+$\alpha = 0.36$ capital share and the calibrated depreciation rate.
+
+Third, the endogenous pension contribution rate $\tau^{p} = 13.81\%$
+is the model's quantitative resolution of the fiscal amplification
+loop described in Section~\ref{sec:intro}. Under the replacement rate
+$\kappa = 0.50$ and the baseline demographic structure, the PAYG block
+balances at a tax wedge component that lies at the high end of the
+range observed in the OECD \textit{Taxing Wages} treatment of Mexico.
+Combined with the labor income tax $\tau^{\omega} = 20\%$, the total
+formal-labor wedge in the baseline is approximately $34\%$, before any
+fiscal pressure from demographic change is imposed.
+
+\subsection{Lifecycle Profiles}
+\label{subsec:lifecycle}
+
+Figure~\ref{fig:lifecycle} reports the six lifecycle objects that
+characterize household behavior at the converged baseline:
+consumption, labor supply, asset holdings, medical spending, the
+health stock, and the surviving mass of each cohort. Each panel shows
+two lines, one for low-skill ($\theta_{L} = -0.20$, blue) and one for
+high-skill ($\theta_{H} = 0.20$, red) agents, plotted against age
+indexed by five-year period from 1 (ages 20--24) through 16 (ages
+95--99).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{plots/ge_01_lifecycle.png}
+\caption{Lifecycle profiles by skill type --- Mexico baseline}
+\label{fig:lifecycle}
+\begin{minipage}{0.95\linewidth}
+\smallskip
+\footnotesize
+\textit{Notes:} Six-panel diagnostic plot generated by
+\texttt{ge\_model.jl} from the converged baseline equilibrium.
+Panels: consumption $c_{j}$, labor supply $\ell_{j}$, asset holdings
+$a_{j}$, medical spending $m_{j}$, health stock $h_{j}$, and surviving
+mass $\phi_{j}$. Blue lines: $\theta_{L}$ agents. Red lines:
+$\theta_{H}$ agents. Horizontal axis in five-year age periods from
+age 20 (period 1) through age 95+ (period 16).
+\end{minipage}
+\end{figure}
+
+\paragraph{Consumption.} At peak (period 8, ages 55--59), $\theta_{H}$
+consumption exceeds $\theta_{L}$ consumption by approximately 44\%
+(2.18 versus 1.51 in model units), widening through the working life
+and narrowing modestly after retirement as both groups draw down
+assets. The visible drop at retirement (period 10, age 65) is the GHH
+composite at work: the recorded $c_{j}$ falls because the leisure
+component $-v(\ell_{j})$ vanishes when $\ell_{j} = 0$ and the
+household's optimization smooths the composite
+$z = c + s(h) - v(\ell)$ rather than $c$ alone. The composite itself
+is smooth across the retirement boundary; this is the standard GHH
+lifecycle profile and not a numerical artifact.
+
+\paragraph{Labor supply.} Both types work approximately $1/3$ of the
+time endowment throughout working life---0.34 for $\theta_{L}$ and
+0.39 for $\theta_{H}$ at the peak---matching the
+$\Psi = 14$ calibration target. $\theta_{H}$ agents work slightly
+more: higher productivity makes the labor-leisure margin more
+favorable. Labor supply is zero from period 10 (age 65) onward; the
+model imposes mandatory retirement at $j_{R} = 10$.
+
+\paragraph{Asset holdings.} Both profiles are hump-shaped, peaking
+at period 9 (ages 60--64) at 3.75 for $\theta_{L}$ and 5.69 for
+$\theta_{H}$---a 52\% peak gap. The asset accumulation phase
+(periods 2 through 9) reflects the lifecycle savings motive amplified
+by the longevity channel: healthier high-skill agents who expect to
+live longer save more aggressively, both because they discount future
+consumption less heavily and because they need a larger asset stock
+to finance the expected length of their retirement.
+
+\paragraph{Medical spending.} Hump-shaped with a peak in periods 11
+and 12 (ages 70--79), reflecting the joint effect of accelerating
+health depreciation and the still-substantial value of additional
+$h$ to expected remaining utility. $\theta_{H}$ agents spend more in
+absolute terms (0.50 versus 0.41 at the peak) but $\theta_{L}$ agents
+spend a higher share of their resources at older ages: the GBD
+calibration places $\varrho(\theta_{L}) = 0.30 > \varrho(\theta_{H}) = 0.20$,
+and the resulting steeper health-productivity penalty makes marginal
+$m$ relatively more valuable for low-skill agents to the extent that
+their lifetime budget allows.
+
+\paragraph{Health stock.} Both types start at $h = 1.0$ in period 1.
+$\theta_{L}$ health declines faster, reaching approximately 0.25 by
+period 15 (ages 90--94). $\theta_{H}$ maintains $h > 0.50$ through
+period 13 (ages 80--84). The 20-year healthy-longevity gap between
+skill groups documented in Section~\ref{sec:intro} is reproduced
+endogenously by the model: both groups face the same age-varying
+depreciation schedule $\delta^{h}_{j}$, but $\theta_{H}$ agents
+invest more (in proportion to their higher wage) and depreciate from
+a stock that compounds at a different effective rate because of the
+productivity feedback.
+
+\paragraph{Surviving mass.} Nearly identical until period 9 (age 60),
+then diverging sharply. By period 15 (age 90), approximately 5\% of
+the $\theta_{L}$ newborn cohort remains versus approximately 10\% of
+the $\theta_{H}$ cohort. The survival differential is driven entirely
+by the endogenous health stock: both groups face the same base
+survival schedule $\psi_{\text{base}}(j)$, but the health-conditional
+multiplier $\psi(h)$ rewards higher $h$, and the model translates the
+$\theta$-dependent health investment trajectory into a
+$\theta$-dependent survival curve.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\linewidth]{plots/ge_03_aggregate_identity.png}
+\caption{Goods-market decomposition at the baseline equilibrium}
+\label{fig:goods_id}
+\begin{minipage}{0.85\linewidth}
+\smallskip
+\footnotesize
+\textit{Notes:} Output $Y$ decomposed into consumption $C$, medical
+spending $M$, capital depreciation $\delta K$, government purchases
+$G$, and the resource leakage $\Lambda_{\text{void}}$. The bars sum
+to $Y$ exactly at convergence; the goods-market residual is
+$3.3 \times 10^{-5}$ in relative units.
+\end{minipage}
+\end{figure}
+
+\subsection{The Fiscal Amplification Loop}
+\label{subsec:fiscal_loop}
+
+The lifecycle profiles in Figure~\ref{fig:lifecycle} are the
+microeconomic counterpart of the fiscal amplification loop introduced
+in Section~\ref{sec:intro}. The endogenous pension contribution rate
+$\tau^{p} = 13.81\%$ is the outcome of the dependency ratio
+$N^{R}/N^{W} = 0.276$ under $\kappa = 0.50$. As demographic aging
+raises $N^{R}/N^{W}$---which the next section quantifies through a
+direct pension-parameter experiment---$\tau^{p}$ rises mechanically.
+Health investment partially offsets this pressure by two channels:
+first, by extending productive working lives (raising $N^{W}$
+indirectly through the productivity penalty $\varrho(\theta) h$); and
+second, by raising labor productivity per unit of labor input
+(raising $wL$). But healthier workers who survive into retirement
+also raise $N^{R}$, and the model treats these two effects as a
+competing pair whose net sign is a quantitative object.
+
+The baseline value $\tau^{p} = 13.81\%$ should therefore be read as
+the point estimate that obtains under \emph{current} Mexican
+demographics: the productivity and survival channels are already in
+play, and the model's task in Section~\ref{sec:experiments} is to
+show how each can be moved by the policy instruments at the
+government's disposal. The Euler residual diagnostic
+(Figure~\ref{fig:euler}, Appendix~\ref{app:diagnostics}) confirms that
+the household optimization is solved to a precision that supports
+welfare comparisons across alternative steady states.
+
+%% ====================================================================
+%% SECTION 7 — POLICY EXPERIMENTS
+%% ====================================================================
+\section{Policy Experiments}
+\label{sec:experiments}
+
+We present two policy experiments that illustrate the model's
+capacity to evaluate reforms along the two principal margins of the
+fiscal-demographic block---pension generosity and health-investment
+incentives. Both experiments compare a reformed stationary
+equilibrium against the baseline documented in
+Section~\ref{sec:baseline}; we do not solve the transition path. The
+welfare criterion is the consumption-equivalent variation at birth,
+defined below. A complete battery of counterfactuals---tax-mix
+reforms, retirement-age shifts, joint health-pension reforms, and the
+formalization experiment---is deferred to the companion synthesis;
+the two experiments reported here are the first-order results
+required for the June 5 IDB seminar.
+
+\subsection{Welfare Criterion}
+\label{subsec:welfare}
+
+For a newborn of type $\theta$, expected lifetime utility under
+policy regime $p$ is
+\begin{equation}
+\label{eq:welfare_newborn}
+\mathcal{W}^{p}_{1}(\theta)
+= \mathbb{E}_{1}\!\left[\sum_{j=1}^{J} \beta^{j-1}
+\left(\prod_{i=2}^{j} \psi_{i}(h_{i}^{p})\right)
+u\!\left(c_{j}^{p}, \ell_{j}^{p}, h_{j}^{p}\right)\right],
+\end{equation}
+where the expectation is over the realizations of the productivity
+shock $\eta$ and the superscript $p$ denotes
+policy-regime-conditional optimal paths. For each comparison we
+report the consumption-equivalent variation (CEV) of switching from
+regime $p$ to regime $p'$, defined by skill type as the constant
+proportional consumption increment $\Delta_{\theta}$ that solves
+\begin{equation}
+\label{eq:cev_newborn}
+\mathbb{E}_{1}\!\left[\sum_{j=1}^{J} \beta^{j-1}
+\left(\prod_{i=2}^{j} \psi_{i}(h_{i}^{p})\right)
+u\!\left((1 + \Delta_{\theta}) c_{j}^{p}, \ell_{j}^{p}, h_{j}^{p}\right)\right]
+= \mathcal{W}^{p'}_{1}(\theta).
+\end{equation}
+The baseline values are
+$\mathcal{W}^{\text{base}}_{1}(\theta_{L}) = 3.565$ and
+$\mathcal{W}^{\text{base}}_{1}(\theta_{H}) = 4.225$; CEVs in the two
+experiments below are reported against these. We also report the
+population-weighted average CEV across types as an aggregate summary,
+with the caveat that the aggregate hides the bulk of the
+distributional content of either experiment.
+
+In both experiments the pension contribution rate $\tau^{p}$ adjusts
+mechanically to balance the PAYG block under the closure
+$\tau^{p} = \kappa \cdot \overline{\text{pen}} \cdot N^{R} / (w L)$;
+the general fiscal budget closes with stationary government debt $B$
+as the residual. Tax rates other than the one under study are held
+fixed.
+
+\subsection{Experiment 1: Pension Reform ($\kappa: 0.50 \to 0.30$)}
+\label{subsec:exp_kappa}
+
+The first experiment lowers the pension replacement rate from
+$\kappa = 0.50$ to $\kappa = 0.30$, a 40\% reduction in pension
+generosity. This is the most direct fiscal lever available within
+the PAYG block: under the closure rule, the equilibrium contribution
+rate is proportional to $\kappa$ for given demographic structure,
+and the reform mechanically widens the wedge between the
+contribution rate the model would produce under baseline pension
+generosity and what is actually required to clear the PAYG block.
+The reform raises private savings of pre-retirement cohorts
+(precautionary, in response to lower public retirement income) and
+lowers $\tau^{p}$. Retirees with little wealth---disproportionately
+$\theta_{L}$ agents whose lifetime productivity is low---bear the
+welfare cost of the reform; high-skill agents benefit from the lower
+tax wedge during their working years.
+
+\begin{table}[H]
+\centering
+\caption{Pension Reform: Baseline ($\kappa = 0.50$) vs. Reform ($\kappa = 0.30$)}
+\label{tab:exp_kappa}
+\begin{tabular}{lrrr}
+\hline\hline
+\textbf{Variable} & \textbf{Baseline} & \textbf{Reform} & \textbf{$\Delta$} \\
+\hline
+Pension contribution $\tau^{p}$ & 13.81\% & \todo{run} & \todo{run} \\
+Interest rate $r$ (annual)      & 5.10\%  & \todo{run} & \todo{run} \\
+Wage rate $w$                   & 0.972   & \todo{run} & \todo{run} \\
+Capital-output $K/Y$ (annual)   & 11.40\% & \todo{run} & \todo{run} \\
+Consumption share $C/Y$         & 48.72\% & \todo{run} & \todo{run} \\
+Medical share $M/Y$             & 4.82\%  & \todo{run} & \todo{run} \\
+Government debt $B/Y$           & 27.50\% & \todo{run} & \todo{run} \\
+Pension benefit $\overline{\text{pen}}$ & 1.163 & \todo{run} & \todo{run} \\
+Welfare $\mathcal{W}_{1}(\theta_{L})$ & 3.565 & \todo{run} & --- \\
+Welfare $\mathcal{W}_{1}(\theta_{H})$ & 4.225 & \todo{run} & --- \\
+CEV $\Delta_{\theta_{L}}$ (\%)  & ---     & \todo{run} & --- \\
+CEV $\Delta_{\theta_{H}}$ (\%)  & ---     & \todo{run} & --- \\
+\hline\hline
+\end{tabular}
+\begin{minipage}{\linewidth}
+\smallskip
+\footnotesize
+\textit{Notes:} Reform values to be filled in from the converged
+$\kappa = 0.30$ stationary equilibrium (\texttt{ge\_summary\_kappa30.csv}).
+$\Delta = $ Reform $-$ Baseline. CEV computed against the
+$\kappa = 0.50$ baseline using equation~\eqref{eq:cev_newborn}.
+\end{minipage}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\linewidth]{plots_kappa30/ge_01_lifecycle.png}
+\caption{Pension reform: lifecycle consumption profiles, baseline vs. reform}
+\label{fig:exp_kappa}
+\begin{minipage}{0.85\linewidth}
+\smallskip
+\footnotesize
+\textit{Notes:} Consumption $c_{j}$ by age and skill type at the
+$\kappa = 0.30$ reform equilibrium. Two lines per type:
+baseline ($\kappa = 0.50$) dashed, reform ($\kappa = 0.30$) solid.
+\end{minipage}
+\end{figure}
+
+\paragraph{Mechanism.} The pension reform reduces $\tau^{p}$ by an
+amount that, to first order, is proportional to the reduction in
+$\kappa$ and the inverse of the dependency ratio: in the closure
+$\tau^{p} = \kappa \cdot \overline{\text{pen}} \cdot N^{R}/(wL)$, a
+40\% cut in $\kappa$ generates approximately a 40\% reduction in
+$\tau^{p}$ at unchanged factor prices, partially offset in general
+equilibrium by the rise in $w$ and the precautionary savings response.
+The expected sign of $\Delta_{\theta_{L}}$ is negative (the reform
+reduces lifetime resources for the type that is most pension-dependent),
+while $\Delta_{\theta_{H}}$ can be positive: high-skill agents value
+the lower tax wedge during their working years more than they value
+the higher public pension during retirement, because they substitute
+private savings for public benefits with low welfare cost.
+\todo{Run the experiment and fill in the magnitudes.}
+
+\subsection{Experiment 2: Health Subsidy ($\tau^{m}: 0 \to -0.20$)}
+\label{subsec:exp_taum}
+
+The second experiment introduces a 20\% subsidy on medical spending,
+$\tau^{m} = -0.20$, with the pension parameter held at the baseline
+$\kappa = 0.50$. The subsidy reduces the effective price of health
+investment, raises $m_{j}$ in the household problem, and propagates
+through the four-channel mechanism described below. This experiment
+is the paper's signature policy instrument: it is the lever through
+which ``spending smarter'' on health translates into a quantifiable
+fiscal and welfare object.
+
+\paragraph{The four-channel mechanism.} Adjusting $\tau^{m}$ is
+qualitatively different from the other tax instruments because
+medical spending $m$ has four distinct effects in the household
+problem, each operating through a different equation.
+\begin{enumerate}
+\item \textbf{Productivity channel.} Higher $h$ raises labor
+productivity $\nu_{j}(h, \eta; \theta) = e_{j} \exp(\theta + \eta -
+\varrho(\theta) h)$, with the effect strongest for $\theta_{L}$
+agents because $\varrho(\theta_{L}) > \varrho(\theta_{H})$.
+\item \textbf{Utility channel.} Higher $h$ raises utility directly
+through the amenity term $s(h)$ in the period utility function.
+This effect is symmetric across skill types.
+\item \textbf{Survival channel.} Higher $h$ raises $\psi_{j+1}(h')$,
+extending expected life. This channel interacts with the policy
+environment: health subsidies that raise life expectancy worsen the
+dependency ratio $N^{R}/N^{W}$ and feed back into a higher
+endogenous $\tau^{p}$, partially offsetting the fiscal benefit of
+the productivity channel.
+\item \textbf{Resource cost.} Medical spending consumes final goods
+at a rate $(1 + \tau^{m}) m$ per unit of $h$ improvement (with
+$\tau^{m} < 0$ a subsidy), entering the resource constraint as part
+of aggregate $M$. The subsidy itself is financed through
+government debt $B$ in the baseline closure; alternative closures
+in which $\tau^{c}$ or $\tau^{\omega}$ absorbs the cost are
+reported as robustness in the synthesis draft.
+\end{enumerate}
+The four channels imply that the net fiscal impact of the subsidy
+is theoretically ambiguous: the productivity channel widens the
+tax base and lowers $\tau^{p}$, while the survival channel raises
+$N^{R}$ and raises $\tau^{p}$. The quantitative resolution is the
+object of this experiment.
+
+\begin{table}[H]
+\centering
+\caption{Health Subsidy: Baseline ($\tau^{m} = 0$) vs. Subsidy ($\tau^{m} = -0.20$)}
+\label{tab:exp_taum}
+\begin{tabular}{lrrr}
+\hline\hline
+\textbf{Variable} & \textbf{Baseline} & \textbf{Subsidy} & \textbf{$\Delta$} \\
+\hline
+Medical share $M/Y$              & 4.82\%  & \todo{run} & \todo{run} \\
+Average health $\bar{h}$ at age 60 & \todo{run} & \todo{run} & \todo{run} \\
+Pension contribution $\tau^{p}$  & 13.81\% & \todo{run} & \todo{run} \\
+Interest rate $r$ (annual)       & 5.10\%  & \todo{run} & \todo{run} \\
+Wage rate $w$                    & 0.972   & \todo{run} & \todo{run} \\
+Effective labor $L$              & 17.604  & \todo{run} & \todo{run} \\
+Output $Y$                       & 26.740  & \todo{run} & \todo{run} \\
+Government debt $B/Y$            & 27.50\% & \todo{run} & \todo{run} \\
+Welfare $\mathcal{W}_{1}(\theta_{L})$ & 3.565 & \todo{run} & --- \\
+Welfare $\mathcal{W}_{1}(\theta_{H})$ & 4.225 & \todo{run} & --- \\
+CEV $\Delta_{\theta_{L}}$ (\%)   & ---     & \todo{run} & --- \\
+CEV $\Delta_{\theta_{H}}$ (\%)   & ---     & \todo{run} & --- \\
+\hline\hline
+\end{tabular}
+\begin{minipage}{\linewidth}
+\smallskip
+\footnotesize
+\textit{Notes:} Subsidy values to be filled in from the converged
+$\tau^{m} = -0.20$ stationary equilibrium
+(\texttt{ge\_summary\_taum20.csv}). $\Delta = $ Subsidy $-$ Baseline.
+Average health $\bar{h}$ at age 60 is the mass-weighted mean of
+$h_{j=9}$ across skill types. CEV computed against the
+$\tau^{m} = 0$ baseline.
+\end{minipage}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\linewidth]{plots_taum20/ge_01_lifecycle.png}
+\caption{Health subsidy: lifecycle health stock and medical spending}
+\label{fig:exp_taum}
+\begin{minipage}{0.85\linewidth}
+\smallskip
+\footnotesize
+\textit{Notes:} Health stock $h_{j}$ (top panels) and medical
+spending $m_{j}$ (bottom panels) by age and skill type at the
+$\tau^{m} = -0.20$ equilibrium. Two lines per type: baseline
+($\tau^{m} = 0$) dashed, subsidy ($\tau^{m} = -0.20$) solid.
+\end{minipage}
+\end{figure}
+
+\paragraph{Mechanism.} A 20\% subsidy raises $M/Y$ from 4.82\% to a
+value that the converged solve will quantify, with the largest
+proportional increase concentrated at the ages of steepest health
+depreciation (periods 11--12, ages 70--79). Average health at age 60
+rises by an amount that reflects both the direct subsidy on
+$m$ at younger ages and the cumulative effect of higher $h$
+investment along the entire lifecycle. The fiscal effect---the
+change in $\tau^{p}$---decomposes into the productivity channel
+(positive: $L$ rises, dependency ratio falls in efficiency units)
+and the survival channel (negative: $N^{R}$ rises). The sign and
+magnitude of the net effect is the model's primary quantitative
+contribution. \todo{Run the experiment and fill in the magnitudes.}
+
+\subsection{Discussion}
+\label{subsec:exp_discussion}
+
+The two experiments are complementary. The pension reform operates
+on the right-hand side of the fiscal amplification loop: it reduces
+the public retirement liability and the associated tax wedge by
+fiat. The health subsidy operates on the left-hand side: it changes
+the underlying productive and survival capacity of the population
+and lets the fiscal block respond endogenously. A natural reading
+of the comparison is therefore: which intervention produces larger
+welfare gains, and which is more fiscally sustainable in the sense
+of stabilizing $B/Y$ at a lower level? The pension reform
+mechanically lowers $\tau^{p}$ but reduces lifetime utility for
+$\theta_{L}$ agents and may widen the consumption inequality
+between skill types. The health subsidy raises $M/Y$ at fiscal
+cost but operates through channels (the productivity and utility
+gains in particular) that benefit $\theta_{L}$ agents
+disproportionately. Whether the productivity channel dominates the
+survival channel quantitatively---and whether the combination of
+the two reforms dominates either in isolation---are the questions
+that the synthesis draft will address. The two experiments reported
+here establish that the model can speak to each of the principal
+margins at quantitative precision sufficient for policy discussion.
+
+
+%% ====================================================================
+%% SECTION 8 — CONCLUSION
+%% ====================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+This paper presents a fully specified analytical framework for studying the fiscal consequences of demographic aging in Latin America through the lens of health expenditure, endogenous longevity, and social security sustainability. The framework consists of a stochastic overlapping-generations model with continuous endogenous health capital, heterogeneous agents who differ by skill type, a production sector with endogenous factor prices, and a government that operates a pay-as-you-go pension system with an endogenous contribution rate. The model is calibrated for M\'exico, Costa Rica, and Panam\'a using data from the Global Burden of Disease, the OECD Taxing Wages series, the WHO Global Health Expenditure Database, and national household surveys.
+
+The model's central analytical contribution is the identification of a fiscal amplification loop that links health investment to pension sustainability through the longevity channel. Health investment raises the health stock, which improves survival probabilities and extends working lives---strengthening the life-cycle savings motive, raising aggregate capital, and compressing the equilibrium interest rate. But longer lives also raise the dependency ratio $N^R/N^W$, mechanically increasing the pension contribution rate $\tau^p = \kappa \cdot N^R/N^W$ and widening the tax wedge on formal labor income. The net fiscal effect of improved population health is therefore ambiguous in sign. This ambiguity cannot be resolved by partial-equilibrium analysis: it requires the calibrated general-equilibrium model that this paper builds, in which health-driven changes in aggregate savings move factor prices and feed back into every household's decision problem.
+
+The paper presents two policy experiments against the Mexico baseline (Section~\ref{sec:experiments}): a pension reform that lowers the replacement rate from $\kappa = 0.50$ to $\kappa = 0.30$, and a health subsidy that sets $\tau^{m} = -0.20$. The pension experiment quantifies the mechanical fiscal relief obtainable on the right-hand side of the amplification loop---a direct reduction in the public retirement liability and the associated tax wedge---against its welfare cost for low-skill agents. The health-subsidy experiment quantifies the four-channel mechanism through which $\tau^{m}$ operates---productivity, utility, survival, and resource cost---and resolves the theoretical ambiguity over whether healthier populations are net fiscal contributors or net fiscal claimants. The synthesis draft scheduled for September extends this battery to tax-mix reforms (variations in $\tau^{\omega}$, $\tau^{c}$, $\tau^{k}$), retirement-age shifts ($j_{R}$), joint health-pension reforms designed to evaluate policy complementarities, and a formalization experiment that expands the contributory base using observed income and health profiles from national household surveys, identifying the threshold formalization rate $\alpha^{*}$ at which the contribution-base effect dominates the expenditure-cost effect on $\tau^{p}$.
+
+The model's architecture supports a natural extension toward gender-differentiated fiscal analysis. By expanding the agent-type space from two skill types to four---$(\theta_L^M, \theta_H^M, \theta_L^F, \theta_H^F)$---calibrated with sex-specific earnings trajectories and the survival differentials documented in the data section, the model can decompose fiscal sustainability pressures by sex within the existing equilibrium framework. This calibration-based approach lets observed income profiles and survival probabilities carry the information that a structural household bargaining model would generate endogenously, at a fraction of the computational cost.
+
+The remaining phases of the project are organized as follows. By the IDB Second Seminar (week of June 8, 2026), baseline results and preliminary calibrations will be reported for the three countries, and initial policy counterfactuals---including the cost-of-inaction benchmark and at least the pension-lever and health-subsidy experiments---will be presented. The formalization experiment with observed income profiles and the gender-differentiated decomposition will follow in the July--August period. The final synthesis, including all counterfactual results, the complete policy analysis, replication code, and datasets, is scheduled for submission by September 4, 2026.
+
+The principle that organizes the analysis is straightforward: the question facing Latin American health systems is not whether to spend more, but \textit{when} to spend, through \textit{which institutional channels}, and with what consequences for the contributory architecture on which fiscal sustainability depends.
+
+
+%% ====================================================================
+%% APPENDICES
+%% ====================================================================
+\begin{appendices}
+
+\section{Fiscal Gap Methodology}
+\label{app:fiscal_gap}
+
+The fiscal gap for country $c$ in year $t$ is defined as:
+\begin{equation}
+\label{eq:fiscal_gap}
+G_{c,t} = H_{c,t}^{\text{est}} - H_{c,t}^{\text{actual}}
+\end{equation}
+where $H_{c,t}^{\text{est}}$ denotes estimated health expenditure requirements and $H_{c,t}^{\text{actual}}$ denotes actual public health expenditure, both expressed as shares of GDP. Estimated requirements are constructed by applying a base-year age-expenditure profile $h(j)$ to the projected population structure:
+\begin{equation}
+\label{eq:fiscal_gap_est}
+H_{c,t}^{\text{est}} = \frac{\sum_j h(j) \cdot N_{j,c,t}}{Y_{c,t}}
+\end{equation}
+where $N_{j,c,t}$ is the population of age group $j$ in country $c$ at time $t$, and $Y_{c,t}$ is nominal GDP. The base-year expenditure profile $h(j)$ is estimated from national health accounts microdata for the reference year.
+
+
+\section{Numerical Diagnostics}
+\label{app:diagnostics}
+
+The general-equilibrium solve uses the endogenous grid method on the
+inner household problem and a damped fixed point on $(K, L)$ for the
+outer block, with damping coefficient 0.5 and convergence tolerance
+$10^{-4}$ on the goods-market residual scaled by $Y$. Convergence is
+attained in 13 outer iterations from the initialization
+$(K_{0}, L_{0}) = (12.0, 10.0)$. Figure~\ref{fig:euler} reports the
+Euler residual diagnostic at the converged baseline.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.80\linewidth]{plots/ge_06_euler_residuals.png}
+\caption{Euler residual diagnostic at the baseline equilibrium}
+\label{fig:euler}
+\begin{minipage}{0.80\linewidth}
+\smallskip
+\footnotesize
+\textit{Notes:} Distribution of $|r|/u_{c}$ across interior grid
+points at the converged household problem. The mean $\log_{10}$ of
+the residual is $-7.24$, the 95th percentile is $-5.27$, and the
+maximum is $-4.71$. The diagnostic supports welfare comparisons
+across stationary equilibria at the precision required for the
+counterfactual experiments in Section~\ref{sec:experiments}.
+\end{minipage}
+\end{figure}
+
+
+\section{Supplementary Tables and Data}
+\label{app:supplementary}
+
+\subsection{Fiscal Indicators}
+\label{app:fiscal_table}
+
+\begin{table}[H]
+\centering
+\caption{Fiscal Indicators}
+\label{tab:fiscal}
+\begin{tabular}{lccc}
+\hline\hline
+\textbf{Indicator} & \textbf{Mexico} & \textbf{Costa Rica} & \textbf{Panama} \\
+\hline
+Standard VAT rate                                  & 16\% (IVA) & 13\% (IVA) & 7\% (ITBMS) \\
+Top personal income tax rate (2023)                & 35\%  & 25\%  & 25\%  \\
+Social security contributions (employer + employee) & $\approx$30\% & $\approx$37\% & $\approx$19\% \\
+General government revenue (\% of GDP, 2022)       & $\approx$23 & $\approx$24 & $\approx$21 \\
+Tax revenue (\% of GDP, 2022)                      & $\approx$17 & $\approx$14 & $\approx$12 \\
+\hline\hline
+\end{tabular}
+\begin{minipage}{\linewidth}
+\smallskip
+\footnotesize
+\textit{Sources:} \citet{PwCWWTS2024}; \citet{OECDRevStats2024};
+\citet{WorldBankWDI2024}; \citet{CCSS2023}.
+\end{minipage}
+\end{table}
+
+\subsection{Labour Market Indicators}
+\label{app:labour_table}
+
+\begin{table}[H]
+\centering
+\caption{Labour Market Indicators (Reference Year: 2022)}
+\label{tab:labour}
+\begin{tabular}{lccc}
+\hline\hline
+\textbf{Indicator} & \textbf{Mexico} & \textbf{Costa Rica} & \textbf{Panama} \\
+\hline
+Male labour force participation rate (\%)    & 76.7        & 72.4        & 77.6        \\
+Female labour force participation rate (\%)  & 45.4        & 50.7        & 51.8        \\
+Gender participation gap (male/female ratio) & 1.69        & 1.43        & 1.50        \\
+Gender wage gap (\% of male wage)            & $\approx$14 & $\approx$18 & $\approx$19 \\
+Informality rate (\% of employed)            & $\approx$55 & $\approx$43 & $\approx$47 \\
+Unemployment rate (\%)                       & 3.3         & 11.2        & 7.7         \\
+Gini coefficient                             & 0.43        & 0.48        & 0.49        \\
+\hline\hline
+\end{tabular}
+\begin{minipage}{\linewidth}
+\smallskip
+\footnotesize
+\textit{Sources:} \citet{ILOILOSTAT2023}; \citet{ECLACILO2023};
+\citet{IMF2023}; \citet{WEFGGR2024}; \citet{WorldBankWDI2024};
+\citet{WorldBankPovCalNet2022}.
+\end{minipage}
+\end{table}
+
+\subsection{Life Table for Mexico}
+\label{app:survival}
+
+The following life table corresponds to Mexico and is used to
+calibrate the age-specific survival probabilities $\psi_{j}$ in the
+model. Data are drawn from \citet{UISP2019}.
+
+\begin{table}[H]
+\centering
+\caption{Life Table for Mexico: Mortality and Survival Probabilities}
+\label{tab:survival_mx}
+\begin{tabular}{lcc}
+\hline\hline
+\textbf{Age group} & \textbf{Probability of death} & \textbf{Survival probability} \\
+\hline
+$<$ 1 year   & 0.011576 & 0.9884 \\
+1--4         & 0.002282 & 0.9977 \\
+5--9         & 0.001132 & 0.9989 \\
+10--14       & 0.001470 & 0.9985 \\
+15--19       & 0.003858 & 0.9961 \\
+20--24       & 0.005897 & 0.9941 \\
+25--29       & 0.006550 & 0.9935 \\
+30--34       & 0.007966 & 0.9920 \\
+35--39       & 0.011217 & 0.9888 \\
+40--44       & 0.013710 & 0.9863 \\
+45--49       & 0.019216 & 0.9808 \\
+50--54       & 0.028413 & 0.9716 \\
+55--59       & 0.042568 & 0.9574 \\
+60--64       & 0.063162 & 0.9368 \\
+65--69       & 0.093160 & 0.9068 \\
+70--74       & 0.137294 & 0.8627 \\
+75--79       & 0.208926 & 0.7911 \\
+80--84       & 0.312093 & 0.6879 \\
+85+          & 1.000000 & 0.0000 \\
+\hline\hline
+\end{tabular}
+\begin{minipage}{\linewidth}
+\smallskip
+\footnotesize
+\textit{Source:} \citet{UISP2019}. Net probability of death and
+survival probability by age group for the total population of Mexico.
+\end{minipage}
+\end{table}
+
+\end{appendices}
+
+
+%% ====================================================================
+%% BIBLIOGRAPHY
+%% ====================================================================
+\bibliography{references}
+
+\end{document}
