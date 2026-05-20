@@ -108,11 +108,11 @@ def report_kappa(base, reform):
     # CEV — placeholder; CEV requires the lifecycle paths
     # As a rough orientation: under CRRA, Δ ≈ (W^p' / W^p)^(1/(1-γ)) - 1
     # With γ=2.0 and W>0, this gives a usable orientation.
-    gamma = 2.0
-    cev_L = (reform["W1_theta_L"] / base["W1_theta_L"]) ** (1 / (1 - gamma)) - 1
-    cev_H = (reform["W1_theta_H"] / base["W1_theta_H"]) ** (1 / (1 - gamma)) - 1
-    rows.append(("CEV Δ_θ_L (CRRA approx)", "---", signed_pct(cev_L), "---"))
-    rows.append(("CEV Δ_θ_H (CRRA approx)", "---", signed_pct(cev_H), "---"))
+    cev_L, cev_H = None, None  # proper CEV requires GHH lifecycle paths
+    rows.append(("ΔW₁/W₁(θ_L)", "---",
+                 signed_pct((reform["W1_theta_L"] - base["W1_theta_L"]) / base["W1_theta_L"]), "---"))
+    rows.append(("ΔW₁/W₁(θ_H)", "---",
+                 signed_pct((reform["W1_theta_H"] - base["W1_theta_H"]) / base["W1_theta_H"]), "---"))
 
     for label, b, r, d in rows:
         print(f"  {label:30s}  baseline={b:>10s}  reform={r:>10s}  Δ={d}")
@@ -151,8 +151,10 @@ def report_taum(base, subsidy):
     gamma = 2.0
     cev_L = (subsidy["W1_theta_L"] / base["W1_theta_L"]) ** (1 / (1 - gamma)) - 1
     cev_H = (subsidy["W1_theta_H"] / base["W1_theta_H"]) ** (1 / (1 - gamma)) - 1
-    rows.append(("CEV Δ_θ_L (CRRA approx)", "---", signed_pct(cev_L), "---"))
-    rows.append(("CEV Δ_θ_H (CRRA approx)", "---", signed_pct(cev_H), "---"))
+    rows.append(("ΔW₁/W₁(θ_L)", "---",
+                 signed_pct((subsidy["W1_theta_L"] - base["W1_theta_L"]) / base["W1_theta_L"]), "---"))
+    rows.append(("ΔW₁/W₁(θ_H)", "---",
+                 signed_pct((subsidy["W1_theta_H"] - base["W1_theta_H"]) / base["W1_theta_H"]), "---"))
 
     for label, b, r, d in rows:
         print(f"  {label:30s}  baseline={b:>10s}  subsidy={r:>10s}  Δ={d}")
