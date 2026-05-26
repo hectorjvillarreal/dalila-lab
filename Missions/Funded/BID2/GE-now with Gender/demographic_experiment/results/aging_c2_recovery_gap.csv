@@ -1,0 +1,2 @@
+label,K,L,Y,r_annual_pct,w,taup,tauomega,B,B_over_Y,C_over_Y,M_over_Y,N_W,N_R,depratio,W_MthetaL,W_MthetaH,W_FthetaL,W_FthetaH,DIFF_over_Y,euler_max_log10,reportable
+RUN 3 · 2050 C2 (recovery),27.703085,22.629444,38.942283,2.95843,1.101355,0.145002,0.200000,9.859906,0.253193,0.478020,0.055628,9.695760,4.989956,0.514653,3.287252,3.999085,3.168254,3.879364,-7.857e-05,-5.448,true

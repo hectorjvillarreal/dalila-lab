@@ -1,0 +1,67 @@
+Precompiling Plots...
+    565.9 ms  ✓ Statistics → SparseArraysExt
+   1286.4 ms  ✓ FixedPointNumbers
+   1324.2 ms  ✓ StatsBase
+    967.6 ms  ✓ ColorTypes
+    425.4 ms  ✓ ColorTypes → StyledStringsExt
+   1286.1 ms  ✓ ColorVectorSpace
+   3115.0 ms  ✓ Colors
+   3167.4 ms  ✓ ColorSchemes
+   8044.4 ms  ✓ PlotUtils
+   2980.7 ms  ✓ PlotThemes
+   3459.2 ms  ✓ RecipesPipeline
+  60523.1 ms  ✓ Plots
+  12 dependencies successfully precompiled in 81 seconds. 167 already precompiled.
+========================================================================
+  Welfare recovery (option 3) — 3 scenarios at known equilibria
+========================================================================
+  nthreads = 16   J = 17
+
+Initializing grids and Rouwenhorst chain …
+
+========================================================================
+  RUN 1 · 2020 baseline
+========================================================================
+  Inputs: K=14.3779  L=15.8705  τp(target)=0.145002  demog=y2020  pension=endogenous
+    inner iter 1: τp=0.144523 (Δ=4.79e-04)  pen=1.0640 (Δ=6.40e-02)  N_W=7.3704  N_R=2.1304
+    inner iter 2: τp=0.145011 (Δ=4.88e-04)  pen=1.0639 (Δ=1.72e-05)  N_W=7.3705  N_R=2.1376
+    inner iter 3: τp=0.145002 (Δ=9.13e-06)  pen=1.0639 (Δ=2.23e-06)  N_W=7.3705  N_R=2.1375
+    → locked
+  lock_at_equilibrium! wall: 18.7 min
+  Aggregates: A_dom=21.3151  L_eff=15.8729  C=11.7025  M=1.2783  Λvoid=1.1176
+  Welfare W₁(g,θ): M_θL=3.4822  M_θH=4.1432  F_θL=3.3207  F_θH=3.9649
+  Euler max log10 = -0.61   |A_dom−B−K|/K = 1.256e-04
+
+========================================================================
+  RUN 2 · C1 (2050 joint)
+========================================================================
+  Inputs: K=21.0353  L=20.3878  τp(target)=0.263791  demog=y2050  pension=endogenous
+    inner iter 1: τp=0.261932 (Δ=1.86e-03)  pen=1.0895 (Δ=8.95e-02)  N_W=9.6895  N_R=5.0760
+    inner iter 2: τp=0.263923 (Δ=1.99e-03)  pen=1.0895 (Δ=3.85e-05)  N_W=9.6898  N_R=5.1148
+    inner iter 3: τp=0.263836 (Δ=8.73e-05)  pen=1.0895 (Δ=1.19e-05)  N_W=9.6897  N_R=5.1130
+    inner iter 4: τp=0.263840 (Δ=4.03e-06)  pen=1.0895 (Δ=7.02e-07)  N_W=9.6897  N_R=5.1131
+    → locked
+  lock_at_equilibrium! wall: 25.1 min
+  Aggregates: A_dom=28.5807  L_eff=20.3913  C=16.1790  M=2.3967  Λvoid=1.2222
+  Welfare W₁(g,θ): M_θL=3.2031  M_θH=3.8277  F_θL=3.2078  F_θH=3.8269
+  Euler max log10 = -4.01   |A_dom−B−K|/K = 1.300e-01
+
+========================================================================
+  RUN 3 · C2 (2050 τp pinned)
+========================================================================
+  Inputs: K=27.7031  L=22.6294  τp(target)=0.145002  demog=y2050  pension=fixed_scaled
+    inner iter 1: τp=0.145002 (Δ=0.00e+00)  pen=0.7079 (Δ=2.92e-01)  N_W=9.6969  N_R=5.1053
+    inner iter 2: τp=0.145002 (Δ=0.00e+00)  pen=0.7253 (Δ=1.74e-02)  N_W=9.6957  N_R=4.9828
+    inner iter 3: τp=0.145002 (Δ=0.00e+00)  pen=0.7242 (Δ=1.09e-03)  N_W=9.6958  N_R=4.9903
+    inner iter 4: τp=0.145002 (Δ=0.00e+00)  pen=0.7242 (Δ=4.52e-05)  N_W=9.6958  N_R=4.9899
+    inner iter 5: τp=0.145002 (Δ=0.00e+00)  pen=0.7242 (Δ=2.26e-06)  N_W=9.6958  N_R=4.9900
+    → locked
+  lock_at_equilibrium! wall: 31.7 min
+  Aggregates: A_dom=37.5671  L_eff=22.6328  C=18.6152  M=2.1663  Λvoid=1.6429
+  Welfare W₁(g,θ): M_θL=3.2873  M_θH=3.9991  F_θL=3.1683  F_θH=3.8794
+  Euler max log10 = -5.43   |A_dom−B−K|/K = 1.484e-04
+
+Wrote /home/hectorjuan/Dalila/Missions/Funded/BID2/GE-now with Gender/demographic_experiment/results/aging_comparison_gap.csv
+Wrote /home/hectorjuan/Dalila/Missions/Funded/BID2/GE-now with Gender/demographic_experiment/results/welfare_panel_gap.png
+
+Done.

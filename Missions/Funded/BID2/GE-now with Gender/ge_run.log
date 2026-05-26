@@ -1,0 +1,87 @@
+Initializing grids …  (J = 17, 2 sexes × 2 skills = 4 types)
+INITIAL GE-Gender  (K₀=12.0, L₀=10.0, damp=0.5, tol=0.0001)
+iter   K        L        K/L      r(5y)    w        τp       DIFF/Y
+─────  ───────  ───────  ───────  ───────  ───────  ───────  ─────────────
+1      12.000   10.000   1.200    0.1634   1.0935   0.1302   -3.486966e-01
+2      10.051   14.433   0.696    0.3770   0.8989   0.1400   -2.314689e-01
+3      15.901   15.789   1.007    0.2243   1.0266   0.1368   -3.344989e-02
+4      13.635   16.883   0.808    0.3113   0.9482   0.1391   -4.391525e-02
+5      15.422   17.164   0.898    0.2677   0.9853   0.1383   -6.209903e-03
+6      14.914   17.428   0.856    0.2873   0.9682   0.1388   -8.665880e-03
+7      15.265   17.501   0.872    0.2796   0.9748   0.1386   -1.787925e-03
+8      15.190   17.560   0.865    0.2829   0.9719   0.1387   -1.833719e-03
+9      15.254   17.580   0.868    0.2816   0.9730   0.1387   -5.080022e-04
+10     15.245   17.593   0.867    0.2822   0.9725   0.1387   -4.012268e-04
+11     15.257   17.598   0.867    0.2820   0.9727   0.1387   -1.326215e-04
+12     15.256   17.601   0.867    0.2821   0.9726   0.1387   -9.017942e-05
+13     15.258   17.602   0.867    0.2821   0.9727   0.1387   -3.396268e-05
+ERROR: LoadError: AssertionError: budget residual exceeds 1e-8
+Stacktrace:
+ [1] diagnostic_gates(DIFF::Float64, K::Float64, L::Float64, A_dom::Float64, C::Float64, M::Float64, Y::Float64)
+   @ Main ~/Dropbox/BID/Codes/New codes/archivos julia/GE-Gender/ge_model_gender.jl:913
+ [2] main()
+   @ Main ~/Dropbox/BID/Codes/New codes/archivos julia/GE-Gender/ge_model_gender.jl:1133
+ [3] top-level scope
+   @ ~/Dropbox/BID/Codes/New codes/archivos julia/GE-Gender/ge_model_gender.jl:1139
+ [4] include(mod::Module, _path::String)
+   @ Base ./Base.jl:306
+ [5] exec_options(opts::Base.JLOptions)
+   @ Base ./client.jl:317
+ [6] _start()
+   @ Base ./client.jl:550
+in expression starting at /Users/diegoascarzamendoza/Dropbox/BID/Codes/New codes/archivos julia/GE-Gender/ge_model_gender.jl:1139
+  → CONVERGED at iter 13
+
+══════════════════════════════════════════════════════════════
+ Stationary GE — GENDER extension (Modelmay)
+══════════════════════════════════════════════════════════════
+  Build:  J = 17,  2 sexes × 2 skills = 4 types
+  K        = 15.25806
+  L        = 17.60207
+  K/L      = 0.86683
+  Y        = 26.75103
+  K/Y (5y) = 0.57037   |  K/Y annual = 0.114
+  r (5-yr) = 0.28205   |  r annual   = 5.0947%
+  w        = 0.97265
+  C        = 13.01975   |  C/Y = 48.67%
+  M        = 1.28409   |  M/Y = 4.80%
+  G        = 5.08270   |  G/Y = 19.00%
+  δK       = 5.32683   |  δK/Y = 19.91%
+  Λ_void   = 1.26026   |  Λ_void/Y = 4.71%
+  A_dom    = 22.61830
+  B (debt) = 7.36015
+  τp       = 0.13872
+  pen      = 1.16250
+  N^W      = 7.36375   |  N^R = 2.04307   |  N^R/N^W = 0.27745
+
+  Goods market residual (Y-C-M-(δ+n_p)K-G-Λ_void)/Y = -3.396268e-05
+  Gov BC residual ((rn-n_p)B = primary)             = +0.000000e+00
+
+  Welfare object 𝒲₁(g,θ) — expected lifetime utility at birth:
+                  θ_L         θ_H
+    male         3.57688     4.23350
+    female       3.57688     4.23350
+    birth-share-weighted aggregate 𝒲₁ = 3.90519
+
+  Euler residual |r|/u_c (n=691702 interior cells):
+     mean log10 = -7.833,  max log10 = -5.470,  p95 log10 = -6.067
+  Wrote ge_lifecycle.csv, ge_summary.csv, ge_history.csv  (under /Users/diegoascarzamendoza/Dropbox/BID/Codes/New codes/archivos julia/GE-Gender)
+
+─── Diagnostic gates ────────────────────────────────────────
+  budget residual      max = 7.997e-06   (gate < 1e-8)
+  consumption          min = 7.259e-07   floored cells = 0
+  savings a'           min = 0.000e+00   max = 3.395e+02
+  distribution Φ       min = 0.000e+00   all finite = true
+  newborn mass ΣΦ[1]       = 1.000000000000   (gate ≈ 1)
+  asset-top mass share     = 0.000e+00   (gate < 1e-3)
+  terminal |a',m,ℓ| at j=J = 0.000e+00   (gate = 0)
+  Euler residual log10 max = -5.470       (gate < -3)
+  two-sex identity max     = 0.000e+00   (gate < 1e-10, symmetric stub)
+  cohort-share invariant   = 1.665e-15   (gate < 1e-8)
+  health h' range          = [0.0082, 1.0000]   below-h_l cells = 12 (soft)
+  medical m* at grid top   = 2.498% of mass (soft, near-budget corner)
+  m* parabolic refinement  = 293992 cells refined   (refine_m = true)
+  goods market DIFF/Y      = -3.396e-05  (gate < 1e-04)
+  capital market |K-(A_dom-B)|/K = 5.695e-06  (gate < 1e-04)
+  government BC residual/Y = +0.000e+00  (gate < 1e-6)
+julia --project=. GE-Gender/ge_model_gender.jl  8517.62s user 28.29s system 95% cpu 2:28:32.17 total

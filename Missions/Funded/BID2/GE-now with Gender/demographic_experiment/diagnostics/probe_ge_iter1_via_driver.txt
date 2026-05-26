@@ -1,0 +1,29 @@
+========================================================================
+  Probe iter 1 — WITH driver redefinitions applied
+========================================================================
+  nthreads=16  J=17  damp_ge=0.30  active_τω[]=0.2000  τw=0.2000
+
+  labor_supply sanity at (j=5,h=0.5,η=0,M,θL): ν=1.8650
+    redef call          → ℓ = 0.296480
+    manual (τw=0.20)   → ℓ = 0.296480
+    manual (active_τω) → ℓ = 0.296480
+
+── iter 1 ──
+  prices: r=0.1634 w=1.0935 rn=0.1308 τp=0.1000 pen=0.3000
+  household solve: 271.5 s  (refinement: 307734 cells)
+  N_W=7.3694  N_R=2.0066  Σ Φ=9.3760
+  after update_pension_taxes!: τp=0.1361  pen=0.7419  wn=0.7259
+  aggregates: A_dom=24.1903  L_new=16.9679  C=11.4661  M=0.9362  Λvoid=1.2819  Y=17.0854  B=14.6407
+  K_target=9.5495  L_new=16.9679  →  K_upd=11.2649  L_upd=12.0904
+┌ Warning: Assignment to `total_νℓ` in soft scope is ambiguous because a global variable by the same name exists: `total_νℓ` will be treated as a new local. Disambiguate by using `local total_νℓ` to suppress this warning or `global total_νℓ` to assign to the existing global variable.
+└ @ ~/Dalila/Missions/Funded/BID2/GE-now with Gender/demographic_experiment/probe_ge_iter1_via_driver.jl:121
+┌ Warning: Assignment to `zero_ℓ_cells` in soft scope is ambiguous because a global variable by the same name exists: `zero_ℓ_cells` will be treated as a new local. Disambiguate by using `local zero_ℓ_cells` to suppress this warning or `global zero_ℓ_cells` to assign to the existing global variable.
+└ @ ~/Dalila/Missions/Funded/BID2/GE-now with Gender/demographic_experiment/probe_ge_iter1_via_driver.jl:122
+┌ Warning: Assignment to `nonzero_cells` in soft scope is ambiguous because a global variable by the same name exists: `nonzero_cells` will be treated as a new local. Disambiguate by using `local nonzero_cells` to suppress this warning or `global nonzero_cells` to assign to the existing global variable.
+└ @ ~/Dalila/Missions/Funded/BID2/GE-now with Gender/demographic_experiment/probe_ge_iter1_via_driver.jl:122
+ERROR: LoadError: UndefVarError: `total_νℓ` not defined in local scope
+Suggestion: check for an assignment to a local variable that shadows a global of the same name.
+Stacktrace:
+ [1] top-level scope
+   @ ~/Dalila/Missions/Funded/BID2/GE-now with Gender/demographic_experiment/probe_ge_iter1_via_driver.jl:121
+in expression starting at /home/hectorjuan/Dalila/Missions/Funded/BID2/GE-now with Gender/demographic_experiment/probe_ge_iter1_via_driver.jl:118
