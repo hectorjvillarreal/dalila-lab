@@ -1,0 +1,31 @@
+Wrote results/stationary_comparison.csv
+
+======================================================================
+  SEMINAR TABLE — Stationary policy experiments, Mexico baseline
+======================================================================
+                                Baseline        κ=0.30      τm=−0.20
+  K (capital)                     14.382      16.479      15.039
+  Y (output)                      24.514      26.534      24.966
+  r (annual, %)                    4.81%       4.24%       4.54%
+  w (wage)                         0.988       1.020       1.003
+  τp                              14.50%       8.53%      14.90%
+  pen                              1.064       0.691       1.084
+  B/Y                             28.29%      31.09%      21.11%
+  C/Y                             47.74%      46.77%      46.86%
+  M/Y                              5.22%       4.39%       5.86%
+
+  Welfare at birth W₁(g,θ):
+    M, θL                         3.4824      3.3645      3.5518
+    M, θH                         4.1434      4.0772      4.2062
+    F, θL                         3.3210      3.1345      3.4041
+    F, θH                         3.9652      3.8330      4.0396
+  (aging RUN 1 cross-check: M,θL=3.482 M,θH=4.143 F,θL=3.321 F,θH=3.965)
+
+  Sanity gates (§5):
+    [1] DIFF/Y < 1e-3      : base +9.2e-05 PASS | κ -9.8e-05 PASS | τm +7.8e-05 PASS
+    [2] Euler log10 < -3   : base -4.83 PASS | κ -5.52 PASS | τm -4.97 PASS
+    [4] κ=0.30 → τp falls  : 14.50% → 8.53% PASS
+    [5] τm=−0.20 → M/Y rises: 5.215% → 5.858% PASS
+    [6] symmetric |M-F|<1e-6: base 1.8e-01 ⚠ FAIL | κ 2.4e-01 ⚠ FAIL | τm 1.7e-01 ⚠ FAIL
+
+⚠ ONE OR MORE GATES FAILED — inspect above

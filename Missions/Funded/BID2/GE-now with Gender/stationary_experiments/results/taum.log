@@ -1,0 +1,33 @@
+WARNING: redefinition of constant Main.τm. This may fail, cause incorrect answers, or produce other errors.
+WARNING: redefinition of constant Main.K_init. This may fail, cause incorrect answers, or produce other errors.
+WARNING: redefinition of constant Main.L_init. This may fail, cause incorrect answers, or produce other errors.
+Initializing grids and Rouwenhorst chain …
+  init done: n_p = 0.051010   gender_gap = true   τm = -0.2000
+
+======================================================================
+  RUN: τm=−0.20 (health subsidy)
+======================================================================
+INITIAL GE-Gender  (K₀=14.378, L₀=15.87, damp=0.3, tol=0.0001)
+iter   K        L        K/L      r(5y)    w        τp       DIFF/Y
+─────  ───────  ───────  ───────  ───────  ───────  ───────  ─────────────
+1      14.378   15.870   0.906    0.2645   0.9882   0.1444   -2.967035e-02
+2      16.917   15.999   1.057    0.2067   1.0448   0.1487   +9.875985e-03
+3      15.628   16.070   0.973    0.2372   1.0138   0.1490   +8.466942e-03
+4      15.252   16.049   0.950    0.2460   1.0054   0.1491   +4.813287e-03
+5      15.141   16.018   0.945    0.2480   1.0034   0.1491   +3.055436e-03
+6      15.099   15.992   0.944    0.2484   1.0030   0.1491   +2.069317e-03
+7      15.078   15.973   0.944    0.2485   1.0030   0.1491   +1.428720e-03
+8      15.065   15.959   0.944    0.2485   1.0030   0.1491   +9.875383e-04
+9      15.057   15.950   0.944    0.2485   1.0030   0.1490   +7.027281e-04
+10     15.050   15.943   0.944    0.2485   1.0030   0.1490   +4.806040e-04
+11     15.046   15.939   0.944    0.2485   1.0030   0.1490   +3.330609e-04
+12     15.043   15.936   0.944    0.2485   1.0030   0.1490   +2.311879e-04
+13     15.041   15.933   0.944    0.2485   1.0030   0.1490   +1.606649e-04
+14     15.040   15.932   0.944    0.2485   1.0030   0.1490   +1.116678e-04
+15     15.039   15.931   0.944    0.2485   1.0030   0.1490   +7.761626e-05
+  → CONVERGED at iter 15
+  → K=15.0390 L=15.9308 Y=24.9661 r(ann)=4.539% τp=0.1490 B/Y=0.2111
+  DIFF/Y=+7.76e-05  Euler max log10=-4.97  M/Y=0.0586
+  Symmetric-primitives identity: |M-F| at θL=1.48e-01, at θH=1.67e-01
+  → wrote results/taum20_results.csv
+run_taum.jl done.
