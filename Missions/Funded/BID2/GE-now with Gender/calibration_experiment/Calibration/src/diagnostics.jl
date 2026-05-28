@@ -145,17 +145,69 @@ function plot_moment_match(m_sim, m_dat, ses, names; outpath::String)
     return p
 end
 
-function plot_jacobian_heatmap(J, target_names, param_names; outpath::String)
-    # Normalize each column by its max-abs so the heatmap is readable.
-    Jn = copy(J)
-    for k in 1:size(Jn, 2)
-        s = maximum(abs.(Jn[:, k]))
-        s > 0 && (Jn[:, k] ./= s)
+function plot_jacobian_heatmap(J, target_names, param_names; outpath::String,
+                                θ::Union{Nothing,Vector{Float64}}=nothing,
+                                lb::Union{Nothing,Vector{Float64}}=nothing,
+                                ub::Union{Nothing,Vector{Float64}}=nothing,
+                                transforms::Union{Nothing,Vector{Symbol}}=nothing,
+                                m_tgt::Union{Nothing,Vector{Float64}}=nothing)
+    # When θ / bounds / transforms / m_tgt are supplied, plot **target-relative
+    # elasticity in raw-θ space** (chain-rule-corrected). This makes rows
+    # comparable — fixes the pathology where col-normalization is dominated by
+    # vsl_usd (~10^6) and every other moment row collapses to zero.
+    #
+    # Per transform, J^x = ∂m/∂x is converted to ∂m/∂θ via dθ/dx, then scaled
+    # by θ/m to get an elasticity (or semi-elasticity for :identity, where the
+    # natural ratio θ/m blows up when θ_init = 0). The combined factor applied
+    # to (J^x / m_tgt) is:
+    #   :log      f = 1                                   (elasticity)
+    #   :logit    f = θ·(ub-lb) / [(θ-lb)·(ub-θ)]         (elasticity at θ)
+    #   :identity f = (ub-lb)/2                           (semi-elast per half-range)
+    # Missing any of the optional kwargs falls back to the legacy col-norm plot.
+    use_elast = θ !== nothing && lb !== nothing && ub !== nothing &&
+                transforms !== nothing && m_tgt !== nothing
+    if use_elast
+        S = similar(J)
+        col_labels = String[]
+        for k in 1:size(J, 2)
+            t = transforms[k]
+            factor, suffix = if t === :log
+                (1.0, "elast")
+            elseif t === :logit
+                denom = (θ[k] - lb[k]) * (ub[k] - θ[k])
+                f = denom > 0 ? θ[k] * (ub[k] - lb[k]) / denom : 0.0
+                (f, "elast")
+            elseif t === :identity
+                Δ = (ub[k] - lb[k]) / 2
+                (Δ, "semi/$(round(Δ; digits=3))")
+            else
+                (1.0, "?")
+            end
+            S[:, k] = J[:, k] .* factor ./ m_tgt
+            push!(col_labels, "$(param_names[k])\n($suffix)")
+        end
+        vmax = maximum(abs.(S))
+        vmax = vmax > 0 ? vmax : 1.0
+        p = heatmap(col_labels, target_names, S;
+                    xlabel = "Parameter (target-relative)",
+                    ylabel = "Moment",
+                    title  = "Jacobian — target-relative elasticity at θ",
+                    color  = :balance, clim = (-vmax, vmax),
+                    xrotation = 30,
+                    size   = (800, 500),
+                    margin = 4 * Plots.mm)
+    else
+        # Legacy column-normalized plot (kept for backward compatibility).
+        Jn = copy(J)
+        for k in 1:size(Jn, 2)
+            s = maximum(abs.(Jn[:, k]))
+            s > 0 && (Jn[:, k] ./= s)
+        end
+        p = heatmap(param_names, target_names, Jn;
+                    xlabel = "Parameter (col-normalized)", ylabel = "Moment",
+                    title  = "Numerical Jacobian (column-normalized)",
+                    color = :balance, clim = (-1, 1))
     end
-    p = heatmap(param_names, target_names, Jn;
-                xlabel = "Parameter (col-normalized)", ylabel = "Moment",
-                title  = "Numerical Jacobian (column-normalized)",
-                color = :balance, clim = (-1, 1))
     savefig(p, outpath)
     return p
 end
@@ -220,7 +272,12 @@ function full_diagnostics_report(obj, x_hat::Vector{Float64},
                        io.targets.names;
                        outpath = joinpath(diag_dir, "01_moment_match.png"))
     plot_jacobian_heatmap(J, io.targets.names, ti.names;
-                           outpath = joinpath(diag_dir, "02_jacobian.png"))
+                           outpath    = joinpath(diag_dir, "02_jacobian.png"),
+                           θ          = θ_econ,
+                           lb         = ti.lb,
+                           ub         = ti.ub,
+                           transforms = ti.transform,
+                           m_tgt      = io.targets.values)
     plot_eval_log_trace(obj.eval_log.path;
                          outpath = joinpath(diag_dir, "03_objective_trace.png"))
 
