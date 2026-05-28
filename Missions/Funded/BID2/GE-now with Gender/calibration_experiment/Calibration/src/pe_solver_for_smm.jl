@@ -157,12 +157,13 @@ const π_η       = zeros(Nη, Nη)
 const π_η_erg   = zeros(Nη)   # ergodic distribution of η
 
 # Scratch buffers required by linint_Grow (length-1 mutable arrays).
-const ial_buf      = Array{Int64}(undef, 1)
-const iar_buf      = Array{Int64}(undef, 1)
-const varphi_a_buf = zeros(1)
-const ihl_buf      = Array{Int64}(undef, 1)
-const ihr_buf      = Array{Int64}(undef, 1)
-const varphi_h_buf = zeros(1)
+const _NT_BUF      = Threads.maxthreadid()    # buffers allocated once for the thread-pool ceiling
+const ial_buf      = [Array{Int64}(undef, 1) for _ in 1:_NT_BUF]
+const iar_buf      = [Array{Int64}(undef, 1) for _ in 1:_NT_BUF]
+const varphi_a_buf = [zeros(1)               for _ in 1:_NT_BUF]
+const ihl_buf      = [Array{Int64}(undef, 1) for _ in 1:_NT_BUF]
+const ihr_buf      = [Array{Int64}(undef, 1) for _ in 1:_NT_BUF]
+const varphi_h_buf = [zeros(1)               for _ in 1:_NT_BUF]
 
 # Count of cells where the m* parabolic refinement improved on the grid node.
 const n_refined    = Ref(0)
@@ -285,17 +286,24 @@ end
 # ─── Bilinear interpolation of policies on (a, h) at fixed (is, ig, iθ) ───────
 
 # Returns (ial, iar, φ_a) for asset a_prime.
+# Uses per-thread scratch (linint_Grow writes the index/weight into the passed
+# 1-element buffers in-place; with shared buffers across threads this races —
+# see ial_buf/iar_buf/varphi_a_buf definitions).
 function asset_interp(a_prime::Float64)
-    ial, iar, φ_a = linint_Grow(a_prime, a_l, a_u, a_grow, NA, ial_buf, iar_buf, varphi_a_buf)
+    tid = Threads.threadid()
+    ial, iar, φ_a = linint_Grow(a_prime, a_l, a_u, a_grow, NA,
+                                 ial_buf[tid], iar_buf[tid], varphi_a_buf[tid])
     ial = max(min(ial, NA - 1), 0)
     iar = max(min(iar, NA), 1)
     φ_a = clamp(φ_a, 0.0, 1.0)
     return ial, iar, φ_a
 end
 
-# Returns (ihl, ihr, φ_h) for h.
+# Returns (ihl, ihr, φ_h) for h. Same per-thread scratch rationale as above.
 function health_interp(h::Float64)
-    ihl, ihr, φ_h = linint_Grow(h, h_l, h_u, h_grow, NH, ihl_buf, ihr_buf, varphi_h_buf)
+    tid = Threads.threadid()
+    ihl, ihr, φ_h = linint_Grow(h, h_l, h_u, h_grow, NH,
+                                 ihl_buf[tid], ihr_buf[tid], varphi_h_buf[tid])
     ihl = max(min(ihl, NH - 1), 0)
     ihr = max(min(ihr, NH), 1)
     φ_h = clamp(φ_h, 0.0, 1.0)
@@ -573,10 +581,19 @@ end
 # Driver for all four (sex, skill) types.
 function solve_household(; verbose::Bool=false)
     n_refined[] = 0
-    for iθ in 1:Nθ, ig in 1:Ng
+    # Embarrassingly parallel (per the file header note): the four (g,θ)
+    # type-solves write to non-overlapping slices of the global policy arrays
+    # (each task owns its (ig, iθ) index pair), so concurrent execution is
+    # race-free for the numeric output. `n_refined[]` is a diagnostic counter
+    # that may race, but it is not consumed by the SMM hot path.
+    # Run with `julia -t 4` (or more) to get the speedup; `-t 1` falls back
+    # to serial-equivalent execution.
+    types = vec([(ig, iθ) for iθ in 1:Nθ, ig in 1:Ng])  # 4 (ig,iθ) pairs
+    Threads.@threads :static for k in eachindex(types)
+        ig, iθ = types[k]
         if verbose
             sexname = ig == 1 ? "male  " : "female"
-            @printf "Solving household for (%s, skill %d, θ = %+.3f)\n" sexname iθ θ_grid[iθ]
+            @printf "Solving household for (%s, skill %d, θ = %+.3f) [thread %d]\n" sexname iθ θ_grid[iθ] Threads.threadid()
             flush(stdout)
         end
         solve_household_for_type(ig, iθ)
