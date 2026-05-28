@@ -1,0 +1,5 @@
+price,value,source
+r,0.26445,GE-Gender gender-gap baseline (5-yr return)
+w,0.98825,GE-Gender gender-gap baseline
+tau_p,0.14500,GE-Gender gender-gap baseline
+pen,1.06407,GE-Gender gender-gap baseline (pension flow per retiree)
