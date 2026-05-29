@@ -239,30 +239,49 @@ function full_diagnostics_report(obj, x_hat::Vector{Float64},
                                   io::NamedTuple, out_dir::String;
                                   h_fd::Float64 = 1e-4)
     ti = io.theta_init
-    J, m_sim = numerical_jacobian(obj, x_hat; h=h_fd)
+    fi = free_idx(ti)
+    n_full, n_free = length(ti.names), length(fi)
 
-    # x-space SEs
-    se_x = sandwich_se(J, io.targets.ses)
-    # Convert x-space SEs to econ-space SEs by delta method:
-    # θ_econ_i = g_i(x_i) for elementwise transform g_i;
-    # SE_θ_i ≈ |g_i'(x_i)| · SE_x_i
-    θ_econ = vec_from_unconstrained(x_hat, ti)
-    se_econ = similar(se_x)
-    for i in eachindex(x_hat)
+    # Auto-detect whether x_hat is full-Np (from jacobian mode at theta_init)
+    # or free-only (post-multistart with frozen params). In both cases the
+    # numerical Jacobian and SEs are computed over the FREE subset only — a
+    # frozen parameter has zero sensitivity by construction.
+    obj_for_fd = obj           # the callable we feed to numerical_jacobian
+    x_free_hat = x_hat
+    if length(x_hat) == n_full && n_free < n_full
+        x_free_hat = x_hat[fi]
+        obj_for_fd = make_free_objective(obj)
+    elseif length(x_hat) == n_free && n_free < n_full
+        obj_for_fd = make_free_objective(obj)
+    end
+
+    J, m_sim = numerical_jacobian(obj_for_fd, x_free_hat; h=h_fd)
+    se_x_free = sandwich_se(J, io.targets.ses)
+
+    # Reconstruct full x for reporting θ_econ; SEs for frozen are reported NaN.
+    x_full_hat = (length(x_hat) == n_full) ? x_hat : inject_full(x_hat, ti)
+    θ_econ_full = vec_from_unconstrained(x_full_hat, ti)
+    se_econ_full = fill(NaN, n_full)
+    for (k, i) in enumerate(fi)
         t = ti.transform[i]
         g_prime = if t === :log
-            exp(x_hat[i])
+            exp(x_full_hat[i])
         elseif t === :logit
-            (ti.ub[i] - ti.lb[i]) * exp(x_hat[i]) / (1.0 + exp(x_hat[i]))^2
+            (ti.ub[i] - ti.lb[i]) * exp(x_full_hat[i]) / (1.0 + exp(x_full_hat[i]))^2
         elseif t === :identity
             1.0
         else
             NaN
         end
-        se_econ[i] = abs(g_prime) * se_x[i]
+        se_econ_full[i] = abs(g_prime) * se_x_free[k]
     end
 
-    write_diagnostics(out_dir, θ_econ, ti.names, se_econ, J,
+    # Pad J to n_full columns (frozen columns = 0) so jacobian.csv, the heatmap
+    # axes, and downstream tooling all see the canonical 6-param layout.
+    J_full = zeros(size(J, 1), n_full)
+    J_full[:, fi] .= J
+
+    write_diagnostics(out_dir, θ_econ_full, ti.names, se_econ_full, J_full,
                        m_sim, io.targets.values, io.targets.ses,
                        io.targets.names)
 
@@ -271,9 +290,9 @@ function full_diagnostics_report(obj, x_hat::Vector{Float64},
     plot_moment_match(m_sim, io.targets.values, io.targets.ses,
                        io.targets.names;
                        outpath = joinpath(diag_dir, "01_moment_match.png"))
-    plot_jacobian_heatmap(J, io.targets.names, ti.names;
+    plot_jacobian_heatmap(J_full, io.targets.names, ti.names;
                            outpath    = joinpath(diag_dir, "02_jacobian.png"),
-                           θ          = θ_econ,
+                           θ          = θ_econ_full,
                            lb         = ti.lb,
                            ub         = ti.ub,
                            transforms = ti.transform,
@@ -281,6 +300,6 @@ function full_diagnostics_report(obj, x_hat::Vector{Float64},
     plot_eval_log_trace(obj.eval_log.path;
                          outpath = joinpath(diag_dir, "03_objective_trace.png"))
 
-    return (; θ_hat = θ_econ, θ_se = se_econ, J,
+    return (; θ_hat = θ_econ_full, θ_se = se_econ_full, J = J_full,
             m_sim, m_dat = io.targets.values, ses = io.targets.ses)
 end

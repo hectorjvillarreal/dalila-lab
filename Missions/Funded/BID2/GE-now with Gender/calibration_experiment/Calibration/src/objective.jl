@@ -162,7 +162,7 @@ function SmmObjective(io::NamedTuple, eval_log::EvalLog; verify::Bool=false)
                         copy(io.targets.names))
 end
 
-# Make it callable
+# Make it callable. Always expects the FULL (length-Np) unconstrained vector.
 function (obj::SmmObjective)(x::Vector{Float64})
     t0 = time()
     # Transform x → economic params → NamedTuple in apply_theta! field order
@@ -183,4 +183,55 @@ function (obj::SmmObjective)(x::Vector{Float64})
     secs = time() - t0
     log_eval!(obj.eval_log, θ_econ, m_sim, Q, secs, status)
     return Q
+end
+
+# ─── Frozen-mask support: optimize over the free subset only ─────────────────
+# When some theta_init.csv rows have frozen=1 (e.g. xi=0.5 to break the Xi/xi
+# VSL ridge), the optimizer should only search over the free dimensions. The
+# helpers below subset/inject the unconstrained x-vector; the per-eval logging
+# still records the FULL θ_econ vector so eval_log is unchanged in schema.
+
+"""
+    free_idx(ti) -> Vector{Int}
+Indices of non-frozen params (1-based). Falls back to all-free if `ti.frozen`
+field is missing (older NamedTuples).
+"""
+free_idx(ti::NamedTuple) =
+    hasproperty(ti, :frozen) ? findall(.!ti.frozen) : collect(1:length(ti.names))
+
+"""
+    inject_full(x_free, ti) -> Vector{Float64}
+Given the unconstrained-x vector over free params only, build the full Np-long
+unconstrained-x vector by inserting `to_unconstrained(init)` for every frozen
+param. Order of `x_free` is the order of `free_idx(ti)`.
+"""
+function inject_full(x_free::Vector{Float64}, ti::NamedTuple)
+    n = length(ti.names)
+    x_full = zeros(n)
+    fi = free_idx(ti)
+    length(x_free) == length(fi) ||
+        error("inject_full: got $(length(x_free))-vec; expected $(length(fi)) free dims")
+    # Free positions: copy from x_free
+    for (k, i) in enumerate(fi)
+        x_full[i] = x_free[k]
+    end
+    # Frozen positions: x = to_unconstrained(init)
+    frz = hasproperty(ti, :frozen) ? ti.frozen : falses(n)
+    for i in 1:n
+        if frz[i]
+            x_full[i] = to_unconstrained(ti.init[i], ti.lb[i], ti.ub[i], ti.transform[i])
+        end
+    end
+    return x_full
+end
+
+"""
+    make_free_objective(obj) -> Function
+Returns a closure `obj_free(x_free)` that injects frozen values to form the
+full x, calls the underlying SmmObjective, and returns Q. Used by the
+multistart driver so Nelder-Mead only searches the free subspace.
+"""
+function make_free_objective(obj::SmmObjective)
+    ti = obj.io.theta_init
+    return x_free::Vector{Float64} -> obj(inject_full(x_free, ti))
 end

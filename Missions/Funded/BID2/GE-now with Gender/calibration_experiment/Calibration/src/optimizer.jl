@@ -59,25 +59,37 @@ function run_multistart(obj, io::NamedTuple;
                         simplex_tol::Float64 = 1e-5,
                         verbose::Bool = false)
     ti = io.theta_init
-    x_init = vec_to_unconstrained(copy(ti.init), ti)
+    fi = free_idx(ti)                                  # only free dims optimize
+    n_free = length(fi)
+    x_init_full = vec_to_unconstrained(copy(ti.init), ti)
+    x_init_free = x_init_full[fi]
+    obj_free    = make_free_objective(obj)             # injects frozen, calls obj
+
+    if verbose
+        n_frozen = length(ti.names) - n_free
+        if n_frozen > 0
+            @printf "Multistart over %d free of %d params (%d frozen: %s)\n" n_free length(ti.names) n_frozen join(ti.names[ti.frozen], ", ")
+        end
+    end
+
     rng = MersenneTwister(seed)
 
     starts = Vector{Vector{Float64}}(undef, n_starts)
-    starts[1] = copy(x_init)                                # exact init
+    starts[1] = copy(x_init_free)                      # exact init (free subset)
     for k in 2:n_starts
-        starts[k] = x_init .+ jitter .* randn(rng, length(x_init))
+        starts[k] = x_init_free .+ jitter .* randn(rng, n_free)
     end
 
     results = []
     for (k, x0) in enumerate(starts)
         verbose && println("\n──── Multistart $(k)/$(n_starts) ────")
         try
-            res = run_one_start(obj, x0; maxiter=maxiter,
+            res = run_one_start(obj_free, x0; maxiter=maxiter,
                                 simplex_tol=simplex_tol, verbose=verbose)
             push!(results, (; start_idx=k, res...))
             verbose && @printf "  start %d: Q = %.6e, iter = %d, conv = %s\n" k res.Q_hat res.n_iter res.converged
         catch e
-            push!(results, (; start_idx=k, x_hat=fill(NaN, length(x0)),
+            push!(results, (; start_idx=k, x_hat=fill(NaN, n_free),
                             Q_hat=Inf, n_iter=0, converged=false))
             verbose && println("  start $k: FAILED with $(typeof(e))")
         end

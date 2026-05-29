@@ -1,7 +1,7 @@
-param,init,lb,ub,transform,description
-Psi,14.0,1.0,50.0,log,Labor-disutility scale (Ψ in paper §4.2.2)
-Xi,0.50,0.01,5.0,log,Health-amenity scale (Ξ)
-xi,0.50,0.01,0.99,logit,Health-amenity curvature (ξ)
-H_0,0.30,0.01,5.0,log,Health-production scale at age 1 (H̄_0)
-h_slope,0.00,-0.10,0.10,identity,Age-decline of health production (h^slope)
-zeta_h,0.50,0.01,0.99,logit,Health-production curvature (ζ_h)
+param,init,lb,ub,transform,frozen,description
+Psi,14.0,1.0,50.0,log,0,Labor-disutility scale (Ψ in paper §4.2.2)
+Xi,0.50,0.01,5.0,log,0,Health-amenity scale (Ξ)
+xi,0.50,0.01,0.99,logit,1,Health-amenity curvature (ξ) — FROZEN at 0.5 to resolve the Xi/xi VSL ridge (see provenance.md and outputs/diagnostics/02_jacobian.png)
+H_0,0.30,0.01,5.0,log,0,Health-production scale at age 1 (H̄_0)
+h_slope,0.00,-0.10,0.10,identity,0,Age-decline of health production (h^slope)
+zeta_h,0.50,0.01,0.99,logit,0,Health-production curvature (ζ_h)

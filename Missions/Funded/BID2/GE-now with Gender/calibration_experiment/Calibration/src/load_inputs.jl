@@ -140,17 +140,22 @@ function load_theta_init(dir::String)
     h, r = read_csv(joinpath(dir, "config", "theta_init.csv"))
     cn, ci, cl, cu, ct = col(h, "param"), col(h, "init"), col(h, "lb"),
                           col(h, "ub"), col(h, "transform")
+    # `frozen` column is optional — if absent, all params are free.
+    cfrz = findfirst(==("frozen"), h)
     names     = [row[cn] for row in r]
     init      = [parse(Float64, row[ci]) for row in r]
     lb        = [parse(Float64, row[cl]) for row in r]
     ub        = [parse(Float64, row[cu]) for row in r]
     transform = [Symbol(row[ct]) for row in r]
+    frozen    = cfrz === nothing ?
+                fill(false, length(names)) :
+                [parse(Int, row[cfrz]) != 0 for row in r]
     length(names) == 6 || @warn "theta_init.csv has $(length(names)) rows; expected 6"
     for t in transform
         t in (:log, :logit, :identity) || error("unknown transform '$t' in theta_init.csv (expected :log, :logit, :identity)")
     end
     all(init .>= lb) && all(init .<= ub) || error("theta_init.csv: init values must lie in [lb, ub]")
-    return (; names, init, lb, ub, transform)
+    return (; names, init, lb, ub, transform, frozen)
 end
 
 # ─── 5. usd_scale (for VSL) ─────────────────────────────────────────────────
