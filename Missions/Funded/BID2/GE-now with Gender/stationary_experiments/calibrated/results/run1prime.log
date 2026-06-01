@@ -1,0 +1,67 @@
+========================================================================
+  RUN 1' — Harmonized calibrated 2020 baseline (runs 2-4 sequence)
+========================================================================
+  Source     : /home/hectorjuan/Dalila/Missions/Funded/BID2/GE-now with Gender/ge_model_gender.jl
+  J=17  gender_gap=true  threads=4
+  Calibrated : Ψ=13.452490 Ξ=0.274472 ξ=0.5000 H̄₀=0.247474 h_slope=-0.035807 ζ_h=0.579138
+  θ_L=-0.3726 θ_H=0.3726  e_age: Milo ENOE 2×J (female genuine profile)
+  Harmonized : ρ_AR=0.7820 σ_ε=0.2650  π_birth=[0.3927 0.1173; 0.3822 0.1078] (INEGI asym)
+
+Initializing grids and Rouwenhorst chain …
+  HARMONIZED AR(1): rebuilding Rouwenhorst chain with ρ=0.7820 σ_ε=0.2650 (stubs were ρ=0.98 σ_ε=0.05)
+  CHECK η_grid range = [-2.0231, 2.0231]  (wider with σ_ε=0.265 than the 0.05 stub)
+  CHECK e_age[1,1:3]=1.0000,1.2718,1.3665  e_age[2,1:3]=0.8350,0.9726,1.0615
+  CHECK θ_grid=-0.3726,0.3726
+  CHECK π_birth=[0.3927 0.1173; 0.3822 0.1078]  sum=1.000000
+  CHECK disutility_of_labor(1.0)=4.484163 (= Ψ/(1+ν)=4.484163)
+  CHECK health_amenity(1.0)=0.548944 (= Ξ/(1-ξ)=0.548944)
+
+Solving GE (joint closure: τp endogenous, B residual) …
+INITIAL GE-Gender  (K₀=12.0, L₀=10.0, damp=0.3, tol=0.0001)
+iter   K        L        K/L      r(5y)    w        τp       DIFF/Y
+─────  ───────  ───────  ───────  ───────  ───────  ───────  ─────────────
+1      12.000   10.000   1.200    0.1634   1.0935   0.0883   +2.840524e-01
+2      10.649   8.523    1.249    0.1504   1.1095   0.0982   +1.950075e-01
+3      8.675    7.557    1.148    0.1782   1.0761   0.0954   +1.782504e-01
+4      7.309    6.834    1.069    0.2027   1.0490   0.0946   +1.451377e-01
+5      6.445    6.307    1.022    0.2190   1.0320   0.0943   +1.126757e-01
+6      5.935    5.924    1.002    0.2262   1.0247   0.0940   +8.452588e-02
+7      5.624    5.648    0.996    0.2284   1.0224   0.0937   +6.220805e-02
+8      5.422    5.452    0.994    0.2290   1.0219   0.0935   +4.538295e-02
+9      5.284    5.314    0.994    0.2290   1.0219   0.0933   +3.269797e-02
+10     5.187    5.217    0.994    0.2290   1.0219   0.0932   +2.350887e-02
+11     5.119    5.149    0.994    0.2290   1.0219   0.0931   +1.674357e-02
+12     5.071    5.100    0.994    0.2290   1.0219   0.0930   +1.186382e-02
+13     5.038    5.067    0.994    0.2290   1.0219   0.0929   +8.470563e-03
+14     5.015    5.043    0.994    0.2289   1.0219   0.0929   +5.939188e-03
+15     4.998    5.026    0.994    0.2289   1.0220   0.0929   +4.184898e-03
+16     4.986    5.014    0.994    0.2289   1.0220   0.0929   +2.948409e-03
+17     4.978    5.006    0.995    0.2289   1.0220   0.0929   +2.070490e-03
+18     4.973    5.000    0.995    0.2289   1.0220   0.0929   +1.454763e-03
+19     4.969    4.996    0.995    0.2289   1.0220   0.0929   +1.020600e-03
+20     4.966    4.993    0.995    0.2289   1.0220   0.0929   +7.161692e-04
+21     4.964    4.991    0.995    0.2289   1.0220   0.0929   +5.026037e-04
+22     4.962    4.990    0.995    0.2289   1.0220   0.0929   +3.528225e-04
+23     4.962    4.989    0.995    0.2289   1.0220   0.0929   +2.479163e-04
+24     4.961    4.988    0.995    0.2289   1.0220   0.0929   +1.736919e-04
+25     4.960    4.987    0.995    0.2289   1.0220   0.0929   +1.221364e-04
+26     4.960    4.987    0.995    0.2289   1.0220   0.0929   +8.553377e-05
+  → CONVERGED at iter 26
+Wrote /home/hectorjuan/Dalila/Missions/Funded/BID2/GE-now with Gender/stationary_experiments/calibrated/results/run1prime_summary.csv
+Wrote /home/hectorjuan/Dalila/Missions/Funded/BID2/GE-now with Gender/stationary_experiments/calibrated/results/run1prime_welfare.csv
+Wrote /home/hectorjuan/Dalila/Missions/Funded/BID2/GE-now with Gender/stationary_experiments/calibrated/results/run1prime_lifecycle.csv
+
+========================================================================
+  RUN 1' GATE SUMMARY
+========================================================================
+  [1] goods DIFF/Y          = +8.553e-05   (gate < 1e-3)   PASS
+  [2] capital |K-(A-B)|/K   = 1.572e-04    (gate < 2e-4)   PASS
+  [3] Euler max log10       = -5.367      (gate < -3, mass-bulk)  mean=-7.418
+  [4] two-sex W gap (θ_L)   = 29.91%     (M≠F)  M=-3.6360 F=-4.7235
+  [5] τp                    = 0.0929      (joint closure; gate Run 1 was 0.1083)
+  [7] K                     = 4.9600      (gate Run 1 K=10.488, ΔK=-52.71%) *** |ΔK|>15%: HARMONIZATION MATERIAL — see §7 ***
+      dep_ratio=0.1857  Y=7.9638  r_ann=4.209%  B/Y=0.3292  w=1.0220  pen=0.3651
+
+  GE iterations: 26 (itermax=30)   final DIFF/Y=+8.553e-05
+
+RUN 1' done.
