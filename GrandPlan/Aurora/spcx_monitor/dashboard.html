@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SPCX Regime Monitor — 2026-06-14</title>
+<style>
+  :root { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+  body { margin:0; background:#0f1115; color:#e6e6e6; }
+  header { padding:18px 24px; background:#15181f; border-bottom:1px solid #2a2f3a; }
+  h1 { font-size:18px; margin:0 0 2px; }
+  .sub { color:#9aa0a6; font-size:12px; }
+  .topstrip { padding:14px 24px; background:#12141a; border-bottom:1px solid #2a2f3a; }
+  .flag { display:inline-block; padding:6px 12px; border-radius:6px; font-weight:700;
+           color:#fff; background:#1b7f3b; }
+  .flagmsg { color:#c8ccd2; font-size:13px; margin-top:8px; max-width:900px; }
+  .chips { margin-top:10px; }
+  .chip { display:inline-block; color:#fff; font-size:12px; font-weight:600;
+           padding:3px 9px; border-radius:12px; margin:0 6px 6px 0; }
+  .spot { color:#9aa0a6; font-size:12px; margin-top:8px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+           gap:14px; padding:18px 24px; }
+  .panel { background:#171a21; border:1px solid #262b35; border-radius:10px; padding:14px; }
+  .panel.inert { opacity:0.55; }
+  .panel.macro { border-color:#2c3e54; }
+  .panhead { display:flex; align-items:center; gap:8px; border-left:4px solid;
+              padding-left:8px; margin-bottom:8px; }
+  .mnum { color:#6b7280; font-weight:700; font-size:12px; }
+  .mname { font-weight:700; font-size:14px; flex:1; }
+  .badge { color:#fff; font-size:11px; font-weight:700; padding:2px 8px; border-radius:10px; }
+  .def { color:#aab0b8; font-size:12px; margin:6px 0; }
+  .rationale { color:#cfd4da; font-size:12.5px; margin:6px 0; }
+  .ruled { color:#8a909a; font-style:italic; font-size:12px; }
+  table.obs { width:100%; border-collapse:collapse; margin:8px 0; }
+  table.obs td { font-size:12px; padding:3px 4px; border-bottom:1px solid #232833; vertical-align:top; }
+  .obk { color:#9aa0a6; width:55%; font-family:ui-monospace,Menlo,monospace; }
+  .obv { color:#e6e6e6; }
+  .unset { color:#6b7280; font-style:italic; }
+  .thresholds { margin:8px 0; }
+  .thr { font-size:11.5px; color:#bcc2ca; margin:3px 0; }
+  .dot { display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:5px; }
+  .driver, .nextesc { font-size:12px; margin-top:6px; color:#dfe3e8; }
+  .nextesc { background:#1d2230; padding:6px 8px; border-radius:6px; }
+  .warn { margin:14px 24px; background:#2a1d1d; border:1px solid #5a2b2b; color:#f3c0c0;
+           padding:10px 14px; border-radius:8px; font-size:12.5px; }
+  .warn ul { margin:6px 0 6px 18px; }
+  .anote { margin:10px 24px; color:#cfd4da; font-size:13px; }
+  footer { padding:16px 24px; color:#6b7280; font-size:11px; border-top:1px solid #2a2f3a; }
+  .nogo { color:#7d8593; }
+</style></head>
+<body>
+<header>
+  <h1>SPCX — Brunnermeier-Reis Regime Monitor</h1>
+  <div class="sub">Aurora · standalone exercise · regime identification only —
+    no price target, no buy/sell, no expected return (brief §0)</div>
+</header>
+<div class="topstrip">
+  <span class="flag">NOMINAL</span>
+  <span class="spot">· price 160.95 (first-day settle, +19.22% over $135 offer) · as of 2026-06-12</span>
+  <div class="flagmsg">All live mechanisms GREEN or unset.</div>
+  <div class="chips"><span class="chip" style="background:#9aa0a6">Runs: UNSET</span><span class="chip" style="background:#9aa0a6">Fire Sales / Balance-Sheet Channel: UNSET</span><span class="chip" style="background:#9aa0a6">Interconnections: UNSET</span></div>
+</div>
+
+<p class="anote">Structural baseline, two days post-IPO (listed 2026-06-12). Qualitative observables are pre-filled from the build brief; every numeric input that requires a prospectus/filing or a live feed is left null (unset/manual) by design. The GREEN/AMBER/RED calls are left UNSET deliberately: classification is the analyst&#x27;s judgment and depends on the missing numeric inputs (lockup schedule, obligation trigger levels, turnover). Fill those, set states with a driving_observable, then render.</p>
+<div class="grid">
+    <div class="panel">
+      <div class="panhead" style="border-color:#9aa0a6">
+        <span class="mnum">1</span>
+        <span class="mname">Runs</span>
+        <span class="badge" style="background:#9aa0a6">UNSET</span>
+      </div>
+      <p class="def">A coordination failure in which holders rush to exit because they expect others to exit, making the exit self-fulfilling. Applies to any claim redeemable or sellable faster than the underlying can absorb.</p>
+      <p class="rationale">The relevant &#x27;run&#x27; is a coordinated exit by belief-driven holders. The vulnerability is holder-base composition — fast, sentiment-driven capital vs. locked-up or conviction-held stock.</p><table class="obs"><tr><td class="obk">lockup_restricted_share_pct</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">free_float_classA_pct</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">next_lockup_expiry_date</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">next_lockup_expiry_size_pct</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">turnover_ratio</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">holder_concentration</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">etf_passive_inclusion_status</td><td class="obv">Newly listed; not yet index-eligible. Future inclusion would change the holder base abruptly.</td></tr></table><div class="thresholds"><div class="thr"><span class="dot" style="background:#1b7f3b"></span><b>GREEN</b> High lockup share, low turnover, stable holder base.</div><div class="thr"><span class="dot" style="background:#c47f00"></span><b>AMBER</b> Approaching a lockup expiry; turnover rising; sentiment softening.</div><div class="thr"><span class="dot" style="background:#b3261e"></span><b>RED</b> Lockup expiry coincident with negative sentiment shift; turnover spike on falling price.</div></div><div class="driver"><b>Driving observable:</b> <span class="unset">— unset / manual</span></div><div class="nextesc"><b>Next escalation trigger:</b> First lockup-expiry date coincident with softening sentiment, or a turnover spike on a down day.</div>
+    </div>
+    <div class="panel">
+      <div class="panhead" style="border-color:#9aa0a6">
+        <span class="mnum">2</span>
+        <span class="mname">Fire Sales / Balance-Sheet Channel</span>
+        <span class="badge" style="background:#9aa0a6">UNSET</span>
+      </div>
+      <p class="def">Asset-price declines force deleveraging by holders who financed positions with debt or hold obligations collateralized by the asset; forced selling depresses prices further, in a reflexive loop.</p>
+      <p class="rationale">SPCX carries a concrete version via stock-denominated obligations. If SPCX falls, obligations priced in SPCX stock reprice simultaneously and can force selling or trigger contingent payments.</p><table class="obs"><tr><td class="obk">cursor_acq_stock_component</td><td class="obv">Pending Cursor acquisition carries a large Class A stock component; termination/deferred-service fees payable in stock or cash (confirm terms from filing).</td></tr><tr><td class="obk">valor_equipment_lease_exposure</td><td class="obv">Valor board-linked equipment leases, ~$20B exposure (per brief).</td></tr><tr><td class="obk">margin_lending_against_spcx</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">insider_pledged_shares</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">counterparties_holding_spcx_as_asset</td><td class="obv">Valor, Cursor consideration, acquisition/vendor counterparties — full map pending filings.</td></tr><tr><td class="obk">convertible_or_stock_settled_instruments</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">nearest_stock_price_trigger</td><td class="obv"><span class="unset">— unset / manual</span></td></tr></table><div class="thresholds"><div class="thr"><span class="dot" style="background:#1b7f3b"></span><b>GREEN</b> Obligations well-covered at current price; ample headroom above any stock-price triggers.</div><div class="thr"><span class="dot" style="background:#c47f00"></span><b>AMBER</b> Price approaching levels where stock-settled obligations or margin become strained.</div><div class="thr"><span class="dot" style="background:#b3261e"></span><b>RED</b> Price below trigger levels forcing contingent payments, margin calls, or pledged-share liquidation.</div></div><div class="driver"><b>Driving observable:</b> <span class="unset">— unset / manual</span></div><div class="nextesc"><b>Next escalation trigger:</b> Price approaching the nearest stock-settled-obligation or margin trigger level (level currently unquantified — pull from filings).</div>
+    </div>
+    <div class="panel">
+      <div class="panhead" style="border-color:#9aa0a6">
+        <span class="mnum">3</span>
+        <span class="mname">Interconnections</span>
+        <span class="badge" style="background:#9aa0a6">UNSET</span>
+      </div>
+      <p class="def">The network of cross-exposures through which distress at one node propagates to others. The vulnerability is the topology of dependencies, not any single balance sheet.</p>
+      <p class="rationale">SPCX sits at the center of a dense web: xAI (absorbed subsidiary), Anthropic (compute customer at Colossus/Memphis), Valor (board-linked lessor, ~$20B exposure), Cursor (pending acquisition), and the TD-frontier IPO pipeline (OpenAI/Anthropic reportedly watching).</p><table class="obs"><tr><td class="obk">counterparty_web_status</td><td class="obv">Dense web: xAI (absorbed subsidiary), Anthropic (compute customer at Colossus/Memphis), Valor (lessor ~$20B), Cursor (pending acquisition).</td></tr><tr><td class="obk">compute_revenue_dependency</td><td class="obv">Neocloud revenue depends on AI-sector demand driven by the same sentiment cycle pricing SPCX — reflexive loop.</td></tr><tr><td class="obk">ipo_pipeline_status</td><td class="obv">TD-frontier pipeline reportedly watching (OpenAI/Anthropic); SPCX framed as door-opener.</td></tr><tr><td class="obk">vendor_customer_concentration</td><td class="obv"><span class="unset">— unset / manual</span></td></tr></table><div class="thresholds"><div class="thr"><span class="dot" style="background:#1b7f3b"></span><b>GREEN</b> Counterparty web stable; no node under stress.</div><div class="thr"><span class="dot" style="background:#c47f00"></span><b>AMBER</b> Stress at one node (AI-sector capex slowdown, IPO-pipeline wobble).</div><div class="thr"><span class="dot" style="background:#b3261e"></span><b>RED</b> Simultaneous stress across multiple connected nodes; reflexive compute-revenue/sentiment loop turning negative.</div></div><div class="driver"><b>Driving observable:</b> <span class="unset">— unset / manual</span></div><div class="nextesc"><b>Next escalation trigger:</b> Stress at a second node (AI capex slowdown, IPO-pipeline failure) while one is already stressed; reflexive compute-revenue/sentiment loop turning negative.</div>
+    </div>
+    <div class="panel inert">
+      <div class="panhead" style="border-color:#6b6b6b">
+        <span class="mnum">4</span>
+        <span class="mname">Currency Mismatch</span>
+        <span class="badge" style="background:#6b6b6b">INERT</span>
+      </div>
+      <p class="def">Vulnerability from holding liabilities in one currency and assets/revenue in another; original-sin dynamics, dollar-denominated debt against local-currency revenue.</p>
+      <p class="rationale">SPCX is USD-denominated, USD-listed, USD-revenue. No first-order currency mismatch at the asset level. Considered and ruled out — not overlooked. Dormant hook: any future FX-denominated revenue or obligation could reactivate this.</p><p class="ruled">Considered, ruled out — retained for the record.</p>
+    </div>
+    <div class="panel inert">
+      <div class="panhead" style="border-color:#6b6b6b">
+        <span class="mnum">5</span>
+        <span class="mname">Inflation-Deflation Spiral</span>
+        <span class="badge" style="background:#6b6b6b">INERT</span>
+      </div>
+      <p class="def">The fiscal-monetary channel — monetization, the fiscal theory of the price level, the debt-deflation interaction.</p>
+      <p class="rationale">A single equity does not generate an inflation-deflation spiral — inert at the asset level. Retains a MACRO-LIQUIDITY hook: the backdrop conditioning belief-driven assets (real rates, capital rotation, liquidity appetite) lives here as context, not as an SPCX trigger. Bridge to Nina&#x27;s wider monetary regime (Duffie-Reis balance-sheet transition, real-rate level).</p><p class="ruled">Considered, ruled out — retained for the record.</p>
+    </div>
+    <div class="panel macro">
+      <div class="panhead" style="border-color:#3a6ea5">
+        <span class="mname">Macro Backdrop (context — not an SPCX trigger)</span>
+        <span class="badge" style="background:#3a6ea5">CONTEXT</span>
+      </div>
+      <table class="obs"><tr><td class="obk">tips_10y_real_yield</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">vix_level</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">vix_trend</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">narrative_vs_cashflow_rotation</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">broad_risk_on_off</td><td class="obv"><span class="unset">— unset / manual</span></td></tr></table>
+      <p class="ruled">Conditions belief-driven assets but does not by itself escalate any SPCX mechanism. Supplied as a backdrop gauge per brief §2.5 / §5.</p>
+    </div></div>
+<footer>
+  Reading date 2026-06-14.
+  Source of truth: <code>state/2026-06-14.json</code>. Provenance: <code>run_log.md</code>.
+  <span class="nogo">Outputs are regime states and escalation triggers — by
+  construction this artifact contains no directional or price output.</span>
+</footer>
+</body></html>

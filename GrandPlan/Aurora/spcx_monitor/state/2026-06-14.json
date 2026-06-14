@@ -1,0 +1,69 @@
+{
+  "date": "2026-06-14",
+  "carried_from": null,
+  "analyst_note": "Structural baseline, two days post-IPO (listed 2026-06-12). Qualitative observables are pre-filled from the build brief; every numeric input that requires a prospectus/filing or a live feed is left null (unset/manual) by design. The GREEN/AMBER/RED calls are left UNSET deliberately: classification is the analyst's judgment and depends on the missing numeric inputs (lockup schedule, obligation trigger levels, turnover). Fill those, set states with a driving_observable, then render.",
+  "spot": {
+    "price": "160.95 (first-day settle, +19.22% over $135 offer)",
+    "as_of": "2026-06-12"
+  },
+  "mechanisms": {
+    "runs": {
+      "state": "UNSET",
+      "driving_observable": "",
+      "observables": {
+        "lockup_restricted_share_pct": null,
+        "free_float_classA_pct": null,
+        "next_lockup_expiry_date": null,
+        "next_lockup_expiry_size_pct": null,
+        "turnover_ratio": null,
+        "holder_concentration": null,
+        "etf_passive_inclusion_status": "Newly listed; not yet index-eligible. Future inclusion would change the holder base abruptly."
+      },
+      "next_escalation_trigger": "First lockup-expiry date coincident with softening sentiment, or a turnover spike on a down day."
+    },
+    "fire_sales": {
+      "state": "UNSET",
+      "driving_observable": "",
+      "observables": {
+        "cursor_acq_stock_component": "Pending Cursor acquisition carries a large Class A stock component; termination/deferred-service fees payable in stock or cash (confirm terms from filing).",
+        "valor_equipment_lease_exposure": "Valor board-linked equipment leases, ~$20B exposure (per brief).",
+        "margin_lending_against_spcx": null,
+        "insider_pledged_shares": null,
+        "counterparties_holding_spcx_as_asset": "Valor, Cursor consideration, acquisition/vendor counterparties \u2014 full map pending filings.",
+        "convertible_or_stock_settled_instruments": null,
+        "nearest_stock_price_trigger": null
+      },
+      "next_escalation_trigger": "Price approaching the nearest stock-settled-obligation or margin trigger level (level currently unquantified \u2014 pull from filings)."
+    },
+    "interconnections": {
+      "state": "UNSET",
+      "driving_observable": "",
+      "observables": {
+        "counterparty_web_status": "Dense web: xAI (absorbed subsidiary), Anthropic (compute customer at Colossus/Memphis), Valor (lessor ~$20B), Cursor (pending acquisition).",
+        "compute_revenue_dependency": "Neocloud revenue depends on AI-sector demand driven by the same sentiment cycle pricing SPCX \u2014 reflexive loop.",
+        "ipo_pipeline_status": "TD-frontier pipeline reportedly watching (OpenAI/Anthropic); SPCX framed as door-opener.",
+        "vendor_customer_concentration": null
+      },
+      "next_escalation_trigger": "Stress at a second node (AI capex slowdown, IPO-pipeline failure) while one is already stressed; reflexive compute-revenue/sentiment loop turning negative."
+    },
+    "currency_mismatch": {
+      "state": "INERT",
+      "driving_observable": "",
+      "observables": {},
+      "next_escalation_trigger": ""
+    },
+    "inflation_deflation": {
+      "state": "INERT",
+      "driving_observable": "",
+      "observables": {},
+      "next_escalation_trigger": ""
+    }
+  },
+  "macro_backdrop": {
+    "tips_10y_real_yield": null,
+    "vix_level": null,
+    "vix_trend": null,
+    "narrative_vs_cashflow_rotation": null,
+    "broad_risk_on_off": null
+  }
+}
