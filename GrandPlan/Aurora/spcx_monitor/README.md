@@ -56,6 +56,41 @@ python spcx_monitor.py status    # top-line regime read in the terminal
 Open `dashboard.html` in a browser to view the five panels, the macro context
 panel, and the top strip (consolidated read + coincidence flag).
 
+## Automation (daily cron on Dalila)
+
+A cron job re-renders the dashboard daily so the viewable artifact stays fresh
+without manual intervention. It is **render-only** by design: it regenerates
+`dashboard.html` / `run_log.md` from the *latest committed state*, and never runs
+`new` or sets a regime state — auto-`new` would risk clobbering manual edits, and
+auto-classification would fabricate judgement. Advancing the regime time series
+(a new dated reading + state calls) remains a deliberate analyst action.
+
+Because the monitor lives on `main` but day-to-day work happens on feature
+branches, the cron renders from a **dedicated sparse git worktree pinned to
+`main`** — independent of whatever branch the primary repo has checked out.
+
+Components:
+
+| Piece | Location |
+| --- | --- |
+| Worktree (sparse, `main`, ~124K) | `/home/hectorjuan/Dalila-spcx` (only `spcx_monitor/` checked out) |
+| Wrapper script | `~/.local/bin/spcx_render.sh` |
+| Cron entry | daily 18:00 local (after US close) — see `crontab -l` |
+| Run log | `~/.spcx_render.log` |
+| Rendered artifact to view | `/home/hectorjuan/Dalila-spcx/GrandPlan/Aurora/spcx_monitor/dashboard.html` |
+
+The wrapper does `git -C <worktree> reset --hard main` before rendering: this
+discards the previous run's regenerated (tracked) artifacts and syncs to `main`'s
+current tip with no network and without moving the ref. So newly committed state
+is picked up automatically on the next run.
+
+Caveat: while the worktree exists, `git checkout main` in the primary repo
+(`/home/hectorjuan/Dalila`) is refused (`main` is checked out in the worktree).
+
+Teardown: `crontab -e` (remove the line), then
+`git worktree remove /home/hectorjuan/Dalila-spcx`, then
+`rm ~/.local/bin/spcx_render.sh`.
+
 ## Run-log convention (deliverable §5.2)
 
 `run_log.md` is regenerated on every `render` from the dated state files, so the
