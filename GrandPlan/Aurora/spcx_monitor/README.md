@@ -56,17 +56,24 @@ python spcx_monitor.py status    # top-line regime read in the terminal
 Open `dashboard.html` in a browser to view the five panels, the macro context
 panel, and the top strip (consolidated read + coincidence flag).
 
-## Automation (daily cron on Dalila)
+## Automation (daily systemd timer on Dalila)
 
-A cron job re-renders the dashboard daily so the viewable artifact stays fresh
-without manual intervention. It is **render-only** by design: it regenerates
-`dashboard.html` / `run_log.md` from the *latest committed state*, and never runs
-`new` or sets a regime state — auto-`new` would risk clobbering manual edits, and
-auto-classification would fabricate judgement. Advancing the regime time series
-(a new dated reading + state calls) remains a deliberate analyst action.
+A **systemd user timer** re-renders the dashboard daily so the viewable artifact
+stays fresh without manual intervention. It is **render-only** by design: it
+regenerates `dashboard.html` / `run_log.md` from the *latest committed state*, and
+never runs `new` or sets a regime state — auto-`new` would risk clobbering manual
+edits, and auto-classification would fabricate judgement. Advancing the regime
+time series (a new dated reading + state calls) remains a deliberate analyst
+action.
+
+A systemd timer is used instead of plain `cron` because Dalila is a laptop that
+suspends: with `Persistent=true`, a run missed while suspended/off executes on the
+next wake/boot, whereas `cron` silently skips it. Lingering is enabled
+(`loginctl enable-linger hectorjuan`) so the user timer runs without an active
+login session.
 
 Because the monitor lives on `main` but day-to-day work happens on feature
-branches, the cron renders from a **dedicated sparse git worktree pinned to
+branches, the render runs from a **dedicated sparse git worktree pinned to
 `main`** — independent of whatever branch the primary repo has checked out.
 
 Components:
@@ -75,9 +82,13 @@ Components:
 | --- | --- |
 | Worktree (sparse, `main`, ~124K) | `/home/hectorjuan/Dalila-spcx` (only `spcx_monitor/` checked out) |
 | Wrapper script | `~/.local/bin/spcx_render.sh` |
-| Cron entry | daily 18:00 local (after US close) — see `crontab -l` |
+| systemd service | `~/.config/systemd/user/spcx-render.service` (`Type=oneshot`) |
+| systemd timer | `~/.config/systemd/user/spcx-render.timer` (`OnCalendar=*-*-* 18:00`, `Persistent=true`) |
 | Run log | `~/.spcx_render.log` |
 | Rendered artifact to view | `/home/hectorjuan/Dalila-spcx/GrandPlan/Aurora/spcx_monitor/dashboard.html` |
+
+Operate it with:
+`systemctl --user {status,start,list-timers} spcx-render.{timer,service}`.
 
 The wrapper does `git -C <worktree> reset --hard main` before rendering: this
 discards the previous run's regenerated (tracked) artifacts and syncs to `main`'s
@@ -87,9 +98,11 @@ is picked up automatically on the next run.
 Caveat: while the worktree exists, `git checkout main` in the primary repo
 (`/home/hectorjuan/Dalila`) is refused (`main` is checked out in the worktree).
 
-Teardown: `crontab -e` (remove the line), then
+Teardown: `systemctl --user disable --now spcx-render.timer`, then
+`rm ~/.config/systemd/user/spcx-render.{timer,service}` and
+`systemctl --user daemon-reload`, then
 `git worktree remove /home/hectorjuan/Dalila-spcx`, then
-`rm ~/.local/bin/spcx_render.sh`.
+`rm ~/.local/bin/spcx_render.sh`. Optionally `loginctl disable-linger hectorjuan`.
 
 ## Run-log convention (deliverable §5.2)
 
