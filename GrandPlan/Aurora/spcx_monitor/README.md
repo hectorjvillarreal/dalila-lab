@@ -58,13 +58,25 @@ panel, and the top strip (consolidated read + coincidence flag).
 
 ## Automation (daily systemd timer on Dalila)
 
-A **systemd user timer** re-renders the dashboard daily so the viewable artifact
-stays fresh without manual intervention. It is **render-only** by design: it
-regenerates `dashboard.html` / `run_log.md` from the *latest committed state*, and
-never runs `new` or sets a regime state — auto-`new` would risk clobbering manual
-edits, and auto-classification would fabricate judgement. Advancing the regime
-time series (a new dated reading + state calls) remains a deliberate analyst
-action.
+A **systemd user timer** runs the full daily cycle so the regime time series
+accumulates without manual intervention. Each run does, in order:
+
+1. `reset --hard main` — clean the worktree to the latest committed state.
+2. `new <today>` — create today's reading by carry-forward, **only if it does not
+   already exist**. This guard is essential: `new` on an existing date would
+   overwrite it, clobbering any manual edits/classification made that day.
+3. `fetch-macro` — refresh the macro backdrop (TIPS-10y, VIX from FRED); fields
+   are left unset on network failure, never fabricated.
+4. `render` — regenerate `dashboard.html` / `run_log.md`.
+5. commit to `main` and push (push failure is non-fatal; commits sync on a later
+   run or a manual push).
+
+Important: the cycle **carries forward** the prior day's regime states — it does
+**not** set or change any GREEN/AMBER/RED call. So daily entries appear in the
+run-log as `heartbeat — no change` until a human edits a day's state file.
+Classification remains a deliberate analyst action (auto-classification would
+fabricate judgement); the automation only keeps the series, the macro panel, and
+the dashboard current.
 
 A systemd timer is used instead of plain `cron` because Dalila is a laptop that
 suspends: with `Persistent=true`, a run missed while suspended/off executes on the
