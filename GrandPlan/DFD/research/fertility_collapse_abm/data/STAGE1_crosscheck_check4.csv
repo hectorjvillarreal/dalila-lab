@@ -1,0 +1,6 @@
+country,iso3,window,tfr_pct_change,births_pct_change,women1549_pct_change,implied_gfr_pct_change,verdict
+Colombia,COL,2016-2024,-35.3,-29.9,11.2,-37.0,BEHAVIORAL (raw births fell; denom did not)
+Argentina,ARG,2010-2021,-34.6,-29.9,10.7,-36.7,BEHAVIORAL (raw births fell; denom did not)
+Chile,CHL,2022-2024,-17.6,-18.4,0.4,-18.8,BEHAVIORAL (raw births fell; denom did not)
+Costa Rica,CRI,2010-2024,-38.8,-35.4,6.2,-39.2,BEHAVIORAL (raw births fell; denom did not)
+Mexico,MEX,2014-2019,-7.4,-15.1,4.5,-18.7,BEHAVIORAL (raw births fell; denom did not)

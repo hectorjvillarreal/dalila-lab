@@ -1,0 +1,3 @@
+year,age_band,pct_partnered,status_definition,source,methodology_flag
+1990,persons 20-59,12.0,union libre (cohabitation only),CCP-UCR Patrones historicos nupcialidad,graph-read; cohabitation only = lower bound
+2019,persons 20-59,20.0,union libre (cohabitation only),CCP-UCR Patrones historicos nupcialidad,graph-read; peak 30-34 ~25%

@@ -1,0 +1,4 @@
+year,value,source,methodology_flag,provisional_flag
+2022,1.25,"INE Chile, Boletines Demograficos / Anuario EV (2022 def; 2023/2024 prov)",definitive basis; corrected births; denom EE.PP base Censo 2017,definitive
+2023,1.16,"INE Chile, Boletines Demograficos / Anuario EV (2022 def; 2023/2024 prov)",provisional; uses OBSERVED (uncorrected) births,provisional
+2024,1.03,"INE Chile, Boletines Demograficos / Anuario EV (2022 def; 2023/2024 prov)",provisional; uses OBSERVED births; methodology break vs corrected 1992-2022 series,provisional

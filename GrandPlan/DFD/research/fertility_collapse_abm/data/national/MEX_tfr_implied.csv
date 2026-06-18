@@ -1,0 +1,12 @@
+year,value,source,methodology_flag,provisional_flag
+2014,2.396,"implied from MEX_births_registered_inegi.csv / WB women 15-49, anchored to national TFR 2018",REGISTERED-births basis (registration lag); 2020 = COVID artifact; proxy only,definitive
+2015,2.267,"implied from MEX_births_registered_inegi.csv / WB women 15-49, anchored to national TFR 2018",REGISTERED-births basis (registration lag); 2020 = COVID artifact; proxy only,definitive
+2016,2.189,"implied from MEX_births_registered_inegi.csv / WB women 15-49, anchored to national TFR 2018",REGISTERED-births basis (registration lag); 2020 = COVID artifact; proxy only,definitive
+2017,2.114,"implied from MEX_births_registered_inegi.csv / WB women 15-49, anchored to national TFR 2018",REGISTERED-births basis (registration lag); 2020 = COVID artifact; proxy only,definitive
+2018,2.029,"implied from MEX_births_registered_inegi.csv / WB women 15-49, anchored to national TFR 2018",REGISTERED-births basis (registration lag); 2020 = COVID artifact; proxy only,definitive
+2019,1.947,"implied from MEX_births_registered_inegi.csv / WB women 15-49, anchored to national TFR 2018",REGISTERED-births basis (registration lag); 2020 = COVID artifact; proxy only,definitive
+2020,1.506,"implied from MEX_births_registered_inegi.csv / WB women 15-49, anchored to national TFR 2018",REGISTERED-births basis (registration lag); 2020 = COVID artifact; proxy only,definitive
+2021,1.756,"implied from MEX_births_registered_inegi.csv / WB women 15-49, anchored to national TFR 2018",REGISTERED-births basis (registration lag); 2020 = COVID artifact; proxy only,definitive
+2022,1.727,"implied from MEX_births_registered_inegi.csv / WB women 15-49, anchored to national TFR 2018",REGISTERED-births basis (registration lag); 2020 = COVID artifact; proxy only,definitive
+2023,1.653,"implied from MEX_births_registered_inegi.csv / WB women 15-49, anchored to national TFR 2018",REGISTERED-births basis (registration lag); 2020 = COVID artifact; proxy only,definitive
+2024,1.509,"implied from MEX_births_registered_inegi.csv / WB women 15-49, anchored to national TFR 2018",REGISTERED-births basis (registration lag); 2020 = COVID artifact; proxy only,provisional

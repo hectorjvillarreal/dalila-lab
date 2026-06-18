@@ -1,0 +1,12 @@
+year,value,source,methodology_flag,provisional_flag
+2014,2463420,INEGI Estadisticas de Nacimientos Registrados (ENR) 2023/2024,tabulated by ANO DE REGISTRO not occurrence; recent years undercount true occurrence; DO NOT use as occurrence series,definitive
+2015,2353596,INEGI Estadisticas de Nacimientos Registrados (ENR) 2023/2024,tabulated by ANO DE REGISTRO not occurrence; recent years undercount true occurrence; DO NOT use as occurrence series,definitive
+2016,2293708,INEGI Estadisticas de Nacimientos Registrados (ENR) 2023/2024,tabulated by ANO DE REGISTRO not occurrence; recent years undercount true occurrence; DO NOT use as occurrence series,definitive
+2017,2234039,INEGI Estadisticas de Nacimientos Registrados (ENR) 2023/2024,tabulated by ANO DE REGISTRO not occurrence; recent years undercount true occurrence; DO NOT use as occurrence series,definitive
+2018,2162535,INEGI Estadisticas de Nacimientos Registrados (ENR) 2023/2024,tabulated by ANO DE REGISTRO not occurrence; recent years undercount true occurrence; DO NOT use as occurrence series,definitive
+2019,2092214,INEGI Estadisticas de Nacimientos Registrados (ENR) 2023/2024,tabulated by ANO DE REGISTRO not occurrence; recent years undercount true occurrence; DO NOT use as occurrence series,definitive
+2020,1629211,INEGI Estadisticas de Nacimientos Registrados (ENR) 2023/2024,"COVID registry-office disruption, NOT a fertility drop",definitive
+2021,1912178,INEGI Estadisticas de Nacimientos Registrados (ENR) 2023/2024,rebound = late-registration catch-up,definitive
+2022,1891388,INEGI Estadisticas de Nacimientos Registrados (ENR) 2023/2024,tabulated by ANO DE REGISTRO not occurrence; recent years undercount true occurrence; DO NOT use as occurrence series,definitive
+2023,1820888,INEGI Estadisticas de Nacimientos Registrados (ENR) 2023/2024,tabulated by ANO DE REGISTRO not occurrence; recent years undercount true occurrence; DO NOT use as occurrence series,definitive
+2024,1672227,INEGI Estadisticas de Nacimientos Registrados (ENR) 2023/2024,only 64.9% of 2024-registered births occurred in 2024,provisional

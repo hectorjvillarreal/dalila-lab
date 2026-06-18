@@ -1,0 +1,19 @@
+year,value,source,methodology_flag,provisional_flag
+2010,2.478,"implied: DEIS births / INDEC women15-49 (Censo-2010), anchored official TGF 2021=1.558",vintage-consistent with anchor; stable-age-pattern proxy,definitive
+2011,2.454,"implied: DEIS births / INDEC women15-49 (Censo-2010), anchored official TGF 2021=1.558",vintage-consistent with anchor; stable-age-pattern proxy,definitive
+2012,2.363,"implied: DEIS births / INDEC women15-49 (Censo-2010), anchored official TGF 2021=1.558",vintage-consistent with anchor; stable-age-pattern proxy,definitive
+2013,2.389,"implied: DEIS births / INDEC women15-49 (Censo-2010), anchored official TGF 2021=1.558",vintage-consistent with anchor; stable-age-pattern proxy,definitive
+2014,2.434,"implied: DEIS births / INDEC women15-49 (Censo-2010), anchored official TGF 2021=1.558",vintage-consistent with anchor; stable-age-pattern proxy,definitive
+2015,2.387,"implied: DEIS births / INDEC women15-49 (Censo-2010), anchored official TGF 2021=1.558",vintage-consistent with anchor; stable-age-pattern proxy,definitive
+2016,2.234,"implied: DEIS births / INDEC women15-49 (Censo-2010), anchored official TGF 2021=1.558",vintage-consistent with anchor; stable-age-pattern proxy,definitive
+2017,2.142,"implied: DEIS births / INDEC women15-49 (Censo-2010), anchored official TGF 2021=1.558",vintage-consistent with anchor; stable-age-pattern proxy,definitive
+2018,2.064,"implied: DEIS births / INDEC women15-49 (Censo-2010), anchored official TGF 2021=1.558",vintage-consistent with anchor; stable-age-pattern proxy,definitive
+2019,1.867,"implied: DEIS births / INDEC women15-49 (Censo-2010), anchored official TGF 2021=1.558",vintage-consistent with anchor; stable-age-pattern proxy,definitive
+2020,1.58,"implied: DEIS births / INDEC women15-49 (Censo-2010), anchored official TGF 2021=1.558",vintage-consistent with anchor; stable-age-pattern proxy,definitive
+2021,1.558,"implied: DEIS births / INDEC women15-49 (Censo-2010), anchored official TGF 2021=1.558",vintage-consistent with anchor; stable-age-pattern proxy,definitive
+2022,1.447,"implied: DEIS births / INDEC women15-49 (Censo-2010), anchored official TGF 2021=1.558",vintage-consistent with anchor; stable-age-pattern proxy,definitive
+2023,1.338,"implied: DEIS births / INDEC women15-49 (Censo-2010), anchored official TGF 2021=1.558",vintage-consistent with anchor; stable-age-pattern proxy,definitive
+2024,1.193,"implied: DEIS births / INDEC women15-49 (Censo-2010), anchored official TGF 2021=1.558",vintage-consistent with anchor; stable-age-pattern proxy,provisional
+2022,1.402,"implied: DEIS births / INDEC women15-49 (Censo-2022), anchored official TGF 2021=1.558",more accurate pop but +3.21% vintage break vs Censo-2010 anchor,definitive
+2023,1.295,"implied: DEIS births / INDEC women15-49 (Censo-2022), anchored official TGF 2021=1.558",more accurate pop but +3.21% vintage break vs Censo-2010 anchor,definitive
+2024,1.153,"implied: DEIS births / INDEC women15-49 (Censo-2022), anchored official TGF 2021=1.558",more accurate pop but +3.21% vintage break vs Censo-2010 anchor,provisional

@@ -1,0 +1,16 @@
+year,value,source,methodology_flag,provisional_flag
+2010,2.377,"implied from ARG_births_national.csv / WB women 15-49, anchored to national TFR 2015",stable-age-pattern assumption; extension/consistency proxy,definitive
+2011,2.357,"implied from ARG_births_national.csv / WB women 15-49, anchored to national TFR 2015",stable-age-pattern assumption; extension/consistency proxy,definitive
+2012,2.272,"implied from ARG_births_national.csv / WB women 15-49, anchored to national TFR 2015",stable-age-pattern assumption; extension/consistency proxy,definitive
+2013,2.299,"implied from ARG_births_national.csv / WB women 15-49, anchored to national TFR 2015",stable-age-pattern assumption; extension/consistency proxy,definitive
+2014,2.344,"implied from ARG_births_national.csv / WB women 15-49, anchored to national TFR 2015",stable-age-pattern assumption; extension/consistency proxy,definitive
+2015,2.3,"implied from ARG_births_national.csv / WB women 15-49, anchored to national TFR 2015",stable-age-pattern assumption; extension/consistency proxy,definitive
+2016,2.153,"implied from ARG_births_national.csv / WB women 15-49, anchored to national TFR 2015",stable-age-pattern assumption; extension/consistency proxy,definitive
+2017,2.065,"implied from ARG_births_national.csv / WB women 15-49, anchored to national TFR 2015",stable-age-pattern assumption; extension/consistency proxy,definitive
+2018,1.991,"implied from ARG_births_national.csv / WB women 15-49, anchored to national TFR 2015",stable-age-pattern assumption; extension/consistency proxy,definitive
+2019,1.802,"implied from ARG_births_national.csv / WB women 15-49, anchored to national TFR 2015",stable-age-pattern assumption; extension/consistency proxy,definitive
+2020,1.525,"implied from ARG_births_national.csv / WB women 15-49, anchored to national TFR 2015",stable-age-pattern assumption; extension/consistency proxy,definitive
+2021,1.504,"implied from ARG_births_national.csv / WB women 15-49, anchored to national TFR 2015",stable-age-pattern assumption; extension/consistency proxy,definitive
+2022,1.398,"implied from ARG_births_national.csv / WB women 15-49, anchored to national TFR 2015",stable-age-pattern assumption; extension/consistency proxy,definitive
+2023,1.292,"implied from ARG_births_national.csv / WB women 15-49, anchored to national TFR 2015",stable-age-pattern assumption; extension/consistency proxy,definitive
+2024,1.151,"implied from ARG_births_national.csv / WB women 15-49, anchored to national TFR 2015",stable-age-pattern assumption; extension/consistency proxy,provisional
