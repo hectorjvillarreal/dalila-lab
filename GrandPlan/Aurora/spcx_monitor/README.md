@@ -32,6 +32,7 @@ without itself escalating any SPCX mechanism.
 | `state/YYYY-MM-DD.json` | One dated reading per day. **The source of truth.** Edit these by hand. |
 | `dashboard.html` | Generated view of the latest reading. Disposable — re-rendered from state. |
 | `run_log.md` | Generated provenance time series of every state change. Do not edit by hand. |
+| `handoffs/` | Discretionary cross-agent handoff notes (e.g. to Nina). Hand-written, dated `YYYY-MM-DD_<agent>.md`, provenance-disciplined per PROTO-RAG-001. `agent_handoff` is not yet a protocol-codified type. Sent outside §5.3 (which routes to Nina only on CRASH-CONFIG). |
 
 ## Daily cycle
 
