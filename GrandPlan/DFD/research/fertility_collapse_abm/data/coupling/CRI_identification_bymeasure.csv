@@ -1,0 +1,6 @@
+country,measure,w,overlap,n_years,level_start,level_end,q1_best_k,q1_best_r,q1_lead1_r,q1_simul_r,q1_lag1_r,q2_coup_pct,q2_tfr_pct,q2_ratio,q2_locus,q2_steepest_year,q3_youngest_first,q3_band_steepest,q4_independent
+CRI,marriage_only,0.0,2010-2024,15,0.3044,0.1657,0,0.244,-0.06,0.244,0.072,-45.6,-38.8,1.17,coupling-side,2021,False,20-24:2011|25-29:2011|30-34:2018|35-39:2016,yes (INEC ENAHO estado conyugal roster vs vital registration)
+CRI,fw_0.4,0.4,2010-2024,15,0.3923,0.2599,0,0.249,-0.084,0.249,0.148,-33.8,-38.8,0.87,coupling-side,2021,False,20-24:2011|25-29:2011|30-34:2018|35-39:2013,yes (INEC ENAHO estado conyugal roster vs vital registration)
+CRI,fw_0.6,0.6,2010-2024,15,0.4363,0.3069,0,0.248,-0.094,0.248,0.181,-29.6,-38.8,0.76,mixed,2021,False,20-24:2011|25-29:2011|30-34:2018|35-39:2013,yes (INEC ENAHO estado conyugal roster vs vital registration)
+CRI,fw_0.8,0.8,2010-2024,15,0.4802,0.354,0,0.246,-0.103,0.246,0.209,-26.3,-38.8,0.68,mixed,2021,False,20-24:2011|25-29:2011|30-34:2018|35-39:2013,yes (INEC ENAHO estado conyugal roster vs vital registration)
+CRI,total,1.0,2010-2024,15,0.5242,0.4011,0,0.242,-0.11,0.242,0.234,-23.5,-38.8,0.61,mixed,2021,False,20-24:2017|25-29:2024|30-34:2018|35-39:2013,yes (INEC ENAHO estado conyugal roster vs vital registration)
