@@ -22,30 +22,35 @@ build_instruction: "STAGE1_5_coupling_identification.md"
 
 ---
 
-## Gate verdict (read first)
+## Gate verdict (read first) — UPDATED after Colombia (Addendum A)
 
-**Do NOT freeze the Stage 2 ABM spec yet — but not because the mechanism failed: because the
-gate cannot yet be evaluated.** The gate requires the lead/nonlinear/cascade pattern to hold for
-**≥2 of the 4 collapse countries**. Only **one** collapse country (Costa Rica) has a usable annual
-coupling series so far; the other three (Colombia, Argentina, Chile) are blocked at the
-data-acquisition step by access walls, not by analysis. So the binding constraint is **data
-access**, and the honest status is **INCONCLUSIVE — gate not yet decidable**.
+**The gate is now DECIDABLE, and it resolves to the MAP side.** Colombia — the second collapse
+country and the only one with an **observed** annual national TFR to pair against coupling — has
+been extracted (DANE GEIH 2007–2024, via the Catálogo Central de Datos; the earlier login wall was
+the wrong door). With **two collapse countries now in hand (Costa Rica + Colombia)**, the gate's
+≥2-country requirement is met, and both point the **same** way:
 
-What we *can* say from the two series extracted:
-- **The identification discipline holds** (Q4): in every case coupling is measured from household
-  survey rosters, fully independent of vital-registration TFR. No circularity. This is the one gate
-  condition that passes cleanly and universally.
-- **Costa Rica (collapse case): PARTIALLY IDENTIFIABLE.** Coupling and TFR both decline materially,
-  but the *specific* threshold predictions — coupling *leads* TFR (Q1) and declines *youngest-first*
-  (Q3) — are **not clearly present** in the annual aggregate. The evidence leans toward a smooth
-  coupling drift feeding a *nonlinear coupling→fertility map* (Q2).
-- **Mexico (comparator, not a gate country): coupling decline is accelerating and youth-concentrated**
-  — qualitatively more threshold-like than Costa Rica — but the verdict is soft (biennial data; lead
-  test impossible against a modeled TFR).
+- **The threshold-in-partnership-formation hypothesis is NOT supported.** In neither collapse country
+  does coupling *lead* TFR (Q1) or decline cleanly *youngest-first* (Q3). Colombia, the one place the
+  lead test is properly evaluable, shows **no clean lead — if anything coupling lags** the TFR turn.
+- **A different, consistent pattern emerges instead: the nonlinearity sits in the coupling→fertility
+  MAP (Q2).** Costa Rica (smooth coupling, sudden TFR) and Colombia (total union flat ~59–60% for
+  twelve years, then a modest −6 pt drift, against a 1.7→1.1 TFR collapse) agree. Mexico — the
+  *slow-decline comparator, not a gate country* — is the lone coupling-side case and no longer drives
+  the locus decision.
+- **The marriage margin is the live sub-mechanism (Anne's caution, now empirically central).** In both
+  countries total co-residential union is far more stable than *marriage*: Colombia's marriage share
+  halves (20.7%→11.9%) under a flat total, cohabitation substituting. If marriage and cohabitation
+  differ in fertility intensity, the behaviorally-relevant coupling variable is **marriage-weighted**,
+  not total union.
+- **Q4 independence holds universally** — coupling from survey rosters, TFR from vital registration.
 
-This is exactly the "learn it before building" outcome Stage 1.5 was designed to produce. The
-mechanism is **not refuted**, but it is **not yet confirmed**, and Costa Rica alone gives a *mixed*
-signal that must not be over-read.
+**Recommendation: the gate can be cleared to proceed.** Nina may freeze the Stage 2 spec as the
+**nesting model** (per her revised recommendation), with the nonlinearity locus **empirically resolved
+to the map side** and the marriage-weighted coupling measure as the primary state variable to test.
+Argentina and Chile remain blocked but are now **enrichment, not gate-critical** — the two-country
+gate is met without them. This is the addendum's explicitly-anticipated second decidable branch:
+*"the mechanism is the fertility-response map, not partnership formation."*
 
 ---
 
@@ -58,18 +63,23 @@ cohabiting) was pursued per the Stage 1.5 source plan. Outcome by country:
 |---|---|---|---|
 | **Costa Rica** | ENAHO 2010–2024 | INEC **REDATAM** server-side crosstab (no login) | ✅ **Full annual series** (`CRI_coupling_annual.csv`) |
 | **Mexico** (comparator) | ENOE 2005–2024 | INEGI **microdata** download (open) | ✅ **Biennial series, 9 yrs** (`MEX_coupling_annual.csv`); 2021 dropped (ETOE/COVID) |
-| **Colombia** | GEIH | DANE microdata | ⛔ **Blocked** — microdata is login-gated (`auth/login`); no GEIH on REDATAM |
-| **Argentina** | EPH | INDEC REDATAM | ⛔ **Blocked** — engine 500s to scripted requests; base `EPH_BASE_FINAL` covers only 2003–2014 |
-| **Chile** | CASEN | ECLAC/INE REDATAM | ⛔ **Blocked** — engine 500s; ECLAC host carries only CASEN 1990–2011 (periodic) |
+| **Colombia** | GEIH 2007–2024 | DANE **Catálogo Central de Datos** microdata download (no login) | ✅ **Full annual series, 18 yrs** (`COL_coupling_annual.csv`) — Addendum A |
+| **Argentina** | EPH | INDEC REDATAM | ⛔ **Blocked** — engine 500s to scripted requests; base `EPH_BASE_FINAL` covers only 2003–2014. *Now enrichment, not gate-critical.* |
+| **Chile** | CASEN | ECLAC/INE REDATAM | ⛔ **Blocked** — engine 500s; ECLAC host carries only CASEN 1990–2011 (periodic). *Now enrichment, not gate-critical.* |
 
 **Method note (reproducible):** the Costa Rica path drives INEC's RedatamX web engine
 (`RpWebStats.exe/CrossTab`) to produce a weighted crosstab of estado conyugal × 5-yr age band,
 filtered to women, weighted by the expansion factor — server-side, no microdata download, no login.
-Extractors: `_extract_redatam_cri.py` (CR), `_extract_enoe_mex.py` (MX). The blocked-country
-extractors (`_extract_redatam_arg.py`, `_extract_geih_col.py`) are written and ready to run once
-access is resolved. **Environmental finding:** background agents have no network egress here, so all
-extraction must run from the main session — and the ARG/CHL REDATAM servers proved unreliable to
-scripted clients, unlike CR's robust INEC server.
+Extractors: `_extract_redatam_cri.py` (CR), `_extract_enoe_mex.py` (MX), `_extract_geih_col_v2.py`
+(CO). **Colombia method (Addendum A):** GEIH person microdata pulled directly from the DANE Catálogo
+Central de Datos (NADA), all 12 months/year pooled with the expansion factor; weighted share of women
+20–39 with P6070 (estado civil) in {1,2}=cohabiting / {3}=married. The v2 extractor auto-detects the
+schema across the 2021–22 "Marco 2018" redesign (sex P6020→P3271, weight Fex_c_2011→FEX_C18; **P6070
+union coding is identical across the break — Check A clean**) and pools Cabecera+Resto (national
+partition) while dropping the redundant Área cut. The blocked-country extractors
+(`_extract_redatam_arg.py`) remain ready for the enrichment pass. **Environmental finding:** background
+agents have no network egress here, so all extraction runs from the main session — ARG/CHL REDATAM
+servers proved unreliable to scripted clients, unlike CR's INEC server and DANE's NADA download.
 
 ---
 
@@ -107,32 +117,56 @@ Coupling (women 20–39): **61.7% (2010) → 54.1% (2024), −12%**. CONAPO TFR 
 - **Verdict (soft):** more threshold-like than Costa Rica (accelerating, youth-concentrated), but
   unverifiable on lead and built on biennial data. Useful as the tipping-point diagnostic, not for the gate.
 
-### Colombia / Argentina / Chile — blocked at acquisition
+### Colombia — collapse case, full annual series, the OBSERVED-TFR tie-breaker (Addendum A)
 
-No annual coupling series obtained. Endpoint-only data from Stage 1 remains the best available
-(e.g. Mexico-style ENADID endpoints; CR/Chile census/survey points). Access obstacles:
-**Colombia** GEIH microdata is login-gated and absent from REDATAM; **Argentina** INDEC REDATAM 500s
-and its public base stops at 2014 (pre/early-collapse only); **Chile** REDATAM 500s and the open ECLAC
-host carries only periodic CASEN 1990–2011. Each needs either a resolved login/account, a more robust
-client against the flaky servers, or a fallback to bulk microdata download.
+Coupling (women 20–39, co-residential union): flat plateau **~59–60% (2008–2020)**, then a downturn
+to **54.0% (2024)** — a ~6 pt (−11%) drop concentrated in 2021–2024. *Observed* DANE EEVV TFR
+**1.7 (2015–18) → 1.1 (2024), −35%**. Marriage share (20–39): **20.7% (2008) → 11.9% (2024)** — a
+secular halving under the stable total, cohabitation substituting. (2007 = 47.5% is an anomalous
+earliest point — likely frame/questionnaire difference — so read the plateau as 2008–2020.)
+
+- **Q1 (lead) — NO clean lead; if anything coupling LAGS.** This is the one country where the test is
+  properly evaluable (observed annual TFR, not modeled). Total union holds its plateau through 2020
+  and breaks only in 2021, *after* TFR has already begun sliding (1.7→1.5 by 2020). The differenced
+  correlation's best alignment is a **lag** (k=−2, r=+0.93); the precise lag is fragile (TFR is
+  chart-label rounded to 1 decimal, n=9 differences), but the direction is clear: coupling does not
+  lead. This is the test Costa Rica could not run cleanly and Mexico could not run at all.
+- **Q2 (nonlinearity) — MAP-SIDE, decisively.** A small, smooth coupling change (~6 pts, ~11%) maps to
+  a large TFR collapse (−35%). The nonlinearity sits in the coupling→fertility **map**, not in coupling.
+  **Colombia agrees with Costa Rica, not Mexico** — this is the empirical tie-breaker.
+- **Q3 (cascade) — synchronized, not clean youngest-first** (25–29 and 30–34 turn in 2021, 20–24 in 2022).
+- **Q4 (independence):** ✅ GEIH household roster (P6070) vs DANE EEVV vital registration — different instruments.
+- **Compositional caveat (load-bearing, as in CR):** the marriage margin moves far more than total union —
+  the marriage-weighted coupling measure is the one to carry into Stage 2.
+- **Verdict: PARTIALLY IDENTIFIABLE, map-side** — same shape as Costa Rica. Independence solid, decline
+  real, lead absent, nonlinearity in the map.
+
+### Argentina / Chile — blocked at acquisition (now enrichment, not gate-critical)
+
+No annual coupling series obtained, and **no longer gate-critical** — the two-country gate is met by
+Costa Rica + Colombia. **Argentina** INDEC REDATAM 500s and its public base stops at 2014
+(pre/early-collapse only; public base `EPH_BASE_FINAL`); **Chile** REDATAM 500s and the open ECLAC
+host carries only periodic CASEN 1990–2011. Both can be pursued in Stage 2 via bulk-microdata fallback
+as the model is calibrated, to widen the collapse-country panel.
 
 ---
 
 ## Cross-country synthesis (Q1–Q4)
 
-| | Costa Rica (collapse) | Mexico (comparator) | COL / ARG / CHL |
-|---|---|---|---|
-| Q1 lead | ✗ simultaneous | — not evaluable | no data |
-| Q2 nonlinear | map-side (smooth coupling) | ✓ accelerating coupling | no data |
-| Q3 cascade | ✗ no clean order | ~ youth-concentrated | no data |
-| Q4 independent | ✓ | ✓ | (endpoints only) |
-| **Verdict** | **PARTIALLY IDENTIFIABLE** | soft / diagnostic | **NOT YET — blocked** |
+| | Costa Rica (collapse) | **Colombia (collapse)** | Mexico (comparator) | ARG / CHL |
+|---|---|---|---|---|
+| Q1 lead | ✗ simultaneous | ✗ **no lead / lags** (observed TFR) | — not evaluable | no data |
+| Q2 nonlinear | map-side (smooth coupling) | **map-side (flat coupling, TFR collapse)** | ✓ accelerating coupling | no data |
+| Q3 cascade | ✗ no clean order | ✗ synchronized 2021–22 | ~ youth-concentrated | no data |
+| Q4 independent | ✓ | ✓ | ✓ | (endpoints only) |
+| **Verdict** | **PARTIALLY IDENTIFIABLE (map-side)** | **PARTIALLY IDENTIFIABLE (map-side)** | soft / diagnostic | enrichment |
 
-**The gate needs ≥2 collapse countries; we have 1 (mixed). Verdict: not yet decidable.** The two
-countries we do have *disagree* on the most important question (Q2 nonlinearity location: CR map-side
-vs MX coupling-side), which is itself informative — it suggests the mechanism may not be uniform
-across countries, and that the model's nonlinearity locus is an open empirical question, not a settled
-assumption.
+**The gate needs ≥2 collapse countries; we now have 2, and they AGREE.** Both Costa Rica and Colombia
+land **map-side** with no coupling→TFR lead. The earlier CR-vs-MX disagreement on Q2 is resolved: the
+two actual *collapse* countries point map-side, and Mexico — the *slow-decline comparator* — is the
+lone coupling-side case and does not govern the gate. **The nonlinearity locus is empirically settled
+to the map side.** The mechanism is the fertility-response map (plausibly marriage-weighted), not a
+partnership-formation threshold.
 
 ---
 
@@ -140,12 +174,13 @@ assumption.
 
 These shape the ABM spec Nina is about to freeze. Ordered by leverage.
 
-1. **The nonlinearity-locus fork is unresolved — design for both.** Costa Rica points to a *nonlinear
-   coupling→fertility map* (smooth coupling, sudden TFR); Mexico points to *nonlinearity in coupling
-   itself* (accelerating partnership decline). These are **two different ABMs** (threshold in the
-   fertility response vs threshold in partnership formation). The spec should either (a) pick the
-   locus empirically once ≥2 collapse countries are in, or (b) build a model nesting both so the data
-   selects. Do **not** hard-code "threshold in partnership formation" yet.
+1. **The nonlinearity-locus fork is now resolved to the MAP side — build the nesting model, default it
+   to the map.** Both collapse countries (Costa Rica, Colombia) show a *nonlinear coupling→fertility
+   map* (smooth/flat coupling, sudden TFR); only Mexico, the slow-decline comparator, shows nonlinearity
+   in coupling itself. Build the model **nesting both loci** (Nina's recommendation) so it stays
+   falsifiable, but with the **fertility-response map as the primary/default mechanism** and
+   partnership-formation threshold as the comparator branch. Do **not** hard-code "threshold in
+   partnership formation" — the data point the other way.
 
 2. **Model the co-residential union, but track the marriage margin separately.** Both countries show
    a marriage collapse partly offset by rising cohabitation. If marriage and cohabitation differ in
@@ -180,23 +215,29 @@ These shape the ABM spec Nina is about to freeze. Ordered by leverage.
 
 ---
 
-## Recommended next actions (before Stage 2 freeze)
+## Recommended next actions (gate now decidable)
 
-1. **Costa Rica refinements** (cheap, high-value): marriage-margin lead-lag (point 2) + EHPM 2000–09
-   backfill (point 6). These directly test whether CR's weak Q1/Q3 is real or an aggregate/noise artifact.
-2. **Acquire ≥1 more collapse country** with observed annual TFR — priority Colombia (GEIH via a DANE
-   account) or Argentina (resolve REDATAM / EPH microdata), to make the gate evaluable.
-3. **Then** re-run this memo's synthesis and issue a decidable gate verdict.
+1. **Freeze the Stage 2 nesting-model spec** with the nonlinearity locus defaulted to the **map side**
+   and **marriage-weighted union** as the primary coupling state variable (test total vs marriage-weighted).
+2. **Marriage-margin lead-lag across both collapse countries** (cheap, high-value): re-run Q1/Q3 on the
+   *marriage* series, not total union — this is the most promising place a lead could still hide, and
+   it is the behaviorally-relevant margin in high-cohabitation LAC.
+3. **Enrichment (not blocking):** Argentina/Chile via bulk-microdata fallback, and the CR EHPM 2000–09
+   backfill, to widen the panel and lengthen pre-collapse baselines during Stage 2 calibration.
 
 ---
 
 ## Gate
 
 Per the Stage 1.5 spec: this memo is reviewed by **Anne and Nina** before the Stage 2 ABM spec is
-frozen. Current recommendation: **hold the freeze**; the mechanism is viable but unproven, the gate is
-not yet decidable on one mixed collapse country, and two cheap CR refinements + one more collapse
-country would make it so. No ABM specification work has begun.
+frozen. **Updated recommendation (after Addendum A): the gate is decidable and can be cleared.** Two
+collapse countries (Costa Rica + Colombia) now agree — map-side nonlinearity, no coupling→TFR lead,
+marriage-margin erosion under stable total union. The mechanism is **not** the originally-hypothesized
+partnership-formation threshold, but a **nonlinear coupling→fertility map**; that is a clean, decidable
+finding, not a failure. Nina may proceed to freeze the Stage 2 nesting-model spec (locus → map,
+marriage-weighted coupling primary). No ABM specification work has begun pending Anne + Nina sign-off.
 
-*Stage 1.5 of 4. Version 1.0, 2026-06-18. Companions: CRI_coupling_annual.csv, CRI_identification.csv,
-MEX_coupling_annual.csv, MEX_identification.csv, CRI_coupling_vs_tfr.png, MEX_coupling_vs_tfr.png,
-extractor scripts, and CRI_coupling_annual.md (PROTO-RAG-001 sidecar).*
+*Stage 1.5 of 4. Version 2.0, 2026-06-18 (Addendum A — Colombia folded in). Companions:
+CRI/MEX/COL_coupling_annual.csv, CRI/MEX/COL_identification.csv, CRI/MEX/COL_coupling_vs_tfr.png,
+extractor scripts, COL_coupling_annual.md + CRI_coupling_annual.md (PROTO-RAG-001 sidecars), and
+STAGE1_5_addendumA_colombia_geih.md (the acquisition build instruction).*
