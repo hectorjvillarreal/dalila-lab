@@ -119,9 +119,20 @@ Teardown: `systemctl --user disable --now spcx-render.timer`, then
 ## Run-log convention (deliverable §5.2)
 
 `run_log.md` is regenerated on every `render` from the dated state files, so the
-state files remain the only thing you edit. Each row is a **state change**: the
-date, the mechanism, the transition (`old → new`), and the observable that drove
-it. Days with no change are recorded as a heartbeat carrying the top-line flag.
+state files remain the only thing you edit. Rows are of three kinds:
+
+- **State change** — the date, the mechanism, the transition (`old → new`), and
+  the observable that drove it.
+- **Observable update** — a day where a LIVE mechanism's observables, driving
+  observable, or next-escalation trigger changed but **no state threshold was
+  crossed**. Without this row such a day would log as a bare heartbeat, hiding
+  material information (e.g. a confirmed acquisition or a new lockup date that
+  did not flip any state). The transition column shows the held state(s) (e.g.
+  `obs update — GREEN held`) and the row text is that day's `analyst_note`. The
+  trigger is scoped to LIVE-mechanism fields only — `spot` and the macro
+  backdrop are context, so a carry-forward heartbeat stays a heartbeat.
+- **Heartbeat** — a day with no change at all, carrying the top-line flag.
+
 This is the corpus-admissible reasoning record under PROTO-RAG-001 — the history
 accumulates as a regime time series, not a snapshot.
 
