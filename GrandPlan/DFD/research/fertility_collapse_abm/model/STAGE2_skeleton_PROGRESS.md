@@ -10,6 +10,37 @@
 
 ---
 
+## 0b. STAGE 2 CALIBRATION BUILD (2026-06-19 — code written, awaiting operator run)
+
+The Stage 2 calibration per `STAGE2_calibration_instruction.md` (Anne+Nina) is now
+CODED (not yet run on this session — Julia/Bash execution denied; a Bash-enabled
+operator runs it). Changes:
+
+- **`cri_skeleton_abm.jl`** rewritten: A1 proper ΣASFR (single-year
+  `births_by_age`/`exposure_by_age`, scalar proxy removed); A2 observed-2010 seeding
+  via `load_seed_composition_2010()` (bands 20-39 from CSV, 15-19/40-49 tails
+  extrapolated); A3 married-ASFR kept as MEX-shape `[PLACEHOLDER]`, single=0.10×
+  `[PROVISIONAL]`; A4 15-49 TFR but Process-A loss on 20-39 only; A5 parity-indep,
+  no tempo; N1 `composition_loss` (composition only, TFR never in loss); N2
+  `marriage_drift=0` PINNED (`apply_params!` refuses to set it, `model_step!` decay
+  is a no-op); per-band trajectory collection; 50k default pop.
+- **`calibrate.jl`** (NEW): 8-param dependency-free Nelder-Mead (logistic box
+  transforms, best-of-3 restarts, ≤150 evals/w); cheap inner ensemble 12k×4 for loss
+  evals; final confirmation 50k×16; N3 2×2 locus grid (site A × site B,
+  `map_depth=0.6` provisional flagged); sweeps w∈{0.4,0.6,0.8}. Run:
+  `JULIA_NUM_THREADS=8 julia --project=. calibrate.jl`.
+- **`make_figures.jl`** (NEW): emits tidy figure-data CSVs (no plotting dep in the
+  pinned env); covers TFR gen-vs-obs, per-band sim-vs-obs, falsification, w-locus grid.
+- **`STAGE2_calibration_results.md`** (NEW): template with `[TO FILL FROM RUN]`
+  placeholders for the four criteria, the marriage-generation sub-test, the 2×2 grid,
+  caveats inline, recommendation. No numbers invented.
+
+Operator next step: `julia --project=. cri_skeleton_abm.jl 0.6 16` (single confirm),
+then `julia --project=. calibrate.jl` (full sweep), then `make_figures.jl`, then fill
+the results template.
+
+---
+
 ## 0. RUN UPDATE (2026-06-19, main session — supersedes §1's "could not execute")
 
 **The model now RUNS** (EXIT 0; baseline + falsification ensembles, w=0.60, 4 seeds). The

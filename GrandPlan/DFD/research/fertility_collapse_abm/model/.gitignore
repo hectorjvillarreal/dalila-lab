@@ -1,2 +1,6 @@
 _env_setup.log
 _run_*.log
+_smoke.log
+_selftest_cal.log
+_fullsweep.log
+_figures.log

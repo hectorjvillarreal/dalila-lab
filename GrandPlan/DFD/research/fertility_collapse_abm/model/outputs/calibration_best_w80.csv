@@ -1,0 +1,11 @@
+param,value
+form_base,0.12877532451850457
+marry_share_of_form,0.16846996896053626
+cohab_to_marr,0.058113581161416766
+dissolve_cohab,0.07385102262561424
+dissolve_marr,0.024277148239868207
+norm_strength,0.6310986166997917
+norm_threshold,0.5226494206478973
+norm_steepness,16.59585055332427
+final_loss,0.08551629553652895
+marriage_drift_PINNED,0.0
