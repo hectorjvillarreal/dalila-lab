@@ -1,7 +1,13 @@
-country,share,period_curvature_rms_2018_2024,cohort_curvature_rms_entry,period_share_of_curvature,leaning,normalization
-CRI,share_married,0.017256296979265513,0.023503063273644785,0.4233701626372651,cohort,sum-to-zero (Deviation) coding; linear trend NOT identified/reported
-CRI,share_cohab,0.009554437025358816,0.015465591704027747,0.38187154494099057,cohort,sum-to-zero (Deviation) coding; linear trend NOT identified/reported
-COL,share_married,0.012781605308732067,0.011122463812283632,0.5347041645514189,period,sum-to-zero (Deviation) coding; linear trend NOT identified/reported
-COL,share_cohab,0.014954530625030518,0.015654711976426795,0.48856258286895765,cohort,sum-to-zero (Deviation) coding; linear trend NOT identified/reported
-MEX,share_married,0.046767856131540345,0.01682443483719661,0.7354327925460685,period,sum-to-zero (Deviation) coding; linear trend NOT identified/reported
-MEX,share_cohab,0.03189120060416762,0.03295510451427507,0.4917967268284275,cohort,sum-to-zero (Deviation) coding; linear trend NOT identified/reported
+country,share,period_window,period_curvature_rms,cohort_curvature_rms_birth_ge_1990,period_share_of_curvature,leaning,normalization
+CRI,share_married,2015_2024,0.03098659677049659,0.021808428736915294,0.5869226593355161,period,sum-to-zero; linear trend NOT identified/reported
+CRI,share_married,2018_2024,0.025491856850325015,0.021808428736915294,0.5389366371437233,period,sum-to-zero; linear trend NOT identified/reported
+CRI,share_cohab,2015_2024,0.008825843728324054,0.01774355572544611,0.33218077599686496,cohort,sum-to-zero; linear trend NOT identified/reported
+CRI,share_cohab,2018_2024,0.010174864313512642,0.01774355572544611,0.3644498613930921,cohort,sum-to-zero; linear trend NOT identified/reported
+COL,share_married,2015_2024,0.006758613962622948,0.013962372763517718,0.32617239960375943,cohort,sum-to-zero; linear trend NOT identified/reported
+COL,share_married,2018_2024,0.005897620700111159,0.013962372763517718,0.2969598510146502,cohort,sum-to-zero; linear trend NOT identified/reported
+COL,share_cohab,2015_2024,0.013447658110780088,0.015118533083637933,0.4707543270034483,cohort,sum-to-zero; linear trend NOT identified/reported
+COL,share_cohab,2018_2024,0.01610610467895452,0.015118533083637933,0.5158139800183641,period,sum-to-zero; linear trend NOT identified/reported
+MEX,share_married,2015_2024,0.03490379332528002,0.019497792054198635,0.6415951498804374,period,sum-to-zero; linear trend NOT identified/reported
+MEX,share_married,2018_2024,0.03702760516988559,0.019497792054198635,0.6550613881242915,period,sum-to-zero; linear trend NOT identified/reported
+MEX,share_cohab,2015_2024,0.023810973530789887,0.03452747844977336,0.40815230302516503,cohort,sum-to-zero; linear trend NOT identified/reported
+MEX,share_cohab,2018_2024,0.02970566133209992,0.03452747844977336,0.46246628193758194,cohort,sum-to-zero; linear trend NOT identified/reported

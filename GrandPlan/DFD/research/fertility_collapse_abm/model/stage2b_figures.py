@@ -89,11 +89,21 @@ def fig1_cohort_lines(country: str) -> None:
     if not HAVE_MPL:
         return
     fig, ax = plt.subplots(figsize=(8, 5))
+    # Anne A2: within-band-SEGMENTED redraw. Draw each cohort's series broken at
+    # band transitions so the cross-band 2012/2017/2022 sawtooth connector is not
+    # rendered as if it were a within-cohort trend. One colour per cohort; the
+    # legend entry is added once, the older-band segments share it (label=None).
+    colours = {c: f"C{i}" for i, c in enumerate(sorted(fig_df["birth_cohort"].unique()))}
     for cohort, g in fig_df.groupby("birth_cohort"):
-        ax.plot(g["year"], g["share_married"], marker="o", ms=3, label=cohort)
+        first = True
+        for _, seg in g.sort_values("year").groupby("age_band"):
+            ax.plot(seg["year"], seg["share_married"], marker="o", ms=3,
+                    color=colours[cohort], label=cohort if first else None)
+            first = False
     ax.set_xlabel("calendar year")
     ax.set_ylabel("married share (within band)")
-    ax.set_title(f"{country}: pseudo-cohort marriage-share lines")
+    ax.set_title(f"{country}: pseudo-cohort marriage-share lines "
+                 f"(within-band segments; no cross-band connector)")
     tfr = load_tfr_overlay(country)
     if tfr is not None:
         ax2 = ax.twinx()

@@ -1,3 +1,5 @@
-country,share,period_curvature_rms_2018_2024,cohort_curvature_rms_entry,period_share_of_curvature,leaning,normalization
-COL,share_married,0.012781605308732067,0.011122463812283632,0.5347041645514189,period,sum-to-zero (Deviation) coding; linear trend NOT identified/reported
-COL,share_cohab,0.014954530625030518,0.015654711976426795,0.48856258286895765,cohort,sum-to-zero (Deviation) coding; linear trend NOT identified/reported
+country,share,period_window,period_curvature_rms,cohort_curvature_rms_birth_ge_1990,period_share_of_curvature,leaning,normalization
+COL,share_married,2015_2024,0.006758613962622948,0.013962372763517718,0.32617239960375943,cohort,sum-to-zero; linear trend NOT identified/reported
+COL,share_married,2018_2024,0.005897620700111159,0.013962372763517718,0.2969598510146502,cohort,sum-to-zero; linear trend NOT identified/reported
+COL,share_cohab,2015_2024,0.013447658110780088,0.015118533083637933,0.4707543270034483,cohort,sum-to-zero; linear trend NOT identified/reported
+COL,share_cohab,2018_2024,0.01610610467895452,0.015118533083637933,0.5158139800183641,period,sum-to-zero; linear trend NOT identified/reported

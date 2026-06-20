@@ -67,8 +67,19 @@ PRIMARY = ("CRI", "COL")
 
 BAND_ORDER = ["20-24", "25-29", "30-34", "35-39"]
 BAND_NEXT_YOUNGER = {"25-29": "20-24", "30-34": "25-29", "35-39": "30-34"}
-REFERENCE_SPECS = ("peer_younger", "pop2039", "own_lag")
+BAND_NEXT_OLDER = {"20-24": "25-29", "25-29": "30-34", "30-34": "35-39"}
+
+# Anne A1 — reference-group specs and their adjudication roles (§5 amended rule).
+#   peer_younger : PRIMARY     — excludes focal cohort; upward-diffusion referent.
+#   peer_older   : clean       — template-setter referent; tests diffusion direction.
+#   pop2039      : robustness  — focal cohort inside it (mild inclusion bias).
+#   own_lag      : comparator  — mechanically contaminated; never decisive.
+SPEC_ROLE = {"peer_younger": "primary", "peer_older": "clean",
+             "pop2039": "robustness", "own_lag": "comparator"}
+REFERENCE_SPECS = ("peer_younger", "peer_older", "pop2039", "own_lag")
 LAGS = (1, 2)
+
+ASSERT_LOG = os.path.join(OUT_DIR, "_assert_no_tfr.log")
 
 
 def assert_no_tfr(df: pd.DataFrame, where: str) -> None:
@@ -79,6 +90,13 @@ def assert_no_tfr(df: pd.DataFrame, where: str) -> None:
         return bool(re.search(r"tfr|asfr|fertil|\bbirths?\b", lc))
 
     banned = [c for c in df.columns if is_fertility(c)]
+    try:                                          # B5 audit trail (append; apc writes header)
+        os.makedirs(OUT_DIR, exist_ok=True)
+        with open(ASSERT_LOG, "a") as fh:
+            fh.write(f"[statedep] {where}: cols={list(df.columns)} -> "
+                     f"{'PASS' if not banned else 'VIOLATION ' + str(banned)}\n")
+    except OSError:
+        pass
     if banned:
         raise RuntimeError(f"Identification wall violated in {where}: {banned}")
 
@@ -103,15 +121,18 @@ def build_reference(panel: pd.DataFrame, spec: str, lag: int) -> pd.DataFrame:
                  .rename("ref_lag").reset_index())
         p = p.merge(ref, on=["cohort_start", "age_band", "year"], how="left")
 
-    elif spec == "peer_younger":
-        younger = p[["year", "age_band", "ref_now"]].copy()
-        younger = younger.rename(columns={"age_band": "younger_band",
-                                          "ref_now": "ref_younger"})
-        p["younger_band"] = p["age_band"].map(BAND_NEXT_YOUNGER)
+    elif spec in ("peer_younger", "peer_older"):
+        # Reference = the adjacent band's not-married share at t-lag. peer_younger
+        # is the upward-diffusion referent (excludes focal cohort, undefined for the
+        # youngest band — see B6 20-39 floor); peer_older is the template-setter
+        # referent (undefined for the oldest band).
+        nbr_map = BAND_NEXT_YOUNGER if spec == "peer_younger" else BAND_NEXT_OLDER
+        nbr = p[["year", "age_band", "ref_now"]].rename(
+            columns={"age_band": "nbr_band", "ref_now": "ref_nbr", "year": "year_lag"})
+        p["nbr_band"] = p["age_band"].map(nbr_map)
         p["year_lag"] = p["year"] - lag
-        ref = younger.rename(columns={"year": "year_lag"})
-        p = p.merge(ref, on=["younger_band", "year_lag"], how="left")
-        p["ref_lag"] = p["ref_younger"]
+        p = p.merge(nbr, on=["nbr_band", "year_lag"], how="left")
+        p["ref_lag"] = p["ref_nbr"]
 
     elif spec == "pop2039":
         # Population 20-39 reference: n-weighted mean of ref_now across bands.
@@ -146,9 +167,10 @@ def estimate(panel: pd.DataFrame, spec: str, lag: int) -> dict:
     df = df.dropna(subset=["d_married", "ref_lag"]).copy()
     assert_no_tfr(df, f"estimate[{spec},lag{lag}]")
     if df["cohort_start"].nunique() < 3 or len(df) < 10:
-        return {"reference_spec": spec, "lag": lag, "n": len(df),
-                "beta": np.nan, "se": np.nan, "ci_lo": np.nan, "ci_hi": np.nan,
-                "pvalue": np.nan, "note": "insufficient variation"}
+        return {"reference_spec": spec, "role": SPEC_ROLE[spec], "lag": lag,
+                "n": len(df), "beta": np.nan, "se": np.nan, "ci_lo": np.nan,
+                "ci_hi": np.nan, "pvalue": np.nan, "amplifying": False,
+                "note": "insufficient variation"}
 
     df["age"] = df["age_band"].astype("category")
     df["cohort"] = df["cohort_start"].astype("category")
@@ -156,7 +178,8 @@ def estimate(panel: pd.DataFrame, spec: str, lag: int) -> dict:
         cov_type="cluster", cov_kwds={"groups": df["cohort_start"]})
     ci = model.conf_int().loc["ref_lag"]
     return {
-        "reference_spec": spec, "lag": lag, "n": int(len(df)),
+        "reference_spec": spec, "role": SPEC_ROLE[spec], "lag": lag,
+        "n": int(len(df)),
         "beta": float(model.params["ref_lag"]),
         "se": float(model.bse["ref_lag"]),
         "ci_lo": float(ci[0]), "ci_hi": float(ci[1]),
@@ -187,6 +210,21 @@ def period_effect_test(panel: pd.DataFrame) -> dict:
 # --------------------------------------------------------------------------- #
 # Driver
 # --------------------------------------------------------------------------- #
+# Anne B7 — estimator level. CORRECTION surfaced during implementation: Task C's
+# LHS is a within-pseudo-cohort CELL composition change, so on repeated cross-
+# sections BOTH countries' β are ECOLOGICAL (cell-level) — no individual union
+# transitions are observed in either (the §8 pseudo-panel limitation). The CR/COL
+# asymmetry is in how the CELLS are built, not the estimator level:
+#   CR  — cells are REDATAM pre-tabulated aggregates (coarsest; not reweightable).
+#   COL — cells computed from DANE microdata (finer; reweightable in principle).
+# This deviates from Anne's B7 wording ("COL β is individual-level"); logged as a
+# protocol note in the memo for Anne's confirmation, not silently absorbed.
+ESTIMATOR_LEVEL = {
+    "CRI": "ecological — REDATAM pre-tabulated cells",
+    "COL": "ecological — cells from DANE microdata",
+}
+
+
 def run_country(country: str) -> pd.DataFrame:
     path = os.path.join(OUT_DIR, f"composition_panel_{country}.csv")
     panel = pd.read_csv(path)
@@ -195,6 +233,7 @@ def run_country(country: str) -> pd.DataFrame:
             for spec, lag in itertools.product(REFERENCE_SPECS, LAGS)]
     est = pd.DataFrame(rows)
     est.insert(0, "country", country)
+    est["estimator_level"] = ESTIMATOR_LEVEL.get(country, "ecological")
     est.to_csv(os.path.join(OUT_DIR, f"statedep_estimates_{country}.csv"),
                index=False)
 
@@ -218,10 +257,16 @@ def main():
     if summaries:
         allsum = pd.concat(summaries, ignore_index=True)
         allsum.to_csv(os.path.join(OUT_DIR, "statedep_summary.csv"), index=False)
+        # Full β matrix (all specs × CR/COL × lags) — Anne A1 deliverable.
+        matrix = allsum.pivot_table(index=["reference_spec", "role", "lag"],
+                                    columns="country", values="beta")
+        matrix.to_csv(os.path.join(OUT_DIR, "statedep_beta_matrix.csv"))
         print("\n[2b-C] State-dependence read (sign of β; NOT the §5 rule):")
-        cols = ["country", "reference_spec", "lag", "beta", "se", "pvalue",
-                "amplifying", "period_present"]
+        cols = ["country", "reference_spec", "role", "lag", "beta", "se",
+                "pvalue", "amplifying", "period_present"]
         print(allsum[cols].to_string(index=False))
+        print("\n[2b-C] Full β matrix (rows: spec×role×lag; cols: country):")
+        print(matrix.to_string())
 
 
 if __name__ == "__main__":

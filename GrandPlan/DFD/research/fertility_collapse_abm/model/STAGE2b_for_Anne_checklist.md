@@ -31,24 +31,30 @@ yours to verify; Group C is the reconciliation gate.**
 
 ## A. Decisions only you can make (these change the answer)
 
-### A1 — Reference-group definition for Task C  *(highest leverage)*
+### A1 — Reference-group definition for Task C  *(RESOLVED by Anne 2026-06-20)*
 The sharp test is `Δ(marriage_share)_{c,a,t} = β · ReferenceShare_{t−1} + age FE + cohort FE`.
-"The relevant reference group" is left as a **robustness sweep** over three specs, and **β flips
-sign across them** in the smoke test:
+Anne's adjudication: **`peer_younger` primary** (excludes focal cohort; upward-diffusion referent),
+**`peer_older` added** (template-setter; tests diffusion direction), `pop2039` robustness, `own_lag`
+comparator only. The amended §5 rule keys on sign, not magnitude.
 
-| spec | what it is | smoke-test β (lag 1) | note |
-|---|---|---|---|
-| `peer_younger` | cohab+single share of next-younger band, t−1 | CRI +0.25 / COL +1.39 | distinct group — clean |
-| `pop2039` | cohab+single share of all women 20–39, t−1 | CRI +0.63 / COL +1.11 | distinct group — clean |
-| `own_lag` | own cohort's cohab+single, t−1 | CRI +0.50 / COL +1.06 | **mechanically contaminated — comparator only** |
+**Contradiction correction (Anne caught this).** The earlier draft said "β flips sign across
+specs." That was wrong — it conflated lag variation with spec variation. The corrected reading
+from the rebuilt full β matrix (birth-year-bin cohorts, all specs × CR/COL × lags):
 
-Which group is the theoretically correct reflexive referent is a population-economics call, not
-a coding choice — and the **H_cascade-vs-H_shock verdict hinges on it.** *Decision needed:* name
-the primary spec (demote the rest to robustness), or tell us the right referent isn't among these.
+| spec (role) | β CRI lag1 | β COL lag1 | β CRI lag2 | β COL lag2 |
+|---|---|---|---|---|
+| `peer_younger` (primary) | +0.17 | +1.33 | +0.12 | +0.05 |
+| `peer_older` (clean) | +0.16 | +0.61 | +0.05 | +0.04 |
+| `pop2039` (robustness) | +0.29 | +0.97 | +0.08 | +0.02 |
+| `own_lag` (comparator) | +0.36 | +0.98 | −0.01 | +0.00 |
 
-> Note the sign convention: amplifying = decline accelerates as the not-married share rises, i.e.
-> **β < 0**. The smoke-test β's are mostly **positive** under the clean specs — i.e. *not* the
-> cascade sign — but this is uncalibrated and must not be read as a result yet.
+β is **uniformly positive at lag 1 across every spec and both countries** — *not* sign-flipping.
+At lag 2 the estimates collapse toward zero. The only negative is a tiny, insignificant
+comparator value (CRI `own_lag` lag2, −0.009).
+
+> Sign convention: amplifying cascade = decline accelerates as the not-married share rises, i.e.
+> **β < 0**. Every clean estimate is β > 0 (stabilizing) → the preliminary lean is **away from
+> H_cascade**, consistent with Anne's standing read. NOT a result — gated on the calibrated run.
 
 ### A2 — Pseudo-cohort construction and the band-transition artifact
 Task A assigns each (year, band) cell a cohort via `central_cohort = year − band_midpoint`,

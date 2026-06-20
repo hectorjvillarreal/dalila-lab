@@ -146,14 +146,21 @@ group definition and to lag length. Do **not** include TFR on the right-hand sid
 
 ## 5. Pre-registered decision rule (→ implication for B)
 
+**Amended per Anne's adjudication 2026-06-20 (STAGE2b_Anne_endorsement.md).** Bar keys on
+**sign** (amplifying = β < 0), not magnitude; the CR/COL magnitude gap is treated as a likely
+B7 (ecological-vs-individual) artifact. Reference specs: `peer_younger` (primary), `peer_older`
+(added, clean), `pop2039` (robustness), `own_lag` (comparator only). Period windows: **2015–2024
+and 2018–2024**. Entry cohorts: **birth-year ≥ 1990**.
+
 | Finding | Reading | Implication for (B) |
 |---|---|---|
-| Cohort-dominant, β ≈ 0 | H_cohort | **(B) deferred.** Threshold is in the wrong place; the model needs cohort-entry heterogeneity, not within-cohort reflexivity. |
-| Period-dominant, β ≈ 0 | H_shock | **(B)'s reflexive structure not justified.** Model needs an exogenous period driver, not endogenous feedback. |
-| Period-dominant, β amplifying & significant | H_cascade | **(B) warranted.** Nina proceeds with reflexive self-reinforcement. |
-| Mixed | H_mixed | Apportion. (B) is warranted **only for the period/state-dependent component**; quantify its share and document. |
+| Cohort-dominant (Task B), no amplifying β under `peer_younger` | H_cohort | **(B) deferred;** model needs cohort-entry heterogeneity, not within-cohort reflexivity. |
+| Period-dominant, β not amplifying / insignificant under `peer_younger` | H_shock | **(B)'s reflexive structure not justified;** needs an exogenous period driver, not endogenous feedback. |
+| β amplifying (β<0) & significant under `peer_younger` **AND** ≥1 of {`peer_older`,`pop2039`}, in **both** CR & COL | H_cascade | **(B) warranted.** Nina proceeds with reflexive self-reinforcement. |
+| Period component (Task B) + amplifying β under ≥ primary spec, mixed with cohort component | H_mixed | **(B) warranted ONLY for the period share;** quantify and document. |
 
-This rule is fixed as of drafting. Any deviation must be logged as a protocol amendment
+CR evidence reads as coarser (ecological / cell-level) in the "both countries" requirement (B7).
+This rule is fixed as amended. Any further deviation must be logged as a protocol amendment
 with reason, not silently absorbed.
 
 ---
@@ -247,8 +254,18 @@ applies even though this is CPU/Python work.
   limitations (microdata-robustness foreclosed for CR; coarse 4-band grid confounds within-band
   aging in the Task C LHS). Clarifications only; the hypothesis set (§2) and pre-registered
   decision rule (§5) are unchanged. Pre-endorsement, so not a protocol amendment under §5.
+- **2026-06-20 — Anne adjudication (STAGE2b_Anne_endorsement.md).** §5 rule amended: bar =
+  amplifying (β<0) & significant under primary (`peer_younger`) + ≥1 clean spec, in both CR & COL;
+  `peer_older` spec added; substantive period windows (2015–2024 and 2018–2024) and entry-cohort
+  cut (birth ≥ 1990) replace the mechanical youngest-third/single-box cuts; pseudo-cohorts
+  redefined by birth-year bin (year − band_lower, not band_midpoint, A2); CR β tagged ecological
+  (B7). Hypothesis set (§2) endorsed **unchanged**. Implemented in code 2026-06-20 (Claude):
+  `stage2b_apc_composition.py` (A2 cohorts, Lexis within-band curvature, windows, entry cut),
+  `stage2b_state_dependence.py` (`peer_older`, full β matrix), `stage2b_figures.py` (within-band
+  segmented fig-1). `endorsed_by` stays blank pending the six execution conditions + calibrated run.
 
 ---
 
 *Stage 2b build instruction. Drafted by Claude, 2026-06-20, on Héctor's instruction,
-following Anne's demographic mandate. endorsed_by blank pending Anne.*
+following Anne's demographic mandate. §5 amended per Anne 2026-06-20; endorsed_by blank pending
+the six execution conditions (STAGE2b_Anne_endorsement.md) and the calibrated run.*
