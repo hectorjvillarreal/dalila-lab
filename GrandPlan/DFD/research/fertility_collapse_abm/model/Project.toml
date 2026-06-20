@@ -1,0 +1,15 @@
+# Plain environment (NOT a package — no name/uuid, so Julia won't try to precompile
+# the project as a package looking for src/cri_skeleton_abm.jl). The model runs as a
+# script: julia --project=. cri_skeleton_abm.jl <w> <nseeds>.
+# Random, Statistics, Printf are stdlibs — available without being declared here.
+[deps]
+Agents = "46ada45e-f475-11e8-01d0-f70cc89e6671"
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+
+# Agents 6/7's walk.jl uses an old Distributions @check_args form that Distributions
+# 0.25.127 (latest) rejects; pin Distributions exactly below the break.
+[compat]
+Agents = "6"
+Distributions = "=0.25.116"

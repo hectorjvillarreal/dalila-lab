@@ -74,13 +74,31 @@ for the review, none blocking:
   explicit Stage 2 criterion; parity-from-the-start enables it, but the paper's causal-timing
   claim still needs it — keep on the nesting-phase radar.
 
-## Parallel track (non-gating)
+## Parallel track (non-gating) — ARG + CHL acquired 2026-06-19; findings revise the spec premise
 
-Argentina/Chile coupling acquisition to extend the cohabitation-share range where `w` is
-unidentified (CRI + COL are both high-cohabitation). ARG route: census 2010/2022 union
-status + DEIS marriage registrations, paired with the INDEC-pinned annual TFR. Feeds the
-nesting phase, not the skeleton. Extends `../data/coupling/*_coupling_annual.csv`, same
-schema and forensic discipline.
+The Argentina and Chile coupling series are now built (`../data/coupling/ARG_coupling_annual.csv`
+via INDEC EPH continua 2017-2025 urban; `../data/coupling/CHL_coupling_annual.csv` via MDS CASEN
+2006-2022 national). The data **revise the spec's external-validity rationale** (§"Parallel track"
+in the spec assumed ARG is a marriage-dominant Southern-Cone contrast):
+
+- **Argentina is NOT the marriage-dominant contrast the spec assumed.** Urban ARG is
+  high-cohabitation throughout (cohab-share of unions 68→75%, sitting with Colombia, 74%). It
+  does **not** extend the `w`-identifying cohabitation range. It is a third high-cohabitation
+  collapse case (strengthens generality of the high-cohab / map-side-at-total pattern).
+- **Chile supplies the missing range — temporally, within one country.** CASEN 2006-2022 shows a
+  marriage→cohabitation flip: marriage halves (36.1→16.7%), cohab-share of unions **35%(2006) →
+  67%(2022)**. **Chile 2006 (35%) is the most marriage-dominant point in the whole
+  CRI/MEX/COL/ARG/CHL panel** (more than CRI's ~48%); 2022 sits with ARG/COL. So Chile alone
+  traverses the cohabitation-share range that identifies `w`, if cohab-share is treated as a
+  time-varying initial condition — **this rescues the `w`-identification goal ARG could not
+  deliver**, and is a stronger external-validity contribution than the spec anticipated.
+- **Caveats:** ARG urban-only (vs national CRI/COL/CHL); CHL periodic (8 waves/16yr, coarse lead
+  test); both have implied/reconstructed TFR (Mexico-style lead caveat); 2020 pandemic waves.
+  Per-country detail + flags in the respective `*_coupling_annual.md` sidecars.
+
+**For the nesting phase:** the panel's cohabitation-share span is CHL-2006 (35%) → CRI (48%) →
+COL/ARG/CHL-2022 (67-75%). Use Chile's 2006-2022 trajectory as the primary `w`-identifying
+variation. The spec's "Argentina marriage-dominant" line should be corrected at the next revision.
 
 ---
 
