@@ -1,0 +1,19 @@
+# Stage 2c identification-wall assertion trail (assert_no_tfr)
+[2c] person_cells: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n'] -> PASS
+[2c] logit[peer_younger,lag1,1519=True,educ=False]: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'nbr_band', 'year_src', 'ref_lag'] -> PASS
+[2c] logit[peer_younger,lag1,1519=False,educ=False]: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'nbr_band', 'year_src', 'ref_lag'] -> PASS
+[2c] logit[peer_younger,lag2,1519=True,educ=False]: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'nbr_band', 'year_src', 'ref_lag'] -> PASS
+[2c] logit[peer_younger,lag2,1519=False,educ=False]: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'nbr_band', 'year_src', 'ref_lag'] -> PASS
+[2c] logit[peer_older,lag1,1519=True,educ=False]: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'nbr_band', 'year_src', 'ref_lag'] -> PASS
+[2c] logit[peer_older,lag1,1519=False,educ=False]: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'nbr_band', 'year_src', 'ref_lag'] -> PASS
+[2c] logit[peer_older,lag2,1519=True,educ=False]: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'nbr_band', 'year_src', 'ref_lag'] -> PASS
+[2c] logit[peer_older,lag2,1519=False,educ=False]: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'nbr_band', 'year_src', 'ref_lag'] -> PASS
+[2c] logit[pop_all,lag1,1519=True,educ=False]: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'ref_lag'] -> PASS
+[2c] logit[pop_all,lag1,1519=False,educ=False]: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'ref_lag'] -> PASS
+[2c] logit[pop_all,lag2,1519=True,educ=False]: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'ref_lag'] -> PASS
+[2c] logit[pop_all,lag2,1519=False,educ=False]: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'ref_lag'] -> PASS
+[2c] logit[peer_younger,lag1,1519=True,educ=True]: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'nbr_band', 'year_src', 'ref_lag'] -> PASS
+[2c] entry_only[peer_older]: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'nbr_band', 'year_src', 'ref_lag'] -> PASS
+[2c] entry_only[pop_all]: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'ref_lag'] -> PASS
+[2c] entry_interaction: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'ref_lag', 'is_1519'] -> PASS
+[2c] multinomial: cols=['year', 'age', 'age_band', 'cohort_start', 'birth_year', 'urban', 'educ3', 'status', 'married', 'weight', 'n', 'nbr_band', 'year_src', 'ref_lag'] -> PASS

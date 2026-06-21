@@ -1,0 +1,4 @@
+test,spec,beta,pvalue,amplifying,n_persons,note
+1519_only,peer_older,31.27179954952235,0.049342679965686975,False,609379,
+1519_only,pop_all,-1.2862914122141094,0.8048978045112376,False,609379,
+interaction,pop_all,0.0682692108845524,0.9684150830454619,False,2782210,coef on ref_lag×1[15-19]: extra amplification in entry band
