@@ -237,8 +237,10 @@ applies even though this is CPU/Python work.
 
 ## 10. Provenance and filing
 
-- Working location: `GrandPlan/DFD/research/fertility_collapse_abm/STAGE2b_compositional_cascade_instruction.md`
-- Archive to `_crossrefs/_build_instructions/` per orientation §10 (Debb follow-up, PROTO-RAG-001).
+- Working location: `GrandPlan/DFD/research/fertility_collapse_abm/model/STAGE2b_compositional_cascade_instruction.md`
+- **Archived (build record):** `_crossrefs/_build_instructions/2026-06-20_fertility_collapse_abm_stage2b.md`
+  (PROTO-RAG-001; `status: executed`, pending Anne's endorsement). Travels with this branch;
+  reaches `main` at merge, per the Stage 1 precedent.
 - **Reconcile against Anne's points document** when it lands; if its (A) framing differs from
   the hypothesis set or decision rule here, Anne's framing governs and this instruction is
   amended before execution.
