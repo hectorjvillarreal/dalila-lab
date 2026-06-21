@@ -7,7 +7,7 @@ title: "Stage 2b — Compositional-vs-cascade discrimination (demographic-measur
 target: Claude Code (Dalila)
 date_added: 2026-06-20
 added_by: Claude
-endorsed_by:                      # pending Anne — see §10
+endorsed_by: Anne   # READ-OF-RECORD endorsed 2026-06-21 with three corrections (B7 ecological; (B) deferred-not-closed; COL/CRI labels) — see §10 amendment log. NB: cited sign-off file STAGE2b_Anne_read_signoff.md is not yet present on Dalila (dangling depends_on in 2c artifacts) — flagged for Héctor.
 seeds: "Question (A) — compositional-vs-cascade (orientation §6A)"
 depends_on:
   - "STAGE1_5_identification_memo.md (v3.0) — frozen invariants, gate of record"
@@ -163,6 +163,17 @@ CR evidence reads as coarser (ecological / cell-level) in the "both countries" r
 This rule is fixed as amended. Any further deviation must be logged as a protocol amendment
 with reason, not silently absorbed.
 
+> **[Anne 2026-06-21 — B7 read-of-record correction, COL/CRI labels]** The implication above
+> that only CR is "ecological / cell-level" while COL is individual-level is **wrong** and is
+> corrected: **both** countries' β are ecological — Task C's LHS is a within-pseudo-cohort *cell*
+> composition change, so on repeated cross-sections no individual union transitions are observed
+> in either. The CR/COL asymmetry is in how the **cells are built**, not the estimator level:
+> CRI cells are REDATAM pre-tabulated aggregates (coarsest, not reweightable); COL cells are
+> computed from DANE microdata (finer, reweightable in principle). The "both CR & COL" H_cascade
+> bar still holds; the verdict (sign-based) is unchanged. The individual-outcome test this
+> motivated is Stage 2c-i (COL), which discharges the aggregation concern — see
+> `STAGE2c_col_individual_memo.md`.
+
 ---
 
 ## 6. Deliverables
@@ -265,9 +276,27 @@ applies even though this is CPU/Python work.
   `stage2b_apc_composition.py` (A2 cohorts, Lexis within-band curvature, windows, entry cut),
   `stage2b_state_dependence.py` (`peer_older`, full β matrix), `stage2b_figures.py` (within-band
   segmented fig-1). `endorsed_by` stays blank pending the six execution conditions + calibrated run.
+- **2026-06-21 — Anne read-of-record sign-off (three corrections); `endorsed_by` → Anne.** The
+  calibrated 2b run and read are endorsed by Anne as the gate of record, with three corrections
+  annotated here (write-back per the 2026-06-21 Debb handoff):
+  1. **B7 ecological correction.** Both CRI and COL β are ecological (cell-level); no individual
+     union transitions are observed in either. The asymmetry is in cell construction (CRI =
+     REDATAM pre-tabulated; COL = cells from DANE microdata), not the estimator level. This
+     deviates from the original B7 wording ("COL β is individual-level"); recorded, not absorbed.
+     (Also logged in `stage2b_state_dependence.py` `ESTIMATOR_LEVEL`.)
+  2. **(B) is deferred-NOT-closed.** The §5 "(B) deferred" implication is refined: (B) reflexive
+     feedback is **deferred, aggregation-cleared, pending ENDS — not closed**. The Stage 2c-i
+     individual-outcome test (COL) discharges the *aggregation* objection but cannot observe a
+     *process in time*; closure waits on the ENDS true-transition hazard (2c-ii, gated). Do not
+     stage (B); Stage 3 sufficiency proceeds in parallel as a **no-reflexivity** model.
+  3. **COL/CRI label fix.** §5 inline correction (above): "ecological / cell-level" applies to
+     **both** countries, not CR alone — see the bracketed Anne-correction block in §5.
+  Provenance note: the cited `STAGE2b_Anne_read_signoff.md` (depends_on in the 2c artifacts) is
+  **not yet present on Dalila** — dangling reference, flagged for Héctor; this amendment log is
+  the in-repo record of the sign-off until that file lands.
 
 ---
 
 *Stage 2b build instruction. Drafted by Claude, 2026-06-20, on Héctor's instruction,
-following Anne's demographic mandate. §5 amended per Anne 2026-06-20; endorsed_by blank pending
-the six execution conditions (STAGE2b_Anne_endorsement.md) and the calibrated run.*
+following Anne's demographic mandate. §5 amended per Anne 2026-06-20; endorsed by Anne as the
+read of record 2026-06-21 with three corrections (§10 amendment log).*
