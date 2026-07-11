@@ -1,0 +1,28 @@
+== CRI — checks at end of calibration (50000x16 final pending) ==
+PASS      loss_no_tfr — composition_loss body contains no TFR token
+PASS      free_params_no_tfr — no free parameter references TFR
+PASS      transitions_no_obs_tfr — transition rules never read the observed TFR series
+PASS      calibration_no_tfr — eval_loss / calibrate_country reference no TFR object
+PASS      runtime_no_tfr_load — files loaded during calibration: CRI_coupling_annual.csv
+PASS      agent_step_no_cross_agent_reads — agent_step! reads no other agent's state
+PASS      model_step_calendar_only — model_step! computes no population snapshot feeding transitions
+PASS      token_absent_refgroup — skeleton feedback identifier `refgroup` absent from 3a model
+PASS      token_absent_norm_multiplier — skeleton feedback identifier `norm_multiplier` absent from 3a model
+PASS      token_absent_map_multiplier — skeleton feedback identifier `map_multiplier` absent from 3a model
+PASS      token_absent_fw_union_share — skeleton feedback identifier `fw_union_share` absent from 3a model
+----
+11 PASS / 0 VIOLATION
+== COL — checks at end of calibration (50000x16 final pending) ==
+PASS      loss_no_tfr — composition_loss body contains no TFR token
+PASS      free_params_no_tfr — no free parameter references TFR
+PASS      transitions_no_obs_tfr — transition rules never read the observed TFR series
+PASS      calibration_no_tfr — eval_loss / calibrate_country reference no TFR object
+PASS      runtime_no_tfr_load — files loaded during calibration: COL_coupling_annual.csv
+PASS      agent_step_no_cross_agent_reads — agent_step! reads no other agent's state
+PASS      model_step_calendar_only — model_step! computes no population snapshot feeding transitions
+PASS      token_absent_refgroup — skeleton feedback identifier `refgroup` absent from 3a model
+PASS      token_absent_norm_multiplier — skeleton feedback identifier `norm_multiplier` absent from 3a model
+PASS      token_absent_map_multiplier — skeleton feedback identifier `map_multiplier` absent from 3a model
+PASS      token_absent_fw_union_share — skeleton feedback identifier `fw_union_share` absent from 3a model
+----
+11 PASS / 0 VIOLATION

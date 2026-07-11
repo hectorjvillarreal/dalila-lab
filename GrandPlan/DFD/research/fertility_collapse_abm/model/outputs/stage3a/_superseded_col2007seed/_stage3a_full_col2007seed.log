@@ -1,0 +1,58 @@
+
+=== STAGE 3a CALIBRATION — no-reflexivity model (threads=8) ===
+inner: 12000 agents x 4 seeds; final: 50000 agents x 16 seeds; budget 600 evals/country x 4 restarts
+IDENTIFICATION: TFR is never loaded during calibration; checks -> _assert_no_tfr.log
+
+--- CALIBRATING CRI (2010-2024) ---
+  [CRI restart 1] best loss = 0.035104 after 150 evals
+  [CRI restart 2] best loss = 0.056550 after 150 evals
+  [CRI restart 3] best loss = 0.083011 after 150 evals
+  [CRI restart 4] best loss = 0.064748 after 150 evals
+  >> best loss(CRI) = 0.035104
+     form_base              = 0.06860
+     marry_share_of_form    = 0.32664
+     cohab_to_marr          = 0.05120
+     dissolve_cohab         = 0.06302
+     dissolve_marr          = 0.02013
+     kappa_floor            = 0.35562
+     kappa_mid              = 1990.11069
+     kappa_steep            = 0.15298
+     form_tilt              = 0.02702
+     period_depth           = 0.15338
+     period_mid             = 2018.95900
+     period_steep           = 0.76658
+  Running FINAL confirmation (50000 x 16) ...
+  Sufficiency metrics:
+    M1_magnitude_capture_married           sim=  0.9750 obs=  1.0000  >=0.85           PASS
+    magnitude_capture_cohab_reported       sim=  1.0289 obs=  1.0000  reported         PASS
+    M2_late_share_married                  sim=  0.5436 obs=  0.5815  |diff|<=0.1      PASS
+    M3_accel_sign_married_d2               sim=  0.0000 obs=  0.0019  same sign        PASS
+  Overlay TFR (placeholder-ASFR, comparison only): 1.237 -> 0.896
+
+--- CALIBRATING COL (2007-2024) ---
+  [COL restart 1] best loss = 0.113946 after 150 evals
+  [COL restart 2] best loss = 0.233092 after 151 evals
+  [COL restart 3] best loss = 0.248616 after 150 evals
+  [COL restart 4] best loss = 0.457596 after 151 evals
+  >> best loss(COL) = 0.113946
+     form_base              = 0.12644
+     marry_share_of_form    = 0.44178
+     cohab_to_marr          = 0.05881
+     dissolve_cohab         = 0.06244
+     dissolve_marr          = 0.01773
+     kappa_floor            = 0.18535
+     kappa_mid              = 1978.91029
+     kappa_steep            = 0.21374
+     form_tilt              = 0.02035
+     period_depth           = 0.18954
+     period_mid             = 2015.00604
+     period_steep           = 0.91205
+  Running FINAL confirmation (50000 x 16) ...
+  Sufficiency metrics:
+    M1_magnitude_capture_married           sim=  1.3782 obs=  1.0000  >=0.85           PASS
+    magnitude_capture_cohab_reported       sim=  1.6044 obs=  1.0000  reported         PASS
+    M2_late_share_married                  sim= -1.7770 obs= -2.3250  |diff|<=0.1      FAIL
+    M3_accel_sign_married_d2               sim= -0.0002 obs= -0.0004  same sign        PASS
+  Overlay TFR (placeholder-ASFR, comparison only): 1.047 -> 1.090
+
+Stage 3a calibration complete. Outputs in: /home/hectorjuan/Dalila/GrandPlan/DFD/research/fertility_collapse_abm/model/outputs/stage3a
