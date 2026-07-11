@@ -11,11 +11,13 @@
 #   which reads ONLY the figdata CSVs written here.
 #
 # INPUTS (read-only)
-#   outputs/stage3a/{CC}_composition_bands.csv     fig 1 (sim-vs-obs by band)
-#   outputs/stage3a/{CC}_cohort_multiplier.csv     fig 2 (kappa(b), phi(b))
+#   HEADLINE SPEC = cohort-only (_noperiod), per STAGE3a_Nina_signoff.md cond. 3;
+#   the full 12-param model is the documented robustness spec (fig 3).
+#   outputs/stage3a/{CC}_composition_bands_noperiod.csv   fig 1 (sim-vs-obs by band)
+#   outputs/stage3a/{CC}_cohort_multiplier_noperiod.csv   fig 2 (kappa(b), phi(b))
 #   outputs/stage2b/apc_cohort_effects_{CC}_married.csv   fig 2 (2b empirical gradient)
-#   outputs/stage3a/{CC}_period_multiplier.csv     fig 3 (pi(t))
-#   outputs/stage3a/{CC}_tfr_overlay.csv           fig 4 (overlay ONLY — see wall note)
+#   outputs/stage3a/{CC}_period_multiplier.csv     fig 3 (pi(t), ROBUSTNESS spec)
+#   outputs/stage3a/{CC}_tfr_overlay_noperiod.csv  fig 4 (overlay ONLY — see wall note)
 #
 # OUTPUTS (outputs/stage3a/figdata/)
 #   fig1_bands_{CC}.csv    fig2_cohort_{CC}.csv    fig3_period.csv    fig4_tfr_{CC}.csv
@@ -46,12 +48,12 @@ const CODES = ("CRI", "COL")
 mkpath(FIGDATA)
 
 for cc in CODES
-    # ---- fig 1: per-band sim-vs-obs composition trajectories (pass-through) ----
-    bands = CSV.read(joinpath(S3A, "$(cc)_composition_bands.csv"), DataFrame)
+    # ---- fig 1: per-band sim-vs-obs composition trajectories (HEADLINE spec) ----
+    bands = CSV.read(joinpath(S3A, "$(cc)_composition_bands_noperiod.csv"), DataFrame)
     CSV.write(joinpath(FIGDATA, "fig1_bands_$(cc).csv"), bands)
 
-    # ---- fig 2: calibrated kappa(b) against the 2b APC cohort effects ----
-    kap = CSV.read(joinpath(S3A, "$(cc)_cohort_multiplier.csv"), DataFrame)
+    # ---- fig 2: calibrated kappa(b) against the 2b APC cohort effects (HEADLINE) ----
+    kap = CSV.read(joinpath(S3A, "$(cc)_cohort_multiplier_noperiod.csv"), DataFrame)
     apc = CSV.read(joinpath(S2B, "apc_cohort_effects_$(cc)_married.csv"), DataFrame)
     # APC bins are 5-yr birth-cohort starts; evaluate kappa at the bin midpoint.
     kmap = Dict(r.birth_year => r.kappa for r in eachrow(kap))
@@ -62,11 +64,11 @@ for cc in CODES
     CSV.write(joinpath(FIGDATA, "fig2_cohort_profile_$(cc).csv"), kap)
 
     # ---- fig 4: TFR overlay (comparison only; caveated in the renderer) ----
-    tfr = CSV.read(joinpath(S3A, "$(cc)_tfr_overlay.csv"), DataFrame)
+    tfr = CSV.read(joinpath(S3A, "$(cc)_tfr_overlay_noperiod.csv"), DataFrame)
     CSV.write(joinpath(FIGDATA, "fig4_tfr_$(cc).csv"), tfr)
 end
 
-# ---- fig 3: exogenous period multiplier pi(t), both countries in one file ----
+# ---- fig 3: pi(t) from the FULL (robustness) spec — the headline spec has none ----
 per = vcat([let d = CSV.read(joinpath(S3A, "$(cc)_period_multiplier.csv"), DataFrame)
                 d.country .= cc; d
             end for cc in CODES]...)

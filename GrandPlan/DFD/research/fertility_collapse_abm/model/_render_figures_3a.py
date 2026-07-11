@@ -138,8 +138,9 @@ def fig3() -> None:
                     color=color, fontweight="bold", va="center")
     ax.set_ylabel("π(t) marriage-entry multiplier")
     ax.set_xlabel("calendar year")
-    ax.set_title("Calibrated exogenous period shock π(t)\n(calendar-time only — no state dependence)",
-                 fontsize=9.5)
+    ax.set_title("Exogenous period shock π(t), full-model ROBUSTNESS spec\n"
+                 "(calendar-time only — no state dependence; headline spec is cohort-only, π ≡ 1)",
+                 fontsize=9)
     fig.tight_layout()
     fig.savefig(os.path.join(FIGS, "fig3_period.png"))
     plt.close(fig)
