@@ -1,0 +1,9 @@
+country,metric,sim,obs,criterion,pass
+CRI,M1_magnitude_capture_married,0.9750317548036299,1.0,>=0.85,true
+CRI,magnitude_capture_cohab_reported,1.028855838058189,1.0,reported,true
+CRI,M2_late_share_married,0.5435933403978218,0.5814832309872464,|diff|<=0.1,true
+CRI,M3_accel_sign_married_d2,1.6800792057115183e-5,0.0019187500000000003,same sign,true
+COL,M1_magnitude_capture_married,1.0436305577521252,1.0,>=0.85,true
+COL,magnitude_capture_cohab_reported,1.6460094992557819,1.0,reported,true
+COL,M2_late_share_married,0.48989118214528565,0.458691686213187,|diff|<=0.1,true
+COL,M3_accel_sign_married_d2,9.297890659620833e-5,-0.00035312500000000274,same sign,false

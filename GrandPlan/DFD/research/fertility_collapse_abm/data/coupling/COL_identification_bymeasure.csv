@@ -1,0 +1,6 @@
+country,measure,w,overlap,n_years,level_start,level_end,q1_best_k,q1_best_r,q1_lead1_r,q1_simul_r,q1_lag1_r,q2_coup_pct,q2_tfr_pct,q2_ratio,q2_locus,q2_steepest_year,q3_youngest_first,q3_band_steepest,q4_independent
+COL,marriage_only,0.0,2015-2024,10,0.1657,0.119,1,-0.59,-0.59,-0.164,0.197,-28.2,-35.3,0.8,mixed,2020,False,20-24:2019|25-29:2013|30-34:2020|35-39:2009,yes (DANE GEIH P6070 roster vs vital registration)
+COL,fw_0.4,0.4,2015-2024,10,0.3369,0.2873,2,0.824,0.105,-0.088,0.518,-14.7,-35.3,0.42,map-side,2021,False,20-24:2022|25-29:2013|30-34:2021|35-39:2011,yes (DANE GEIH P6070 roster vs vital registration)
+COL,fw_0.6,0.6,2015-2024,10,0.4225,0.3715,-2,0.808,0.431,-0.02,0.481,-12.1,-35.3,0.34,map-side,2021,False,20-24:2022|25-29:2021|30-34:2021|35-39:2011,yes (DANE GEIH P6070 roster vs vital registration)
+COL,fw_0.8,0.8,2015-2024,10,0.5081,0.4556,-2,0.906,0.591,0.021,0.414,-10.4,-35.3,0.3,map-side,2021,False,20-24:2022|25-29:2021|30-34:2021|35-39:2011,yes (DANE GEIH P6070 roster vs vital registration)
+COL,total,1.0,2015-2024,10,0.5937,0.5398,-2,0.934,0.667,0.044,0.365,-9.3,-35.3,0.26,map-side,2021,False,20-24:2022|25-29:2021|30-34:2021|35-39:2013,yes (DANE GEIH P6070 roster vs vital registration)

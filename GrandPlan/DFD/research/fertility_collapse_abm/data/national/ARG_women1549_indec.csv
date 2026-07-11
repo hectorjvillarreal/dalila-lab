@@ -1,0 +1,19 @@
+year,value,source,methodology_flag,provisional_flag
+2010,10306944,"INDEC Cuadro 2, c2_proyecciones_nac_2010_2040.xls (Censo-2010 base)","female 15-49, sum of 5-yr groups; mid-year",definitive
+2011,10432273,"INDEC Cuadro 2, c2_proyecciones_nac_2010_2040.xls (Censo-2010 base)","female 15-49, sum of 5-yr groups; mid-year",definitive
+2012,10552880,"INDEC Cuadro 2, c2_proyecciones_nac_2010_2040.xls (Censo-2010 base)","female 15-49, sum of 5-yr groups; mid-year",definitive
+2013,10669484,"INDEC Cuadro 2, c2_proyecciones_nac_2010_2040.xls (Censo-2010 base)","female 15-49, sum of 5-yr groups; mid-year",definitive
+2014,10783268,"INDEC Cuadro 2, c2_proyecciones_nac_2010_2040.xls (Censo-2010 base)","female 15-49, sum of 5-yr groups; mid-year",definitive
+2015,10894899,"INDEC Cuadro 2, c2_proyecciones_nac_2010_2040.xls (Censo-2010 base)","female 15-49, sum of 5-yr groups; mid-year",definitive
+2016,11004627,"INDEC Cuadro 2, c2_proyecciones_nac_2010_2040.xls (Censo-2010 base)","female 15-49, sum of 5-yr groups; mid-year",definitive
+2017,11111662,"INDEC Cuadro 2, c2_proyecciones_nac_2010_2040.xls (Censo-2010 base)","female 15-49, sum of 5-yr groups; mid-year",definitive
+2018,11214540,"INDEC Cuadro 2, c2_proyecciones_nac_2010_2040.xls (Censo-2010 base)","female 15-49, sum of 5-yr groups; mid-year",definitive
+2019,11311612,"INDEC Cuadro 2, c2_proyecciones_nac_2010_2040.xls (Censo-2010 base)","female 15-49, sum of 5-yr groups; mid-year",definitive
+2020,11401749,"INDEC Cuadro 2, c2_proyecciones_nac_2010_2040.xls (Censo-2010 base)","female 15-49, sum of 5-yr groups; mid-year",definitive
+2021,11484778,"INDEC Cuadro 2, c2_proyecciones_nac_2010_2040.xls (Censo-2010 base)","female 15-49, sum of 5-yr groups; mid-year",definitive
+2022,11561088,"INDEC Cuadro 2, c2_proyecciones_nac_2010_2040.xls (Censo-2010 base)","female 15-49, sum of 5-yr groups; mid-year",definitive
+2023,11631314,"INDEC Cuadro 2, c2_proyecciones_nac_2010_2040.xls (Censo-2010 base)","female 15-49, sum of 5-yr groups; mid-year",definitive
+2024,11695576,"INDEC Cuadro 2, c2_proyecciones_nac_2010_2040.xls (Censo-2010 base)","female 15-49, sum of 5-yr groups; mid-year",definitive
+2022,11931996,INDEC proyecciones_nacionales_2022_2040_base.csv (Censo-2022 base),"female 15-49, sum single ages; +3.21% vs Censo-2010 at 2022",definitive
+2023,12016973,INDEC proyecciones_nacionales_2022_2040_base.csv (Censo-2022 base),"female 15-49, sum single ages; +3.21% vs Censo-2010 at 2022",definitive
+2024,12101183,INDEC proyecciones_nacionales_2022_2040_base.csv (Censo-2022 base),"female 15-49, sum single ages; +3.21% vs Censo-2010 at 2022",definitive

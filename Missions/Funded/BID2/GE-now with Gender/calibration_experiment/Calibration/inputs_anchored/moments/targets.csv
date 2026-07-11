@@ -1,0 +1,7 @@
+name,value,se,description
+hours_pa_males,0.3400,0.0100,Average hours of prime-age males (j<jR) as share of time endowment; ENOE/OECD Mexico hours
+vsl_usd,2000000,700000,Value of a statistical life at reference age (2022 USD); Mexico benefit-transfer central ~2.0M
+cross_elast_m,1.0000,0.3000,Cross-sectional (pooled) income elasticity of medical spending; UMIC anchor between aggregate-luxury and bias-corrected micro
+mean_m_age_25_35,0.0400,0.0200,Phi-weighted mean of m for age periods j=2 and j=3 (model units); ENIGH medical share ~3.4% of consumption
+logslope_m_25_75,0.1200,0.0500,OLS slope of log(mean m by age) on age-period index j=2..12; ~2-2.5%/yr life-cycle medical-spending growth
+within_age_elast,0.4000,0.1500,Mass-weighted mean over working ages of within-age income elasticity of m; Newhouse/RAND micro range

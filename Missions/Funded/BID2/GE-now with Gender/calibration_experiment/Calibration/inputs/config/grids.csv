@@ -1,0 +1,6 @@
+param,value,description
+NA,100,Asset grid points (Household-Gender default)
+NH,15,Health grid points
+Nm,40,Medical-spending grid points (incl. m=0)
+refine_m,1,Parabolic refinement of m* (1=on, 0=off)
+verify,0,Run @assert diagnostic gates after each PE solve (1=on, 0=off; slow during SMM)

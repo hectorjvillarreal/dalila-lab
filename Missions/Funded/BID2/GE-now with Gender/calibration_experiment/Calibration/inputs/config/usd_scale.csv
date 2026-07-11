@@ -1,0 +1,4 @@
+param,value,description
+usd_per_unit_c,15000,USD per unit of model consumption (placeholder; calibrate to per-capita annual consumption in target country)
+periods_per_year,5,Years per model period (used to scale VSL from per-period units to per-year)
+reference_age_period,4,Age period at which to evaluate VSL (j=4 means age 35 with the 5-year periods + age-20 origin)

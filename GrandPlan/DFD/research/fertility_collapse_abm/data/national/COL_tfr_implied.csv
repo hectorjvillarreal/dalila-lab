@@ -1,0 +1,10 @@
+year,value,source,methodology_flag,provisional_flag
+2016,1.758,"implied from COL_births_national.csv / WB women 15-49, anchored to national TFR 2018",stable-age-pattern assumption; extension/consistency proxy,definitive
+2017,1.756,"implied from COL_births_national.csv / WB women 15-49, anchored to national TFR 2018",stable-age-pattern assumption; extension/consistency proxy,definitive
+2018,1.7,"implied from COL_births_national.csv / WB women 15-49, anchored to national TFR 2018",stable-age-pattern assumption; extension/consistency proxy,definitive
+2019,1.651,"implied from COL_births_national.csv / WB women 15-49, anchored to national TFR 2018",stable-age-pattern assumption; extension/consistency proxy,definitive
+2020,1.593,"implied from COL_births_national.csv / WB women 15-49, anchored to national TFR 2018",stable-age-pattern assumption; extension/consistency proxy,definitive
+2021,1.545,"implied from COL_births_national.csv / WB women 15-49, anchored to national TFR 2018",stable-age-pattern assumption; extension/consistency proxy,definitive
+2022,1.423,"implied from COL_births_national.csv / WB women 15-49, anchored to national TFR 2018",stable-age-pattern assumption; extension/consistency proxy,definitive
+2023,1.268,"implied from COL_births_national.csv / WB women 15-49, anchored to national TFR 2018",stable-age-pattern assumption; extension/consistency proxy,definitive
+2024,1.108,"implied from COL_births_national.csv / WB women 15-49, anchored to national TFR 2018",stable-age-pattern assumption; extension/consistency proxy,definitive

@@ -1,0 +1,7 @@
+spec,role,lag,indiv_beta,indiv_p,indiv_amplifying,cell_beta_2b,cell_amplifying_2b,verdict
+peer_younger,primary,1,0.44506280736160736,0.0009994736547065603,False,1.3295513573935689,False,confirms non-amplifying
+peer_younger,primary,2,0.32653970427214307,0.022129719419398744,False,0.0456993652883563,False,confirms non-amplifying
+peer_older,clean,1,0.27289896973711203,0.129508385541178,False,0.6074489675610373,False,confirms non-amplifying
+peer_older,clean,2,0.24701020600281282,0.11810609458608208,False,0.0371915788850327,False,confirms non-amplifying
+pop_all,robustness,1,0.5071839531010056,0.02371463819448032,False,0.9681426466214844,False,confirms non-amplifying
+pop_all,robustness,2,0.4892211126087791,0.01422563586521755,False,0.0207137636839207,False,confirms non-amplifying

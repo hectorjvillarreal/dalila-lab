@@ -1,0 +1,10 @@
+{
+  "reading": "H_confirm",
+  "ruling": "(B) DEFERRED, AGGREGATION-CLEARED, pending ENDS \u2014 NOT closed (Anne 9a). The individual-level status model does not reveal an amplifying dependence the cell-level aggregation hid; the aggregation concern (B7) is cleared. But a cascade is a process in time, which only the ENDS true-transition test (2c-ii) observes. Stage 3 sufficiency may proceed in parallel as a no-reflexivity model.",
+  "primary_amplifying": false,
+  "clean_amplifying": false,
+  "amplifying_any_spec": false,
+  "amplifying_robust": false,
+  "entry_band_amplifying": false,
+  "body_amplifying": false
+}

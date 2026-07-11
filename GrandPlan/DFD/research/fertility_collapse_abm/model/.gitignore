@@ -1,0 +1,11 @@
+_env_setup.log
+_run_*.log
+_smoke.log
+_selftest_cal.log
+_fullsweep.log
+_figures.log
+_stage2c_full.log
+_stage3a_full.log
+_stage3a_col_rerun.log
+_stage3a_cri_trace_regen.log
+_stage3a_ablation_*.log

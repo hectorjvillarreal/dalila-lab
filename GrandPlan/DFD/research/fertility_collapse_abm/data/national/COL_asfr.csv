@@ -1,0 +1,11 @@
+year,age_group,value,source,methodology_flag,provisional_flag
+2015,10-14,3.1,"DANE EEVV Boletin Isem-2025pr (25-sep-2025), Grafico 6 [pdftotext -layout]","per 1,000 women; chart-read (2015 peak bar)",definitive
+2015,20-24,94.2,"DANE EEVV Boletin Isem-2025pr (25-sep-2025), Grafico 6 [pdftotext -layout]","per 1,000 women; chart-read (2015 peak bar; series peak)",definitive
+2015,25-29,81.2,"DANE EEVV Boletin Isem-2025pr (25-sep-2025), Grafico 6 [pdftotext -layout]","per 1,000 women; chart-read (2015 peak bar)",definitive
+2015,30-34,66.1,"DANE EEVV Boletin Isem-2025pr (25-sep-2025), Grafico 6 [pdftotext -layout]","per 1,000 women; chart-read (2015 peak bar)",definitive
+2015,35-39,36.6,"DANE EEVV Boletin Isem-2025pr (25-sep-2025), Grafico 6 [pdftotext -layout]","per 1,000 women; chart-read (2015 peak bar)",definitive
+2015,40-44,8.7,"DANE EEVV Boletin Isem-2025pr (25-sep-2025), Grafico 6 [pdftotext -layout]","per 1,000 women; chart-read (2015 peak bar)",definitive
+2015,45+,0.4,"DANE EEVV Boletin Isem-2025pr (25-sep-2025), Grafico 6 [pdftotext -layout]","per 1,000 women; chart-read (2015 peak bar)",definitive
+2024,20-24,38.6,"DANE EEVV Boletin Isem-2025pr (25-sep-2025), Grafico 6 [pdftotext -layout]","per 1,000 women; DERIVED from DANE prose (-55.6 pts vs 2015); approximate",definitive
+2024,40-44,6.9,"DANE EEVV Boletin Isem-2025pr (25-sep-2025), Grafico 6 [pdftotext -layout]","per 1,000 women; DERIVED from DANE prose (-20.4% vs 2015); self-validating",definitive
+2024,45+,0.3,"DANE EEVV Boletin Isem-2025pr (25-sep-2025), Grafico 6 [pdftotext -layout]","per 1,000 women; chart-read (2024 bar)",definitive

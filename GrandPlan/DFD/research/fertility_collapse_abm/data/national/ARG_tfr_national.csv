@@ -1,0 +1,13 @@
+year,value,source,methodology_flag,provisional_flag
+2010,2.383,AEPA 2023 Tabla 1 (DEIS births + INDEC-2013 Censo-2010 projection denom); INDEC Anuario 2023 (030902_2023.xlsx),INDEC Anuario 2023 precise value; Censo-2010 denom,definitive
+2011,2.4,AEPA 2023 Tabla 1 (DEIS births + INDEC-2013 Censo-2010 projection denom); INDEC Anuario 2023 (030902_2023.xlsx),rounded 1dp; Censo-2010 denominators (NOT rebased to Censo 2022); 2022-2024 period TGF NOT published,definitive
+2012,2.3,AEPA 2023 Tabla 1 (DEIS births + INDEC-2013 Censo-2010 projection denom); INDEC Anuario 2023 (030902_2023.xlsx),rounded 1dp; Censo-2010 denominators (NOT rebased to Censo 2022); 2022-2024 period TGF NOT published,definitive
+2013,2.3,AEPA 2023 Tabla 1 (DEIS births + INDEC-2013 Censo-2010 projection denom); INDEC Anuario 2023 (030902_2023.xlsx),rounded 1dp; Censo-2010 denominators (NOT rebased to Censo 2022); 2022-2024 period TGF NOT published,definitive
+2014,2.4,AEPA 2023 Tabla 1 (DEIS births + INDEC-2013 Censo-2010 projection denom); INDEC Anuario 2023 (030902_2023.xlsx),rounded 1dp; Censo-2010 denominators (NOT rebased to Censo 2022); 2022-2024 period TGF NOT published,definitive
+2015,2.3,AEPA 2023 Tabla 1 (DEIS births + INDEC-2013 Censo-2010 projection denom); INDEC Anuario 2023 (030902_2023.xlsx),rounded 1dp; Censo-2010 denominators (NOT rebased to Censo 2022); 2022-2024 period TGF NOT published,definitive
+2016,2.2,AEPA 2023 Tabla 1 (DEIS births + INDEC-2013 Censo-2010 projection denom); INDEC Anuario 2023 (030902_2023.xlsx),rounded 1dp; Censo-2010 denominators (NOT rebased to Censo 2022); 2022-2024 period TGF NOT published,definitive
+2017,2.1,AEPA 2023 Tabla 1 (DEIS births + INDEC-2013 Censo-2010 projection denom); INDEC Anuario 2023 (030902_2023.xlsx),rounded 1dp; Censo-2010 denominators (NOT rebased to Censo 2022); 2022-2024 period TGF NOT published,definitive
+2018,2.0,AEPA 2023 Tabla 1 (DEIS births + INDEC-2013 Censo-2010 projection denom); INDEC Anuario 2023 (030902_2023.xlsx),rounded 1dp; Censo-2010 denominators (NOT rebased to Censo 2022); 2022-2024 period TGF NOT published,definitive
+2019,1.9,AEPA 2023 Tabla 1 (DEIS births + INDEC-2013 Censo-2010 projection denom); INDEC Anuario 2023 (030902_2023.xlsx),rounded 1dp; Censo-2010 denominators (NOT rebased to Censo 2022); 2022-2024 period TGF NOT published,definitive
+2020,1.6,AEPA 2023 Tabla 1 (DEIS births + INDEC-2013 Censo-2010 projection denom); INDEC Anuario 2023 (030902_2023.xlsx),rounded 1dp; Censo-2010 denominators (NOT rebased to Censo 2022); 2022-2024 period TGF NOT published,definitive
+2021,1.558,AEPA 2023 Tabla 1 (DEIS births + INDEC-2013 Censo-2010 projection denom); INDEC Anuario 2023 (030902_2023.xlsx),INDEC Anuario 2023 precise value; Censo-2010 denom,definitive

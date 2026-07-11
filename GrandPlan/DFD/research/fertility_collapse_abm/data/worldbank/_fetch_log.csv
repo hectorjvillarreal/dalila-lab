@@ -1,0 +1,61 @@
+country,iso3,indicator_code,short_name,category,file,n_obs,year_min,year_max,lastupdated,url,status
+Colombia,COL,SP.DYN.TFRT.IN,tfr,fertility,COL_tfr.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/COL/indicator/SP.DYN.TFRT.IN?format=json&per_page=400,ok
+Argentina,ARG,SP.DYN.TFRT.IN,tfr,fertility,ARG_tfr.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/ARG/indicator/SP.DYN.TFRT.IN?format=json&per_page=400,ok
+Chile,CHL,SP.DYN.TFRT.IN,tfr,fertility,CHL_tfr.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/CHL/indicator/SP.DYN.TFRT.IN?format=json&per_page=400,ok
+Costa Rica,CRI,SP.DYN.TFRT.IN,tfr,fertility,CRI_tfr.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/CRI/indicator/SP.DYN.TFRT.IN?format=json&per_page=400,ok
+Mexico,MEX,SP.DYN.TFRT.IN,tfr,fertility,MEX_tfr.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/MEX/indicator/SP.DYN.TFRT.IN?format=json&per_page=400,ok
+Colombia,COL,SP.DYN.CBRT.IN,crude_birth_rate,fertility,COL_crude_birth_rate.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/COL/indicator/SP.DYN.CBRT.IN?format=json&per_page=400,ok
+Argentina,ARG,SP.DYN.CBRT.IN,crude_birth_rate,fertility,ARG_crude_birth_rate.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/ARG/indicator/SP.DYN.CBRT.IN?format=json&per_page=400,ok
+Chile,CHL,SP.DYN.CBRT.IN,crude_birth_rate,fertility,CHL_crude_birth_rate.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/CHL/indicator/SP.DYN.CBRT.IN?format=json&per_page=400,ok
+Costa Rica,CRI,SP.DYN.CBRT.IN,crude_birth_rate,fertility,CRI_crude_birth_rate.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/CRI/indicator/SP.DYN.CBRT.IN?format=json&per_page=400,ok
+Mexico,MEX,SP.DYN.CBRT.IN,crude_birth_rate,fertility,,0,,,,https://api.worldbank.org/v2/country/MEX/indicator/SP.DYN.CBRT.IN?format=json&per_page=400,ERROR: HTTP Error 400: Bad Request
+Colombia,COL,SP.POP.TOTL,pop_total,denominator,COL_pop_total.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/COL/indicator/SP.POP.TOTL?format=json&per_page=400,ok
+Argentina,ARG,SP.POP.TOTL,pop_total,denominator,ARG_pop_total.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/ARG/indicator/SP.POP.TOTL?format=json&per_page=400,ok
+Chile,CHL,SP.POP.TOTL,pop_total,denominator,CHL_pop_total.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/CHL/indicator/SP.POP.TOTL?format=json&per_page=400,ok
+Costa Rica,CRI,SP.POP.TOTL,pop_total,denominator,CRI_pop_total.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/CRI/indicator/SP.POP.TOTL?format=json&per_page=400,ok
+Mexico,MEX,SP.POP.TOTL,pop_total,denominator,MEX_pop_total.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/MEX/indicator/SP.POP.TOTL?format=json&per_page=400,ok
+Colombia,COL,SP.POP.TOTL.FE.IN,pop_female,denominator,COL_pop_female.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/COL/indicator/SP.POP.TOTL.FE.IN?format=json&per_page=400,ok
+Argentina,ARG,SP.POP.TOTL.FE.IN,pop_female,denominator,,0,,,,https://api.worldbank.org/v2/country/ARG/indicator/SP.POP.TOTL.FE.IN?format=json&per_page=400,ERROR: HTTP Error 400: Bad Request
+Chile,CHL,SP.POP.TOTL.FE.IN,pop_female,denominator,CHL_pop_female.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/CHL/indicator/SP.POP.TOTL.FE.IN?format=json&per_page=400,ok
+Costa Rica,CRI,SP.POP.TOTL.FE.IN,pop_female,denominator,CRI_pop_female.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/CRI/indicator/SP.POP.TOTL.FE.IN?format=json&per_page=400,ok
+Mexico,MEX,SP.POP.TOTL.FE.IN,pop_female,denominator,MEX_pop_female.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/MEX/indicator/SP.POP.TOTL.FE.IN?format=json&per_page=400,ok
+Colombia,COL,SM.POP.NETM,net_migration,migration,COL_net_migration.csv,66,1960,2025,2026-04-08,https://api.worldbank.org/v2/country/COL/indicator/SM.POP.NETM?format=json&per_page=400,ok
+Argentina,ARG,SM.POP.NETM,net_migration,migration,ARG_net_migration.csv,66,1960,2025,2026-04-08,https://api.worldbank.org/v2/country/ARG/indicator/SM.POP.NETM?format=json&per_page=400,ok
+Chile,CHL,SM.POP.NETM,net_migration,migration,CHL_net_migration.csv,66,1960,2025,2026-04-08,https://api.worldbank.org/v2/country/CHL/indicator/SM.POP.NETM?format=json&per_page=400,ok
+Costa Rica,CRI,SM.POP.NETM,net_migration,migration,CRI_net_migration.csv,66,1960,2025,2026-04-08,https://api.worldbank.org/v2/country/CRI/indicator/SM.POP.NETM?format=json&per_page=400,ok
+Mexico,MEX,SM.POP.NETM,net_migration,migration,MEX_net_migration.csv,66,1960,2025,2026-04-08,https://api.worldbank.org/v2/country/MEX/indicator/SM.POP.NETM?format=json&per_page=400,ok
+Colombia,COL,SP.URB.TOTL.IN.ZS,urban_pct,covariate,COL_urban_pct.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/COL/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=400,ok
+Argentina,ARG,SP.URB.TOTL.IN.ZS,urban_pct,covariate,ARG_urban_pct.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/ARG/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=400,ok
+Chile,CHL,SP.URB.TOTL.IN.ZS,urban_pct,covariate,CHL_urban_pct.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/CHL/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=400,ok
+Costa Rica,CRI,SP.URB.TOTL.IN.ZS,urban_pct,covariate,CRI_urban_pct.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/CRI/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=400,ok
+Mexico,MEX,SP.URB.TOTL.IN.ZS,urban_pct,covariate,MEX_urban_pct.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/MEX/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=400,ok
+Colombia,COL,SL.TLF.CACT.FE.ZS,female_lfp_pct,covariate,COL_female_lfp_pct.csv,36,1990,2025,2026-04-08,https://api.worldbank.org/v2/country/COL/indicator/SL.TLF.CACT.FE.ZS?format=json&per_page=400,ok
+Argentina,ARG,SL.TLF.CACT.FE.ZS,female_lfp_pct,covariate,ARG_female_lfp_pct.csv,36,1990,2025,2026-04-08,https://api.worldbank.org/v2/country/ARG/indicator/SL.TLF.CACT.FE.ZS?format=json&per_page=400,ok
+Chile,CHL,SL.TLF.CACT.FE.ZS,female_lfp_pct,covariate,CHL_female_lfp_pct.csv,36,1990,2025,2026-04-08,https://api.worldbank.org/v2/country/CHL/indicator/SL.TLF.CACT.FE.ZS?format=json&per_page=400,ok
+Costa Rica,CRI,SL.TLF.CACT.FE.ZS,female_lfp_pct,covariate,CRI_female_lfp_pct.csv,36,1990,2025,2026-04-08,https://api.worldbank.org/v2/country/CRI/indicator/SL.TLF.CACT.FE.ZS?format=json&per_page=400,ok
+Mexico,MEX,SL.TLF.CACT.FE.ZS,female_lfp_pct,covariate,MEX_female_lfp_pct.csv,36,1990,2025,2026-04-08,https://api.worldbank.org/v2/country/MEX/indicator/SL.TLF.CACT.FE.ZS?format=json&per_page=400,ok
+Colombia,COL,SL.AGR.EMPL.ZS,agri_emp_pct,covariate,COL_agri_emp_pct.csv,35,1991,2025,2026-04-08,https://api.worldbank.org/v2/country/COL/indicator/SL.AGR.EMPL.ZS?format=json&per_page=400,ok
+Argentina,ARG,SL.AGR.EMPL.ZS,agri_emp_pct,covariate,ARG_agri_emp_pct.csv,35,1991,2025,2026-04-08,https://api.worldbank.org/v2/country/ARG/indicator/SL.AGR.EMPL.ZS?format=json&per_page=400,ok
+Chile,CHL,SL.AGR.EMPL.ZS,agri_emp_pct,covariate,CHL_agri_emp_pct.csv,35,1991,2025,2026-04-08,https://api.worldbank.org/v2/country/CHL/indicator/SL.AGR.EMPL.ZS?format=json&per_page=400,ok
+Costa Rica,CRI,SL.AGR.EMPL.ZS,agri_emp_pct,covariate,CRI_agri_emp_pct.csv,35,1991,2025,2026-04-08,https://api.worldbank.org/v2/country/CRI/indicator/SL.AGR.EMPL.ZS?format=json&per_page=400,ok
+Mexico,MEX,SL.AGR.EMPL.ZS,agri_emp_pct,covariate,MEX_agri_emp_pct.csv,35,1991,2025,2026-04-08,https://api.worldbank.org/v2/country/MEX/indicator/SL.AGR.EMPL.ZS?format=json&per_page=400,ok
+Colombia,COL,NV.AGR.TOTL.ZS,agri_va_pct_gdp,covariate,COL_agri_va_pct_gdp.csv,60,1965,2024,2026-04-08,https://api.worldbank.org/v2/country/COL/indicator/NV.AGR.TOTL.ZS?format=json&per_page=400,ok
+Argentina,ARG,NV.AGR.TOTL.ZS,agri_va_pct_gdp,covariate,ARG_agri_va_pct_gdp.csv,60,1965,2024,2026-04-08,https://api.worldbank.org/v2/country/ARG/indicator/NV.AGR.TOTL.ZS?format=json&per_page=400,ok
+Chile,CHL,NV.AGR.TOTL.ZS,agri_va_pct_gdp,covariate,CHL_agri_va_pct_gdp.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/CHL/indicator/NV.AGR.TOTL.ZS?format=json&per_page=400,ok
+Costa Rica,CRI,NV.AGR.TOTL.ZS,agri_va_pct_gdp,covariate,CRI_agri_va_pct_gdp.csv,65,1960,2024,2026-04-08,https://api.worldbank.org/v2/country/CRI/indicator/NV.AGR.TOTL.ZS?format=json&per_page=400,ok
+Mexico,MEX,NV.AGR.TOTL.ZS,agri_va_pct_gdp,covariate,MEX_agri_va_pct_gdp.csv,60,1965,2024,2026-04-08,https://api.worldbank.org/v2/country/MEX/indicator/NV.AGR.TOTL.ZS?format=json&per_page=400,ok
+Colombia,COL,SE.SEC.CUAT.UP.FE.ZS,fem_attain_uppersec_pct,covariate_education,COL_fem_attain_uppersec_pct.csv,23,2002,2024,2026-04-08,https://api.worldbank.org/v2/country/COL/indicator/SE.SEC.CUAT.UP.FE.ZS?format=json&per_page=400,ok
+Argentina,ARG,SE.SEC.CUAT.UP.FE.ZS,fem_attain_uppersec_pct,covariate_education,ARG_fem_attain_uppersec_pct.csv,4,1997,2022,2026-04-08,https://api.worldbank.org/v2/country/ARG/indicator/SE.SEC.CUAT.UP.FE.ZS?format=json&per_page=400,ok
+Chile,CHL,SE.SEC.CUAT.UP.FE.ZS,fem_attain_uppersec_pct,covariate_education,CHL_fem_attain_uppersec_pct.csv,22,2000,2024,2026-04-08,https://api.worldbank.org/v2/country/CHL/indicator/SE.SEC.CUAT.UP.FE.ZS?format=json&per_page=400,ok
+Costa Rica,CRI,SE.SEC.CUAT.UP.FE.ZS,fem_attain_uppersec_pct,covariate_education,CRI_fem_attain_uppersec_pct.csv,25,1973,2024,2026-04-08,https://api.worldbank.org/v2/country/CRI/indicator/SE.SEC.CUAT.UP.FE.ZS?format=json&per_page=400,ok
+Mexico,MEX,SE.SEC.CUAT.UP.FE.ZS,fem_attain_uppersec_pct,covariate_education,MEX_fem_attain_uppersec_pct.csv,26,1990,2025,2026-04-08,https://api.worldbank.org/v2/country/MEX/indicator/SE.SEC.CUAT.UP.FE.ZS?format=json&per_page=400,ok
+Colombia,COL,SE.TER.CUAT.BA.FE.ZS,fem_attain_bachelors_pct,covariate_education,COL_fem_attain_bachelors_pct.csv,16,2007,2024,2026-04-08,https://api.worldbank.org/v2/country/COL/indicator/SE.TER.CUAT.BA.FE.ZS?format=json&per_page=400,ok
+Argentina,ARG,SE.TER.CUAT.BA.FE.ZS,fem_attain_bachelors_pct,covariate_education,ARG_fem_attain_bachelors_pct.csv,1,2022,2022,2026-04-08,https://api.worldbank.org/v2/country/ARG/indicator/SE.TER.CUAT.BA.FE.ZS?format=json&per_page=400,ok
+Chile,CHL,SE.TER.CUAT.BA.FE.ZS,fem_attain_bachelors_pct,covariate_education,CHL_fem_attain_bachelors_pct.csv,15,2010,2024,2026-04-08,https://api.worldbank.org/v2/country/CHL/indicator/SE.TER.CUAT.BA.FE.ZS?format=json&per_page=400,ok
+Costa Rica,CRI,SE.TER.CUAT.BA.FE.ZS,fem_attain_bachelors_pct,covariate_education,CRI_fem_attain_bachelors_pct.csv,13,2001,2024,2026-04-08,https://api.worldbank.org/v2/country/CRI/indicator/SE.TER.CUAT.BA.FE.ZS?format=json&per_page=400,ok
+Mexico,MEX,SE.TER.CUAT.BA.FE.ZS,fem_attain_bachelors_pct,covariate_education,MEX_fem_attain_bachelors_pct.csv,10,2010,2024,2026-04-08,https://api.worldbank.org/v2/country/MEX/indicator/SE.TER.CUAT.BA.FE.ZS?format=json&per_page=400,ok
+Colombia,COL,SE.PRM.CUAT.FE.ZS,fem_attain_primary_pct,covariate_education,COL_fem_attain_primary_pct.csv,23,2002,2024,2026-04-08,https://api.worldbank.org/v2/country/COL/indicator/SE.PRM.CUAT.FE.ZS?format=json&per_page=400,ok
+Argentina,ARG,SE.PRM.CUAT.FE.ZS,fem_attain_primary_pct,covariate_education,ARG_fem_attain_primary_pct.csv,7,1970,2022,2026-04-08,https://api.worldbank.org/v2/country/ARG/indicator/SE.PRM.CUAT.FE.ZS?format=json&per_page=400,ok
+Chile,CHL,SE.PRM.CUAT.FE.ZS,fem_attain_primary_pct,covariate_education,CHL_fem_attain_primary_pct.csv,22,2000,2024,2026-04-08,https://api.worldbank.org/v2/country/CHL/indicator/SE.PRM.CUAT.FE.ZS?format=json&per_page=400,ok
+Costa Rica,CRI,SE.PRM.CUAT.FE.ZS,fem_attain_primary_pct,covariate_education,CRI_fem_attain_primary_pct.csv,25,1973,2024,2026-04-08,https://api.worldbank.org/v2/country/CRI/indicator/SE.PRM.CUAT.FE.ZS?format=json&per_page=400,ok
+Mexico,MEX,SE.PRM.CUAT.FE.ZS,fem_attain_primary_pct,covariate_education,MEX_fem_attain_primary_pct.csv,27,1980,2025,2026-04-08,https://api.worldbank.org/v2/country/MEX/indicator/SE.PRM.CUAT.FE.ZS?format=json&per_page=400,ok

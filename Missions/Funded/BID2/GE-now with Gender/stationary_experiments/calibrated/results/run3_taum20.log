@@ -1,0 +1,65 @@
+WARNING: redefinition of constant Main.τm. This may fail, cause incorrect answers, or produce other errors.
+========================================================================
+  RUN 3 — τm health subsidy 0→−0.20 (harmonized calibrated baseline)
+========================================================================
+  J=17  gender_gap=true  threads=4  τm=-0.2
+
+Initializing grids and Rouwenhorst chain …
+  HARMONIZED AR(1): ρ=0.7820 σ_ε=0.2650 (stubs were ρ=0.98 σ_ε=0.05)
+  CHECK η_grid range = [-2.0231, 2.0231]
+  CHECK π_birth=[0.3927 0.1173; 0.3822 0.1078]  θ_grid=-0.3726,0.3726  τm=-0.2000
+
+Solving GE (joint closure: τp endogenous, B residual) …
+INITIAL GE-Gender  (K₀=12.0, L₀=10.0, damp=0.3, tol=0.0001)
+iter   K        L        K/L      r(5y)    w        τp       DIFF/Y
+─────  ───────  ───────  ───────  ───────  ───────  ───────  ─────────────
+1      12.000   10.000   1.200    0.1634   1.0935   0.0915   +2.788455e-01
+2      10.829   8.534    1.269    0.1454   1.1157   0.1036   +1.853119e-01
+3      9.062    7.578    1.196    0.1646   1.0921   0.0998   +1.702474e-01
+4      7.724    6.867    1.125    0.1851   1.0683   0.0986   +1.392834e-01
+5      6.808    6.350    1.072    0.2018   1.0500   0.0980   +1.093415e-01
+6      6.242    5.973    1.045    0.2109   1.0404   0.0976   +8.278514e-02
+7      5.897    5.701    1.034    0.2146   1.0365   0.0973   +6.113622e-02
+8      5.675    5.506    1.031    0.2159   1.0352   0.0969   +4.478828e-02
+9      5.525    5.367    1.029    0.2163   1.0347   0.0968   +3.233528e-02
+10     5.421    5.270    1.029    0.2165   1.0345   0.0966   +2.325729e-02
+11     5.348    5.201    1.028    0.2167   1.0344   0.0965   +1.657651e-02
+12     5.297    5.152    1.028    0.2167   1.0343   0.0964   +1.184050e-02
+13     5.261    5.118    1.028    0.2168   1.0342   0.0964   +8.379191e-03
+14     5.236    5.093    1.028    0.2168   1.0342   0.0963   +5.934235e-03
+15     5.218    5.076    1.028    0.2168   1.0342   0.0963   +4.185726e-03
+16     5.206    5.064    1.028    0.2168   1.0342   0.0963   +2.954048e-03
+17     5.197    5.056    1.028    0.2168   1.0342   0.0963   +2.080114e-03
+18     5.191    5.050    1.028    0.2168   1.0342   0.0963   +1.479200e-03
+19     5.186    5.046    1.028    0.2169   1.0342   0.0962   +1.039370e-03
+20     5.183    5.043    1.028    0.2169   1.0342   0.0962   +7.300914e-04
+21     5.181    5.041    1.028    0.2169   1.0342   0.0962   +5.156879e-04
+22     5.179    5.039    1.028    0.2169   1.0342   0.0962   +3.641496e-04
+23     5.178    5.038    1.028    0.2169   1.0342   0.0962   +2.545907e-04
+24     5.178    5.038    1.028    0.2169   1.0342   0.0962   +1.798061e-04
+25     5.177    5.037    1.028    0.2169   1.0342   0.0962   +1.263898e-04
+26     5.177    5.037    1.028    0.2169   1.0342   0.0962   +8.892549e-05
+  → CONVERGED at iter 26
+Wrote /home/hectorjuan/Dalila/Missions/Funded/BID2/GE-now with Gender/stationary_experiments/calibrated/results/run3_taum20_summary.csv
+Wrote /home/hectorjuan/Dalila/Missions/Funded/BID2/GE-now with Gender/stationary_experiments/calibrated/results/run3_taum20_welfare.csv
+Wrote /home/hectorjuan/Dalila/Missions/Funded/BID2/GE-now with Gender/stationary_experiments/calibrated/results/run3_taum20_lifecycle.csv
+
+========================================================================
+  RUN 3 (τm=−0.20) — GATE SUMMARY
+========================================================================
+  [1] goods DIFF/Y          = +8.893e-05   (gate < 1e-3)   PASS
+  [2] capital |K-(A-B)|/K   = 1.689e-04    (gate < 2e-4)   PASS
+  [3] Euler max log10       = -5.182      (gate < -3)  mean=-7.231
+  [4] two-sex W gap (θ_L)   = 30.30%     (M≠F)  M=-3.6203 F=-4.7174
+  τp    = 0.0962   (Run 1' = 0.0929, Δ=+0.0034)
+  K     = 5.1767   (Run 1' = 4.9600, Δ=+4.37%)
+  M/Y   = 0.03217   dep_ratio=0.1925  Y=8.1386  r_ann=4.004%  B/Y=0.2880  w=1.0342  pen=0.3713
+  W: M_θL=-3.6203 M_θH=-0.3865 F_θL=-4.7174 F_θH=-1.8762
+
+  GE iterations: 26 (itermax=30)   final DIFF/Y=+8.893e-05
+
+RUN 3 (τm=−0.20) done.
+
+[gate 7] M/Y: Run 1' 0.02728 → τm=−0.20 0.03217  (PASS — expect rise)
+[gate 9] τp: Run 1' 0.0929 → τm=−0.20 0.0962  (≈/PASS — expect slight rise via survival)
+(gate 8 — progressive welfare incidence — assessed in assemble step vs run1prime_welfare.csv)

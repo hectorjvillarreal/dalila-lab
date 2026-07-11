@@ -42,6 +42,22 @@
 
 ---
 
+## Fertility-Collapse ABM (DFD parallel research)
+
+**Location:** `GrandPlan/DFD/research/fertility_collapse_abm/`
+**Owner:** Anne (population economics) + Nina (ABM lead); executed by Claude Code; archived by Debb
+**Date registered:** 2026-06-17
+**Build instruction:** `_crossrefs/_build_instructions/2026-06-17_fertility_collapse_abm_stage1.md`
+
+| Project | Connection |
+|---|---|
+| DFD | Threshold-coupling ABM of rapid TFR collapse (COL/ARG/CHL/CRI) with Mexico tipping-point diagnostic; complements the OLG/DSGE demographic microfoundation; coupling/partnership formation as the core ABM state variable |
+| Demographics corpus | Shares LAC TFR anchors and the fast-transition framing; national-source collapse tails (DANE/INE/DEIS/INEC/CONAPO) feed `_crossrefs/corpus/demographics/` |
+
+**Status:** Stage 1 of 4 (data acquisition + forensic memo) executed 2026-06-17/18 — World Bank backbone (61 CSVs) + national collapse-tail series (26 CSVs), forensic Checks 1–5, all five countries source-verified. Hard gate: Anne + Nina review `STAGE1_forensic_memo.md` before Stage 2 (ABM specification). Stages 2–4 (ABM spec, calibration, write-up) pending.
+
+---
+
 ## Infrastructure (cross-cutting)
 
 **Location:** `_crossrefs/protocols/`, `_crossrefs/_build_instructions/`
