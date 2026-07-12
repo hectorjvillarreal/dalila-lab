@@ -1,0 +1,141 @@
+% =============================================================================
+% Appendix A — ODD protocol (Grimm et al. 2020, second update).
+% The anti-black-box deliverable: sufficient for reimplementation.
+% =============================================================================
+\section{ODD Protocol for the Cohort Microsimulation}
+\label{app:odd}
+
+This appendix documents the model of Section~\ref{sec:model} following the ODD
+(Overview, Design concepts, Details) protocol, second update
+\citep{grimm2020odd}. Together with Algorithm~\ref{alg:abm} and
+equations~\eqref{eq:formation}--\eqref{eq:phi}, it is intended to be sufficient
+for independent reimplementation. The reference implementation (Julia,
+Agents.jl) with all figure data is available in the project repository.
+
+\subsection{Purpose and patterns}
+
+\emph{Purpose:} to test whether cohort-entry heterogeneity in marriage
+propensity --- with no social feedback of any kind --- is \emph{sufficient} to
+reproduce the observed union-composition collapse among women 20--39 in Costa
+Rica (2010--2024) and Colombia (2008--2024). The model is evaluated against
+three pre-registered patterns: (M1) the magnitude of the married-share fall;
+(M2) its late-loading; (M3) the sign of its late-window curvature
+(Section~\ref{sec:calibration}). It is explicitly \emph{not} used for
+identification (done econometrically, Section~\ref{sec:discrimination}),
+fertility-magnitude claims, or projection.
+
+\subsection{Entities, state variables, and scales}
+
+\emph{Entities:} women; no other agent types, no spatial units, no collectives.
+\emph{State variables per woman:} age $a \in \{15,\dots,49\}$ (single years);
+birth year $b$ (fixed at entry); union status
+$u \in \{\Sng,\Coh,\Mar\}$; parity (bookkeeping for the comparison-only
+fertility overlay; no behavioral role). Two fixed background attributes
+(education level, urban/rural) are carried for descriptive seeding realism but
+enter no transition rule in this specification.
+\emph{Scales:} one tick = one calendar year; population 50{,}000 women
+(reported ensembles); horizon = seed year to 2024 (14 ticks Costa Rica, 16
+Colombia).
+
+\subsection{Process overview and scheduling}
+
+Each tick, every woman executes, in order: (1) union transition per
+equations~\eqref{eq:formation}--\eqref{eq:dissolution}; (2) fertility-overlay
+draw (comparison bookkeeping only); (3) ageing by one year, with closed-cohort
+replacement --- a woman exceeding 49 is replaced by a new 15-year-old single
+woman with birth year $t-15$, who therefore carries her own cohort's $\kb$ and
+$\phib$. The model-level step advances the calendar year; it computes nothing
+else. Agent processing order is immaterial because agents do not interact
+(Design concepts). Composition observables are measured after each tick.
+
+\subsection{Design concepts}
+
+\emph{Basic principles.} Cohort replacement as the carrier of behavioral
+change: transition probabilities depend on own birth cohort and own state only.
+The two cohort functions $\kb$ (marriage entry) and $\phib$ (union formation)
+encode the Second Demographic Transition's across-cohort gradient in reduced
+form.
+\emph{Emergence.} The aggregate composition trajectory --- including its late
+acceleration --- emerges from the interaction of the cohort gradient with the
+age-structured stock-flow dynamics: nothing in the rules accelerates; the
+acceleration is compositional.
+\emph{Adaptation, objectives, learning, prediction.} None. Agents do not
+decide, optimize, learn, or forecast; transitions are exogenous hazards. This
+is by design --- the model is a sufficiency probe for a mechanism, not a
+behavioral theory.
+\emph{Sensing and interaction.} \textbf{None, verifiably.} No agent's
+transition depends on any other agent's state or on any population aggregate.
+The absence is enforced by automated checks: static source checks (the agent
+update contains no cross-agent read; feedback identifiers from the rejected
+threshold model are absent) and a runtime registry proving that only the
+composition target file is opened during calibration. Eleven checks per
+country; all pass.
+\emph{Stochasticity.} Bernoulli draws for all transitions; seeded generators;
+the full pipeline is deterministic given seeds (the Costa Rican calibration
+reproduces its loss to all reported digits on re-run).
+\emph{Collectives.} None.
+\emph{Observation.} Per-band (20--24, 25--29, 30--34, 35--39) married and
+cohabiting shares each tick; ensemble mean $\pm$ s.d.\ over 16 seeds.
+
+\subsection{Initialization}
+
+The population is seeded at the first observed year (Costa Rica 2010, Colombia
+2008 --- the 2007 Colombian survey year is a documented frame outlier,
+Section~\ref{sec:datalim-measurement}): ages uniform 15--49; birth year $=$
+seed year $-$ age; union status drawn from the observed band-specific
+married/cohabiting shares, with age-graded extrapolation to the unobserved
+15--19 and 40--49 tails (ramp below the 20--24 band; held at the 35--39 level,
+respectively). Pre-seed cohorts receive $\kb$ and $\phib$ from the same
+parametric functions --- the seeded stock embodies the gradient.
+
+\subsection{Input data}
+
+Calibration target (the only file read during calibration): observed annual
+per-band married/cohabiting shares --- Costa Rica ENAHO via INEC REDATAM
+tabulations; Colombia DANE GEIH person microdata, pooled annual files,
+person-weighted. National TFR series are loaded only after calibration, for
+the comparison overlay. Every series carries per-row source and methodology
+flags in the repository.
+
+\subsection{Submodels and calibrated parameters}
+
+The complete submodels are
+equations~\eqref{eq:formation}--\eqref{eq:phi}. Table~\ref{tab:params} reports
+the calibrated headline (cohort-only) parameters; the robustness specification
+adds the period shifter $\pit$ (three parameters), whose ablation costs are
+reported in Section~\ref{sec:credibility}.
+
+\begin{table}[h]
+\centering
+\caption{Calibrated parameters, headline (cohort-only) specification.}
+\label{tab:params}
+\small
+\begin{tabular}{llcc}
+\toprule
+& Interpretation & Costa Rica & Colombia \\
+\midrule
+$f_0$ & base union-formation hazard (single, /yr) & 0.067 & 0.126 \\
+$m_0$ & married share of new unions (oldest cohorts) & 0.308 & 0.147 \\
+$c_0$ & cohabitation$\to$marriage hazard (oldest cohorts) & 0.042 & 0.025 \\
+$\delta_c$ & cohabitation dissolution hazard & 0.062 & 0.067 \\
+$\delta_m$ & marriage dissolution hazard & 0.019 & 0.023 \\
+\midrule
+$\kappa_\infty$ & marriage-propensity floor, newest cohorts & 0.371 & 0.306 \\
+$b_0$ & cohort-decline midpoint (birth year) & 1991.7 & 1988.8 \\
+$s$ & cohort-decline steepness (/birth-yr) & 0.129 & 0.194 \\
+$\tau$ & formation tilt (/birth-yr) & 0.028 & 0.020 \\
+\midrule
+& composition loss~\eqref{eq:loss} & 0.0372 & 0.0246 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Data and code availability}
+
+The reference implementation, calibration harness (including the
+pre-registered gates and the automated no-feedback/no-TFR checks with their
+logs), figure data for every exhibit, and the archived superseded runs are
+maintained in the project repository and will be deposited with the
+publication version. Figures regenerate from stored figure-data files without
+re-simulation; the full calibration re-runs in minutes on a workstation and is
+deterministic given seeds.

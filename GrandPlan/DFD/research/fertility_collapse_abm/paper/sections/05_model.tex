@@ -1,0 +1,281 @@
+% =============================================================================
+% §5 Model & sufficiency (M4 / R4) — GLASS BOX per Fina §5/§A:
+% reframe (4-parameter cohort microsimulation), equations in main text,
+% algorithm box, calibration in the open, pre-registered gates, wall,
+% κ–φ separability, ablations, non-fit convergences (fig2 signature),
+% M3 residual, division of labor restated. ODD appendix cross-ref.
+% =============================================================================
+\section{A Transparent Sufficiency Test: Is Cohort Replacement Enough?}
+\label{sec:model}
+
+Section~\ref{sec:discrimination} identified the mechanism. This section asks a
+different question, and it is important to keep the two separate: taking the
+identified structure as given, is it \emph{sufficient}? Can cohort replacement
+alone --- with no reflexivity anywhere --- generate the observed composition
+collapse, its magnitude \emph{and} its late-loaded shape? The simulation model
+below is never asked to identify anything; identification is econometric and
+lives in Section~\ref{sec:discrimination}. The model's job is to test whether
+the surviving mechanism quantitatively suffices, under an evaluation whose
+success criteria were fixed before the model was run.
+
+\subsection{The model is four interpretable parameters, not a black box}
+\label{sec:modelspec}
+
+The model is best described as a parsimonious cohort microsimulation. Beyond
+five baseline demographic rates (calibrated, and interpretable as ordinary
+formation/dissolution hazards), its entire mechanism content is \emph{four}
+parameters: three describing how marriage propensity declines across birth
+cohorts, and one describing how union formation tilts across birth cohorts.
+There are no per-cohort free effects, no adaptive dynamics, no interaction
+terms, and --- by construction --- no channel through which any agent's
+transition depends on any other agent's state.
+
+Each woman $i$ carries age $a_{it} \in \{15,\dots,49\}$, birth year $b_i$, and
+union status $u_{it} \in \{\Sng, \Coh, \Mar\}$. One tick is one calendar year.
+Annual transitions are:
+\begin{align}
+\Pr(\Sng \to \text{union})_{it} &= f_0 \,\phib[b_i],
+  &&\text{of which married w.p. } m_0\,\kb[b_i], \text{ else cohabiting},
+  \label{eq:formation}\\
+\Pr(\Coh \to \Mar)_{it} &= c_0 \,\kb[b_i],
+  \label{eq:conversion}\\
+\Pr(\Coh \to \Sng)_{it} = \delta_c, &\qquad
+\Pr(\Mar \to \Sng)_{it} = \delta_m.
+  \label{eq:dissolution}
+\end{align}
+The two cohort terms are
+\begin{align}
+\kb &= \kappa_\infty + \frac{1-\kappa_\infty}{1+\exp\{s\,(b-b_0)\}},
+  \label{eq:kappa}\\
+\phib &= \exp\{-\tau\,(b-1985)\}, \quad \text{clamped to } [0.2,\,3].
+  \label{eq:phi}
+\end{align}
+Equation~\eqref{eq:kappa} is the paper's mechanism: a logistic decline in
+cohort marriage propensity with exactly three parameters --- a floor
+$\kappa_\infty$ (the marriage propensity of the newest cohorts relative to the
+oldest), a midpoint $b_0$ (the birth cohort at which the decline is halfway),
+and a slope $s$ (how compressed the across-cohort change is). It multiplies
+both marriage-entry margins --- the formation split in~\eqref{eq:formation} and
+the conversion hazard in~\eqref{eq:conversion} --- and nothing else.
+Equation~\eqref{eq:phi} is a one-parameter log-linear tilt in overall union
+formation across cohorts. Old cohorts ($b \ll b_0$) have $\kb \approx 1$: the
+baseline rates $\{f_0, m_0, c_0, \delta_c, \delta_m\}$ are simply the behavior
+of pre-decline cohorts.
+
+In a robustness specification we add an exogenous period shifter
+$\pit = 1 - d\,/\,(1+\exp\{-s_p (t - t_p)\})$ multiplying the same
+marriage-entry margins --- calendar time only, common to all cohorts, never a
+function of prevailing composition (the Colombian period overlay of
+Section~\ref{sec:discrimination}). As shown below, the data render it
+dispensable, and the headline specification omits it entirely.
+
+Algorithm~\ref{alg:abm} states the per-year update completely; the ODD protocol
+appendix (Appendix~\ref{app:odd}) documents the model to the community
+transparency standard \citep{grimm2020odd}, sufficient for reimplementation.
+
+\begin{algorithm}[t]
+\caption{One simulated year (population of $N$ women; one tick = one year)}
+\label{alg:abm}
+\begin{algorithmic}[1]
+\For{each woman $i$ (order immaterial; no interaction)}
+  \State $\kappa \gets \kb[b_i]$;\quad $\varphi \gets \phib[b_i]$
+    \Comment{depends only on own birth year}
+  \If{$u_i = \Sng$}
+    \State with prob.\ $f_0\varphi$: form union; married w.p.\
+      $m_0\kappa$, else cohabiting
+  \ElsIf{$u_i = \Coh$}
+    \State with prob.\ $\delta_c$: $u_i \gets \Sng$; else with prob.\
+      $c_0\kappa$: $u_i \gets \Mar$
+  \Else
+    \State with prob.\ $\delta_m$: $u_i \gets \Sng$
+  \EndIf
+  \State $a_i \gets a_i + 1$
+  \If{$a_i > 49$} \State replace: $a_i \gets 15$, $u_i \gets \Sng$,
+    $b_i \gets t - 15$ \Comment{new entry cohort carries its own $\kb$}
+  \EndIf
+\EndFor
+\State $t \gets t + 1$ \Comment{model step advances the calendar; nothing else}
+\end{algorithmic}
+\end{algorithm}
+
+The no-reflexivity claim is verifiable in the code, not just the prose: the
+agent update reads no other agent's state (no population shares, no
+reference-group terms enter any transition), and the model-level step advances
+the calendar only. Automated checks --- static source checks plus a runtime
+registry of every data file opened during calibration --- are logged with the
+repository (eleven checks per country, all passing).
+
+\subsection{Calibration in the open}
+\label{sec:calibration}
+
+\emph{Targets.} The observed per-band (20--24 through 35--39) married and
+cohabiting shares, all available years: Costa Rica ENAHO 2010--2024; Colombia
+GEIH 2008--2024 (2008 seed per the documented 2007 frame outlier,
+Section~\ref{sec:datalim-measurement}). The initial population is seeded at
+the first observed year's composition.
+
+\emph{Loss.} Composition only:
+\begin{equation}
+\mathcal{L} \;=\; \sum_{\text{bands}} \sum_{\text{years}}
+\left[ \left(m^{\text{sim}} - m^{\text{obs}}\right)^2
+     + \left(c^{\text{sim}} - c^{\text{obs}}\right)^2 \right].
+\label{eq:loss}
+\end{equation}
+
+\emph{Identification wall.} The TFR never enters the loss, tunes no parameter,
+and is not loaded during calibration (enforced by the runtime file registry).
+Where a TFR path appears in this paper it is a comparison overlay only.
+
+\emph{Free versus fixed.} Free, per country: the five baseline rates, the three
+$\kb$ parameters, the $\phib$ tilt (and, in the robustness specification, the
+three $\pit$ parameters). Fixed: the demographic scaffolding (age range,
+seeding, closed-cohort replacement), reported in Appendix~\ref{app:odd}.
+
+\emph{Optimizer.} Nelder--Mead in a boxed transform, four random restarts, 600
+evaluations per country; inner evaluation ensembles of 12{,}000 agents
+$\times$ 4 seeds; final reported ensembles of 50{,}000 agents $\times$ 16 seeds
+(mean $\pm$ s.d.). The pipeline is deterministic given seeds; the Costa Rican
+calibration, re-run end-to-end, reproduces its loss to all reported digits.
+
+\emph{Pre-registered evaluation.} Three metrics were fixed, with their
+thresholds, before the full calibration ran. On the equal-band-mean married
+share: \textbf{M1}, magnitude capture --- the simulated share of the observed
+seed-to-2024 fall --- must be at least $0.85$; \textbf{M2}, the late-window
+share of the total decline (2017--2024 relative to the full window) must match
+the observed within $\pm 0.10$; \textbf{M3}, the sign of the mean second
+difference over 2015--2024 must match (does the decline accelerate or
+decelerate late?).
+
+\subsection{Results: sufficiency on magnitude and late-loading}
+\label{sec:results}
+
+\begin{table}[t]
+\centering
+\caption{Pre-registered sufficiency metrics, headline (cohort-only)
+specification. Final ensembles, 50{,}000 agents $\times$ 16 seeds.}
+\label{tab:gates}
+\begin{tabular}{lccl}
+\toprule
+Metric (married, 20--39 equal-band) & Costa Rica & Colombia & Criterion \\
+\midrule
+M1 magnitude capture & 0.954 & 0.999 & $\geq 0.85$: \textbf{pass, pass} \\
+M2 late-share, sim vs.\ obs & 0.490 / 0.581 & 0.468 / 0.459 & $|\Delta|\leq0.10$: \textbf{pass, pass} \\
+M3 late-window $\Delta^2$ sign & $+$ / $+$ & $+$ / $-$ & same sign: pass, \textbf{fail} \\
+\midrule
+Composition loss~\eqref{eq:loss} & 0.0372 & 0.0246 &
+  (threshold model: 0.0855) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:gates} reports the gates; Figure~\ref{fig:abmbands} the fit.
+The verdict, stated precisely: \emph{sufficiency on magnitude and late-loading,
+with one unreproduced shape residual.} The cohort-only model captures 95.4
+(Costa Rica) and 99.9 (Colombia) percent of the observed married-share fall and
+matches the late-loading of the decline within 0.09 and 0.01 respectively. The
+residual is Colombia's M3: the observed series steepens slightly in the late
+window (a 2019--22 kink in which both married and cohabiting shares break
+trend) while the simulated path does not. Both second differences are near
+zero; the kink coincides with pandemic-era survey collection
+(Section~\ref{sec:datalim-measurement}) and/or a discrete shock, and its
+resolution requires transition-level data
+(Section~\ref{sec:limitations}). A kink that a smooth model misses is not
+evidence of a cascade; Section~\ref{sec:discrimination} tested for that
+signature directly and rejected it. Honest margins: under the headline
+specification Costa Rica's M2 sits nearer its tolerance than with the period
+term included ($\Delta$ 0.091 versus 0.038), and the (ungated) cohabitation
+magnitude capture drops to 0.63.
+
+\begin{figure}[t]
+\centering
+\begin{subfigure}[b]{\textwidth}
+  \includegraphics[width=\textwidth]{fig_abm_bands_COL.pdf}
+  \caption{Colombia (seed 2008)}
+\end{subfigure}\\[0.6em]
+\begin{subfigure}[b]{\textwidth}
+  \includegraphics[width=\textwidth]{fig_abm_bands_CRI.pdf}
+  \caption{Costa Rica (seed 2010)}
+\end{subfigure}
+\caption{Headline (cohort-only) model versus observed union composition, by
+five-year age band: married (top rows) and cohabiting (bottom rows) shares,
+simulated mean $\pm 1$ s.d.\ over 16 seeds against observed.}
+\label{fig:abmbands}
+\end{figure}
+
+\subsection{Why the result is credible: what a black box could not do}
+\label{sec:credibility}
+
+Fit quality is table stakes --- a model handed a flexible mechanism should fit
+a trajectory. The evidential weight lies in three properties a curve-fitting
+box would not exhibit.
+
+\paragraph{(i) A single recovered parameter matches an estimate the model never
+saw.} The calibrated $\kb$ midpoints land at birth cohorts \textbf{1991.7}
+(Costa Rica) and \textbf{1988.8} (Colombia). The APC decomposition of
+Section~\ref{sec:discrimination} --- estimated by entirely different methods,
+on cohort effects the simulation never touched --- places the married cohort
+effects' sign crossover in the same 1985--1992 window
+(Figure~\ref{fig:kappaapc}). Because $\kb$ is a three-parameter logistic, the
+midpoint is one number, not a flexible profile that could have been bent to
+agree: the convergence is non-circular. This is the paper's signature exhibit.
+
+\begin{figure}[t]
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+  \includegraphics[width=\textwidth]{fig_kappa_apc_COL.pdf}
+  \caption{Colombia}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.48\textwidth}
+  \includegraphics[width=\textwidth]{fig_kappa_apc_CRI.pdf}
+  \caption{Costa Rica}
+\end{subfigure}
+\caption{The signature exhibit. Top panels: the calibrated cohort multiplier
+$\kb$ (three parameters, calibrated to composition trajectories only). Bottom
+panels: the independently estimated APC married cohort effects
+(Section~\ref{sec:discrimination}). The calibrated midpoint recovers the APC
+sign crossover the model was never fit to.}
+\label{fig:kappaapc}
+\end{figure}
+
+\paragraph{(ii) Ablations reproduce the econometric decomposition.} Removing a
+mechanism and \emph{fully recalibrating} the rest yields losses that mirror
+Section~\ref{sec:discrimination}: without the cohort gradient, Colombia's loss
+rises 63 percent (cohort replacement is essential exactly where the APC found
+it dominant); without the period shifter, the loss is essentially unchanged in
+both countries (Costa Rica $+6$ percent; Colombia slightly \emph{better}).
+The apparent tension with Colombia's statistically significant period effect
+dissolves on inspection: that effect is real but small (Section
+\ref{sec:verdict}), and statistical existence is not quantitative necessity.
+This is why the cohort-only model is the headline specification and the period
+shifter a documented robustness term. A corollary worth stating against
+ourselves: since a period-only model can also pass the magnitude gates,
+band-level composition alone cannot discriminate the mechanisms --- which is
+precisely why identification lives in Section~\ref{sec:discrimination} and the
+model is asked only about sufficiency.
+
+\paragraph{(iii) The mechanism's parameters are pinned by separate moments.}
+Both cohort terms act on union behavior, so one may ask whether they are
+separately identified or a disguised degree-of-freedom. They are separable by
+construction: $\kb$ multiplies only marriage-\emph{entry} margins, both of
+which leave union status unchanged (a formation splits into married or
+cohabiting either way; a conversion moves within union), so $\kb$ is
+union-total-neutral; $\phib$ multiplies formation itself and moves the union
+total directly. Paired-seed perturbations at the calibrated parameters confirm
+it: perturbing $\kappa_\infty$ moves the married share with the union total
+essentially unchanged (response ratios 11.6 in Costa Rica, 102 in Colombia),
+while perturbing $\tau$ does the reverse (ratios 0.32 and 0.05). The married
+split pins $\kappa$; the union total pins $\varphi$.
+
+Finally, the comparison that frames the exercise: this four-parameter,
+no-feedback model fits the composition data \emph{better} than the calibrated
+coordination-threshold model it replaced (losses 0.037/0.025 versus 0.086 on
+the identical target) --- the reflexive mechanism was not removed at the cost
+of fit, but with a gain.
+
+A comparison-only overlay of the generated fertility path against the national
+TFR appears in the online appendix figures; consistent with the identification
+wall, we attach no claim to it --- its level rides a placeholder fertility
+schedule, and the fertility-magnitude question requires union-specific
+fertility rates that are the subject of ongoing data acquisition
+(Section~\ref{sec:limitations}).

@@ -1,0 +1,68 @@
+% =============================================================================
+% main.tex — Rapid Fertility Collapse in Latin America (Draft 1)
+% Overleaf-ready. Compile: pdflatex -> bibtex -> pdflatex x2.
+% Build instruction: DRAFT1_build_instruction_Fina.md (Fina, 2026-07-12).
+% Numbers trace to FINA_results_for_draft1_2026-07-12.md and the endorsed memos.
+% =============================================================================
+\documentclass[11pt]{article}
+\input{preamble}
+
+\title{Cohort Replacement, Not Cascade:\\
+Union Composition and the Rapid Fertility Collapse in Latin America\thanks{%
+Draft 1 (2026-07-12), not for circulation. Prepared within the Demographic Fiscal
+Dynamics (DFD) project. Replication code, figure data, and the ODD protocol are
+described in Appendix~\ref{app:odd}; all series carry per-row source and methodology
+flags in the project repository.}}
+\author{H\'ector Juan Villarreal P\'aez\\
+\small Tecnol\'ogico de Monterrey, School of Social Sciences and Government
+% \and (coauthors TBD)
+}
+\date{July 2026 --- Draft 1}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+Several Latin American countries have experienced one of the fastest peacetime
+fertility declines on record: national vital registries show total fertility falling
+to near 1.1 in Costa Rica, Colombia, and Chile by 2024, while smoothed international
+series largely erase the acceleration. We document this collapse against registry and
+microdata sources, and locate its proximate driver in union \emph{composition}: total
+union prevalence is roughly flat while marriage collapses and cohabitation substitutes.
+We then discriminate between candidate mechanisms with a pre-registered,
+outcome-robust design. Age--period--cohort curvature and the sign of state dependence
+in pseudo-cohort panels reject a within-cohort reflexive cascade in both Costa Rica
+and Colombia --- the state-dependence coefficient is positive (stabilizing) in every
+specification --- and identify cohort replacement as the dominant structure, with a
+small exogenous period component in Colombia. A deliberately transparent
+cohort microsimulation with \emph{four} interpretable parameters --- a three-parameter
+logistic decline in cohort marriage propensity and a one-parameter formation tilt,
+with no social feedback --- is then shown to be \emph{sufficient} for the observed
+composition collapse: it reproduces its magnitude and late-loading, and its calibrated
+cohort inflection point (birth cohorts 1989--1992) independently recovers the
+age--period--cohort crossover it was never fit to. We interpret the findings as
+channel-assisted compression of the Second Demographic Transition, and state a
+falsifiable out-of-sample prediction for marriage-dominant regimes.
+\end{abstract}
+
+\vspace{0.5em}
+\noindent\textbf{Keywords:} fertility decline; union composition; cohabitation;
+Second Demographic Transition; agent-based modeling; Latin America.
+
+\input{sections/01_intro}
+\input{sections/02_phenomenon}
+\input{sections/03_mechanisms}
+\input{sections/04_discrimination}
+\input{sections/05_model}
+\input{sections/06_interpretation}
+\input{sections/07_limitations}
+\input{sections/08_conclusion}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\appendix
+\input{sections/appendix_odd}
+
+\end{document}

@@ -1,0 +1,62 @@
+% =============================================================================
+% §3 Candidate mechanisms (M2) — three separable hypotheses; why smooth models
+% struggle with fast collapse; the ABM as the device that separates predictions.
+% =============================================================================
+\section{Candidate Mechanisms and Their Signatures}
+\label{sec:mechanisms}
+
+Three families of mechanism could generate a marriage-composition collapse of
+the observed speed. They are not mutually exclusive, but they carry different
+observable signatures, which is what makes discrimination possible.
+
+\paragraph{H$_{\text{cohort}}$: cohort replacement.}
+Successive birth cohorts enter adulthood with durably lower marriage propensity
+--- formed by education expansion, structural change, and the ideational change
+of the Second Demographic Transition \citep{callesvogl2026} --- and the stock
+composition shifts as these
+cohorts flow through the age distribution. The signature: change localizes on
+\emph{cohort} lines in an age--period--cohort decomposition; within a cohort,
+behavior is comparatively stable; the aggregate can nonetheless accelerate
+purely mechanically, as steep-gradient cohorts come to dominate the observed
+age range.
+
+\paragraph{H$_{\text{shock}}$: exogenous period shock.}
+A calendar-time force common to all living cohorts --- an economic shock, a
+policy change, a pandemic --- shifts marriage entry for everyone at once. The
+signature: change localizes on \emph{period} lines, visible as parallel shifts
+across cohorts at the same calendar date, with no dependence on the prevailing
+composition itself.
+
+\paragraph{H$_{\text{cascade}}$: within-cohort reflexive cascade.}
+The mechanism behind most ``fast-dynamics'' narratives: individuals respond to
+the behavior of their reference group, so that as non-marriage spreads, the
+social cost of not marrying falls, generating self-reinforcing acceleration ---
+a norm cascade or tipping dynamic. The signature is \emph{state dependence with
+an amplifying sign}: within a cohort, marriage decline must be \emph{larger}
+where the reference-group not-married share is already high. This is the only
+mechanism of the three that is genuinely reflexive, and identifying it from
+observational data confronts the classical reflection problem
+\citep{manski1993}; Section~\ref{sec:discrimination} states how our design
+addresses the sign-based, within-cohort version of the test.
+
+Why not adjudicate with a standard smooth model? Because the phenomenon's
+defining feature --- late acceleration --- is exactly what smooth aggregate
+specifications absorb rather than explain. A logistic trend fitted to the
+married share will always ``fit'' a collapse after the fact; it cannot say
+whether the curvature came from cohort turnover, a dated shock, or feedback.
+We therefore proceeded in two deliberately separated steps. First, the
+econometric discrimination of Section~\ref{sec:discrimination}, which asks the
+data directly which signature is present. Second, a generative test: we built
+an agent-based implementation of the \emph{cascade} hypothesis --- a
+coordination threshold in partnership formation, the formalization of the
+tipping narrative --- and calibrated it to the composition data. That model was
+a genuine, live candidate, not a straw man: with its threshold active it
+generated a real, endogenous marriage decline, and removing the threshold
+flipped the generated fertility path from collapse to increase (the mechanism
+was doing the work). It nonetheless failed in a specific, diagnostic way: the
+calibrated threshold produced a smooth glide --- roughly $-0.02$ per year in
+generated TFR, about 55 percent of the observed magnitude --- with none of the
+observed late acceleration, and its failure shaped the discrimination design
+that follows. Cascade dynamics, when actually calibrated to composition data,
+do not produce the observed shape; the question became which non-reflexive
+structure does.

@@ -1,0 +1,137 @@
+% =============================================================================
+% §4 Discrimination — identification (M3 / R3). β>0 everywhere; COL cohort-
+% dominant + small exogenous period; CRI cohort-leaning; 2c-i individual
+% confirmation; explicit identification-strategy statement; ecological caveats.
+% =============================================================================
+\section{Discriminating the Mechanism: APC Curvature and the Sign of State
+Dependence}
+\label{sec:discrimination}
+
+\subsection{Identification strategy, stated plainly}
+\label{sec:idstrategy}
+
+Two quantities identify the discrimination; both were fixed, with their decision
+rule, before the estimates were run.
+
+\emph{First, where the change localizes.} We build birth-year pseudo-cohorts
+from the repeated cross-sections and decompose the married (and cohabiting)
+share into age, period, and cohort components. Because the linear APC trends
+are not separately identified, we rest nothing on them: only
+\emph{curvature} (identified second differences) enters the verdict --- where
+does the \emph{acceleration} sit, on cohort lines or on period lines? Age-band
+fixed effects and within-band estimation keep Lexis artifacts out of the
+curvature.
+
+\emph{Second, the sign of state dependence.} For the cascade hypothesis the
+decisive quantity is the coefficient $\beta$ on the \emph{lagged reference-group
+not-married share} in a within-pseudo-cohort regression of the change in
+marriage outcomes. An amplifying cascade requires $\beta < 0$ and significant:
+decline must be faster where non-marriage is already prevalent. A positive
+$\beta$ --- decline \emph{smaller} where the reference share is high --- is the
+opposite of the cascade signature: stabilizing, mean-reverting dynamics. To
+guard against mechanical correlation, the reference group is varied across
+specifications: the adjacent \emph{younger} cohort (primary), the adjacent
+\emph{older} cohort (clean of own-cohort reflection), the whole 20--39
+population (robustness), and the cohort's own lag (comparator). The
+pre-registered rule required an amplifying $\beta$ under the primary and at
+least one clean specification, in \emph{both} countries, for
+H$_{\text{cascade}}$ to stand.
+
+\subsection{The verdict: stabilizing, not self-reinforcing}
+\label{sec:verdict}
+
+Table~\ref{tab:beta} reports the full $\beta$ matrix at lag one, where the
+signal concentrates (lag-two estimates collapse toward zero).
+
+\begin{table}[t]
+\centering
+\caption{State-dependence coefficient $\beta$ on the lagged reference
+not-married share (lag 1). Amplifying cascade requires $\beta<0$.}
+\label{tab:beta}
+\begin{tabular}{lcc}
+\toprule
+Reference-group specification & $\beta$ Costa Rica & $\beta$ Colombia \\
+\midrule
+Adjacent younger cohort (primary) & $+0.17$ & $+1.33$ \\
+Adjacent older cohort (clean)     & $+0.16$ & $+0.61$ \\
+Population 20--39 (robustness)    & $+0.29$ & $+0.97$ \\
+Own lag (comparator)              & $+0.36$ & $+0.98$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+$\beta > 0$ in every specification, in both countries. Within-cohort marriage
+decline is \emph{smaller}, not larger, where the reference not-married share is
+already high. The dynamics are stabilizing --- the sign is the opposite of the
+cascade signature, and the pre-registered H$_{\text{cascade}}$ condition fails
+comprehensively.
+
+The localization completes the picture. In Colombia, curvature localizes on
+\emph{cohort} lines (married-share curvature RMS 0.007 on period lines versus
+0.014 on cohort lines), with a statistically unambiguous period component
+(F-test $p \approx 3\times10^{-6}$) that is \emph{small} relative to the cohort
+step-down --- and, crucially, non-reflexive: because $\beta$ is not amplifying,
+that period component carries an \emph{exogenous-shock} signature, not
+endogenous feedback. In Costa Rica the period effect is not statistically
+present at all ($p = 0.18$), leaving a cohort-replacement reading. The
+structure, in both countries, is
+H$_{\text{cohort}}$ --- dominant cohort replacement --- with a secondary
+H$_{\text{shock}}$ overlay in Colombia. Figure~\ref{fig:apc} shows the
+pseudo-cohort lines and the identified curvature; Figure~\ref{fig:beta} the
+$\beta$ estimates with confidence intervals by specification.
+
+\begin{figure}[t]
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+  \includegraphics[width=\textwidth]{fig_cohortlines_COL.pdf}
+  \caption{Colombia: pseudo-cohort lines}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.48\textwidth}
+  \includegraphics[width=\textwidth]{fig_apc_curvature_COL.pdf}
+  \caption{Colombia: identified APC curvature}
+\end{subfigure}
+\caption{Localization of the change (Colombia; Costa Rica in the online
+appendix). Acceleration sits on cohort lines; the period overlay is real but
+small.}
+\label{fig:apc}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+  \includegraphics[width=\textwidth]{fig_beta_ci_CRI.pdf}
+  \caption{Costa Rica}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.48\textwidth}
+  \includegraphics[width=\textwidth]{fig_beta_ci_COL.pdf}
+  \caption{Colombia}
+\end{subfigure}
+\caption{State-dependence $\beta$ by reference-group specification, with
+confidence intervals. Positive everywhere: stabilizing, not cascading.}
+\label{fig:beta}
+\end{figure}
+
+\subsection{The individual-level confirmation}
+\label{sec:individual}
+
+The estimates above are cell-level: on repeated cross-sections, the
+state-dependence test is a within-pseudo-cohort \emph{cell} regression, and an
+ecological objection is available --- individual dynamics could differ from
+cell dynamics. For Colombia, where person-level microdata permit it, we re-ran
+the test at the individual-outcome level (a multinomial model of current union
+status on the lagged reference share, person weights, within cohort--age
+cells). The individual-level estimates confirm the cell-level verdict --- no
+amplifying state dependence --- discharging the ecological objection for the
+country where the period overlay made it most pointed. What repeated
+cross-sections cannot deliver at any level is \emph{true individual
+transitions}; that requires panel or event-history data (the Colombian ENDS
+program), which we return to in Section~\ref{sec:limitations}.
+
+Two caveats bound the verdict rather than undermine it. The 20--39 estimation
+floor excludes the 15--19 entry margin --- a cascade igniting among teenagers
+would be under-observed here; and both countries are high-cohabitation regimes,
+so the non-cascade verdict does not automatically travel to marriage-dominant
+systems (that is the out-of-sample prediction of
+Section~\ref{sec:interpretation}, not an assumption).

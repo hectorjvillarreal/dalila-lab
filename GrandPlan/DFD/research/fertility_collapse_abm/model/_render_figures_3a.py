@@ -55,8 +55,14 @@ OBS = "#1A1A1A"      # observed — near-black ink
 SIM = "#0072B2"      # simulated — Okabe-Ito blue
 ACC = "#D55E00"      # secondary — Okabe-Ito vermillion
 
+def _save(fig, stem: str) -> None:
+    """PNG for quick viewing + vector PDF for the paper (Overleaf)."""
+    fig.savefig(os.path.join(FIGS, stem + ".png"))
+    fig.savefig(os.path.join(FIGS, stem + ".pdf"))
+
+
 plt.rcParams.update({
-    "figure.dpi": 150, "savefig.dpi": 150, "font.size": 9,
+    "figure.dpi": 150, "savefig.dpi": 300, "font.size": 9,
     "axes.spines.top": False, "axes.spines.right": False,
     "axes.grid": True, "axes.grid.axis": "y", "grid.color": "#DDDDDD",
     "grid.linewidth": 0.6, "axes.axisbelow": True,
@@ -95,7 +101,7 @@ def fig1(cc: str) -> None:
     fig.suptitle(f"{cc} — union composition by age band, women 20–39: "
                  "no-reflexivity model vs observed", y=0.98)
     fig.tight_layout(rect=(0, 0.05, 1, 0.96))
-    fig.savefig(os.path.join(FIGS, f"fig1_{cc}.png"))
+    _save(fig, f"fig1_{cc}")
     plt.close(fig)
 
 
@@ -122,7 +128,7 @@ def fig2(cc: str) -> None:
              "the comparison is qualitative (shape/timing), not level.",
              fontsize=7, color="#555555")
     fig.tight_layout(rect=(0, 0.03, 1, 1))
-    fig.savefig(os.path.join(FIGS, f"fig2_{cc}.png"))
+    _save(fig, f"fig2_{cc}")
     plt.close(fig)
 
 
@@ -142,7 +148,7 @@ def fig3() -> None:
                  "(calendar-time only — no state dependence; headline spec is cohort-only, π ≡ 1)",
                  fontsize=9)
     fig.tight_layout()
-    fig.savefig(os.path.join(FIGS, "fig3_period.png"))
+    _save(fig, "fig3_period")
     plt.close(fig)
 
 
@@ -168,7 +174,7 @@ def fig4(cc: str) -> None:
              "placeholder MEX-shape ASFR — Stage 3a makes NO TFR claim (3b is ENDS-gated).",
              fontsize=7, color="#555555")
     fig.tight_layout(rect=(0, 0.04, 1, 1))
-    fig.savefig(os.path.join(FIGS, f"fig4_{cc}.png"))
+    _save(fig, f"fig4_{cc}")
     plt.close(fig)
 
 

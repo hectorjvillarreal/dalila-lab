@@ -113,6 +113,7 @@ def fig1_cohort_lines(country: str) -> None:
     ax.legend(fontsize=6, ncol=2, title="birth cohort")
     fig.tight_layout()
     fig.savefig(os.path.join(FIGS, f"fig1_cohortlines_{country}.png"), dpi=140)
+    fig.savefig(os.path.join(FIGS, f"fig1_cohortlines_{country}.pdf"))
     plt.close(fig)
 
 
@@ -150,6 +151,7 @@ def fig2_apc_curvature(country: str) -> None:
     ax.legend()
     fig.tight_layout()
     fig.savefig(os.path.join(FIGS, f"fig2_apc_curvature_{country}.png"), dpi=140)
+    fig.savefig(os.path.join(FIGS, f"fig2_apc_curvature_{country}.pdf"))
     plt.close(fig)
 
 
@@ -179,6 +181,7 @@ def fig3_beta_ci(country: str) -> None:
     ax.set_title(f"{country}: state-dependence β by reference-group spec")
     fig.tight_layout()
     fig.savefig(os.path.join(FIGS, f"fig3_beta_ci_{country}.png"), dpi=140)
+    fig.savefig(os.path.join(FIGS, f"fig3_beta_ci_{country}.pdf"))
     plt.close(fig)
 
 

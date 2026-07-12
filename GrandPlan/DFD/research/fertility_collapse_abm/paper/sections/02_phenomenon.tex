@@ -1,0 +1,145 @@
+% =============================================================================
+% §2 Phenomenon & measurement (M1 / R1+R2) — registry collapse; WB/WPP smoothing
+% failure; union composition as state variable; data-limitations (measurement).
+% =============================================================================
+\section{The Phenomenon: Measurement Against Primary Sources}
+\label{sec:phenomenon}
+
+\subsection{The collapse in national vital registries}
+\label{sec:registries}
+
+Table~\ref{tab:anchors} reports the corrected national anchors. Every figure
+comes from the national vital-registration system or statistical institute of
+the country concerned; each series in the project repository carries per-row
+source and methodology flags.
+
+\begin{table}[t]
+\centering
+\caption{National TFR anchors, collapse countries and comparator}
+\label{tab:anchors}
+\small
+\begin{tabular}{llll}
+\toprule
+Country & National series & Level and change & Notes \\
+\midrule
+Costa Rica & INEC & $1.83 \rightarrow 1.12$ (2010--24) & $-39\%$; 2024 from INEC release \\
+Colombia & DANE EEVV & $1.7 \rightarrow 1.1$ (2015--24) & \emph{not} the circulating ``$2.0 \rightarrow 1.06$'' \\
+Chile & INE/DEIS & $1.81 \rightarrow 1.03$ (2010--24) & official TGF gap 2010--21 filled by implied TFR \\
+Argentina & DEIS/INDEC & $\approx 1.15$--$1.19$ (2024) & no official period TGF after 2021; reconstructed \\
+Mexico (comparator) & CONAPO / ENADID & 1.89 (modeled) / 1.60 (survey, 2023) & slow decline; ``1.55'' is not national \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Three measurement points deserve emphasis. First, the decline is behavioral,
+not a denominator artifact: in every collapse country the \emph{raw annual
+birth count} fell between 18 and 47 percent while the female population aged
+15--49 grew (Chile: 250{,}643 births in 2010 to 154{,}441 in 2024, $-38$
+percent; Figure~\ref{fig:forensics}). No plausible revision to population
+denominators reverses that.
+Second, several widely circulated figures are wrong or unofficial: Colombia's
+``2.0 to 1.06'' appears in no DANE source (the genuine collapse is roughly 35
+percent in TFR, not 47); Argentina has published no official period TGF since
+2021, so any post-2021 level is a reconstruction and should be labeled as such.
+Third, the smoothed international series miss the event.
+Figure~\ref{fig:smoothing} contrasts national registry series with the World
+Bank/WPP series: the model-smoothed lines glide while the registries collapse,
+with end-of-sample gaps up to roughly half a child per woman. Analyses built on
+the international series would date the collapse late, understate its speed,
+and miss its acceleration entirely.
+
+\begin{figure}[t]
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+  \includegraphics[width=\textwidth]{fig_tfr_registry_wb_COL.png}
+  \caption{Colombia}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.48\textwidth}
+  \includegraphics[width=\textwidth]{fig_tfr_registry_wb_CRI.png}
+  \caption{Costa Rica}
+\end{subfigure}
+\caption{National registry TFR versus World Bank/WPP model-smoothed series.
+The international series erase the acceleration that defines the phenomenon.}
+\label{fig:smoothing}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+  \includegraphics[width=\textwidth]{fig_forensic_panel_COL.png}
+  \caption{Colombia}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.48\textwidth}
+  \includegraphics[width=\textwidth]{fig_forensic_panel_CRI.png}
+  \caption{Costa Rica}
+\end{subfigure}
+\caption{Registered births and period TFR. Births-implied TFR (anchored to a
+registry year) tracks the published national series: the collapse is in the
+numerator, not the denominator.}
+\label{fig:forensics}
+\end{figure}
+
+\subsection{The state variable: union composition}
+\label{sec:composition}
+
+What proximately drives births down? We construct annual union-composition
+series for women aged 20--39, in four five-year age bands, distinguishing
+\emph{married} from \emph{cohabiting} (consensual union) --- for Costa Rica from
+ENAHO via INEC's REDATAM tabulations (2010--2024), and for Colombia from DANE
+GEIH person-level microdata (2007--2024; eighteen annual pooled files, with the
+estado-civil coding verified to be identical across the 2021--22 survey
+redesign, so the downturn is not a recode).
+
+The composition series reveal the phenomenon's structure
+(Figure~\ref{fig:coupling}). In Colombia, \emph{total} union prevalence sits on
+a flat plateau near 59--60 percent from 2008 to 2020 (declining moderately
+thereafter), while the \emph{married} share halves --- from 20.7 to 11.9
+percent --- with cohabitation substituting almost one-for-one. Costa Rica shows
+the same signature: the equal-band-mean married share falls from 0.324 (2010)
+to 0.166 (2024). Partnership as such is not disappearing; its \emph{composition}
+is transforming, and because fertility differs across union types, composition
+is the natural state variable for the fertility consequences. Throughout the
+paper, the state variable is the three-way composition
+$\{\Sng,\Coh,\Mar\}$ (single, cohabiting, married) --- never a binary
+partnered/unpartnered.
+
+\begin{figure}[t]
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+  \includegraphics[width=\textwidth]{fig_coupling_vs_tfr_COL.png}
+  \caption{Colombia (GEIH microdata, 2007--2024)}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.48\textwidth}
+  \includegraphics[width=\textwidth]{fig_coupling_vs_tfr_CRI.png}
+  \caption{Costa Rica (ENAHO/REDATAM, 2010--2024)}
+\end{subfigure}
+\caption{Union composition of women 20--39 (married vs.\ cohabiting) against the
+national TFR (comparison overlay only). Marriage collapses on a roughly flat
+total-union base; cohabitation substitutes.}
+\label{fig:coupling}
+\end{figure}
+
+\subsection{Data limitations: measurement}
+\label{sec:datalim-measurement}
+
+We flag the measurement limits here rather than in footnotes.
+(i)~\emph{Colombia 2007.} The earliest GEIH year is a documented
+frame/questionnaire outlier (total union 47.5 percent versus the 2008--2020
+plateau near 59--60); all Colombian analysis treats 2008 as the first usable
+composition year. (ii)~\emph{Argentina.} No official period TGF exists after
+2021; our reconstruction is INDEC-anchored and labeled throughout. The
+much-discussed INDEC credibility break of 2007--15 does \emph{not} contaminate
+fertility: vital statistics are produced by DEIS, a separate institution.
+(iii)~\emph{Chile.} The official TGF series has a 2010--21 publication gap,
+filled here by births-implied TFR anchored to registry years.
+(iv)~\emph{Pandemic-era collection.} Colombian household-survey collection in
+2020--21 switched modes; we flag 2019--22 composition readings as potentially
+affected and return to this in Sections~\ref{sec:model}
+and~\ref{sec:limitations}. (v)~\emph{Tempo.} Registry TFRs are period measures;
+where levels are anchored we also report a tempo-adjusted sensitivity in the
+spirit of \citet{bongaarts1998} (a $+0.10$ TFR adjustment changes the Mexican
+comparator's implied population by roughly 2 percent); none of the paper's
+claims rests on the distinction.
