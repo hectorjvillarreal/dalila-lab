@@ -37,12 +37,18 @@ Annual transitions are:
 \Pr(\Sng \to \text{union})_{it} &= f_0 \,\phib[b_i],
   &&\text{of which married w.p. } m_0\,\kb[b_i], \text{ else cohabiting},
   \label{eq:formation}\\
-\Pr(\Coh \to \Mar)_{it} &= c_0 \,\kb[b_i],
+\Pr(\Coh \to \Sng)_{it} &= \delta_c, \qquad
+\Pr(\Coh \to \Mar \mid \text{no dissolution})_{it} = c_0 \,\kb[b_i],
   \label{eq:conversion}\\
-\Pr(\Coh \to \Sng)_{it} = \delta_c, &\qquad
-\Pr(\Mar \to \Sng)_{it} = \delta_m.
+\Pr(\Mar \to \Sng)_{it} &= \delta_m.
   \label{eq:dissolution}
 \end{align}
+In the cohabiting state, where dissolution and conversion compete, the two
+risks are evaluated \emph{sequentially} --- dissolution first, then conversion
+conditional on remaining in union, exactly as in Algorithm~\ref{alg:abm} ---
+so the realized annual conversion probability is
+$(1-\delta_c)\,c_0\,\kb$. This matches the reference implementation; the
+conversion parameter $c_0$ is interpreted conditionally throughout.
 The two cohort terms are
 \begin{align}
 \kb &= \kappa_\infty + \frac{1-\kappa_\infty}{1+\exp\{s\,(b-b_0)\}},
@@ -129,7 +135,14 @@ Where a TFR path appears in this paper it is a comparison overlay only.
 \emph{Free versus fixed.} Free, per country: the five baseline rates, the three
 $\kb$ parameters, the $\phib$ tilt (and, in the robustness specification, the
 three $\pit$ parameters). Fixed: the demographic scaffolding (age range,
-seeding, closed-cohort replacement), reported in Appendix~\ref{app:odd}.
+seeding, closed-cohort replacement), reported in Appendix~\ref{app:odd}. The
+resulting parameter-to-moment ratio is the most legible overfitting check:
+\emph{nine} free parameters per country face 120 (Costa Rica: 4 bands
+$\times$ 2 shares $\times$ 15 years) and 136 (Colombia: $4 \times 2 \times 17$)
+target moments. Closed-cohort replacement holds cohort inflow constant ---
+counterfactual under birth declines of 18--47 percent --- but the evaluation
+metrics are computed on \emph{within-band composition shares}, which are
+insulated from inflow scale by construction.
 
 \emph{Optimizer.} Nelder--Mead in a boxed transform, four random restarts, 600
 evaluations per country; inner evaluation ensembles of 12{,}000 agents
@@ -179,7 +192,10 @@ trend) while the simulated path does not. Both second differences are near
 zero; the kink coincides with pandemic-era survey collection
 (Section~\ref{sec:datalim-measurement}) and/or a discrete shock, and its
 resolution requires transition-level data
-(Section~\ref{sec:limitations}). A kink that a smooth model misses is not
+(Section~\ref{sec:limitations}). The miss is structural, not incidental: both
+cohort terms are monotone in birth cohort --- $\phib$ in particular cannot
+produce Colombia's flat-then-declining total-union path --- so the same
+parsimony that disciplines the model is what surfaces here as the residual. A kink that a smooth model misses is not
 evidence of a cascade; Section~\ref{sec:discrimination} tested for that
 signature directly and rejected it. Honest margins: under the headline
 specification Costa Rica's M2 sits nearer its tolerance than with the period

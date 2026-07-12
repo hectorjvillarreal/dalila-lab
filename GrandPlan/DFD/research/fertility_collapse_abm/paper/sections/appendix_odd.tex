@@ -40,7 +40,9 @@ Colombia).
 \subsection{Process overview and scheduling}
 
 Each tick, every woman executes, in order: (1) union transition per
-equations~\eqref{eq:formation}--\eqref{eq:dissolution}; (2) fertility-overlay
+equations~\eqref{eq:formation}--\eqref{eq:dissolution}, with the cohabiting
+state's competing risks evaluated sequentially (dissolution first; conversion
+conditional on remaining in union); (2) fertility-overlay
 draw (comparison bookkeeping only); (3) ageing by one year, with closed-cohort
 replacement --- a woman exceeding 49 is replaced by a new 15-year-old single
 woman with birth year $t-15$, who therefore carries her own cohort's $\kb$ and
@@ -116,7 +118,7 @@ reported in Section~\ref{sec:credibility}.
 \midrule
 $f_0$ & base union-formation hazard (single, /yr) & 0.067 & 0.126 \\
 $m_0$ & married share of new unions (oldest cohorts) & 0.308 & 0.147 \\
-$c_0$ & cohabitation$\to$marriage hazard (oldest cohorts) & 0.042 & 0.025 \\
+$c_0$ & cohab.$\to$marriage hazard, cond.\ on no dissolution (oldest cohorts) & 0.042 & 0.025 \\
 $\delta_c$ & cohabitation dissolution hazard & 0.062 & 0.067 \\
 $\delta_m$ & marriage dissolution hazard & 0.019 & 0.023 \\
 \midrule
