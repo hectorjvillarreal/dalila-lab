@@ -97,7 +97,8 @@ transparency standard \citep{grimm2020odd}, sufficient for reimplementation.
   \EndIf
   \State $a_i \gets a_i + 1$
   \If{$a_i > 49$} \State replace: $a_i \gets 15$, $u_i \gets \Sng$,
-    $b_i \gets t - 15$ \Comment{new entry cohort carries its own $\kb$}
+    $b_i \gets (t{+}1) - 15$ \Comment{the tick produces year $t{+}1$; the new
+    entrant is 15 \emph{then}, and carries her own $\kb$}
   \EndIf
 \EndFor
 \State $t \gets t + 1$ \Comment{model step advances the calendar; nothing else}

@@ -126,3 +126,32 @@ handling — untouched.
 
 *Claude Code, 2026-07-12. Draft 2 in `paper/`; zip regenerated. Awaiting: Anne (B1
 release), Nina (N1 verify → model-section signature), Fina (P1 wording).*
+
+---
+
+# Addendum — Draft 2-final cleanup (post gate-close, same day)
+
+Per `DRAFT2_gate_close.md` (both gates clear; cleanup list):
+
+1. **Version label** — title-page footnote and date now read Draft 2.
+2. **Line-for-line Algorithm-1 ↔ `agent_step!` diff executed on Dalila** (the item
+   Nina's signature boundary deferred to a Dalila check). Result: transitions,
+   sequential competing risk, κ/φ dependence, and calendar-only model step all
+   line-faithful; **one discrepancy found — in the algorithm, not the code**: the
+   replacement line wrote $b \gets t-15$ (pre-increment year) while the code assigns
+   `birth_year = (t+1) − 15` (the produced year, in which the entrant is 15). A
+   one-year label offset in the paper's pseudocode only; no result touched. Fixed
+   with an explanatory comment in Algorithm 1. Logged here because Nina's signature
+   rests on the map's accuracy — the map was accurate; the pseudocode line was not.
+3. **P2 references closed:** Lesthaeghe–van de Kaa 1986 page range pinned to
+   **9–24** (verified against Lesthaeghe's own scan record of the original: lead
+   article, *Mens en Maatschappij* book volume 61, Van Loghum Slaterus). JFV entry
+   completed as keynote slide deck, University of Pennsylvania, publicly circulated,
+   deck vintage 2026-04-01; **no working-paper version exists as of July 2026**
+   (checked) — note instructs substitution if one appears. No VERIFY flags remain in
+   the bib except Calles–Vogl's year (per Debb's supply, flagged).
+4. Static checks re-run clean; `fertility_collapse_draft2_overleaf.zip` regenerated.
+
+Remaining before submission (not Claude Code's): Fina's journal-policy check on the
+disclosure wording/placement; Debb's amendment of the 2026-07-11 baseline verdict
+(CR ruling) + process-lesson log; final human read.
