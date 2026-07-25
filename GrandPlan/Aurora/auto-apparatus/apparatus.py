@@ -130,11 +130,16 @@ def section_bullets(body, heading_re):
 
 def scan():
     docs = []
+    archived_ids = set()
     for root in SCAN_ROOTS:
         if not os.path.isdir(root):
             continue
         for dirpath, dirs, files in os.walk(root):
-            dirs[:] = [d for d in dirs if d != "_archive"]
+            if os.path.basename(dirpath) == "_archive":
+                dirs[:] = []
+                archived_ids.update(os.path.splitext(fn)[0] for fn in files
+                                    if fn.lower().endswith(".md"))
+                continue
             for fn in sorted(files):
                 path = os.path.join(dirpath, fn)
                 if fn.lower().endswith(".md"):
@@ -195,6 +200,10 @@ def scan():
                 board["crossrefs"].append(f"`{r}` → `{base}` — marked [pending]")
             elif marker == "thread":
                 board["crossrefs"].append(f"`{r}` → {base} — thread, no formal note yet")
+            elif base in archived_ids and base not in ids:
+                board["crossrefs"].append(
+                    f"`{r}` → `{base}` — points to archived/superseded version; "
+                    f"update pointer at next revision")
             elif base not in ids and not os.path.exists(
                     os.path.join(os.path.dirname(d["path"]), base + ".md")):
                 # unresolved only if it looks like a doc_id, not free text

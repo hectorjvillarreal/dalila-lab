@@ -27,24 +27,24 @@
 - `GrandPlan/Aurora/AI/202607_AURORA_AI_mollick_twilight-chatbots_v1.2.md` → `202606_AURORA_AI_amodei_exponential_v1.0` — UNRESOLVED (no file found)
 - `GrandPlan/Aurora/AI/202607_AURORA_AI_mollick_twilight-chatbots_v1.2.md` → `202605_AURORA_AI_robin_futurehouse_v1.0` — marked [pending]
 - `GrandPlan/Aurora/AI/202607_AURORA_AI_nadella_reverse-info-paradox_v1.0.md` → `202604_AURORA_AI_kiesling_price-theory_v1.0` — UNRESOLVED (no file found)
-- `GrandPlan/Aurora/AI/202607_AURORA_AI_nadella_reverse-info-paradox_v1.0.md` → `20260613_GRANDPLAN_DESIGN-LOG_DP-001_api-severability_v1.0` — UNRESOLVED (no file found)
+- `GrandPlan/Aurora/AI/202607_AURORA_AI_nadella_reverse-info-paradox_v1.0.md` → `20260613_GRANDPLAN_DESIGN-LOG_DP-001_api-severability_v1.0` — points to archived/superseded version; update pointer at next revision
 - `GrandPlan/Aurora/AI/202607_AURORA_AI_nadella_reverse-info-paradox_v1.0.md` → `202606_AURORA_AI_amodei_exponential_v1.0` — UNRESOLVED (no file found)
 - `GrandPlan/Aurora/AI/202607_AURORA_AI_nadella_reverse-info-paradox_v1.0.md` → `202605_AURORA_AI_robin_futurehouse_v1.0` — marked [pending]
 - `GrandPlan/Aurora/AI/202607_AURORA_AI_nadella_reverse-info-paradox_v1.0.md` → `202605_AURORA_AI_lightwell_v1.0` — marked [pending]
 - `GrandPlan/Aurora/AI/202607_AURORA_AI_nadella_reverse-info-paradox_v1.0.md` → LatAm rents-without-stack thread — thread, no formal note yet
-- `GrandPlan/Aurora/briefing/20260715_AURORA_BRIEFING_expertise-convexity_v1.0.md` → `202607_AURORA_AI_mollick_twilight-chatbots_v1.0` — UNRESOLVED (no file found)
+- `GrandPlan/Aurora/briefing/20260715_AURORA_BRIEFING_expertise-convexity_v1.0.md` → `202607_AURORA_AI_mollick_twilight-chatbots_v1.0` — points to archived/superseded version; update pointer at next revision
 - `GrandPlan/Aurora/briefing/20260715_AURORA_BRIEFING_expertise-convexity_v1.0.md` → `202604_AURORA_AI_kiesling_price-theory_v1.0` — UNRESOLVED (no file found)
 - `GrandPlan/Aurora/briefing/20260715_AURORA_BRIEFING_expertise-convexity_v1.0.md` → `202606_AURORA_AI_amodei_exponential_v1.0` — UNRESOLVED (no file found)
-- `GrandPlan/Aurora/briefing/20260715_AURORA_BRIEFING_frontier-agents-dalila_v1.0.md` → `20260613_GRANDPLAN_DESIGN-LOG_DP-001_api-severability_v1.1` — UNRESOLVED (no file found)
-- `GrandPlan/Aurora/briefing/20260715_AURORA_BRIEFING_frontier-agents-dalila_v1.0.md` → `202607_AURORA_AI_mollick_twilight-chatbots_v1.0` — UNRESOLVED (no file found)
+- `GrandPlan/Aurora/briefing/20260715_AURORA_BRIEFING_frontier-agents-dalila_v1.0.md` → `20260613_GRANDPLAN_DESIGN-LOG_DP-001_api-severability_v1.1` — points to archived/superseded version; update pointer at next revision
+- `GrandPlan/Aurora/briefing/20260715_AURORA_BRIEFING_frontier-agents-dalila_v1.0.md` → `202607_AURORA_AI_mollick_twilight-chatbots_v1.0` — points to archived/superseded version; update pointer at next revision
 - `GrandPlan/Aurora/briefing/20260715_AURORA_BRIEFING_frontier-agents-dalila_v1.0.md` → `20260516_GRANDPLAN_BRIEFING_compute-envelope_v1` — UNRESOLVED (no file found)
-- `GrandPlan/Aurora/geopol/202606_AURORA_geopol_mythos-export-control_v1.1.md` → `20260613_GRANDPLAN_DESIGN-LOG_DP-001_api-severability_v1.1` — UNRESOLVED (no file found)
-- `GrandPlan/Aurora/geopol/202606_AURORA_geopol_mythos-export-control_v1.1.md` → `202607_AURORA_AI_mollick_twilight-chatbots_v1.1` — UNRESOLVED (no file found)
+- `GrandPlan/Aurora/geopol/202606_AURORA_geopol_mythos-export-control_v1.1.md` → `20260613_GRANDPLAN_DESIGN-LOG_DP-001_api-severability_v1.1` — points to archived/superseded version; update pointer at next revision
+- `GrandPlan/Aurora/geopol/202606_AURORA_geopol_mythos-export-control_v1.1.md` → `202607_AURORA_AI_mollick_twilight-chatbots_v1.1` — points to archived/superseded version; update pointer at next revision
 - `GrandPlan/Aurora/geopol/202606_AURORA_geopol_mythos-export-control_v1.1.md` → `202606_AURORA_AI_amodei_exponential_v1.0` — UNRESOLVED (no file found)
 - `GrandPlan/Aurora/geopol/202606_AURORA_geopol_mythos-export-control_v1.1.md` → `202605_AURORA_AI_lightwell_v1.0` — marked [pending]
 - `GrandPlan/Aurora/geopol/202606_AURORA_geopol_mythos-export-control_v1.1.md` → LatAm rents-without-stack thread — thread, no formal note yet
-- `GrandPlan/Aurora/geopol/202607_AURORA_geopol_open-weights-letter_v1.0.md` → `202607_AURORA_AI_mollick_twilight-chatbots_v1.1` — UNRESOLVED (no file found)
-- `GrandPlan/Aurora/geopol/202607_AURORA_geopol_open-weights-letter_v1.0.md` → `20260613_GRANDPLAN_DESIGN-LOG_DP-001_api-severability_v1.1` — UNRESOLVED (no file found)
+- `GrandPlan/Aurora/geopol/202607_AURORA_geopol_open-weights-letter_v1.0.md` → `202607_AURORA_AI_mollick_twilight-chatbots_v1.1` — points to archived/superseded version; update pointer at next revision
+- `GrandPlan/Aurora/geopol/202607_AURORA_geopol_open-weights-letter_v1.0.md` → `20260613_GRANDPLAN_DESIGN-LOG_DP-001_api-severability_v1.1` — points to archived/superseded version; update pointer at next revision
 - `_crossrefs/design_log/20260613_GRANDPLAN_DESIGN-LOG_DP-001_api-severability_v1.2.md` → `20260516_GRANDPLAN_BRIEFING_compute-envelope_v1` — UNRESOLVED (no file found)
 - `_crossrefs/design_log/20260613_GRANDPLAN_DESIGN-LOG_DP-001_api-severability_v1.2.md` → `202606_AURORA_AI_amodei_exponential_v1.0` — UNRESOLVED (no file found)
 
