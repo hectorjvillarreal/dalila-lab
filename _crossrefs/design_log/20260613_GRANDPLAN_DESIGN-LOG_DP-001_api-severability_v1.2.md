@@ -15,7 +15,8 @@ added_by: Elle
 revised_by: Claude Code (auto-apparatus maintenance run, 2026-07-24)
 endorsed_by: Elle            # v1.1 endorsement; v1.2 restates rationale, no change to principle or entailments
 approving_authority: Héctor
-status: draft, pending approval
+status: approved
+date_approved: 2026-07-24
 review_status: "T1 fired and resolved (v1.1). T5 fired and RESOLVED 2026-07-24, outcome refined (v1.2). Principle UPHELD; recurrence rationale restated on the EO framework."
 tags:
   - 2027_model
