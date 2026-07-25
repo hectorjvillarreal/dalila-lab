@@ -1,0 +1,110 @@
+# Facts file — entry 007. Prose (judgment, incl. qualitative loadings) lives in 007-hyundai.md.
+id: "007"
+player: "Hyundai Motor Group"
+archetype_ref: "mixture"   # READ-ONLY pointer into ../archetypes.md — not a corner
+slots:
+  volume:
+    value: "4,138,389"
+    unit: "units — HMC, 2025"
+    delta: "flat YoY"
+    date: 2026-07-14
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+    notes: >-
+      First-ever 1M US wholesale; 5th straight US retail record; 2026 guidance >4.16M.
+      Electrified ~962k (+27%); HEV 612k (+32%); BEV 269k (+17%).
+  margin:
+    value: "6.2% op margin — op profit KRW 11.47tn (2025)"
+    unit: null
+    delta: "op profit -19.5%; net -21.7%"
+    date: 2026-07-14
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: true
+    notes: >-
+      Revenue record KRW 186.3tn (+6.3%). Q4 op margin 3.6% (-39.9%). Cause named as
+      US tariffs + incentives, not Chinese competition.
+  tariff_exposure:
+    value: "high"
+    unit: null
+    delta: null
+    date: 2026-07-14
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: true
+    notes: "custom slot — separated from china_dependence by this entry"
+  china_dependence:
+    value: "~nil"
+    unit: null
+    delta: null
+    date: 2026-07-14
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+    notes: "~42,900 units sold in China, Q3 2025"
+  legitimacy_assets:
+    value: "native/high — Korean"
+    unit: null
+    delta: null
+    date: 2026-07-14
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+    notes: "No Connected Vehicle Rule exposure."
+  vertical_integration:
+    value: "moderate-high (Mobis/Glovis/steel; cells via JV)"
+    unit: null
+    delta: null
+    date: 2026-07-14
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+  segment_span:
+    value: "mass → Genesis luxury"
+    unit: null
+    delta: null
+    date: 2026-07-14
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+    notes: "Genesis US 82,331 units (+10%, best-ever); 2030 target 350k."
+  non_auto_optionality:
+    value: "Boston Dynamics, Motional, Pleos, physical-AI stack"
+    unit: null
+    delta: null
+    date: 2026-07-14
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: true
+    notes: "custom slot (frontier family)"
+  geographic_reach:
+    value: "broad and deliberately diversified"
+    unit: null
+    delta: null
+    date: 2026-07-14
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+    notes: >-
+      Metaplant America GA ($12.6B, Ioniq 5/9, phase 2 → 500k, adding hybrids); Ulsan
+      EV 200k (Q1 2026); Pune India 250k; Saudi 50k (Q4 2026); Vietnam; Algeria;
+      Louisiana low-carbon steel.
+  backing:
+    value: "listed; Chung family / chaebol structure"
+    unit: null
+    delta: null
+    date: 2026-07-14
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false

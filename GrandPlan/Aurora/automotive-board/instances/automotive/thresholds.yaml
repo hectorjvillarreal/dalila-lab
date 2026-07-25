@@ -1,0 +1,35 @@
+# Thresholds — dated, falsifiable observations booked against entries.
+# `due_passed` is tool-set (mechanical). `status` and `resolution` are HUMAN-set.
+# The tool never resolves a threshold.
+
+- id: TH-001
+  entry: "001"
+  description: "Volvo US authorization survival — does the waiver survive, and at what price in disentanglement?"
+  due: 2027-01-01          # review date
+  status: open
+  due_passed: false
+  resolution: ""
+
+- id: TH-002
+  entry: "001"
+  description: "Lotus / smart adjudication under the US Connected Vehicle Rule"
+  due: null                # open, no date
+  status: open
+  due_passed: false
+  resolution: ""
+
+- id: TH-003
+  entry: "004"
+  description: "JAMA harness specifications agreed"
+  due: 2027-12-31
+  status: open
+  due_passed: false
+  resolution: ""
+
+- id: TH-004
+  entry: "007"
+  description: "Atlas on the HMGMA floor (parts sequencing)"
+  due: 2028-12-31
+  status: open
+  due_passed: false
+  resolution: ""

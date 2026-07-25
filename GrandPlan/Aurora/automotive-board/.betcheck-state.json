@@ -1,0 +1,122 @@
+{
+ "instances/automotive/board/001-geely.yaml::geographic_reach": {
+  "date": null,
+  "delta": null,
+  "entry": "001",
+  "player": "Geely / Zeekr Group",
+  "slot": "geographic_reach",
+  "value": null
+ },
+ "instances/automotive/board/001-geely.yaml::legitimacy_assets": {
+  "date": "2026-07-16",
+  "delta": null,
+  "entry": "001",
+  "player": "Geely / Zeekr Group",
+  "slot": "legitimacy_assets",
+  "value": "Volvo: authorized (US, May 2026) \u00b7 Polestar: denied (US, MY2027) \u00b7 Lotus / smart / Mercedes stake: untested \u00b7 EU: no equivalent gate yet"
+ },
+ "instances/automotive/board/001-geely.yaml::segment_span": {
+  "date": "2026-07-16",
+  "delta": null,
+  "entry": "001",
+  "player": "Geely / Zeekr Group",
+  "slot": "segment_span",
+  "value": "mass \u2192 ultra-premium"
+ },
+ "instances/automotive/board/002-byd.yaml::cost_position": {
+  "date": null,
+  "delta": null,
+  "entry": "002",
+  "player": "BYD",
+  "slot": "cost_position",
+  "value": null
+ },
+ "instances/automotive/board/002-byd.yaml::vertical_integration": {
+  "date": "2026-06-21",
+  "delta": null,
+  "entry": "002",
+  "player": "BYD",
+  "slot": "vertical_integration",
+  "value": "highest on the board"
+ },
+ "instances/automotive/board/002-byd.yaml::volume": {
+  "date": "2026-07-16",
+  "delta": "-38.5% YoY (market -20.2%)",
+  "entry": "002",
+  "player": "BYD",
+  "slot": "volume",
+  "value": "990,900"
+ },
+ "instances/automotive/board/003-huawei-xiaomi.yaml::compute_autonomy_moat": {
+  "date": null,
+  "delta": null,
+  "entry": "003",
+  "player": "Huawei (HIMA) / Xiaomi",
+  "slot": "compute_autonomy_moat",
+  "value": null
+ },
+ "instances/automotive/board/004-toyota.yaml::transition_pace_exposure": {
+  "date": null,
+  "delta": null,
+  "entry": "004",
+  "player": "Toyota",
+  "slot": "transition_pace_exposure",
+  "value": null
+ },
+ "instances/automotive/board/005-volkswagen.yaml::china_dependence": {
+  "date": "2026-07-14",
+  "delta": null,
+  "entry": "005",
+  "player": "Volkswagen Group",
+  "slot": "china_dependence",
+  "value": "high"
+ },
+ "instances/automotive/board/005-volkswagen.yaml::restructuring_latency": {
+  "date": "2026-07-09",
+  "delta": null,
+  "entry": "005",
+  "player": "Volkswagen Group",
+  "slot": "restructuring_latency",
+  "value": "high (measured 2026-07-09)"
+ },
+ "instances/automotive/board/006-tesla.yaml::compute_autonomy_moat": {
+  "date": null,
+  "delta": null,
+  "entry": "006",
+  "player": "Tesla",
+  "slot": "compute_autonomy_moat",
+  "value": null
+ },
+ "instances/automotive/board/006-tesla.yaml::non_auto_optionality": {
+  "date": null,
+  "delta": null,
+  "entry": "006",
+  "player": "Tesla",
+  "slot": "non_auto_optionality",
+  "value": null
+ },
+ "instances/automotive/board/007-hyundai.yaml::margin": {
+  "date": "2026-07-14",
+  "delta": "op profit -19.5%; net -21.7%",
+  "entry": "007",
+  "player": "Hyundai Motor Group",
+  "slot": "margin",
+  "value": "6.2% op margin \u2014 op profit KRW 11.47tn (2025)"
+ },
+ "instances/automotive/board/007-hyundai.yaml::non_auto_optionality": {
+  "date": "2026-07-14",
+  "delta": null,
+  "entry": "007",
+  "player": "Hyundai Motor Group",
+  "slot": "non_auto_optionality",
+  "value": "Boston Dynamics, Motional, Pleos, physical-AI stack"
+ },
+ "instances/automotive/board/007-hyundai.yaml::tariff_exposure": {
+  "date": "2026-07-14",
+  "delta": null,
+  "entry": "007",
+  "player": "Hyundai Motor Group",
+  "slot": "tariff_exposure",
+  "value": "high"
+ }
+}

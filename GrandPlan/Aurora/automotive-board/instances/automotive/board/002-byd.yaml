@@ -1,0 +1,75 @@
+# Facts file — entry 002. Prose (judgment) lives in 002-byd.md.
+id: "002"
+player: "BYD"
+archetype_ref: "pure-diffusion-integrator"   # READ-ONLY pointer into ../archetypes.md
+slots:
+  volume:
+    value: "990,900"
+    unit: "units — China domestic retail, H1-2026"
+    delta: "-38.5% YoY (market -20.2%)"
+    date: 2026-07-16
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: true
+    notes: >-
+      2025: 2.26M pure BEV (+~28%); overtook Tesla for the global BEV crown. H1-2026:
+      lost #1 in China to Geely (1.021M). Exports 769,300 (+73.6%), 18.1% share, 2nd —
+      with Chery forms an export duopoly at ~40% of China's exports.
+  vertical_integration:
+    value: "highest on the board"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: true
+  legitimacy_assets:
+    value: "low (no owned foreign marques)"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+  margin:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: false
+    notes: "unset — board marks '(feed)'; awaiting feed data"
+  cost_position:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: true
+    notes: "unset — board marks '(feed)'; awaiting feed data"
+  geographic_reach:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: false
+    notes: "unset — board marks '(feed)'; awaiting feed data"
+  backing:
+    value: "dual-listed (HKEX 1211 / SZSE 002594); private, founder-led (Wang Chuanfu)"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false

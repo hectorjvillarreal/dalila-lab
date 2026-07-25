@@ -1,0 +1,46 @@
+# Slot registry — invariant. Defines the slot mechanism and the generic core slot set.
+# Instance-specific slots (and slot families) are declared in the instance's entry YAML
+# files and documented in the instance's findings file. Nothing here may be
+# industry-specific.
+
+schema_version: 1
+
+# Fields a tool may write, and only inside slots.*:
+writable_fields:
+  - value
+  - unit
+  - delta
+  - date
+  - source
+  - source_type
+  - confidence
+
+# Every other key in every file is read-only for tools, including:
+readonly_fields:
+  - decisive        # set by hand from the entry's falsifiable bet
+  - notes           # human-set factual remainder from migration / curation
+# ...and all top-level keys (id, player, archetype_ref, slots-structure itself).
+
+field_vocabulary:
+  confidence: [reported, confirmed]   # mandatory where value is set;
+                                      # reported -> confirmed may be tool-promoted;
+                                      # the reverse requires a human.
+  source_type: [primary, secondary]   # filing / regulator / statistical agency vs press.
+                                      # Prefer primary; where both exist, record primary.
+
+# Generic core slots — provisional and extensible. Meanings are industry-neutral.
+core_slots:
+  volume:              "output / sales in the instance's primary unit of scale"
+  segment_span:        "product breadth across price bands / tiers"
+  vertical_integration: "share of the value stack owned in-house"
+  margin:              "profitability at the stated level (operating / net, dated)"
+  cost_position:       "unit-cost standing relative to the field"
+  geographic_reach:    "breadth and diversification of markets served"
+  legitimacy_assets:   "assets conferring market access / trust in foreign or regulated markets"
+  backing:             "ownership, listing, control and funding structure"
+
+custom_slots_policy: >
+  Entries may carry custom slots where the core set does not reach the bet's decisive
+  variables. A custom slot is declared simply by using it in an entry YAML; its
+  definition is recorded in the instance findings file. Custom slot values follow the
+  same writable-field rules.

@@ -1,0 +1,21 @@
+# Entry 004 — Toyota  ·  *transition-tempo skeptic*
+
+**Structure:** world's largest automaker (~10M+/yr), hybrid-first, multi-pathway (HEV/PHEV/BEV/hydrogen). **CEO Kenta Kon** (ex-CFO, appointed early 2026); chairman Akio Toyoda (publicly holds BEVs cap near ~30% share). **Koji Sato** — CEO 2023–26, now on the board as Toyota's **first chief industry officer** and **head of JAMA**. Owns Daihatsu and Lexus; minority stakes in Subaru, Mazda, Suzuki.
+
+**Third component surfaced (2026-07-20) — system coordination.** Sato is pushing industry-wide standardisation across Japanese automakers: wiring harnesses first (~70,000 supplier variants today, which obstructs automation), then steel grades and resin specs — a claimed ten-fold productivity gain, with savings redeployed into ADAS, faster-charging batteries and software. Six further cooperation areas: logistics, raw-materials access, circular recycling, talent, AV infrastructure, and simplifying Japan's auto taxes. Nissan's Ivan Espinosa backs a certified "JAMA standard" for shared commodities. **This is diffusion logic — commonality, scale, cost compression — adopted defensively at the *system* level.** A firm that moves its ex-CEO into an industry-coordination role is signalling where it thinks the decisive game is played.
+**Does not falsify the tempo bet — isolates it.** "The industry will not survive without cooperation" concerns *competitive threat*; the hedge concerns *transition tempo*. Separate axes; both can hold. This is what makes the pole split tractable.
+**The clock (falsifiable):** ~1–2 years to settle specs, rollout only with the next vehicle generation → ~5–8 years to effect, against a Chinese iteration cadence in months. **Coordination is slow by construction — consent is the price.** Same structure as VW's institutional latency, one level up. *Threshold: are harness specs actually agreed by end-2027?* (Booked as TH-003 in `../thresholds.yaml`.)
+**The bet (falsifiable):** the BEV transition is slower, messier, and more infrastructure-bound than China prices; a hybrid-heavy hedge prints profit through the transition while keeping optionality. *(Counter: everyone running the diffusion thesis.)*
+**Reading:** the wager has *already paid once* — in the windows where Western BEV growth stalled, the hybrid lineup buffered profit while pure-BEV players bled. Open question: vindication or merely *delay*? If diffusion drives BEV cost decisively below parity, the hedge becomes the reason Toyota is behind on BEV scale, software, and in China.
+**Watch items:** *(Gina, light)* Japan's hydrogen-as-industrial-policy and China exposure · solid-state credibility (timeline slipped 2020→23→26→**2027-28**) · BEV ramp pace vs the diffusion cost curve · China share erosion.
+
+## Data slots — judgment retained
+*(Facts moved to `004-toyota.yaml`; decisive flags there. Narrative readings from the slot block are retained verbatim below.)*
+
+- Decisive slot is a custom `transition_pace_exposure` — share of profit pool dependent on the transition staying slow; **now known to be regionally conditional, not scalar**.
+- **Natural experiment (2026-07-16): Great Wall Motor dropped out of China's top-ten domestic retail**, with NEVs at ~30% of its domestic sales against an industry level >63%. The skeptic archetype run in a *fast-transition* market → elimination. Toyota runs the same archetype in *slow-transition* markets → profit. The archetype is neither right nor wrong; it is region-indexed. GWM is the negative data point this entry previously lacked. *(GWM offsets domestically via exports: 256,000, +52.8%, ~half its sales.)*
+- `volume` — largest on the board; BEV small but growing.
+- `backing` — most financially robust incumbent.
+- **Displacement markers (2026-07-20):** Chinese marques collectively **outsold Japanese marques in Europe for the first time in May 2026**. Australia YTD-May: **China 144,425 > Japan 117,332** — China now the leading source of new cars in an unwalled developed market.
+
+**Status (2026-07-20):** Hybrid profitability still buffering; deliberate BEV ramp; solid-state reaffirmed 2027-28 against a decade-long delay record. **New:** the firm-level hedge is now accompanied by a system-level coordination push via JAMA — the same player answering the threat at two levels at once.

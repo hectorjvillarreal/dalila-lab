@@ -1,0 +1,83 @@
+# Facts file — entry 005. Prose (judgment) lives in 005-volkswagen.md.
+id: "005"
+player: "Volkswagen Group"
+archetype_ref: "declining-span-adapting-incumbent"   # READ-ONLY pointer into ../archetypes.md
+slots:
+  volume:
+    value: "~8.98M"
+    unit: "units — global, 2025"
+    delta: "-0.5% YoY"
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+  china_dependence:
+    value: "high"
+    unit: null
+    delta: null
+    date: 2026-07-14
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: true
+    notes: >-
+      China sales 2.694M (-8% FY25; Q1-2026 -20%); JV equity-method profit ~-45%
+      (≈€1.74B→€958M); 2030 China target cut 4M→3.2M, margin double-digit→4–6%.
+      Custom slot (incumbent family).
+  restructuring_latency:
+    value: "high (measured 2026-07-09)"
+    unit: null
+    delta: null
+    date: 2026-07-09
+    source: null
+    source_type: null
+    confidence: confirmed
+    decisive: true
+    notes: >-
+      Plan blocked by labour; no closures, no job-cut decision, no spinoff decision.
+      Only unilateral lever exercised: model lineup halved (~150 lines). Cost gap to
+      rivals: 20% (Blume memo, July 13). ~100k cuts avowed but unagreed; >28k departure
+      agreements already signed. German plants at ~81% of standard capacity in 2026.
+      US tariffs ~€4B/yr. Custom slot (incumbent family). Confidence 'confirmed':
+      measured against the July 9 supervisory-board outcome, per the 2026-06-26 →
+      2026-07-09 reported/confirmed distinction.
+  margin:
+    value: "op margin 2.8% (2025)"
+    unit: null
+    delta: null
+    date: 2026-07-14
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+    notes: >-
+      2025 group net profit €6.9B (-44%); Q1-2026 net profit -28% to €1.56B.
+  segment_span:
+    value: "high"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+  tariff_exposure:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: false
+    notes: "unset — back-fill listed in board open repairs (004/005/006); US tariffs ~€4B/yr noted under restructuring_latency"
+  backing:
+    value: "listed; Porsche SE / Lower Saxony control"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false

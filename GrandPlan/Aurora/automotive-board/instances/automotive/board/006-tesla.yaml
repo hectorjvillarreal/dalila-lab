@@ -1,0 +1,101 @@
+# Facts file — entry 006. Prose (judgment) lives in 006-tesla.md.
+id: "006"
+player: "Tesla"
+archetype_ref: "frontier-disruptor"   # READ-ONLY pointer into ../archetypes.md
+slots:
+  volume:
+    value: "1.636M"
+    unit: "deliveries — global, 2025"
+    delta: "-9% YoY"
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+    notes: "Overtaken by BYD (2.26M BEV) as the world's largest EV maker in 2025."
+  segment_span:
+    value: "narrow (two core models ≈ most volume)"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+  legitimacy_assets:
+    value: "strong Western brand, now politically polarized"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+  vertical_integration:
+    value: "high (silicon, software, energy)"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+  compute_autonomy_moat:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: true
+    notes: "custom slot (frontier family); qualitative; no seeded value in v1 board"
+  non_auto_optionality:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: true
+    notes: "custom slot (frontier family); qualitative; no seeded value in v1 board"
+  tariff_exposure:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: false
+    notes: "unset — back-fill listed in board open repairs (004/005/006)"
+  margin:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: false
+    notes: "unset — board marks '(feed)'; awaiting feed data"
+  cost_position:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: false
+    notes: "unset — board marks '(feed)'; awaiting feed data"
+  backing:
+    value: "listed"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false

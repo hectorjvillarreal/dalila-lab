@@ -1,0 +1,94 @@
+# Facts file — entry 004. Prose (judgment) lives in 004-toyota.md.
+id: "004"
+player: "Toyota"
+archetype_ref: "transition-tempo-skeptic"   # READ-ONLY pointer into ../archetypes.md
+slots:
+  volume:
+    value: "~10M+ /yr"
+    unit: "units — global, annual"
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+    notes: "BEV ~145k FY25/26 (+~168%)"
+  segment_span:
+    value: "mass → Lexus luxury"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+  legitimacy_assets:
+    value: "high (global incumbent, deep trust)"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+  vertical_integration:
+    value: "high (incl. battery R&D, solid-state patents)"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+  transition_pace_exposure:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: true
+    notes: >-
+      Custom slot — share of profit pool dependent on the transition staying slow;
+      regionally conditional, not scalar (2026-07-16). No seeded scalar in v1 board;
+      GWM natural-experiment reading in the prose file. Backlog: region-index it.
+  tariff_exposure:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: false
+    notes: "unset — back-fill listed in board open repairs (004/005/006)"
+  margin:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: false
+    notes: "unset — board marks '(feed)'; awaiting feed data"
+  cost_position:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: false
+    notes: "unset — board marks '(feed)'; awaiting feed data"
+  backing:
+    value: "listed, cash-rich"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false

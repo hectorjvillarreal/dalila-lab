@@ -1,0 +1,89 @@
+# Facts file — entry 001. Prose (judgment) lives in 001-geely.md.
+# Migration note: no source URLs existed in the v1 board; source/source_type null with
+# confidence: reported throughout. `notes` keys are read-only, human-set at migration.
+id: "001"
+player: "Geely / Zeekr Group"
+archetype_ref: "span-legitimacy-conglomerate"   # READ-ONLY pointer into ../archetypes.md
+slots:
+  volume:
+    value: "1.021M"
+    unit: "units — China domestic retail, H1-2026"
+    delta: "-16.7% YoY (market -20.2%)"
+    date: 2026-07-16
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+    notes: >-
+      Overtook BYD (990,900) for #1 in China, H1-2026 — falling 16.7% vs BYD's 38.5%
+      in a market down 20.2%. Exports 472,500 (+158.3%), 3rd — already above its
+      full-year 2025 total. 2026 group target 3.45M incl. 2.22M NEV.
+  segment_span:
+    value: "mass → ultra-premium"
+    unit: null
+    delta: null
+    date: 2026-07-16
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: true
+  vertical_integration:
+    value: "high"
+    unit: null
+    delta: null
+    date: 2026-07-16
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+  legitimacy_assets:
+    value: "Volvo: authorized (US, May 2026) · Polestar: denied (US, MY2027) · Lotus / smart / Mercedes stake: untested · EU: no equivalent gate yet"
+    unit: "portfolio of per-marque authorizations"
+    delta: null
+    date: 2026-07-16
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: true
+    notes: >-
+      Polestar denial covers ~6% of its volume, redirecting to Europe + SE Asia,
+      Eastern Europe, Latin America, Canada.
+  margin:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: false
+    notes: "unset — board marks '(feed)'; awaiting feed data"
+  cost_position:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: false
+    notes: "unset — board marks '(feed)'; awaiting feed data"
+  geographic_reach:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: true
+    notes: "unset — board marks '(feed)'; awaiting feed data"
+  backing:
+    value: "HKEX 0175 under private Zhejiang Geely Holding (Li Shufu)"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false

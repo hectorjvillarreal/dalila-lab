@@ -1,0 +1,2 @@
+# stdlib + PyYAML only (build doc: Python 3.11+, no services, no database)
+PyYAML>=6.0

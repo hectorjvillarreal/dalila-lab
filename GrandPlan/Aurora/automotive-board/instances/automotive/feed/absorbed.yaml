@@ -1,0 +1,14 @@
+# Dedupe ledger — every absorbed feed item, one record each.
+# url_normalised: scheme, www., tracking params (utm_*, amp, fbclid, gclid, ref),
+# trailing slashes stripped; host lowercased. feed.py maintains this file.
+# NOTE: the seed URL below is carried EXACTLY as far as the build instruction records
+# it (it is truncated there: ".../toyota-executive-wants-all-japanese..."). The full
+# slug was not recorded and has NOT been invented — Héctor/Elle should complete it
+# from the promoted item of 2026-07-20. Dedupe matches on the normalised prefix.
+
+- url: "https://www.carexpert.com.au/car-news/toyota-executive-wants-all-japanese"
+  url_normalised: "carexpert.com.au/car-news/toyota-executive-wants-all-japanese"
+  url_truncated_in_source: true
+  absorbed: 2026-07-20
+  entries_touched: ["004"]
+  scaffold_touched: true

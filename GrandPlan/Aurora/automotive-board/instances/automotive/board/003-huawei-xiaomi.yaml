@@ -1,0 +1,62 @@
+# Facts file — entry 003. Prose (judgment) lives in 003-huawei-xiaomi.md.
+id: "003"
+player: "Huawei (HIMA) / Xiaomi"
+archetype_ref: "compute-first-entrant"   # READ-ONLY pointer into ../archetypes.md
+slots:
+  volume:
+    value: "Huawei HIMA ~192k (Jan–May 2026); Xiaomi ~410k (2025)"
+    unit: "units"
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+    notes: >-
+      HIMA run-rate toward ~1M annual target. Xiaomi 2026 target 550k.
+  margin:
+    value: "Xiaomi auto loss-making ~$5,600/car (Q1 2026); 2025 group net profit ~¥39B (+44%)"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+  segment_span:
+    value: "premium-leaning (Xiaomi ASP ~¥235k; no sub-¥100k)"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+  legitimacy_assets:
+    value: "high domestic brand, low foreign"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
+  compute_autonomy_moat:
+    value: null
+    unit: null
+    delta: null
+    date: null
+    source: null
+    source_type: null
+    confidence: null
+    decisive: true
+    notes: "custom slot — standard set doesn't reach it; qualitative; no seeded value in v1 board"
+  backing:
+    value: "Huawei (private, sanctioned); Xiaomi (HKEX-listed, ecosystem-funded)"
+    unit: null
+    delta: null
+    date: 2026-06-21
+    source: null
+    source_type: null
+    confidence: reported
+    decisive: false
