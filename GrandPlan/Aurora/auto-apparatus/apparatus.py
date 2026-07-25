@@ -133,7 +133,8 @@ def scan():
     for root in SCAN_ROOTS:
         if not os.path.isdir(root):
             continue
-        for dirpath, _dirs, files in os.walk(root):
+        for dirpath, dirs, files in os.walk(root):
+            dirs[:] = [d for d in dirs if d != "_archive"]
             for fn in sorted(files):
                 path = os.path.join(dirpath, fn)
                 if fn.lower().endswith(".md"):

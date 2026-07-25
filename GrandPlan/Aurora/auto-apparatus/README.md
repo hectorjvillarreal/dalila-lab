@@ -57,6 +57,12 @@ A **maintenance run** (a Claude Code session against this folder) is:
      letter PDF) as a normal register document, pending approval;
    - hygiene: archive superseded versions / resolve duplicate locations —
      **only with Héctor's approval**, since filing conventions are his call.
+     Archive convention (approved 2026-07-24): each register directory keeps
+     an `_archive/` subfolder; superseded versions and retired duplicate
+     copies are `git mv`'d there **unmodified** (the move itself is the
+     record; git history preserves provenance; nothing is ever deleted).
+     The scanner skips `_archive/` — archived documents leave the active
+     register and the board.
 3. `scan` again — the run's deliverable is the delta in `run_log.md`.
 
 ## Disciplines (mirroring `spcx_monitor`)
