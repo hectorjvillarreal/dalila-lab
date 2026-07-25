@@ -15,7 +15,8 @@ added_by: Elle
 revised_by: Debb
 endorsed_by: Elle
 approving_authority: Héctor
-status: revised, pending approval
+status: approved
+date_approved: 2026-07-24
 review_status: "Trigger 1 FIRED 2026-06-30/07-01. Reviewed 2026-07-15. Principle UPHELD, rationale strengthened."
 tags:
   - 2027_model

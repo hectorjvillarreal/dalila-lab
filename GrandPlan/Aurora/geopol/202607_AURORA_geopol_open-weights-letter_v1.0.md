@@ -10,7 +10,8 @@ classification: position_document / industry_coalition
 added_by: Claude Code (auto-apparatus maintenance run, 2026-07-24)
 endorsed_by: null            # pending — Gina's layer (brief activation), Elle for AI-strategy spine
 approving_authority: Héctor
-status: draft, pending approval
+status: approved
+date_approved: 2026-07-24
 tags:
   - open_weight
   - export_controls

@@ -23,7 +23,8 @@ revised_by: Claude Code (auto-apparatus maintenance run, 2026-07-24)
 endorsed_by: null            # pending Gina's brief activation — this is her layer
 contributing: Elle (technical layer, structural framing)
 approving_authority: Héctor
-status: draft, pending approval
+status: approved
+date_approved: 2026-07-24
 resolution_status: "Event resolved 2026-06-30/07-01. Cross-lab question resolved 2026-07-24 (separate actions). Causal question OPEN."
 tags:
   - export_controls
