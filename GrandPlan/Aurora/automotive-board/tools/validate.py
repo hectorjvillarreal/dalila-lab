@@ -209,21 +209,22 @@ def readonly_projection():
 
 
 def git_head_projection():
-    """If a git repo exists, rebuild the projection from HEAD via a temp checkout."""
-    if not (ROOT / ".git").is_dir():
-        return None
+    """If a git repo contains ROOT (at ROOT or enclosing it), rebuild the
+    projection from HEAD. Paths are prefixed so a board nested inside a
+    larger repository (the installed layout) resolves correctly."""
     try:
-        out = subprocess.run(["git", "-C", str(ROOT), "stash", "list"],
-                             capture_output=True, text=True, check=True)
-        _ = out  # repo exists and answers; fall through to snapshot-based flow
+        top = subprocess.run(["git", "-C", str(ROOT), "rev-parse", "--show-toplevel"],
+                             capture_output=True, text=True, check=True).stdout.strip()
     except Exception:
         return None
+    prefix = ROOT.resolve().relative_to(Path(top).resolve()).as_posix()
+    prefix = "" if prefix == "." else prefix + "/"
     # Minimal HEAD access without touching the working tree: read files via git show.
     proj_now = readonly_projection()
     proj_head = {"prose": {}, "entries": {}, "thresholds": {}}
     for section in proj_now:
         for rel in proj_now[section]:
-            show = subprocess.run(["git", "-C", str(ROOT), "show", f"HEAD:{rel}"],
+            show = subprocess.run(["git", "-C", str(ROOT), "show", f"HEAD:{prefix}{rel}"],
                                   capture_output=True)
             if show.returncode != 0:
                 continue  # new file; boundary check flags it below
