@@ -15,8 +15,8 @@ Subcommands:
                                  Refuses read-only keys, unknown slots (adding a slot
                                  is a human act) and confidence downgrades
                                  (confirmed -> reported requires a human).
-                                 --fetch (OFF by default; activation is Héctor's open
-                                 decision) retrieves the --source URL and prints its
+                                 --fetch (activated 2026-07-24 by Héctor; opt-in per
+                                 invocation) retrieves the --source URL and prints its
                                  text for the operator. Without --fetch this tool
                                  makes no network calls.
 
@@ -248,7 +248,7 @@ def main():
     p.add_argument("--set", action="append", default=[], metavar="field=value")
     p.add_argument("--source", default=None)
     p.add_argument("--fetch", action="store_true",
-                   help="retrieve --source over the network (OFF by default)")
+                   help="retrieve --source over the network (opt-in; activated 2026-07-24)")
     p.set_defaults(fn=cmd_slot_update)
 
     args = ap.parse_args()

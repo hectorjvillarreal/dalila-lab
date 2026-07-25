@@ -36,7 +36,7 @@ decide the item changes anything. Promotion is a human call; promoted write-ups 
 
 Update factual slots from feed items and sources — writable fields only, inside
 `slots.*`. **One slot write = one commit.** Network fetching sits behind an explicit
-`--fetch` flag, off by default; absent the flag the tool makes no network calls.
+`--fetch` flag, opt-in per invocation; absent the flag the tool makes no network calls.
 
 ## Job 3 — thresholds and bet-status
 

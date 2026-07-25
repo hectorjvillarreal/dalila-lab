@@ -41,7 +41,7 @@ automotive-board/
     ├── validate.py               # schema, pairing, boundary check, scaffold purity
     ├── thresholds.py             # overdue / due-soon report; due_passed maintenance
     ├── betcheck.py               # decisive-slot movement flags (never verdicts)
-    ├── feed.py                   # Job 1 (dedupe/absorb) + Job 2 (slot writes; --fetch off by default)
+    ├── feed.py                   # Job 1 (dedupe/absorb) + Job 2 (slot writes; --fetch opt-in, activated 2026-07-24)
     ├── reconstruct.py            # migration completeness pass (acceptance §9)
     └── requirements.txt
 ```
@@ -55,7 +55,7 @@ automotive-board/
    **outside PROTO-RAG-001 scope** — no corpus frontmatter here, ever.
 2. **Slot maintenance** (`tools/feed.py slot-update`) — writes only the writable fields
    (`value, unit, delta, date, source, source_type, confidence`) inside `slots.*`.
-   Network fetching exists behind `--fetch`, **off by default** (activation is Héctor's
+   Network fetching exists behind `--fetch`, opt-in per invocation (**activated 2026-07-24** by Héctor’s
    open decision). One slot write = one commit, once git is wired (see below).
 3. **Thresholds & bet-status** (`tools/thresholds.py`, `tools/betcheck.py`) —
    mechanical date checks and decisive-slot movement flags. **Output is a flag, never a
