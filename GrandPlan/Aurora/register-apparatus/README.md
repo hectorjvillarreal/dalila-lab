@@ -1,4 +1,4 @@
-# auto-apparatus — Aurora corpus obligation scanner
+# register-apparatus — Aurora corpus obligation scanner
 
 Aurora project · apparatus tooling. Answers, in the minimal form the complexity
 budget allows, the design question logged in the Mollick entry
