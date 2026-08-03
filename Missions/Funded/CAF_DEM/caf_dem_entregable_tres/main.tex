@@ -1,0 +1,1823 @@
+% ============================================================
+%  P3 — Versión intermedia: marco institucional, datos compilados
+%       y proyecciones fiscales
+%  Misión CAF_DEM · Contrato CW29884
+%  Nota técnica: Riesgos Macrofiscales del Cambio Demográfico
+%                en América Latina
+% ============================================================
+
+\documentclass[12pt, letterpaper]{article}
+
+% --- Encoding & language -----------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+
+% --- Typography --------------------------------------------------------
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{setspace}
+\onehalfspacing
+
+% --- Layout (1 in margins) ---------------------------------------------
+\usepackage[margin=1in]{geometry}
+\usepackage{parskip}
+\setlength{\parskip}{6pt}
+
+% --- Tables & figures --------------------------------------------------
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{xltabular}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\definecolor{cafblue}{RGB}{0, 70, 127}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\graphicspath{{graficas/}{./}}
+
+% --- Column helpers (requeridos por las tablas de pilares) --------------
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+% --- Lists -------------------------------------------------------------
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=1.5em, topsep=2pt, itemsep=2pt}
+\setlist[enumerate]{leftmargin=1.5em, topsep=2pt, itemsep=2pt}
+
+% --- Headers & footers -------------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{cafblue}{Riesgos Macrofiscales del Cambio Demográfico en ALC}}
+\fancyhead[R]{\small\textcolor{cafblue}{P3 · CAF · CW29884}}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% --- Section formatting ------------------------------------------------
+\usepackage{titlesec}
+\titleformat{\section}
+  {\large\bfseries\color{cafblue}}{\thesection.}{0.6em}{}[\vspace{2pt}\hrule\vspace{4pt}]
+\titleformat{\subsection}
+  {\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}
+  {\normalsize\itshape}{\thesubsubsection.}{0.5em}{}
+
+% --- Citations ---------------------------------------------------------
+\usepackage{natbib}
+
+% --- Hyperlinks --------------------------------------------------------
+\usepackage[colorlinks=true, linkcolor=cafblue, urlcolor=cafblue,
+            citecolor=cafblue, pdfauthor={Héctor J. Villarreal Páez; Juan Pablo López Reynosa},
+            pdftitle={P3 CAF\_DEM --- Versión intermedia: marco institucional, datos compilados y proyecciones fiscales}]{hyperref}
+
+% --- Utilities ---------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{pdflscape}
+
+% --- Table spacing (igual que el documento de referencia) --------------
+\renewcommand{\arraystretch}{1.22}
+\setlength{\tabcolsep}{5pt}
+\captionsetup{font=small, labelfont=bf}
+
+% =======================================================================
+\begin{document}
+
+% -----------------------------------------------------------------------
+%  PORTADA
+% -----------------------------------------------------------------------
+\thispagestyle{empty}
+
+\vspace*{1cm}
+
+{\color{cafblue}\hrule height 2pt}
+\vspace{0.4cm}
+{\color{cafblue}\hrule height 0.4pt}
+\vspace{0.8cm}
+
+\begin{center}
+  {\Large\bfseries\color{cafblue}
+    Riesgos Macrofiscales del Cambio Demográfico\\[6pt]
+    en América Latina}\\[1cm]
+
+  {\large\itshape
+    \textit{Background paper} para el Reporte Macroeconómico de la\\
+    Dirección de Estudios Macroeconómicos (DEM), CAF}\\[1.5cm]
+
+  {\normalsize\bfseries PRODUCTO 3}\\[0.3cm]
+  {\normalsize Versión intermedia: marco institucional,\\
+   datos compilados y proyecciones fiscales}\\[1.5cm]
+
+  \begin{tabular}{ll}
+    \textbf{Autores:}            & Héctor J. Villarreal Páez \\[4pt]
+                                 & Juan Pablo López Reynosa \\[4pt]
+    \textbf{Contrato:}           & CW29884 \\[4pt]
+    \textbf{Ejecutivo responsable (ERC):} & Richard Cóndor (CAF/DEM) \\[4pt]
+    \textbf{Fecha de entrega:}   & 5 de agosto de 2026 \\
+  \end{tabular}
+\end{center}
+
+\vspace{1.5cm}
+{\color{cafblue}\hrule height 0.4pt}
+\vspace{0.4cm}
+{\color{cafblue}\hrule height 2pt}
+
+\vspace{2cm}
+
+\begin{small}
+\noindent\textbf{Nota de confidencialidad.}
+Este documento es de circulación restringida. Su contenido es propiedad exclusiva
+de CAF-Banco de Desarrollo de América Latina y el Caribe, conforme al Anexo A del
+Contrato CW29884. Queda prohibida su reproducción, distribución o uso para
+beneficio propio o de terceros sin autorización escrita de CAF.
+\end{small}
+
+\vspace{0.5cm}
+
+\begin{small}
+\noindent\textbf{Alcance.} Este documento corresponde al Producto 3 del contrato
+CW29884. Desarrolla el marco institucional y jurídico de los sistemas de pensiones
+y de salud (secciones 1 a 4) e incorpora la compilación estadística demográfica y
+fiscal comparada, con proyecciones inerciales de mediano plazo (sección 5). El
+análisis heurístico de riesgos macrofiscales, las consideraciones de política y el
+apéndice sobre efectos de equilibrio general corresponden al Producto 4.
+\end{small}
+
+\newpage
+
+\tableofcontents
+\newpage
+
+% =======================================================================
+\section{Introducción}
+% =======================================================================
+
+\subsection{Motivación}
+
+La transición demográfica en América Latina y el Caribe (ALC) avanza con un perfil
+distintivo respecto al de las economías que envejecieron antes: ocurre con mayor
+velocidad relativa, sobre niveles de ingreso per cápita más bajos, y sobre estructuras
+fiscales con bases tributarias estrechas, alta informalidad laboral y arquitecturas
+de protección social heterogéneas. La caída sostenida de la fecundidad y la
+extensión de la esperanza de vida modifican la relación entre contribuyentes,
+beneficiarios y capacidad fiscal del Estado, y esa modificación no es lineal: está
+mediada por las reglas institucionales que rigen los sistemas de pensiones y de
+salud, y por los incentivos que esas reglas generan sobre la decisión de
+formalización laboral.
+
+El supuesto implícito en buena parte del debate público de la región --que el
+envejecimiento traduce mecánicamente más gasto público-- subestima la complejidad
+del problema. El gasto efectivo depende del diseño paramétrico (edades de retiro,
+tasas de reemplazo, fórmulas de cálculo), de la madurez institucional del sistema
+(cuántas cohortes han completado historia contributiva), de la cobertura efectiva
+(qué porcentaje de la población activa cotiza), y de la interacción entre el pilar
+contributivo y el no contributivo. Dos países con pirámides poblacionales similares
+pueden enfrentar trayectorias fiscales muy distintas si sus reglas institucionales
+difieren.
+
+\subsection{Objetivo del documento}
+
+Esta nota técnica analiza, en perspectiva comparada, los riesgos macrofiscales que
+la transición demográfica plantea sobre los sistemas de pensiones y de salud en seis
+economías de ALC. El énfasis está en los \textit{canales de transmisión}
+institucionales --no en la proyección actuarial-- y en cómo la arquitectura legal y
+operativa de cada sistema condiciona la exposición fiscal del Estado.
+
+El Producto 2 estableció el marco institucional y jurídico: qué reglas rigen hoy
+los sistemas de pensiones y salud en cada país, cómo se articulan los componentes
+contributivo y no contributivo, y qué cobertura efectiva producen. Este Producto 3
+conserva y actualiza esa base institucional ---necesaria para interpretar cualquier
+cifra--- y añade la dimensión estadística: compilación y homologación de las series
+demográficas y fiscales de los seis países, su caracterización descriptiva y una
+proyección inercial de mediano plazo de los agregados fiscales. El Producto 4
+incorporará, sobre esta base, el análisis heurístico de riesgos con su respectivo
+apéndice de equilibrio general.
+
+\subsection{Países y criterio de selección}
+
+El estudio cubre seis casos: \textbf{México, Costa Rica, Panamá, Colombia, Brasil} y
+\textbf{Chile}. La selección busca heterogeneidad analítica relevante a lo largo de
+tres ejes:
+
+\begin{itemize}
+  \item \textbf{Etapa demográfica}: desde economías en transición avanzada (Chile,
+        Costa Rica, Brasil) hasta economías en transición media con bono demográfico
+        aún activo (México, Colombia, Panamá).
+  \item \textbf{Arquitectura de pensiones}: el espectro completo, desde
+        capitalización individual obligatoria pura (Chile), con sistemas
+        mixtos paralelos (Colombia) y mixtos secuenciales (Panamá, México), hasta
+        regímenes contributivos PAYG con reservas (Costa Rica, Brasil).
+  \item \textbf{Arquitectura de salud}: desde sistemas universales financiados con
+        rentas generales (Brasil, vía SUS), con seguros sociales de
+        extensión no contributiva (México, Costa Rica, Panamá), hasta sistemas
+        segmentados público-privados con elección regulada (Chile, Colombia).
+\end{itemize}
+
+Esta heterogeneidad permite identificar configuraciones institucionales que han
+mostrado mayor o menor resiliencia frente a la transición demográfica, y aislar
+qué reglas amplifican o amortiguan el impacto fiscal del envejecimiento.
+
+\subsection{Estructura de este documento}
+
+El documento se organiza en cinco secciones. La Sección~2 documenta los hechos
+estilizados de la transición demográfica en ALC y posiciona a los seis países en la
+curva regional. La Sección~3 desarrolla la arquitectura institucional de los
+sistemas de pensiones, con énfasis especial (Sección~3.2) en la distinción
+analítica entre seguridad social, protección social y asistencia social, y sus
+implicaciones para los incentivos de formalización laboral. La Sección~4 analiza el
+financiamiento del gasto en salud, su organización institucional y la presión que
+el envejecimiento ejercerá sobre él. La Sección~5 aporta la dimensión cuantitativa:
+documenta la trayectoria demográfica que define el marco poblacional de referencia,
+describe la posición fiscal de partida de los seis países y proyecta la evolución
+inercial de mediano plazo de los agregados fiscales relevantes.
+
+\newpage
+
+% =======================================================================
+\section{La transición demográfica en América Latina: hechos estilizados}
+\label{sec:demografia}
+% =======================================================================
+
+\subsection{Panorama regional}
+
+La transición demográfica de América Latina y el Caribe presenta, observada en
+agregado, los rasgos esperables de una región que entró tarde pero avanza rápido
+respecto a las economías de la OCDE. En los seis países de este estudio la tasa
+global de fecundidad promedia 1{,}62 hijos por mujer en 2024 y se sitúa por debajo
+del nivel de reemplazo poblacional (2{,}1) en cinco de ellos, con Panamá en el
+umbral; la esperanza de vida al nacer promedia 78{,}6 años, con convergencia
+parcial hacia los niveles de la OCDE (véase la Tabla~\ref{tab:demog}).
+
+Estas dinámicas agregadas ocultan una heterogeneidad subregional considerable. El
+Cono Sur (Chile, Argentina, Uruguay) y Costa Rica completaron antes la primera
+fase de la transición y enfrentan hoy estructuras por edades cercanas a las de
+economías avanzadas. Brasil entró más tarde pero aceleró fuertemente en las últimas
+dos décadas. México, Colombia y Panamá conservan todavía un bono demográfico
+parcial, aunque la velocidad de cierre se ha acelerado en el ciclo
+post-2010. Centroamérica norte y los Andes presentan transiciones más rezagadas que
+no son objeto directo de este estudio.
+
+Tres rasgos del proceso regional merecen subrayarse desde la perspectiva fiscal:
+
+\begin{enumerate}
+  \item \textbf{Compresión temporal.} El intervalo entre el inicio del descenso de la
+        fecundidad y el momento en que la razón de dependencia senil alcanza
+        valores comparables a los actuales de la OCDE es sustancialmente más corto
+        en ALC que en Europa. Esto reduce el tiempo disponible para acumular
+        instituciones contributivas maduras y reservas fiscales.
+  \item \textbf{Envejecimiento sobre niveles de ingreso bajos.} La región envejece
+        antes de alcanzar el ingreso per cápita que las economías de la OCDE tenían
+        cuando enfrentaron presiones similares. La capacidad fiscal de absorción es,
+        en consecuencia, menor en términos relativos.
+  \item \textbf{Persistencia de la informalidad.} A diferencia de la mayoría de
+        economías OCDE, la transición demográfica de ALC ocurre sobre mercados
+        laborales con tasas de informalidad estructurales que, en los seis países
+        del estudio, van del 26{,}4\,\% (Chile) al 56{,}9\,\% (México) según el
+        último dato disponible (ILOSTAT, 2025). La cobertura contributiva permanece
+        incompleta incluso en las cohortes que envejecerán durante las próximas dos
+        décadas, lo que limita la capacidad del pilar contributivo para absorber el
+        riesgo.
+\end{enumerate}
+
+\subsection{Razones de dependencia: presente y proyección}
+
+La razón de dependencia senil --población de 65 años y más sobre población de 15 a
+64 años-- es el indicador agregado más utilizado para sintetizar la presión que el
+envejecimiento ejerce sobre los sistemas contributivos. En los seis países del
+estudio, la trayectoria proyectada al horizonte 2050, con base en UN WPP 2024,
+duplica o más los valores de 2025 en los seis casos (factor de 2.0x a 2.2x; véase la
+Tabla~\ref{tab:demog}).
+
+La razón de dependencia juvenil, en cambio, sigue trayectorias decrecientes en los
+seis países, lo que abre transitoriamente una ventana de menor dependencia total
+antes del cierre del bono demográfico. Esta ventana es relevante para la política
+fiscal: el período en el que la población en edad de trabajar alcanza su máximo
+relativo es también el período de mayor capacidad de generación de ingresos
+tributarios y de mayor margen para acumular reservas previsionales o reducir deuda
+pública.
+
+\subsection{Posición comparada de los seis países}
+
+La Tabla~\ref{tab:demog} presenta los indicadores demográficos clave de los seis
+países en el momento actual y proyectados a 2050. Tres patrones merecen comentario:
+
+\textbf{Chile, Costa Rica y Brasil} aparecen como los casos más avanzados en la
+transición. Sus razones de dependencia senil ya superan las de México y Colombia, y
+seguirán por encima a lo largo del horizonte de proyección. En estos tres países la
+discusión fiscal del envejecimiento es ya inminente: las decisiones tomadas en la
+próxima década definirán la trayectoria de mediano plazo.
+
+\textbf{México y Colombia} mantienen estructuras por edades más jóvenes, pero el
+descenso de la fecundidad observado en la última década (más pronunciado de lo
+proyectado en escenarios anteriores) ha acelerado el cronograma de cierre del bono
+demográfico. Esta aceleración es un desarrollo reciente y todavía no plenamente
+internalizado en la planificación fiscal de mediano plazo.
+
+\textbf{Panamá} ocupa una posición intermedia: con un bono demográfico relativamente
+amplio pero con un sistema de pensiones que enfrenta presiones financieras
+inmediatas no derivadas tanto del envejecimiento agregado como del diseño
+paramétrico de su régimen mixto.
+
+\begin{table}[h!]
+\centering
+\caption{Indicadores demográficos clave, seis países seleccionados.}
+\label{tab:demog}
+\small
+\begin{tabular}{lcccc}
+\toprule
+País & TFR & Esperanza & RD senil & RD senil \\
+     & (2024) & vida (2024) & 2025 (\%) & 2050 (\%) \\
+\midrule
+México       & 1.89 & 75.3 & 12.6 & 25.9 \\
+Costa Rica   & 1.32 & 81.0 & 18.5 & 40.7 \\
+Panamá       & 2.11 & 79.8 & 14.7 & 29.4 \\
+Colombia     & 1.63 & 77.9 & 14.6 & 31.7 \\
+Brasil       & 1.61 & 76.0 & 16.6 & 35.8 \\
+Chile        & 1.14 & 81.4 & 21.2 & 43.1 \\
+\midrule
+Promedio (6 países) & 1.62 & 78.6 & 16.4 & 34.4 \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\footnotesize
+TFR: tasa global de fecundidad (hijos por mujer). RD senil: razón de dependencia
+senil = población 65+ / población 15--64, expresada en porcentaje. Fuente: UN World
+Population Prospects 2024, revisión mediana (datos 2024 para TFR y esperanza de vida;
+proyección mediana para 2050). La fila de promedio corresponde a la media simple de
+los seis países de la muestra, no a un agregado OCDE. Entre 2025 y 2050 los seis
+países duplican o más su razón de dependencia senil (factor de 2.0x a 2.2x), con
+trayectoria estrictamente ascendente año a año en todos los casos.
+\end{table}
+
+\subsection{La particularidad de ALC: envejecer antes que enriquecerse}
+
+Una característica distintiva de la transición demográfica de ALC es la posición
+del envejecimiento en relación con el desarrollo económico. Las economías que hoy
+componen la OCDE alcanzaron las razones de dependencia senil actualmente vigentes
+en ALC con un producto per cápita significativamente mayor al que registran hoy
+los países de la región. La cuantificación de ese diferencial, sobre series
+comparables a paridad de poder adquisitivo, se incorporará al análisis del
+Producto 4.
+
+Esta secuencia tiene tres implicaciones fiscales:
+
+\begin{enumerate}
+  \item La base tributaria sobre la que se financia el gasto adicional es
+        proporcionalmente menor.
+  \item Los sistemas contributivos no alcanzaron el nivel de cobertura que tuvieron
+        los sistemas europeos cuando enfrentaron presiones similares; la
+        informalidad estructural deja a una porción importante de las cohortes de
+        edad activa fuera del esquema de aseguramiento contributivo.
+  \item La presión política para extender la cobertura no contributiva
+        (asistencial) crece simultáneamente con la presión por sostener los
+        compromisos contributivos --una doble carga que los sistemas europeos
+        manejaron de forma secuencial, no simultánea.
+\end{enumerate}
+
+La combinación de compresión temporal, ingreso per cápita más bajo, informalidad
+elevada y presión simultánea sobre componentes contributivo y no contributivo es lo
+que define el perfil específico del riesgo macrofiscal demográfico en la región.
+Las secciones siguientes documentan, país por país, cómo cada arreglo institucional
+metaboliza estas presiones.
+
+\newpage
+
+% =======================================================================
+\section{Arquitectura institucional de los sistemas de pensiones}
+% =======================================================================
+
+\subsection{Marco jurídico y diseño de cada sistema}
+
+\textbf{El análisis compara la arquitectura normativa e institucional de los sistemas de pensiones en los seis países.} La lectura distingue entre componentes no contributivos, contributivos públicos de reparto, contributivos privados de capitalización individual, mecanismos estatales de garantía sobre la capitalización individual, y ahorro voluntario. Esta distinción es relevante porque no todos los instrumentos generan el mismo tipo de derecho, ni se financian con la misma fuente, ni producen las mismas obligaciones para trabajadores, empleadores y Estado.
+
+\textbf{La taxonomía multipilar del Banco Mundial (Holzmann y Hinz, 2005, \textit{Old Age Income Support in the 21st Century}) ordena los componentes de cada sistema según el tipo de gestión y la naturaleza del financiamiento, no según el mecanismo de cálculo del beneficio.} El \textbf{Pilar 1} es el esquema público tradicional, de reparto, por lo general de beneficio definido y gestión estatal; el \textbf{Pilar 2} es el esquema obligatorio y fondeado, con cuentas individuales de propiedad del trabajador a cargo de entidades privadas o autónomas. Bajo este criterio, las AFORE de México, el RAIS de Colombia, las AFP de Chile y el componente de ahorro personal del subsistema mixto panameño corresponden al \textbf{Pilar 2}. El régimen de transición de la Ley 73/Artículo Décimo Transitorio en México, el IVM de Costa Rica y de Panamá, el RGPS/RPPS de Brasil y el RPM de Colombia corresponden al \textbf{Pilar 1}.
+
+\textbf{La lectura por pilares permite distinguir la función institucional de cada componente del sistema pensional.} El Pilar 0 corresponde a prestaciones no contributivas financiadas con presupuesto público; el Pilar 1 agrupa los regímenes públicos de reparto y beneficio definido; el Pilar 2 identifica los regímenes obligatorios de capitalización individual gestionados por entidades privadas o autónomas; un bloque adicional, que aquí se denomina \textbf{Pilar 1-B o garantía estatal no convencional}, identifica los mecanismos financiados con presupuesto público que garantizan o complementan el monto obtenido en el Pilar 2 cuando el saldo acumulado resulta insuficiente; y el Pilar 3 corresponde al ahorro voluntario previsional. Esta clasificación es analítica y busca hacer comparables sistemas institucionalmente distintos sin perder las diferencias entre beneficio definido, contribución definida, reparto, capitalización individual y asistencia social.
+
+% -----------------------------------------------------------------------
+\subsubsection*{Síntesis comparada por pilares}
+\addcontentsline{toc}{subsubsection}{Síntesis comparada por pilares}
+
+\textbf{La comparación separa el pilar no contributivo y el pilar público de reparto de los componentes de capitalización individual, garantía estatal y ahorro voluntario.} La primera tabla presenta el Pilar 0 y el Pilar 1; la segunda presenta el Pilar 2 y el Pilar 1-B (garantía estatal no convencional); la tercera presenta el Pilar 3. Esta separación evita comprimir en una sola tabla elementos jurídicamente distintos.
+
+\begin{xltabular}{\textwidth}{P{2.1cm}Y Y}
+\caption{Arquitectura de pensiones por pilares: Pilar 0 (no contributivo) y Pilar 1 (público, reparto y beneficio definido).}
+\label{tab:pilares_01}\\
+\toprule
+\textbf{País} & \textbf{Pilar 0: no contributivo} & \textbf{Pilar 1: público, reparto / beneficio definido} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{País} & \textbf{Pilar 0: no contributivo} & \textbf{Pilar 1: público, reparto / beneficio definido} \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+México &
+Pensión para el Bienestar de personas adultas mayores, de rango constitucional (Art.\ 4.\textsuperscript{o}), financiada íntegramente con presupuesto público. Es universal por edad e independiente de la historia laboral o contributiva. &
+Régimen de la Ley del Seguro Social de 1973 (IMSS) y Régimen del Artículo Décimo Transitorio (ISSSTE): esquemas de transición de beneficio definido, administrados por el IMSS y el ISSSTE respectivamente, aplicables a cohortes que cotizaban antes de 1997/2007 y que optan por las reglas de la ley anterior. \\
+
+Costa Rica &
+Régimen No Contributivo (RNC), administrado por la CCSS, focalizado en personas en pobreza o pobreza extrema y otros grupos elegibles por ley. &
+Seguro de Invalidez, Vejez y Muerte (IVM), administrado por la CCSS desde 1947, de beneficio definido, financiamiento tripartito y capitalización colectiva con rasgos de reparto. \\
+
+Panamá &
+Programa especial de asistencia económica para personas adultas mayores sin jubilación ni pensión contributiva (Ley 86 de 2010), administrado por el MIDES y focalizado por condición socioeconómica. &
+Subsistema exclusivamente de beneficio definido del régimen de Invalidez, Vejez y Muerte (IVM), y componente de beneficio definido del subsistema mixto sobre ingresos hasta B/.\,500 mensuales, ambos administrados por la CSS bajo la Ley 51 de 2005. \\
+
+Colombia &
+Renta Básica Solidaria (Pilar Solidario de la Ley 2381 de 2024, con vigencia suspendida); transitoriamente opera el esquema previo de Colombia Mayor bajo los artículos 257 y 258 de la Ley 100 de 1993. &
+Régimen de Prima Media con Prestación Definida (RPM), administrado por Colpensiones bajo la Ley 100 de 1993 y la Ley 797 de 2003, vigente como arquitectura operativa principal mientras subsiste la suspensión de la Ley 2381. \\
+
+Brasil &
+Benefício de Prestação Continuada (BPC), regulado por la LOAS de 1993 y fundamentado en el Art.\ 203 de la Constitución Federal de 1988, para personas mayores de 65 años en pobreza y personas con discapacidad. &
+Regime Geral de Previdência Social (RGPS) para trabajadores del sector privado, administrado por el INSS, y Regime Próprio de Previdência Social (RPPS) para servidores públicos; ambos de reparto y beneficio definido, con parámetros modificados por la Emenda Constitucional 103/2019. \\
+
+Chile &
+Pensión Garantizada Universal (PGU), creada por la Ley N.\textsuperscript{o}~21.419 de 2022 y administrada por el IPS, financiada íntegramente con recursos del Estado y focalizada por ingresos y residencia. &
+Seguro Social Previsional, introducido por la Ley N.\textsuperscript{o}~21.735 de 2025 y administrado por el IPS a través del Fondo Autónomo de Protección Previsional (FAPP); convive con el antiguo sistema de reparto de las ex cajas de previsión para quienes no migraron a las AFP. \\
+
+\end{xltabular}
+
+\begin{xltabular}{\textwidth}{P{2.1cm}Y Y}
+\caption{Arquitectura de pensiones por pilares: Pilar 2 (capitalización individual obligatoria) y Pilar 1-B (garantía estatal no convencional sobre el Pilar 2).}
+\label{tab:pilares_2g}\\
+\toprule
+\textbf{País} & \textbf{Pilar 2: capitalización individual obligatoria} & \textbf{Pilar 1-B: garantía estatal sobre el Pilar 2} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{País} & \textbf{Pilar 2: capitalización individual obligatoria} & \textbf{Pilar 1-B: garantía estatal sobre el Pilar 2} \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+México &
+Sistema de Ahorro para el Retiro (SAR), administrado por AFORE y PENSIONISSSTE bajo la LSAR de 1996; cuentas individuales de propiedad del trabajador, reguladas y supervisadas por la CONSAR. &
+Pensión Garantizada (Art.\ 170 LSS / Art.\ 92 Ley del ISSSTE) y Fondo de Pensiones para el Bienestar (fideicomiso público creado en abril de 2024, con Banco de México como fiduciario), que complementa la pensión hasta el último salario con un tope actualizable. \\
+
+Costa Rica &
+Régimen Obligatorio de Pensiones Complementarias (ROPC), creado por la Ley de Protección al Trabajador N.\textsuperscript{o}~7983 de 2000, administrado por Operadoras de Pensiones Complementarias (OPC) bajo capitalización individual. &
+No se identifica un mecanismo estatal que garantice un piso o complemento fiscal específico sobre el saldo del ROPC; la Ley 7983 únicamente prevé una garantía estatal de respaldo patrimonial frente a insolvencia o dolo de la operadora, distinta de una garantía de monto. \\
+
+Panamá &
+Componente de Ahorro Personal del subsistema mixto del IVM, sobre el excedente de B/.\,500 mensuales, administrado --- de forma atípica en la región --- por la propia CSS pública en cuentas separadas, bajo la Ley 51 de 2005. &
+No se identifica un fondo de garantía estatal sobre el componente de ahorro personal; el sistema prevé en su lugar un aporte de solidaridad (3.5\,\% del excedente cotizado) que transfiere recursos del Pilar 2 hacia el Pilar 1, no en sentido inverso. \\
+
+Colombia &
+Régimen de Ahorro Individual con Solidaridad (RAIS), creado por la Ley 100 de 1993 y administrado por Sociedades Administradoras de Fondos de Pensiones (AFP) privadas. &
+Fondo de Garantía de Pensión Mínima (Art.\ 65, Ley 100 de 1993), financiado con una fracción de la cotización al RAIS y con garantía soberana de la Nación; asegura una mesada mínima de un salario mínimo a quienes cumplen edad y 1{,}150 semanas cotizadas. \\
+
+Brasil &
+Brasil no cuenta con un régimen de capitalización individual obligatoria equivalente a una AFORE o AFP; el componente de capitalización (Regime de Previdência Complementar) es estrictamente facultativo. &
+No existe ni puede existir por mandato constitucional: el Art.\ 201, \S\,8.\textsuperscript{o} de la Constitución Federal de 1988 prohíbe expresamente la subvención pública a entidades de previsión privada con fines de lucro. \\
+
+Chile &
+Sistema de capitalización individual obligatoria administrado por AFP bajo el Decreto Ley N.\textsuperscript{o}~3.500 de 1980, con cotización del trabajador del 10\,\% y nueva cotización patronal parcial introducida por la Ley N.\textsuperscript{o}~21.735 de 2025. &
+Pensión Garantizada Universal (PGU), que opera como complemento decreciente cuando la pensión autofinanciada del Pilar 2 es inferior a la ``pensión superior'' definida por ley; adicionalmente existe garantía estatal acotada (hasta 45 UF mensuales) para rentas vitalicias ante insolvencia de la aseguradora. \\
+
+\end{xltabular}
+
+\begin{small}
+\noindent\textit{Nota:} Pilar 0 = no contributivo; Pilar 1 = público, de reparto y generalmente de beneficio definido; Pilar 2 = obligatorio, fondeado mediante cuentas individuales de capitalización, gestionado por entidades privadas o autónomas; Pilar 1-B = mecanismo estatal de garantía o complemento financiado con presupuesto público que opera sobre el resultado del Pilar 2; Pilar 3 = ahorro voluntario. La clasificación sigue a Holzmann y Hinz (2005) y no necesariamente coincide con la denominación legal usada por cada país.
+\end{small}
+
+\begin{xltabular}{\textwidth}{P{2.1cm}Y}
+\caption{Pilar 3: ahorro previsional voluntario.}
+\label{tab:pilar3}\\
+\toprule
+\textbf{País} & \textbf{Pilar 3: ahorro voluntario} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{País} & \textbf{Pilar 3: ahorro voluntario} \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+México &
+Aportaciones voluntarias y complementarias en AFORE/SIEFORE; Ahorro Solidario para servidores públicos del ISSSTE (Art.\ 100, con aporte gubernamental de \$3.25 por cada peso ahorrado hasta un tope); planes privados de pensiones patrocinados por el empleador, registrados ante la CONSAR. \\
+
+Costa Rica &
+Régimen Voluntario de Pensiones Complementarias, administrado por las mismas OPC bajo la Ley N.\textsuperscript{o}~7523 de 1995 y la Ley de Protección al Trabajador; afiliación individual o patrocinada por el empleador, con exención de cargas sociales e impuesto de renta hasta el 10\,\% del ingreso bruto mensual. \\
+
+Panamá &
+Cuentas de ahorro voluntario en la CSS para independientes (Art.\ 86, Ley 51 de 2005); planes ocupacionales patrocinados por el empleador (Decreto Ley 114 de 1954); fondos de pensiones privados con incentivos fiscales (Ley 10 de 1993); SIACAP para servidores públicos (Ley 8 de 1997). \\
+
+Colombia &
+Pilar de Ahorro Voluntario (Ley 2381 de 2024) y cotizaciones voluntarias bajo los artículos 62 y 63 de la Ley 100 de 1993, gestionadas por AFP y otras entidades vigiladas por la Superintendencia Financiera; tratamiento tributario preferencial bajo el Estatuto Tributario. \\
+
+Brasil &
+Regime de Previdência Complementar (RPC), de naturaleza estrictamente facultativa, gestionado por entidades cerradas (EFPC) o abiertas (EAPC) bajo el Art.\ 202 constitucional y las Leyes Complementarias 108 y 109 de 2001; incentivos fiscales diferenciados según los planes PGBL y VGBL. \\
+
+Chile &
+Ahorro Previsional Voluntario (APV), Ahorro Previsional Voluntario Colectivo (APVC), Depósitos Convenidos y Cuenta de Ahorro Voluntario (Cuenta 2), regulados por el Decreto Ley N.\textsuperscript{o}~3.500 de 1980 y la Ley N.\textsuperscript{o}~20.255 de 2008; dos regímenes tributarios opcionales (bonificación fiscal del 15\,\% o deducción de base imponible). \\
+
+\end{xltabular}
+
+% -----------------------------------------------------------------------
+\subsubsection*{Parámetros institucionales generales}
+\addcontentsline{toc}{subsubsection}{Parámetros institucionales generales}
+
+\textbf{Los parámetros institucionales del Pilar 1 y del Pilar 2 permiten comparar la administración, la fuente de financiamiento, las reglas de elegibilidad y el mecanismo de beneficio de cada componente por separado.} El tratamiento de cada pilar por separado evita fusionar bajo una etiqueta genérica común dos componentes con gestión y financiamiento distintos.
+
+\begin{xltabular}{\textwidth}{P{1.6cm}Y Y}
+\caption{Pilar 1 (público, reparto): administración, tasa y elegibilidad.}
+\label{tab:param_pilar1}\\
+\toprule
+\textbf{País} & \textbf{Institución y norma} & \textbf{Tasa, edad y fórmula de beneficio} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{País} & \textbf{Institución y norma} & \textbf{Tasa, edad y fórmula de beneficio} \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+México &
+IMSS (Ley del Seguro Social de 1973) para cohortes privadas previas a 1997; ISSSTE (Art.\ Décimo Transitorio, Ley del ISSSTE 2007) para cohortes públicas previas a 2007. Ambos regímenes en extinción gradual por cohorte. &
+IMSS: 500 semanas mínimas, 60 años (cesantía) o 65 (vejez); beneficio sobre el promedio de las últimas 250 semanas. ISSSTE: 30/28 años de servicio (hombres/mujeres) con edad mínima creciente hasta 60/58 en 2028; jubilación equivalente al 100\,\% del sueldo básico del último año, o escala de 50\,\%--95\,\% según años de servicio. \\
+
+Costa Rica &
+CCSS administra el IVM desde 1947 (Ley Constitutiva; universalización por Ley N.\textsuperscript{o}~2738 de 1961). &
+Tasa 2026--2028: 11.66\,\% total (5.58\,\% patrono, 4.33\,\% trabajador, 1.75\,\% Estado). Edad ordinaria 65 años con 300 cuotas; retiro anticipado 59 a.\ 11 m.\ (mujeres, 450 cuotas) o 61 a.\ 11 m.\ (hombres, 462 cuotas). Beneficio: 43\,\%--52.5\,\% del promedio de los últimos 240 salarios ajustados por IPC. \\
+
+Panamá &
+CSS administra el IVM bajo la Ley 51 de 2005, reformada por la Ley 462 de 2025. &
+Trabajador 9.25\,\%, empleador 4.25\,\%, Estado 0.8\,\%. Edad ordinaria post-reforma: 60 años mujeres, 65 hombres; 240 cuotas de referencia (mínimo 180 para pensión proporcional). Beneficio: 60\,\% del salario base (promedio de los 10 mejores años), con incrementos de 1.25\,\% por cada 12 meses adicionales; tope de B/.\,500 en el componente de beneficio definido. \\
+
+Colombia &
+Colpensiones administra el RPM bajo la Ley 100 de 1993 y la Ley 797 de 2003 (arquitectura vigente; la Ley 2381 de 2024 está suspendida por el Auto A-841 de 2025). &
+Tasa total 16\,\% del IBC (12\,\% empleador, 4\,\% trabajador). Edad: 57 mujeres, 62 hombres, con 1{,}300 semanas mínimas. Tasa de reemplazo $r = 65.50 - 0.50s$ (donde $s$ son los SMLMV del IBL), entre 55\,\% y 65\,\% según ingreso, con incrementos de 1.5\,\% por cada 50 semanas adicionales; tope de 80\,\% del IBL. \\
+
+Brasil &
+INSS administra el RGPS (sector privado); cada ente administra su RPPS (servidores públicos). Base constitucional en los Arts.\ 201 y 40, modificados por la EC 103/2019. &
+Trabajador: tasa progresiva de 7.5\,\% a 14\,\% (RGPS) según salario, hasta 22\,\% en el RPPS para los tramos más altos; empleador con tasa estándar de 20\,\% sobre nómina en el RGPS. Edad mínima: 62 mujeres / 65 hombres, con 15/20 años de contribución (55/60 años para trabajadores rurales). Beneficio: 60\,\% del promedio salarial desde julio de 1994, más 2\,\% por cada año que exceda el mínimo de contribución; piso de un salario mínimo. \\
+
+Chile &
+IPS administra el nuevo Seguro Social Previsional (Ley N.\textsuperscript{o}~21.735 de 2025) a través del FAPP; el IPS también administra el antiguo sistema de reparto de las ex cajas de previsión (anterior a 1980) para quienes no migraron a AFP. &
+Seguro Social: cotización patronal de 2.5 puntos de los 8.5\,\% nuevos, sin aporte del trabajador; edad 65 años ambos sexos; requiere 120--180 meses cotizados (mujeres) o 240 meses (hombres); beneficio de hasta 0.1 UF por cada 12 meses cotizados, tope de 300 meses computables. Antiguo sistema de reparto: 65 hombres / 60 mujeres, fórmula legal sobre sueldo de pensión y antigüedad. \\
+
+\end{xltabular}
+
+\begin{xltabular}{\textwidth}{P{1.6cm}Y Y}
+\caption{Pilar 2 (capitalización individual obligatoria): administración, tasa y mecanismo de beneficio.}
+\label{tab:param_pilar2}\\
+\toprule
+\textbf{País} & \textbf{Institución y norma} & \textbf{Tasa y mecanismo de beneficio} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{País} & \textbf{Institución y norma} & \textbf{Tasa y mecanismo de beneficio} \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+México &
+AFORE y PENSIONISSSTE administran el SAR bajo la LSAR de 1996; CONSAR regula y supervisa. &
+IMSS: patrón 2\,\% (retiro) más tasa progresiva 3.150\,\%--7.513\,\% (cesantía y vejez, hasta 2030), trabajador 1.125\,\%. ISSSTE: dependencia 2\,\% (retiro) y 3.175\,\% (cesantía y vejez), trabajador 6.125\,\%. Beneficio según saldo acumulado: renta vitalicia o retiro programado, al cumplir 60/65 años y semanas mínimas crecientes hasta 1{,}000 en 2031 (IMSS) o 25 años (ISSSTE). \\
+
+Costa Rica &
+Operadoras de Pensiones Complementarias (OPC) administran el ROPC bajo la Ley N.\textsuperscript{o}~7983 de 2000; SICERE (CCSS) recauda. &
+Tasa total 4.25\,\% (3.25\,\% patrono, 1\,\% trabajador). Beneficio según saldo acumulado, exigible al cumplir los requisitos del Pilar 1; modalidades de renta vitalicia, renta permanente, renta temporal o retiro único si el saldo representa menos del 10\,\% de la pensión total. \\
+
+Panamá &
+CSS administra el componente de ahorro personal del subsistema mixto bajo la Ley 51 de 2005, en cuentas separadas del patrimonio institucional. &
+13.50\,\% sobre el excedente de B/.\,500 (9.25\,\% trabajador + 4.25\,\% empleador), de los cuales 3.5 puntos se destinan como aporte de solidaridad al Pilar 1, con lo que un 10\,\% neto queda en la cuenta individual. Beneficio: pensión programada según expectativa de vida, con garantía colectiva de renta vitalicia si el afiliado sobrevive a su expectativa calculada. \\
+
+Colombia &
+Sociedades Administradoras de Fondos de Pensiones (AFP) administran el RAIS bajo la Ley 100 de 1993 y la Ley 797 de 2003. &
+Tasa total 16\,\% del IBC: 10 puntos a la cuenta individual, 0.5 al Fondo de Garantía de Pensión Mínima, 3 a seguros y administración, resto a fondos de solidaridad. Beneficio según saldo, rendimientos y expectativa de vida; modalidades de retiro programado, renta vitalicia inmediata o combinación diferida. \\
+
+Brasil &
+No existe Pilar 2 obligatorio. El Regime de Previdência Complementar (RPC) es voluntario y se trata en el Pilar 3. &
+No aplica bajo norma vigente; la PEC 6/2019 propuso un componente de capitalización obligatoria, pero no fue aprobada en la EC 103/2019. \\
+
+Chile &
+AFP administran el componente de capitalización bajo el Decreto Ley N.\textsuperscript{o}~3.500 de 1980; Superintendencia de Pensiones fiscaliza. &
+Trabajador 10\,\% de la remuneración imponible más comisión AFP; nueva cotización patronal de 6.0 puntos de los 8.5\,\% introducidos por la Ley N.\textsuperscript{o}~21.735 de 2025 (vigencia general desde abril de 2027, con calendario de implementación gradual ya iniciado). Beneficio: saldo acumulado dividido entre capital necesario según expectativa de vida; modalidades de renta vitalicia, retiro programado o combinaciones. \\
+
+\end{xltabular}
+
+\begin{small}
+\noindent\textit{Abreviaturas:} BD: beneficio definido. CD: contribución definida. RPM: Régimen de Prima Media. RAIS: Régimen de Ahorro Individual con Solidaridad. IVM: Invalidez, Vejez y Muerte. ROPC: Régimen Obligatorio de Pensiones Complementarias. PGU: Pensión Garantizada Universal. IBC: Ingreso Base de Cotización. IBL: Ingreso Base de Liquidación. FAPP: Fondo Autónomo de Protección Previsional. RGPS/RPPS: Regime Geral/Próprio de Previdência Social.
+\end{small}
+
+\subsubsection{México}
+
+\textbf{El sistema mexicano de pensiones está regulado por una arquitectura normativa diferenciada por sector laboral.} Para el sector privado, la Ley del Seguro Social regula el régimen obligatorio, que abarca los seguros de retiro, cesantía en edad avanzada y vejez. Para los trabajadores al servicio del Estado, la Ley del ISSSTE regula las prestaciones y seguros correspondientes. La Ley de los Sistemas de Ahorro para el Retiro ordena el funcionamiento del SAR, las cuentas individuales, las AFORE y la CONSAR. A nivel constitucional, el artículo 123 establece las bases de la seguridad social y el artículo 4.\textsuperscript{o} reconoce el derecho a una pensión no contributiva para las personas adultas mayores.
+
+\textbf{El régimen vigente para los nuevos trabajadores es de capitalización individual y corresponde al Pilar 2.} El Sistema de Ahorro para el Retiro (SAR) deposita las cuotas del trabajador, el empleador y el Estado en una cuenta individual propiedad del trabajador, a cargo de una AFORE o de PENSIONISSSTE, con recursos invertidos a través de SIEFORE y regulación de la CONSAR. El Pilar 1 mexicano --- el esquema público de reparto y beneficio definido --- subsiste únicamente como régimen de transición: el de la Ley del Seguro Social de 1973 para trabajadores del IMSS inscritos antes de julio de 1997, y el del Artículo Décimo Transitorio de la Ley del ISSSTE de 2007 para trabajadores del Estado activos antes de marzo de 2007 que no optaron por el Bono de Pensión. En ambos casos, la pensión se determina por reglas salariales y de antigüedad de la ley anterior, y el pago corre a cargo del Gobierno Federal.
+
+\textbf{La administración del sistema está dividida funcionalmente entre cuatro tipos de entidades.} El IMSS y el ISSSTE reconocen derechos y otorgan resoluciones de pensión, tanto para sus regímenes de transición (Pilar 1) como para los afiliados del SAR (Pilar 2). Las AFORE, junto con PENSIONISSSTE, administran financieramente los recursos de las cuentas individuales del Pilar 2. La CONSAR coordina, regula y supervisa este sistema de capitalización.
+
+\textbf{El financiamiento del Pilar 2 combina aportaciones patronales, laborales y estatales, con una estructura distinta según el instituto de afiliación.} En el IMSS, el ramo de retiro se financia con 2\,\% patronal; los ramos de cesantía en edad avanzada y vejez incorporan una aportación patronal progresiva que en 2024 oscila entre 3.150\,\% y 5.331\,\% según el salario, con un calendario de incremento gradual hasta 2030, más 1.125\,\% del trabajador y una cuota social estatal para ingresos de hasta cuatro UMA. En el ISSSTE, la dependencia aporta 2\,\% para retiro y 3.175\,\% para cesantía y vejez; el trabajador aporta 6.125\,\%, además de la cuota social del Gobierno Federal.
+
+\textbf{Las edades de referencia del Pilar 1 en transición distinguen por sexo únicamente en el esquema del ISSSTE.} La pensión por jubilación bajo el Artículo Décimo Transitorio mantiene una tabla gradual: 58 años para hombres y 56 para mujeres en 2024--2025; 59 años para hombres y 57 para mujeres en 2026--2027; y 60 años para hombres y 58 para mujeres a partir de 2028, condicionada además a 30 o 28 años de servicio respectivamente. En el Pilar 2 (cuentas individuales), las edades de referencia --- 60 años para cesantía en edad avanzada y 65 para vejez --- son las mismas para ambos sexos. La pensión no contributiva del artículo 4.\textsuperscript{o} constitucional (Pilar 0) se reconoce a partir de los 65 años, sin distinción de sexo y sin vínculo con la historia laboral.
+
+\textbf{La regla de beneficio depende estrictamente del pilar.} En el Pilar 2, el monto resulta del saldo acumulado en la AFORE y puede ejercerse mediante renta vitalicia, retiro programado, o el seguro de sobrevivencia obligatorio al pensionarse. En el Pilar 1 de transición, la prestación se calcula con fórmulas de beneficio definido: en el ISSSTE, la jubilación puede equivaler al 100\,\% del promedio del sueldo básico del último año, o seguir una escala de 50\,\% a 95\,\% según años de servicio; en el IMSS (Ley 1973), el cálculo se basa en el promedio de las últimas 250 semanas cotizadas y el tiempo total de servicio, con un mínimo de 500 semanas acreditadas.
+
+\textbf{El sistema incorpora dos mecanismos de garantía estatal sobre el Pilar 2, que constituyen lo que este documento denomina Pilar 1-B.} El primero es la Pensión Garantizada, prevista en el artículo 170 de la Ley del Seguro Social y el artículo 92 de la Ley del ISSSTE: es el monto mínimo que el Estado asegura a quienes cumplen edad y semanas de cotización pero cuyo saldo en la AFORE resulta insuficiente. En el ISSSTE, el monto base documentado es de \$3,034.20 pesos mensuales, actualizable cada febrero por el INPC, con requisito de 25 años de cotización al Instituto; en el IMSS, el monto se determina por una tabla que combina edad, semanas de cotización (con un requisito transitorio que sube de 750 semanas en 2021 a 1,000 en 2031) y salario base promedio.
+
+\textbf{El segundo mecanismo de garantía es el Fondo de Pensiones para el Bienestar, creado mediante decreto publicado en el Diario Oficial de la Federación el 30 de abril de 2024.} Opera como un fideicomiso público --- no considerado entidad paraestatal --- con el Banco de México como fiduciario, y ventanilla única operada por el IMSS, el ISSSTE o el INFONAVIT según corresponda. Se financia con el 75\,\% de los remanentes netos de enajenación de bienes del INDEP, el 25\,\% de ingresos de entidades paraestatales del sector militar, y los recursos de cuentas individuales no reclamadas por trabajadores de 70 años (IMSS) o 75 años (ISSSTE) sin relación laboral activa. El complemento se otorga a trabajadores de 65 años o más bajo el régimen de cuentas individuales (IMSS 1997 o ISSSTE 2007), con el objetivo de que la pensión alcance el 100\,\% del último salario, sujeto a un tope de \$16,777.68 pesos mensuales actualizable anualmente por inflación.
+
+\textbf{El Pilar 3 mexicano incluye tres mecanismos diferenciados.} Las aportaciones voluntarias y complementarias en la cuenta individual, administradas por AFORE y SIEFORE, con beneficios fiscales y comisiones preferenciales por permanencia. El Ahorro Solidario del sector público, exclusivo para trabajadores del régimen de cuentas individuales del ISSSTE (artículo 100 de su ley), en el que la dependencia aporta \$3.25 pesos por cada peso que ahorre el trabajador, hasta un tope del 2\,\% del sueldo básico. Y los planes privados de pensiones u ocupacionales, establecidos por los patrones y registrados ante la CONSAR, cuyas aportaciones patronales pueden excluirse del salario base de cotización.
+
+\textbf{Las reformas recientes identificadas incluyen la creación del Fondo de Pensiones para el Bienestar en abril de 2024; la reforma al artículo 4.\textsuperscript{o} constitucional de diciembre de 2024, que reconoce la pensión no contributiva a personas adultas mayores; la reforma de enero de 2026 sobre igualdad sustantiva y perspectiva de género en resoluciones de pensión; y la reforma constitucional al artículo 127, publicada en el Diario Oficial de la Federación el 10 de abril de 2026, sobre límites a jubilaciones y pensiones en entidades públicas.}
+
+\subsubsection{Costa Rica}
+
+\textbf{Costa Rica organiza su sistema de pensiones en torno a cuatro pilares en la denominación legal local, que no coinciden exactamente con la taxonomía analítica de este documento.} El régimen contributivo obligatorio (Pilar 1 en la taxonomía de Holzmann y Hinz) tiene como base el Seguro de Invalidez, Vejez y Muerte (IVM), administrado por la Caja Costarricense de Seguro Social desde su entrada en vigor el 1 de enero de 1947, con cobertura universalizada por la Ley N.\textsuperscript{o}~2738 de 1961. Este pilar convive con regímenes especiales para el Magisterio Nacional, el Poder Judicial, Bomberos Permanentes y regímenes con cargo al Presupuesto Nacional. El componente de capitalización individual obligatoria (Pilar 2) es el Régimen Obligatorio de Pensiones Complementarias (ROPC), creado por la Ley de Protección al Trabajador N.\textsuperscript{o}~7983 de 2000. El componente voluntario (Pilar 3) corresponde al ahorro adicional de capitalización individual. El componente no contributivo (Pilar 0) es el Régimen No Contributivo (RNC), focalizado en personas en pobreza o pobreza extrema.
+
+\textbf{El IVM es un régimen de beneficio definido y constituye el núcleo del Pilar 1 y cubre a la gran mayoría de la población afiliada (92.1\,\%, según CEPAL 2020).} Se describe como un esquema de capitalización colectiva con financiamiento tripartito, aunque los estudios actuariales suelen caracterizarlo como un régimen de reparto maduro. Esta precisión importa porque el beneficio no depende del saldo de una cuenta individual, sino de una fórmula legal aplicada sobre salarios y cuotas. En contraste, el ROPC (Pilar 2) es de capitalización individual y su beneficio depende exclusivamente del ahorro acumulado.
+
+\textbf{El financiamiento del IVM sigue una trayectoria de ajuste gradual definida por reforma de junio de 2019.} Para el período 2026--2028, la tasa total es de 11.66\,\%, distribuida en 5.58\,\% a cargo del patrono, 4.33\,\% del trabajador y 1.75\,\% del Estado. El ROPC agrega una contribución separada de 4.25\,\% (3.25\,\% patrono, 1\,\% trabajador), administrada por seis Operadoras de Pensiones Complementarias (BN Vital, BCR Pensiones, Vida Plena, OPC CCSS, BAC Pensiones y Popular Pensiones), cuyos aportes se registran a través del SICERE de la CCSS pero cuyos fondos son propiedad de los afiliados.
+
+\textbf{La edad ordinaria de retiro en el IVM es de 65 años para hombres y mujeres, con al menos 300 cuotas mensuales.} Existe retiro anticipado para mujeres a los 59 años y 11 meses con 450 cuotas, y para hombres a los 61 años y 11 meses con 462 cuotas, así como pensión proporcional a los 65 años para quienes acumulan entre 180 y 299 cuotas. En regímenes especiales las reglas son heterogéneas: el Poder Judicial exige 65 años y 35 de servicio tras la reforma de 2018; el Magisterio Nacional permite retiro desde 55 años con 396 cotizaciones; y Bomberos Permanentes permite retiro a los 50 años con 20 de servicio.
+
+\textbf{La fórmula del IVM se calcula sobre el promedio de los últimos 240 salarios, ajustados por IPC, con una tasa de reemplazo entre 43\,\% y 52.5\,\%}, con un incremento de 0.0833\,\% por cada cuota adicional sobre las primeras 240, y de 0.1333\,\% mensual por postergación del retiro. El beneficio del ROPC, en cambio, se determina según el saldo acumulado, con modalidades de renta vitalicia, renta permanente, renta temporal o retiro único si el saldo representa menos del 10\,\% de la pensión total --- regla que enfrenta presión legislativa para flexibilizarse a medida que el sistema madura y más afiliados superan ese umbral. Los montos de la pensión mínima contributiva del IVM y del Régimen No Contributivo se actualizan periódicamente por resolución institucional.
+
+\textbf{No se identifica en Costa Rica un mecanismo de garantía estatal (Pilar 1-B) que complemente específicamente el saldo del ROPC cuando resulte insuficiente.} La Ley 7983 prevé, en su lugar, una garantía estatal de naturaleza distinta: si una Operadora de Pensiones incurre en dolo o culpa y su patrimonio no alcanza para cubrir el perjuicio a los afiliados, el Estado compensa la diferencia y procede a liquidar la operadora. Es un mecanismo de protección contra fraude o insolvencia administrativa, no un piso de monto mínimo sobre la pensión del Pilar 2. La función de piso mínimo en el sistema costarricense recae en la pensión mínima contributiva del propio IVM (Pilar 1) y, para quienes no alcanzan ese nivel, en el Régimen No Contributivo (Pilar 0).
+
+\textbf{El Régimen No Contributivo es administrado por la CCSS y financiado principalmente por FODESAF}, con recursos complementarios del Presupuesto Nacional y utilidades de la lotería electrónica de la Junta de Protección Social. Es un programa focalizado, no universal, dirigido a personas en pobreza o pobreza extrema, personas con discapacidad, viudas, huérfanos y otros grupos definidos por la Ley Integral para la Persona Adulta Mayor (N.\textsuperscript{o}~7935).
+
+\textbf{La característica institucional central de Costa Rica es la integración de pensiones y salud en la CCSS.} Esta integración no implica ausencia de separación contable entre seguros, pero sí concentra en una misma institución la administración del Pilar 1 (IVM), el Pilar 0 (RNC) y el seguro de salud.
+
+\subsubsection{Panamá}
+
+\textbf{El sistema panameño de pensiones se rige por la Ley 51 de 27 de diciembre de 2005, que reformó la Ley Orgánica de la Caja de Seguro Social.} La Ley 462 de 18 de marzo de 2025 introduce una reforma reciente al sistema, con una nueva edad de referencia para la pensión de vejez. La Caja de Seguro Social (CSS) es una entidad pública autónoma, con personería jurídica y patrimonio propio, encargada de administrar, planificar y controlar el Régimen de Invalidez, Vejez y Muerte (IVM).
+
+\textbf{La arquitectura panameña combina, dentro de la misma institución, un componente de Pilar 1 y un componente de Pilar 2, lo que constituye una excepción institucional relevante en la región: ambos son administrados por la CSS pública, no por una AFP privada separada.} El subsistema exclusivamente de beneficio definido (Pilar 1) opera bajo reparto de capitales de cobertura, e incluye a pensionados vigentes al 1 de enero de 2006 y a asegurados que superaban los 35 años en esa fecha. El subsistema mixto combina un componente de beneficio definido (Pilar 1) sobre los primeros B/.\,500 mensuales, con un componente de ahorro personal en cuenta individual (Pilar 2) sobre el excedente, obligatorio para quienes ingresaron al sistema a partir de 2008 o tenían 35 años o menos en 2006 y optaron por este subsistema.
+
+\textbf{La contribución total se mantiene en su nivel máximo de gradualidad desde 2013 bajo la Ley 51.} Los trabajadores aportan 9.25\,\% de su salario base y los empleadores 4.25\,\%, para un total de 13.50\,\% sobre el excedente de B/.\,500. De ese 13.50\,\%, 3.5 puntos se destinan obligatoriamente como aporte de solidaridad al componente de beneficio definido (Pilar 1); el 10\,\% neto restante se acredita a la cuenta de ahorro personal (Pilar 2). Los trabajadores independientes contribuyentes aportan 13.50\,\% de sus honorarios anuales. El Estado contribuye con 0.8\,\% de los sueldos y bases de cotización, además de un subsidio anual y aportes al Fondo Fiduciario.
+
+\textbf{En materia de edad de retiro, la Ley 51 de 2005 establecía 57 años para mujeres y 62 para hombres.} La Ley 462 de 2025 eleva la edad de referencia a 60 años para mujeres y 65 para hombres, con una banda de retiro anticipado sujeta a reducción actuarial. El requisito de cuotas de referencia es de 240 cuotas mensuales (20 años), con pensión proporcional desde 180 cuotas. El beneficio del Pilar 1 se calcula sobre el 60\,\% del salario base --- promedio de los 10 mejores años de cotización ---, con incrementos de 1.25\,\% por cada 12 meses adicionales de cotización y 2\,\% por cada 12 meses de postergación tras la edad ordinaria; el componente del subsistema mixto tiene un tope de B/.\,500 en su parte de beneficio definido. El beneficio del Pilar 2 se calcula como pensión programada según el saldo acumulado y la expectativa de vida, con garantía colectiva de renta vitalicia si el afiliado sobrevive a su expectativa calculada, prorrateada entre los participantes del subsistema.
+
+\textbf{No se identifica en Panamá un fondo de garantía estatal (Pilar 1-B) que complemente el saldo del componente de ahorro personal cuando resulte insuficiente.} El único vínculo financiero entre ambos componentes es el aporte de solidaridad ya descrito, que transfiere recursos del Pilar 2 hacia el Pilar 1 --- en sentido inverso al de un mecanismo de garantía --- y la separación contable entre subsistemas es estricta: la ley prohíbe transferencias entre los fondos del antiguo subsistema de beneficio definido y los del subsistema mixto.
+
+\textbf{La pensión no contributiva panameña (Pilar 0) corresponde al programa de asistencia económica regulado por la Ley 86 de 18 de noviembre de 2010.} Esta norma establece un beneficio de B/.\,120.00 para personas adultas mayores de 70 años o más, en condiciones de riesgo social, vulnerabilidad, marginación o pobreza, que no cuentan con jubilación ni pensión contributiva. Aunque existen referencias operativas a ``120 a los 65'', para este corte no se identificó el instrumento normativo que reduzca formalmente de 70 a 65 años la edad de elegibilidad establecida en la Ley 86.
+
+\textbf{La administración de este beneficio no contributivo corresponde al Ministerio de Desarrollo Social (MIDES), no a la CSS.} Esta separación institucional es importante: la CSS administra los pilares contributivos (1 y 2) de quienes cotizaron; el MIDES opera una transferencia de asistencia social financiada con cargo al Presupuesto General del Estado, complementada por la Ley 36 de 2016 y la Ley 423 de 2024 sobre gratuidad de servicios de salud para este grupo.
+
+\subsubsection{Colombia}
+
+\textbf{El sistema colombiano se fundamenta en la Constitución Política, cuyo artículo 48 establece la seguridad social como servicio público obligatorio y derecho irrenunciable.} La Ley 100 de 1993 creó el Sistema General de Pensiones y organizó dos regímenes excluyentes: el Régimen de Prima Media con Prestación Definida (RPM, Pilar 1), administrado actualmente por Colpensiones, y el Régimen de Ahorro Individual con Solidaridad (RAIS, Pilar 2), administrado por las AFP. La Ley 797 de 2003 modificó requisitos y reglas de sostenibilidad: edad, semanas de cotización, obligatoriedad para independientes y mecanismos de solidaridad.
+
+\textbf{A la fecha de este corte, la arquitectura operativa del sistema pensional colombiano sigue organizada alrededor del RPM y el RAIS bajo la Ley 100/797, no bajo la Ley 2381 de 2024.} La cotización vigente es de 16\,\% del Ingreso Base de Cotización (IBC), distribuida en 12\,\% a cargo del empleador y 4\,\% del trabajador; los independientes asumen la totalidad. En el RAIS específicamente, de ese 16\,\%, 10 puntos se abonan a la cuenta individual, 0.5 al Fondo de Garantía de Pensión Mínima y 3 a seguros de invalidez, sobrevivientes y administración, con incrementos adicionales de la Ley 797 destinados a fondos de solidaridad. Esta regla opera bajo la arquitectura previa de Ley 100/797 y no depende de la implementación de la Ley 2381.
+
+\textbf{La Ley 2381 de 2024 propone una reorganización en cuatro pilares: solidario, semicontributivo, contributivo y ahorro voluntario.} Sin embargo, su entrada en vigor general, prevista para el 1 de julio de 2025, fue suspendida por la Corte Constitucional mediante Auto A-841 de 2025, salvo el parágrafo transitorio del artículo 12 y el artículo 76 sobre oportunidad de traslado. Por ello, la Ley 100 de 1993 y la Ley 797 de 2003 continúan como las normas operativas principales mientras se resuelve la situación constitucional de la reforma.
+
+\textbf{Bajo el diseño de la Ley 2381, el RAIS se transformaría en el componente complementario de ahorro individual de un pilar contributivo mixto}, con cotizaciones únicamente sobre el excedente de 2.3 salarios mínimos mensuales legales vigentes (smlmv) y hasta 25 smlmv; el componente de prima media absorbería las cotizaciones entre 1 y 2.3 smlmv. La pensión sería única e integraría ambos componentes. Dado el estado de suspensión, esta descripción debe leerse como diseño legal aprobado pero no plenamente operativo.
+
+\textbf{La edad vigente del régimen contributivo (RPM, Pilar 1) es de 57 años para mujeres y 62 para hombres, con un mínimo de 1{,}300 semanas de cotización.} El beneficio se calcula sobre el Ingreso Base de Liquidación (IBL) --- promedio salarial de los últimos 10 años, actualizado por IPC --- mediante la fórmula de tasa de reemplazo $r = 65.50 - 0.50s$, donde $s$ es el número de smlmv equivalentes al IBL; la tasa inicial oscila entre 55\,\% y 65\,\% según el nivel de ingreso, con incrementos de 1.5\,\% por cada 50 semanas adicionales, un piso de un salario mínimo y un techo de 80\,\% del IBL. El RAIS (Pilar 2), en cambio, determina el beneficio exclusivamente por el capital acumulado, los rendimientos y la expectativa de vida, con modalidades de retiro programado, renta vitalicia inmediata o combinación diferida.
+
+\textbf{Colombia cuenta con un mecanismo de garantía estatal (Pilar 1-B) explícito sobre el RAIS: el Fondo de Garantía de Pensión Mínima (FGPM), establecido por el artículo 65 de la Ley 100 de 1993.} Administrado por las propias AFP como patrimonio autónomo, se financia con una fracción parafiscal de la cotización al régimen de ahorro individual y cuenta con garantía soberana de la Nación, que respalda con presupuesto público si el fondo resulta insuficiente. Garantiza una mesada mínima de un salario mínimo a quienes tienen 57 años (mujeres) o 62 (hombres) y al menos 1{,}150 semanas cotizadas, y cubre la diferencia entre lo ahorrado y el capital necesario para esa pensión mínima vitalicia. Adicionalmente, para quienes no alcanzan las semanas requeridas, operan los Beneficios Económicos Periódicos (BEPS) --- ahorro voluntario con un incentivo estatal del 20\,\% sobre lo ahorrado, administrado por Colpensiones --- y, bajo la Ley 2381 suspendida, se propone un pilar semicontributivo con subsidio fiscal de 20\,\% (hombres) o 30\,\% (mujeres) sobre el saldo ahorrado.
+
+\textbf{El componente no contributivo (Pilar 0) de la reforma es la Renta Básica Solidaria, sucesora del programa Colombia Mayor y administrada por el Departamento Administrativo para la Prosperidad Social (DPS).} Es un beneficio focalizado, no universal, orientado a colombianos residentes en pobreza extrema, pobreza o vulnerabilidad, con 65 años (hombres) o 60 (mujeres) --- o 55/50 años respectivamente en caso de discapacidad superior al 50\,\%---, y al menos diez años de residencia previa. Su monto, bajo la Ley 2381, correspondería como mínimo a la línea de pobreza extrema certificada por el DANE, pero su aplicación general está sujeta a la suspensión provisional de dicha ley; transitoriamente opera el esquema previo de Colombia Mayor bajo los artículos 257 y 258 de la Ley 100 de 1993.
+
+\subsubsection{Brasil}
+
+\textbf{El sistema brasileño no contempla un Pilar 2 de capitalización individual obligatoria, lo que constituye una diferencia estructural relevante frente a los otros cinco países de la muestra.} El Pilar 1 está compuesto por el Regime Geral de Previdência Social (RGPS), administrado por el Instituto Nacional do Seguro Social (INSS) para trabajadores del sector privado, y los Regimes Próprios de Previdência Social (RPPS) para servidores públicos federales, estaduales y municipales. Ambos tienen base constitucional (artículos 201 y 40 de la Constitución Federal de 1988) y operan bajo reparto con beneficio definido.
+
+\textbf{La Emenda Constitucional 103/2019 (Reforma da Previdência) introdujo cambios paramétricos profundos al Pilar 1.} Estableció edades mínimas de retiro de 62 años para mujeres y 65 para hombres en el RGPS urbano (55/60 años para trabajadores rurales), con 15 y 20 años de contribución respectivamente. El financiamiento es tripartito: el trabajador cotiza bajo una escala progresiva que va de 7.5\,\% (hasta un salario mínimo) a 14\,\% (hasta el techo del RGPS) en el régimen general, y hasta 22\,\% en el RPPS para los tramos salariales más altos; el empleador aporta sobre la nómina, generalmente al 20\,\% en el RGPS; el Estado financia el sistema con recursos del presupuesto de la Seguridad Social y cubre los déficits. El beneficio se calcula sobre el promedio aritmético del 100\,\% de los salarios de cotización desde julio de 1994, con una base de 60\,\% de ese promedio más 2\,\% adicional por cada año que exceda el mínimo de contribución, sujeto a un piso de un salario mínimo.
+
+\textbf{El componente de capitalización individual --- el Regime de Previdência Complementar (RPC) --- es estrictamente voluntario y corresponde, por tanto, al Pilar 3 y no al Pilar 2.} Tiene base en el artículo 202 constitucional y en las Leyes Complementarias 108 y 109 de 2001. Es gestionado por Entidades Cerradas (EFPC, fondos de pensión vinculados a empresas, entes públicos o sindicatos) y Entidades Abiertas (EAPC, sociedades con fines de lucro accesibles a cualquier persona). No existe una tasa de cotización única, ya que el régimen depende de cada plan contratado; para servidores públicos federales que ganan sobre el techo del RGPS, rige una paridad contributiva en la que el aporte estatal no puede exceder al del servidor. El beneficio se basa en contribución definida sobre el saldo acumulado. Durante la discusión de la reforma de 2019, el gobierno propuso mediante la PEC 6/2019 instituir un régimen de capitalización obligatoria, pero ese componente no fue aprobado en la versión final de la Emenda Constitucional 103/2019; el sistema brasileño mantuvo, por tanto, su estructura de reparto para los pilares obligatorios.
+
+\textbf{No existe en Brasil un mecanismo de garantía estatal (Pilar 1-B) sobre el componente de capitalización privada, y dicho mecanismo está además constitucionalmente prohibido.} El artículo 201, párrafo octavo, de la Constitución Federal de 1988 veda expresamente la subvención o auxilio del poder público a entidades de previsión privada con fines lucrativos. El piso mínimo de un salario mínimo que sí garantiza la Constitución aplica al beneficio definido del Pilar 1 (RGPS y RPPS), no como complemento a saldos insuficientes del RPC. La única red de protección financiada con presupuesto público para adultos mayores sin pensión suficiente es el Pilar 0.
+
+\textbf{El Benefício de Prestação Continuada (BPC), regulado por la LOAS de 1993 y fundamentado en el artículo 203, inciso V, de la Constitución Federal, constituye el Pilar 0 brasileño.} Provee una transferencia mensual equivalente a un salario mínimo a personas mayores de 65 años cuya renta familiar per cápita sea inferior a un cuarto del salario mínimo, y a personas con discapacidad bajo el mismo criterio de carencia. Es estrictamente asistencial, sin requisito de historia laboral o de cotización, financiado por el presupuesto de la Seguridad Social, y administrado por el Ministerio de Desarrollo Social (MDS) con gestión operativa del INSS y pago a través de la Caixa Econômica Federal.
+
+\subsubsection{Chile}
+
+\textbf{Chile regula su sistema de pensiones mediante el Decreto Ley N.\textsuperscript{o}~3.500 de 1980, que estableció la capitalización individual obligatoria administrada por AFP; la Ley N.\textsuperscript{o}~20.255 de 2008, que creó el Pilar Solidario; la Ley N.\textsuperscript{o}~21.419 de 2022, que creó la Pensión Garantizada Universal; y la Ley N.\textsuperscript{o}~21.735 de 2025, que transforma el sistema hacia una arquitectura mixta con incorporación de un Seguro Social.}
+
+\textbf{El componente de capitalización individual (Pilar 2) sigue a cargo de las AFP, con cotización del trabajador del 10\,\% de su remuneración imponible, más comisión por administración y el costo del Seguro de Invalidez y Sobrevivencia (SIS).} La reforma de 2025 introduce, además, una nueva cotización obligatoria de 8.5\,\% de cargo exclusivo del empleador, de la cual 6.0 puntos se destinan gradualmente al ahorro individual de los trabajadores (un 1.5\,\% inicial opera como ``cotización con rentabilidad protegida''), y 2.5 puntos se dirigen a un componente distinto: el nuevo Seguro Social Previsional.
+
+\textbf{Ese Seguro Social Previsional constituye un nuevo componente de Pilar 1 --- no una variante del Pilar 2 ---, ya que introduce solidaridad y beneficios definidos basados en el historial contributivo, sin depender únicamente del saldo individual.} Es administrado por el Instituto de Previsión Social (IPS), que registra afiliados, recauda la cotización patronal de 2.5 puntos y deposita los recursos en el Fondo Autónomo de Protección Previsional (FAPP). Requiere 65 años de edad para ambos sexos y un mínimo de 120 a 180 meses cotizados (mujeres, con gradualidad) o 240 meses (hombres); el beneficio otorga hasta 0.1 UF por cada 12 meses cotizados, con un tope de 300 meses computables. Este componente convive, además, con el antiguo sistema de reparto de las ex cajas de previsión (anteriores a 1980), también administrado por el IPS, para los trabajadores que no migraron a las AFP; y con los regímenes propios e independientes de las Fuerzas Armadas (CAPREDENA) y de Orden (DIPRECA), no alterados por las reformas de 1980, 2008 o 2025.
+
+\textbf{El Pilar 1 (Seguro Social) y el Pilar 2 (capitalización individual) operan como componentes complementarios dentro del nuevo Sistema Mixto de Pensiones, no como sustitutos.} La pensión final del afiliado resulta de la suma de ambos: la prestación del Seguro Social --- como el beneficio por años cotizados o la compensación de expectativa de vida para mujeres --- se paga simultáneamente con la pensión autofinanciada de capitalización individual. La administración permanece separada: las AFP gestionan el Pilar 2; el IPS administra el Pilar 1 y calcula sus beneficios de forma integrada con lo que el trabajador ya generó o generará en su cuenta individual, para asegurar que el nuevo beneficio sea un incremento real sobre la base de capitalización. La vigencia general de la reforma está fijada para el 1 de abril de 2027, aunque el incremento gradual de la cotización patronal y las mejoras a la PGU siguen calendarios de implementación anticipados que ya han comenzado a operar.
+
+\textbf{La edad legal de pensión por vejez en el antiguo sistema de reparto y en las AFP mantiene diferencia por sexo (65 hombres / 60 mujeres), mientras que tanto el nuevo Seguro Social como la PGU exigen una edad uniforme de 65 años.} Esta arquitectura genera una asimetría relevante para las mujeres: pueden pensionarse por vejez en el sistema AFP a los 60 años, pero solo acceden al Seguro Social y a la PGU a los 65, lo que abre una ventana de cinco años sin acceso a esos dos componentes adicionales de protección.
+
+\textbf{La Pensión Garantizada Universal constituye el Pilar 0 chileno y, simultáneamente, opera como el principal mecanismo de garantía estatal (Pilar 1-B) sobre el resultado del Pilar 2.} Fue creada por la Ley N.\textsuperscript{o}~21.419 de 2022, financiada íntegramente con recursos del Estado, en reemplazo de los antiguos beneficios de vejez del Pilar Solidario, y administrada por el IPS bajo fiscalización de la Superintendencia de Pensiones. La Ley N.\textsuperscript{o}~21.735 de 2025 incrementa gradualmente su monto máximo de \$185,000 a \$250,000; al 29 de junio de 2026, las personas de 82 años o más ya reciben el monto máximo de \$250,000, mientras que los beneficiarios más jóvenes reciben el monto original reajustado por IPC, con el siguiente incremento programado para el grupo de 75 años o más en septiembre de 2026 y la cobertura completa en 2027. Cuando la ``pensión base'' del afiliado --- que incluye lo obtenido en el Pilar 2 --- es inferior a la ``pensión inferior'' (\$630,000), la persona recibe el monto máximo de la PGU; entre la pensión inferior y la ``pensión superior'' (\$1,000,000), el beneficio se reduce proporcionalmente hasta extinguirse.
+
+\textbf{Aunque se denomina universal, la PGU es técnicamente focalizada: no pueden acceder quienes integren un grupo familiar perteneciente al 10\,\% más rico de la población, y se exige residencia de al menos 20 años desde los 20 años de edad, más 4 de los últimos 5 años previos a la solicitud.} El diseño está pensado para alcanzar al 90\,\% de la población de 65 años o más. De forma complementaria, existe una garantía estatal acotada para quienes optaron por renta vitalicia en el Pilar 2: ante quiebra o liquidación de la compañía de seguros, el Estado garantiza el 100\,\% de la renta si ésta es igual o inferior a la PGU, o la PGU más el 75\,\% de la diferencia si es superior, con un tope de 45 UF mensuales por beneficiario.
+
+\textbf{El Pilar 3 chileno es comparativamente el más desarrollado de la muestra, con cuatro mecanismos diferenciados:} el Ahorro Previsional Voluntario (APV) individual; el Ahorro Previsional Voluntario Colectivo (APVC), mediante contrato entre empleador y trabajadores; los Depósitos Convenidos, acordados directamente con el empleador para anticipar el retiro o mejorar la pensión; y la Cuenta de Ahorro Voluntario (Cuenta 2), de libre disposición y eventualmente transferible a la cuenta obligatoria. Estos instrumentos pueden administrarse no solo por AFP sino por bancos, administradoras de fondos mutuos, compañías de seguros de vida y administradoras de fondos de inversión o de vivienda, bajo dos regímenes tributarios opcionales: bonificación fiscal del 15\,\% sobre lo ahorrado (Régimen A) o deducción de la base imponible (Régimen B).
+
+\subsection{Seguridad social, protección social y asistencia social: distinciones analíticas y consecuencias}
+
+\textbf{La comparación normativa requiere distinguir tres categorías que en el debate público suelen usarse de manera intercambiable: seguridad social, asistencia social y protección social.} En esta nota, seguridad social se refiere a los regímenes contributivos vinculados al trabajo formal --- tanto el Pilar 1 público de reparto como el Pilar 2 de capitalización individual --- financiados con cotizaciones laborales, patronales y, en algunos casos, aportes estatales. Asistencia social se refiere a prestaciones no contributivas (Pilar 0) financiadas con presupuesto público y asignadas por edad, pobreza, discapacidad u otra condición de elegibilidad. Protección social es la categoría amplia que engloba ambos tipos de instrumentos, junto con los mecanismos de garantía estatal sobre el Pilar 2 (Pilar 1-B) y el ahorro voluntario (Pilar 3).
+
+\textbf{En México, el IMSS y el ISSSTE en su función de reconocimiento de derechos del régimen de transición pertenecen al Pilar 1; las AFORE y PENSIONISSSTE al Pilar 2; y la pensión constitucional de adultos mayores al Pilar 0.} En Costa Rica, el IVM es Pilar 1 y el ROPC es Pilar 2, ambos contributivos, mientras que el RNC es Pilar 0 asistencial focalizado. En Panamá, la CSS administra tanto el Pilar 1 como el Pilar 2 dentro de una misma institución pública, mientras que el MIDES gestiona el Pilar 0. En Colombia, el RPM es Pilar 1 y el RAIS es Pilar 2, ambos vigentes bajo Ley 100/797; el Pilar Solidario de la Ley 2381 corresponde a una reforma aprobada cuya operación general está suspendida. En Brasil, el RGPS y el RPPS son Pilar 1; no existe Pilar 2 obligatorio; el BPC es Pilar 0. En Chile, las AFP corresponden al Pilar 2 y el nuevo Seguro Social al Pilar 1, mientras que la PGU es Pilar 0 y, simultáneamente, Pilar 1-B.
+
+\textbf{La pregunta analítica central es si el componente no contributivo (Pilar 0) funciona como complemento del Pilar 1/2 o como sustituto cuando estos resultan insuficientes.} En Costa Rica y Panamá, los beneficios no contributivos son focalizados en pobreza o vulnerabilidad y, por tanto, pueden clasificarse como complementarios al régimen contributivo, sin que exista además un Pilar 1-B explícito sobre el Pilar 2 en ninguno de los dos países. En México y Colombia, en cambio, sí existe un Pilar 1-B diferenciado del Pilar 0: el Fondo de Pensiones para el Bienestar y la Pensión Garantizada en México, y el Fondo de Garantía de Pensión Mínima en Colombia, ambos dirigidos específicamente a quienes ya cotizaron en el Pilar 2 pero no alcanzan un piso suficiente. En Chile, la PGU cumple ambas funciones a la vez --- Pilar 0 y Pilar 1-B ---, amplia pero no universal en sentido estricto. En Brasil, la combinación está prohibida por mandato constitucional: el Pilar 0 (BPC) opera exclusivamente como red de asistencia social general, sin vínculo alguno con el resultado de la previsión complementaria privada, que es enteramente voluntaria.
+
+\begin{xltabular}{\textwidth}{P{1.7cm}Y Y Y}
+\caption{Clasificación analítica de los pilares de pensiones.}
+\label{tab:sspsas}\\
+\toprule
+\textbf{País} & \textbf{Pilar 1 (público, reparto)} & \textbf{Pilar 2 (capitalización individual)} & \textbf{Pilar 0 y Pilar 1-B (no contributivo y garantía estatal)} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{País} & \textbf{Pilar 1 (público, reparto)} & \textbf{Pilar 2 (capitalización individual)} & \textbf{Pilar 0 y Pilar 1-B (no contributivo y garantía estatal)} \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+México &
+IMSS (Ley 1973) e ISSSTE (Art.\ Décimo Transitorio); en extinción gradual por cohorte. &
+SAR/AFORE/PENSIONISSSTE; régimen vigente para nuevas cohortes. &
+Pilar 0: pensión constitucional universal por edad. Pilar 1-B: Pensión Garantizada y Fondo de Pensiones para el Bienestar. \\
+
+Costa Rica &
+IVM-CCSS; regímenes especiales (Magisterio, Poder Judicial, Bomberos). &
+ROPC, administrado por OPC. &
+Pilar 0: RNC focalizado, financiado por FODESAF. Pilar 1-B: no se identifica mecanismo específico sobre el ROPC. \\
+
+Panamá &
+Subsistema de beneficio definido y componente BD del subsistema mixto, ambos vía CSS. &
+Componente de ahorro personal del subsistema mixto, administrado --- atípicamente --- por la CSS pública. &
+Pilar 0: transferencia Ley 86/2010 vía MIDES. Pilar 1-B: no se identifica mecanismo específico; existe transferencia de solidaridad del Pilar 2 al Pilar 1. \\
+
+Colombia &
+RPM/Colpensiones, vigente bajo Ley 100/797. &
+RAIS/AFP, vigente bajo Ley 100/797. &
+Pilar 0: Colombia Mayor / Renta Básica Solidaria (Ley 2381, suspendida). Pilar 1-B: Fondo de Garantía de Pensión Mínima (Art.\ 65, Ley 100). \\
+
+Brasil &
+RGPS/INSS y RPPS, de reparto y beneficio definido. &
+No existe; el RPC es voluntario (Pilar 3). &
+Pilar 0: BPC/LOAS. Pilar 1-B: inexistente y constitucionalmente prohibido (Art.\ 201 \S\,8.\textsuperscript{o}). \\
+
+Chile &
+Nuevo Seguro Social (Ley 21.735) y antiguo sistema de reparto de ex cajas, ambos vía IPS. &
+AFP, bajo el Decreto Ley 3.500. &
+Pilar 0 y Pilar 1-B simultáneamente: PGU, administrada por IPS. \\
+
+\end{xltabular}
+
+La distinción no es sólo clasificatoria: determina por qué canal la demografía se
+convierte en riesgo fiscal. Cuando el componente no contributivo opera como
+sustituto ---cuando el beneficio asistencial resulta accesible en condiciones
+comparables al contributivo sin exigir historia de cotización---, el valor que el
+trabajador atribuye a contribuir se reduce, y con él el retorno percibido de la
+formalización. La literatura reciente sobre incentivos de formalización en la
+región documenta este mecanismo mediante indicadores compuestos que integran la
+cuña tributaria, la valoración del beneficio y los costos de cumplimiento, y
+muestra que la valoración del componente contributivo ---la riqueza previsional
+que el trabajador percibe haber acumulado--- es determinante de la decisión de
+cotizar \citep{wb2025}. La consecuencia macrofiscal es de segundo orden pero
+acumulativa: un diseño sustitutivo erosiona la base contributiva sobre la que
+descansa el financiamiento del Pilar 1, desplazando el peso hacia las rentas
+generales justamente cuando la razón de dependencia senil se duplica. El
+envejecimiento amplifica una tensión que el diseño institucional ya contiene.
+
+\subsection{Cobertura efectiva y brechas}
+
+\textbf{Esta sección documenta dos cosas distintas, y conviene separarlas con cuidado.} La primera es lo que la propia arquitectura normativa, ya desarrollada en las Secciones 3.1 y 3.2, permite anticipar sobre la cobertura efectiva sin necesidad de un solo dato estadístico: qué mecanismos institucionales \textit{tienden a} ampliar o limitar la cobertura, y por qué razón estructural. La segunda es la medición misma --- cuántas personas cotizan, qué porcentaje de la fuerza laboral es informal, qué proporción de adultos mayores recibe alguna pensión, y qué tan ancha es la brecha de género --- que no puede obtenerse de la lectura normativa y requiere fuente estadística externa. La Tabla~\ref{tab:cobertura} cierra esta sección con el resultado del llenado y el inventario de lo que aún falta.
+
+\subsubsection{Lo que la arquitectura normativa ya permite anticipar}
+
+\textbf{El diseño del Pilar 0 determina, por construcción jurídica y no por medición, un piso de cobertura de adultos mayores muy distinto entre países.} En México y Chile, el Pilar 0 (la pensión constitucional y la PGU, respectivamente) está definido por ley como un derecho casi universal por edad, condicionado únicamente por residencia y --- en el caso chileno --- por exclusión del decil de mayores ingresos. Esto significa que, con independencia de cualquier medición, la cobertura de adultos mayores en estos dos países tiende necesariamente hacia la universalidad por el solo hecho del diseño legal, no por la fortaleza del mercado laboral formal. En Costa Rica, Panamá y Colombia, en cambio, el Pilar 0 (RNC, Ley 86, Colombia Mayor/Renta Básica Solidaria) está diseñado como un programa focalizado con comprobación de medios: la cobertura de adultos mayores en estos tres países depende, en una proporción mayor que en México o Chile, de cuántas personas efectivamente cotizaron al Pilar 1 o al Pilar 2 durante su vida laboral --- es decir, depende más directamente de la tasa de informalidad histórica del país. Brasil ocupa una posición intermedia: el BPC es focalizado por ingreso familiar per cápita, pero su umbral (un cuarto de salario mínimo) es suficientemente bajo como para no operar como sustituto general del Pilar 1.
+
+\textbf{La existencia o ausencia de un mecanismo de Pilar 1-B también anticipa, estructuralmente, qué tan completa será la cobertura efectiva de quienes sí cotizaron al Pilar 2.} México y Colombia, que cuentan con garantía estatal explícita (Fondo de Pensiones para el Bienestar/Pensión Garantizada; Fondo de Garantía de Pensión Mínima), tienen un piso institucional que evita que la cobertura contributiva nominal --- estar afiliado --- se traduzca en una pensión por debajo de un umbral mínimo. Costa Rica y Panamá, que no cuentan con ese mecanismo sobre su Pilar 2 (ROPC y componente de ahorro personal, respectivamente), dependen en mayor medida de que la densidad de cotización individual sea alta; la cobertura \textit{nominal} (estar afiliado) puede no traducirse en una pensión adecuada si la densidad de cotización fue baja, y este riesgo no está mitigado por un mecanismo de garantía sobre ese pilar específico.
+
+\textbf{La fragmentación institucional del Pilar 1 es, en sí misma, un indicio --- aunque no una medición --- de heterogeneidad en la cobertura por sector.} Costa Rica documenta explícitamente regímenes especiales (Magisterio Nacional, Poder Judicial, Bomberos Permanentes) con parámetros de acceso más favorables que el régimen general del IVM, lo que típicamente se asocia con una cobertura efectiva más alta y más temprana para esos sectores específicos frente al resto de la fuerza laboral formal. Panamá documenta una segmentación por cohorte (pensionados y mayores de 35 años al 2006 en el subsistema BD; el resto en el subsistema mixto) que no es una segmentación de cobertura en sentido estricto, pero sí genera una heterogeneidad de facto en el tipo de derecho que cada cohorte puede ejercer.
+
+\textbf{La asimetría de género del caso chileno (Sección 3.1.6) es un punto en el que el marco normativo, por sí solo, cuantifica de forma parcial una brecha:} la ventana de cinco años (60 a 65) en que las mujeres pueden cobrar su pensión AFP pero no acceden aún al Seguro Social ni a la PGU es una brecha de \textit{diseño}, verificable directamente en la ley, independiente de cualquier encuesta de hogares. Es, sin embargo, una sola pieza de la brecha de género en cobertura; la medición empírica de la brecha por tipo de pensión, presentada en la Tabla~\ref{tab:cobertura}, la complementa.
+
+\textbf{En síntesis, el marco normativo predice una jerarquía cualitativa de cobertura de adultos mayores aun sin cifras: México y Chile deberían mostrar la cobertura más alta y más pareja por diseño del Pilar 0; Costa Rica debería mostrar alta cobertura contributiva por la antigüedad e integración institucional de la CCSS, pero con heterogeneidad sectorial relevante; Panamá y Colombia deberían mostrar mayor dependencia de la densidad de cotización y, por tanto, mayor sensibilidad a la informalidad histórica; y Brasil debería mostrar un perfil mixto, con el BPC como piso parcial pero no universal.} Esta jerarquía es una hipótesis derivada del diseño institucional, no un resultado medido, y debe leerse como tal frente a los datos de la Tabla~\ref{tab:cobertura}.
+
+\subsubsection{Resultado del llenado y datos aún pendientes}
+
+\textbf{La Tabla~\ref{tab:cobertura} se llenó con los datos disponibles en las bases del proyecto.} La informalidad laboral está completa para los seis países (OIT/ILOSTAT, 2025). La cobertura de adultos mayores --- desagregada en pensión contributiva y no contributiva, indicadores independientes --- y la brecha de género en cada una de ellas se obtuvieron de SEDLAC (CEDLAS y Banco Mundial) para cinco países; Chile no figura en esas bases.
+
+La cobertura contributiva de la población económicamente activa ---proporción de
+la PEA que cotiza activamente--- no se deriva de las bases utilizadas en esta
+compilación y se incorporará en el Producto 4 a partir de registros
+administrativos nacionales: CONSAR e IMSS en México, CCSS en Costa Rica, CSS en
+Panamá, Colpensiones y Superintendencia Financiera en Colombia, INSS en Brasil, y
+Superintendencia de Pensiones en Chile. Es un indicador conceptualmente distinto
+de los que sí recoge la Tabla~\ref{tab:cobertura}: las columnas de cobertura de
+65 años y más miden receptores de pensión, no cotizantes activos.
+
+\textbf{La brecha de género en cobertura, construida a partir de la desagregación por sexo de las encuestas SEDLAC, revela un patrón redistributivo nítido:} la brecha en cobertura \textit{contributiva} es positiva en los cinco países con dato (los hombres de 65 años o más reciben pensión contributiva en mayor proporción que las mujeres), mientras que la brecha en cobertura \textit{no} contributiva es negativa en los cinco (las mujeres acceden al pilar no contributivo en mayor proporción que los hombres). El signo opuesto sistemático indica que el Pilar 0 compensa parcialmente la desventaja femenina acumulada en el componente contributivo, coherente con su función descrita en las Secciones 3.1 y 3.2. Esta lectura requiere
+una precisión temporal. La cobertura de la población de 65 años o más es un
+indicador de acervo: refleja las historias laborales de cohortes nacidas
+aproximadamente entre 1935 y 1958, no las condiciones de formalización vigentes.
+No puede leerse, por tanto, como enunciado sobre los incentivos que hoy enfrentan
+hombres y mujeres al decidir su participación en el empleo formal, dimensión sobre
+la cual la evidencia reciente para la región apunta en dirección no necesariamente
+coincidente.
+
+\textbf{Los años no son homologables a uno solo entre indicadores, por lo que cada celda de la Tabla~\ref{tab:cobertura} indica su año de fuente mediante superíndice.} La informalidad corresponde a 2025; la cobertura de 65+ al último año disponible por país (2018 para México; 2022 o 2023 para el resto); y la brecha de género se homologó a 2022 para los cuatro países con dato ese año; México queda en 2018, su encuesta más reciente en estos indicadores. El dato mexicano es, además, anterior a la expansión de la Pensión para el Bienestar, por lo que subestima el estado actual del componente no contributivo.
+
+\textbf{Cuatro datos cualitativos adicionales, mencionados en el análisis anterior, conservan valor para sustentar la hipótesis de jerarquía con mayor precisión y no se derivan de estas bases:} (i) el porcentaje de afiliados del IVM costarricense que pertenece a los regímenes especiales frente al régimen general; (ii) la proporción de pensionados panameños en el subsistema exclusivamente de beneficio definido frente al mixto; (iii) el umbral efectivo de focalización del BPC brasileño como proporción de la población mayor de 65 años bajo el umbral de pobreza; y (iv) la cobertura de adultos mayores de Chile, ausente en SEDLAC, que debería completarse con registro del IPS, idealmente posterior a la PGU (2022).
+
+\begin{table}[h!]
+\centering
+\caption{Indicadores de cobertura efectiva, seis países. El superíndice indica el año de la fuente. La brecha de género se expresa en puntos porcentuales (hombres menos mujeres); un valor positivo indica ventaja masculina.}
+\label{tab:cobertura}
+\scriptsize
+\begin{tabularx}{\textwidth}{P{1.55cm}YYYYY}
+\toprule
+País & Informalidad laboral & Cob.\ 65+: contributiva & Cob.\ 65+: no contributiva & Brecha género: contributiva (pp) & Brecha género: no contributiva (pp) \\
+\midrule
+México &
+56.9\,\textsuperscript{2025} &
+29.9\,\textsuperscript{2018} &
+44.9\,\textsuperscript{2018} &
+$+16.9$\,\textsuperscript{2018\,(c)} &
+$-12.3$\,\textsuperscript{2018\,(c)} \\
+
+Costa Rica &
+36.1\,\textsuperscript{2025} &
+51.8\,\textsuperscript{2023} &
+19.2\,\textsuperscript{2023} &
+$+23.1$\,\textsuperscript{2022} &
+$-6.4$\,\textsuperscript{2022} \\
+
+Panamá &
+55.7\,\textsuperscript{2025} &
+52.5\,\textsuperscript{2022} &
+25.1\,\textsuperscript{2022} &
+$+12.2$\,\textsuperscript{2022} &
+$-8.5$\,\textsuperscript{2022} \\
+
+Colombia &
+56.0\,\textsuperscript{2025} &
+28.6\,\textsuperscript{2023} &
+24.0\,\textsuperscript{2023} &
+$+4.7$\,\textsuperscript{2022} &
+$-0.4$\,\textsuperscript{2022} \\
+
+Brasil &
+35.6\,\textsuperscript{2025} &
+81.0\,\textsuperscript{2022\,(a)} &
+5.9\,\textsuperscript{2022} &
+$+5.0$\,\textsuperscript{2022} &
+$-1.3$\,\textsuperscript{2022} \\
+
+Chile &
+26.4\,\textsuperscript{2025} &
+\textit{Pend.}\textsuperscript{(b)} &
+\textit{Pend.}\textsuperscript{(b)} &
+\textit{Pend.}\textsuperscript{(b)} &
+\textit{Pend.}\textsuperscript{(b)} \\
+\bottomrule
+\end{tabularx}
+
+\smallskip
+\footnotesize
+\textit{Fuentes:} Informalidad laboral: OIT, ILOSTAT (empleo informal sobre empleo total), último dato disponible 2025. Cobertura de adultos mayores y brecha de género: elaboración propia a partir de SEDLAC (CEDLAS y Banco Mundial), sobre encuestas de hogares nacionales, indicadores \texttt{pensionista\_cont\_65\_mas} y \texttt{pensionista\_nocont\_65\_mas} (población de 65 años o más). Las columnas de cobertura contributiva y no contributiva de 65+ son \textbf{independientes y no sumables}: una misma persona puede percibir ambos tipos de pensión, por lo que su suma no equivale a la ``cobertura total de 65+''.
+
+\smallskip
+\textit{Año de la brecha de género:} se homologó a 2022 para los cuatro países con dato disponible ese año (Brasil, Colombia, Costa Rica y Panamá). \textsuperscript{(c)}~México no dispone de encuesta SEDLAC posterior a 2018 en estos indicadores, por lo que su brecha se reporta para 2018; el valor es además anterior a la expansión de la Pensión para el Bienestar y debe leerse con esa salvedad.
+
+\smallskip
+\textit{Lectura de la brecha:} la brecha en cobertura \textit{contributiva} es positiva en los cinco países (ventaja masculina), máxima en Costa Rica ($+23.1$ pp) y México ($+16.9$ pp) y mínima en Colombia ($+4.7$ pp) y Brasil ($+5.0$ pp). La brecha en cobertura \textit{no} contributiva es negativa en los cinco (ventaja femenina), con la mayor compensación femenina en México ($-12.3$ pp) y Panamá ($-8.5$ pp). El signo opuesto sistemático indica que el componente no contributivo compensa parcialmente la desventaja femenina del componente contributivo.
+
+\smallskip
+\textit{Notas:} \textsuperscript{(a)}~Brasil: la cobertura contributiva de la PEA activa no se reporta en las bases utilizadas. El RGPS es de afiliación obligatoria para todo trabajador formal y el piso constitucional de un salario mínimo (Art.\ 201 de la Constitución Federal de 1988), junto con la cobertura rural de hecho, sostienen una cobertura efectiva de 65+ muy alta (81.0\,\% por vía contributiva en 2022, la mayor de la muestra), pese a una informalidad laboral del 35.6\,\%. \textsuperscript{(b)}~Chile: no disponible en las bases SEDLAC utilizadas (el archivo de cobertura excluye a Chile); debe completarse con registro administrativo del IPS o estadística de la Superintendencia de Pensiones, idealmente con dato posterior a la PGU (2022).
+
+\smallskip
+\textit{Anotación de contraste (hipótesis de la Sección 3.3.1):} con los datos disponibles, México es el país con mayor peso del componente \textit{no} contributivo en la cobertura de 65+ (44.9\,\% frente a 29.9\,\% contributiva; dato 2018, anterior a la expansión de la Pensión para el Bienestar, por lo que subestima el estado actual), consistente con la hipótesis de dependencia del Pilar~0. Brasil es el caso opuesto: cobertura casi enteramente contributiva (81.0\,\%), coherente con el RGPS de reparto. Costa Rica, Panamá y Colombia muestran perfiles mixtos sensibles a la densidad de cotización, según lo anticipado. Chile no puede contrastarse por ausencia de dato.
+\end{table}
+
+\newpage
+
+% =======================================================================
+\section{Financiamiento del gasto en salud}
+% =======================================================================
+
+\subsection{Esquemas de financiamiento por país}
+\label{sec:esquemas-salud}
+
+El gasto total en salud de los seis países, medido como porcentaje del PIB, se ubica
+en un rango que va del 5{,}5\,\% (México) al 10{,}2\,\% (Chile) en 2023 (WHO
+GHED; véase la Tabla~\ref{tab:salud}). La cifra agregada, sin embargo, dice poco
+sobre la naturaleza del riesgo macrofiscal asociado: lo relevante es la composición
+de ese gasto entre las fuentes principales --gasto público (presupuestario más
+contributivo), gasto privado prepago y gasto de bolsillo-- y, dentro del gasto
+público, la división entre contribuciones a la seguridad social y rentas generales.
+
+La Tabla~\ref{tab:salud} presenta esa composición para los seis países.
+
+\begin{table}[h!]
+\centering
+\caption{Composición del gasto en salud, seis países (\% del PIB, 2023).}
+\label{tab:salud}
+\footnotesize
+
+\textbf{Panel A. Agregados del gasto en salud (GGHE-D / PVT-D)}
+
+\smallskip
+\begin{tabular}{p{1.8cm}p{1.9cm}p{2.2cm}p{2.2cm}p{1.9cm}}
+\toprule
+País & Gasto total & Gasto público total & Gasto privado total & Gasto de bolsillo \\
+\midrule
+México      & 5.50  & 2.68 & 2.83 & 2.27 \\
+Costa Rica  & 6.87  & 4.61 & 2.25 & 1.66 \\
+Panamá      & 8.33  & 4.27 & 4.00 & 3.37 \\
+Colombia    & 8.16  & 5.74 & 2.42 & 1.19 \\
+Brasil      & 9.73  & 4.29 & 5.44 & 2.55 \\
+Chile       & 10.17 & 5.25 & 4.92 & 3.52 \\
+\bottomrule
+\end{tabular}
+
+\medskip
+\begin{minipage}{0.95\textwidth}
+\textbf{Panel B. Desagregación del gasto público por esquema de financiamiento
+(SHA 2011).} Los valores de este panel proceden de la clasificación por esquema de
+financiamiento de GHED y \textbf{no son estrictamente aditivos respecto al agregado
+del Panel A}: en Colombia y Chile una fracción del esquema contributivo obligatorio
+se clasifica fuera del perímetro del gobierno general, por lo que sus valores
+contributivos constituyen una cota superior. La suma reproduce el gasto público
+total con exactitud en México y Brasil y con desviación menor a 0{,}25 pp en Costa
+Rica y Panamá.
+\end{minipage}
+
+\smallskip
+\begin{tabular}{p{1.8cm}p{3.2cm}p{3.4cm}}
+\toprule
+País & Contributivo (HF.1.2) & Presupuestario (HF.1.1) \\
+\midrule
+México      & 1.40 & 1.27 \\
+Costa Rica  & 4.67 & 0.19 \\
+Panamá      & 2.12 & 2.27 \\
+Colombia    & 5.99 & 0.27 \\
+Brasil      & 0.07 & 4.23 \\
+Chile       & 5.83 & 0.20 \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\footnotesize
+Fuente: WHO Global Health Expenditure Database (GHED), 2023 (año más reciente común a
+los seis países). Gasto total = Current Health Expenditure (CHE); gasto público total
+= Domestic General Government Health Expenditure (GGHE-D); gasto privado total =
+Domestic Private Health Expenditure (PVT-D); contributivo = esquemas de seguro social
+obligatorio (HF.1.2); presupuestario = esquemas gubernamentales por rentas generales
+(HF.1.1); gasto de bolsillo = OOPS (HF.3), todos de la misma base GHED (clasificación
+SHA 2011). Identidad contable del Panel A verificada: total = público total + privado
+total (desviación máxima 0{,}10 pp por redondeo). Estas cifras no son comparables con
+las de la Tabla~\ref{tab:ultimo-gfs}, de cobertura de gobierno central; véase la
+reconciliación al inicio de la Sección~\ref{sec:gfs-funcional}.
+\end{table}
+
+Tres patrones merecen comentario sustantivo:
+
+\textbf{Brasil es el caso atípico de la región}. La participación del gasto público
+financiado con rentas generales (vía SUS) es proporcionalmente la más alta del
+grupo, en línea con el modelo Beveridge consolidado por la Constitución de 1988.
+La participación del componente contributivo es residual respecto al sistema de
+acceso universal. El SUS coexiste con una red privada (\textit{saúde suplementar})
+que cubre a una fracción significativa de la población, mayoritariamente vía planes
+vinculados al empleo formal, y cuya magnitud precisa se documentará con estadística
+de la Agência Nacional de Saúde Suplementar.
+
+\textbf{Costa Rica integra dentro de la CCSS la totalidad del esquema contributivo
+de salud}. El financiamiento es dominantemente contributivo, vía el Seguro de
+Enfermedad y Maternidad de la CCSS. La cobertura del Estado (mediante la modalidad
+\textit{cobertura por el Estado}) extiende el aseguramiento a personas en pobreza
+sin capacidad contributiva, con cargo al presupuesto general.
+
+\textbf{México, Panamá, Colombia y Chile presentan estructuras
+mixtas/segmentadas} con ponderaciones distintas del componente contributivo y el
+presupuestario. México tiene IMSS e ISSSTE financiados contributivamente para la
+población formal, e IMSS-Bienestar (sucesor de Seguro Popular e INSABI) financiado
+con rentas generales para la población sin cotización. Panamá distingue entre la
+CSS (contributiva) y la red MINSA (presupuestaria, residual). Colombia organiza el
+sistema en dos regímenes (contributivo y subsidiado) administrados por las EPS y
+articulados por una unidad de pago por capitación. Chile combina FONASA (público,
+financiado con cotizaciones obligatorias y presupuesto general) e ISAPREs
+(privados, financiados con cotizaciones individuales). El dato de gasto confirma el
+contraste de nivel: México, con la estructura más dependiente de rentas generales
+para la población no cotizante, registra el gasto público en salud más bajo del
+grupo (2{,}68\,\% del PIB), frente a Colombia y Chile (5{,}74\,\% y 5{,}25\,\%).
+
+El gasto de bolsillo --la fracción que los hogares pagan directamente por servicios
+de salud-- es el indicador más directo de la insuficiencia o segmentación de la
+cobertura formal. Su nivel varía de forma marcada en el grupo: Chile (3{,}52\,\% del
+PIB) y Panamá (3{,}37\,\%) registran la mayor carga directa sobre los hogares, pese a
+tener el gasto total más alto de la muestra, lo que indica una protección financiera
+incompleta a pesar del volumen de recursos; Colombia, en el extremo opuesto
+(1{,}19\,\%), combina alto gasto público contributivo con bajo desembolso directo, el
+patrón más favorable en protección financiera del grupo. México (2{,}27\,\%) sostiene
+un bolsillo elevado en relación con su bajo gasto público, coherente con la
+segmentación entre población con y sin seguridad social.
+
+\subsection{Organización institucional}
+
+La dimensión institucional del gasto en salud puede organizarse, para los fines de
+este análisis, alrededor de tres ejes: \textit{quién cubre a quién} (segmentación),
+\textit{cómo se financia la cobertura ampliada} (universalización) y
+\textit{cómo se articula la salud con las pensiones} (integración).
+
+\subsubsection{Segmentación: quién cubre a quién}
+
+En todos los países del grupo, salvo Brasil, la cobertura formal de salud está
+segmentada según condición laboral o sector. La segmentación tiene tres
+modalidades:
+
+\textbf{Segmentación por condición contributiva}: la población formal ocupada (y
+sus dependientes) accede a una red contributiva; la población sin cotización
+accede a una red presupuestaria distinta. México (IMSS/ISSSTE frente a IMSS-Bienestar),
+Panamá (CSS frente a MINSA) y Colombia (régimen contributivo frente a régimen subsidiado del
+SGSSS) son los casos paradigmáticos. La calidad y oportunidad de los servicios
+puede ser distinta entre las redes, lo que genera un \textit{costo no monetario} de
+la informalidad que se suma al monetario.
+
+\textbf{Segmentación por sector}: en varios países, los trabajadores de
+fuerzas armadas, fuerzas de seguridad, empresas estatales estratégicas (PEMEX en
+México) y/o sector público disponen de regímenes propios de cobertura, con redes y
+condiciones distintas a las del régimen general. Este segmento tiende a ser
+financieramente generoso y a generar pasivos contingentes específicos.
+
+\textbf{Segmentación por elección regulada}: el caso chileno es el más explícito.
+Los cotizantes pueden elegir entre FONASA y una ISAPRE, lo que genera una selección
+adversa estructural (la ISAPRE concentra cotizantes de mayor ingreso y menor riesgo,
+FONASA absorbe el resto y financia con presupuesto general la diferencia). El
+sistema colombiano admite una variante regulada de elección entre EPS dentro de
+ambos regímenes.
+
+La segmentación tiene tres consecuencias macrofiscales relevantes: (i) genera
+pasivos contingentes asimétricos según la dirección esperada de los flujos
+poblacionales; (ii) produce ineficiencia administrativa por duplicación de redes;
+(iii) erosiona el incentivo a la formalización cuando la red presupuestaria provee
+servicios de calidad cercana a la red contributiva sin requerir cotización.
+
+\subsubsection{Universalización y su financiamiento}
+
+Brasil, con el SUS, es el caso de mayor avance en la universalización del acceso
+en términos de derecho legal: la Constitución de 1988 establece la salud como
+derecho universal y deber del Estado, y el SUS provee atención sin condicionamiento
+contributivo. El financiamiento, sin embargo, está sujeto a presiones recurrentes:
+los recursos efectivamente destinados al SUS son objeto de las negociaciones
+fiscales del marco general, cuyo régimen de límite de gasto fue sustituido en 2023
+por un nuevo marco fiscal con reglas de crecimiento del gasto distintas a las de la
+Emenda Constitucional 95/2016.
+
+México avanzó hacia esquemas de cobertura ampliada vía Seguro Popular (2003), que
+fue sustituido por el INSABI en 2020 y por el IMSS-Bienestar en 2023. La
+secuencia institucional es ilustrativa: cada rediseño modificó la arquitectura de
+financiamiento sin alcanzar un equilibrio estable entre cobertura, calidad y
+sostenibilidad fiscal.
+
+Costa Rica logra cobertura universal de hecho dentro del marco contributivo de la
+CCSS, complementada por la cobertura por el Estado para personas en pobreza, sin
+necesidad de un sistema universal paralelo.
+
+Panamá y Colombia mantienen la dualidad contributivo/presupuestario explícita.
+
+Chile mantiene la segmentación FONASA/ISAPRE con elección regulada y subsidios
+implícitos al sistema FONASA.
+
+La pregunta analítica relevante --en línea con la discusión de la
+Sección~3.2-- es si los esquemas de cobertura ampliada por la vía no contributiva
+operan como complemento o como sustituto de la cobertura contributiva. La
+respuesta condiciona la trayectoria fiscal: en sistemas de cobertura ampliada
+sustitutiva, la base contributiva tenderá a contraerse en favor de la
+presupuestaria, con efecto sobre la composición --no necesariamente sobre el
+nivel total-- del gasto público en salud.
+
+El mecanismo es el mismo que en pensiones, con una diferencia que lo agrava: en
+salud el beneficio es de disfrute inmediato y no diferido, de modo que la
+comparación entre la red contributiva y la presupuestaria es directamente
+observable para el trabajador. Cuando la red no contributiva provee servicios de
+calidad y oportunidad cercanas sin exigir cotización, el diferencial de valor que
+sostiene la decisión de formalizarse se estrecha ---y, a diferencia del caso
+previsional, sin el descuento intertemporal que atenúa la percepción del beneficio
+pensional. La segmentación descrita en la Sección 4.2.1 opera así en dos
+direcciones simultáneas: genera un costo no monetario de la informalidad donde la
+brecha de calidad es amplia, y un incentivo a permanecer informal donde esa brecha
+se cierra sin contrapartida contributiva.
+
+\subsubsection{Integración con el sistema de pensiones}
+
+La integración o separación institucional entre el aseguramiento contributivo de
+salud y el de pensiones es un detalle de gobernanza con consecuencias prácticas.
+En Costa Rica, la CCSS administra ambos: la cotización del trabajador formal cubre
+simultáneamente IVM (pensiones) y SEM (salud). En México, IMSS gestiona ambos
+seguros, igual que ISSSTE para el sector público. En Panamá, la CSS también los
+integra. En Colombia, el SGSSS de salud y el sistema general pensional son
+institucionalmente separados aunque comparten recaudación. En Brasil, INSS
+(pensiones) y SUS (salud) están institucionalmente separados, y el SUS no opera con
+lógica contributiva. En Chile, AFPs y FONASA/ISAPREs son sistemas separados.
+
+La integración produce dos efectos relevantes para el análisis:
+
+\begin{itemize}
+  \item \textbf{Sobre la valoración de la cotización}: cuando el trabajador percibe
+        que su cotización compra un paquete combinado (pensión + salud), la
+        riqueza de seguridad social percibida es el valor del paquete, mayor que
+        la suma de los valores percibidos individuales si los componentes están
+        separados.
+  \item \textbf{Sobre los flujos financieros internos}: una institución integrada
+        puede arbitrar (formal o informalmente) los flujos entre sus seguros, y
+        absorbe presiones de uno con superávits del otro. Esto puede
+        ocultar transitoriamente desbalances actuariales pero también provee un
+        margen de flexibilidad operativa.
+\end{itemize}
+
+\subsection{Gasto en salud y envejecimiento}
+\label{sec:salud-envejecimiento}
+
+\subsubsection{Perfil etario del gasto en salud}
+
+El gasto en salud per cápita exhibe, en todos los países con datos disponibles, un
+perfil pronunciadamente creciente con la edad. El gasto promedio de una persona en
+el grupo de 70 años o más es típicamente entre tres y cinco veces el gasto promedio
+de una persona en edad activa.\footnote{Rango consistente con los perfiles de gasto
+en salud por edad de la metodología National Transfer Accounts y con las cuentas
+nacionales de salud por grupo etario disponibles para la región. El cálculo
+específico para los seis países del estudio se incorporará en el Producto 4.} Este
+patrón se debe a la concentración de morbilidad crónica y de procedimientos de alta
+complejidad en las edades avanzadas.
+
+La consecuencia mecánica es que un cambio en la estructura por edades, a costo por
+edad constante, eleva el gasto agregado. Si la estructura del gasto
+por edad permanece estable y la proporción de adultos mayores se duplica al
+horizonte 2050, el gasto agregado aumenta en una magnitud que --aunque no
+duplicada-- es significativa y de carácter estructural, no transitorio.
+
+\subsubsection{La doble presión: envejecimiento más transición epidemiológica}
+
+La presión demográfica sobre el gasto en salud no opera aisladamente. Coincide
+con la transición epidemiológica regional, que ha desplazado el peso de la
+morbilidad desde las enfermedades transmisibles y maternoinfantiles hacia las
+enfermedades crónicas no transmisibles (cardiovasculares, oncológicas,
+metabólicas, neurológicas degenerativas) y hacia las condiciones de salud mental.
+Este desplazamiento es, en parte, expresión del propio envejecimiento --la mayor
+incidencia de crónicas a edades avanzadas-- pero también responde a cambios en
+los patrones de exposición (urbanización, cambios alimentarios, sedentarismo),
+con incidencia creciente incluso en cohortes en edad activa.
+
+La transición epidemiológica modifica la \textit{intensidad} del gasto, no solo su
+nivel. Las enfermedades crónicas son, por construcción, prolongadas: requieren
+seguimiento continuo, medicación de largo plazo y, en sus etapas avanzadas,
+servicios de alta complejidad. La medicina personalizada y los biológicos de alto
+costo, que son los frentes terapéuticos más activos para varias de estas
+patologías, agregan un componente de inflación tecnológica al gasto que es
+independiente del envejecimiento agregado.
+
+La combinación de los dos factores --más adultos mayores, atendidos sobre una
+canasta de servicios más cara por unidad-- es lo que define el perfil específico
+de la presión que la transición demográfica ejerce sobre los sistemas de salud de
+la región. La Sección~\ref{sec:sostenibilidad} de este documento establece el punto
+de partida cuantitativo ---trayectoria demográfica, posición fiscal observada y
+proyección inercial de los agregados--- sobre el cual esta presión puede evaluarse.
+La proyección condicionada al envejecimiento, bajo supuestos explícitos sobre la
+evolución de la canasta de servicios y de la estructura por edades, corresponde al
+Producto 4.
+
+\subsubsection{Implicaciones provisionales para el riesgo macrofiscal}
+
+El análisis institucional permite anticipar tres conclusiones que el análisis
+cuantitativo posterior debiera contrastar:
+
+\begin{enumerate}
+  \item \textbf{La presión demográfica sobre la salud es proporcionalmente mayor
+        que sobre las pensiones en el horizonte de mediano plazo}. Las pensiones
+        responden a la cohorte que ha completado historia contributiva; el gasto
+        en salud responde a toda la cohorte adulta mayor con independencia de su
+        historia contributiva. En sistemas con cobertura universal de salud
+        (Brasil, y de hecho en varios otros países por la vía residual), el
+        crecimiento de la cohorte mayor se traduce en gasto público con
+        independencia de la formalización laboral.
+  \item \textbf{El componente de inflación tecnológica es un riesgo no
+        demográfico que se superpone al demográfico}. El crecimiento del gasto
+        en salud por unidad excede en general el crecimiento del PIB (la conocida
+        \textit{ley de Baumol} y la inflación específica de servicios médicos),
+        un factor de presión adicional que no se reduce al envejecimiento.
+  \item \textbf{La organización institucional condiciona el grado de
+        absorción}. Los sistemas integrados (CCSS) tienen capacidad de
+        amortiguamiento dentro del propio sistema; los sistemas segmentados producen
+        traspasos de población entre redes que se traducen en variaciones
+        de gasto público no anticipadas en la programación presupuestaria.
+\end{enumerate}
+
+\newpage
+% =======================================================================
+
+\section{Sostenibilidad demográfica y fiscal}
+\label{sec:sostenibilidad}
+
+En las secciones anteriores se estableció que el impacto fiscal del envejecimiento no obedece una lógica lineal:
+está mediado por el diseño paramétrico de cada sistema, por su madurez institucional
+y por la cobertura efectiva que produce. Esa lectura institucional identificó
+\emph{dónde y cómo} puede materializarse la presión, pero no su magnitud ni su ritmo. Esta
+sección aporta la dimensión cuantitativa: documenta la trayectoria demográfica que
+define el marco de referencia poblacional, describe la posición fiscal de partida de los seis
+países y proyecta la evolución de mediano plazo de los agregados fiscales relevantes.
+
+Primero la demografía, porque es la variable
+más predecible del sistema y opera como restricción exógena sobre el resto. Después
+la situación fiscal descriptiva, que fija el punto de partida. Finalmente las
+proyecciones, que extienden la dinámica observada bajo supuestos explícitos y
+acotados. Ninguna de las tres etapas pretende sustituir la proyección actuarial
+por sistema; el objetivo es definir la situación fiscal para absorber
+la presión demográfica documentada.
+
+% ---------------------------------------------------------------------
+\subsection{Trayectoria demográfica: proyecciones de UN World Population Prospects}
+% ---------------------------------------------------------------------
+
+Las series demográficas de esta sección provienen de \textbf{United Nations, World
+Population Prospects 2024, revisión mediana}. La distinción metodológica es
+importante y se mantiene explícita a lo largo del documento: hasta 2023 los valores
+corresponden a estimaciones sobre datos observados; a partir de 2024 son proyección
+de la variante mediana de la División de Población de Naciones Unidas. Sobre estas
+series \emph{no} se ajusta modelo econométrico propio. La proyección demográfica de
+Naciones Unidas incorpora supuestos explícitos y auditables sobre fecundidad,
+mortalidad y migración, con una estructura por cohortes que un modelo univariado de
+series de tiempo no puede replicar; remodelarla sería redundante y metodológicamente
+inferior al insumo original. La demografía entra aquí como marco de referencia, no
+como objeto de estimación.
+
+La Figura~\ref{fig:demografia} presenta las dos series que sintetizan la transición:
+la tasa global de fecundidad y la razón de dependencia senil. Su lectura conjunta
+ordena el argumento. La fecundidad cae de forma sostenida y sin inflexión en los seis
+países, y ya se sitúa por debajo del nivel de reemplazo (2,1 hijos por mujer) en cinco
+de ellos, con Panamá en el umbral. La dependencia senil responde a esa caída con el
+rezago que impone la propia estructura por edades —los adultos mayores de 2050 ya
+nacieron— y es precisamente ese rezago el que hace que su trayectoria sea, en el
+horizonte de este análisis, prácticamente independiente de cualquier cambio de política
+que pudiera adoptarse hoy.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{graficas/fig_demografia.png}
+  \caption{Tasa global de fecundidad y razón de dependencia senil, seis países,
+  1990--2050. Trazo continuo: estimación (hasta 2023). Trazo discontinuo: proyección
+  de la variante mediana. Fuente: UN World Population Prospects 2024.}
+  \label{fig:demografia}
+\end{figure}
+
+La Tabla~1 ya cuantificó el resultado: entre 2025 y 2050 los seis países
+multiplican su razón de dependencia senil por un factor de 2,0 a 2,2, con trayectoria
+estrictamente ascendente año a año. Conviene subrayar aquí una implicación que la
+tabla no hace evidente por sí sola. La dependencia juvenil sigue trayectorias
+decrecientes en los seis casos. El tramo final del
+bono demográfico es el período en que la relación entre población en edad de trabajar y población dependiente alcanza su punto más favorable, y por tanto el período de mayor
+capacidad relativa para generar ingresos tributarios, acumular reservas previsionales o reducir deuda pública. La sección fiscal que sigue evalúa en qué medida los seis países están utilizando esa ventana.
+
+% ---------------------------------------------------------------------
+\subsection{Posición fiscal: análisis descriptivo}
+% ---------------------------------------------------------------------
+
+El análisis fiscal se organiza en torno a cinco indicadores, todos expresados como
+porcentaje del PIB. Tres describen la posición fiscal agregada —ingresos del gobierno, balance primario y deuda neta del gobierno— y provienen del
+\textbf{Fondo Monetario Internacional, World Economic Outlook 2025}, con cobertura 2000--2024. Dos describen el gasto en las funciones directamente expuestas al envejecimiento —salud y pensiones— y provienen de la base de
+\textbf{gasto público por función de CEPAL/FMI-GFS}, con cobertura de gobierno central
+y disponibilidad que termina entre 2017 y 2020 según el país.
+
+Se emplea deuda neta y no bruta porque descuenta los activos financieros del sector
+público, entre ellos las reservas de los regímenes previsionales de capitalización
+colectiva, cuya magnitud difiere sustancialmente entre los seis países y
+distorsionaría la comparación de posición fiscal si se ignorara. La contrapartida
+es que la deuda neta es menos comparable internacionalmente que la bruta, por la
+heterogeneidad en la valuación de activos.
+
+Los tres agregados del WEO forman un sistema contable articulado y por eso se presentan
+juntos: los ingresos miden la capacidad de recaudación; el balance primario, el resultado de la gestión corriente antes del servicio de la deuda; y la deuda neta, el
+resultado acumulado de esa gestión más el efecto de las condiciones financieras. Un balance primario deficitario sostenido se traduce en acumulación de deuda neta, y ésta
+determina el margen disponible para absorber presiones futuras de gasto. La
+incorporación de la deuda neta es la que permite conectar la fotografía de corto plazo
+con la restricción intertemporal que la demografía impone.
+
+Dos advertencias de medición condicionan la lectura y se mantienen vigentes en todo el
+análisis posterior. Primera: en el WEO los valores de 2024 son estimación del FMI en
+Brasil, Costa Rica y Panamá, y dato observado en Chile, Colombia y México. Segunda, más relevante: el gasto funcional tiene cobertura de \emph{gobierno central}. En los
+países donde salud y pensiones se financian principalmente a través de instituciones de
+seguridad social con autonomía presupuestaria —la CCSS en Costa Rica, la CSS en Panamá,
+y de forma parcial IMSS e ISSSTE en México— los niveles registrados subestiman el gasto
+público efectivo en esas funciones. Las series son internamente consistentes en el
+tiempo, que es la propiedad que el análisis de series de tiempo requiere, pero sus
+niveles no son directamente comparables entre países sin esta salvedad.
+
+\subsubsection{Agregados fiscales}
+
+Las Figuras~\ref{fig:ingresos} a~\ref{fig:deuda} presentan la evolución de los tres agregados del WEO. La heterogeneidad de niveles es el primer rasgo a destacar: Brasil recauda de forma sostenida entre 35 y 40\,\% del PIB, mientras Costa Rica y Panamá se
+sitúan en el rango de 13 a 17\,\%. Esta diferencia de más de veinte puntos porcentuales
+del PIB en capacidad de recaudación es determinante de la capacidad de absorción del choque demográfico, y refuerza el punto planteado en la
+Sección 2.4 sobre el envejecimiento con bases tributarias estrechas.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth]{graficas/fig_ingresos.png}
+  \caption{Ingresos del gobierno general (\% del PIB), 2000--2024.
+  Fuente: FMI, World Economic Outlook, abril de 2025.}
+  \label{fig:ingresos}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth]{graficas/fig_balance.png}
+  \caption{Balance primario del gobierno general (\% del PIB), 2000--2024.
+  Fuente: FMI, World Economic Outlook, abril de 2025.}
+  \label{fig:balance}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth]{graficas/fig_deuda.png}
+  \caption{Deuda neta del gobierno general (\% del PIB), 2000--2024.
+  Fuente: FMI, World Economic Outlook, abril de 2025.}
+  \label{fig:deuda}
+\end{figure}
+
+El balance primario muestra el comportamiento procíclico esperable: mínimos históricos en 2020--2021 asociados al choque sanitario. La recuperación
+posterior ha sido parcial y desigual. La deuda neta, en cambio, exhibe una trayectoria
+ascendente que no revierte con la misma velocidad: el nivel alcanzado tras la pandemia
+se consolida en la mayoría de los casos, y en 2024 supera el 50\,\% del PIB en cuatro de
+los seis países.
+
+La Tabla~\ref{tab:ultimo-weo} sintetiza la posición en el último año disponible. La variación se reporta como \emph{diferencia en puntos porcentuales} respecto al año previo, no como tasa de crecimiento: al estar las series ya expresadas en porcentaje del
+PIB, el cambio en puntos porcentuales es la métrica interpretable, y en el caso del balance primario es además la única viable, dado que la serie cruza el cero.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Agregados fiscales en 2024 y variación respecto a 2023
+  (\% del PIB; variación en puntos porcentuales).}
+  \label{tab:ultimo-weo}
+  \begin{tabular}{lcccccc}
+    \toprule
+    & \multicolumn{2}{c}{Ingresos} & \multicolumn{2}{c}{Balance primario}
+    & \multicolumn{2}{c}{Deuda neta} \\
+    \cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+    País & 2024 & $\Delta$ & 2024 & $\Delta$ & 2024 & $\Delta$ \\
+    \midrule
+    Brasil     & 38.8 & $+1.2$ & $-0.3$ & $+1.8$ & 61.5 & $+1.1$ \\
+    Chile      & 23.7 & $-1.4$ & $-2.0$ & $-0.1$ & 25.8 & $+2.6$ \\
+    Colombia   & 28.2 & $-4.0$ & $-0.8$ & $-1.4$ & 53.2 & $+5.1$ \\
+    Costa Rica & 15.1 & $-0.2$ & $+1.1$ & $-0.5$ & 58.9 & $-0.3$ \\
+    México     & 24.6 & $+0.4$ & $+0.2$ & $-1.3$ & 51.4 & $+4.7$ \\
+    Panamá     & 15.5 & $-2.0$ & $-4.5$ & $-3.1$ & 40.2 & $+5.8$ \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{2pt}
+  \footnotesize
+  Fuente: FMI, World Economic Outlook, abril de 2025. Los valores de 2024 son
+  estimación del FMI en Brasil, Costa Rica y Panamá, y observados en Chile, Colombia
+  y México.
+\end{table}
+
+El patrón de 2024 merece atención. Cinco de los seis países registran deterioro del
+balance primario respecto a 2023, y cinco de seis aumentan su deuda neta. Los casos de
+Panamá y Colombia son los más pronunciados: Panamá combina una caída de ingresos de 2,0 puntos con un deterioro del balance primario de 3,1 puntos y un aumento de deuda neta de 5,8 puntos en un solo ejercicio; Colombia registra la mayor contracción de
+ingresos de la muestra (4,0 puntos) junto con un aumento de deuda de 5,1 puntos. Este deterioro ocurre en la fase en que la dependencia senil todavía se encuentra en niveles bajos respecto a su trayectoria proyectada, lo que significa que el punto de partida
+fiscal se está debilitando precisamente durante la ventana en que sería más favorable fortalecerlo.
+
+\subsubsection{Gasto en salud y pensiones}
+\label{sec:gfs-funcional}
+
+Antes de leer estas series conviene reconciliarlas con las de la
+Sección~\ref{sec:esquemas-salud}. Los niveles de gasto público en salud que aquí se
+reportan son sistemáticamente inferiores a los de la Tabla~\ref{tab:salud} porque
+miden cosas distintas: la Tabla~\ref{tab:salud} recoge el gasto público total en
+salud según la clasificación GHED de la Organización Mundial de la Salud, que
+incorpora los esquemas de seguro social obligatorio con independencia de su
+ubicación institucional; las series de esta sección proceden de la base de gasto
+por función de CEPAL/FMI-GFS con \textbf{cobertura de gobierno central}, que
+excluye a las instituciones de seguridad social con autonomía presupuestaria. La
+brecha es mayor donde esa autonomía es mayor: Costa Rica registra 4,61\,\% del PIB
+en la Tabla~\ref{tab:salud} y 0,69\,\% en la Tabla~\ref{tab:ultimo-gfs}, diferencia
+que corresponde casi enteramente al Seguro de Enfermedad y Maternidad de la CCSS;
+Panamá presenta la misma discrepancia por la CSS, y México una versión atenuada por
+el IMSS y el ISSSTE. \textbf{Los niveles de esta sección no deben citarse como
+medida del gasto público en salud de estos países; su utilidad es la consistencia
+interna en el tiempo, que es la propiedad que requiere el análisis de series que
+sigue.}
+
+Las Figuras~\ref{fig:salud} y~\ref{fig:pensiones} presentan el gasto en las dos
+funciones directamente expuestas al envejecimiento. La tendencia es creciente en la
+mayoría de los países, con dos casos destacados: Chile, cuyo gasto público en salud
+pasa de 1,8 a 6,0\,\% del PIB entre 1990 y 2020, y México, cuyo gasto en pensiones
+crece hasta 3,0\,\% del PIB en 2020,
+reflejo de la maduración del régimen de transición documentado en la Sección 3.1.1. Brasil presenta el nivel más alto de la muestra en pensiones (8,8\,\% del
+PIB), consistente con un sistema de reparto de cobertura amplia y beneficio definido.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth]{graficas/fig_salud.png}
+  \caption{Gasto público en salud (\% del PIB), gobierno central.
+  Fuente: CEPAL/FMI-GFS, gasto público por función.}
+  \label{fig:salud}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth]{graficas/fig_pensiones.png}
+  \caption{Gasto público en pensiones (\% del PIB), gobierno central.
+  Serie construida como suma de las funciones \emph{edad avanzada} y
+  \emph{enfermedad e incapacidad} donde la cobertura de la segunda lo permite;
+  en caso contrario, sólo \emph{edad avanzada}.
+  Fuente: CEPAL/FMI-GFS, gasto público por función.}
+  \label{fig:pensiones}
+\end{figure}
+
+La Tabla~\ref{tab:ultimo-gfs} reporta el último dato disponible y su variación. A diferencia de los agregados del WEO, aquí el año de corte difiere entre países, y en cuatro de los seis casos corresponde a 2020. Esto implica que la variación reportada captura el choque sanitario y no una tendencia estructural: los incrementos de salud en
+Brasil (0,52 puntos) y Chile (0,87 puntos) reflejan la respuesta fiscal a la pandemia, no un cambio de régimen de gasto. La interpretación estructural de estas series debe
+apoyarse en la trayectoria completa de las Figuras~\ref{fig:salud} y~\ref{fig:pensiones}, no en la última variación anual.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Gasto en salud y pensiones: último año disponible y variación respecto al
+  año previo (\% del PIB; variación en puntos porcentuales).}
+  \label{tab:ultimo-gfs}
+  \begin{tabular}{lccccc}
+    \toprule
+    & & \multicolumn{2}{c}{Salud} & \multicolumn{2}{c}{Pensiones} \\
+    \cmidrule(lr){3-4}\cmidrule(lr){5-6}
+    País & Año & Nivel & $\Delta$ & Nivel & $\Delta$ \\
+    \midrule
+    Brasil     & 2020 & 2.67 & $+0.52$ & 8.83 & $+0.45$ \\
+    Chile      & 2020 & 6.03 & $+0.87$ & 4.17 & $+0.36$ \\
+    Colombia   & 2019 & 3.24 & $+0.24$ & 3.75 & $-0.19$ \\
+    Costa Rica & 2020 & 0.69 & $-0.08$ & 3.06 & $-0.03$ \\
+    México     & 2020 & 1.24 & $+0.24$ & 3.01 & $+0.39$ \\
+    Panamá     & 2017 & 1.72 & $+0.06$ & 0.50 & $+0.03$ \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{2pt}
+  \footnotesize
+  Fuente: CEPAL/FMI-GFS, gasto público por función, cobertura de gobierno central.
+  Los niveles de Costa Rica y Panamá subestiman el gasto público efectivo por operar
+  su seguridad social (CCSS y CSS) fuera del perímetro del gobierno central. En cuatro
+  de los seis países el último año disponible es 2020, por lo que la variación captura
+  el efecto de la pandemia. Los niveles no son comparables con los de la
+  Tabla~\ref{tab:salud} (GHED, cobertura institucional completa); véase la
+  reconciliación al inicio de esta subsección.
+\end{table}
+
+\subsubsection{Importancia relativa de pensiones y salud en el gasto público}
+
+La expresión del gasto como porcentaje del PIB mide la carga sobre la economía, pero no informa sobre su peso dentro del presupuesto. Esa segunda dimensión es la que determina el grado de rigidez presupuestaria: cuanto mayor sea la fracción del gasto público
+comprometida en funciones cuya demanda está determinada demográficamente, menor es el margen de reasignación disponible ante un choque. La Tabla~\ref{tab:composicion} y la
+Figura~\ref{fig:composicion} presentan la participación de salud y pensiones en el gasto
+público total.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Participación de salud y pensiones en el gasto público total,
+  último año con dato simultáneo.}
+  \label{tab:composicion}
+  \begin{tabular}{lccccccc}
+    \toprule
+    & & \multicolumn{3}{c}{\% del PIB} & \multicolumn{3}{c}{\% del gasto público} \\
+    \cmidrule(lr){3-5}\cmidrule(lr){6-8}
+    País & Año & Salud & Pens. & Gasto tot. & Salud & Pens. & Suma \\
+    \midrule
+    Chile      & 2020 & 6.03 & 4.17 & 29.1 & 20.7 & 14.3 & 35.1 \\
+    Brasil     & 2020 & 2.67 & 8.83 & 46.2 & 5.8  & 19.1 & 24.9 \\
+    Colombia   & 2019 & 3.24 & 3.75 & 32.9 & 9.9  & 11.4 & 21.3 \\
+    Costa Rica & 2020 & 0.69 & 3.06 & 22.3 & 3.1  & 13.7 & 16.8 \\
+    México     & 2020 & 1.24 & 3.01 & 27.8 & 4.5  & 10.8 & 15.3 \\
+    Panamá     & 2017 & 1.72 & 0.50 & 21.2 & 8.1  & 2.4  & 10.5 \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{2pt}
+  \footnotesize
+  Fuentes: CEPAL/FMI-GFS (gasto funcional, gobierno central) y FMI-WEO
+  (gasto total del gobierno general, abril de 2025). Las participaciones combinan
+  numerador de gobierno central con denominador de gobierno general, por lo que
+  constituyen una \textbf{cota inferior} del peso presupuestario efectivo,
+  particularmente en Costa Rica y Panamá, donde la seguridad social opera fuera del
+  perímetro del gobierno central. Los valores son comparables en el tiempo dentro de
+  cada país, no estrictamente entre países. El numerador de salud no es comparable
+  con el gasto público en salud de la Tabla~\ref{tab:salud} (GHED); véase la
+  reconciliación al inicio de la Sección~\ref{sec:gfs-funcional}.
+\end{table}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth]{graficas/fig_composicion_gasto.png}
+  \caption{Participación de salud y pensiones en el gasto público total,
+  último año con dato simultáneo.}
+  \label{fig:composicion}
+\end{figure}
+
+Tres lecturas se desprenden. Primero, Chile y Brasil destinan a estas dos funciones
+una fracción del presupuesto notablemente superior al resto —35,1 y 24,9\,\%
+respectivamente— y son también, junto con Costa Rica, los países en etapa más avanzada
+de la transición demográfica. La correspondencia entre etapa demográfica y rigidez
+presupuestaria es el mecanismo central que este documento busca cuantificar.
+
+Segundo, la composición interna difiere de manera reveladora. En Chile domina el
+componente de salud (20,7\,\% del gasto frente a 14,3\,\% de pensiones), coherente con
+un sistema de pensiones de capitalización individual en el que el pasivo previsional no
+transita por el presupuesto público en la misma magnitud que en un régimen de reparto.
+En Brasil ocurre lo contrario: pensiones representa 19,1\,\% del gasto frente a 5,8\,\%
+de salud, reflejo directo del RGPS/RPPS de reparto y beneficio definido descrito en la
+Sección 3.1.5. 
+
+Tercero, las cifras bajas de Costa Rica y Panamá deben leerse contemplando la limitación en cobertura ya señalada. En ambos casos el grueso del financiamiento de salud y pensiones
+transita por instituciones de seguridad social —CCSS y CSS— que no forman parte del gobierno central, de modo que la participación reportada es una cota inferior. 
+
+% ---------------------------------------------------------------------
+\subsection{Proyecciones fiscales}
+% ---------------------------------------------------------------------
+
+\subsubsection{Procedimiento}
+
+Las proyecciones se construyen mediante un procedimiento univariado uniforme para las treinta series fiscales (cinco indicadores por seis países), con selección de modelo
+basada en desempeño fuera de muestra. La elección de un enfoque univariado responde al
+alcance de este producto: el objetivo es caracterizar la inercia de cada serie, no
+estimar elasticidades estructurales.
+
+El procedimiento consta de cuatro etapas. En la primera se determina el orden de integración de cada serie mediante las pruebas de Dickey-Fuller aumentada
+(H$_0$: raíz unitaria) y KPSS (H$_0$: estacionariedad), sintetizadas en el criterio
+\texttt{ndiffs} (Hyndman y Athanasopoulos, 2021). La evidencia sobre datos anuales es la esperable para series fiscales: los agregados de nivel —ingresos, deuda neta, gasto en
+salud y en pensiones— requieren en general una diferencia regular por presentar tendencia estocástica, mientras que el balance primario resulta estacionario o próximo
+a serlo, consistente con su naturaleza de flujo que revierte alrededor de cero. Esta
+diferencia de comportamiento entre indicadores es relevante: implica que la deuda neta
+y el gasto funcional son series con memoria larga, en las que un choque desplaza el
+nivel de forma persistente, mientras que el balance primario tiende a retornar a su
+media tras una perturbación.
+
+En la segunda etapa se estiman tres familias de modelo sobre cada serie. ARIMA, bajo
+la metodología Box-Jenkins con selección de órdenes por AICc mediante búsqueda
+exhaustiva, incorpora la diferenciación de forma endógena y captura la estructura
+autorregresiva y de medias móviles. ETS, con selección automática de componentes por
+máxima verosimilitud, modela nivel y tendencia de manera explícita sin requerir
+estacionariedad previa, lo que le confiere ventaja en series cortas. Holt con
+amortiguación introduce un parámetro que atenúa progresivamente la pendiente
+proyectada; su inclusión responde a una consideración sustantiva y no meramente
+técnica: en horizontes de diez años, una extrapolación lineal de la tendencia reciente
+produce trayectorias implausibles para razones acotadas como las aquí analizadas, y la
+amortiguación impone una convergencia gradual que resulta más congruente con el
+comportamiento observado de los agregados fiscales.
+
+En la tercera etapa se reservan los últimos cuatro años de cada serie como conjunto de validación y se selecciona, para cada una, el modelo con menor raíz del error cuadrático
+medio fuera de muestra. Se reporta adicionalmente el error absoluto medio escalado
+(MASE). La cuarta etapa reestima el modelo seleccionado sobre la muestra completa
+y proyecta a diez años, validando la especificación mediante la prueba de Ljung-Box
+sobre los residuales (H$_0$: ausencia de autocorrelación).
+
+El criterio de selección se aplica serie por serie y no de forma agregada. Esta decisión es deliberada: aplicar una única especificación a las treinta series por
+conveniencia operativa —típicamente ARIMA automático— ignoraría que las series con
+tendencia dominante y muestra corta se ajustan mejor mediante suavizamiento exponencial,
+y que un ARIMA cuyos residuales conservan autocorrelación produce intervalos de
+pronóstico mal calibrados. La Tabla~\ref{tab:modelos} documenta la especificación
+seleccionada para cada serie y su desempeño.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Modelo seleccionado por serie, desempeño fuera de muestra y diagnóstico
+  de residuales.}
+  \label{tab:modelos}
+  \input{tablas/tab_modelos.tex}
+
+  \vspace{2pt}
+  \footnotesize
+  RMSE y MASE calculados sobre los últimos cuatro años, excluidos de la estimación.
+  MASE inferior a la unidad indica desempeño superior al método ingenuo de
+  persistencia; sobre la interpretación de los valores superiores a la unidad,
+  véase la primera precisión de la Sección~\ref{sec:alcance-proy}. Ljung-Box:
+  valor $p$ superior a 0.05 indica ausencia de autocorrelación residual.
+  Elaboración propia.
+\end{table}
+
+\subsubsection{Resultados}
+
+Las Figuras~\ref{fig:proj-ingresos} a~\ref{fig:proj-pensiones} presentan las
+trayectorias proyectadas. Cada panel identifica en su encabezado el país y el modelo
+seleccionado, de modo que la especificación que genera cada trayectoria resulta
+inmediatamente identificable. Las proyecciones se presentan como estimación puntual,
+sin banda de intervalo: la finalidad es exponer el escenario central y su ordenamiento
+relativo entre países, no cuantificar la incertidumbre, que crece de forma sustancial
+con el horizonte y cuya cuantificación mediante intervalos de pronóstico se
+incorporará en el Producto 4.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{graficas/fig_proj_ingresos.png}
+  \caption{Ingresos del gobierno general: trayectoria observada y proyección a diez
+  años. Elaboración propia sobre FMI-WEO.}
+  \label{fig:proj-ingresos}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{graficas/fig_proj_balance.png}
+  \caption{Balance primario: trayectoria observada y proyección a diez años.
+  Elaboración propia sobre FMI-WEO. Cuatro de las seis series de este panel
+  presentan MASE superior a dos; véase la primera precisión de la
+  Sección~\ref{sec:alcance-proy}.}
+  \label{fig:proj-balance}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{graficas/fig_proj_deuda.png}
+  \caption{Deuda neta del gobierno general: trayectoria observada y proyección a diez
+  años. Elaboración propia sobre FMI-WEO.}
+  \label{fig:proj-deuda}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{graficas/fig_proj_salud.png}
+  \caption{Gasto público en salud: trayectoria observada y proyección a diez años.
+  Elaboración propia sobre CEPAL/FMI-GFS. La trayectoria proyectada para Chile
+  ---que extiende el nivel observado de 6,0\,\% del PIB en 2020 hacia valores
+  sustancialmente superiores al final del horizonte--- es resultado de la
+  extrapolación de una tendencia histórica pronunciada y sostenida, sin restricción
+  de plausibilidad ni amortiguación de la pendiente. Constituye una caracterización
+  de la inercia de la serie, no un escenario de gasto. La misma advertencia aplica,
+  en menor magnitud, a Colombia.}
+  \label{fig:proj-salud}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{graficas/fig_proj_pensiones.png}
+  \caption{Gasto público en pensiones: trayectoria observada y proyección a diez años.
+  Elaboración propia sobre CEPAL/FMI-GFS. La proyección para México extrapola la
+  maduración del régimen de transición documentada en la Sección 3.1.1, cuya
+  dinámica histórica es fuertemente ascendente por construcción demográfica y de
+  cohorte. Al no incorporar el agotamiento previsible de esa cohorte, la
+  extrapolación univariada sobreestima la pendiente de mediano plazo.}
+  \label{fig:proj-pensiones}
+\end{figure}
+
+\subsubsection{Alcance e interpretación}
+\label{sec:alcance-proy}
+
+Cuatro precisiones delimitan el alcance de estas proyecciones. La primera y más
+importante concierne al desempeño desigual de los modelos entre series. El error
+absoluto medio escalado (MASE) reportado en la Tabla~\ref{tab:modelos} compara cada
+modelo con el método ingenuo de persistencia: un valor superior a la unidad indica
+que la especificación seleccionada no supera a la regla de suponer que la serie
+mantiene su último valor observado. Ese es el caso en poco más de la mitad de las
+treinta series. En algunas la discrepancia es de una magnitud que las inhabilita
+como estimación puntual: la deuda neta de Costa Rica, estimada sobre catorce
+observaciones, arroja un MASE de 7,38 y una raíz del error cuadrático medio de
+36,6 puntos del PIB; el balance primario de Costa Rica (5,59), Brasil (4,23) y
+Panamá (3,26) muestra un patrón análogo. \textbf{Las trayectorias correspondientes
+a series con MASE superior a dos se presentan por completitud del ejercicio
+uniforme y no deben leerse como pronóstico ni citarse como estimación puntual.}
+El caso del balance primario merece mención propia: es la única de las cinco
+series que resulta estacionaria o próxima a serlo, y su reversión a la media
+alrededor de cero ---consistente con su naturaleza de flujo, según se documentó en
+la Sección 5.3.1--- hace que la extrapolación univariada aporte poca información
+más allá de esa media. La lectura informativa de este ejercicio se concentra en
+las series de nivel con memoria larga: deuda neta, ingresos y gasto funcional en
+los países donde la muestra es suficiente.
+
+La segunda es de naturaleza metodológica: al tratarse de modelos univariados, las
+trayectorias extrapolan la inercia de cada serie sin incorporar la demografía como
+determinante. Constituyen, por tanto, un escenario inercial —qué ocurriría si cada
+serie mantuviera su dinámica histórica— y no una proyección condicionada al
+envejecimiento. La comparación entre este escenario inercial y la presión
+demográfica documentada en las Secciones~\ref{sec:demografia}
+y~\ref{sec:salud-envejecimiento} es precisamente el ejercicio que el Producto 4
+desarrollará mediante modelos con determinantes explícitos.
+
+La tercera es de cobertura temporal. Las series de gasto funcional terminan entre 2017
+y 2020, de modo que sus proyecciones parten de una base anterior a la normalización
+posterior a la pandemia y no incorporan la información fiscal más reciente. Esta
+asimetría respecto a los agregados del WEO —que llegan a 2024— debe considerarse al
+comparar trayectorias entre indicadores. Adicionalmente, dado que las series de
+gasto funcional terminan entre 2017 y 2020, un horizonte de proyección de diez años
+cubre en parte años ya transcurridos. El tramo inicial de esas trayectorias no es
+pronóstico sino reconstrucción inercial de un período observable por otras fuentes.
+
+La cuarta concierne a la estabilidad paramétrica. Las series fiscales de la región presentan quiebres estructurales asociados a reformas tributarias, ciclos de precios de
+materias primas y al choque de 2020. Los modelos aquí empleados no incorporan estos quiebres de forma explícita, por lo que la extrapolación del pasado más lejano debe
+interpretarse con cautela, particularmente en las series cuya dinámica reciente difiere del promedio histórico.
+
+Con estas salvedades, el ejercicio cumple su función dentro de la arquitectura del estudio: establece el punto de partida cuantitativo y la trayectoria inercial sobre los
+cuales el Producto 4 evaluará el impacto diferencial de la transición demográfica bajo
+las distintas configuraciones institucionales documentadas en el Producto 2.
+
+
+
+
+
+
+
+% =======================================================================
+%  CIERRE DEL DOCUMENTO
+% =======================================================================
+% ---------------------------------------------------------------------
+\subsection*{Nota de cierre}
+\addcontentsline{toc}{subsection}{Nota de cierre}
+% ---------------------------------------------------------------------
+
+Este documento cierra el alcance del Producto 3: las series demográficas y fiscales de
+los seis países, su caracterización descriptiva y las proyecciones de mediano plazo de
+los agregados fiscales. El análisis de cuentas nacionales y el apartado de equilibrio
+general corresponden al Producto 4.
+
+Dos precisiones sobre el alcance de lo entregado. La primera concierne al análisis de
+quiebres estructurales. Las series fiscales de los seis países fueron sometidas a la
+prueba supF de constancia de parámetros y al procedimiento de Bai-Perron de detección
+múltiple de rupturas; los resultados —estadísticos, valores $p$ y fechas de quiebre por serie— están disponibles. Su
+exclusión del cuerpo principal responde a una decisión de diseño del documento. 
+La segunda concierne a la asimetría de cobertura entre fuentes. Los agregados del WEO
+llegan a 2024, mientras que las series de gasto funcional terminan entre 2017 y 2020
+según el país. La actualización de estas últimas puede realizarse cuando la base de CEPAL/FMI-GFS publique ejercicios posteriores, lo que permitirá revisar las proyecciones de salud y pensiones
+sobre una base pospandemia. Hasta entonces, las trayectorias de esos dos indicadores deben leerse como condicionadas a un punto de partida anterior a la normalización
+fiscal reciente.
+% =======================================================================
+%  BIBLIOGRAFÍA
+% =======================================================================
+\newpage
+\addcontentsline{toc}{section}{Referencias}
+
+\begin{thebibliography}{99}
+
+\bibitem[Bai y Perron(2003)]{baiperron2003} Bai, J. y Perron, P. (2003).
+Computation and Analysis of Multiple Structural Change Models.
+\textit{Journal of Applied Econometrics}, 18(1), 1--22.
+
+\bibitem[CEPAL(2020)]{cepal2020} CEPAL (2020). \textit{El sistema de pensiones en
+Costa Rica: institucionalidad, gasto público y sostenibilidad financiera}.
+Elizondo, H., Pacheco, J.~F. y Pacheco, J.~C. Serie Macroeconomía del Desarrollo.
+Santiago: Comisión Económica para América Latina y el Caribe.
+
+\bibitem[Holzmann y Hinz(2005)]{holzmann2005} Holzmann, R. y Hinz, R. (2005).
+\textit{Old-Age Income Support in the 21st Century: An International Perspective
+on Pension Systems and Reform}. Washington, DC: Banco Mundial.
+
+\bibitem[Hyndman y Athanasopoulos(2021)]{hyndman2021} Hyndman, R.~J. y
+Athanasopoulos, G. (2021). \textit{Forecasting: Principles and Practice},
+3.\textsuperscript{a} ed. Melbourne: OTexts.
+
+\bibitem[World Bank(2025)]{wb2025} World Bank (2025). \textit{(In)Formalizing Jobs in Latin America
+and the Caribbean}. Fietz, K., et al. Washington, DC: The World Bank.
+
+\end{thebibliography}
+
+\subsection*{Bases de datos}
+
+\begin{itemize}
+  \item Naciones Unidas, División de Población. \textit{World Population
+        Prospects 2024}, revisión mediana.
+  \item Organización Mundial de la Salud. \textit{Global Health Expenditure
+        Database} (GHED), clasificación SHA 2011.
+  \item Organización Internacional del Trabajo. \textit{ILOSTAT}, indicadores de
+        empleo informal.
+  \item SEDLAC --- Socio-Economic Database for Latin America and the Caribbean
+        (CEDLAS, Universidad Nacional de La Plata, y Banco Mundial).
+  \item Fondo Monetario Internacional. \textit{World Economic Outlook}, abril de
+        2025.
+  \item CEPAL/FMI-GFS. Gasto público por función, cobertura de gobierno central.
+\end{itemize}
+
+\subsection*{Fuentes normativas}
+
+\begin{itemize}
+  \item \textbf{México:} Constitución Política de los Estados Unidos Mexicanos
+        (arts.\ 4.\textsuperscript{o}, 123 y 127); Ley del Seguro Social (1973 y
+        1995); Ley del ISSSTE (2007); Ley de los Sistemas de Ahorro para el
+        Retiro (1996).
+  \item \textbf{Costa Rica:} Ley Constitutiva de la CCSS;
+        Ley N.\textsuperscript{o}~2738 de 1961; Ley N.\textsuperscript{o}~7523 de
+        1995; Ley de Protección al Trabajador N.\textsuperscript{o}~7983 de 2000;
+        Ley Integral para la Persona Adulta Mayor N.\textsuperscript{o}~7935.
+  \item \textbf{Panamá:} Ley 51 de 2005; Ley 86 de 2010; Ley 462 de 2025.
+  \item \textbf{Colombia:} Constitución Política (art.\ 48); Ley 100 de 1993;
+        Ley 797 de 2003; Ley 2381 de 2024 (vigencia general suspendida por el
+        Auto A-841 de 2025 de la Corte Constitucional).
+  \item \textbf{Brasil:} Constitución Federal de 1988 (arts.\ 40, 201, 202 y
+        203); Emenda Constitucional 103/2019; Lei Orgânica da Assistência Social
+        (LOAS, 1993); Leyes Complementarias 108 y 109 de 2001.
+  \item \textbf{Chile:} Decreto Ley N.\textsuperscript{o}~3.500 de 1980;
+        Ley N.\textsuperscript{o}~20.255 de 2008;
+        Ley N.\textsuperscript{o}~21.419 de 2022;
+        Ley N.\textsuperscript{o}~21.735 de 2025.
+\end{itemize}
+
+\end{document}
