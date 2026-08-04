@@ -254,4 +254,5 @@ Anne / Debb; if (b) is chosen later, the frontmatter reverts to
 - → Q2 baseline replicate (superseded §10 anchor; standing scenario tables): `quarterly/2026-Q2_demographic_replicate.md`
 - → ENR 2024 corpus entry (births source of record): `_crossrefs/corpus/demographics/_pending/2026-08-03_inegi-enr2024-mex-births.md`
 - → Scenario anchors (MEX row unchanged): `_crossrefs/corpus/demographics/scenario_anchors.md`
+- → Companion plot (new this quarter): `../mex_births_registered.py` / `.png` — ENR registered-births series 2015–2024 with the Rule-of-85 trigger line. The four Q2 scenario plots (`mex_population_2050.py`, `mex_population_tfr15.py`, `mex_population_tfr_decline.py`, `mex_dependency_ratio_decline.py`) are unchanged — no cohort-component input moved this quarter.
 - → Standing reference: Fernández-Villaverde (2026), "The Demographic Future of Humanity" (GrandPlan/DFD/docs/corpus/JFV_260401.pdf)
