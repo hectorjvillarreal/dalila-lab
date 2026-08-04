@@ -9,9 +9,12 @@ Format:
 
 ## Pending
 
-- 2026-08-03 — `../country/MEX/quarterly/2026-Q3_demographic_replicate.md` — [DFD, BDH] — composite (births, tfr proxy, coupling, age-structure) — MEX — **Anne endorsed §§1–3,5–6 (2026-08-03; re-anchor decision frame recorded in §2). Remains pending CATH**: §4 observed-TDR ≈49 vs. Central-path ≈46 wedge (window-timing lag ~1 step if level is real) + unchanged fiscal-window characterization; also Q2's never-cleared §5/§7 fiscal items. Project cross-refs held until Cath rules. Option (a) per-quarter build instructions: Anne provisionally ratifies; final call joint with Debb.
+*(none — queue cleared 2026-08-03)*
 
 ## Endorsed and moved (recent — last 30 days)
+
+- 2026-08-03 — Q3 replicate (`../country/MEX/quarterly/2026-Q3_demographic_replicate.md`) — **fully endorsed** (Anne §§1–3,5–6; Cath §4/§5/§7 with window-timing caveat applied as endorsement condition); `workflow_status: endorsed`; DFD + BDH cross-refs released. Cath's key rulings: window entry may lag up to one projection step (caveat now mandatory wherever fiscal-space numbers are cited, pending Q4 retabulation); wedge is plausibly real at ~2 pts — integer rounding alone bounds CONAPO-implied TDR to [47.4, 51.1], so the conciliación-vs-WPP base difference is load-bearing (refines Anne's read); Rule-of-85 steepening raises the cost of missing the window but does not move it. Beth not triggered (no standalone health-financing assertion).
+- 2026-08-03 — Q2 replicate — **fully endorsed** (Anne retroactive batch; Cath §§4–5, §7 with resolution caveat applied): the "window shortened to ~5 yr vs v1.1's 8–10" claim was an overstated grid-resolution artifact — interpolated Central window ≈ 2030–2041 (~11 yr); supersession of v1.1 holds for level (42.0) and timing (~2038) only. IM-6 anchor stays 2033–2038 (conservative interior under either convention).
 
 - 2026-08-03 — `2026-08-03_inegi-enr2024-mex-births.md` — endorsed by Anne 2026-08-03 (with one factual edit applied); routed to `releases/`; Rule-of-85 trigger reading confirmed sound; anchor stays 1.60/2023; cross-refs appended to DFD + BDH
 - 2026-08-03 — Q2 replicate (`../country/MEX/quarterly/2026-Q2_demographic_replicate.md`) — retroactive batch endorsement of Anne-scope content (queue-hygiene repair: it never entered this inbox); Cath items (§5 fiscal window, §7 IM-6 flags) still open
@@ -20,7 +23,7 @@ Format:
 
 ## Flagged to Debb (from Anne's 2026-08-03 rulings)
 
-1. Retrofit candidate (one build instruction, not silent fixes): `type: working_note` → `type: corpus_entry` in Q2 replicate and `scenario_anchors.md` (Q3 already conformant).
+1. Retrofit candidate (one build instruction, not silent fixes): `type: working_note` → `type: corpus_entry` in Q2 replicate and `scenario_anchors.md` (Q3 already conformant). Per Cath: the Q2 endorsement line must survive the retrofit verbatim.
 2. SKILL.md v0.3: add `desired_fertility` to §Classification indicator vocabulary; fix cross-reference template relative path (`../../../` is one level short from `GrandPlan/{Project}/docs/corpus/` — executed entries use `../../../../`).
 3. `observations/` folder now exists (routing table had it; scaffold list didn't) — update README/scaffold list.
 4. Option (a) per-quarter build instructions for quarterly replicates — Anne provisionally ratifies; your concurrence closes it, no PROTO amendment needed.

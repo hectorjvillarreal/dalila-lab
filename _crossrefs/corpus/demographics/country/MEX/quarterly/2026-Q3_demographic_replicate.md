@@ -9,10 +9,10 @@ venue: "Internal — DFD calibration / demographics corpus"
 doi: "n/a"
 date_added: 2026-08-03
 added_by: Claude Code
-endorsed_by: "Anne (2026-08-03, §§1–3,5–6; Cath pending — §4, fiscal window)"
+endorsed_by: "Anne (2026-08-03, §§1–3,5–6); Cath (2026-08-03 — §4 TDR wedge note, §5 carry-forward with window-timing caveat, §7 calibration flag and Rule-of-85 fiscal-horizon signal)"
 governing_instructions: "_crossrefs/corpus/demographics/country/MEX/DFD_TFR_forecast_instructions.md (v1.3)"
 build_instruction: "_crossrefs/_build_instructions/2026-08-03_demographics_MEX_2026Q3_replicate.md"
-workflow_status: pending-endorsement
+workflow_status: endorsed
 quarter: 2026-Q3
 country: MEX
 ---
@@ -161,6 +161,18 @@ Full year-by-year tables: see the 2026-Q2 baseline replicate §5.
 > space are most feasible during this interval.** (Central: ~2033–2038,
 > TDR_min ≈ 42.0 — unchanged from Q2.)
 
+**Window-timing caveat (Cath endorsement condition, 2026-08-03).** The
+2033–2038 window is carried forward, not independently reconfirmed — no
+cohort-component input moved this quarter. Two open items push in the same
+direction: the §4 level wedge (if the true 2026 TDR is ≈49, window entry
+lags the Central path by up to one projection step, ~5 yr) and the §2
+implied-TFR proxy (≈1.46, between Central and Stress; the Stress column's
+window is later and deeper). Until the Q4 retabulation, any downstream
+citation of the fiscal-space numbers (2033–2038, TDR_min 42.0) must carry
+a one-line flag that window entry may shift later by up to ~5 years. The
+convention-robust statement is that the reform window lies in the 2030s
+decade.
+
 **Positioning note:** with the 2024 implied-TFR proxy at ≈1.46, observed
 fertility now sits **between the Central and Stress columns**, closer to
 Central. The scenario family still brackets the data; no scenario
@@ -193,7 +205,8 @@ The tempo-corrected column remains **reported, not operational**.
 **IM-6 demographic inputs require updating before next model run: NO NEW
 CHANGES beyond the Q2 mandate** (which stands: 2023 age-structure starting
 state, Central TDR path 49.0 → 42.0 → 49.1, stylized survival ratios pending
-CONAPO extraction).
+CONAPO extraction) — subject to the §5 window-timing caveat wherever
+fiscal-space numbers are quoted downstream.
 
 New this quarter, for the record and for downstream users:
 
@@ -203,7 +216,11 @@ New this quarter, for the record and for downstream users:
   superseded. The long-run stationary population is now **~14 M below** the
   Central-scenario 2050 level (140.4 M), i.e., 2050 carries more
   transitional inertia and the post-2050 decline is steeper than the Q2
-  reading implied.
+  reading implied. For fiscal-horizon language: this steepening does not
+  move the pre-2040 fiscal window, but it raises the cost of missing it —
+  pension-reform scenarios that defer adjustment beyond the window now
+  face a worse post-2050 demographic denominator than the Q2 baseline
+  implied.
 - **e₀ validation.** CONAPO 2026 e₀ = 75.63 confirms the stylized e₀ ≈ 75 is
   approximately right *today* — but the machinery still assumes no mortality
   improvement to 2050, which remains conservative on the dying side.

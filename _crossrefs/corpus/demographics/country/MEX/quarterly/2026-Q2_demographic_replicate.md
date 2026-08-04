@@ -9,10 +9,10 @@ venue: "Internal — DFD calibration / demographics corpus"
 doi: "n/a"
 date_added: 2026-05-19
 added_by: Claude Code
-endorsed_by: "Anne (2026-08-03, retroactive batch; Cath pending — §5 fiscal window, §7 IM-6 flags)"
+endorsed_by: "Anne (2026-08-03, retroactive batch); Cath (2026-08-03 — §§4–5 dependency-ratio path and fiscal window, with resolution caveat applied; §7 IM-6 mandate)"
 governing_instructions: "_crossrefs/corpus/demographics/country/MEX/DFD_TFR_forecast_instructions.md (v1.2)"
 build_instruction: "(see §Promotion recommendation — PROTO-RAG-001 conformance pending)"
-workflow_status: pending_endorsement
+workflow_status: endorsed
 quarter: 2026-Q2
 country: MEX
 ---
@@ -204,6 +204,19 @@ embed UN's mortality improvement and assumes flat-not-rising TFR.
 | Tempo-corrected | ~2033–2038 (tied) | 43.6 | 2028–2038 (≈10 yr) |
 | Stress | ~2038 | 36.3 | 2038–2043 (≈5 yr) |
 
+**Resolution caveat (Cath endorsement condition, 2026-08-03).** Window
+durations in this replicate are grid-year counts on 5-year steps:
+"2033–2038 (≈5 yr)" is the span of table years satisfying
+TDR ≤ TDR_min + 2.0, not an annual-resolution measurement. Linear
+interpolation of the same threshold gives approximately: Optimistic
+~2027–2041 (~14 yr), Central ~2030–2041 (~11 yr), Tempo-corrected
+~2028–2041 (~14 yr), Stress ~2035–2044 (~9 yr). The cross-scenario
+ordering (Central and Stress tighter than Optimistic and Tempo-corrected)
+is robust to convention; absolute durations are not. Downstream citations
+must state which convention they use. IM-6 fiscal-space work anchors to
+the grid interval 2033–2038, the conservative interior of the Central
+window under either convention.
+
 **Tempo-correction effect on the fiscal window:** Lifting TFR from 1.50
 to 1.60 raises the TDR minimum by ~1.6 points (42.0 → 43.6) and widens
 the window from ~5 to ~10 years. The reform-feasibility interval is
@@ -213,11 +226,15 @@ does not relocate the window, only smooths and slightly elevates it.
 > **This is the reform window. Policy interventions that require fiscal
 > space are most feasible during this interval.**
 >
-> Under the central scenario, the window is shorter than the v1.1
-> reference (which gave 8–10 years at TDR ≈ 39–40). The fresh replicate
-> gives TDR_min = 42.0 at 2038, with a ~5-year window of TDR ≤ 44.0. The
-> v1.1 reference values were placeholder estimates; **this replicate
-> supersedes them as the authoritative Q2 baseline.**
+> Under the central scenario, the TDR minimum is higher than the v1.1
+> reference (42.0, not ≈39–40) and arrives at ~2038, not 2038–2043. Grid
+> years 2033–2038 fall inside TDR ≤ 44.0 (min + 2.0); linear interpolation
+> of the same threshold spans roughly 2030–2041 (~11 yr). The v1.1
+> reference values were placeholder estimates; **this replicate supersedes
+> them as the authoritative Q2 baseline on the level and timing of the
+> minimum.** The duration contrast with v1.1's 8–10 yr is
+> convention-dependent (see resolution caveat below) and must not be
+> quoted as evidence that the reform window has shortened.
 
 **Refinement vs. v1.1 instructions:**
 
@@ -225,7 +242,7 @@ does not relocate the window, only smooths and slightly elevates it.
 |---|---|---|
 | Year of TDR min (central) | 2038–2043 | 2038 |
 | TDR at min | ~39–40 | 42.0 |
-| Window duration | ~8–10 yr | ~5 yr |
+| Window duration | ~8–10 yr | ~5 yr (grid) / ~11 yr (interpolated) — not resolution-comparable to v1.1 |
 
 The instructions document should be updated in v1.3 to carry these
 refined reference values.
@@ -300,8 +317,11 @@ Specifically:
 - **Survival probabilities:** Stylized Coale-Demeny West e₀ ≈ 75. Flag
   for replacement with CONAPO life-table-derived survival ratios in Q3.
 - **Fiscal window for reform-feasibility analysis:** Approximately
-  2033–2038, TDR_min ≈ 42.0 in 2038. Pension-reform fiscal-space
-  calculations should anchor to this interval.
+  2033–2038 (grid convention; interpolated window ≈ 2030–2041 — see §5
+  resolution caveat), TDR_min ≈ 42.0 at ~2038. Pension-reform
+  fiscal-space calculations should anchor to 2033–2038: it is interior
+  to the window under either convention, so fiscal space is not
+  overstated.
 
 ---
 
