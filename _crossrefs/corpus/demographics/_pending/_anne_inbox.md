@@ -9,7 +9,9 @@ Format:
 
 ## Pending
 
-*(none)*
+- 2026-08-03 — `../country/MEX/quarterly/2026-Q3_demographic_replicate.md` — [DFD, BDH] — composite (births, tfr proxy, coupling, age-structure) — MEX — **needs Anne + Cath**: (1) endorse replicate; (2) Anne: re-anchor trigger armed — implied 2024 TFR proxy ≈1.46 is at/below Central 1.50; (3) Cath: §4 observed-TDR ≈49 vs. Central-path ≈46 at 2026 (rounding/base wedge) and unchanged fiscal window; (4) Anne/Debb: option (a) per-quarter build instruction adopted provisionally — ratify or switch to (b)
+- 2026-08-03 — `2026-08-03_inegi-enr2024-mex-births.md` — [DFD, BDH] — cbr (registered births, definitive 2024) — MEX — **needs Anne**: (1) endorse/route as `data_source`; (2) confirm the Rule-of-85 trigger reading (1.672 M births, −8.2% → long-run stationary 125.4 M at e₀=75, below Central-scenario 2050 of 140.4 M); (3) note anchor row stays 1.60/2023 — no TGF in ENR 2024 definitive
+- 2026-07-11 — `2026-07-11_unfpa-demographic-futures-survey.md` — [DFD, BDH, Aurora] — coupling (partnership formation) + tfr (reproductive aspirations); framing-layer — WLD (73 countries; no LAC country cut surfaced) — **needs Anne**: (1) endorse/route, (2) adjudicate UNFPA agency-constraint vs SDT value-change framing tension, (3) rule on whether the framing tension rises to a watch item
 
 ## Endorsed and moved (recent — last 30 days)
 
