@@ -1,5 +1,5 @@
 ---
-type: working_note
+type: corpus_entry
 tier: working_note
 project_scope: [DFD, BDH]
 authors: [Claude Code]
@@ -9,10 +9,10 @@ venue: "Internal — DFD calibration / demographics corpus"
 doi: "n/a"
 date_added: 2026-08-03
 added_by: Claude Code
-endorsed_by: "(pending — Anne, Cath)"
+endorsed_by: "Anne (2026-08-03, §§1–3,5–6; Cath pending — §4, fiscal window)"
 governing_instructions: "_crossrefs/corpus/demographics/country/MEX/DFD_TFR_forecast_instructions.md (v1.3)"
 build_instruction: "_crossrefs/_build_instructions/2026-08-03_demographics_MEX_2026Q3_replicate.md"
-workflow_status: pending_endorsement
+workflow_status: pending-endorsement
 quarter: 2026-Q3
 country: MEX
 ---
@@ -81,6 +81,11 @@ vintage 2024 or 2025 (ENADID successor, conciliación update, or ENR
 retabulation), the Central scenario anchor should be re-examined — either
 re-pin Central at the published value or open a fifth scenario row. That is
 a scenario-structure decision and sits with Anne per §Domain Authority.
+
+**Anne's pre-committed frame (2026-08-03):** published TGF in [1.45, 1.50]
+→ re-pin Central at the published value; below 1.45 → do not chase the
+point estimate — open a fifth scenario row and keep Central at 1.50 as the
+upper bracket.
 
 ---
 
@@ -252,7 +257,7 @@ Anne / Debb; if (b) is chosen later, the frontmatter reverts to
 - → Governing instructions (v1.3): `_crossrefs/corpus/demographics/country/MEX/DFD_TFR_forecast_instructions.md`
 - → Build instruction: `_crossrefs/_build_instructions/2026-08-03_demographics_MEX_2026Q3_replicate.md`
 - → Q2 baseline replicate (superseded §10 anchor; standing scenario tables): `quarterly/2026-Q2_demographic_replicate.md`
-- → ENR 2024 corpus entry (births source of record): `_crossrefs/corpus/demographics/_pending/2026-08-03_inegi-enr2024-mex-births.md`
+- → ENR 2024 corpus entry (births source of record; endorsed, routed 2026-08-03): `_crossrefs/corpus/demographics/releases/2026-08-03_inegi-enr2024-mex-births.md`
 - → Scenario anchors (MEX row unchanged): `_crossrefs/corpus/demographics/scenario_anchors.md`
 - → Companion plot (new this quarter): `../mex_births_registered.py` / `.png` — ENR registered-births series 2015–2024 with the Rule-of-85 trigger line. The four Q2 scenario plots (`mex_population_2050.py`, `mex_population_tfr15.py`, `mex_population_tfr_decline.py`, `mex_dependency_ratio_decline.py`) are unchanged — no cohort-component input moved this quarter.
 - → Standing reference: Fernández-Villaverde (2026), "The Demographic Future of Humanity" (GrandPlan/DFD/docs/corpus/JFV_260401.pdf)

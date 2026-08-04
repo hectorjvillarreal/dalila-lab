@@ -6,7 +6,8 @@ work. Maintained by the skills that produce the upstream entries (currently:
 
 ## Demographics (`_crossrefs/corpus/demographics/`)
 
-*(none at scaffold creation)*
+- 2026-07-11 — [UNFPA 2026 Demographic Futures Survey — "Lives, Choices and Futures"](../../../../_crossrefs/corpus/demographics/observations/2026-07-11_unfpa-demographic-futures-survey.md) — coupling, desired_fertility, WLD, neutral
+- 2026-08-03 — [INEGI ENR 2024 (definitive) — Mexico registered births fall 8.2%, below the Rule-of-85 trigger](../../../../_crossrefs/corpus/demographics/releases/2026-08-03_inegi-enr2024-mex-births.md) — cbr, MEX, fast-transition
 
 ## Inequality (`_crossrefs/corpus/inequality/`)
 

@@ -9,7 +9,7 @@ venue: "Internal — DFD calibration / demographics corpus"
 doi: "n/a"
 date_added: 2026-05-19
 added_by: Claude Code
-endorsed_by: "(pending — Anne, Cath)"
+endorsed_by: "Anne (2026-08-03, retroactive batch; Cath pending — §5 fiscal window, §7 IM-6 flags)"
 governing_instructions: "_crossrefs/corpus/demographics/country/MEX/DFD_TFR_forecast_instructions.md (v1.2)"
 build_instruction: "(see §Promotion recommendation — PROTO-RAG-001 conformance pending)"
 workflow_status: pending_endorsement

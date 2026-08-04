@@ -9,7 +9,7 @@ venue: "INEGI, Comunicado de prensa 129/25 (25 septiembre 2025); Reporte de Resu
 doi: "https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2025/enr/enr2024_CP.pdf"
 date_added: 2026-08-03
 added_by: Claude Code
-endorsed_by:                          # blank until Anne endorses
+endorsed_by: Anne
 build_instruction: "_crossrefs/_build_instructions/2026-08-03_demographics_mex_enr2024_update.md"
 
 indicators: [cbr]
@@ -17,7 +17,7 @@ geography: [MEX]
 scenario_implication: fast-transition
 source_reliability: primary
 data_vintage: 2024
-workflow_status: pending-endorsement
+workflow_status: endorsed
 ---
 
 # INEGI ENR 2024 (definitive) — Mexico registered births fall 8.2%, below the Rule-of-85 trigger
@@ -68,8 +68,9 @@ microdata must handle this mass explicitly.
   tempo-corrected column (Q2 §6 promotion conditions are not met — this is
   evidence in the opposite direction).
 - **Q3 replicate input.** This entry supplies follow-up item 4 of the Q2
-  list (SINAC/ENR 2024 births refresh). The Q3 replicate (overdue; target
-  was 2026-07-15) should use 1.672 M as the births anchor and rerun §10.
+  list (SINAC/ENR 2024 births refresh). The Q3 replicate (produced
+  2026-08-03, same build cycle) uses 1.672 M as the births anchor and
+  reruns §10.
 
 **BDH.** Directional only: a births contraction of this size accelerates the
 age-structure shift feeding old-age health-expenditure shares, but the

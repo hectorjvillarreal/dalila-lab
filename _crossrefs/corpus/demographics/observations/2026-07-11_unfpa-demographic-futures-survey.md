@@ -1,19 +1,23 @@
 ---
 type: corpus_entry
 tier: working_note
+project_scope: [DFD, BDH, Aurora]
+authors: [UNFPA]
+year: 2026
 title: "UNFPA (2026), Demographic Futures Survey — 'Lives, Choices and Futures: What young people want and what shapes their decisions about relationships and parenthood'"
-date: 2026-07-11
-added_by: Claude
-endorsed_by:                          # blank — pending Anne
-projects: [DFD, BDH, Aurora]
-indicators: [composite — coupling (partnership formation), tfr (reproductive aspirations)]
+venue: "UNFPA institutional release"
+doi: "https://www.unfpa.org/publications/lives-choices-and-futures-demographic-futures-survey"
+date_added: 2026-07-11
+added_by: Claude Code
+endorsed_by: Anne
+build_instruction: "_crossrefs/_build_instructions/2026-07-11_population-day_monitor_instruction.md"
+
+indicators: [coupling, desired_fertility (aspirational — not realized TFR)]
 geography: [WLD]   # 73 countries/territories; global aggregates + 7 regional groupings; no LAC country breakdown in public release
 scenario_implication: neutral   # aspirations/barriers survey, not a projection revision; does not move observed TFR vs CELADE
 source_reliability: primary   # UNFPA institutional release — BUT non-representative convenience sample; see §Source quality
 data_vintage: 2026
-promotion_status: pending-anne
-workflow_status: pending-endorsement
-build_instruction: "_crossrefs/_build_instructions/2026-07-11_population-day_monitor_instruction.md"
+workflow_status: endorsed
 discriminator_ruling: "REPORT, not REVISION (per build instruction §1). No Revision Transition Protocol; no re-baseline; WPP 2024 remains the projection reference."
 ---
 
@@ -100,6 +104,12 @@ will be released is **unknown**; if it is, the CR/COL partnership-aspiration cut
 candidate input to the coupling story. → **pending-anne** (and a candidate acquisition-queue
 follow-up if microdata appear).
 
+## Endorsement guardrail (Anne, 2026-07-11)
+
+The "desire persists" finding is not evidence against cohort-replacement and
+must not be cited as such. Aspiration ≠ realized behavior. Persistent
+two-child ideals do not refute the SDT/cohort account.
+
 ## Source quality
 
 - **Reliability:** `primary` as a UNFPA institutional publication, **but** the sample is an
@@ -126,6 +136,7 @@ Population Fund. https://www.unfpa.org/publications/lives-choices-and-futures-de
 - → Build instruction: `_crossrefs/_build_instructions/2026-07-11_population-day_monitor_instruction.md`
 - → Related corpus entries: `_crossrefs/corpus/demographics/2026-06-20_fernandez-villaverde-demographic-future.md` (scenario-discipline cornerstone; complementary "desire persists, transition overshoots" reading)
 - → Related project work: DFD fertility-collapse ABM Stage 2b/2c (coupling/composition; behind identification wall) — framing layer only
+- → Watch item opened from this entry: `_crossrefs/corpus/demographics/watch_items/2026-07-11_fertility-reversibility-policy-tractability.md`
 - → Project corpus cross-refs (append on endorsement, per §Routing):
     - DFD: `GrandPlan/DFD/docs/corpus/_cross_references.md`
     - BDH: `GrandPlan/BDH/docs/corpus/_cross_references.md`
