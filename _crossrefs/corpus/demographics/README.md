@@ -6,10 +6,12 @@ attainment, socialization, and population projections — with priority on Latin
 America and Mexico-specific calibration material. Cross-cutting across DFD,
 BDH, and Aurora.
 
-**Status:** Initial scaffold (May 2026). Populated incrementally by the
-`dfd-demographics-monitor` skill (v0.2) on activation. No entries at scaffold
-creation; `scenario_anchors.md` carries provisional values pending Anne's
-source-pinning review.
+**Status:** Operational (scaffolded May 2026; first full endorsement cycle
+completed August 2026). Populated incrementally by the
+`dfd-demographics-monitor` skill (v0.3) on activation. `scenario_anchors.md`
+is source-pinned and endorsed (Anne, 2026-05-16); `releases/`,
+`observations/`, and `watch_items/` hold endorsed entries; the MEX quarterly
+replicate series (Q2 baseline, Q3) is endorsed by Anne and Cath.
 
 ## Organization
 
@@ -20,8 +22,8 @@ source-pinning review.
   Birth Gauge, national vital-statistics agencies); tier `data_source`
 - `country/` — country-specific notes, organized by ISO-3166 alpha-3 subfolder
   (`MEX`, `CRI`, `PAN`, `COL`, `CHL`, etc.)
-- `observations/` — multi-country / cross-cutting working notes that do not
-  belong to a single-country subfolder; tier `working_note`
+- `observations/` — endorsed multi-country / cross-cutting working notes that
+  do not belong to a single-country subfolder; tier `working_note`
 - `watch_items/` — open methodological threads connecting demographic material
   to active modeling work
 - `_pending/` — endorsement-pending holding area; entries move to their

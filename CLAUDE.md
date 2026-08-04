@@ -172,7 +172,7 @@ Cross-cutting methodological corpus on income and wealth inequality measurement.
 
 ### Demographics corpus (`_crossrefs/corpus/demographics/`)
 
-Cross-cutting demographics corpus shared across DFD, BDH, and Aurora. Initial scaffold May 2026. Populated incrementally by the `dfd-demographics-monitor` skill (v0.2) on activation; manual additions also conform via `_pending/` endorsement workflow. Scenario anchors (`scenario_anchors.md`) carry provisional TFR values pending Anne's source-pinning. See `_crossrefs/corpus/demographics/README.md` for organization and standing principles.
+Cross-cutting demographics corpus shared across DFD, BDH, and Aurora. Scaffolded May 2026; operational, first full endorsement cycle completed August 2026. Populated incrementally by the `dfd-demographics-monitor` skill (v0.3) on activation; manual additions also conform via `_pending/` endorsement workflow. Scenario anchors (`scenario_anchors.md`) are source-pinned and endorsed (Anne). MEX quarterly replicates run under per-quarter build instructions (closed option-(a) decision, 2026-08-03). See `_crossrefs/corpus/demographics/README.md` for organization and standing principles.
 
 ---
 

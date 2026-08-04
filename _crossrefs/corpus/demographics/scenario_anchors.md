@@ -1,5 +1,5 @@
 ---
-type: working_note
+type: corpus_entry
 tier: data_source
 project_scope: [DFD, BDH, Aurora]
 authors: [Anne]
@@ -105,3 +105,4 @@ Completed.
 - → Source brief: `_crossrefs/corpus/demographics/_pending/anne_scenario_anchors_brief.md`
 - → Governing skill: `_crossrefs/_skills/dfd-demographics-monitor/SKILL.md` §Scenario Discipline
 - → Fernández-Villaverde (2026) "The Demographic Future of Humanity" (standing reference for fast-transition framing)
+- → Type retrofit build instruction: `_crossrefs/_build_instructions/2026-08-03_demographics_type_retrofit.md`

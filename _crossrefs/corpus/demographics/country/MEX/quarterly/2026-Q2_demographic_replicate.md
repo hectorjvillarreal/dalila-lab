@@ -1,5 +1,5 @@
 ---
-type: working_note
+type: corpus_entry
 tier: working_note
 project_scope: [DFD, BDH]
 authors: [Claude Code]
@@ -438,6 +438,7 @@ when available.
   - `mex_dependency_ratio_decline.py` — dependency-ratio comparison
 - → Standing reference: Fernández-Villaverde (2026), "The Demographic
   Future of Humanity" (GrandPlan/DFD/docs/corpus/JFV_260401.pdf)
+- → Type retrofit build instruction: `_crossrefs/_build_instructions/2026-08-03_demographics_type_retrofit.md`
 
 ---
 
