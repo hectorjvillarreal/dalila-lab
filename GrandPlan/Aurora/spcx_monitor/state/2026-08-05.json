@@ -1,7 +1,7 @@
 {
   "date": "2026-08-05",
   "carried_from": "2026-07-12",
-  "analyst_note": "",
+  "analyst_note": "SERIES GAP 2026-07-13 .. 2026-08-04: the daily systemd cycle failed on every run in this window ('monitor dir missing' in ~/.spcx_render.log) because the /home/hectorjuan/Dalila-spcx worktree had been removed without disabling the timer. No readings exist for those 23 days; nothing is backfilled. Worktree rebuilt and cycle re-run 2026-08-05. This reading is a carry-forward from 2026-07-12 (with a fresh macro fetch), NOT a reaffirmed classification: the Runs rationale ('August unlock ~2 months out') is stale now that the unlock window is current, and the outage covered exactly the proximity window the 06-19 note flagged. Mechanism states need a deliberate analyst pass.",
   "spot": {
     "price": "~185 intraday 2026-06-19 (prev close 191.82; intraday low ~172.11); ATH ~225.64 on 2026-06-16, ~18% off the high; +~37% over the $135 offer ($135 priced 06-11, ~$161 day-one close 06-12)",
     "as_of": "2026-06-19"
