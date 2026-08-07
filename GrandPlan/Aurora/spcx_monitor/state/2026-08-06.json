@@ -1,0 +1,69 @@
+{
+  "date": "2026-08-06",
+  "carried_from": "2026-08-05",
+  "analyst_note": "",
+  "spot": {
+    "price": "Below offer for the first time: 08-04 close $125.33 (+9.43% into earnings), ~$115.98 after-hours (-7.46% on capex guidance), pre-market 08-05 ~$111 (source spread ~$108-116 across 08-05 reports). Offer $135 (06-11); ATH $225.64 (06-16), so ~45-50% off the high.",
+    "as_of": "2026-08-05"
+  },
+  "mechanisms": {
+    "runs": {
+      "state": "AMBER",
+      "driving_observable": "The AMBER cluster (lockup expiry APPROACHING + sentiment softening) is now met, one day short of the event itself: the unconditional first lockup tranche expires TOMORROW 2026-08-06 \u2014 911.5M shares (~7% of ~13.2B outstanding, ~1.4x the current ~5% tradable float, ~$100-116B at current prices), insiders free to sell up to 20% of restricted holdings, unconditional regardless of price. Sentiment has clearly softened: price below the $135 offer for the first time, an after-hours drop through a revenue beat (capex spook), and openly bearish sell-side coverage. Turnover-spike-on-falling-price (the RED marker) is NOT yet observed \u2014 the unlock has not happened. Mitigants keeping this at AMBER rather than worse: Musk's stated long-term hold, employee brokerage windows/blackout restrictions, and venture tranches deferred to later dates.",
+      "observables": {
+        "lockup_restricted_share_pct": "~95% of shares outstanding still restricted pre-08-06 (tradable float ~5%); first tranche of ~7% unlocks 08-06.",
+        "free_float_classA_pct": "~5% of ~13.2B shares outstanding tradable pre-unlock (~$86B at early-Aug prices); the 08-06 tranche is ~1.4x that float.",
+        "next_lockup_expiry_date": "2026-08-06 (TOMORROW): unconditional first tranche, two trading days after the 08-04 maiden earnings. Staggered further tranches tied to earnings windows and fixed dates through the full 180-day expiry 2026-12-08.",
+        "next_lockup_expiry_size_pct": "911.5M shares, ~7% of outstanding, ~$100-116B at current prices, ~1.4x current tradable float; up to 20% of insiders' restricted holdings sellable. The conditional 10% bonus tranche (>=$175.50 close on >=5 of 10 days into the Q2-earnings window) FAILED \u2014 price was ~$108-125 in the window \u2014 and rolls into later time-based tranches.",
+        "turnover_ratio": null,
+        "holder_concentration": "Tight ~5% float amplified both the June squeeze to $225.64 and the slide since. Concentration mitigants on the unlock: Musk stated long-term hold; employee sales gated by brokerage windows/blackouts; VC holdings in later tranches.",
+        "etf_passive_inclusion_status": "Not yet index-eligible; the 08-06+ float step-change moves it toward eligibility thresholds \u2014 a future abrupt holder-base change."
+      },
+      "next_escalation_trigger": "Re-rate to RED if the 08-06 unlock window shows a turnover spike on falling price \u2014 a disorderly open, heavy realized insider selling into weakness, or a break below the recent ~$108-111 lows on elevated volume. De-escalate toward GREEN only if the unlock passes with modest realized selling and price stabilizes."
+    },
+    "fire_sales": {
+      "state": "AMBER",
+      "driving_observable": "The basis for GREEN \u2014 price ~+37% over the $135 offer, obligations covered with headroom \u2014 is gone: price is now BELOW the offer (~$108-116 vs $135). And the Cursor obligation is worse than the fixed-consideration reading carried since June: merger terms make the consideration VWAP-BASED (Class A shares issued per $60B implied value at SPCX's 7-day VWAP immediately before closing, expected Q3 2026), so each leg down mechanically increases the shares to be issued \u2014 dilution that scales with weakness, the signature of a stock-settled obligation under strain. Termination exposure is also now quantified: $10B if the deal collapses under specified conditions, $4B if antitrust-blocked. Margin/pledge trigger levels remain unquantified (null), so RED-type forced events cannot be ruled in or out from public data; none is visible.",
+      "observables": {
+        "cursor_acq_stock_component": "~$60B all-stock, consideration VWAP-based (not fixed-exchange): shares issued at closing per SPCX's 7-day VWAP \u2014 lower price -> more Class A issued. Expected close Q3 2026 under antitrust scrutiny. Termination fees: $10B under specified collapse conditions, $4B if blocked by regulators.",
+        "valor_equipment_lease_exposure": "Valor-linked compute SPV ~$20B (~$7.5B equity + ~$12.5B debt) to acquire Nvidia chips, with an xAI/SPCX option to acquire the hardware at lease end; Nvidia ~$2B equity into the SPV (risk shifted toward Valor).",
+        "margin_lending_against_spcx": null,
+        "insider_pledged_shares": null,
+        "counterparties_holding_spcx_as_asset": "Cursor/Anysphere holders convert into SPCX Class A at closing (VWAP-based count); Valor SPV; vendor/acquisition counterparties \u2014 full map still pending filings.",
+        "convertible_or_stock_settled_instruments": "The VWAP-based Cursor consideration is now the identified principal stock-settled obligation; below-offer price raises the issuance count and the dilution absorbed at closing.",
+        "nearest_stock_price_trigger": null
+      },
+      "next_escalation_trigger": "Re-rate to RED on any visible forced event: margin calls or pledged-share liquidation surfacing in filings, a renegotiation/collapse of the Cursor deal crystallizing the $10B/$4B termination exposure, or a slide deep enough that the VWAP-based issuance materially reprices the deal. Quantify margin/pledge triggers from the merger filing and insider disclosures \u2014 still the biggest observability hole."
+    },
+    "interconnections": {
+      "state": "AMBER",
+      "driving_observable": "The reflexive stock-as-currency loop has turned from up to down: SPCX stock \u2014 the acquisition currency that 'paid for Cursor in a few hours of trading' in June \u2014 is now below its offer price, and the VWAP-based consideration converts further weakness into extra dilution at the Q3 closing. The IPO-pipeline node is wobbling in exactly the brief's sense: press reports SPCX's slide from $225 to below-offer as denting confidence in the mega-cap listing pipeline (Anthropic confidentially filed 06-01 targeting ~October; OpenAI possibly Q4; OpenAI's CFO publicly cautions it is not ready to be public). This meets AMBER ('stress at one node / IPO-pipeline wobble'). NOT RED: the compute-demand leg is strong (AI-segment revenue +247% y/y to $2.56B; total revenue +92% beat), and no counterparty node \u2014 Cursor, Valor SPV, Anthropic-as-customer, xAI \u2014 is in visible operational distress. The stress is concentrated in the sentiment/currency leg of the loop, not (yet) propagating through the web.",
+      "observables": {
+        "counterparty_web_status": "Web intact, no node in operational distress: Cursor closing expected Q3 2026 (antitrust scrutiny noted); Valor ~$20B compute-SPV unchanged; Anthropic compute customer at Colossus/Memphis; Colossus 2 expansion continuing. The hub itself (SPCX equity) is the stressed element.",
+        "compute_revenue_dependency": "Q2 2026 (first public print, 08-04): total revenue $7.81B +92% y/y (beat ~$6.93B est); AI segment +247% y/y to $2.56B (beat). Demand leg of the reflexive loop strong; the sentiment leg broke on capex \u2014 $18.37B in the quarter vs ~$13B expected, with management guiding two more similar quarters.",
+        "ipo_pipeline_status": "Wobbling but alive: Anthropic confidentially filed 06-01-2026, targeting a listing as soon as October (raised at $965B in late May); OpenAI possibly Q4 (recent raise at $852B; ~$14B projected 2026 losses; CFO cautions not ready). SPCX's below-offer slide is reported as denting confidence in mega-cap tech listings \u2014 a failed or repriced Anthropic/OpenAI debut would reprice the whole narrative.",
+        "vendor_customer_concentration": null
+      },
+      "next_escalation_trigger": "Re-rate to RED on simultaneous multi-node stress: an Anthropic/OpenAI listing pulled or badly repriced, a Cursor-deal renegotiation/failure, visible AI-capex demand slowdown hitting the compute-revenue leg, or Valor-SPV strain \u2014 while SPCX weakness persists. Watch the 08-06 unlock interaction: a disorderly unlock is the mechanism by which equity stress starts propagating into the web."
+    },
+    "currency_mismatch": {
+      "state": "INERT",
+      "driving_observable": "",
+      "observables": {},
+      "next_escalation_trigger": ""
+    },
+    "inflation_deflation": {
+      "state": "INERT",
+      "driving_observable": "",
+      "observables": {},
+      "next_escalation_trigger": ""
+    }
+  },
+  "macro_backdrop": {
+    "tips_10y_real_yield": "2.40 (2026-08-04, FRED DFII10)",
+    "vix_level": "16.50 (2026-08-04, FRED VIXCLS)",
+    "vix_trend": "Calm: 16.50 (08-04) vs the 16.4-18.4 range around the June SPCX pullback. The SPCX drawdown is idiosyncratic, not systemic \u2014 the macro backdrop is NOT amplifying the stress.",
+    "narrative_vs_cashflow_rotation": null,
+    "broad_risk_on_off": null
+  }
+}
