@@ -1,0 +1,10 @@
+# Fixture entry — exercises the archetype_ref rules. Not board data.
+# archetype_ref is present but null: the key exists, so the schema check's
+# missing-key test does not fire, and check_archetype_ref returns early on
+# `ref is None`. Probes whether the two checks each assume the other covers this.
+id: "entry-null-ref"
+player: "Fixture Player"
+archetype_ref: null
+slots:
+  placeholder:
+    value: null

@@ -14,9 +14,34 @@ Run any case with:
 | `empty-list/` | `[]` | fail — must be non-empty (Rule A) |
 | `no-registry/` | valid slug, but `archetypes.md` has no SLUG-REGISTRY markers | fail loudly — no prose fallback (§3 trap) |
 | `orphan-slug/` | valid slug; registry lists `ghost-pole`, prose never names it | pass with Rule D warning |
+| `null-ref/` | `null` | **passes (exit 0) — characterisation, not endorsement.** See below. |
 
 Dangling and retired fail with **distinct messages** — a checker that only ever
 passes is indistinguishable from one that does nothing.
+
+## `null-ref/` — a documented gap, not a passing rule
+
+`archetype_ref: null` currently validates clean. Two checks each assume the other
+covers it:
+
+- `check_entry_schema` tests `ENTRY_TOP_KEYS - set(data)`, which asks only whether the
+  **key** is present. `archetype_ref: null` has the key, so nothing fires.
+- `check_archetype_ref` returns early on `if ref is None`, commented *"absence already
+  reported by the schema check"* — which is true for a missing key and false for a
+  null value.
+
+So an entry can carry no archetype pointer at all and the board still reports green.
+Compare `empty-list/`, where `[]` is a hard error: the two express the same thing and
+are treated oppositely.
+
+This fixture pins the **current** behaviour so that a future change is visible as a
+change. It does **not** assert that null should pass. Whether null becomes an error
+(Rule A) or stays legal is a rule decision for the build doc's author, not a tool fix —
+if the rule changes, this row moves to *fail* and the fixture keeps earning its place.
+
+Found 2026-08-08 while reading the `tools/validate.py` diff during the v1.1 §8
+independent check — i.e. by the check specifically designed not to route through the
+agent's self-report.
 
 The `no-registry` and `retired` prose deliberately mentions valid-looking and retired
 slugs in backticks/brackets: if the validator ever regressed to scanning prose, those
