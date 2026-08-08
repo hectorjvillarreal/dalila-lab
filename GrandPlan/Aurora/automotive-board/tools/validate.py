@@ -8,6 +8,14 @@ Jobs (build doc §6.4):
      (git HEAD if a repo exists, else the snapshot baseline .boundary-baseline.json;
      refresh the snapshot with --snapshot after intended human edits).
   4. scaffold/ purity: warn on instance-specific vocabulary (warning, not error).
+  5. archetype_ref integrity (build doc 20260726_AURORA_BUILD_validate-archetype-refs_v1.1):
+     string or non-empty list; every slug must be `active` in the slug registry of
+     instances/<x>/archetypes.md (the fenced block between the SLUG-REGISTRY markers —
+     never the prose). Retired slug in use = hard failure quoting the registry's
+     recorded replacements, distinct from a dangling pointer. Rule D: warn when an
+     active slug never appears in the prose outside the registry block (one-directional
+     coherence check). Detection only: the tool never repairs a reference.
+     Rules are proven against tools/fixtures/ via --root; see tools/fixtures/README.md.
 
 The tool validates facts infrastructure only. It never reads meaning into any value.
 Exit codes: 0 ok · 1 schema/pairing errors · 2 boundary violation.
@@ -36,6 +44,12 @@ CONFIDENCE_VALUES = {"reported", "confirmed"}
 SOURCE_TYPE_VALUES = {"primary", "secondary"}
 THRESHOLD_KEYS = {"id", "entry", "description", "due", "status", "due_passed", "resolution"}
 THRESHOLD_WRITABLE = {"due_passed"}  # the only tool-writable threshold field
+
+# Slug registry delimiters in instances/<x>/archetypes.md. Only what lies between
+# them is machine-readable; retired slugs also appear in the prose as documentation
+# of past splits, and the prose must never be scanned for validity.
+REGISTRY_BEGIN = "<!-- SLUG-REGISTRY-BEGIN -->"
+REGISTRY_END = "<!-- SLUG-REGISTRY-END -->"
 
 # scaffold purity: default instance-vocabulary term list (configurable via --terms FILE,
 # one term per line). Word-boundary matched, case-insensitive except all-caps terms.
@@ -132,6 +146,102 @@ def check_thresholds_schema(path, data, errors):
         due = th.get("due")
         if due is not None and not isinstance(due, date):
             err(errors, f"{where}: due must be an ISO date or null")
+
+
+# ---------------------------------------------------------------- archetype refs
+
+def load_slug_registry(inst, errors, warnings):
+    """Parse the slug registry fenced between the SLUG-REGISTRY markers in
+    instances/<x>/archetypes.md. Missing markers is a loud failure with no
+    fallback — the file's prose documents retired slugs and must not be read
+    as a source of valid anchors. Adding the block is a human edit.
+
+    Rule D (warning, one-directional): an active slug that never appears in
+    the prose outside the block may not be a pole at all — a bad reference
+    would then validate clean, which is the silent failure direction.
+
+    Returns {"active": set, "retired": {slug: registry comment}} or None."""
+    path = inst / "archetypes.md"
+    if not path.is_file():
+        err(errors, f"{inst.relative_to(ROOT)}: archetypes.md missing — "
+                    "archetype_ref cannot be validated")
+        return None
+    rel = path.relative_to(ROOT)
+    text = path.read_text(encoding="utf-8")
+    begin, end = text.find(REGISTRY_BEGIN), text.find(REGISTRY_END)
+    if begin == -1 or end == -1 or end < begin:
+        err(errors, f"{rel}: slug registry markers ({REGISTRY_BEGIN} … {REGISTRY_END}) "
+                    "not found. The registry block is the single source of slug validity; "
+                    "prose is never scanned. Adding the block is a human edit — stop.")
+        return None
+    block_lines = [ln for ln in text[begin + len(REGISTRY_BEGIN):end].splitlines()
+                   if not ln.strip().startswith("```")]
+    try:
+        data = yaml.safe_load("\n".join(block_lines))
+    except yaml.YAMLError as e:
+        err(errors, f"{rel}: slug registry block is not valid YAML: {e}")
+        return None
+    if not isinstance(data, dict) or not isinstance(data.get("active"), list) or not data["active"]:
+        err(errors, f"{rel}: slug registry must map 'active' to a non-empty list")
+        return None
+    retired_slugs = data.get("retired") or []
+    if not isinstance(retired_slugs, list):
+        err(errors, f"{rel}: slug registry 'retired' must be a list")
+        return None
+    # Per-slug comments are stripped by the YAML parser; recover the retired ones
+    # from the raw lines because Rule C must quote the registry, never infer.
+    comments, section = {}, None
+    for ln in block_lines:
+        s = ln.strip()
+        if s.startswith("active:"):
+            section = "active"
+        elif s.startswith("retired:"):
+            section = "retired"
+        elif section == "retired":
+            m = re.match(r"-\s*(\S+)\s*(?:#\s*(.*))?$", s)
+            if m:
+                comments[m.group(1)] = (m.group(2) or "").strip()
+    active = {str(s) for s in data["active"]}
+    retired = {str(s): comments.get(str(s), "") for s in retired_slugs}
+    for slug in active & set(retired):
+        err(errors, f"{rel}: slug registry lists {slug!r} as both active and retired")
+    prose = text[:begin] + text[end + len(REGISTRY_END):]
+    for slug in sorted(active):
+        if slug not in prose:
+            warnings.append(
+                f"{rel}: active slug {slug!r} appears nowhere in the prose outside the "
+                "registry block — registry/prose incoherence; a human judges which is right")
+    return {"active": active, "retired": retired}
+
+
+def check_archetype_ref(path, data, registry, errors):
+    """Rules A–C. Normalises string→list in memory only; the file is never rewritten."""
+    if not isinstance(data, dict):
+        return
+    ref = data.get("archetype_ref")
+    if ref is None:  # absence already reported by the schema check
+        return
+    rel = path.relative_to(ROOT)
+    refs = [ref] if isinstance(ref, str) else ref
+    if not isinstance(refs, list) or not refs:
+        err(errors, f"{rel}: archetype_ref must be a slug or a NON-EMPTY list of slugs")
+        return
+    for slug in refs:
+        if not isinstance(slug, str) or not slug.strip():
+            err(errors, f"{rel}: archetype_ref element is not a slug: {slug!r}")
+            continue
+        if registry is None:
+            continue  # the registry failure is already on the board, once
+        if slug in registry["active"]:
+            continue
+        if slug in registry["retired"]:
+            note = registry["retired"][slug]
+            recorded = f"registry records: {note}" if note else "registry records no replacement"
+            err(errors, f"{rel}: archetype_ref {slug!r} is RETIRED ({recorded}). "
+                        "Likely a half-applied split; repairing the reference is a human edit.")
+        else:
+            err(errors, f"{rel}: archetype_ref {slug!r} is a dangling pointer — "
+                        "in neither 'active' nor 'retired' in the slug registry")
 
 
 def check_pairing(inst, errors):
@@ -307,7 +417,18 @@ def main():
                     help="record the current tree as the boundary baseline (human act)")
     ap.add_argument("--terms", type=Path, default=None,
                     help="file with one purity term per line (overrides default list)")
+    ap.add_argument("--root", type=Path, default=None,
+                    help="validate this tree instead of the repo root "
+                         "(general capability; used to run the tools/fixtures/ suite)")
     args = ap.parse_args()
+
+    if args.root:
+        global ROOT, BASELINE
+        ROOT = args.root.resolve()
+        BASELINE = ROOT / ".boundary-baseline.json"
+        if not (ROOT / "instances").is_dir():
+            print(f"ERROR --root {ROOT} has no instances/ directory")
+            return 1
 
     if args.snapshot:
         BASELINE.write_text(json.dumps(readonly_projection(), indent=1, sort_keys=True),
@@ -319,11 +440,15 @@ def main():
 
     for inst in instance_dirs():
         check_pairing(inst, errors)
+        registry = load_slug_registry(inst, errors, warnings)
         for path in sorted((inst / "board").glob("*.yaml")):
             try:
-                check_entry_schema(path, load_yaml(path), errors)
+                data = load_yaml(path)
             except yaml.YAMLError as e:
                 err(errors, f"{path.relative_to(ROOT)}: YAML parse error: {e}")
+                continue
+            check_entry_schema(path, data, errors)
+            check_archetype_ref(path, data, registry, errors)
         tpath = inst / "thresholds.yaml"
         if tpath.is_file():
             check_thresholds_schema(tpath, load_yaml(tpath), errors)
