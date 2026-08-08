@@ -1,0 +1,7 @@
+# Fixture entry — exercises the archetype_ref rules. Not board data.
+id: "entry-dangling"
+player: "Fixture Player"
+archetype_ref: "not-a-real-pole"
+slots:
+  placeholder:
+    value: null
