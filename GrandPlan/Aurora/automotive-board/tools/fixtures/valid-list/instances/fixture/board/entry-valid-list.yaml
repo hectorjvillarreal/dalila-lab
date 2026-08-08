@@ -1,0 +1,7 @@
+# Fixture entry — exercises the archetype_ref rules. Not board data.
+id: "entry-valid-list"
+player: "Fixture Player"
+archetype_ref: ["multi-path-hedger", "tempo-skeptic"]
+slots:
+  placeholder:
+    value: null
