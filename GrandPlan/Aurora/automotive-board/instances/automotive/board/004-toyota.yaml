@@ -1,7 +1,7 @@
 # Facts file — entry 004. Prose (judgment) lives in 004-toyota.md.
 id: "004"
 player: "Toyota"
-archetype_ref: "transition-tempo-skeptic"   # READ-ONLY pointer into ../archetypes.md
+archetype_ref: ["multi-path-hedger", "tempo-skeptic"]   # READ-ONLY pointer into ../archetypes.md
 slots:
   volume:
     value: "~10M+ /yr"

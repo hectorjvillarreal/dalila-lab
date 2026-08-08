@@ -1,9 +1,10 @@
 # Facts file — entry 001. Prose (judgment) lives in 001-geely.md.
 # Migration note: no source URLs existed in the v1 board; source/source_type null with
 # confidence: reported throughout. `notes` keys are read-only, human-set at migration.
+# 2026-07-24: pole 2 split into 2a/2b. Only archetype_ref changed — no fact moved.
 id: "001"
 player: "Geely / Zeekr Group"
-archetype_ref: "span-legitimacy-conglomerate"   # READ-ONLY pointer into ../archetypes.md
+archetype_ref: ["segment-span-conglomerate", "acquired-legitimacy"]   # READ-ONLY pointers into ../archetypes.md
 slots:
   volume:
     value: "1.021M"
@@ -27,6 +28,7 @@ slots:
     source_type: null
     confidence: reported
     decisive: true
+    notes: "Decisive for 2a (segment-span conglomerate)."
   vertical_integration:
     value: "high"
     unit: null
@@ -47,7 +49,8 @@ slots:
     decisive: true
     notes: >-
       Polestar denial covers ~6% of its volume, redirecting to Europe + SE Asia,
-      Eastern Europe, Latin America, Canada.
+      Eastern Europe, Latin America, Canada. Decisive for 2b (acquired legitimacy);
+      note the unit — a portfolio of per-marque authorizations, not a scalar stock.
   margin:
     value: null
     unit: null

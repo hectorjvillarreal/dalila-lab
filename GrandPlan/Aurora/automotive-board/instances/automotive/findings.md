@@ -37,22 +37,32 @@ The board has since surfaced **three slot families**: *challenger* (cost/integra
 
 **Architecture finding (2026-07-16) — the poles are unbundling.** Two of six corners have now cracked under contact with data: 004 (Toyota) bundles *hedge* with *skepticism*; 001 (Geely) bundles *segment span* with *legitimacy assets*. The poles chosen intuitively were composites mistaken for extremes; data is separating them. This is the archetypal-analysis purity problem arriving empirically — and it **settles the quantification question**: loadings cannot be computed on a basis whose elements keep splitting. The qualitative discipline is not a compromise pending better method; it is the only representation that survives contact. *Poles unbundling is the instrument refining, not failing.*
 
+**Repair 1 executed (2026-07-24) — pole 004 split.** Resolved into **two firm-level axes** (4a multi-path hedger, 4b tempo skeptic) **and one cross-level variable** (coordination capacity) — *not* the three poles the backlog anticipated. Three things worth keeping from how it resolved:
+1. **The split added no players.** It re-read existing entries and produced a discrimination the bundled pole could not make: Toyota and Hyundai were indistinguishable, and are now one cell apart.
+2. **It produced the archetype set's first predictive structure.** The 4a×4b grid has all four cells occupied, and the empty-in-principle combination — hedge-low + skeptic-high — is the failure cell. Great Wall confirms it; a hedge-low skeptic surviving a fast-transition market would break it.
+3. **Not every component of a bundled pole is a pole.** One of the three operated at a different level and was filed as a cross-level variable instead. *A repair can discover that a component belongs somewhere other than the axis set — which is a second failure mode for intuitive poles, distinct from bundling.*
+
+**Cross-level — coordination capacity (2026-07-24).** The capacity to restructure at *industry or national* level rather than firm level, **environmentally gated**: Japan has an association tradition and gets JAMA standardisation; Germany has co-determination and gets paralysis presented as a model-range cut; China has state standard-setting; the US has regulatory power over market access. The *act* is firm-level — Toyota placed its former CEO in the JAMA role — but its *availability* is not. Filing it as a firm archetype would attribute an institutional endowment to a corporate strategy, the category error the VW finding warns against. Recorded in `archetypes.md#cross-level-variables--not-archetypes`; **strongest evidence yet for opening a coalition register** (see the level limitation, below).
+
 ## Slot corrections
 
 **Slot correction (entry 007):** `china_dependence` and **`tariff_exposure`** are separate — the board had them fused. VW carries both maxed; Hyundai carries only the second. The difference between "flat with a profit hit" and "worst result since dieselgate" in the same year, same tariff regime, same EV softness, is approximately the diffusion exposure.
 
 **Slot correction (2026-07-16):** `transition_pace_exposure` is **regionally conditional**, not a scalar. Great Wall (NEV ~30% of domestic sales vs industry >63%) was eliminated from China's top-ten retail running the skeptic archetype in a fast-transition market; Toyota runs the same archetype in slow-transition markets and prints profit. The archetype is neither right nor wrong — it is region-indexed.
+**Post-split note (2026-07-24):** this slot measures **4b (belief)**, not 4a (capability). A hedge does not decay with transition pace; a belief does. Hyundai is the demonstration — high 4a, low `transition_pace_exposure`. Renaming the slot to match the axis is **deferred**: a slot question, and it should wait until a slot actually needs it.
 
 ## Shakeouts have institutional forms
 *(cf. `scaffold/discipline.md#shakeout-institutional-forms`)*
 
 **Generalization (2026-07-20) — shakeouts have institutional forms.** Same underlying pressure, three mechanisms: **China → elimination** (price war; Great Wall out of the top-ten); **Japan → negotiated consolidation** (JAMA standardisation; Nissan–Honda cooperation reportedly close; Nissan ~27% of Mitsubishi; Toyota stakes in Subaru/Mazda/Suzuki); **Germany → blocked restructuring** (VW, July 9). China's commonality *emerged* endogenously from a tournament; Japan's must be *negotiated* through an association — and negotiation is slow by construction, because consent is its price. "Institutions constrain strategy shape" (VW, 2026-07-14) is now a cross-national regularity, not a single-firm observation. **Portable to pharma directly.**
 **Sharpening (added 2026-07-24, from the same source): Japan's consolidation is *nationalizing*.** Domestic ties tighten (Nissan–Honda, Nissan~27% Mitsubishi, Toyota's Subaru/Mazda/Suzuki stakes, a common JAMA supplier standard) while the one *cross-border* alliance loosens — Renault has ceded day-to-day control of Nissan, the partnership now case-by-case model sharing (Micra/R5, Duster/Tekton) rather than central management. Consolidation is not merely negotiated; it is negotiated **along national lines**. *Gina: alliance geometry re-forming around the nation-state as the competitive unit — consistent with the level limitation below.*
+**Corollary (2026-07-24, from the 004 split):** because the response is **endowed rather than chosen**, predicting a bloc's answer to diffusion means reading its *institutions*, not its strategy documents. This is why coordination capacity is filed as a cross-level variable rather than an archetype.
 
 ## The level limitation
 *(cf. `scaffold/discipline.md#level-limitation`)*
 
 **⚠ Level limitation (2026-07-20) — the board is firm-level; the contest may not be.** The diffusion advantage was never BYD-the-firm: it is supplier density, ecosystem depth, commonality produced by a domestic tournament. Japan's response is at the *system* level because that is where the competition sits. **A firm-level board may mis-locate the contest.** Not fixed by adding a player — "national coordination" is a *level*, not an archetype, and must not be entered as a pole (cf. the rejected "export-channel pole"). Possible future object: a **coalition register** alongside the player board. Not now.
+**Update (2026-07-24):** the 004 split confirmed this by forcing the question — coordination capacity would not fit the firm-level axis set without distorting it, and was filed cross-level instead. **The coalition register now has an explicit trigger: open it when a second component refuses to fit the firm-level board.**
 
 ## Wall gradient
 *(cf. `scaffold/discipline.md#wall-gradient`)*
@@ -73,13 +83,14 @@ The board has since surfaced **three slot families**: *challenger* (cost/integra
 ## Board at seven — live contrasts (verbatim closing note)
 
 *Board at seven — a spanning archetype set plus its first mixture, never a size ranking. Live contrasts: diffusion vs frontier (BYD ↔ Tesla) · span conglomerate riser vs faller (Geely ↔ VW) · the incumbent's responses (Toyota hedge ↔ VW adapt ↔ Hyundai diversify) · the AI layer (Huawei-Xiaomi ↔ Tesla ↔ Hyundai) · corners vs the un-cornered middle (007) · **archetype vs instantiation (Leapmotor ↔ BYD)**.*
+*Added 2026-07-24: **hedge vs belief** (Toyota ↔ Hyundai) — the contrast the 004 split made visible.*
 
 ## Open repairs and next entry (human backlog — not tool work)
 
-**Open repairs:** split the Toyota pole **three ways** (hedge ≠ tempo-skepticism ≠ system coordination) · split the Geely pole (segment span ≠ legitimacy assets) · back-fill `tariff_exposure` for 004/005/006 · region-index `transition_pace_exposure` · decide whether a **coalition register** is needed alongside the firm-level board.
+**Open repairs:** ~~split the Toyota pole three ways~~ **— done 2026-07-24, resolved as two axes + one cross-level variable** · split the Geely pole (segment span ≠ legitimacy assets) — **next, same method; Polestar/Volvo is the separating case** · back-fill `tariff_exposure` for 004/005/006 · region-index `transition_pace_exposure` · decide whether a **coalition register** is needed alongside the firm-level board — *trigger now explicit: a second component refusing to fit the firm-level board*.
 **Thresholds added:** JAMA harness specs agreed by end-2027? (bears on 004) — booked as TH-003 in `thresholds.yaml`.
 
-**Entry 008 — now clearly indicated: Chery.** The board has **no export-channel pole**, and export channel is the variable that now decides the tournament. Chery leads it (931,600, ahead of BYD) and the board doesn't have it. It is also a HIMA partner (Luxeed) — so it enters as a *mixture*, testing the loadings discipline a second time — and it is the export champion into the global South including **Latin America**, which is where this instance touches the DFD/LatAm thread directly. *Runner-up candidate: Leapmotor (the diffusion archetype's better instance; possible Stellantis channel inversion).*
+**Entry 008 — now clearly indicated: Chery.** The board has **no export-channel pole**, and export channel is the variable that now decides the tournament. Chery leads it (931,600, ahead of BYD) and the board doesn't have it. It is also a HIMA partner (Luxeed) — so it enters as a *mixture*, testing the loadings discipline a second time — and it is the export champion into the global South including **Latin America**, which is where this instance touches the DFD/LatAm thread directly. *Runner-up candidate: Leapmotor (the diffusion archetype's better instance; possible Stellantis channel inversion — unverified).*
 
 ## Custom slot definitions (instance registry)
 
@@ -87,7 +98,7 @@ Per `scaffold/slot-registry.yaml` custom-slot policy, the automotive instance us
 
 - `china_dependence` — share of volume/profit dependent on the China market (incumbent family).
 - `restructuring_latency` — institutional speed limit on restructuring (incumbent family).
-- `transition_pace_exposure` — share of profit pool dependent on the transition staying slow; **regionally conditional, not scalar** (incumbent family).
+- `transition_pace_exposure` — share of profit pool dependent on the transition staying slow; **regionally conditional, not scalar**; **measures 4b (belief), not 4a (capability)** (incumbent family).
 - `tariff_exposure` — exposure to tariff walls, distinct from `china_dependence` (correction, entry 007).
 - `compute_autonomy_moat` — depth of the compute/software/autonomy stack moat (frontier family).
 - `non_auto_optionality` — value options outside the vehicle business (frontier family).
