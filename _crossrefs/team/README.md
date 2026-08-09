@@ -21,5 +21,6 @@ Current contents:
 |---|---|---|
 | Anne | `20260808_BID2_briefing_anne_age_profiles.md` — demographic implications of the health-spending age profiles + 2050 composition experiment | BID2/motivation |
 | Beth | `20260808_BID2_briefing_beth_motivation.md` — motivation build: results, limitations, figure locations, 2020 natural experiment | BID2/motivation |
+| Debb | `20260808_BID2_briefing_debb_agenda_split.md` — two-track split: paper motivation (Sept 2) vs the emergent research agenda to park and resurface | BID2/motivation |
 | Fina | `20260808_BID2_briefing_fina_coordination.md` — coordination view: open loops, dependencies, cadence | BID2/motivation |
 | Judy | `20260808_BID2_briefing_judy_frailty.md` — frailty index reconstruction and confirmation questions | BID2/motivation |
