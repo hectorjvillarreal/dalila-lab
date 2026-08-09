@@ -55,7 +55,8 @@ receta") to curative.
 
 ## The corollary — low spending among the poor is unmet need, not good health
 
-All three independent lines agree.
+All three planned lines agree — and a fourth, unplanned one emerged from the
+2020 wave (see below).
 
 1. *ENIGH (indirect):* zero health spending is concentrated in poor
    households and remains elevated there even when the household contains a
@@ -74,6 +75,25 @@ All three independent lines agree.
    with the caveat that the tercile-1 vs tercile-2 ordering is not monotone
    and the confidence intervals are wide. Descriptive, not causal, and labeled
    as such everywhere.
+
+**A fourth line, found along the way (fig 12).** The pandemic wave is itself
+evidence. Real household OOP health spending jumped between 2018 and 2020 in
+*every* decile — +76% in the poorest, +29% in the richest — while food
+spending (the placebo) was flat to negative everywhere, and the shift never
+reversed in 2022–2024. The margin was participation, not intensity: the share
+of households spending zero on health fell 13–15 pp in every decile, while
+conditional-on-positive amounts rose far less (+36% bottom decile, +7.5%
+top). When the free public option failed, the zeros emptied out — poor
+households were conscripted into out-of-pocket payment, not priced out of
+responding. In peso terms the top two deciles still financed 36% of the
+aggregate jump (growth rates and contributions tell opposite stories; quote
+both or neither). This is time-series support for the cross-sectional
+identification in fig 5: the zeros among poor households encode access to
+in-kind provision plus unmet need, because they collapsed the moment public
+provision did. Caveat: two waves and one placebo cannot fully exclude a
+health-specific reporting change in ENIGH 2020 (the same J-code instrument
+was used in both waves, which helps); keep causal language soft.
+Table: `pandemic_jump_by_decile.csv`.
 
 ## Validation of the estimated profile (the single most valuable check)
 
@@ -130,7 +150,9 @@ Assignment-dependent: the precise preventive share (2%–46% bracket).
   net-worth variable ships); bracket follow-ups for NR/NS amounts were not
   interval-imputed in this pass — wealth terciles are based on point amounts
   (~60% of households report enough components).
-- **2020 ENIGH** is pandemic-affected and flagged in every note that uses it.
+- **2020 ENIGH** is pandemic-affected and flagged in every note that uses it —
+  though the disruption is also informative in its own right (fig 12 and the
+  fourth evidence line above).
 - The ENIGH↔ENASEM level gap means fig 2 validates shape only; that is stated
   on the figure itself.
 
