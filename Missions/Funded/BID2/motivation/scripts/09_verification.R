@@ -74,7 +74,8 @@ figtabs <- list(
   "Figure 10 — Subsequent outcomes by wealth" = "fig10_subsequent_outcomes_by_wealth.csv",
   "Figure 11 — Wave stability" = "fig11_profile_stability.csv",
   "Frailty probit reproduction check" = "enasem_probit_reproduction_check.csv",
-  "GHED benchmark" = "verification_ghed_benchmark.csv")
+  "GHED benchmark" = "verification_ghed_benchmark.csv",
+  "Figure 12 — 2018-2020 pandemic jump by decile" = "pandemic_jump_by_decile.csv")
 
 nl <- c("# NUMBERS — every figure's plotted values",
         "",

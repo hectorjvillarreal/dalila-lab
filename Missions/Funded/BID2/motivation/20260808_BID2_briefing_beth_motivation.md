@@ -85,19 +85,35 @@ break shows in the external benchmark: ENIGH's capture of GHED out-of-pocket
 rises from 0.22 in 2018 to 0.31–0.34 from 2020 onward
 (`output/tables/verification_ghed_benchmark.csv`).
 
-The reading: when the public system saturated in 2020, households that could
-pay bought care out of pocket — and the shift persisted after the emergency.
-That is the restoration constraint binding on cash *in the aggregate time
-series*, not just in the cross-section: an in-kind provision shock forcing
-exactly the private spending response the model formalizes, with the poor
-(who could not respond — see the forgone-care evidence) absorbing it as unmet
-need instead. If you think it earns more than a footnote in the motivation, a
-decile-split of the 2018→2020 spending jump would show who financed the surge;
-the data and scripts are already in place, so it is an afternoon, not a
-project. Caveat before leaning on it: part of the 2018→2020 step could be
-survey-instrument improvement rather than behavior (capture ratio and spending
-jump together), so any serious use should difference against a placebo
-category with no pandemic exposure.
+The decile split is now run (`scripts/11_pandemic_jump.R`,
+`output/tables/pandemic_jump_by_decile.csv`,
+`output/figures/fig12_pandemic_jump.png`), and it corrects the first reading
+we had of this episode. Three facts:
+
+1. **The surge was universal, and proportionally largest at the bottom.**
+   Real mean household OOP rose in every decile — +76% in decile 1, +29% in
+   decile 10, monotone-ish in between. It was not a rich-household response.
+2. **The margin was participation, not intensity.** Zero-spending fell by
+   13–15 pp in *every* decile; conditional-on-positive spending rose far
+   less (+36% in decile 1, +7.5% in decile 10). The jump is mostly
+   households that previously spent nothing starting to pay — for the poor,
+   almost entirely so. When the free public option failed, the zeros
+   emptied out. This is direct time-series support for reading the
+   cross-sectional zeros as *access to in-kind provision plus unmet need*,
+   not as good health.
+3. **In pesos, the rich still financed most of it** (deciles 9–10 contribute
+   36% of the aggregate jump; deciles 1–3 about 16%) — levels and growth
+   rates tell opposite stories, so quote both or neither.
+
+The placebo behaves: food spending was flat-to-negative in the same window
+(+10% in decile 1 to −12% in decile 10), so the health surge is not a
+general instrument or recall improvement in ENIGH 2020. The reading that
+survives: the pandemic forced *out-of-pocket participation* on households
+the public system had been covering — the restoration constraint binding in
+the aggregate time series, with the poor conscripted into paying rather than
+priced out of responding. A caveat stands for any causal language: the same
+J-code instrument was used in both waves, but a health-specific reporting
+change cannot be fully excluded with two waves and one placebo.
 
 ## Limitations — read before citing anything
 
