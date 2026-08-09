@@ -64,11 +64,16 @@ a zip is a snapshot by nature. Two things keep it honest:
   `overleaf_motivation/`. So a committed zip always matches the committed
   sources.
 
-The hook lives in `.git/hooks/pre-commit`, which git does not version. That file
-also carries the automotive-board hook, and **re-running the board's install
-line replaces the whole file**, removing the two-line dispatch to this one. If
-the zip ever starts drifting, that is the first thing to check; the lines to
-re-add are in the header of `../scripts/pre-commit-hook.sh`.
+The hook is versioned: it is called by the dispatcher at `.githooks/pre-commit`,
+which the repo uses via `core.hooksPath`. Nothing is installed into
+`.git/hooks/`, so no other project's install step can displace it.
+
+`core.hooksPath` is local config and does not travel with a clone, so it is the
+one thing to check if the zip ever starts drifting:
+
+    git config core.hooksPath      # should print .githooks
+
+See `.githooks/README.md`.
 
 ## Reading the section
 

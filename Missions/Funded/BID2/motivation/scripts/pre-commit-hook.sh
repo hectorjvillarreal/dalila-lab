@@ -10,17 +10,14 @@
 #
 # The rebuild is deterministic, so a no-op rebuild produces no diff.
 #
-# Install (from repo root) — note the repo already carries an automotive-board
-# pre-commit hook, so DISPATCH to this script rather than overwriting it:
+# This script is not installed into .git/hooks/ — it is called by the versioned
+# dispatcher at .githooks/pre-commit, which is already listed there. Nothing to
+# install per project; a fresh clone only needs the repo-wide switch:
 #
-#   MOT="Missions/Funded/BID2/motivation/scripts/pre-commit-hook.sh"
-#   # add near the TOP of .git/hooks/pre-commit, before the board block:
-#   #   H="$(git rev-parse --show-toplevel)/$MOT"
-#   #   [ -x "$H" ] && { "$H" || exit 1; }
+#   git config core.hooksPath .githooks
 #
-# Re-running the automotive-board install line
-#   cp GrandPlan/Aurora/automotive-board/tools/pre-commit-hook.sh .git/hooks/pre-commit
-# will REMOVE that dispatch. If it goes missing, re-add the two lines above.
+# If this hook stops firing, check that first — core.hooksPath is local config
+# and does not travel with a clone. See .githooks/README.md.
 # Wired 2026-08-09.
 
 MOT_REL="Missions/Funded/BID2/motivation"
