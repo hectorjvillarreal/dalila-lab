@@ -75,6 +75,30 @@ That third line is the restorative-spending mechanism the model formalizes,
 observed directly — reported as descriptive conditional patterns, explicitly
 not causal (wealth bundles insurance, education, prior health, access).
 
+## Worth a second look: 2020 as a natural experiment
+
+The build treats ENIGH 2020 as a pandemic-affected wave to flag — but the flag
+hides something substantive. Real per-capita OOP health spending (constant
+Aug–Nov 2024 pesos) jumped **~43% between 2018 and 2020** (1,259 → 1,799
+pesos/year) and never came back down (1,715 in 2022, 1,915 in 2024). The same
+break shows in the external benchmark: ENIGH's capture of GHED out-of-pocket
+rises from 0.22 in 2018 to 0.31–0.34 from 2020 onward
+(`output/tables/verification_ghed_benchmark.csv`).
+
+The reading: when the public system saturated in 2020, households that could
+pay bought care out of pocket — and the shift persisted after the emergency.
+That is the restoration constraint binding on cash *in the aggregate time
+series*, not just in the cross-section: an in-kind provision shock forcing
+exactly the private spending response the model formalizes, with the poor
+(who could not respond — see the forgone-care evidence) absorbing it as unmet
+need instead. If you think it earns more than a footnote in the motivation, a
+decile-split of the 2018→2020 spending jump would show who financed the surge;
+the data and scripts are already in place, so it is an afternoon, not a
+project. Caveat before leaning on it: part of the 2018→2020 step could be
+survey-instrument improvement rather than behavior (capture ratio and spending
+jump together), so any serious use should difference against a placebo
+category with no pandemic exposure.
+
 ## Limitations — read before citing anything
 
 1. **ENIGH levels are not usable as totals.** ENIGH captures only **22–34% of
