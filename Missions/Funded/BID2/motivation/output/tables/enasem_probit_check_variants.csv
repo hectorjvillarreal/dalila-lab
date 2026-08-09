@@ -1,0 +1,3 @@
+variant,n,deaths,pseudo_r2
+age>=50,15819,1509,0.168489961270856
+deaths=ENASEM fieldwork only,16702,661,0.257555747492002
