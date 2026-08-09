@@ -118,6 +118,18 @@ select variables from the shipped dictionaries — see §code lists below.)
   them (J071/J072). Verified against the concentrado `salud` aggregate: weighted
   detail/aggregate = 0.996 / 0.998 / 0.997 / 0.998 for 2018/2020/2022/2024
   (06-only for 2024 gives 0.892). Monetary out-of-pocket only (`tipo_gasto == G1`).
+- 2026-08-09 · COICOP recode, direction of the composition break (correction).
+  The 2024 COICOP rubros **drop prescription status**, which the 2018/2020/2022
+  J-codes carried ("con receta" / "sin receta"). Items the earlier scheme could
+  identify as prescribed — and therefore classify as curative — become
+  unidentifiable in 2024 and fall into the **ambiguous** block, which grows from
+  38.0% of OOP spending in 2018 to 44.5% in 2024
+  (`output/tables/fig7_ambiguous_sensitivity.csv`, column `amb_share`). The
+  recode therefore moves items *into* ambiguous, not out of it. An earlier
+  sentence in `READTHIS.md` stated the opposite direction; corrected 2026-08-09
+  during the motivation-section draft build. Consequence for the draft: the
+  curative/preventive split is **not comparable across waves** and is quoted
+  cross-sectionally only.
 - 2026-08-08 · Income deciles: households ranked by quarterly current income
   (`ing_cor`), weighted by `factor`, ten equal weighted-household groups (INEGI
   tabulados convention). Design-based estimation uses `est_dis` strata × `upm`

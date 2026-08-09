@@ -49,9 +49,13 @@ consistent picture: preventive motives (vaccination, check-up, prenatal
 control) are a minority of needs and *decline* toward the poorest wellbeing
 tercile. The 2018 ENSANUT utilizadores module conditions on illness and cannot
 yield a preventive share at all — an instructive measurement asymmetry, noted
-rather than smoothed. Note also a scheme discontinuity: 2024 COICOP rubros
-drop prescription status, mechanically moving items from ambiguous (2018 "sin
-receta") to curative.
+rather than smoothed. Note also a scheme discontinuity: the 2024 COICOP rubros
+drop prescription status, so items the 2018 scheme could identify as prescribed
+(and therefore classify as curative) become unidentifiable and fall into the
+ambiguous block, which grows from 38.0% of OOP spending in 2018 to 44.5% in
+2024 (`fig7_ambiguous_sensitivity.csv`). The curative/preventive split is
+therefore **not comparable across waves**; quote the composition
+cross-sectionally only.
 
 ## The corollary — low spending among the poor is unmet need, not good health
 
