@@ -24,7 +24,8 @@ section_endorsements:
   public_finance: Cath       # domain endorsement, applicable
   china_geopolitics: Gina    # pending brief activation
 approving_authority: Héctor
-status: pending approval
+status: approved
+date_approved: 2026-08-13
 tags:
   - reverse_information_paradox
   - learning_loop_ownership

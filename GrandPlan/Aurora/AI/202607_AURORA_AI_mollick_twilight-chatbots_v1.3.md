@@ -24,7 +24,8 @@ endorsed_by: Elle
 section_endorsements:
   china_open_weights: Gina    # pending brief activation
 approving_authority: Héctor
-status: pending approval
+status: approved
+date_approved: 2026-08-13
 tags:
   - agentic_shift
   - expertise_convexity
