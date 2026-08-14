@@ -14,3 +14,5 @@ Appended by every `scan`. Generated — do not edit.
 | 2026-07-24 | 8 | 51 | approval:0, endorsement:4, corroboration:3, crossrefs:24, hygiene:0, sources:0, triggers:11, actions:8, decay:1 |
 | 2026-07-24 | 8 | 51 | approval:0, endorsement:4, corroboration:3, crossrefs:24, hygiene:0, sources:0, triggers:11, actions:8, decay:1 |
 | 2026-07-24 | 10 | 51 | approval:0, endorsement:4, corroboration:3, crossrefs:24, hygiene:0, sources:0, triggers:11, actions:8, decay:1 |
+| 2026-08-13 | 10 | 60 | approval:3, endorsement:4, corroboration:3, crossrefs:28, hygiene:0, sources:0, triggers:11, actions:10, decay:1 |
+| 2026-08-13 | 10 | 59 | approval:3, endorsement:4, corroboration:3, crossrefs:27, hygiene:0, sources:0, triggers:11, actions:10, decay:1 |
