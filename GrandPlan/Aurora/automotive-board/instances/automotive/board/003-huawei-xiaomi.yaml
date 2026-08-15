@@ -4,12 +4,12 @@ player: "Huawei (HIMA) / Xiaomi"
 archetype_ref: "compute-first-entrant"   # READ-ONLY pointer into ../archetypes.md
 slots:
   volume:
-    value: "Huawei HIMA ~192k (Jan–May 2026); Xiaomi ~410k (2025)"
+    value: "Huawei HIMA 45,046 (July 2026; cumulative >1.48M); Xiaomi 185,055 (H1-2026)"
     unit: "units"
-    delta: null
-    date: 2026-06-21
-    source: null
-    source_type: null
+    delta: "HIMA second straight monthly decline; Xiaomi >30k/month for 4 straight months"
+    date: 2026-08-01
+    source: "https://cnevpost.com/2026/08/01/huawei-hima-delivers-45046-vehicles-jul-2026/ · https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/xiaomi-s-two-speed-engine-ev-deliveries-surge-while-chip-costs-cloud-the/69918005"
+    source_type: secondary
     confidence: reported
     decisive: false
     notes: >-
