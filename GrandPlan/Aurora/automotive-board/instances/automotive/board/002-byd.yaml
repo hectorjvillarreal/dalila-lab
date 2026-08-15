@@ -55,13 +55,13 @@ slots:
     decisive: true
     notes: "unset — board marks '(feed)'; awaiting feed data"
   geographic_reach:
-    value: null
-    unit: null
-    delta: null
-    date: null
-    source: null
-    source_type: null
-    confidence: null
+    value: "179,841"
+    unit: "units — exports (passenger cars + pickups), July 2026 (~43% of monthly sales)"
+    delta: "+124.3% YoY (July)"
+    date: 2026-08-12
+    source: "https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/byd-s-two-track-reality-record-exports-abroad-profit-erosion-at-home/69941113"
+    source_type: secondary
+    confidence: reported
     decisive: false
     notes: "unset — board marks '(feed)'; awaiting feed data"
   backing:
