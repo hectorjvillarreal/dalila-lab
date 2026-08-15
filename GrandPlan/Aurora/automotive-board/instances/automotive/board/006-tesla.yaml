@@ -71,13 +71,13 @@ slots:
     decisive: false
     notes: "unset — back-fill listed in board open repairs (004/005/006)"
   margin:
-    value: null
-    unit: null
-    delta: null
-    date: null
-    source: null
-    source_type: null
-    confidence: null
+    value: "16.3% automotive gross margin excl. regulatory credits, Q2-2026 (operating margin 1.4%)"
+    unit: "%"
+    delta: "GAAP operating income $398M, −57% YoY; FCF −$1.09B on capex +142%"
+    date: 2026-07-22
+    source: "https://www.cnbc.com/2026/07/22/tesla-tsla-q2-2026-earnings-report.html"
+    source_type: secondary
+    confidence: reported
     decisive: false
     notes: "unset — board marks '(feed)'; awaiting feed data"
   cost_position:
