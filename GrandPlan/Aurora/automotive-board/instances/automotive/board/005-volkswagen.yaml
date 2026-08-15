@@ -43,13 +43,13 @@ slots:
       measured against the July 9 supervisory-board outcome, per the 2026-06-26 →
       2026-07-09 reported/confirmed distinction.
   margin:
-    value: "op margin 2.8% (2025)"
-    unit: null
-    delta: null
-    date: 2026-07-14
-    source: null
-    source_type: null
-    confidence: reported
+    value: "3.8% operating margin, H1-2026 (4.3% before special items); op profit €5.9B on revenue €158.1B"
+    unit: "% — operating return on sales, group"
+    delta: "op profit −12% YoY; FY revenue outlook cut to −3%–0% (was 0%–+3%)"
+    date: 2026-07-24
+    source: "https://www.volkswagen-group.com/en/press-releases/volkswagen-group-stays-on-track-in-challenging-environment-and-expects-improved-margin-in-the-second-half-of-the-year-20542"
+    source_type: primary
+    confidence: confirmed
     decisive: false
     notes: >-
       2025 group net profit €6.9B (-44%); Q1-2026 net profit -28% to €1.56B.
