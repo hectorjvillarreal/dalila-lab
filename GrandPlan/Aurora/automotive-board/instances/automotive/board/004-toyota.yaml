@@ -64,13 +64,13 @@ slots:
     decisive: false
     notes: "unset — back-fill listed in board open repairs (004/005/006)"
   margin:
-    value: null
-    unit: null
-    delta: null
-    date: null
-    source: null
-    source_type: null
-    confidence: null
+    value: "¥1.0634T operating income, Apr–Jun 2026 (FY2027 Q1)"
+    unit: "JPY — consolidated operating income"
+    delta: "−8.8% YoY (−¥102.6B); FY2027 full-year forecast raised ¥400B to ¥3.4T"
+    date: 2026-08-04
+    source: "https://global.toyota/pages/global_toyota/ir/financial-results/2027_1q_summary_en.pdf"
+    source_type: primary
+    confidence: confirmed
     decisive: false
     notes: "unset — board marks '(feed)'; awaiting feed data"
   cost_position:
