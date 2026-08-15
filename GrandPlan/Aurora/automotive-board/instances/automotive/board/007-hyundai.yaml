@@ -16,12 +16,12 @@ slots:
       First-ever 1M US wholesale; 5th straight US retail record; 2026 guidance >4.16M.
       Electrified ~962k (+27%); HEV 612k (+32%); BEV 269k (+17%).
   margin:
-    value: "6.2% op margin — op profit KRW 11.47tn (2025)"
-    unit: null
-    delta: "op profit -19.5%; net -21.7%"
-    date: 2026-07-14
-    source: null
-    source_type: null
+    value: "5.8% operating margin, Q2-2026 — op profit KRW 2.85tn on record revenue KRW 49.22tn"
+    unit: "% — consolidated operating margin"
+    delta: "op profit −20.8% YoY; COGS ratio 82.2% (+3.3pp on materials); FY2026 guidance 6.3–7.3% maintained"
+    date: 2026-07-23
+    source: "https://www.marklines.com/en/news/348250"
+    source_type: secondary
     confidence: reported
     decisive: true
     notes: >-
