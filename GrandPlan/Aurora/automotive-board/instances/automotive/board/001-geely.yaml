@@ -72,13 +72,13 @@ slots:
     decisive: false
     notes: "unset — board marks '(feed)'; awaiting feed data"
   geographic_reach:
-    value: null
-    unit: null
-    delta: null
-    date: null
-    source: null
-    source_type: null
-    confidence: null
+    value: "106,663"
+    unit: "units — group exports, July 2026 (42.6% of monthly sales; H1-2026 cumulative 472,500)"
+    delta: "+202% YoY (July); NEV exports 62,604, +616% YoY"
+    date: 2026-08-01
+    source: "https://cnevpost.com/2026/08/01/geely-jul-2026-sales/"
+    source_type: secondary
+    confidence: reported
     decisive: true
     notes: "unset — board marks '(feed)'; awaiting feed data"
   backing:
