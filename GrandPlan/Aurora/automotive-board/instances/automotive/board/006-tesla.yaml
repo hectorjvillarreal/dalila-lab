@@ -4,12 +4,12 @@ player: "Tesla"
 archetype_ref: "frontier-disruptor"   # READ-ONLY pointer into ../archetypes.md
 slots:
   volume:
-    value: "1.636M"
-    unit: "deliveries — global, 2025"
-    delta: "-9% YoY"
-    date: 2026-06-21
-    source: null
-    source_type: null
+    value: "480,126"
+    unit: "deliveries — global, Q2-2026 (record quarter)"
+    delta: "+25% YoY"
+    date: 2026-07-22
+    source: "https://www.cnbc.com/2026/07/22/tesla-tsla-q2-2026-earnings-report.html"
+    source_type: secondary
     confidence: reported
     decisive: false
     notes: "Overtaken by BYD (2.26M BEV) as the world's largest EV maker in 2025."
