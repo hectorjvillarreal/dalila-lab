@@ -14,7 +14,7 @@ cnbc.com:
   rejected: 0
   weight: 1.0
 fiercebiotech.com:
-  surfaced: 3
+  surfaced: 4
   promoted: 0
   rejected: 0
   weight: 1.0
@@ -29,7 +29,7 @@ finance.yahoo.com:
   rejected: 0
   weight: 1.0
 globenewswire.com:
-  surfaced: 1
+  surfaced: 3
   promoted: 0
   rejected: 0
   weight: 1.0
@@ -89,6 +89,71 @@ thenationonlineng.net:
   rejected: 0
   weight: 1.0
 pharmanewsonline.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+ashp.org:
+  surfaced: 2
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+pharmexec.com:
+  surfaced: 2
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+bioxconomy.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+dcatvci.org:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+entrytoregulatory.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+gilead.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+ajmc.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+ophthalmologytimes.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+investor.elanco.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+sec.gov:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+cordenpharma.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+contractpharma.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+prnewswire.com:
   surfaced: 1
   promoted: 0
   rejected: 0

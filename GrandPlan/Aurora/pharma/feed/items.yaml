@@ -397,3 +397,274 @@
   query_id: x003
   lane: exploration
   promote: null
+- id: 20260816-0029
+  date_seen: '2026-08-16'
+  date_published: '2026-08-13'
+  headline: biopharmaceutical Contract Development and Manufacturing Organization (CDMO) Market Report
+    2026-2033
+  why: dated release claiming largest US/EU CDMO capacity expansion cycle in two decades, $10B+ announced
+    investments
+  url: https://www.globenewswire.com/news-release/2026/08/13/3344692/0/en/biopharmaceutical-contract-development-and-manufacturing-organization-cdmo-market-report-2026-2033.html
+  source_domain: globenewswire.com
+  entities:
+  - GlobeNewswire
+  query_id: q014
+  lane: main
+  promote: null
+- id: 20260816-0030
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: 'Drug Shortage Detail: Lorazepam Injection'
+  why: 'current status entry: Hikma Ativan 2 mg/mL and 4 mg/mL vials on back order with estimated release
+    mid-August 2026'
+  url: https://www.ashp.org/drug-shortages/current-shortages/drug-shortage-detail.aspx?id=87
+  source_domain: ashp.org
+  entities:
+  - ASHP
+  - Hikma
+  - FDA
+  query_id: q015
+  lane: main
+  promote: null
+- id: 20260816-0031
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: 'Drug Shortage Detail: Estradiol Transdermal System'
+  why: 'current status entry: Amneal shortage of Dotti twice-weekly transdermal patches with no stated
+    reason'
+  url: https://www.ashp.org/drug-shortages/current-shortages/drug-shortage-detail.aspx?Id=1206
+  source_domain: ashp.org
+  entities:
+  - ASHP
+  - Amneal
+  query_id: q015
+  lane: main
+  promote: null
+- id: 20260816-0032
+  date_seen: '2026-08-16'
+  date_published: '2026-08-10'
+  headline: Novo Nordisk and Amazon sign AI drug discovery pact, launch London innovation hub
+  why: major pharma naming a hyperscaler its preferred cloud/AI partner signals platform consolidation
+    in AI discovery
+  url: https://www.fiercebiotech.com/biotech/novo-nordisk-and-aws-sign-ai-drug-discovery-pact-launch-london-innovation-hub
+  source_domain: fiercebiotech.com
+  entities:
+  - Novo Nordisk
+  - Amazon
+  - AWS
+  - London (UK)
+  query_id: q016
+  lane: main
+  promote: null
+- id: 20260816-0033
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: 'M&A Roundup: Novo Nordisk Enters AI Drug Discovery Partnership with Amazon, Innate Pharma
+    Partners with Sobi, Innovent Enters Commercialization Agreement with Daiichi Sankyo'
+  why: roundup of current-week deals including the Novo-AWS pact and Sobi's $75M upfront lacutamab deal
+  url: https://www.pharmexec.com/view/roundup-novo-nordisk-ai-drug-discovery-amazon-innate-sobi-innovent-commercialization-daiichi-sankyo
+  source_domain: pharmexec.com
+  entities:
+  - Novo Nordisk
+  - Amazon
+  - Innate Pharma
+  - Sobi
+  - Innovent
+  - Daiichi Sankyo
+  query_id: q016
+  lane: main
+  promote: null
+- id: 20260816-0034
+  date_seen: '2026-08-16'
+  date_published: '2026-08-10'
+  headline: Novo Nordisk and AWS enter strategic partnership to accelerate drug discovery through AI
+  why: major pharma names a preferred cloud/AI compute partner, signaling compute access as strategic
+    asset
+  url: https://www.globenewswire.com/news-release/2026/08/10/3341794/0/en/novo-nordisk-and-aws-enter-strategic-partnership-to-accelerate-drug-discovery-through-ai.html
+  source_domain: globenewswire.com
+  entities:
+  - Novo Nordisk
+  - Amazon Web Services
+  - Amazon
+  - London
+  query_id: q017
+  lane: main
+  promote: null
+- id: 20260816-0035
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: AI partnerships reshape life sciences beyond drug discovery, industry leaders say
+  why: reported industry-leader commentary that AI deals now span diagnostics, clinical development, and
+    manufacturing, not just discovery
+  url: https://www.bioxconomy.com/partnering/ai-partnerships-reshape-life-science-beyond-drug-discovery-industry-leaders-say
+  source_domain: bioxconomy.com
+  entities: []
+  query_id: q017
+  lane: main
+  promote: null
+- id: 20260816-0036
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: 'President Trump Announces Phased Generic Drug Tariff Plan: Report'
+  why: new phased tariff schedule for generic drug imports (0% through Aug 2026, 100% in 2028, 200% after)
+    would reshape generics supply economics
+  url: https://www.pharmexec.com/view/president-trump-phased-drug-tariff
+  source_domain: pharmexec.com
+  entities:
+  - Trump administration
+  - U.S. Department of Commerce
+  - HHS
+  - United States
+  query_id: q022
+  lane: main
+  promote: null
+- id: 20260816-0037
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: 'A New Round in US Pharma Tariffs: What''s at Play? - DCAT Value Chain Insights'
+  why: analysis of the newly announced generic-drug tariff round layered onto the Section 232 patented-drug
+    tariffs that took effect July 31, 2026
+  url: https://www.dcatvci.org/features/a-new-round-in-us-pharma-tariffs-whats-at-play/
+  source_domain: dcatvci.org
+  entities:
+  - Trump administration
+  - United States
+  - EU
+  - Japan
+  - South Korea
+  - Switzerland
+  query_id: q022
+  lane: main
+  promote: null
+- id: 20260816-0038
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: 'FDA''s August 2026 PDUFA Wave: Five Landmark Decisions Regulatory Affairs Professionals Need
+    to Know'
+  why: flags five high-profile FDA approval decisions clustered in August 2026
+  url: https://www.entrytoregulatory.com/post/fda-s-august-2026-pdufa-wave-five-landmark-decisions-regulatory-affairs-professionals-need-to-know
+  source_domain: entrytoregulatory.com
+  entities:
+  - FDA
+  query_id: q023
+  lane: main
+  promote: null
+- id: 20260816-0039
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: Gilead Receives CHMP Positive Opinion for Trodelvy® in First Line Metastatic Triple Negative
+    Breast Cancer for Patients Not Candidates for PD (L)1 Inhibitors
+  why: positive CHMP opinion sets up EU first-line approval expansion for Trodelvy in mTNBC
+  url: https://www.gilead.com/news/news-details/2026/gilead-receives-chmp-positive-opinion-for-trodelvy-in-first-line-metastatic-triple-negative-breast-cancer-for-patients-not-candidates-for-pd-l1-inhibitors
+  source_domain: gilead.com
+  entities:
+  - Gilead
+  - EMA
+  - CHMP
+  - European Union
+  query_id: q024
+  lane: main
+  promote: null
+- id: 20260816-0040
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: CHMP Backs Nerandomilast for IPF and PPF in EU | AJMC
+  why: CHMP recommendation for nerandomilast (Jascayd) opens first new EU pulmonary-fibrosis therapy class
+    in a decade
+  url: https://www.ajmc.com/view/chmp-backs-nerandomilast-for-ipf-and-ppf-in-eu
+  source_domain: ajmc.com
+  entities:
+  - Boehringer Ingelheim
+  - EMA
+  - CHMP
+  - European Union
+  query_id: q024
+  lane: main
+  promote: null
+- id: 20260816-0041
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: EMA CHMP issues positive opinion for teprotumumab (Tepezza) marketing authorization application
+    | Ophthalmology Times - Clinical Insights for Eye Specialists
+  why: Tepezza CHMP positive opinion paves way for first EU-approved thyroid eye disease therapy
+  url: https://www.ophthalmologytimes.com/view/ema-chmp-issues-positive-opinion-for-teprotumumab-tepezza-marketing-authorization-application
+  source_domain: ophthalmologytimes.com
+  entities:
+  - Amgen
+  - EMA
+  - CHMP
+  - European Union
+  query_id: q024
+  lane: main
+  promote: null
+- id: 20260816-0042
+  date_seen: '2026-08-16'
+  date_published: '2026-08-05'
+  headline: Elanco Animal Health Reports Second Quarter 2026 Results
+  why: Q2 results from a top-5 animal health firm, including charges tied to its AHV acquisition
+  url: https://investor.elanco.com/news-releases/news-release-details/elanco-animal-health-reports-second-quarter-2026-results
+  source_domain: investor.elanco.com
+  entities:
+  - Elanco Animal Health
+  - AHV
+  query_id: x007
+  lane: exploration
+  promote: null
+- id: 20260816-0043
+  date_seen: '2026-08-16'
+  date_published: '2026-08-13'
+  headline: IMMUCELL CORP /DE/ - Form 8-K - FY2026
+  why: ImmuCell reported Q2-2026 revenue up 11.5% to $7.2M, a datapoint on small-cap animal-health demand
+  url: https://www.sec.gov/Archives/edgar/data/0000811641/000143774926027667/ex_1004692.htm
+  source_domain: sec.gov
+  entities:
+  - ImmuCell Corporation
+  - SEC
+  query_id: x007
+  lane: exploration
+  promote: null
+- id: 20260816-0044
+  date_seen: '2026-08-16'
+  date_published: '2026-08-03'
+  headline: CordenPharma Closes Acquisition of Peptide CDMO AmbioPharm | CordenPharma
+  why: closing of a peptide CDMO consolidation spanning US (South Carolina) and Shanghai capacity amid
+    GLP-1-driven peptide demand
+  url: https://cordenpharma.com/articles/cordenpharma-closes-acquisition-of-peptide-cdmo-ambiopharm/
+  source_domain: cordenpharma.com
+  entities:
+  - CordenPharma
+  - AmbioPharm
+  query_id: x008
+  lane: exploration
+  promote: null
+- id: 20260816-0045
+  date_seen: '2026-08-16'
+  date_published: '2026-08-05'
+  headline: Porton Advanced Expands CDMO Services to Commercialization with China Manufacturing License
+  why: NMPA Class C license lets a China-sited advanced-therapy CDMO move into commercial manufacture,
+    relevant to CDMO capacity geography
+  url: https://www.contractpharma.com/breaking-news/porton-advanced-expands-cdmo-services-to-commercialization-with-china-manufacturing-license/
+  source_domain: contractpharma.com
+  entities:
+  - Porton Advanced Solutions
+  - NMPA
+  - China
+  query_id: x008
+  lane: exploration
+  promote: null
+- id: 20260816-0046
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: GI Partners Completes Acquisition of the CDMO and Cell Solutions Businesses from Charles River
+    Laboratories and forms Rose BioSolutions
+  why: private-equity carve-out of Charles River's CDMO arm into a standalone entity, a notable ownership
+    shift in cell-therapy manufacturing
+  url: https://www.prnewswire.com/news-releases/gi-partners-completes-acquisition-of-the-cdmo-and-cell-solutions-businesses-from-charles-river-laboratories-and-forms-rose-biosolutions-302765625.html
+  source_domain: prnewswire.com
+  entities:
+  - GI Partners
+  - Charles River Laboratories
+  - Rose BioSolutions
+  query_id: x008
+  lane: exploration
+  promote: null

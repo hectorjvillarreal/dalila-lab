@@ -1,13 +1,14 @@
 config:
-  cycles_completed: 1
+  cycles_completed: 2
   cadence_hours: 48
   cycle_budget: 16
   exploration_share: 0.25
   rotation:
-    main: 12
-    exploration: 4
+    main: 24
+    exploration: 8
   resolved_ids: []
   promotes_per_cycle:
+  - 0
   - 0
   next_provisional: 1
 main:
@@ -102,22 +103,29 @@ main:
   text: CDMO capacity expansion
   group: The diffusion layer
   origin: seed
-  window: []
+  window:
+  - 20260816-0029
 - id: q015
   text: drug shortage cause
   group: The diffusion layer
   origin: seed
-  window: []
+  window:
+  - 20260816-0030
+  - 20260816-0031
 - id: q016
   text: AI drug discovery deal
   group: Frontier cost
   origin: seed
-  window: []
+  window:
+  - 20260816-0032
+  - 20260816-0033
 - id: q017
   text: AI pharma partnership compute
   group: Frontier cost
   origin: seed
-  window: []
+  window:
+  - 20260816-0034
+  - 20260816-0035
 - id: q018
   text: machine learning clinical trial design
   group: Frontier cost
@@ -142,17 +150,23 @@ main:
   text: pharmaceutical tariff
   group: The payer
   origin: seed
-  window: []
+  window:
+  - 20260816-0036
+  - 20260816-0037
 - id: q023
   text: FDA approval decision
   group: The gate
   origin: seed
-  window: []
+  window:
+  - 20260816-0038
 - id: q024
   text: EMA CHMP opinion
   group: The gate
   origin: seed
-  window: []
+  window:
+  - 20260816-0039
+  - 20260816-0040
+  - 20260816-0041
 - id: q025
   text: NMPA approval
   group: The gate
@@ -230,12 +244,17 @@ exploration:
   text: veterinary pharmaceutical market
   group: Instruments and walls
   origin: seed
-  window: []
+  window:
+  - 20260816-0042
+  - 20260816-0043
 - id: x008
   text: CDMO acquires drug asset
   group: Instruments and walls
   origin: seed
-  window: []
+  window:
+  - 20260816-0044
+  - 20260816-0045
+  - 20260816-0046
 - id: x009
   text: insurer acquires manufacturer
   group: Instruments and walls
