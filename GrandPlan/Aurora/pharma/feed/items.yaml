@@ -12,7 +12,7 @@
   - United States
   query_id: q003
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0002
   date_seen: '2026-08-16'
   date_published: '2026-08-10'
@@ -27,7 +27,7 @@
   - European Union
   query_id: q003
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0003
   date_seen: '2026-08-16'
   date_published: '2026-08-10'
@@ -42,7 +42,7 @@
   - Ministry of Food and Drug Safety (South Korea)
   query_id: q003
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0004
   date_seen: '2026-08-16'
   date_published: '2026-08-05'
@@ -58,7 +58,7 @@
   - Netherlands
   query_id: q003
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0005
   date_seen: '2026-08-16'
   date_published: '2026-08-11'
@@ -77,7 +77,7 @@
   - FDA
   query_id: q003
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0006
   date_seen: '2026-08-16'
   date_published: null
@@ -91,7 +91,7 @@
   - United States
   query_id: q004
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0007
   date_seen: '2026-08-16'
   date_published: '2026-08-11'
@@ -106,7 +106,7 @@
   - Actio Biosciences
   query_id: q006
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0008
   date_seen: '2026-08-16'
   date_published: null
@@ -122,7 +122,7 @@
   - TerSera
   query_id: q006
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0009
   date_seen: '2026-08-16'
   date_published: null
@@ -137,7 +137,7 @@
   - PTC Therapeutics
   query_id: q006
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0010
   date_seen: '2026-08-16'
   date_published: '2026-08-06'
@@ -150,7 +150,7 @@
   - Alteogen
   query_id: q007
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0011
   date_seen: '2026-08-16'
   date_published: '2026-08-11'
@@ -165,7 +165,7 @@
   - Sentynl Therapeutics
   query_id: q007
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0012
   date_seen: '2026-08-16'
   date_published: null
@@ -179,7 +179,7 @@
   - AstraZeneca
   query_id: q009
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0013
   date_seen: '2026-08-16'
   date_published: null
@@ -191,7 +191,7 @@
   - Novo Nordisk
   query_id: q009
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0014
   date_seen: '2026-08-16'
   date_published: null
@@ -203,7 +203,7 @@
   - Novo Nordisk
   query_id: q009
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0015
   date_seen: '2026-08-16'
   date_published: null
@@ -215,7 +215,7 @@
   - Citeline
   query_id: q009
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0016
   date_seen: '2026-08-16'
   date_published: null
@@ -227,7 +227,7 @@
   - BioSpace
   query_id: q010
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0017
   date_seen: '2026-08-16'
   date_published: null
@@ -240,7 +240,7 @@
   - aTyr Pharma
   query_id: q010
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0018
   date_seen: '2026-08-16'
   date_published: null
@@ -254,7 +254,7 @@
   - Aardvark Therapeutics
   query_id: q010
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0019
   date_seen: '2026-08-16'
   date_published: null
@@ -268,7 +268,7 @@
   - India
   query_id: q011
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0020
   date_seen: '2026-08-16'
   date_published: null
@@ -284,7 +284,7 @@
   - Sun Pharma
   query_id: q011
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0021
   date_seen: '2026-08-16'
   date_published: null
@@ -297,7 +297,7 @@
   - China
   query_id: q012
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0022
   date_seen: '2026-08-16'
   date_published: null
@@ -311,7 +311,7 @@
   - Novo Nordisk
   query_id: q012
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0023
   date_seen: '2026-08-16'
   date_published: null
@@ -326,7 +326,7 @@
   - Indonesia
   query_id: x002
   lane: exploration
-  promote: null
+  promote: false
 - id: 20260816-0024
   date_seen: '2026-08-16'
   date_published: '2026-08-15'
@@ -340,7 +340,7 @@
   - Nigeria
   query_id: x003
   lane: exploration
-  promote: null
+  promote: false
 - id: 20260816-0025
   date_seen: '2026-08-16'
   date_published: null
@@ -354,7 +354,7 @@
   - Nigeria
   query_id: x003
   lane: exploration
-  promote: null
+  promote: false
 - id: 20260816-0026
   date_seen: '2026-08-16'
   date_published: null
@@ -368,7 +368,7 @@
   - Nigeria
   query_id: x003
   lane: exploration
-  promote: null
+  promote: false
 - id: 20260816-0027
   date_seen: '2026-08-16'
   date_published: null
@@ -381,7 +381,7 @@
   - Nigeria
   query_id: x003
   lane: exploration
-  promote: null
+  promote: false
 - id: 20260816-0028
   date_seen: '2026-08-16'
   date_published: null
@@ -396,7 +396,7 @@
   - Nigeria
   query_id: x003
   lane: exploration
-  promote: null
+  promote: false
 - id: 20260816-0029
   date_seen: '2026-08-16'
   date_published: '2026-08-13'
@@ -410,7 +410,7 @@
   - GlobeNewswire
   query_id: q014
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0030
   date_seen: '2026-08-16'
   date_published: null
@@ -425,7 +425,7 @@
   - FDA
   query_id: q015
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0031
   date_seen: '2026-08-16'
   date_published: null
@@ -439,7 +439,7 @@
   - Amneal
   query_id: q015
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0032
   date_seen: '2026-08-16'
   date_published: '2026-08-10'
@@ -455,7 +455,7 @@
   - London (UK)
   query_id: q016
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0033
   date_seen: '2026-08-16'
   date_published: null
@@ -473,7 +473,7 @@
   - Daiichi Sankyo
   query_id: q016
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0034
   date_seen: '2026-08-16'
   date_published: '2026-08-10'
@@ -489,7 +489,7 @@
   - London
   query_id: q017
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0035
   date_seen: '2026-08-16'
   date_published: null
@@ -501,7 +501,7 @@
   entities: []
   query_id: q017
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0036
   date_seen: '2026-08-16'
   date_published: null
@@ -517,7 +517,7 @@
   - United States
   query_id: q022
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0037
   date_seen: '2026-08-16'
   date_published: null
@@ -535,7 +535,7 @@
   - Switzerland
   query_id: q022
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0038
   date_seen: '2026-08-16'
   date_published: null
@@ -548,7 +548,7 @@
   - FDA
   query_id: q023
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0039
   date_seen: '2026-08-16'
   date_published: null
@@ -564,7 +564,7 @@
   - European Union
   query_id: q024
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0040
   date_seen: '2026-08-16'
   date_published: null
@@ -580,7 +580,7 @@
   - European Union
   query_id: q024
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0041
   date_seen: '2026-08-16'
   date_published: null
@@ -596,7 +596,7 @@
   - European Union
   query_id: q024
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0042
   date_seen: '2026-08-16'
   date_published: '2026-08-05'
@@ -609,7 +609,7 @@
   - AHV
   query_id: x007
   lane: exploration
-  promote: null
+  promote: false
 - id: 20260816-0043
   date_seen: '2026-08-16'
   date_published: '2026-08-13'
@@ -622,7 +622,7 @@
   - SEC
   query_id: x007
   lane: exploration
-  promote: null
+  promote: false
 - id: 20260816-0044
   date_seen: '2026-08-16'
   date_published: '2026-08-03'
@@ -636,7 +636,7 @@
   - AmbioPharm
   query_id: x008
   lane: exploration
-  promote: null
+  promote: true
 - id: 20260816-0045
   date_seen: '2026-08-16'
   date_published: '2026-08-05'
@@ -651,7 +651,7 @@
   - China
   query_id: x008
   lane: exploration
-  promote: null
+  promote: true
 - id: 20260816-0046
   date_seen: '2026-08-16'
   date_published: null
@@ -667,7 +667,7 @@
   - Rose BioSolutions
   query_id: x008
   lane: exploration
-  promote: null
+  promote: true
 - id: 20260816-0047
   date_seen: '2026-08-16'
   date_published: null
@@ -682,7 +682,7 @@
   - India
   query_id: q027
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0048
   date_seen: '2026-08-16'
   date_published: '2026-08-03'
@@ -694,7 +694,7 @@
   entities: []
   query_id: q028
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0049
   date_seen: '2026-08-16'
   date_published: null
@@ -708,7 +708,7 @@
   - United States
   query_id: q028
   lane: main
-  promote: null
+  promote: true
 - id: 20260816-0050
   date_seen: '2026-08-16'
   date_published: null
@@ -722,7 +722,7 @@
   - United States
   query_id: q028
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0051
   date_seen: '2026-08-16'
   date_published: '2026-08-07'
@@ -742,7 +742,7 @@
   - United States
   query_id: q031
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0052
   date_seen: '2026-08-16'
   date_published: '2026-08-14'
@@ -759,7 +759,7 @@
   - United States
   query_id: q001
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0053
   date_seen: '2026-08-16'
   date_published: null
@@ -776,7 +776,7 @@
   - United States
   query_id: q001
   lane: main
-  promote: null
+  promote: false
 - id: 20260816-0054
   date_seen: '2026-08-16'
   date_published: '2026-08-05'
@@ -789,7 +789,7 @@
   - HDVI
   query_id: x009
   lane: exploration
-  promote: null
+  promote: false
 - id: 20260816-0055
   date_seen: '2026-08-16'
   date_published: '2026-08-12'
@@ -805,7 +805,7 @@
   - FDA
   query_id: x012
   lane: exploration
-  promote: null
+  promote: true
 - id: 20260816-0056
   date_seen: '2026-08-16'
   date_published: null
@@ -820,7 +820,7 @@
   - FDA
   query_id: x012
   lane: exploration
-  promote: null
+  promote: true
 - id: 20260816-0057
   date_seen: '2026-08-16'
   date_published: null
@@ -834,7 +834,7 @@
   - Eli Lilly and Company
   query_id: x012
   lane: exploration
-  promote: null
+  promote: false
 - id: 20260816-0058
   date_seen: '2026-08-16'
   date_published: null
@@ -847,4 +847,4 @@
   - Sangamo Therapeutics
   query_id: x012
   lane: exploration
-  promote: null
+  promote: false
