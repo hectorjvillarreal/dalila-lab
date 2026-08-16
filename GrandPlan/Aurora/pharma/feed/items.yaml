@@ -668,3 +668,183 @@
   query_id: x008
   lane: exploration
   promote: null
+- id: 20260816-0047
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: 'CDSCO New Drug Approval Update 2026: IND Division Clarification'
+  why: CDSCO circular dated 2026-08-10 clarifies routing of unapproved-anywhere new drug import/marketing
+    applications with Indian Phase III GCT participation
+  url: https://www.psrcompliance.com/blog/cdsco-new-drug-approval-update-2026
+  source_domain: psrcompliance.com
+  entities:
+  - CDSCO
+  - IND Division CDSCO HQ New Delhi
+  - India
+  query_id: q027
+  lane: main
+  promote: null
+- id: 20260816-0048
+  date_seen: '2026-08-16'
+  date_published: '2026-08-03'
+  headline: 'Regulatory round-up: 3 August 2026'
+  why: in-window pharmaceutical regulatory news roundup that may capture export-control and approval actions
+    from early August
+  url: https://www.thepharmaletter.com/regulation/regulatory-roundup-3-august-2026
+  source_domain: thepharmaletter.com
+  entities: []
+  query_id: q028
+  lane: main
+  promote: null
+- id: 20260816-0049
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: How China Turned US Trade Compliance Into a Supply Chain Risk
+  why: reports China's 2026 Regulations on Industrial and Supply Chain Security making US trade compliance
+    a trigger for Chinese export restrictions on pharma inputs
+  url: https://www.pharmaceuticalcommerce.com/view/how-china-turned-us-trade-compliance-into-a-supply-chain-risk
+  source_domain: pharmaceuticalcommerce.com
+  entities:
+  - China
+  - United States
+  query_id: q028
+  lane: main
+  promote: null
+- id: 20260816-0050
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: How Exposed is The U.S. Pharmaceutical Supply Chain to China's Updated Export Control Regulations?
+  why: assesses US pharma supply-chain exposure to China's updated export control regulations, relevant
+    to API sourcing risk
+  url: https://www.pharmexec.com/view/exposed-us-pharmaceutical-supply-chain-china-export-regulations
+  source_domain: pharmexec.com
+  entities:
+  - China
+  - United States
+  query_id: q028
+  lane: main
+  promote: null
+- id: 20260816-0051
+  date_seen: '2026-08-16'
+  date_published: '2026-08-07'
+  headline: Onshoring Commitments and the Public Narrative Behind Them
+  why: examines regulatory and reputational stakes behind pharma US-manufacturing commitments amid tariff-driven
+    onshoring wave
+  url: https://www.pharmexec.com/view/onshoring-commitments-and-the-public-narrative-behind-them
+  source_domain: pharmexec.com
+  entities:
+  - FDA
+  - CMS
+  - Skadden
+  - DLA Piper
+  - RC Resolve
+  - Real Chemistry
+  - Leavitt Partners
+  - United States
+  query_id: q031
+  lane: main
+  promote: null
+- id: 20260816-0052
+  date_seen: '2026-08-16'
+  date_published: '2026-08-14'
+  headline: 'The $300 Billion Patent Cliff: Why Big Pharma Is Racing to Secure the Next Generation of
+    Science'
+  why: press release framing the 2026-2030 exclusivity losses as a science-replacement problem driving
+    biotech acquisition demand
+  url: https://www.einpresswire.com/article/933942320/the-300-billion-patent-cliff-why-big-pharma-is-racing-to-secure-the-next-generation-of-science
+  source_domain: einpresswire.com
+  entities:
+  - GenBio Inc.
+  - IQVIA
+  - FDA
+  - United States
+  query_id: q001
+  lane: main
+  promote: null
+- id: 20260816-0053
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: Blockbuster drugs face a massive patent cliff in 2026
+  why: flags 2026 as the onset year of major small-molecule expiries (Eliquis, Januvia, Xeljanz) with
+    >$230B US revenue at risk through 2030
+  url: https://www.drugdiscoverynews.com/blockbuster-drugs-face-a-massive-patent-cliff-in-2026-17019
+  source_domain: drugdiscoverynews.com
+  entities:
+  - Merck
+  - Pfizer
+  - Bristol Myers Squibb
+  - FDA
+  - United States
+  query_id: q001
+  lane: main
+  promote: null
+- id: 20260816-0054
+  date_seen: '2026-08-16'
+  date_published: '2026-08-05'
+  headline: 'Exclusive: Federated Insurance to acquire trucking insurtech HDVI'
+  why: only recent insurer-acquisition event surfaced, though target is an insurtech rather than a manufacturer
+  url: https://www.theinsurer.com/ti/news/exclusive-federated-insurance-to-acquire-trucking-insurtech-hdvi-2026-08-05/
+  source_domain: theinsurer.com
+  entities:
+  - Federated Insurance
+  - HDVI
+  query_id: x009
+  lane: exploration
+  promote: null
+- id: 20260816-0055
+  date_seen: '2026-08-16'
+  date_published: '2026-08-12'
+  headline: Sangamo Therapeutics Selects Successful Bidders Following Competitive Asset Auction for $163.55
+    Million in Cash Consideration at Closing and Up to $100 Million in Potential Milestones
+  why: bankruptcy auction transfers a BLA-stage gene therapy program and platforms to new owners
+  url: https://www.globenewswire.com/news-release/2026/08/12/3344041/33816/en/sangamo-therapeutics-selects-successful-bidders-following-competitive-asset-auction-for-163-55-million-in-cash-consideration-at-closing-and-up-to-100-million-in-potential-milestone.html
+  source_domain: globenewswire.com
+  entities:
+  - Sangamo Therapeutics
+  - PTC Therapeutics
+  - Eli Lilly and Company
+  - FDA
+  query_id: x012
+  lane: exploration
+  promote: null
+- id: 20260816-0056
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: PTC to Expand Rare Disease Portfolio with Acquisition of BLA-Stage ST-920 Fabry Disease Program
+  why: acquirer's own announcement of taking over a BLA-stage program, with rolling BLA completion planned
+    Q4 2026
+  url: https://www.prnewswire.com/news-releases/ptc-to-expand-rare-disease-portfolio-with-acquisition-of-bla-stage-st-920-fabry-disease-program-302850091.html
+  source_domain: prnewswire.com
+  entities:
+  - PTC Therapeutics
+  - Sangamo Therapeutics
+  - FDA
+  query_id: x012
+  lane: exploration
+  promote: null
+- id: 20260816-0057
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: PTC takes a chance on Sangamo's Fabry disease gene therapy
+  why: independent coverage of the same license-transfer event, including Lilly's platform purchase
+  url: https://www.biopharmadive.com/news/ptc-sangamo-fabry-gene-therapy-bankruptcy-sale-lilly/827767/
+  source_domain: biopharmadive.com
+  entities:
+  - PTC Therapeutics
+  - Sangamo Therapeutics
+  - Eli Lilly and Company
+  query_id: x012
+  lane: exploration
+  promote: null
+- id: 20260816-0058
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: PTC Therapeutics' $211M Bid Wins Bankruptcy Auction for Sangamo Gene Therapy
+  why: additional confirmation of the BLA-stage asset changing hands via bankruptcy court process
+  url: https://medcitynews.com/2026/08/ptc-sangamo-therapeutics-bankruptcy-auction-fabry-gene-therapybid-wins-bankruptcy-auction-for-sangamo-gene-therapy-ptct-sgmoq/
+  source_domain: medcitynews.com
+  entities:
+  - PTC Therapeutics
+  - Sangamo Therapeutics
+  query_id: x012
+  lane: exploration
+  promote: null

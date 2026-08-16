@@ -1,13 +1,14 @@
 config:
-  cycles_completed: 2
+  cycles_completed: 3
   cadence_hours: 48
   cycle_budget: 16
   exploration_share: 0.25
   rotation:
-    main: 24
-    exploration: 8
+    main: 5
+    exploration: 12
   resolved_ids: []
   promotes_per_cycle:
+  - 0
   - 0
   - 0
   next_provisional: 1
@@ -16,7 +17,9 @@ main:
   text: patent cliff pharma
   group: Rent extinction
   origin: seed
-  window: []
+  window:
+  - 20260816-0052
+  - 20260816-0053
 - id: q002
   text: loss of exclusivity
   group: Rent extinction
@@ -181,12 +184,16 @@ main:
   text: CDSCO India approval
   group: The gate
   origin: seed
-  window: []
+  window:
+  - 20260816-0047
 - id: q028
   text: pharmaceutical export control
   group: Instruments and walls
   origin: seed
-  window: []
+  window:
+  - 20260816-0048
+  - 20260816-0049
+  - 20260816-0050
 - id: q029
   text: biosecurity legislation pharma
   group: Instruments and walls
@@ -201,7 +208,8 @@ main:
   text: onshoring drug manufacturing
   group: Instruments and walls
   origin: seed
-  window: []
+  window:
+  - 20260816-0051
 provisional: []
 exploration:
 - id: x001
@@ -259,7 +267,8 @@ exploration:
   text: insurer acquires manufacturer
   group: Instruments and walls
   origin: seed
-  window: []
+  window:
+  - 20260816-0054
 - id: x010
   text: pharmacy benefit manager reform
   group: Instruments and walls
@@ -274,7 +283,11 @@ exploration:
   text: biologics licence transfer
   group: Instruments and walls
   origin: seed
-  window: []
+  window:
+  - 20260816-0055
+  - 20260816-0056
+  - 20260816-0057
+  - 20260816-0058
 - id: x013
   text: pharmaceutical counterfeiting enforcement
   group: Instruments and walls

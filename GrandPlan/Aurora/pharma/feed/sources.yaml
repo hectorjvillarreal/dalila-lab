@@ -29,7 +29,7 @@ finance.yahoo.com:
   rejected: 0
   weight: 1.0
 globenewswire.com:
-  surfaced: 3
+  surfaced: 4
   promoted: 0
   rejected: 0
   weight: 1.0
@@ -99,7 +99,7 @@ ashp.org:
   rejected: 0
   weight: 1.0
 pharmexec.com:
-  surfaced: 2
+  surfaced: 4
   promoted: 0
   rejected: 0
   weight: 1.0
@@ -154,6 +154,46 @@ contractpharma.com:
   rejected: 0
   weight: 1.0
 prnewswire.com:
+  surfaced: 2
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+psrcompliance.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+thepharmaletter.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+pharmaceuticalcommerce.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+einpresswire.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+drugdiscoverynews.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+theinsurer.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+biopharmadive.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+medcitynews.com:
   surfaced: 1
   promoted: 0
   rejected: 0
