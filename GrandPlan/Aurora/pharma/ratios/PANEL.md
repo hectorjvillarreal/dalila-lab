@@ -1,6 +1,6 @@
 # PANEL.md — companion to panel.py
 
-**Build instruction:** `20260816_AURORA_BUILD_pharma-ratio-panel_v1.0` (in `pharma_board/`).
+**Build instruction:** `20260816_AURORA_BUILD_pharma-ratio-panel_v1.0` (in `pharma/pharma_board/`).
 **Deliberately crude, and meant to stay that way.** Deviations only — no
 composite, no ranking, no forecast, no verdict.
 

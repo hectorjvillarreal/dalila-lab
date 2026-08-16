@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """Pharma digest layer — a concatenation and a counter. Nothing else.
 
-Build instruction: 20260816_AURORA_BUILD_pharma-digest-layer_v1.0 (pharma_board/).
+Build instruction: 20260816_AURORA_BUILD_pharma-digest-layer_v1.0 (pharma/pharma_board/).
 Companion doc: DIGESTER.md.
 
 The digest never summarises, ranks, highlights, or characterises. Every line
@@ -201,7 +201,7 @@ def selftest_boundary():
         (guarded_write, ("feed/items.yaml", "x"), "write into feed/"),
         (guarded_write, ("ratios/panel.csv", "x"), "write into ratios/"),
         (guarded_write, ("feed/seeds.md", "x"), "write a human-owned file"),
-        (guarded_write, ("../pharma_board/x.md", "x"), "write outside pharma/"),
+        (guarded_write, ("../outside.md", "x"), "write outside pharma/"),
         (guarded_read, ("ratios/readings.md",), "READ readings.md"),
     ]:
         try:

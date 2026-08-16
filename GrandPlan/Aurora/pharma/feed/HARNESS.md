@@ -1,6 +1,6 @@
 # HARNESS.md — companion to harness.py
 
-**Build instruction:** `20260816_AURORA_BUILD_pharma-feed-harness_v1.0` (in `pharma_board/`).
+**Build instruction:** `20260816_AURORA_BUILD_pharma-feed-harness_v1.0` (in `pharma/pharma_board/`).
 **Layer 1 only.** No board, no archetypes, no valuation, no price data.
 
 ## Division of labour

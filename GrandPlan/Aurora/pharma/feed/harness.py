@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """Pharma feed harness — layer 1 intake and calibration.
 
-Build instruction: 20260816_AURORA_BUILD_pharma-feed-harness_v1.0 (pharma_board/).
+Build instruction: 20260816_AURORA_BUILD_pharma-feed-harness_v1.0 (pharma/pharma_board/).
 Companion doc: HARNESS.md.
 
 The harness never decides what matters. It records candidate items with
@@ -451,7 +451,7 @@ def selftest_boundary():
     for target, mode, label in [
         ("seeds.md", "w", "write to seeds.md"),
         ("rules.md", "w", "write to rules.md"),
-        ("../../pharma_board/x.md", "w", "write outside feed dir"),
+        ("../outside.md", "w", "write outside feed dir"),
         ("_graveyard/queries_retired.yaml", "w", "overwrite in _graveyard"),
     ]:
         try:

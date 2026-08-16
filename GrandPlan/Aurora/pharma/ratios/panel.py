@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """Pharma back-office ratio panel — deliberately crude, and meant to stay that way.
 
-Build instruction: 20260816_AURORA_BUILD_pharma-ratio-panel_v1.0 (pharma_board/).
+Build instruction: 20260816_AURORA_BUILD_pharma-ratio-panel_v1.0 (pharma/pharma_board/).
 Companion doc: PANEL.md.
 
 Standard ratios over the human-supplied roster, each expressed twice — against

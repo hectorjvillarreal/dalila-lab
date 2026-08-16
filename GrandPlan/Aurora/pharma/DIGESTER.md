@@ -1,6 +1,6 @@
 # DIGESTER.md — companion to digest.py
 
-**Build instruction:** `20260816_AURORA_BUILD_pharma-digest-layer_v1.0` (in `pharma_board/`).
+**Build instruction:** `20260816_AURORA_BUILD_pharma-digest-layer_v1.0` (in `pharma/pharma_board/`).
 **A concatenation and a counter. Nothing else.**
 
 `python digest.py build` regenerates `DIGEST.md` — run it after every feed
