@@ -1,0 +1,273 @@
+config:
+  cycles_completed: 1
+  cadence_hours: 48
+  cycle_budget: 16
+  exploration_share: 0.25
+  rotation:
+    main: 12
+    exploration: 4
+  resolved_ids: []
+  promotes_per_cycle:
+  - 0
+  next_provisional: 1
+main:
+- id: q001
+  text: patent cliff pharma
+  group: Rent extinction
+  origin: seed
+  window: []
+- id: q002
+  text: loss of exclusivity
+  group: Rent extinction
+  origin: seed
+  window: []
+- id: q003
+  text: biosimilar launch
+  group: Rent extinction
+  origin: seed
+  window:
+  - 20260816-0001
+  - 20260816-0002
+  - 20260816-0003
+  - 20260816-0004
+  - 20260816-0005
+- id: q004
+  text: generic entry approval
+  group: Rent extinction
+  origin: seed
+  window:
+  - 20260816-0006
+- id: q005
+  text: patent litigation pharma ruling
+  group: Rent extinction
+  origin: seed
+  window: []
+- id: q006
+  text: pharma acquisition biotech
+  group: Rent replacement
+  origin: seed
+  window:
+  - 20260816-0007
+  - 20260816-0008
+  - 20260816-0009
+- id: q007
+  text: pharma licensing deal
+  group: Rent replacement
+  origin: seed
+  window:
+  - 20260816-0010
+  - 20260816-0011
+- id: q008
+  text: in-licensing China biotech
+  group: Rent replacement
+  origin: seed
+  window: []
+- id: q009
+  text: pharma pipeline failure phase 3
+  group: Rent replacement
+  origin: seed
+  window:
+  - 20260816-0012
+  - 20260816-0013
+  - 20260816-0014
+  - 20260816-0015
+- id: q010
+  text: pharma restructuring layoffs R&D
+  group: Rent replacement
+  origin: seed
+  window:
+  - 20260816-0016
+  - 20260816-0017
+  - 20260816-0018
+- id: q011
+  text: India generics export
+  group: The diffusion layer
+  origin: seed
+  window:
+  - 20260816-0019
+  - 20260816-0020
+- id: q012
+  text: China API production
+  group: The diffusion layer
+  origin: seed
+  window:
+  - 20260816-0021
+  - 20260816-0022
+- id: q013
+  text: pharmaceutical precursor supply
+  group: The diffusion layer
+  origin: seed
+  window: []
+- id: q014
+  text: CDMO capacity expansion
+  group: The diffusion layer
+  origin: seed
+  window: []
+- id: q015
+  text: drug shortage cause
+  group: The diffusion layer
+  origin: seed
+  window: []
+- id: q016
+  text: AI drug discovery deal
+  group: Frontier cost
+  origin: seed
+  window: []
+- id: q017
+  text: AI pharma partnership compute
+  group: Frontier cost
+  origin: seed
+  window: []
+- id: q018
+  text: machine learning clinical trial design
+  group: Frontier cost
+  origin: seed
+  window: []
+- id: q019
+  text: drug price negotiation
+  group: The payer
+  origin: seed
+  window: []
+- id: q020
+  text: HTA reimbursement decision
+  group: The payer
+  origin: seed
+  window: []
+- id: q021
+  text: formulary exclusion
+  group: The payer
+  origin: seed
+  window: []
+- id: q022
+  text: pharmaceutical tariff
+  group: The payer
+  origin: seed
+  window: []
+- id: q023
+  text: FDA approval decision
+  group: The gate
+  origin: seed
+  window: []
+- id: q024
+  text: EMA CHMP opinion
+  group: The gate
+  origin: seed
+  window: []
+- id: q025
+  text: NMPA approval
+  group: The gate
+  origin: seed
+  window: []
+- id: q026
+  text: PMDA approval Japan
+  group: The gate
+  origin: seed
+  window: []
+- id: q027
+  text: CDSCO India approval
+  group: The gate
+  origin: seed
+  window: []
+- id: q028
+  text: pharmaceutical export control
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: q029
+  text: biosecurity legislation pharma
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: q030
+  text: pharmaceutical industrial policy
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: q031
+  text: onshoring drug manufacturing
+  group: Instruments and walls
+  origin: seed
+  window: []
+provisional: []
+exploration:
+- id: x001
+  text: Brazil pharmaceutical policy
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x002
+  text: Indonesia drug manufacturing
+  group: Instruments and walls
+  origin: seed
+  window:
+  - 20260816-0023
+- id: x003
+  text: Nigeria pharmaceutical production
+  group: Instruments and walls
+  origin: seed
+  window:
+  - 20260816-0024
+  - 20260816-0025
+  - 20260816-0026
+  - 20260816-0027
+  - 20260816-0028
+- id: x004
+  text: Gulf sovereign fund biotech
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x005
+  text: compulsory licensing medicine
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x006
+  text: pandemic treaty stockpile
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x007
+  text: veterinary pharmaceutical market
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x008
+  text: CDMO acquires drug asset
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x009
+  text: insurer acquires manufacturer
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x010
+  text: pharmacy benefit manager reform
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x011
+  text: hospital compounding scale
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x012
+  text: biologics licence transfer
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x013
+  text: pharmaceutical counterfeiting enforcement
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x014
+  text: pharmaceutical waste regulation
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x015
+  text: state owned pharmaceutical enterprise
+  group: Instruments and walls
+  origin: seed
+  window: []

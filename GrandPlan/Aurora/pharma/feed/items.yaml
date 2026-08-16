@@ -1,0 +1,399 @@
+- id: 20260816-0001
+  date_seen: '2026-08-16'
+  date_published: '2026-08-03'
+  headline: Biocon's Yesafili™ (Aflibercept) Launches as Second Eylea® Biosimilar on US Market
+  why: second US biosimilar entrant against Eylea 2 mg accelerates erosion of a multibillion-dollar ophthalmology
+    franchise
+  url: https://www.pearceip.law/2026/08/03/biocons-yesafiliaflibercept-launches-as-second-eylea-biosimilar-on-us-market/
+  source_domain: pearceip.law
+  entities:
+  - Biocon
+  - Regeneron
+  - United States
+  query_id: q003
+  lane: main
+  promote: null
+- id: 20260816-0002
+  date_seen: '2026-08-16'
+  date_published: '2026-08-10'
+  headline: Samsung Bioepis Launches PFS Aflibercept Biosimilar in Europe
+  why: European launch of Opuviz/SB15 widens aflibercept biosimilar competition in the EU market
+  url: https://www.pearceip.law/2026/08/10/samsung-bioepis-launches-pfs-aflibercept-biosimilar-in-europe/
+  source_domain: pearceip.law
+  entities:
+  - Samsung Bioepis
+  - Regeneron
+  - Bayer
+  - European Union
+  query_id: q003
+  lane: main
+  promote: null
+- id: 20260816-0003
+  date_seen: '2026-08-16'
+  date_published: '2026-08-10'
+  headline: Samsung Bioepis Files First Korean Application for Biosimilar to MSD's Keytruda® (Pembrolizumab)
+  why: first Korean pembrolizumab biosimilar filing signals positioning ahead of the Keytruda patent cliff
+    (~2028)
+  url: https://www.pearceip.law/2026/08/10/samsung-bioepis-files-first-korean-application-for-biosimilar-to-msds-keytruda-pembrolizumab/
+  source_domain: pearceip.law
+  entities:
+  - Samsung Bioepis
+  - MSD
+  - Ministry of Food and Drug Safety (South Korea)
+  query_id: q003
+  lane: main
+  promote: null
+- id: 20260816-0004
+  date_seen: '2026-08-16'
+  date_published: '2026-08-05'
+  headline: Dutch Court Grants Preliminary Injunction Preventing Sale of Compounded Semaglutide Nasal
+    Spray
+  why: exclusivity enforcement against a semaglutide copy while GLP-1 franchises approach loss of exclusivity
+  url: https://www.pearceip.law/2026/08/05/dutch-court-grants-preliminary-injunction-preventing-sale-of-compounded-semaglutide-nasal-spray/
+  source_domain: pearceip.law
+  entities:
+  - Novo Nordisk
+  - Ceban Ziekenhuisfarmacie B.V.
+  - The Hague District Court
+  - Netherlands
+  query_id: q003
+  lane: main
+  promote: null
+- id: 20260816-0005
+  date_seen: '2026-08-16'
+  date_published: '2026-08-11'
+  headline: Pearce IP BioBlast® for the week ending 7 August 2026
+  why: weekly biosimilar/IP news digest capturing multiple launch and filing events in the intake window
+  url: https://www.pearceip.law/2026/08/11/pearce-ip-bioblast-for-the-week-ending-7-august-2026/
+  source_domain: pearceip.law
+  entities:
+  - Pearce IP
+  - Samsung Bioepis
+  - Biocon
+  - Novo Nordisk
+  - Replimune
+  - Ono Pharmaceutical
+  - Bristol Myers Squibb
+  - FDA
+  query_id: q003
+  lane: main
+  promote: null
+- id: 20260816-0006
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: FDA Drug Approval Decisions Expected in August 2026
+  why: flags August 2026 PDUFA/approval decisions that could open or close generic and biosimilar entry
+    paths
+  url: https://www.infectiousdiseaseadvisor.com/news/fda-drug-approval-decisions-expected-in-august-2026/
+  source_domain: infectiousdiseaseadvisor.com
+  entities:
+  - FDA
+  - United States
+  query_id: q004
+  lane: main
+  promote: null
+- id: 20260816-0007
+  date_seen: '2026-08-16'
+  date_published: '2026-08-11'
+  headline: Jazz Pharmaceuticals to acquire Actio Biosciences for $820 million, expanding rare epilepsy
+    portfolio
+  why: $820M upfront plus up to $500M contingent for KCNT1+ epilepsy precision therapy ABS-1230; close
+    expected Q4 2026
+  url: https://www.cnbc.com/2026/08/11/jazz-pharmaceuticals-to-buy-actio-biosciences-for-820-million.html
+  source_domain: cnbc.com
+  entities:
+  - Jazz Pharmaceuticals
+  - Actio Biosciences
+  query_id: q006
+  lane: main
+  promote: null
+- id: 20260816-0008
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: PTC’s $211M bid wins Sangamo auction, teeing up ‘special opportunity’ to enter Fabry market
+  why: bankruptcy auction outcome 4x the stalking-horse terms for BLA-stage Fabry gene therapy ST-920,
+    launch targeted 2027
+  url: https://www.fiercebiotech.com/biotech/ptcs-211m-bid-wins-sangamo-auction-teeing-special-opportunity-enter-fabry-market
+  source_domain: fiercebiotech.com
+  entities:
+  - PTC Therapeutics
+  - Sangamo Therapeutics
+  - Astellas
+  - TerSera
+  query_id: q006
+  lane: main
+  promote: null
+- id: 20260816-0009
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: Bankrupt Sangamo offloads assets to Lilly, PTC in $161M sale
+  why: Chapter 11 asset breakup distributes a gene-therapy platform across two buyers, signaling distressed-asset
+    appetite
+  url: https://www.biospace.com/deals/bankrupt-sangamo-offloads-assets-to-lilly-ptc-in-161m-sale
+  source_domain: biospace.com
+  entities:
+  - Sangamo Therapeutics
+  - Eli Lilly
+  - PTC Therapeutics
+  query_id: q006
+  lane: main
+  promote: null
+- id: 20260816-0010
+  date_seen: '2026-08-16'
+  date_published: '2026-08-06'
+  headline: Alteogen signs $365m Hybrozyme licensing deal with pharma company
+  why: worldwide rights to ALT-B4 hyaluronidase for a subcutaneous biologic with undisclosed global pharma;
+    platform-licensing momentum
+  url: https://finance.yahoo.com/healthcare/articles/alteogen-signs-365m-hybrozyme-licensing-103616461.html
+  source_domain: finance.yahoo.com
+  entities:
+  - Alteogen
+  query_id: q007
+  lane: main
+  promote: null
+- id: 20260816-0011
+  date_seen: '2026-08-16'
+  date_published: '2026-08-11'
+  headline: Mereo BioPharma and Sentynl Therapeutics Announce Option and License Agreement for alvelestat
+    in Alpha-1 Antitrypsin Deficiency-Associated Lung Disease (AATD-LD)
+  why: US commercial plus global manufacturing rights, up to $435M milestones, funds Phase 3 start in
+    early 2027
+  url: https://www.globenewswire.com/news-release/2026/08/11/3342646/0/en/mereo-biopharma-and-sentynl-therapeutics-announce-option-and-license-agreement-for-alvelestat-in-alpha-1-antitrypsin-deficiency-associated-lung-disease-aatd-ld.html
+  source_domain: globenewswire.com
+  entities:
+  - Mereo BioPharma
+  - Sentynl Therapeutics
+  query_id: q007
+  lane: main
+  promote: null
+- id: 20260816-0012
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: Update on CARDIO-TTRansform Phase 3 trial of eplontersen in adults with transthyretin-mediated
+    amyloid cardiomyopathy
+  why: missed primary CV endpoint in a large phase 3, hits ATTR cardiomyopathy franchise expectations
+  url: https://ir.ionis.com/news-releases/news-release-details/update-cardio-ttransform-phase-3-trial-eplontersen-adults
+  source_domain: ir.ionis.com
+  entities:
+  - Ionis Pharmaceuticals
+  - AstraZeneca
+  query_id: q009
+  lane: main
+  promote: null
+- id: 20260816-0013
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: Ziltivekimab Fails to Reduce MACE Risk in Phase 3 ZEUS Trial
+  why: blockbuster-tipped IL-6 inhibitor missed MACE endpoint, undercuts anti-inflammatory CV thesis
+  url: https://www.hcplive.com/view/ziltivekimab-fails-to-reduce-mace-risk-in-phase-3-zeus-trial
+  source_domain: hcplive.com
+  entities:
+  - Novo Nordisk
+  query_id: q009
+  lane: main
+  promote: null
+- id: 20260816-0014
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: Novo Nordisk left praying to Artemis and Hermes to salvage CKD program after phase 3 fail
+  why: second late-stage setback for Novo's cardio-renal pipeline in quick succession
+  url: https://www.fiercebiotech.com/biotech/novo-nordisk-left-praying-artemis-and-hermes-salvage-program-after-key-phase-3-trial-flops
+  source_domain: fiercebiotech.com
+  entities:
+  - Novo Nordisk
+  query_id: q009
+  lane: main
+  promote: null
+- id: 20260816-0015
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: 'Pharma Pipeline Stalls for First Time in Decades: Citeline - BioSpace'
+  why: industry-wide pipeline contraction signal rather than a single-asset failure
+  url: https://www.biospace.com/drug-development/pharma-pipeline-stalls-for-first-time-in-decades-citeline
+  source_domain: biospace.com
+  entities:
+  - Citeline
+  query_id: q009
+  lane: main
+  promote: null
+- id: 20260816-0016
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: July's biopharma layoffs affect 466 employees, a 94% year-over-year drop - BioSpace
+  why: monthly layoff tally shows sharp deceleration versus 2025 cuts
+  url: https://www.biospace.com/job-trends/julys-biopharma-layoffs-affect-466-employees-a-94-year-over-year-drop
+  source_domain: biospace.com
+  entities:
+  - BioSpace
+  query_id: q010
+  lane: main
+  promote: null
+- id: 20260816-0017
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: 'Fierce Biotech Layoff Tracker 2026: Aura loses 20% of staffers; aTyr shrinks by 60%'
+  why: fresh mid-cap biotech workforce cuts logged in the rolling 2026 tracker
+  url: https://www.fiercebiotech.com/biotech/fierce-biotech-layoff-tracker-2026
+  source_domain: fiercebiotech.com
+  entities:
+  - Aura Biosciences
+  - aTyr Pharma
+  query_id: q010
+  lane: main
+  promote: null
+- id: 20260816-0018
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: 'Layoff Tracker: MindMaze trims Relief staff, Aardvark cuts workforce amid Prader-Willi troubles'
+  why: clinical setbacks (Prader-Willi) driving immediate workforce cuts at small caps
+  url: https://www.biospace.com/biospace-layoff-tracker
+  source_domain: biospace.com
+  entities:
+  - MindMaze
+  - Relief Therapeutics
+  - Aardvark Therapeutics
+  query_id: q010
+  lane: main
+  promote: null
+- id: 20260816-0019
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: no additional tariffs by us on indian pharma electronics govt
+  why: official Indian government line that pharma exports are spared from the latest US tariff round
+  url: https://www.deccanherald.com/business/no-additional-tariffs-by-us-on-indian-pharma-electronics-govt-3677132
+  source_domain: deccanherald.com
+  entities:
+  - Government of India
+  - United States
+  - India
+  query_id: q011
+  lane: main
+  promote: null
+- id: 20260816-0020
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: 'US 100% Tariff on Patented Pharma Products: India''s Generic Drug Exports Get a Temporary
+    Pass'
+  why: generics exempted for now but escalation path (100%/200% by 2028-29) hangs over Indian exporters
+  url: https://www.india-briefing.com/news/us-patented-pharma-tariff-2026-india-generic-drug-exports-exempted-43899.html/
+  source_domain: india-briefing.com
+  entities:
+  - United States
+  - India
+  - Dr. Reddy's Laboratories
+  - Sun Pharma
+  query_id: q011
+  lane: main
+  promote: null
+- id: 20260816-0021
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: China NMPA Expands Priority Review for Chemical API Marketing Authorization Applications
+  why: regulatory acceleration for standalone chemical API approvals effective 2026-08-01
+  url: https://cisema.com/news/china-priority-review-chemical-api
+  source_domain: cisema.com
+  entities:
+  - NMPA
+  - China
+  query_id: q012
+  lane: main
+  promote: null
+- id: 20260816-0022
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: China API Exports Enter 3.0 Era, Reshaping Global Pharma - Blooming
+  why: claims Chinese API makers moving up-value into GLP-1 and nucleic-acid drug supply chains
+  url: https://www.bloominglobal.com/media/detail/china-api-exports-enter-30-era-reshaping-global-pharma
+  source_domain: bloominglobal.com
+  entities:
+  - China
+  - Eli Lilly
+  - Novo Nordisk
+  query_id: q012
+  lane: main
+  promote: null
+- id: 20260816-0023
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: With Indonesian Pharmacists Association, PYFA Advances National Pharmaceutical Resilience
+  why: listed manufacturer aligning with the government's pharmaceutical self-sufficiency push at an Aug
+    12 industry congress
+  url: https://pyfa.co.id/news/with-indonesian-pharmacists-association-pyfa-advances-national-pharmaceutical-resilience/
+  source_domain: pyfa.co.id
+  entities:
+  - PT Pyridam Farma Tbk (PYFA)
+  - Indonesian Pharmacists Association
+  - Indonesia
+  query_id: x002
+  lane: exploration
+  promote: null
+- id: 20260816-0024
+  date_seen: '2026-08-16'
+  date_published: '2026-08-15'
+  headline: Pharma Manufacturers Target 70% Local Drug Production, Urge FG To Lower Energy Costs
+  why: industry group sets explicit 70% localization target conditioned on energy-cost policy relief
+  url: https://www.channelstv.com/2026/08/15/pharma-manufacturers-target-70-local-drug-production-urge-fg-to-lower-energy-costs/
+  source_domain: channelstv.com
+  entities:
+  - PMG-MAN
+  - Federal Government of Nigeria
+  - Nigeria
+  query_id: x003
+  lane: exploration
+  promote: null
+- id: 20260816-0025
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: 40% revenue goes to power, pharma manufacturers tell FG
+  why: quantifies energy costs as up to 40% of revenue, a binding constraint on local drug production
+  url: https://www.vanguardngr.com/2026/08/40-revenue-goes-to-power-pharma-manufacturers-tell-fg/
+  source_domain: vanguardngr.com
+  entities:
+  - PMG-MAN
+  - Federal Government of Nigeria
+  - Nigeria
+  query_id: x003
+  lane: exploration
+  promote: null
+- id: 20260816-0026
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: FG to commission 11 pharmaceutical manufacturing projects in 2026 to boost local drug production
+  why: state-backed commissioning of 11 plants signals concrete capacity additions, not just policy talk
+  url: https://www.premiumtimesng.com/health/health-news/896220-fg-to-commission-11-pharmaceutical-manufacturing-projects-in-2026-to-boost-local-drug-production.html
+  source_domain: premiumtimesng.com
+  entities:
+  - Federal Government of Nigeria
+  - NAFDAC
+  - Nigeria
+  query_id: x003
+  lane: exploration
+  promote: null
+- id: 20260816-0027
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: Fidson's expansion signals new era for local drug manufacturing
+  why: claimed largest pharma manufacturing buildout in Sub-Saharan Africa by a Nigerian listed firm
+  url: https://thenationonlineng.net/fidsons-expansion-signals-new-era-for-local-drug-manufacturing/
+  source_domain: thenationonlineng.net
+  entities:
+  - Fidson Healthcare Plc
+  - Nigeria
+  query_id: x003
+  lane: exploration
+  promote: null
+- id: 20260816-0028
+  date_seen: '2026-08-16'
+  date_published: null
+  headline: 2026 Nigeria Pharma Manufacturers Expo to Spotlight Push for Pharma Self-Sufficiency
+  why: upcoming Sept 28-29 expo concentrates the local-production agenda with 200+ exhibitors
+  url: https://pharmanewsonline.com/2026-nigeria-pharma-manufacturers-expo-to-spotlight-push-for-pharma-self-sufficiency/
+  source_domain: pharmanewsonline.com
+  entities:
+  - PMG-MAN
+  - NPME 2026
+  - Lagos
+  - Nigeria
+  query_id: x003
+  lane: exploration
+  promote: null

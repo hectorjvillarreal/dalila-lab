@@ -1,0 +1,95 @@
+pearceip.law:
+  surfaced: 5
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+infectiousdiseaseadvisor.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+cnbc.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+fiercebiotech.com:
+  surfaced: 3
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+biospace.com:
+  surfaced: 4
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+finance.yahoo.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+globenewswire.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+ir.ionis.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+hcplive.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+deccanherald.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+india-briefing.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+cisema.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+bloominglobal.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+pyfa.co.id:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+channelstv.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+vanguardngr.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+premiumtimesng.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+thenationonlineng.net:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+pharmanewsonline.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
