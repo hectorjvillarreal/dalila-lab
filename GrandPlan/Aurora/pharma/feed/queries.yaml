@@ -1,16 +1,75 @@
 config:
-  cycles_completed: 3
-  cadence_hours: 48
+  cycles_completed: 4
+  cadence_hours: 36
   cycle_budget: 16
   exploration_share: 0.25
   rotation:
-    main: 5
-    exploration: 12
-  resolved_ids: []
+    main: 17
+    exploration: 1
+  resolved_ids:
+  - 20260816-0001
+  - 20260816-0002
+  - 20260816-0003
+  - 20260816-0004
+  - 20260816-0005
+  - 20260816-0006
+  - 20260816-0007
+  - 20260816-0008
+  - 20260816-0009
+  - 20260816-0010
+  - 20260816-0011
+  - 20260816-0012
+  - 20260816-0013
+  - 20260816-0014
+  - 20260816-0015
+  - 20260816-0016
+  - 20260816-0017
+  - 20260816-0018
+  - 20260816-0019
+  - 20260816-0020
+  - 20260816-0021
+  - 20260816-0022
+  - 20260816-0023
+  - 20260816-0024
+  - 20260816-0025
+  - 20260816-0026
+  - 20260816-0027
+  - 20260816-0028
+  - 20260816-0029
+  - 20260816-0030
+  - 20260816-0031
+  - 20260816-0032
+  - 20260816-0033
+  - 20260816-0034
+  - 20260816-0035
+  - 20260816-0036
+  - 20260816-0037
+  - 20260816-0038
+  - 20260816-0039
+  - 20260816-0040
+  - 20260816-0041
+  - 20260816-0042
+  - 20260816-0043
+  - 20260816-0044
+  - 20260816-0045
+  - 20260816-0046
+  - 20260816-0047
+  - 20260816-0048
+  - 20260816-0049
+  - 20260816-0050
+  - 20260816-0051
+  - 20260816-0052
+  - 20260816-0053
+  - 20260816-0054
+  - 20260816-0055
+  - 20260816-0056
+  - 20260816-0057
+  - 20260816-0058
   promotes_per_cycle:
   - 0
   - 0
   - 0
+  - 23
   next_provisional: 1
 main:
 - id: q001
@@ -54,6 +113,9 @@ main:
   - 20260816-0007
   - 20260816-0008
   - 20260816-0009
+  - 20260816-0059
+  - 20260816-0060
+  - 20260816-0061
 - id: q007
   text: pharma licensing deal
   group: Rent replacement
@@ -61,11 +123,15 @@ main:
   window:
   - 20260816-0010
   - 20260816-0011
+  - 20260816-0062
 - id: q008
   text: in-licensing China biotech
   group: Rent replacement
   origin: seed
-  window: []
+  window:
+  - 20260816-0063
+  - 20260816-0064
+  - 20260816-0065
 - id: q009
   text: pharma pipeline failure phase 3
   group: Rent replacement
@@ -75,6 +141,9 @@ main:
   - 20260816-0013
   - 20260816-0014
   - 20260816-0015
+  - 20260816-0066
+  - 20260816-0067
+  - 20260816-0068
 - id: q010
   text: pharma restructuring layoffs R&D
   group: Rent replacement
@@ -83,6 +152,8 @@ main:
   - 20260816-0016
   - 20260816-0017
   - 20260816-0018
+  - 20260816-0069
+  - 20260816-0070
 - id: q011
   text: India generics export
   group: The diffusion layer
@@ -108,6 +179,10 @@ main:
   origin: seed
   window:
   - 20260816-0029
+  - 20260816-0071
+  - 20260816-0072
+  - 20260816-0073
+  - 20260816-0074
 - id: q015
   text: drug shortage cause
   group: The diffusion layer
@@ -115,6 +190,8 @@ main:
   window:
   - 20260816-0030
   - 20260816-0031
+  - 20260816-0075
+  - 20260816-0076
 - id: q016
   text: AI drug discovery deal
   group: Frontier cost
@@ -122,6 +199,11 @@ main:
   window:
   - 20260816-0032
   - 20260816-0033
+  - 20260816-0077
+  - 20260816-0078
+  - 20260816-0079
+  - 20260816-0080
+  - 20260816-0081
 - id: q017
   text: AI pharma partnership compute
   group: Frontier cost
@@ -216,7 +298,8 @@ exploration:
   text: Brazil pharmaceutical policy
   group: Instruments and walls
   origin: seed
-  window: []
+  window:
+  - 20260816-0083
 - id: x002
   text: Indonesia drug manufacturing
   group: Instruments and walls
@@ -292,7 +375,8 @@ exploration:
   text: pharmaceutical counterfeiting enforcement
   group: Instruments and walls
   origin: seed
-  window: []
+  window:
+  - 20260816-0082
 - id: x014
   text: pharmaceutical waste regulation
   group: Instruments and walls

@@ -39,10 +39,12 @@ is not needed — items.yaml is tool-owned and writable).
   20-item window with zero promotes → moved to `_graveyard/queries_retired.yaml`
   with full record. Interpretation choice: unflagged items do not count toward
   the 15, so Héctor's reading lag can't retire a query. Exploration is exempt.
-- **Propose**: term (unigram/bigram over promoted headlines + entities)
-  recurring across ≥3 promoted items and absent from every active query → new
-  provisional query, cap 3/cycle. Provisional items are lane-tagged and the
-  query graduates to main only after one of its items is promoted.
+- **Propose**: term (unigram/bigram over promoted *headlines only* — entities
+  have their own channel and tokenizing them proposed junk like "united
+  states") recurring across ≥3 promoted items and absent from every active
+  query → new provisional query, cap 3/cycle; sub-terms of an accepted longer
+  term suppressed. Provisional items are lane-tagged and the query graduates
+  to main only after one of its items is promoted.
 - **Sources**: Laplace-smoothed promote rate relative to the overall rate,
   clipped to [0.2, 1.0]. Down-weight only; blocking is Héctor's.
 - **Entities**: recounted from promoted items only; reported, never nominated.

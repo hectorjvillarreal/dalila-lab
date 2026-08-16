@@ -304,18 +304,28 @@ def calibrate(state, items, sources, entities, notes):
             still.append(q)
     state["provisional"] = still
 
-    # 5.1 auto-propose — quarantined in the provisional lane, cap 3 per cycle
+    # 5.1 auto-propose — quarantined in the provisional lane, cap 3 per cycle.
+    # Terms come from promoted HEADLINES only: entities have their own channel
+    # (5.3) and tokenizing them proposes junk queries like "united states".
+    # A shorter term contained in an accepted longer term is suppressed.
     promoted_items = [it for it in items if it["promote"] is True]
     active_text = " | ".join(q["text"] for lane in ("main", "provisional", "exploration") for q in state[lane]).lower()
     counts = {}
     for it in promoted_items:
-        for t in _terms(it["headline"] + " " + " ".join(it.get("entities") or [])):
+        for t in _terms(it["headline"]):
             counts.setdefault(t, set()).add(it["id"])
     candidates = sorted(
         [(t, ids) for t, ids in counts.items() if len(ids) >= PROPOSE_MIN_ITEMS and t not in active_text],
         key=lambda kv: (-len(kv[1]), -len(kv[0])),
     )
-    for t, ids in candidates[:PROPOSE_CAP]:
+    accepted = []
+    for t, ids in candidates:
+        if len(accepted) >= PROPOSE_CAP:
+            break
+        if any(t in a or a in t for a, _ in accepted):
+            continue
+        accepted.append((t, ids))
+    for t, ids in accepted:
         pid = f"p{cfg['next_provisional']:03d}"
         cfg["next_provisional"] += 1
         q = {"id": pid, "text": t, "group": "auto-proposed", "origin": "auto",
