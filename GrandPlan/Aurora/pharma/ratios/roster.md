@@ -27,7 +27,7 @@ tool may not estimate them; blank is better than wrong.
 | 7 | `NVO` | Novo Nordisk | 2031? | Frontier peer to LLY under a different ownership structure (foundation control) |
 | 8 | `AZN` | AstraZeneca | 2030? | Deepest China exposure among Western majors — the walls case |
 | 9 | `NVS` | Novartis | 2029? | Deliberately exited diffusion by spinning out Sandoz — a firm that chose a pole |
-| 10 | `ROG.SW` | Roche | 2028? | Pharma plus diagnostics; long biosimilar erosion history |
+| 10 | `RO.SW` | Roche | 2028? | Pharma plus diagnostics; long biosimilar erosion history |
 | 11 | `SNY` | Sanofi | 2030? | Vaccines plus branded; different rent structure from the small-molecule majors |
 | 12 | `4502.T` | Takeda | 2027? | Debt-financed acquisition of frontier rent — leverage as strategy |
 | 13 | `4568.T` | Daiichi Sankyo | 2032? | Owns a platform it licenses to a larger firm — stack rentability seen from the owner's side |
