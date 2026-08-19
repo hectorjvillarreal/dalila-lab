@@ -1252,7 +1252,7 @@
   - European Commission
   query_id: q020
   lane: main
-  promote: null
+  promote: true
 - id: 20260818-0002
   date_seen: '2026-08-18'
   date_published: '2026-08-04'
@@ -1267,7 +1267,7 @@
   - European Union
   query_id: q020
   lane: main
-  promote: null
+  promote: false
 - id: 20260818-0003
   date_seen: '2026-08-18'
   date_published: '2026-08-07'
@@ -1282,7 +1282,7 @@
   - Trump administration
   query_id: q022
   lane: main
-  promote: null
+  promote: true
 - id: 20260818-0004
   date_seen: '2026-08-18'
   date_published: '2026-08-05'
@@ -1297,7 +1297,7 @@
   - United States
   query_id: q023
   lane: main
-  promote: null
+  promote: true
 - id: 20260818-0005
   date_seen: '2026-08-18'
   date_published: '2026-08-18'
@@ -1312,7 +1312,7 @@
   - China
   query_id: q025
   lane: main
-  promote: null
+  promote: false
 - id: 20260818-0006
   date_seen: '2026-08-18'
   date_published: '2026-08-05'
@@ -1327,7 +1327,7 @@
   - Japan
   query_id: q026
   lane: main
-  promote: null
+  promote: false
 - id: 20260818-0007
   date_seen: '2026-08-18'
   date_published: '2026-08-10'
@@ -1342,4 +1342,4 @@
   - China
   query_id: x002
   lane: exploration
-  promote: null
+  promote: false
