@@ -1,11 +1,11 @@
 config:
-  cycles_completed: 4
+  cycles_completed: 5
   cadence_hours: 36
   cycle_budget: 16
   exploration_share: 0.25
   rotation:
-    main: 17
-    exploration: 1
+    main: 29
+    exploration: 5
   resolved_ids:
   - 20260816-0001
   - 20260816-0002
@@ -65,12 +65,38 @@ config:
   - 20260816-0056
   - 20260816-0057
   - 20260816-0058
+  - 20260816-0059
+  - 20260816-0060
+  - 20260816-0061
+  - 20260816-0062
+  - 20260816-0063
+  - 20260816-0064
+  - 20260816-0065
+  - 20260816-0066
+  - 20260816-0067
+  - 20260816-0068
+  - 20260816-0069
+  - 20260816-0070
+  - 20260816-0071
+  - 20260816-0072
+  - 20260816-0073
+  - 20260816-0074
+  - 20260816-0075
+  - 20260816-0076
+  - 20260816-0077
+  - 20260816-0078
+  - 20260816-0079
+  - 20260816-0080
+  - 20260816-0081
+  - 20260816-0082
+  - 20260816-0083
   promotes_per_cycle:
   - 0
   - 0
   - 0
   - 23
-  next_provisional: 1
+  - 2
+  next_provisional: 2
 main:
 - id: q001
   text: patent cliff pharma
@@ -225,7 +251,9 @@ main:
   text: HTA reimbursement decision
   group: The payer
   origin: seed
-  window: []
+  window:
+  - 20260818-0001
+  - 20260818-0002
 - id: q021
   text: formulary exclusion
   group: The payer
@@ -238,12 +266,14 @@ main:
   window:
   - 20260816-0036
   - 20260816-0037
+  - 20260818-0003
 - id: q023
   text: FDA approval decision
   group: The gate
   origin: seed
   window:
   - 20260816-0038
+  - 20260818-0004
 - id: q024
   text: EMA CHMP opinion
   group: The gate
@@ -256,12 +286,14 @@ main:
   text: NMPA approval
   group: The gate
   origin: seed
-  window: []
+  window:
+  - 20260818-0005
 - id: q026
   text: PMDA approval Japan
   group: The gate
   origin: seed
-  window: []
+  window:
+  - 20260818-0006
 - id: q027
   text: CDSCO India approval
   group: The gate
@@ -292,7 +324,16 @@ main:
   origin: seed
   window:
   - 20260816-0051
-provisional: []
+provisional:
+- id: p001
+  text: portfolio
+  group: auto-proposed
+  origin: auto
+  from_items:
+  - 20260816-0007
+  - 20260816-0056
+  - 20260816-0061
+  window: []
 exploration:
 - id: x001
   text: Brazil pharmaceutical policy
@@ -306,6 +347,7 @@ exploration:
   origin: seed
   window:
   - 20260816-0023
+  - 20260818-0007
 - id: x003
   text: Nigeria pharmaceutical production
   group: Instruments and walls

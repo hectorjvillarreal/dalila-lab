@@ -1236,3 +1236,110 @@
   query_id: x001
   lane: exploration
   promote: false
+- id: 20260818-0001
+  date_seen: '2026-08-18'
+  date_published: '2026-08-04'
+  headline: Ireland Issues First JCA-Based National HTA Decision, Declines Reimbursement of Itvisma at
+    Submitted Price
+  why: first national reimbursement decision built on an EU JCA tests how joint assessments bind national
+    pricing
+  url: https://www.navlindaily.com/article/31281/ireland-issues-first-jca-based-national-hta-decision-declines-reimbursement-of-itvisma-at-submitted-price
+  source_domain: navlindaily.com
+  entities:
+  - NCPE
+  - Ireland
+  - Novartis
+  - European Commission
+  query_id: q020
+  lane: main
+  promote: null
+- id: 20260818-0002
+  date_seen: '2026-08-18'
+  date_published: '2026-08-04'
+  headline: NCPE — First National HTA Using EU Joint Clinical Assessment Data
+  why: second account of the Irish JCA-based rapid review, framing it as the EU HTA regulation's first
+    national test
+  url: https://blueteq.com/2026/08/04/ncpe-first-national-hta-using-eu-joint-clinical-assessment-data/
+  source_domain: blueteq.com
+  entities:
+  - NCPE
+  - Ireland
+  - European Union
+  query_id: q020
+  lane: main
+  promote: null
+- id: 20260818-0003
+  date_seen: '2026-08-18'
+  date_published: '2026-08-07'
+  headline: 'US: CBP Issues Implementation Guidance for Section 232 Tariffs on Patented Pharmaceuticals'
+  why: guidance turns the July 31 tariff proclamation into operative customs rules with no company yet
+    qualifying for the reduced 20% rate
+  url: https://globalimportblog.bakermckenzie.com/2026/08/07/us-cbp-issues-implementation-guidance-for-section-232-tariffs-on-patented-pharmaceuticals/
+  source_domain: globalimportblog.bakermckenzie.com
+  entities:
+  - CBP
+  - United States
+  - Trump administration
+  query_id: q022
+  lane: main
+  promote: null
+- id: 20260818-0004
+  date_seen: '2026-08-18'
+  date_published: '2026-08-05'
+  headline: FDA Approves mFLUSIVA (influenza vaccine, mRNA) for the Prevention of Seasonal Influenza
+  why: first mRNA seasonal influenza vaccine licensure opens a new franchise and validates the platform
+    beyond COVID
+  url: https://www.drugs.com/newdrugs/fda-approves-mflusiva-influenza-vaccine-mrna-prevention-seasonal-influenza-6855.html
+  source_domain: drugs.com
+  entities:
+  - Moderna
+  - FDA
+  - United States
+  query_id: q023
+  lane: main
+  promote: null
+- id: 20260818-0005
+  date_seen: '2026-08-18'
+  date_published: '2026-08-18'
+  headline: Harbour BioMed Announces NMPA Approval of IND Application for HBM7004 for the Treatment of
+    Advanced Solid Tumors
+  why: IND clearance for a B7H4xCD3 bispecific marks continued domestic Chinese novel-biologic flow
+  url: https://www.biospace.com/press-releases/harbour-biomed-announces-nmpa-approval-of-ind-application-for-hbm7004-for-the-treatment-of-advanced-solid-tumors
+  source_domain: biospace.com
+  entities:
+  - Harbour BioMed
+  - NMPA
+  - China
+  query_id: q025
+  lane: main
+  promote: null
+- id: 20260818-0006
+  date_seen: '2026-08-18'
+  date_published: '2026-08-05'
+  headline: Signatera Is Submitted to Japan's PMDA for Companion Diagnostic Approval in MIBC
+  why: companion-diagnostic filing extends Japan's first approved MRD test from colorectal toward bladder
+    cancer
+  url: https://www.onclive.com/view/signatera-is-submitted-to-japan-s-pmda-for-companion-diagnostic-approval-in-mibc
+  source_domain: onclive.com
+  entities:
+  - Natera
+  - PMDA
+  - Japan
+  query_id: q026
+  lane: main
+  promote: null
+- id: 20260818-0007
+  date_seen: '2026-08-18'
+  date_published: '2026-08-10'
+  headline: Indonesia, China seek stronger drug, food regulatory cooperation
+  why: regulator-level cooperation could reroute API sourcing and approval pathways between Jakarta and
+    Beijing
+  url: https://en.antaranews.com/amp/news/426611/indonesia-china-seek-stronger-drug-food-regulatory-cooperation
+  source_domain: en.antaranews.com
+  entities:
+  - BPOM
+  - Indonesia
+  - China
+  query_id: x002
+  lane: exploration
+  promote: null
