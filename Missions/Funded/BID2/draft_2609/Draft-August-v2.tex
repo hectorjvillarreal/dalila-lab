@@ -924,11 +924,6 @@ Figure~\ref{fig:lifecycle_baseline} plots the life-cycle profiles the estimated 
 \fignote{0.92}{Cohort-mean profiles by five-year age period from the general-equilibrium solve at the estimates. Skill groups: \serone{high skill} and \sertwo{low skill}; solid lines men, dashed lines women. Labour is shown for working ages only. Panel~(f) repeats panel~(e) on a magnified vertical scale: across all four types and all ages the health stock spans $[0.990,\,1.000]$.}
 \end{figure}
 
-\subsection{Reproducibility of the Superseded Solve}
-\label{subsec:repro}
-
-Two facts about the superseded results should be on the record rather than left to be discovered. First, the estimates of Section~\ref{subsec:calibration_results}, the moment fit of Table~\ref{tab:moment_match} and the baseline equilibrium of Table~\ref{tab:calibrated_baseline} have no producing artifact in the project repository: they are internally consistent---the reported objective equals the sum of squared $t$-statistics---but they cannot be regenerated from what is archived, and the general-equilibrium solve that is archived differs materially from them. Second, the fixed price anchor at which the estimation is carried out is taken from that archived general-equilibrium run, and is therefore \emph{not} the equilibrium reported in Table~\ref{tab:calibrated_baseline}: the anchor carries a contribution rate of $14.5\%$ and an annual interest rate of $4.80\%$ against the $9.29\%$ and $4.21\%$ reported there. The claim in Section~\ref{subsec:secondstep_smm} that the anchor lies near the general-equilibrium point is therefore true of one equilibrium of this model and not of the one the paper reports, and the bound it places on the partial-equilibrium approximation error should be read accordingly. Both are reasons to treat the superseded numbers as provenance for the present draft rather than as results, and both are resolved by the re-estimation and the general-equilibrium solve at its estimates that this draft now reports; what remains is the regeneration of the baseline exhibits and experiments from it (Section~\ref{subsec:roadmap}).
-
 \subsection{Validation}
 \label{subsec:validation}
 
@@ -1487,9 +1482,299 @@ This appendix documents the apparatus behind the Mexican-data calibration of Sec
 \subsection{Objective and Weighting}
 \label{app:smm_objective}
 
-The estimator minimizes the quadratic form~\eqref{eq:smm_objective}, $Q(\Theta)=[m^{\rm mod}(\Theta)-m^{\rm dat}]'\,W\,[m^{\rm mod}(\Theta)-m^{\rm dat}]$. Under $W=\operatorname{diag}(1/\mathrm{SE}^2)$ each moment contributes its squared $t$-statistic and $Q(\widehat\Theta)=\sum_k t_k^2$, which is the form used in the superseded six-moment estimation reported in Section~\ref{subsec:calibration_results} and in Table~\ref{tab:moment_match}. Section~\ref{subsec:secondstep_smm} explains why that weighting is treated as a specification choice rather than a default under the current ten-moment target set. At each candidate $\Theta$ the model is solved as a partial equilibrium at prices anchored to a stationary general-equilibrium solve, and the model moments are computed \emph{exactly} from the stationary distribution $\Phi$ over $(j,g,\theta,a,h,\eta)$ rather than by simulating panels---which is what makes the estimator classical minimum distance and removes the $(1+1/S)$ term from the variance formula. Asymptotic standard errors on $\widehat\Theta$ are sandwich estimates from a numerical Jacobian of $m^{\rm mod}$ at $\widehat\Theta$; because $\Xi$ enters the amenity $\Omega(h)$ that scales the GHH aggregator, its identification interacts with the externally fixed $\gamma$, which is treated as conditioning information.
+The estimator minimizes the quadratic form~\eqref{eq:smm_objective}, $Q(\Theta)=[m^{\rm mod}(\Theta)-m^{\rm dat}]'\,W\,[m^{\rm mod}(\Theta)-m^{\rm dat}]$. Under $W=\operatorname{diag}(1/\mathrm{SE}^2)$ each moment contributes its squared $t$-statistic and $Q(\widehat\Theta)=\sum_k t_k^2$, which is the form used in the superseded six-moment estimation reported in Appendix~\ref{app:provenance} and in Table~\ref{tab:moment_match}. Section~\ref{subsec:secondstep_smm} explains why that weighting is treated as a specification choice rather than a default under the current ten-moment target set. At each candidate $\Theta$ the model is solved as a partial equilibrium at prices anchored to a stationary general-equilibrium solve, and the model moments are computed \emph{exactly} from the stationary distribution $\Phi$ over $(j,g,\theta,a,h,\eta)$ rather than by simulating panels---which is what makes the estimator classical minimum distance and removes the $(1+1/S)$ term from the variance formula. Asymptotic standard errors on $\widehat\Theta$ are sandwich estimates from a numerical Jacobian of $m^{\rm mod}$ at $\widehat\Theta$; because $\Xi$ enters the amenity $\Omega(h)$ that scales the GHH aggregator, its identification interacts with the externally fixed $\gamma$, which is treated as conditioning information.
 
 \paragraph{A caveat on the Jacobian.} The finite-difference step size is not innocuous here. The derivative of the moment that currently dominates the objective---the age log-slope of medical spending---is not sign-stable across candidate step sizes, so a Jacobian computed at a default step can invert the sign of the dominant column and with it every standard error derived from the sandwich formula. A step-size sensitivity study is a prerequisite to reporting inference, not a robustness check on it. The underlying reason is the discretization noted in Section~\ref{subsec:secondstep_smm}: every moment is kinked where a household changes grid cell, and the two income-elasticity moments are additionally discontinuous where a cell crosses the spending floor at which it leaves the regression. Note that the moment whose derivative misbehaves here---the age log-slope---is \emph{not} one of the two, so the step-size problem is not a consequence of that discontinuity and is not resolved by removing it.
+
+\subsection{Identification}
+\label{app:identification}
+
+\emph{This analysis was performed on the superseded six-parameter, six-moment system of Appendix~\ref{app:provenance}. It does not speak to the current nine-parameter, ten-moment system, whose identification is discussed in Section~\ref{subsec:secondstep_smm} and whose rank condition has not been re-analysed at the reported estimates.} The pre-optimization Jacobian at the starting values (Figure~\ref{fig:jacobian_elast}, reported as target-relative elasticities) shows that every free parameter has strong sensitivity on at least one moment, with no globally flat direction. Two near-flat directions require handling. The first is the $\Xi\leftrightarrow\xi$ ridge on the VSL target: both the amenity level and its curvature move \texttt{vsl\_usd} with the same sign and comparable magnitude, so they cannot be separately identified from that single moment. It was resolved there by freezing $\xi=0.5$ during estimation. The second is the $\overline{H}_0\leftrightarrow\zeta_h$ ridge on the medical-spending moments: the scale and curvature of the health-production function compete with opposite signs, $\zeta_h$ roughly three times the stronger, so their point estimates are within literature ranges but imprecise (the wide standard errors in Table~\ref{tab:theta_hat}). This ridge is acknowledged rather than resolved; it does not prevent identification of $\overline{H}_0$ to within range. One benign off-diagonal sign-flip (the within-age elasticity with respect to $h^{\rm slope}$) appears at the boundary $h^{\rm slope}=0$, where the sign is fragile to the income profile; it is not a new identification problem.
+
+\begin{figure}[H]
+\centering
+% TODO: ensure 02b_jacobian_elasticity.png is uploaded to the Overleaf project root
+% (source: Calibration/outputs/diagnostics/02b_jacobian_elasticity.png; 02_jacobian.png is the alternative).
+\includegraphics[width=0.85\textwidth]{02b_jacobian_elasticity.png}
+\caption{Pre-optimization Jacobian: target-relative elasticities of the six moments with respect to the six parameters. The $\Xi\leftrightarrow\xi$ ridge on \texttt{vsl\_usd} (resolved by freezing $\xi$) and the strong $\zeta_h$ column on the medical-spending moments (the acknowledged $\overline{H}_0\leftrightarrow\zeta_h$ ridge) are the two identification features behind the estimation restrictions of Section~\ref{subsec:secondstep_smm}.}
+\label{fig:jacobian_elast}
+\end{figure}
+
+\subsection{Multistart Protocol and Convergence}
+\label{app:multistart}
+
+The objective is minimized by a multistart Nelder--Mead simplex: four starts of at most forty iterations each, run under four-way contention at roughly twelve minutes per partial-equilibrium evaluation. The smoke test at the starting values returns $Q(\theta_{\rm init})=73.11$ with all six moments finite. The best of the four starts is start~4 at $Q=13.28$; the remaining starts converge to $Q\approx 20.5$, so the reported optimum is well separated from the runner-up basins. Figure~\ref{fig:obj_trace} traces the running-best objective across evaluations on a log scale.
+
+\begin{figure}[H]
+\centering
+% TODO: regenerate 03_objective_trace.png for the Mexican-data multistart (best Q = 13.28)
+% and upload to the Overleaf project root
+% (source: Calibration/outputs/diagnostics/03_objective_trace.png reflects the intermediate run).
+\includegraphics[width=0.9\textwidth]{03_objective_trace.png}
+\caption{Multistart progress: running-best objective $Q$ versus evaluation index, on a log scale. The descent terminates at the best-of-four optimum $Q=13.28$.}
+\label{fig:obj_trace}
+\end{figure}
+
+\subsection{Parity and Euler Diagnostics}
+\label{app:parity_euler}
+
+The calibration scaffold reproduces the production \texttt{Household-Gender} solver to machine precision: the maximum absolute cohort-mean difference between the two solvers is below $10^{-10}$ (achieved at $7\times10^{-11}$), so the calibration and the experiments share an identical household solution algorithm. At the calibrated baseline (Run~1$'$) the Euler-equation residual has a maximum of $\log_{10}=-5.37$ and a mean of $-7.42$, with the mass-weighted bulk of the distribution comfortably below the convergence gate; the two-sex welfare-gap diagnostic also passes. The calibrated experiments (Runs~2--4) each converged within twenty-six outer iterations and pass the same internal gates.
+
+\subsection{Override Mechanics}
+\label{app:overrides}
+
+The calibration and the experiments ran without editing the protected solver \texttt{ge\_model\_gender.jl}. Three override patterns were used, each respecting Julia's compilation semantics. The AR(1) persistence and innovation scale $(\rho,\sigma_\varepsilon)$ are \texttt{const} scalars inlined into the Rouwenhorst discretization, so they were passed as \emph{literals} into the model initializer rather than redefined (a \texttt{const} redefinition would silently fail to propagate into already-compiled methods). The birth-share vector $\pi_{\rm birth}$ is a \texttt{const} array, so in-place mutation propagates, as do the ENOE age-efficiency and skill-intercept overrides. The 2050 demographics are installed on typed globals (population growth and the sex-specific survival schedules) through a setter rather than by inlining. A frozen-parameter bug in the diagnostics module was worked around through a shim rather than a source edit. These patterns are recorded for replicability.
+
+\subsection{First-Step Provenance of the Superseded Solve}
+\label{app:provenance}
+
+This subsection documents the first step behind the superseded estimates of Table~\ref{tab:theta_hat}, not the current one. The current first-step inputs are the ENIGH and ENASEM estimates of Section~\ref{subsec:firststep}.
+
+The survival schedule is the WHO Global Health Observatory life table for M\'exico (2019), aggregated to five-year bands and closed out above age~85 by a Gompertz fit, consistent with UN WPP 2024 medium-variant magnitudes. The ENOE age-efficiency profile $e^g_j$ is constructed, for each sex and five-year band, as the skill-averaged log labour income net of the skill intercept, normalised so the male 20--24 cell equals one; the skill intercepts follow from the prime-age (35--49) cross-skill log gap of $0.745$. The hours target is the equal-weighted mean of the ENOE \texttt{hrsocup} share over male prime-age (30--44) skill cells. The ENOE-based inputs described here have been superseded and the file that documented them is no longer part of the project.
+
+The stationary equilibrium that earlier solve generates---the economy the experiments of Section~\ref{sec:experiments} perturb---is reported in Table~\ref{tab:calibrated_baseline}. It is recorded here, rather than beside the current baseline of Table~\ref{tab:baseline_ge}, so that the two are not mistaken for one another.
+
+At that superseded parameterization the economy supplies effective labour $L=4.99$ and holds capital $K=4.96$ per unit of cohort mass, producing output $Y=7.96$ at an annual interest rate of $4.21\%$. The pay-as-you-go pension system clears at a contribution rate of $\tau^p=9.29\%$ against a system dependency ratio of $0.186$, and households devote $48\%$ of output to consumption and $2.7\%$ to medical care.
+
+\begin{table}[H]
+\centering
+\caption{Calibrated baseline equilibrium (M\'exico, 2020): stationary aggregates. \emph{Superseded solve} (p.~\pageref{par:superseded}); not the current baseline of Section~\ref{subsec:calibrated_baseline}.}
+\label{tab:calibrated_baseline}
+\small
+\begin{tabular}{@{}lr@{}}
+\toprule
+\theadl{Quantity} & \theadr{Value} \\
+\midrule
+\tgroup{2}{Stationary aggregates and prices}
+$K$ (capital, per cohort mass)              & $4.96$ \\
+$L$ (effective labour)                      & $4.99$ \\
+$Y$ (output)                                & $7.96$ \\
+$r$ (annual)                                & $4.21\%$ \\
+$w$ (wage)                                  & $1.022$ \\
+$\tau^p$ (PAYG contribution rate)           & $9.29\%$ \\
+$\overline{pen}$ (pension flow per retiree) & $0.365$ \\
+$C/Y$                                       & $48.1\%$ \\
+$M/Y$                                       & $2.73\%$ \\
+$N^R/N^W$ (PAYG dependency)                 & $0.186$ \\
+$5K/Y$ (annual capital--output ratio)       & $3.11$ \\
+$5B/Y$ (annual debt--output ratio)          & $165\%$ \\
+\bottomrule
+\end{tabular}
+\tabnote{0.92}{Stationary per-cohort-mass units (Section~\ref{subsec:markets}). Stock--flow ratios are annualized by the factor of five of Section~\ref{subsec:units}: $5K/Y$ and $5B/Y$ convert the five-year-flow denominator to an annual one, and $r$ is annualized geometrically. Closure: $\tau^p$ clears the PAYG block, and the stationary debt $B=2.62$ residually closes the general budget through~\eqref{eq:gov_stationary} (so $B/Y=0.329$ at the five-year frequency, $5B/Y=165\%$ annual). Welfare $\mathcal{W}_1(g,\theta)$ is expected lifetime utility at birth ($\gamma=2$); because GHH--CRRA felicity is not homogeneous in consumption, only the ordering across types is interpreted, never the levels. Euler-equation residuals: $\max\log_{10}=-5.37$, mean $-7.42$.}
+\end{table}
+
+The macroeconomic ratios in the table constitute a genuine, if modest, validation \emph{of that superseded configuration}, because none of them is targeted: the discount factor, capital share, and depreciation rate are set externally, and the estimated moments concern hours and medical spending. The annual capital--output ratio of $5K/Y=3.11$ is in line with Mexican data, the annual return of $4.2\%$ is in the empirically plausible range, and a consumption share of $48\%$ is reasonable for an economy with a $19\%$ public-goods share and life-cycle investment. One untargeted ratio is off, and we flag it rather than suppress it: the implied public debt, at $165\%$ of annual GDP, far exceeds M\'exico's federal debt (near $50\%$). The excess is a consequence of the residual closure---$B$ absorbs whatever stationary stock balances the primary account at the calibrated tax-and-spending configuration---rather than of any targeted object, and disciplining it directly, by targeting a debt ratio and letting a tax instrument clear the budget, is a refinement for the next stage. The number matters beyond bookkeeping, because the debt level enters the infeasibility result of Section~\ref{subsec:c2_infeasibility}. None of this transfers to the current baseline, whose sourced capital share, depreciation rate, and tax block differ and whose corresponding ratios are those of Table~\ref{tab:baseline_ge}. The ratios above are provenance for the superseded solve, not evidence for the model as now calibrated.
+
+\begin{table}[H]
+\centering
+\caption{Superseded estimates $\widehat\Theta$ under the earlier specification and first step (best of four starts, $Q=13.28$).}
+\label{tab:theta_hat}
+\begin{tabular}{lrrrr}
+\toprule
+Parameter & Init & $\widehat\theta$ & Rel.\ change & SE \\
+\midrule
+$\Psi$ (labor disutility)                  & 14.00  & 13.45    & $-3.9\%$  & 0.232 \\
+$\Xi$ (health amenity)                     & 0.500  & 0.275    & $-45.1\%$ & 0.171 \\
+$\xi$ (amenity curvature)                  & 0.500  & 0.500    & frozen    & ---   \\
+$\overline{H}_0$ (health-production scale) & 0.300  & 0.247    & $-17.5\%$ & 0.949 \\
+$h^{\mathrm{slope}}$ (age-decline)         & 0.000  & $-0.0358$ & ---      & 0.138 \\
+$\zeta_h$ (health-production curvature)    & 0.500  & 0.579    & $+15.8\%$ & 0.895 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.5em}
+\begin{minipage}{0.92\textwidth}
+\footnotesize \textit{Notes.} $\widehat\theta$ is the best of four multistart Nelder--Mead runs ($Q=13.28$ at start~4; the other starts converge to $Q\approx 20.5$). $\xi$ is held fixed at $0.5$ to resolve the $\Xi\leftrightarrow\xi$ ridge. Standard errors are sandwich estimates from a numerical Jacobian at $\widehat\theta$; the wide $\overline{H}_0$ and $\zeta_h$ intervals reflect the medical-spending ridge documented in Appendix~\ref{app:calibration}.
+\end{minipage}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Moment match at $\widehat\theta$.}
+\label{tab:moment_match}
+\begin{tabular}{lrrlrr}
+\toprule
+Moment                         & Data         & SE        & Source                & Model     & $t$-stat \\
+\midrule
+Prime-age male hours           & 0.2686       & 0.000946  & ENOE (this paper)     & 0.2687    & $+0.07$  \\
+VSL (2022 USD)                 & 2{,}000{,}000 & 700{,}000 & OECD transfer (Lit.)  & 27{,}698  & $-2.82$  \\
+Cross-section $\eta_m$         & 1.000        & 0.300     & Hall--Jones (Lit.)    & 0.471     & $-1.76$  \\
+Mean $m$, ages 25--35          & 0.040        & 0.020     & Hall--Jones; ENIGH    & 0.0131    & $-1.35$  \\
+$d\log\bar m/dj$, $j\in[2,12]$ & 0.120        & 0.050     & Literature            & 0.136     & $+0.33$  \\
+Within-age $\eta_m$            & 0.400        & 0.150     & Hall--Jones; RAND     & 0.483     & $+0.56$  \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.5em}
+\begin{minipage}{0.92\textwidth}
+\footnotesize \textit{Notes.} Source column distinguishes the ENOE-this-paper moment from the retained literature/external anchors. Five of six moments are within $2$ SE (three within $1$ SE); the VSL is the structural divergence of Section~\ref{subsec:vsl_structural}. $\sum_k t_k^2 = 13.28 = Q(\widehat\theta)$.
+\end{minipage}
+\end{table}
+
+\label{subsec:repro}
+Two facts about the superseded results should be on the record rather than left to be discovered. First, the superseded estimates of Table~\ref{tab:theta_hat}, the moment fit of Table~\ref{tab:moment_match} and the baseline equilibrium of Table~\ref{tab:calibrated_baseline} have no producing artifact in the project repository: they are internally consistent---the reported objective equals the sum of squared $t$-statistics---but they cannot be regenerated from what is archived, and the general-equilibrium solve that is archived differs materially from them. Second, the fixed price anchor at which the estimation is carried out is taken from that archived general-equilibrium run, and is therefore \emph{not} the equilibrium reported in Table~\ref{tab:calibrated_baseline}: the anchor carries a contribution rate of $14.5\%$ and an annual interest rate of $4.80\%$ against the $9.29\%$ and $4.21\%$ reported there. The claim in Section~\ref{subsec:secondstep_smm} that the anchor lies near the general-equilibrium point is therefore true of one equilibrium of this model and not of the one the paper reports, and the bound it places on the partial-equilibrium approximation error should be read accordingly. Both are reasons to treat the superseded numbers as provenance for the present draft rather than as results, and both are resolved by the re-estimation and the general-equilibrium solve at its estimates that this draft now reports; what remains is the regeneration of the baseline exhibits and experiments from it (Section~\ref{subsec:roadmap}).
+
+\section{Supplementary Tables and Data}
+\label{app:supplementary}
+
+This appendix collects the three-country comparative landscape that motivates the project. Only M\'exico is calibrated in the present draft; these indicators discipline none of the parameters in Section~\ref{sec:calibration} and are reported for context.
+
+\subsection{Demographic and Health-Status Indicators}
+\label{app:demog_table}
+
+\begin{table}[H]
+\centering
+\caption{Demographic and Health Status Indicators}
+\label{tab:demog}
+\begin{tabular}{lccc}
+\hline\hline
+\textbf{Indicator} & \textbf{Mexico} & \textbf{Costa Rica} & \textbf{Panama} \\
+\hline
+Life expectancy at birth, total (2023)           & 75.1 & 81.0 & 78.1 \\
+Life expectancy, male (2023)                     & 72.1 & 78.6 & 75.4 \\
+Life expectancy, female (2023)                   & 78.3 & 83.5 & 80.9 \\
+Fertility rate (births per woman, 2023)          & 1.82 & 1.51 & 2.30 \\
+Infant mortality (per 1{,}000 live births, 2022) & 12.4 & 8.7  & 14.5 \\
+Population aged 65+ (\% of total, 2023)          & 8.1  & 10.4 & 8.9  \\
+Diabetes prevalence (\% of adults)               & 16.9 & 9.8  & 11.0 \\
+\hline\hline
+\end{tabular}
+\begin{minipage}{\linewidth}
+\smallskip
+\footnotesize
+\textit{Sources:} \citet{PAHOHIA2024}; \citet{WHOGHO2024};
+\citet{WorldBankWDI2024}; \citet{OECDHaG2023}.
+\end{minipage}
+\end{table}
+
+\subsection{Health Expenditure Indicators}
+\label{app:health_table}
+
+\begin{table}[H]
+\centering
+\caption{Health Expenditure Indicators (Reference Year: 2022)}
+\label{tab:health_exp}
+\begin{tabular}{lccc}
+\hline\hline
+\textbf{Indicator} & \textbf{Mexico} & \textbf{Costa Rica} & \textbf{Panama} \\
+\hline
+Current health expenditure (\% of GDP)       & 5.5          & 7.1   & 7.8   \\
+Public health expenditure (\% of CHE)        & $\approx$51  & $\approx$69 & $\approx$72 \\
+Out-of-pocket expenditure (\% of CHE)        & $\approx$41$^{a}$ & 22.4 & $\approx$26 \\
+OOP per capita, USD current                  & $\approx$253 & 220   & $\approx$290 \\
+Total health exp.\ per capita, USD PPP       & $\approx$1{,}100 & 1{,}658 & $\approx$1{,}450 \\
+OOP as \% of household final consumption     & $\approx$5.0 & 2.6   & $\approx$3.5 \\
+\hline\hline
+\end{tabular}
+\begin{minipage}{\linewidth}
+\smallskip
+\footnotesize
+\textit{Sources:} \citet{WHOGHED2024}; \citet{OECDHaG2023};
+\citet{WHOGHO2024}. CHE = Current Health Expenditure; OOP =
+Out-of-pocket; PPP = Purchasing Power Parity. Values marked
+($\approx$) are approximations. $^{a}$~Mexico's OOP share
+corresponds to the 2021 data vintage, the most recent available.
+\end{minipage}
+\end{table}
+
+\subsection{Fiscal Indicators}
+\label{app:fiscal_table}
+
+\begin{table}[H]
+\centering
+\caption{Fiscal Indicators}
+\label{tab:fiscal}
+\begin{tabular}{lccc}
+\hline\hline
+\textbf{Indicator} & \textbf{Mexico} & \textbf{Costa Rica} & \textbf{Panama} \\
+\hline
+Standard VAT rate                                  & 16\% (IVA) & 13\% (IVA) & 7\% (ITBMS) \\
+Top personal income tax rate (2023)                & 35\%  & 25\%  & 25\%  \\
+Social security contributions (employer + employee) & $\approx$30\% & $\approx$37\% & $\approx$19\% \\
+General government revenue (\% of GDP, 2022)       & $\approx$23 & $\approx$24 & $\approx$21 \\
+Tax revenue (\% of GDP, 2022)                      & $\approx$17 & $\approx$14 & $\approx$12 \\
+\hline\hline
+\end{tabular}
+\begin{minipage}{\linewidth}
+\smallskip
+\footnotesize
+\textit{Sources:} \citet{PwCWWTS2024}; \citet{OECDRevStats2024};
+\citet{WorldBankWDI2024}; \citet{CCSS2023}.
+\end{minipage}
+\end{table}
+
+\subsection{Labour Market Indicators}
+\label{app:labour_table}
+
+\begin{table}[H]
+\centering
+\caption{Labour Market Indicators (Reference Year: 2022)}
+\label{tab:labour}
+\begin{tabular}{lccc}
+\hline\hline
+\textbf{Indicator} & \textbf{Mexico} & \textbf{Costa Rica} & \textbf{Panama} \\
+\hline
+Male labour force participation rate (\%)    & 76.7        & 72.4        & 77.6        \\
+Female labour force participation rate (\%)  & 45.4        & 50.7        & 51.8        \\
+Gender participation gap (male/female ratio) & 1.69        & 1.43        & 1.50        \\
+Gender wage gap (\% of male wage)            & $\approx$14 & $\approx$18 & $\approx$19 \\
+Informality rate (\% of employed)            & $\approx$55 & $\approx$43 & $\approx$47 \\
+Unemployment rate (\%)                       & 3.3         & 11.2        & 7.7         \\
+Gini coefficient                             & 0.43        & 0.48        & 0.49        \\
+\hline\hline
+\end{tabular}
+\begin{minipage}{\linewidth}
+\smallskip
+\footnotesize
+\textit{Sources:} \citet{ILOILOSTAT2023}; \citet{ECLACILO2023};
+\citet{IMF2023}; \citet{WEFGGR2024}; \citet{WorldBankWDI2024};
+\citet{WorldBankPovCalNet2022}.
+\end{minipage}
+\end{table}
+
+\subsection{Life Table for Mexico}
+\label{app:survival}
+
+The following life table corresponds to Mexico and is used to
+calibrate the age-specific survival probabilities $\psi_{j}$ in the
+model. Data are drawn from \citet{UISP2019}.
+
+\begin{table}[H]
+\centering
+\caption{Life Table for Mexico: Mortality and Survival Probabilities}
+\label{tab:survival_mx}
+\begin{tabular}{lcc}
+\hline\hline
+\textbf{Age group} & \textbf{Probability of death} & \textbf{Survival probability} \\
+\hline
+$<$ 1 year   & 0.011576 & 0.9884 \\
+1--4         & 0.002282 & 0.9977 \\
+5--9         & 0.001132 & 0.9989 \\
+10--14       & 0.001470 & 0.9985 \\
+15--19       & 0.003858 & 0.9961 \\
+20--24       & 0.005897 & 0.9941 \\
+25--29       & 0.006550 & 0.9935 \\
+30--34       & 0.007966 & 0.9920 \\
+35--39       & 0.011217 & 0.9888 \\
+40--44       & 0.013710 & 0.9863 \\
+45--49       & 0.019216 & 0.9808 \\
+50--54       & 0.028413 & 0.9716 \\
+55--59       & 0.042568 & 0.9574 \\
+60--64       & 0.063162 & 0.9368 \\
+65--69       & 0.093160 & 0.9068 \\
+70--74       & 0.137294 & 0.8627 \\
+75--79       & 0.208926 & 0.7911 \\
+80--84       & 0.312093 & 0.6879 \\
+85+          & 1.000000 & 0.0000 \\
+\hline\hline
+\end{tabular}
+\begin{minipage}{\linewidth}
+\smallskip
+\footnotesize
+\textit{Source:} \citet{UISP2019}. Net probability of death and
+survival probability by age group for the total population of Mexico.
+\end{minipage}
+\end{table}
 
 \end{appendices}
 
