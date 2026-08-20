@@ -18,19 +18,19 @@ tool may not estimate them; blank is better than wrong.
 
 | # | Ticker | Firm | loe_major | Why on the roster |
 |---|---|---|---|---|
-| 1 | `LLY` | Eli Lilly | 2033? | Frontier rent at maximum; metabolic franchise concentration |
-| 2 | `JNJ` | Johnson & Johnson | 2029? | Diversified across pharma and devices — tests whether diversification is a position or an accident |
-| 3 | `AMGN` | Amgen | 2028? | Biologics incumbent whose own products are the biosimilar target |
-| 4 | `PFE` | Pfizer | 2027? | Rent collapse followed by acquisition-led replacement — the cleanest replacement case |
-| 5 | `MRK` | Merck & Co | 2028? | Single-asset concentration; the largest scheduled extinction in the industry |
-| 6 | `VRTX` | Vertex | 2037? | Pure frontier, single disease area, no diffusion exposure at all |
-| 7 | `NVO` | Novo Nordisk | 2031? | Frontier peer to LLY under a different ownership structure (foundation control) |
-| 8 | `AZN` | AstraZeneca | 2030? | Deepest China exposure among Western majors — the walls case |
-| 9 | `NVS` | Novartis | 2029? | Deliberately exited diffusion by spinning out Sandoz — a firm that chose a pole |
-| 10 | `RO.SW` | Roche | 2028? | Pharma plus diagnostics; long biosimilar erosion history |
-| 11 | `SNY` | Sanofi | 2030? | Vaccines plus branded; different rent structure from the small-molecule majors |
-| 12 | `4502.T` | Takeda | 2027? | Debt-financed acquisition of frontier rent — leverage as strategy |
-| 13 | `4568.T` | Daiichi Sankyo | 2032? | Owns a platform it licenses to a larger firm — stack rentability seen from the owner's side |
+| 1 | `LLY` | Eli Lilly | 2036 | Frontier rent at maximum; metabolic franchise concentration |
+| 2 | `JNJ` | Johnson & Johnson | 2029 | Diversified across pharma and devices — tests whether diversification is a position or an accident |
+| 3 | `AMGN` | Amgen | 2028 | Biologics incumbent whose own products are the biosimilar target |
+| 4 | `PFE` | Pfizer | 2028 | Rent collapse followed by acquisition-led replacement — the cleanest replacement case |
+| 5 | `MRK` | Merck & Co | 2028 | Single-asset concentration; the largest scheduled extinction in the industry |
+| 6 | `VRTX` | Vertex | 2037 | Pure frontier, single disease area, no diffusion exposure at all |
+| 7 | `NVO` | Novo Nordisk | 2032 | Frontier peer to LLY under a different ownership structure (foundation control) |
+| 8 | `AZN` | AstraZeneca | 2032 | Deepest China exposure among Western majors — the walls case |
+| 9 | `NVS` | Novartis | 2029 | Deliberately exited diffusion by spinning out Sandoz — a firm that chose a pole |
+| 10 | `RO.SW` | Roche | 2029 | Pharma plus diagnostics; long biosimilar erosion history |
+| 11 | `SNY` | Sanofi | 2031 | Vaccines plus branded; different rent structure from the small-molecule majors |
+| 12 | `4502.T` | Takeda | 2032 | Debt-financed acquisition of frontier rent — leverage as strategy |
+| 13 | `4568.T` | Daiichi Sankyo | 2033 | Owns a platform it licenses to a larger firm — stack rentability seen from the owner's side |
 | 14 | `SUNPHARMA.NS` | Sun Pharmaceutical | n/a | India's largest; generics base attempting branded entry |
 | 15 | `DRREDDY.NS` | Dr. Reddy's | n/a | Generics and biosimilars, heavy regulated-market exposure |
 | 16 | `2359.HK` | WuXi AppTec | n/a | The service layer, and the named target of Western supply-security instruments |
@@ -42,6 +42,35 @@ tool may not estimate them; blank is better than wrong.
 `n/a` in `loe_major` marks firms whose economics are not organised around a single
 scheduled expiry. That is itself a structural fact and should not be read as missing
 data.
+
+## LOE verification (2026-08-18, by CC at Héctor's instruction)
+
+All 13 dates verified against company disclosure or settlement reporting; `?` marks
+removed. Anchor product, governing instrument, and source per firm:
+
+| Ticker | Anchor product | Governs | Source |
+|---|---|---|---|
+| `LLY` | tirzepatide (Mounjaro/Zepbound) | US compound patent 2036 | Lilly 10-K FY2025 patent table |
+| `JNJ` | Darzalex (daratumumab) | US patents incl. PTE 2029 | Genmab 20-F; JNJ 10-K |
+| `AMGN` | 2028–29 cluster: Otezla (Feb 2028), Repatha (Aug 2028), Enbrel (Nov 2028/Apr 2029) | US patents per 10-K | Amgen 10-K patent table |
+| `PFE` | Eliquis (apixaban, BMS alliance) | settlement entry no earlier than 2028-04-01 | BMS–Pfizer alliance statement; BMS 10-K |
+| `MRK` | Keytruda (pembrolizumab) | US compound patent Dec 2028 | Merck 10-K FY2025 |
+| `VRTX` | Trikafta | US basic product patent 2037 | Vertex 10-K FY2025 |
+| `NVO` | semaglutide (Ozempic/Rybelsus/Wegovy) | US compound patent + ped. excl., company states 2032 | Novo 20-F FY2025 |
+| `AZN` | Tagrisso (osimertinib) | US substance patents incl. PTE Jul–Aug 2032 | AZ patent-expiry schedule (Feb 2026) |
+| `NVS` | Cosentyx (secukinumab) | US composition patents + PTE 2029 | Novartis 20-F |
+| `RO.SW` | Ocrevus (ocrelizumab) | 12-yr BLA exclusivity floor Mar 2029; entry could slip to 2030 | FDA BLA date; trade reporting |
+| `SNY` | Dupixent (dupilumab) | US composition patent Mar 2031 (company base case) | Sanofi investor disclosure via Fierce |
+| `4502.T` | Entyvio (vedolizumab) | US patents ~May 2032 per 20-F; pre-2032 at-risk entry possible | Takeda 20-F FY2025 risk factors |
+| `4568.T` | Enhertu (T-DXd) | US NME patent incl. PTE 2033 | AZ patent-expiry schedule (partner disclosure) |
+
+Caveats that survive verification: `AMGN` has no single dominant product — 2028 is a
+cluster, not one expiry. `RO.SW` 2029 is the regulatory exclusivity floor, not a
+company-stated date (medium confidence). `PFE` and `4502.T` dates are
+settlement/litigation-shaped. `LLY` and `SNY` hold formulation patents that could
+extend effective protection well past the anchor year; the anchor is the compound
+date. `VRTX` is migrating patients to Alyftrek (US 2039), so effective franchise LOE
+may exceed 2037.
 
 ---
 
