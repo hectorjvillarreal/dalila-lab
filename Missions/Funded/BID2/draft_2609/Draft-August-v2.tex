@@ -1506,7 +1506,7 @@ The calibration scaffold reproduces the production \texttt{Household-Gender} sol
 
 The calibration and the experiments ran without editing the protected solver \texttt{ge\_model\_gender.jl}. Three override patterns were used, each respecting Julia's compilation semantics. The AR(1) persistence and innovation scale $(\rho,\sigma_\varepsilon)$ are \texttt{const} scalars inlined into the Rouwenhorst discretization, so they were passed as \emph{literals} into the model initializer rather than redefined (a \texttt{const} redefinition would silently fail to propagate into already-compiled methods). The birth-share vector $\pi_{\rm birth}$ is a \texttt{const} array, so in-place mutation propagates, as do the ENOE age-efficiency and skill-intercept overrides. The 2050 demographics are installed on typed globals (population growth and the sex-specific survival schedules) through a setter rather than by inlining. A frozen-parameter bug in the diagnostics module was worked around through a shim rather than a source edit. These patterns are recorded for replicability.
 
-\subsection{First-Step Provenance of the Superseded Solve}
+\subsection{First-Step Provenance and Reproducibility of the Superseded Solve}
 \label{app:provenance}
 
 This subsection documents the first step behind the superseded estimates of Table~\ref{tab:theta_hat}, not the current one. The current first-step inputs are the ENIGH and ENASEM estimates of Section~\ref{subsec:firststep}.
