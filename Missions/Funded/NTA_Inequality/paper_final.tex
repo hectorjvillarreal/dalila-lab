@@ -1,0 +1,912 @@
+% ===========================================================================
+%  Cuentas Nacionales de Transferencia para Mexico, 2016-2024
+%
+%  Compilar:  pdflatex paper -> bibtex paper -> pdflatex paper x2
+%
+%  Las figuras (figures/) y las tablas (tables/) las genera paper.ipynb.
+%  No editarlas a mano: se sobrescriben en cada corrida del cuaderno.
+% ===========================================================================
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage[round,authoryear]{natbib}
+\usepackage[hidelinks]{hyperref}
+\graphicspath{{figures/}}
+\captionsetup{font=small,labelfont=bf}
+\setlength{\parskip}{0.35em}
+\title{\textbf{Cuentas Nacionales de Transferencia para México, 2016--2024}\\[0.3em]
+\large Construcción y conciliación de una base persona-año a partir de la ENIGH
+y el Sistema de Cuentas Nacionales}
+\author{Juan Pablo López Reynosa \and Héctor Villarreal}
+\date{\today}
+\begin{document}
+\maketitle
+\begin{abstract}
+Este documento construye una base persona-año de Cuentas Nacionales de Transferencia
+para México a partir de cinco levantamientos bienales de la Encuesta Nacional de
+Ingresos y Gastos de los Hogares (ENIGH) 2016--2024, con 1.46 millones de registros,
+conciliada con el Sistema de Cuentas Nacionales mediante un único factor de
+reescalamiento por variable y año. El procedimiento toma de la encuesta la forma del
+perfil por edad y de las cuentas nacionales el nivel, garantiza el cierre contra siete
+agregados de control y reporta la brecha entre los dos métodos independientes de cálculo
+del déficit del ciclo de vida en lugar de forzarla a cero.
+
+Los resultados documentan tres asimetrías estructurales. Primera: el déficit del ciclo
+de vida en México es un resultado de composición por sexo. El perfil masculino alcanza
+superávit entre los 33 y los 62 años en 2024; el femenino no lo alcanza en ninguna edad
+de ninguno de los cinco levantamientos. Las mujeres concentran el 76.3\,\% del déficit
+agregado. Segunda: el déficit no crece en términos agregados --- bajó de 47.4\,\% a
+42.2\,\% del consumo entre 2016 y 2024 ---, pero se desplaza hacia la vejez: el déficit
+per cápita de los mayores de 60 años subió 71.7\,\% en términos reales mientras su peso
+poblacional pasó de 11.3\,\% a 15.1\,\%. Tercera: los dos extremos del ciclo se
+financian por vías opuestas. La niñez cubre su déficit en 88.6\,\% con recursos privados;
+la vejez lo cubre en 54.5\,\% con transferencias públicas netas. Un envejecimiento
+demográfico que aumente el peso de la vejez se traduce de forma directa en presión
+presupuestaria, mientras un cambio en el peso de la niñez se absorbe dentro de los
+hogares. El sistema público no compensa la brecha de financiamiento por sexo en la vejez:
+las mujeres mayores de 60 años reciben 24.0\,\% menos en transferencias públicas netas
+que los hombres, pese a que su déficit duplica al de ellos.
+\end{abstract}
+% ---------------------------------------------------------------------------
+\section{Objetivo}
+% ---------------------------------------------------------------------------
+Este documento construye una base persona-año para México que permite calcular perfiles
+económicos por edad bajo el marco de Cuentas Nacionales de Transferencia (NTA) y los concilia
+con el Sistema de Cuentas Nacionales de México. El producto es una base de 1.46 millones de
+registros persona-año que cubre cinco levantamientos bienales de la Encuesta Nacional de
+Ingresos y Gastos de los Hogares (ENIGH) --- 2016, 2018, 2020, 2022 y 2024 --- y de la cual se
+derivan perfiles por año y edad exacta.
+El ejercicio resuelve un problema de compatibilidad entre dos fuentes con propósitos distintos.
+La encuesta observa la estructura por edad del ingreso y del gasto, pero subcapta el nivel: los
+factores de reescalamiento de la sección~\ref{sec:reescalamiento} van de 1.9 a 9.9 según la
+variable y el año, es decir, la encuesta capta entre el 10\,\% y el 53\,\% del agregado
+correspondiente de cuentas nacionales. Las cuentas nacionales fijan el nivel pero carecen de
+dimensión etaria. El procedimiento toma de la encuesta la forma por edad y de las cuentas
+nacionales el nivel, mediante un reescalamiento proporcional por variable y año.
+El documento persigue tres objetivos operativos. El primero es dejar explícita la identidad
+contable del ciclo de vida y calcularla por dos vías independientes, con reporte de la brecha
+entre ambas en lugar de un cierre forzado. El segundo es documentar cada imputación ---
+contribuciones a la seguridad social, impuesto sobre la renta, alquiler imputado de la vivienda
+propia, consumo de gobierno y transferencias dentro del hogar --- con su ecuación, su agregado
+de control y su supuesto. El tercero es acotar qué parte del resultado proviene del dato y qué
+parte de la conciliación.
+% ---------------------------------------------------------------------------
+\section{Revisión de literatura}
+% ---------------------------------------------------------------------------
+\subsection{NTA como metodología}
+Las Cuentas Nacionales de Transferencia extienden el sistema de cuentas nacionales e incorporan
+la edad como dimensión de la contabilidad macroeconómica \citep{lee_mason_2011,
+un_nta_manual_2013}. El objeto de medición es el ciclo de vida económico: en la niñez y en la
+vejez el consumo excede al ingreso laboral, y esa diferencia se financia con transferencias
+públicas, transferencias privadas y reasignaciones por activos. El marco cuantifica esos flujos
+por edad y exige que sus agregados reproduzcan las cuentas nacionales del país, de modo que los
+perfiles etarios resulten comparables entre economías y consistentes con el sistema de cuentas
+nacionales \citep{sna_2008}.
+La construcción sigue un orden fijo. Se define un agregado de control por variable desde las
+cuentas nacionales; se estima la forma por edad desde encuestas de hogares y registros
+administrativos; y se reescala la forma micro para que su agregado reproduzca el control macro.
+El manual de Naciones Unidas \citep{un_nta_manual_2013} formaliza el procedimiento y fija las
+convenciones de clasificación que hacen comparables los resultados entre países. La literatura
+posterior ha usado los perfiles resultantes para medir el dividendo demográfico y la
+sostenibilidad de los sistemas de transferencias públicas \citep{mason_lee_2007, lee_1994}.
+\subsection{Casos especiales}
+Dos imputaciones concentran la mayor parte de la modelización propia de una aplicación NTA y
+merecen tratamiento separado. La primera es el alquiler imputado de la vivienda propia. La
+encuesta capta el gasto como desembolso: un hogar arrendatario paga renta y ese pago se
+registra, mientras que un hogar propietario consume el mismo servicio habitacional sin
+desembolso, de modo que el servicio no aparece por ningún lado. El consumo final de los hogares
+de las cuentas nacionales sí lo incluye. El marco NTA resuelve la asimetría con el
+reconocimiento de que el alquiler imputado es dos cosas a la vez --- por el lado del consumo, el
+servicio habitacional que el hogar disfruta; por el lado del ingreso de activos, el rendimiento
+del activo vivienda --- y lo incorpora a ambos lados de la identidad, ecuaciones~\eqref{eq:cpriv}
+y~\eqref{eq:ykalq}.
+La segunda es la asignación a personas del gasto observado a nivel hogar. La encuesta registra
+alimentos, vivienda y servicios como gasto del hogar, no de sus miembros, y el perfil etario del
+consumo depende por completo de cómo se reparta ese gasto. La alternativa habitual consiste en
+imponer una escala de equivalencia externa, construida para otro país o para otro propósito. El
+procedimiento que se documenta aquí extrae la escala del propio dato con un algoritmo de punto
+fijo, ecuaciones~\eqref{eq:alloc1}--\eqref{eq:allocconv}: parte de un reparto per cápita, estima
+el perfil etario implícito, redistribuye el gasto del hogar según ese perfil y repite hasta la
+convergencia, con conservación exacta del total del hogar en cada iteración. La alternativa
+econométrica sería un estimador del tipo \citet{deaton_paxson_1998}, que identifica economías de
+escala del hogar a partir de la respuesta del gasto en alimentos al tamaño del hogar; queda
+anotada como contraste externo del perfil de consumo por edad.
+\subsection{Aplicaciones y usos de NTA en América Latina}
+La evidencia aplicada en América Latina ha usado el marco sobre todo para medir cómo el
+envejecimiento altera las transferencias entre generaciones y presiona los sistemas de protección
+social. \citet{RoseroBixby2011Generational} compara Brasil, Chile, Costa Rica, México y Uruguay, y
+encuentra que el envejecimiento eleva la carga de sostén sobre las edades activas y vuelve
+visibles las tensiones entre el circuito familiar y el público. \citet{Mason2011Population}
+sintetizan resultados comparados y subrayan que el aumento de la población mayor reduce la razón
+de soporte y eleva la relevancia fiscal de pensiones, salud y cuidados de largo plazo. Este
+documento se ubica en esa tradición, pero su unidad de análisis no es la proyección sino la
+construcción: qué parte de un perfil por edad proviene de la encuesta y qué parte de la
+conciliación con las cuentas nacionales.
+Una segunda línea muestra que los promedios nacionales ocultan diferencias distributivas grandes,
+y es la que más se acerca a los resultados de la sección~\ref{sec:resultados}. Para Ecuador,
+\citet{Rosero2024Socioeconomic} encuentra que algunas transferencias públicas son progresivas
+mientras las pensiones de retiro resultan fuertemente regresivas. Para Perú,
+\citet{Olivera2023distributive} documenta que los cambios distributivos del periodo favorecieron
+relativamente más a los grupos jóvenes y con mayor escolaridad. La implicación metodológica es
+directa: un perfil promedio por edad puede ser consistente con el agregado macro y aun así
+describir mal a los subgrupos que lo componen.
+Para México, \citet{MejiaGuevaraRivero2024} muestran que el análisis del ingreso laboral y del
+consumo por edad cambia de forma sustantiva al desagregar por grupo socioeconómico y por sexo, y
+al incorporar el trabajo no remunerado mediante cuentas de transferencias de tiempo. Sus
+resultados indican que las diferencias no se explican sólo por edad, sino por la interacción entre
+escolaridad, género y organización del trabajo pagado y no pagado. Este documento comparte ese
+diagnóstico y aporta evidencia complementaria por el lado del financiamiento: la
+sección~\ref{sec:resultados} muestra que el ciclo de vida masculino alcanza superávit en un tramo
+amplio de edades mientras el femenino no lo alcanza en ninguna, de modo que el agregado nacional
+que aparece deficitario en todo el ciclo es un resultado de composición.
+\subsection{Identidad contable completa del ciclo de vida}
+\label{sec:identidad}
+La restricción presupuestaria de una persona de edad $a$ en el año $t$ iguala los recursos con
+los usos:
+\begin{equation}
+\label{eq:presupuesto}
+\underbrace{Y_L(a,t) + Y_K(a,t)}_{\text{ingreso propio}} \;+\;
+\underbrace{\tau^{+}(a,t)}_{\text{transf. recibidas}}
+\;=\;
+\underbrace{C(a,t)}_{\text{consumo}} \;+\; \underbrace{S(a,t)}_{\text{ahorro}} \;+\;
+\underbrace{\tau^{-}(a,t)}_{\text{transf. pagadas}}
+\end{equation}
+Al reordenar los términos, el exceso de consumo sobre ingreso laboral queda igualado a la suma
+de las transferencias netas y de la reasignación por activos:
+\begin{equation}
+\label{eq:reordenada}
+\underbrace{C(a,t) - Y_L(a,t)}_{\text{Déficit del Ciclo de Vida}}
+\;=\;
+\underbrace{\big(\tau^{+}(a,t) - \tau^{-}(a,t)\big)}_{\text{transferencias netas}}
+\;+\;
+\underbrace{\big(Y_K(a,t) - S(a,t)\big)}_{\text{reasignación por activos}}
+\end{equation}
+\begin{equation}
+\label{eq:lcd}
+LCD(a,t) \;\equiv\; C(a,t) - Y_L(a,t)
+\end{equation}
+La convención de signo importa para la lectura de cualquier resultado. El déficit del ciclo de
+vida se define como $C - Y_L$ y no como $Y_L - C$: en la niñez y en la vejez el consumo excede al
+ingreso laboral y el déficit es positivo, mientras que en la edad activa el ingreso laboral
+excede al consumo y el saldo es negativo, es decir, superávit.
+Los dos lados de la ecuación~\eqref{eq:reordenada} dan lugar a dos formas independientes de
+calcular la misma cantidad, y este documento implementa ambas en paralelo:
+\begin{equation}
+\label{eq:m1}
+LCD_{M1}(a,t) = C(a,t) - Y_L(a,t)
+\end{equation}
+\begin{equation}
+\label{eq:m2}
+LCD_{M2}(a,t) = \big(\tau^{+}(a,t) - \tau^{-}(a,t)\big) + \big(Y_K(a,t) - S(a,t)\big)
+\end{equation}
+El primer método mide el déficit; el segundo mide cómo se financia. En una contabilidad cerrada
+ambos coinciden. Aquí no coinciden de forma exacta, y la diferencia se reporta en lugar de
+forzarse a cero: es consecuencia directa de que las cuentas nacionales no publiquen un agregado
+de transferencias privadas netas, y su magnitud es derivable de forma analítica
+(sección~\ref{sec:validacion}). El segundo método se reporta en su versión completa, que incluye
+el bloque privado observado:
+\begin{equation}
+\label{eq:m2full}
+LCD^{\,c}_{M2}(a,t) = \big(\tau^{+}_{pub}(a,t) - \tau^{-}_{pub}(a,t)\big)
++ \tau^{+}_{ext}(a,t) + \tau^{priv}(a,t) + \big(Y_K(a,t) - S(a,t)\big)
+\end{equation}
+El último término desempeña el papel de $(Y_K - S)$ de la ecuación~\eqref{eq:m2}, porque su
+agregado de control es la reasignación neta por activos y no el ingreso de activos bruto. No
+existe, por tanto, un término de ahorro separado.
+% ---------------------------------------------------------------------------
+\section{Manejo de datos}
+% ---------------------------------------------------------------------------
+\subsection{Fuentes macro}
+Los agregados de control provienen del Sistema de Cuentas Nacionales de México, cuentas por
+sectores institucionales \citep{inegi_scnm}, en pesos corrientes de cada año, y se deflactan a precios de 2024. Las series
+utilizadas son la remuneración de asalariados, el excedente bruto de operación por cuenta propia
+y el excedente bruto de explotación; el consumo de capital fijo, el saldo neto de rentas de la
+propiedad y el ahorro neto; el gasto de consumo final de los hogares y del gobierno, con su
+apertura de educación y salud; las prestaciones sociales, las transferencias sociales en especie
+y las transferencias netas del exterior; y los impuestos corrientes sobre el ingreso junto con
+las contribuciones sociales efectivas de los empleadores. El Anexo~\ref{anexo:series} identifica
+cada serie con su clave del sistema de cuentas y el agregado de control que alimenta.
+El agregado de transferencias públicas pagadas suma los impuestos corrientes al ingreso y las
+contribuciones sociales de los empleadores, efectivas e imputadas. Las imputadas son la
+contraparte de las prestaciones que un empleador paga de forma directa, sin fondo constituido, y
+representan entre 5\,\% y 8\,\% de ese agregado según el año. Se incluyen por simetría contable:
+el agregado del ingreso laboral las contiene dentro de la remuneración de asalariados, y la
+prestación que financian ya forma parte de las prestaciones sociales recibidas, de modo que
+excluirlas sólo del lado del pago haría aparecer al hogar cobrando la contribución y su prestación
+sin pagarla nunca.
+Sobre las series publicadas se derivan tres agregados que no aparecen como tales. El ingreso de
+activos ampliado incorpora el saldo neto de rentas de la propiedad frente al resto del mundo, y
+de él se descuenta el ahorro neto:
+\begin{equation}
+\label{eq:activos}
+Y_A(t) = Y_K(t) + D^{prop}(t), \qquad
+\big(Y_K - S\big)(t) \;\equiv\; Y_A(t) - S(t)
+\end{equation}
+\begin{equation}
+\label{eq:cfuncion}
+C_{edu}(t) = C^{hog}_{edu}(t) + C^{gob}_{edu}(t), \qquad
+C_{sal}(t) = C^{hog}_{sal}(t) + C^{gob}_{sal}(t)
+\end{equation}
+\subsection{Deflactación}
+Todos los montos monetarios de este documento están expresados en pesos constantes de 2024. Sea
+$\pi(t)$ el deflactor implícito con $\pi(2024)=1$; cada monto micro y cada agregado de control se
+divide entre el deflactor de su año:
+\begin{equation}
+\label{eq:deflactor}
+x^{r}_i(t) = \frac{x_i(t)}{\pi(t)}, \qquad
+V^{r}_{macro}(t) = \frac{V_{macro}(t)}{\pi(t)}
+\end{equation}
+El deflactor acumula 48.3\,\% entre 2016 y 2024, con incrementos bienales de 12.1\,\%, 9.1\,\%,
+11.5\,\% y 8.7\,\%. La deflactación se aplica antes del reescalamiento de la
+sección~\ref{sec:reescalamiento} y no lo altera: el factor de reescalamiento es un cociente entre
+un agregado macro y un agregado micro del mismo año, de modo que ambos se dividen entre el mismo
+$\pi(t)$ y el cociente queda idéntico. La deflactación cambia el nivel de las cifras reportadas,
+no la conciliación.
+\subsection{Fuente micro}
+La fuente micro es la Encuesta Nacional de Ingresos y Gastos de los Hogares del INEGI
+\citep{inegi_enigh}, levantamientos 2016, 2018, 2020, 2022 y 2024. Las tablas de cada
+levantamiento --- población, ingresos, gasto por persona, gasto del hogar, concentrado del hogar
+y trabajos --- se consolidan en una fila por persona y año, con montos en pesos
+trimestrales. El Cuadro~\ref{tab:muestra} resume la composición de cada levantamiento. La muestra
+va de 257\,805 a 315\,743 registros y la población expandida de 120.9 a 130.3 millones de
+personas. El envejecimiento del periodo es visible en la propia muestra: la edad media sube de
+31.0 a 34.4 años, la participación de los menores de 15 años baja de 27.2\,\% a 22.3\,\% y la de
+los mayores de 60 sube de 11.3\,\% a 15.1\,\%.
+\input{tables/tab_muestra.tex}
+La encuesta capta un trimestre de referencia y las cuentas nacionales son anuales, de modo que
+toda comparación entre ambas exige una regla de cierre explícita. Cualquier total anual de este
+documento se construye como
+\begin{equation}
+\label{eq:cierre}
+X(t) \;=\; \Big(\sum_{i \in t} x_i \cdot f_i\Big) \cdot 4
+\end{equation}
+donde $f_i$ es el factor de expansión de la persona $i$. El factor de expansión no se modifica en
+ninguna etapa del procedimiento: la conciliación actúa sobre montos monetarios, no sobre pesos
+muestrales.
+Esa regla implica un supuesto: el trimestre de referencia se toma como representativo del año.
+El nivel anual no depende de él, porque queda fijado por el agregado
+de control, pero la forma por edad sí lo haría si existiera estacionalidad correlacionada con la
+edad --- gasto escolar concentrado al inicio del ciclo lectivo, ingreso agrícola concentrado en la
+cosecha. El levantamiento ocurre siempre en el mismo periodo del año, de modo que el sesgo, de
+existir, es estable entre levantamientos y no contamina la comparación temporal.
+\subsection{Correspondencia entre variables micro y agregados de control}
+La correspondencia entre cada variable de la base persona-año y su agregado de control está en
+el Anexo~\ref{anexo:mapeo}. Es la única declaración del mapa de escalamiento: una variable que no
+aparece en el Cuadro~\ref{tab:scale_map} no recibe factor de reescalamiento. El
+Cuadro~\ref{tab:excluidas} documenta las exclusiones deliberadas y la razón de cada una, que no
+es la misma en todos los casos.
+% ---------------------------------------------------------------------------
+\section{Definición de variables}
+\label{sec:variables}
+% ---------------------------------------------------------------------------
+\subsection{Ingreso laboral}
+El ingreso laboral individual suma el ingreso subordinado y la componente laboral del ingreso
+mixto. La encuesta reporta las percepciones por clave, y la clasificación separa el ingreso
+subordinado, el ingreso mixto del trabajador por cuenta propia y el ingreso de capital puro. El
+ingreso mixto retribuye a la vez al trabajo y al capital de quien trabaja por cuenta propia, y la
+convención del manual de Naciones Unidas lo divide en dos tercios laborales y un tercio de capital
+\citep{un_nta_manual_2013}; la división 2/3--1/3 se registra como supuesto E1 en el
+anexo~\ref{anexo:supuestos}. La misma convención se aplica del lado macro, de modo que la
+proporción es idéntica en el numerador y en el denominador del factor de reescalamiento: el
+agregado de control suma la remuneración de asalariados --- con las contribuciones sociales de los
+empleadores, efectivas e imputadas --- y dos tercios del ingreso mixto neto de su depreciación,
+ecuación~\eqref{eq:ylmacro}.
+\begin{equation}
+\label{eq:yl1}
+Y^{sub}_i = \sum_{k \in K_{sub}} y_{ik}, \qquad
+Y^{mix}_i = \sum_{k \in K_{mix}} y_{ik}, \qquad
+Y^{cap}_i = \sum_{k \in K_{cap}} y_{ik}
+\end{equation}
+\begin{equation}
+\label{eq:yl2}
+Y^{mix,L}_i = \tfrac{2}{3}\, Y^{mix}_i, \qquad Y^{mix,K}_i = \tfrac{1}{3}\, Y^{mix}_i
+\end{equation}
+\begin{equation}
+\label{eq:yl3}
+Y_{L,i} = Y^{sub}_i + Y^{mix,L}_i, \qquad
+Y_{K,i} = Y^{cap}_i + Y^{mix,K}_i
+\end{equation}
+\begin{equation}
+\label{eq:ylmacro}
+Y_L(t) = \underbrace{W(t)}_{\text{remuneración de asalariados}}
++ \tfrac{2}{3}\,\big[M(t) - \delta_M(t)\big]
+\end{equation}
+\subsection{Consumo}
+El consumo se mide a nivel persona, lo que obliga a resolver que la encuesta observe buena parte
+del gasto a nivel hogar. La asignación usa un algoritmo iterativo de punto fijo que construye su
+propia escala de equivalencia etaria a partir del dato en vez de importar una escala externa:
+parte de un reparto per cápita, ecuación~\eqref{eq:alloc1}; estima la participación de cada edad
+en el agregado, ecuación~\eqref{eq:alloc2}; redistribuye el gasto del hogar en proporción a esas
+participaciones, ecuación~\eqref{eq:alloc3}; y repite hasta que se cumple el criterio de
+convergencia, ecuación~\eqref{eq:allocconv}. El reparto conserva el total del hogar de forma
+exacta en cada iteración, ecuación~\eqref{eq:alloccons}, de modo que ninguna configuración del
+algoritmo puede mover un agregado. El consumo de gobierno se imputa de forma plana per cápita,
+ecuación~\eqref{eq:cgob}, y se incorpora \emph{después} de las transferencias dentro del hogar:
+el consumo público se financia con impuestos y no con transferencias privadas, de manera que su
+incorporación previa lo convertiría en un déficit que algún miembro del hogar tendría que cubrir.
+El reescalamiento de la sección~\ref{sec:reescalamiento} trata este bloque de forma partida: el
+consumo de gobierno conserva el valor con que se calibró y el factor se aplica únicamente al
+residuo privado, cuyo agregado de control es el consumo total menos el consumo de gobierno,
+ecuación~\eqref{eq:cparticion}. Sin esa partición el factor volvería a escalar una componente ya
+calibrada y la dejaría al doble de su nivel de control.
+La imputación es plana para el total del consumo de gobierno y no separa su componente colectivo
+--- defensa, administración, orden público --- del individualizable, que es cerca de la mitad y
+corresponde a educación y salud públicas. Darle a esa mitad la forma etaria del gasto privado en
+educación y salud parecería una mejora, pero descansa en una equivalencia que la evidencia no
+sostiene: en salud, el gasto de bolsillo puede ser \emph{inverso} al beneficio público recibido,
+porque quien desembolsa lo hace a menudo por no haber resuelto su necesidad en el sistema público,
+mientras que quien registra gasto nulo pudo haberse atendido en él. Sin una fuente de utilización
+efectiva de servicios públicos por edad, imponer el perfil del gasto privado arriesga invertir el
+signo de la asignación. La imputación plana no inventa una forma que no se ha medido, y es la
+opción conservadora mientras no se incorporen registros de matrícula y de utilización.
+\begin{equation}
+\label{eq:alloc1}
+x_i^{(1)} = \frac{X_h}{n_h}
+\end{equation}
+\begin{equation}
+\label{eq:alloc2}
+T_a^{(k)} = \sum_{i : a_i = a} x_i^{(k)} \cdot f_i,
+\qquad
+\theta_a^{(k)} = \frac{T_a^{(k)}}{\sum_{a'} T_{a'}^{(k)}}
+\end{equation}
+\begin{equation}
+\label{eq:alloc3}
+x_i^{(k+1)} = X_h \cdot \frac{\theta_{a_i}^{(k)}}{\sum_{j \in h} \theta_{a_j}^{(k)}}
+\end{equation}
+\begin{equation}
+\label{eq:alloccons}
+\sum_{i \in h} x_i^{(k)} = X_h \qquad \text{para toda iteración } k
+\end{equation}
+\begin{equation}
+\label{eq:allocconv}
+\sum_a \big|\theta_a^{(k)} - \theta_a^{(k-1)}\big| < \varepsilon
+\end{equation}
+\begin{equation}
+\label{eq:cgob}
+C^{gob}_i(t) = \frac{C^{gob}(t)}{\big(\sum_i f_i(t)\big)\cdot 4}
+\end{equation}
+\begin{equation}
+\label{eq:cparticion}
+C^{adj}_i(t) = \big(C_i(t) - C^{gob}_i(t)\big)\cdot\lambda^{priv}_C(t) + C^{gob}_i(t),
+\qquad
+\lambda^{priv}_C(t) = \frac{C_{total}(t) - C^{gob}(t)}
+{\sum_i \big(C_i(t) - C^{gob}_i(t)\big)\cdot f_i \cdot 4}
+\end{equation}
+\subsection{Transferencias fiscales pagadas}
+La encuesta reporta ingreso neto, no carga fiscal, de modo que el vector de transferencias
+pagadas se reconstruye persona por persona a partir de la normativa. Las contribuciones a la
+seguridad social se calculan sobre el salario base de cotización, con piso de una unidad de
+medida, topes diferenciados por régimen, y valor nulo para los informales; el pago que entra a
+la contabilidad es la suma de la contribución patronal y la de gobierno, ecuación~\eqref{eq:css},
+y excluye de forma deliberada la contribución del trabajador, que ya viene descontada del ingreso
+observado y cuya suma sería doble conteo. El impuesto sobre la renta exige resolver el problema
+inverso: la tarifa se aplica sobre el ingreso bruto mientras la encuesta observa el neto, y la
+solución es una iteración de punto fijo, ecuaciones~\eqref{eq:isr1}--\eqref{eq:isrconv}, cuya
+convergencia está garantizada porque la tasa marginal máxima es 0.35 y el operador es por tanto
+una contracción. Esa rutina cubre únicamente el componente asalariado, mientras que el agregado
+de control abarca todas las rentas, incluidas las de personas morales; para cerrar esa asimetría
+se añade el tramo de personas morales sobre el ingreso de capital observado con la tasa del
+artículo 9 de la Ley del ISR, ecuación~\eqref{eq:isrpm}, y ambos bloques se consolidan en la
+ecuación~\eqref{eq:taupagada}. La base gravable de ese tramo excluye el alquiler imputado de la
+vivienda propia, que es un ingreso no monetario y no constituye hecho gravable; es el mismo
+criterio del simulador fiscal del CIEP, que construye la base de personas morales como el ingreso
+de capital menos la imputación de vivienda. Como la tasa es plana, el resultado no depende de la
+frecuencia de la base.
+Toda la imputación fiscal opera sobre base anual. La encuesta capta un trimestre, mientras que el
+salario base de cotización, su piso de una unidad de medida, sus topes por régimen y la tarifa
+progresiva son parámetros anuales; aplicarlos al flujo trimestral comprime a casi toda la
+población formal contra el piso y contra los primeros tramos de la tarifa. La base se anualiza
+antes de aplicar cualquier parámetro y el resultado regresa a periodicidad trimestral, que es la
+unidad del resto del ejercicio. Con esta convención la proporción de trabajadores formales con
+impuesto positivo va de 65.8\,\% a 92.4\,\% según el año, y la participación del decil superior
+en el impuesto imputado queda entre 52.1\,\% y 65.6\,\%.
+\begin{equation}
+\label{eq:css}
+\tau^{ss}_i = \tau^{ss,pat}_i + \tau^{ss,gob}_i
+\end{equation}
+\begin{equation}
+\label{eq:isr1}
+g(B) = q_k + (B - l_k)\cdot t_k, \qquad \text{para } B \in (l_k, u_k]
+\end{equation}
+\begin{equation}
+\label{eq:isr2}
+T(y) = y^{neto}_i + \max\Big( g\big(B_i(y)\big) - se\big(B_i(y)\big),\; 0 \Big),
+\qquad B_i(y) = \max\big(y - \tau^{ss,tra}_i,\,0\big)
+\end{equation}
+\begin{equation}
+\label{eq:isrconv}
+\max_i \big| y^{(m+1)}_i - y^{(m)}_i \big| < 1 \text{ peso}
+\end{equation}
+\begin{equation}
+\label{eq:isrpm}
+\tau^{isr}_i = \tau^{isr,asal}_i + t_{PM}\cdot \max\big(Y^{obs}_{K,i},\,0\big),
+\qquad t_{PM} = 0.30
+\end{equation}
+\begin{equation}
+\label{eq:taupagada}
+\tau^{-}_{pub,i} = \tau^{ss}_i + \tau^{isr}_i
+\end{equation}
+\subsection{Transferencias recibidas}
+Las transferencias públicas recibidas se anclan a la suma de las prestaciones sociales y las
+transferencias sociales en especie, ecuación~\eqref{eq:taurecibida}. Las transferencias del
+exterior se anclan a las transferencias netas del exterior y no al bloque de cooperación
+internacional corriente, y la razón es de orden de magnitud: las remesas efectivas van de 0.5 a
+1.18 billones de pesos según el año, mientras que ese segundo bloque ronda los 20 mil millones,
+es decir, entre 25 y 60 veces menos. Como la serie de transferencias netas ya viene neta de los
+pagos de los hogares al exterior, el flujo pagado se fija en cero y el
+neto coincide con el recibido.
+Este bloque tiene el factor de reescalamiento más alto del ejercicio y merece una advertencia
+específica. La encuesta capta entre 10.1\,\% y 12.0\,\% del agregado de control, sobre una base
+de 1.6\,\% de las personas y 4.4\,\% de los hogares. La subcaptación de remesas ocurre en dos
+márgenes --- cuántos hogares reciben y cuánto recibe cada uno --- y el reescalamiento proporcional
+atribuye la corrección entera al segundo: el monto medio por receptor pasa de 16\,088 a
+145\,339 pesos trimestrales, es decir 581\,354 pesos anuales, una cifra que excede lo que
+documentan las estadísticas de envíos. La sección~\ref{sec:validacion} reporta los resultados que
+dependen de este canal con y sin el ajuste.
+\begin{equation}
+\label{eq:taurecibida}
+\tau^{+}_{pub}(t) = B^{soc}(t) + B^{esp}(t)
+\end{equation}
+\subsection{Asignaciones dentro y entre hogares}
+Dentro del hogar existe una reasignación privada que este documento hace visible en lugar de
+dejarla implícita en un residuo contable. Para cada persona se calcula el ingreso propio total,
+ecuación~\eqref{eq:ytot}, y sus posiciones de déficit y superávit, ecuación~\eqref{eq:defsup};
+dentro de cada hogar se emparejan miembros deficitarios con superavitarios mediante una matriz de
+pagos sujeta a las restricciones de la ecuación~\eqref{eq:restr}, y el saldo neto por persona,
+ecuación~\eqref{eq:taunet}, suma exactamente cero a nivel de hogar, ecuación~\eqref{eq:sumacero}.
+A diferencia de un residuo contable, el método puede dejar déficit sin cubrir cuando el hogar no
+dispone de superávit suficiente, ecuación~\eqref{eq:defnc}; ese residuo se financia por fuerza
+desde fuera del hogar, vía transferencias públicas, remesas o transferencias entre hogares. El
+bloque privado, que suma la reasignación dentro del hogar y las transferencias observadas entre
+hogares distintos, queda observado y sin reescalar, decisión que genera una brecha conocida y
+explicable en el segundo método de cálculo del déficit.
+\begin{equation}
+\label{eq:ytot}
+Y^{tot}_i = Y_{L,i} + Y_{K,i} + \tau^{+}_{pub,i} + \tau^{+}_{ext,i}
+\end{equation}
+\begin{equation}
+\label{eq:defsup}
+d_i = \max\big(C_i - Y^{tot}_i,\; 0\big),
+\qquad
+s_i = \max\big(Y^{tot}_i - C_i,\; 0\big)
+\end{equation}
+\begin{equation}
+\label{eq:restr}
+\sum_{k \in h} p_{kj} \le d_j \quad \forall j,
+\qquad
+\sum_{j \in h} p_{kj} \le s_k \quad \forall k
+\end{equation}
+\begin{equation}
+\label{eq:taunet}
+\tau^{in}_i = \underbrace{\sum_{k} p_{ki}}_{\text{recibe}}
+- \underbrace{\sum_{j} p_{ij}}_{\text{paga}}
+\end{equation}
+\begin{equation}
+\label{eq:sumacero}
+\sum_{i \in h} \tau^{in}_i = 0 \quad \text{para todo hogar } h
+\end{equation}
+\begin{equation}
+\label{eq:defnc}
+d^{nc}_i = d_i - \sum_k p_{ki} \; \ge \; 0
+\end{equation}
+\subsection{Reasignación por activos}
+El agregado de control de esta variable no es el ingreso de activos bruto sino la reasignación
+neta de ahorro, ecuación~\eqref{eq:activos}. La razón es la ecuación~\eqref{eq:m2}: el segundo
+método requiere exactamente el término $(Y_K - S)$, y un agregado ya neto de ahorro evita la
+asignación del ahorro por edad, tarea para la cual la encuesta no ofrece información confiable.
+En la práctica, el ahorro nunca se asigna por edad de forma independiente y cualquier lectura del
+perfil de ingreso de activos debe entenderse como lectura de la reasignación neta. El alquiler
+imputado de la vivienda propia entra por este lado además de por el lado del consumo,
+ecuación~\eqref{eq:ykalq}, neto de predial y conservación, ecuación~\eqref{eq:alqneto}. El
+reparto dentro del hogar es per cápita por los dos lados: cada integrante recibe la misma fracción
+del servicio habitacional y del rendimiento del activo. Es el criterio del simulador fiscal del
+CIEP, que divide la imputación entre el número de miembros del hogar. La alternativa de asignar
+el rendimiento a la persona de referencia concentra el ingreso de activos en las edades donde se
+ubica la jefatura del hogar y lo elimina de la niñez, lo que altera la lectura del financiamiento
+del déficit infantil sin cambiar ningún agregado.
+El alquiler imputado sí tiene contraparte en las cuentas nacionales y está dentro del agregado de
+control: el excedente de operación de los hogares, que es la renta imputada de la vivienda propia,
+forma parte del excedente bruto de explotación del que se deriva la reasignación por activos. Lo
+que no tiene es un agregado de control \emph{propio}, de modo que el factor de reescalamiento se
+aplica al bloque completo. Eso distorsiona su composición interna: el alquiler imputado representa
+entre 58\,\% y 63\,\% del ingreso de activos observado en la encuesta, frente a una contraparte
+macro que ronda entre 10\,\% y 16\,\% del agregado de control, y tras el reescalamiento el bloque
+de alquiler queda en torno a 2.8 veces el excedente bruto de operación de los hogares.
+La partición que se aplica al consumo no se replica aquí, y la razón es que operaría en sentido
+contrario. Antes de cualquier ajuste, el alquiler imputado de la encuesta \emph{excede} a su
+contraparte macro --- 1.36 contra 0.90 billones de pesos en 2024 --- porque se construye con un
+modelo y no depende de que el informante lo declare, mientras que el ingreso de capital observado
+se capta con mucha menor calidad. Anclarlo por separado lo reduciría en un tercio y trasladaría
+toda la brecha de captación al capital observado, con un factor cercano a diez sobre una base de
+7\,\% de la población, que es la misma configuración que el documento señala como problemática en
+el caso de las remesas. A esto se añade un desajuste de concepto: la imputación micro es bruta de
+depreciación --- sólo descuenta predial y conservación --- mientras la contraparte macro neta ya la
+descuenta, de modo que forzar la igualdad mezclaría un problema de captación con uno de definición.
+El bloque se deja sin particionar y la distorsión se reporta como limitación.
+\begin{equation}
+\label{eq:cpriv}
+C^{priv}_i = C^{obs}_i + R^{C}_i
+\end{equation}
+\begin{equation}
+\label{eq:ykalq}
+Y_{K,i} = Y^{obs}_{K,i} + R^{K}_i
+\end{equation}
+\begin{equation}
+\label{eq:alqneto}
+R^{K}_h = \max\big(R_h - P_h,\; 0\big)
+\end{equation}
+% ---------------------------------------------------------------------------
+\section{Reescalamiento micro a macro}
+\label{sec:reescalamiento}
+% ---------------------------------------------------------------------------
+La conciliación se resuelve con un único escalar por variable y año. Para cada variable $v$ del
+mapa de escalamiento se calcula
+\begin{equation}
+\label{eq:lambda}
+\lambda_v(t) \;=\; \frac{V_{macro}(t)}{\displaystyle\sum_i x_{iv}(t)\cdot f_i \cdot 4}
+\end{equation}
+y se aplica de manera uniforme a todas las observaciones del año:
+\begin{equation}
+\label{eq:lambdaap}
+x^{adj}_{iv}(t) = x_{iv}(t)\cdot \lambda_v(t)
+\end{equation}
+Tres propiedades justifican esta elección frente a alternativas más elaboradas, como la
+calibración por ajuste iterativo proporcional o la reponderación de factores. La primera es el
+cierre exacto por construcción: al sustituir~\eqref{eq:lambda} en~\eqref{eq:lambdaap}, el
+agregado ajustado reproduce el control macro sea cual sea $x_{iv}$, ecuación~\eqref{eq:cierrelam}.
+Esto permite afirmar sin necesidad de un experimento que ninguna imputación previa --- alquiler
+imputado, asignación del gasto del hogar, imputación fiscal --- puede romper el cierre agregado.
+La segunda es la invariancia de la forma relativa, ecuación~\eqref{eq:invar}: el reescalamiento
+preserva toda la información distributiva y etaria de la encuesta, y ningún perfil por edad
+cambia de forma, sólo de escala vertical. La tercera es que el factor actúa sobre montos
+monetarios y nunca sobre el factor de expansión, de modo que la conciliación no altera la
+estructura demográfica de la muestra expandida.
+\begin{equation}
+\label{eq:cierrelam}
+\sum_i x^{adj}_{iv}(t)\cdot f_i\cdot 4 \;=\;
+\lambda_v(t)\sum_i x_{iv}(t)\cdot f_i\cdot 4 \;=\; V_{macro}(t)
+\end{equation}
+\begin{equation}
+\label{eq:invar}
+\frac{x^{adj}_{iv}}{x^{adj}_{jv}} = \frac{x_{iv}}{x_{jv}}
+\end{equation}
+El consumo es la única variable que no recibe el factor sobre su total, por la partición ya
+descrita en la sección~\ref{sec:variables} (ecuación~\eqref{eq:cparticion}): el bloque de
+gobierno conserva su valor calibrado y el factor actúa sólo sobre el residuo privado. El total
+sigue cerrando contra el agregado de control del consumo.
+El Cuadro~\ref{tab:lambda} del Anexo~\ref{anexo:lambda} reporta los 35 factores, siete variables
+por cinco años, con marca de auditoría para los que caen fuera de la banda $[0.5,\,2.0]$. Treinta
+y tres de los treinta y cinco quedan fuera de esa banda, y todos por arriba: la encuesta capta
+menos que las cuentas nacionales en las siete variables. El rango va de 1.90 en el ingreso
+laboral de 2024 a 9.88 en las transferencias del exterior de 2020. Un factor lejos de la unidad
+no es en sí mismo un error, sino la medida de la subcaptación de la encuesta; lo que sí
+contaminaría la comparación temporal es un factor con cambios grandes entre años sin razón
+metodológica, porque en ese caso parte de la variación observada en los perfiles sería artefacto
+de la conciliación y no cambio económico real. Los factores son invariantes a la deflactación,
+por la razón expuesta en la ecuación~\eqref{eq:deflactor}, de modo que los valores del cuadro son
+los mismos en términos nominales y reales.
+El costo de este procedimiento define también su alcance. El reescalamiento proporcional atribuye
+la totalidad de la discrepancia micro-macro a un error de nivel uniforme, de modo que no corrige
+subcaptación diferencial por edad ni por posición en la distribución del ingreso. Donde eso pesa
+más es en el ingreso de activos, subcaptado de forma característica en la cola alta, cuyo factor
+va de 4.28 a 6.11. El método sirve como control macroeconómico de los perfiles por edad, no como
+instrumento para estudiar la desigualdad del ingreso de capital. Cualquier lectura distributiva
+de ese bloque excede lo que el procedimiento puede sostener, y el documento no la propone.
+% ---------------------------------------------------------------------------
+\section{Presentación de resultados}
+\label{sec:resultados}
+% ---------------------------------------------------------------------------
+\subsection{Ingreso laboral, total y por sexo}
+El ingreso laboral agregado creció 22.1\,\% en términos reales entre 2016 y 2024, de 12.2 a 14.9
+billones de pesos de 2024. El perfil por edad conserva la forma de campana característica del
+ciclo laboral: el ingreso es prácticamente nulo antes de los 15 años, se eleva con rapidez entre
+los 20 y los 35, y desciende de forma sostenida a partir de los 55. El desplazamiento vertical de
+la curva ocurre sin cambio apreciable en el tramo de edades donde el perfil alcanza su máximo, de
+modo que el crecimiento del agregado responde al nivel del ingreso y no a un corrimiento del
+calendario laboral.
+La convergencia por sexo explica buena parte de ese crecimiento. El ingreso laboral real per
+cápita de las mujeres subió 25.1\,\% en el periodo, de 15\,016 a 18\,785 pesos trimestrales,
+mientras el de los hombres subió 8.6\,\%, de 36\,107 a 39\,222. La razón entre ambos pasó de
+41.6\,\% a 47.9\,\%, y de 44.1\,\% a 48.0\,\% si la comparación se restringe al grupo de 25 a 59
+años. La brecha se cerró poco más de seis puntos porcentuales sin alterar su orden de magnitud:
+al cierre del periodo el ingreso laboral femenino permanece por debajo de la mitad del masculino.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{fig_yl_sexo.pdf}
+\caption{Ingreso laboral por edad. Panel izquierdo: total de la población, 2016--2024. Panel
+derecho: por sexo de la persona, 2024. Pesos constantes de 2024, trimestrales per cápita.}
+\label{fig:yl_sexo}
+\end{figure}
+\subsection{Consumo y déficit del ciclo de vida}
+El consumo agregado creció 11.1\,\% en términos reales entre 2016 y 2024, de 23.2 a 25.8 billones
+de pesos de 2024, y superó al ingreso laboral en los cinco levantamientos. El déficit del ciclo de
+vida se mantuvo prácticamente estable: pasó de 11.0 a 10.9 billones, una caída real de 1.1\,\%.
+Medido como proporción del consumo, el déficit bajó de 47.4\,\% a 42.2\,\%, porque el ingreso
+laboral creció al doble de velocidad que el consumo.
+El origen de ese déficit agregado importa: no es un resultado de la imputación, sino de la
+contabilidad nacional. Los dos términos de la identidad tienen agregado de control y por tanto
+su diferencia queda determinada antes de repartir nada por edad. El ingreso laboral es la
+remuneración de asalariados más dos tercios del ingreso mixto neto de depreciación,
+ecuación~\eqref{eq:ylmacro}; el consumo es el gasto final de hogares y gobierno neto de impuestos
+a los productos, ecuación~\eqref{eq:cmacro}. En México el primero representa entre 39.1\,\% y
+44.4\,\% del producto interno bruto y el segundo entre 72.9\,\% y 78.4\,\%, de modo que la
+diferencia equivale a entre 31.5\,\% y 35.8\,\% del producto. Esa brecha existe en las cuentas
+nacionales con independencia de cualquier supuesto de este documento; el ejercicio sólo decide
+cómo se distribuye por edad, no cuánto vale.
+\begin{equation}
+\label{eq:cmacro}
+C(t) = C^{hog}(t) + C^{gob}(t) - T^{prod}(t),
+\qquad
+LCD(t) = C(t) - Y_L(t)
+\end{equation}
+La participación laboral relativamente baja del producto en México fija así un déficit agregado
+alto que ninguna variante de las imputaciones puede cerrar. Lo que sí depende del procedimiento
+es en qué edades se concentra, y esa es la pregunta que aborda el resto de la sección.
+El perfil por edad del consumo es mucho más plano que el del ingreso laboral, y su distancia entre
+extremos se amplió. En términos reales el consumo per cápita de los menores de 15 años cayó
+20.3\,\%, de 30\,364 a 24\,209 pesos trimestrales, mientras el de los mayores de 60 subió
+7.3\,\%, de 45\,344 a 48\,666. La razón entre ambos extremos pasó de 1.49 a 2.01, y la del grupo
+de 25 a 59 años frente a la niñez de 1.86 a 2.54.
+El déficit per cápita bajó en la niñez y en la juventud y subió en la vejez. Entre 2016 y 2024 el
+déficit real cayó 20.5\,\% entre los menores de 15 años y 17.9\,\% entre los jóvenes de 15 a 24,
+mientras subió 71.7\,\% a partir de los 60 años, de 18\,569 a 31\,879 pesos trimestrales; en el
+grupo de 25 a 59 bajó 5.9\,\%, de 11\,601 a 10\,914. La ventana de edades con superávit se cerró
+en paralelo: abarcaba diez años en 2020 --- de los 40 a los 49 --- y en 2022 y 2024 no hay ninguna
+edad en la que el ingreso laboral per cápita del conjunto de la población supere a su consumo.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{fig_c_lcd.pdf}
+\caption{Consumo, ingreso laboral y déficit del ciclo de vida por edad. Panel izquierdo: consumo
+e ingreso laboral en 2024, con el área sombreada según el signo de la diferencia. Panel derecho:
+déficit por el primer método, 2016--2024. Pesos constantes de 2024, trimestrales per cápita.}
+\label{fig:c_lcd}
+\end{figure}
+Ese déficit que no se cierra en ninguna edad esconde dos ciclos de vida distintos. Separado por
+sexo, el perfil masculino sí completa el ciclo: en 2024 el ingreso laboral de los hombres supera a
+su consumo entre los 33 y los 62 años, una ventana de treinta edades cuyo punto más alto son
+18\,547 pesos trimestrales per cápita de superávit hacia los 47 años. El perfil femenino no cruza
+el eje en ninguna edad de ningún año de la serie: su valor más bajo en edad activa, 18\,700 pesos
+hacia los 45 años, sigue siendo un déficit. El agregado deficitario en todo el ciclo es, por
+tanto, resultado de composición, no una característica del ciclo de vida mexicano.
+La distancia entre ambos perfiles se concentra en la edad activa y no se cerró durante el periodo.
+Entre los 25 y los 59 años los hombres registran en 2024 un superávit per cápita de 7\,033 pesos
+trimestrales y las mujeres un déficit de 26\,461, y la misma configuración se repite en los cinco
+levantamientos. Las mujeres concentran 76.3\,\% del déficit agregado de 2024, frente a 74.5\,\%
+en 2016, de modo que financiar el ciclo de vida en México es, en su mayor parte, financiar el
+déficit femenino.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{fig_lcd_sexo.pdf}
+\caption{Déficit del ciclo de vida por sexo. Panel izquierdo: perfil por edad en 2024, con el área
+sombreada sobre las edades en que el ingreso laboral masculino supera al consumo. Panel derecho:
+saldo per cápita de la población de 25 a 59 años, 2016--2024; los valores negativos son superávit.
+Pesos constantes de 2024, trimestrales per cápita.}
+\label{fig:lcd_sexo}
+\end{figure}
+\subsection{Financiamiento por rangos de edad}
+La composición del financiamiento se invierte entre la niñez y la vejez. En 2024 los componentes
+que financian el déficit de los menores de 15 años se reparten en 57.4\,\% de reasignación por
+activos y 31.2\,\% de transferencias privadas entre hogares, con 8.8\,\% de transferencias
+públicas netas. En el grupo de 60 años o más la jerarquía se invierte: las transferencias públicas
+netas aportan 54.5\,\% y la reasignación por activos 42.7\,\%. El contraste sitúa a la niñez como
+un déficit financiado por vía privada y a la vejez como uno financiado por vía pública.
+El grupo de 25 a 59 años es contribuyente neto tanto al sistema público como al circuito privado.
+Su pago neto de transferencias públicas asciende a 12\,960 pesos trimestrales per cápita en 2024
+y su saldo de transferencias privadas entre hogares es negativo en 2\,145 pesos. Ese pago público
+neto creció 39.1\,\% en términos reales respecto de 2016, cuando era de 9\,317 pesos trimestrales
+per cápita. El aumento no proviene de una mayor carga tributaria sobre el grupo, sino de lo que
+dejó de recibir: su pago bruto per cápita subió 15\,\% en términos reales, mientras las
+transferencias públicas que percibe cayeron a la mitad, porque su participación en el total
+transferido pasó de 27.7\,\% a 13.4\,\%.
+La transferencia pública neta por adulto mayor se mantuvo estable en términos reales mientras la
+contribución que la financia creció con rapidez. Pasó de 36\,543 pesos trimestrales per cápita en
+2016 a 37\,943 en 2024, un aumento real de 3.8\,\%, frente al 39.1\,\% que subió el pago neto
+por persona en edad activa. El sistema desplazó transferencias hacia las edades mayores.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{fig_financiamiento_edad.pdf}
+\caption{Financiamiento del déficit por grupo de edad. Panel izquierdo: componentes en 2024.
+Panel derecho: déficit per cápita por grupo de edad, 2016--2024. Pesos constantes de 2024,
+trimestrales per cápita.}
+\label{fig:fin_edad}
+\end{figure}
+\subsection{Financiamiento de jóvenes, mujeres y adultos mayores}
+Entre los jóvenes de 15 a 24 años el déficit de las mujeres supera al de los hombres en 36\,\%.
+En 2024 el déficit per cápita es de 39\,551 pesos trimestrales para ellas y de 29\,133 para
+ellos. La diferencia se financia sobre todo por vía privada: las mujeres jóvenes reciben 9\,045
+pesos en transferencias entre hogares frente a 6\,232 de los hombres, y 1\,958 pesos en
+transferencias del exterior frente a 329, casi seis veces más.
+Entre los adultos mayores la diferencia por sexo es mayor y su composición es distinta. El
+déficit per cápita de las mujeres de 60 años o más es de 42\,322 pesos trimestrales, 2.2 veces el
+de los hombres del mismo grupo, que es de 19\,109. Dos de los tres canales operan en su contra:
+las mujeres reciben 33\,224 pesos de transferencias públicas netas frente a 43\,713 de los
+hombres, una diferencia de 24.0\,\%, y 27\,414 por reasignación de activos frente a 32\,648. El
+único canal que las favorece es el privado, con un saldo positivo de 748 pesos frente a uno
+negativo de 9\,082 en el caso de los hombres, insuficiente para compensar los otros dos.
+El perfil femenino mantiene déficit positivo en los cuatro grupos de edad. En el grupo de 25 a 59
+años, donde el conjunto de la población registra un déficit per cápita de 10\,914 pesos
+trimestrales, el de las mujeres asciende a 26\,461. Las transferencias del exterior que reciben
+las mujeres de esa edad son de 4\,185 pesos trimestrales, 1.7 veces el promedio del grupo, lo que
+sitúa a las remesas como un canal de financiamiento con sesgo de sexo marcado en la edad activa.
+El nivel de ese canal depende del reescalamiento (véase el Cuadro~\ref{tab:remesas}); la razón
+entre sexos, en cambio, es la misma con y sin ajuste, porque el factor es único por año y no
+altera la forma relativa del perfil.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{fig_financiamiento_grupos.pdf}
+\caption{Componentes del financiamiento en 2024 para tres subpoblaciones: jóvenes de 15 a 24 años
+por sexo, adultos mayores de 60 años o más por sexo, y mujeres por grupo de edad. Pesos constantes de 2024,
+trimestrales per cápita.}
+\label{fig:fin_grupos}
+\end{figure}
+\subsection{Validación}
+\label{sec:validacion}
+El procedimiento se sometió a tres comprobaciones reproducibles. La primera verifica la
+neutralidad de las imputaciones respecto de los agregados de control: para las siete variables
+del mapa de escalamiento y los cinco años, el agregado micro ajustado reproduce el agregado de
+control dentro de la tolerancia declarada, sin diferencias relevantes. La segunda comprueba que
+la agregación por edad no pierda información respecto de la base persona-año, con el mismo
+resultado. La tercera contrasta la corrida contra una salida de referencia y confirma que
+ninguna variable con agregado de control asociado modificó su total anual.
+La identidad contable se contrastó después por los dos métodos. El primero cierra contra el
+agregado de control, porque sus dos componentes tienen correspondencia directa. El segundo no
+cierra, y la brecha no es un residuo desconocido: todos sus términos excepto el bloque privado
+tienen agregado de control y agregan a él, de modo que la diferencia equivale al agregado de las
+transferencias observadas entre hogares. En 2024 esa brecha es de 277 mil millones de pesos
+anuales, frente a un agregado de transferencias entre hogares de 277 mil millones, con un residuo
+de 61 millones, equivalente a 0.001\,\% del déficit total. La brecha se reporta y no se fuerza a
+cero: un cierre forzado exigiría un agregado de control inexistente, o bien el reescalamiento del
+bloque privado contra un objetivo nulo, que lo eliminaría.
+Un tercer contraste, de naturaleza distinta, aplica al bloque de transferencias del exterior. Su
+factor de reescalamiento es el mayor del ejercicio y la base de receptores observados es estrecha,
+por lo que los resultados que dependen de él se reportan con y sin el ajuste. El
+Cuadro~\ref{tab:remesas} lo hace. El canal pasa de financiar 2.6\,\% del déficit del grupo de 25
+a 59 años a financiar 23.2\,\%, y de 1.9\,\% a 17.6\,\% en el grupo de 60 años o más; en la
+niñez el peso es marginal bajo cualquiera de las dos lecturas. La composición interna del canal no
+se ve afectada: al ser un factor único por año, la razón entre sexos en la edad activa es 6.8 en
+ambos casos.
+\input{tables/tab_remesas.tex}
+La lectura correcta es que la \emph{forma} del canal por edad y por sexo proviene de la encuesta y
+es robusta al ajuste, mientras que su \emph{nivel} proviene del agregado de control y descansa en
+el supuesto de que toda la subcaptación ocurre en el monto declarado y ninguna en el número de
+hogares receptores. Corregir esa asimetría exige repartir el ajuste entre los dos márgenes: imputar
+receptores adicionales con un modelo de propensión --- sobre entidad federativa, composición del
+hogar y posición en la distribución del ingreso --- y escalar los montos por un factor
+sustancialmente menor, con un objetivo externo de incidencia tomado de las estadísticas de envíos.
+Ese refinamiento queda fuera del alcance de este documento y se anota como extensión pendiente.
+\subsection{Implicaciones}
+El resultado con mayor consecuencia para el espacio fiscal es la asimetría en el financiamiento
+de los dos extremos del ciclo. La niñez se financia en 88.6\,\% con recursos privados --- activos
+y transferencias entre hogares --- mientras la vejez se financia en 54.5\,\% con transferencias
+públicas netas. Un cambio demográfico que aumente el peso relativo de los mayores de 60 años se
+traduce así de forma directa en presión sobre el presupuesto público, mientras que un cambio en
+el peso de la niñez se absorbe sobre todo dentro de los hogares.
+La segunda implicación proviene de la divergencia entre lo que recibe cada adulto mayor y lo que
+aporta cada persona en edad activa. El déficit per cápita de los mayores de 60 años creció
+71.7\,\% en términos reales entre 2016 y 2024, mientras la transferencia pública neta que reciben
+subió 3.8\,\% y la contribución neta por persona en edad activa subió 39.1\,\%. El peso relativo
+del grupo de 60 años o más pasó de 11.3\,\% a 15.1\,\% de la población en el mismo lapso, de modo
+que la carga por aportante creció sin que la prestación real por beneficiario avanzara, y el resto
+del déficit se trasladó a la reasignación por activos y a los hogares.
+La tercera se refiere a la desigualdad horizontal por sexo. El déficit de las mujeres de 60 años
+o más duplica al de los hombres, y las transferencias públicas netas que reciben son 24.0\,\%
+menores, de modo que el sistema público no compensa la brecha sino que se suma a ella. El mismo
+patrón aparece en la edad activa, como se mostró antes: el déficit femenino más que duplica al
+del grupo completo. La incidencia del gasto público por sexo, evaluada sobre estos perfiles, no
+corrige un punto de partida desigual que la política pública no genera pero tampoco revierte.
+% ---------------------------------------------------------------------------
+\section{Conclusiones}
+\label{sec:conclusiones}
+% ---------------------------------------------------------------------------
+
+Este documento construyó una base de Cuentas Nacionales de Transferencia para México
+con tres propiedades que la distinguen de ejercicios previos: cierre verificable contra
+siete agregados de control del Sistema de Cuentas Nacionales, documentación explícita de
+cada imputación con su supuesto y su impacto, y reporte de la brecha entre los dos
+métodos de cálculo del déficit del ciclo de vida en lugar de un cierre forzado. La
+brecha en 2024 equivale a 0.001\,\% del déficit total, lo que valida la consistencia
+interna del procedimiento sin requerir ningún supuesto adicional sobre el bloque privado.
+
+El resultado empírico central es que el ciclo de vida económico en México no es
+deficitario en todas las edades: es deficitario en el agregado porque agrega dos ciclos
+de vida estructuralmente distintos. El perfil masculino alcanza superávit en treinta
+edades consecutivas alrededor de los 47 años; el femenino no cruza el eje en ninguna
+edad de ningún levantamiento. Esta asimetría no se corrigió entre 2016 y 2024: la razón
+del ingreso laboral femenino al masculino subió de 41.6\,\% a 47.9\,\%, pero el déficit
+de las mujeres en edad activa continuó más que duplicando al del grupo completo. Financiar
+el ciclo de vida en México es, en su mayor parte, financiar el déficit femenino.
+
+El análisis de financiamiento añade una dimensión fiscal. La niñez y la vejez se
+financian por mecanismos opuestos: la primera recurre principalmente a la reasignación de
+activos del hogar y a las transferencias privadas entre hogares; la segunda depende en
+más de la mitad de las transferencias públicas netas. Esta asimetría implica que el
+envejecimiento demográfico no es un shock simétrico sobre el presupuesto: cada punto
+porcentual que gana el grupo de 60 años o más en la distribución de la población se
+traduce directamente en presión sobre el gasto público, mientras que un cambio equivalente
+en el peso de la niñez se absorbe sobre todo dentro de los hogares. México ya recorrió
+ese camino: el grupo de mayores pasó de 11.3\,\% a 15.1\,\% de la población entre 2016
+y 2024.
+
+La dinámica interna del sistema público durante ese periodo muestra una tensión creciente.
+El pago neto de transferencias públicas por persona en edad activa subió 39.1\,\% en
+términos reales, pero no porque la carga tributaria individual haya aumentado en esa
+proporción --- el pago bruto per cápita subió 15\,\% --- sino porque la participación del
+grupo en las transferencias públicas recibidas cayó a la mitad. El sistema desplazó
+recursos hacia las edades mayores sin ampliar la base que los financia. La transferencia
+pública neta por adulto mayor, en cambio, subió apenas 3.8\,\% real en el mismo periodo,
+de modo que la carga por aportante creció sin que la prestación por beneficiario
+avanzara proporcionalmente. El resto del déficit de la vejez se trasladó a la
+reasignación por activos y a los hogares.
+
+La desigualdad por sexo en la vejez opera en el mismo sentido que la brecha laboral: las
+mujeres mayores de 60 años enfrentan un déficit 2.2 veces el de los hombres de ese grupo,
+y reciben 24.0\,\% menos en transferencias públicas netas. El sistema público no
+compensa la diferencia de origen; se suma a ella. El único canal que favorece a las
+mujeres mayores frente a los hombres es el de las transferencias privadas entre hogares,
+insuficiente para cerrar la brecha de los otros dos canales.
+
+El procedimiento construido habilita extensiones directas. Los perfiles por edad, sexo y
+posición en la distribución del ingreso son el insumo para proyectar el déficit del ciclo
+de vida bajo distintos escenarios de envejecimiento, formalización y reforma de la
+política social, y para evaluar el efecto de cambios paramétricos sobre cada grupo. Esa
+proyección requiere, adicionalmente, un modelo de comportamiento que permita distinguir
+los efectos de composición demográfica de los efectos de política. Las Cuentas Nacionales
+de Transferencia construidas aquí son el punto de partida contable, no el modelo de
+comportamiento; la distinción es pertinente porque el reescalamiento proporcional
+preserva la forma por edad de la encuesta y no corrige subcaptación diferencial por
+posición en la distribución, lo que acota las inferencias sobre desigualdad del ingreso
+de capital pero no compromete las relativas a la incidencia fiscal por edad y sexo.
+
+% ---------------------------------------------------------------------------
+\appendix
+\section{Series del Sistema de Cuentas Nacionales}
+\label{anexo:series}
+% ---------------------------------------------------------------------------
+\input{tables/tab_series_macro.tex}
+\FloatBarrier
+% ---------------------------------------------------------------------------
+\section{Correspondencia entre variables micro y agregados de control}
+\label{anexo:mapeo}
+% ---------------------------------------------------------------------------
+\input{tables/tab_scale_map.tex}
+\input{tables/tab_excluidas.tex}
+\FloatBarrier
+% ---------------------------------------------------------------------------
+\section{Registro de supuestos}
+\label{anexo:supuestos}
+% ---------------------------------------------------------------------------
+\input{tables/tab_supuestos.tex}
+\FloatBarrier
+% ---------------------------------------------------------------------------
+\section{Factores de reescalamiento}
+\label{anexo:lambda}
+% ---------------------------------------------------------------------------
+\input{tables/tab_lambda.tex}
+\FloatBarrier
+% ---------------------------------------------------------------------------
+\section{Limitaciones y puntos a verificar}
+\label{anexo:limitaciones}
+% ---------------------------------------------------------------------------
+\input{tables/tab_limitaciones.tex}
+\FloatBarrier
+\noindent El cuadro recoge sólo los puntos abiertos. Dos que aparecían en versiones previas de
+este registro ya están resueltos y sus correcciones están incorporadas a las cifras: la escala de
+equivalencia por edad, que se estimaba sobre la muestra sin expandir, y el reescalamiento del
+consumo, que escalaba una segunda vez el bloque de gobierno ya calibrado. Ninguna de las dos
+alteraba los agregados anuales; ambas afectaban la forma por edad de los perfiles.
+% ---------------------------------------------------------------------------
+\bibliographystyle{plainnat}
+\bibliography{referencias}
+\end{document}

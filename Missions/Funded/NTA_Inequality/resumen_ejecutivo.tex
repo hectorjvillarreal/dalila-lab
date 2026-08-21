@@ -1,0 +1,148 @@
+% ===========================================================================
+%  Resumen ejecutivo
+%  Cuentas Nacionales de Transferencia para Mexico, 2016-2024
+%
+%  Compilar:  pdflatex resumen_ejecutivo   (sin bibliografia)
+%  Las figuras las genera paper.ipynb; se copian a figures/ desde paper/figures.
+% ===========================================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{lmodern}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage[top=1.9cm,bottom=1.7cm,left=2.0cm,right=2.0cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\graphicspath{{figures/}}
+\captionsetup{font=small,labelfont=bf}
+\setlength{\parskip}{0.38em}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\definecolor{acento}{HTML}{2C6FBB}
+
+\newcommand{\titulillo}[1]{%
+  \vspace{0.30em}\textcolor{acento}{\textbf{\large #1}}\par\vspace{0.08em}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries Cuentas Nacionales de Transferencia para México}\\[0.35em]
+{\large Quién consume, quién aporta y quién financia la diferencia, 2016--2024}\\[0.7em]
+{\normalsize Juan Pablo López Reynosa \quad · \quad Héctor Villarreal}
+\end{center}
+
+\vspace{0.4em}
+\hrule
+\vspace{0.9em}
+
+% ---------------------------------------------------------------------------
+\titulillo{El ciclo de vida económico no se cierra igual para todos}
+
+El consumo de una persona sólo coincide con su ingreso laboral en un tramo acotado de la edad
+adulta. Esa diferencia ---el déficit del ciclo de vida--- se financia por dos vías: la privada,
+con transferencias entre hogares y reasignación de activos del propio hogar, y la pública, con el
+saldo entre lo que cada edad recibe del Estado y lo que le aporta. Cómo se reparte esa carga entre
+ambas vías importa especialmente en una transición demográfica que envejecerá la composición
+etaria del país. Este trabajo mide esos flujos año por año y edad por edad, con la Encuesta
+Nacional de Ingresos y Gastos de los Hogares conciliada contra el Sistema de Cuentas Nacionales.
+
+El resultado central es que ese ciclo se cierra de forma distinta para hombres y mujeres. El
+perfil masculino completa el ciclo: entre los 33 y los 62 años el ingreso laboral de los hombres
+supera a su consumo. El perfil femenino \textbf{no alcanza superávit en ninguna edad, en ninguno
+de los cinco levantamientos analizados}. Las mujeres concentran 76.3\,\% del déficit agregado del
+país.
+
+El promedio nacional aparece deficitario en todas las edades, y conviene leerlo con precisión.
+Agrega perfiles distintos entre sí, y su consumo incluye ---por convención del marco--- el
+consumo de gobierno además del gasto de los hogares. Frente a ese consumo total, la participación
+del ingreso laboral en el producto mexicano, entre 39\,\% y 44\,\% según el año, deja una
+diferencia que existe en las cuentas nacionales antes del reparto por edad. El déficit
+del promedio es un rasgo de la composición macroeconómica y de la agregación entre grupos, no un
+juicio sobre una edad en particular.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth]{fig_lcd_sexo.pdf}
+\caption{Déficit del ciclo de vida por sexo. A la izquierda, el perfil por edad en 2024: el área
+sombreada marca las edades en que el ingreso laboral masculino supera al consumo. A la derecha, el
+saldo de la población de 25 a 59 años; los valores negativos son superávit.}
+\end{figure}
+
+% ---------------------------------------------------------------------------
+\titulillo{El déficit no crece: se envejece}
+
+El marco contable garantiza que exista déficit, de modo que la pregunta relevante no es si lo hay
+sino cómo evoluciona y dónde se concentra. En términos reales el déficit agregado se mantuvo
+prácticamente constante entre 2016 y 2024, y como proporción del consumo incluso descendió de
+47.4\,\% a 42.2\,\%. Lo que sí cambió es su distribución por edad: el déficit por persona de 60
+años o más creció 71.7\,\% en términos reales, mientras el peso de ese grupo en la población pasó
+de 11.3\,\% a 15.1\,\%. El déficit es positivo y sostenido, y se está recorriendo hacia la vejez.
+
+% ---------------------------------------------------------------------------
+\titulillo{Quién financia a quién}
+
+Los dos extremos del ciclo se financian por vías opuestas. El déficit de los menores de 15 años se
+cubre en 88.6\,\% con recursos privados ---reasignación de activos del hogar y transferencias
+entre hogares--- mientras el de los mayores de 60 se cubre en 54.5\,\% con transferencias públicas
+netas. Un cambio demográfico que aumente el peso de la vejez se traduce de forma directa en
+presión presupuestaria; uno que aumente el peso de la niñez se absorbe dentro de los hogares.
+
+El saldo intergeneracional se movió de forma desigual. Entre 2016 y 2024 la transferencia pública
+neta por adulto mayor subió 3.8\,\% real y el pago neto por persona en edad activa 39.1\,\%. Ese
+aumento no viene de una mayor carga tributaria sino de lo que ese grupo dejó de recibir: su
+participación en las transferencias públicas se redujo a la mitad, desplazada hacia las edades
+mayores.
+
+La desigualdad por sexo aparece también del lado del financiamiento. El déficit de las mujeres de
+60 años o más duplica al de los hombres, y las transferencias públicas netas que reciben son
+24.0\,\% menores: el sistema público no compensa la brecha, se suma a ella.
+
+% ---------------------------------------------------------------------------
+\titulillo{Qué aporta el procedimiento}
+
+El objetivo del trabajo fue construir un procedimiento reproducible y escalable de Cuentas
+Nacionales de Transferencia para México, que conecte la información de hogares con las cuentas
+nacionales y sirva de base para cuentas de inclusión.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\linewidth]{fig_pipeline.pdf}
+\end{figure}
+
+El procedimiento integra la encuesta de hogares y el sistema de cuentas nacionales para
+identificar el ingreso laboral, el consumo, las transferencias que entran y salen de cada persona
+---dentro del hogar, entre hogares y con el gobierno--- y la reasignación por activos. El
+tratamiento del gobierno es deliberado: aparece como \textbf{mediador entre generaciones y no como
+agente}, porque recauda de unas edades y transfiere a otras sin consumir por cuenta propia dentro
+de la identidad.
+
+Cada variable se construye con una decisión metodológica explícita, documentada y sustituible. Esa
+es la propiedad que hace escalable al procedimiento: mejorar la identificación de un bloque no
+exige rehacer los demás. Un ejemplo ilustra el criterio. La reasignación por activos se ancla a un
+agregado neto de ahorro, lo que permite cuadrar el déficit por sus dos lados sin repartir el
+ahorro por edad. Es una decisión válida para el propósito actual y no pretende ser un instrumento
+para medir desigualdad del ingreso de capital, que requeriría otro diseño.
+
+% ---------------------------------------------------------------------------
+\titulillo{Siguiente paso}
+
+El producto es una base con observaciones a nivel de agente representativo, construida desde la
+encuesta y conciliada con las cuentas nacionales. Esa estructura habilita el paso siguiente:
+proyectar los perfiles bajo distintos escenarios demográficos y económicos, y evaluar el efecto de
+cambios de política sobre cada grupo de edad y sexo.
+
+\vspace{0.6em}
+\hrule
+\vspace{0.4em}
+{\footnotesize Cifras en pesos constantes de 2024. Fuente: elaboración propia con ENIGH (INEGI) y
+SCNM. El documento metodológico detalla imputaciones, agregados de control y limitaciones.}
+
+\end{document}
