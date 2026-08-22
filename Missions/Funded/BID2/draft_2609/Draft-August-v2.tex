@@ -1494,7 +1494,7 @@ The estimator minimizes the quadratic form~\eqref{eq:smm_objective}, $Q(\Theta)=
 \subsection{Multistart Protocol and Convergence}
 \label{app:multistart}
 
-The objective is minimized by a multistart Nelder--Mead simplex: four starts of at most forty iterations each, run under four-way contention at roughly twelve minutes per partial-equilibrium evaluation. The smoke test at the starting values returns $Q(\theta_{\rm init})=73.11$ with all six moments finite. The best of the four starts is start~4 at $Q=13.28$; the remaining starts converge to $Q\approx 20.5$, so the reported optimum is well separated from the runner-up basins.
+\emph{This protocol belongs to the superseded six-parameter, six-moment estimation of Appendix~\ref{app:provenance} (p.~\pageref{par:superseded}); the objective value and start count below are those of that estimation, not of the nine-parameter, ten-moment system whose estimates Section~\ref{subsec:calibration_results} reports.} The objective is minimized by a multistart Nelder--Mead simplex: four starts of at most forty iterations each, run under four-way contention at roughly twelve minutes per partial-equilibrium evaluation. The smoke test at the starting values returns $Q(\theta_{\rm init})=73.11$ with all six moments finite. The best of the four starts is start~4 at $Q=13.28$; the remaining starts converge to $Q\approx 20.5$, so the reported optimum is well separated from the runner-up basins.
 
 \subsection{Parity and Euler Diagnostics}
 \label{app:parity_euler}
@@ -1716,9 +1716,12 @@ Gini coefficient                             & 0.43        & 0.48        & 0.49 
 \subsection{Life Table for Mexico}
 \label{app:survival}
 
-The following life table corresponds to Mexico and is used to
+The following life table corresponds to Mexico and was used to
 calibrate the age-specific survival probabilities $\psi_{j}$ in the
-model. Data are drawn from \citet{UISP2019}.
+\emph{superseded} first step (p.~\pageref{par:superseded}); it is reproduced
+for provenance only. The current baseline uses the education- and
+sex-specific ENASEM survival schedules of Section~\ref{subsec:firststep},
+not this table. Data are drawn from \citet{UISP2019}.
 
 \begin{table}[H]
 \centering
