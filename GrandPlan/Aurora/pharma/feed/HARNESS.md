@@ -43,7 +43,10 @@ is not needed — items.yaml is tool-owned and writable).
   have their own channel and tokenizing them proposed junk like "united
   states") recurring across ≥3 promoted items and absent from every active
   query → new provisional query, cap 3/cycle; sub-terms of an accepted longer
-  term suppressed. Provisional items are lane-tagged and the query graduates
+  term suppressed. Terms matching a retired query in
+  `_graveyard/queries_retired.yaml` are never re-proposed — retirement
+  (automatic or Héctor's manual instruction) is final unless he revives the
+  query himself (added 2026-08-23, after manual retirement of p002 "issues"). Provisional items are lane-tagged and the query graduates
   to main only after one of its items is promoted.
 - **Sources**: Laplace-smoothed promote rate relative to the overall rate,
   clipped to [0.2, 1.0]. Down-weight only; blocking is Héctor's.

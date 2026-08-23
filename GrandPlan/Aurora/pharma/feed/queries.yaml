@@ -355,15 +355,6 @@ provisional:
   - 20260816-0061
   window:
   - 20260823-0003
-- id: p002
-  text: issues
-  group: auto-proposed
-  origin: auto
-  from_items:
-  - 20260816-0041
-  - 20260818-0001
-  - 20260818-0003
-  window: []
 exploration:
 - id: x001
   text: Brazil pharmaceutical policy

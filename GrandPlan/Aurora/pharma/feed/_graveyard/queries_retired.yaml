@@ -1,0 +1,20 @@
+# Retired queries — full record per HARNESS.md. Auto-retirement (>=15 flagged,
+# zero promotes in rolling window) and manual retirements by Héctor both land here.
+- id: p002
+  text: issues
+  group: auto-proposed
+  origin: auto
+  from_items:
+  - 20260816-0041
+  - 20260818-0001
+  - 20260818-0003
+  window: []
+  lane: provisional
+  retired: "2026-08-23"
+  retired_by: hector
+  mechanism: manual
+  note: >-
+    Auto-proposed by cycle 6 (2026-08-23) from three promoted headlines;
+    retired by Héctor's instruction the same day, before any retrieval
+    (window empty). Judged a tokenization artifact, not a topic term —
+    same class as p001 "portfolio", which remains live pending his call.

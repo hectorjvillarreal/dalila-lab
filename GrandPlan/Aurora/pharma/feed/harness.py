@@ -310,12 +310,19 @@ def calibrate(state, items, sources, entities, notes):
     # A shorter term contained in an accepted longer term is suppressed.
     promoted_items = [it for it in items if it["promote"] is True]
     active_text = " | ".join(q["text"] for lane in ("main", "provisional", "exploration") for q in state[lane]).lower()
+    # Retired terms stay retired: a retirement removes the query from active_text,
+    # and without this the same promoted headlines re-propose it every cycle.
+    try:
+        with open("_graveyard/queries_retired.yaml") as f:
+            retired_text = " | ".join(q.get("text", "") for q in (yaml.safe_load(f) or [])).lower()
+    except FileNotFoundError:
+        retired_text = ""
     counts = {}
     for it in promoted_items:
         for t in _terms(it["headline"]):
             counts.setdefault(t, set()).add(it["id"])
     candidates = sorted(
-        [(t, ids) for t, ids in counts.items() if len(ids) >= PROPOSE_MIN_ITEMS and t not in active_text],
+        [(t, ids) for t, ids in counts.items() if len(ids) >= PROPOSE_MIN_ITEMS and t not in active_text and t not in retired_text],
         key=lambda kv: (-len(kv[1]), -len(kv[0])),
     )
     accepted = []
