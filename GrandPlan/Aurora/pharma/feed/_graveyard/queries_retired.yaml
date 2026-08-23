@@ -17,4 +17,25 @@
     Auto-proposed by cycle 6 (2026-08-23) from three promoted headlines;
     retired by Héctor's instruction the same day, before any retrieval
     (window empty). Judged a tokenization artifact, not a topic term —
-    same class as p001 "portfolio", which remains live pending his call.
+    same class as p001 "portfolio", retired by the same instruction path
+    later that day.
+- id: p001
+  text: portfolio
+  group: auto-proposed
+  origin: auto
+  from_items:
+  - 20260816-0007
+  - 20260816-0056
+  - 20260816-0061
+  window:
+  - 20260823-0003
+  lane: provisional
+  retired: "2026-08-23"
+  retired_by: hector
+  mechanism: manual
+  note: >-
+    Auto-proposed by cycle 5 (2026-08-18) from three promoted headlines;
+    flagged then as a likely junk term. Its single retrieval (cycle 6,
+    item 20260823-0003, GSK broker commentary) bore that out. Retired by
+    Héctor's instruction 2026-08-23. The item remains in items.yaml with
+    promote unset — his flag, as always.

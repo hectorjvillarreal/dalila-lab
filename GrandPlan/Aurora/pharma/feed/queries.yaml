@@ -344,17 +344,7 @@ main:
   window:
   - 20260816-0051
   - 20260823-0002
-provisional:
-- id: p001
-  text: portfolio
-  group: auto-proposed
-  origin: auto
-  from_items:
-  - 20260816-0007
-  - 20260816-0056
-  - 20260816-0061
-  window:
-  - 20260823-0003
+provisional: []
 exploration:
 - id: x001
   text: Brazil pharmaceutical policy
