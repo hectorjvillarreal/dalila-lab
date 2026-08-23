@@ -1355,7 +1355,7 @@
   - PLI scheme
   query_id: q030
   lane: main
-  promote: null
+  promote: false
 - id: 20260823-0002
   date_seen: '2026-08-23'
   date_published: '2026-08-12'
@@ -1368,7 +1368,7 @@
   - United States
   query_id: q031
   lane: main
-  promote: null
+  promote: false
 - id: 20260823-0003
   date_seen: '2026-08-23'
   date_published: '2026-08-20'
@@ -1380,7 +1380,7 @@
   - GSK
   query_id: p001
   lane: provisional
-  promote: null
+  promote: true
 - id: 20260823-0004
   date_seen: '2026-08-23'
   date_published: '2026-08-21'
@@ -1394,7 +1394,7 @@
   - United States
   query_id: q003
   lane: main
-  promote: null
+  promote: true
 - id: 20260823-0005
   date_seen: '2026-08-23'
   date_published: '2026-08-17'
@@ -1409,7 +1409,7 @@
   - United States
   query_id: q005
   lane: main
-  promote: null
+  promote: false
 - id: 20260823-0006
   date_seen: '2026-08-23'
   date_published: '2026-08-19'
@@ -1422,7 +1422,7 @@
   - Teva
   query_id: q005
   lane: main
-  promote: null
+  promote: false
 - id: 20260823-0007
   date_seen: '2026-08-23'
   date_published: '2026-08-18'
@@ -1436,7 +1436,7 @@
   - Alesta Therapeutics
   query_id: q006
   lane: main
-  promote: null
+  promote: true
 - id: 20260823-0008
   date_seen: '2026-08-23'
   date_published: '2026-08-10'
@@ -1449,7 +1449,7 @@
   - Actio Biosciences
   query_id: q006
   lane: main
-  promote: null
+  promote: false
 - id: 20260823-0009
   date_seen: '2026-08-23'
   date_published: '2026-08-03'
@@ -1462,7 +1462,7 @@
   - Lantheus
   query_id: q006
   lane: main
-  promote: null
+  promote: true
 - id: 20260823-0010
   date_seen: '2026-08-23'
   date_published: '2026-08-06'
@@ -1475,7 +1475,7 @@
   - Alkeus Pharmaceuticals
   query_id: q006
   lane: main
-  promote: null
+  promote: true
 - id: 20260823-0011
   date_seen: '2026-08-23'
   date_published: '2026-08-05'
@@ -1488,7 +1488,7 @@
   - Alteogen
   query_id: q007
   lane: main
-  promote: null
+  promote: false
 - id: 20260823-0012
   date_seen: '2026-08-23'
   date_published: '2026-08-17'
@@ -1501,7 +1501,7 @@
   - AstraZeneca
   query_id: q009
   lane: main
-  promote: null
+  promote: true
 - id: 20260823-0013
   date_seen: '2026-08-23'
   date_published: '2026-08-17'
@@ -1514,7 +1514,7 @@
   - EyePoint
   query_id: q009
   lane: main
-  promote: null
+  promote: false
 - id: 20260823-0014
   date_seen: '2026-08-23'
   date_published: '2026-08-06'
@@ -1528,4 +1528,4 @@
   - China
   query_id: x008
   lane: exploration
-  promote: null
+  promote: false
