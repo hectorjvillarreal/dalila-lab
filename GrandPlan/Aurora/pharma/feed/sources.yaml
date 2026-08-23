@@ -17,19 +17,19 @@ fiercebiotech.com:
   surfaced: 7
   promoted: 0
   rejected: 7
-  weight: 0.36
+  weight: 0.35
 biospace.com:
   surfaced: 7
   promoted: 1
-  rejected: 5
-  weight: 0.82
+  rejected: 6
+  weight: 0.7
 finance.yahoo.com:
   surfaced: 1
   promoted: 1
   rejected: 0
   weight: 1.0
 globenewswire.com:
-  surfaced: 7
+  surfaced: 8
   promoted: 3
   rejected: 4
   weight: 1.0
@@ -97,12 +97,12 @@ ashp.org:
   surfaced: 2
   promoted: 0
   rejected: 2
-  weight: 0.82
+  weight: 0.79
 pharmexec.com:
   surfaced: 5
   promoted: 1
   rejected: 4
-  weight: 0.93
+  weight: 0.91
 bioxconomy.com:
   surfaced: 1
   promoted: 0
@@ -139,7 +139,7 @@ investor.elanco.com:
   rejected: 1
   weight: 1.0
 sec.gov:
-  surfaced: 1
+  surfaced: 2
   promoted: 0
   rejected: 1
   weight: 1.0
@@ -154,7 +154,7 @@ contractpharma.com:
   rejected: 0
   weight: 1.0
 prnewswire.com:
-  surfaced: 2
+  surfaced: 3
   promoted: 2
   rejected: 0
   weight: 1.0
@@ -232,7 +232,7 @@ pharmtech.com:
   surfaced: 3
   promoted: 0
   rejected: 3
-  weight: 0.65
+  weight: 0.63
 zamann-pharma.com:
   surfaced: 1
   promoted: 0
@@ -242,7 +242,7 @@ beckershospitalreview.com:
   surfaced: 2
   promoted: 0
   rejected: 2
-  weight: 0.82
+  weight: 0.79
 techtimes.com:
   surfaced: 1
   promoted: 0
@@ -260,30 +260,80 @@ pureglobal.com:
   weight: 1.0
 navlindaily.com:
   surfaced: 1
-  promoted: 0
+  promoted: 1
   rejected: 0
   weight: 1.0
 blueteq.com:
   surfaced: 1
   promoted: 0
-  rejected: 0
+  rejected: 1
   weight: 1.0
 globalimportblog.bakermckenzie.com:
   surfaced: 1
-  promoted: 0
+  promoted: 1
   rejected: 0
   weight: 1.0
 drugs.com:
   surfaced: 1
-  promoted: 0
+  promoted: 1
   rejected: 0
   weight: 1.0
 onclive.com:
   surfaced: 1
   promoted: 0
-  rejected: 0
+  rejected: 1
   weight: 1.0
 en.antaranews.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 1
+  weight: 1.0
+plutusias.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+endpoints.news:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+business-standard.com:
+  surfaced: 2
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+bigmoleculewatch.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+biomarin.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+investor.jazzpharma.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+curiumpharma.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+astrazeneca.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+investors.eyepoint.bio:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+allsci.com:
   surfaced: 1
   promoted: 0
   rejected: 0

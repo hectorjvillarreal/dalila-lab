@@ -5,8 +5,8 @@ Regeneron:
   count: 2
   last_seen: '2026-08-16'
 United States:
-  count: 5
-  last_seen: '2026-08-16'
+  count: 7
+  last_seen: '2026-08-18'
 Samsung Bioepis:
   count: 1
   last_seen: '2026-08-16'
@@ -74,8 +74,8 @@ London:
   count: 1
   last_seen: '2026-08-16'
 Trump administration:
-  count: 2
-  last_seen: '2026-08-16'
+  count: 3
+  last_seen: '2026-08-18'
 U.S. Department of Commerce:
   count: 1
   last_seen: '2026-08-16'
@@ -143,8 +143,8 @@ Eli Lilly and Company:
   count: 1
   last_seen: '2026-08-16'
 FDA:
-  count: 2
-  last_seen: '2026-08-16'
+  count: 3
+  last_seen: '2026-08-18'
 Alfasigma:
   count: 1
   last_seen: '2026-08-16'
@@ -178,3 +178,21 @@ BMO Capital Markets:
 RBC Capital Markets:
   count: 1
   last_seen: '2026-08-16'
+NCPE:
+  count: 1
+  last_seen: '2026-08-18'
+Ireland:
+  count: 1
+  last_seen: '2026-08-18'
+Novartis:
+  count: 1
+  last_seen: '2026-08-18'
+European Commission:
+  count: 1
+  last_seen: '2026-08-18'
+CBP:
+  count: 1
+  last_seen: '2026-08-18'
+Moderna:
+  count: 1
+  last_seen: '2026-08-18'

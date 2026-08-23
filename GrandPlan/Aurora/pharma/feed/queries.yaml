@@ -1,11 +1,11 @@
 config:
-  cycles_completed: 5
+  cycles_completed: 6
   cadence_hours: 36
   cycle_budget: 16
   exploration_share: 0.25
   rotation:
-    main: 29
-    exploration: 5
+    main: 8
+    exploration: 9
   resolved_ids:
   - 20260816-0001
   - 20260816-0002
@@ -90,13 +90,21 @@ config:
   - 20260816-0081
   - 20260816-0082
   - 20260816-0083
+  - 20260818-0001
+  - 20260818-0002
+  - 20260818-0003
+  - 20260818-0004
+  - 20260818-0005
+  - 20260818-0006
+  - 20260818-0007
   promotes_per_cycle:
   - 0
   - 0
   - 0
   - 23
   - 2
-  next_provisional: 2
+  - 3
+  next_provisional: 3
 main:
 - id: q001
   text: patent cliff pharma
@@ -120,6 +128,7 @@ main:
   - 20260816-0003
   - 20260816-0004
   - 20260816-0005
+  - 20260823-0004
 - id: q004
   text: generic entry approval
   group: Rent extinction
@@ -130,7 +139,9 @@ main:
   text: patent litigation pharma ruling
   group: Rent extinction
   origin: seed
-  window: []
+  window:
+  - 20260823-0005
+  - 20260823-0006
 - id: q006
   text: pharma acquisition biotech
   group: Rent replacement
@@ -142,6 +153,10 @@ main:
   - 20260816-0059
   - 20260816-0060
   - 20260816-0061
+  - 20260823-0007
+  - 20260823-0008
+  - 20260823-0009
+  - 20260823-0010
 - id: q007
   text: pharma licensing deal
   group: Rent replacement
@@ -150,6 +165,7 @@ main:
   - 20260816-0010
   - 20260816-0011
   - 20260816-0062
+  - 20260823-0011
 - id: q008
   text: in-licensing China biotech
   group: Rent replacement
@@ -170,6 +186,8 @@ main:
   - 20260816-0066
   - 20260816-0067
   - 20260816-0068
+  - 20260823-0012
+  - 20260823-0013
 - id: q010
   text: pharma restructuring layoffs R&D
   group: Rent replacement
@@ -317,13 +335,15 @@ main:
   text: pharmaceutical industrial policy
   group: Instruments and walls
   origin: seed
-  window: []
+  window:
+  - 20260823-0001
 - id: q031
   text: onshoring drug manufacturing
   group: Instruments and walls
   origin: seed
   window:
   - 20260816-0051
+  - 20260823-0002
 provisional:
 - id: p001
   text: portfolio
@@ -333,6 +353,16 @@ provisional:
   - 20260816-0007
   - 20260816-0056
   - 20260816-0061
+  window:
+  - 20260823-0003
+- id: p002
+  text: issues
+  group: auto-proposed
+  origin: auto
+  from_items:
+  - 20260816-0041
+  - 20260818-0001
+  - 20260818-0003
   window: []
 exploration:
 - id: x001
@@ -388,6 +418,7 @@ exploration:
   - 20260816-0044
   - 20260816-0045
   - 20260816-0046
+  - 20260823-0014
 - id: x009
   text: insurer acquires manufacturer
   group: Instruments and walls

@@ -1343,3 +1343,189 @@
   query_id: x002
   lane: exploration
   promote: false
+- id: 20260823-0001
+  date_seen: '2026-08-23'
+  date_published: '2026-08-07'
+  headline: 'UPSC Alert: PLI Scheme Boosts Pharma Sector with ₹6,659 Crore Incentives'
+  why: covers 2026-08-07 PIB written response on pharma PLI disbursement progress
+  url: https://plutusias.com/upsc-alert-pli-scheme-boosts-pharma-sector-with-%E2%82%B96659-crore-incentives/
+  source_domain: plutusias.com
+  entities:
+  - India
+  - PLI scheme
+  query_id: q030
+  lane: main
+  promote: null
+- id: 20260823-0002
+  date_seen: '2026-08-23'
+  date_published: '2026-08-12'
+  headline: 'GDUFA IV commitments: New onshoring incentives and meeting types for generic drugs'
+  why: onshoring inspection incentives written into generic-drug user-fee commitments
+  url: https://endpoints.news/gdufa-iv-commitments-new-onshoring-incentives-and-meeting-types-for-generic-drugs/
+  source_domain: endpoints.news
+  entities:
+  - FDA
+  - United States
+  query_id: q031
+  lane: main
+  promote: null
+- id: 20260823-0003
+  date_seen: '2026-08-23'
+  date_published: '2026-08-20'
+  headline: New launches, innovative portfolio set to drive gains for GSK Pharma stock
+  why: broker commentary; representative of what the provisional term retrieves
+  url: https://www.business-standard.com/markets/news/new-launches-innovative-portfolio-set-to-drive-gains-for-gsk-pharma-stock-126082001219_1.html
+  source_domain: business-standard.com
+  entities:
+  - GSK
+  query_id: p001
+  lane: provisional
+  promote: null
+- id: 20260823-0004
+  date_seen: '2026-08-23'
+  date_published: '2026-08-21'
+  headline: Biocon Launches Aflibercept Biosimilar in the United States
+  why: YESAFILI (aflibercept-jbvf) US commercial launch referencing Eylea 2 mg
+  url: http://www.bigmoleculewatch.com/2026/08/21/biocon-launches-aflibercept-biosimilar-in-the-united-states/
+  source_domain: bigmoleculewatch.com
+  entities:
+  - Biocon
+  - Regeneron
+  - United States
+  query_id: q003
+  lane: main
+  promote: null
+- id: 20260823-0005
+  date_seen: '2026-08-23'
+  date_published: '2026-08-17'
+  headline: Sun Pharma receives favorable court ruling in Lipitor patent settlement case in US
+  why: Third Circuit affirms summary judgment in Lipitor generic-settlement antitrust case
+  url: https://www.business-standard.com/markets/capital-market-news/sun-pharma-receives-favorable-court-ruling-in-lipitor-patent-settlement-case-in-us-126081700278_1.html
+  source_domain: business-standard.com
+  entities:
+  - Sun Pharma
+  - Pfizer
+  - Ranbaxy
+  - United States
+  query_id: q005
+  lane: main
+  promote: null
+- id: 20260823-0006
+  date_seen: '2026-08-23'
+  date_published: '2026-08-19'
+  headline: Aurinia Settles Patent Litigation with Teva
+  why: ANDA settlement; generic voclosporin entry no earlier than December 2036
+  url: https://www.sec.gov/Archives/edgar/data/0001600620/000160062026000066/exhibit991pressreleasedate.htm
+  source_domain: sec.gov
+  entities:
+  - Aurinia
+  - Teva
+  query_id: q005
+  lane: main
+  promote: null
+- id: 20260823-0007
+  date_seen: '2026-08-23'
+  date_published: '2026-08-18'
+  headline: BioMarin to Acquire Alesta Therapeutics to Gain ALE1, a Potential First Oral Therapy for Hypophosphatasia,
+    Adding an Important Clinical Program to BioMarin's Pipeline
+  why: $275M upfront plus $215M milestones for oral hypophosphatasia asset
+  url: https://www.biomarin.com/news/press-releases/biomarin-to-acquire-alesta-therapeutics-to-gain-ale1-a-potential-first-oral-therapy-for-hypophosphatasia-adding-an-important-clinical-program-to-biomarins-pipeline/
+  source_domain: biomarin.com
+  entities:
+  - BioMarin
+  - Alesta Therapeutics
+  query_id: q006
+  lane: main
+  promote: null
+- id: 20260823-0008
+  date_seen: '2026-08-23'
+  date_published: '2026-08-10'
+  headline: Jazz Pharmaceuticals to Acquire Actio Biosciences, Expanding Rare Epilepsy Portfolio
+  why: $820M upfront plus up to $500M contingent for KCNT1 epilepsy asset
+  url: https://investor.jazzpharma.com/news-releases/news-release-details/jazz-pharmaceuticals-acquire-actio-biosciences-expanding-rare
+  source_domain: investor.jazzpharma.com
+  entities:
+  - Jazz Pharmaceuticals
+  - Actio Biosciences
+  query_id: q006
+  lane: main
+  promote: null
+- id: 20260823-0009
+  date_seen: '2026-08-23'
+  date_published: '2026-08-03'
+  headline: Curium Announces Definitive Agreement to Merge with Lantheus
+  why: up to ~$8B radiopharma merger, $102.50/share cash plus CVRs
+  url: https://www.curiumpharma.com/2026/08/03/curium-merge-lantheus/
+  source_domain: curiumpharma.com
+  entities:
+  - Curium
+  - Lantheus
+  query_id: q006
+  lane: main
+  promote: null
+- id: 20260823-0010
+  date_seen: '2026-08-23'
+  date_published: '2026-08-06'
+  headline: Tarsus Pharmaceuticals to Acquire Alkeus Pharmaceuticals and Advance Eye Care Leadership Position
+  why: ~$450M upfront for phase-3 Stargardt disease asset gildeuretinol
+  url: https://www.globenewswire.com/news-release/2026/08/06/3340125/0/en/tarsus-pharmaceuticals-to-acquire-alkeus-pharmaceuticals-and-advance-eye-care-leadership-position.html
+  source_domain: globenewswire.com
+  entities:
+  - Tarsus Pharmaceuticals
+  - Alkeus Pharmaceuticals
+  query_id: q006
+  lane: main
+  promote: null
+- id: 20260823-0011
+  date_seen: '2026-08-23'
+  date_published: '2026-08-05'
+  headline: Alteogen Announces Exclusive License Agreement with a Global Pharmaceutical Company for the
+    Development and Commercialization of a Hybrozyme™-Enabled Subcutaneous Biologic Product
+  why: third ALT-B4 out-license, up to $365M, counterparty undisclosed
+  url: https://www.prnewswire.com/news-releases/alteogen-announces-exclusive-license-agreement-with-a-global-pharmaceutical-company-for-the-development-and-commercialization-of-a-hybrozyme-enabled-subcutaneous-biologic-product-302843463.html
+  source_domain: prnewswire.com
+  entities:
+  - Alteogen
+  query_id: q007
+  lane: main
+  promote: null
+- id: 20260823-0012
+  date_seen: '2026-08-23'
+  date_published: '2026-08-17'
+  headline: Update on eVOLVE-Lung02 Phase III trial of volrustomig plus chemotherapy in metastatic non-small
+    cell lung cancer
+  why: IDMC-recommended discontinuation in 1L NSCLC PD-L1 below 50 percent
+  url: https://www.astrazeneca.com/media-centre/press-releases/2026/update-on-evolve-lung02-phase-iii-trial.html
+  source_domain: astrazeneca.com
+  entities:
+  - AstraZeneca
+  query_id: q009
+  lane: main
+  promote: null
+- id: 20260823-0013
+  date_seen: '2026-08-23'
+  date_published: '2026-08-17'
+  headline: EyePoint Announces Topline Data from LUGANO, the First of Two Pivotal Phase 3 Clinical Trials
+    for DURAVYU™ 2.7mg in Wet AMD
+  why: primary BCVA non-inferiority endpoint missed in full dataset
+  url: https://investors.eyepoint.bio/news-releases/news-release-details/eyepoint-announces-topline-data-lugano-first-two-pivotal-phase-3
+  source_domain: investors.eyepoint.bio
+  entities:
+  - EyePoint
+  query_id: q009
+  lane: main
+  promote: null
+- id: 20260823-0014
+  date_seen: '2026-08-23'
+  date_published: '2026-08-06'
+  headline: Transcenta sells CDMO assets to WuXi Bio to focus on drug pipeline
+  why: reverse of the query's direction — biotech exits manufacturing, CDMO buys the plant
+  url: https://allsci.com/news/corporate-strategy/transcenta-cdmo-assets-sale-exits-manufacturing/
+  source_domain: allsci.com
+  entities:
+  - Transcenta
+  - WuXi Biologics
+  - China
+  query_id: x008
+  lane: exploration
+  promote: null
