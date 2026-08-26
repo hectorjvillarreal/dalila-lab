@@ -1529,3 +1529,126 @@
   query_id: x008
   lane: exploration
   promote: false
+- id: 20260826-0001
+  date_seen: '2026-08-26'
+  date_published: '2026-08-10'
+  headline: Tenax Therapeutics Announces Topline Results from Phase 3 LEVEL Clinical Trial of TNX-103
+    in Patients with PH-HFpEF
+  why: primary-endpoint miss (6MWD) in oral levosimendan phase 3; company seeking Type C meeting on subgroup
+  url: https://www.globenewswire.com/news-release/2026/08/10/3341675/12401/en/tenax-therapeutics-announces-topline-results-from-phase-3-level-clinical-trial-of-tnx-103-in-patients-with-ph-hfpef.html
+  source_domain: globenewswire.com
+  entities:
+  - Tenax Therapeutics
+  - FDA
+  - EMA
+  query_id: q009
+  lane: main
+  promote: null
+- id: 20260826-0002
+  date_seen: '2026-08-26'
+  date_published: '2026-08-17'
+  headline: Sanofi to lay off 229 workers in Mass., a year after $9.1B Blueprint Medicines acquisition
+  why: WARN notice; ~33% of acquired biotech's headcount, two Cambridge sites closing
+  url: https://www.statnews.com/2026/08/17/sanofi-layoffs-mass-blueprint-medicines/
+  source_domain: statnews.com
+  entities:
+  - Sanofi
+  - Blueprint Medicines
+  - Massachusetts
+  query_id: q010
+  lane: main
+  promote: null
+- id: 20260826-0003
+  date_seen: '2026-08-26'
+  date_published: '2026-08-05'
+  headline: Emergent BioSolutions Inc. - Form 8-K - FY2026
+  why: restructuring 8-K — ~93 roles cut, CMO/Head of R&D role eliminated, Gaithersburg wet labs closed
+  url: https://www.sec.gov/Archives/edgar/data/0001367644/000136764426000080/ebs-20260805.htm
+  source_domain: sec.gov
+  entities:
+  - Emergent BioSolutions
+  query_id: q010
+  lane: main
+  promote: null
+- id: 20260826-0004
+  date_seen: '2026-08-26'
+  date_published: '2026-08-04'
+  headline: Pfizer expands multibillion-dollar cost-cutting plan
+  why: additional $2.5B savings through 2029, $1.5B of it manufacturing network; total program ~$9.7B
+  url: https://www.biopharmadive.com/news/pfizer-cost-cuts-savings-2q-2026-earnings/826930/
+  source_domain: biopharmadive.com
+  entities:
+  - Pfizer
+  query_id: q010
+  lane: main
+  promote: null
+- id: 20260826-0005
+  date_seen: '2026-08-26'
+  date_published: '2026-08-11'
+  headline: Theravance Biopharma, Inc. - Form 10-Q - FY2026
+  why: 10-Q discloses ~50% headcount reduction including wind-down of R&D function
+  url: https://www.sec.gov/Archives/edgar/data/0001583107/000110465926093773/tbph-20260630x10q.htm
+  source_domain: sec.gov
+  entities:
+  - Theravance Biopharma
+  query_id: q010
+  lane: main
+  promote: null
+- id: 20260826-0006
+  date_seen: '2026-08-26'
+  date_published: '2026-08-04'
+  headline: H1 Partners with Novo Nordisk to Scale AI-Driven Clinical Development
+  why: AI for protocol design/site selection; H1 acquires rights to Novo's StudyHub platform
+  url: https://www.globenewswire.com/news-release/2026/08/04/3338385/0/en/h1-partners-with-novo-nordisk-to-scale-ai-driven-clinical-development.html
+  source_domain: globenewswire.com
+  entities:
+  - H1
+  - Novo Nordisk
+  query_id: q018
+  lane: main
+  promote: null
+- id: 20260826-0007
+  date_seen: '2026-08-26'
+  date_published: '2026-08-14'
+  headline: ALK's tree pollen and house dust mite tablets now recommended by NICE for paediatric treatment
+    in the UK health system
+  why: NICE positive recommendation extending SLIT tablets to paediatric use
+  url: https://www.globenewswire.com/news-release/2026/08/14/3345198/0/en/alk-s-tree-pollen-and-house-dust-mite-tablets-now-recommended-by-nice-for-paediatric-treatment-in-the-uk-health-system.html
+  source_domain: globenewswire.com
+  entities:
+  - ALK
+  - NICE
+  - United Kingdom
+  query_id: q020
+  lane: main
+  promote: null
+- id: 20260826-0008
+  date_seen: '2026-08-26'
+  date_published: '2026-08-14'
+  headline: Court rules companies can't import Gilead medications from overseas in blow to AFP health
+    programs
+  why: Fourth Circuit affirms injunction on gray-market Biktarvy imports — foreign versions "materially
+    differ"
+  url: https://www.cnbc.com/2026/08/14/court-ruling-gilead-medications-overseas-afps.html
+  source_domain: cnbc.com
+  entities:
+  - Gilead
+  - Fourth Circuit
+  - Meritain Health
+  - United States
+  query_id: x013
+  lane: exploration
+  promote: null
+- id: 20260826-0009
+  date_seen: '2026-08-26'
+  date_published: '2026-08-07'
+  headline: Senate Unanimously Passes Grassley-Hassan Bill to Combat Counterfeit Imports
+  why: S.2677 lets CBP share seized-shipment data with rights holders; House passed companion in April
+  url: https://www.grassley.senate.gov/news/news-releases/senate-unanimously-passes-grassley-hassan-bill-to-combat-counterfeit-imports
+  source_domain: grassley.senate.gov
+  entities:
+  - US Senate
+  - CBP
+  query_id: x013
+  lane: exploration
+  promote: null

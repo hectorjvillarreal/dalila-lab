@@ -1,11 +1,11 @@
 config:
-  cycles_completed: 6
+  cycles_completed: 7
   cadence_hours: 36
   cycle_budget: 16
   exploration_share: 0.25
   rotation:
-    main: 8
-    exploration: 9
+    main: 20
+    exploration: 13
   resolved_ids:
   - 20260816-0001
   - 20260816-0002
@@ -97,6 +97,20 @@ config:
   - 20260818-0005
   - 20260818-0006
   - 20260818-0007
+  - 20260823-0001
+  - 20260823-0002
+  - 20260823-0003
+  - 20260823-0004
+  - 20260823-0005
+  - 20260823-0006
+  - 20260823-0007
+  - 20260823-0008
+  - 20260823-0009
+  - 20260823-0010
+  - 20260823-0011
+  - 20260823-0012
+  - 20260823-0013
+  - 20260823-0014
   promotes_per_cycle:
   - 0
   - 0
@@ -104,7 +118,8 @@ config:
   - 23
   - 2
   - 3
-  next_provisional: 3
+  - 6
+  next_provisional: 6
 main:
 - id: q001
   text: patent cliff pharma
@@ -188,6 +203,7 @@ main:
   - 20260816-0068
   - 20260823-0012
   - 20260823-0013
+  - 20260826-0001
 - id: q010
   text: pharma restructuring layoffs R&D
   group: Rent replacement
@@ -198,6 +214,10 @@ main:
   - 20260816-0018
   - 20260816-0069
   - 20260816-0070
+  - 20260826-0002
+  - 20260826-0003
+  - 20260826-0004
+  - 20260826-0005
 - id: q011
   text: India generics export
   group: The diffusion layer
@@ -259,7 +279,8 @@ main:
   text: machine learning clinical trial design
   group: Frontier cost
   origin: seed
-  window: []
+  window:
+  - 20260826-0006
 - id: q019
   text: drug price negotiation
   group: The payer
@@ -272,6 +293,7 @@ main:
   window:
   - 20260818-0001
   - 20260818-0002
+  - 20260826-0007
 - id: q021
   text: formulary exclusion
   group: The payer
@@ -344,7 +366,35 @@ main:
   window:
   - 20260816-0051
   - 20260823-0002
-provisional: []
+provisional:
+- id: p003
+  text: launches
+  group: auto-proposed
+  origin: auto
+  from_items:
+  - 20260816-0001
+  - 20260816-0002
+  - 20260823-0003
+  - 20260823-0004
+  window: []
+- id: p004
+  text: pharmaceuticals
+  group: auto-proposed
+  origin: auto
+  from_items:
+  - 20260816-0007
+  - 20260818-0003
+  - 20260823-0010
+  window: []
+- id: p005
+  text: therapeutics
+  group: auto-proposed
+  origin: auto
+  from_items:
+  - 20260816-0011
+  - 20260816-0055
+  - 20260823-0007
+  window: []
 exploration:
 - id: x001
   text: Brazil pharmaceutical policy
@@ -431,6 +481,8 @@ exploration:
   origin: seed
   window:
   - 20260816-0082
+  - 20260826-0008
+  - 20260826-0009
 - id: x014
   text: pharmaceutical waste regulation
   group: Instruments and walls

@@ -1,12 +1,12 @@
 Biocon:
-  count: 1
-  last_seen: '2026-08-16'
-Regeneron:
   count: 2
-  last_seen: '2026-08-16'
+  last_seen: '2026-08-23'
+Regeneron:
+  count: 3
+  last_seen: '2026-08-23'
 United States:
-  count: 7
-  last_seen: '2026-08-18'
+  count: 8
+  last_seen: '2026-08-23'
 Samsung Bioepis:
   count: 1
   last_seen: '2026-08-16'
@@ -47,8 +47,8 @@ Ionis Pharmaceuticals:
   count: 1
   last_seen: '2026-08-16'
 AstraZeneca:
-  count: 1
-  last_seen: '2026-08-16'
+  count: 2
+  last_seen: '2026-08-23'
 India:
   count: 2
   last_seen: '2026-08-16'
@@ -196,3 +196,24 @@ CBP:
 Moderna:
   count: 1
   last_seen: '2026-08-18'
+GSK:
+  count: 1
+  last_seen: '2026-08-23'
+BioMarin:
+  count: 1
+  last_seen: '2026-08-23'
+Alesta Therapeutics:
+  count: 1
+  last_seen: '2026-08-23'
+Curium:
+  count: 1
+  last_seen: '2026-08-23'
+Lantheus:
+  count: 1
+  last_seen: '2026-08-23'
+Tarsus Pharmaceuticals:
+  count: 1
+  last_seen: '2026-08-23'
+Alkeus Pharmaceuticals:
+  count: 1
+  last_seen: '2026-08-23'
