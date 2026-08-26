@@ -41,7 +41,7 @@ Ninguna verificación quedó en `no verificable`. Sub-datos no verificables (no 
 
 ## Cambios aplicados al deck respecto a la instrucción de construcción
 
-1. Lámina 3: se usa el SVG oficial de Naciones Unidas para ALC convertido a PDF vectorial, con el pie de atribución reproducido íntegro en texto (el SVG oficial no lo trae); el PNG oficial, byte a byte idéntico al del sitio, queda como alternativa comentada. El SVG que estaba en Descargas era el de "LLDC: Latin America" (Bolivia y Paraguay): renombrado `DESCARTADO_LLDC_…`.
+1. Lámina 3: se usa el PNG oficial de Naciones Unidas para ALC (byte a byte idéntico al del sitio WPP 2024), con el pie de atribución incrustado, por decisión del autor (26-ago-2026). El SVG oficial convertido a PDF vectorial queda como alternativa comentada. El SVG que estaba en Descargas era el de "LLDC: Latin America" (Bolivia y Paraguay): renombrado `DESCARTADO_LLDC_…`.
 2. Lámina 6: "dentro de dos años", no "el año próximo".
 3. Lámina 8: 2.7 % (2023) en lugar de 2.6 % (2019); se añade el contraste regional 4.1 % y el gasto de bolsillo 41 % vs 30 %.
 4. Lámina 12: informalidad "cerca de la mitad, entre 22 % en Uruguay y 70 % en Ecuador"; cobertura contributiva enunciada por países, con Costa Rica y Uruguay como excepciones explícitas.
