@@ -39,3 +39,55 @@
     item 20260823-0003, GSK broker commentary) bore that out. Retired by
     Héctor's instruction 2026-08-23. The item remains in items.yaml with
     promote unset — his flag, as always.
+- id: p003
+  text: launches
+  group: auto-proposed
+  origin: auto
+  from_items:
+  - 20260816-0001
+  - 20260816-0002
+  - 20260823-0003
+  - 20260823-0004
+  window: []
+  lane: provisional
+  retired: '2026-08-26'
+  retired_by: hector
+  mechanism: manual
+  note: 'Auto-proposed by cycle 7 (2026-08-26) from promoted cycle-6 headlines; retired
+    by Héctor''s instruction the same day, before any retrieval (window empty). Third
+    round of headline-token artifacts (with p001 ''portfolio'', p002 ''issues''):
+    a sector-generic word, not a topic term.'
+- id: p004
+  text: pharmaceuticals
+  group: auto-proposed
+  origin: auto
+  from_items:
+  - 20260816-0007
+  - 20260818-0003
+  - 20260823-0010
+  window: []
+  lane: provisional
+  retired: '2026-08-26'
+  retired_by: hector
+  mechanism: manual
+  note: 'Auto-proposed by cycle 7 (2026-08-26) from promoted cycle-6 headlines; retired
+    by Héctor''s instruction the same day, before any retrieval (window empty). Third
+    round of headline-token artifacts (with p001 ''portfolio'', p002 ''issues''):
+    a sector-generic word, not a topic term.'
+- id: p005
+  text: therapeutics
+  group: auto-proposed
+  origin: auto
+  from_items:
+  - 20260816-0011
+  - 20260816-0055
+  - 20260823-0007
+  window: []
+  lane: provisional
+  retired: '2026-08-26'
+  retired_by: hector
+  mechanism: manual
+  note: 'Auto-proposed by cycle 7 (2026-08-26) from promoted cycle-6 headlines; retired
+    by Héctor''s instruction the same day, before any retrieval (window empty). Third
+    round of headline-token artifacts (with p001 ''portfolio'', p002 ''issues''):
+    a sector-generic word, not a topic term.'

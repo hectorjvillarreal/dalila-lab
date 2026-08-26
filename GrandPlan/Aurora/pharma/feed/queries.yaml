@@ -366,35 +366,7 @@ main:
   window:
   - 20260816-0051
   - 20260823-0002
-provisional:
-- id: p003
-  text: launches
-  group: auto-proposed
-  origin: auto
-  from_items:
-  - 20260816-0001
-  - 20260816-0002
-  - 20260823-0003
-  - 20260823-0004
-  window: []
-- id: p004
-  text: pharmaceuticals
-  group: auto-proposed
-  origin: auto
-  from_items:
-  - 20260816-0007
-  - 20260818-0003
-  - 20260823-0010
-  window: []
-- id: p005
-  text: therapeutics
-  group: auto-proposed
-  origin: auto
-  from_items:
-  - 20260816-0011
-  - 20260816-0055
-  - 20260823-0007
-  window: []
+provisional: []
 exploration:
 - id: x001
   text: Brazil pharmaceutical policy
