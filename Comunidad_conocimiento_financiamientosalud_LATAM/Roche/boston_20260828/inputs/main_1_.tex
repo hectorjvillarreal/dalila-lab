@@ -1,0 +1,373 @@
+% !TeX program = pdflatex
+\documentclass[10pt]{beamer}
+
+%========================
+% Tema y estilo
+%========================
+\usetheme{Madrid}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+%========================
+% Idioma y tipografía
+%========================
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+%========================
+% Matemáticas
+%========================
+\usepackage{amsmath,amssymb,mathtools}
+
+%========================
+% Metadatos
+%========================
+\title[Salud en México]{Parte II (México): Salud, informalidad y espacio fiscal}
+\subtitle{Seguridad social contributiva, paquete diferenciado y seguros privados}
+\author{Curso de Economía Poblacional}
+\institute{Tecnológico de Monterrey}
+\date{\today}
+
+\begin{document}
+
+%------------------------------------------------
+\begin{frame}
+\titlepage
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Ruta y tesis de la Parte II}
+\textbf{Tesis:} México enfrenta un triángulo de tensión:
+\begin{enumerate}
+  \item Seguridad social contributiva (IMSS/ISSSTE)
+  \item Informalidad con paquete diferenciado (no contributivo)
+  \item Mercado privado (seguros + CAF)
+\end{enumerate}
+
+\bigskip
+Bajo una restricción central:
+\[
+\textbf{Espacio fiscal limitado}
+\]
+
+\bigskip
+\emph{La política viable no es “gastar más” a secas: es reorganizar riesgo e incentivos con un sendero fiscal creíble.}
+\end{frame}
+
+%================================================
+% ACTO I: Restricción y diagnóstico
+%================================================
+
+\begin{frame}{Acto I: La restricción fiscal manda}
+La política de salud compite con otras presiones del Estado:
+\[
+G = G_{\text{pensiones}} + G_{\text{salud}} + G_{\text{otros}}
+\]
+
+Restricción presupuestaria (estilizada):
+\[
+G \le R + \Delta D
+\]
+donde \(R\) son ingresos públicos y \(\Delta D\) es variación de deuda compatible con sostenibilidad.
+
+\bigskip
+\begin{itemize}
+  \item Si \(G_{\text{pensiones}}\uparrow\), el margen para \(G_{\text{salud}}\) se estrecha.
+  \item El problema de salud debe plantearse como \textbf{reforma bajo restricción fiscal}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{El problema estructural en una frase}
+\centering
+\Large
+México promete protección amplia\\
+con financiamiento fragmentado\\
+y un mercado laboral altamente informal.
+\end{frame}
+
+\begin{frame}{Variables de equilibrio del sistema: \(\phi\) y \(\beta\)}
+Usaremos dos variables resumen para conectar diseño e incentivos:
+
+\bigskip
+\begin{itemize}
+  \item \(\phi\): proporción de trabajadores \textbf{formales} (tamaño del pool contributivo).
+  \item \(\beta\): exposición de los hogares a \textbf{gasto de bolsillo} (OOP).
+\end{itemize}
+
+\bigskip
+Identidades mínimas:
+\[
+G = G_{\text{público}} + OOP
+\qquad\text{y}\qquad
+OOP = \beta M
+\]
+donde \(M\) es el costo del evento de salud relevante.
+
+\bigskip
+\emph{La política de salud busca subir \(\phi\) (pooling) y bajar \(\beta\) (protección financiera), sin romper la restricción fiscal.}
+\end{frame}
+
+%================================================
+% ACTO II: Seguridad social contributiva
+%================================================
+
+\begin{frame}{Acto II: Seguridad social contributiva (Bismarck real)}
+Financiamiento contributivo (estilizado):
+\[
+G_{\text{contrib}} = \phi \,\tau\, \bar w
+\]
+donde \(\tau\) es la tasa contributiva y \(\bar w\) el salario promedio formal.
+
+\bigskip
+\begin{itemize}
+  \item \(\phi\) bajo \(\Rightarrow\) pool pequeño \(\Rightarrow\) presión financiera.
+  \item \(\tau\) alto puede aumentar ingresos hoy, pero puede reducir \(\phi\) mañana (margen/informalidad).
+\end{itemize}
+
+\bigskip
+\emph{En México, Bismarck no falla por teoría: falla por base contributiva estrecha.}
+\end{frame}
+
+\begin{frame}{Incentivos: por qué la informalidad importa para salud}
+El individuo compara utilidad esperada entre formal e informal.
+
+Formal (con cobertura \(\alpha_F\), contribución \(\tau\) y costo fijo \(\kappa\)):
+\[
+EU_F=(1-p)u(y(1-\tau)-\kappa)+p\,u(y(1-\tau)-\kappa-(1-\alpha_F)M)
+\]
+
+Informal (con cobertura pública limitada \(\alpha_I\) y gasto directo \(\beta\)):
+\[
+EU_I=(1-p)u(y)+p\,u(y-\beta M)
+\]
+
+\bigskip
+\textbf{Regla:} elige formal si \(EU_F \ge EU_I\).
+
+\bigskip
+\emph{La estructura del paquete para informales afecta \(\phi\).}
+\end{frame}
+
+%================================================
+% ACTO III: Paquete diferenciado para informales
+%================================================
+
+\begin{frame}{Acto III: Paquete diferenciado (el dilema inevitable)}
+En la práctica hay dos paquetes:
+
+\begin{itemize}
+  \item \textbf{Formal:} paquete relativamente amplio (\(\alpha_F\) alto) financiado por contribuciones.
+  \item \textbf{Informal:} paquete más limitado (\(\alpha_I\) menor) financiado por impuestos/transferencias.
+\end{itemize}
+
+\bigskip
+La tensión:
+\[
+\alpha_F - \alpha_I \quad \text{define simultáneamente} \quad
+\text{equidad y formalización}
+\]
+
+\bigskip
+\begin{itemize}
+  \item Si \(\alpha_I \uparrow\) mucho, puede caer el incentivo a formalizar (\(\phi\downarrow\)).
+  \item Si \(\alpha_I\) es muy bajo, sube \(\beta\) y aumenta pobreza/inequidad.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Una política realista: paquete básico explícito}
+Bajo restricción fiscal, una política viable es \textbf{hacer explícito} un paquete:
+
+\begin{itemize}
+  \item \textbf{Paquete básico universal} (prioridades costo-efectivas, prevención, crónicas esenciales).
+  \item \textbf{Cobertura ampliada contributiva} para el formal (más servicios/tiempos/tecnologías).
+\end{itemize}
+
+\bigskip
+Esto se puede expresar como:
+\[
+\alpha_I = \alpha_0 \quad \text{(básico universal)}
+\qquad \text{y}\qquad
+\alpha_F = \alpha_0 + \Delta\alpha
+\]
+
+\bigskip
+\emph{La clave es transparentar el contrato social y alinear incentivos.}
+\end{frame}
+
+%================================================
+% ACTO IV: Mercado privado y seguros
+%================================================
+
+\begin{frame}{Acto IV: El privado como válvula de escape (y riesgo de segmentación)}
+Cuando el público no cubre bien, los hogares migran a privado por acceso/tiempos.
+
+Opciones privadas típicas:
+\begin{itemize}
+  \item Seguro privado tradicional (alto costo, cobertura alta).
+  \item Seguro de bajo costo / planes delgados (prima baja, cobertura limitada).
+  \item CAF + pago directo “organizado”.
+\end{itemize}
+
+\bigskip
+\emph{El privado puede bajar \(\beta\) en eventos pequeños, pero puede segmentar el pooling del sistema.}
+\end{frame}
+
+\begin{frame}{Modelo: tercera opción (seguro privado)}
+Ampliamos el menú del agente:
+\[
+\max\{EU_F,\,EU_I,\,EU_P\}
+\]
+
+Seguro privado:
+\[
+EU_P=(1-p)u(y-\pi_p)+p\,u(y-\pi_p-(1-\alpha_p)M)
+\]
+
+\bigskip
+\begin{itemize}
+  \item Tradicional: \(\pi_p\) alta, \(\alpha_p\) alta.
+  \item Bajo costo: \(\pi_p\) baja, \(\alpha_p\) baja (copagos/límites).
+\end{itemize}
+
+\bigskip
+\emph{La política debe decidir: ¿complemento regulado o sustituto segmentador?}
+\end{frame}
+
+\begin{frame}{Selección adversa y sistema dual}
+Si el privado capta población de menor riesgo o mayor ingreso:
+\[
+p_{\text{pool público}} \uparrow
+\Rightarrow
+\text{costo esperado público} \uparrow
+\]
+
+Y si el público se vuelve “residual”:
+\[
+\beta \uparrow \quad \text{(para vulnerables)} \qquad
+\phi \downarrow \quad \text{(por menor atractivo formal)}
+\]
+
+\bigskip
+\emph{Sin coordinación, el sistema converge a dualidad: público de alto riesgo + privado de bajo riesgo.}
+\end{frame}
+
+%================================================
+% ACTO V: Policy bajo espacio fiscal
+%================================================
+
+\begin{frame}{Acto V: Policy bajo espacio fiscal (qué SÍ es creíble)}
+Bajo poco espacio fiscal, la policy creíble tiene tres rasgos:
+
+\bigskip
+\textbf{(1) Priorizar reducción de \(\beta\) rápidamente}
+\begin{itemize}
+  \item medicamentos, abasto, atención primaria efectiva
+  \item protección ante eventos catastróficos (topes OOP)
+\end{itemize}
+
+\bigskip
+\textbf{(2) Reasignación + eficiencia antes que “nivel”}
+\begin{itemize}
+  \item compra estratégica, integración de padrones, evitar duplicidades
+\end{itemize}
+
+\bigskip
+\textbf{(3) Sendero fiscal gradual y defendible}
+\[
+\Delta G_{\text{salud}} \text{ pequeño pero sostenido}
+\]
+\end{frame}
+
+\begin{frame}{El “mapa” de política: tres instrumentos}
+Instrumentos (estilizados) y objetivos:
+
+\bigskip
+\begin{tabular}{p{0.34\textwidth} p{0.55\textwidth}}
+\textbf{Instrumento} & \textbf{Objetivo principal} \\
+\hline
+Paquete básico universal (\(\alpha_0\)) & bajar \(\beta\), legitimidad social \\
+Diferencial contributivo (\(\Delta\alpha\)) & sostener \(\phi\), evitar desaliento formal \\
+Regulación/integ. privado & evitar segmentación, cobertura complementaria \\
+\end{tabular}
+
+\bigskip
+\emph{No es “todo para todos”: es un diseño explícito de contrato social bajo restricción fiscal.}
+\end{frame}
+
+\begin{frame}{Integración final: el equilibrio \(\phi\)--\(\beta\) bajo restricción}
+Base pública:
+\[
+G_{\text{público}} = \phi\tau \bar w + T
+\]
+y exposición financiera:
+\[
+OOP=\beta M
+\]
+
+\bigskip
+\textbf{Meta de política (bajo restricción fiscal):}
+\[
+\beta \downarrow \quad \text{sin inducir} \quad \phi \downarrow
+\]
+
+\bigskip
+\textbf{Lectura:}
+\begin{itemize}
+  \item bajar \(\beta\) sin destruir \(\phi\) requiere paquete básico + diferencial contributivo claro
+  \item el privado debe ser complemento regulado, no sustituto que vacía el pool
+\end{itemize}
+\end{frame}
+
+%================================================
+% ACTO VI: EP / NTA
+%================================================
+
+\begin{frame}{Acto VI: Economía Poblacional y NTA (por qué esto es EP)}
+Salud como transferencia en especie:
+\[
+\sum_x N(x)\tau_y(x) = \sum_x N(x)\tau_H(x)
+\]
+
+\bigskip
+Transición demográfica y epidemiológica:
+\[
+G = \sum_x N(x)\Big[p_C(x)M_C(x)+p_N(x)M_N(x)\Big]
+\]
+
+\begin{itemize}
+  \item envejecimiento: \(N(65+)\uparrow\)
+  \item crónicas: \(p_N(x)\uparrow\), \(M_N(x)\uparrow\)
+\end{itemize}
+
+\bigskip
+\emph{El diseño del financiamiento hoy redistribuye cargas y bienestar entre cohortes.}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Cierre: la policy en una página}
+\textbf{Problema:} cobertura amplia con financiamiento fragmentado + informalidad + poco espacio fiscal.
+
+\bigskip
+\textbf{Trade-off central:}
+\[
+\text{Equidad (}\beta\downarrow\text{)} \quad \text{vs} \quad \text{Incentivos (}\phi\uparrow\text{)}
+\]
+
+\bigskip
+\textbf{Paquete de política creíble:}
+\begin{enumerate}
+  \item Paquete básico universal explícito (\(\alpha_0\)) para bajar \(\beta\).
+  \item Diferencial contributivo claro (\(\Delta\alpha\)) para sostener \(\phi\).
+  \item Privado como complemento regulado (evitar sistema dual).
+  \item Sendero fiscal gradual y defendible (no “saltos”).
+\end{enumerate}
+
+\bigskip
+\centering
+\Large
+Reforma de salud = diseño de contrato social bajo restricción fiscal.
+\end{frame}
+
+\end{document}
