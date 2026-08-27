@@ -63,8 +63,8 @@
     }
   },
   "macro_backdrop": {
-    "tips_10y_real_yield": "2.38 (2026-08-24, FRED DFII10)",
-    "vix_level": "15.85 (2026-08-24, FRED VIXCLS); 15.45 (2026-08-25, Yahoo ^VIX, FRED not yet posted)",
+    "tips_10y_real_yield": "2.32 (2026-08-25, FRED DFII10)",
+    "vix_level": "15.45 (2026-08-25, FRED VIXCLS)",
     "vix_trend": "Calm; post-tranche prints contained: 16.01 (08-20, tranche day) -> 15.13 (08-21) -> 15.85 (08-24) -> 15.45 (08-25, Yahoo). Below the 16.4-18.4 June range and the ~18.4 unlock-week prints; non-amplifying. TIPS 10y real 2.35 (08-20) -> 2.40 (08-21) -> 2.38 (08-24). Refreshed 08-26 from FRED (the 08-23 timeout is cleared).",
     "narrative_vs_cashflow_rotation": null,
     "broad_risk_on_off": null
