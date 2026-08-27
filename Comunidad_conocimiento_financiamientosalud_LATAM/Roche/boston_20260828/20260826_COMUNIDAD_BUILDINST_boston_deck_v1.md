@@ -7,7 +7,7 @@ version: 1
 date: 2026-08-26
 added_by: Debb
 endorsed_by:
-status: verificación completa (verificaciones_boston_v1.md) y deck v1 construido (boston_20260828.tex) — 2026-08-26; PDF se compila en Overleaf; revisión del autor pendiente
+status: entregado a Claude Code — verificación pendiente
 ---
 
 # Instrucciones de construcción — Deck Boston, 28 de agosto de 2026
