@@ -15,9 +15,12 @@
 %   (5) La antigua lámina 22 se divide en dos: "quiénes" e "independencia".
 %       El deck queda en 26 láminas de contenido + 2 de fuentes.
 %
-% PENDIENTE PARA CLAUDE CODE (ver instrucciones v2):
-%   - Argentina en la Figura 2 (CEPALSTAT, mismo indicador y cosecha).
-%   - Sustituir el marcador por la imagen real: wpp2024_lac_broad_age_groups.png
+% RESUELTO POR CLAUDE CODE, 2026-08-26 (instrucciones v2, Tareas A–C):
+%   - Argentina: sin registros en CEPALSTAT 3136 (aporta) ni 3138 (afiliada),
+%     ningún año. Gráfica con siete barras y nota activada (Tarea A, regla del hueco declarado).
+%   - Imagen ONU: wpp2024_lac_broad_age_groups.png, oficial LAC (eje a 400 M), pie incrustado.
+%   - Figuras 1 y 2 cotejadas contra verificaciones_boston_v1.md: sin discrepancias.
+% Compilar en Overleaf con pdfLaTeX (dos pasadas); ver verificaciones_boston_v2.md.
 %
 % Restricción dura: cero ecuaciones, cero notación matemática, cero letras griegas.
 
@@ -134,9 +137,9 @@ Comunidad Latinoamericana del Conocimiento sobre Financiamiento de la Salud}
 % ---------- 3 ----------
 \begin{frame}{América Latina y el Caribe: población por grandes grupos de edad}
   \begin{center}
-    % CLAUDE CODE: sustituir por la imagen oficial del portal WPP 2024,
-    % agregado "Latin America and the Caribbean". Conservar el pie de
-    % atribución incrustado (CC BY 3.0 IGO). NO usar la versión "LLDC".
+    % Imagen oficial del portal WPP 2024, agregado "Latin America and the Caribbean"
+    % (MD5 idéntico al archivo del sitio; eje vertical a 400 millones, NO la versión LLDC).
+    % Pie de atribución incrustado (CC BY 3.0 IGO). No recortar.
     \includegraphics[height=0.78\textheight,keepaspectratio]{wpp2024_lac_broad_age_groups.png}
   \end{center}
 \end{frame}
@@ -324,19 +327,15 @@ Comunidad Latinoamericana del Conocimiento sobre Financiamiento de la Salud}
     \end{column}
     \begin{column}{0.54\textwidth}
       % ---- FIGURA 3: cotizantes por país ----
-      % CLAUDE CODE: falta ARGENTINA. Obtener de CEPALSTAT con el MISMO
-      % indicador y la MISMA cosecha (ocupados que cotizan o están afiliados
-      % a pensiones, 2023-2024). Insertar la coordenada en el orden que le
-      % corresponda y añadir la etiqueta al eje simbólico.
-      % Si no existe con ese corte exacto: dejar siete barras y activar la
-      % nota de la línea marcada abajo. NO sustituir por otro indicador.
+      % Argentina: sin registros en CEPALSTAT 3136 ni 3138 (consulta a la API,
+      % 2026-08-26). Siete barras; nota activada abajo. No se sustituye por otro indicador.
       \begin{center}
       \begin{tikzpicture}[scale=0.92, transform shape]
         \begin{axis}[
           xbar, width=6.6cm, height=5.0cm,
           bar width=11pt,
           xmin=0, xmax=92,
-          xlabel={\tiny \% de ocupados que cotizan},
+          xlabel={\tiny \% de ocupados que cotizan o están afiliados a pensiones},
           symbolic y coords={Paraguay,México,Ecuador,Colombia,Rep.\ Dom.,Costa Rica,Uruguay},
           ytick=data,
           tick label style={font=\tiny},
@@ -347,12 +346,10 @@ Comunidad Latinoamericana del Conocimiento sobre Financiamiento de la Salud}
           \addplot[fill=dato, draw=dato] coordinates {
             (77,Uruguay) (73,Costa Rica) (43,Rep.\ Dom.) (43,Colombia)
             (35,Ecuador) (34,México) (25,Paraguay)};
-          % CLAUDE CODE: insertar aquí (77,Uruguay) ... con Argentina en su lugar.
         \end{axis}
       \end{tikzpicture}
       \end{center}
-      % CLAUDE CODE: activar esta línea SOLO si Argentina no está disponible.
-      % {\tiny\color{grisfino}Argentina no disponible en la misma serie.}
+      {\tiny\color{grisfino}Argentina no disponible en la misma serie.}
     \end{column}
   \end{columns}
   \pie{OIT, \emph{Panorama Laboral 2025}; CEPALSTAT, 2023--2024. Detalle de fuentes al final.}
