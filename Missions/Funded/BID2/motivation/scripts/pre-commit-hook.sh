@@ -23,7 +23,9 @@
 MOT_REL="Missions/Funded/BID2/motivation"
 TOP=$(git rev-parse --show-toplevel) || exit 0
 
-git diff --cached --name-only \
+# --no-renames: a rename lists only its destination under --name-only, so a
+# file moved OUT of a watched folder would otherwise slip past this grep.
+git diff --cached --name-only --no-renames \
   | grep -qE "^$MOT_REL/(draft/|output/figures/|overleaf_motivation/)" || exit 0
 
 echo "[bid2-motivation] Overleaf sources staged - rebuilding overleaf_motivation.zip"
