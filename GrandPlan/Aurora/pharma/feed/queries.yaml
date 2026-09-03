@@ -1,11 +1,11 @@
 config:
-  cycles_completed: 7
+  cycles_completed: 8
   cadence_hours: 36
   cycle_budget: 16
   exploration_share: 0.25
   rotation:
-    main: 20
-    exploration: 13
+    main: 32
+    exploration: 2
   resolved_ids:
   - 20260816-0001
   - 20260816-0002
@@ -111,6 +111,15 @@ config:
   - 20260823-0012
   - 20260823-0013
   - 20260823-0014
+  - 20260826-0001
+  - 20260826-0002
+  - 20260826-0003
+  - 20260826-0004
+  - 20260826-0005
+  - 20260826-0006
+  - 20260826-0007
+  - 20260826-0008
+  - 20260826-0009
   promotes_per_cycle:
   - 0
   - 0
@@ -119,7 +128,8 @@ config:
   - 2
   - 3
   - 6
-  next_provisional: 6
+  - 4
+  next_provisional: 8
 main:
 - id: q001
   text: patent cliff pharma
@@ -314,6 +324,8 @@ main:
   window:
   - 20260816-0038
   - 20260818-0004
+  - 20260903-0001
+  - 20260903-0002
 - id: q024
   text: EMA CHMP opinion
   group: The gate
@@ -359,6 +371,7 @@ main:
   origin: seed
   window:
   - 20260823-0001
+  - 20260903-0003
 - id: q031
   text: onshoring drug manufacturing
   group: Instruments and walls
@@ -366,7 +379,25 @@ main:
   window:
   - 20260816-0051
   - 20260823-0002
-provisional: []
+provisional:
+- id: p006
+  text: aflibercept
+  group: auto-proposed
+  origin: auto
+  from_items:
+  - 20260816-0001
+  - 20260816-0002
+  - 20260823-0004
+  window: []
+- id: p007
+  text: update
+  group: auto-proposed
+  origin: auto
+  from_items:
+  - 20260816-0012
+  - 20260816-0047
+  - 20260823-0012
+  window: []
 exploration:
 - id: x001
   text: Brazil pharmaceutical policy

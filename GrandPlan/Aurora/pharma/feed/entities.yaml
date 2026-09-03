@@ -5,8 +5,8 @@ Regeneron:
   count: 3
   last_seen: '2026-08-23'
 United States:
-  count: 8
-  last_seen: '2026-08-23'
+  count: 9
+  last_seen: '2026-08-26'
 Samsung Bioepis:
   count: 1
   last_seen: '2026-08-16'
@@ -95,11 +95,11 @@ Switzerland:
   count: 1
   last_seen: '2026-08-16'
 Gilead:
-  count: 1
-  last_seen: '2026-08-16'
+  count: 2
+  last_seen: '2026-08-26'
 EMA:
-  count: 3
-  last_seen: '2026-08-16'
+  count: 4
+  last_seen: '2026-08-26'
 CHMP:
   count: 3
   last_seen: '2026-08-16'
@@ -143,8 +143,8 @@ Eli Lilly and Company:
   count: 1
   last_seen: '2026-08-16'
 FDA:
-  count: 3
-  last_seen: '2026-08-18'
+  count: 4
+  last_seen: '2026-08-26'
 Alfasigma:
   count: 1
   last_seen: '2026-08-16'
@@ -191,8 +191,8 @@ European Commission:
   count: 1
   last_seen: '2026-08-18'
 CBP:
-  count: 1
-  last_seen: '2026-08-18'
+  count: 2
+  last_seen: '2026-08-26'
 Moderna:
   count: 1
   last_seen: '2026-08-18'
@@ -217,3 +217,24 @@ Tarsus Pharmaceuticals:
 Alkeus Pharmaceuticals:
   count: 1
   last_seen: '2026-08-23'
+Tenax Therapeutics:
+  count: 1
+  last_seen: '2026-08-26'
+Sanofi:
+  count: 1
+  last_seen: '2026-08-26'
+Blueprint Medicines:
+  count: 1
+  last_seen: '2026-08-26'
+Massachusetts:
+  count: 1
+  last_seen: '2026-08-26'
+Fourth Circuit:
+  count: 1
+  last_seen: '2026-08-26'
+Meritain Health:
+  count: 1
+  last_seen: '2026-08-26'
+US Senate:
+  count: 1
+  last_seen: '2026-08-26'

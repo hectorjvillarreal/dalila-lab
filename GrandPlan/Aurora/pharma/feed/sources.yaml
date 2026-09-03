@@ -7,22 +7,22 @@ infectiousdiseaseadvisor.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 cnbc.com:
   surfaced: 2
-  promoted: 1
+  promoted: 2
   rejected: 0
   weight: 1.0
 fiercebiotech.com:
   surfaced: 7
   promoted: 0
   rejected: 7
-  weight: 0.34
+  weight: 0.33
 biospace.com:
   surfaced: 7
   promoted: 1
   rejected: 6
-  weight: 0.67
+  weight: 0.66
 finance.yahoo.com:
   surfaced: 1
   promoted: 1
@@ -30,8 +30,8 @@ finance.yahoo.com:
   weight: 1.0
 globenewswire.com:
   surfaced: 11
-  promoted: 4
-  rejected: 4
+  promoted: 5
+  rejected: 6
   weight: 1.0
 ir.ionis.com:
   surfaced: 1
@@ -47,7 +47,7 @@ deccanherald.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 india-briefing.com:
   surfaced: 1
   promoted: 1
@@ -62,52 +62,52 @@ bloominglobal.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 pyfa.co.id:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 channelstv.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 vanguardngr.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 premiumtimesng.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 thenationonlineng.net:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 pharmanewsonline.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 ashp.org:
   surfaced: 2
   promoted: 0
   rejected: 2
-  weight: 0.76
+  weight: 0.74
 pharmexec.com:
   surfaced: 5
   promoted: 1
   rejected: 4
-  weight: 0.87
+  weight: 0.84
 bioxconomy.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 dcatvci.org:
   surfaced: 1
   promoted: 1
@@ -117,7 +117,7 @@ entrytoregulatory.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 gilead.com:
   surfaced: 1
   promoted: 1
@@ -137,12 +137,12 @@ investor.elanco.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 sec.gov:
   surfaced: 4
   promoted: 0
-  rejected: 2
-  weight: 0.76
+  rejected: 4
+  weight: 0.49
 cordenpharma.com:
   surfaced: 1
   promoted: 1
@@ -167,7 +167,7 @@ thepharmaletter.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 pharmaceuticalcommerce.com:
   surfaced: 1
   promoted: 1
@@ -177,27 +177,27 @@ einpresswire.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 drugdiscoverynews.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 theinsurer.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 biopharmadive.com:
   surfaced: 2
   promoted: 0
-  rejected: 1
-  weight: 1.0
+  rejected: 2
+  weight: 0.74
 medcitynews.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 businesswire.com:
   surfaced: 2
   promoted: 1
@@ -207,57 +207,57 @@ scmp.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 investing.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 gurufocus.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 stockstotrade.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 xtalks.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 pharmtech.com:
   surfaced: 3
   promoted: 0
   rejected: 3
-  weight: 0.61
+  weight: 0.59
 zamann-pharma.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 beckershospitalreview.com:
   surfaced: 2
   promoted: 0
   rejected: 2
-  weight: 0.76
+  weight: 0.74
 techtimes.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 pakistantoday.com.pk:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 pureglobal.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 navlindaily.com:
   surfaced: 1
   promoted: 1
@@ -267,7 +267,7 @@ blueteq.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 globalimportblog.bakermckenzie.com:
   surfaced: 1
   promoted: 1
@@ -282,22 +282,22 @@ onclive.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 en.antaranews.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 plutusias.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 endpoints.news:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 business-standard.com:
   surfaced: 2
   promoted: 1
@@ -317,7 +317,7 @@ investor.jazzpharma.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 curiumpharma.com:
   surfaced: 1
   promoted: 1
@@ -332,18 +332,28 @@ investors.eyepoint.bio:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 allsci.com:
   surfaced: 1
   promoted: 0
   rejected: 1
-  weight: 1.0
+  weight: 0.98
 statnews.com:
   surfaced: 1
-  promoted: 0
+  promoted: 1
   rejected: 0
   weight: 1.0
 grassley.senate.gov:
+  surfaced: 1
+  promoted: 1
+  rejected: 0
+  weight: 1.0
+fda.gov:
+  surfaced: 2
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+whitehouse.gov:
   surfaced: 1
   promoted: 0
   rejected: 0
