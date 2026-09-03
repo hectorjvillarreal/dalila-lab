@@ -91,3 +91,22 @@
     by Héctor''s instruction the same day, before any retrieval (window empty). Third
     round of headline-token artifacts (with p001 ''portfolio'', p002 ''issues''):
     a sector-generic word, not a topic term.'
+- id: p007
+  text: update
+  group: auto-proposed
+  origin: auto
+  from_items:
+  - 20260816-0012
+  - 20260816-0047
+  - 20260823-0012
+  window: []
+  lane: provisional
+  retired: '2026-09-03'
+  retired_by: hector
+  mechanism: manual
+  note: 'Auto-proposed by cycle 8 (2026-09-03) from promoted cycle-7 headlines; retired
+    by Héctor''s instruction the same day, before any retrieval (window empty). Sixth
+    headline-token artifact in the graveyard (after ''portfolio'', ''issues'', ''launches'',
+    ''pharmaceuticals'', ''therapeutics''): a sector-generic word, not a topic term.
+    NOTE: p006 ''aflibercept'', proposed in the same round, was KEPT provisional by
+    the same instruction — the first auto-proposal judged a real topic term.'

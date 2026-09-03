@@ -389,15 +389,6 @@ provisional:
   - 20260816-0002
   - 20260823-0004
   window: []
-- id: p007
-  text: update
-  group: auto-proposed
-  origin: auto
-  from_items:
-  - 20260816-0012
-  - 20260816-0047
-  - 20260823-0012
-  window: []
 exploration:
 - id: x001
   text: Brazil pharmaceutical policy
