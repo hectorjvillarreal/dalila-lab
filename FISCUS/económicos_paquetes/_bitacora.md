@@ -114,3 +114,9 @@ Estado tras la adenda: **31 archivos, 120.4 MB**. Faltante real: **exposición d
 | 2026 | cgpe | `2026_cgpe_criterios-generales.pdf` | 3.9 |
 | 2026 | ilif | `2026_ilif_iniciativa.pdf` | 1.3 |
 | 2026 | ppef | `2026_ppef_proyecto-decreto.pdf` | 6.9 |
+
+## Adenda 2026-09-05 (corrida de evaluación CIEP 2020)
+
+Durante la evaluación del documento CIEP 2020 (`_evaluacion/2020/`) se descargaron por demanda, conforme a la sección 7 de su instrucción, cuatro analíticos presupuestarios del PPEF 2020 en formato xlsx (ramo×programa y ramo×función, versiones Gobierno Federal y entidades). Están en `2020/` con prefijo `2020_ppef_analitico-` y registrados en `_manifiesto.csv` (35 filas). Hallazgo de estructura del portal: aunque `/work/models/PPEF2020/docs/` y `/paquete/` devuelven 404, `/work/models/PPEF2020/analiticosPresupuestarios/Proyecto/` sí sirve archivos; conviene probar esa ruta para 2022–2026 antes de dar por perdidos los materiales PPEF.
+
+Los siete PDF `ciep_implicaciones{año}.pdf` (2020–2026) que Héctor colocó en las carpetas de ejercicio son material derivado (tier 2, CIEP) y no están en el manifiesto, cuyo esquema solo prevé `oficial_primaria`. Solo el de 2020 fue verificado (`%PDF`, sha256 `327c7e28…`).
