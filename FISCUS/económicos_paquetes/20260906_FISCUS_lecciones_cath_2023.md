@@ -1,7 +1,7 @@
 # FISCUS — Lecciones de la corrida 2023 para Cath
 
 **De:** Claude (sesión 2026-09-06, Dalila) · **Para:** Cath (finanzas públicas y modelado) · **Copia:** Héctor
-**Objeto:** cuarta evaluación del género, *Implicaciones del Paquete Económico 2023* (CIEP), primera de la Parte III. Capítulo propio: deuda y balance, contra CGPE, ILIF y DEC 2023, la nota metodológica de la SHCP (abril 2023) y Cantú, Ramones y Villarreal (2016). Artefactos en `_evaluacion/2023/`, adendas en `_aprendizaje/`, dos piezas nuevas en `_metodologia/`. Sin commit todavía.
+**Objeto:** cuarta evaluación del género, *Implicaciones del Paquete Económico 2023* (CIEP), primera de la Parte III. Capítulo propio: deuda y balance, contra CGPE, ILIF y DEC 2023, la nota metodológica de la SHCP (abril 2023) y Cantú, Ramones y Villarreal (2016). Artefactos en `_evaluacion/2023/`, adendas en `_aprendizaje/`, dos piezas nuevas en `_metodologia/`. Commit `9d61d72`, rama `p3-correcciones-tex`.
 
 Este memo no repite la bitácora ni los memos de 2020–2022. Recoge lo que cambia al pasar al balance, lo que cae en tu dominio y lo que necesita decisión antes de 2024.
 
