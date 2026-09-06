@@ -54,5 +54,30 @@ Nota: la hoja de datos es la segunda ("Hoja1"); la primera es carátula. Cargar 
 
 Ninguno de los Tomos PDF (el árbol `/work/models/PPEF2020/docs/` y `/paquete/` devolvía 404 el 2026-09-05). Se descargaron cuatro analíticos xlsx (ver arriba) para: verificar el cuadro de programas prioritarios (CIEP 3.1), el cuadro de programas de salud (4.2), los perímetros de salud/educación/seguridad/energía/inversión, el Ramo 19 por programa y la SSPC por UR. Los cuatro bastaron para todo el 2020 salvo lo que exige PEF 2019 o Cuenta Pública.
 
+## Adenda 2021
+
+**Rutas de analíticos (procedimiento estándar desde 2021):**
+- PPEF t: `https://www.ppef.hacienda.gob.mx/es/PPEF{t}/analiticos_presupuestarios` → `/work/models/PPEF{t}/analiticosPresupuestarios/Proyecto/ac01_ra_pp_ur_og.xlsx`, `ac01_ra_f_ur_og.xlsx`, y sus `_efe` (entidades). Verificado 2020 y 2021.
+- PEF t−1 aprobado: `https://www.pef.hacienda.gob.mx/es/PEF{t-1}/analiticos_presupuestarios` → `/work/models/PEF/Analiticos_Historico/{t-1}/Autorizado/ac01_ra_pp_ur_og.xlsx` (y `_f_`, `_efe`). Verificado 2020 (descargado) y 2021 (HEAD 200, 9.4 MB).
+- Estado 2022–2026 (tarea lateral, 2026-09-05, solo HEAD, nada descargado): la página de analíticos responde 200 en los cinco ejercicios y lista 25 xlsx cada una; 2022 y 2023 enlazan a `/work/models/PPEF{t}/analiticosPresupuestarios/Proyecto/…`, 2024–2026 a `/work/models/PPEF{t}/analiticosPresupuestarios/…` (sin `Proyecto`). **Todos los archivos devuelven 404** (misma página de error de 2,978 bytes). Alternativa a probar en la corrida correspondiente: los aprobados en `pef.hacienda.gob.mx/work/models/PEF/Analiticos_Historico/{t}/Autorizado/`.
+
+**Dónde vive cada perímetro de salud (2021):**
+
+| perímetro | fuente | 2021 |
+|---|---|---|
+| Cuadro oficial "Gasto en salud, dependencias, entidades y ramos generales" | EM p. 67–68 | 667,236.4 (IMSS 325,506.8; ISSSTE 64,202.8; SSA ramo 145,414.6; FASSA 109,501.3; IMSS-Bienestar 13,607.6; Sedena 6,462.9; Semar 2,540.3) |
+| Función Salud consolidada neta (con serie 2016–2020) | EM p. 203; p. 150 | 664,659.6 |
+| Función Salud bruta por ramo/entidad y subfunción | AN `ac01_ra_f_ur_og` (FN "Salud") y `_efe` | GF 280,644.6; entidades 389,709.6 |
+| Ramo 12 por programa y UR (INSABI = UR M7B; Seguro Popular = U005 hasta 2020; U013; E023) | AN `ac01_ra_pp_ur_og` | 145,414.6 |
+| FASSA | EM p. 201 (federalizado); DEC Anexo 22; AN R33 PP I002; por entidad: AN columna EF | 109,501.3 |
+| IMSS-Bienestar | EM p. 61; AN R19 PP S038 | 13,607.6 |
+| Servicios médicos Pemex | AN `_efe` Pemex PP E013 (en función C&E, no Salud); por AI en CIEP | 17,441.6 |
+| FONSABI (fideicomiso) | aportación: AN R12 partida 46101; extracción: ILIF transitorios (2021: 13o., PDF 122); uso: EM texto (p. 64) | +16,703.5 / −33,000 / 3,819.3 |
+| Medicamentos | EM p. 62 (cuadro por institución); AN partidas 253xx | 90,572.4 |
+| Plazas y residentes | EM p. 64–67; AN partida 16102 | 6,566.2 (SSA) |
+| Gasto extraordinario COVID | CGPE 3.2 (p. 22–26) y 3.4 (p. 36) para 2020; **sin línea en PPEF 2021** | — |
+| Gasto de bolsillo / total en salud | fuera del paquete (EM p. 59 cita OCDE) | — |
+
 ## Historial
 - 2026-09-05 · ejercicio 2020 · creado.
+- 2026-09-05 · ejercicio 2021 · adenda (rutas PPEF t y PEF t−1, estado 2022–2026, perímetros de salud).
