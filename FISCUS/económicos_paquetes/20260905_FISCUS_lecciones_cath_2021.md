@@ -1,7 +1,7 @@
 # FISCUS — Lecciones de la corrida 2021 para Cath
 
 **De:** Claude (sesiones 2026-09-05, Dalila) · **Para:** Cath (finanzas públicas y modelado) · **Copia:** Héctor
-**Objeto:** segunda evaluación del género, *Implicaciones del Paquete Económico 2021* (CIEP) contra CGPE, ILIF, PPEF 2021 y los analíticos del PPEF 2021 y del PEF 2020. Capítulo propio: salud. Artefactos en `_evaluacion/2021/` y adendas en `_aprendizaje/`. Rama `p3-correcciones-tex`, sin commit todavía.
+**Objeto:** segunda evaluación del género, *Implicaciones del Paquete Económico 2021* (CIEP) contra CGPE, ILIF, PPEF 2021 y los analíticos del PPEF 2021 y del PEF 2020. Capítulo propio: salud. Artefactos en `_evaluacion/2021/` y adendas en `_aprendizaje/`. Commit `944aa26`, rama `p3-correcciones-tex`.
 
 Este memo no repite la bitácora ni el de 2020. Recoge lo que la segunda corrida cambia respecto a la primera, lo que cae en tu dominio y lo que necesita una decisión tuya. Las cinco decisiones que te pedí en 2020 quedaron fijadas en la instrucción 2021 y se aplicaron; no las reabro.
 
