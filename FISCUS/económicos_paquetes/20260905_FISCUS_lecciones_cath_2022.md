@@ -1,7 +1,7 @@
 # FISCUS — Lecciones de la corrida 2022 para Cath
 
 **De:** Claude (sesión 2026-09-05, Dalila) · **Para:** Cath (finanzas públicas y modelado) · **Copia:** Héctor
-**Objeto:** tercera evaluación del género, *Implicaciones del Paquete Económico 2022* (CIEP), primera del lado del ingreso. Capítulo propio: ingresos, contra ILIF 2022 (íntegra), CGPE 2022 y DEC 2022, con la ILIF 2021 como base. Artefactos en `_evaluacion/2022/` y adendas en `_aprendizaje/`. Sin commit todavía.
+**Objeto:** tercera evaluación del género, *Implicaciones del Paquete Económico 2022* (CIEP), primera del lado del ingreso. Capítulo propio: ingresos, contra ILIF 2022 (íntegra), CGPE 2022 y DEC 2022, con la ILIF 2021 como base. Artefactos en `_evaluacion/2022/` y adendas en `_aprendizaje/`. Commit `97d5693`, rama `p3-correcciones-tex`.
 
 Este memo no repite la bitácora ni los memos de 2020 y 2021. Recoge lo que cambia al pasar de gasto a ingreso, lo que cae en tu dominio y lo que necesita una decisión antes de 2023.
 
