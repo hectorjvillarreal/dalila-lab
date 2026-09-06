@@ -111,7 +111,48 @@ Ninguno de los Tomos PDF (el árbol `/work/models/PPEF2020/docs/` y `/paquete/` 
 | Gasto neto y déficit | DEC art. 2 | p. 2 |
 | Base LIF t−1 por concepto | ILIF t−1 art. 1o. | 2021: PDF 56–64 |
 
+## Adenda 2023: deuda y balance, piezas metodológicas, rutas y sondas
+
+**Rutas y sondas (2026-09-06):**
+- **Nota metodológica SHCP "Balance Fiscal en México. Definición y Metodología":** la ruta canónica `secciones.hacienda.gob.mx/work/models/estadisticas_oportunas/metodologias/1bfm.pdf` sirve siempre la **edición vigente** (abril 2026 al consultar; 42 pp, con texto). Ediciones anteriores: Wayback conserva 2022-01/07/09/10 (abril 2022) y 2024-08 (abril 2024), no 2023. La **edición abril 2023** está en la Gaceta Parlamentaria como anexo del oficio de la SHCP: `gaceta.diputados.gob.mx/PDF/65/2023/may/Shcp_balanceF-20230509.pdf` (44 pp, **escaneo sin texto**; pp. 3–4 y 26 y 40–41 cotejadas contra la edición 2022 con texto: mismo contenido y paginación en las secciones I, IV.1 y Anexo IV). Patrón para otros años: índice HTML `gaceta.diputados.gob.mx/Gaceta/65/{año}/may/{aaaammdd}.html` y buscar `Shcp_balanceF` o `Shcp-…`; la edición abril 2022 está en `PDF/65/2022/may/Shcp-20220503.pdf` (con texto).
+- **Cantú, Ramones y Villarreal (2016):** `economia.unam.mx/assets/pdfs/econmex/01/07CantuRamones.pdf` devuelve 404 desde 2026 (el sitio migró); Wayback captura 2025-10-18 (`web.archive.org/web/20251018171417id_/…`). El índice del número 1 tampoco está vivo; los PDF se llaman `NNApellido.pdf` (00Presentacion, 01Ros, 02CIbarra, 03HdzLaos, 04CamposVqz, 05Fujii, 06MorenoBrid, 07CantuRamones).
+- **DOF (para el DUC):** `dof.gob.mx/nota_detalle.php?codigo=…&fecha=…` sirve HTML con el texto del decreto (el host `www.dof.gob.mx` falla por certificado; usar sin `www`). Decreto de reforma a la LISH: código 5581294, 09-12-2019 (art. 39 → 54 %; Transitorio Segundo: 58 % para 2020; 65 % era la tasa de 2019). Decreto de beneficios fiscales a asignatarios (crédito contra el DUC): 21-04-2020 (citado en el considerando del decreto 5609025 de 28-12-2020, que difiere el pago de noviembre de 2020). 40 % para 2022 y 2023: LIF 2022 art. 22 e ILIF 2023 art. 22 (PDF 94), "en sustitución de la tasa prevista en el artículo 39".
+- **Transparencia Presupuestaria (sonda acotada, instrucción §10.1):** `transparenciapresupuestaria.gob.mx/es/PTP/Datos_Abiertos` responde 200 pero es una cáscara JavaScript sin enlaces en el HTML (1.9 KB); las rutas adivinadas `work/models/PTP/DatosAbiertos/Bases_de_datos_presupuestales/{PPEF_2023,ppef_2023,PEF_2023}.zip` devuelven 404. **Resultado: el proyecto 2023 a nivel programa no se obtuvo por esta vía; harían falta un navegador o la API del portal.** Nada descargado. La decisión sobre analíticos sigue diferida a 2024.
+- **PEF aprobado, analítico de entidades** (`pef.hacienda.gob.mx/work/models/PEF/Analiticos_Historico/{t}/Autorizado/ac01_ra_pp_ur_og_efe.xlsx`): descargado para 2022 (3.4 MB) y 2023 (2.9 MB) con el bundle de certificados de la bitácora; hoja `Hoja1`, columnas ETAPA, CICLO, SECTOR, ENTIDAD, TPP, GPP, IPP, PP, F, FN, SF, AI, TG, FF, PE, EF, CC, IMPORTE PEF (pesos). Sirve para IMSS TG 4 (pensiones): 636,461.8 (2022) y 750,252.1 (2023) mdp.
+- `www.ppef.hacienda.gob.mx/work/models/PPEF2023/…` sigue en 404 (Tomo I, analíticos del proyecto).
+
+**Dónde vive cada objeto del capítulo de deuda (2023):**
+
+| objeto | fuente | ubicación 2023 |
+|---|---|---|
+| Balance público / presupuestario / no presupuestario / sin inversión / primario / RFSPF, en mdp y % PIB | CGPE IV.6 (dos columnas 2022: aprobado con PIB de aprobación; estimado) | p. 150–151; p. 69 (por entidad: GF, IMSS, ISSSTE, Pemex, CFE); p. 19 (resumen) |
+| Fuera del presupuesto por componente (IPAB, Pidiregas, adecuaciones, deudores, banca) | CGPE 3.2 texto (dos decimales) y III.2 (un decimal) | p. 66–67; p. 135 |
+| Regla del 25 % del costo financiero (art. 11 RLFPRH) | CGPE 3.2 | p. 16, 66 |
+| Inversión excluida del equilibrio (perímetro de la regla) | ILIF art. 1o. párrafo tras el cuadro; CGPE nota 1 del IV.6 | ILIF PDF 58; CGPE p. 150 |
+| Déficit presupuestario (cifra legal) | DEC art. 2 | p. 2 |
+| Endeudamiento neto del GF (informativo) y financiamientos por fuente | ILIF art. 1o. numeral 0 | PDF 57 |
+| Techos interno/externo GF, Pemex, CFE, IPAB (canje), banca (intermediación), CDMX; cláusula de intercambio | ILIF arts. 2o.–3o.; CGPE 3.5 | ILIF PDF 60–63; CGPE p. 18–19, 87 |
+| SHRFSPF, deuda neta SPF, deuda bruta SPNF (% PIB, interno/externo, 2016–2028) | CGPE Anexo I.1 y III.2 | p. 120 (serie; nota: SHRFSP 2020 = 51.6), p. 122 (PFN; SHRFSP 2020 = 52.4), p. 135 (2022–2028) |
+| Deuda neta/bruta en pesos, colocación y amortización, 2014–jul 2022 | CGPE Anexo I | p. 126 |
+| Costo financiero total, GF (Ramos 24 y 34), EPE | CGPE IV.6; DEC Anexo 1 (ramos generales y 1.E) y Anexo 8 | CGPE p. 150; DEC p. 61, 66 |
+| Costo financiero por fuente (externa, valores internos, otros) | **Tomo I** (ausente); CIEP fig. 11.2 lo reproduce | — |
+| Indicadores del portafolio (moneda, tasa fija, plazo, duración, revisa tasa) | CGPE 3.5 cuadro | p. 88 (rótulo "bruta"; CGPE 2022 p. 56 decía "neta") |
+| Amortizaciones GF 2023–2028 (interno mdp, externo mdd) | ILIF exposición III | p. XXXIX |
+| Amortizaciones sector público por acreedor, saldo jun-2022 | CGPE III.3 | p. 139 |
+| Bonos externos GF con vencimiento en el año | CGPE 3.5; ILIF III | p. 87; p. XXXVII |
+| Sensibilidades (0.5 pp PIB, 1 dpb, 10 centavos, 50 mbd, 100 pb) | CGPE 4.3.1 | p. 102 |
+| Marco macro con Cetes nominal y real, deflactor, tipo de cambio, 2021–2028 | CGPE III.1 (y 3.1 p. 39–40 para 2022–2023) | p. 134 |
+| Supuestos fiscales de mediano plazo (pensiones +4.2 % real; inversión = balance; RFSPF 2.7) | CGPE III.2 cuadros de supuestos | p. 137–138 |
+| Pasivo pensionario por institución; SAR; PBAM | CGPE 4.3.2 | p. 104–105 |
+| Pidiregas (exposición contingente; compromisos de pago) y APP | CGPE 4.3.2 y III.3; DEC Anexo 6 | p. 106, 140; DEC p. 64–65 |
+| Seguro de depósitos, banca de desarrollo, desastres, amortiguadores | CGPE 4.3 | p. 103, 105–107 |
+| Descomposición oficial ex post del cambio del SHRFSPF (PIB, endeudamiento bruto, activos, euro, peso) | ILIF del año siguiente, exposición III "Evolución de la deuda del Gobierno Federal" | ILIF 2022 p. XXX (2019→2020); ILIF 2023 p. XXXII (2020→2021); ILIF 2024 p. XXVIII (2021→2022) |
+| SHRFSPF en pesos por componente, ex post | Nota metodológica SHCP, Anexo IV | edición 2023 p. 40 (2021: 13,103,964; 2022: 14,065,537 mdp) |
+| Definiciones de balances, sectores y deuda bruta/neta | Nota metodológica SHCP | p. 3 (LFPRH art. 2), p. 6 (subsectores MEFP), p. 12–13 (sector público federal y subsectores), p. 16 (deuda bruta/neta), p. 25–26 (presupuestario, no presupuestario, público; énfasis en presupuestario desde 2023), p. 40 (SHRFSP) |
+| Ecuación de la razón deuda/PIB con crecimiento e inflación separados; "señoreaje fiscal" | Cantú, Ramones y Villarreal (2016) | p. 268–270 (ecuación y tres implicaciones), p. 272–276 (proyecciones 2030) |
+
 ## Historial
 - 2026-09-05 · ejercicio 2020 · creado.
 - 2026-09-05 · ejercicio 2021 · adenda (rutas PPEF t y PEF t−1, estado 2022–2026, perímetros de salud).
 - 2026-09-05 · ejercicio 2022 · adenda (rutas: aprobado 2022–2026 sirve, proyecto 404, miscelánea y EM 2022 404; mapa del capítulo de ingresos).
+- 2026-09-06 · ejercicio 2023 · adenda (rutas de la nota metodológica y del artículo autoral, DOF para el DUC, sonda a Transparencia Presupuestaria, analíticos del PEF aprobado de entidades; mapa del capítulo de deuda).
