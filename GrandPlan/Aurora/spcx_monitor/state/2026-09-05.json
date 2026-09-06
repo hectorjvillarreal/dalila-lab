@@ -63,8 +63,8 @@
     }
   },
   "macro_backdrop": {
-    "tips_10y_real_yield": "2.45 (2026-09-02, FRED DFII10)",
-    "vix_level": "15.20 (2026-09-02, FRED VIXCLS)",
+    "tips_10y_real_yield": "2.42 (2026-09-03, FRED DFII10)",
+    "vix_level": "14.32 (2026-09-03, FRED VIXCLS)",
     "vix_trend": "Calm with one bump: 14.51 (08-27) -> 14.43 (08-28, Cboe) -> 14.92 (08-31) -> 16.34 (09-01, the SPCX/QQQ down session) -> 15.20 (09-02); FRED not yet posted for 09-03. Still below the June range; non-amplifying. TIPS 10y real firming: 2.34 (08-27) -> 2.42 (08-28) -> 2.44 (08-31) -> 2.44 (09-01) -> 2.45 (09-02). Refreshed 09-03 (FRED direct).",
     "narrative_vs_cashflow_rotation": null,
     "broad_risk_on_off": null
