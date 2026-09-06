@@ -1,0 +1,2 @@
+FISCUS/*/2026/2026_ppef_anexos-transversales.csv filter=lfs diff=lfs merge=lfs -text
+FISCUS/*/2026/2026_ppef_analitico-claves.csv filter=lfs diff=lfs merge=lfs -text

@@ -78,6 +78,40 @@ Ninguno de los Tomos PDF (el árbol `/work/models/PPEF2020/docs/` y `/paquete/` 
 | Gasto extraordinario COVID | CGPE 3.2 (p. 22–26) y 3.4 (p. 36) para 2020; **sin línea en PPEF 2021** | — |
 | Gasto de bolsillo / total en salud | fuera del paquete (EM p. 59 cita OCDE) | — |
 
+## Adenda 2022: capítulo de ingresos y estado de las rutas
+
+**Rutas (tarea lateral 11.1, 2026-09-05 23:16, solo HEAD, nada descargado):** la ruta del **PEF aprobado** `pef.hacienda.gob.mx/work/models/PEF/Analiticos_Historico/{t}/Autorizado/ac01_ra_pp_ur_og.xlsx` responde **200 con content-type xlsx para 2022, 2023, 2024, 2025 y 2026**; las páginas `pef.hacienda.gob.mx/es/PEF{t}/analiticos_presupuestarios` responden 200 (los enlaces no se extraen con el patrón `href=".xlsx"`; navegar la página antes de descargar). La ruta del **PPEF (proyecto)** sigue en 404 para 2022–2026 (confirmado 2026-09-05). `transparenciapresupuestaria.gob.mx/es/PTP/Datos_Abiertos` responde 200 (no explorada). **Implicación:** para 2022–2026 existe el aprobado a nivel programa/UR/función y no el proyecto; la instrucción 2023 decide si se compara aprobado contra aprobado con etiqueta (§1.3 de la instrucción 2022).
+
+**Otros 404 del 2026-09-05 en `ppef.hacienda.gob.mx/work/models/PPEF2022/`:** `docs/exposicion/EM_Documento_Completo.pdf`, `docs/exposicion/EM_Capitulo_1.pdf`, `paquete/ingresos/LISR_LIVA_LIEPS_CFF.pdf` (miscelánea), `paquete/ingresos/LFD_2022.pdf`, `paquete/ingresos/LIF_2022.pdf`. La ILIF se obtiene de `finanzaspublicas.hacienda.gob.mx/work/models/Finanzas_Publicas/docs/paquete_economico/ilif/ilif_{t}.pdf` (sirve). La miscelánea no tiene ruta conocida que sirva; probar `diputados.gob.mx` (Gaceta Parlamentaria) en 2023.
+
+**Dónde vive cada objeto del capítulo de ingresos (2022):**
+
+| objeto | fuente | ubicación 2022 |
+|---|---|---|
+| Ingresos por concepto, estimados | ILIF art. 1o. | PDF 59–70 (impresa 1–12); numerales 1 impuestos, 2 cuotas, 3 mejoras, 4 derechos, 5 productos, 6 aprovechamientos, 7 ventas (7.71 IMSS/ISSSTE, 7.72 Pemex/CFE), 9.97 FMP, 0 financiamientos |
+| Ingresos presupuestarios (sin financiamiento) y su cierre con CGPE | ILIF art. 1o. total − numeral 0; CGPE IV.6 | PDF 59, 69; CGPE p. 120–121 (reconciliación en `_evaluacion/2022/00` §5: 56.9 mdp de ISR petrolero reclasificados) |
+| RFP; inversión excluida del equilibrio; pago en especie; obligación de informar "Otros aprovechamientos" | ILIF art. 1o. párrafos posteriores al cuadro | PDF 70–72 |
+| Techos de deuda | ILIF art. 2o.; CGPE 3.2.4 | PDF 73; CGPE p. 54 |
+| Estímulos fiscales y exenciones | ILIF art. 16 | PDF 96–106 |
+| Tasa de retención a intereses (metodología) | ILIF art. 21 | PDF 109–110 |
+| DUC | ILIF art. 22; exposición IV | PDF 110; p. LII–LIII |
+| Renuncias recaudatorias (cinco cifras); memoria de cálculo; series y proyección de ingresos | ILIF exposición I | p. I–VIII (memoria), IX–X (series 2017–2021, 2023–2027), X–XIII (renuncias) |
+| Transitorios con ingresos (FONSABI remanente, Lotería, rendimientos de fideicomisos, FEIEF, IMSS-Bienestar con FASSA) | ILIF transitorios | PDF 118–124 |
+| Ingresos 2021–2022 en pesos de 2022 con dos bases (LIF y estimado) por rubro e impuesto | CGPE 3.2.2 | p. 46–47 |
+| Política de ingresos (medidas sin cifra) | CGPE intro y 3.2.2 | p. 13; 43–46 |
+| Marco macro (aprobado 2021, estimado 2021, 2022) y mediano plazo | CGPE p. 39, 119; III.1 p. 100 | — |
+| Precio máximo de referencia (fórmula art. 31 LFPRH) | CGPE IV.3 | p. 117 |
+| Sensibilidades y amortiguadores | CGPE 3.3 | p. 58 |
+| Series 2015–2021 en % PIB (ingresos por rubro e impuesto) | CGPE Anexo I.2 | p. 87 (y 84–86 RFSP, posición financiera neta) |
+| 12 indicadores (tributarios sin IEPS combustibles; gasto neto sin inversión financiera, pensiones, participaciones, costo financiero) | CGPE IV.1 | p. 112 |
+| Proyección 2023–2027 de ingresos y supuestos | CGPE 4.3 y III.2 | p. 80, 102, 104 |
+| Reforma de subcontratación (cifras de evasión y afiliados) | CGPE 4.1.1; 2.1.2 | p. 65; p. 27 |
+| Aportaciones del GF al IMSS (seguros; pensiones en curso; reservas) | DEC art. 5 | p. 7 |
+| Gastos obligatorios con y sin pensiones | DEC Anexo 3 | p. 55 |
+| Gasto neto y déficit | DEC art. 2 | p. 2 |
+| Base LIF t−1 por concepto | ILIF t−1 art. 1o. | 2021: PDF 56–64 |
+
 ## Historial
 - 2026-09-05 · ejercicio 2020 · creado.
 - 2026-09-05 · ejercicio 2021 · adenda (rutas PPEF t y PEF t−1, estado 2022–2026, perímetros de salud).
+- 2026-09-05 · ejercicio 2022 · adenda (rutas: aprobado 2022–2026 sirve, proyecto 404, miscelánea y EM 2022 404; mapa del capítulo de ingresos).

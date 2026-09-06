@@ -52,6 +52,27 @@
 
 **Lo que no funcionó en 2021:** el conteo de "afirmaciones comparativas con contrafactual explícito" sigue siendo manual y sensible a cómo se agrupan las filas del CSV; conviene una columna booleana `contrafactual_explicito` en 2022.
 
+## Adenda 2022
+
+**Reorden para un capítulo de ingresos (instrucción 2022 §9):** 1 contrafactual, 2 perímetro, 3 supuestos macro, 4 cobertura, 5 cierre contable, 6 descriptivo–normativo y horizonte. Perímetro y contrafactual quedan al mismo rango.
+
+**Columnas nuevas del CSV:** `tier_seccion` (restitucion / juicio / mixta, según la subsección del género: "Evolución… a 2022" y aperturas → restitución; "Implicaciones" → juicio; "Incidencia" → mixta) y `contrafactual_explicito` (si / no / na). El conteo del criterio 1 sale del CSV por primera vez.
+
+**Criterio 1, contrafactual — lo que ingresos enseñó:** (a) en ingresos la trampa de base no es aprobado vs cierre sino **el denominador del % del PIB**: el CGPE presenta el aprobado 2021 con el PIB de aprobación (22.2 %) y con el PIB revisado (21.3 %), y la comparación con 2022 cambia de signo (−0.3 vs +0.6 pp) según cuál se use; una afirmación en % del PIB necesita una quinta declaración, *con qué PIB para cada año*, cuando el año base tiene PIB revisado. (b) Una elasticidad derivada de dos cifras en % del PIB del mismo año (aprobado vs estimado) no es una elasticidad: mide la revisión del PIB, no la respuesta de la recaudación. Se registra como `contrafactual` aunque cada cifra sea correcta.
+
+**Criterio 2, perímetro — casos de ingresos:** (a) "ingresos totales" del art. 1o. incluye deuda; toda razón sobre "ingresos" declara si es presupuestarios o totales (en 2022 CIEP lo declaró; su cuadro 2.1 usa presupuestarios como denominador bajo un rótulo que dice "ILIF"); (b) "petroleros" tiene dos definiciones oficiales que difieren en 56.9 mdp (ILIF: Pemex + FMP; CGPE: + ISR de contratistas y asignatarios), indistinguibles al décimo pero distintas de nombre; (c) "no tributarios no petroleros" de CIEP excluye CFE y el CGPE la incluye en "organismos y empresas": perímetro propio declarado, no error; (d) los aprovechamientos son dos objetos (con nombre y "Otros") y solo el segundo es material.
+
+**Criterio 3, supuestos macro (nuevo rango):** el CGPE 2022 sí trae sensibilidades (p. 58) de choques individuales; la evaluación pide tres cosas: si el evaluado las cita, si computa elasticidades implícitas contra la base correcta (cierre), y si señala que la meta descansa en "eficiencia" no cuantificada. En 2022 la elasticidad implícita es 1.56 contra cierre (1.15 sin IEPS de gasolinas) y el paquete no separa actividad, eficiencia y miscelánea.
+
+**Criterio 4, cobertura — lista mínima para ingresos:** memoria de cálculo (método), renuncias recaudatorias (cinco cifras), art. 16 estímulos, art. 21 retención, art. 22 DUC, transitorios con ingresos, RFP, precio máximo de referencia (art. 31 LFPRH), sensibilidades, proyección 2023–2027 por rubro, reclasificación ILIF–CGPE, dos presentaciones del aprobado t−1, "Otros aprovechamientos" y su obligación de reporte.
+
+**Criterio 5, cierre contable — identidades de ingresos:** total art. 1o. = gasto neto (DEC art. 2); presupuestarios + financiamientos = total; gasto pagado − presupuestarios = déficit; financiamientos − déficit = diferimiento de pagos; suma de numerales = total; bloques ILIF = bloques CGPE salvo la reclasificación declarada.
+
+**Fuentes ex post (decisión §1.2):** se admiten solo para verificar; en 2022 no se descargaron y las filas que las requerían quedaron `no_verificable` con "fuente ex post" en la nota.
+
+**Lo que no funcionó en 2022:** el 40 % de las filas de ingresos tiene `contrafactual_explicito = na` porque son niveles o participaciones; la columna sirve, pero el criterio 1 en ingresos se juega en pocas filas y hay que leerlas una por una. Y la ausencia de la EM y de la miscelánea dejó al capítulo propio sin dos de sus fuentes naturales: la rúbrica debe prever un "nivel de carpeta" declarado al inicio (qué piezas del paquete faltan) porque condiciona qué criterios pueden aplicarse.
+
 ## Historial
 - 2026-09-05 · ejercicio 2020 · creado.
 - 2026-09-05 · ejercicio 2021 · adenda (reorden, convenciones §1, tipo_error, casos límite de perímetro, pendiente 9.2).
+- 2026-09-05 · ejercicio 2022 · adenda (reorden para ingresos, columnas nuevas, casos de contrafactual y perímetro en ingresos, criterio de supuestos macro, lista mínima de cobertura, identidades, fuentes ex post, lo que no funcionó).
