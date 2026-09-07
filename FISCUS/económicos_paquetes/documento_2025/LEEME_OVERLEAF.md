@@ -37,10 +37,36 @@ Solo los que Overleaf trae de fábrica: `inputenc`, `fontenc`, `babel` (spanish)
 `siunitx` e `hyperref`. Ninguna fuente externa, ningún paquete que haya que
 instalar, nada que exija `shell-escape`.
 
+## Estado: ya compila
+
+**El documento se compiló** con pdfLaTeX, tres pasadas: **57 páginas, 0 errores, 0
+referencias sin resolver, 4 desbordes de caja de menos de 8 pt** (líneas de prosa,
+dentro de la tolerancia normal de un texto justificado). El PDF resultante viene
+en la entrega.
+
+Si la versión anterior no compiló en Overleaf gratuito, el sospechoso principal
+era **la generación de fuentes de mapa de bits**: sin `lmodern`, la combinación de
+`fontenc` T1 con Computer Modern obliga a `mktexpk` a generar fuentes al vuelo. En
+esta máquina eso costaba 8.2 segundos por pasada; con `lmodern` baja a 3.1. En un
+servidor compartido y con el límite de tiempo del plan gratuito, esa diferencia
+decide. **`lmodern` ya está en el preámbulo.**
+
+Además se corrigieron, en este orden de importancia:
+
+1. **Once cuadros se salían de la caja**, hasta 363 pt, porque la primera columna
+   no envolvía el texto. Ahora usa un tipo de columna `L{ancho}` que parte los
+   nombres largos en varias líneas.
+2. **Las etiquetas del eje de años salían como «2,025»**, porque `siunitx` y
+   `pgfplots` comparten el separador de millares y un año no es una cantidad.
+3. **Las tres curvas de una figura salían idénticas**: `\addplot[...]` sobrescribe
+   la lista de estilos; con `\addplot+[...]` se respeta, y ahora se distinguen por
+   trazo y por marca, que es lo que hace falta para leerlas en blanco y negro.
+4. **Una figura mezclaba el acervo (51.4) con los flujos (de −3.9 a 0.6)** en el
+   mismo eje, con lo que los flujos quedaban aplastados contra el cero.
+
 ## Qué revisar en la primera compilación
 
-Esta máquina no tiene toolchain de LaTeX, así que **el documento no se ha
-compilado**. Pasó 96 comprobaciones estáticas (llaves y entornos balanceados, todo
+Ya compilado, quedan por mirar con ojo editorial. Pasó 104 comprobaciones estáticas (llaves y entornos balanceados, todo
 `\input` apuntando a un archivo existente, todo `\ref` con su `\label`, paquetes
 dentro de la lista permitida, columnas de `pgfplots` existentes en su `.csv`), pero
 eso no es lo mismo que compilar. Conviene mirar:

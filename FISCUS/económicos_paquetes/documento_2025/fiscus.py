@@ -85,6 +85,58 @@ def dif_nominal(v_t: float, v_prev: float) -> float:
     return round(v_t - v_prev, 1)
 
 
+# ---------------------------------------------------- acentos de las etiquetas ---
+# Las etiquetas que escribimos nosotros se teclearon sin acentos para no pelearnos
+# con la codificación en los guiones. Las que vienen del analítico ya traen los
+# suyos ("Educación Pública"). Este mapa corrige SOLO las nuestras: como va de
+# palabra sin acento a palabra con acento, no puede tocar una etiqueta oficial,
+# que ya está acentuada. Se aplica al escribir el csv, a las celdas no numéricas.
+import re as _re
+
+_ACENTOS = {
+    "Inflacion": "Inflación", "inflacion": "inflación",
+    "Petroleo": "Petróleo", "petroleo": "petróleo", "Petroleos": "Petróleos",
+    "produccion": "producción", "Produccion": "Producción",
+    "exportacion": "exportación", "Exportacion": "Exportación",
+    "dolares": "dólares", "Deficit": "Déficit", "deficit": "déficit",
+    "economica": "económica", "economico": "económico", "Economicas": "Económicas",
+    "clasificacion": "clasificación", "Clasificacion": "Clasificación",
+    "Educacion": "Educación", "educacion": "educación",
+    "funcion": "función", "Funcion": "Función", "subfuncion": "subfunción",
+    "publica": "pública", "publico": "público", "Publica": "Pública",
+    "credito": "crédito", "energetico": "energético", "energeticos": "energéticos",
+    "Energia": "Energía", "energia": "energía", "Mexico": "México",
+    "Comision": "Comisión", "autorizacion": "autorización",
+    "perimetro": "perímetro", "Perimetro": "Perímetro",
+    "analitico": "analítico", "analiticos": "analíticos",
+    "institucion": "institución", "Innovacion": "Innovación",
+    "Tecnologia": "Tecnología", "inversion": "inversión", "Inversion": "Inversión",
+    "fisica": "física", "interes": "interés", "demografica": "demográfica",
+    "demografico": "demográfico", "matricula": "matrícula",
+    "poblacion": "población", "Poblacion": "Población",
+    "proyeccion": "proyección", "transicion": "transición",
+    "vertice": "vértice", "verticies": "vértices",
+    "recaudacion": "recaudación", "articulo": "artículo", "renglon": "renglón",
+    "hibrida": "híbrida", "definicion": "definición", "bitacora": "bitácora",
+    "decimas": "décimas", "mecanica": "mecánica", "aplicacion": "aplicación",
+    "compensacion": "compensación", "maximo": "máximo", "limite": "límite",
+    "Aplicacion": "Aplicación", "anios": "años", "anio": "año",
+    "Basica": "Básica", "basica": "básica", "Tecnica": "Técnica",
+    "Practica": "Práctica", "medico": "médico", "medicos": "médicos",
+    "Nomina": "Nómina", "nomina": "nómina", "Regimen": "Régimen",
+    "jubilaciones": "jubilaciones", "Adefas": "Adefas",
+}
+_PAT = _re.compile(r"\b(" + "|".join(sorted(_ACENTOS, key=len, reverse=True)) + r")\b")
+
+
+def acentuar(v):
+    """Repone acentos en una celda de texto. Deja intactos los numeros."""
+    t = str(v)
+    if not t or _re.fullmatch(r"-?[\d,]*\.?\d*", t.strip()):
+        return v
+    return _PAT.sub(lambda m: _ACENTOS[m.group(1)], t)
+
+
 # ---------------------------------------------------------------- registro ---
 
 CAMPOS_FUENTE = ["archivo", "cuadro", "documento", "ubicacion", "tier", "nota"]
@@ -97,7 +149,7 @@ def emitir(nombre: str, filas, encabezado, fuente: dict) -> str:
         w = csv.writer(f)
         w.writerow(encabezado)
         for r in filas:
-            w.writerow(r)
+            w.writerow([acentuar(c) for c in r])
     _registrar(nombre, fuente)
     return ruta
 

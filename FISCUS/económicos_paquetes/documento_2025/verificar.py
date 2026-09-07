@@ -93,11 +93,13 @@ for a, b in pares:
 mp = cargar("macro_medianoplazo.csv", "variable")
 print("\nCoherencia entre el Anexo II.5 (p. 81) y el Anexo III.1 (p. 84), 2024 y 2025:")
 for var in ["PIB nominal (miles de millones de pesos)", "Deflactor del PIB (%)",
-            "Inflacion dic/dic (%)", "Inflacion promedio (%)", "Tipo de cambio promedio",
-            "Cetes 28 nominal promedio (%)", "Petroleo, precio promedio (dls/barril)",
-            "Plataforma de produccion (mbd)", "Plataforma de exportacion (mbd)"]:
+            "Inflación dic/dic (%)", "Inflación promedio (%)", "Tipo de cambio promedio",
+            "Cetes 28 nominal promedio (%)", "Petróleo, precio promedio (dls/barril)",
+            "Plataforma de producción (mbd)", "Plataforma de exportación (mbd)"]:
     var_mp = var.replace("Deflactor del PIB (%)", "Deflactor del PIB promedio (%)")
     if var not in mm or var_mp not in mp:
+        fallos.append(f"  FALLA  la variable '{var}' no esta en el csv: la prueba se "
+                      f"habria saltado en silencio")
         continue
     for col_a, col_b, etiq in [("estimado_2024", "2024", "2024 est."), ("proyecto_2025", "2025", "2025")]:
         pruebas += 1

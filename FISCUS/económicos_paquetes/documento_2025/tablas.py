@@ -69,13 +69,23 @@ def cuadro(ident: str, archivo: str, titulo: str, fuente: str, *,
     Sin esto, tres cuadros se salen de la caja y cuatro no caben en una pagina."""
     enc, filas = leer(archivo, filtro, columnas, renombrar, limite)
     ncol = len(enc)
-    al = alineacion or ("l" + "S" * (ncol - 1))
+    # La primera columna lleva nombres largos de ramo, entidad o programa. Con `l`
+    # no envuelve y la tabla se sale de la caja: era el origen de once desbordes.
+    # Se le da ancho fijo y se deja que parta en varias lineas.
+    if alineacion is None:
+        largo_max = max([len(str(f[0])) for f in filas] + [len(str(enc[0]))])
+        ancho = 4.2 if ncol >= 6 else (5.4 if ncol >= 4 else 7.0)
+        if largo_max < 26:
+            ancho = min(ancho, 3.4)
+        al = "L{%.1fcm}" % ancho + "S" * (ncol - 1)
+    else:
+        al = alineacion
     if ajuste == "auto":
         ajuste = "largo" if len(filas) > 26 else ("ancho" if ncol > 7 else "float")
-    cuerpo_tam = r"\scriptsize" if (ajuste == "largo" and ncol > 7) else r"\small"
+    cuerpo_tam = r"\footnotesize" if ncol >= 6 else r"\small"
 
     if ajuste == "largo":
-        out = [cuerpo_tam,
+        out = [cuerpo_tam, r"\setlength{\tabcolsep}{4pt}",
                r"\begin{longtable}{" + al + "}",
                r"\caption{" + _esc(titulo) + r"}\label{tab:" + ident + r"}\\",
                r"\toprule",
@@ -103,7 +113,7 @@ def cuadro(ident: str, archivo: str, titulo: str, fuente: str, *,
     # ---- LaTeX, cuadro flotante
     out = [r"\begin{table}[htbp]", r"\centering",
            r"\caption{" + _esc(titulo) + "}", r"\label{tab:" + ident + "}",
-           r"\small"]
+           cuerpo_tam, r"\setlength{\tabcolsep}{4pt}"]
     if ajuste == "ancho":
         out.append(r"\resizebox{\textwidth}{!}{%")
     out += [r"\begin{tabular}{" + al + "}", r"\toprule"]
@@ -168,15 +178,28 @@ def figura(ident: str, titulo: str, fuente: str, *, series: list,
            r"                 legend columns=-1, draw=none},",
            r"  tick label style={font=\footnotesize},",
            r"  label style={font=\footnotesize},",
+           # Sin esto el eje de años sale como "2,025": siunitx y pgfplots comparten
+           # el separador de millares y el año no es una cantidad.
+           r"  x tick label style={/pgf/number format/1000 sep={}},",
            r"  ymajorgrids=true, grid style={dashed, gray!30},",
-           r"  enlarge x limits=0.06,"]
+           r"  enlarge x limits=0.06,",
+           # Marcas y trazos distintos: el documento tiene que leerse en blanco y negro.
+           r"  cycle list={{solid,mark=*}, {dashed,mark=square*}, "
+           r"{dotted,mark=triangle*}, {dashdotted,mark=diamond*}},"]
     if tipo == "barra":
         out += [r"  ybar, bar width=9pt,", r"  xtick=data,"]
     else:
         out += [r"  xtick=data,"]
     out.append(r"]")
     for etiqueta, puntos in series:
-        estilo = "" if tipo == "barra" else "[mark=*, mark size=1.6pt, thick]"
+        # Una serie vacia produce una leyenda sin curva: el lector ve una entrada
+        # que no corresponde a nada. Es un fallo silencioso y se convierte en ruidoso.
+        if not puntos:
+            raise ValueError(f"figura {ident}: la serie '{etiqueta}' salio vacia; "
+                             "casi siempre es que el concepto no coincide con el csv")
+        # \addplot+ respeta el cycle list; \addplot[ ] lo sobrescribe y deja
+        # las tres curvas identicas, que es lo que pasaba.
+        estilo = "+" if tipo == "barra" else "+[thick, mark size=1.7pt]"
         coords = " ".join(f"({x},{y})" for x, y in puntos)
         out.append(rf"\addplot{estilo} coordinates {{{coords}}};")
         out.append(r"\addlegendentry{" + _esc(etiqueta) + "}")

@@ -9,13 +9,22 @@
 \documentclass[11pt,letterpaper]{report}
 
 \usepackage[utf8]{inputenc}
+% lmodern ANTES de fontenc: sin el, T1 con Computer Modern obliga a generar
+% fuentes de mapa de bits al vuelo (mktexpk), que en Overleaf gratuito es una
+% de las causas habituales de que una compilacion se alargue o se caiga.
+\usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage[spanish,es-nodecimaldot]{babel}
 % El genero usa marginalia. Sin margen derecho ancho y sin marginparwidth
 % declarado, \marginpar se desborda de la caja.
 \usepackage[letterpaper,top=2.4cm,bottom=2.4cm,left=2.2cm,right=4.8cm,
               marginparwidth=3.3cm,marginparsep=0.45cm]{geometry}
+% array: hace falta para >{...}p{} en la columna de etiqueta
+\usepackage{array}
 \usepackage{booktabs}
+% Columna de texto que ENVUELVE. Sin ella, una etiqueta larga estira la
+% tabla hasta salirse de la caja, que era el origen de los desbordes.
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \usepackage{longtable}
 \usepackage{graphicx}
 \usepackage{caption}
@@ -34,7 +43,6 @@
   output-decimal-marker = {.},
   detect-weight = true,
   detect-family = true,
-  table-align-text-before = false,
 }
 
 \captionsetup{font=small, labelfont=bf, justification=raggedright, singlelinecheck=false}

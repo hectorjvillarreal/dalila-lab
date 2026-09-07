@@ -188,23 +188,23 @@ la Secretaría se impone.
 | PIB, crecimiento real (rango) | [2.5,3.5] | [1.5,2.5] | [2.0,3.0] |
 | PIB nominal (miles de millones de pesos) | 34374 | 33927.7 | 36166.4 |
 | Deflactor del PIB (%) | 4.8 | 4.6 | 4.3 |
-| Inflacion dic/dic (%) | 3.8 | 4.3 | 3.5 |
-| Inflacion promedio (%) | 4.5 | 4.7 | 3.8 |
+| Inflación dic/dic (%) | 3.8 | 4.3 | 3.5 |
+| Inflación promedio (%) | 4.5 | 4.7 | 3.8 |
 | Tipo de cambio fin de periodo | 17.6 | 19.7 | 18.5 |
 | Tipo de cambio promedio | 17.1 | 18.2 | 18.7 |
 | Cetes 28 nominal fin de periodo (%) | 9.5 | 10.0 | 8.0 |
 | Cetes 28 nominal promedio (%) | 10.3 | 10.7 | 8.9 |
 | Cetes 28 real acumulada (%) | 6.7 | 6.7 | 5.6 |
-| Cuenta corriente (millones de dolares) | -14954 | -7097.5 | -7941.0 |
+| Cuenta corriente (millones de dólares) | -14954 | -7097.5 | -7941.0 |
 | Cuenta corriente (% del PIB) | -0.7 | -0.4 | -0.4 |
 | PIB EE.UU., crecimiento real (%) | 1.8 | 2.7 | 2.2 |
-| Produccion industrial EE.UU. (%) | 2.0 | 0.5 | 2.0 |
-| Inflacion EE.UU. promedio (%) | 2.4 | 2.9 | 2.2 |
+| Producción industrial EE.UU. (%) | 2.0 | 0.5 | 2.0 |
+| Inflación EE.UU. promedio (%) | 2.4 | 2.9 | 2.2 |
 | SOFR 3 meses promedio (%) | 4.3 | 5.0 | 3.3 |
 | Fed Funds Rate promedio (%) | 4.5 | 5.3 | 3.8 |
-| Petroleo, precio promedio (dls/barril) | 56.7 | 70.7 | 57.8 |
-| Plataforma de produccion (mbd) | 1983 | 1877 | 1891 |
-| Plataforma de exportacion (mbd) | 994 | 900 | 892 |
+| Petróleo, precio promedio (dls/barril) | 56.7 | 70.7 | 57.8 |
+| Plataforma de producción (mbd) | 1983 | 1877 | 1891 |
+| Plataforma de exportación (mbd) | 994 | 900 | 892 |
 | Plataforma de privados (mbd) | 86 | 67 | 74 |
 | Gas, precio promedio (dls/MMBtu) | 3.5 | 2.2 | 3.1 |
 
@@ -260,8 +260,8 @@ el sector no se contrae.
 | PIB, crecimiento real (rango) | 3.2 | [1.5,2.5] | [2.0,3.0] | [2.0,3.0] | [2.0,3.0] | [2.0,3.0] | [2.0,3.0] | [2.0,3.0] |
 | PIB nominal (miles de millones de pesos) | 31772.4 | 33927.7 | 36166.4 | 38348.3 | 40682.5 | 43152.6 | 45789.6 | 48574.0 |
 | Deflactor del PIB promedio (%) | 4.5 | 4.6 | 4.3 | 3.5 | 3.5 | 3.5 | 3.5 | 3.5 |
-| Inflacion dic/dic (%) | 4.7 | 4.3 | 3.5 | 3.0 | 3.0 | 3.0 | 3.0 | 3.0 |
-| Inflacion promedio (%) | 5.5 | 4.7 | 3.8 | 3.2 | 3.0 | 3.0 | 3.0 | 3.0 |
+| Inflación dic/dic (%) | 4.7 | 4.3 | 3.5 | 3.0 | 3.0 | 3.0 | 3.0 | 3.0 |
+| Inflación promedio (%) | 5.5 | 4.7 | 3.8 | 3.2 | 3.0 | 3.0 | 3.0 | 3.0 |
 | Tipo de cambio fin de periodo | 16.9 | 19.7 | 18.5 | 18.0 | 18.1 | 18.3 | 18.5 | 18.7 |
 | Tipo de cambio promedio | 17.8 | 18.2 | 18.7 | 18.5 | 18.7 | 18.9 | 19.1 | 19.3 |
 | Cetes 28 nominal fin de periodo (%) | 11.3 | 10.0 | 8.0 | 7.0 | 5.5 | 5.5 | 5.5 | 5.5 |
@@ -269,11 +269,11 @@ el sector no se contrae.
 | Cetes 28 real acumulada (%) | 6.7 | 6.7 | 5.6 | 4.6 | 3.2 | 2.6 | 2.6 | 2.6 |
 | Cetes 28 real fin de periodo (%) | 6.3 | 5.4 | 4.4 | 3.9 | 2.4 | 2.4 | 2.4 | 2.4 |
 | Cetes 28 real promedio (%) | 5.3 | 5.7 | 4.9 | 4.1 | 3.1 | 2.4 | 2.4 | 2.4 |
-| Cuenta corriente (millones de dolares) | -5476.7 | -7097.5 | -7941.0 | -10359.3 | -10853.3 | -11395.5 | -11974.6 | -12579.2 |
+| Cuenta corriente (millones de dólares) | -5476.7 | -7097.5 | -7941.0 | -10359.3 | -10853.3 | -11395.5 | -11974.6 | -12579.2 |
 | Cuenta corriente (% del PIB) | -0.3 | -0.4 | -0.4 | -0.5 | -0.5 | -0.5 | -0.5 | -0.5 |
-| Petroleo, precio promedio (dls/barril) | 70.9 | 70.7 | 57.8 | 61.7 | 60.9 | 60.5 | 60.2 | 60.0 |
-| Plataforma de produccion (mbd) | 1942 | 1877 | 1891 | 1902 | 1911 | 1921 | 1930 | 1941 |
-| Plataforma de exportacion (mbd) | 1032 | 900 | 892 | 883 | 875 | 866 | 858 | 850 |
+| Petróleo, precio promedio (dls/barril) | 70.9 | 70.7 | 57.8 | 61.7 | 60.9 | 60.5 | 60.2 | 60.0 |
+| Plataforma de producción (mbd) | 1942 | 1877 | 1891 | 1902 | 1911 | 1921 | 1930 | 1941 |
+| Plataforma de exportación (mbd) | 1032 | 900 | 892 | 883 | 875 | 866 | 858 | 850 |
 | Gas, precio promedio (dls/MMBtu) | 2.5 | 2.2 | 3.1 | 3.6 | 3.6 | 3.6 | 3.4 | 3.4 |
 
 Fuente: elaboración propia del ITED con información de la SHCP, CGPE 2025, Anexo III.1, p.~84. El CGPE 2025 se publicó sin capa de texto; las cifras se leyeron de la página renderizada y se validaron por identidad contable.
@@ -386,10 +386,10 @@ no propone la reforma que haría sostenible la consolidación.
 | 5 | Pensiones IMSS / cuotas IMSS (serie aprobada) |  | 1.545 | 1.593 | 1.627 | 1.603 |
 | 6 | Gasto en salud del IMSS / cuotas IMSS | 0.85 |  |  | 0.851 | 0.798 |
 | 6 | Pensiones IMSS+ISSSTE / salud IMSS+ISSSTE | 2.11 |  |  | 2.282 | 2.412 |
-| 7 | Funcion Educacion / pensiones y jubilaciones |  |  | 0.709 | 0.689 | 0.662 |
-| 7 | Funcion Educacion / pensiones totales (con no contributivas) |  |  | 0.558 | 0.518 | 0.501 |
+| 7 | Función Educación / pensiones y jubilaciones |  |  | 0.709 | 0.689 | 0.662 |
+| 7 | Función Educación / pensiones totales (con no contributivas) |  |  | 0.558 | 0.518 | 0.501 |
 | 12 | Costo financiero / impuestos |  | 0.20 | 0.23 | 0.256 | 0.262 |
-| 12 | SHRFSPF / impuestos, en anios de recaudacion |  | 3.6 | 3.4 | 3.4 | 3.51 |
+| 12 | SHRFSPF / impuestos, en años de recaudación |  | 3.6 | 3.4 | 3.4 | 3.51 |
 
 Fuente: elaboración propia del ITED; numerador y denominador en las columnas correspondientes. Aprobado contra aprobado en toda la serie. Ninguna línea híbrida. El punto de 2023 de la razón del capítulo 4 se retira porque no se reproduce.
 
@@ -426,9 +426,9 @@ propio de empresas, una es renta petrolera transferida y una es un impuesto.
 
 | Concepto | 2024 | 2025 | Dif. nominal | Dif. real | Var. real % |
 |---|---|---|---|---|---|
-| Transferencias del Fondo Mexicano del Petroleo (ordinarias) | 277774.3 | 279766.8 | 1992.5 | -9951.8 | -3.4 |
-| Ingreso propio de Petroleos Mexicanos | 769805.6 | 860868.2 | 91062.6 | 57961.0 | 7.2 |
-| Ingreso propio de la Comision Federal de Electricidad | 446951.3 | 539145.6 | 92194.3 | 72975.4 | 15.7 |
+| Transferencias del Fondo Mexicano del Petróleo (ordinarias) | 277774.3 | 279766.8 | 1992.5 | -9951.8 | -3.4 |
+| Ingreso propio de Petróleos Mexicanos | 769805.6 | 860868.2 | 91062.6 | 57961.0 | 7.2 |
+| Ingreso propio de la Comisión Federal de Electricidad | 446951.3 | 539145.6 | 92194.3 | 72975.4 | 15.7 |
 | Impuesto por la actividad de exploracion y extraccion de hidrocarburos | 7811.0 | 7140.1 | -670.9 | -1006.8 | -12.4 |
 | SUMA de las cuatro vias | 1502342.2 | 1686920.7 | 184578.5 | 119977.8 | 7.7 |
 
@@ -651,7 +651,7 @@ dos años.
 |---|---|---|---|---|---|
 | Entidades de control directo (pago directo) | 1343107.4 | 1505658.9 | 162551.4 | 104797.8 | 7.5 |
 | Gobierno Federal, pago directo (sin 45203) | 155931.2 | 132006.3 | -23924.9 | -30630.0 | -18.8 |
-| CONSOLIDADO (clasificacion economica) | 1499038.6 | 1637665.1 | 138626.5 | 74167.8 | 4.7 |
+| CONSOLIDADO (clasificación económica) | 1499038.6 | 1637665.1 | 138626.5 | 74167.8 | 4.7 |
 | Partida informativa: transferencias del GF a las entidades (45203) | 1009414.4 | 1148026.4 | 138612.0 | 95207.2 | 9.0 |
 |   ... GYN Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado | 342043.9 | 390767.1 | 48723.2 | 34015.3 | 9.5 |
 |   ... GYR Instituto Mexicano del Seguro Social | 870981.7 | 966726.3 | 95744.5 | 58292.3 | 6.4 |
@@ -746,7 +746,7 @@ sin ajustar por el neteo.
 
 | Concepto | 2024 | 2025 | Dif. nominal | Dif. real | Var. real % |
 |---|---|---|---|---|---|
-| TOTAL funcion Salud (GF + entidades, bruto) | 970522.5 | 888903.7 | -81618.8 | -123351.3 | -12.2 |
+| TOTAL función Salud (GF + entidades, bruto) | 970522.5 | 888903.7 | -81618.8 | -123351.3 | -12.2 |
 | *Gobierno Federal, por ramo* | | | | | |
 | 47 Entidades no Sectorizadas | 128623.9 | 165352.2 | 36728.3 | 31197.5 | 23.3 |
 | 33 Aportaciones Federales para Entidades Federativas y Municipios | 135589.4 | 81220.5 | -54369.0 | -60199.3 | -42.6 |
@@ -835,7 +835,7 @@ es cuánto, sino quién lo ejerce.
 
 | Concepto | 2024 | 2025 | Dif. nominal | Dif. real | Var. real % |
 |---|---|---|---|---|---|
-| TOTAL funcion Educacion (GF, bruto) | 1032621.4 | 1084590.9 | 51969.4 | 7566.7 | 0.7 |
+| TOTAL función Educación (GF, bruto) | 1032621.4 | 1084590.9 | 51969.4 | 7566.7 | 0.7 |
 | *por ramo* | | | | | |
 | 33 Aportaciones Federales para Entidades Federativas y Municipios | 526250.1 | 553261.9 | 27011.8 | 4383.1 | 0.8 |
 | 11 Educación Pública | 411848.3 | 437675.4 | 25827.1 | 8117.6 | 1.9 |
@@ -844,13 +844,13 @@ es cuánto, sino quién lo ejerce.
 | 07 Defensa Nacional | 3854.1 | 3992.7 | 138.5 | -27.2 | -0.7 |
 | 13 Marina | 2230.0 | 2138.2 | -91.8 | -187.7 | -8.1 |
 | 47 Entidades no Sectorizadas | 631.7 | 378.4 | -253.3 | -280.4 | -42.6 |
-| *por subfuncion* | | | | | |
-| subfuncion 1 | 650707.5 | 690468.9 | 39761.4 | 11781.0 | 1.7 |
-| subfuncion 3 | 165466.5 | 171539.1 | 6072.7 | -1042.4 | -0.6 |
-| subfuncion 2 | 145417.1 | 151385.4 | 5968.3 | -284.6 | -0.2 |
-| subfuncion 6 | 55256.3 | 55035.7 | -220.7 | -2596.7 | -4.5 |
-| subfuncion 4 | 10322.0 | 10521.3 | 199.3 | -244.5 | -2.3 |
-| subfuncion 5 | 5452.1 | 5640.5 | 188.4 | -46.1 | -0.8 |
+| *por subfunción* | | | | | |
+| subfunción 1 | 650707.5 | 690468.9 | 39761.4 | 11781.0 | 1.7 |
+| subfunción 3 | 165466.5 | 171539.1 | 6072.7 | -1042.4 | -0.6 |
+| subfunción 2 | 145417.1 | 151385.4 | 5968.3 | -284.6 | -0.2 |
+| subfunción 6 | 55256.3 | 55035.7 | -220.7 | -2596.7 | -4.5 |
+| subfunción 4 | 10322.0 | 10521.3 | 199.3 | -244.5 | -2.3 |
+| subfunción 5 | 5452.1 | 5640.5 | 188.4 | -46.1 | -0.8 |
 
 Fuente: elaboración propia del ITED con los analíticos del PEF aprobado 2024 y 2025. Las diferencias en millones de pesos se reportan dos veces, nominal y real; la real está en pesos de 2025 con el deflactor de 4.3% que declara el CGPE.
 
@@ -977,7 +977,7 @@ lecturas es el capítulo entero: la inversión física baja de 3.0 a **2.3% del 
 
 | Concepto | 2024 | 2025 | Dif. nominal | Dif. real | Var. real % |
 |---|---|---|---|---|---|
-| Capitulo 6000 Inversion publica (obra) (GF + entidades) | 447575.3 | 290693.9 | -156881.4 | -176127.1 | -37.7 |
+| Capitulo 6000 Inversión pública (obra) (GF + entidades) | 447575.3 | 290693.9 | -156881.4 | -176127.1 | -37.7 |
 | Capitulo 5000 Bienes muebles e inmuebles (GF + entidades) | 78494.0 | 46296.1 | -32198.0 | -35573.2 | -43.5 |
 | Capitulo 7000 Inversiones financieras y otras provisiones (GF + entidades) | 340623.7 | 351922.6 | 11298.9 | -3348.0 | -0.9 |
 | *Capitulo 6000 por ramo (GF)* | | | | | |
@@ -1038,7 +1038,7 @@ la composición.
 
 | Concepto | 2024 | 2025 | Dif. nominal | Dif. real | Var. real % |
 |---|---|---|---|---|---|
-| TOTAL funcion Combustibles y Energia (GF + entidades, bruto) | 1361059.8 | 1373266.1 |  |  |  |
+| TOTAL función Combustibles y Energía (GF + entidades, bruto) | 1361059.8 | 1373266.1 |  |  |  |
 | *Gobierno Federal, por ramo* | | | | | |
 | 18 Energía | 166789.3 | 137466.4 | -29323.0 | -36494.9 | -21.0 |
 | 23 Provisiones Salariales y Económicas | 97281.3 | 104591.0 | 7309.7 | 3126.6 | 3.1 |
@@ -1066,15 +1066,15 @@ publica el supuesto de precios y volúmenes por empresa que la sostendría.
 |---|---|---|---|---|---|
 | Pemex: gasto total (bruto) | 624805.6 | 612145.9 | -12659.7 | -39526.3 | -6.1 |
 |   Pemex: pensiones (tipo de gasto 4) | 74120.5 | 83827.6 | 9707.1 | 6519.9 | 8.4 |
-|   Pemex: obra publica (capitulo 6000) | 237574.8 | 199216.9 | -38357.9 | -48573.6 | -19.6 |
+|   Pemex: obra pública (capitulo 6000) | 237574.8 | 199216.9 | -38357.9 | -48573.6 | -19.6 |
 |   Pemex: servicios personales (capitulo 1000) | 105084.2 | 114074.0 | 8989.8 | 4471.2 | 4.1 |
-|   Pemex: deuda publica (capitulo 9000) | 143341.2 | 147890.7 | 4549.5 | -1614.2 | -1.1 |
+|   Pemex: deuda pública (capitulo 9000) | 143341.2 | 147890.7 | 4549.5 | -1614.2 | -1.1 |
 | CFE: gasto total (bruto) | 528532.7 | 583951.1 | 55418.4 | 32691.5 | 5.9 |
 |   CFE: pensiones (tipo de gasto 4) | 55961.3 | 64337.9 | 8376.6 | 5970.3 | 10.2 |
-|   CFE: obra publica (capitulo 6000) | 32405.2 | 39064.5 | 6659.3 | 5265.9 | 15.6 |
+|   CFE: obra pública (capitulo 6000) | 32405.2 | 39064.5 | 6659.3 | 5265.9 | 15.6 |
 |   CFE: servicios personales (capitulo 1000) | 74169.5 | 80447.5 | 6278.0 | 3088.7 | 4.0 |
-|   CFE: deuda publica (capitulo 9000) | 35152.0 | 38479.5 | 3327.5 | 1816.0 | 5.0 |
-| Ramo 18 Energia (aportacion del Gobierno Federal) | 167736.2 | 138307.4 | -29428.8 | -36641.5 | -20.9 |
+|   CFE: deuda pública (capitulo 9000) | 35152.0 | 38479.5 | 3327.5 | 1816.0 | 5.0 |
+| Ramo 18 Energía (aportacion del Gobierno Federal) | 167736.2 | 138307.4 | -29428.8 | -36641.5 | -20.9 |
 
 Fuente: elaboración propia del ITED con los analíticos del PEF aprobado 2024 y 2025. Las diferencias en millones de pesos se reportan dos veces, nominal y real; la real está en pesos de 2025 con el deflactor de 4.3% que declara el CGPE.
 
@@ -1116,8 +1116,8 @@ rubro de este documento.
 
 | Concepto | 2024 | 2025 | Dif. nominal | Dif. real | Var. real % |
 |---|---|---|---|---|---|
-| TOTAL perimetro de seguridad (15 subfunciones) | 387626.5 | 333091.1 | -54535.4 | -71203.3 | -17.6 |
-| *por funcion y subfuncion* | | | | | |
+| TOTAL perímetro de seguridad (15 subfunciones) | 387626.5 | 333091.1 | -54535.4 | -71203.3 | -17.6 |
+| *por función y subfunción* | | | | | |
 | 1.6.1 Seguridad Nacional | 103530.1 | 101948.0 | -1582.2 | -6034.0 | -5.6 |
 | 1.2.1 Justicia | 84778.9 | 77263.3 | -7515.6 | -11161.1 | -12.6 |
 | 1.7.1 Asuntos de Orden Público y de Segu | 72976.2 | 35951.5 | -37024.7 | -40162.7 | -52.8 |
@@ -1292,10 +1292,10 @@ Los tres flujos de 2025 son el **balance presupuestario**, un déficit de
 
 | Objeto | 2024 | 2025 | Fuente | Qué es |
 |---|---|---|---|---|
-| Endeudamiento neto interno del Gobierno Federal (techo) | 1990000.0 | 1580000.0 | ILIF art. 2o. | autorizacion, no gasto |
-| Endeudamiento neto externo del sector publico (techo, millones de dolares) | 18000.0 | 15500.0 | ILIF art. 2o. | en dolares, no en pesos |
-| Endeudamiento neto interno del Gobierno Federal (partida informativa) | 1906069.4 | 1576170.0 | LIF art. 1o. renglon 0.01.01 | lo que se preve ejercer |
-| Deficit presupuestario | 1693000.0 | 1170566.5 | DEC art. 2 y CGPE | el flujo, distinto de los dos anteriores |
+| Endeudamiento neto interno del Gobierno Federal (techo) | 1990000.0 | 1580000.0 | ILIF art. 2o. | autorización, no gasto |
+| Endeudamiento neto externo del sector público (techo, millones de dólares) | 18000.0 | 15500.0 | ILIF art. 2o. | en dólares, no en pesos |
+| Endeudamiento neto interno del Gobierno Federal (partida informativa) | 1906069.4 | 1576170.0 | LIF art. 1o. renglón 0.01.01 | lo que se preve ejercer |
+| Déficit presupuestario | 1693000.0 | 1170566.5 | DEC art. 2 y CGPE | el flujo, distinto de los dos anteriores |
 
 Fuente: elaboración propia del ITED con la ILIF y la LIF aprobada, y los decretos. El renglón externo está en millones de dólares y no se suma con los demás.
 
@@ -1340,7 +1340,7 @@ inflación es la suma de los dos, no el primero solo.
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Prueba 2022, añada CGPE 2024 | 49.2 | 47.7 | -1.5 | 4.3 | -1.73 | -3.09 | 2.97 | -0.12 | -0.8 | -1.32 | -0.18 |
 | Prueba 2022, añada alterna | 50.7 | 49.4 | -1.3 | 4.5 | -1.78 | -3.18 | 3.06 | -0.12 | -0.82 | -1.29 | -0.01 |
-| Aplicacion a 2025 | 51.4 | 51.4 | 0.0 | 3.9 | -1.06 | -2.12 | 2.07 | -0.05 | -0.79 | -0.07 | 0.07 |
+| Aplicación a 2025 | 51.4 | 51.4 | 0.0 | 3.9 | -1.06 | -2.12 | 2.07 | -0.05 | -0.79 | -0.07 | 0.07 |
 
 Fuente: construcción propia del ITED con el CGPE 2025. Los dos primeros renglones son la prueba de aceptación del marco sobre 2022, con las dos añadas que estaban en disputa.
 
@@ -1412,8 +1412,8 @@ cambiara.
 | Subsidios | 2.7 | 2.7 | 3.0 | 3.5 | 3.7 | 3.7 | 3.6 | 3.5 | 0.5 |
 | Pensiones y jubilaciones | 4.4 | 4.4 | 4.5 | 4.6 | 4.6 | 4.7 | 4.8 | 4.8 | 0.3 |
 | Gasto de capital | 3.2 | 3.7 | 2.8 | 2.7 | 2.4 | 2.4 | 2.4 | 2.4 | -0.4 |
-| Inversion fisica | 2.7 | 3.0 | 2.3 | 2.4 | 2.0 | 2.1 | 2.0 | 2.0 | -0.3 |
-| Inversion financiera | 0.5 | 0.7 | 0.4 | 0.3 | 0.3 | 0.3 | 0.3 | 0.3 | -0.1 |
+| Inversión física | 2.7 | 3.0 | 2.3 | 2.4 | 2.0 | 2.1 | 2.0 | 2.0 | -0.3 |
+| Inversión financiera | 0.5 | 0.7 | 0.4 | 0.3 | 0.3 | 0.3 | 0.3 | 0.3 | -0.1 |
 | Gasto no programable | 7.5 | 7.4 | 7.7 | 6.9 | 6.5 | 6.5 | 6.3 | 6.3 | -1.4 |
 | Costo financiero | 3.7 | 3.6 | 3.8 | 3.2 | 2.8 | 2.8 | 2.7 | 2.7 | -1.1 |
 | Participaciones | 3.7 | 3.7 | 3.7 | 3.5 | 3.5 | 3.5 | 3.5 | 3.5 | -0.2 |
@@ -1426,7 +1426,7 @@ cambiara.
 | Deuda neta interna | 37.1 | 37.9 | 39.2 | 40.0 | 40.4 | 40.8 | 41.1 | 41.5 | 2.3 |
 | Deuda neta externa | 11.5 | 13.1 | 11.7 | 10.9 | 10.5 | 10.1 | 9.8 | 9.4 | -2.2 |
 | Saldo historico de la deuda bruta del SPNF | 52.9 | 54.9 | 54.9 | 54.9 | 54.9 | 54.9 | 54.9 | 54.9 | 0.0 |
-| Limite maximo de gasto corriente estructural | 9.8 | 10.1 | 10.1 | 10.1 | 10.1 | 10.1 | 10.1 | 10.1 | 0.0 |
+| Limite máximo de gasto corriente estructural | 9.8 | 10.1 | 10.1 | 10.1 | 10.1 | 10.1 | 10.1 | 10.1 | 0.0 |
 
 Fuente: elaboración propia del ITED con información de la SHCP, CGPE 2025, Anexo III.2, p.~85. El CGPE 2025 se publicó sin capa de texto; las cifras se leyeron de la página renderizada y se validaron por identidad contable.
 
@@ -1488,10 +1488,10 @@ supone sobre esa estructura.
 
 | Vértice | 2025 (mdp) | % PIB | Var. real % | Dirección demográfica | ¿Horizonte en el paquete? |
 |---|---|---|---|---|---|
-| Pensiones contributivas (clasificacion economica) | 1637665.1 | 4.53 | 4.7 | la transicion lo empuja al alza | SI: el CGPE proyecta pensiones y jubilaciones a 2030 (4.5 a 4.8 % del PIB) |
-| Pensiones no contributivas (ramo 20) | 527389.1 | 1.46 | 2.6 | la transicion lo empuja al alza | NO: el paquete no proyecta el padron |
-| Salud (funcion 2.3, GF + entidades, bruta) | 888903.7 | 2.46 | -12.2 | al alza por envejecimiento | NO: ninguna proyeccion por funcion |
-| Educacion (funcion 2.5, GF, bruta) | 1084590.9 | 3.0 | 0.7 | LA TRANSICION LO EMPUJA A LA BAJA | NO: el paquete no declara matricula, cobertura, planteles ni docentes |
+| Pensiones contributivas (clasificación económica) | 1637665.1 | 4.53 | 4.7 | la transición lo empuja al alza | SI: el CGPE proyecta pensiones y jubilaciones a 2030 (4.5 a 4.8 % del PIB) |
+| Pensiones no contributivas (ramo 20) | 527389.1 | 1.46 | 2.6 | la transición lo empuja al alza | NO: el paquete no proyecta el padron |
+| Salud (función 2.3, GF + entidades, bruta) | 888903.7 | 2.46 | -12.2 | al alza por envejecimiento | NO: ninguna proyección por función |
+| Educación (función 2.5, GF, bruta) | 1084590.9 | 3.0 | 0.7 | LA TRANSICION LO EMPUJA A LA BAJA | NO: el paquete no declara matrícula, cobertura, planteles ni docentes |
 
 Fuente: elaboración propia del ITED con los analíticos del PEF aprobado 2024 y 2025 y el CGPE 2025.
 

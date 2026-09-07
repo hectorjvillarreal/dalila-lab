@@ -1,9 +1,9 @@
 """validar_latex.py — comprobación estática del proyecto LaTeX.
 
-NO SUSTITUYE A LA COMPILACIÓN. Esta máquina no tiene toolchain de LaTeX y la
-preferencia del proyecto es no instalarlo: los borradores compilan en Overleaf.
-Lo que este script hace es reducir a lo mínimo la probabilidad de que la
-compilación falle por algo mecánico, y decir con claridad qué no puede comprobar.
+NO SUSTITUYE A LA COMPILACIÓN, pero ya no es lo único que hay: desde el
+2026-09-07 Dalila tiene TinyTeX en ~/.TinyTeX y `compilar.sh` hace la compilación
+de verdad. Este script sigue siendo útil porque es instantáneo y porque atrapa
+cosas que la compilación no señala como error, y se corre antes de compilar.
 
 Comprueba: llaves balanceadas, entornos abiertos y cerrados, que todo \\input
 apunte a un archivo que existe, que todo \\ref tenga su \\label, que los paquetes
@@ -17,7 +17,7 @@ CAPS = os.path.join(AQUI, "capitulos")
 DATOS = os.path.join(AQUI, "datos")
 MAIN = os.path.join(AQUI, "main.tex")
 
-PERMITIDOS = {"inputenc", "fontenc", "babel", "geometry", "booktabs", "longtable",
+PERMITIDOS = {"inputenc", "fontenc", "babel", "geometry", "booktabs", "longtable", "array", "lmodern",
               "graphicx", "caption", "fancyhdr", "pgfplots", "siunitx", "hyperref"}
 PROHIBIDOS = {"minted", "shellesc", "svg", "epstopdf"}
 
@@ -124,9 +124,8 @@ if problemas:
         print("   " + p_)
 else:
     print("Sin problemas estáticos.")
-print("\nLO QUE ESTO NO COMPRUEBA, y hay que verificar en Overleaf:")
-print("   - que el documento compile de verdad, en dos pasadas y sin errores")
-print("   - desbordes de caja en los cuadros anchos (C1_2, C12_2, C12_4)")
-print("   - que siunitx acepte todas las celdas de las columnas tipo S")
+print("\nLO QUE ESTO NO COMPRUEBA: corre `sh compilar.sh`, que sí compila.")
+print("   - desbordes de caja, que solo aparecen al componer")
 print("   - la colocacion de flotantes y la paginacion")
+print("   - si una figura quedo ilegible por escala, que ningun log reporta")
 sys.exit(1 if problemas else 0)

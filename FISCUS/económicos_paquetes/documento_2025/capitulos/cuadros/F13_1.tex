@@ -8,14 +8,16 @@
                  legend columns=-1, draw=none},
   tick label style={font=\footnotesize},
   label style={font=\footnotesize},
+  x tick label style={/pgf/number format/1000 sep={}},
   ymajorgrids=true, grid style={dashed, gray!30},
   enlarge x limits=0.06,
+  cycle list={{solid,mark=*}, {dashed,mark=square*}, {dotted,mark=triangle*}, {dashdotted,mark=diamond*}},
   ybar, bar width=9pt,
   xtick=data,
 ]
-\addplot coordinates {(1,4.36) (2,1.43) (3,2.82) (4,3.0)};
+\addplot+ coordinates {(1,4.36) (2,1.43) (3,2.82) (4,3.0)};
 \addlegendentry{2024}
-\addplot coordinates {(1,4.53) (2,1.46) (3,2.46) (4,3.0)};
+\addplot+ coordinates {(1,4.53) (2,1.46) (3,2.46) (4,3.0)};
 \addlegendentry{2025}
 \end{axis}
 \end{tikzpicture}

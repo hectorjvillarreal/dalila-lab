@@ -52,15 +52,24 @@ Conviene la honestidad sobre el resultado: **dos de los tres capítulos que el p
 
 Cuatro huecos quedan declarados **en el documento y no solo aquí**: población por afiliación, población por entidad, matrícula, y la trayectoria del derecho petrolero.
 
-## 6. Compilación
+## 6. Compilación · CERRADA el 2026-09-07
 
-**No se compiló.** Esta máquina no tiene toolchain de LaTeX y la preferencia del proyecto es no instalarlo. **El criterio de aceptación 1.3 de la instrucción queda abierto y hay que cerrarlo en Overleaf.**
+**El criterio de aceptación 1.3 está cumplido: el documento compila.** 57 páginas, tres pasadas, **0 errores, 0 referencias sin resolver, 0 fuentes de mapa de bits** y cuatro desbordes de caja de menos de 8 pt, todos en líneas de prosa y dentro de la tolerancia normal de un texto justificado.
 
-Lo que sí se hizo: `validar_latex.py`, 96 comprobaciones estáticas, todas pasan. Llaves y entornos balanceados; todo `\input` apunta a un archivo existente; todo `\ref` tiene su `\label`; solo paquetes de la lista permitida; nada exige `shell-escape`; las columnas que pide pgfplots existen en su archivo de datos.
+Se instaló **TinyTeX en `~/.TinyTeX`**, que es de usuario y no toca el sistema, después de que Overleaf gratuito no pudiera con el proyecto. `compilar.sh` deja el flujo reproducible: regenera cuadros, corre las comprobaciones estáticas, corre el cierre contable, compila tres veces y deja el PDF en `_entrega/`.
 
-**La comprobación encontró un error que habría roto la compilación entera:** LaTeX resuelve los `\input` desde el directorio del archivo maestro, no desde el del capítulo, y las veintiuna inclusiones de cuadro estaban mal.
+**Por qué probablemente falló Overleaf.** No era un error de LaTeX: el documento compilaba desde el primer intento aquí. El sospechoso es la **generación de fuentes de mapa de bits**. Sin `lmodern`, `fontenc` T1 con Computer Modern obliga a `mktexpk` a generar fuentes al vuelo: **8.2 segundos por pasada en esta máquina contra 3.1 con `lmodern`**. En un servidor compartido y con el límite de tiempo del plan gratuito, esa diferencia decide. Se descartó la hipótesis del `table-align-text-before` de siunitx: se probó restaurándolo y no da error.
 
-**Lo que la comprobación estática no cubre y hay que ver en Overleaf:** que compile en dos pasadas sin errores, desbordes de caja en los cuadros anchos (C1\_2, C12\_2, C12\_4), que siunitx acepte todas las celdas de las columnas tipo S, y la colocación de flotantes.
+**Lo que la compilación reveló y ninguna comprobación estática podía ver.**
+
+1. **Once cuadros se salían de la caja, hasta 363 pt.** La causa era que la primera columna era `l` y no envolvía: un nombre de ramo largo estira la tabla sin límite. Se introdujo el tipo de columna `L{ancho}`. Es el hallazgo de maquetación más importante y **es invisible sin componer**.
+2. **Las etiquetas del eje de años salían «2,025»**, porque siunitx y pgfplots comparten el separador de millares.
+3. **Las tres curvas de una figura salían idénticas.** `\addplot[...]` sobrescribe la lista de estilos; hay que usar `\addplot+[...]`. Una figura con tres curvas indistinguibles no es un error para ningún compilador.
+4. **Una figura mezclaba el acervo (51.4) con los flujos (de −3.9 a 0.6)** en el mismo eje y los flujos quedaban aplastados contra el cero.
+5. **Nuestras propias etiquetas estaban sin acentos** («Inflacion», «Petroleo») porque se teclearon en ASCII en los guiones. Se repone con un mapa determinista al emitir el csv, que por ir de palabra sin acento a palabra con acento no puede tocar una etiqueta oficial, que ya viene acentuada.
+6. **El acentuado rompió las búsquedas por nombre del validador, que se saltó diez pruebas EN SILENCIO** y siguió diciendo que todo cerraba. Se corrigió para que una variable ausente sea una falla y no un salto. **Un validador que se salta pruebas calladamente es peor que no tenerlo.** El mismo fallo dejó una serie de figura vacía, con leyenda y sin curva; ahora también es error ruidoso.
+
+**Lo que sigue sin comprobarse por medios automáticos:** si una figura quedó ilegible por escala o si un flotante cayó lejos de su texto. Eso se ve mirando.
 
 ## 6.bis Entrega para Overleaf
 
