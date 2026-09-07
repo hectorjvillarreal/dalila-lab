@@ -62,6 +62,19 @@ Lo que sí se hizo: `validar_latex.py`, 96 comprobaciones estáticas, todas pasa
 
 **Lo que la comprobación estática no cubre y hay que ver en Overleaf:** que compile en dos pasadas sin errores, desbordes de caja en los cuadros anchos (C1\_2, C12\_2, C12\_4), que siunitx acepte todas las celdas de las columnas tipo S, y la colocación de flotantes.
 
+## 6.bis Entrega para Overleaf
+
+`_entrega/Implicaciones_PE2025_ITED.zip`, 98 KB, 74 archivos, con **main.tex en la raíz del zip y no dentro de una carpeta**: Overleaf compila desde la raíz del proyecto y una carpeta envolvente rompería las 42 inclusiones. Se probó extrayendo el zip en limpio y comprobando que las 42 resuelven.
+
+Cuatro correcciones de maquetación que se hicieron al preparar la entrega, todas por riesgo real de que la compilación falle o se desborde:
+
+1. **Celdas vacías en columnas `S` de siunitx.** Salían como `---` sin llaves, que es un error de compilación. Ahora salen como `{---}`. Afectaba a ocho cuadros.
+2. **Marginalia sin ancho de margen.** El género usa notas al margen y el preámbulo tenía márgenes simétricos de 2.6 cm, con lo que cada `\marginpar` se habría salido de la página. Margen derecho a 4.8 cm y `marginparwidth` de 3.3 cm.
+3. **`es-tabla` en babel** rotulaba las leyendas como «Tabla»; el género rotula «Cuadro». Retirado.
+4. **Cuadros que no caben.** Se añadió ajuste automático: `longtable` para los de más de 26 filas (C7\_3, C10\_1, C11\_1, C12\_2) y `\resizebox` para los de más de 7 columnas (C1\_2, C2\_1, C12\_4).
+
+**Y se cerró un hueco del pacto:** prometía ocho figuras y el borrador no tenía ninguna. Se generaron cuatro (F2\_1, F12\_1, F12\_2, F13\_1) **con las coordenadas en línea**, no leyendo el `.csv` en tiempo de compilación. La proveniencia es la misma, porque el generador lee el `.csv`; lo que se evita es la parte más frágil de un proyecto LaTeX que no se puede probar aquí. Siguen faltando cuatro de las ocho previstas.
+
 ## 7. Errores propios que la corrida cometió y corrigió
 
 Se registran porque son el material de la rúbrica.
@@ -71,6 +84,7 @@ Se registran porque son el material de la rúbrica.
 3. **Coercionar a número una columna que traía nombre.** En los cortes por función, `F` y `FN` vienen como texto; con pandas 3 el dtype es `str` y no `object`, de modo que la comprobación habitual falla en silencio.
 4. **Una cifra tecleada de memoria.** El impuesto a la exploración de 2024 se escribió como 8,459.0 cuando la ley dice 7,811.0. Se detectó al contrastar contra el PDF. **Es exactamente lo que la regla de no teclear cifras existe para evitar, y ocurrió en el único lugar donde se tecleó.**
 5. **Rutas `\input` mal resueltas**, ver §6.
+6. **Etiquetas de eje y encabezados con doble escape.** El generador escapaba texto que ya traía `\%`, produciendo `\textbackslash\{\}\%`. Ocurrió dos veces, en los encabezados de cuadro y en las etiquetas de eje de las figuras, y las dos se detectaron mirando el `.tex` generado, no el texto.
 
 ## 8. Series de seguimiento
 

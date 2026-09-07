@@ -150,3 +150,61 @@ cuadro("CR_1", "razones_estructurales.csv",
 print("cuadros generados en capitulos/cuadros/ y markdown/cuadros/")
 print("archivos:", len(os.listdir(os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                                "capitulos", "cuadros"))))
+
+# =========================================================== FIGURAS ==========
+# Las coordenadas se leen aqui de los .csv y se emiten EN LINEA en el .tex.
+# Misma proveniencia, sin que la compilacion dependa de leer un archivo.
+import csv as _csv
+from tablas import figura
+
+def _serie(archivo, concepto, anios, campo=None):
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "datos", archivo),
+              newline="", encoding="utf-8") as f:
+        filas = list(_csv.DictReader(f))
+    for r in filas:
+        clave = r.get("concepto") or r.get("vertice") or r.get("variable") or ""
+        if clave.strip().startswith(concepto):
+            return [(a, r[a]) for a in anios if r.get(a) not in (None, "", "nan")]
+    return []
+
+ANIOS = ["2025", "2026", "2027", "2028", "2029", "2030"]
+
+figura("F12_1", "Saldo histórico de los requerimientos financieros y sus flujos, 2025--2030",
+       CG + ", Anexo III.2, p.~85",
+       series=[("SHRFSPF", _serie("perspectivas_2024_2030.csv", "SHRFSP", ANIOS)),
+               ("RFSPF", _serie("perspectivas_2024_2030.csv", "I. RFSP", ANIOS)),
+               ("Balance primario", _serie("perspectivas_2024_2030.csv", "IV. Balance primario", ANIOS))],
+       xlabel="ejercicio", ylabel="\\% del PIB", origen="perspectivas_2024_2030.csv",
+       nota="El acervo se mantiene plano seis años; el ajuste está en el flujo. " + IMG)
+
+figura("F12_2", "Gasto por clasificación económica en el escenario oficial, 2025--2030",
+       CG + ", Anexo III.2, p.~85",
+       series=[("Pensiones y jubilaciones", _serie("perspectivas_2024_2030.csv", "Pensiones y jubilaciones", ANIOS)),
+               ("Costo financiero", _serie("perspectivas_2024_2030.csv", "Costo financiero", ANIOS)),
+               ("Inversión física", _serie("perspectivas_2024_2030.csv", "Inversion fisica", ANIOS)),
+               ("Servicios personales", _serie("perspectivas_2024_2030.csv", "Servicios personales", ANIOS))],
+       xlabel="ejercicio", ylabel="\\% del PIB", origen="perspectivas_2024_2030.csv",
+       nota="Pensiones es la única de las cuatro que sube. " + IMG)
+
+figura("F13_1", "La tríada de transferencias de ciclo de vida, 2024 y 2025",
+       AN, tipo="barra",
+       series=[("2024", [(str(i+1), r["pct_pib_2024"]) for i, r in
+                         enumerate(_csv.DictReader(open(os.path.join(
+                             os.path.dirname(os.path.abspath(__file__)), "datos",
+                             "triada_nta.csv"), encoding="utf-8")))]),
+               ("2025", [(str(i+1), r["pct_pib_2025"]) for i, r in
+                         enumerate(_csv.DictReader(open(os.path.join(
+                             os.path.dirname(os.path.abspath(__file__)), "datos",
+                             "triada_nta.csv"), encoding="utf-8")))])],
+       xlabel="1 pensiones contributivas · 2 no contributivas · 3 salud · 4 educación",
+       ylabel="\\% del PIB", origen="triada_nta.csv",
+       nota="Mismos perímetros que los capítulos 5, 6 y 7.")
+
+figura("F2_1", "Ingresos y gasto neto en el escenario oficial, 2025--2030",
+       CG + ", Anexo III.2, p.~85",
+       series=[("Ingresos presupuestarios", _serie("perspectivas_2024_2030.csv", "III.A Ingresos", ANIOS)),
+               ("Gasto neto pagado", _serie("perspectivas_2024_2030.csv", "III.B Gasto neto", ANIOS))],
+       xlabel="ejercicio", ylabel="\\% del PIB", origen="perspectivas_2024_2030.csv",
+       nota="La brecha se cierra bajando el gasto, no subiendo el ingreso. " + IMG)
+
+print("figuras generadas: F12_1, F12_2, F13_1, F2_1")

@@ -53,13 +53,13 @@ def añadir(caso, r, nota):
 # del CGPE 2024 (49.2 -> 47.7 con RFSPF de 4.3), y anota que las demas dan -1.4 y
 # -1.3. Son tres vintages del mismo año y dan resultados distintos, asi que se
 # corren los dos y se declara cual es cual. No se elige uno en silencio.
-añadir("Prueba 2022, añada del CGPE 2024 (la validada en la rubrica 2023)",
+añadir("Prueba 2022, añada CGPE 2024",
        descomponer(d_prev=49.2, d_t=47.7, rfspf=4.3, g=0.039, pi=0.067,
                    deuda_externa_pp=14.6, apreciacion=0.055),
        "Reproduce -1.5 observado. Es la añada con la que la rubrica dio -1.7 en 2023; "
        "aqui cierra mejor porque el efecto de tipo de cambio se calcula sobre la deuda "
        "externa del sector publico y no sobre la del Gobierno Federal.")
-añadir("Prueba 2022, añada que nombra la instruccion 2025 (50.7 -> 49.4)",
+añadir("Prueba 2022, añada alterna",
        descomponer(d_prev=50.7, d_t=49.4, rfspf=4.5, g=0.039, pi=0.067,
                    deuda_externa_pp=15.0, apreciacion=0.055),
        "Misma mecanica, otra añada del mismo año. La diferencia entre este renglon y el "
@@ -74,7 +74,7 @@ añadir("Prueba 2022, añada que nombra la instruccion 2025 (50.7 -> 49.4)",
 #   tipo de cambio fin de periodo 19.7 -> 18.5 = apreciacion de 6.09 %
 n_2025 = 36166.4 / 33927.7 - 1
 g_2025 = (1 + n_2025) / 1.043 - 1
-añadir("Aplicacion a 2025 (SHRFSPF 51.4 -> 51.4)",
+añadir("Aplicacion a 2025",
        descomponer(d_prev=51.4, d_t=51.4, rfspf=3.9, g=g_2025, pi=0.043,
                    deuda_externa_pp=12.9, apreciacion=(19.7 - 18.5) / 19.7),
        f"Crecimiento implicito en el PIB nominal publicado: {100*g_2025:.2f} %, dentro del "

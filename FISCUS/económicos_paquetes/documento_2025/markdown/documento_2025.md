@@ -354,6 +354,14 @@ exposición de motivos del proyecto de presupuesto disponible y la iniciativa de
 ingresos no comenta el renglón. Se deja registrado como el cambio de composición
 más grande del artículo primero, con su explicación pendiente de fuente.
 
+**Figura F2_1. Ingresos y gasto neto en el escenario oficial, 2025--2030**
+
+- *Ingresos presupuestarios*: 2025: 22.3, 2026: 22.2, 2027: 22.1, 2028: 22.0, 2029: 21.9, 2030: 21.8
+- *Gasto neto pagado*: 2025: 25.5, 2026: 24.9, 2027: 24.4, 2028: 24.3, 2029: 24.2, 2030: 24.1
+
+Fuente: elaboración propia del ITED con información de la SHCP, CGPE 2025, Anexo III.2, p.~85. La brecha se cierra bajando el gasto, no subiendo el ingreso. El CGPE 2025 se publicó sin capa de texto; las cifras se leyeron de la página renderizada y se validaron por identidad contable.
+*(generada desde `datos/perspectivas_2024_2030.csv`)*
+
 ### Sin miscelánea fiscal
 
 **El paquete 2025 no incluye una iniciativa de reformas fiscales.** La
@@ -1330,9 +1338,9 @@ inflación es la suma de los dos, no el primero solo.
 
 | Caso | d_t-1 | d_t | Obs. | RFSPF | Crec. | Infl. denom. | Compens. | Infl. neta | Tipo cambio | Suma | Residuo |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Prueba 2022, añada del CGPE 2024 (la validada en la rubrica 2023) | 49.2 | 47.7 | -1.5 | 4.3 | -1.73 | -3.09 | 2.97 | -0.12 | -0.8 | -1.32 | -0.18 |
-| Prueba 2022, añada que nombra la instruccion 2025 (50.7 -> 49.4) | 50.7 | 49.4 | -1.3 | 4.5 | -1.78 | -3.18 | 3.06 | -0.12 | -0.82 | -1.29 | -0.01 |
-| Aplicacion a 2025 (SHRFSPF 51.4 -> 51.4) | 51.4 | 51.4 | 0.0 | 3.9 | -1.06 | -2.12 | 2.07 | -0.05 | -0.79 | -0.07 | 0.07 |
+| Prueba 2022, añada CGPE 2024 | 49.2 | 47.7 | -1.5 | 4.3 | -1.73 | -3.09 | 2.97 | -0.12 | -0.8 | -1.32 | -0.18 |
+| Prueba 2022, añada alterna | 50.7 | 49.4 | -1.3 | 4.5 | -1.78 | -3.18 | 3.06 | -0.12 | -0.82 | -1.29 | -0.01 |
+| Aplicacion a 2025 | 51.4 | 51.4 | 0.0 | 3.9 | -1.06 | -2.12 | 2.07 | -0.05 | -0.79 | -0.07 | 0.07 |
 
 Fuente: construcción propia del ITED con el CGPE 2025. Los dos primeros renglones son la prueba de aceptación del marco sobre 2022, con las dos añadas que estaban en disputa.
 
@@ -1433,6 +1441,25 @@ Conviene anotar lo que el escenario *no* incorpora, porque el propio cuadro
 lo hace visible: la inversión física baja de 2.3 a 2.0% del PIB y se queda ahí
 seis años. **La estabilidad del acervo se sostiene, en el escenario oficial, sobre una inversión pública permanentemente baja.**
 
+**Figura F12_1. Saldo histórico de los requerimientos financieros y sus flujos, 2025--2030**
+
+- *SHRFSPF*: 2025: 51.4, 2026: 51.4, 2027: 51.4, 2028: 51.4, 2029: 51.4, 2030: 51.4
+- *RFSPF*: 2025: -3.9, 2026: -3.2, 2027: -2.9, 2028: -2.9, 2029: -2.9, 2030: -2.9
+- *Balance primario*: 2025: 0.6, 2026: 0.5, 2027: 0.5, 2028: 0.4, 2029: 0.4, 2030: 0.4
+
+Fuente: elaboración propia del ITED con información de la SHCP, CGPE 2025, Anexo III.2, p.~85. El acervo se mantiene plano seis años; el ajuste está en el flujo. El CGPE 2025 se publicó sin capa de texto; las cifras se leyeron de la página renderizada y se validaron por identidad contable.
+*(generada desde `datos/perspectivas_2024_2030.csv`)*
+
+**Figura F12_2. Gasto por clasificación económica en el escenario oficial, 2025--2030**
+
+- *Pensiones y jubilaciones*: 2025: 4.5, 2026: 4.6, 2027: 4.6, 2028: 4.7, 2029: 4.8, 2030: 4.8
+- *Costo financiero*: 2025: 3.8, 2026: 3.2, 2027: 2.8, 2028: 2.8, 2029: 2.7, 2030: 2.7
+- *Inversión física*: 2025: 2.3, 2026: 2.4, 2027: 2.0, 2028: 2.1, 2029: 2.0, 2030: 2.0
+- *Servicios personales*: 2025: 4.7, 2026: 4.7, 2027: 4.7, 2028: 4.7, 2029: 4.7, 2030: 4.7
+
+Fuente: elaboración propia del ITED con información de la SHCP, CGPE 2025, Anexo III.2, p.~85. Pensiones es la única de las cuatro que sube. El CGPE 2025 se publicó sin capa de texto; las cifras se leyeron de la página renderizada y se validaron por identidad contable.
+*(generada desde `datos/perspectivas_2024_2030.csv`)*
+
 ### Comparaciones estructurales
 
 *Costo financiero sobre impuestos*: 0.20 en 2022, 0.23 en 2023, 0.256 en 2024
@@ -1477,6 +1504,14 @@ descomposición del capítulo 6. La educación vale 3.00% y crece 0.7%.
 
 **En conjunto, la tríada consume 11.45% del PIB, casi la mitad del gasto neto total.** Y su composición se desplaza de forma consistente: el vértice de la
 vejez crece, el de la juventud se mantiene, el del ciclo completo cae.
+
+**Figura F13_1. La tríada de transferencias de ciclo de vida, 2024 y 2025**
+
+- *2024*: 1: 4.36, 2: 1.43, 3: 2.82, 4: 3.0
+- *2025*: 1: 4.53, 2: 1.46, 3: 2.46, 4: 3.0
+
+Fuente: elaboración propia del ITED con los analíticos del PEF aprobado 2024 y 2025. Mismos perímetros que los capítulos 5, 6 y 7.
+*(generada desde `datos/triada_nta.csv`)*
 
 ### Dónde declara el paquete un supuesto demográfico
 

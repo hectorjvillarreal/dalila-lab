@@ -38,9 +38,12 @@ def _num(v: str) -> bool:
 def _fmt(v: str) -> str:
     """Numero -> \\num{} de siunitx, que aplica el formato espanol declarado una vez."""
     v = str(v).strip()
+    # OJO: en una columna S de siunitx, cualquier contenido no numerico DEBE ir
+    # entre llaves o la compilacion falla. Las celdas vacias son frecuentes
+    # (variacion real sin base, columna de la Camara sin dato).
     if v in ("", "nan", "None"):
-        return "---"
-    return r"\num{" + v + "}" if _num(v) else _esc(v)
+        return "{---}"
+    return r"\num{" + v + "}" if _num(v) else "{" + _esc(v) + "}"
 
 
 def leer(archivo: str, filtro=None, columnas=None, renombrar=None, limite=None):
@@ -57,15 +60,53 @@ def leer(archivo: str, filtro=None, columnas=None, renombrar=None, limite=None):
 
 def cuadro(ident: str, archivo: str, titulo: str, fuente: str, *,
            columnas=None, renombrar=None, filtro=None, limite=None,
-           alineacion=None, nota: str = "") -> None:
+           alineacion=None, nota: str = "", ajuste: str = "auto") -> None:
+    """`ajuste` decide como se acomoda el cuadro en la caja:
+       'float'     table + tabular, lo normal;
+       'ancho'     igual pero envuelto en \resizebox para que quepa a lo ancho;
+       'largo'     longtable, que si parte entre paginas;
+       'auto'      elige por numero de filas y columnas.
+    Sin esto, tres cuadros se salen de la caja y cuatro no caben en una pagina."""
     enc, filas = leer(archivo, filtro, columnas, renombrar, limite)
     ncol = len(enc)
     al = alineacion or ("l" + "S" * (ncol - 1))
+    if ajuste == "auto":
+        ajuste = "largo" if len(filas) > 26 else ("ancho" if ncol > 7 else "float")
+    cuerpo_tam = r"\scriptsize" if (ajuste == "largo" and ncol > 7) else r"\small"
 
-    # ---- LaTeX
+    if ajuste == "largo":
+        out = [cuerpo_tam,
+               r"\begin{longtable}{" + al + "}",
+               r"\caption{" + _esc(titulo) + r"}\label{tab:" + ident + r"}\\",
+               r"\toprule",
+               " & ".join("{" + str(e) + "}" for e in enc) + r" \\",
+               r"\midrule\endfirsthead",
+               r"\toprule",
+               " & ".join("{" + str(e) + "}" for e in enc) + r" \\",
+               r"\midrule\endhead",
+               r"\bottomrule\endfoot"]
+        for fila in filas:
+            if str(fila[0]).startswith("--") and not any(str(c).strip() for c in fila[1:]):
+                out.append(r"\multicolumn{" + str(ncol) + r"}{l}{\itshape " +
+                           _esc(str(fila[0]).strip("- ")) + r"} \\")
+                continue
+            out.append(" & ".join(_fmt(c) for c in fila) + r" \\")
+        pie = r"\par\vspace{2pt}\footnotesize Fuente: " + _esc(fuente) + "."
+        if nota:
+            pie += r" " + _esc(nota)
+        out += [r"\end{longtable}", pie, r"\normalsize", ""]
+        with open(os.path.join(TEX, f"{ident}.tex"), "w", encoding="utf-8") as f:
+            f.write("\n".join(out))
+        _markdown(ident, titulo, enc, filas, ncol, fuente, nota)
+        return
+
+    # ---- LaTeX, cuadro flotante
     out = [r"\begin{table}[htbp]", r"\centering",
            r"\caption{" + _esc(titulo) + "}", r"\label{tab:" + ident + "}",
-           r"\small", r"\begin{tabular}{" + al + "}", r"\toprule"]
+           r"\small"]
+    if ajuste == "ancho":
+        out.append(r"\resizebox{\textwidth}{!}{%")
+    out += [r"\begin{tabular}{" + al + "}", r"\toprule"]
     # Los encabezados van CRUDOS: permiten $d_{t-1}$ y \%. Las celdas si se escapan.
     out.append(" & ".join("{" + str(e) + "}" for e in enc) + r" \\")
     out.append(r"\midrule")
@@ -77,13 +118,18 @@ def cuadro(ident: str, archivo: str, titulo: str, fuente: str, *,
             continue
         out.append(" & ".join(_fmt(c) for c in fila) + r" \\")
     out += [r"\bottomrule", r"\end{tabular}"]
+    if ajuste == "ancho":
+        out.append(r"}")
     pie = r"\par\vspace{2pt}\footnotesize Fuente: " + _esc(fuente) + "."
     if nota:
         pie += r" " + _esc(nota)
     out += [pie, r"\end{table}", ""]
     with open(os.path.join(TEX, f"{ident}.tex"), "w", encoding="utf-8") as f:
         f.write("\n".join(out))
+    _markdown(ident, titulo, enc, filas, ncol, fuente, nota)
 
+
+def _markdown(ident, titulo, enc, filas, ncol, fuente, nota):
     # ---- Markdown
     limpio = [re.sub(r"\\\\[a-zA-Z]+|[$\\\\{}]", "", str(e)).strip() for e in enc]
     md = [f"**Cuadro {ident}. {titulo}**", "",
@@ -100,36 +146,52 @@ def cuadro(ident: str, archivo: str, titulo: str, fuente: str, *,
         f.write("\n".join(md))
 
 
-def figura(ident: str, archivo: str, titulo: str, fuente: str, *,
-           x: str, series: list, xlabel: str = "", ylabel: str = "",
-           tipo: str = "ybar", ancho: str = r"0.92\textwidth", nota: str = "") -> None:
-    """pgfplots leyendo el .csv directamente. La grafica se vuelve verificable
-    como una cifra: apunta al mismo archivo que el cuadro."""
-    ruta = f"datos/{archivo}"  # relativa al directorio de compilacion, no al del capitulo
-    out = [r"\begin{figure}[htbp]", r"\centering",
-           r"\begin{tikzpicture}",
+def figura(ident: str, titulo: str, fuente: str, *, series: list,
+           xlabel: str = "", ylabel: str = "", tipo: str = "linea",
+           nota: str = "", origen: str = "") -> None:
+    """Emite una figura de pgfplots con las COORDENADAS EN LINEA.
+
+    Las coordenadas se generan desde los .csv de datos/ en tiempo de generacion,
+    de modo que la regla del pacto se cumple igual: ninguna cifra se teclea. Lo
+    que NO se hace es que el .tex lea el .csv en tiempo de compilacion, porque esa
+    es la parte mas fragil de un proyecto LaTeX que no se puede probar aqui: una
+    ruta mal resuelta o un separador inesperado tumban el documento entero.
+
+    `series` es una lista de (etiqueta, [(x, y), ...]).
+    """
+    out = [r"\begin{figure}[htbp]", r"\centering", r"\begin{tikzpicture}",
            r"\begin{axis}[",
-           f"  width={ancho}, height=6.2cm,",
-           f"  xlabel={{{_esc(xlabel)}}}, ylabel={{{_esc(ylabel)}}},",
-           r"  legend style={font=\footnotesize, at={(0.5,-0.22)}, anchor=north, legend columns=-1},",
+           r"  width=0.9\textwidth, height=6.4cm,",
+           # Las etiquetas de eje van CRUDAS, como los encabezados: permiten \% y matematicas.
+           f"  xlabel={{{xlabel}}}, ylabel={{{ylabel}}},",
+           r"  legend style={font=\footnotesize, at={(0.5,-0.24)}, anchor=north,",
+           r"                 legend columns=-1, draw=none},",
            r"  tick label style={font=\footnotesize},",
+           r"  label style={font=\footnotesize},",
            r"  ymajorgrids=true, grid style={dashed, gray!30},",
-           r"  enlarge x limits=0.08,"]
-    if tipo == "ybar":
-        out.append(r"  ybar, bar width=7pt,")
+           r"  enlarge x limits=0.06,"]
+    if tipo == "barra":
+        out += [r"  ybar, bar width=9pt,", r"  xtick=data,"]
+    else:
+        out += [r"  xtick=data,"]
     out.append(r"]")
-    for s in series:
-        estilo = "" if tipo == "ybar" else "[mark=*, thick]"
-        out.append(rf"\addplot{estilo} table [x={x}, y={s}, col sep=comma] {{{ruta}}};")
-        out.append(r"\addlegendentry{" + _esc(s.replace("_", " ")) + "}")
+    for etiqueta, puntos in series:
+        estilo = "" if tipo == "barra" else "[mark=*, mark size=1.6pt, thick]"
+        coords = " ".join(f"({x},{y})" for x, y in puntos)
+        out.append(rf"\addplot{estilo} coordinates {{{coords}}};")
+        out.append(r"\addlegendentry{" + _esc(etiqueta) + "}")
+    pie = r"\par\vspace{2pt}\footnotesize Fuente: " + _esc(fuente) + "."
+    if nota:
+        pie += " " + _esc(nota)
     out += [r"\end{axis}", r"\end{tikzpicture}",
             r"\caption{" + _esc(titulo) + "}", r"\label{fig:" + ident + "}",
-            r"\par\vspace{2pt}\footnotesize Fuente: " + _esc(fuente) + "." +
-            (" " + _esc(nota) if nota else ""),
-            r"\end{figure}", ""]
+            pie, r"\end{figure}", ""]
     with open(os.path.join(TEX, f"{ident}.tex"), "w", encoding="utf-8") as f:
         f.write("\n".join(out))
+    md = [f"**Figura {ident}. {titulo}**", ""]
+    for etiqueta, puntos in series:
+        md.append(f"- *{etiqueta}*: " + ", ".join(f"{x}: {y}" for x, y in puntos))
+    md += ["", f"Fuente: {fuente}." + (f" {nota}" if nota else ""),
+           f"*(generada desde `datos/{origen}`)*" if origen else "", ""]
     with open(os.path.join(MD, f"{ident}.md"), "w", encoding="utf-8") as f:
-        f.write(f"**Figura {ident}. {titulo}**\n\n"
-                f"*(serie generada desde `datos/{archivo}`; en la version LaTeX es una "
-                f"grafica pgfplots que lee ese mismo archivo)*\n\nFuente: {fuente}.\n")
+        f.write("\n".join(md))

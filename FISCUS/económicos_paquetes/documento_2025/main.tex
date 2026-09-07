@@ -10,8 +10,11 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
-\usepackage[letterpaper,top=2.4cm,bottom=2.4cm,left=2.6cm,right=2.6cm]{geometry}
+\usepackage[spanish,es-nodecimaldot]{babel}
+% El genero usa marginalia. Sin margen derecho ancho y sin marginparwidth
+% declarado, \marginpar se desborda de la caja.
+\usepackage[letterpaper,top=2.4cm,bottom=2.4cm,left=2.2cm,right=4.8cm,
+              marginparwidth=3.3cm,marginparsep=0.45cm]{geometry}
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{graphicx}
