@@ -73,10 +73,43 @@ Son cuatro y ninguno se va a resolver con la carpeta. La regla del pacto es deci
 
 ---
 
-## Cierre
+## Cierre, contado sobre el borrador terminado
 
-Se rellena al terminar cada borrador, con la cuenta real de afirmaciones.
+Se cuentan las cifras del **cuerpo del texto**, sin las de los cuadros, y sin los años.
 
-| cap. | afirmaciones | restituciones | derivaciones | juicios | no verificables | % NV | veredicto |
-|---|---|---|---|---|---|---|---|
-| | | | | | | | *(pendiente)* |
+| cap. | capítulo | palabras | cifras en prosa | cuadros | veredicto |
+|---|---|---|---|---|---|
+| 1 | Marco macroeconómico | 740 | 46 | 2 | redactable |
+| 2 | Ingresos presupuestarios | 641 | 46 | 2 | redactable |
+| 3 | Ingresos energéticos | 396 | 16 | 1 | redactable, con ausencia declarada |
+| 4 | Gasto: los agregados | 777 | 69 | 3 | redactable |
+| 5 | Pensiones | 678 | 61 | 1 | redactable |
+| 6 | Salud | 720 | 42 | 1 | redactable, con hueco declarado |
+| 7 | Educación | 807 | 54 | 2 | redactable, con hueco declarado |
+| 8 | Inversión | 293 | 18 | 1 | redactable |
+| 9 | Energía | 321 | 27 | 2 | redactable |
+| 10 | Seguridad | 412 | 31 | 1 | redactable |
+| 11 | Gasto federalizado | 277 | 14 | 1 | redactable, con hueco declarado |
+| 12 | Balance y deuda | 1,057 | 76 | 3 | redactable |
+| 13 | Horizonte demográfico | 603 | 13 | 1 | redactable |
+| | **total** | **7,722** | **513** | **21** | |
+
+**Ningún capítulo quedó por debajo del umbral y ninguno se declaró no redactable.**
+
+Conviene ser preciso sobre por qué, porque el resultado podría leerse como que el
+umbral era laxo. **Dos de los tres capítulos que el pacto puso en riesgo se
+rescataron construyendo datos que no existían al sellarlo**: el 9 con el detalle
+de Pemex y la Comisión Federal de Electricidad por vía de entrada, y el 10
+agotando el analítico por subfunción. El 3, que era el más expuesto, llega a
+dieciséis cifras y se publica **con su ausencia escrita en el cuerpo**: la
+trayectoria de la tasa del derecho por la utilidad compartida no se obtuvo y el
+capítulo dice qué pregunta deja sin responder.
+
+Los capítulos más cortos son el 11 (277 palabras) y el 8 (293). Los dos son cortos
+por la misma razón: **prefieren no publicar el corte per cápita antes que publicar
+uno cuyo denominador no se puede declarar.** Es la aplicación de la quinta
+declaración y tiene un costo en extensión que se acepta.
+
+**Cuatro huecos quedan declarados en el cuerpo del documento y no solo en la
+bitácora**, como manda el pacto: población por afiliación, población por entidad,
+matrícula, y la trayectoria del derecho petrolero.

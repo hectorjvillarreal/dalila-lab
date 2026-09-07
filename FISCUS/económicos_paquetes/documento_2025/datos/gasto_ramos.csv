@@ -20,7 +20,7 @@ concepto,mdp_2024,mdp_2025,dif_nominal_mdp,dif_real_mdp,var_real_pct
 30 Adeudos de Ejercicios Fiscales Anteriores,44050.6,45800.0,1749.4,-144.8,-0.3
 16 Medio Ambiente y Recursos Naturales,70245.5,44370.5,-25875.0,-28895.5,-39.4
 "15 Desarrollo Agrario, Territorial y Urbano",12880.3,38048.0,25167.8,24613.9,183.2
-"38 Ciencia, Humanidades, Tecnología e Innovación",0.0,33295.9,33295.9,33295.9,
+"38 Ciencia, Humanidades, Tecnología e Innovación",33170.7,33295.9,125.2,-1301.2,-3.8
 14 Trabajo y Previsión Social,28603.2,27830.2,-772.9,-2002.9,-6.7
 22 Instituto Nacional Electoral,32767.0,27000.1,-5767.0,-7176.0,-21.0
 06 Hacienda y Crédito Público,28320.8,26732.7,-1588.1,-2805.9,-9.5
@@ -36,7 +36,7 @@ concepto,mdp_2024,mdp_2025,dif_nominal_mdp,dif_real_mdp,var_real_pct
 54 Mujeres,0.0,2093.5,2093.5,2093.5,
 21 Turismo,1973.7,1774.9,-198.8,-283.7,-13.8
 35 Comisión Nacional de los Derechos Humanos,1722.1,1722.4,0.2,-73.8,-4.1
-27 Anticorrupción y Buen Gobierno,0.0,1699.0,1699.0,1699.0,
+27 Anticorrupción y Buen Gobierno,1636.6,1699.0,62.4,-7.9,-0.5
 31 Tribunales Agrarios,959.0,891.8,-67.2,-108.4,-10.8
 02 Oficina de la Presidencia de la República,924.1,823.5,-100.6,-140.3,-14.6
 43 Instituto Federal de Telecomunicaciones,1680.0,500.0,-1180.0,-1252.2,-71.5
@@ -45,5 +45,3 @@ concepto,mdp_2024,mdp_2025,dif_nominal_mdp,dif_real_mdp,var_real_pct
 45 Comisión Reguladora de Energía,285.5,199.9,-85.7,-97.9,-32.9
 46 Comisión Nacional de Hidrocarburos,247.6,173.3,-74.3,-84.9,-32.9
 37 Consejería Jurídica del Ejecutivo Federal,164.5,149.6,-14.9,-21.9,-12.8
-27 Función Pública,1636.6,0.0,-1636.6,-1707.0,-100.0
-"38 Humanidades, Ciencias, Tecnologías e Innovación",33170.7,0.0,-33170.7,-34597.1,-100.0

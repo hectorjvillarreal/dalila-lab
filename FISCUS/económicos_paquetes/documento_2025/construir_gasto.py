@@ -38,8 +38,23 @@ def comparar(s24, s25, etiqueta="concepto"):
 ENC = ["concepto", "mdp_2024", "mdp_2025", "dif_nominal_mdp", "dif_real_mdp", "var_real_pct"]
 
 # ------------------------------------------------------- C4.2 por ramo (GF) ---
-filas = comparar(a24.groupby("RAMO")["IMPORTE"].sum(), a25.groupby("RAMO")["IMPORTE"].sum())
-emitir("gasto_ramos.csv", filas, ENC, dict(FUENTE, cuadro="C4.2"))
+# OJO: se agrupa por NUMERO de ramo y no por su nombre completo. El Ramo 38 se
+# llamaba "Humanidades, Ciencias, Tecnologias e Innovacion" en 2024 y "Ciencia,
+# Humanidades, Tecnologia e Innovacion" en 2025. Agrupar por nombre lo parte en dos
+# y produce un ramo que desaparece con 33,170.7 y otro que aparece con 33,295.9:
+# una variacion contable de 100 % que no existe. Es exactamente el error de
+# perimetro que este proyecto le senala al genero desde 2020, cometido por nuestra
+# propia herramienta.
+n24 = a24.RAMO.astype(str).str[:2]
+n25 = a25.RAMO.astype(str).str[:2]
+etiqueta = {**dict(zip(n24, a24.RAMO.astype(str))), **dict(zip(n25, a25.RAMO.astype(str)))}
+s24 = a24.assign(N=n24).groupby("N")["IMPORTE"].sum().rename(index=lambda k: etiqueta[k])
+s25 = a25.assign(N=n25).groupby("N")["IMPORTE"].sum().rename(index=lambda k: etiqueta[k])
+filas = comparar(s24, s25)
+emitir("gasto_ramos.csv", filas, ENC, dict(FUENTE, cuadro="C4.2",
+       nota=FUENTE["nota"] + " Agrupado por NUMERO de ramo, no por nombre: el Ramo 38 "
+            "cambia de nombre entre 2024 y 2025 y agruparlo por nombre inventa una "
+            "variacion de 100 % que no existe."))
 
 # ------------------------------------------- por entidad de control directo ---
 filas = comparar(e24.groupby("ENTIDAD")["IMPORTE"].sum(), e25.groupby("ENTIDAD")["IMPORTE"].sum())
