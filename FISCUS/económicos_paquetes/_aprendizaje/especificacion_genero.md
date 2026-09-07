@@ -188,3 +188,91 @@ Las nueve adendas anteriores describen el género desde fuera. Ésta se escribi�
 - 2026-09-06 · ejercicio 2023 · adenda §8 (arquitectura de la Parte III, caracterización comparada de las tres partes, plantilla del capítulo de deuda, comparación estructural propuesta para deuda, frente).
 - 2026-09-06 · ejercicio 2024 · adenda §9 (arquitectura del capítulo de educación, cuarto patrón de error, tríada de NTA como conjunto, comparación estructural para educación, plantilla del rubro federalizado, frente).
 - 2026-09-06 · ejercicio 2025 · adenda §10 (lo que se aprende al escribir el género: qué es difícil de imitar, qué convenciones resultaron indefendibles, qué puede hacer un documento propio, y los errores de nuestras propias herramientas).
+
+## Adenda 2026: lo que cambia al escribir el género BAJO RESTRICCIÓN DE LECTURA EN VIVO
+
+La adenda anterior se escribió tras producir un documento del género con el presupuesto ya aprobado. Ésta se escribió tras producirlo **prohibiéndose toda pieza aprobada del ejercicio**: sin Ley de Ingresos aprobada, sin PEF aprobado, sin sus analíticos, sin Cuenta Pública y sin abrir el documento del género hasta terminar. Lo que sigue es lo que solo se ve desde esa restricción.
+
+### 11.1 Qué se pierde y qué se gana al escribir en vivo
+
+**Se pierde una sola cosa, y es grande: la capacidad de adjudicar.** Bajo régimen en vivo, cuando una cifra propia difiere de la de otro documento, **no se puede saber si la diferencia es de método o de momento**. Las tres verificaciones que exigen el aprobado del mismo ejercicio ---separar objeto de perímetro, medir lo que movió la Cámara, adjudicar un titular del proyecto contra el presupuesto que se ejerce--- desaparecen por construcción. Todo documento del género publicado a las setenta y dos horas tiene esa limitación, la declare o no.
+
+**Se gana precisión sobre qué es afirmable y cuándo.** Escribir con la prohibición encima obliga a preguntarse, ante cada cifra, de qué pieza sale. Ese ejercicio produce el registro de lo no verificable, que resultó ser el capítulo más útil del documento y el que ningún ejemplar del género trae.
+
+### 11.2 La comparación proyecto contra proyecto es posible y nadie la hace
+
+El género compara siempre el proyecto del año contra el **aprobado** del anterior, y así mezcla un objeto ex ante con uno ex post. Es la comparación que usa la discusión pública.
+
+**La comparación proyecto contra proyecto ---ex ante contra ex ante--- es la limpia, está disponible el día de la entrega y ningún ejemplar del género la construye.** Exige los analíticos del proyecto del año anterior, que existen y que este proyecto tardó cuatro corridas en localizar (ver `mapa_fuentes.md`, adenda 2026-09-07).
+
+**Regla nueva del género FISCUS: dos líneas etiquetadas en toda columna comparativa.** Línea P, proyecto contra proyecto; línea G, proyecto contra aprobado. Nunca conviven sin etiqueta. La razón práctica es contundente. En el **ejercicio 2025** la misma función educativa, con el mismo perímetro y el mismo deflactor, crece 0,81 % en la línea P, crece 0,70 % de aprobado contra aprobado y **cae 0,47 %** en la línea G: la elección de línea cambia el signo del capítulo. En 2026 el trío no se puede formar ---no hay aprobado 2026 bajo régimen en vivo--- y las dos líneas disponibles dan +3,4 % (P) y +2,2 % (G). Ninguna de las cifras es falsa. **Corrección del 2026-09-07: la versión anterior de este párrafo atribuía a 2026 el trío de 2025.**
+
+### 11.3 Un año de reclasificación cambia lo que el género tiene que hacer
+
+En 2026 aparecieron 271 claves de programa y desaparecieron 358; cinco ramos se extinguieron y tres nacieron; una corporación de seguridad cambió de ramo. **En un año así, el diff de claves deja de ser un control auxiliar y pasa a ser el primer producto del documento.**
+
+**Y es donde el género falla de forma sistemática.** El ejemplar de 2026 no menciona ni una vez la Guardia Nacional, ni el Ramo 47, ni el Ramo 56, ni reclasificación alguna: cero apariciones en 85 páginas. Con lo cual la caída de 95,4 % real del Ramo 47 queda sin explicar y el crecimiento de 12,3 % de Defensa queda sin atribuir.
+
+**No es descuido:** el diff exige los analíticos de los dos años cargados y una herramienta que agrupe por clave. Es caro de montar y barato de correr. Un documento escrito en días no lo monta.
+
+### 11.4 Las trampas de clave, de una a cinco
+
+La regla del género FISCUS era «por clave, nunca por nombre». **No basta.** Cinco trampas, todas verificadas en 2026:
+
+1. **Los nombres cambian:** «Pemex Consolidado» → «Petróleos Mexicanos». Un filtro por nombre devuelve cero.
+2. **La clave cambia de prefijo:** la Pensión Mujeres Bienestar es U316 en 2025 y S316 en 2026. Cambió la modalidad, no el número. **Se selecciona por el número dentro del ramo.**
+3. **Los programas se renumeran conservando el objeto:** el mayor de salud del IMSS pasó de 011 «Atención a la Salud» a 031 «Servicios de atención a la salud». Ni la clave ni el nombre lo encuentran.
+4. **Los ramos enteros cambian de unidad responsable:** todo el Ramo 33 pasó de la UR 420 a la 411.
+5. **Los organismos cambian de ramo, a veces todos los años:** IMSS-Bienestar, ramo 19 en 2024, 47 en 2025, 56 en 2026.
+
+**Corolario:** la única agregación estable es por **función y subfunción**, que son catálogo nacional y no cambian con la estructura administrativa. **Todo perímetro de rubro se define ahí primero y se desagrega por ramo después.** El capítulo de seguridad de 2026 lo demuestra: medido por ramo se ve un desplome del gasto civil; medido por las quince subfunciones, una línea plana. Las dos cifras son correctas y solo una responde la pregunta.
+
+### 11.5 La capa demográfica es lo que separa al género de un reporte contable
+
+La corrida 2025 se negó a calcular por habitante porque los denominadores no estaban en el paquete. **Fue un error de archivo, no de disciplina.** Corregirlo costó dos descargas y produjo el hallazgo mayor del documento 2026:
+
+- Las pensiones caen **0,7 % real** en el agregado y **4,8 % por persona de 65 años y más**, porque esa población creció 4,3 %.
+- La educación crece **3,4 % real**, **2,6 % por habitante** y **4,4 % por persona en edad escolar**, porque hay 248 115 niños menos.
+
+**El paquete asigna 3,8 billones de pesos a la tríada de transferencias de ciclo de vida y no publica un solo denominador para ninguna.** Proyecta pensiones a 2031 ---donde la demografía empuja al alza--- y no declara ningún supuesto de población para educación ---donde empuja a la baja---.
+
+**Regla del género FISCUS:** cuadros presupuestales y cuadros per cápita van separados; toda cifra per cápita declara su denominador con fuente y año; y donde el denominador no se consiga, **se declara y no se calcula**, diciendo además qué habría respondido.
+
+### 11.6 Los anexos transversales tratados como objeto presupuestal
+
+Es un capítulo que el género trae y que nadie audita. Tratado como objeto ---qué anexos hay, cuánto concentran, qué contienen, cuánto se cuentan dos veces--- produce lo siguiente en 2026:
+
+- Doce anexos suman **5 215 304,6 mdp: el 74,3 % del gasto programable**.
+- **170 de los 288 programas etiquetados aparecen en más de un anexo**, y concentran el 95,8 % del etiquetado.
+- La beca de educación básica, un programa de 129 386,0 mdp, aporta **667 631,8** al total transversal a través de los ocho anexos donde está.
+- **El 48,1 % del anexo de igualdad entre mujeres y hombres son programas de pensión**, y su renglón mayor ---la Pensión Adultas Mayores--- es el 43,7 % de todo el anexo.
+
+**El defecto de diseño, que la propia base hace evidente: ningún anexo declara qué fracción de cada programa le corresponde.** Se etiqueta el programa entero, en tantos anexos como se quiera. Una regla de proporciones acotadas a uno lo arreglaría, y el presupuesto tiene la información.
+
+**Esto solo se puede escribir con la base de anexos transversales desglosada por programa**, que la Secretaría publica en datos abiertos y que este proyecto usó por primera vez en 2026.
+
+### 11.7 El deflactor del género, otra vez
+
+El ejemplar de 2026 **no declara su deflactor**. Se recuperó de tres programas independientes y vale **1,0365**, no el 4,8 % del PIB que declara el CGPE. **Toda variación real de su documento es aproximadamente 1,1 puntos porcentuales mayor que la misma cifra deflactada con el índice oficial.**
+
+Y su columna del año anterior **está en pesos del año del proyecto y se rotula como del año anterior**: el gasto por afiliado «de 2025» de 8 596 pesos produce exactamente el 17,2 % real que reportan solo si ya está deflactado.
+
+**Los dos patrones son idénticos a los de 2025 y a los de 2024.** Ya no son hallazgos: son rasgos del género, y la especificación los registra como tales.
+
+### 11.8 Lo que el género hace mejor que un documento propio, y conviene copiar
+
+De la comparación 2026, cuatro cosas, y las cuatro son omisiones propias y no carencias de fuente:
+
+1. **Varas externas.** Citan el 6 % del PIB de la Organización Mundial de la Salud y miden la brecha contra el 2,6 % del paquete. Un documento sin vara externa describe y no juzga.
+2. **Pronósticos independientes.** Contrastan el crecimiento supuesto contra el del Fondo Monetario Internacional. Un capítulo macro que solo discute el marco contra sí mismo carece de contraste.
+3. **Cifras per cápita por subsistema**, con la brecha de 2,3 a 1 entre quien tiene y quien no tiene seguridad social. Exige padrones sectoriales cuya ruta este proyecto todavía no conoce.
+4. **Un agregado que resume el problema en una cifra**: su «espacio fiscal de 1,9 % del PIB».
+
+### 11.9 La comprobación estática de LaTeX, dos años seguidos
+
+En 2025 encontró **veintiuna** inclusiones `\input` mal resueltas. En 2026 encontró **veintiuna**, otra vez, y por la misma razón: LaTeX las resuelve desde el directorio del archivo maestro, no desde el del capítulo que las incluye. Las dos veces habrían roto la compilación entera y ninguna lectura del texto las habría revelado.
+
+**Es el control que más veces ha pagado su costo y el error que este proyecto más ha repetido.**
+
+## Historial (continuación)
+- 2026-09-07 · ejercicio 2026 · adenda §11 (escribir el género bajo restricción de lectura en vivo: qué se pierde y qué se gana; las dos líneas de comparación; el diff de claves como primer producto; las cinco trampas de clave y el corolario funcional; la capa demográfica; los anexos transversales como objeto presupuestal; el deflactor del género confirmado por tercer año; lo que conviene copiarle al género; la comprobación estática).

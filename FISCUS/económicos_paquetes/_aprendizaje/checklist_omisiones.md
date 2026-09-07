@@ -1,0 +1,84 @@
+# Checklist de omisiones propias
+
+**Artefacto de método · FISCUS · creado 2026-09-07 · precarga §3.9 de
+`INSTRUCCIONES_preparacion_2027.md`**
+
+---
+
+## Por qué existe
+
+En 2027 **no habrá documento del género con qué compararse**: la corrida es en vivo y el
+ejemplar de CIEP sobre el mismo paquete no existirá cuando cerremos. Las secciones «lo que
+el otro documento tiene y nosotros no» de las comparaciones 2025 y 2026 fueron el mecanismo
+que detectaba nuestras omisiones. **Esta lista es su reemplazo, y hay que correrla a mano.**
+
+El precedente que la justifica: la vara externa de suficiencia en salud ---el 6 % del PIB
+que recomienda la Organización Mundial de la Salud--- **estaba en la checklist de la corrida
+2025 y volvió a quedarse fuera en 2026**. Una lista que no se revisa capítulo por capítulo
+no sirve de nada.
+
+## Cómo se usa
+
+Al cerrar cada capítulo, y otra vez antes de compilar. Tres respuestas posibles por renglón:
+
+- **HECHO** — está en el documento, con el capítulo donde vive.
+- **FUERA DE ALCANCE** — se declara en el registro del documento **con su razón**, no se
+  omite en silencio.
+- **PENDIENTE** — no se ha decidido. Ningún renglón puede quedar así al compilar.
+
+La columna que hace utilizable la lista es **«¿está en vivo?»**: si la fuente no estará
+disponible el día de la entrega, el renglón nace fuera de alcance y eso se sabe antes de
+gastar reloj en buscarlo.
+
+---
+
+## La lista
+
+### A. Renglones que la corrida 2026 ya puede resolver, porque la precarga los desbloqueó
+
+| # | qué falta | fuente que lo resuelve | ¿está en vivo? | estado 2027 |
+|---|---|---|---|---|
+| A1 | **Gasto en salud por persona afiliada, por subsistema** | `datos_demograficos/`: asegurados del IMSS (cubo mensual del portal propio del Instituto), derechohabientes del ISSSTE (catálogo nacional), registro de IMSS-Bienestar | **Sí, precargado.** No depende del paquete | Era la carencia número uno de 2026. **Resuelta en la precarga.** Cuidado: asegurados del IMSS **no** es derechohabientes; la razón entre subsistemas cambia según cuál se use y hay que decir cuál |
+| A2 | **Gasto por alumno, por nivel educativo** | `datos_demograficos/matricula_sep.csv`, Principales Cifras del Sistema Educativo Nacional | **Sí, precargado** | Resuelta. Los tres denominadores ---población total, población en edad escolar, matrícula--- van en cuadros separados |
+| A3 | **Padrones de programas pensionarios no contributivos** | `datos_demograficos/padron_bienestar.csv` | **Sí, precargado** | Resuelta |
+| A4 | **El perímetro de exclusión de la regla fiscal** | ILIF 2027, artículo del equilibrio presupuestario; serie 2018-2026 en `_aprendizaje/serie_perimetro_regla_fiscal.md` | **Sí**: la ILIF llega el día de la entrega y contiene su exposición de motivos | **Capítulo propio en 2027** (`14_regla_fiscal`). Lo perdieron los dos documentos de 2026 |
+
+### B. Omisiones propias: la fuente existe y es pública, y no la usamos
+
+| # | qué falta | fuente que lo resuelve | ¿está en vivo? | nota |
+|---|---|---|---|---|
+| B1 | **Vara externa de suficiencia en salud** (6 % del PIB, OMS) | Recomendación pública, no requiere descarga | **Sí, siempre** | **Se quedó fuera dos años seguidos.** Es una línea de texto y un cociente |
+| B2 | **Contraste del marco macro con pronósticos externos** | Encuesta de expectativas del banco central (mensual); *World Economic Outlook* del FMI, edición de abril; organismos internacionales | **Sí** la encuesta y la edición de abril. **No** la edición de octubre del WEO, que sale después de la entrega: se usa la de abril y **se declara la añada** | El capítulo macro de 2026 discute el marco contra sí mismo y contra nadie más |
+| B3 | **Comparación contra los Pre-Criterios** | Pre-Criterios del ejercicio, publicados en abril | **Sí** | Es el contraste entre lo prometido en abril y lo entregado en septiembre. El punto de entrada ya lista la fila 2027 con sus Pre-Criterios |
+| B4 | **Límite de gasto corriente estructural contra el observado** | CGPE, partida informativa y su restitución en el texto | **Sí** | Hecho en 2026 y convertido en identidad; **se conserva en el guion de identidades** |
+| B5 | **Presupuesto de la Secretaría de las Mujeres como proporción del anexo de igualdad** | Analíticos por ramo más el anexo transversal | **Sí** | Cifra pequeña y elocuente que no calculamos |
+| B6 | **Convenios de reasignación** | Analíticos, concepto de gasto federalizado no comprendido en los Ramos 28 y 33 | **Sí** | Nuestro perímetro federalizado los excluyó por declaración; **la declaración se mantiene, pero el monto se reporta** |
+| B7 | **Federalismo más allá de los Ramos 28 y 33**: convenios, subsidios, coordinación fiscal, distribución subnacional | Analíticos de entidades, anexos del decreto, Ley de Coordinación Fiscal | **Sí** | Es la ampliación natural del capítulo de gasto federalizado |
+| B8 | **Balances de las empresas públicas con y sin apoyos** | CGPE, anexos de Pemex y CFE | **Sí** | El capítulo de energéticos de 2026 mira la renta y la aportación de capital, no el balance |
+| B9 | **Economía de cuidados: qué parte del anexo es gasto preexistente** | Anexo transversal de cuidados, contra el mismo anexo del ejercicio anterior | **Sí**, con el diff de anexos ya construido | **Sólo como auditoría de etiquetado**, que es donde nuestro método aporta (§4 de la instrucción) |
+| B10 | **Género: concentración del anexo y qué proporción son pensiones** | Anexo de igualdad entre mujeres y hombres, por programa | **Sí** | Hecho parcialmente en 2026 (48,1 % son programas de pensión). Se conserva y se amplía a la concentración |
+| B11 | **Medio ambiente y agua como política, no sólo como composición funcional** | CGPE y exposición de motivos del PPEF | **Parcial**: la exposición de motivos del PPEF **no se publica desde 2022** (servidor caído, no retirada). Si en 2027 sigue sin aparecer, el renglón nace limitado y se declara | El capítulo de 2026 es composición funcional |
+
+### C. Renglones que dependen de una fuente que no estará en vivo
+
+| # | qué falta | fuente que lo resolvería | ¿está en vivo? | decisión |
+|---|---|---|---|---|
+| C1 | **Series largas desde 2013** en las figuras sectoriales | Cuentas Públicas | **No**, y por decisión de alcance no se descargan | **Fuera de alcance, declarado.** Mitigación: los analíticos del **proyecto** están disponibles desde 2021 en `Analiticos_Historico/{t}/Proyecto/`, así que la línea P admite **seis puntos** sin tocar Cuenta Pública. Es la ampliación de serie más barata disponible |
+| C2 | **Desigualdad pensionaria** | Distribución de montos por pensionado: memorias estadísticas institucionales y encuesta de ingresos y gastos | **No**: el paquete no la trae y las memorias no salen ese día | **Fuera de alcance**, con la razón escrita |
+| C3 | **Gasto de bolsillo en salud** | Encuesta de ingresos y gastos de los hogares; cuentas en salud | **No** en la ventana; la encuesta es bienal y su vintage no coincide | Fuera de alcance, o **como referencia contextual fechada**, nunca como cifra del ejercicio |
+| C4 | **Política tributaria en detalle**: Código Fiscal, facturación, RFC, aduanas, comercio electrónico, impuestos específicos | Iniciativa de miscelánea fiscal, en la Gaceta Parlamentaria el día de la entrega | **Sí, en vivo** ---la Gaceta publica el paquete completo el mismo día--- **pero es lectura jurídica de cientos de páginas** | **Decisión de alcance, no de fuente:** se hace la lectura de los cambios de tasa y base, y se declara que el detalle procedimental queda fuera |
+| C5 | **Inversión por sector con nombre de proyecto** | Cartera de inversión con denominación; los analíticos traen la clave sin nombre | **Parcial**: la clave sí, el nombre no | Se publican claves y montos, y **se declara que la denominación no está en la base** |
+| C6 | **Incidencia distributiva completa** | Microdatos y modelo de incidencia | **No** | **Fuera de alcance por decisión de la instrucción** (§4) |
+| C7 | **El espacio fiscal como cifra única** | Definición propia | n/a | **No se adopta.** Es un concepto que este proyecto no computa; lo que el género resume en una cifra, nuestro documento lo dice en tres capítulos. Se declara la diferencia de enfoque, no se copia la cifra |
+
+---
+
+## Renglón que la lista aprendió a incluir sola
+
+**Fondos y programas nuevos que no detectamos.** En 2026 se nos pasó el FAISPIAM ---fondo
+nuevo de infraestructura social para pueblos indígenas y afromexicanos, presentado como
+programa de Bienestar y no como aportación federal---. **No es un renglón temático: es una
+salida del diff.** El diff de claves de `_herramientas/diff_claves.py` lista las altas; la
+regla es **revisar la lista de altas completa antes de cerrar el capítulo de gasto**, y
+nombrar en el documento toda alta que supere el umbral. Con eso este renglón deja de
+depender de que alguien se acuerde.

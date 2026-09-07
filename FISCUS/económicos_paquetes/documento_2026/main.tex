@@ -1,0 +1,90 @@
+\documentclass[11pt,letterpaper]{report}
+
+% Paquetes admitidos por el pacto §11.4. siunitx, minted y todo lo que exija
+% shell-escape están prohibidos. Los números vienen formateados desde el paso de datos.
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}                 % siempre: sin él, T1 + CM genera fuentes bitmap
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage[letterpaper,margin=2.4cm,top=2.6cm,bottom=2.6cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\itshape Implicaciones del Paquete Económico 2026}
+\fancyhead[R]{\footnotesize\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\captionsetup{font=small,labelfont=bf,justification=raggedright,singlelinecheck=false}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+
+% --- capa de presentación (pacto §8.0) ---------------------------------------
+% Lámina: titular cuantitativo, figura o cuadro principal, qué cambió, por qué importa.
+\newcommand{\titular}[1]{%
+  \vspace{2pt}\noindent\fbox{\begin{minipage}{0.965\textwidth}\vspace{3pt}%
+  \large\bfseries #1\vspace{4pt}\end{minipage}}\vspace{6pt}}
+\newcommand{\quecambio}[1]{\noindent\textbf{Qué cambió.} #1\par}
+\newcommand{\porqueimporta}[1]{\noindent\textbf{Por qué importa.} #1\par}
+% Ficha metodológica de cierre: ocho renglones, siempre los mismos.
+\newenvironment{ficha}[1]{%
+  \vspace{6pt}\small\noindent\rule{\textwidth}{0.4pt}\par
+  \noindent\textbf{Ficha metodológica --- #1}\par\vspace{-4pt}
+  \begin{list}{}{\setlength{\leftmargin}{1.1em}\setlength{\itemsep}{0pt}
+  \setlength{\parsep}{1pt}\setlength{\topsep}{3pt}}}%
+  {\end{list}\noindent\rule{\textwidth}{0.4pt}\par\normalsize}
+\newcommand{\fila}[2]{\item[]\textbf{#1:} #2}
+\newcommand{\marginal}[1]{\marginpar{\raggedright\scriptsize\textsc{#1}}}
+% Recuadro metodológico: convenciones que valen para todo el documento y no se repiten
+% por capítulo. Marco simple, sin paquetes: `fbox` sobre `minipage`, como la lámina.
+\newenvironment{recuadro}[1]{%
+  \vspace{6pt}\par\noindent\begin{lrbox}{\recuadrobox}%
+  \begin{minipage}{0.93\textwidth}\small\vspace{3pt}
+  \textbf{#1}\par\vspace{2pt}}%
+  {\vspace{3pt}\end{minipage}\end{lrbox}%
+  \noindent\fbox{\usebox{\recuadrobox}}\vspace{6pt}\par}
+\newsavebox{\recuadrobox}
+
+\begin{document}
+
+\input{capitulos/00_portada}
+\input{capitulos/00_nota_metodo}
+\input{capitulos/00_resumen}
+
+\part*{\centering (+) Ingresos}
+\addcontentsline{toc}{part}{(+) Ingresos}
+\input{capitulos/01_macro}
+\input{capitulos/02_ingresos}
+\input{capitulos/03_energeticos}
+
+\part*{\centering ($-$) Gasto}
+\addcontentsline{toc}{part}{($-$) Gasto}
+\input{capitulos/04_gasto}
+\input{capitulos/05_salud}
+\input{capitulos/06_educacion}
+\input{capitulos/07_pensiones}
+\input{capitulos/08_inversion}
+\input{capitulos/09_seguridad}
+\input{capitulos/10_federalizado}
+\input{capitulos/11_ambiente}
+\input{capitulos/12_transversales}
+
+\part*{\centering (=) Balance y deuda}
+\addcontentsline{toc}{part}{(=) Balance y deuda}
+\input{capitulos/13_deuda}
+
+\part*{\centering Cierre}
+\addcontentsline{toc}{part}{Cierre}
+\input{capitulos/14_horizonte}
+\input{capitulos/15_implicaciones}
+\input{capitulos/99_registro}
+
+\end{document}

@@ -1,0 +1,12 @@
+ejercicio,etapa,concepto,valor_mdp,documento,ubicacion,nota
+2024,ex_ante,oblig_con_pensiones,7327588.8,Proyecto de Decreto de PEF 2024,Anexo 3,"Registrado en _evaluacion/2024/00_inventario_paquete.md §8. Es el PROYECTO: el art. 2 del decreto coincide con el total del art. 1o. de la ILIF (9,066,045.8)."
+2024,ex_ante,costo_financiero,1263994.1,CGPE 2024,p. 119,"Registrado en _evaluacion/2024/00_inventario_paquete.md §8. El CGPE se publica UNA vez, con el paquete: toda cifra suya es ex ante."
+2024,ex_ante,shrfsp,16787906.1,CGPE 2024,p. 119,Registrado en _evaluacion/2024/00_inventario_paquete.md §8.
+2025,ex_ante,oblig_con_pensiones,7684111.9,Proyecto de Decreto de PEF 2025,Anexo 3,"Leído en la corrida 2026 (restituciones/2026.json, decreto_anterior)."
+2025,ex_ante,oblig_sin_pensiones,6046446.8,Proyecto de Decreto de PEF 2025,Anexo 3,"Leído en la corrida 2026 (restituciones/2026.json, decreto_anterior)."
+2025,ex_ante,costo_financiero,1388373.6,CGPE 2025,"Anexo, estimación de finanzas públicas 2025","Registrado en documento_2025/datos/finanzas_publicas.csv, columna mdp_2025."
+2025,ex_ante,shrfsp,18591005.5,CGPE 2025,"Anexo, estimación de finanzas públicas 2025","Registrado en documento_2025/datos/finanzas_publicas.csv, columna mdp_2025."
+2026,ex_ante,oblig_con_pensiones,8406440.2,Proyecto de Decreto de PEF 2026,Anexo 3,restituciones/2026.json
+2026,ex_ante,oblig_sin_pensiones,6702281.0,Proyecto de Decreto de PEF 2026,Anexo 3,restituciones/2026.json
+2026,ex_ante,costo_financiero,1572073.3,CGPE 2026,Anexo II.6 p. 84,restituciones/2026.json
+2026,ex_ante,shrfsp,20259590.7,CGPE 2026,Anexo III.2 p. 87,restituciones/2026.json

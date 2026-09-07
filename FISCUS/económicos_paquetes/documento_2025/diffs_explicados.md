@@ -47,7 +47,9 @@ El Ramo 07 pasa de **259,433.8 a 158,287.8 mdp**. La explicación está entera e
 | H0M Tren Maya, S.A. de C.V. | 125,937.3 | 40,827.8 |
 | H0C Grupo Aeroportuario, Ferroviario y de Servicios Auxiliares | 15,172.8 | 2,275.5 |
 
-Por función, la caída vive en **3.5 Transporte** (127,556.9 → 41,772.1), no en 1.6 Seguridad Nacional (103,530.1 → 101,948.0, prácticamente plana).
+Por función, la caída vive en **3.5 Transporte** (127,556.9 → 41,772.1) y en **3.1 Asuntos económicos y comerciales** (15,172.8 → 2,255.8), no en 1.6 Seguridad Nacional (103,530.1 → 101,948.0: **−1.5 % nominal, −5.6 % real**). Las dos funciones no militares explican 98,701.8 de los 101,146.0 mdp nominales que pierde el ramo, el 97.6 %.
+
+> **Corrección, 2026-09-07 (fase 0.5 de la corrida 2026).** Este párrafo decía que la función 1.6 quedaba «prácticamente plana». Es cierto en nominal y falso en real: cae 5.6 %. La regla de la casa —toda diferencia declara si es nominal o real— rige también en los artefactos internos, no solo en el documento compilado.
 
 **Conclusión para los capítulos 8 y 10.** Defensa cae porque los proyectos de transporte que ejecuta bajan de escala, no porque baje el gasto militar. **Cualquier lectura de "recorte a Defensa" que no separe las dos cosas está mal.** Y la contraparte: la obra pública de infraestructura de transporte ejecutada por las fuerzas armadas es una partida de inversión que el capítulo 8 tiene que nombrar.
 

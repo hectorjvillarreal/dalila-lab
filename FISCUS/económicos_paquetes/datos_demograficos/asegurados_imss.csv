@@ -1,0 +1,1883 @@
+mes,cve_entidad,entidad,sexo,rango_edad,asegurados
+2025-07-31,1,Aguascalientes,hombres,E1,266
+2025-07-31,1,Aguascalientes,hombres,E10,16985
+2025-07-31,1,Aguascalientes,hombres,E11,6837
+2025-07-31,1,Aguascalientes,hombres,E12,2888
+2025-07-31,1,Aguascalientes,hombres,E13,1398
+2025-07-31,1,Aguascalientes,hombres,E14,1338
+2025-07-31,1,Aguascalientes,hombres,E2,31406
+2025-07-31,1,Aguascalientes,hombres,E3,42689
+2025-07-31,1,Aguascalientes,hombres,E4,37863
+2025-07-31,1,Aguascalientes,hombres,E5,33939
+2025-07-31,1,Aguascalientes,hombres,E6,28181
+2025-07-31,1,Aguascalientes,hombres,E7,25033
+2025-07-31,1,Aguascalientes,hombres,E8,22726
+2025-07-31,1,Aguascalientes,hombres,E9,20852
+2025-07-31,1,Aguascalientes,mujeres,E1,274
+2025-07-31,1,Aguascalientes,mujeres,E10,11346
+2025-07-31,1,Aguascalientes,mujeres,E11,4807
+2025-07-31,1,Aguascalientes,mujeres,E12,1983
+2025-07-31,1,Aguascalientes,mujeres,E13,1075
+2025-07-31,1,Aguascalientes,mujeres,E14,1468
+2025-07-31,1,Aguascalientes,mujeres,E2,32330
+2025-07-31,1,Aguascalientes,mujeres,E3,37253
+2025-07-31,1,Aguascalientes,mujeres,E4,29082
+2025-07-31,1,Aguascalientes,mujeres,E5,24057
+2025-07-31,1,Aguascalientes,mujeres,E6,20390
+2025-07-31,1,Aguascalientes,mujeres,E7,17776
+2025-07-31,1,Aguascalientes,mujeres,E8,15494
+2025-07-31,1,Aguascalientes,mujeres,E9,14031
+2025-07-31,2,Baja California,hombres,E1,626
+2025-07-31,2,Baja California,hombres,E10,41333
+2025-07-31,2,Baja California,hombres,E11,16762
+2025-07-31,2,Baja California,hombres,E12,4816
+2025-07-31,2,Baja California,hombres,E13,1726
+2025-07-31,2,Baja California,hombres,E14,909
+2025-07-31,2,Baja California,hombres,E2,53054
+2025-07-31,2,Baja California,hombres,E3,103540
+2025-07-31,2,Baja California,hombres,E4,112064
+2025-07-31,2,Baja California,hombres,E5,93538
+2025-07-31,2,Baja California,hombres,E6,74837
+2025-07-31,2,Baja California,hombres,E7,65176
+2025-07-31,2,Baja California,hombres,E8,59192
+2025-07-31,2,Baja California,hombres,E9,55293
+2025-07-31,2,Baja California,mujeres,E1,646
+2025-07-31,2,Baja California,mujeres,E10,28284
+2025-07-31,2,Baja California,mujeres,E11,10548
+2025-07-31,2,Baja California,mujeres,E12,2557
+2025-07-31,2,Baja California,mujeres,E13,810
+2025-07-31,2,Baja California,mujeres,E14,717
+2025-07-31,2,Baja California,mujeres,E2,48926
+2025-07-31,2,Baja California,mujeres,E3,83536
+2025-07-31,2,Baja California,mujeres,E4,83194
+2025-07-31,2,Baja California,mujeres,E5,66828
+2025-07-31,2,Baja California,mujeres,E6,56431
+2025-07-31,2,Baja California,mujeres,E7,50368
+2025-07-31,2,Baja California,mujeres,E8,44393
+2025-07-31,2,Baja California,mujeres,E9,38441
+2025-07-31,2,Baja California,no especificado,E3,1
+2025-07-31,2,Baja California,no especificado,E5,1
+2025-07-31,3,Baja California Sur,hombres,E1,53
+2025-07-31,3,Baja California Sur,hombres,E10,8863
+2025-07-31,3,Baja California Sur,hombres,E11,3697
+2025-07-31,3,Baja California Sur,hombres,E12,1164
+2025-07-31,3,Baja California Sur,hombres,E13,495
+2025-07-31,3,Baja California Sur,hombres,E14,285
+2025-07-31,3,Baja California Sur,hombres,E2,19748
+2025-07-31,3,Baja California Sur,hombres,E3,25186
+2025-07-31,3,Baja California Sur,hombres,E4,23935
+2025-07-31,3,Baja California Sur,hombres,E5,22392
+2025-07-31,3,Baja California Sur,hombres,E6,19137
+2025-07-31,3,Baja California Sur,hombres,E7,16308
+2025-07-31,3,Baja California Sur,hombres,E8,14082
+2025-07-31,3,Baja California Sur,hombres,E9,11949
+2025-07-31,3,Baja California Sur,mujeres,E1,50
+2025-07-31,3,Baja California Sur,mujeres,E10,4763
+2025-07-31,3,Baja California Sur,mujeres,E11,1859
+2025-07-31,3,Baja California Sur,mujeres,E12,486
+2025-07-31,3,Baja California Sur,mujeres,E13,194
+2025-07-31,3,Baja California Sur,mujeres,E14,235
+2025-07-31,3,Baja California Sur,mujeres,E2,18408
+2025-07-31,3,Baja California Sur,mujeres,E3,17739
+2025-07-31,3,Baja California Sur,mujeres,E4,15999
+2025-07-31,3,Baja California Sur,mujeres,E5,14557
+2025-07-31,3,Baja California Sur,mujeres,E6,12634
+2025-07-31,3,Baja California Sur,mujeres,E7,10683
+2025-07-31,3,Baja California Sur,mujeres,E8,8833
+2025-07-31,3,Baja California Sur,mujeres,E9,6977
+2025-07-31,4,Campeche,hombres,E1,82
+2025-07-31,4,Campeche,hombres,E10,7458
+2025-07-31,4,Campeche,hombres,E11,3164
+2025-07-31,4,Campeche,hombres,E12,1046
+2025-07-31,4,Campeche,hombres,E13,415
+2025-07-31,4,Campeche,hombres,E14,267
+2025-07-31,4,Campeche,hombres,E2,14884
+2025-07-31,4,Campeche,hombres,E3,15369
+2025-07-31,4,Campeche,hombres,E4,16492
+2025-07-31,4,Campeche,hombres,E5,16209
+2025-07-31,4,Campeche,hombres,E6,14057
+2025-07-31,4,Campeche,hombres,E7,12799
+2025-07-31,4,Campeche,hombres,E8,10884
+2025-07-31,4,Campeche,hombres,E9,9258
+2025-07-31,4,Campeche,mujeres,E1,71
+2025-07-31,4,Campeche,mujeres,E10,3837
+2025-07-31,4,Campeche,mujeres,E11,1543
+2025-07-31,4,Campeche,mujeres,E12,468
+2025-07-31,4,Campeche,mujeres,E13,190
+2025-07-31,4,Campeche,mujeres,E14,207
+2025-07-31,4,Campeche,mujeres,E2,14511
+2025-07-31,4,Campeche,mujeres,E3,12423
+2025-07-31,4,Campeche,mujeres,E4,11526
+2025-07-31,4,Campeche,mujeres,E5,10256
+2025-07-31,4,Campeche,mujeres,E6,8146
+2025-07-31,4,Campeche,mujeres,E7,7069
+2025-07-31,4,Campeche,mujeres,E8,5688
+2025-07-31,4,Campeche,mujeres,E9,5028
+2025-07-31,5,Coahuila,hombres,E1,200
+2025-07-31,5,Coahuila,hombres,E10,42793
+2025-07-31,5,Coahuila,hombres,E11,12490
+2025-07-31,5,Coahuila,hombres,E12,3949
+2025-07-31,5,Coahuila,hombres,E13,1494
+2025-07-31,5,Coahuila,hombres,E14,775
+2025-07-31,5,Coahuila,hombres,E2,43609
+2025-07-31,5,Coahuila,hombres,E3,90624
+2025-07-31,5,Coahuila,hombres,E4,90057
+2025-07-31,5,Coahuila,hombres,E5,79801
+2025-07-31,5,Coahuila,hombres,E6,65895
+2025-07-31,5,Coahuila,hombres,E7,59856
+2025-07-31,5,Coahuila,hombres,E8,58144
+2025-07-31,5,Coahuila,hombres,E9,53282
+2025-07-31,5,Coahuila,mujeres,E1,129
+2025-07-31,5,Coahuila,mujeres,E10,23458
+2025-07-31,5,Coahuila,mujeres,E11,7271
+2025-07-31,5,Coahuila,mujeres,E12,1871
+2025-07-31,5,Coahuila,mujeres,E13,611
+2025-07-31,5,Coahuila,mujeres,E14,690
+2025-07-31,5,Coahuila,mujeres,E2,34160
+2025-07-31,5,Coahuila,mujeres,E3,62524
+2025-07-31,5,Coahuila,mujeres,E4,59920
+2025-07-31,5,Coahuila,mujeres,E5,50152
+2025-07-31,5,Coahuila,mujeres,E6,41814
+2025-07-31,5,Coahuila,mujeres,E7,38519
+2025-07-31,5,Coahuila,mujeres,E8,36143
+2025-07-31,5,Coahuila,mujeres,E9,31250
+2025-07-31,5,Coahuila,no especificado,E3,1
+2025-07-31,6,Colima,hombres,E1,48
+2025-07-31,6,Colima,hombres,E10,8550
+2025-07-31,6,Colima,hombres,E11,3325
+2025-07-31,6,Colima,hombres,E12,1117
+2025-07-31,6,Colima,hombres,E13,455
+2025-07-31,6,Colima,hombres,E14,315
+2025-07-31,6,Colima,hombres,E2,15169
+2025-07-31,6,Colima,hombres,E3,16365
+2025-07-31,6,Colima,hombres,E4,14190
+2025-07-31,6,Colima,hombres,E5,13899
+2025-07-31,6,Colima,hombres,E6,12379
+2025-07-31,6,Colima,hombres,E7,11415
+2025-07-31,6,Colima,hombres,E8,10364
+2025-07-31,6,Colima,hombres,E9,10020
+2025-07-31,6,Colima,mujeres,E1,45
+2025-07-31,6,Colima,mujeres,E10,5003
+2025-07-31,6,Colima,mujeres,E11,1749
+2025-07-31,6,Colima,mujeres,E12,467
+2025-07-31,6,Colima,mujeres,E13,199
+2025-07-31,6,Colima,mujeres,E14,254
+2025-07-31,6,Colima,mujeres,E2,15840
+2025-07-31,6,Colima,mujeres,E3,14077
+2025-07-31,6,Colima,mujeres,E4,10772
+2025-07-31,6,Colima,mujeres,E5,10040
+2025-07-31,6,Colima,mujeres,E6,9638
+2025-07-31,6,Colima,mujeres,E7,8560
+2025-07-31,6,Colima,mujeres,E8,7291
+2025-07-31,6,Colima,mujeres,E9,6374
+2025-07-31,7,Chiapas,hombres,E1,189
+2025-07-31,7,Chiapas,hombres,E10,11008
+2025-07-31,7,Chiapas,hombres,E11,5472
+2025-07-31,7,Chiapas,hombres,E12,2036
+2025-07-31,7,Chiapas,hombres,E13,905
+2025-07-31,7,Chiapas,hombres,E14,709
+2025-07-31,7,Chiapas,hombres,E2,77038
+2025-07-31,7,Chiapas,hombres,E3,55570
+2025-07-31,7,Chiapas,hombres,E4,37772
+2025-07-31,7,Chiapas,hombres,E5,28047
+2025-07-31,7,Chiapas,hombres,E6,23767
+2025-07-31,7,Chiapas,hombres,E7,20825
+2025-07-31,7,Chiapas,hombres,E8,17180
+2025-07-31,7,Chiapas,hombres,E9,13925
+2025-07-31,7,Chiapas,mujeres,E1,223
+2025-07-31,7,Chiapas,mujeres,E10,6125
+2025-07-31,7,Chiapas,mujeres,E11,2531
+2025-07-31,7,Chiapas,mujeres,E12,968
+2025-07-31,7,Chiapas,mujeres,E13,444
+2025-07-31,7,Chiapas,mujeres,E14,552
+2025-07-31,7,Chiapas,mujeres,E2,75583
+2025-07-31,7,Chiapas,mujeres,E3,46878
+2025-07-31,7,Chiapas,mujeres,E4,26778
+2025-07-31,7,Chiapas,mujeres,E5,18799
+2025-07-31,7,Chiapas,mujeres,E6,16262
+2025-07-31,7,Chiapas,mujeres,E7,14181
+2025-07-31,7,Chiapas,mujeres,E8,11172
+2025-07-31,7,Chiapas,mujeres,E9,8726
+2025-07-31,8,Chihuahua,hombres,E1,86
+2025-07-31,8,Chihuahua,hombres,E10,47328
+2025-07-31,8,Chihuahua,hombres,E11,15908
+2025-07-31,8,Chihuahua,hombres,E12,4798
+2025-07-31,8,Chihuahua,hombres,E13,1663
+2025-07-31,8,Chihuahua,hombres,E14,835
+2025-07-31,8,Chihuahua,hombres,E2,73286
+2025-07-31,8,Chihuahua,hombres,E3,98769
+2025-07-31,8,Chihuahua,hombres,E4,90417
+2025-07-31,8,Chihuahua,hombres,E5,80623
+2025-07-31,8,Chihuahua,hombres,E6,67526
+2025-07-31,8,Chihuahua,hombres,E7,60811
+2025-07-31,8,Chihuahua,hombres,E8,57749
+2025-07-31,8,Chihuahua,hombres,E9,57029
+2025-07-31,8,Chihuahua,mujeres,E1,83
+2025-07-31,8,Chihuahua,mujeres,E10,33500
+2025-07-31,8,Chihuahua,mujeres,E11,10383
+2025-07-31,8,Chihuahua,mujeres,E12,2326
+2025-07-31,8,Chihuahua,mujeres,E13,709
+2025-07-31,8,Chihuahua,mujeres,E14,573
+2025-07-31,8,Chihuahua,mujeres,E2,75007
+2025-07-31,8,Chihuahua,mujeres,E3,85889
+2025-07-31,8,Chihuahua,mujeres,E4,71276
+2025-07-31,8,Chihuahua,mujeres,E5,62256
+2025-07-31,8,Chihuahua,mujeres,E6,53827
+2025-07-31,8,Chihuahua,mujeres,E7,48898
+2025-07-31,8,Chihuahua,mujeres,E8,45415
+2025-07-31,8,Chihuahua,mujeres,E9,41831
+2025-07-31,8,Chihuahua,no especificado,E3,1
+2025-07-31,8,Chihuahua,no especificado,E4,2
+2025-07-31,9,Ciudad de México,hombres,E1,965
+2025-07-31,9,Ciudad de México,hombres,E10,162255
+2025-07-31,9,Ciudad de México,hombres,E11,74504
+2025-07-31,9,Ciudad de México,hombres,E12,22655
+2025-07-31,9,Ciudad de México,hombres,E13,8019
+2025-07-31,9,Ciudad de México,hombres,E14,4964
+2025-07-31,9,Ciudad de México,hombres,E2,259445
+2025-07-31,9,Ciudad de México,hombres,E3,404661
+2025-07-31,9,Ciudad de México,hombres,E4,412776
+2025-07-31,9,Ciudad de México,hombres,E5,372378
+2025-07-31,9,Ciudad de México,hombres,E6,313746
+2025-07-31,9,Ciudad de México,hombres,E7,262770
+2025-07-31,9,Ciudad de México,hombres,E8,219788
+2025-07-31,9,Ciudad de México,hombres,E9,203928
+2025-07-31,9,Ciudad de México,mujeres,E1,813
+2025-07-31,9,Ciudad de México,mujeres,E10,122670
+2025-07-31,9,Ciudad de México,mujeres,E11,54634
+2025-07-31,9,Ciudad de México,mujeres,E12,15251
+2025-07-31,9,Ciudad de México,mujeres,E13,5431
+2025-07-31,9,Ciudad de México,mujeres,E14,5198
+2025-07-31,9,Ciudad de México,mujeres,E2,253166
+2025-07-31,9,Ciudad de México,mujeres,E3,377905
+2025-07-31,9,Ciudad de México,mujeres,E4,357400
+2025-07-31,9,Ciudad de México,mujeres,E5,293333
+2025-07-31,9,Ciudad de México,mujeres,E6,246999
+2025-07-31,9,Ciudad de México,mujeres,E7,208607
+2025-07-31,9,Ciudad de México,mujeres,E8,173490
+2025-07-31,9,Ciudad de México,mujeres,E9,158541
+2025-07-31,9,Ciudad de México,no especificado,E2,2
+2025-07-31,9,Ciudad de México,no especificado,E3,8
+2025-07-31,9,Ciudad de México,no especificado,E4,14
+2025-07-31,9,Ciudad de México,no especificado,E5,4
+2025-07-31,9,Ciudad de México,no especificado,E6,3
+2025-07-31,9,Ciudad de México,no especificado,E8,1
+2025-07-31,10,Durango,hombres,E1,129
+2025-07-31,10,Durango,hombres,E10,14002
+2025-07-31,10,Durango,hombres,E11,4763
+2025-07-31,10,Durango,hombres,E12,1427
+2025-07-31,10,Durango,hombres,E13,502
+2025-07-31,10,Durango,hombres,E14,337
+2025-07-31,10,Durango,hombres,E2,19843
+2025-07-31,10,Durango,hombres,E3,29721
+2025-07-31,10,Durango,hombres,E4,26979
+2025-07-31,10,Durango,hombres,E5,23894
+2025-07-31,10,Durango,hombres,E6,20401
+2025-07-31,10,Durango,hombres,E7,17908
+2025-07-31,10,Durango,hombres,E8,17389
+2025-07-31,10,Durango,hombres,E9,16843
+2025-07-31,10,Durango,mujeres,E1,140
+2025-07-31,10,Durango,mujeres,E10,6849
+2025-07-31,10,Durango,mujeres,E11,2484
+2025-07-31,10,Durango,mujeres,E12,622
+2025-07-31,10,Durango,mujeres,E13,249
+2025-07-31,10,Durango,mujeres,E14,309
+2025-07-31,10,Durango,mujeres,E2,19443
+2025-07-31,10,Durango,mujeres,E3,23625
+2025-07-31,10,Durango,mujeres,E4,19257
+2025-07-31,10,Durango,mujeres,E5,16510
+2025-07-31,10,Durango,mujeres,E6,14568
+2025-07-31,10,Durango,mujeres,E7,12458
+2025-07-31,10,Durango,mujeres,E8,10755
+2025-07-31,10,Durango,mujeres,E9,9315
+2025-07-31,11,Guanajuato,hombres,E1,357
+2025-07-31,11,Guanajuato,hombres,E10,48289
+2025-07-31,11,Guanajuato,hombres,E11,17573
+2025-07-31,11,Guanajuato,hombres,E12,5255
+2025-07-31,11,Guanajuato,hombres,E13,1985
+2025-07-31,11,Guanajuato,hombres,E14,1143
+2025-07-31,11,Guanajuato,hombres,E2,77956
+2025-07-31,11,Guanajuato,hombres,E3,123392
+2025-07-31,11,Guanajuato,hombres,E4,121672
+2025-07-31,11,Guanajuato,hombres,E5,109405
+2025-07-31,11,Guanajuato,hombres,E6,88735
+2025-07-31,11,Guanajuato,hombres,E7,77336
+2025-07-31,11,Guanajuato,hombres,E8,69068
+2025-07-31,11,Guanajuato,hombres,E9,62202
+2025-07-31,11,Guanajuato,mujeres,E1,341
+2025-07-31,11,Guanajuato,mujeres,E10,27496
+2025-07-31,11,Guanajuato,mujeres,E11,10083
+2025-07-31,11,Guanajuato,mujeres,E12,2430
+2025-07-31,11,Guanajuato,mujeres,E13,787
+2025-07-31,11,Guanajuato,mujeres,E14,809
+2025-07-31,11,Guanajuato,mujeres,E2,73164
+2025-07-31,11,Guanajuato,mujeres,E3,97304
+2025-07-31,11,Guanajuato,mujeres,E4,88955
+2025-07-31,11,Guanajuato,mujeres,E5,75695
+2025-07-31,11,Guanajuato,mujeres,E6,62389
+2025-07-31,11,Guanajuato,mujeres,E7,53992
+2025-07-31,11,Guanajuato,mujeres,E8,45935
+2025-07-31,11,Guanajuato,mujeres,E9,38752
+2025-07-31,11,Guanajuato,no especificado,E4,1
+2025-07-31,11,Guanajuato,no especificado,E5,1
+2025-07-31,12,Guerrero,hombres,E1,660
+2025-07-31,12,Guerrero,hombres,E10,8309
+2025-07-31,12,Guerrero,hombres,E11,4499
+2025-07-31,12,Guerrero,hombres,E12,1650
+2025-07-31,12,Guerrero,hombres,E13,714
+2025-07-31,12,Guerrero,hombres,E14,650
+2025-07-31,12,Guerrero,hombres,E2,38220
+2025-07-31,12,Guerrero,hombres,E3,28209
+2025-07-31,12,Guerrero,hombres,E4,24344
+2025-07-31,12,Guerrero,hombres,E5,16950
+2025-07-31,12,Guerrero,hombres,E6,14589
+2025-07-31,12,Guerrero,hombres,E7,12247
+2025-07-31,12,Guerrero,hombres,E8,10815
+2025-07-31,12,Guerrero,hombres,E9,9700
+2025-07-31,12,Guerrero,mujeres,E1,678
+2025-07-31,12,Guerrero,mujeres,E10,5749
+2025-07-31,12,Guerrero,mujeres,E11,2704
+2025-07-31,12,Guerrero,mujeres,E12,1020
+2025-07-31,12,Guerrero,mujeres,E13,583
+2025-07-31,12,Guerrero,mujeres,E14,839
+2025-07-31,12,Guerrero,mujeres,E2,41774
+2025-07-31,12,Guerrero,mujeres,E3,28942
+2025-07-31,12,Guerrero,mujeres,E4,20231
+2025-07-31,12,Guerrero,mujeres,E5,12555
+2025-07-31,12,Guerrero,mujeres,E6,11000
+2025-07-31,12,Guerrero,mujeres,E7,9130
+2025-07-31,12,Guerrero,mujeres,E8,7815
+2025-07-31,12,Guerrero,mujeres,E9,7065
+2025-07-31,13,Hidalgo,hombres,E1,68
+2025-07-31,13,Hidalgo,hombres,E10,14122
+2025-07-31,13,Hidalgo,hombres,E11,6543
+2025-07-31,13,Hidalgo,hombres,E12,2107
+2025-07-31,13,Hidalgo,hombres,E13,780
+2025-07-31,13,Hidalgo,hombres,E14,461
+2025-07-31,13,Hidalgo,hombres,E2,55391
+2025-07-31,13,Hidalgo,hombres,E3,54297
+2025-07-31,13,Hidalgo,hombres,E4,39775
+2025-07-31,13,Hidalgo,hombres,E5,30192
+2025-07-31,13,Hidalgo,hombres,E6,25235
+2025-07-31,13,Hidalgo,hombres,E7,22196
+2025-07-31,13,Hidalgo,hombres,E8,19493
+2025-07-31,13,Hidalgo,hombres,E9,17120
+2025-07-31,13,Hidalgo,mujeres,E1,65
+2025-07-31,13,Hidalgo,mujeres,E10,7519
+2025-07-31,13,Hidalgo,mujeres,E11,3261
+2025-07-31,13,Hidalgo,mujeres,E12,952
+2025-07-31,13,Hidalgo,mujeres,E13,319
+2025-07-31,13,Hidalgo,mujeres,E14,414
+2025-07-31,13,Hidalgo,mujeres,E2,59529
+2025-07-31,13,Hidalgo,mujeres,E3,49684
+2025-07-31,13,Hidalgo,mujeres,E4,28328
+2025-07-31,13,Hidalgo,mujeres,E5,19567
+2025-07-31,13,Hidalgo,mujeres,E6,17191
+2025-07-31,13,Hidalgo,mujeres,E7,15000
+2025-07-31,13,Hidalgo,mujeres,E8,12155
+2025-07-31,13,Hidalgo,mujeres,E9,9941
+2025-07-31,13,Hidalgo,no especificado,E3,1
+2025-07-31,13,Hidalgo,no especificado,E4,1
+2025-07-31,14,Jalisco,hombres,E1,644
+2025-07-31,14,Jalisco,hombres,E10,90097
+2025-07-31,14,Jalisco,hombres,E11,39527
+2025-07-31,14,Jalisco,hombres,E12,14479
+2025-07-31,14,Jalisco,hombres,E13,6297
+2025-07-31,14,Jalisco,hombres,E14,5046
+2025-07-31,14,Jalisco,hombres,E2,156299
+2025-07-31,14,Jalisco,hombres,E3,216731
+2025-07-31,14,Jalisco,hombres,E4,222392
+2025-07-31,14,Jalisco,hombres,E5,190211
+2025-07-31,14,Jalisco,hombres,E6,161570
+2025-07-31,14,Jalisco,hombres,E7,144601
+2025-07-31,14,Jalisco,hombres,E8,125320
+2025-07-31,14,Jalisco,hombres,E9,115171
+2025-07-31,14,Jalisco,mujeres,E1,585
+2025-07-31,14,Jalisco,mujeres,E10,62557
+2025-07-31,14,Jalisco,mujeres,E11,27668
+2025-07-31,14,Jalisco,mujeres,E12,9514
+2025-07-31,14,Jalisco,mujeres,E13,4175
+2025-07-31,14,Jalisco,mujeres,E14,4524
+2025-07-31,14,Jalisco,mujeres,E2,159070
+2025-07-31,14,Jalisco,mujeres,E3,186769
+2025-07-31,14,Jalisco,mujeres,E4,174250
+2025-07-31,14,Jalisco,mujeres,E5,139661
+2025-07-31,14,Jalisco,mujeres,E6,120183
+2025-07-31,14,Jalisco,mujeres,E7,108280
+2025-07-31,14,Jalisco,mujeres,E8,92755
+2025-07-31,14,Jalisco,mujeres,E9,81040
+2025-07-31,14,Jalisco,no especificado,E2,6
+2025-07-31,14,Jalisco,no especificado,E3,2
+2025-07-31,14,Jalisco,no especificado,E4,12
+2025-07-31,14,Jalisco,no especificado,E5,1
+2025-07-31,14,Jalisco,no especificado,E6,1
+2025-07-31,14,Jalisco,no especificado,E8,1
+2025-07-31,15,México,hombres,E1,216
+2025-07-31,15,México,hombres,E10,94628
+2025-07-31,15,México,hombres,E11,41623
+2025-07-31,15,México,hombres,E12,11303
+2025-07-31,15,México,hombres,E13,3942
+2025-07-31,15,México,hombres,E14,2197
+2025-07-31,15,México,hombres,E2,245688
+2025-07-31,15,México,hombres,E3,271076
+2025-07-31,15,México,hombres,E4,254700
+2025-07-31,15,México,hombres,E5,204791
+2025-07-31,15,México,hombres,E6,164289
+2025-07-31,15,México,hombres,E7,142695
+2025-07-31,15,México,hombres,E8,128036
+2025-07-31,15,México,hombres,E9,117027
+2025-07-31,15,México,mujeres,E1,228
+2025-07-31,15,México,mujeres,E10,56130
+2025-07-31,15,México,mujeres,E11,23807
+2025-07-31,15,México,mujeres,E12,5920
+2025-07-31,15,México,mujeres,E13,1959
+2025-07-31,15,México,mujeres,E14,1541
+2025-07-31,15,México,mujeres,E2,255831
+2025-07-31,15,México,mujeres,E3,221989
+2025-07-31,15,México,mujeres,E4,178473
+2025-07-31,15,México,mujeres,E5,132903
+2025-07-31,15,México,mujeres,E6,110858
+2025-07-31,15,México,mujeres,E7,99655
+2025-07-31,15,México,mujeres,E8,85714
+2025-07-31,15,México,mujeres,E9,74256
+2025-07-31,15,México,no especificado,E3,1
+2025-07-31,15,México,no especificado,E5,1
+2025-07-31,15,México,no especificado,E6,1
+2025-07-31,15,México,no especificado,E7,1
+2025-07-31,16,Michoacán,hombres,E1,258
+2025-07-31,16,Michoacán,hombres,E10,23587
+2025-07-31,16,Michoacán,hombres,E11,11306
+2025-07-31,16,Michoacán,hombres,E12,4220
+2025-07-31,16,Michoacán,hombres,E13,1823
+2025-07-31,16,Michoacán,hombres,E14,1273
+2025-07-31,16,Michoacán,hombres,E2,59150
+2025-07-31,16,Michoacán,hombres,E3,66358
+2025-07-31,16,Michoacán,hombres,E4,51841
+2025-07-31,16,Michoacán,hombres,E5,47463
+2025-07-31,16,Michoacán,hombres,E6,41577
+2025-07-31,16,Michoacán,hombres,E7,36141
+2025-07-31,16,Michoacán,hombres,E8,32023
+2025-07-31,16,Michoacán,hombres,E9,28733
+2025-07-31,16,Michoacán,mujeres,E1,231
+2025-07-31,16,Michoacán,mujeres,E10,15493
+2025-07-31,16,Michoacán,mujeres,E11,6767
+2025-07-31,16,Michoacán,mujeres,E12,2221
+2025-07-31,16,Michoacán,mujeres,E13,919
+2025-07-31,16,Michoacán,mujeres,E14,1056
+2025-07-31,16,Michoacán,mujeres,E2,67585
+2025-07-31,16,Michoacán,mujeres,E3,66160
+2025-07-31,16,Michoacán,mujeres,E4,42443
+2025-07-31,16,Michoacán,mujeres,E5,36426
+2025-07-31,16,Michoacán,mujeres,E6,32886
+2025-07-31,16,Michoacán,mujeres,E7,27561
+2025-07-31,16,Michoacán,mujeres,E8,23110
+2025-07-31,16,Michoacán,mujeres,E9,20159
+2025-07-31,16,Michoacán,no especificado,E4,1
+2025-07-31,16,Michoacán,no especificado,E7,1
+2025-07-31,17,Morelos,hombres,E1,89
+2025-07-31,17,Morelos,hombres,E10,11391
+2025-07-31,17,Morelos,hombres,E11,4981
+2025-07-31,17,Morelos,hombres,E12,1724
+2025-07-31,17,Morelos,hombres,E13,744
+2025-07-31,17,Morelos,hombres,E14,555
+2025-07-31,17,Morelos,hombres,E2,27538
+2025-07-31,17,Morelos,hombres,E3,27345
+2025-07-31,17,Morelos,hombres,E4,23219
+2025-07-31,17,Morelos,hombres,E5,20489
+2025-07-31,17,Morelos,hombres,E6,17869
+2025-07-31,17,Morelos,hombres,E7,15537
+2025-07-31,17,Morelos,hombres,E8,14180
+2025-07-31,17,Morelos,hombres,E9,13592
+2025-07-31,17,Morelos,mujeres,E1,107
+2025-07-31,17,Morelos,mujeres,E10,8654
+2025-07-31,17,Morelos,mujeres,E11,3377
+2025-07-31,17,Morelos,mujeres,E12,1037
+2025-07-31,17,Morelos,mujeres,E13,484
+2025-07-31,17,Morelos,mujeres,E14,598
+2025-07-31,17,Morelos,mujeres,E2,28463
+2025-07-31,17,Morelos,mujeres,E3,25136
+2025-07-31,17,Morelos,mujeres,E4,18787
+2025-07-31,17,Morelos,mujeres,E5,15542
+2025-07-31,17,Morelos,mujeres,E6,14052
+2025-07-31,17,Morelos,mujeres,E7,12884
+2025-07-31,17,Morelos,mujeres,E8,11200
+2025-07-31,17,Morelos,mujeres,E9,10634
+2025-07-31,18,Nayarit,hombres,E1,66
+2025-07-31,18,Nayarit,hombres,E10,8569
+2025-07-31,18,Nayarit,hombres,E11,3947
+2025-07-31,18,Nayarit,hombres,E12,1428
+2025-07-31,18,Nayarit,hombres,E13,573
+2025-07-31,18,Nayarit,hombres,E14,495
+2025-07-31,18,Nayarit,hombres,E2,21761
+2025-07-31,18,Nayarit,hombres,E3,19940
+2025-07-31,18,Nayarit,hombres,E4,17873
+2025-07-31,18,Nayarit,hombres,E5,15819
+2025-07-31,18,Nayarit,hombres,E6,14514
+2025-07-31,18,Nayarit,hombres,E7,12777
+2025-07-31,18,Nayarit,hombres,E8,10982
+2025-07-31,18,Nayarit,hombres,E9,10621
+2025-07-31,18,Nayarit,mujeres,E1,71
+2025-07-31,18,Nayarit,mujeres,E10,5012
+2025-07-31,18,Nayarit,mujeres,E11,2123
+2025-07-31,18,Nayarit,mujeres,E12,707
+2025-07-31,18,Nayarit,mujeres,E13,335
+2025-07-31,18,Nayarit,mujeres,E14,435
+2025-07-31,18,Nayarit,mujeres,E2,22184
+2025-07-31,18,Nayarit,mujeres,E3,17234
+2025-07-31,18,Nayarit,mujeres,E4,14624
+2025-07-31,18,Nayarit,mujeres,E5,12485
+2025-07-31,18,Nayarit,mujeres,E6,11765
+2025-07-31,18,Nayarit,mujeres,E7,10148
+2025-07-31,18,Nayarit,mujeres,E8,8412
+2025-07-31,18,Nayarit,mujeres,E9,7119
+2025-07-31,18,Nayarit,no especificado,E3,1
+2025-07-31,19,Nuevo León,hombres,E1,326
+2025-07-31,19,Nuevo León,hombres,E10,95168
+2025-07-31,19,Nuevo León,hombres,E11,28691
+2025-07-31,19,Nuevo León,hombres,E12,8238
+2025-07-31,19,Nuevo León,hombres,E13,2874
+2025-07-31,19,Nuevo León,hombres,E14,1681
+2025-07-31,19,Nuevo León,hombres,E2,68474
+2025-07-31,19,Nuevo León,hombres,E3,184674
+2025-07-31,19,Nuevo León,hombres,E4,229486
+2025-07-31,19,Nuevo León,hombres,E5,200196
+2025-07-31,19,Nuevo León,hombres,E6,159807
+2025-07-31,19,Nuevo León,hombres,E7,141775
+2025-07-31,19,Nuevo León,hombres,E8,129602
+2025-07-31,19,Nuevo León,hombres,E9,121793
+2025-07-31,19,Nuevo León,mujeres,E1,281
+2025-07-31,19,Nuevo León,mujeres,E10,54420
+2025-07-31,19,Nuevo León,mujeres,E11,17061
+2025-07-31,19,Nuevo León,mujeres,E12,4195
+2025-07-31,19,Nuevo León,mujeres,E13,1344
+2025-07-31,19,Nuevo León,mujeres,E14,1514
+2025-07-31,19,Nuevo León,mujeres,E2,46186
+2025-07-31,19,Nuevo León,mujeres,E3,125501
+2025-07-31,19,Nuevo León,mujeres,E4,151852
+2025-07-31,19,Nuevo León,mujeres,E5,117511
+2025-07-31,19,Nuevo León,mujeres,E6,91950
+2025-07-31,19,Nuevo León,mujeres,E7,81852
+2025-07-31,19,Nuevo León,mujeres,E8,74596
+2025-07-31,19,Nuevo León,mujeres,E9,69392
+2025-07-31,19,Nuevo León,no especificado,E3,2
+2025-07-31,19,Nuevo León,no especificado,E4,1
+2025-07-31,19,Nuevo León,no especificado,E5,2
+2025-07-31,19,Nuevo León,no especificado,E6,1
+2025-07-31,19,Nuevo León,no especificado,E7,1
+2025-07-31,19,Nuevo León,no especificado,E8,1
+2025-07-31,20,Oaxaca,hombres,E1,56
+2025-07-31,20,Oaxaca,hombres,E10,10607
+2025-07-31,20,Oaxaca,hombres,E11,5514
+2025-07-31,20,Oaxaca,hombres,E12,2076
+2025-07-31,20,Oaxaca,hombres,E13,947
+2025-07-31,20,Oaxaca,hombres,E14,706
+2025-07-31,20,Oaxaca,hombres,E2,48026
+2025-07-31,20,Oaxaca,hombres,E3,31138
+2025-07-31,20,Oaxaca,hombres,E4,25172
+2025-07-31,20,Oaxaca,hombres,E5,22653
+2025-07-31,20,Oaxaca,hombres,E6,19622
+2025-07-31,20,Oaxaca,hombres,E7,17415
+2025-07-31,20,Oaxaca,hombres,E8,14974
+2025-07-31,20,Oaxaca,hombres,E9,13105
+2025-07-31,20,Oaxaca,mujeres,E1,67
+2025-07-31,20,Oaxaca,mujeres,E10,6721
+2025-07-31,20,Oaxaca,mujeres,E11,3146
+2025-07-31,20,Oaxaca,mujeres,E12,1118
+2025-07-31,20,Oaxaca,mujeres,E13,499
+2025-07-31,20,Oaxaca,mujeres,E14,520
+2025-07-31,20,Oaxaca,mujeres,E2,53985
+2025-07-31,20,Oaxaca,mujeres,E3,31137
+2025-07-31,20,Oaxaca,mujeres,E4,20843
+2025-07-31,20,Oaxaca,mujeres,E5,17409
+2025-07-31,20,Oaxaca,mujeres,E6,15512
+2025-07-31,20,Oaxaca,mujeres,E7,13721
+2025-07-31,20,Oaxaca,mujeres,E8,11377
+2025-07-31,20,Oaxaca,mujeres,E9,9119
+2025-07-31,21,Puebla,hombres,E1,154
+2025-07-31,21,Puebla,hombres,E10,29324
+2025-07-31,21,Puebla,hombres,E11,12132
+2025-07-31,21,Puebla,hombres,E12,3479
+2025-07-31,21,Puebla,hombres,E13,1302
+2025-07-31,21,Puebla,hombres,E14,885
+2025-07-31,21,Puebla,hombres,E2,103870
+2025-07-31,21,Puebla,hombres,E3,109493
+2025-07-31,21,Puebla,hombres,E4,94380
+2025-07-31,21,Puebla,hombres,E5,83525
+2025-07-31,21,Puebla,hombres,E6,60071
+2025-07-31,21,Puebla,hombres,E7,49891
+2025-07-31,21,Puebla,hombres,E8,43425
+2025-07-31,21,Puebla,hombres,E9,38242
+2025-07-31,21,Puebla,mujeres,E1,125
+2025-07-31,21,Puebla,mujeres,E10,18081
+2025-07-31,21,Puebla,mujeres,E11,7269
+2025-07-31,21,Puebla,mujeres,E12,2150
+2025-07-31,21,Puebla,mujeres,E13,708
+2025-07-31,21,Puebla,mujeres,E14,805
+2025-07-31,21,Puebla,mujeres,E2,111145
+2025-07-31,21,Puebla,mujeres,E3,95442
+2025-07-31,21,Puebla,mujeres,E4,73841
+2025-07-31,21,Puebla,mujeres,E5,63828
+2025-07-31,21,Puebla,mujeres,E6,42914
+2025-07-31,21,Puebla,mujeres,E7,35297
+2025-07-31,21,Puebla,mujeres,E8,29289
+2025-07-31,21,Puebla,mujeres,E9,24557
+2025-07-31,22,Querétaro,hombres,E1,166
+2025-07-31,22,Querétaro,hombres,E10,27507
+2025-07-31,22,Querétaro,hombres,E11,10198
+2025-07-31,22,Querétaro,hombres,E12,2797
+2025-07-31,22,Querétaro,hombres,E13,990
+2025-07-31,22,Querétaro,hombres,E14,624
+2025-07-31,22,Querétaro,hombres,E2,40805
+2025-07-31,22,Querétaro,hombres,E3,73555
+2025-07-31,22,Querétaro,hombres,E4,81665
+2025-07-31,22,Querétaro,hombres,E5,75855
+2025-07-31,22,Querétaro,hombres,E6,59685
+2025-07-31,22,Querétaro,hombres,E7,49522
+2025-07-31,22,Querétaro,hombres,E8,42035
+2025-07-31,22,Querétaro,hombres,E9,36571
+2025-07-31,22,Querétaro,mujeres,E1,141
+2025-07-31,22,Querétaro,mujeres,E10,18449
+2025-07-31,22,Querétaro,mujeres,E11,6687
+2025-07-31,22,Querétaro,mujeres,E12,1678
+2025-07-31,22,Querétaro,mujeres,E13,616
+2025-07-31,22,Querétaro,mujeres,E14,524
+2025-07-31,22,Querétaro,mujeres,E2,39925
+2025-07-31,22,Querétaro,mujeres,E3,61183
+2025-07-31,22,Querétaro,mujeres,E4,61504
+2025-07-31,22,Querétaro,mujeres,E5,52753
+2025-07-31,22,Querétaro,mujeres,E6,40915
+2025-07-31,22,Querétaro,mujeres,E7,34913
+2025-07-31,22,Querétaro,mujeres,E8,29183
+2025-07-31,22,Querétaro,mujeres,E9,24920
+2025-07-31,22,Querétaro,no especificado,E3,1
+2025-07-31,23,Quintana Roo,hombres,E1,72
+2025-07-31,23,Quintana Roo,hombres,E10,17170
+2025-07-31,23,Quintana Roo,hombres,E11,7862
+2025-07-31,23,Quintana Roo,hombres,E12,2089
+2025-07-31,23,Quintana Roo,hombres,E13,676
+2025-07-31,23,Quintana Roo,hombres,E14,379
+2025-07-31,23,Quintana Roo,hombres,E2,35845
+2025-07-31,23,Quintana Roo,hombres,E3,58654
+2025-07-31,23,Quintana Roo,hombres,E4,62489
+2025-07-31,23,Quintana Roo,hombres,E5,56788
+2025-07-31,23,Quintana Roo,hombres,E6,46041
+2025-07-31,23,Quintana Roo,hombres,E7,37314
+2025-07-31,23,Quintana Roo,hombres,E8,28906
+2025-07-31,23,Quintana Roo,hombres,E9,23696
+2025-07-31,23,Quintana Roo,mujeres,E1,75
+2025-07-31,23,Quintana Roo,mujeres,E10,9594
+2025-07-31,23,Quintana Roo,mujeres,E11,3899
+2025-07-31,23,Quintana Roo,mujeres,E12,949
+2025-07-31,23,Quintana Roo,mujeres,E13,281
+2025-07-31,23,Quintana Roo,mujeres,E14,255
+2025-07-31,23,Quintana Roo,mujeres,E2,32719
+2025-07-31,23,Quintana Roo,mujeres,E3,41760
+2025-07-31,23,Quintana Roo,mujeres,E4,44193
+2025-07-31,23,Quintana Roo,mujeres,E5,37655
+2025-07-31,23,Quintana Roo,mujeres,E6,30956
+2025-07-31,23,Quintana Roo,mujeres,E7,24453
+2025-07-31,23,Quintana Roo,mujeres,E8,18355
+2025-07-31,23,Quintana Roo,mujeres,E9,14081
+2025-07-31,23,Quintana Roo,no especificado,E4,1
+2025-07-31,24,San Luis Potosí,hombres,E1,255
+2025-07-31,24,San Luis Potosí,hombres,E10,21922
+2025-07-31,24,San Luis Potosí,hombres,E11,9258
+2025-07-31,24,San Luis Potosí,hombres,E12,3431
+2025-07-31,24,San Luis Potosí,hombres,E13,1387
+2025-07-31,24,San Luis Potosí,hombres,E14,1240
+2025-07-31,24,San Luis Potosí,hombres,E2,41456
+2025-07-31,24,San Luis Potosí,hombres,E3,55442
+2025-07-31,24,San Luis Potosí,hombres,E4,50759
+2025-07-31,24,San Luis Potosí,hombres,E5,46242
+2025-07-31,24,San Luis Potosí,hombres,E6,38464
+2025-07-31,24,San Luis Potosí,hombres,E7,33268
+2025-07-31,24,San Luis Potosí,hombres,E8,29055
+2025-07-31,24,San Luis Potosí,hombres,E9,26931
+2025-07-31,24,San Luis Potosí,mujeres,E1,245
+2025-07-31,24,San Luis Potosí,mujeres,E10,14378
+2025-07-31,24,San Luis Potosí,mujeres,E11,6835
+2025-07-31,24,San Luis Potosí,mujeres,E12,2476
+2025-07-31,24,San Luis Potosí,mujeres,E13,1097
+2025-07-31,24,San Luis Potosí,mujeres,E14,1710
+2025-07-31,24,San Luis Potosí,mujeres,E2,41649
+2025-07-31,24,San Luis Potosí,mujeres,E3,45340
+2025-07-31,24,San Luis Potosí,mujeres,E4,36805
+2025-07-31,24,San Luis Potosí,mujeres,E5,31394
+2025-07-31,24,San Luis Potosí,mujeres,E6,26648
+2025-07-31,24,San Luis Potosí,mujeres,E7,23485
+2025-07-31,24,San Luis Potosí,mujeres,E8,20059
+2025-07-31,24,San Luis Potosí,mujeres,E9,18506
+2025-07-31,25,Sinaloa,hombres,E1,87
+2025-07-31,25,Sinaloa,hombres,E10,31571
+2025-07-31,25,Sinaloa,hombres,E11,11575
+2025-07-31,25,Sinaloa,hombres,E12,3976
+2025-07-31,25,Sinaloa,hombres,E13,1682
+2025-07-31,25,Sinaloa,hombres,E14,1052
+2025-07-31,25,Sinaloa,hombres,E2,69672
+2025-07-31,25,Sinaloa,hombres,E3,76122
+2025-07-31,25,Sinaloa,hombres,E4,59163
+2025-07-31,25,Sinaloa,hombres,E5,52190
+2025-07-31,25,Sinaloa,hombres,E6,44909
+2025-07-31,25,Sinaloa,hombres,E7,40411
+2025-07-31,25,Sinaloa,hombres,E8,37650
+2025-07-31,25,Sinaloa,hombres,E9,37393
+2025-07-31,25,Sinaloa,mujeres,E1,70
+2025-07-31,25,Sinaloa,mujeres,E10,19938
+2025-07-31,25,Sinaloa,mujeres,E11,6692
+2025-07-31,25,Sinaloa,mujeres,E12,1663
+2025-07-31,25,Sinaloa,mujeres,E13,609
+2025-07-31,25,Sinaloa,mujeres,E14,585
+2025-07-31,25,Sinaloa,mujeres,E2,71213
+2025-07-31,25,Sinaloa,mujeres,E3,69499
+2025-07-31,25,Sinaloa,mujeres,E4,49318
+2025-07-31,25,Sinaloa,mujeres,E5,41553
+2025-07-31,25,Sinaloa,mujeres,E6,35359
+2025-07-31,25,Sinaloa,mujeres,E7,31217
+2025-07-31,25,Sinaloa,mujeres,E8,27539
+2025-07-31,25,Sinaloa,mujeres,E9,25031
+2025-07-31,26,Sonora,hombres,E1,118
+2025-07-31,26,Sonora,hombres,E10,32583
+2025-07-31,26,Sonora,hombres,E11,12594
+2025-07-31,26,Sonora,hombres,E12,4606
+2025-07-31,26,Sonora,hombres,E13,1827
+2025-07-31,26,Sonora,hombres,E14,1028
+2025-07-31,26,Sonora,hombres,E2,58994
+2025-07-31,26,Sonora,hombres,E3,70466
+2025-07-31,26,Sonora,hombres,E4,70738
+2025-07-31,26,Sonora,hombres,E5,60418
+2025-07-31,26,Sonora,hombres,E6,48845
+2025-07-31,26,Sonora,hombres,E7,43973
+2025-07-31,26,Sonora,hombres,E8,40781
+2025-07-31,26,Sonora,hombres,E9,38463
+2025-07-31,26,Sonora,mujeres,E1,132
+2025-07-31,26,Sonora,mujeres,E10,20726
+2025-07-31,26,Sonora,mujeres,E11,7198
+2025-07-31,26,Sonora,mujeres,E12,2011
+2025-07-31,26,Sonora,mujeres,E13,695
+2025-07-31,26,Sonora,mujeres,E14,633
+2025-07-31,26,Sonora,mujeres,E2,59718
+2025-07-31,26,Sonora,mujeres,E3,60365
+2025-07-31,26,Sonora,mujeres,E4,56615
+2025-07-31,26,Sonora,mujeres,E5,44734
+2025-07-31,26,Sonora,mujeres,E6,35390
+2025-07-31,26,Sonora,mujeres,E7,31950
+2025-07-31,26,Sonora,mujeres,E8,29222
+2025-07-31,26,Sonora,mujeres,E9,26154
+2025-07-31,26,Sonora,no especificado,E10,1
+2025-07-31,26,Sonora,no especificado,E5,1
+2025-07-31,27,Tabasco,hombres,E1,31
+2025-07-31,27,Tabasco,hombres,E10,7673
+2025-07-31,27,Tabasco,hombres,E11,3520
+2025-07-31,27,Tabasco,hombres,E12,1073
+2025-07-31,27,Tabasco,hombres,E13,365
+2025-07-31,27,Tabasco,hombres,E14,257
+2025-07-31,27,Tabasco,hombres,E2,51555
+2025-07-31,27,Tabasco,hombres,E3,36039
+2025-07-31,27,Tabasco,hombres,E4,29350
+2025-07-31,27,Tabasco,hombres,E5,23885
+2025-07-31,27,Tabasco,hombres,E6,20909
+2025-07-31,27,Tabasco,hombres,E7,17953
+2025-07-31,27,Tabasco,hombres,E8,14422
+2025-07-31,27,Tabasco,hombres,E9,10729
+2025-07-31,27,Tabasco,mujeres,E1,52
+2025-07-31,27,Tabasco,mujeres,E10,3161
+2025-07-31,27,Tabasco,mujeres,E11,1453
+2025-07-31,27,Tabasco,mujeres,E12,442
+2025-07-31,27,Tabasco,mujeres,E13,185
+2025-07-31,27,Tabasco,mujeres,E14,256
+2025-07-31,27,Tabasco,mujeres,E2,49647
+2025-07-31,27,Tabasco,mujeres,E3,27504
+2025-07-31,27,Tabasco,mujeres,E4,18596
+2025-07-31,27,Tabasco,mujeres,E5,13752
+2025-07-31,27,Tabasco,mujeres,E6,11837
+2025-07-31,27,Tabasco,mujeres,E7,9667
+2025-07-31,27,Tabasco,mujeres,E8,6966
+2025-07-31,27,Tabasco,mujeres,E9,4752
+2025-07-31,28,Tamaulipas,hombres,E1,116
+2025-07-31,28,Tamaulipas,hombres,E10,33225
+2025-07-31,28,Tamaulipas,hombres,E11,12585
+2025-07-31,28,Tamaulipas,hombres,E12,3752
+2025-07-31,28,Tamaulipas,hombres,E13,1317
+2025-07-31,28,Tamaulipas,hombres,E14,750
+2025-07-31,28,Tamaulipas,hombres,E2,49129
+2025-07-31,28,Tamaulipas,hombres,E3,82476
+2025-07-31,28,Tamaulipas,hombres,E4,78856
+2025-07-31,28,Tamaulipas,hombres,E5,63259
+2025-07-31,28,Tamaulipas,hombres,E6,52199
+2025-07-31,28,Tamaulipas,hombres,E7,48638
+2025-07-31,28,Tamaulipas,hombres,E8,45295
+2025-07-31,28,Tamaulipas,hombres,E9,41342
+2025-07-31,28,Tamaulipas,mujeres,E1,123
+2025-07-31,28,Tamaulipas,mujeres,E10,19354
+2025-07-31,28,Tamaulipas,mujeres,E11,7063
+2025-07-31,28,Tamaulipas,mujeres,E12,1786
+2025-07-31,28,Tamaulipas,mujeres,E13,588
+2025-07-31,28,Tamaulipas,mujeres,E14,611
+2025-07-31,28,Tamaulipas,mujeres,E2,44795
+2025-07-31,28,Tamaulipas,mujeres,E3,64168
+2025-07-31,28,Tamaulipas,mujeres,E4,55719
+2025-07-31,28,Tamaulipas,mujeres,E5,42348
+2025-07-31,28,Tamaulipas,mujeres,E6,36664
+2025-07-31,28,Tamaulipas,mujeres,E7,35087
+2025-07-31,28,Tamaulipas,mujeres,E8,31060
+2025-07-31,28,Tamaulipas,mujeres,E9,26104
+2025-07-31,29,Tlaxcala,hombres,E1,27
+2025-07-31,29,Tlaxcala,hombres,E10,5046
+2025-07-31,29,Tlaxcala,hombres,E11,2325
+2025-07-31,29,Tlaxcala,hombres,E12,733
+2025-07-31,29,Tlaxcala,hombres,E13,255
+2025-07-31,29,Tlaxcala,hombres,E14,137
+2025-07-31,29,Tlaxcala,hombres,E2,24540
+2025-07-31,29,Tlaxcala,hombres,E3,22946
+2025-07-31,29,Tlaxcala,hombres,E4,14371
+2025-07-31,29,Tlaxcala,hombres,E5,11550
+2025-07-31,29,Tlaxcala,hombres,E6,9544
+2025-07-31,29,Tlaxcala,hombres,E7,8314
+2025-07-31,29,Tlaxcala,hombres,E8,7385
+2025-07-31,29,Tlaxcala,hombres,E9,6296
+2025-07-31,29,Tlaxcala,mujeres,E1,28
+2025-07-31,29,Tlaxcala,mujeres,E10,2891
+2025-07-31,29,Tlaxcala,mujeres,E11,1237
+2025-07-31,29,Tlaxcala,mujeres,E12,366
+2025-07-31,29,Tlaxcala,mujeres,E13,120
+2025-07-31,29,Tlaxcala,mujeres,E14,104
+2025-07-31,29,Tlaxcala,mujeres,E2,26056
+2025-07-31,29,Tlaxcala,mujeres,E3,20212
+2025-07-31,29,Tlaxcala,mujeres,E4,9628
+2025-07-31,29,Tlaxcala,mujeres,E5,8335
+2025-07-31,29,Tlaxcala,mujeres,E6,7508
+2025-07-31,29,Tlaxcala,mujeres,E7,6910
+2025-07-31,29,Tlaxcala,mujeres,E8,5595
+2025-07-31,29,Tlaxcala,mujeres,E9,4108
+2025-07-31,30,Veracruz,hombres,E1,471
+2025-07-31,30,Veracruz,hombres,E10,41197
+2025-07-31,30,Veracruz,hombres,E11,20087
+2025-07-31,30,Veracruz,hombres,E12,9048
+2025-07-31,30,Veracruz,hombres,E13,4809
+2025-07-31,30,Veracruz,hombres,E14,5719
+2025-07-31,30,Veracruz,hombres,E2,96893
+2025-07-31,30,Veracruz,hombres,E3,101529
+2025-07-31,30,Veracruz,hombres,E4,91176
+2025-07-31,30,Veracruz,hombres,E5,75636
+2025-07-31,30,Veracruz,hombres,E6,66237
+2025-07-31,30,Veracruz,hombres,E7,58543
+2025-07-31,30,Veracruz,hombres,E8,51019
+2025-07-31,30,Veracruz,hombres,E9,47020
+2025-07-31,30,Veracruz,mujeres,E1,498
+2025-07-31,30,Veracruz,mujeres,E10,25796
+2025-07-31,30,Veracruz,mujeres,E11,15479
+2025-07-31,30,Veracruz,mujeres,E12,8000
+2025-07-31,30,Veracruz,mujeres,E13,5362
+2025-07-31,30,Veracruz,mujeres,E14,8589
+2025-07-31,30,Veracruz,mujeres,E2,95586
+2025-07-31,30,Veracruz,mujeres,E3,81722
+2025-07-31,30,Veracruz,mujeres,E4,66150
+2025-07-31,30,Veracruz,mujeres,E5,51178
+2025-07-31,30,Veracruz,mujeres,E6,46981
+2025-07-31,30,Veracruz,mujeres,E7,41867
+2025-07-31,30,Veracruz,mujeres,E8,36261
+2025-07-31,30,Veracruz,mujeres,E9,32131
+2025-07-31,30,Veracruz,no especificado,E3,1
+2025-07-31,31,Yucatán,hombres,E1,50
+2025-07-31,31,Yucatán,hombres,E10,19975
+2025-07-31,31,Yucatán,hombres,E11,9031
+2025-07-31,31,Yucatán,hombres,E12,3595
+2025-07-31,31,Yucatán,hombres,E13,1856
+2025-07-31,31,Yucatán,hombres,E14,2111
+2025-07-31,31,Yucatán,hombres,E2,34043
+2025-07-31,31,Yucatán,hombres,E3,47681
+2025-07-31,31,Yucatán,hombres,E4,50565
+2025-07-31,31,Yucatán,hombres,E5,45695
+2025-07-31,31,Yucatán,hombres,E6,37609
+2025-07-31,31,Yucatán,hombres,E7,32557
+2025-07-31,31,Yucatán,hombres,E8,28679
+2025-07-31,31,Yucatán,hombres,E9,25406
+2025-07-31,31,Yucatán,mujeres,E1,41
+2025-07-31,31,Yucatán,mujeres,E10,12674
+2025-07-31,31,Yucatán,mujeres,E11,6028
+2025-07-31,31,Yucatán,mujeres,E12,2257
+2025-07-31,31,Yucatán,mujeres,E13,1366
+2025-07-31,31,Yucatán,mujeres,E14,2158
+2025-07-31,31,Yucatán,mujeres,E2,32494
+2025-07-31,31,Yucatán,mujeres,E3,33183
+2025-07-31,31,Yucatán,mujeres,E4,34813
+2025-07-31,31,Yucatán,mujeres,E5,30000
+2025-07-31,31,Yucatán,mujeres,E6,23943
+2025-07-31,31,Yucatán,mujeres,E7,20828
+2025-07-31,31,Yucatán,mujeres,E8,17199
+2025-07-31,31,Yucatán,mujeres,E9,15601
+2025-07-31,32,Zacatecas,hombres,E1,44
+2025-07-31,32,Zacatecas,hombres,E10,9961
+2025-07-31,32,Zacatecas,hombres,E11,4061
+2025-07-31,32,Zacatecas,hombres,E12,1287
+2025-07-31,32,Zacatecas,hombres,E13,539
+2025-07-31,32,Zacatecas,hombres,E14,339
+2025-07-31,32,Zacatecas,hombres,E2,25416
+2025-07-31,32,Zacatecas,hombres,E3,27254
+2025-07-31,32,Zacatecas,hombres,E4,22623
+2025-07-31,32,Zacatecas,hombres,E5,18695
+2025-07-31,32,Zacatecas,hombres,E6,16476
+2025-07-31,32,Zacatecas,hombres,E7,14472
+2025-07-31,32,Zacatecas,hombres,E8,13249
+2025-07-31,32,Zacatecas,hombres,E9,12111
+2025-07-31,32,Zacatecas,mujeres,E1,61
+2025-07-31,32,Zacatecas,mujeres,E10,5657
+2025-07-31,32,Zacatecas,mujeres,E11,2173
+2025-07-31,32,Zacatecas,mujeres,E12,563
+2025-07-31,32,Zacatecas,mujeres,E13,181
+2025-07-31,32,Zacatecas,mujeres,E14,206
+2025-07-31,32,Zacatecas,mujeres,E2,28286
+2025-07-31,32,Zacatecas,mujeres,E3,25665
+2025-07-31,32,Zacatecas,mujeres,E4,18249
+2025-07-31,32,Zacatecas,mujeres,E5,12686
+2025-07-31,32,Zacatecas,mujeres,E6,11288
+2025-07-31,32,Zacatecas,mujeres,E7,9667
+2025-07-31,32,Zacatecas,mujeres,E8,8884
+2025-07-31,32,Zacatecas,mujeres,E9,7398
+2025-07-31,32,Zacatecas,no especificado,E3,1
+2026-07-31,1,Aguascalientes,hombres,E1,239
+2026-07-31,1,Aguascalientes,hombres,E10,17410
+2026-07-31,1,Aguascalientes,hombres,E11,6866
+2026-07-31,1,Aguascalientes,hombres,E12,2844
+2026-07-31,1,Aguascalientes,hombres,E13,1431
+2026-07-31,1,Aguascalientes,hombres,E14,1427
+2026-07-31,1,Aguascalientes,hombres,E2,31229
+2026-07-31,1,Aguascalientes,hombres,E3,41265
+2026-07-31,1,Aguascalientes,hombres,E4,37994
+2026-07-31,1,Aguascalientes,hombres,E5,33966
+2026-07-31,1,Aguascalientes,hombres,E6,28322
+2026-07-31,1,Aguascalientes,hombres,E7,24858
+2026-07-31,1,Aguascalientes,hombres,E8,22590
+2026-07-31,1,Aguascalientes,hombres,E9,20929
+2026-07-31,1,Aguascalientes,mujeres,E1,269
+2026-07-31,1,Aguascalientes,mujeres,E10,11872
+2026-07-31,1,Aguascalientes,mujeres,E11,4996
+2026-07-31,1,Aguascalientes,mujeres,E12,2093
+2026-07-31,1,Aguascalientes,mujeres,E13,1176
+2026-07-31,1,Aguascalientes,mujeres,E14,1532
+2026-07-31,1,Aguascalientes,mujeres,E2,31702
+2026-07-31,1,Aguascalientes,mujeres,E3,35357
+2026-07-31,1,Aguascalientes,mujeres,E4,29679
+2026-07-31,1,Aguascalientes,mujeres,E5,24257
+2026-07-31,1,Aguascalientes,mujeres,E6,20462
+2026-07-31,1,Aguascalientes,mujeres,E7,17571
+2026-07-31,1,Aguascalientes,mujeres,E8,15408
+2026-07-31,1,Aguascalientes,mujeres,E9,14119
+2026-07-31,1,Aguascalientes,no especificado,E3,3
+2026-07-31,2,Baja California,hombres,E1,105
+2026-07-31,2,Baja California,hombres,E10,48159
+2026-07-31,2,Baja California,hombres,E11,20158
+2026-07-31,2,Baja California,hombres,E12,6589
+2026-07-31,2,Baja California,hombres,E13,2457
+2026-07-31,2,Baja California,hombres,E14,1429
+2026-07-31,2,Baja California,hombres,E2,60508
+2026-07-31,2,Baja California,hombres,E3,100901
+2026-07-31,2,Baja California,hombres,E4,114350
+2026-07-31,2,Baja California,hombres,E5,98605
+2026-07-31,2,Baja California,hombres,E6,80585
+2026-07-31,2,Baja California,hombres,E7,69016
+2026-07-31,2,Baja California,hombres,E8,62632
+2026-07-31,2,Baja California,hombres,E9,59791
+2026-07-31,2,Baja California,mujeres,E1,109
+2026-07-31,2,Baja California,mujeres,E10,33427
+2026-07-31,2,Baja California,mujeres,E11,13349
+2026-07-31,2,Baja California,mujeres,E12,3662
+2026-07-31,2,Baja California,mujeres,E13,1316
+2026-07-31,2,Baja California,mujeres,E14,1148
+2026-07-31,2,Baja California,mujeres,E2,58071
+2026-07-31,2,Baja California,mujeres,E3,84259
+2026-07-31,2,Baja California,mujeres,E4,89623
+2026-07-31,2,Baja California,mujeres,E5,73712
+2026-07-31,2,Baja California,mujeres,E6,62546
+2026-07-31,2,Baja California,mujeres,E7,54485
+2026-07-31,2,Baja California,mujeres,E8,47848
+2026-07-31,2,Baja California,mujeres,E9,42628
+2026-07-31,2,Baja California,no especificado,E3,1
+2026-07-31,2,Baja California,no especificado,E5,1
+2026-07-31,3,Baja California Sur,hombres,E1,43
+2026-07-31,3,Baja California Sur,hombres,E10,9231
+2026-07-31,3,Baja California Sur,hombres,E11,3734
+2026-07-31,3,Baja California Sur,hombres,E12,1180
+2026-07-31,3,Baja California Sur,hombres,E13,485
+2026-07-31,3,Baja California Sur,hombres,E14,305
+2026-07-31,3,Baja California Sur,hombres,E2,20731
+2026-07-31,3,Baja California Sur,hombres,E3,24981
+2026-07-31,3,Baja California Sur,hombres,E4,23766
+2026-07-31,3,Baja California Sur,hombres,E5,22053
+2026-07-31,3,Baja California Sur,hombres,E6,19023
+2026-07-31,3,Baja California Sur,hombres,E7,16221
+2026-07-31,3,Baja California Sur,hombres,E8,14061
+2026-07-31,3,Baja California Sur,hombres,E9,12050
+2026-07-31,3,Baja California Sur,mujeres,E1,59
+2026-07-31,3,Baja California Sur,mujeres,E10,5339
+2026-07-31,3,Baja California Sur,mujeres,E11,2076
+2026-07-31,3,Baja California Sur,mujeres,E12,580
+2026-07-31,3,Baja California Sur,mujeres,E13,182
+2026-07-31,3,Baja California Sur,mujeres,E14,242
+2026-07-31,3,Baja California Sur,mujeres,E2,19788
+2026-07-31,3,Baja California Sur,mujeres,E3,18088
+2026-07-31,3,Baja California Sur,mujeres,E4,16330
+2026-07-31,3,Baja California Sur,mujeres,E5,14604
+2026-07-31,3,Baja California Sur,mujeres,E6,12922
+2026-07-31,3,Baja California Sur,mujeres,E7,10909
+2026-07-31,3,Baja California Sur,mujeres,E8,9109
+2026-07-31,3,Baja California Sur,mujeres,E9,7312
+2026-07-31,4,Campeche,hombres,E1,22
+2026-07-31,4,Campeche,hombres,E10,7032
+2026-07-31,4,Campeche,hombres,E11,2549
+2026-07-31,4,Campeche,hombres,E12,703
+2026-07-31,4,Campeche,hombres,E13,251
+2026-07-31,4,Campeche,hombres,E14,172
+2026-07-31,4,Campeche,hombres,E2,15268
+2026-07-31,4,Campeche,hombres,E3,15172
+2026-07-31,4,Campeche,hombres,E4,14731
+2026-07-31,4,Campeche,hombres,E5,14735
+2026-07-31,4,Campeche,hombres,E6,13739
+2026-07-31,4,Campeche,hombres,E7,12801
+2026-07-31,4,Campeche,hombres,E8,10741
+2026-07-31,4,Campeche,hombres,E9,9020
+2026-07-31,4,Campeche,mujeres,E1,15
+2026-07-31,4,Campeche,mujeres,E10,3318
+2026-07-31,4,Campeche,mujeres,E11,1124
+2026-07-31,4,Campeche,mujeres,E12,256
+2026-07-31,4,Campeche,mujeres,E13,111
+2026-07-31,4,Campeche,mujeres,E14,142
+2026-07-31,4,Campeche,mujeres,E2,15087
+2026-07-31,4,Campeche,mujeres,E3,12045
+2026-07-31,4,Campeche,mujeres,E4,8745
+2026-07-31,4,Campeche,mujeres,E5,7855
+2026-07-31,4,Campeche,mujeres,E6,7121
+2026-07-31,4,Campeche,mujeres,E7,6503
+2026-07-31,4,Campeche,mujeres,E8,5153
+2026-07-31,4,Campeche,mujeres,E9,4267
+2026-07-31,5,Coahuila,hombres,E1,208
+2026-07-31,5,Coahuila,hombres,E10,44584
+2026-07-31,5,Coahuila,hombres,E11,12492
+2026-07-31,5,Coahuila,hombres,E12,4008
+2026-07-31,5,Coahuila,hombres,E13,1530
+2026-07-31,5,Coahuila,hombres,E14,847
+2026-07-31,5,Coahuila,hombres,E2,46441
+2026-07-31,5,Coahuila,hombres,E3,89517
+2026-07-31,5,Coahuila,hombres,E4,88030
+2026-07-31,5,Coahuila,hombres,E5,79141
+2026-07-31,5,Coahuila,hombres,E6,67126
+2026-07-31,5,Coahuila,hombres,E7,59513
+2026-07-31,5,Coahuila,hombres,E8,57410
+2026-07-31,5,Coahuila,hombres,E9,53723
+2026-07-31,5,Coahuila,mujeres,E1,194
+2026-07-31,5,Coahuila,mujeres,E10,25128
+2026-07-31,5,Coahuila,mujeres,E11,7756
+2026-07-31,5,Coahuila,mujeres,E12,2015
+2026-07-31,5,Coahuila,mujeres,E13,690
+2026-07-31,5,Coahuila,mujeres,E14,704
+2026-07-31,5,Coahuila,mujeres,E2,36353
+2026-07-31,5,Coahuila,mujeres,E3,60267
+2026-07-31,5,Coahuila,mujeres,E4,57822
+2026-07-31,5,Coahuila,mujeres,E5,49639
+2026-07-31,5,Coahuila,mujeres,E6,42672
+2026-07-31,5,Coahuila,mujeres,E7,38490
+2026-07-31,5,Coahuila,mujeres,E8,35553
+2026-07-31,5,Coahuila,mujeres,E9,31911
+2026-07-31,5,Coahuila,no especificado,E3,1
+2026-07-31,5,Coahuila,no especificado,E4,1
+2026-07-31,6,Colima,hombres,E1,39
+2026-07-31,6,Colima,hombres,E10,8816
+2026-07-31,6,Colima,hombres,E11,3504
+2026-07-31,6,Colima,hombres,E12,1185
+2026-07-31,6,Colima,hombres,E13,495
+2026-07-31,6,Colima,hombres,E14,317
+2026-07-31,6,Colima,hombres,E2,15475
+2026-07-31,6,Colima,hombres,E3,16054
+2026-07-31,6,Colima,hombres,E4,14400
+2026-07-31,6,Colima,hombres,E5,13814
+2026-07-31,6,Colima,hombres,E6,12735
+2026-07-31,6,Colima,hombres,E7,11740
+2026-07-31,6,Colima,hombres,E8,10606
+2026-07-31,6,Colima,hombres,E9,10330
+2026-07-31,6,Colima,mujeres,E1,37
+2026-07-31,6,Colima,mujeres,E10,5478
+2026-07-31,6,Colima,mujeres,E11,1836
+2026-07-31,6,Colima,mujeres,E12,526
+2026-07-31,6,Colima,mujeres,E13,203
+2026-07-31,6,Colima,mujeres,E14,246
+2026-07-31,6,Colima,mujeres,E2,15938
+2026-07-31,6,Colima,mujeres,E3,13496
+2026-07-31,6,Colima,mujeres,E4,10794
+2026-07-31,6,Colima,mujeres,E5,9923
+2026-07-31,6,Colima,mujeres,E6,9600
+2026-07-31,6,Colima,mujeres,E7,8837
+2026-07-31,6,Colima,mujeres,E8,7511
+2026-07-31,6,Colima,mujeres,E9,6601
+2026-07-31,6,Colima,no especificado,E3,1
+2026-07-31,7,Chiapas,hombres,E1,184
+2026-07-31,7,Chiapas,hombres,E10,11616
+2026-07-31,7,Chiapas,hombres,E11,5864
+2026-07-31,7,Chiapas,hombres,E12,2187
+2026-07-31,7,Chiapas,hombres,E13,1032
+2026-07-31,7,Chiapas,hombres,E14,763
+2026-07-31,7,Chiapas,hombres,E2,78208
+2026-07-31,7,Chiapas,hombres,E3,53178
+2026-07-31,7,Chiapas,hombres,E4,35582
+2026-07-31,7,Chiapas,hombres,E5,27888
+2026-07-31,7,Chiapas,hombres,E6,23835
+2026-07-31,7,Chiapas,hombres,E7,21274
+2026-07-31,7,Chiapas,hombres,E8,17649
+2026-07-31,7,Chiapas,hombres,E9,14501
+2026-07-31,7,Chiapas,mujeres,E1,199
+2026-07-31,7,Chiapas,mujeres,E10,6492
+2026-07-31,7,Chiapas,mujeres,E11,2910
+2026-07-31,7,Chiapas,mujeres,E12,1037
+2026-07-31,7,Chiapas,mujeres,E13,493
+2026-07-31,7,Chiapas,mujeres,E14,567
+2026-07-31,7,Chiapas,mujeres,E2,76798
+2026-07-31,7,Chiapas,mujeres,E3,45314
+2026-07-31,7,Chiapas,mujeres,E4,25232
+2026-07-31,7,Chiapas,mujeres,E5,18611
+2026-07-31,7,Chiapas,mujeres,E6,16565
+2026-07-31,7,Chiapas,mujeres,E7,14530
+2026-07-31,7,Chiapas,mujeres,E8,11571
+2026-07-31,7,Chiapas,mujeres,E9,9174
+2026-07-31,8,Chihuahua,hombres,E1,69
+2026-07-31,8,Chihuahua,hombres,E10,48928
+2026-07-31,8,Chihuahua,hombres,E11,15619
+2026-07-31,8,Chihuahua,hombres,E12,4680
+2026-07-31,8,Chihuahua,hombres,E13,1676
+2026-07-31,8,Chihuahua,hombres,E14,835
+2026-07-31,8,Chihuahua,hombres,E2,74574
+2026-07-31,8,Chihuahua,hombres,E3,98487
+2026-07-31,8,Chihuahua,hombres,E4,91552
+2026-07-31,8,Chihuahua,hombres,E5,80231
+2026-07-31,8,Chihuahua,hombres,E6,69190
+2026-07-31,8,Chihuahua,hombres,E7,59939
+2026-07-31,8,Chihuahua,hombres,E8,56656
+2026-07-31,8,Chihuahua,hombres,E9,56802
+2026-07-31,8,Chihuahua,mujeres,E1,61
+2026-07-31,8,Chihuahua,mujeres,E10,35162
+2026-07-31,8,Chihuahua,mujeres,E11,10657
+2026-07-31,8,Chihuahua,mujeres,E12,2429
+2026-07-31,8,Chihuahua,mujeres,E13,756
+2026-07-31,8,Chihuahua,mujeres,E14,573
+2026-07-31,8,Chihuahua,mujeres,E2,75841
+2026-07-31,8,Chihuahua,mujeres,E3,86540
+2026-07-31,8,Chihuahua,mujeres,E4,72308
+2026-07-31,8,Chihuahua,mujeres,E5,61964
+2026-07-31,8,Chihuahua,mujeres,E6,54960
+2026-07-31,8,Chihuahua,mujeres,E7,48441
+2026-07-31,8,Chihuahua,mujeres,E8,44406
+2026-07-31,8,Chihuahua,mujeres,E9,41986
+2026-07-31,8,Chihuahua,no especificado,E2,1
+2026-07-31,8,Chihuahua,no especificado,E3,1
+2026-07-31,8,Chihuahua,no especificado,E4,1
+2026-07-31,9,Ciudad de México,hombres,E1,576
+2026-07-31,9,Ciudad de México,hombres,E10,172671
+2026-07-31,9,Ciudad de México,hombres,E11,77755
+2026-07-31,9,Ciudad de México,hombres,E12,24088
+2026-07-31,9,Ciudad de México,hombres,E13,8902
+2026-07-31,9,Ciudad de México,hombres,E14,5320
+2026-07-31,9,Ciudad de México,hombres,E2,261511
+2026-07-31,9,Ciudad de México,hombres,E3,407645
+2026-07-31,9,Ciudad de México,hombres,E4,425790
+2026-07-31,9,Ciudad de México,hombres,E5,376808
+2026-07-31,9,Ciudad de México,hombres,E6,326707
+2026-07-31,9,Ciudad de México,hombres,E7,272975
+2026-07-31,9,Ciudad de México,hombres,E8,228003
+2026-07-31,9,Ciudad de México,hombres,E9,211725
+2026-07-31,9,Ciudad de México,mujeres,E1,555
+2026-07-31,9,Ciudad de México,mujeres,E10,131145
+2026-07-31,9,Ciudad de México,mujeres,E11,56568
+2026-07-31,9,Ciudad de México,mujeres,E12,16243
+2026-07-31,9,Ciudad de México,mujeres,E13,5732
+2026-07-31,9,Ciudad de México,mujeres,E14,5412
+2026-07-31,9,Ciudad de México,mujeres,E2,254929
+2026-07-31,9,Ciudad de México,mujeres,E3,377177
+2026-07-31,9,Ciudad de México,mujeres,E4,366629
+2026-07-31,9,Ciudad de México,mujeres,E5,294448
+2026-07-31,9,Ciudad de México,mujeres,E6,254077
+2026-07-31,9,Ciudad de México,mujeres,E7,214635
+2026-07-31,9,Ciudad de México,mujeres,E8,177934
+2026-07-31,9,Ciudad de México,mujeres,E9,163125
+2026-07-31,9,Ciudad de México,no especificado,E3,13
+2026-07-31,9,Ciudad de México,no especificado,E4,21
+2026-07-31,9,Ciudad de México,no especificado,E5,17
+2026-07-31,9,Ciudad de México,no especificado,E6,3
+2026-07-31,9,Ciudad de México,no especificado,E7,2
+2026-07-31,9,Ciudad de México,no especificado,E8,1
+2026-07-31,10,Durango,hombres,E1,62
+2026-07-31,10,Durango,hombres,E10,14602
+2026-07-31,10,Durango,hombres,E11,4874
+2026-07-31,10,Durango,hombres,E12,1492
+2026-07-31,10,Durango,hombres,E13,550
+2026-07-31,10,Durango,hombres,E14,363
+2026-07-31,10,Durango,hombres,E2,21031
+2026-07-31,10,Durango,hombres,E3,29906
+2026-07-31,10,Durango,hombres,E4,29080
+2026-07-31,10,Durango,hombres,E5,24880
+2026-07-31,10,Durango,hombres,E6,21695
+2026-07-31,10,Durango,hombres,E7,18598
+2026-07-31,10,Durango,hombres,E8,17862
+2026-07-31,10,Durango,hombres,E9,17320
+2026-07-31,10,Durango,mujeres,E1,48
+2026-07-31,10,Durango,mujeres,E10,7517
+2026-07-31,10,Durango,mujeres,E11,2583
+2026-07-31,10,Durango,mujeres,E12,669
+2026-07-31,10,Durango,mujeres,E13,247
+2026-07-31,10,Durango,mujeres,E14,312
+2026-07-31,10,Durango,mujeres,E2,20551
+2026-07-31,10,Durango,mujeres,E3,22716
+2026-07-31,10,Durango,mujeres,E4,20601
+2026-07-31,10,Durango,mujeres,E5,17083
+2026-07-31,10,Durango,mujeres,E6,15146
+2026-07-31,10,Durango,mujeres,E7,12756
+2026-07-31,10,Durango,mujeres,E8,10944
+2026-07-31,10,Durango,mujeres,E9,9496
+2026-07-31,11,Guanajuato,hombres,E1,714
+2026-07-31,11,Guanajuato,hombres,E10,50936
+2026-07-31,11,Guanajuato,hombres,E11,17675
+2026-07-31,11,Guanajuato,hombres,E12,5218
+2026-07-31,11,Guanajuato,hombres,E13,1966
+2026-07-31,11,Guanajuato,hombres,E14,1138
+2026-07-31,11,Guanajuato,hombres,E2,81339
+2026-07-31,11,Guanajuato,hombres,E3,119686
+2026-07-31,11,Guanajuato,hombres,E4,121608
+2026-07-31,11,Guanajuato,hombres,E5,108579
+2026-07-31,11,Guanajuato,hombres,E6,91027
+2026-07-31,11,Guanajuato,hombres,E7,77494
+2026-07-31,11,Guanajuato,hombres,E8,69490
+2026-07-31,11,Guanajuato,hombres,E9,63408
+2026-07-31,11,Guanajuato,mujeres,E1,765
+2026-07-31,11,Guanajuato,mujeres,E10,29631
+2026-07-31,11,Guanajuato,mujeres,E11,10601
+2026-07-31,11,Guanajuato,mujeres,E12,2656
+2026-07-31,11,Guanajuato,mujeres,E13,807
+2026-07-31,11,Guanajuato,mujeres,E14,800
+2026-07-31,11,Guanajuato,mujeres,E2,77621
+2026-07-31,11,Guanajuato,mujeres,E3,93667
+2026-07-31,11,Guanajuato,mujeres,E4,88664
+2026-07-31,11,Guanajuato,mujeres,E5,75184
+2026-07-31,11,Guanajuato,mujeres,E6,63566
+2026-07-31,11,Guanajuato,mujeres,E7,54864
+2026-07-31,11,Guanajuato,mujeres,E8,46539
+2026-07-31,11,Guanajuato,mujeres,E9,39704
+2026-07-31,11,Guanajuato,no especificado,E11,1
+2026-07-31,11,Guanajuato,no especificado,E3,1
+2026-07-31,12,Guerrero,hombres,E1,592
+2026-07-31,12,Guerrero,hombres,E10,8532
+2026-07-31,12,Guerrero,hombres,E11,4618
+2026-07-31,12,Guerrero,hombres,E12,1712
+2026-07-31,12,Guerrero,hombres,E13,779
+2026-07-31,12,Guerrero,hombres,E14,678
+2026-07-31,12,Guerrero,hombres,E2,40784
+2026-07-31,12,Guerrero,hombres,E3,27022
+2026-07-31,12,Guerrero,hombres,E4,22452
+2026-07-31,12,Guerrero,hombres,E5,16947
+2026-07-31,12,Guerrero,hombres,E6,14257
+2026-07-31,12,Guerrero,hombres,E7,12404
+2026-07-31,12,Guerrero,hombres,E8,10693
+2026-07-31,12,Guerrero,hombres,E9,9867
+2026-07-31,12,Guerrero,mujeres,E1,611
+2026-07-31,12,Guerrero,mujeres,E10,6139
+2026-07-31,12,Guerrero,mujeres,E11,2920
+2026-07-31,12,Guerrero,mujeres,E12,1073
+2026-07-31,12,Guerrero,mujeres,E13,562
+2026-07-31,12,Guerrero,mujeres,E14,827
+2026-07-31,12,Guerrero,mujeres,E2,44397
+2026-07-31,12,Guerrero,mujeres,E3,27355
+2026-07-31,12,Guerrero,mujeres,E4,18698
+2026-07-31,12,Guerrero,mujeres,E5,12701
+2026-07-31,12,Guerrero,mujeres,E6,10939
+2026-07-31,12,Guerrero,mujeres,E7,9508
+2026-07-31,12,Guerrero,mujeres,E8,7917
+2026-07-31,12,Guerrero,mujeres,E9,7270
+2026-07-31,13,Hidalgo,hombres,E1,81
+2026-07-31,13,Hidalgo,hombres,E10,15111
+2026-07-31,13,Hidalgo,hombres,E11,6773
+2026-07-31,13,Hidalgo,hombres,E12,2247
+2026-07-31,13,Hidalgo,hombres,E13,909
+2026-07-31,13,Hidalgo,hombres,E14,590
+2026-07-31,13,Hidalgo,hombres,E2,56415
+2026-07-31,13,Hidalgo,hombres,E3,52169
+2026-07-31,13,Hidalgo,hombres,E4,42106
+2026-07-31,13,Hidalgo,hombres,E5,31411
+2026-07-31,13,Hidalgo,hombres,E6,26203
+2026-07-31,13,Hidalgo,hombres,E7,23181
+2026-07-31,13,Hidalgo,hombres,E8,20154
+2026-07-31,13,Hidalgo,hombres,E9,18390
+2026-07-31,13,Hidalgo,mujeres,E1,76
+2026-07-31,13,Hidalgo,mujeres,E10,8174
+2026-07-31,13,Hidalgo,mujeres,E11,3412
+2026-07-31,13,Hidalgo,mujeres,E12,1030
+2026-07-31,13,Hidalgo,mujeres,E13,338
+2026-07-31,13,Hidalgo,mujeres,E14,461
+2026-07-31,13,Hidalgo,mujeres,E2,60291
+2026-07-31,13,Hidalgo,mujeres,E3,48502
+2026-07-31,13,Hidalgo,mujeres,E4,31254
+2026-07-31,13,Hidalgo,mujeres,E5,20373
+2026-07-31,13,Hidalgo,mujeres,E6,17653
+2026-07-31,13,Hidalgo,mujeres,E7,15559
+2026-07-31,13,Hidalgo,mujeres,E8,12694
+2026-07-31,13,Hidalgo,mujeres,E9,10440
+2026-07-31,13,Hidalgo,no especificado,E3,3
+2026-07-31,13,Hidalgo,no especificado,E4,2
+2026-07-31,14,Jalisco,hombres,E1,546
+2026-07-31,14,Jalisco,hombres,E10,94346
+2026-07-31,14,Jalisco,hombres,E11,39858
+2026-07-31,14,Jalisco,hombres,E12,14607
+2026-07-31,14,Jalisco,hombres,E13,6519
+2026-07-31,14,Jalisco,hombres,E14,5203
+2026-07-31,14,Jalisco,hombres,E2,154417
+2026-07-31,14,Jalisco,hombres,E3,208689
+2026-07-31,14,Jalisco,hombres,E4,227223
+2026-07-31,14,Jalisco,hombres,E5,189205
+2026-07-31,14,Jalisco,hombres,E6,162891
+2026-07-31,14,Jalisco,hombres,E7,144029
+2026-07-31,14,Jalisco,hombres,E8,126441
+2026-07-31,14,Jalisco,hombres,E9,115799
+2026-07-31,14,Jalisco,mujeres,E1,462
+2026-07-31,14,Jalisco,mujeres,E10,67937
+2026-07-31,14,Jalisco,mujeres,E11,29269
+2026-07-31,14,Jalisco,mujeres,E12,10187
+2026-07-31,14,Jalisco,mujeres,E13,4486
+2026-07-31,14,Jalisco,mujeres,E14,4610
+2026-07-31,14,Jalisco,mujeres,E2,158341
+2026-07-31,14,Jalisco,mujeres,E3,181301
+2026-07-31,14,Jalisco,mujeres,E4,182553
+2026-07-31,14,Jalisco,mujeres,E5,141897
+2026-07-31,14,Jalisco,mujeres,E6,123591
+2026-07-31,14,Jalisco,mujeres,E7,110299
+2026-07-31,14,Jalisco,mujeres,E8,95801
+2026-07-31,14,Jalisco,mujeres,E9,83935
+2026-07-31,14,Jalisco,no especificado,E2,3
+2026-07-31,14,Jalisco,no especificado,E3,11
+2026-07-31,14,Jalisco,no especificado,E4,12
+2026-07-31,14,Jalisco,no especificado,E5,2
+2026-07-31,14,Jalisco,no especificado,E6,3
+2026-07-31,14,Jalisco,no especificado,E8,1
+2026-07-31,15,México,hombres,E1,1261
+2026-07-31,15,México,hombres,E10,102307
+2026-07-31,15,México,hombres,E11,44091
+2026-07-31,15,México,hombres,E12,12578
+2026-07-31,15,México,hombres,E13,4302
+2026-07-31,15,México,hombres,E14,2447
+2026-07-31,15,México,hombres,E2,257918
+2026-07-31,15,México,hombres,E3,267102
+2026-07-31,15,México,hombres,E4,268968
+2026-07-31,15,México,hombres,E5,213550
+2026-07-31,15,México,hombres,E6,174933
+2026-07-31,15,México,hombres,E7,148886
+2026-07-31,15,México,hombres,E8,133216
+2026-07-31,15,México,hombres,E9,123627
+2026-07-31,15,México,mujeres,E1,1626
+2026-07-31,15,México,mujeres,E10,61608
+2026-07-31,15,México,mujeres,E11,25530
+2026-07-31,15,México,mujeres,E12,6574
+2026-07-31,15,México,mujeres,E13,2212
+2026-07-31,15,México,mujeres,E14,1631
+2026-07-31,15,México,mujeres,E2,270250
+2026-07-31,15,México,mujeres,E3,217651
+2026-07-31,15,México,mujeres,E4,187490
+2026-07-31,15,México,mujeres,E5,137530
+2026-07-31,15,México,mujeres,E6,115556
+2026-07-31,15,México,mujeres,E7,102644
+2026-07-31,15,México,mujeres,E8,88296
+2026-07-31,15,México,mujeres,E9,77545
+2026-07-31,15,México,no especificado,E3,1
+2026-07-31,15,México,no especificado,E4,2
+2026-07-31,15,México,no especificado,E5,1
+2026-07-31,15,México,no especificado,E6,2
+2026-07-31,16,Michoacán,hombres,E1,138
+2026-07-31,16,Michoacán,hombres,E10,24342
+2026-07-31,16,Michoacán,hombres,E11,11418
+2026-07-31,16,Michoacán,hombres,E12,4218
+2026-07-31,16,Michoacán,hombres,E13,1839
+2026-07-31,16,Michoacán,hombres,E14,1278
+2026-07-31,16,Michoacán,hombres,E2,60241
+2026-07-31,16,Michoacán,hombres,E3,68122
+2026-07-31,16,Michoacán,hombres,E4,53290
+2026-07-31,16,Michoacán,hombres,E5,47739
+2026-07-31,16,Michoacán,hombres,E6,42072
+2026-07-31,16,Michoacán,hombres,E7,36451
+2026-07-31,16,Michoacán,hombres,E8,32005
+2026-07-31,16,Michoacán,hombres,E9,29147
+2026-07-31,16,Michoacán,mujeres,E1,88
+2026-07-31,16,Michoacán,mujeres,E10,16188
+2026-07-31,16,Michoacán,mujeres,E11,7083
+2026-07-31,16,Michoacán,mujeres,E12,2273
+2026-07-31,16,Michoacán,mujeres,E13,904
+2026-07-31,16,Michoacán,mujeres,E14,1039
+2026-07-31,16,Michoacán,mujeres,E2,69335
+2026-07-31,16,Michoacán,mujeres,E3,69778
+2026-07-31,16,Michoacán,mujeres,E4,44070
+2026-07-31,16,Michoacán,mujeres,E5,36621
+2026-07-31,16,Michoacán,mujeres,E6,33064
+2026-07-31,16,Michoacán,mujeres,E7,28097
+2026-07-31,16,Michoacán,mujeres,E8,23303
+2026-07-31,16,Michoacán,mujeres,E9,20437
+2026-07-31,17,Morelos,hombres,E1,83
+2026-07-31,17,Morelos,hombres,E10,11583
+2026-07-31,17,Morelos,hombres,E11,5025
+2026-07-31,17,Morelos,hombres,E12,1731
+2026-07-31,17,Morelos,hombres,E13,736
+2026-07-31,17,Morelos,hombres,E14,536
+2026-07-31,17,Morelos,hombres,E2,29017
+2026-07-31,17,Morelos,hombres,E3,26213
+2026-07-31,17,Morelos,hombres,E4,20751
+2026-07-31,17,Morelos,hombres,E5,18754
+2026-07-31,17,Morelos,hombres,E6,17070
+2026-07-31,17,Morelos,hombres,E7,14817
+2026-07-31,17,Morelos,hombres,E8,13768
+2026-07-31,17,Morelos,hombres,E9,13252
+2026-07-31,17,Morelos,mujeres,E1,80
+2026-07-31,17,Morelos,mujeres,E10,9224
+2026-07-31,17,Morelos,mujeres,E11,3541
+2026-07-31,17,Morelos,mujeres,E12,1083
+2026-07-31,17,Morelos,mujeres,E13,490
+2026-07-31,17,Morelos,mujeres,E14,602
+2026-07-31,17,Morelos,mujeres,E2,30078
+2026-07-31,17,Morelos,mujeres,E3,24263
+2026-07-31,17,Morelos,mujeres,E4,16260
+2026-07-31,17,Morelos,mujeres,E5,14478
+2026-07-31,17,Morelos,mujeres,E6,13873
+2026-07-31,17,Morelos,mujeres,E7,12858
+2026-07-31,17,Morelos,mujeres,E8,11064
+2026-07-31,17,Morelos,mujeres,E9,10729
+2026-07-31,18,Nayarit,hombres,E1,71
+2026-07-31,18,Nayarit,hombres,E10,9074
+2026-07-31,18,Nayarit,hombres,E11,3985
+2026-07-31,18,Nayarit,hombres,E12,1380
+2026-07-31,18,Nayarit,hombres,E13,645
+2026-07-31,18,Nayarit,hombres,E14,483
+2026-07-31,18,Nayarit,hombres,E2,24097
+2026-07-31,18,Nayarit,hombres,E3,21293
+2026-07-31,18,Nayarit,hombres,E4,18589
+2026-07-31,18,Nayarit,hombres,E5,15613
+2026-07-31,18,Nayarit,hombres,E6,14636
+2026-07-31,18,Nayarit,hombres,E7,12925
+2026-07-31,18,Nayarit,hombres,E8,10921
+2026-07-31,18,Nayarit,hombres,E9,10563
+2026-07-31,18,Nayarit,mujeres,E1,63
+2026-07-31,18,Nayarit,mujeres,E10,5433
+2026-07-31,18,Nayarit,mujeres,E11,2131
+2026-07-31,18,Nayarit,mujeres,E12,761
+2026-07-31,18,Nayarit,mujeres,E13,355
+2026-07-31,18,Nayarit,mujeres,E14,452
+2026-07-31,18,Nayarit,mujeres,E2,25117
+2026-07-31,18,Nayarit,mujeres,E3,18582
+2026-07-31,18,Nayarit,mujeres,E4,15565
+2026-07-31,18,Nayarit,mujeres,E5,12395
+2026-07-31,18,Nayarit,mujeres,E6,11996
+2026-07-31,18,Nayarit,mujeres,E7,10221
+2026-07-31,18,Nayarit,mujeres,E8,8514
+2026-07-31,18,Nayarit,mujeres,E9,7259
+2026-07-31,18,Nayarit,no especificado,E2,1
+2026-07-31,18,Nayarit,no especificado,E3,2
+2026-07-31,18,Nayarit,no especificado,E4,1
+2026-07-31,19,Nuevo León,hombres,E1,296
+2026-07-31,19,Nuevo León,hombres,E10,100477
+2026-07-31,19,Nuevo León,hombres,E11,28589
+2026-07-31,19,Nuevo León,hombres,E12,8155
+2026-07-31,19,Nuevo León,hombres,E13,2903
+2026-07-31,19,Nuevo León,hombres,E14,1667
+2026-07-31,19,Nuevo León,hombres,E2,70529
+2026-07-31,19,Nuevo León,hombres,E3,172776
+2026-07-31,19,Nuevo León,hombres,E4,209196
+2026-07-31,19,Nuevo León,hombres,E5,189133
+2026-07-31,19,Nuevo León,hombres,E6,162398
+2026-07-31,19,Nuevo León,hombres,E7,141621
+2026-07-31,19,Nuevo León,hombres,E8,130161
+2026-07-31,19,Nuevo León,hombres,E9,123238
+2026-07-31,19,Nuevo León,mujeres,E1,259
+2026-07-31,19,Nuevo León,mujeres,E10,58924
+2026-07-31,19,Nuevo León,mujeres,E11,17831
+2026-07-31,19,Nuevo León,mujeres,E12,4497
+2026-07-31,19,Nuevo León,mujeres,E13,1449
+2026-07-31,19,Nuevo León,mujeres,E14,1480
+2026-07-31,19,Nuevo León,mujeres,E2,49058
+2026-07-31,19,Nuevo León,mujeres,E3,114343
+2026-07-31,19,Nuevo León,mujeres,E4,131677
+2026-07-31,19,Nuevo León,mujeres,E5,109617
+2026-07-31,19,Nuevo León,mujeres,E6,93882
+2026-07-31,19,Nuevo León,mujeres,E7,83009
+2026-07-31,19,Nuevo León,mujeres,E8,75019
+2026-07-31,19,Nuevo León,mujeres,E9,71051
+2026-07-31,19,Nuevo León,no especificado,E3,1
+2026-07-31,19,Nuevo León,no especificado,E4,2
+2026-07-31,19,Nuevo León,no especificado,E5,1
+2026-07-31,19,Nuevo León,no especificado,E6,1
+2026-07-31,19,Nuevo León,no especificado,E8,1
+2026-07-31,20,Oaxaca,hombres,E1,60
+2026-07-31,20,Oaxaca,hombres,E10,11590
+2026-07-31,20,Oaxaca,hombres,E11,5746
+2026-07-31,20,Oaxaca,hombres,E12,2313
+2026-07-31,20,Oaxaca,hombres,E13,976
+2026-07-31,20,Oaxaca,hombres,E14,758
+2026-07-31,20,Oaxaca,hombres,E2,50654
+2026-07-31,20,Oaxaca,hombres,E3,33709
+2026-07-31,20,Oaxaca,hombres,E4,27503
+2026-07-31,20,Oaxaca,hombres,E5,24490
+2026-07-31,20,Oaxaca,hombres,E6,20993
+2026-07-31,20,Oaxaca,hombres,E7,18615
+2026-07-31,20,Oaxaca,hombres,E8,16131
+2026-07-31,20,Oaxaca,hombres,E9,13820
+2026-07-31,20,Oaxaca,mujeres,E1,71
+2026-07-31,20,Oaxaca,mujeres,E10,7362
+2026-07-31,20,Oaxaca,mujeres,E11,3457
+2026-07-31,20,Oaxaca,mujeres,E12,1220
+2026-07-31,20,Oaxaca,mujeres,E13,556
+2026-07-31,20,Oaxaca,mujeres,E14,562
+2026-07-31,20,Oaxaca,mujeres,E2,57940
+2026-07-31,20,Oaxaca,mujeres,E3,33962
+2026-07-31,20,Oaxaca,mujeres,E4,22894
+2026-07-31,20,Oaxaca,mujeres,E5,18619
+2026-07-31,20,Oaxaca,mujeres,E6,16414
+2026-07-31,20,Oaxaca,mujeres,E7,14562
+2026-07-31,20,Oaxaca,mujeres,E8,12066
+2026-07-31,20,Oaxaca,mujeres,E9,9759
+2026-07-31,21,Puebla,hombres,E1,137
+2026-07-31,21,Puebla,hombres,E10,30458
+2026-07-31,21,Puebla,hombres,E11,12122
+2026-07-31,21,Puebla,hombres,E12,3550
+2026-07-31,21,Puebla,hombres,E13,1261
+2026-07-31,21,Puebla,hombres,E14,887
+2026-07-31,21,Puebla,hombres,E2,106979
+2026-07-31,21,Puebla,hombres,E3,103411
+2026-07-31,21,Puebla,hombres,E4,93556
+2026-07-31,21,Puebla,hombres,E5,84450
+2026-07-31,21,Puebla,hombres,E6,62541
+2026-07-31,21,Puebla,hombres,E7,50054
+2026-07-31,21,Puebla,hombres,E8,43429
+2026-07-31,21,Puebla,hombres,E9,38346
+2026-07-31,21,Puebla,mujeres,E1,127
+2026-07-31,21,Puebla,mujeres,E10,19029
+2026-07-31,21,Puebla,mujeres,E11,7613
+2026-07-31,21,Puebla,mujeres,E12,2146
+2026-07-31,21,Puebla,mujeres,E13,696
+2026-07-31,21,Puebla,mujeres,E14,821
+2026-07-31,21,Puebla,mujeres,E2,115839
+2026-07-31,21,Puebla,mujeres,E3,91448
+2026-07-31,21,Puebla,mujeres,E4,72729
+2026-07-31,21,Puebla,mujeres,E5,65918
+2026-07-31,21,Puebla,mujeres,E6,45773
+2026-07-31,21,Puebla,mujeres,E7,36129
+2026-07-31,21,Puebla,mujeres,E8,29714
+2026-07-31,21,Puebla,mujeres,E9,25308
+2026-07-31,21,Puebla,no especificado,E4,1
+2026-07-31,22,Querétaro,hombres,E1,110
+2026-07-31,22,Querétaro,hombres,E10,29148
+2026-07-31,22,Querétaro,hombres,E11,10142
+2026-07-31,22,Querétaro,hombres,E12,2899
+2026-07-31,22,Querétaro,hombres,E13,989
+2026-07-31,22,Querétaro,hombres,E14,619
+2026-07-31,22,Querétaro,hombres,E2,42197
+2026-07-31,22,Querétaro,hombres,E3,71174
+2026-07-31,22,Querétaro,hombres,E4,81834
+2026-07-31,22,Querétaro,hombres,E5,76605
+2026-07-31,22,Querétaro,hombres,E6,62066
+2026-07-31,22,Querétaro,hombres,E7,50103
+2026-07-31,22,Querétaro,hombres,E8,42327
+2026-07-31,22,Querétaro,hombres,E9,37632
+2026-07-31,22,Querétaro,mujeres,E1,108
+2026-07-31,22,Querétaro,mujeres,E10,19941
+2026-07-31,22,Querétaro,mujeres,E11,7166
+2026-07-31,22,Querétaro,mujeres,E12,1753
+2026-07-31,22,Querétaro,mujeres,E13,645
+2026-07-31,22,Querétaro,mujeres,E14,546
+2026-07-31,22,Querétaro,mujeres,E2,41481
+2026-07-31,22,Querétaro,mujeres,E3,58516
+2026-07-31,22,Querétaro,mujeres,E4,63646
+2026-07-31,22,Querétaro,mujeres,E5,53593
+2026-07-31,22,Querétaro,mujeres,E6,42576
+2026-07-31,22,Querétaro,mujeres,E7,35792
+2026-07-31,22,Querétaro,mujeres,E8,30002
+2026-07-31,22,Querétaro,mujeres,E9,26121
+2026-07-31,22,Querétaro,no especificado,E4,2
+2026-07-31,22,Querétaro,no especificado,E5,1
+2026-07-31,23,Quintana Roo,hombres,E1,28
+2026-07-31,23,Quintana Roo,hombres,E10,17527
+2026-07-31,23,Quintana Roo,hombres,E11,7783
+2026-07-31,23,Quintana Roo,hombres,E12,2018
+2026-07-31,23,Quintana Roo,hombres,E13,668
+2026-07-31,23,Quintana Roo,hombres,E14,377
+2026-07-31,23,Quintana Roo,hombres,E2,35905
+2026-07-31,23,Quintana Roo,hombres,E3,54051
+2026-07-31,23,Quintana Roo,hombres,E4,59337
+2026-07-31,23,Quintana Roo,hombres,E5,55308
+2026-07-31,23,Quintana Roo,hombres,E6,45846
+2026-07-31,23,Quintana Roo,hombres,E7,36839
+2026-07-31,23,Quintana Roo,hombres,E8,28718
+2026-07-31,23,Quintana Roo,hombres,E9,23478
+2026-07-31,23,Quintana Roo,mujeres,E1,28
+2026-07-31,23,Quintana Roo,mujeres,E10,10250
+2026-07-31,23,Quintana Roo,mujeres,E11,4065
+2026-07-31,23,Quintana Roo,mujeres,E12,933
+2026-07-31,23,Quintana Roo,mujeres,E13,302
+2026-07-31,23,Quintana Roo,mujeres,E14,261
+2026-07-31,23,Quintana Roo,mujeres,E2,33239
+2026-07-31,23,Quintana Roo,mujeres,E3,38156
+2026-07-31,23,Quintana Roo,mujeres,E4,43090
+2026-07-31,23,Quintana Roo,mujeres,E5,37229
+2026-07-31,23,Quintana Roo,mujeres,E6,31034
+2026-07-31,23,Quintana Roo,mujeres,E7,24794
+2026-07-31,23,Quintana Roo,mujeres,E8,18739
+2026-07-31,23,Quintana Roo,mujeres,E9,14235
+2026-07-31,23,Quintana Roo,no especificado,E3,1
+2026-07-31,24,San Luis Potosí,hombres,E1,228
+2026-07-31,24,San Luis Potosí,hombres,E10,23554
+2026-07-31,24,San Luis Potosí,hombres,E11,9936
+2026-07-31,24,San Luis Potosí,hombres,E12,3868
+2026-07-31,24,San Luis Potosí,hombres,E13,1599
+2026-07-31,24,San Luis Potosí,hombres,E14,1360
+2026-07-31,24,San Luis Potosí,hombres,E2,41867
+2026-07-31,24,San Luis Potosí,hombres,E3,54399
+2026-07-31,24,San Luis Potosí,hombres,E4,52213
+2026-07-31,24,San Luis Potosí,hombres,E5,47022
+2026-07-31,24,San Luis Potosí,hombres,E6,40140
+2026-07-31,24,San Luis Potosí,hombres,E7,34789
+2026-07-31,24,San Luis Potosí,hombres,E8,29840
+2026-07-31,24,San Luis Potosí,hombres,E9,28068
+2026-07-31,24,San Luis Potosí,mujeres,E1,248
+2026-07-31,24,San Luis Potosí,mujeres,E10,15851
+2026-07-31,24,San Luis Potosí,mujeres,E11,7747
+2026-07-31,24,San Luis Potosí,mujeres,E12,2964
+2026-07-31,24,San Luis Potosí,mujeres,E13,1242
+2026-07-31,24,San Luis Potosí,mujeres,E14,1863
+2026-07-31,24,San Luis Potosí,mujeres,E2,42202
+2026-07-31,24,San Luis Potosí,mujeres,E3,44640
+2026-07-31,24,San Luis Potosí,mujeres,E4,38485
+2026-07-31,24,San Luis Potosí,mujeres,E5,32970
+2026-07-31,24,San Luis Potosí,mujeres,E6,28155
+2026-07-31,24,San Luis Potosí,mujeres,E7,24874
+2026-07-31,24,San Luis Potosí,mujeres,E8,21074
+2026-07-31,24,San Luis Potosí,mujeres,E9,19768
+2026-07-31,25,Sinaloa,hombres,E1,98
+2026-07-31,25,Sinaloa,hombres,E10,32111
+2026-07-31,25,Sinaloa,hombres,E11,11277
+2026-07-31,25,Sinaloa,hombres,E12,3824
+2026-07-31,25,Sinaloa,hombres,E13,1627
+2026-07-31,25,Sinaloa,hombres,E14,1029
+2026-07-31,25,Sinaloa,hombres,E2,68559
+2026-07-31,25,Sinaloa,hombres,E3,76297
+2026-07-31,25,Sinaloa,hombres,E4,61730
+2026-07-31,25,Sinaloa,hombres,E5,51858
+2026-07-31,25,Sinaloa,hombres,E6,45225
+2026-07-31,25,Sinaloa,hombres,E7,40008
+2026-07-31,25,Sinaloa,hombres,E8,36718
+2026-07-31,25,Sinaloa,hombres,E9,37445
+2026-07-31,25,Sinaloa,mujeres,E1,78
+2026-07-31,25,Sinaloa,mujeres,E10,21436
+2026-07-31,25,Sinaloa,mujeres,E11,7006
+2026-07-31,25,Sinaloa,mujeres,E12,1765
+2026-07-31,25,Sinaloa,mujeres,E13,673
+2026-07-31,25,Sinaloa,mujeres,E14,608
+2026-07-31,25,Sinaloa,mujeres,E2,70056
+2026-07-31,25,Sinaloa,mujeres,E3,72352
+2026-07-31,25,Sinaloa,mujeres,E4,51215
+2026-07-31,25,Sinaloa,mujeres,E5,41646
+2026-07-31,25,Sinaloa,mujeres,E6,36487
+2026-07-31,25,Sinaloa,mujeres,E7,31723
+2026-07-31,25,Sinaloa,mujeres,E8,27935
+2026-07-31,25,Sinaloa,mujeres,E9,25602
+2026-07-31,25,Sinaloa,no especificado,E5,1
+2026-07-31,26,Sonora,hombres,E1,112
+2026-07-31,26,Sonora,hombres,E10,33373
+2026-07-31,26,Sonora,hombres,E11,12070
+2026-07-31,26,Sonora,hombres,E12,4490
+2026-07-31,26,Sonora,hombres,E13,1834
+2026-07-31,26,Sonora,hombres,E14,1046
+2026-07-31,26,Sonora,hombres,E2,59696
+2026-07-31,26,Sonora,hombres,E3,67553
+2026-07-31,26,Sonora,hombres,E4,68093
+2026-07-31,26,Sonora,hombres,E5,58822
+2026-07-31,26,Sonora,hombres,E6,49072
+2026-07-31,26,Sonora,hombres,E7,43729
+2026-07-31,26,Sonora,hombres,E8,39873
+2026-07-31,26,Sonora,hombres,E9,38679
+2026-07-31,26,Sonora,mujeres,E1,119
+2026-07-31,26,Sonora,mujeres,E10,21857
+2026-07-31,26,Sonora,mujeres,E11,7503
+2026-07-31,26,Sonora,mujeres,E12,2059
+2026-07-31,26,Sonora,mujeres,E13,726
+2026-07-31,26,Sonora,mujeres,E14,633
+2026-07-31,26,Sonora,mujeres,E2,60432
+2026-07-31,26,Sonora,mujeres,E3,58739
+2026-07-31,26,Sonora,mujeres,E4,54118
+2026-07-31,26,Sonora,mujeres,E5,44575
+2026-07-31,26,Sonora,mujeres,E6,35674
+2026-07-31,26,Sonora,mujeres,E7,31931
+2026-07-31,26,Sonora,mujeres,E8,28737
+2026-07-31,26,Sonora,mujeres,E9,26734
+2026-07-31,26,Sonora,no especificado,E11,1
+2026-07-31,27,Tabasco,hombres,E1,34
+2026-07-31,27,Tabasco,hombres,E10,8497
+2026-07-31,27,Tabasco,hombres,E11,3795
+2026-07-31,27,Tabasco,hombres,E12,1303
+2026-07-31,27,Tabasco,hombres,E13,445
+2026-07-31,27,Tabasco,hombres,E14,299
+2026-07-31,27,Tabasco,hombres,E2,53495
+2026-07-31,27,Tabasco,hombres,E3,36234
+2026-07-31,27,Tabasco,hombres,E4,29531
+2026-07-31,27,Tabasco,hombres,E5,25050
+2026-07-31,27,Tabasco,hombres,E6,21560
+2026-07-31,27,Tabasco,hombres,E7,19167
+2026-07-31,27,Tabasco,hombres,E8,15154
+2026-07-31,27,Tabasco,hombres,E9,11587
+2026-07-31,27,Tabasco,mujeres,E1,43
+2026-07-31,27,Tabasco,mujeres,E10,3479
+2026-07-31,27,Tabasco,mujeres,E11,1612
+2026-07-31,27,Tabasco,mujeres,E12,447
+2026-07-31,27,Tabasco,mujeres,E13,209
+2026-07-31,27,Tabasco,mujeres,E14,265
+2026-07-31,27,Tabasco,mujeres,E2,52055
+2026-07-31,27,Tabasco,mujeres,E3,27336
+2026-07-31,27,Tabasco,mujeres,E4,18276
+2026-07-31,27,Tabasco,mujeres,E5,14307
+2026-07-31,27,Tabasco,mujeres,E6,12046
+2026-07-31,27,Tabasco,mujeres,E7,10138
+2026-07-31,27,Tabasco,mujeres,E8,7359
+2026-07-31,27,Tabasco,mujeres,E9,5112
+2026-07-31,27,Tabasco,no especificado,E4,1
+2026-07-31,28,Tamaulipas,hombres,E1,298
+2026-07-31,28,Tamaulipas,hombres,E10,33926
+2026-07-31,28,Tamaulipas,hombres,E11,12217
+2026-07-31,28,Tamaulipas,hombres,E12,3621
+2026-07-31,28,Tamaulipas,hombres,E13,1311
+2026-07-31,28,Tamaulipas,hombres,E14,701
+2026-07-31,28,Tamaulipas,hombres,E2,49922
+2026-07-31,28,Tamaulipas,hombres,E3,80385
+2026-07-31,28,Tamaulipas,hombres,E4,79249
+2026-07-31,28,Tamaulipas,hombres,E5,62865
+2026-07-31,28,Tamaulipas,hombres,E6,51628
+2026-07-31,28,Tamaulipas,hombres,E7,47509
+2026-07-31,28,Tamaulipas,hombres,E8,43814
+2026-07-31,28,Tamaulipas,hombres,E9,40876
+2026-07-31,28,Tamaulipas,mujeres,E1,317
+2026-07-31,28,Tamaulipas,mujeres,E10,20027
+2026-07-31,28,Tamaulipas,mujeres,E11,7103
+2026-07-31,28,Tamaulipas,mujeres,E12,1741
+2026-07-31,28,Tamaulipas,mujeres,E13,563
+2026-07-31,28,Tamaulipas,mujeres,E14,557
+2026-07-31,28,Tamaulipas,mujeres,E2,45463
+2026-07-31,28,Tamaulipas,mujeres,E3,62845
+2026-07-31,28,Tamaulipas,mujeres,E4,56657
+2026-07-31,28,Tamaulipas,mujeres,E5,42189
+2026-07-31,28,Tamaulipas,mujeres,E6,35762
+2026-07-31,28,Tamaulipas,mujeres,E7,33953
+2026-07-31,28,Tamaulipas,mujeres,E8,30082
+2026-07-31,28,Tamaulipas,mujeres,E9,25324
+2026-07-31,28,Tamaulipas,no especificado,E3,1
+2026-07-31,29,Tlaxcala,hombres,E1,28
+2026-07-31,29,Tlaxcala,hombres,E10,5201
+2026-07-31,29,Tlaxcala,hombres,E11,2381
+2026-07-31,29,Tlaxcala,hombres,E12,774
+2026-07-31,29,Tlaxcala,hombres,E13,304
+2026-07-31,29,Tlaxcala,hombres,E14,154
+2026-07-31,29,Tlaxcala,hombres,E2,23480
+2026-07-31,29,Tlaxcala,hombres,E3,21191
+2026-07-31,29,Tlaxcala,hombres,E4,14801
+2026-07-31,29,Tlaxcala,hombres,E5,11427
+2026-07-31,29,Tlaxcala,hombres,E6,9626
+2026-07-31,29,Tlaxcala,hombres,E7,8396
+2026-07-31,29,Tlaxcala,hombres,E8,7422
+2026-07-31,29,Tlaxcala,hombres,E9,6331
+2026-07-31,29,Tlaxcala,mujeres,E1,26
+2026-07-31,29,Tlaxcala,mujeres,E10,3068
+2026-07-31,29,Tlaxcala,mujeres,E11,1338
+2026-07-31,29,Tlaxcala,mujeres,E12,396
+2026-07-31,29,Tlaxcala,mujeres,E13,153
+2026-07-31,29,Tlaxcala,mujeres,E14,109
+2026-07-31,29,Tlaxcala,mujeres,E2,24682
+2026-07-31,29,Tlaxcala,mujeres,E3,18032
+2026-07-31,29,Tlaxcala,mujeres,E4,9672
+2026-07-31,29,Tlaxcala,mujeres,E5,8062
+2026-07-31,29,Tlaxcala,mujeres,E6,7535
+2026-07-31,29,Tlaxcala,mujeres,E7,6856
+2026-07-31,29,Tlaxcala,mujeres,E8,5583
+2026-07-31,29,Tlaxcala,mujeres,E9,4325
+2026-07-31,30,Veracruz,hombres,E1,419
+2026-07-31,30,Veracruz,hombres,E10,42201
+2026-07-31,30,Veracruz,hombres,E11,20906
+2026-07-31,30,Veracruz,hombres,E12,9383
+2026-07-31,30,Veracruz,hombres,E13,5000
+2026-07-31,30,Veracruz,hombres,E14,5973
+2026-07-31,30,Veracruz,hombres,E2,97254
+2026-07-31,30,Veracruz,hombres,E3,96795
+2026-07-31,30,Veracruz,hombres,E4,88842
+2026-07-31,30,Veracruz,hombres,E5,74640
+2026-07-31,30,Veracruz,hombres,E6,67487
+2026-07-31,30,Veracruz,hombres,E7,59029
+2026-07-31,30,Veracruz,hombres,E8,51606
+2026-07-31,30,Veracruz,hombres,E9,47378
+2026-07-31,30,Veracruz,mujeres,E1,432
+2026-07-31,30,Veracruz,mujeres,E10,27321
+2026-07-31,30,Veracruz,mujeres,E11,16010
+2026-07-31,30,Veracruz,mujeres,E12,8565
+2026-07-31,30,Veracruz,mujeres,E13,5512
+2026-07-31,30,Veracruz,mujeres,E14,8969
+2026-07-31,30,Veracruz,mujeres,E2,97169
+2026-07-31,30,Veracruz,mujeres,E3,77233
+2026-07-31,30,Veracruz,mujeres,E4,65463
+2026-07-31,30,Veracruz,mujeres,E5,51131
+2026-07-31,30,Veracruz,mujeres,E6,47900
+2026-07-31,30,Veracruz,mujeres,E7,42673
+2026-07-31,30,Veracruz,mujeres,E8,37191
+2026-07-31,30,Veracruz,mujeres,E9,33023
+2026-07-31,30,Veracruz,no especificado,E3,2
+2026-07-31,30,Veracruz,no especificado,E5,1
+2026-07-31,30,Veracruz,no especificado,E8,1
+2026-07-31,31,Yucatán,hombres,E1,34
+2026-07-31,31,Yucatán,hombres,E10,20631
+2026-07-31,31,Yucatán,hombres,E11,8963
+2026-07-31,31,Yucatán,hombres,E12,3799
+2026-07-31,31,Yucatán,hombres,E13,1930
+2026-07-31,31,Yucatán,hombres,E14,2234
+2026-07-31,31,Yucatán,hombres,E2,33672
+2026-07-31,31,Yucatán,hombres,E3,47685
+2026-07-31,31,Yucatán,hombres,E4,50803
+2026-07-31,31,Yucatán,hombres,E5,45930
+2026-07-31,31,Yucatán,hombres,E6,37373
+2026-07-31,31,Yucatán,hombres,E7,32498
+2026-07-31,31,Yucatán,hombres,E8,28457
+2026-07-31,31,Yucatán,hombres,E9,25797
+2026-07-31,31,Yucatán,mujeres,E1,38
+2026-07-31,31,Yucatán,mujeres,E10,13710
+2026-07-31,31,Yucatán,mujeres,E11,6296
+2026-07-31,31,Yucatán,mujeres,E12,2556
+2026-07-31,31,Yucatán,mujeres,E13,1414
+2026-07-31,31,Yucatán,mujeres,E14,2296
+2026-07-31,31,Yucatán,mujeres,E2,32313
+2026-07-31,31,Yucatán,mujeres,E3,33463
+2026-07-31,31,Yucatán,mujeres,E4,35498
+2026-07-31,31,Yucatán,mujeres,E5,30917
+2026-07-31,31,Yucatán,mujeres,E6,24230
+2026-07-31,31,Yucatán,mujeres,E7,20986
+2026-07-31,31,Yucatán,mujeres,E8,17439
+2026-07-31,31,Yucatán,mujeres,E9,16088
+2026-07-31,31,Yucatán,no especificado,E3,1
+2026-07-31,31,Yucatán,no especificado,E4,1
+2026-07-31,32,Zacatecas,hombres,E1,14
+2026-07-31,32,Zacatecas,hombres,E10,10233
+2026-07-31,32,Zacatecas,hombres,E11,4139
+2026-07-31,32,Zacatecas,hombres,E12,1313
+2026-07-31,32,Zacatecas,hombres,E13,510
+2026-07-31,32,Zacatecas,hombres,E14,347
+2026-07-31,32,Zacatecas,hombres,E2,25871
+2026-07-31,32,Zacatecas,hombres,E3,26131
+2026-07-31,32,Zacatecas,hombres,E4,23142
+2026-07-31,32,Zacatecas,hombres,E5,18204
+2026-07-31,32,Zacatecas,hombres,E6,16370
+2026-07-31,32,Zacatecas,hombres,E7,14702
+2026-07-31,32,Zacatecas,hombres,E8,12973
+2026-07-31,32,Zacatecas,hombres,E9,12260
+2026-07-31,32,Zacatecas,mujeres,E1,28
+2026-07-31,32,Zacatecas,mujeres,E10,5965
+2026-07-31,32,Zacatecas,mujeres,E11,2305
+2026-07-31,32,Zacatecas,mujeres,E12,621
+2026-07-31,32,Zacatecas,mujeres,E13,177
+2026-07-31,32,Zacatecas,mujeres,E14,191
+2026-07-31,32,Zacatecas,mujeres,E2,28080
+2026-07-31,32,Zacatecas,mujeres,E3,25010
+2026-07-31,32,Zacatecas,mujeres,E4,19242
+2026-07-31,32,Zacatecas,mujeres,E5,12650
+2026-07-31,32,Zacatecas,mujeres,E6,11329
+2026-07-31,32,Zacatecas,mujeres,E7,9908
+2026-07-31,32,Zacatecas,mujeres,E8,8905
+2026-07-31,32,Zacatecas,mujeres,E9,7654

@@ -243,3 +243,128 @@ Ninguno de los Tomos PDF (el árbol `/work/models/PPEF2020/docs/` y `/paquete/` 
 
 **1.04252**, recuperado de seis programas independientes de su cuadro 6.1 que cierran al décimo. No es el deflactor del PIB de 4.3 % que declara el CGPE: es el 4.25 % de la fórmula del límite de gasto corriente estructural. Sus columnas rotuladas «PEF 2024» están en pesos de 2025.
 
+
+---
+
+## Adenda 2026-09-07 · corrida 2026, fase 1 · **LOS ANALÍTICOS DEL PROYECTO SÍ EXISTEN**
+
+### La corrección más importante de este archivo
+
+Desde el 2026-09-05 este mapa registra que «la ruta del PPEF (proyecto) sigue en 404 para
+2022–2026» y que «para 2022–2026 existe el aprobado a nivel programa/UR/función y no el
+proyecto». **Era un problema de host, no un documento ausente.**
+
+Los analíticos del **proyecto** viven en el almacén histórico de `pef.hacienda.gob.mx`, en
+una subcarpeta `Proyecto/` paralela a la `Autorizado/` que este mapa documenta desde 2021:
+
+```
+https://www.pef.hacienda.gob.mx/work/models/PEF/Analiticos_Historico/{t}/Proyecto/{archivo}.xlsx
+https://www.pef.hacienda.gob.mx/work/models/PEF/Analiticos_Historico/{t}/Autorizado/{archivo}.xlsx
+```
+
+Archivos: `ac01_ra_pp_ur_og`, `ac01_ra_f_ur_og`, y sus `_efe`. **Verificado el 2026-09-07:
+los cuatro cortes responden 200 para 2021, 2022, 2023, 2024, 2025 y 2026** — veinticuatro
+peticiones, veinticuatro 200. Con el bundle de certificados; sin él, falla el TLS.
+
+**Nadie sondeó esa ruta** porque el proyecto se buscó siempre en `ppef.hacienda.gob.mx`, que
+es donde estuvo hasta 2021 y donde el almacén sigue roto. La página de analíticos del portal
+PPEF **sigue** listando los archivos —y sigue listándolos sin el segmento `/Proyecto/`, la
+trampa de rutas ya documentada— y **los catorce enlaces devuelven 404** para 2026
+(reverificado 2026-09-07). El control de 2021 en ese host sigue en 200.
+
+**Prueba de aceptación, contra una cifra publicada por un tercero.** El perímetro educativo
+de CIEP 2025 —ramos 11, 38 y 48 completos más el resto de la función Educación— reconstruido
+sobre `2025/Proyecto/ac01_ra_f_ur_og.xlsx` da **1,142,490.5 mdp** contra los **1,142,490.0**
+que CIEP publica del proyecto. **Medio millón de pesos sobre 1.14 billones.** El archivo es
+el proyecto, no una copia del aprobado: sobre el aprobado el mismo perímetro da 1,161,164.8.
+
+**Consecuencias para el resto de la serie FISCUS:**
+- La comparación **proyecto contra proyecto** es posible desde 2021, a nivel de programa y de
+  unidad responsable. Deja de haber techo de granularidad en la línea primaria.
+- La serie **pensiones IMSS / cuotas IMSS ex ante**, congelada desde 2022 por falta de la
+  exposición de motivos del PPEF, **se puede reconstruir** desde el analítico de entidades
+  del proyecto, tipo de gasto 4, para 2021–2026.
+- La decisión de la corrida 2025 de trabajar «aprobado contra aprobado» era legítima con lo
+  que se sabía y **su premisa era falsa**. El documento 2025 declaró su objeto y no cambia;
+  lo que cambia es el motivo por el que lo eligió.
+
+### El repositorio de datos abiertos de la SHCP (ATDT)
+
+Segundo hallazgo de la fase 1. Existe y no estaba en este mapa. Se descubre por la API CKAN
+de `datos.gob.mx` (`/api/3/action/package_search?q=...`; el host `datos.gob.mx` devuelve 403
+al navegador y 200 a la API, y `/busca/api/...` es 404: usar `datos.gob.mx/api/3/...`).
+
+| conjunto | ruta | contenido |
+|---|---|---|
+| Proyecto de PEF | `repodatos.atdt.gob.mx/api_update/secretaria_hacienda/proyecto_presupuesto_egresos_federacion/PPEF_2026.csv` | 129,908 filas, 33 columnas: ciclo, ramo, UR, grupo funcional, función, subfunción, AI, modalidad, PP, **capítulo, concepto, partida genérica y específica**, tipo de gasto, fuente de financiamiento, **entidad federativa**, **clave de cartera**, monto. 77 MB |
+| Anexos transversales del PPEF | `…/analitico_plazas_remuneraciones_apf_ppef/anexos_transversales_ppef2026.csv` | el desglose por programa de cada anexo transversal, con vertiente y componente. 124 MB |
+| Plazas y remuneraciones del PPEF | `…/analitico_plazas_remuneraciones_apf_ppef/analitico_plazas_apf_PPEF.csv` | plazas, horas y percepciones por unidad y rango salarial. 11.7 MB |
+
+**Es más rico que los xlsx**: funde el corte por programa y el corte por función en una sola
+tabla y añade partida específica y clave de cartera. Cubre Gobierno Federal **y** entidades:
+los ramos 50 IMSS, 51 ISSSTE, 52 Pemex, 53 CFE, 54 Mujeres, 55 ATDT y **56 Servicios de
+Salud del IMSS para el Bienestar**. Total bruto 2026: **11,746,796.8 mdp**.
+
+**Trampa capital: el repositorio guarda UNA sola ranura y la sobrescribe.** `PPEF_2025.csv`,
+`PPEF_2024.csv` y los anteriores devuelven **503** (dos intentos cada uno, con control 200
+sobre `PPEF_2026.csv` y 503 sobre el listado del directorio). El conjunto de CKAN declara un
+solo recurso. **Lo que no se descargue el día de la entrega desaparece cuando llega el
+paquete siguiente.** Y la nota del conjunto ya dice «ejercicio fiscal 2027» mientras el
+archivo todavía sirve `ciclo = 2026`: la ranura está por rotar.
+
+Nota de fecha: el recurso figura como creado el **2026-02-24**, tres meses después de la
+entrega del paquete 2026. No se puede saber desde CKAN si eso es la primera publicación o
+una migración del portal. **Queda como pregunta abierta para la corrida 2027: comprobar el
+día de la entrega si el CSV ya está.**
+
+### La Gaceta Parlamentaria publica el paquete completo el día de la entrega
+
+Tercer hallazgo, y el más útil para una lectura en vivo. El paquete 2026 se entregó el
+**8 de septiembre de 2025** y la Gaceta Parlamentaria de ese día (año XXVIII, número 6871)
+lo publica íntegro, con URLs estables:
+
+```
+https://gaceta.diputados.gob.mx/Gaceta/66/2025/sep/20250908.html      (índice)
+https://gaceta.diputados.gob.mx/PDF/66/2025/sep/20250908-{A..L}.pdf   (anexos)
+```
+
+| anexo | contenido |
+|---|---|
+| A | **Iniciativa de Ley de Ingresos** 2026 |
+| B | **Proyecto de Presupuesto de Egresos** 2026 |
+| C | **Criterios Generales de Política Económica** 2026 |
+| D | Ley Federal de Derechos |
+| E | **Ley del IEPS** |
+| F | **Código Fiscal de la Federación** |
+| G | Informe sobre la facultad arancelaria (art. 131 constitucional) |
+| H, J, K | Nota metodológica y listados de zonas de atención prioritaria 2026 |
+| I | Comunicaciones de la Junta de Coordinación Política |
+| L | Recursos federales para subsidios de vivienda y suelo |
+
+**Esto resuelve el problema de adquisición de una lectura en vivo.** El portal de la
+Secretaría es lento y su almacén se rompe; la Gaceta publica las tres piezas grandes y la
+miscelánea el mismo día, en un host que conserva su archivo histórico. Para la corrida 2027:
+**la Gaceta del día de la entrega es la primera parada, no la última.**
+
+**Hallazgo de contenido:** la miscelánea 2026 son tres leyes —Derechos, IEPS y Código
+Fiscal— y **no hay iniciativa de reforma al ISR ni al IVA**. Es una afirmación del capítulo
+de ingresos que se obtiene del índice de la Gaceta en un minuto.
+
+### Capa demográfica (tier `externa_demografica`)
+
+| denominador | ruta | cobertura |
+|---|---|---|
+| Población a mitad de año | `repodatos.atdt.gob.mx/CONAPO/proyecciones/00_Pob_Mitad_1950_2070.csv` | 1950–2070, **32 entidades × edad simple 0–109 × sexo**. 45 MB. Verificado: 2026 = 134,407,258 personas; 65 y más = 12,201,321; de 3 a 14 años = 25,421,421 |
+| Indicadores demográficos | `datos.gob.mx/dataset/f2b9b220-…/download/05_indicadores_demograficos_proyecciones.csv` | 1950–2070 por entidad: esperanza de vida, índice de envejecimiento, nacimientos, migración. 1.7 MB. **Devuelve 403 sin `User-Agent` de navegador**; con él, 200 |
+
+Resuelve cuatro de los siete denominadores del pacto: población total, población de 65 y
+más, población en edad escolar y población por entidad. Quedan pendientes matrícula,
+afiliación a IMSS e ISSSTE, y padrón de programas pensionarios.
+
+### Estado del bundle TLS, reverificado
+
+`http://yr1.i.lencr.org/` sirve el intermedio en **DER**: hay que convertirlo con
+`openssl x509 -inform DER -outform PEM` antes de concatenarlo. Un `cat` del DER produce un
+bundle que curl acepta sin protestar y que **no arregla nada**; el síntoma es idéntico al de
+no tener bundle. Con el PEM correcto, `pef` y `ppef.hacienda.gob.mx` verifican.
+`repodatos.atdt.gob.mx`, `datos.gob.mx` y `gaceta.diputados.gob.mx` no lo necesitan.

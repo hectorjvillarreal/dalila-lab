@@ -174,3 +174,132 @@ Descargas (todas registradas en `_manifiesto.csv`, ahora 55 líneas): (1) nota m
 **Contaminación:** ninguna en cifras, verificable por el orden de sellado. Dos en forma, y la más ilustrativa es que los dos documentos abren con la misma frase, «X pesos de cada 100 provendrán de financiamiento», escrita de forma independiente.
 
 **Artefacto nuevo:** `_aprendizaje/protocolo_lectura_en_vivo.md`, con el orden de descarga, el orden de verificación, qué se puede afirmar a las dos horas, qué exige veinticuatro, y qué no se afirma nunca sin fuente en mano.
+
+## Adenda 2026-09-07 (corrida de precarga para 2027)
+
+**Qué es esta corrida.** No evalúa ni produce documento: **mueve trabajo fuera del
+reloj.** La ejecuta `INSTRUCCIONES_preparacion_2027.md`, cuyo criterio de terminación son
+diez puntos. **Los diez quedan cumplidos**, tres de ellos con un faltante declarado que se
+nombra abajo.
+
+### Parte A — las correcciones que pidió la comparación 2026
+
+**La compuerta semántica, artefacto nuevo** (`_aprendizaje/compuerta_semantica.md`). Es la
+primera entrada de la rúbrica que **ninguna identidad contable puede verificar**: en 2026
+las treinta y tres pruebas cerraron al peso y aun así tres afirmaciones excedieron su
+perímetro. La regla: *el perímetro de la frase debe coincidir con el perímetro del
+cálculo.* Se corrió sobre el documento 2026 y **se reescribieron diez frases ---tres del
+resumen ejecutivo, dos de Pensiones, tres de Inversión y dos de Gasto federalizado--- sin
+tocar una sola cifra.** El documento recompila en 66 páginas.
+
+Hallazgo del procedimiento, incorporado al paso 3: **cuando una frase compara dos
+crecimientos, tiene que decir si compara tasas o niveles.** «Crece más del doble que lo
+etiquetado» era ambiguo; lo que es más del doble es la tasa.
+
+**El recuadro del deflactor** (§2 de la instrucción) va en la nota de método, con entorno
+`recuadro` nuevo en el preámbulo. Dice tres cosas: deflactor del PIB para todo agregado
+fiscal y toda razón a PIB; índice al consumidor sólo para el poder de compra de una
+prestación individual, y **en ningún cuadro presupuestal**; y la sensibilidad con
+inflación promedio **en una sola línea y sólo ahí**.
+
+**La inconsistencia de la nota de método, corregida y rastreada.** El ejemplo de las dos
+líneas de comparación ---+0,81 / +0,70 / −0,47 en educación--- **es del ejercicio 2025 y
+la nota lo atribuía a 2026**, donde el capítulo correspondiente publica +3,4 %. El error
+se había propagado a `rubrica.md` y a `especificacion_genero.md`; los tres quedan
+corregidos con la nota de la corrección a la vista. Las cifras verdaderas de 2026 son
+**+3,4 % en la línea P y +2,2 % en la línea G**, y el punto y dos décimas de diferencia
+son los **12 641,1 mdp** que la Cámara añadió a la función educativa en diciembre de 2024.
+**Ninguna comprobación estática lo veía: las dos cifras son correctas en su lugar y sólo
+el vecindario las contradice.** De ahí la entrada 9 de la rúbrica.
+
+**Defecto propio encontrado de paso:** el conversor a Markdown (`a_markdown.py`) borraba
+los comentarios de LaTeX con `%.*` **sin excluir el `\%` escapado**, y con él se comía el
+resto del renglón. **218 renglones del entregable en Markdown de 2026 terminaban en una
+diagonal suelta y sin su signo de porcentaje.** Corregido con un lookbehind; el archivo
+recuperó 8 KB de texto.
+
+### Parte B — la precarga
+
+**Capa demográfica, ocho series** (`datos_demograficos/`, tier `externa_demografica`):
+CONAPO nacional y por entidad, matrícula de la SEP, derechohabientes del ISSSTE, registro
+de IMSS-Bienestar, padrón único de Bienestar, contraste con Banco Mundial, y
+**asegurados del IMSS**, que era *la* carencia de 2026.
+
+**Cómo se resolvió el IMSS, que la corrida 2026 dio por perdido.** Tres cosas: el host
+**va por HTTP** ---`https://` devuelve 503---; el portal es **Drupal y no CKAN**, así que
+`package_search` devuelve HTML y por eso la sonda anterior lo declaró muerto; y el
+**catálogo nacional no tiene la serie**. La ruta es directa al archivo mensual,
+`datos.imss.gob.mx/sites/default/files/asg-AAAA-MM-DD.csv`, estable desde 1997. Pesa 400
+MB, viene separado por barra vertical y en latin-1: **se agrega y se borra.** Julio de
+2025: 30 642 265 asegurados; julio de 2026: 31 071 555. **ASEGURADOS NO ES
+DERECHOHABIENTES** y la advertencia va en `_fuentes.csv` y tiene que llegar al cuadro.
+
+**Serie del perímetro de la regla fiscal, 2018–2026** (§3.2, prioritaria): hecha, y
+**corrige un dato de la propia instrucción** ---la LIF 2023 aprobada no devolvió el tope
+de 3,1 %: quedó sin tope, como la iniciativa---. Documenta que el tope de 2026 iguala el
+déficit con 1,8 mdp de diferencia, que la cláusula desapareció en 2024–2025 y volvió
+abarcando **capital humano**, y que el renglón «balance sin inversión» **dejó de
+publicarse** en el CGPE 2026. La conexión con Pemex se sostiene y está acotada: la ley
+crea la posibilidad de excluir 0,68 % del PIB y el CGPE retira la evidencia; **no se
+afirma que se haya aplicado.**
+
+**Diff, identidades y rutas.** El diff corre contra 2025→2026 y resuelve los dos casos
+obligatorios: IMSS-Bienestar a través de tres ramos (−0,59 % real, no extinción) y la
+Guardia Nacional (−33,68 % real a través del cambio de ramo). Las **treinta y tres
+identidades** quedan parametrizadas por ejercicio ---las pruebas son permanentes, las
+cifras viven en `restituciones/{año}.json`--- y **cierran las treinta y tres contra
+2026**. Las rutas de descarga: veinticinco renglones probados.
+
+**Esqueleto de LaTeX** (`documento_2027/`): dieciséis capítulos ---uno nuevo, la regla
+fiscal---, plantillas, `bibliografia.bib`, `LEEME.md` y `PLANTILLAS.md`. **Comprobación
+estática 0 errores, dos pasadas de pdflatex, PDF de 41 páginas**, y el ZIP abierto en un
+directorio limpio recompila idéntico. El cuadro de relleno se incluye por la ruta desde el
+maestro en los dieciséis capítulos, para que el camino que se rompió veintiuna veces en
+2025 y otras veintiuna en 2026 esté probado antes de la corrida. *Desviación declarada:
+la carpeta se llama `documento_2027/` y no `_documento_2027/`, para no romper la serie
+`documento_2025`, `documento_2026`.*
+
+**Series históricas, y lo que se descongeló.** La serie ex ante de pensiones IMSS / cuotas
+estaba detenida desde 2021 «porque la exposición de motivos del PPEF no existe desde
+2022». **No hacía falta:** el numerador sale del analítico del **proyecto**, y esos
+analíticos existen para 2020–2026. Faltaban los de 2022 y 2023; se descargaron ---más los
+aprobados de 2021 y 2022 que faltaban--- y quedaron en el manifiesto, que pasa de 85 a 100
+archivos registrados. **La serie pasa de dos puntos a siete**, y los dos viejos se reprodujeron al
+milésimo (1,31 y 1,46 contra 1,306 y 1,463 calculados de cero). **Todos los puntos ya
+registrados se reprodujeron menos uno**, que difiere en dos milésimas por el perímetro de
+las pensiones no contributivas y **se deja a la vista en vez de ajustarlo para que
+cuadre.**
+
+**Regla nueva que sale de aquí:** el CGPE se publica **una sola vez, con el paquete**, de
+modo que **no existe un CGPE aprobado** y toda razón que lo use es ex ante por
+construcción. En la serie aprobada esas cuatro filas van vacías a propósito. La versión
+anterior de estas series las mezclaba.
+
+**Hallazgo lateral, verificado en los siete ejercicios:** al comparar proyecto contra
+aprobado, **el total de las entidades de control directo cambió una sola vez en siete
+años** (2024, −25 442,9 mdp) y el del Gobierno Federal dos (2020 y 2024). En cinco de
+siete la Cámara **no movió un peso de ningún total: reasignó dentro.** En 2023, con el
+total del Gobierno Federal idéntico al peso, se movieron diez ramos con suma neta cero
+---Bienestar −6 342,1; INE +4 475,5; Poder Judicial +2 425,1---. **Un documento que
+compare totales concluirá que la Cámara no hizo nada. Hizo, y el diff es lo que lo
+muestra.** Y explica por qué las cinco razones que viven en entidades dan idéntico ex ante
+y aprobado.
+
+**Checklist de omisiones** (`_aprendizaje/checklist_omisiones.md`), que **sustituye al
+comparador**: veintidós renglones en tres bloques ---los que la precarga desbloqueó, las
+omisiones propias con fuente pública disponible, y los que dependen de una fuente que no
+estará en vivo---, cada uno con su fuente y su columna de disponibilidad. El renglón que
+más pesa: **la vara externa de suficiencia en salud se quedó fuera dos años seguidos** y
+es una línea de texto y un cociente.
+
+### Los tres faltantes, declarados
+
+1. **Las cuatro razones que necesitan CGPE o Anexo 3 sólo llegan a 2024** hacia atrás: los
+   escalares de años anteriores no están en forma legible por máquina y **el CGPE 2025 es
+   un escaneo sin capa de texto**.
+2. **2018 y 2019 quedan fuera de las series**: no hay analíticos en carpeta y el artículo
+   1o. de 2018 no se extrae con el patrón que sirve de 2019 en adelante.
+3. **La columna `no_trabajadores` del cubo del IMSS no se separó**: el denominador de
+   asegurados incluye a quien no tiene empleo asociado. Para separarla hay que volver a
+   bajar 400 MB.
+

@@ -1,0 +1,14 @@
+# Caché de analíticos: pickles regenerables desde los xlsx, que sí están versionados.
+# 500 MB de derivados que se reconstruyen con una corrida del guion.
+_cache/
+_herramientas/_cache/
+documento_*/_cache/
+documento_*/_build/
+
+# Crudos de la capa demográfica: se reducen a las series de datos_demograficos/,
+# que son las que se versionan. El cubo del IMSS pesa 400 MB por mes.
+datos_demograficos/_crudos/
+
+# Python
+__pycache__/
+*.pyc
