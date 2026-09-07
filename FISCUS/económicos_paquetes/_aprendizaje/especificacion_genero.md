@@ -103,8 +103,52 @@ Patrón de error observado: erratas de transcripción en cifras grandes; contraf
 
 **Lo que 2023 enseñó sobre el frente:** el resumen dice "6.3 billones" para un gasto neto de 8.3 (V014), "−11.5 %" nominal junto a variaciones reales (V013) y "equilibrio presupuestario" para un déficit proyectado de 2.2 % (V032); el cap. 13 dice "−13 %" donde el resumen dice "−11.5 %" y el CGPE −15.5 % (V072). Tres cifras para una caída y dos nombres para un flujo: el frente sigue siendo objeto propio.
 
+
+## 9. Adenda 2024: el capítulo de educación, el cuarto patrón de error y la tríada de NTA
+
+**Arquitectura del capítulo 8 de CIEP 2024 (cuatro páginas impresas, dos figuras, cero cuadros):** encabezado con el agregado, la razón a PIB y a gasto neto, y la nota al pie que declara el perímetro; §8.1 «Gasto en educación: 2016–2024» (prioridad relativa, subfunciones, SEP; Figura 8.1 con dos ejes, puntos de PIB en barras y proporción del gasto neto en línea con rótulo); recuadro «¿En qué se gastará?»; §8.2 «Incidencia del gasto en educación» (los tres niveles con nivel, variación, conteo de programas o unidades responsables con reducción, y gasto por estudiante; luego posgrado, adultos, cultura y CTI; Figura 8.2 con tres series por estudiante); §8.3 «Implicaciones». El capítulo se repite condensado en §13.4 del capítulo de implicaciones de política pública. **A diferencia del capítulo de salud, el de educación no trae ni un solo cuadro:** todas las comprobaciones de lámina se hacen contra el texto.
+
+**El cuarto patrón de error: un rubro federalizado falla por consistencia interna.** La serie queda así:
+
+| parte | ejercicio | error característico |
+|---|---|---|
+| (+) Ingresos | 2022 | **base**: aprobado contra estimado sobre PIB distinto; nominal por real |
+| (−) Gasto federal | 2020, 2021 | **perímetro**: neteo silencioso, reclasificaciones, PPEF por PEF |
+| (=) Balance y deuda | 2023 | **objeto**: la cifra correcta con el nombre equivocado |
+| (−) Gasto federalizado | 2024 | **consistencia interna**: el texto contra su lámina, su nota al pie y el otro capítulo |
+
+De los once renglones marcados `no` en 2024, ocho son contradicciones del documento consigo mismo y solo tres son discrepancias contra la fuente oficial. Contra la fuente, el capítulo acierta el 87 % de las veces y reconstruye su agregado al mdp. **La explicación no es descuido sino estructura:** un rubro que vive en cuatro ramos, seis subfunciones y treinta y dos entidades obliga a mantener coherentes un texto, dos láminas, doce notas al pie y dos capítulos, y un documento escrito en 72 horas por capítulos independientes no tiene quien haga cumplir sus convenciones entre capítulos. Los cuatro casos de 2024, para reconocerlos en vivo:
+
+1. **Texto contra lámina.** «El aumento es resultado de 1.8 millones de NNA menos en las escuelas», cuando el denominador implícito de la propia figura **sube** 0.41 %. Prueba barata: dividir el numerador entre el valor per cápita en dos años consecutivos y comparar la trayectoria del cociente con lo que el texto afirma.
+2. **Texto contra su nota al pie.** «1 mil 385 mdp» en el cuerpo, «890 + 471» en la nota. Prueba barata: sumar todas las notas al pie que desglosan.
+3. **Un capítulo contra otro.** El capítulo sectorial acota «en EMS y ES»; el de implicaciones repite la frase sin el calificador y queda contradicha por la figura. Prueba barata: buscar cada afirmación del capítulo sectorial en el capítulo de implicaciones y comparar los calificadores.
+4. **Una convención aplicada en un capítulo y no en otro.** El cambio de año base del PIB se declara ejemplarmente en deuda y no se aplica en educación, donde sostiene la afirmación de «mínimo histórico». Prueba barata: cuando el documento presuma de un mínimo o un máximo de serie, recalcular los dos últimos puntos con la misma añada.
+
+**El hábito de la casa que produce el error de nota al pie: las variaciones en mdp son reales y no lo dicen.** Ocho de ocho en 2024. La convención es defendible dentro del documento y produce una afirmación falsa en cuanto toca un hecho legal: la nota 11 dice que «en 2023 se aprobaron 22 mil 297 mdp» para las previsiones del FONE, cuando la Cámara aprobó 21,275.7 corrientes y 22,297 es esa cifra deflactada. **Regla para leer el género: ninguna diferencia en mdp de un documento de CIEP es nominal hasta que se demuestre lo contrario.**
+
+**La tríada de NTA como conjunto.** Pensiones (2021), salud (2021, propuesta) y educación (2024) son la columna vertebral del sistema de cuentas de transferencias nacionales, y ahora hay tres capítulos evaluados con los que caracterizarlas:
+
+| | Pensiones | Salud | Educación |
+|---|---|---|---|
+| **Perfil de edad** | vejez | todo el ciclo, con joroba en los extremos | juventud |
+| **Dirección demográfica** | la transición lo empuja al alza | mixta, al alza por envejecimiento | **la transición lo empuja a la baja** |
+| **Dónde vive el gasto** | ramos 19 y generales + entidades de control directo | ramo 12, ramo 33 (FASSA), IMSS, ISSSTE, ramo 47 | **ramo 33 (FONE) 51 %, ramo 11 40 %, ramo 25 8 %** |
+| **Federal o federalizado** | federal, con entidades de control directo | mixto | **federalizado: 59 % se transfiere a las entidades** |
+| **Denominador natural** | población 65+ y pensionados | población total y por afiliación | matrícula, no población |
+| **Lo que el paquete declara** | proyección a 2050 del 65+ | ninguna proyección | **ninguna: ni matrícula, ni cobertura, ni planteles, ni docentes** |
+| **Comparación estructural adoptada** | pensiones / tributarios | pendiente | **educación / pensiones y jubilaciones** (0.709 en 2023, 0.689 en 2024) |
+
+**Lo que comparten:** los tres son transferencias de ciclo de vida, los tres tienen un componente contributivo y uno no contributivo, y en los tres el paquete publica el flujo y no el perfil de edad que lo genera. **En qué difieren:** pensiones es un compromiso adquirido cuyo horizonte el paquete sí discute; salud es un servicio corriente cuya demanda el paquete reconoce que crecerá; **educación es el único cuyo denominador demográfico se contrae, y es el único de los tres para el que el paquete no declara ningún supuesto de población.** Esa asimetría es el hallazgo transversal de la tríada: el paquete tiene horizonte demográfico donde la demografía presiona al alza y no lo tiene donde presiona a la baja. Para el Layer B de NTA significa que el perfil de edad de educación hay que construirlo íntegramente fuera del paquete, mientras que el de pensiones se puede anclar parcialmente en él.
+
+**Comparación estructural adoptada para educación:** *función Educación (Gobierno Federal, bruta) / pensiones y jubilaciones (clasificación económica)*. 2023: 945.0/1,333.3 = **0.709**; 2024: 1,032.6/1,499.0 = **0.689**. Con pensiones totales (contributivas + PAM + PPD): 0.558 → **0.518**. Compara las dos transferencias públicas de los extremos opuestos del ciclo de vida con perímetros presupuestarios declarados. Descartadas por escrito: *educación / tributarios* (0.209 en 2024; habla de financiamiento y ya hay cuatro razones con ese denominador); *educación / gasto programable* (denominador de política, no de compromiso); *educación % del PIB* (ya está en la serie oficial del CGPE y no es una razón estructural); *FONE / cuotas* (no hay relación institucional entre nómina educativa y cuotas). Queda propuesta para adopción.
+
+**Plantilla FISCUS del capítulo de un rubro federalizado (probada en 2024):** DECLARACIONES DE APERTURA (los dos perímetros —función y ramo— presentados por separado y nunca sumados; añada del PIB; ex ante o ex post; deflactor y su fuente; población o su hueco declarado) / POLÍTICA DEL RUBRO (agregado con % PIB y % gasto neto; reparto por ramo con la separación federal / federalizado; prioridad relativa con un solo denominador) / EVOLUCIÓN (por subfunción; por programa; **por unidad responsable**, que es donde se ve la reasignación; reconciliación suma por ramos contra suma por función, que no dan lo mismo y la diferencia es el hallazgo; bruto contra neto) / DISTRIBUCIÓN TERRITORIAL (el fondo federalizado por entidad, y si la fórmula cambió) / IMPLICACIONES (con la comparación estructural y lo que el paquete no trae).
+
+**Lo que 2024 enseñó sobre el frente:** el frente aportó dos de los once `no` (el rango de crecimiento de 2023 y el año de la base del costo financiero) y la contradicción del espacio fiscal entre la presentación y el capítulo 13. Además el frente hace bien lo que los capítulos hacen mal: es donde vive el único tratamiento explícito de cambio de año base del PIB del documento. **Filas propias, siempre, y ahora también para contrastar convenciones entre el frente y los capítulos.**
+
 ## Historial
 - 2026-09-05 · ejercicio 2020 · creado a partir de la evaluación de *Implicaciones del Paquete Económico 2020* (CIEP, 11-sep-2019).
 - 2026-09-05 · ejercicio 2021 · adenda §6 (cambios del género, comparación canónica de pensiones, propuesta para salud, resolución del pendiente 9.1).
 - 2026-09-05 · ejercicio 2022 · adenda §7 (decisiones fijadas tras 2021, arquitectura y plantilla del capítulo de ingresos, comparación estructural propuesta para ingresos, frente del documento).
 - 2026-09-06 · ejercicio 2023 · adenda §8 (arquitectura de la Parte III, caracterización comparada de las tres partes, plantilla del capítulo de deuda, comparación estructural propuesta para deuda, frente).
+- 2026-09-06 · ejercicio 2024 · adenda §9 (arquitectura del capítulo de educación, cuarto patrón de error, tríada de NTA como conjunto, comparación estructural para educación, plantilla del rubro federalizado, frente).

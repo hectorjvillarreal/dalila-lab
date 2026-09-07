@@ -156,3 +156,43 @@ Ninguno de los Tomos PDF (el árbol `/work/models/PPEF2020/docs/` y `/paquete/` 
 - 2026-09-05 · ejercicio 2021 · adenda (rutas PPEF t y PEF t−1, estado 2022–2026, perímetros de salud).
 - 2026-09-05 · ejercicio 2022 · adenda (rutas: aprobado 2022–2026 sirve, proyecto 404, miscelánea y EM 2022 404; mapa del capítulo de ingresos).
 - 2026-09-06 · ejercicio 2023 · adenda (rutas de la nota metodológica y del artículo autoral, DOF para el DUC, sonda a Transparencia Presupuestaria, analíticos del PEF aprobado de entidades; mapa del capítulo de deuda).
+
+---
+
+## Adenda 2026-09-06 · corrida de evaluación CIEP 2024 (educación)
+
+### Dónde vive cada peso del gasto educativo
+
+**Por ramo (función Educación del Gobierno Federal, finalidad 2 / función 5, bruta, PEF aprobado 2024, mdp):** Ramo 33 Aportaciones Federales **526,250.1** (51.0 %); Ramo 11 Educación Pública **411,848.3** (39.9 %); Ramo 25 Previsiones y Aportaciones **82,460.5** (8.0 %); Ramo 08 Agricultura 5,346.7; Ramo 07 Defensa 3,854.1; Ramo 13 Marina 2,230.0; Ramo 47 Entidades no Sectorizadas 631.7. **Total 1,032,621.4.** Las entidades de control directo (IMSS, ISSSTE, Pemex, CFE) tienen **cero** en función Educación; el EBDI del ISSSTE (3,013.0) es Protección Social.
+
+**Por subfunción (misma fuente, 2024 aprobado):** 1 Educación básica 650,707.5; 2 Media superior 145,417.1; 3 Superior 165,466.5; 4 Posgrado 10,322.0; 5 Adultos 5,452.1; 6 Otros servicios educativos 55,256.3.
+
+**Los fondos federalizados (Ramo 33, programas):** I013 FONE servicios personales 454,187.0; I014 FONE otros de gasto corriente 11,823.4; I015 FONE gasto de operación 17,901.9; I016 FONE fondo de compensación 12,880.5 (**FONE total 496,792.7 = 48.1 % de la función**); I009 FAETA tecnológica 5,798.0; I010 FAETA adultos 3,593.8; I007 FAM infraestructura educativa básica 12,842.0; I008 FAM infraestructura MS y S 7,223.6. **El reparto del FONE por entidad está en el Anexo 22 del decreto** y es reproducible desde el analítico de Gobierno Federal por la columna EF. **La Ciudad de México no está en el FONE:** su educación básica y normal va por el Ramo 25 (PP 003 y 004).
+
+**Ramo 25:** PP 003 Servicios de educación básica en la CDMX 49,736.3; PP 004 Educación normal en la CDMX 1,378.4; PP 002 Previsiones salariales del FONE 25,637.0; PP 003 Previsiones del FAETA 311.9; PP 001 Actividades de apoyo administrativo 5,198.0; PP 001 Becas para la población atendida por el sector educativo 199.0. **Las previsiones se distribuyen al FONE durante el año y no aparecen en el FONE al aprobar.**
+
+**Educación superior:** subsidio a universidades públicas estatales = U006 (UR 511), 110,558.4 en 2024, con **reparto por entidad en el Anexo 29 del decreto** (74,688.8 entre 31 entidades; el resto vive en las UR 514, 515 y otras). Universidades federales como UR del Ramo 11: A3Q UNAM 50,418.4; M00 TecNM 21,715.2; B00 IPN 21,361.5; A2M UAM 9,465.5; L4J Cinvestav 2,908.0; A00 UPN 1,077.1. Antonio Narro va en el Ramo 08 (1,260.5).
+
+**Becas:** las tres Benito Juárez y Elisa Acuña viven en el **Ramo 11, UR O00 Coordinación Nacional de Becas** (101,324.2 aprobado, la UR más grande de la SEP), **no en Bienestar**. Posgrado en el Ramo 38 (S190); artísticas en el 48; militares en 07 y 13; 199.0 en el Ramo 25.
+
+**Cultura y CTI, para no confundirlos con educación:** cultura, deporte y recreación es **finalidad 2 / función 4** y vale 24,541.9 en el Gobierno Federal (cruza los ramos 48 y 11). Ciencia, tecnología e innovación es **finalidad 3 / función 8** y vale 60,385.7 (ramos 38, 11, 12, 08 y 23); sus subfunciones son 1 Investigación científica, 2 Desarrollo tecnológico, 3 Servicios científicos y tecnológicos, 4 Innovación (esta última íntegramente en el Ramo 23). El Anexo 12 del decreto (transversal de CTI, todos los ramos) vale 148,154.2.
+
+### Rutas verificadas
+
+- **Analíticos del PEF aprobado, Gobierno Federal:** `pef.hacienda.gob.mx/work/models/PEF/Analiticos_Historico/{t}/Autorizado/ac01_ra_pp_ur_og.xlsx` (ramo × programa × UR × objeto, ~9 MB) y `ac01_ra_f_ur_og.xlsx` (ramo × función × UR × objeto, ~6.7 MB). Descargados para 2023 y 2024 con el bundle de certificados. **Los datos están en la hoja `Hoja1`, no en la primera hoja**, que es un resumen de 45 filas por ramo y hace creer que el archivo está vacío. Columnas: ETAPA AC01, CICLO, RAMO, TPP, GPP, MOD, PP, UR, **F** (finalidad), **FN** (función), **SF** (subfunción), AI, TG, FF, PE, EF, CC, IMPORTE PEF (pesos). El código de programa se arma como `MOD[0] + PP[:3]`: la modalidad va en su columna, no en el código del PP.
+- **Analíticos de entidades:** mismas rutas con sufijo `_efe`. Descargados para 2024 (y ya se tenían 2022 y 2023).
+- **LIF aprobada:** en el portal, en la tabla del punto de entrada, columna LIF. Descargadas 2022, 2023 y 2024. Las cuotas del IMSS están en el artículo 1o., numeral 2, renglón 01 «Cuotas para el Seguro Social a cargo de patrones y trabajadores»: **411,852.5 (2022), 470,845.4 (2023), 535,254.7 (2024)**, idénticas a las de la ILIF de cada año.
+
+### Resultado de las sondas (2026-09-06, una petición cada 2 s, verificación TLS activa)
+
+- **El árbol PPEF sigue caído para 2024 y sigue vivo para 2021.** Las **subpáginas** responden 200 en los dos años (`/es/PPEF2024/exposicion_de_motivos`, `/es/PPEF2024/analiticos_presupuestarios`) y **listan los archivos**, pero para 2024 **los siete archivos que la página enumera dan 404**: `docs/carta/Carta.pdf`, `docs/exposicion/EM_Anexo.pdf` y `EM_Capitulo_{1..4}.pdf`, `EM_Documento_Completo.pdf`. Control 2021: `work/models/PPEF2021/docs/exposicion/EM_Documento_Completo.pdf` responde **200 application/pdf**. **Diagnóstico: almacén de archivos roto o reubicado para 2022–2026, no retirada de documentos.** Las páginas índice se generan de una base que sí conserva las entradas.
+- **Trampa de ruta en las páginas de analíticos.** La página lista `analiticosPresupuestarios/ac01_*.xlsx` **sin el segmento `/Proyecto/`**, y esa ruta da 404 **incluso para 2021**. La ruta que funciona en 2021 es `analiticosPresupuestarios/**Proyecto**/ac01_ra_pp_ur_og.xlsx` (200, xlsx). Las páginas índice están desactualizadas respecto al almacén en todos los años; no tomar sus href como ruta canónica.
+- **Wayback no tiene la exposición de motivos del PPEF 2024** (consulta a `archive.org/wayback/available` con y sin `www`: `archived_snapshots` vacío).
+- **Transparencia Presupuestaria comparte la cadena TLS rota de la SHCP** y el mismo bundle la arregla: `www.transparenciapresupuestaria.gob.mx` falla con «unable to get local issuer certificate» contra el almacén del sistema y responde 200 con `--cacert`. Hallazgo nuevo, aplicable a futuras sondas. `/es/PTP/Datos_Abiertos` devuelve **1,919 bytes de cáscara JS sin un solo enlace a archivo y sin la cadena «PPEF»**, lo que corrobora lo que CIEP denuncia en su presentación: no hay base de datos del PPEF en datos abiertos.
+
+### Contenido de la ILIF única · RESUELTO tras cinco corridas
+
+**El portal no ofrece una «exposición de motivos de la ILIF» como pieza separada porque no existe: el PDF de la ILIF la contiene.** Estructura verificada en los nueve ejercicios 2018–2026: oficio de remisión a la Mesa Directiva, **exposición de motivos**, articulado. En 2020–2026 la sección lleva el encabezado literal «EXPOSICIÓN DE MOTIVOS»; en 2018 y 2019 el mismo texto va sin encabezado. En 2024 la exposición ocupa las páginas 1–65 del PDF y el articulado empieza en la 66 (artículo 1o.).
+
+**Consecuencia para el manifiesto:** las nueve piezas «ILIF exposición de motivos» dejan de contarse como faltantes. El faltante real del proyecto se reduce a **cinco documentos: la exposición de motivos del PPEF 2022–2026**, y esos están caídos en el servidor, no ausentes del portal.
+
