@@ -152,3 +152,25 @@ Descargas (todas registradas en `_manifiesto.csv`, ahora 55 líneas): (1) nota m
 **Remarcado retroactivo de 2023, ejecutado *ex post* el 2026-09-06:** veinte filas `aprox` pasan a `tipo_error = deflactor` (§2.10 de la instrucción v3). Todo conteo de `tipo_error` de 2023 anterior a esta fecha las excluye.
 
 **Resultado de la evaluación.** 115 filas; 84 verificables; **87 % de coincidencia sobre verificable**, el punto más alto de la serie 2020–2024, pero **el salto de 65 % a 87 % es de las fuentes disponibles y no del evaluado**: por primera vez la corrida tuvo los analíticos completos de los dos años y pudo reconstruir los agregados de CIEP al mdp. Once errores, de los cuales **ocho son contradicciones internas del documento**. Con eso se cierra la serie de patrones: ingresos falla por base, gasto federal por perímetro, deuda por nombre, **gasto federalizado por consistencia interna**. Los tres hallazgos principales: la matrícula implícita de la Figura 8.2 **sube** 0.41 % mientras el texto atribuye el alza del gasto por alumno a «1.8 millones de NNA menos»; la nota al pie 11 presenta una cifra deflactada (22,297) como el monto que la Cámara aprobó en 2023 (21,275.7 corrientes); y el «mínimo histórico en puntos del PIB» solo se sostiene mezclando el PIB base 2013 con el base 2018, que es el cambio de vintage que el propio capítulo de deuda del documento sí corrige.
+
+## Adenda 2026-09-06 (corrida de producción: documento propio ITED sobre el Paquete Económico 2025)
+
+**Cambio de producto.** Las cinco corridas anteriores evaluaron; ésta produce. El entregable es un documento completo del género, de autoría ITED, en Markdown y LaTeX compilable, con la comparación contra CIEP al final y solo al final. Vive en `documento_2025/`.
+
+**Control del ejercicio.** Pacto de estructura sellado a las **21:36:40**, escrito sin red y sin abrir ninguna pieza del paquete 2025 ni el documento de CIEP. Los trece capítulos se redactaron y comprometieron antes de las **23:08:39**, hora de la primera apertura de CIEP. Las marcas están en el historial de git.
+
+**Hallazgo que condicionó la corrida: el CGPE 2025 se publicó sin capa de texto.** Noventa de sus noventa y una páginas son imagen; la única con texto trae las fórmulas del PIB potencial. El portal no sirve otra edición. Las cifras se leyeron de páginas renderizadas a 150 dpi y **se validaron por identidad contable y no por relectura**: cincuenta pruebas de cierre y de coherencia entre anexos, todas pasan. Los cuatro anexos que resuelven el documento son II.5, II.6, III.1 y III.2, páginas 81, 82, 84 y 85.
+
+**Descargas (verificadas al byte):** Ley de Ingresos aprobada 2025 y los cuatro analíticos del PEF aprobado 2025.
+
+**Perímetro de pensiones, adjudicado y no elegido.** El Anexo 3 del decreto publica los gastos obligatorios con y sin pensiones; su diferencia reproduce al mdp, en 2024 y 2025, la construcción desde los analíticos (tipo de gasto 4 de entidades más tipo de gasto 4 del GF sin la partida 45203). Es la técnica que la rúbrica adopta: **buscar la fuente independiente que adjudique el perímetro en vez de argumentarlo.**
+
+**El documento.** Trece capítulos, 7,722 palabras de prosa, 513 afirmaciones cuantitativas, 21 cuadros generados desde datos registrados, y ningún capítulo por debajo del umbral. Cuatro huecos declarados en el cuerpo y no solo en bitácora. **La compilación queda abierta:** esta máquina no tiene LaTeX y la preferencia es no instalarlo, así que hay 96 comprobaciones estáticas que pasan y el criterio de aceptación 1.3 hay que cerrarlo en Overleaf.
+
+**Errores propios, registrados porque son material de rúbrica.** Agrupar el gasto por nombre de ramo partió el Ramo 38, que cambió de nombre, e inventó una variación de 100 %: es el error de perímetro que este proyecto le señala al género desde 2020, cometido por nuestra herramienta. Seleccionar programas por nombre no encuentra «Personas **Adultas** Mayores». Y la única cifra que se tecleó de memoria estaba mal.
+
+**Comparación contra CIEP 2025.** Coinciden las tres cifras de cabecera, incluidos los 13.4 pesos de cada 100 de financiamiento y las pensiones no contributivas con una diferencia de 1.1 mdp sobre 527 mil millones. **Hallazgo que solo se puede hacer un año después:** la Cámara aumentó el gasto educativo en 18,674.8 mdp entre el proyecto y el aprobado, lo suficiente para cambiar el signo del capítulo, de una caída real de 1.2 % a un aumento de 0.4 %. **Deflactor de CIEP recuperado: 1.04252**, que no es el del PIB sino el de la fórmula del límite de gasto corriente estructural; sus columnas rotuladas «PEF 2024» están en pesos de 2025, como en 2024.
+
+**Contaminación:** ninguna en cifras, verificable por el orden de sellado. Dos en forma, y la más ilustrativa es que los dos documentos abren con la misma frase, «X pesos de cada 100 provendrán de financiamiento», escrita de forma independiente.
+
+**Artefacto nuevo:** `_aprendizaje/protocolo_lectura_en_vivo.md`, con el orden de descarga, el orden de verificación, qué se puede afirmar a las dos horas, qué exige veinticuatro, y qué no se afirma nunca sin fuente en mano.

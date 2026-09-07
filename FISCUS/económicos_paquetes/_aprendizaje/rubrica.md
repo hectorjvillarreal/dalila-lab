@@ -123,9 +123,29 @@ Las ocho entradas que la corrida 2024 fija:
 
 **Lo que no funcionó en 2024:** (a) el agregado de 10,516 mdp de las seis estrategias educativas no se reconstruye por ningún perímetro; se probaron todas las combinaciones de hasta cinco programas del Ramo 11 y la única coincidencia es espuria. Sin la enumeración del evaluado, un agregado de partes nombradas pero no listadas es irrecuperable y la fila correcta es `no_verificable`, no `no`. (b) El 80 % del gasto «comprometido» del capítulo 13 tampoco se reconstruye (los tres conceptos nombrados dan 64.2 %); mismo tratamiento. (c) La cota de indexación sigue sin identificarse con el paquete (ver §8.3 de la bitácora). (d) Las figuras de CIEP 2024 no tienen capa de texto: hay que renderizar la página y leerla como imagen, igual que en 2023, pero en 2024 los rótulos de las series sí son legibles y de ahí salió el hallazgo principal del capítulo.
 
+
+## Adenda 2025 — la rúbrica aplicada a un documento propio
+
+La corrida 2025 no evaluó: produjo. Los seis criterios se usaron como **lista de exigencias sobre el propio texto** antes de que existiera, y de ahí salen cinco reglas nuevas.
+
+**1. Presupuesto de afirmaciones, declarado antes de redactar.** Doce afirmaciones cuantitativas verificables por capítulo, seis de ellas restitución de fuente primaria, y no más del 30 % en `no_verificable`. Un capítulo que no llega **publica su declaración de no redactable, compilada como página del documento**, en el registro del documento y no como nota técnica. En 2025 los trece capítulos pasaron, dos de ellos porque se construyeron datos que no existían al sellar el pacto. **El umbral no es laxo: es el que separa un capítulo de un relleno elegante, y hay que contarlo sobre el borrador, no sobre la intención.**
+
+**2. Agrupar por clave, nunca por nombre.** Toda agregación por ramo, programa o unidad responsable se hace por su clave numérica. El Ramo 38 cambió de nombre entre 2024 y 2025 y agruparlo por nombre inventa una variación de 100 %. Un programa cuyo nombre está en femenino no lo encuentra un patrón en masculino. **Es el error de perímetro característico del género y nuestra herramienta lo cometió.**
+
+**3. Adjudicar el perímetro contra una fuente independiente, no argumentarlo.** Antes de defender una construcción propia, buscar el cuadro oficial que la confirme. En pensiones lo hay: la diferencia entre gastos obligatorios con y sin pensiones del Anexo 3 del decreto. Un perímetro que reproduce una fuente independiente al millón de pesos deja de ser discutible.
+
+**4. Validar la lectura de imagen por identidad, no por relectura.** Cuando la fuente no tenga capa de texto, las cifras se leen de la página renderizada y se validan con un conjunto de identidades contables y de coherencia entre anexos. Un dígito mal leído rompe una suma; una relectura lo repite. **En 2025 fueron cincuenta pruebas y hay que correrlas después de cada cambio en los datos.**
+
+**5. Toda diferencia en millones de pesos declara si es nominal o real.** Los cuadros llevan las dos columnas. Es la regla que este proyecto estrena y viene de que en 2024 la convención contraria produjo una afirmación falsa sobre un monto aprobado por la Cámara.
+
+**Sobre la comprobación de un entregable LaTeX.** Si la máquina no compila, la comprobación estática debe cubrir al menos: llaves y entornos balanceados, que todo `\input` apunte a un archivo existente **resuelto desde el directorio del archivo maestro**, que todo `\ref` tenga su `\label`, que los paquetes estén en la lista permitida, que nada exija `shell-escape`, y que las columnas que pide una gráfica existan en el archivo de datos que lee. **Y debe imprimir qué no comprueba.** En 2025 encontró veintiún inclusiones mal resueltas que habrían roto la compilación entera.
+
+**Sobre la contaminación.** Cuando se produce un documento del mismo género que se lleva años evaluando, la comparación final incluye un apartado que busca explícitamente qué afirmaciones propias se sostienen solo porque el otro las dijo antes. **En 2025 no hubo contaminación de cifras y sí de forma:** los dos documentos abren con la misma frase, «X pesos de cada 100 provendrán de financiamiento», escrita de forma independiente. El molde viaja aunque el dato no.
+
 ## Historial
 - 2026-09-05 · ejercicio 2020 · creado.
 - 2026-09-05 · ejercicio 2021 · adenda (reorden, convenciones §1, tipo_error, casos límite de perímetro, pendiente 9.2).
 - 2026-09-05 · ejercicio 2022 · adenda (reorden para ingresos, columnas nuevas, casos de contrafactual y perímetro en ingresos, criterio de supuestos macro, lista mínima de cobertura, identidades, fuentes ex post, lo que no funcionó).
 - 2026-09-06 · ejercicio 2023 · adenda (identidad de objeto como primer criterio, `objeto`, nomenclatura RFSPF/SHRFSPF, quinta declaración en deuda, identidades, marco de cuatro variables con el caso 2022, cobertura de deuda, sección cero, frente, tier, lo que no funcionó).
 - 2026-09-06 · ejercicio 2024 · adenda (reorden para rubro federalizado, ocho entradas fijadas: prueba de divulgación, dos tasas, deflactor y su prohibición, excepción de esquema, retiro del marco de manual, consistencia interna de rango alto, marca de fuente aprobada, series internamente consistentes; sección cero ampliada; lo que no funcionó).
+- 2026-09-06 · ejercicio 2025 · adenda (rúbrica aplicada a un documento propio: presupuesto de afirmaciones, agrupar por clave, adjudicar perímetros, validar imagen por identidad, declarar nominal o real; comprobación estática de LaTeX; contaminación).

@@ -196,3 +196,50 @@ Ninguno de los Tomos PDF (el árbol `/work/models/PPEF2020/docs/` y `/paquete/` 
 
 **Consecuencia para el manifiesto:** las nueve piezas «ILIF exposición de motivos» dejan de contarse como faltantes. El faltante real del proyecto se reduce a **cinco documentos: la exposición de motivos del PPEF 2022–2026**, y esos están caídos en el servidor, no ausentes del portal.
 
+---
+
+## Adenda 2026-09-06 · corrida de producción, documento propio 2025
+
+### Piezas del paquete 2025 y su estado
+
+| pieza | ruta | estado |
+|---|---|---|
+| CGPE 2025 | `finanzaspublicas.hacienda.gob.mx/work/models/Finanzas_Publicas/docs/paquete_economico/cgpe/cgpe_{t}.pdf` | **sirve, y viene SIN CAPA DE TEXTO** |
+| LIF aprobada | `…/docs/paquete_economico/lif/lif_{t}.pdf` | sirve; descargadas 2022–2025 |
+| ILIF | `…/docs/paquete_economico/ilif/ilif_{t}.pdf` | sirve; contiene su propia exposición de motivos |
+| Analíticos del PEF aprobado | `pef.hacienda.gob.mx/work/models/PEF/Analiticos_Historico/{t}/Autorizado/{ac01_ra_pp_ur_og, ac01_ra_f_ur_og, + _efe}.xlsx` | sirven; 2025 descargados y verificados al byte |
+| Exposición de motivos del PPEF | `ppef.hacienda.gob.mx/work/models/PPEF{t}/docs/exposicion/…` | **404 para 2022–2026**; el control de 2021 sirve |
+
+### El CGPE 2025 no tiene capa de texto
+
+**Noventa de sus noventa y una páginas son imagen.** La única con texto es la 34 y contiene las fórmulas del PIB potencial y del límite máximo de gasto corriente estructural, que quedaron como objetos incrustados. Se comprobó que el portal no sirve otra edición: la ruta canónica devuelve el mismo archivo de 22,852,266 bytes.
+
+**Procedimiento que funcionó:** leer el índice (p. 2) para mapear el documento, renderizar con `pdftoppm -png -r 150 -f N -l N` solo las páginas de los anexos, y leerlas como imagen. Los cuatro anexos que resuelven casi todo el documento son **II.5 (p. 81) marco macro 2024-2025**, **II.6 (p. 82) estimación de finanzas públicas**, **III.1 (p. 84) marco macro 2023-2030** y **III.2 (p. 85) perspectivas de finanzas públicas 2024-2030**. Con esas cuatro páginas se construyen el capítulo macro, el de agregados de gasto y el de deuda.
+
+**Validación:** no por relectura sino por identidad contable. Cincuenta pruebas de cierre y de coherencia entre anexos, todas pasan. Ver `documento_2025/verificar.py`.
+
+### Estructura de los analíticos, precisada
+
+- La hoja de datos es **`Hoja1`**; la primera es una carátula de 45 filas por ramo.
+- En los cortes **por función** (`ac01_ra_f_ur_og` y `_efe`) las columnas `F` y `FN` vienen **como texto con nombre** («2 Desarrollo Social», «5 Educación»); en los cortes por programa vienen como número. Coercionarlas a número sin mirar destruye la etiqueta. Con pandas 3 el dtype es `str`, no `object`: preguntar por `is_numeric_dtype`, no por `== object`.
+- El código de programa se arma como `MOD[0] + PP[:3]`.
+- **Agrupar siempre por clave, nunca por nombre:** el Ramo 38 se llama «Humanidades, Ciencias, Tecnologías e Innovación» en 2024 y «Ciencia, Humanidades, Tecnología e Innovación» en 2025.
+
+### Identidades que cierran y sirven de control
+
+- Gobierno Federal bruto + entidades − neteo del Anexo 1 = gasto neto total del decreto. En 2025: 7,603,962.3 + 3,191,122.8 − 1,493,069.3 = 9,302,015.8. **Exacto.**
+- Total de la Ley de Ingresos = gasto neto total del decreto = 9,302,015.8.
+- Gasto neto total − diferimiento de pagos = gasto neto pagado del CGPE.
+- **Anexo 3 del decreto: gastos obligatorios con pensiones − sin pensiones = pensiones y jubilaciones de la clasificación económica.** 2024: 7,327,588.8 − 5,828,550.2 = 1,499,038.6. 2025: 7,684,111.9 − 6,046,446.8 = 1,637,665.1. Reproduce al mdp la construcción desde los analíticos (tipo de gasto 4 de entidades más tipo de gasto 4 del GF sin la partida 45203). **Es la fuente que adjudica el perímetro de pensiones.**
+
+### Dónde vive cada objeto de 2025
+
+- **Pensiones no contributivas:** Ramo 20, programas **S176** (Adultas Mayores, 483,427.6), **S286** (Discapacidad, 28,961.4) y **U316** (Mujeres Bienestar, 15,000.0, nuevo en 2025). Seleccionar por clave: el nombre está en femenino.
+- **Función Salud:** finalidad 2, función 3. El programa **R023** del Ramo 19 (adeudos con IMSS e ISSSTE) pasa de 52,324.5 a 339.8: era una liquidación de 2024 y su desaparición no es un recorte al servicio. **S038** IMSS-Bienestar sale del Ramo 19 y el organismo del Ramo 47 sube.
+- **Obra de transporte:** la función 3.5 apenas se mueve (212,619.2 → 214,635.9) pero cambia de ejecutor: Defensa 127,556.9 → 41,772.1, Secretaría de Infraestructura 80,811.1 → 147,181.7, Marina 4,251.2 → 25,682.1. En la Secretaría, la dirección de desarrollo ferroviario cambia de clave 311 a 215.
+- **Guardia Nacional:** unidad **H00 del Ramo 36** en los dos años, 70,767.4 → 33,799.8. **No se mudó a Defensa.**
+
+### El deflactor de CIEP 2025
+
+**1.04252**, recuperado de seis programas independientes de su cuadro 6.1 que cierran al décimo. No es el deflactor del PIB de 4.3 % que declara el CGPE: es el 4.25 % de la fórmula del límite de gasto corriente estructural. Sus columnas rotuladas «PEF 2024» están en pesos de 2025.
+

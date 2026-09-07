@@ -146,9 +146,45 @@ De los once renglones marcados `no` en 2024, ocho son contradicciones del docume
 
 **Lo que 2024 enseñó sobre el frente:** el frente aportó dos de los once `no` (el rango de crecimiento de 2023 y el año de la base del costo financiero) y la contradicción del espacio fiscal entre la presentación y el capítulo 13. Además el frente hace bien lo que los capítulos hacen mal: es donde vive el único tratamiento explícito de cambio de año base del PIB del documento. **Filas propias, siempre, y ahora también para contrastar convenciones entre el frente y los capítulos.**
 
+
+## 10. Adenda 2025: lo que se aprende al ESCRIBIR el género, no al leerlo
+
+Las nueve adendas anteriores describen el género desde fuera. Ésta se escribió después de producir un documento completo del género, en Markdown y LaTeX, sobre el Paquete Económico 2025. Lo que sigue es lo que solo se ve desde dentro.
+
+### 10.1 Qué resultó más difícil de imitar
+
+**No fue el registro ni la estructura. Fue la serie histórica.** La arquitectura en tres partes, la plantilla de capítulo, la marginalia en versalitas y la densidad de cuadros se reproducen en una tarde. Lo que no se reproduce sin Cuentas Públicas es que **todas las figuras del género cubren doce años**. Un documento con dos años se lee como otra cosa, por bien escrito que esté: pierde la capacidad de decir «el nivel más bajo desde 2013», que es la forma en que el género entrega la mayor parte de su juicio.
+
+**Segundo en dificultad: la amplitud.** El género cubre cuidados, medio ambiente y perspectiva de género además de los rubros grandes. Cada uno de esos capítulos es barato si se tiene el perímetro y caro si hay que inventarlo. Cuatro de las seis omisiones de nuestra comparación no eran carencias de fuente sino capítulos que no escribimos.
+
+### 10.2 Qué convenciones del género resultaron indefendibles al aplicarlas
+
+**La columna de t−1 deflactada y rotulada como si fuera el aprobado.** Se sabía desde 2024 que el género lo hace; escribir un documento propio obligó a decidir si hacerlo. La decisión fue **publicar las dos columnas, nominal y real**, y el costo es real: los cuadros crecen una columna y los párrafos tienen que elegir cuál citan. A cambio, toda cifra del documento se puede buscar en el decreto. **La convención del género es más limpia de leer y menos verificable; la nuestra es lo contrario.** No hay ganador, hay una elección que ahora está declarada.
+
+**El deflactor no declarado.** Aquí sí es indefendible. CIEP 2025 usa 1.04252, que es la inflación de la fórmula del límite de gasto corriente estructural y no el deflactor del PIB de 4.3 % que declara el CGPE. Recuperarlo exigió contrastar seis programas. **Un documento que no dice con qué deflacta obliga a cada lector a rehacer esa aritmética, y casi ninguno la hace.**
+
+**El perímetro ancho declarado en nota al pie.** Es defendible y lo mantuvimos como alternativa. Sumar el ramo de ciencia y el de cultura al gasto educativo responde una pregunta legítima; el problema es que la razón a PIB que resulta es la que se cita, y difiere en dos décimas de la de la función Educación.
+
+### 10.3 Lo que un documento propio puede hacer y el género no
+
+**Escribir un año después.** El género publica a las 72 horas y evalúa el proyecto. Un documento escrito con distancia evalúa el presupuesto que se ejerció, y esa diferencia no es menor: en 2025 la Cámara aumentó el gasto educativo en 18,674.8 mdp entre el proyecto y el aprobado, lo suficiente para **cambiar el signo del capítulo**, de una caída real de 1.2 % a un aumento de 0.4 %. El titular del género sobre educación dejó de ser cierto en diciembre y el documento se sigue leyendo todo el año.
+
+**Adjudicar perímetros en vez de elegirlos.** El Anexo 3 del decreto publica gastos obligatorios con y sin pensiones; su diferencia es el agregado de la clasificación económica. Una construcción propia que reproduce esa diferencia al millón de pesos deja de ser una elección metodológica y pasa a ser un hecho verificable. **Buscar la fuente independiente que adjudique el perímetro es el paso que el género nunca da.**
+
+**Separar el hallazgo del artefacto contable.** Requiere el diff de códigos antes de escribir. En 2025 produjo tres correcciones de titular: la caída de salud es en su mayor parte un adeudo liquidado, la de Defensa es obra ferroviaria que cambia de ejecutor, y la del ramo de ciencia no existe porque solo cambió de nombre.
+
+### 10.4 Lo que el ejercicio enseñó sobre nuestras propias herramientas
+
+**El error de perímetro que la serie FISCUS le señala al género desde 2020 lo cometió nuestra herramienta.** Agrupar el gasto por el nombre completo del ramo, y no por su número, partió el Ramo 38 en dos y produjo una variación contable de 100 % que no existe. Se detectó porque la cifra era absurda, no porque hubiera un control. **Regla nueva: toda agrupación por entidad presupuestaria se hace por clave, nunca por nombre.** Lo mismo pasó al seleccionar programas: el patrón «Adultos Mayores» no encuentra un programa que se llama «Personas Adultas Mayores», en femenino.
+
+**La validación por identidad contable sustituye a la relectura.** El CGPE 2025 se publicó sin capa de texto y sus cifras se leyeron de páginas renderizadas. Releerlas habría dado una falsa seguridad; cincuenta identidades que cierran dan una seguridad real, porque un dígito mal leído rompe una suma. **Es una técnica general, no un parche para este año.**
+
+**La comprobación estática de LaTeX encontró un error que habría roto la compilación entera.** LaTeX resuelve los `\input` desde el directorio del archivo maestro, no desde el del capítulo que los incluye. Veintiún inclusiones de cuadro estaban mal y ninguna lectura del texto lo habría revelado.
+
 ## Historial
 - 2026-09-05 · ejercicio 2020 · creado a partir de la evaluación de *Implicaciones del Paquete Económico 2020* (CIEP, 11-sep-2019).
 - 2026-09-05 · ejercicio 2021 · adenda §6 (cambios del género, comparación canónica de pensiones, propuesta para salud, resolución del pendiente 9.1).
 - 2026-09-05 · ejercicio 2022 · adenda §7 (decisiones fijadas tras 2021, arquitectura y plantilla del capítulo de ingresos, comparación estructural propuesta para ingresos, frente del documento).
 - 2026-09-06 · ejercicio 2023 · adenda §8 (arquitectura de la Parte III, caracterización comparada de las tres partes, plantilla del capítulo de deuda, comparación estructural propuesta para deuda, frente).
 - 2026-09-06 · ejercicio 2024 · adenda §9 (arquitectura del capítulo de educación, cuarto patrón de error, tríada de NTA como conjunto, comparación estructural para educación, plantilla del rubro federalizado, frente).
+- 2026-09-06 · ejercicio 2025 · adenda §10 (lo que se aprende al escribir el género: qué es difícil de imitar, qué convenciones resultaron indefendibles, qué puede hacer un documento propio, y los errores de nuestras propias herramientas).
