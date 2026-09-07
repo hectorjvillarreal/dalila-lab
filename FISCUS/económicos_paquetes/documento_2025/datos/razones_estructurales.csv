@@ -1,0 +1,11 @@
+capitulo,razon,numerador,denominador,2021,2022,2023,2024,2025,nota
+2,Impuestos / gastos obligatorios con pensiones,LIF art. 1o. numeral 1,DEC Anexo 3,0.671,0.674,,0.674,0.689,Serie 2021-2022 de la corrida 2022. 2023 no calculado.
+2,Impuestos + cuotas IMSS / gastos obligatorios con pensiones,LIF art. 1o. numerales 1 y 2,DEC Anexo 3,0.743,0.745,,0.747,0.768,Segunda linea de la misma razon.
+4,Pensiones y jubilaciones + costo financiero / impuestos,clasificacion economica + CGPE,LIF art. 1o. numeral 1,,,RETIRADO,0.559,0.571,El punto de 0.60 para 2023 se RETIRA: no se reproduce con ninguna de las dos definiciones de pensiones (dan 0.583 y 0.522). La serie arranca en 2024 con la definicion declarada aqui. Detalle en la bitacora de la corrida 2024.
+5,Pensiones IMSS / cuotas IMSS (serie aprobada),"PEF aprobado, tipo de gasto 4 del IMSS",LIF aprobada art. 1o. renglon 2.22,,1.545,1.593,1.627,1.603,"Aprobado contra aprobado en los cuatro puntos. La serie ex ante (1.31 en 2020, 1.46 en 2021) esta congelada: la exposicion de motivos del PPEF no existe desde 2022."
+6,Gasto en salud del IMSS / cuotas IMSS,funcion 2.3 Salud del IMSS,LIF aprobada art. 1o. renglon 2.22,0.85,,,0.851,0.798,El punto de 2021 viene de la corrida 2021 y usa la misma construccion.
+6,Pensiones IMSS+ISSSTE / salud IMSS+ISSSTE,tipo de gasto 4 de IMSS e ISSSTE,funcion 2.3 Salud de IMSS e ISSSTE,2.11,,,2.282,2.412,"Dentro de los institutos, cuanto pesa la pension contra el servicio."
+7,Funcion Educacion / pensiones y jubilaciones,"funcion 2.5 Educacion, GF bruto","pensiones y jubilaciones, clasificacion economica",,,0.709,0.689,0.662,Las dos transferencias de los extremos opuestos del ciclo de vida.
+7,Funcion Educacion / pensiones totales (con no contributivas),"funcion 2.5 Educacion, GF bruto",pensiones y jubilaciones + adultos mayores + personas con discapacidad,,,0.558,0.518,0.501,Segunda linea de la comparacion adoptada para educacion.
+12,Costo financiero / impuestos,"CGPE, costo financiero del sector publico",LIF art. 1o. numeral 1,,0.20,0.23,0.256,0.262,
+12,"SHRFSPF / impuestos, en anios de recaudacion","CGPE, SHRFSPF",LIF art. 1o. numeral 1,,3.6,3.4,3.4,3.51,"Complemento del marco autoral (Cantu, Ramones y Villarreal 2016)."

@@ -109,10 +109,42 @@ for var in ["PIB nominal (miles de millones de pesos)", "Deflactor del PIB (%)",
             fallos.append(f"  FALLA  {var} {etiq}: II.5 dice {va}, III.1 dice {vb}")
 print(f"  {pruebas} pruebas corridas en total")
 
+# ------------------------------------------- comprobaciones contra los analiticos ---
+# Estas cierran nuestras propias construcciones contra fuentes oficiales
+# INDEPENDIENTES. Son lo que convierte un perimetro elegido en un perimetro
+# adjudicado.
+print("\nPerimetros propios contra fuente oficial independiente:")
+import importlib.util
+spec = importlib.util.spec_from_file_location(
+    "fis", os.path.join(os.path.dirname(os.path.abspath(__file__)), "fiscus.py"))
+fis = importlib.util.module_from_spec(spec); spec.loader.exec_module(fis)
+
+def pens_cons(y):
+    gf, en = fis.an(y, "gf_pp"), fis.an(y, "ent_pp")
+    d = gf[(gf.TG == 4) & (~gf.PE.astype(str).str.startswith("45203"))]["IMPORTE"].sum()
+    return fis.mdp(d + en[en.TG == 4]["IMPORTE"].sum())
+
+# El decreto publica gastos obligatorios CON y SIN pensiones; su diferencia es
+# exactamente el agregado de pensiones y jubilaciones. Fuente independiente de los
+# analiticos, y cierra al mdp en los dos anios.
+for y, con, sin in [(2024, 7327588.8, 5828550.2), (2025, 7684111.9, 6046446.8)]:
+    chk(f"pensiones consolidadas {y} = Anexo 3 con pensiones - sin pensiones",
+        pens_cons(y), round(con - sin, 1))
+
+# Identidad de los analiticos: GF bruto + entidades - neteo = gasto neto total.
+for y, neteo, neto in [(2025, 1493069.3, 9302015.8)]:
+    bruto = fis.mdp(fis.an(y, "gf_pp")["IMPORTE"].sum()) + fis.mdp(fis.an(y, "ent_pp")["IMPORTE"].sum())
+    chk(f"GF bruto + entidades - neteo = gasto neto total {y}", bruto - neteo, neto, tol=0.3)
+
+# La Ley de Ingresos y el decreto de Egresos tienen que dar el mismo total.
+chk("LIF 2025 total = gasto neto total del decreto", 9302015.8, 9302015.8)
+# Y el gasto neto PAGADO del CGPE difiere del total por el diferimiento de pagos.
+chk("gasto neto total - diferimiento = gasto neto pagado",
+    9302015.8 - 75800.0, g("Gasto neto pagado"))
+
 print("\n" + "=" * 62)
 if fallos:
-    print(f"{len(fallos)} FALLAS de {pruebas} pruebas:")
-    for f_ in fallos:
-        print(f_)
+    print(f"{len(fallos)} FALLAS:")
+    for f_ in fallos: print(f_)
     sys.exit(1)
 print(f"Las {pruebas} pruebas cierran. Ninguna identidad falla.")
