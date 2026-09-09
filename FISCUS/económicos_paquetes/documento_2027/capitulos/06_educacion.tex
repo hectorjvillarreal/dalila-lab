@@ -1,55 +1,83 @@
 \chapter{Educación}
 
-% ---------------------------------------------------------------------------
-% ESQUELETO. Relleno para probar la compilación; se sustituye íntegro en la
-% corrida. NINGUNA cifra de este archivo es real: son nueves para que se vean.
-% El orden de la lámina es obligatorio y no se altera (plantillas §1).
-% ---------------------------------------------------------------------------
+\titular{El \textbf{Ramo 11 Educación Pública crece 8,1~\% real en la línea P}, de 513.015,6 a
+576.631,9 mdp: \textbf{63.616,3 millones más, el mayor aumento en pesos de cualquier ramo
+administrativo}. El \textbf{FONE}, que
+paga la nómina educativa de las entidades, crece \textbf{6,8~\% real}. \textbf{Los dos no se
+suman}: el Ramo 25 provisiona recursos que terminan en el propio FONE.}
 
-\titular{Titular cuantitativo con \textbf{signo y base declarada}: la magnitud crece
-\textbf{9,9\,\% real} en la \textbf{línea P}. Una segunda oración con el denominador o el
-perímetro, si el titular lo necesita para no exceder su cálculo.}
+\input{capitulos/cuadros/C6_1}
 
-\quecambio{Dos o tres cifras del cuerpo, con su clave: el ramo NN pasa de 9\,999,9 a
-9\,999,9 millones y la función N crece 9,9\,\%. Aquí van los movimientos, no las
-interpretaciones.}
+\quecambio{El Ramo 11 gana \textbf{63.616,3 mdp}. Dentro del FONE, el componente de
+\textbf{servicios personales pasa de 500.367,1 a 554.903,6 mdp} y el \textbf{Fondo de
+Compensación de 13.915,7 a 16.700,9}. El \textbf{Ramo 38, Ciencia, Humanidades, Tecnología
+e Innovación, crece 16,4~\% real}, de 34.860,8 a 42.217,7 mdp, y el \textbf{Anexo 12, que
+etiqueta ese programa, 15,6~\%}. El \textbf{FAETA cae 0,2~\% real}.}
 
-\porqueimporta{Una consecuencia, no un adjetivo. Qué queda mal medido si se lee el agregado
-sin separar el objeto, y qué decisión cambia según cómo se lea.}
+\porqueimporta{El crecimiento educativo de 2027 es, en su mayor parte, \textbf{nómina}: el
+componente de servicios personales del FONE explica 54.536,5 de los 60.481,4 mdp que gana
+el fondo, casi el 90~\%. Eso no lo hace menor ---la nómina es el servicio educativo--- pero
+\textbf{sí lo distingue de una expansión de cobertura o de infraestructura}, y un titular
+que diga «más recursos para la educación» sin esa distinción excede su cálculo.}
 
 \section{Declaración de perímetro}
 
-\marginal{qué se sumó}
-Perímetro enumerable: finalidad N, función N, subfunciones N a N; o capítulos NNNN del objeto
-del gasto; o ramos NN, NN y NN. \textbf{Por clave, nunca por nombre}, y por función o
-subfunción cuando la clave de programa no sea estable entre ejercicios.
+\marginal{qué se sumó, y qué no}
+Cinco vehículos, declarados y no agregados: \textbf{Ramo 11} y \textbf{Ramo 25} por clave
+del Anexo 1; \textbf{FONE} y \textbf{FAETA} del Anexo 22; y el \textbf{Ramo 38}, que financia
+ciencia y humanidades y que este documento reporta aquí por proximidad temática,
+\textbf{advirtiendo que no es gasto educativo} en la clasificación funcional.
+
+El \textbf{FAM} tiene un componente de infraestructura educativa (25.154,9 mdp en 2027) que
+\textbf{no se suma} a los anteriores y se reporta en el capítulo de gasto federalizado.
 
 \section{Cuerpo}
 
-\input{capitulos/cuadros/C0_1}
+El FONE se descompone en el propio Anexo 22 del decreto, y la descomposición es lo que
+permite decir de qué está hecho el crecimiento:
 
-Texto. \textbf{Los cuadros se incluyen con su ruta desde el archivo maestro}, que empieza en
-\texttt{capitulos/cuadros/}, y nunca con la ruta relativa al capítulo que los incluye. Esa
-trampa costó veintiuna inclusiones rotas en 2025 y otras veintiuna en 2026; la comprobación
-estática la detecta antes de compilar.
+\begin{list}{}{\setlength{\leftmargin}{1.4em}\setlength{\itemsep}{2pt}}
+\item[$\bullet$] \textbf{Servicios personales:} de 500.367,1 a \textbf{554.903,6 mdp}.
+\item[$\bullet$] \textbf{Otros de gasto corriente:} de 12.773,6 a \textbf{15.330,2 mdp}.
+\item[$\bullet$] \textbf{Gasto de operación:} de 19.340,5 a \textbf{19.943,5 mdp}.
+\item[$\bullet$] \textbf{Fondo de Compensación:} de 13.915,7 a \textbf{16.700,9 mdp}.
+\end{list}
+
+En términos reales, servicios personales crece \textbf{6,6~\%}, el gasto de operación
+\textbf{cae 0,9~\%} y el Fondo de Compensación crece \textbf{15,4~\%}. \textbf{La
+composición del fondo se mueve hacia la nómina.}
 
 \section{Qué no sabemos}
 
 \begin{list}{}{\setlength{\leftmargin}{1.4em}\setlength{\itemsep}{2pt}}
-\item[$\bullet$] Lo que la fuente no permite afirmar, con el nombre de la fuente que haría
-falta y por qué no se tiene.
-\item[$\bullet$] Lo que exigiría el presupuesto aprobado del mismo ejercicio, que bajo
-régimen en vivo no existe.
+\item[$\bullet$] \textbf{Cuánto del Ramo 11 es educación básica, media superior o superior.}
+Es una separación por programa presupuestario y exige el analítico ausente.
+\item[$\bullet$] \textbf{Si el aumento del Ramo 11 corresponde a programas nuevos o a
+programas existentes.} Sin diff institucional no se puede decir. En el paquete anterior el
+diff encontró 271 claves nuevas y 358 desaparecidas en el conjunto del presupuesto.
+\item[$\bullet$] \textbf{El gasto por alumno.} Exige matrícula, que es un denominador
+externo al paquete. Se trata en el capítulo de horizonte demográfico y \textbf{no se mezcla
+aquí con cifras del paquete en la misma línea}.
+\item[$\bullet$] \textbf{Qué hará la Cámara.} En el ejercicio 2026 la Cámara añadió
+12.641,1 mdp a la función educativa entre el proyecto y el aprobado, lo suficiente para
+mover la variación de la línea P a la G en más de un punto porcentual. \textbf{Eso es
+historia del ejercicio anterior, no pronóstico.}
 \end{list}
 
 \begin{ficha}{educación}
-\fila{Perímetro}{Enumerado arriba, constante en todo el capítulo.}
-\fila{Línea de comparación}{Línea P (proyecto contra proyecto). La línea G, donde aparezca,
-va etiquetada en el encabezado del cuadro.}
-\fila{Deflactor}{Del PIB, el que declara el CGPE 2027. Véase el recuadro de la nota de método.}
-\fila{Año de los pesos}{Pesos de 2027.}
-\fila{PIB y añada}{PIB nominal de 2027 según el CGPE 2027.}
-\fila{Denominadores}{Ninguno, o el que se use con su fuente, año de referencia y cobertura.}
-\fila{Fuentes}{Renglones del archivo de datos que sostienen cada cifra.}
-\fila{Qué no puede afirmarse con ellas}{La frase explícita. No se deja en blanco.}
+\fila{Perímetro}{Ramos 11, 25 y 38 por clave del Anexo 1; FONE y FAETA del Anexo 22, con su
+desglose interno. Cinco perímetros, ninguno sumado con otro.}
+\fila{Línea de comparación}{Línea P en todos los renglones. La línea G del ejercicio
+anterior se menciona en «Qué no sabemos» y \textbf{no aparece en ningún cuadro}.}
+\fila{Deflactor}{Del PIB, 1,040, del CGPE 2027. Véase el recuadro de la nota de método
+sobre la diferencia con el deflactor que usa el propio CGPE.}
+\fila{Año de los pesos}{Pesos de 2027 en las variaciones; pesos corrientes en los niveles.}
+\fila{PIB y añada}{No se usan razones a PIB en este capítulo.}
+\fila{Denominadores}{Ninguno. No hay gasto por alumno aquí, deliberadamente.}
+\fila{Fuentes}{\texttt{datos/ramos.csv} (claves 11, 25 y 38); \texttt{datos/ramo33.csv}
+(FONE y FAETA); Anexo 22 del decreto para el desglose del FONE;
+\texttt{datos/anexos.csv} para el Anexo 12.}
+\fila{Qué no puede afirmarse con ellas}{Que haya «más educación» en 2027. Hay más pesos en
+los vehículos que financian educación, y casi nueve de cada diez pesos adicionales del FONE
+son nómina. Cobertura, matrícula y calidad no se observan en el paquete económico.}
 \end{ficha}

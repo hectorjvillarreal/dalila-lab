@@ -1,55 +1,124 @@
 \chapter{Horizonte demográfico}
 
-% ---------------------------------------------------------------------------
-% ESQUELETO. Relleno para probar la compilación; se sustituye íntegro en la
-% corrida. NINGUNA cifra de este archivo es real: son nueves para que se vean.
-% El orden de la lámina es obligatorio y no se altera (plantillas §1).
-% ---------------------------------------------------------------------------
+\titular{El perímetro pensionario crece \textbf{3,9~\% real} y la población de 65 años y más
+crece \textbf{4,29~\%}. \textbf{Por persona de esa edad, el gasto cae 0,4~\% real.} El mismo paquete que aumenta \textbf{el perímetro
+pensionario} en pesos lo reduce \textbf{por persona de 65 años y más}, y la diferencia
+entera es demografía.}
 
-\titular{Titular cuantitativo con \textbf{signo y base declarada}: la magnitud crece
-\textbf{9,9\,\% real} en la \textbf{línea P}. Una segunda oración con el denominador o el
-perímetro, si el titular lo necesita para no exceder su cálculo.}
+\input{capitulos/cuadros/C15_1}
 
-\quecambio{Dos o tres cifras del cuerpo, con su clave: el ramo NN pasa de 9\,999,9 a
-9\,999,9 millones y la función N crece 9,9\,\%. Aquí van los movimientos, no las
-interpretaciones.}
+\quecambio{La \textbf{población total crece 0,73~\%} y la de \textbf{65 años y más, 4,29~\%}:
+casi seis veces más rápido. La \textbf{población en edad escolar básica cae 0,95~\%}, unas
+241.571 personas menos. El \textbf{índice de envejecimiento pasa de 38,84 a 40,91} y la
+\textbf{razón de dependencia adulta de 13,44 a 13,90}. La \textbf{tasa global de fecundidad
+baja de 1,84 a 1,82} hijos por mujer.}
 
-\porqueimporta{Una consecuencia, no un adjetivo. Qué queda mal medido si se lee el agregado
-sin separar el objeto, y qué decisión cambia según cómo se lea.}
+\porqueimporta{Las dos presiones van en sentidos contrarios y \textbf{el presupuesto responde
+a las dos con el mismo signo}: aumenta el gasto pensionario, cuya población crece, y aumenta
+el gasto educativo, cuya población se reduce. \textbf{El resultado por persona es opuesto en
+cada caso}, y sólo se ve al dividir. Un documento que se quede en los montos verá que los dos
+crecen ---y que en tasa el FONE crece más---; \textbf{sólo al dividir aparece que uno cae por
+persona y el otro sube casi ocho puntos.}}
 
 \section{Declaración de perímetro}
 
-\marginal{qué se sumó}
-Perímetro enumerable: finalidad N, función N, subfunciones N a N; o capítulos NNNN del objeto
-del gasto; o ramos NN, NN y NN. \textbf{Por clave, nunca por nombre}, y por función o
-subfunción cuando la clave de programa no sea estable entre ejercicios.
+\marginal{la regla de separación}
+\textbf{Los cuadros presupuestales y los per cápita van separados, y así están.} El cuadro
+de indicadores demográficos no contiene ninguna cifra de pesos; el de razones por persona no
+contiene ningún agregado presupuestal. Es la regla de la nota de método y no se relaja aquí.
+
+La capa demográfica es \textbf{precargada}, con tier \texttt{externa\_demografica}, y sus
+ocho series se descargaron antes de la entrega del paquete. \textbf{Ninguna cifra del paquete
+se mezcla con un denominador externo en la misma línea de texto.}
 
 \section{Cuerpo}
 
-\input{capitulos/cuadros/C0_1}
+\input{capitulos/cuadros/C15_2}
 
-Texto. \textbf{Los cuadros se incluyen con su ruta desde el archivo maestro}, que empieza en
-\texttt{capitulos/cuadros/}, y nunca con la ruta relativa al capítulo que los incluye. Esa
-trampa costó veintiuna inclusiones rotas en 2025 y otras veintiuna en 2026; la comprobación
-estática la detecta antes de compilar.
+\subsection*{Tres advertencias sobre los denominadores, y ninguna es retórica}
+
+\textbf{Primera: la razón de pensiones no es una pensión media.} El denominador
+---población de 65 años y más--- incluye a quien no recibe pensión alguna, y el numerador
+---el perímetro del Anexo 3--- puede incluir pensiones de personas menores de esa edad.
+\textbf{Los 144.665 pesos del cuadro son un indicador de presión demográfica y nada más.}
+Leerlos como el monto que recibe una persona pensionada sería un error de perímetro de los
+que este proyecto documenta desde 2020.
+
+\textbf{Segunda: matrícula no es población en edad escolar.} El mismo FONE de 2027 dividido
+entre la población de 3 a 14 años da \textbf{24.102 pesos} y dividido entre la matrícula de
+educación básica del ciclo 2025--2026 da \textbf{26.564}. \textbf{Los dos denominadores
+difieren en 10,2~\%} y la cifra por persona se mueve en esa misma proporción. La primera
+responde «cuánto se gasta por persona en edad de estudiar»; la segunda, «cuánto por persona
+inscrita». \textbf{Son preguntas distintas y no se mezclan en un cuadro.}
+
+\textbf{Tercera: la matrícula disponible no es la del ejercicio.} El ciclo más reciente que
+publica la SEP es 2025--2026 y el presupuesto es de 2027. \textbf{La razón por alumno se
+publica una sola vez, con su año declarado}, y no se usa para calcular variaciones.
+
+\subsection*{Dónde el paquete trae horizonte demográfico y dónde no}
+
+La instrucción de esta corrida pide verificar si el paquete invoca la demografía cuando ésta
+presiona al alza y la omite cuando podría liberar espacio fiscal. \textbf{Con la fuente
+disponible la respuesta es parcial}: el CGPE proyecta finanzas públicas a 2032 y publica un
+escenario macroeconómico de mediano plazo, \textbf{pero no publica una proyección
+demográfica propia ni asocia sus supuestos de gasto a la evolución de la población}. La
+población en edad escolar básica lleva años cayendo y \textbf{el documento no lo menciona} al
+justificar el gasto educativo.
+
+\textbf{No se afirma que la omisión sea deliberada.} Se afirma que el paquete no publica el
+vínculo, y que sin él la lectura por persona hay que construirla desde fuera, como hace este
+capítulo.
+
+\subsection*{Un contraste que la fuente misma obliga a declarar}
+
+Las proyecciones de CONAPO y las estimaciones del Banco Mundial difieren de forma
+sistemática: entre 2018 y 2025 la diferencia está entre \textbf{1,05 y 1,16~\%} de la
+población, siempre en el mismo sentido. \textbf{Todas las razones por persona de este
+capítulo se moverían alrededor de un punto porcentual} si se usara la otra fuente. Se usa
+CONAPO por consistencia con el marco institucional mexicano, y la diferencia se declara aquí.
 
 \section{Qué no sabemos}
 
 \begin{list}{}{\setlength{\leftmargin}{1.4em}\setlength{\itemsep}{2pt}}
-\item[$\bullet$] Lo que la fuente no permite afirmar, con el nombre de la fuente que haría
-falta y por qué no se tiene.
-\item[$\bullet$] Lo que exigiría el presupuesto aprobado del mismo ejercicio, que bajo
-régimen en vivo no existe.
+\item[$\bullet$] \textbf{Cuántas personas reciben cada prestación pensionaria.} Es un padrón,
+no un presupuesto. El padrón de Bienestar está en la capa precargada, pero cruzarlo con el
+perímetro del Anexo 3 exigiría el analítico por programa, que respondió 404.
+\item[$\bullet$] \textbf{El gasto en salud por persona sin seguridad social.} El registro de
+IMSS-Bienestar es \textbf{de cobertura parcial} ---sólo las entidades adheridas--- y es un
+padrón de registro, no una medición de quién carece de afiliación: quien no se registra no
+aparece. \textbf{Usarlo como denominador daría una cifra falsa}, y por eso no está en el
+cuadro.
+\item[$\bullet$] \textbf{El gasto por afiliado del IMSS.} La serie disponible es de
+\textbf{asegurados}, que cuenta a la persona asegurada y no a sus familiares beneficiarios:
+un gasto por afiliado con ese denominador daría una cifra varias veces mayor que la
+verdadera. \textbf{Asegurados no es derechohabientes}, y por eso tampoco está en el cuadro.
+\item[$\bullet$] \textbf{Las proyecciones de CELADE}, que no se pudieron obtener: la API de
+CEPALSTAT responde por indicador pero su catálogo devuelve 404 y el identificador no se
+descubrió sin adivinar. El contraste con el Banco Mundial es un \textbf{sustituto declarado}.
+\item[$\bullet$] \textbf{La distribución por entidad federativa} de cualquiera de estas
+razones. Los datos de población por entidad están en la capa; los presupuestales, no.
 \end{list}
 
 \begin{ficha}{horizonte demográfico}
-\fila{Perímetro}{Enumerado arriba, constante en todo el capítulo.}
-\fila{Línea de comparación}{Línea P (proyecto contra proyecto). La línea G, donde aparezca,
-va etiquetada en el encabezado del cuadro.}
-\fila{Deflactor}{Del PIB, el que declara el CGPE 2027. Véase el recuadro de la nota de método.}
-\fila{Año de los pesos}{Pesos de 2027.}
-\fila{PIB y añada}{PIB nominal de 2027 según el CGPE 2027.}
-\fila{Denominadores}{Ninguno, o el que se use con su fuente, año de referencia y cobertura.}
-\fila{Fuentes}{Renglones del archivo de datos que sostienen cada cifra.}
-\fila{Qué no puede afirmarse con ellas}{La frase explícita. No se deja en blanco.}
+\fila{Perímetro}{Indicadores nacionales de CONAPO; y tres razones por persona con numerador
+presupuestal declarado: perímetro del Anexo 3, FONE del Anexo 22, y suma de los ramos 12 y
+56 del Anexo 1. \textbf{Los cuadros presupuestales y los per cápita van en tablas separadas.}}
+\fila{Línea de comparación}{Línea P en los tres numeradores presupuestales.}
+\fila{Deflactor}{Del PIB, 1,040, del CGPE 2027, aplicado a las razones por persona. Véase el
+recuadro de la nota de método.}
+\fila{Año de los pesos}{Pesos corrientes de cada año en los niveles; pesos de 2027 en las
+variaciones reales.}
+\fila{PIB y añada}{No se usan razones a PIB en este capítulo.}
+\fila{Denominadores}{Tres de CONAPO ---población total, de 65 años y más, y en edad escolar
+básica---, de las Proyecciones 2020--2070, a mitad de año y con cobertura nacional. Uno de
+la SEP: matrícula de educación básica, ciclo 2025--2026, modalidad escolarizada, nacional.
+\textbf{Cada uno con su año y su cobertura, como exige la nota de método.}}
+\fila{Fuentes}{De la capa demográfica precargada: los archivos de población nacional,
+matrícula de la SEP y contraste de población, con el registro de fuentes de esa carpeta. Los
+numeradores presupuestales, de la carpeta de datos de este documento.}
+\fila{Qué no puede afirmarse con ellas}{Que una persona pensionada reciba 144.665 pesos al
+año, ni que un alumno de básica cueste 26.564: son cocientes entre un agregado y una
+población, no prestaciones ni costos unitarios. Tampoco que el gasto educativo por persona
+crezca porque haya más recursos por alumno: crece en parte porque hay menos personas en edad
+de estudiar.}
 \end{ficha}

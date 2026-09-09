@@ -77,22 +77,28 @@ def correr(anio: int) -> int:
     t.nota(f"el Anexo 3 adjudica el perímetro pensionario: {pens:,.1f} mdp")
 
     print("\n2. El decreto contra los analíticos")
-    gf = analitico(anio, "gf-ramo-programa-ur-objeto", etapa)["MDP"].sum()
-    ef = analitico(anio, "entidades-ramo-programa-ur-objeto", etapa)["MDP"].sum()
-    t.prueba("analíticos GF + entidades = bruto del Anexo 1", gf + ef, bruto)
-    gff = analitico(anio, "gf-ramo-funcion-ur-objeto", etapa)["MDP"].sum()
-    eff = analitico(anio, "entidades-ramo-funcion-ur-objeto", etapa)["MDP"].sum()
-    t.prueba("corte por función = corte por programa (GF)", gff, gf)
-    t.prueba("corte por función = corte por programa (entidades)", eff, ef)
-    csv_p = AQUI.parent / str(anio) / f"{anio}_ppef_analitico-claves.csv"
-    if csv_p.exists():
-        import pandas as pd
-        d = pd.read_csv(csv_p, low_memory=False)
-        col = next(c for c in d.columns if "monto" in c.lower())
-        t.prueba("base de datos abiertos = analíticos xlsx", d[col].sum() / 1e6, gf + ef)
-    else:
-        t.nota(f"no hay base de datos abiertos en carpeta para {anio}: la validación "
-               f"cruzada más barata que existe se queda sin correr")
+    # Ruta B: si los analíticos del ejercicio no están en carpeta, este bloque no se puede
+    # correr. NO se aborta la corrida: se declara y siguen las identidades documentales.
+    try:
+        gf = analitico(anio, "gf-ramo-programa-ur-objeto", etapa)["MDP"].sum()
+        ef = analitico(anio, "entidades-ramo-programa-ur-objeto", etapa)["MDP"].sum()
+        t.prueba("analíticos GF + entidades = bruto del Anexo 1", gf + ef, bruto)
+        gff = analitico(anio, "gf-ramo-funcion-ur-objeto", etapa)["MDP"].sum()
+        eff = analitico(anio, "entidades-ramo-funcion-ur-objeto", etapa)["MDP"].sum()
+        t.prueba("corte por función = corte por programa (GF)", gff, gf)
+        t.prueba("corte por función = corte por programa (entidades)", eff, ef)
+        csv_p = AQUI.parent / str(anio) / f"{anio}_ppef_analitico-claves.csv"
+        if csv_p.exists():
+            import pandas as pd
+            d = pd.read_csv(csv_p, low_memory=False)
+            col = next(c for c in d.columns if "monto" in c.lower())
+            t.prueba("base de datos abiertos = analíticos xlsx", d[col].sum() / 1e6, gf + ef)
+        else:
+            t.nota(f"no hay base de datos abiertos en carpeta para {anio}: la validación "
+                   f"cruzada más barata que existe se queda sin correr")
+    except FileNotFoundError as ex:
+        t.nota(f"RUTA B: sin analíticos de {anio} en carpeta, el bloque 2 completo no corre "
+               f"({ex}). Cuatro pruebas quedan sin correr; no cuentan como aprobadas.")
 
     print("\n3. La Ley de Ingresos contra el decreto")
     t.prueba("total del art. 1o. = gasto neto total", I["total"], D["gasto_neto"])
