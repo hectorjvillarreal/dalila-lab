@@ -922,3 +922,75 @@ N 6/6). Dos hallazgos con cifra:
 **Ruta nueva que aparece en la nota metodológica y que la precarga no tenía:**
 `sisge.bienestar.gob.mx/dae/zap2027/zap_urbanas_2027_43636_variables_descarga.zip`, las
 43 636 AGEB con sus variables. Va al registro de rutas.
+
+### 31. La adenda: decisión, y qué se volvió a correr
+
+**Decisión de Héctor: adenda fechada.** El cuerpo de los dieciséis capítulos **no se
+reescribe**: es el artefacto de la corrida del 8 de septiembre y se conserva como tal. Lo
+que llegó después entra en un capítulo nuevo, `99b_actualizacion.tex`, fechado el 9, que
+declara en su primer párrafo qué es y qué no es.
+
+**Lo que la adenda contiene.** El sondeo sin cambio y la vigencia de la Ruta B; la
+reasignación de letras con el cuadro C99.1, que es el mapa real leído de los PDF; la vara de
+vivienda con el cuadro C99.2 y sus tres advertencias; y la declaratoria ZAP 2027, registrada
+como denominador disponible pero **no cruzada con el gasto**, porque cruzarla exige la
+distribución territorial y ésa sigue enganchada a la Ruta A.
+
+**Corrección en el sitio, dentro del §99.** El renglón que decía que los anexos F y G eran
+el Código Fiscal y el informe arancelario se reescribe: el 404 era cierto, la descripción no.
+Remite a la adenda.
+
+**Las tres verificaciones se volvieron a correr.**
+
+- **Identidades: de 29 a 41 pruebas, 0 fallan.** Las doce nuevas son de la cola del paquete:
+  los tres montos de vivienda contra hogares por costo unitario, los tres desgloses
+  urbano-rural del Cuadro 1 contra los hogares del Cuadro 3, la UMA implícita en los tres
+  costos ---3.566,22 en los tres, que es la UMA mensual de 2026---, las dos sumas del total
+  (226.133.296.956 pesos y 63.409.800 UMA) y la aritmética de los municipios de la ZAP
+  (1.645 − 70 = 1.575). Las cifras viven en el bloque `gaceta_cola` de
+  `restituciones/2027.json`; el guion no las lleva dentro, conforme a la separación del
+  archivo.
+- **Compuerta semántica: tres frases reescritas, ninguna cifra modificada.** Todas por
+  sujeto más ancho que su cálculo: (1) el titular decía «el Ramo 15 completo son 37.873,6
+  mdp: el 16,7 % de esa cifra» sin advertir que el ramo es mucho más que subsidios de
+  vivienda; (2) «el vehículo presupuestal completo que podría pagarla» nombra un conjunto
+  mayor que el Ramo 15, porque CONAVI es descentralizado y hay gasto en vivienda fuera del
+  ramo ---se bajó a «el ramo entero que la aloja»---; (3) «el perímetro territorial de la
+  política social» nombra más de lo que la ZAP es, y se bajó a «el perímetro territorial que
+  se declara cada año junto con el presupuesto».
+- **Checklist de omisiones: dos renglones nuevos y una corrección.** **B12**, vara externa de
+  suficiencia en vivienda, nace y se marca **resuelta en 2027**: es el equivalente de B1 en
+  salud y llegó antes que B1, que sigue fuera por tercer ejercicio. **B13**, la ZAP como
+  denominador territorial, queda registrada y enganchada a la Ruta A. Y **C4** se corrige:
+  el detalle tributario no queda fuera sólo por alcance, sino **también por fuente**, porque
+  las iniciativas fiscales de la cola llegan escaneadas.
+
+**Un error de conteo del cuerpo, encontrado al recontar y corregido.** El §99 decía que la
+compuerta se aplicó a los pies de «los diecinueve cuadros». Eran **veinte** el día 8. Con los
+dos de la adenda, veintidós. Se corrigió el número en el §99 y en el LEEME de la entrega; no
+cambia ninguna cifra.
+
+### 32. Entrega reempaquetada
+
+| pieza | antes (8 sep.) | ahora (9 sep.) |
+|---|---|---|
+| `documento_2027.pdf` | 557 KB, 61 páginas | **563 KB, 66 páginas** |
+| `documento_2027.zip` | 104 KB | **111 KB** |
+| `documento_2027.md` | 128 KB, 2.155 renglones | **138 KB, 2.352 renglones** |
+| `datos/` | 6 CSV | **8 CSV**, con `gaceta_anexos_2027.csv` y `vivienda_art61.csv` |
+
+**El ZIP volvió a pasar la prueba del directorio limpio, y esta vez la prueba fue más dura:
+se borraron los veintidós cuadros antes de regenerarlos.** `generar_cuadros.py` los reconstruye
+desde `datos/`, `pdflatex` produce 66 páginas y **el texto extraído tiene el mismo sha256**
+que el PDF de la entrega, `088dd50e…`. El Markdown regenerado desde el ZIP es idéntico al de
+la entrega, y sigue en **cero renglones terminados en diagonal suelta**.
+
+Composición: los dos avisos que quedan ---un `Underfull` en el capítulo 12 y un `Overfull` de
+1,46 pt en el §99--- **son los mismos del día 8**. El cuadro C99.1 desbordaba 214,7 pt en su
+primera versión y se corrigió con columnas `p{}` antes de cerrar.
+
+**Lo que sigue abierto, sin cambios respecto del cierre de ayer:** los cuatro analíticos del
+proyecto, las dos ranuras del ATDT, la ranura de plazas por vigilar, y la exposición de
+motivos del PPEF, que va por su sexto ejercicio. **Y una tarea nueva:** el ZIP de las 43.636
+AGEB de la ZAP urbana, que la nota metodológica publica y que este proyecto todavía no ha
+descargado.

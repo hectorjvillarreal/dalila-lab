@@ -178,6 +178,38 @@ def correr(anio: int) -> int:
     except FileNotFoundError as ex:
         t.nota(f"sin analíticos de {anio-1} en carpeta: {ex}")
 
+    G = r.get("gaceta_cola")
+    if G is None:
+        t.nota("sin bloque «gaceta_cola» en la restitución: no se corren las identidades "
+               "de los anexos de la cola del paquete.")
+    else:
+        print("\n9. Anexos de la cola: vivienda (art. 61 LV) y ZAP")
+        F = G["vivienda_filas"]
+        for f in F:
+            t.prueba(f"vivienda: hogares x costo unitario = monto ({f['necesidad'].lower()})",
+                     f["hogares"] * f["costo_unitario"] / 1e6, f["monto"] / 1e6)
+            t.prueba(f"vivienda: urbano + rural = hogares ({f['necesidad'].lower()})",
+                     f["urbano"] + f["rural"], f["hogares"], tol=0.0, unidad="hogares")
+            t.prueba(f"vivienda: costo unitario / UMA = UMA mensual ({f['necesidad'].lower()})",
+                     f["costo_unitario"] / f["uma"], G["vivienda_uma_mensual_2026"],
+                     tol=0.005, unidad="pesos")
+        t.prueba("vivienda: suma de los tres montos = total declarado",
+                 sum(f["monto"] for f in F) / 1e6,
+                 G["vivienda_total_pesos_declarado"] / 1e6)
+        t.prueba("vivienda: suma de hogares x UMA = total en UMA declarado",
+                 sum(f["hogares"] * f["uma"] for f in F), G["vivienda_total_uma_declarado"],
+                 tol=0.0, unidad="UMA")
+        t.prueba("ZAP: municipios rurales = universo menos los que pasan a la lista urbana",
+                 G["zap_rurales_antes_de_pasar_urbanos"] - G["zap_rurales_pasados_a_urbanos"],
+                 G["zap_rurales_municipios"], tol=0.0, unidad="municipios")
+        req = G["vivienda_total_pesos_declarado"] / 1e6
+        t.nota(f"requerimiento de vivienda {req:,.1f} mdp = {req / PIB * 100:.3f} % del PIB; "
+               f"Ramo 15 completo {G['ramo15_mdp']:,.1f} mdp = "
+               f"{G['ramo15_mdp'] / PIB * 100:.3f} % del PIB, esto es el "
+               f"{G['ramo15_mdp'] / req * 100:.1f} % del requerimiento. "
+               f"AÑOS DE PESOS DISTINTOS: el requerimiento está en pesos de 2026 (UMA y "
+               f"Reglas de Operación de 2026) y el presupuesto en pesos de 2027.")
+
     print("\n" + "=" * 130)
     print(f"RESULTADO: {t.ok} pruebas cierran, {t.fallo} fallan")
     for f in t.fallas:

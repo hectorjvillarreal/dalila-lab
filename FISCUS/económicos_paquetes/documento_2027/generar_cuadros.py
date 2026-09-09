@@ -532,6 +532,54 @@ def main() -> int:
         "mismo Ejecutivo sobre el mismo ejercicio, separadas por cinco meses.} Ninguna de "
         "estas cifras admite variación real: son precios, tasas, volúmenes y un nivel "
         "nominal de PIB."))
+    # --- C99_1 y C99_2: nota de actualización del 9 de septiembre --------------
+    with open(AQUI / "datos" / "gaceta_anexos_2027.csv", encoding="utf-8") as f:
+        anx = list(csv.DictReader(f))
+    fil = []
+    for a in anx:
+        pp = a["paginas"] or "---"
+        d, _, h = a["creado_pdf"].partition("T")
+        cre = ("8 sep." if d.endswith("08") else "9 sep.") + (" " + h if h else "")
+        idx = a["letra_indice_0908"]
+        cambio = "" if idx == a["letra"] else "\\textbf{"
+        fil.append(f"{cambio}{a['letra']}{'}' if cambio else ''} & {a['contenido']} & {pp} "
+                   f"& {cre} & {idx}")
+    escribe("C99_1", tabla(
+        "Los trece anexos del paquete que sirve la Gaceta 7121, y la letra que el "
+        "índice les daba el día de la entrega", "cua:anexos",
+        "l>{\\raggedright\\arraybackslash}p{5.0cm}rl>{\\raggedright\\arraybackslash}p{2.9cm}",
+        "Letra & Contenido, leído de la primera página del PDF & pp. & Creado & Letra en el "
+        "índice del 8 sep.", fil,
+        "Leído el 9 de septiembre de 2026 a las 07:40; el paginado es el de la edición de "
+        "la Gaceta, que añade portada y colofón. \\textbf{La letra no identifica el "
+        "contenido}: el índice del día de la entrega se reescribió y las letras se "
+        "reasignaron. Los anexos K a N no aparecen en el índice vivo. Las dos copias del "
+        "índice, del 8 y del 9, están archivadas.", tam="footnotesize"))
+
+    with open(AQUI / "datos" / "vivienda_art61.csv", encoding="utf-8") as f:
+        viv = list(csv.DictReader(f))
+    tot_mdp = sum(float(v["monto_pesos"]) for v in viv) / 1e6
+    r15 = R["15"]
+    fil = [f"{v['necesidad']} & {n(float(v['hogares']), 0)} & {v['uma_por_vivienda']} & "
+           f"{n(float(v['costo_unitario_pesos']))} & {n(float(v['monto_pesos']) / 1e6)}"
+           for v in viv]
+    fil.append("\\midrule \\textbf{Requerimiento declarado} & & & & \\textbf{"
+               + n(tot_mdp) + "}")
+    fil.append("Ramo 15 completo, proyecto 2027 & & & & " + n(r15[2027]))
+    fil.append("\\textbf{El ramo como proporción del requerimiento} & & & & \\textbf{"
+               + n(r15[2027] / tot_mdp * 100) + "\\,\\%}")
+    escribe("C99_2", tabla(
+        "La vara del artículo 61 de la Ley de Vivienda contra el Ramo 15 (mdp)",
+        "cua:vivienda", "lrrrr",
+        "Necesidad & Hogares & UMA & Costo unitario (pesos) & Monto (mdp)", fil,
+        "Fuente: Gaceta Parlamentaria 7121, anexo N, estimación de la Secretaría de "
+        "Bienestar; y \\texttt{datos/ramos.csv} para el Ramo 15. \\textbf{Años de pesos "
+        "distintos}: los costos unitarios provienen de las Reglas de Operación y de la UMA "
+        "de 2026, y el presupuesto está en pesos de 2027. \\textbf{El Ramo 15 no es el "
+        "perímetro del gasto en subsidios de vivienda}: es el ramo completo, y CONAVI es un "
+        "organismo descentralizado. La comparación es de orden de magnitud.",
+        tam="footnotesize"))
+
     return 0
 
 

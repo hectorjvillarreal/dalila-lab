@@ -2079,10 +2079,14 @@ etiquetado para igualdad son programas de pensión. **Las tres preguntas quedan 
 anexo y el documento completo— y **los once dan 404**. Es el sexto ejercicio
 consecutivo con el mismo patrón, de 2022 a 2027.
 
-- **Los anexos F y G de la Gaceta Parlamentaria** —Código Fiscal e
-informe arancelario— están enlazados en el índice del día de la entrega y respondieron
-**404** en tres intentos. La miscelánea fiscal de este documento se apoya en los anexos
-D (Ley Federal de Derechos) y E (Impuesto sobre la Renta), que sí llegaron.
+- **Los anexos F y G de la Gaceta Parlamentaria** respondieron
+**404** en tres intentos el día de la entrega, estando enlazados en el índice. La
+miscelánea fiscal de este documento se apoya en los anexos D (Ley Federal de Derechos) y E
+(Impuesto sobre la Renta), que sí llegaron. Al día siguiente resultó que el problema
+no era el que este documento supuso. El índice se reescribió, las letras se reasignaron y la
+iniciativa de Código Fiscal que el índice anunciaba en la F desapareció sin haberse servido
+nunca. **Véase la Nota de actualización al final del documento**, que corrige este
+renglón y publica el mapa real de anexos.
 
 - **Transparencia Presupuestaria.** `/es/PTP/Datos_Abiertos`
 responde 200 con **1.923 bytes de cáscara** sin un solo enlace a archivo y sin las
@@ -2151,5 +2155,198 @@ no permitiera escribirlo.
 ### Cinco. Compuerta semántica
 
 Se aplicó a los dieciséis titulares, a las frases del resumen ejecutivo y a los pies de los
-diecinueve cuadros. **Trece frases reescritas, ninguna cifra modificada.** El detalle
+veinte cuadros. **Trece frases reescritas, ninguna cifra modificada.** El detalle
 por capítulo está en la bitácora de la corrida.
+
+## Nota de actualización, 9 de septiembre de 2026
+
+> Los anexos de la cola del paquete **no se sirvieron hasta el día siguiente**
+de la entrega, y el índice de la Gaceta **reasignó las letras** entretanto. Con ellos
+llega una vara que este documento no tenía: la Secretaría de Bienestar estima en
+**226.133,3 mdp** —**0,57 % del PIB**— lo necesario para cumplimentar la
+política de subsidios de vivienda y suelo en 2027. El **Ramo 15 completo** —que es
+mucho más que subsidios de vivienda— son **37.873,6 mdp**: el **16,7 %** de esa
+cifra.
+
+**Qué es esta nota y qué no es.** El cuerpo de este documento se escribió el 8 de
+septiembre de 2026, entre las 18:45 y las 21:00, con el paquete que existía esa tarde. No se
+ha reescrito. Esta nota se añade el día siguiente y no modifica ninguna cifra ni
+ningún capítulo: registra lo que llegó después, corrige un renglón del registro que quedó
+mal contado, y publica dos hallazgos con cifra que el paquete completo permite y el paquete
+del día 8 no permitía. **Lo que estaba fuera de alcance sigue fuera de alcance.**
+
+### Uno. Lo que no cambió: la Ruta B sigue vigente
+
+Se volvieron a sondear los seis recursos que bloquearon la corrida. Ninguno cambió
+de estado entre las 21:45 del día 8 y las 07:33 del día 9: los cuatro analíticos del
+proyecto siguen en **404** y las dos ranuras del portal de datos abiertos en
+**503**. La ranura de plazas sigue sirviendo, sin aviso, el archivo del ejercicio 2026.
+
+En consecuencia, todo lo que los dieciséis capítulos declaran como no afirmable lo
+sigue siendo: no hay diff institucional, no hay auditoría de etiquetado de los anexos
+transversales, no hay composición por programa presupuestario, no hay distribución
+territorial, y la separación entre atención médica y pensiones en el IMSS y el ISSSTE sigue
+sin poder hacerse.
+
+### Dos. Las letras de la Gaceta se reasignaron después de la entrega
+
+El registro del documento anota que los anexos F y G —que el índice del 8 de septiembre
+describía como la iniciativa de Código Fiscal y el informe arancelario— estaban enlazados
+y respondían 404. **El 404 era cierto; la descripción no.**
+
+Al reintentarlos el día 9 responden, pero con otro contenido. El índice de la Gaceta se
+reescribió: la iniciativa de Código Fiscal desapareció del índice sin haberse
+servido nunca, la letra F pasó a ser una reforma a la **Ley Aduanera**, se insertaron
+dos iniciativas que no estaban —la Ley de Economía Digital para Pagos Digitales y
+Electrónicos y la Ley General para el Fortalecimiento y Armonización Catastral y
+Registral— y **el informe arancelario del artículo 131 se recorrió de la G a la J**.
+Además se sirven cuatro anexos más, K a N, que **el índice todavía no lista**: sólo
+aparecen en un bloque comentado dentro del HTML, con las letras del año anterior y fechados
+2026, cuando los PDF dicen 2027.
+
+**Cuadro C99.1 — Los trece anexos del paquete que sirve la Gaceta 7121, y la letra que el índice les daba el día de la entrega**
+
+| Letra | Contenido, leído de la primera página del PDF | pp. | Creado | Letra en el índice del 8 sep. |
+|---|---|---|---|---|
+| A | ILIF 2027 | 310 | 8 sep. | A |
+| B | PPEF, proyecto de decreto | 254 | 8 sep. | B |
+| C | CGPE 2027 | 78 | 8 sep. | C |
+| D | Ley Federal de Derechos | 142 | 8 sep. | D |
+| E | Ley del Impuesto sobre la Renta | 228 | 8 sep. | E |
+| **F** | Ley Aduanera | 28 | 8 sep. 19:18 | no listada; la F anunciaba Código Fiscal |
+| **G** | Ley de Economía Digital para Pagos Digitales y Electrónicos | 22 | 8 sep. 19:06 | no listada |
+| **H** | Ley General para el Fortalecimiento y Armonización Catastral y Registral | 28 | 8 sep. 19:08 | no listada |
+| **J** | Informe arancelario, artículo 131 | 12 | 8 sep. 19:54 | G |
+| **K** | Nota metodológica y declaratoria ZAP 2027 | 18 | 9 sep. 05:29 | no listada |
+| **L** | Listado ZAP rurales 2027 | 244 | 9 sep. 05:38 | no listada |
+| **M** | Listado ZAP urbanas 2027 | 224 | 9 sep. 05:41 | no listada |
+| **N** | Estimación de subsidios de vivienda y suelo 2027 | 6 | 9 sep. 05:46 | no listada |
+
+<sub>Leído el 9 de septiembre de 2026 a las 07:40; el paginado es el de la edición de la Gaceta, que añade portada y colofón. **La letra no identifica el contenido**: el índice del día de la entrega se reescribió y las letras se reasignaron. Los anexos K a N no aparecen en el índice vivo. Las dos copias del índice, del 8 y del 9, están archivadas.</sub>
+
+Los anexos A, C, D y E se volvieron a descargar y son **idénticos byte a byte** a los
+que sostienen este documento. Lo que se movió es la cola del paquete, no la cabeza:
+ninguna cifra de los dieciséis capítulos depende de un anexo reasignado.
+
+**Una corrección de método, que vale más que el episodio.** La advertencia con la que
+este proyecto llegó a la entrega era «las letras no son fijas: léelas del índice». No basta.
+**El índice mismo se reescribe, y las letras se reasignan.** La regla que sustituye a la
+anterior: la letra no identifica nada; identifica el PDF por su primera página, guarda el
+índice con marca de tiempo cada vez que lo consultes, y recorre las letras de la cola hasta
+el primer 404 firme. Se anota también que **el 404 de la Gaceta es intermitente**: el
+anexo L respondió 404 a las 07:34 y 206 a las 07:38, misma dirección, cuatro minutos después.
+El almacén no retira archivos: los sirve tarde y de forma inestable.
+
+### Tres. Lo que llegó, y qué de ello es utilizable
+
+**Las tres iniciativas de ley y el informe arancelario vienen escaneados.** Los anexos
+F, G, H y J tienen capa de texto **sólo en la portada y el colofón**: 2 de 28 páginas,
+2 de 22, 2 de 28 y 2 de 12. El cuerpo es imagen. **Se archivan y no se explotan aquí**:
+el reconocimiento óptico de un texto legal no se usa para citar cifras sin cotejo a mano, y
+este documento no cita lo que no ha leído.
+
+Los cuatro anexos de la Secretaría de Bienestar sí traen texto completo, y de ellos salen los
+dos hallazgos que siguen.
+
+#### 3.1 La vara de suficiencia en vivienda
+
+El artículo 61 de la Ley de Vivienda obliga a la Secretaría de Bienestar a estimar cada año
+el monto de recursos federales requeridos para cumplimentar la política de subsidios en
+materia de vivienda y suelo. Es una vara externa al presupuesto, publicada en el
+mismo paquete, y es exactamente el tipo de contraste que este proyecto busca y que en salud
+lleva tres ejercicios sin poder hacer.
+
+**Cuadro C99.2 — La vara del artículo 61 de la Ley de Vivienda contra el Ramo 15 (mdp)**
+
+| Necesidad | Hogares | UMA | Costo unitario (pesos) | Monto (mdp) |
+|---|---|---|---|---|
+| Mejora de vivienda | 849.226 | 25 | 89.155,5 | 75.713,2 |
+| Ampliación de vivienda | 771.091 | 50 | 178.311,0 | 137.494,0 |
+| Vivienda nueva | 36.246 | 100 | 356.622,0 | 12.926,1 |
+| **Requerimiento declarado** |  |  |  | **226.133,3** |
+| Ramo 15 completo, proyecto 2027 |  |  |  | 37.873,6 |
+| **El ramo como proporción del requerimiento** |  |  |  | **16,7\,%** |
+
+<sub>Fuente: Gaceta Parlamentaria 7121, anexo N, estimación de la Secretaría de Bienestar; y `datos/ramos.csv` para el Ramo 15. **Años de pesos distintos**: los costos unitarios provienen de las Reglas de Operación y de la UMA de 2026, y el presupuesto está en pesos de 2027. **El Ramo 15 no es el perímetro del gasto en subsidios de vivienda**: es el ramo completo, y CONAVI es un organismo descentralizado. La comparación es de orden de magnitud.</sub>
+
+El requerimiento declarado es de **226.133,3 mdp**: 849.226 hogares que requieren
+mejora de vivienda, 771.091 que requieren ampliación y 36.246 que requieren vivienda nueva,
+costeados a 25, 50 y 100 veces la UMA mensual. Contra eso, el Ramo 15, Desarrollo
+Agrario, Territorial y Urbano, completo, son **37.873,6 mdp** en el proyecto 2027, con
+un crecimiento real de **0,35 %** respecto del proyecto 2026.
+
+**Por qué importa.** **El requerimiento es seis veces el ramo entero**, y el ramo entero es
+mucho más que subsidios de vivienda. Dicho en la unidad que este documento usa para todo lo
+demás: la política declarada necesaria vale **0,57 % del PIB** y el ramo entero que
+la aloja, junto con todo lo demás que ese ramo hace, vale **0,10 %**. La brecha no es un
+matiz de calibración: es de orden de magnitud, y está declarada por la misma dependencia,
+en el mismo paquete, el mismo día.
+
+**Tres advertencias, sin las cuales la cifra no debe citarse.** Primera: los costos
+unitarios salen de las Reglas de Operación **de 2026** y de la **UMA de 2026**, de
+modo que el requerimiento está en pesos de 2026 y el presupuesto en pesos de 2027; corregirlo
+ampliaría la brecha, y este documento **no lo corrige** porque la fuente no publica la
+actualización. Segunda: **CONAVI es un organismo descentralizado** y no todo el gasto en
+vivienda pasa por el Ramo 15; sin el analítico por programa —que sigue en 404— no puede
+construirse el perímetro exacto del gasto en subsidios de vivienda. Tercera, en consecuencia:
+**esto es una comparación de orden de magnitud a nivel de ramo, no un cierre contable**,
+y así debe leerse.
+
+#### 3.2 La declaratoria de zonas de atención prioritaria 2027
+
+Las ZAP rurales de 2027 quedan integradas por **1.575 municipios** en las 32 entidades
+federativas; las urbanas, por **43.636 áreas geoestadísticas básicas** distribuidas en
+**4.531 localidades urbanas de 2.423 municipios**. La nota metodológica documenta la
+construcción criterio por criterio y de forma acumulativa: 790 municipios por grado de
+marginación, 796 al añadir rezago social, 953 al añadir municipios indígenas, 959 al añadir
+población afromexicana, 1.383 al añadir incidencia delictiva, 1.621 al añadir pobreza
+extrema, 1.638 al añadir grado de accesibilidad a carretera pavimentada y 1.645 al incorporar
+municipios de creación reciente, de los que 70 pasan a la lista urbana por ser urbanos.
+
+**Por qué importa.** Es el perímetro territorial que se declara cada año junto con el
+presupuesto, publicado con su regla de construcción a la vista. Este documento no lo cruza con el gasto
+—hacerlo exige la distribución territorial, que la Ruta B no permite— pero lo deja
+registrado como denominador disponible para el ejercicio siguiente. La nota
+metodológica publica además una ruta de descarga de las 43.636 AGEB con sus variables, que
+la precarga de este proyecto no tenía.
+
+### Cuatro. Qué se vuelve a correr y qué no
+
+Esta nota **no reescribe ningún capítulo**, de modo que las verificaciones que validan
+el cuerpo siguen siendo válidas tal como se publicaron. Las cifras que la nota introduce
+—las de los cuadros de esta sección— se verificaron contra su fuente y se incorporaron al
+guion de identidades, que pasa de 29 a 41 pruebas y sigue cerrando sin una sola
+falla: los tres montos de vivienda contra hogares por costo unitario, los tres desgloses
+urbano-rural, la UMA implícita en los tres costos, las dos sumas del total —en pesos y en
+UMA— y la aritmética de los municipios de la ZAP. La checklist de omisiones incorpora dos
+renglones nuevos, y la vara de vivienda queda anotada como **resuelta**. La compuerta
+semántica se aplicó al titular, a los dos pies de cuadro y a las dos frases de «por qué
+importa» de esta nota: **tres frases reescritas, ninguna cifra modificada**, todas por
+sujeto más ancho que su cálculo. **Ninguna cifra del cuerpo del documento cambió.**
+
+**Un error de conteo del cuerpo, corregido.** El registro decía que la compuerta se
+aplicó a los pies de «los diecinueve cuadros». Los cuadros del documento del día 8 eran
+**veinte**, y con los dos de esta nota son veintidós. Se corrigió el número; no cambia
+ninguna cifra ni ninguna afirmación.
+
+**Ficha metodológica — nota de actualización**
+
+- **Perímetro:** Ramo 15 completo, del Anexo 1 del decreto. No es el perímetro del
+gasto en subsidios de vivienda, que no puede construirse sin el analítico por programa.
+- **Línea de comparación:** Línea P, proyecto 2026 contra proyecto 2027, para el Ramo 15.
+Para el requerimiento no hay línea: es el primer año que este proyecto lo recoge.
+- **Deflactor:** Del PIB, 1,040, del CGPE 2027, en la variación real del Ramo 15.
+- **Año de los pesos:** **Mixto, y es el defecto de la comparación**: el requerimiento
+está en pesos de 2026 (UMA y Reglas de Operación de 2026) y el presupuesto en pesos de 2027.
+- **PIB y añada:** PIB nominal 2027 de 39.419.400,0 mdp, CGPE 2027 edición SHCP, Anexo II.5.
+- **Denominadores:** Ninguno per cápita. Los conteos de hogares y de municipios se citan como
+los publica la fuente.
+- **Fuentes:** Gaceta Parlamentaria 7121, anexos K (nota metodológica y declaratoria ZAP
+2027), L y M (listados rural y urbano) y N (estimación del artículo 61 de la Ley de
+Vivienda); `datos/ramos.csv` para el Ramo 15; las dos copias del índice de la Gaceta,
+del 8 y del 9 de septiembre, para la reasignación de letras.
+- **Qué no puede afirmarse con ellas:** Que el presupuesto de vivienda cubra el 16,7 % de la
+necesidad. Lo que se compara es *un ramo completo* contra un requerimiento de
+política, en años de pesos distintos y con parte del gasto fuera del ramo. La afirmación
+sostenible es de orden de magnitud: el requerimiento declarado es varias veces el
+ramo entero.
