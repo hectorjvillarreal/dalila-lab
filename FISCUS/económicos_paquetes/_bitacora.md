@@ -303,3 +303,83 @@ es una línea de texto y un cociente.
    asegurados incluye a quien no tiene empleo asociado. Para separarla hay que volver a
    bajar 400 MB.
 
+
+## Adenda 2026-09-08 (ordenamiento y verificación de las piezas 2027, antes de la corrida en vivo)
+
+**Qué es esta adenda.** No es la corrida en vivo. Es el paso previo: las tres piezas del
+Paquete Económico 2027 que Héctor descargó el 2026-09-08 entre las 18:35 y las 18:36
+estaban sueltas en la raíz del proyecto de LaTeX (`documento_2027/`), con los nombres del
+servidor. Se verificaron, se archivaron con la nomenclatura de la serie y se registraron.
+**El reloj de la corrida no ha arrancado.**
+
+**Ordenamiento.** Carpeta `2027/` nueva, con el patrón de los nueve ejercicios anteriores:
+
+| nombre del servidor | archivado como | MB | páginas |
+|---|---|---|---|
+| `CGPE_2027.pdf` | `2027/2027_cgpe_criterios-generales.pdf` | 2.6 | 75 |
+| `LIF_2027.pdf` | `2027/2027_ilif_iniciativa.pdf` | 1.8 | 308 |
+| `Proyecto_Decreto.pdf` | `2027/2027_ppef_proyecto-decreto.pdf` | 6.4 | 252 |
+
+`LIF_2027.pdf` se renombra a **ilif**: el documento es la *iniciativa* —oficio de remisión
+a la Mesa Directiva, exposición de motivos y articulado—, no la ley aprobada, que no
+existe. Conservar el nombre del servidor habría metido en la carpeta un archivo que dice
+«LIF» cuando la serie reserva ese rótulo para el aprobado.
+
+Manifiesto: **de 100 a 103 archivos registrados**, con sha256 y tier `oficial_primaria`.
+`url_origen` queda como «descarga manual» porque no se registró la URL; **conviene
+anotarla**, igual que quedó pendiente para los decretos 2022–2026.
+
+**Verificación de identidad, por contenido y no por nombre de archivo.**
+
+- **CGPE:** índice con «2. Entorno económico 2026» y «3. Lineamientos de política
+  económica para 2027». Es el CGPE 2027. **Trae capa de texto completa** en las 75 páginas
+  —2 800 a 3 700 caracteres por página—, así que **no se repite el problema de 2025**, que
+  llegó como escaneo de imagen y obligó a leer las cifras de páginas renderizadas a 150
+  dpi. Son **18 páginas menos que el CGPE 2026** (93).
+- **ILIF:** oficio a la Mesa Directiva, exposición de motivos en las páginas 1–159 y
+  articulado desde la 160 («Decreto por el que se expide la Ley de Ingresos… para el
+  ejercicio fiscal de 2027»). **Confirma en el décimo ejercicio consecutivo que la
+  exposición de motivos de la ILIF viaja dentro del mismo PDF** y no como pieza separada.
+  Ingreso total del artículo 1o.: **10 636 488.1 mdp**. Endeudamiento neto interno
+  autorizado en el artículo 2o.: **1 billón 700 mmp**; externo, **13 500 mdd**.
+- **PPEF, proyecto de decreto:** «Proyecto de Presupuesto de Egresos de la Federación para
+  el ejercicio fiscal 2027», Título Primero, Capítulo I, Artículo 1. Articulado hasta la
+  página 61, **Transitorios en la 62**, anexos desde la 69. Estructura paralela a la de
+  2026 (Transitorios en la 59, anexos desde la 65). **El Anexo 3, Gastos obligatorios,
+  está en la página 71** —es el que adjudica el perímetro de pensiones, y estaba en la 67
+  del decreto 2026—.
+
+**Integridad.** Los tres abren con `%PDF`, `pdfinfo` los procesa y la extracción de texto
+es completa. Las **diez páginas casi vacías** del decreto (182, 186, 190, 192, 195, 196,
+198, 199, 202) **no son pérdida de contenido**: son separadores con el escudo y el
+encabezado «Presidencia de la República». La ILIF viene cifrada con AES-256 y todos los
+permisos negados, **igual que la de 2026**; no estorba la extracción.
+
+**Anomalía de procedencia, declarada.** Las tres piezas de los nueve ejercicios anteriores
+salen de Word 2016. En 2027 sólo el CGPE lo hace. **La ILIF trae `Producer: pypdf` y el
+decreto `Creator: PDF24`**, es decir, pasaron por una herramienta intermedia después de
+salir de la Secretaría. No hay indicio de contenido alterado —la ILIF conserva incluso el
+cifrado original—, pero **el sha256 registrado puede no coincidir con el del archivo que
+sirve el portal**. Tarea de la primera banda de la corrida: bajar las tres piezas de la
+fuente, comparar sha256 y, si difieren, sustituir y volver a sellar el manifiesto.
+
+**Hallazgo sustantivo, encontrado al verificar y no al redactar.** El artículo 1o. de la
+ILIF 2027 **termina en el párrafo de la reserva del ISSSTE**. Después vienen la
+recaudación federal participable (5 billones 722 752 mdp), el pago en especie (527 mdp),
+el FEIEF y el ISSSTE, y enseguida el artículo 2o. **No hay cláusula de exclusión y no hay
+tope en porcentaje del PIB.** La exposición de motivos lo corrobora: su recorrido por el
+artículo 1o. enumera esos mismos párrafos y llama «último párrafo» al del ISSSTE. Las
+cadenas «contabiliz\*» y «equilibrio presupuestario» **no aparecen en ninguna de las 308
+páginas de la ILIF ni en las 252 del decreto**.
+
+La serie del perímetro (`_aprendizaje/serie_perimetro_regla_fiscal.md`) gana entonces su
+renglón 2027 con **cláusula ausente**, como 2024 y 2025. El patrón deja de ser «volvió en
+2026»: **volvió un año, con inversión física más financiera más desarrollo de capital
+humano y un tope de 3.6 % calibrado al tamaño del déficit, y volvió a desaparecer.**
+El capítulo §5.1 de la instrucción en vivo **no se queda sin objeto: su objeto es la
+desaparición**, y la pregunta que hereda es qué pasa con el balance sin inversión, que el
+CGPE 2026 ya había dejado de publicar. Verificación pendiente contra el CGPE 2027.
+
+**Lo que esta adenda no hizo:** no descargó nada, no corrió el diff institucional, no
+corrió las pruebas de identidad, no tocó `documento_2027/`. La ruta A o B sigue sin
+decidir porque **los analíticos del proyecto no están en carpeta**.
