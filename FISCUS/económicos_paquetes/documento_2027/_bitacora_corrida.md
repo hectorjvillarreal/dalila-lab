@@ -758,3 +758,38 @@ en diagonal suelta** contra los 218 de aquel entregable.
 2026, TinyTeX, `tlmgr` 79639, pdfTeX 1.40.29---, las restricciones de portabilidad que el
 proyecto respeta, qué hay en cada carpeta, y la advertencia del deflactor, que es lo primero
 que necesita quien compare nuestras cifras con las del CGPE.
+
+---
+
+## Cierre de la sesión, 2026-09-08T21:47
+
+**Cronómetro: 18:45 → 21:47, tres horas y dos minutos.** El sondeo automático queda
+**detenido** por instrucción de Héctor; corrió cada media hora desde las 19:26 y en sus
+ocho pasadas los seis recursos siguieron caídos.
+
+**Estado al cierre.**
+
+- **La corrida cumple el criterio de entrega**: PDF de 61 páginas, ZIP portátil probado en
+  directorio limpio, Markdown y datos, todo en `documento_2027/_entrega/`.
+- **La Ruta B sigue vigente.** Último sondeo a las 21:45: los cuatro analíticos en 404 y las
+  dos ranuras del ATDT en 503.
+- **Todo commiteado** en la rama `p3-correcciones-tex`: `87932b6` la adquisición, `1eded47`
+  el documento.
+
+**Lo primero que hay que hacer al retomar**, en este orden:
+
+1. **Sondear los seis recursos.** Si el árbol `Analiticos_Historico/2027/Proyecto/` existe,
+   se pasa a **Ruta A**, se declara la hora, y se desbloquean de golpe: el diff
+   institucional, la auditoría de etiquetado de los anexos transversales, el monto
+   potencialmente excluible del capítulo de la regla fiscal, la separación entre atención
+   médica y pensiones en el IMSS y el ISSSTE, el destino de los 571,1 mdp restantes del
+   Ramo 18, y siete renglones de la checklist que hoy están fuera de alcance.
+2. **Vigilar la ranura de plazas del ATDT**, que hoy respondía 200 sirviendo todavía el
+   archivo de 2026. **El día que se sobrescriba, lo de 2026 desaparece**; ya está en
+   carpeta, pero la de 2027 hay que tomarla el mismo día.
+3. **Reintentar los anexos F y G de la Gaceta** y la exposición de motivos del PPEF, sin
+   esperar nada: son las fallas que llevan seis años.
+
+**Lo que NO hay que rehacer.** Las identidades, la compuerta semántica y la checklist ya
+corrieron sobre el documento tal como está. Si llega la Ruta A y se reescriben capítulos,
+**las tres se vuelven a correr**, porque validan el texto que hay, no el que hubo.
