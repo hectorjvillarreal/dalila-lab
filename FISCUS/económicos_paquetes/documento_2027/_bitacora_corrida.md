@@ -793,3 +793,132 @@ ocho pasadas los seis recursos siguieron caídos.
 **Lo que NO hay que rehacer.** Las identidades, la compuerta semántica y la checklist ya
 corrieron sobre el documento tal como está. Si llega la Ruta A y se reescriben capítulos,
 **las tres se vuelven a correr**, porque validan el texto que hay, no el que hubo.
+
+---
+
+## Retoma, 2026-09-09T07:33-06:00
+
+Se ejecuta el orden anotado al cierre. Los dos primeros renglones no mueven nada; el
+tercero, que se anotó «sin esperar nada», resultó ser el que cambia el documento.
+
+### 28. Sondeo de los seis recursos: sin cambio, la Ruta B sigue vigente
+
+| recurso | respuesta 09-08 21:45 | respuesta 09-09 07:33 |
+|---|---|---|
+| `…/Analiticos_Historico/2027/Proyecto/ac01_ra_pp_ur_og.xlsx` | 404 | **404** |
+| `…/2027/Proyecto/ac01_ra_f_ur_og.xlsx` | 404 | **404** |
+| `…/2027/Proyecto/ac01_ra_pp_ur_og_efe.xlsx` | 404 | **404** |
+| `…/2027/Proyecto/ac01_ra_f_ur_og_efe.xlsx` | 404 | **404** |
+| `…/PPEF_2027.csv` (ATDT) | 503 | **503** |
+| `…/anexos_transversales_ppef2027.csv` (ATDT) | 503 | **503** |
+
+**No hay Ruta A.** El diff institucional, la auditoría de etiquetado y los otros cinco
+renglones bloqueados siguen bloqueados. Nada de lo que el documento declara como fuera
+de alcance cambia de estado.
+
+**La ranura de plazas del ATDT tampoco se ha sobrescrito.** `last-modified`
+2026-06-03T19:03:11 y `content-length` 11 663 197: el mismo archivo de 2026 que ya está
+en carpeta. Sigue en vigilancia.
+
+### 29. Los anexos de la Gaceta: las letras se movieron después de la entrega
+
+Se reintentaron F y G. Responden **200**, pero **no traen lo que el índice del día de la
+entrega decía que traían**. El índice se volvió a bajar y se comparó con el que se guardó
+a las 18:51 del 8 de septiembre. Diferencia, textual:
+
+```
+ Anexo F
+-Que reforma, adiciona y deroga diversas disposiciones del Código Fiscal de la Federación
++Que reforma y adiciona diversas disposiciones de la Ley Aduanera
+ Anexo G
++Que expide la Ley de Economía Digital para Pagos Digitales y Electrónicos
++Anexo H
++Que expide la Ley General para el Fortalecimiento y Armonización Catastral y Registral
++Anexo J
+ Informe sobre el uso de la facultad conferida al Ejecutivo Federal en materia arancelaria…
+```
+
+**Tres cosas pasaron a la vez, y ninguna es la que se supuso el día de la entrega.**
+
+1. **La iniciativa de Código Fiscal desapareció del índice.** No se sirvió nunca —404 en
+   tres intentos el día 8— y el 9 su renglón ya no existe. Lo que ocupa la letra F es una
+   reforma a la **Ley Aduanera**.
+2. **Se insertaron dos iniciativas que no estaban**: la **Ley de Economía Digital para
+   Pagos Digitales y Electrónicos** (G) y la **Ley General para el Fortalecimiento y
+   Armonización Catastral y Registral** (H).
+3. **El informe arancelario del artículo 131 se recorrió de G a J.** No cambió de
+   contenido: cambió de letra porque le metieron dos anexos delante.
+
+**Y hay cuatro anexos más que el índice todavía no lista.** K, L, M y N se sirven y el
+índice vivo no los menciona; sólo aparecen en un bloque **comentado en el HTML**, con
+letras viejas (H, J, K, L) y fechados **2026**. Los PDF dicen **2027**. El índice va
+atrás del almacén en un sentido y adelante en el otro.
+
+**Mapa real de letras al 2026-09-09T07:40**, leído de los PDF servidos, no del índice:
+
+| letra | contenido | pp | creado (metadato del PDF) |
+|---|---|---|---|
+| A | ILIF 2027 | — | 09-08 |
+| B | PPEF, proyecto de decreto | — | 09-08 |
+| C | CGPE 2027 | — | 09-08 |
+| D | Ley Federal de Derechos | — | 09-08 |
+| E | Ley del Impuesto sobre la Renta | — | 09-08 |
+| **F** | **Ley Aduanera** | 28 | 09-08 19:18 |
+| **G** | **Ley de Economía Digital** | 22 | 09-08 19:06 |
+| **H** | **Ley Catastral y Registral** | 28 | 09-08 19:08 |
+| **J** | Informe arancelario, art. 131 | 12 | 09-08 19:54 |
+| **K** | Nota metodológica y declaratoria **ZAP 2027** | 18 | **09-09 05:29** |
+| **L** | Listado **ZAP rurales 2027** | 244 | **09-09 05:38** |
+| **M** | Listado **ZAP urbanas 2027** | 224 | **09-09 05:41** |
+| **N** | Estimación de subsidios de **vivienda y suelo 2027** | 6 | **09-09 05:46** |
+
+**A, C, D y E se volvieron a bajar y son idénticos byte a byte** a los que están en
+carpeta (sha256 sin cambio). Lo que se movió es la cola del paquete, no la cabeza.
+
+**El 404 de la Gaceta es intermitente, no definitivo.** El anexo L respondió **404 a las
+07:34 y 206 a las 07:38**, misma URL, cuatro minutos de diferencia. Eso corrige la lectura
+del día 8: el «almacén roto» de la Gaceta **no retira archivos, los sirve tarde y de forma
+inestable**. La regla de dos intentos alcanza para no bloquear la corrida, pero **no
+alcanza para dar por inexistente un anexo**.
+
+**Lección para la precarga 2028, que es más dura que la de 2027.** El aviso vigente decía
+«las letras no son fijas: léelas del índice». **No basta.** El índice se reescribe después
+de la entrega y las letras se reasignan. La regla nueva: **la letra no identifica nada;
+identifica el PDF, por su primera página**, y el índice se guarda con marca de tiempo cada
+vez que se consulta, porque es un documento que cambia.
+
+### 30. Lo que llegó, y qué de eso es utilizable
+
+Ocho anexos nuevos y una segunda copia del índice en `2027/`, registradas en el manifiesto, que pasa de 109 a 118 registros, 18 de ellos del ejercicio 2027:
+
+**Las tres iniciativas de ley y el informe arancelario vienen escaneados.** F, G, H y J
+tienen capa de texto **sólo en la portada y el colofón** —2 de 28, 2 de 22, 2 de 28 y 2 de
+12 páginas—. El cuerpo es imagen. Sin OCR no son legibles por máquina, y el OCR de un
+texto legal no se usa para citar cifras sin cotejo a mano. **Se archivan; no se explotan en
+esta pasada.**
+
+**Los cuatro anexos de Bienestar sí traen texto completo** (K 17/18, L 243/244, M 224/224,
+N 6/6). Dos hallazgos con cifra:
+
+1. **La vara de suficiencia en vivienda, que el documento no tenía.** El anexo N es la
+   estimación que ordena el artículo 61 de la Ley de Vivienda: **226 133,3 mdp** es el
+   monto que la Secretaría de Bienestar declara necesario para cumplimentar la política de
+   subsidios de vivienda y suelo en 2027. Se compone de 849 226 hogares que requieren
+   mejora, 771 091 ampliación y 36 246 vivienda nueva, costeados a 25, 50 y 100 UMA. El
+   **Ramo 15 completo** del PPEF 2027 son **37 873,6 mdp**: el **16,7 %** de esa cifra, y
+   el ramo es mucho más que subsidios de vivienda. *Advertencia obligatoria al usarla:*
+   los costos unitarios salen de las Reglas de Operación **de 2026** y de la **UMA de
+   2026**, de modo que el requerimiento está en pesos de 2026 y el presupuesto en pesos de
+   2027; y CONAVI es un descentralizado, así que la comparación es de orden de magnitud a
+   nivel de ramo, no un cierre contable.
+2. **La declaratoria ZAP 2027.** 1 575 municipios rurales prioritarios en las 32
+   entidades, y 43 636 AGEB urbanas en 4 531 localidades de 2 423 municipios. La
+   construcción es acumulativa y está documentada criterio por criterio (790 por
+   marginación → 796 con rezago social → 953 con municipios indígenas → 959 con
+   afromexicanos → 1 383 con incidencia delictiva → 1 621 con pobreza extrema → 1 638 con
+   grado de accesibilidad → 1 645 con municipios de creación reciente → 1 575 al pasar 70
+   urbanos a la lista urbana).
+
+**Ruta nueva que aparece en la nota metodológica y que la precarga no tenía:**
+`sisge.bienestar.gob.mx/dae/zap2027/zap_urbanas_2027_43636_variables_descarga.zip`, las
+43 636 AGEB con sus variables. Va al registro de rutas.

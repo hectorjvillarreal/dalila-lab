@@ -40,7 +40,12 @@ RUTAS = [
  dict(orden=1, id="gaceta_indice", pieza="paquete completo", metodo="GET",
       url="https://gaceta.diputados.gob.mx/Gaceta/{leg}/{anio_entrega}/sep/{fecha}.html",
       nota="PRIMERA PARADA. Índice del día de la entrega; los anexos cuelgan de él. "
-           "URLs estables y archivo histórico. En 2026 fueron doce anexos, A-L."),
+           "La URL es estable; EL CONTENIDO NO. Se reescribe en las horas y el día "
+           "siguientes a la entrega: en 2027 cambió entre las 18:51 del día 8 y la "
+           "mañana del 9, y arrastra un bloque comentado con las letras del año "
+           "anterior. GUÁRDALO CON MARCA DE TIEMPO CADA VEZ y quédate con las dos "
+           "copias: la diferencia es evidencia. En 2026 fueron doce anexos, A-L; en "
+           "2027, catorce servidos, A-N, y el índice sólo listaba hasta J."),
  dict(orden=2, id="gaceta_ilif", pieza="ILIF", metodo="GET",
       url="https://gaceta.diputados.gob.mx/PDF/{leg}/{anio_entrega}/sep/{fecha}-A.pdf",
       nota="Anexo A. CONTIENE SU PROPIA EXPOSICIÓN DE MOTIVOS: no la busques aparte. "
@@ -54,9 +59,34 @@ RUTAS = [
       nota="Anexo C."),
  dict(orden=5, id="gaceta_miscelanea", pieza="miscelánea fiscal", metodo="GET",
       url="https://gaceta.diputados.gob.mx/PDF/{leg}/{anio_entrega}/sep/{fecha}-D.pdf",
-      nota="En 2026: D = Ley Federal de Derechos, E = IEPS, F = Código Fiscal, "
-           "G = informe arancelario del art. 131. LAS LETRAS NO SON FIJAS: léelas del "
-           "índice, no las supongas."),
+      nota="LA LETRA NO IDENTIFICA NADA. Lección de la corrida 2027, más dura que la "
+           "de 2026: no basta con leer las letras del índice, porque EL ÍNDICE SE "
+           "REESCRIBE DESPUÉS DE LA ENTREGA y las letras se reasignan. El 8-sep-2026 el "
+           "índice daba F = Código Fiscal y G = informe arancelario; el 9-sep esa "
+           "iniciativa había desaparecido del índice, F era Ley Aduanera, se habían "
+           "insertado G = Ley de Economía Digital y H = Ley Catastral y Registral, y el "
+           "informe arancelario se había recorrido a J. Identifica cada anexo POR LA "
+           "PRIMERA PÁGINA DEL PDF y guarda el índice con marca de tiempo cada vez que "
+           "lo consultes. En 2026: D = Derechos, E = IEPS, F = Código Fiscal, "
+           "G = arancelario. En 2027: D = Derechos, E = ISR, F = Aduanera, G = Economía "
+           "Digital, H = Catastral, J = arancelario, K-N = Bienestar (ZAP y vivienda)."),
+ dict(orden=5.1, id="gaceta_cola", pieza="anexos de la cola del paquete (ZAP, vivienda)",
+      metodo="GET",
+      url="https://gaceta.diputados.gob.mx/PDF/{leg}/{anio_entrega}/sep/{fecha}-K.pdf",
+      nota="LA COLA LLEGA AL DÍA SIGUIENTE. En 2027 los cuatro anexos de la Secretaría "
+           "de Bienestar ---nota metodológica y declaratoria ZAP, listados rural y "
+           "urbano, y la estimación de subsidios de vivienda del art. 61 de la Ley de "
+           "Vivienda--- se generaron entre las 05:29 y las 05:46 del DÍA SIGUIENTE a la "
+           "entrega, y el índice vivo seguía sin listarlos. Recorre K, L, M, N... hasta "
+           "el primer 404 firme. Éstos SÍ traen capa de texto completa; las iniciativas "
+           "de ley de la misma tanda vienen escaneadas."),
+ dict(orden=5.2, id="bienestar_zap_urbanas", pieza="ZAP urbanas con variables (AGEB)",
+      metodo="GET",
+      url="https://sisge.bienestar.gob.mx/dae/zap{t}/zap_urbanas_{t}_43636_variables_descarga.zip",
+      nota="HALLAZGO 2026-09-09: la nota metodológica de la ZAP publica esta ruta. Las "
+           "43.636 AGEB urbanas prioritarias de 2027 con sus variables, legibles por "
+           "máquina. El conteo va EN EL NOMBRE del archivo, así que cambia cada año: "
+           "léelo de la nota metodológica, no lo supongas."),
  # ---- 2. Analíticos del proyecto, en el portal de la Secretaría -----------
  dict(orden=6, id="analitico_p_gf_prog", pieza="analítico proyecto GF ramo-programa-UR-objeto",
       metodo="GET", url=PEF + "/{t}/Proyecto/ac01_ra_pp_ur_og.xlsx",
