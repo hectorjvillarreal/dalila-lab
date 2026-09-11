@@ -2350,3 +2350,233 @@ necesidad. Lo que se compara es *un ramo completo* contra un requerimiento de
 política, en años de pesos distintos y con parte del gasto fuera del ramo. La afirmación
 sostenible es de orden de magnitud: el requerimiento declarado es varias veces el
 ramo entero.
+
+## Segunda nota de actualización, 10 de septiembre de 2026
+
+> El índice de la Gaceta se reescribió por tercera vez y esta vez se
+corrigió: lo que ahora publica coincide renglón por renglón con el mapa de anexos que este
+documento reconstruyó el día 9 leyendo la primera página de cada PDF. Y se descargó el archivo de las **43.636 AGEB** de la
+declaratoria urbana: sus cuentas cierran, pero sólo sobre la clave de localidad
+actual a junio de 2026. Sobre las claves que el propio archivo trae al frente, sus
+**2.423 municipios y 4.531 localidades** son **2.416 y 4.540**.
+
+**Qué es esta nota y qué no es.** Es la segunda adenda, y obedece a la misma regla que
+la primera: **el cuerpo de los dieciséis capítulos no se reescribe**. Lo que se añade
+aquí no corrige ninguna cifra del documento —no hay ninguna que corregir— sino que
+**confirma con la fuente** una reconstrucción que el día 9 era nuestra, y añade una
+pieza de datos que el paquete anunciaba y no entregaba. Lo que estaba fuera de
+alcance sigue fuera de alcance, por tercer día.
+
+### Uno. Tercer día sin Ruta A
+
+Los seis recursos que abren la Ruta A se sondearon por tercera vez, el 10 de septiembre a las
+21:52. **Ninguno cambió**: los cuatro analíticos del proyecto responden **404** con
+el mismo cuerpo de 2.978 bytes de las dos sondas anteriores, y las dos ranuras del portal de
+datos abiertos **503** con el mismo cuerpo de 592 bytes. La ranura de plazas responde
+200 y sigue sirviendo el archivo del ejercicio 2026, con la misma fecha de modificación y el
+mismo tamaño al byte.
+
+**La distinción que este documento hizo el día 8 se sostiene tres días después**: no es
+que el árbol de los analíticos esté vacío, es que **no existe**; y no es que falte el
+recurso del portal de datos, es que **el servicio está caído**. Son dos fallas distintas
+y se diagnostican distinto. En consecuencia siguen sin poder hacerse el diff institucional,
+la auditoría de etiquetado de los anexos transversales, la composición por programa
+presupuestario, la distribución territorial, y la separación entre atención médica y
+pensiones en el IMSS y el ISSSTE.
+
+### Dos. El índice de la Gaceta se corrigió solo, y confirma el cuadro cua:anexos
+
+La primera nota dejó registrado que el índice del día de la entrega se había reescrito y que
+las letras se habían reasignado, y publicó el mapa real de los trece anexos leído de
+la primera página de cada PDF, porque el índice no servía para identificarlos. El 10 de
+septiembre el índice se reescribió por tercera vez: el bloque que el día 9 estaba
+comentado —con las letras del año anterior y fechado 2026— se descomentó, se le
+corrigieron las letras y se le corrigió el año.
+
+**Cuadro C99.3 — Lo que el índice de la Gaceta dijo de cada anexo, en sus tres versiones**
+
+| Letra | Contenido, leído del PDF | Índice del 8 sep. | Índice del 9 sep. | Índice del 10 sep. |
+|---|---|---|---|---|
+| **F** | Ley Aduanera | anunciada como Código Fiscal | Ley Aduanera | Ley Aduanera |
+| **G** | Ley de Economía Digital | anunciada como informe arancelario | Ley de Economía Digital | Ley de Economía Digital |
+| **H** | Ley Catastral y Registral | no listada | Ley Catastral y Registral | Ley Catastral y Registral |
+| **J** | Informe arancelario, art. 131 | no listada; iba como G | Informe arancelario, art. 131 | Informe arancelario, art. 131 |
+| **K** | Nota metodológica y declaratoria ZAP 2027 | no listada | comentada, como H y fechada 2026 | Nota metodológica y declaratoria ZAP |
+| **L** | Listado ZAP rurales 2027 | no listada | comentada, como J y fechada 2026 | Listado ZAP rurales 2027 |
+| **M** | Listado ZAP urbanas 2027 | no listada | comentada, como K y fechada 2026 | Listado ZAP urbanas 2027 |
+| **N** | Estimación de subsidios de vivienda 2027 | no listada | comentada, como L y fechada 2026 | Estimación de subsidios de vivienda 2027 |
+
+<sub>Las tres copias del índice están archivadas, con marca de tiempo. Los anexos A a E no aparecen aquí porque su descripción no cambió en ninguna de las tres versiones. **La columna del día 10 coincide renglón por renglón con el cuadro cua:anexos**, que se construyó dos días antes leyendo la primera página de cada PDF. El índice del 10 conserva un error de la fuente: titula el anexo K «zonas de atención prioritaria 2026» en su primera cláusula y 2027 en la segunda.</sub>
+
+**Por qué importa.** La columna del día 10 es, renglón por renglón, el cuadro
+cua:anexos, que se construyó dos días antes y sin ella. La reconstrucción propia deja
+de ser reconstrucción propia y pasa a ser **reconstrucción confirmada por la fuente**.
+Pero la lección de método no se ablanda, se afila: el índice converge, y tarda dos
+días. Un documento que se escribe el día de la entrega no puede esperarlos. El día
+de la corrida la única fuente que identifica un anexo es el PDF, y la regla de la primera
+nota —identifica por la primera página, guarda el índice con marca de tiempo cada vez—
+queda en pie con una adición: vuelve al tercer día y compara; la cuarta copia es la
+confirmación que la fuente te debía.
+
+Dos detalles menores, para que el registro esté completo. El índice del 10 estrena un
+**anexo O** —el orden del día de la sesión— y un **anexo V** —una
+comunicación de la Mesa Directiva sobre turnos—, además de una sección de prevenciones:
+**nada de eso es paquete económico** y nada de eso toca el perímetro de este documento.
+Y el índice conserva un error de la fuente: describe el anexo K como «zonas de atención
+prioritaria 2026» en su primera cláusula y 2027 en la segunda, cuando el PDF es de 2027 en
+las dos.
+
+### Tres. Las 43.636 AGEB de la declaratoria urbana
+
+La primera nota cerró anotando que la nota metodológica del anexo K publica una ruta
+de descarga de las 43.636 AGEB urbanas con sus variables, y que este proyecto no la había
+usado. Se descargó el 10 de septiembre: un archivo comprimido de 2,1 MB con una sola hoja de
+cálculo dentro, doce columnas y 43.636 renglones de datos.
+
+#### 3.1 No es una pieza de la cola del paquete
+
+**El archivo se publicó el 15 de julio de 2026**, según la fecha de modificación que
+declara el servidor: **dos meses antes de la entrega del paquete**. No llegó con la cola
+ni con el paquete. **Lo que llegó con el paquete es el nombre del archivo**, porque el
+conteo de AGEB va dentro del nombre —cambia cada año— y sólo la nota metodológica lo
+dice.
+
+**Por qué importa.** Hay aquí una asimetría de publicación: el dato estuvo disponible
+dos meses antes que el documento que lo cita, y era inalcanzable porque nadie
+podía adivinar su dirección. No es un problema de calendario: es de catálogo. Para la
+corrida del año que viene esto cambia una prioridad: la ruta puede intentarse
+antes del día de la entrega, en cuanto se sepa el conteo, y no esperar a la cola.
+
+#### 3.2 Las cuentas cierran, y sobre qué clave
+
+**Cuadro C99.4 — Las cuentas de la declaratoria urbana contra el archivo de las 43.636 AGEB**
+
+| Cuenta | Declarado en el anexo K | Sobre la clave actual | Sobre las claves del archivo |
+|---|---|---|---|
+| AGEB urbanas prioritarias | 43.636 | 43.636 | 43.636 |
+| Entidades federativas | 32 | 32 | 32 |
+| **Municipios** | 2.423 | 2.423 | **2.416** |
+| **Localidades urbanas** | 4.531 | 4.531 | **4.540** |
+| AGEB dentro de los 1.575 municipios ZAP rurales | no se publica | 25.836 | — |
+
+<sub>Fuente: anexo K de la Gaceta 7121 para lo declarado; y `2027/2027_zap-urbanas-agebs_variables.zip`, descargado el 10 de septiembre de 2026, para lo calculado. **Los dos renglones en negritas son el aviso**: municipios y localidades sólo cierran contra la última columna del archivo, *clave de localidad actual a junio de 2026*. Quien cuente sobre las columnas de clave que el archivo trae al frente publicará 2.416 y 4.540. El traslape con la lista rural sí lo publica la nota metodológica: el archivo lo reproduce al AGEB.</sub>
+
+Las cuatro cuentas de la declaratoria cierran contra el archivo: 43.636 áreas
+geoestadísticas básicas **sin una sola repetida** y 32 entidades federativas. Los
+municipios y las localidades también cierran, pero no sobre las columnas de clave
+que el archivo trae al frente: sobre ésas dan 2.416 municipios y 4.540 localidades.
+Cierran sobre la última columna, *clave de localidad actual a junio de 2026*.
+
+**La nota metodológica advierte esa columna, y hay que decirlo con precisión.** Su
+párrafo final explica que la clave actualizada a junio de 2026 se agrega al anexo «con fines
+operativos», porque la creación de nuevos municipios puede haber movido la clave de localidad
+respecto de la cartografía de 2020, y declara que las AGEB se identifican con su clave
+oficial de origen. **Lo que la nota no dice es cuál de las dos claves cuenta**: que sus
+2.423 municipios y sus 4.531 localidades están calculados sobre la columna actualizada y no
+sobre la de origen, que es la que el archivo pone al frente. Eso es lo que aquí se reconstruye.
+
+La diferencia son **120 AGEB reasignadas**. Ciento cinco cambian de municipio y quince
+cambian de localidad dentro del mismo municipio —localidades absorbidas por la cabecera, en
+Cuernavaca, Mazatlán, Tijuana, Uruapan—. De las que cambian de municipio, 102 se
+van a siete municipios que la clave vieja no tiene.
+
+**Cuadro C99.5 — Los siete municipios que sólo existen bajo la clave actualizada**
+
+| Clave | Municipio | Entidad | Se desprende de | AGEB |
+|---|---|---|---|---|
+| 02007 | San Felipe | Baja California | 02002 Mexicali | 16 |
+| 04013 | Dzitbalché | Campeche | 04001 Calkiní | 8 |
+| 12082 | Las Vigas | Guerrero | 12053 San Marcos | 8 |
+| 12085 | San Nicolás | Guerrero | 12023 Cuajinicuilapa | 4 |
+| 24059 | Villa de Pozos | San Luis Potosí | 24028 San Luis Potosí | 18 |
+| 25019 | Eldorado | Sinaloa | 25006 Culiacán | 25 |
+| 25020 | Juan José Ríos | Sinaloa | 25001 Ahome; 25011 Guasave | 23 |
+| **Suma** |  |  |  | **102** |
+
+<sub>Claves y AGEB, del archivo de variables; nombres, del anexo L, que marca a los siete en su columna de *municipios de reciente creación*. Las 102 AGEB de este cuadro más 3 que pasan de Chinameca a Oteapan —Veracruz, municipios que ya existían— son las 105 que cambian de municipio; las 15 restantes de las 120 reasignadas cambian de localidad dentro del mismo municipio, absorbidas por la cabecera.</sub>
+
+**Los siete son municipios de creación reciente, y el anexo L lo confirma**: los marca a
+los siete en su columna de *municipios de reciente creación*, donde hay nueve en total
+—los dos restantes, Ñuu Savi y Santa Cruz del Rincón, en Guerrero, no tienen AGEB urbanas—.
+Los nueve son los que la nota metodológica llama «municipios de creación posterior al año
+2020».
+
+**Aquí hay dos sietes distintos y no deben confundirse.** La cadena acumulativa de la
+nota pasa de 1.638 a 1.645 municipios rurales porque, de esos nueve, dos ya eran prioritarios
+y **se añaden siete**. El de este cuadro es otro: los siete que tienen AGEB
+urbanas y que sólo existen bajo la clave actualizada. Las dos cifras coinciden en el número y
+**no se ha verificado que coincidan en los municipios**; este documento no lo afirma.
+
+**Por qué importa.** Quien cuente sobre las columnas del frente publicará 2.416 municipios
+y no sabrá por qué no coincide con la declaratoria. El archivo trae dos mapas municipales
+—el del censo y el de junio de 2026— y la declaratoria cuenta sobre el segundo sin
+decirlo. Para este proyecto la consecuencia es concreta: cualquier cruce futuro entre
+la ZAP y el gasto tiene que hacerse sobre la clave actualizada, o siete municipios de
+creación reciente —y las 102 AGEB que viven en ellos— quedarán colgados de un municipio
+que ya no existe.
+
+#### 3.3 El traslape entre las dos declaratorias
+
+25.836 de las 43.636 AGEB urbanas —el 59,2 %— caen dentro de los 1.575 municipios
+de la lista ZAP rural. La cifra **la publica la nota metodológica**, y el archivo la
+reproduce al AGEB: la columna que marca el traslape parte el universo completo y da
+exactamente 25.836. La nota añade el desglose que el archivo no trae: de esas 25.836,
+**17.035 ya eran prioritarias** por otros criterios y **8.801 se agregaron** por
+éste, hasta el universo de 43.636.
+
+**Por qué importa.** Las dos declaratorias no son disjuntas: se traslapan en seis de cada
+diez AGEB urbanas. Sumar «municipios ZAP rurales» y «municipios con AGEB urbanas ZAP» para
+obtener un universo territorial cuenta doble, y el traslape no es marginal sino mayoritario.
+Este documento no cruza la ZAP con el gasto —hacerlo exige la distribución territorial, que
+sigue enganchada a la Ruta A— pero el denominador queda ahora en carpeta y
+recalculado, no sólo citado.
+
+### Cuatro. Qué se volvió a correr y qué no
+
+Esta nota, como la anterior, **no reescribe ningún capítulo**, y las verificaciones que
+validan el cuerpo siguen siendo las que se publicaron. Lo que se corrió otra vez:
+
+itemize
+ **Identidades: de 41 a 49 pruebas, ninguna falla.** Las ocho nuevas son las cuatro
+cuentas de la declaratoria contra el archivo, la comprobación de que ninguna AGEB está
+repetida, la de que la columna del traslape parte el universo completo, la del traslape
+mismo —25.836 AGEB, contadas en el archivo contra las declaradas en la nota— y la de su
+desglose, 17.035 ya prioritarias más 8.801 agregadas. El guion no lleva las cifras dentro:
+viven en el bloque de restituciones del ejercicio, como manda la separación del archivo.
+ **Compuerta semántica**, aplicada al titular, a los tres pies de cuadro y a las
+cuatro frases de «por qué importa» de esta nota. Ninguna cifra modificada, y tres
+frases reescritas, las tres por la misma falla y la peor de las que la compuerta persigue:
+el borrador atribuía a la fuente un silencio que no tenía. Decía que la nota metodológica no
+advierte la clave actualizada —la advierte, en su párrafo final—; que el traslape de
+25.836 AGEB no está publicado —está publicado, y con desglose—; y ligaba nuestros siete
+municipios con AGEB urbanas a los siete que la nota suma en su cadena rural, que son otro
+conjunto. Las tres se corrigieron contra el texto del anexo K, no contra la memoria
+del redactor.
+ **Checklist de omisiones**: el renglón B13 —la ZAP como denominador
+territorial— pasa de «registrada, no cruzada» a «denominador en mano, cruce
+pendiente». El cruce sigue enganchado a la Ruta A. B1, la vara de suficiencia en
+salud, sigue fuera por tercer ejercicio: es una línea de texto y un cociente.
+itemize
+
+Con los tres cuadros de esta nota, los del documento son **veinticinco**.
+**Ninguna cifra del cuerpo cambió, ni el 9 ni el 10 de septiembre.**
+
+**Ficha metodológica — segunda nota de actualización**
+
+- **Perímetro:** Ninguno presupuestal. Esta nota no toca gasto ni ingreso: verifica un
+denominador territorial y el mapa documental del paquete.
+- **Línea de comparación:** Ninguna. No hay variación real que calcular.
+- **Año de los pesos:** No aplica: no hay pesos en esta nota.
+- **Denominadores:** Los conteos de AGEB, municipios, localidades y entidades se citan como
+los publica la fuente, **y se recalculan contra el archivo de origen**. El traslape —25.836 AGEB, 59,2 %— lo publica la nota
+metodológica y aquí se recalcula contra el archivo.
+- **Fuentes:** Archivo de variables de las ZAP urbanas, de la Secretaría de Bienestar,
+descargado el 10 de septiembre de 2026 de la ruta que publica el anexo K y archivado en
+la carpeta del ejercicio 2027; el nombre exacto está al pie del cuadro
+cua:zapcuentas. Anexos K y L de la Gaceta Parlamentaria 7121; y las tres copias
+fechadas del índice de la Gaceta, del 8, el 9 y el 10 de septiembre.
+- **Qué no puede afirmarse con ellas:** Nada sobre el gasto. La ZAP es un denominador
+territorial y **este documento no lo ha cruzado con un peso**: para hacerlo hace falta
+la distribución territorial del gasto, que exige los analíticos del proyecto. Tampoco que
+los 2.416 municipios de las columnas del archivo sean un error: son otro mapa municipal,
+el del censo, y la declaratoria no cuenta sobre él.

@@ -1110,3 +1110,94 @@ a la Ruta A**, como todo lo demás.
 - **Sigue abierto, sin cambios:** los cuatro analíticos del proyecto, las dos ranuras del ATDT,
   la ranura de plazas por vigilar, la exposición de motivos del PPEF en su sexto ejercicio, y
   B1, la vara de suficiencia en salud, que sigue siendo una línea de texto y un cociente.
+
+---
+
+## Segunda adenda, 2026-09-10T22:00-06:00
+
+**Decisión de Héctor: segunda adenda fechada el 10.** Misma regla que la primera: el cuerpo
+de los dieciséis capítulos no se reescribe, y lo que llegó después entra en un capítulo nuevo
+---`99c_actualizacion.tex`--- que declara en su primer párrafo qué es y qué no es.
+
+### 37. Qué contiene la segunda adenda
+
+Cuatro secciones. El tercer sondeo sin cambio y la Ruta B por tercer día. El índice de la
+Gaceta que se corrigió solo, con el cuadro C99.3, que es lo que el índice dijo de cada anexo
+en sus tres versiones. Las 43.636 AGEB de la declaratoria urbana, con los cuadros C99.4
+---las cuentas declaradas contra las calculadas sobre las dos claves--- y C99.5 ---los siete
+municipios que sólo existen bajo la clave actualizada, con el municipio del que se
+desprenden---. Y el registro de lo que se volvió a correr.
+
+**Tres cuadros nuevos, los tres generados desde CSV**, como todos los demás:
+`gaceta_indice_convergencia.csv`, `zap_urbanas_conteos.csv` y `zap_municipios_nuevos.csv`.
+Los cuadros del documento pasan de veintidós a **veinticinco**.
+
+### 38. La compuerta semántica se ganó el sueldo
+
+**Tres frases reescritas, ninguna cifra modificada, y las tres por la misma falla**, que no
+es la que la compuerta venía persiguiendo desde 2026. No fue un sujeto más ancho que su
+cálculo: fue **atribuirle a la fuente un silencio que no tenía**. El borrador decía:
+
+1. Que la nota metodológica **no advierte** la clave actualizada. **La advierte**, en su
+   párrafo final: la agrega al anexo «con fines operativos» porque la creación de nuevos
+   municipios pudo mover la clave de localidad respecto de la cartografía de 2020, y remite
+   al Catálogo Único del INEGI de junio de 2026. Lo que la nota **no** dice, y eso sí es
+   nuestro, es **cuál de las dos claves cuenta**: que sus 2.423 municipios y sus 4.531
+   localidades salen de la columna actualizada y no de la clave de origen, que es la que el
+   archivo pone al frente.
+2. Que el traslape de **25.836 AGEB** con los municipios ZAP rurales **no lo publica la
+   fuente**. **Lo publica**, y con desglose: de esas 25.836, 17.035 ya eran prioritarias y
+   8.801 se agregaron por ese criterio. Lo que hace el archivo es **reproducirlo al AGEB**,
+   que es verificación y no hallazgo. El renglón se reescribió y el desglose se incorporó.
+3. Que nuestros **siete municipios con AGEB urbanas** son los siete de la cadena acumulativa
+   de la nota. **Son dos sietes distintos.** La nota parte de **nueve** municipios de creación
+   posterior a 2020, de los cuales dos ya eran prioritarios, y por eso suma siete para llegar
+   a 1.645. Los nuestros son los que **tienen AGEB urbanas**. Coinciden en el número; **no se
+   ha verificado que coincidan en los municipios**, y el documento ahora lo dice.
+
+**La lección, que vale más que las tres correcciones:** la compuerta nació para vigilar que
+el sujeto de la frase no fuera más ancho que el perímetro del cálculo. Este caso añade una
+segunda forma de exceso, y es más fácil de cometer: **afirmar lo que una fuente omite sin
+haber releído la fuente**. Se corrigió contra el texto del anexo K, no contra la memoria del
+redactor.
+
+### 39. Las tres verificaciones, otra vez
+
+- **Identidades: de 41 a 49 pruebas, 0 fallan.** Las ocho nuevas: las cuatro cuentas de la
+  declaratoria contra el archivo, la de que ninguna AGEB está repetida, la de que la columna
+  del traslape parte el universo completo, la del traslape mismo ---25.836 contadas en el
+  archivo contra las declaradas--- y la de su desglose, 17.035 + 8.801 = 25.836. Las cifras
+  viven en `gaceta_cola` de `restituciones/2027.json`; el guion no las lleva dentro.
+- **Compuerta semántica**: las tres frases del §38.
+- **Checklist de omisiones**: B13 pasa de «registrada, no cruzada» a **«denominador en mano,
+  cruce pendiente»**. B1, la vara de suficiencia en salud, sigue fuera por tercer ejercicio.
+
+### 40. Entrega reempaquetada, segunda vez
+
+| pieza | 8 sep. | 9 sep. | 10 sep. |
+|---|---|---|---|
+| `documento_2027.pdf` | 557 KB, 61 pp | 563 KB, 66 pp | **588 KB, 72 pp** |
+| `documento_2027.zip` | 104 KB | 111 KB | **122 KB** |
+| `documento_2027.md` | 2.155 renglones | 2.352 renglones | **2.582 renglones** |
+| `datos/` | 6 CSV | 8 CSV | **11 CSV** |
+| cuadros | 20 | 22 | **25** |
+
+**El ZIP volvió a pasar la prueba del directorio limpio con la versión dura**: se borraron
+los veinticinco cuadros antes de regenerarlos, `generar_cuadros.py` los reconstruye desde
+`datos/`, `pdflatex` produce 72 páginas y el texto extraído tiene **el mismo sha256 que el
+PDF de la entrega**, `e49f2408…`. El Markdown regenerado desde el ZIP es **idéntico** al de
+la entrega, y sigue en cero renglones terminados en diagonal suelta.
+
+**Composición: los dos avisos que quedan son los mismos del día 8** ---un `Underfull` en el
+capítulo 12 y un `Overfull` de 1,46 pt en el §99---. Los tres que introdujo la adenda se
+corrigieron antes de cerrar: el cuadro C99.4 desbordaba 34,0 pt y se arregló con columnas
+`p{}` alineadas a la derecha; un `\porqueimporta` y el renglón de fuentes de la ficha
+desbordaban 8,4 y 8,3 pt, y se arreglaron reescribiendo ---el de la ficha, quitando una ruta
+de archivo en `\texttt` que no admite corte y remitiendo al pie del cuadro---.
+
+**El archivo de variables no viaja en el ZIP** ---2,1 MB contra 122 KB del paquete entero---:
+queda archivado en `2027/` con su sha256 en el manifiesto, y el LEEME de `datos/` lo dice.
+
+**Sigue abierto, sin cambios:** los cuatro analíticos del proyecto, las dos ranuras del ATDT,
+la ranura de plazas por vigilar, la exposición de motivos del PPEF en su sexto ejercicio, y
+B1.

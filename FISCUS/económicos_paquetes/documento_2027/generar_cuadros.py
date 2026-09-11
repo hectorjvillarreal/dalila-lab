@@ -580,6 +580,72 @@ def main() -> int:
         "organismo descentralizado. La comparación es de orden de magnitud.",
         tam="footnotesize"))
 
+    # --- C99_3 a C99_5: segunda nota de actualización, 10 de septiembre ---------
+    with open(AQUI / "datos" / "gaceta_indice_convergencia.csv", encoding="utf-8") as f:
+        cnv = list(csv.DictReader(f))
+    fil = [f"\\textbf{{{c['letra']}}} & {c['contenido_pdf']} & {c['indice_08']} & "
+           f"{c['indice_09']} & {c['indice_10']}" for c in cnv]
+    escribe("C99_3", tabla(
+        "Lo que el índice de la Gaceta dijo de cada anexo, en sus tres versiones",
+        "cua:convergencia",
+        "l>{\\raggedright\\arraybackslash}p{3.2cm}>{\\raggedright\\arraybackslash}p{2.9cm}"
+        ">{\\raggedright\\arraybackslash}p{2.9cm}>{\\raggedright\\arraybackslash}p{2.9cm}",
+        "Letra & Contenido, leído del PDF & Índice del 8 sep. & Índice del 9 sep. & "
+        "Índice del 10 sep.", fil,
+        "Las tres copias del índice están archivadas, con marca de tiempo. Los anexos A a E "
+        "no aparecen aquí porque su descripción no cambió en ninguna de las tres versiones. "
+        "\\textbf{La columna del día 10 coincide renglón por renglón con el cuadro "
+        "\\ref{cua:anexos}}, que se construyó dos días antes leyendo la primera página de "
+        "cada PDF. El índice del 10 conserva un error de la fuente: titula el anexo K "
+        "«zonas de atención prioritaria 2026» en su primera cláusula y 2027 en la segunda.",
+        tam="scriptsize"))
+
+    with open(AQUI / "datos" / "zap_urbanas_conteos.csv", encoding="utf-8") as f:
+        zc = list(csv.DictReader(f))
+    fil = []
+    for z in zc:
+        dec, act, arc = (int(z["declarado"]), int(z["clave_actual"]), int(z["clave_archivo"]))
+        neg = act != arc
+        cue = f"\\textbf{{{z['cuenta']}}}" if neg else z["cuenta"]
+        ult = f"\\textbf{{{n(arc, 0)}}}" if neg else n(arc, 0)
+        fil.append(f"{cue} & {n(dec, 0)} & {n(act, 0)} & {ult}")
+    fil.append("\\midrule AGEB dentro de los 1.575 municipios ZAP rurales & no se publica "
+               "& 25.836 & ---")
+    escribe("C99_4", tabla(
+        "Las cuentas de la declaratoria urbana contra el archivo de las 43.636 AGEB",
+        "cua:zapcuentas", ">{\\raggedright\\arraybackslash}p{5.0cm}"
+        ">{\\raggedleft\\arraybackslash}p{2.2cm}>{\\raggedleft\\arraybackslash}p{2.0cm}"
+        ">{\\raggedleft\\arraybackslash}p{2.2cm}",
+        "Cuenta & Declarado en el anexo K & Sobre la clave actual & Sobre las claves del "
+        "archivo", fil,
+        "Fuente: anexo K de la Gaceta 7121 para lo declarado; y "
+        "\\texttt{2027/2027\\_zap-urbanas-agebs\\_variables.zip}, descargado el 10 de "
+        "septiembre de 2026, para lo calculado. \\textbf{Los dos renglones en negritas son "
+        "el aviso}: municipios y localidades sólo cierran contra la última columna del "
+        "archivo, \\emph{clave de localidad actual a junio de 2026}. Quien cuente sobre las "
+        "columnas de clave que el archivo trae al frente publicará 2.416 y 4.540. El "
+        "traslape con la lista rural sí lo publica la nota metodológica: el archivo lo "
+        "reproduce al AGEB.",
+        tam="footnotesize"))
+
+    with open(AQUI / "datos" / "zap_municipios_nuevos.csv", encoding="utf-8") as f:
+        mn = list(csv.DictReader(f))
+    fil = [f"{m['clave']} & {m['municipio']} & {m['entidad']} & {m['se_desprende_de']} & "
+           f"{m['agebs']}" for m in mn]
+    fil.append("\\midrule \\textbf{Suma} & & & & \\textbf{"
+               + str(sum(int(m["agebs"]) for m in mn)) + "}")
+    escribe("C99_5", tabla(
+        "Los siete municipios que sólo existen bajo la clave actualizada",
+        "cua:zapnuevos",
+        "ll>{\\raggedright\\arraybackslash}p{2.4cm}>{\\raggedright\\arraybackslash}p{4.0cm}r",
+        "Clave & Municipio & Entidad & Se desprende de & AGEB", fil,
+        "Claves y AGEB, del archivo de variables; nombres, del anexo L, que marca a los "
+        "siete en su columna de \\emph{municipios de reciente creación}. Las 102 AGEB de "
+        "este cuadro más 3 que pasan de Chinameca a Oteapan ---Veracruz, municipios que ya "
+        "existían--- son las 105 que cambian de municipio; las 15 restantes de las 120 "
+        "reasignadas cambian de localidad dentro del mismo municipio, absorbidas por la "
+        "cabecera.", tam="footnotesize"))
+
     return 0
 
 

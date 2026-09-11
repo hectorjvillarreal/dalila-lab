@@ -256,9 +256,17 @@ def correr(anio: int) -> int:
                          int(m[col[Z['columna_traslape_rural']]].isin(["SI", "NO"]).sum()),
                          len(m), tol=0.0, unidad="AGEB")
                 tr = int((m[col[Z['columna_traslape_rural']]] == "SI").sum())
+                t.prueba("ZAP urbana: AGEB en municipios ZAP rurales = las declaradas",
+                         tr, G["zap_urbanas_agebs_en_municipios_rurales"],
+                         tol=0.0, unidad="AGEB")
+                t.prueba("ZAP urbana: ya prioritarias + agregadas = traslape declarado",
+                         G["zap_urbanas_agebs_ya_prioritarias"]
+                         + G["zap_urbanas_agebs_agregadas_por_traslape"],
+                         G["zap_urbanas_agebs_en_municipios_rurales"], tol=0.0, unidad="AGEB")
                 t.nota(f"{tr:,} de las {len(m):,} AGEB urbanas ({tr / len(m) * 100:.1f} %) "
                        f"caen dentro de los {G['zap_rurales_municipios']:,} municipios ZAP "
-                       "rurales: las dos listas se traslapan, no son disjuntas.")
+                       "rurales: las dos listas se traslapan, no son disjuntas. La cifra la "
+                       "publica la nota metodológica; el archivo la reproduce al AGEB.")
 
     print("\n" + "=" * 130)
     print(f"RESULTADO: {t.ok} pruebas cierran, {t.fallo} fallan")

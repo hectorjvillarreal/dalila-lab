@@ -3,10 +3,13 @@
 **Autoría ITED.** Documento sobre el proyecto de Paquete Económico 2027, escrito el día de
 su entrega al Congreso, el 8 de septiembre de 2026.
 
-**Lleva una nota de actualización fechada el 9 de septiembre**, al final del documento. El
-cuerpo no se reescribió: la nota registra los anexos que la Gaceta no sirvió hasta el día
-siguiente, corrige un renglón del registro y publica dos hallazgos que el paquete completo
-permite. Ninguna cifra del cuerpo cambió.
+**Lleva dos notas de actualización fechadas**, al final del documento, y el cuerpo no se
+reescribió en ninguna de las dos. La del **9 de septiembre** registra los anexos que la
+Gaceta no sirvió hasta el día siguiente, corrige un renglón del registro y publica dos
+hallazgos que el paquete completo permite. La del **10 de septiembre** deja constancia de
+que el índice de la Gaceta se corrigió solo y confirmó el mapa de anexos que el documento
+había reconstruido de los PDF, y verifica las cuentas de la declaratoria urbana contra el
+archivo de las 43.636 AGEB. **Ninguna cifra del cuerpo cambió en ninguna de las dos.**
 
 ## Cómo compilar
 
@@ -47,14 +50,17 @@ O, en una sola pasada, `./compilar.sh`, que hace las cuatro cosas y copia el PDF
 | ruta | qué contiene |
 |---|---|
 | `main.tex` | maestro: preámbulo, macros de lámina y ficha, orden de capítulos |
-| `capitulos/` | los veintiún archivos de capítulo, incluida la nota de actualización |
-| `capitulos/cuadros/` | los veintidós cuadros, **generados, no escritos a mano** |
+| `capitulos/` | los veintidós archivos de capítulo, incluidas las dos notas de actualización |
+| `capitulos/cuadros/` | los veinticinco cuadros, **generados, no escritos a mano** |
 | `datos/_fuentes.csv` | una fila por cifra, con documento y ubicación |
 | `datos/ramos.csv` | Anexo 1 de los decretos 2026 y 2027, por clave de ramo |
 | `datos/ramo33.csv` | los ocho fondos del Ramo 33, del Anexo 22 |
 | `datos/anexos.csv` | totales de los anexos transversales de los dos ejercicios |
 | `datos/gaceta_anexos_2027.csv` | los trece anexos del paquete que sirve la Gaceta, con la letra que el índice les daba el día de la entrega |
 | `datos/vivienda_art61.csv` | la estimación del artículo 61 de la Ley de Vivienda, del anexo N |
+| `datos/gaceta_indice_convergencia.csv` | lo que el índice de la Gaceta dijo de cada anexo en sus tres versiones |
+| `datos/zap_urbanas_conteos.csv` | las cuentas de la declaratoria urbana, declaradas y recalculadas |
+| `datos/zap_municipios_nuevos.csv` | los siete municipios que sólo existen bajo la clave actualizada |
 | `generar_cuadros.py` | produce los cuadros desde los CSV de `datos/` |
 | `a_markdown.py` | produce la versión en Markdown desde el mismo LaTeX |
 | `validar_latex.py` | comprobación estática previa a compilar |
