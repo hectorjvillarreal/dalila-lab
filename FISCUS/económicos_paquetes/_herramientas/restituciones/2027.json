@@ -136,6 +136,20 @@
     "zap_urbanas_agebs": 43636,
     "zap_urbanas_localidades": 4531,
     "zap_urbanas_municipios": 2423,
-    "ramo15_mdp": 37873.6
+    "ramo15_mdp": 37873.6,
+    "zap_urbanas_microdatos": {
+      "_procedencia": "sisge.bienestar.gob.mx/dae/zap2027/zap_urbanas_2027_43636_variables_descarga.zip, ruta publicada dentro de la nota metodológica del anexo K y descargada el 2026-09-10. last-modified del servidor 2026-07-15, dos meses ANTES de la entrega del paquete. sha256 3e1a6ed30ddb269d932d0a2796f7745eb057854bc384b348748ccfd96ca7a4e6.",
+      "archivo": "2027/2027_zap-urbanas-agebs_variables.zip",
+      "encabezado_en_renglon": 4,
+      "columnas": [
+        0,
+        1,
+        2,
+        3,
+        11
+      ],
+      "_columnas": "índices de CLAVE DE ENTIDAD, CLAVE DE MUNICIPIO, CLAVE DE LOCALIDAD, CLAVE DE AGEB y CLAVE DE LOCALIDAD ACTUAL A JUNIO DE 2026.",
+      "columna_traslape_rural": 10
+    }
   }
 }

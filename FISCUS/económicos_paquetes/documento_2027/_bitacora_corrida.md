@@ -994,3 +994,119 @@ proyecto, las dos ranuras del ATDT, la ranura de plazas por vigilar, y la exposi
 motivos del PPEF, que va por su sexto ejercicio. **Y una tarea nueva:** el ZIP de las 43.636
 AGEB de la ZAP urbana, que la nota metodológica publica y que este proyecto todavía no ha
 descargado.
+
+---
+
+## Retoma, 2026-09-10T21:52-06:00
+
+Se ejecuta otra vez el orden del cierre. Los dos primeros renglones vuelven a no mover nada;
+el tercero vuelve a ser el que mueve, y aparece un cuarto que no estaba en la lista: la tarea
+nueva que dejó la adenda de ayer.
+
+### 33. Sondeo de los seis recursos: segundo día sin cambio
+
+| recurso | 09-08 21:45 | 09-09 07:33 | 09-10 21:52 |
+|---|---|---|---|
+| `…/Analiticos_Historico/2027/Proyecto/ac01_ra_pp_ur_og.xlsx` | 404 | 404 | **404** |
+| `…/2027/Proyecto/ac01_ra_f_ur_og.xlsx` | 404 | 404 | **404** |
+| `…/2027/Proyecto/ac01_ra_pp_ur_og_efe.xlsx` | 404 | 404 | **404** |
+| `…/2027/Proyecto/ac01_ra_f_ur_og_efe.xlsx` | 404 | 404 | **404** |
+| `…/PPEF_2027.csv` (ATDT) | 503 | 503 | **503** |
+| `…/anexos_transversales_ppef2027.csv` (ATDT) | 503 | 503 | **503** |
+
+**Sigue sin haber Ruta A**, al tercer día. Los cuatro analíticos devuelven el mismo 404 de
+2 978 bytes de HTML y las dos ranuras del ATDT el mismo 503 de 592 bytes: no es que el árbol
+esté vacío, es que no existe, y no es que el recurso falte, es que el servicio está caído.
+La distinción importa y se sostiene: **falla «árbol no creado», no falla «almacén roto»**.
+
+**La ranura de plazas tampoco se ha sobrescrito.** `last-modified` 2026-06-03T19:03:11 y
+`content-length` 11 663 197, byte por byte el archivo de 2026 que ya está en carpeta. Tercer
+día en vigilancia.
+
+### 34. El índice de la Gaceta se reescribió por tercera vez, y esta vez se corrigió
+
+Se bajó la tercera copia (`2027_gaceta_indice-entrega_20260910.html`, 86 039 bytes) y se
+comparó con la del 9. **El bloque que el día 9 estaba comentado ---con las letras y el año del
+ejercicio anterior--- se descomentó, se le corrigieron las letras y se le corrigió el año.**
+Lo que ahora publica el índice es esto:
+
+| letra | el índice del 8 | el índice del 9 | el índice del 10 |
+|---|---|---|---|
+| K | no listada | comentada, como «H … ZAP 2026» | **nota metodológica y declaratoria ZAP** |
+| L | no listada | comentada, como «J … rurales 2026» | **listado ZAP rurales 2027** |
+| M | no listada | comentada, como «K … urbanas 2026» | **listado ZAP urbanas 2027** |
+| N | no listada | comentada, como «L … vivienda 2026» | **estimación de subsidios de vivienda 2027** |
+
+**El índice quedó idéntico al cuadro C99.1 de la adenda**, que se construyó leyendo la primera
+página de cada PDF porque el índice no servía. No cambia una sola cifra del documento: lo que
+cambia es el estatus del cuadro, que pasa de reconstrucción propia a **reconstrucción propia
+confirmada por la fuente dos días después**. La regla que sale de aquí, y que ya está escrita
+en el registro de rutas: **el índice converge, pero tarda dos días; el día de la corrida la
+única fuente fiable es el PDF.**
+
+Dos detalles menores. El índice del 10 estrena un **Anexo O** (orden del día de la sesión) y un
+**Anexo V** (comunicación de la Mesa Directiva con los turnos), más una sección de
+Prevenciones: **nada de eso es paquete económico** y no toca el perímetro. Y el renglón K
+conserva un error de la fuente: titula «zonas de atención prioritaria 2026» en su primera
+cláusula y «2027» en la segunda, cuando el PDF es de 2027 en las dos.
+
+### 35. La tarea nueva, cumplida: las 43 636 AGEB de la ZAP urbana
+
+La adenda de ayer cerró con una tarea que no estaba en ninguna lista previa: **el ZIP de AGEB
+con variables que la propia nota metodológica publica y que este proyecto no había bajado.**
+Se bajó.
+
+`2027/2027_zap-urbanas-agebs_variables.zip`, 2 163 470 bytes, sha256 `3e1a6ed3…`, un solo
+`.xlsx` dentro, **encabezado en el renglón 5**, doce columnas, 43 636 renglones de datos.
+Manifiesto: **de 119 a 121 archivos**, con el índice del día 10.
+
+**Hallazgo de procedencia, y es el que más pesa para el año que viene:** el `last-modified`
+del servidor es **2026-07-15**, es decir **dos meses antes de la entrega del paquete**. Este
+archivo *no es pieza de cola*. Lo que llega con el paquete no es el archivo: es **el nombre
+del archivo**, porque el conteo de AGEB va dentro del nombre y sólo la nota metodológica lo
+dice. La ruta estaba servida desde julio y nadie podía adivinarla.
+
+**Las cinco cuentas de la declaratoria cierran contra el archivo** ---identidades 42 a 47, y el
+tablero pasa de 41 a **47 pruebas, 0 fallan**---:
+
+| cuenta | declarado en el anexo K | en el archivo |
+|---|---|---|
+| AGEB urbanas | 43 636 | **43 636**, y sin una sola repetida |
+| entidades | 32 | **32** |
+| municipios | 2 423 | **2 423**, sobre la clave actual |
+| localidades | 4 531 | **4 531**, sobre la clave actual |
+
+**«Sobre la clave actual» no es un detalle de redacción.** El archivo trae sus propias columnas
+de clave de municipio y de localidad, y con ésas los conteos **no cierran**: dan **2 416
+municipios y 4 540 localidades**. Lo que la declaratoria cuenta es la última columna, *clave de
+localidad actual a junio de 2026*. **120 AGEB están reasignadas**, 105 de ellas cambian de
+municipio, y aparecen **siete municipios que la clave vieja no tiene**: 02007 (San Felipe, Baja
+California), 04013 (Dzitbalché, Campeche), 12082 y 12085 (Guerrero), 24059 (San Luis Potosí),
+25019 y 25020 (Sinaloa). Son **los municipios de creación reciente**, que es justamente uno de
+los criterios de la cadena acumulativa de la nota metodológica. La diferencia 2 423 − 2 416 = 7
+es esa lista. Quien cuente sobre las columnas del archivo publicará una cifra que no coincide
+con la declaratoria y no sabrá por qué.
+
+**Un dato que la nota no publica y el archivo sí:** **25 836 de las 43 636 AGEB urbanas, el
+59,2 %, caen dentro de los 1 575 municipios ZAP rurales.** Las dos listas **no son disjuntas**:
+se traslapan en seis de cada diez AGEB urbanas. Cualquier suma de «municipios ZAP» que junte
+las dos declaratorias cuenta doble.
+
+B13 pasa de «registrada, no cruzada» a **«denominador en mano, cruce pendiente»**. El cruce con
+el gasto sigue exigiendo la distribución territorial, que sale de los analíticos: **enganchado
+a la Ruta A**, como todo lo demás.
+
+### 36. Estado al cierre del 10 de septiembre
+
+- **La entrega no se tocó.** El PDF de 66 páginas, el ZIP y el Markdown siguen siendo los del
+  9 de septiembre; ninguna cifra del documento cambió hoy.
+- **Lo de hoy es adquisición, verificación y registro**: dos archivos nuevos en `2027/`, dos
+  renglones nuevos en el manifiesto, seis identidades nuevas, dos notas de ruta corregidas y
+  B13 avanzado.
+- **Queda para Héctor una sola decisión**: si la confirmación del mapa de anexos por el propio
+  índice y las seis cuentas de la ZAP entran al documento como **segunda adenda fechada el
+  10**, o se quedan en bitácora hasta que llegue la Ruta A y se reabra el cuerpo. **No hay
+  urgencia:** nada de lo de hoy contradice una línea de lo entregado; lo confirma.
+- **Sigue abierto, sin cambios:** los cuatro analíticos del proyecto, las dos ranuras del ATDT,
+  la ranura de plazas por vigilar, la exposición de motivos del PPEF en su sexto ejercicio, y
+  B1, la vara de suficiencia en salud, que sigue siendo una línea de texto y un cociente.

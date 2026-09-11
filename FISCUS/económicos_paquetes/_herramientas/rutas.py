@@ -45,7 +45,12 @@ RUTAS = [
            "mañana del 9, y arrastra un bloque comentado con las letras del año "
            "anterior. GUÁRDALO CON MARCA DE TIEMPO CADA VEZ y quédate con las dos "
            "copias: la diferencia es evidencia. En 2026 fueron doce anexos, A-L; en "
-           "2027, catorce servidos, A-N, y el índice sólo listaba hasta J."),
+           "2027, catorce servidos, A-N, y el índice sólo listaba hasta J. SE REESCRIBE "
+           "MÁS DE UNA VEZ: en 2027 hubo tres versiones ---18:51 del día 8, mañana del 9 "
+           "y noche del 10---, y la tercera DESCOMENTÓ el bloque del año anterior y le "
+           "corrigió letras y año, quedando idéntica al mapa que nosotros habíamos leído "
+           "de la primera página de cada PDF. El índice converge, pero tarda dos días: "
+           "el día de la corrida la única fuente fiable sigue siendo el PDF."),
  dict(orden=2, id="gaceta_ilif", pieza="ILIF", metodo="GET",
       url="https://gaceta.diputados.gob.mx/PDF/{leg}/{anio_entrega}/sep/{fecha}-A.pdf",
       nota="Anexo A. CONTIENE SU PROPIA EXPOSICIÓN DE MOTIVOS: no la busques aparte. "
@@ -83,10 +88,17 @@ RUTAS = [
  dict(orden=5.2, id="bienestar_zap_urbanas", pieza="ZAP urbanas con variables (AGEB)",
       metodo="GET",
       url="https://sisge.bienestar.gob.mx/dae/zap{t}/zap_urbanas_{t}_43636_variables_descarga.zip",
-      nota="HALLAZGO 2026-09-09: la nota metodológica de la ZAP publica esta ruta. Las "
-           "43.636 AGEB urbanas prioritarias de 2027 con sus variables, legibles por "
-           "máquina. El conteo va EN EL NOMBRE del archivo, así que cambia cada año: "
-           "léelo de la nota metodológica, no lo supongas."),
+      nota="HALLAZGO 2026-09-09, DESCARGADA Y VERIFICADA EL 2026-09-10. La nota "
+           "metodológica de la ZAP publica esta ruta. Las 43.636 AGEB urbanas "
+           "prioritarias de 2027 con sus variables, legibles por máquina: ZIP de 2,1 "
+           "MB con un solo xlsx, ENCABEZADO EN EL RENGLÓN 5 y doce columnas. El conteo "
+           "va EN EL NOMBRE del archivo, así que cambia cada año: léelo de la nota "
+           "metodológica, no lo supongas. Y NO ES PIEZA DE COLA: el last-modified del "
+           "servidor es 2026-07-15, DOS MESES ANTES de la entrega. Lo que llega con el "
+           "paquete es el nombre, no el archivo. Cuenta municipios y localidades sobre "
+           "la CLAVE ACTUAL A JUNIO DE t-1 (última columna), no sobre las claves de sus "
+           "propias columnas: con ésas dan 2.416 y 4.540, no los 2.423 y 4.531 que "
+           "declara la nota."),
  # ---- 2. Analíticos del proyecto, en el portal de la Secretaría -----------
  dict(orden=6, id="analitico_p_gf_prog", pieza="analítico proyecto GF ramo-programa-UR-objeto",
       metodo="GET", url=PEF + "/{t}/Proyecto/ac01_ra_pp_ur_og.xlsx",

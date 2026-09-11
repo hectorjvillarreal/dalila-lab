@@ -210,6 +210,56 @@ def correr(anio: int) -> int:
                f"AÑOS DE PESOS DISTINTOS: el requerimiento está en pesos de 2026 (UMA y "
                f"Reglas de Operación de 2026) y el presupuesto en pesos de 2027.")
 
+        Z = G.get("zap_urbanas_microdatos")
+        if Z is None:
+            t.nota("sin bloque «zap_urbanas_microdatos»: no se verifican las 43.636 AGEB "
+                   "contra el archivo de variables.")
+        else:
+            ruta = AQUI.parent / Z["archivo"]
+            if not ruta.exists():
+                t.nota(f"no está en carpeta {Z['archivo']}: la declaratoria urbana queda "
+                       "verificada sólo por el PDF.")
+            else:
+                print("\n10. ZAP urbanas: la declaratoria contra el archivo de variables")
+                import pandas as pd, zipfile
+                with zipfile.ZipFile(ruta) as z:
+                    interno = [n for n in z.namelist() if n.lower().endswith(".xlsx")][0]
+                    with z.open(interno) as fh:
+                        m = pd.read_excel(fh, header=Z["encabezado_en_renglon"], dtype=str)
+                m = m.dropna(how="all")
+                col = list(m.columns)
+                ent, mun, loc, ageb, actual = (col[i] for i in Z["columnas"])
+                t.prueba("ZAP urbana: renglones del archivo = AGEB declaradas",
+                         len(m), G["zap_urbanas_agebs"], tol=0.0, unidad="AGEB")
+                t.prueba("ZAP urbana: AGEB sin repetir = renglones",
+                         m[ageb].nunique(), len(m), tol=0.0, unidad="AGEB")
+                t.prueba("ZAP urbana: entidades = 32",
+                         m[ent].nunique(), 32, tol=0.0, unidad="entidades")
+                # LA CLAVE QUE CUENTA ES LA ACTUALIZADA. Sobre la clave que el propio
+                # archivo trae en sus columnas, los dos conteos NO cierran: ver la nota.
+                t.prueba("ZAP urbana: municipios (clave actual) = declarados",
+                         m[actual].str[:5].nunique(), G["zap_urbanas_municipios"],
+                         tol=0.0, unidad="municipios")
+                t.prueba("ZAP urbana: localidades (clave actual) = declaradas",
+                         m[actual].nunique(), G["zap_urbanas_localidades"],
+                         tol=0.0, unidad="localidades")
+                mv, lv = m[mun].nunique(), m[loc].nunique()
+                reasignados = int((m[loc] != m[actual]).sum())
+                nuevos = sorted(set(m[actual].str[:5]) - set(m[mun]))
+                t.nota(f"sobre la clave que el archivo trae en sus columnas serían {mv:,} "
+                       f"municipios y {lv:,} localidades, no {G['zap_urbanas_municipios']:,} "
+                       f"y {G['zap_urbanas_localidades']:,}. La declaratoria cuenta sobre la "
+                       f"CLAVE ACTUAL A JUNIO DE 2026: {reasignados} AGEB están reasignadas y "
+                       f"aparecen {len(nuevos)} municipios que la clave vieja no tiene "
+                       f"({', '.join(nuevos)}), los de creación reciente.")
+                t.prueba("ZAP urbana: la columna del traslape rural parte el universo",
+                         int(m[col[Z['columna_traslape_rural']]].isin(["SI", "NO"]).sum()),
+                         len(m), tol=0.0, unidad="AGEB")
+                tr = int((m[col[Z['columna_traslape_rural']]] == "SI").sum())
+                t.nota(f"{tr:,} de las {len(m):,} AGEB urbanas ({tr / len(m) * 100:.1f} %) "
+                       f"caen dentro de los {G['zap_rurales_municipios']:,} municipios ZAP "
+                       "rurales: las dos listas se traslapan, no son disjuntas.")
+
     print("\n" + "=" * 130)
     print(f"RESULTADO: {t.ok} pruebas cierran, {t.fallo} fallan")
     for f in t.fallas:
