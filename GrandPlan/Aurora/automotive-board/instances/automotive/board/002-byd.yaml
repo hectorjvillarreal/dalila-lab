@@ -35,13 +35,13 @@ slots:
     confidence: reported
     decisive: false
   margin:
-    value: null
-    unit: null
-    delta: null
-    date: null
-    source: null
-    source_type: null
-    confidence: null
+    value: "18.85% gross margin, H1-2026 — revenue 344.82B yuan; net profit attributable 12.33B yuan"
+    unit: "% — gross margin, consolidated"
+    delta: "gross margin 18.01% in H1-2025; revenue −7.13% YoY; net profit attributable −20.54% YoY"
+    date: 2026-08-28
+    source: "https://cnevpost.com/2026/08/28/byd-h1-2026-earnings/"
+    source_type: secondary
+    confidence: reported
     decisive: false
     notes: "unset — board marks '(feed)'; awaiting feed data"
   cost_position:
