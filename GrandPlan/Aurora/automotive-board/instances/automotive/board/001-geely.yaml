@@ -52,13 +52,13 @@ slots:
       Eastern Europe, Latin America, Canada. Decisive for 2b (acquired legitimacy);
       note the unit — a portfolio of per-marque authorizations, not a scalar stock.
   margin:
-    value: null
-    unit: null
-    delta: null
-    date: null
-    source: null
-    source_type: null
-    confidence: null
+    value: "17.9% gross margin, H1-2026 — revenue RMB 173.6B; core profit attributable to owners RMB 9.68B"
+    unit: "% — gross margin, Geely Automobile Holdings consolidated"
+    delta: "revenue +15% YoY; core profit attributable +46% YoY; core profit per vehicle RMB 6,806 (+45% YoY)"
+    date: 2026-08-17
+    source: "https://global.geely.com/en/news/2026/geely-auto-record-h1-2026-revenue"
+    source_type: primary
+    confidence: confirmed
     decisive: false
     notes: "unset — board marks '(feed)'; awaiting feed data"
   cost_position:
