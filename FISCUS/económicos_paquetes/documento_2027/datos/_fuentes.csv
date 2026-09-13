@@ -135,3 +135,11 @@ pc_plat_prod_27,Plataforma de produccion,2027,pre-criterios,1806.1,mbd,Pre-Crite
 pc_plat_exp_27,Plataforma de exportacion,2027,pre-criterios,427.6,mbd,Pre-Criterios 2027,Anexo I p. 34
 pc_infl_dic_27,Inflacion INPC dic./dic.,2027,pre-criterios,3.0,pct,Pre-Criterios 2027,Anexo I p. 34
 ramo54_27,Ramo 54 Mujeres,2027,proyecto,2269.4,mdp,Decreto PEF 2027,Anexo 1 p. 70
+pc_rfsp_27,RFSP,2027,pre-criterios,-1390632.3,mdp,Pre-Criterios 2027,p. 32
+pc_rfsp_pct_27,RFSP,2027,pre-criterios,-3.5,pct del PIB,Pre-Criterios 2027,p. 32
+pc_shrfsp_27,SHRFSP,2027,pre-criterios,21848685.1,mdp,Pre-Criterios 2027,p. 32
+pc_shrfsp_pct_27,SHRFSP,2027,pre-criterios,55.0,pct del PIB,Pre-Criterios 2027,p. 32
+cg_p32_pens_nc_27,"Pensiones no contributivas (Adultos Mayores, Mujeres, Discapacidad)",2027,proyecto,640291.0,mdp,CGPE 2027 (ed. SHCP),"p. 32, Programas sociales prioritarios"
+cg_p32_inv_total_27,"Prioridades de inversion, total",2027,proyecto,560172.6,mdp,CGPE 2027 (ed. SHCP),"p. 32, Prioridades de inversion"
+cg_gce_nuevos_rubros_cp25,Rubros (7) a (10) excluidos del gasto corriente estructural,2025,cuenta publica,1964499.8,mdp,CGPE 2027 (ed. SHCP),p. 24
+an_73903_27,Ramo 18 partida 73903 aportaciones de capital,2027,proyecto,81103.0,mdp,Analitico PPEF 2027 GF ramo-programa-UR-objeto,"Hoja1, ramo 18, PE 73903"

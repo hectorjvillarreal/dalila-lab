@@ -73,6 +73,26 @@ gastar reloj en buscarlo.
 | C6 | **Incidencia distributiva completa** | Microdatos y modelo de incidencia | **No** | **Fuera de alcance por decisión de la instrucción** (§4) |
 | C7 | **El espacio fiscal como cifra única** | Definición propia | n/a | **No se adopta.** Es un concepto que este proyecto no computa; lo que el género resume en una cifra, nuestro documento lo dice en tres capítulos. Se declara la diferencia de enfoque, no se copia la cifra |
 
+### D. Estado al 12 de septiembre de 2026, tras la comparación con CIEP y la Ruta A
+
+La comparación con CIEP (`documento_2027/comparacion_2027.md`) hizo el trabajo que esta
+lista debía hacer en vivo, y **encontró omisiones que la lista no tenía como renglón**. Se
+registran aquí; la tercera nota de actualización del documento las publica.
+
+| # | renglón | estado |
+|---|---|---|
+| B1 | Vara externa de salud (6 % del PIB) | **Sigue fuera, cuarto ejercicio** contando 2025. CIEP la trae otra vez |
+| B2 | Pronóstico externo del marco macro | **Sigue fuera.** CIEP cita FMI, Banco Mundial y la encuesta de Banxico |
+| B3 | Pre-Criterios | **A medias en el cuerpo**: sólo macro. La meta fiscal de abril (RFSP 3,5 %) entra en la tercera nota |
+| B5 | Mujeres como proporción del anexo de igualdad | **HECHO** (0,36 %, capítulo de anexos) |
+| B10 | Pensiones en el anexo de igualdad | **HECHO** en la tercera nota: 57,2 % en 2027 contra 48,1 % en 2026 |
+| C5 | Inversión por proyecto con nombre | **Tiene fuente**: la tabla «Prioridades de inversión» de la **p. 32 del CGPE** (total 560.172,6). El documento sólo cita el total |
+| D1 | **Anexos que nombra el artículo 3 del decreto contra anexos extraídos** | **Nuevo.** El Anexo 32 no tiene encabezado ni total en el decreto y la extracción lo perdió |
+| D2 | **Leer el CGPE completo antes de escribir «la fuente no lo publica»** | **Nuevo.** La p. 24 (metodología del gasto corriente estructural) y la p. 32 (inversión por proyecto, pensiones no contributivas) estaban en carpeta |
+| D3 | **Antes de declarar Ruta B, buscar el prefijo vigente del árbol del PPEF en lo publicado** | **Nuevo.** Véase la adenda 2027 de `mapa_fuentes.md` |
+| D4 | **Titulares cuyo signo depende del deflactor** | **Nuevo.** «Por persona de 65 y más, las pensiones caen 0,4 %» sube 0,3 % con 1,0325. Toda afirmación con variación real menor que la brecha entre deflactores (~0,8 pp) lleva línea de sensibilidad |
+| D5 | **Ramos brutos que cuentan dos veces** | **Nuevo.** El Ramo 19 transfiere al IMSS y al ISSSTE; en un cuadro de ramos se advierte o se neta |
+
 ---
 
 ## Renglón que la lista aprendió a incluir sola

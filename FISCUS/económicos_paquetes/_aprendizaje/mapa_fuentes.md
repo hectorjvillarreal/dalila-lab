@@ -10,7 +10,19 @@ Válido para la estructura del paquete 2020; verificar paginación en cada ejerc
 | ILIF | ingresos por concepto (art. 1o.); techo de deuda (art. 2o.); método de pronóstico; series y proyección de ingresos; gastos fiscales; "otras medidas" (dividendo, Pidiregas, meta Pemex) | PDF 52–61 (art. 1o.); 65–66 (art. 2o.); I–XII (método, series, gastos fiscales); XXX–XXXV (otras medidas) |
 | EM (PPEF) | acciones de gasto; programas por ramo (texto); series 2015–2019 por clasificación; perspectiva 2021–2025; estimación 2020 y cuentas dobles; clasificación administrativa, económica (incl. pensiones por institución), funcional, federalizado; anexos transversales | p. 14 (acciones); p. 63–72 (Bienestar, IMSS, ISSSTE); p. 127–134 (series); p. 140–143 (2021–2025); p. 146–152 (estimación, costo financiero, cuentas dobles); p. 155–167 (administrativa); p. 169–171 (económica; pensiones p. 171); p. 188 (federalizado); p. 189–192 (funcional); p. 195–217 (anexos transversales) |
 | DEC (PPEF) | gasto neto (art. 2); metas Pemex/CFE (art. 5); IMSS aportaciones GF (art. 6); Anexo 1 por ramo; Anexo 2 GCE; Anexo 3 gastos obligatorios con/sin pensiones; Anexos 10–19 transversales; Anexo 25/26 programas | p. 2, 6–7; p. 57–58 (Anexo 1); p. 59 (Anexos 2–5); p. 65–88 (transversales); p. 141–144 |
-| Analíticos PPEF (xlsx) | todo lo de abajo | `ppef.hacienda.gob.mx/es/PPEF{año}/analiticos_presupuestarios` → `/work/models/PPEF{año}/analiticosPresupuestarios/Proyecto/` |
+| Analíticos PPEF (xlsx) | todo lo de abajo | hasta 2021: `ppef.hacienda.gob.mx/work/models/PPEF{año}/analiticosPresupuestarios/Proyecto/`. **2027: `ppef.hacienda.gob.mx/work/models/PP3F2709/PPEF2027/yik327fP/analiticosPresupuestarios/` SIN `/Proyecto/`** (ver «Adenda 2027: árbol con prefijo ofuscado») |
+
+## Adenda 2027: árbol con prefijo ofuscado (2026-09-12)
+
+**El 404 sobre la ruta conocida no probaba que el recurso no existiera: la Secretaría movió el árbol del PPEF a un prefijo ofuscado.** Se descubrió por las referencias del documento de CIEP, no por sondeo.
+
+- Raíz 2027: `https://www.ppef.hacienda.gob.mx/work/models/PP3F2709/PPEF2027/yik327fP/`. Con el bundle TLS de `_herramientas/_certs/bundle.pem`.
+- `analiticosPresupuestarios/ac01_ra_{pp,f}_ur_og{,_efe}.xlsx`: 200, Last-Modified 2026-09-11 20:55 GMT. **Con `/Proyecto/` da 404.** Descargados 2026-09-12 23:08 (manifiesto).
+- `docs/carta/Carta.pdf`: 200, Last-Modified **2026-09-08 08:58 GMT** (existía el día de la entrega). `docs/exposicion/EM_Documento_Completo.pdf` y `EM_Capitulo_N.pdf`: 206. `paquete/ingresos/LISR_2027.pdf`: 206.
+- Las páginas `/es/PPEF2027/*` responden 200 pero no traen enlaces estáticos (se arman por JS): **no sirven para descubrir el prefijo**.
+- ATDT `PPEF_2027.csv` y `anexos_transversales_ppef2027.csv`: 403 el 2026-09-12. La auditoría de etiquetado se hizo **leyendo las tablas de los anexos del decreto** (`documento_2027/ruta_a.py`), que desde 2027 traen objetivo, ramo, programa y acción.
+
+**Regla nueva.** Antes de declarar Ruta B: (1) buscar el prefijo vigente en cualquier documento publicado que enlace al árbol (la Carta, referencias de terceros, el HTML de la Gaceta); (2) probar el mismo sufijo conocido bajo ese prefijo, con y sin `/Proyecto/`; (3) sólo entonces declarar ausencia, con la ruta probada. **El prefijo cambia por ejercicio: no lo supongas para 2028.**
 
 ## Analíticos: archivos y columnas
 

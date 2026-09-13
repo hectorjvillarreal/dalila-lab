@@ -2580,3 +2580,306 @@ territorial y **este documento no lo ha cruzado con un peso**: para hacerlo hace
 la distribución territorial del gasto, que exige los analíticos del proyecto. Tampoco que
 los 2.416 municipios de las columnas del archivo sean un error: son otro mapa municipal,
 el del censo, y la declaratoria no cuenta sobre él.
+
+## Tercera nota de actualización, 12 de septiembre de 2026
+
+> **La Ruta A existía**: los analíticos del proyecto estaban publicados bajo un
+prefijo de dirección distinto del que este documento sondeó tres días. Con ellos, el
+perímetro pensionario se reparte por institución —el IMSS aporta 125.702,8 de los
+136.586,9 mdp del aumento—, la salud del IMSS se separa de sus pensiones, y la auditoría de
+etiquetado se hace. Y una corrección que no dependía de la ruta: la caída del gasto
+corriente estructural no se explica sólo por la exclusión de las empresas públicas.
+
+**Qué es esta nota y qué no es.** Es la tercera adenda y obedece a la misma regla:
+**el cuerpo de los dieciséis capítulos no se reescribe**. A diferencia de las dos
+anteriores, **esta nota corrige afirmaciones del cuerpo**, y dice cuáles. Ninguna cifra
+del cuerpo estaba mal calculada; lo que cambia es lo que el cuerpo dijo que no se podía
+saber y dos lecturas que excedían su cálculo. Lo que se añade sale de fuentes que se
+leyeron el 12 de septiembre; el documento de CIEP sobre el mismo paquete, publicado el 11, se
+leyó ese mismo día, **después** de cerrar las dos notas anteriores.
+
+### Uno. La ruta, y lo que el registro dijo mal
+
+El registro y las dos notas afirman que los cuatro analíticos del proyecto respondían 404
+porque **«el árbol de 2027 no existe»**, y que la exposición de motivos del PPEF no se
+servía **por sexto ejercicio consecutivo**. Las dos afirmaciones son falsas
+para 2027. Los 404 eran ciertos; el diagnóstico, no: se sondeó la ruta de los ejercicios
+anteriores. La Secretaría publicó el paquete bajo el prefijo
+`ppef.hacienda.gob.mx/work/models/PP3F2709/PPEF2027/yik327fP/`, que este proyecto no
+conocía y que localizó en las referencias del documento de CIEP.
+
+itemize
+ **La Carta del proyecto** está ahí con fecha de servidor del 8 de
+septiembre, 08:58 GMT: existía el día de la entrega. La exposición de motivos también se
+sirve: se verificó el documento completo y su primer capítulo.
+ **Los cuatro analíticos** se sirven en la carpeta de analíticos presupuestarios de
+ese árbol, **sin** el segmento «Proyecto» —con él siguen dando 404—, con fecha de
+servidor del 11 de septiembre, 20:55 GMT. Esa fecha es posterior a la tercera sonda de este
+documento; **no se sabe si es la de primera publicación o la de una resubida**, y no se
+afirma ninguna de las dos.
+itemize
+
+**Cambio de ruta: 12 de septiembre, 23:08 — Ruta A.** Los analíticos se descargaron,
+y antes de usarlos se probaron: los cuarenta ramos del Anexo 1 salen del analítico en los
+dos ejercicios con una diferencia máxima de 0,05 mdp, y el IMSS, el ISSSTE, Pemex y CFE de
+2027 salen al décimo.
+
+**Por qué importa.** **Un 404 sobre una ruta conocida no prueba que el recurso no exista.**
+Este documento distinguió con cuidado entre «árbol no creado», para los analíticos, y
+«servicio caído», para el portal de datos abiertos; el primero de los dos diagnósticos
+era de ruta. El segundo sigue en pie: esas ranuras responden 403 el 12 de septiembre. La
+regla que queda: antes de declarar
+que una fuente no se publicó, se busca su dirección vigente en lo que sí se publicó.
+
+**El diff institucional**, que la Ruta B no permitió, se corrió: ningún ramo
+nace ni se extingue entre 2026 y 2027, y casi todo lo que aparece como programa nuevo es
+recodificación —el Ramo 28 abre en fondos con nombre propio lo que era un solo concepto;
+CFE renumera tres programas; el programa de atención gratuita de IMSS-Bienestar se divide en
+tres—. **La Guardia Nacional sigue en el Ramo 07 y crece 28,9 % real**, sin cambio de
+ramo; el Cuerpo de Policía Militar desaparece como unidad responsable, y el analítico no
+permite atribuir a dónde fue su presupuesto.
+
+### Dos. La regla fiscal: por qué cae el gasto corriente estructural
+
+El capítulo de la regla fiscal y la implicación 2 atribuyen la caída del agregado —de
+3.868.319,9 a 1.884.958,2 mdp— a que la reforma de abril a la LFPRH dispone que el gasto
+de las empresas públicas «no se contabilizará». Es incompleto, y la fuente que lo
+completa estaba en carpeta desde el 8 de septiembre: el propio CGPE publica la metodología
+nueva en su página 24.
+
+**Cuadro C99.6 — El límite máximo del gasto corriente estructural con la metodología nueva (mdp)**
+
+| Concepto | Monto |
+|---|---|
+| **A) Gasto neto pagado CP 2025** | **8.374.179,5** |
+| (1) Costo financiero | 1.131.312,2 |
+| (2) Participaciones | 1.350.864,7 |
+| (3) Adefas | 28.863,6 |
+| (4) Pensiones y jubilaciones | 1.458.485,7 |
+| (5) Inversión física y financiera directa GF y ECPD | 643.527,6 |
+| (6) Inversión física y financiera directa ECPI | 35.936,0 |
+| **(7) Programas sociales universales establecidos en la CPEUM** | **766.412,4** |
+| **(8) Servicios personales función educación** | **648.331,6** |
+| **(9) Servicios personales función salud** | **522.120,5** |
+| **(10) Servicios personales función asuntos de orden público y de seguridad interior** | **27.635,3** |
+| **B) Gasto corriente estructural pagado CP 2025** | **1.760.689,7** |
+| Diferimiento de pagos | 75.720,6 |
+| **C) Gasto corriente estructural devengado CP 2025** | **1.836.410,3** |
+| **D) Límite máximo para 2027** | **2.058.457,0** |
+| **Suma de los rubros (7) a (10)** | **1.964.499,8** |
+
+<sub>Fuente: CGPE 2027, edición SHCP, p. 24, extraído del PDF a `datos/gce_limite_2027.csv`. El renglón A excluye, además, el gasto de las empresas públicas del Estado (nota 2/ del propio cuadro, artículo 2, fracción XXIV Bis, de la LFPRH). **Los rubros en negritas no se restaban antes**; son de la Cuenta Pública 2025, no del proyecto 2027. La D resulta de actualizar C por precios (3,8 y 4,0 %) y crecimiento real (1,9 % cada año).</sub>
+
+El cómputo nuevo resta, además de las empresas públicas, cuatro rubros que antes no
+restaba: los programas sociales universales establecidos en la Constitución y los servicios
+personales de las funciones de educación, salud y orden público. Sobre la Cuenta Pública
+2025, esos cuatro rubros suman **1.964.499,8 mdp**.
+
+**Por qué importa.** **La frase correcta es otra**: el agregado que la regla mide ya no excluye
+sólo a las empresas públicas, sino también a los programas sociales constitucionales y a la
+nómina de tres funciones. La cifra de los rubros nuevos es de la Cuenta Pública 2025 y la
+caída del agregado es entre dos proyectos, de modo que **no se restan una de otra**; lo
+que se puede decir es que son del mismo orden de magnitud, y que el gasto corriente de las
+empresas públicas sin costo financiero —573.721,3 mdp en el proyecto 2027, según los
+analíticos— es bastante menor.
+
+**El punto que el capítulo dejó «ni se afirma ni se niega» queda resuelto.** Sí hay
+aportación de capital a una empresa pública clasificada en el capítulo 7000: la partida
+**73903** del Ramo 18 lleva **81.103,0 mdp** en 2027, contra 263.476,3 en 2026. Con
+la partida exacta, la aritmética del capítulo de energía se afina: el resto del Ramo 18 sube
+**568,4 mdp**, no 571,1, que salía de las cifras redondeadas de la prosa del CGPE.
+
+### Tres. Pensiones por institución, y dos advertencias al cuerpo
+
+**Cuadro C99.7 — El perímetro pensionario por institución, y el Ramo 19 bruto y neto, línea P (mdp)**
+
+| Institución | 2026 | 2027 | Dif. nominal | Var. real (%) |
+|---|---|---|---|---|
+| IMSS | 1.010.525,2 | 1.136.228,0 | 125.702,8 | +8,1 |
+| ISSSTE | 395.156,0 | 409.867,0 | 14.711,0 | −0,3 |
+| Pemex | 92.333,4 | 94.472,9 | 2.139,5 | −1,6 |
+| CFE | 67.841,7 | 66.154,8 | −1.686,9 | −6,2 |
+| Resto del Gobierno Federal, por diferencia | 138.302,9 | 134.023,4 | −4.279,5 | −6,8 |
+| **Perímetro del Anexo 3** | **1.704.159,2** | **1.840.746,1** | **136.586,9** | **+3,9** |
+| *Ramo 19: no se suma a lo anterior* |  |  |  |  |
+| Ramo 19 bruto | 1.541.518,7 | 1.661.007,9 | 119.489,2 | +3,6 |
+| Transferido a IMSS e ISSSTE (UR GYR y GYN) | 1.401.952,8 | 1.526.114,6 | 124.161,8 | +4,7 |
+| Ramo 19 neto de esas transferencias | 139.565,9 | 134.893,2 | −4.672,7 | −7,1 |
+
+<sub>Fuente: analíticos del proyecto 2026 y 2027, tipo de gasto 4 (pensiones y jubilaciones), `datos/ruta_a/pensiones_tg4_institucion.csv`; perímetro por diferencia de los dos renglones del Anexo 3 de los decretos. Deflactor del PIB 1,040. **El Ramo 19 bruto cuenta dos veces lo que transfiere al IMSS y al ISSSTE**, que reaparece en el presupuesto de esas entidades; el neto es la cifra que publica CIEP.</sub>
+
+El perímetro que este documento adjudicó por diferencia del Anexo 3 se descompone
+ahora sin residuo inexplicado. El IMSS pasa de 1.010.525,2 a **1.136.228,0 mdp**,
+$+$8,1 % real, y aporta el 92 % del aumento del perímetro; el ISSSTE, Pemex, CFE y el resto
+del Gobierno Federal caen en términos reales. El «qué no sabemos» del capítulo de pensiones
+queda respondido.
+
+**Primera advertencia: el Ramo 19 del cuadro de gasto total.** El cuadro de los ramos
+que más se mueven pone al Ramo 19 en segundo lugar, con $+$119.489,2 mdp. La cifra es
+correcta y es bruta: lo que el Ramo 19 transfiere al IMSS y al ISSSTE crece
+124.161,8 mdp, más que todo el aumento del ramo, y esos mismos pesos reaparecen en el
+presupuesto del IMSS. Neto de esas transferencias, el Ramo 19 **cae**. Leer el renglón
+bruto como una prioridad de gasto nueva sería contar dos veces.
+
+**Segunda advertencia: el titular de pensiones por persona.** El resumen y la
+implicación 4 dicen que, por persona de 65 años y más, el gasto pensionario cae
+0,4 % real. Con el deflactor del PIB (1,040) es así. Con el índice que usa el propio CGPE
+en sus cuadros (1,0325), el mismo cociente **sube 0,3 %**. Una cifra que cambia
+de signo con la convención de deflactación no sostiene un verbo: lo que el documento puede
+afirmar es que el perímetro pensionario **crece prácticamente al mismo ritmo** que la
+población de 65 años y más, no que caiga por persona. La nota de método promete una línea de
+sensibilidad para estos casos, y este titular no la tuvo.
+
+### Cuatro. Salud del IMSS y del ISSSTE, separada de sus pensiones
+
+**Cuadro C99.8 — IMSS e ISSSTE por función, y la función salud completa, línea P (mdp)**
+
+| Entidad | Función | 2026 | 2027 | Var. real (%) |
+|---|---|---|---|---|
+| IMSS | 2.3 salud | 556.342,6 | 640.797,1 | +10,8 |
+| IMSS | 2.6 protección social | 1.032.733,4 | 1.160.838,9 | +8,1 |
+| ISSSTE | 2.3 salud | 81.525,8 | 99.963,9 | +17,9 |
+| ISSSTE | 2.6 protección social | 457.005,5 | 471.135,6 | −0,9 |
+| **Función salud, GF y entidades** | 2.3 | **974.302,2** | **1.114.506,5** | **+10,0** |
+
+<sub>Fuente: analíticos del proyecto por ramo, función, UR y objeto del gasto, de Gobierno Federal y de entidades; `datos/ruta_a/entidades_funcion.csv` y `salud_subfuncion.csv`. La función 2.6 del IMSS y del ISSSTE contiene sus pensiones. La función salud de 2026 reproduce la del documento 2026, 974.302,2.</sub>
+
+El capítulo de salud tituló que el presupuesto del IMSS crece 9,0 % y advirtió, con razón,
+que esa cifra mezcla atención médica y pensiones. Separadas, la función salud del
+IMSS crece 10,8 % real y la del ISSSTE 17,9 %; la protección social del ISSSTE, que
+contiene sus pensiones, cae. La función salud completa, del Gobierno Federal y las
+entidades, pasa de 974.302,2 a **1.114.506,5 mdp**, $+$10,0 % real.
+
+Una caída que **no debe leerse**: la subfunción 2.3.4 cae 74,3 %, y casi toda es el
+Ramo 33 —el FASSA— que baja en esa subfunción lo que sube en la 2.3.2. Es el mismo fondo
+reclasificado entre subfunciones, no un recorte.
+
+### Cinco. Anexos transversales: la auditoría que faltaba, y el anexo que faltaba
+
+**El capítulo de anexos dice «aparece un anexo nuevo, el 33». Son dos.** El proyecto de
+decreto trae también el **Anexo 32, Acciones para la Movilidad y Seguridad Vial**,
+con **175.045,5 mdp**, y el artículo 3 del propio decreto los nombra a los dos. El 32 no
+se leyó porque en el decreto **no tiene encabezado ni renglón de total**: su tabla
+empieza a media página, y el procedimiento de lectura reconocía cada anexo por esos dos
+renglones. Con él, la suma aritmética de los anexos del cuadro cua:trans sería
+de 4.600.786,6 mdp; sigue sin medir ningún gasto.
+
+Las ranuras de datos abiertos siguen sin servir el etiquetado por programa, así que la
+auditoría se hizo **leyendo las tablas de los anexos del decreto**, que desde 2027 traen
+objetivo, ramo, programa y acción, y validando cada extracción contra el total de su anexo.
+
+**Cuadro C99.9 — La auditoría de etiquetado de los anexos transversales**
+
+| Indicador | 2026 | 2027, mismos anexos | 2027, con el 32 y el 33 |
+|---|---|---|---|
+| Programas etiquetados | 226 | 228 | 243 |
+| Programas en más de un anexo | 123 | 123 | 136 |
+| **% del etiquetado en programas con más de una etiqueta** | **95,4** | **95,8** | **95,2** |
+| Suma aritmética de etiquetas (mdp) | 4.284.445,1 | 4.381.269,1 | 4.599.683,9 |
+| **Pensiones no contributivas en el Anexo 13 (%)** | **48,1** | **57,2** | **57,2** |
+| Anexo 32: programas ya etiquetados en otro anexo | — | — | 16 de 23 |
+| Anexo 32: mdp ya etiquetados en otro anexo | — | — | 130.912,2 de 175.045,5 |
+| Anexo 33: programas ya etiquetados en otro anexo | — | — | 54 de 62 |
+| Anexo 33: mdp ya etiquetados en otro anexo | — | — | 43.322,2 de 43.369,4 |
+
+<sub>Fuente: tablas de los anexos 13 a 19, 31, 32 y 33 de los proyectos de decreto, extraídas programa por programa y validadas contra el «Total general» de cada anexo (cobertura del 100 % salvo el Anexo 13 de 2027, 99,99 %, y el 31, 99,78 %; el 32 no imprime total). `datos/ruta_a/anexos_auditoria.csv`. Pensiones no contributivas: claves S176, S286 y S316. **La suma de etiquetas no mide gasto.**</sub>
+
+**Las tres preguntas que el capítulo dejó sin responder, respondidas:**
+itemize
+ **El traslape no cambia:** el 95,8 % de lo etiquetado en los anexos que existían
+en 2026 está en programas que llevan más de una etiqueta; en 2026 era el 95,4 % con el mismo
+procedimiento.
+ **El anexo de igualdad se vuelve más pensión:** el 57,2 % son tres pensiones no
+contributivas, contra el 48,1 % de 2026.
+ Los dos anexos nuevos son, sobre todo, etiqueta sobre programas ya
+etiquetados: el 99,9 % de los pesos del Anexo 33 y el 74,8 % de los del Anexo 32 están
+en programas que ya llevaban otra etiqueta en 2027. Responde el «qué no sabemos» del
+capítulo sobre el Anexo 33.
+itemize
+
+**Cuadro C99.10 — Los cinco programas que más etiqueta pierden en el Anexo 16, cambio climático (mdp)**
+
+| Ramo-programa | Nombre | Etiqueta 2026 | Etiqueta 2027 | Presupuesto 2026 |
+|---|---|---|---|---|
+| 07-A001 | Defensa de la Integridad, la Independencia, la Soberanía del Territorio Nacional | 44.673,4 | 0,0 | 44.673,4 |
+| 07-K003 | Infraestructura en materia de seguridad nacional | 40.000,0 | 0,0 | 1.510,9 |
+| 18-P038 | Articulación de la política de hidrocarburos | 26.370,0 | 0,0 | 263.700,0 |
+| 07-E017 | Servicios de dirección la infraestructura aeroportuaria, ferroviaria y de servicios auxiliares | 3.422,2 | 21,0 | 3.422,2 |
+| 07-E015 | Servicios Públicos de Transporte Masivo de Personas y Carga Tren Maya | 744,1 | 139,4 | 744,1 |
+| **Anexo 16 completo** |  | **212.569,7** | **160.120,9** |  |
+
+<sub>Fuente: Anexo 16 de los proyectos de decreto 2026 y 2027; presupuesto del programa, del analítico del proyecto 2026. `datos/ruta_a/anexo16_programas.csv`. **La etiqueta de 2026 del K003 es más de 26 veces el presupuesto del programa**, y el programa no existe en 2027.</sub>
+
+**La caída del Anexo 16 es de etiquetado.** Tres programas dejan de etiquetarse y suman
+111.043,4 mdp: dos de Defensa y el de articulación de la política de hidrocarburos, cuyo
+presupuesto se redujo por la reformulación del rescate de Pemex. No es la conclusión
+de la inversión del Tren Maya: su programa de servicios de transporte pierde 604,8 mdp de
+etiqueta. Y una anomalía de la fuente, que se registra sin interpretarla: en 2026 el
+anexo etiquetó 40.000,0 mdp a un programa cuyo presupuesto en el analítico del proyecto era
+de 1.510,9.
+
+### Seis. Lo que estaba en el CGPE y en los Pre-Criterios, y no se usó
+
+Tres omisiones propias que **no dependían de la ruta**, y que el documento declaró como
+límites de la fuente:
+itemize
+ **La inversión por proyecto.** El capítulo de inversión escribió que la
+composición por proyecto «exige el analítico del proyecto y la cartera». La página 32 del
+CGPE publica las prioridades de inversión por proyecto, con un total de 560.172,6
+mdp.
+ **La pensión no contributiva por programa.** El capítulo de pensiones escribió que
+«se puede acotar con el Ramo 20, pero no separar». La misma página publica las tres pensiones
+no contributivas, que suman **640.291,0 mdp**.
+ **La meta fiscal de abril.** El capítulo macro comparó los Pre-Criterios con el
+CGPE sólo en variables macroeconómicas. Los Pre-Criterios fijaban unos RFSP de
+3,5 % del PIB para 2027; el CGPE los deja en 3,9. El saldo proyectado, 55,0 % del PIB, es el
+mismo porcentaje en los dos documentos sobre dos PIB distintos.
+itemize
+
+### Siete. Qué se volvió a correr
+
+itemize
+ **Identidades del paquete: de 49 a 52 pruebas, ninguna falla.** Las tres nuevas
+corren solas al estar los analíticos de 2027 en carpeta: el bruto del Anexo 1 contra los
+analíticos del Gobierno Federal y de las entidades, y el corte por función contra el corte
+por programa en cada uno de los dos, las tres al peso.
+ **Guion de la Ruta A**, nuevo: los cuarenta ramos y las cuatro entidades contra el
+Anexo 1, la función salud y la partida 73903 de 2026 contra el documento de ese año, el Ramo
+19 neto, el Anexo 32, el cuadro del gasto corriente estructural contra su propia aritmética
+y las tablas de la página 32 del CGPE: **catorce pruebas, ninguna falla**.
+ **Compuerta semántica**, aplicada al titular, a los cinco pies de cuadro y a las
+frases de «por qué importa» de esta nota; el detalle está en la bitácora.
+ **Checklist de omisiones**: B2 y B3 quedan resueltas a medias —la meta de abril
+sí, el pronóstico externo no—; B5 y B10 resueltas; C5 encuentra su fuente en la página 32 del
+CGPE, de la que esta nota sólo cita el total; **B1, la vara de suficiencia en salud, sigue fuera, ahora por cuarto ejercicio**
+contando el de 2025.
+itemize
+
+**Lo que sigue sin hacerse**, aunque la Ruta A ya lo permitiría: el agua dentro del Ramo
+16; la lectura de la exposición de motivos del PPEF; la línea G por programa; y el cruce de
+la ZAP con el gasto, que el analítico no permite porque llega a entidad federativa y no a
+municipio.
+
+**Ficha metodológica — tercera nota de actualización**
+
+- **Perímetro:** Los del cuerpo, más: tipo de gasto 4 de los analíticos por institución;
+funciones 2.3 y 2.6 de las entidades; partida 73903; tablas de los anexos transversales
+programa por programa; y el cuadro de la página 24 del CGPE, que es de Cuenta Pública 2025.
+- **Línea de comparación:** Línea P en todos los cuadros de los analíticos. El cuadro del gasto
+corriente estructural no tiene línea: es un cómputo de la Cuenta Pública 2025 proyectado.
+- **Deflactor:** Del PIB, 1,040. La sensibilidad al índice de 1,0325 se reporta sólo donde
+cambia el signo de una afirmación del cuerpo.
+- **Año de los pesos:** Pesos corrientes en los niveles; pesos de 2027 en las variaciones.
+Pesos de 2025 en el cuadro cua:gcemetodo.
+- **Denominadores:** Población de 65 años y más, de la capa demográfica, sólo en la
+sensibilidad del titular de pensiones.
+- **Fuentes:** Los cuatro analíticos del proyecto 2027 y los de 2026, en la carpeta de cada
+ejercicio con su sha256 en el manifiesto; los proyectos de decreto 2026 y 2027; CGPE 2027,
+pp. 24 y 32; Pre-Criterios 2027, p. 32. Los CSV de esta nota están en
+`datos/ruta_a/` y los genera `ruta_a.py`, que viaja en la carpeta del
+proyecto y no en este paquete porque exige los analíticos.
+- **Qué no puede afirmarse con ellas:** Que la caída del gasto corriente estructural se
+descomponga exactamente en los cuatro rubros nuevos: son de otro año y de otra base. Que el
+Anexo 33 no tenga pesos nuevos: el 0,1 % restante son programas que no llevaban otra
+etiqueta, no necesariamente gasto nuevo. Ni que la fecha del servidor de los analíticos sea
+la de su primera publicación.

@@ -1201,3 +1201,133 @@ queda archivado en `2027/` con su sha256 en el manifiesto, y el LEEME de `datos/
 **Sigue abierto, sin cambios:** los cuatro analíticos del proyecto, las dos ranuras del ATDT,
 la ranura de plazas por vigilar, la exposición de motivos del PPEF en su sexto ejercicio, y
 B1.
+
+---
+
+## 12 de septiembre de 2026 · comparación con CIEP y cambio a Ruta A
+
+### 41. El comparador llegó, y encontró la ruta
+
+*Implicaciones del Paquete Económico 2027* de CIEP (125 pp., fechado el 11) entró a `2027/` a
+las 22:49. La comparación está en `comparacion_2027.md`. Su hallazgo mayor no es de cifras sino de
+fuente: **CIEP cita un árbol del PPEF con prefijo ofuscado**,
+`ppef.hacienda.gob.mx/work/models/PP3F2709/PPEF2027/yik327fP/`, que responde 200.
+
+- **La Carta** existe ahí desde el 8 de septiembre, 08:58 GMT. El renglón «la exposición de
+  motivos da 404 por sexto ejercicio» es **falso para 2027**: el 404 era de la ruta vieja.
+- **Los analíticos** están bajo `analiticosPresupuestarios/`, **sin `/Proyecto/`**, con fecha del
+  servidor 11 de septiembre, 20:55 GMT.
+
+**El diagnóstico «el árbol de 2027 no existe», escrito tres veces, fue de ruta.**
+
+### 42. Cambio de ruta: **2026-09-12 23:08 — Ruta A**
+
+- Cuatro analíticos descargados (18,8 MB) y registrados en el manifiesto con sha256.
+- `_herramientas/diff_claves.py --de 2026 --a 2027`: **0 ramos nuevos o extintos**; 48 claves de
+  programa aparecen y 27 desaparecen, casi todas recodificaciones (Ramo 28 abierto en fondos; CFE
+  077–079→015–017; IMSS-Bienestar U013 dividido en tres). Nace la modalidad X. La Guardia Nacional
+  sigue en el Ramo 07 (+28,9 % real); la Policía Militar desaparece como UR.
+- `documento_2027/ruta_a.py`: **8 pruebas, 0 fallas.** Los 40 ramos del Anexo 1 salen del analítico
+  al redondeo, en 2026 y 2027; las entidades, al décimo; la función salud 2026 (974.302,2), la
+  partida 73903 2026 (263.476,3), el Ramo 19 neto de CIEP y el Anexo 32 (175.045,5) se reproducen.
+- **Auditoría de etiquetado sin el ATDT** (sus dos ranuras dan 403): se leyeron las tablas de los
+  anexos del decreto, validadas contra cada «Total general».
+
+Resultados y correcciones al documento, en `ruta_a_2027.md`. **El cuerpo del documento no se
+tocó.** Las dos correcciones de mayor peso:
+
+1. La caída del gasto corriente estructural **no es sólo la exclusión de las empresas públicas**:
+   el CGPE (pp. 23–24) resta además programas sociales constitucionales y la nómina de educación,
+   salud y seguridad, que suman 1.964.499,8 sobre la CP 2025.
+2. El titular «por persona de 65 y más, las pensiones caen 0,4 %» **cambia de signo** con el
+   deflactor del INPC (véase `comparacion_2027.md` §4.5).
+
+### 43. Lecciones que suben a `_aprendizaje/`
+
+- **`mapa_fuentes.md`, adenda 2027:** el prefijo ofuscado y la regla nueva. Antes de declarar
+  Ruta B, se busca el prefijo vigente en lo publicado y se prueba el sufijo conocido con y sin
+  `/Proyecto/`.
+- **Anexos:** reconocer un anexo por su encabezado y su «Total general» **perdió el Anexo 32**, que
+  en el decreto no tiene ninguno de los dos. Se contrasta la lista del artículo 3 contra lo extraído.
+- **Leer el CGPE entero antes de escribir «la fuente no lo publica»:** la tabla de inversión por
+  proyecto, la de programas sociales (p. 32) y la metodología del gasto corriente estructural
+  (pp. 23–24) estaban en carpeta desde el día 8.
+
+### 44. Tercera nota de actualización, 12 de septiembre
+
+Autorizada por Héctor. `capitulos/99d_actualizacion.tex`, con cinco cuadros nuevos (C99.6 a
+C99.10). **Es la primera nota que corrige afirmaciones del cuerpo, y lo dice**; el cuerpo de los
+dieciséis capítulos sigue sin tocarse. Lo que publica:
+
+1. **La ruta.** Los analíticos existían bajo otro prefijo. «El árbol no existe» y «la exposición
+   de motivos no se sirve por sexto ejercicio» son falsos para 2027. El diagnóstico del portal
+   de datos abiertos, «servicio caído», se sostiene: sus ranuras dan 403.
+2. **La regla fiscal.** Cuadro C99.6, extraído de la p. 24 del CGPE. La caída del gasto
+   corriente estructural no es sólo la exclusión de las empresas públicas: hay cuatro rubros
+   nuevos, que suman 1.964.499,8 sobre la CP 2025. La partida 73903 (81.103,0) cierra el punto 4
+   del capítulo, y el resto del Ramo 18 sube 568,4, no 571,1.
+3. **Pensiones por institución** (C99.7), con dos advertencias al cuerpo: el Ramo 19 bruto del
+   cuadro C4.1 y el signo del titular de pensiones por persona (−0,4 % con 1,040; +0,3 % con
+   1,0325).
+4. **IMSS e ISSSTE por función** (C99.8): salud del IMSS +10,8 %, del ISSSTE +17,9 %; la
+   función salud completa +10,0 %.
+5. **Anexos** (C99.9 y C99.10): el Anexo 32 que el cuerpo no leyó, la auditoría de etiquetado,
+   el 33 como reetiquetado y la caída del 16 como desetiquetado.
+6. **Omisiones propias que no dependían de la ruta:** CGPE p. 32 y la meta fiscal de los
+   Pre-Criterios.
+
+**Datos.**
+- `ruta_a.py` gana la sección 10: extrae del PDF el cuadro del CGPE p. 24 (su página se
+  localiza por contenido: la impresa 32 es la 33 del PDF), las dos tablas de la p. 32 y el
+  renglón fiscal de los Pre-Criterios.
+- Escribe `datos/gce_limite_2027.csv`, `datos/cgpe_p32_2027.csv` y ocho renglones nuevos en
+  `_fuentes.csv`. **14 pruebas, 0 fallas.**
+- La prueba «A menos (1)…(10) = B» se dejó con tolerancia 0,5 porque el cuadro publica once
+  cifras redondeadas y la suma difiere en 0,2.
+- Los CSV de `datos/ruta_a/` pasan a tres decimales: con uno, los cuadros que suman renglones
+  derivaban una décima (974.302,1 y 212.569,6 donde la fuente dice ,2 y ,7).
+- **Identidades del paquete: de 49 a 52, 0 fallas.** Las tres nuevas son el decreto contra
+  los analíticos de 2027.
+
+**Compuerta semántica sobre la nota.** Ninguna cifra modificada. Seis frases reescritas antes
+de compilar:
+1. «Los dos diagnósticos resultaron ser de la misma ruta vieja»: el de datos abiertos es otro
+   servidor y sigue en pie.
+2. «La exposición de motivos, completa y por capítulos»: sólo se verificó el completo y el
+   capítulo 1.
+3. «Las cuatro entidades salen al décimo»: sólo se probó 2027.
+4. «C5 pasa a resuelta»: la nota sólo cita el total de la p. 32.
+5. «Excede en casi 27 veces»: son 26,5.
+6. «Ninguna falla» sin conteo.
+
+Y **una cifra del texto alineada con su cuadro**: la transferencia del Ramo 19 decía 124.161,9 y
+el cuadro, sobre la suma de sus renglones, 124.161,8.
+
+**Composición.**
+- Primera compilación: una etiqueta `cua:gce` duplicada con el cuadro C14.2 (se renombró a
+  `cua:gcemetodo`) y dos `Overfull` de 26,2 y 15,7 pt.
+- Los desbordes se corrigieron estrechando columnas de los cuadros C99.7, C99.9 y C99.10 y
+  quitando un `\texttt` sin corte del texto.
+- Quedan los dos avisos del día 8 más un `Underfull` de badness 1910 en un pie de cuadro.
+
+**Entrega reempaquetada, tercera vez.**
+
+| pieza | 10 sep. | 12 sep. |
+|---|---|---|
+| `documento_2027.pdf` | 588 KB, 72 pp | **614 KB, 79 pp** |
+| `documento_2027.zip` | 122 KB | **165 KB, 96 archivos** |
+| `documento_2027.md` | 2.582 renglones | **2.885 renglones** |
+| cuadros | 25 | **30** |
+
+**Prueba del directorio limpio, versión dura:** se borraron los treinta cuadros del ZIP,
+`generar_cuadros.py` los regeneró con el Python del sistema (sin pandas), `pdflatex` produjo 79
+páginas y **el texto extraído tiene el mismo sha256 que el PDF de la entrega**, `b70fb640…`.
+El Markdown regenerado desde el ZIP es **idéntico** y tiene cero renglones terminados en
+diagonal.
+
+**Checklist de omisiones:** sección D nueva, con B1 en su cuarto ejercicio y cinco renglones
+que la comparación enseñó (D1 a D5).
+
+**Sigue abierto:** el agua dentro del Ramo 16, la lectura de la exposición de motivos, la línea G
+por programa, B1 y B2, actualizar `_herramientas/rutas.py` con el prefijo, y comparar el sha256
+del decreto contra el portal.

@@ -26,3 +26,15 @@ variables. `zap_municipios_nuevos.csv` son los siete municipios que sólo existe
 clave actualizada a junio de 2026: claves y AGEB salen del archivo de variables, los nombres
 del anexo L. **El archivo de variables no viaja en este paquete** ---2,1 MB--- pero está
 archivado en `2027/2027_zap-urbanas-agebs_variables.zip` con su sha256 en el manifiesto.
+
+**Añadidos el 2026-09-12, con la tercera nota de actualización (Ruta A).**
+`gce_limite_2027.csv` es el cuadro del límite máximo del gasto corriente estructural de la
+p. 24 del CGPE 2027, extraído del PDF. `cgpe_p32_2027.csv` son las dos tablas de la p. 32 del
+CGPE ---programas sociales prioritarios y prioridades de inversión---, extraídas del PDF.
+`ruta_a/` guarda los CSV que produce `../ruta_a.py` desde los analíticos del proyecto 2026 y
+2027 y desde las tablas de los anexos transversales de los dos decretos: pensiones por
+institución, Ramo 19 bruto y neto, IMSS e ISSSTE por función, salud, educación y protección
+social por subfunción, capítulos 6000 y 7000, gasto de las empresas públicas, Ramo 33 por
+entidad, Defensa por UR, los anexos programa por programa, la auditoría de etiquetado y el
+Anexo 16. **`ruta_a.py` no viaja en el paquete**: exige los analíticos (18,8 MB) y pandas.
+Los CSV sí viajan, y `generar_cuadros.py` los lee con la biblioteca estándar.

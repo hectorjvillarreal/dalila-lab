@@ -646,6 +646,143 @@ def main() -> int:
         "reasignadas cambian de localidad dentro del mismo municipio, absorbidas por la "
         "cabecera.", tam="footnotesize"))
 
+    # --- C99_6 a C99_10: tercera nota de actualización, 12 de septiembre (Ruta A) ---
+    RA = AQUI / "datos" / "ruta_a"
+
+    def lee(p):
+        with open(p, encoding="utf-8") as f:
+            return list(csv.DictReader(f))
+
+    def limpia(s):
+        # pdftotext corta la palabra tras v, x o y («Serv icios», «May a»); sólo si la letra
+        # va pegada a otra letra, para no comerse la conjunción «y». Fuera el espacio de ancho cero.
+        s = s.replace("​", "")
+        return re.sub(r"(?<=[A-Za-záéíóúñ][vxyVXY]) (?=[a-záéíóúñ])", "", s).strip()
+
+    def nd(v):
+        """Diferencia con signo tipográfico."""
+        return ("$-$" + n(-v)) if v < 0 else n(v)
+
+    g = {r["clave"]: r for r in lee(AQUI / "datos" / "gce_limite_2027.csv")}
+    fil = []
+    for k in ("A", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "B", "Dife", "C", "D"):
+        c, v = g[k]["concepto"], float(g[k]["valor"])
+        if k in ("7", "8", "9", "10"):
+            fil.append(f"\\quad \\textbf{{{c}}} & \\textbf{{{n(v)}}}")
+        elif k in ("A", "B", "C", "D"):
+            fil.append(f"\\textbf{{{c}}} & \\textbf{{{n(v)}}}")
+        else:
+            fil.append(f"\\quad {c} & {n(v)}")
+    nuevos = sum(float(g[k]["valor"]) for k in ("7", "8", "9", "10"))
+    fil.append(f"\\midrule \\textbf{{Suma de los rubros (7) a (10)}} & \\textbf{{{n(nuevos)}}}")
+    escribe("C99_6", tabla(
+        "El límite máximo del gasto corriente estructural con la metodología nueva (mdp)",
+        "cua:gcemetodo", ">{\\raggedright\\arraybackslash}p{9.6cm}r", "Concepto & Monto", fil,
+        "Fuente: CGPE 2027, edición SHCP, p. 24, extraído del PDF a "
+        "\\texttt{datos/gce\\_limite\\_2027.csv}. El renglón A excluye, además, el gasto de las "
+        "empresas públicas del Estado (nota 2/ del propio cuadro, artículo 2, fracción XXIV Bis, "
+        "de la LFPRH). \\textbf{Los rubros en negritas no se restaban antes}; son de la Cuenta "
+        "Pública 2025, no del proyecto 2027. La D resulta de actualizar C por precios (3,8 y "
+        "4,0~\\%) y crecimiento real (1,9~\\% cada año).", tam="footnotesize"))
+
+    F = fuentes()
+    pen = {r["INST"]: r for r in lee(RA / "pensiones_tg4_institucion.csv")}
+    a3 = {2026: F["dec_oblig_con_26"] - F["dec_oblig_sin_26"], 2027: F["dec_oblig_con_27"] - F["dec_oblig_sin_27"]}
+    fil = []
+    for k, nom in (("GYR", "IMSS"), ("GYN", "ISSSTE"), ("TYY", "Pemex"), ("TVV", "CFE")):
+        a, b = float(pen[k]["mdp_2026"]), float(pen[k]["mdp_2027"])
+        fil.append(f"{nom} & {n(a)} & {n(b)} & {nd(b - a)} & {pct(real(a, b))}")
+    ent ={y: sum(float(pen[k][f"mdp_{y}"]) for k in ("GYR", "GYN", "TYY", "TVV")) for y in (2026, 2027)}
+    ra_, rb_ = a3[2026] - ent[2026], a3[2027] - ent[2027]
+    fil.append(f"Resto del Gobierno Federal, por diferencia & {n(ra_)} & {n(rb_)} & {nd(rb_ - ra_)} & {pct(real(ra_, rb_))}")
+    fil.append(f"\\midrule \\textbf{{Perímetro del Anexo 3}} & \\textbf{{{n(a3[2026])}}} & "
+               f"\\textbf{{{n(a3[2027])}}} & \\textbf{{{n(a3[2027] - a3[2026])}}} & "
+               f"\\textbf{{{pct(real(a3[2026], a3[2027]))}}}")
+    t19 = {r["concepto"]: r for r in lee(RA / "ramo19_transferencias.csv")}
+    fil.append("\\midrule \\multicolumn{5}{l}{\\emph{Ramo 19: no se suma a lo anterior}}")
+    for c in ("Ramo 19 bruto", "transferido a IMSS e ISSSTE (UR GYR y GYN)", "Ramo 19 neto de esas transferencias"):
+        a, b = float(t19[c]["mdp_2026"]), float(t19[c]["mdp_2027"])
+        fil.append(f"{c[0].upper() + c[1:]} & {n(a)} & {n(b)} & {nd(b - a)} & {pct(real(a, b))}")
+    escribe("C99_7", tabla(
+        "El perímetro pensionario por institución, y el Ramo 19 bruto y neto, línea P (mdp)",
+        "cua:pensinst", ">{\\raggedright\\arraybackslash}p{4.6cm}rrrr",
+        "Institución & 2026 & 2027 & Dif. nominal & Var. real (\\%)", fil,
+        "Fuente: analíticos del proyecto 2026 y 2027, tipo de gasto 4 (pensiones y "
+        "jubilaciones), \\texttt{datos/ruta\\_a/pensiones\\_tg4\\_institucion.csv}; perímetro por "
+        "diferencia de los dos renglones del Anexo 3 de los decretos. Deflactor del PIB 1,040. "
+        "\\textbf{El Ramo 19 bruto cuenta dos veces lo que transfiere al IMSS y al ISSSTE}, que "
+        "reaparece en el presupuesto de esas entidades; el neto es la cifra que publica CIEP.",
+        tam="footnotesize"))
+
+    fun = {(r["INST"], r["FN_K"]): r for r in lee(RA / "entidades_funcion.csv")}
+    fil = []
+    for (k, nom) in (("GYR", "IMSS"), ("GYN", "ISSSTE")):
+        for fn, fnom in (("2.3", "salud"), ("2.6", "protección social")):
+            r_ = fun[(k, fn)]; a, b = float(r_["mdp_2026"]), float(r_["mdp_2027"])
+            fil.append(f"{nom} & {fn} {fnom} & {n(a)} & {n(b)} & {pct(real(a, b))}")
+    sal = lee(RA / "salud_subfuncion.csv")
+    sa, sb = sum(float(r["mdp_2026"]) for r in sal), sum(float(r["mdp_2027"]) for r in sal)
+    fil.append(f"\\midrule \\textbf{{Función salud, GF y entidades}} & 2.3 & \\textbf{{{n(sa)}}} & "
+               f"\\textbf{{{n(sb)}}} & \\textbf{{{pct(real(sa, sb))}}}")
+    escribe("C99_8", tabla(
+        "IMSS e ISSSTE por función, y la función salud completa, línea P (mdp)", "cua:imssfun",
+        "ll>{\\raggedleft\\arraybackslash}p{2.0cm}>{\\raggedleft\\arraybackslash}p{2.0cm}r",
+        "Entidad & Función & 2026 & 2027 & Var. real (\\%)", fil,
+        "Fuente: analíticos del proyecto por ramo, función, UR y objeto del gasto, de Gobierno "
+        "Federal y de entidades; \\texttt{datos/ruta\\_a/entidades\\_funcion.csv} y "
+        "\\texttt{salud\\_subfuncion.csv}. La función 2.6 del IMSS y del ISSSTE contiene sus "
+        "pensiones. La función salud de 2026 reproduce la del documento 2026, 974.302,2.",
+        tam="footnotesize"))
+
+    au = {(r["ejercicio"], r["alcance"]): r for r in lee(RA / "anexos_auditoria.csv")}
+    cols_ = (("2026", "anexos 13-19 y 31"), ("2027", "anexos 13-19 y 31"), ("2027", "todos los anexos del ejercicio"))
+
+    def fila(etq, campo, fmt):
+        return etq + " & " + " & ".join(fmt(float(au[c][campo])) for c in cols_)
+    fil = [fila("Programas etiquetados", "programas", lambda v: n(v, 0)),
+           fila("Programas en más de un anexo", "en_mas_de_un_anexo", lambda v: n(v, 0)),
+           fila("\\textbf{\\% del etiquetado en programas con más de una etiqueta}",
+                "pct_etiquetado_en_multiples", lambda v: "\\textbf{" + n(v) + "}"),
+           fila("Suma aritmética de etiquetas (mdp)", "suma_etiquetas", n),
+           fila("\\textbf{Pensiones no contributivas en el Anexo 13 (\\%)}", "anexo13_pct_pensiones",
+                lambda v: "\\textbf{" + n(v) + "}")]
+    for r in lee(RA / "anexos_nuevos_traslape.csv"):
+        fil.append(f"\\midrule Anexo {r['anexo']}: programas ya etiquetados en otro anexo & --- & --- & "
+                   f"{r['ya_en_otro_anexo']} de {r['programas']}")
+        fil.append(f"Anexo {r['anexo']}: mdp ya etiquetados en otro anexo & --- & --- & "
+                   f"{n(float(r['mdp_ya_en_otro_anexo']))} de {n(float(r['mdp_total']))}")
+    escribe("C99_9", tabla(
+        "La auditoría de etiquetado de los anexos transversales", "cua:auditoria",
+        ">{\\raggedright\\arraybackslash}p{5.0cm}r>{\\raggedleft\\arraybackslash}p{2.2cm}>{\\raggedleft\\arraybackslash}p{2.8cm}",
+        "Indicador & 2026 & 2027, mismos anexos & 2027, con el 32 y el 33", fil,
+        "Fuente: tablas de los anexos 13 a 19, 31, 32 y 33 de los proyectos de decreto, "
+        "extraídas programa por programa y validadas contra el «Total general» de cada anexo "
+        "(cobertura del 100~\\% salvo el Anexo 13 de 2027, 99,99~\\%, y el 31, 99,78~\\%; el 32 no "
+        "imprime total). \\texttt{datos/ruta\\_a/anexos\\_auditoria.csv}. Pensiones no contributivas: "
+        "claves S176, S286 y S316. \\textbf{La suma de etiquetas no mide gasto.}", tam="footnotesize"))
+
+    nom16 = {}
+    for r in lee(RA / "anexos_programas.csv"):
+        if r["anexo"] == "16":
+            nom16.setdefault(f"{r['ramo']}-{r['pp']}", limpia(r["nombre"]))
+    a16 = lee(RA / "anexo16_programas.csv")
+    ta, tb = sum(float(r["mdp_2026"]) for r in a16), sum(float(r["mdp_2027"]) for r in a16)
+    sel = sorted(a16, key=lambda r: float(r["dif_nominal"]))[:5]
+    fil = []
+    for r in sel:
+        p26 = r["presupuesto_2026_analitico"]
+        fil.append(f"{r['K']} & {nom16.get(r['K'], '')} & {n(float(r['mdp_2026']))} & "
+                   f"{n(float(r['mdp_2027']))} & {n(float(p26)) if p26 else '---'}")
+    fil.append(f"\\midrule \\textbf{{Anexo 16 completo}} & & \\textbf{{{n(ta)}}} & \\textbf{{{n(tb)}}} & ")
+    escribe("C99_10", tabla(
+        "Los cinco programas que más etiqueta pierden en el Anexo 16, cambio climático (mdp)",
+        "cua:anexo16", "l>{\\raggedright\\arraybackslash}p{4.6cm}rrr",
+        "Ramo-programa & Nombre & Etiqueta 2026 & Etiqueta 2027 & Presupuesto 2026", fil,
+        "Fuente: Anexo 16 de los proyectos de decreto 2026 y 2027; presupuesto del programa, del "
+        "analítico del proyecto 2026. \\texttt{datos/ruta\\_a/anexo16\\_programas.csv}. \\textbf{La "
+        "etiqueta de 2026 del K003 es más de 26 veces el presupuesto del programa}, y el "
+        "programa no existe en 2027.", tam="footnotesize"))
+
     return 0
 
 
