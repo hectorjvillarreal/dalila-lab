@@ -15,12 +15,12 @@ slots:
     notes: >-
       HIMA run-rate toward ~1M annual target. Xiaomi 2026 target 550k.
   margin:
-    value: "Xiaomi auto loss-making ~$5,600/car (Q1 2026); 2025 group net profit ~¥39B (+44%)"
-    unit: null
-    delta: null
-    date: 2026-06-21
-    source: null
-    source_type: null
+    value: "Xiaomi smart EV / AI / new initiatives segment, Q2-2026: operating loss 2.6B yuan; gross margin 19.2%; revenue 24.9B yuan"
+    unit: "CNY / % — segment level (Xiaomi only; no HIMA figure)"
+    delta: "gross margin 26.4% in Q2-2025; operating loss 3.1B yuan in Q1-2026; revenue +25.3% QoQ"
+    date: 2026-08-21
+    source: "https://www.electrive.com/2026/08/21/xiaomi-posts-further-loss-in-q2-with-its-ev-division/"
+    source_type: secondary
     confidence: reported
     decisive: false
   segment_span:
