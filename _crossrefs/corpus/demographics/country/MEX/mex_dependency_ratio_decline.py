@@ -1,9 +1,9 @@
 """
-Mexico dependency ratios 2023→2050 under TFR-decline-to-1.0 scenario,
+Mexico dependency ratios 2023→2050 under TFR-decline-to-0.9 scenario,
 compared to a UN-like ~1.65 stable benchmark.
 
 Why dependency ratios (DR) and not total population:
-The total-population gap to UN (13.5% by 2050 in the TFR-decline scenario)
+The total-population gap to UN (recomputed each run; see stdout)
 understates the fiscal pressure. What drives pension contribution rate and
 health-financing path is the *ratio* of dependents to working-age, not
 total people. Under a TFR collapse, the 65+ population is locked in (those
@@ -17,8 +17,13 @@ Definitions (UN convention):
   Total dependency ratio (TDR) = YDR + OADR
 
 Scenarios:
-  TFR-decline: 1.60 (2024) → 1.50 → 1.40 → 1.30 → 1.20 → 1.10 (2029)
-               → 1.00 from 2030 stable to 2050.
+  TFR-decline (stress): 1.60 (2024) → 1.50 → 1.40 → 1.30 → 1.20 → 1.10
+               (2029) → 1.00 (2030) → 0.90 from 2031, stable to 2050.
+               Stress-floor revision, Héctor ruling 2026-09-15 (Anne
+               option (b)): the LAC empirical floor is declared
+               UNIDENTIFIED and 0.90 carried as a working stress value,
+               not an observed minimum. The -0.10/yr glide shape is
+               unchanged; it runs one year further.
   UN-like baseline: TFR ≈ 1.65 stable. This is an approximation of UN
                WPP 2024 medium variant's trajectory (Mexico TFR rises
                from ~1.62 in 2024 to ~1.71 by 2050; mid-point ~1.66).
@@ -60,18 +65,23 @@ YOUTH = slice(0, 3)        # 0-4, 5-9, 10-14  → 0-14
 WORKING = slice(3, 13)     # 15-19 ... 60-64  → 15-64
 OLD = slice(13, N_AGES)    # 65-69 ... 100+   → 65+
 
-# User-specified TFR trajectory for the decline scenario.
+# User-specified TFR trajectory for the decline scenario (-0.10/yr glide).
 TFR_DECLINE_ANNUAL = {
     2024: 1.60, 2025: 1.50, 2026: 1.40, 2027: 1.30, 2028: 1.20, 2029: 1.10,
+    2030: 1.00,
 }
-TFR_DECLINE_FROM_2030 = 1.00
+# Working stress value; the empirical floor is declared unidentified.
+TFR_DECLINE_FLOOR = 0.90
+TFR_DECLINE_FLOOR_FROM = 2031
 
 # UN-like baseline (approximation of WPP 2024 medium variant Mexico TFR).
 TFR_UN_LIKE = 1.65
 
 
 def tfr_decline(y: int) -> float:
-    return TFR_DECLINE_ANNUAL.get(y, TFR_DECLINE_FROM_2030 if y >= 2030 else 1.60)
+    if y in TFR_DECLINE_ANNUAL:
+        return TFR_DECLINE_ANNUAL[y]
+    return TFR_DECLINE_FLOOR if y >= TFR_DECLINE_FLOOR_FROM else 1.60
 
 
 def period_tfr_decline(y0: int, y1: int) -> float:
@@ -153,7 +163,7 @@ def main():
     axO.plot(years, oadr_u, color="#1f3a5f", linewidth=2.0, linestyle="--", marker="s", markersize=5,
              label=f"UN-like (TFR≈{TFR_UN_LIKE} estable)")
     axO.plot(years, oadr_d, color="#7d2222", linewidth=2.5, marker="o", markersize=5,
-             label="TFR → 1.0 by 2030")
+             label="TFR → 0.9 by 2031 (working)")
     axO.set_title("OADR — Old-age (65+) / Working-age (15-64)", fontsize=11, loc="left")
     axO.set_ylabel("Old-age deps. per 100 (15-64)")
     axO.set_xlabel("Year")
@@ -169,7 +179,7 @@ def main():
     axY.plot(years, ydr_u, color="#1f3a5f", linewidth=2.0, linestyle="--", marker="s", markersize=5,
              label=f"UN-like (TFR≈{TFR_UN_LIKE} estable)")
     axY.plot(years, ydr_d, color="#7d2222", linewidth=2.5, marker="o", markersize=5,
-             label="TFR → 1.0 by 2030")
+             label="TFR → 0.9 by 2031 (working)")
     axY.set_title("YDR — Youth (0-14) / Working-age (15-64)", fontsize=11, loc="left")
     axY.set_ylabel("Youth deps. per 100 (15-64)")
     axY.set_xlabel("Year")
@@ -185,7 +195,7 @@ def main():
     axT.plot(years, tdr_u, color="#1f3a5f", linewidth=2.0, linestyle="--", marker="s", markersize=5,
              label=f"UN-like (TFR≈{TFR_UN_LIKE} estable)")
     axT.plot(years, tdr_d, color="#7d2222", linewidth=2.5, marker="o", markersize=5,
-             label="TFR → 1.0 by 2030")
+             label="TFR → 0.9 by 2031 (working)")
     axT.set_title("TDR — Total dependency (youth + old) / Working-age", fontsize=11, loc="left")
     axT.set_ylabel("Total deps. per 100 (15-64)")
     axT.set_xlabel("Year")
@@ -199,7 +209,7 @@ def main():
 
     fig.suptitle(
         "Mexico — dependency ratios 2023→2050\n"
-        "UN-like baseline (TFR≈1.65 stable) vs. TFR-decline-to-1.0 stress scenario",
+        "UN-like baseline (TFR≈1.65 stable) vs. TFR-decline-to-0.9 stress scenario (working floor)",
         fontsize=13)
     fig.text(0.5, 0.005,
              "Method: cohort-component, 5-yr age groups × 5-yr steps, period-averaged TFR; Mexico-shape ASFR (peak 25-29); "

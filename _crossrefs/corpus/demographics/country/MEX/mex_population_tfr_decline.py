@@ -1,5 +1,5 @@
 """
-Mexico population projection under a sharp TFR decline to 1.0, 2023 → 2050.
+Mexico population projection under a sharp TFR decline to 0.9, 2023 → 2050.
 
 User-specified TFR trajectory:
   2024: 1.60 (carryover from 2023 INEGI ENADID anchor; unspecified, assumed flat)
@@ -8,7 +8,16 @@ User-specified TFR trajectory:
   2027: 1.30
   2028: 1.20
   2029: 1.10
-  2030+: 1.00  (constant through 2050)
+  2030: 1.00
+  2031+: 0.90  (constant through 2050)
+
+Stress-floor revision — Héctor ruling 2026-09-15, Anne option (b).
+The LAC empirical floor is declared UNIDENTIFIED (the terra incognita
+position); 0.90 is carried as a WORKING stress value, not as an observed
+minimum. The -0.10/yr glide shape is unchanged — it simply runs one year
+further, so the floor is reached in 2031 rather than 2030. Anchoring to
+Puerto Rico 0.87 was explicitly ruled out (US-linked, emigration-driven,
+not comparable).
 
 Method (same cohort-component skeleton as mex_population_tfr15.py):
 - 5-year age groups × 5-year time steps from 2023 baseline (OWID/UN WPP).
@@ -21,9 +30,14 @@ Method (same cohort-component skeleton as mex_population_tfr15.py):
 
 This scenario is **dramatically more pessimistic than UN WPP 2024 medium
 variant**. UN assumes TFR rises gently from ~1.6 to ~1.7 by 2050. This
-trajectory collapses to 1.0 — well below any current LAC observation
-(Chile's 1.03 in 2024 is the regional floor). The Republic of Korea is
-the only major country near 1.0 globally (~0.78 in 2022). So this is an
+trajectory collapses to 0.9.
+
+The previous version of this script anchored the floor to Chile's 1.03
+(2024) as the observed LAC minimum. That anchor no longer holds: the
+September 2026 registry table puts Chile at 0.99 (2025), having fallen
+from 1.54 in 2018. Rather than chase the observed minimum down, the floor
+is now declared unidentified and 0.90 carried as a working value. Korea
+(~0.72 in 2023) shows the region below 0.9 is inhabited. This remains an
 extreme stress scenario, not a forecast.
 
 Outputs:
@@ -57,7 +71,7 @@ ASFR_FERTILE_START = 3
 ASFR_FERTILE_END = 10
 FEMALE_SHARE = 0.5
 
-# User-specified annual TFR trajectory.
+# User-specified annual TFR trajectory (-0.10/yr glide).
 TFR_ANNUAL = {
     2024: 1.60,
     2025: 1.50,
@@ -65,15 +79,18 @@ TFR_ANNUAL = {
     2027: 1.30,
     2028: 1.20,
     2029: 1.10,
+    2030: 1.00,
 }
-TFR_FROM_2030 = 1.00
+# Working stress value; the empirical floor is declared unidentified.
+TFR_FLOOR = 0.90
+TFR_FLOOR_FROM = 2031
 
 
 def tfr_for_year(y: int) -> float:
     if y in TFR_ANNUAL:
         return TFR_ANNUAL[y]
-    if y >= 2030:
-        return TFR_FROM_2030
+    if y >= TFR_FLOOR_FROM:
+        return TFR_FLOOR
     raise ValueError(f"No TFR for year {y}")
 
 
@@ -168,7 +185,7 @@ def main():
     ax.plot(un["Year"], un_m, color="#1f3a5f", linewidth=2.0, linestyle="--",
             label="UN WPP 2024 medium variant (TFR ≈ 1.6→1.7)")
     ax.plot(years, totals_m, color="#7d2222", linewidth=2.5, marker="o", markersize=5,
-            label="Scenario: TFR → 1.0 by 2030, stable to 2050")
+            label="Scenario: TFR → 0.9 by 2031, stable to 2050 (working value)")
 
     # Annotate end values
     ax.annotate(f"{un_2050:.1f} M", xy=(2050, un_2050), xytext=(8, 0),
@@ -183,7 +200,7 @@ def main():
                 fontsize=10, color="#555")
 
     ax.set_title("Mexico — total population, 2023 → 2050\n"
-                 "UN WPP 2024 medium variant vs. TFR-decline-to-1.0 scenario",
+                 "UN WPP 2024 medium variant vs. TFR-decline-to-0.9 stress scenario (working floor)",
                  fontsize=13, loc="left")
     ax.set_xlabel("Year")
     ax.set_ylabel("Population (millions)")
@@ -200,17 +217,17 @@ def main():
     inset.plot(yrs_tfr, tfrs, color="#7d2222", linewidth=2.0, marker="o", markersize=3)
     inset.axhline(2.1, color="#888", linestyle=":", linewidth=1, alpha=0.7)
     inset.text(2026, 2.13, "reemplazo (~2.1)", fontsize=7, color="#888")
-    inset.text(2026, 1.05, "TFR = 1.0", fontsize=8, color="#7d2222")
+    inset.text(2026, 0.95, "TFR = 0.9 (valor de trabajo)", fontsize=7, color="#7d2222")
     inset.set_title("Trayectoria TFR asumida", fontsize=9)
     inset.set_xlim(2024, 2050)
-    inset.set_ylim(0.8, 2.3)
+    inset.set_ylim(0.7, 2.3)
     inset.tick_params(labelsize=7)
     inset.grid(alpha=0.25)
 
     ax.text(0.01, -0.16,
-            "Stress scenario, not a forecast. TFR=1.0 is below any current LAC observation (Chile 1.03 in 2024). "
-            "Method: cohort-component, 5-yr groups × 5-yr steps; period-averaged TFR across the user-specified annual\n"
-            "trajectory; Mexico-shape ASFR (peak 25-29); Coale-Demeny West e_0≈75 fixed mortality; zero migration.",
+            "Stress scenario, not a forecast. The LAC empirical floor is declared UNIDENTIFIED (Héctor, 2026-09-15); 0.9 is a\n"
+            "working value, not an observed minimum. Method: cohort-component, 5-yr groups × 5-yr steps; period-averaged TFR "
+            "across the\nuser-specified annual trajectory; Mexico-shape ASFR (peak 25-29); Coale-Demeny West e_0≈75 fixed mortality; zero migration.",
             transform=ax.transAxes, fontsize=8, color="#555")
 
     plt.tight_layout(rect=[0, 0.02, 1, 1])

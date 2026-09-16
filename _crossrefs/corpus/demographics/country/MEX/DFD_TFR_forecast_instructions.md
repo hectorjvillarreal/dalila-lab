@@ -101,7 +101,7 @@ coupling rate decline — is the DFD central scenario.
 | Optimistic | CELADE medium-variant (TFR ≈ 1.6→1.7) | operational | Fertility stabilization and partial rebound |
 | **Central (fast-transition)** | **TFR = 1.5, stable from ~2026** | **operational (baseline)** | Structural drivers unabated; coupling rate decline embedded |
 | Tempo-corrected | TFR = 1.6 stable (Central + 0.10 Fischer-Dattani lift) | reported, not operational | Defensive sensitivity against the period-TFR-vs-completed-cohort objection (see §1) |
-| Stress | TFR → 1.0 by 2030, stable thereafter | operational | Overshooting accelerates; current LAC floor anchored to Chile 1.03 (2024) |
+| Stress | TFR → 0.9 by 2031, stable thereafter | operational | Overshooting accelerates; **the empirical floor is declared unidentified** — 0.9 is a working value, not an observed minimum (Héctor ruling 2026-09-15, Anne option (b)) |
 
 **Central scenario note (Mexico):** TFR = 1.5 stable is the DFD central scenario,
 confirmed by the 2026-Q2 replicate. It implies a Mexico population of **140.4 M
@@ -116,10 +116,33 @@ not promoted to operational. Promotion conditions: Mexico-specific Fischer-
 Dattani correction > +0.15, or ENOE evidence of coupling-rate stabilization
 (see standing considerations §1).
 
-**Stress scenario note:** TFR → 1.0 by 2030 is a stress scenario, not a forecast.
-Chile at 1.03 (2024) is the current observed LAC floor. The stress scenario is
-anchored to this floor, not to an arbitrary assumption. It implies **128.9 M
-by 2050** — a 15.7 M gap (10.9%) relative to the optimistic approximation.
+**Stress scenario note (revised v1.5):** TFR → 0.9 by 2031 is a stress scenario,
+not a forecast.
+
+**The empirical floor is declared unidentified.** Earlier versions anchored the
+stress path to Chile 1.03 (2024) as the observed LAC minimum. That anchor no
+longer holds: the September 2026 registry table puts Chile at **0.99 (2025)**,
+down from 1.54 in 2018, and the cornerstone paper documents WPP projecting a
+*recovery* to 1.12 by 2028 against that fall. Rather than chase the observed
+minimum downward each time a registry prints — which would make the stress
+column a moving function of the latest release — the floor is stated as
+**unknown**, the *terra incognita* position, and **0.9 is carried as a working
+value**. Anchoring to Puerto Rico 0.87 was explicitly ruled out: US-linked,
+emigration-driven, not comparable. (Héctor ruling 2026-09-15 on Anne's
+escalation; Anne's recommended option (b).)
+
+**Glide specification.** The −0.10/yr glide shape is unchanged from v1.4; it
+simply runs one year further, so the floor is reached in 2031 rather than 2030:
+1.60 (2024) → 1.50 → 1.40 → 1.30 → 1.20 → 1.10 (2029) → 1.00 (2030) → 0.90
+from 2031. The stress and prior-stress paths are therefore **identical through
+2030** and diverge only afterwards. *This one-year extension is a specification
+choice made in execution, not dictated by the ruling — flagged for Anne's
+confirmation.*
+
+**Recomputed implications (2026-09-15 run):** **126.85 M by 2050** — a 17.7 M
+gap (12.3%) relative to the optimistic approximation (144.59 M), and a 22.10 M
+gap (14.8%) against UN WPP 2024 medium's actual 148.95 M. This supersedes the
+v1.4 figure of 128.9 M, which was computed at TFR → 1.0.
 
 ---
 
@@ -174,7 +197,7 @@ for reform. Claude Code must identify and report:
 | Optimistic (TFR=1.65) | ~2033 | 44.1 | 2028–2038 (≈10 yr) |
 | **Central (TFR=1.50)** | **~2038** | **42.0** | **2033–2038 (≈5 yr)** |
 | Tempo-corrected (TFR=1.60) | ~2033–2038 (tied) | 43.6 | 2028–2038 (≈10 yr) |
-| Stress (TFR→1.0) | ~2038 | 36.3 | 2038–2043 (≈5 yr) |
+| Stress (TFR→0.9, working floor) | ~2038 | 35.5 | 2038–2043 (≈5 yr) |
 
 Source: `_crossrefs/corpus/demographics/country/MEX/quarterly/2026-Q2_demographic_replicate.md`.
 
@@ -184,7 +207,7 @@ condition).** Window durations in the table above are **grid-year counts on
 TDR ≤ TDR_min + 2.0 — not annual-resolution measurements. Linear
 interpolation of the same threshold gives approximately: Optimistic
 ~2027–2041 (~14 yr), Central ~2030–2041 (~11 yr), Tempo-corrected
-~2028–2041 (~14 yr), Stress ~2035–2044 (~9 yr). The cross-scenario ordering
+~2028–2041 (~14 yr), Stress ~2035–2045 (~9.5 yr). The cross-scenario ordering
 (Central and Stress tighter than Optimistic and Tempo-corrected) is robust
 to convention; absolute durations are not, and duration comparisons across
 replicate vintages or against pre-v1.3 placeholder values are not
@@ -198,8 +221,12 @@ also carry the Q3 §5 window-timing caveat (entry may shift later by up to
 
 After the TDR minimum (in all scenarios), the ratio rises sharply as old-age
 dependency accumulates — reaching ~49–51 by 2050 in the upper three scenarios
-and ~43 in the stress scenario (where old-age dependency is partially offset
-by collapsed youth share). The Central scenario's window is the operational
+and **~41** in the stress scenario (where old-age dependency is partially
+offset by collapsed youth share). Note the composition beneath that lower
+stress total: by 2050 the stress column carries a *higher* old-age ratio than
+any other scenario (OADR 26.4 against 24.7 optimistic) and a youth ratio barely
+over half the optimistic one (YDR 14.9 against 25.9). The favourable-looking
+total is arithmetic, not relief. The Central scenario's window is the operational
 reference for reform-feasibility analysis.
 
 *v1.2 placeholder values (2038–2043, TDR ≈ 39–40, 8–10 yr) are superseded by
@@ -304,7 +331,7 @@ The 2026-Q2 replicate should additionally include:
 
 ---
 
-*These instructions are versioned. This is v1.4, August 2026.*
+*These instructions are versioned. This is v1.5, September 2026.*
 *v1.0 → v1.1 changes: (1) central scenario pinned to TFR=1.5 stable for Mexico
 with confirmed 2026-Q2 population implied values; (2) stress scenario floor
 anchored to Chile 1.03 (2024) as current LAC observed minimum; (3) fiscal window
@@ -331,4 +358,19 @@ cross-scenario ordering noted as convention-robust, absolute durations not;
 IM-6 anchor 2033–2038 documented as conservative interior; Q3 window-timing
 caveat (entry may lag up to ~5 yr pending Q4 retabulation) referenced
 wherever fiscal-space numbers are cited.*
+*v1.4 → v1.5 changes (2026-09-15, Héctor ruling on Anne's stress-floor
+escalation, option (b)): (1) the Stress column's empirical floor is declared
+**unidentified** rather than re-anchored, with 0.9 carried as a working value —
+the Chile 1.03 (2024) anchor is retired, having been overtaken by 0.99 (2025);
+Puerto Rico 0.87 explicitly ruled out as a substitute. (2) The stress path runs
+TFR → 0.9 by **2031** on the unchanged −0.10/yr glide, identical to the prior
+path through 2030; the one-year extension is a specification choice made in
+execution and is flagged for Anne's confirmation. (3) Stress reference values
+recomputed (run 2026-09-15): 2050 population **126.85 M** (was 128.9 M),
+TDR_min **35.5** at ~2038 (was 36.3), 2050 TDR **41.4** (was 42.8); grid window
+unchanged at 2038–2043, interpolated window ~2035–2045. (4) Consequently the
+**Stress columns of the 2026-Q2 and 2026-Q3 replicates are superseded** and
+must not be quoted; those entries are endorsed artifacts and are deliberately
+left unamended (PROTO-RAG-001 standing principle 5). Central, Optimistic and
+Tempo-corrected columns are untouched throughout.*
 *Next review: 2026-Q4 replicate, January 2027.*
