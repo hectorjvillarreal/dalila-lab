@@ -1,0 +1,7 @@
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+weo/WEOApr2025all.tsv
+html_extract/

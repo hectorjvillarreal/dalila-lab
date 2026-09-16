@@ -1,0 +1,49 @@
+opcion,Indicador,pais,Modelo,RMSE,MASE,LjungBox,ultimo,fin_proy,excede
+P3,Gasto público en salud,Brasil,Holt amortiguado,0.333,1.94,0.657,2.675,2.7640201153622828,FALSE
+P3,Gasto público en salud,Chile,ETS,0.54,2.64,0.441,6.0301,12.548948242130885,TRUE
+P3,Gasto público en salud,Colombia,ETS,0.355,2.28,0.83,3.2413,3.55213526358134,FALSE
+P3,Gasto público en salud,Costa Rica,ETS,0.068,0.68,0.273,0.6902,0.7239249291799509,FALSE
+P3,Gasto público en salud,México,ETS,0.132,1.42,0.83,1.2408,1.646338403022952,TRUE
+P3,Gasto público en salud,Panamá,ETS,0.176,0.55,0.967,1.7189,1.8905725663411372,FALSE
+P3,Gasto público en pensiones,Brasil,Holt amortiguado,0.442,1.01,0.766,8.8274,8.82206208946877,FALSE
+P3,Gasto público en pensiones,Chile,ETS,0.215,0.67,0.137,4.1679,4.167863081413736,FALSE
+P3,Gasto público en pensiones,Colombia,ARIMA,0.405,1.57,0.783,3.747,3.7469999999999994,FALSE
+P3,Gasto público en pensiones,Costa Rica,Holt amortiguado,0.086,0.86,0.742,3.064,3.09407408829365,FALSE
+P3,Gasto público en pensiones,México,ARIMA,0.198,1.07,0.566,3.0101,5.3034226674287765,TRUE
+P3,Gasto público en pensiones,Panamá,ETS,0.065,0.78,0.952,0.501,0.5009968526766571,FALSE
+Opción 1,Gasto público en salud,Brasil,Holt amortiguado,0.188,1.49,0.657,2.675,2.7640201153622828,FALSE
+Opción 1,Gasto público en salud,Chile,ARIMA,0.21,1.28,0.441,6.0301,12.527658005330846,TRUE
+Opción 1,Gasto público en salud,Colombia,ETS,0.355,2.28,0.83,3.2413,3.55213526358134,FALSE
+Opción 1,Gasto público en salud,Costa Rica,ETS,0.025,0.27,0.273,0.6902,0.7239249291799509,FALSE
+Opción 1,Gasto público en salud,México,ETS,0.131,2.09,0.83,1.2408,1.646338403022952,TRUE
+Opción 1,Gasto público en salud,Panamá,ETS,0.176,0.55,0.967,1.7189,1.8905725663411372,FALSE
+Opción 1,Gasto público en pensiones,Brasil,ARIMA,1.019,2.6,0.42,8.8274,8.18415727203171,FALSE
+Opción 1,Gasto público en pensiones,Chile,Holt amortiguado,0.066,0.25,0.456,4.1679,4.34916720477099,FALSE
+Opción 1,Gasto público en pensiones,Colombia,ARIMA,0.405,1.57,0.783,3.747,3.7469999999999994,FALSE
+Opción 1,Gasto público en pensiones,Costa Rica,Holt amortiguado,0.098,1,0.742,3.064,3.09407408829365,FALSE
+Opción 1,Gasto público en pensiones,México,Holt amortiguado,0.063,0.35,0.448,3.0101,2.988354881567864,FALSE
+Opción 1,Gasto público en pensiones,Panamá,ETS,0.065,0.78,0.952,0.501,0.5009968526766571,FALSE
+Opción 2,Gasto público en salud,Brasil,Holt amortiguado,0.333,1.94,0.657,2.675,2.7640201153622828,FALSE
+Opción 2,Gasto público en salud,Chile,ETS amortiguado,0.677,3.5,0.497,6.0301,9.937193017776139,TRUE
+Opción 2,Gasto público en salud,Colombia,Holt amortiguado,0.404,2.75,0.825,3.2413,3.547366550907713,FALSE
+Opción 2,Gasto público en salud,Costa Rica,ETS amortiguado,0.134,1.43,0.279,0.6902,0.8865084289895723,FALSE
+Opción 2,Gasto público en salud,México,ETS amortiguado,0.135,1.98,0.756,1.2408,1.4358663995199041,FALSE
+Opción 2,Gasto público en salud,Panamá,ETS amortiguado,0.234,0.62,0.804,1.7189,1.6490773286887916,FALSE
+Opción 2,Gasto público en pensiones,Brasil,ETS amortiguado,0.442,1.01,0.766,8.8274,8.822051505252109,FALSE
+Opción 2,Gasto público en pensiones,Chile,Holt amortiguado,0.261,0.83,0.456,4.1679,4.34916720477099,FALSE
+Opción 2,Gasto público en pensiones,Colombia,Holt amortiguado,0.471,1.85,0.443,3.747,2.947508252046475,TRUE
+Opción 2,Gasto público en pensiones,Costa Rica,ETS amortiguado,0.086,0.86,0.742,3.064,3.094070858816019,FALSE
+Opción 2,Gasto público en pensiones,México,ETS amortiguado,0.221,0.95,0.448,3.0101,2.9871496299800904,FALSE
+Opción 2,Gasto público en pensiones,Panamá,ETS amortiguado,0.188,2.36,0.392,0.501,0.5176669685549641,FALSE
+Opción 1+2 (diagnóstico),Gasto público en salud,Brasil,ETS amortiguado,0.188,1.49,0.657,2.675,2.7635755614938615,FALSE
+Opción 1+2 (diagnóstico),Gasto público en salud,Chile,ETS amortiguado,0.465,2.64,0.497,6.0301,9.937193017776139,TRUE
+Opción 1+2 (diagnóstico),Gasto público en salud,Colombia,Holt amortiguado,0.404,2.75,0.825,3.2413,3.547366550907713,FALSE
+Opción 1+2 (diagnóstico),Gasto público en salud,Costa Rica,Holt amortiguado,0.054,0.57,0.279,0.6902,0.8865553746788398,FALSE
+Opción 1+2 (diagnóstico),Gasto público en salud,México,ETS amortiguado,0.212,3.43,0.756,1.2408,1.4358663995199041,FALSE
+Opción 1+2 (diagnóstico),Gasto público en salud,Panamá,ETS amortiguado,0.234,0.62,0.804,1.7189,1.6490773286887916,FALSE
+Opción 1+2 (diagnóstico),Gasto público en pensiones,Brasil,ETS amortiguado,1.074,2.74,0.766,8.8274,8.822051505252109,FALSE
+Opción 1+2 (diagnóstico),Gasto público en pensiones,Chile,ETS amortiguado,0.066,0.25,0.456,4.1679,4.349158592372742,FALSE
+Opción 1+2 (diagnóstico),Gasto público en pensiones,Colombia,Holt amortiguado,0.471,1.85,0.443,3.747,2.947508252046475,TRUE
+Opción 1+2 (diagnóstico),Gasto público en pensiones,Costa Rica,ETS amortiguado,0.098,1,0.742,3.064,3.094070858816019,FALSE
+Opción 1+2 (diagnóstico),Gasto público en pensiones,México,ETS amortiguado,0.063,0.35,0.448,3.0101,2.9871496299800904,FALSE
+Opción 1+2 (diagnóstico),Gasto público en pensiones,Panamá,ETS amortiguado,0.188,2.36,0.392,0.501,0.5176669685549641,FALSE
