@@ -1,0 +1,20 @@
+clave,concepto,valor,unidad
+A,A) Gasto neto pagado CP 2025,8374179.5,mdp
+1,(1) Costo financiero,1131312.2,mdp
+2,(2) Participaciones,1350864.7,mdp
+3,(3) Adefas,28863.6,mdp
+4,(4) Pensiones y jubilaciones,1458485.7,mdp
+5,(5) Inversión física y financiera directa GF y ECPD,643527.6,mdp
+6,(6) Inversión física y financiera directa ECPI,35936.0,mdp
+7,(7) Programas sociales universales establecidos en la CPEUM,766412.4,mdp
+8,(8) Servicios personales función educación,648331.6,mdp
+9,(9) Servicios personales función salud,522120.5,mdp
+10,(10) Servicios personales función asuntos de orden público y de seguridad interior,27635.3,mdp
+B,B) Gasto corriente estructural pagado CP 2025,1760689.7,mdp
+Dife,Diferimiento de pagos,75720.6,mdp
+C,C) Gasto corriente estructural devengado CP 2025,1836410.3,mdp
+actu_2026,Actualización por precios 2026,3.8,pct
+crec_2026,Crecimiento real propuesto 2026,1.9,pct
+actu_2027,Actualización por precios 2027,4.0,pct
+crec_2027,Crecimiento real propuesto 2027,1.9,pct
+D,D) Límite máximo para 2027,2058457.0,mdp

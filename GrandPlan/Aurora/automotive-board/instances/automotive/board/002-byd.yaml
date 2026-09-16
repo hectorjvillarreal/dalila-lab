@@ -35,13 +35,13 @@ slots:
     confidence: reported
     decisive: false
   margin:
-    value: null
-    unit: null
-    delta: null
-    date: null
-    source: null
-    source_type: null
-    confidence: null
+    value: "18.85% gross margin, H1-2026 — revenue 344.82B yuan; net profit attributable 12.33B yuan"
+    unit: "% — gross margin, consolidated"
+    delta: "gross margin 18.01% in H1-2025; revenue −7.13% YoY; net profit attributable −20.54% YoY"
+    date: 2026-08-28
+    source: "https://cnevpost.com/2026/08/28/byd-h1-2026-earnings/"
+    source_type: secondary
+    confidence: reported
     decisive: false
     notes: "unset — board marks '(feed)'; awaiting feed data"
   cost_position:
@@ -55,11 +55,11 @@ slots:
     decisive: true
     notes: "unset — board marks '(feed)'; awaiting feed data"
   geographic_reach:
-    value: "179,841"
-    unit: "units — exports (passenger cars + pickups), July 2026 (~43% of monthly sales)"
-    delta: "+124.3% YoY (July)"
-    date: 2026-08-12
-    source: "https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/byd-s-two-track-reality-record-exports-abroad-profit-erosion-at-home/69941113"
+    value: "189,466"
+    unit: "units — overseas sales, August 2026 (43.03% of 440,293 NEV sales)"
+    delta: "+134.45% YoY"
+    date: 2026-09-01
+    source: "https://cnevpost.com/2026/09/01/byd-aug-2026-sales/"
     source_type: secondary
     confidence: reported
     decisive: false

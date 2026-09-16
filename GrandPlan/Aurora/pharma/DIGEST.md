@@ -1,0 +1,203 @@
+PHARMA INSTANCE — state as of 2026-09-03 16:55
+
+items awaiting promote flag .......... 3
+oldest unflagged item ................ 0 days
+cycles since last promote flag ....... 0
+feed calibration ..................... active
+provisional queries pending .......... 1
+roster size .......................... 20
+panel last refreshed ................. 15 days ago
+
+---
+
+## Feed — latest cycle report (verbatim: feed/_reports/20260903_1643_cycle.md)
+
+# Feed cycle report — cycle 8
+
+Machine-authored by harness.py, 2026-09-03 16:43. No judgment in this file; all figures are counts.
+
+- items retrieved this cycle: 3 (main: 3)
+- duplicates discarded: 0
+- items awaiting promote flag (total): 3
+- promotes recorded since last cycle: 4
+- queries retired: none
+- provisional queries added: p006 (aflibercept), p007 (update)
+- provisional graduated to main: none
+- source weight changes: infectiousdiseaseadvisor.com 1.0->0.98, fiercebiotech.com 0.34->0.33, biospace.com 0.67->0.66, deccanherald.com 1.0->0.98, bloominglobal.com 1.0->0.98, pyfa.co.id 1.0->0.98, channelstv.com 1.0->0.98, vanguardngr.com 1.0->0.98, premiumtimesng.com 1.0->0.98, thenationonlineng.net 1.0->0.98, pharmanewsonline.com 1.0->0.98, ashp.org 0.76->0.74, pharmexec.com 0.87->0.84, bioxconomy.com 1.0->0.98, entrytoregulatory.com 1.0->0.98, investor.elanco.com 1.0->0.98, sec.gov 0.76->0.49, thepharmaletter.com 1.0->0.98, einpresswire.com 1.0->0.98, drugdiscoverynews.com 1.0->0.98, theinsurer.com 1.0->0.98, biopharmadive.com 1.0->0.74, medcitynews.com 1.0->0.98, scmp.com 1.0->0.98, investing.com 1.0->0.98, gurufocus.com 1.0->0.98, stockstotrade.com 1.0->0.98, xtalks.com 1.0->0.98, pharmtech.com 0.61->0.59, zamann-pharma.com 1.0->0.98, beckershospitalreview.com 0.76->0.74, techtimes.com 1.0->0.98, pakistantoday.com.pk 1.0->0.98, pureglobal.com 1.0->0.98, blueteq.com 1.0->0.98, onclive.com 1.0->0.98, en.antaranews.com 1.0->0.98, plutusias.com 1.0->0.98, endpoints.news 1.0->0.98, investor.jazzpharma.com 1.0->0.98, investors.eyepoint.bio 1.0->0.98, allsci.com 1.0->0.98
+- entity counts moved: United States 8->9, Gilead 1->2, EMA 3->4, FDA 3->4, CBP 1->2, Tenax Therapeutics 0->1, Sanofi 0->1, Blueprint Medicines 0->1, Massachusetts 0->1, Fourth Circuit 0->1, Meritain Health 0->1, US Senate 0->1
+- cadence: 36h (unchanged)
+- next cycle due: 2026-09-05 04:43
+- calibration: active
+
+## Noticed, not handled
+
+- rules.md (human-owned) does not exist; harness ran on seeds.md alone
+
+### Unflagged items (3 awaiting promote flag)
+
+- "White House announces MFN pricing deals with nine additional manufacturers (Alcon, Astellas, BeOne, BridgeBio, CSL, Kyowa Kirin, Sun, Teva, UCB) — program now covers 26 firms, 89% of branded market" — The pricing-deal/tariff-exemption apparatus is consolidating into the de facto US pharma industrial policy: nine mid-cap signatories bring MFN coverage to 26 manufacturers and 89% of the branded market, bundled with >=US$19.6B of near-term US manufacturing commitments and API donations to the Strategic API Reserve — three instruments (price control, onshoring, stockpile) fused in one non-legislative deal structure, four weeks before the 09-29 Section 232 all-importers deadline. Primary source (White House fact sheet); Teva and Sun are notable as generics-side signatories. — 2026-09-03 — https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-deal-with-nine-additional-pharmaceutical-manufacturers-to-lower-drug-prices-for-americans/ — [main] — 20260903-0003
+- "FDA grants accelerated approval to Zenbexus (iberdomide) + daratumumab/dexamethasone for multiple myeloma — first CELMoD approval, first myeloma approval on an MRD surrogate endpoint" — BMS's Revlimid/Pomalyst successor franchise clears the gate: first CELMoD approval (EXCALIBER-RRMM, MRD-negative CR 41% vs 21%), and the first myeloma approval driven by minimal residual disease as the registrational surrogate rather than PFS/OS — a gate-speed precedent that shortens the path for the whole class. Directly relevant to the roster's largest LOE stories (lenalidomide aftermath). At the edge of the intake window (08-13) but first surfacing — q023 was not planned in cycle 7. — 2026-09-03 — https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-iberdomide-daratumumab-and-hyaluronidase-fihj-and-dexamethasone — [main] — 20260903-0002
+- "FDA approves Rasonque (daraxonrasib), first broad RAS-targeted therapy, for previously treated metastatic pancreatic adenocarcinoma" — First-in-class gate event in the largest essentially untargeted solid-tumor market: RASolute 302 showed median OS 13.2 vs 6.7 months (60% mortality-risk reduction) against chemo in a disease with ~13% five-year survival. Revolution Medicines becomes a rent-replacement reference point — a clinical-stage RAS platform converting to approved revenue while large-cap oncology franchises age toward their cliffs. Primary source (FDA press announcement); company release at ir.revmed.com same day. — 2026-09-03 — https://www.fda.gov/news-events/press-announcements/fda-approves-first-class-targeted-therapy-metastatic-pancreatic-cancer — [main] — 20260903-0001
+
+---
+
+## Panel — latest report (verbatim: ratios/_reports/20260819_1838_panel.md)
+
+# Ratio panel report — 2026-08-19 18:38
+
+Machine-authored by panel.py. Deviations only; no composite, no verdict.
+
+## Roster (20 firms)
+
+`LLY`, `JNJ`, `AMGN`, `PFE`, `MRK`, `VRTX`, `NVO`, `AZN`, `NVS`, `RO.SW`, `SNY`, `4502.T`, `4568.T`, `SUNPHARMA.NS`, `DRREDDY.NS`, `2359.HK`, `600276.SS`, `TEVA`, `SDZ.SW`, `LONN.SW`
+
+Retrieval: 2026-08-19T18:37:46 to 2026-08-19T18:38:46, source yfinance (Yahoo Finance). Per-value source field names in `history/20260819_1838_raw.yaml`.
+
+## Warning — print in full, every report
+
+**Two distortions that make these ratios lie in pharma** (printed in every
+report by construction; both bite hard in this industry).
+
+**Trailing earnings overstate durable earnings near a patent cliff.** A firm two
+years from a major loss of exclusivity has earnings that are scheduled to fall.
+Its low P/E is not cheapness — it is the market pricing a known extinction. This
+is the single most common way a pharma ratio screen misleads, and it will
+misfire in exactly the cases the Aurora board cares most about.
+
+**R&D is expensed, not capitalised.** Book value, margins, and ROIC are
+therefore not comparable across firms with different R&D intensity. A
+research-heavy firm looks less profitable and less asset-rich than a scale
+player running the same economics. Do not compare P/B across firms whose
+R&D/sales differ by more than roughly half.
+
+The `years_to_major_LOE` column beside the valuation ratios is human-supplied
+in roster.md, not estimated by the tool. It is a column, not a model. Its only
+job is to sit next to the P/E so the cliff is visible at the moment the P/E is
+read. Values still marked `?` in roster.md are unverified approximations.
+
+## Retrieval failures
+
+- none
+
+## NA fields (excluded from medians, never zero-filled)
+
+- pe_trailing: 4502.T (Yahoo field trailingPE absent)
+- ev_ebitda: NVO (price/statement currency mismatch (ADR); Yahoo EV/book fields unreliable); SNY (price/statement currency mismatch (ADR); Yahoo EV/book fields unreliable); 2359.HK (price/statement currency mismatch (ADR); Yahoo EV/book fields unreliable); SDZ.SW (price/statement currency mismatch (ADR); Yahoo EV/book fields unreliable)
+- ev_sales: NVO (price/statement currency mismatch (ADR); Yahoo EV/book fields unreliable); SNY (price/statement currency mismatch (ADR); Yahoo EV/book fields unreliable); 2359.HK (price/statement currency mismatch (ADR); Yahoo EV/book fields unreliable); SDZ.SW (price/statement currency mismatch (ADR); Yahoo EV/book fields unreliable)
+- ev_fcf: NVO (price/statement currency mismatch (ADR)); SNY (price/statement currency mismatch (ADR)); 4568.T (free cash flow non-positive or missing); 2359.HK (price/statement currency mismatch (ADR)); SDZ.SW (price/statement currency mismatch (ADR)); LONN.SW (free cash flow non-positive or missing)
+- price_book: NVO (price/statement currency mismatch (ADR); Yahoo EV/book fields unreliable); SNY (price/statement currency mismatch (ADR); Yahoo EV/book fields unreliable); 2359.HK (price/statement currency mismatch (ADR); Yahoo EV/book fields unreliable); SDZ.SW (price/statement currency mismatch (ADR); Yahoo EV/book fields unreliable)
+- dividend_yield: VRTX (no dividend); TEVA (no dividend)
+- rnd_sales: SUNPHARMA.NS (inputs missing from source statements)
+- eps_growth_3y: TEVA (inputs missing from source statements); LONN.SW (inputs missing from source statements)
+
+## Restatements since last refresh
+
+- none vs 20260819_1838_raw.yaml
+
+## Notable (own-history deviation beyond 2 sigma — no direction attached)
+
+- LLY: ev_ebitda (own-history |z| >= 2, window std 3.14, n=3)
+- LLY: gross_margin (own-history |z| >= 2, window std 0.0186, n=3)
+- LLY: operating_margin (own-history |z| >= 2, window std 0.039, n=3)
+- LLY: net_margin (own-history |z| >= 2, window std 0.0352, n=3)
+- LLY: roic (own-history |z| >= 2, window std 0.0291, n=3)
+- LLY: net_debt_ebitda (own-history |z| >= 2, window std 0.124, n=3)
+- LLY: current_ratio (own-history |z| >= 2, window std 0.0862, n=3)
+- LLY: rnd_sales (own-history |z| >= 2, window std 0.0122, n=3)
+- JNJ: ev_ebitda (own-history |z| >= 2, window std 1.42, n=3)
+- JNJ: ev_sales (own-history |z| >= 2, window std 0.826, n=3)
+- JNJ: ev_fcf (own-history |z| >= 2, window std 3.42, n=3)
+- JNJ: price_book (own-history |z| >= 2, window std 0.467, n=3)
+- JNJ: dividend_yield (own-history |z| >= 2, window std 0.00361, n=3)
+- JNJ: gross_margin (own-history |z| >= 2, window std 0.00177, n=3)
+- JNJ: roic (own-history |z| >= 2, window std 0.00317, n=3)
+- JNJ: rnd_sales (own-history |z| >= 2, window std 0.00806, n=3)
+- AMGN: ev_ebitda (own-history |z| >= 2, window std 0.0509, n=3)
+- AMGN: ev_fcf (own-history |z| >= 2, window std 4.52, n=3)
+- AMGN: dividend_yield (own-history |z| >= 2, window std 0.00226, n=3)
+- AMGN: rnd_sales (own-history |z| >= 2, window std 0.00444, n=3)
+- AMGN: capex_sales (own-history |z| >= 2, window std 0.00273, n=3)
+- MRK: ev_sales (own-history |z| >= 2, window std 0.362, n=3)
+- MRK: price_book (own-history |z| >= 2, window std 0.792, n=3)
+- VRTX: price_book (own-history |z| >= 2, window std 0.402, n=3)
+- VRTX: interest_coverage (own-history |z| >= 2, window std 38.8, n=3)
+- NVO: gross_margin (own-history |z| >= 2, window std 0.00337, n=3)
+- NVO: operating_margin (own-history |z| >= 2, window std 0.00897, n=3)
+- NVO: roe (own-history |z| >= 2, window std 0.0501, n=3)
+- NVO: roic (own-history |z| >= 2, window std 0.0877, n=3)
+- NVO: net_debt_ebitda (own-history |z| >= 2, window std 0.245, n=3)
+- NVO: interest_coverage (own-history |z| >= 2, window std 52.2, n=3)
+- NVO: rnd_sales (own-history |z| >= 2, window std 0.0132, n=3)
+- NVO: capex_sales (own-history |z| >= 2, window std 0.042, n=3)
+- NVO: fcf_conversion (own-history |z| >= 2, window std 0.194, n=3)
+- AZN: dividend_yield (own-history |z| >= 2, window std 0.000839, n=3)
+- AZN: interest_coverage (own-history |z| >= 2, window std 1.4, n=3)
+- NVS: ev_ebitda (own-history |z| >= 2, window std 1.46, n=3)
+- NVS: ev_sales (own-history |z| >= 2, window std 0.284, n=3)
+- NVS: ev_fcf (own-history |z| >= 2, window std 1.42, n=3)
+- NVS: price_book (own-history |z| >= 2, window std 0.544, n=3)
+- NVS: dividend_yield (own-history |z| >= 2, window std 0.002, n=3)
+- NVS: gross_margin (own-history |z| >= 2, window std 0.00891, n=3)
+- NVS: operating_margin (own-history |z| >= 2, window std 0.0416, n=3)
+- NVS: net_debt_ebitda (own-history |z| >= 2, window std 0.1, n=3)
+- RO.SW: ev_sales (own-history |z| >= 2, window std 0.395, n=3)
+- RO.SW: rnd_sales (own-history |z| >= 2, window std 0.00591, n=3)
+- RO.SW: capex_sales (own-history |z| >= 2, window std 0.00465, n=3)
+- SNY: gross_margin (own-history |z| >= 2, window std 0.00428, n=3)
+- SNY: current_ratio (own-history |z| >= 2, window std 0.0837, n=3)
+- 4502.T: ev_sales (own-history |z| >= 2, window std 0.0215, n=3)
+- 4502.T: price_book (own-history |z| >= 2, window std 0.0798, n=3)
+- 4502.T: dividend_yield (own-history |z| >= 2, window std 0.00204, n=3)
+- 4502.T: net_margin (own-history |z| >= 2, window std 0.024, n=3)
+- 4502.T: roe (own-history |z| >= 2, window std 0.0153, n=3)
+- 4502.T: net_debt_ebitda (own-history |z| >= 2, window std 0.642, n=3)
+- 4568.T: ev_sales (own-history |z| >= 2, window std 0.951, n=3)
+- 4568.T: price_book (own-history |z| >= 2, window std 0.566, n=3)
+- 4568.T: dividend_yield (own-history |z| >= 2, window std 0.005, n=3)
+- 4568.T: gross_margin (own-history |z| >= 2, window std 0.0263, n=3)
+- 4568.T: net_debt_ebitda (own-history |z| >= 2, window std 1.01, n=3)
+- 4568.T: current_ratio (own-history |z| >= 2, window std 0.195, n=3)
+- SUNPHARMA.NS: roe (own-history |z| >= 2, window std 0.000432, n=3)
+- SUNPHARMA.NS: roic (own-history |z| >= 2, window std 0.00475, n=3)
+- SUNPHARMA.NS: capex_sales (own-history |z| >= 2, window std 0.00306, n=3)
+- DRREDDY.NS: pe_trailing (own-history |z| >= 2, window std 1.14, n=3)
+- DRREDDY.NS: ev_ebitda (own-history |z| >= 2, window std 0.713, n=3)
+- DRREDDY.NS: ev_sales (own-history |z| >= 2, window std 0.297, n=3)
+- DRREDDY.NS: price_book (own-history |z| >= 2, window std 0.459, n=3)
+- DRREDDY.NS: dividend_yield (own-history |z| >= 2, window std 0.000461, n=3)
+- DRREDDY.NS: gross_margin (own-history |z| >= 2, window std 0.00887, n=3)
+- DRREDDY.NS: operating_margin (own-history |z| >= 2, window std 0.00789, n=3)
+- DRREDDY.NS: net_margin (own-history |z| >= 2, window std 0.0106, n=3)
+- DRREDDY.NS: roe (own-history |z| >= 2, window std 0.0129, n=3)
+- DRREDDY.NS: roic (own-history |z| >= 2, window std 0.0156, n=3)
+- DRREDDY.NS: interest_coverage (own-history |z| >= 2, window std 7.07, n=3)
+- DRREDDY.NS: current_ratio (own-history |z| >= 2, window std 0.278, n=3)
+- DRREDDY.NS: rnd_sales (own-history |z| >= 2, window std 0.00217, n=3)
+- 2359.HK: gross_margin (own-history |z| >= 2, window std 0.0191, n=3)
+- 2359.HK: operating_margin (own-history |z| >= 2, window std 0.0218, n=3)
+- 2359.HK: net_margin (own-history |z| >= 2, window std 0.0074, n=3)
+- 2359.HK: roe (own-history |z| >= 2, window std 0.0114, n=3)
+- 2359.HK: roic (own-history |z| >= 2, window std 0.00754, n=3)
+- 2359.HK: current_ratio (own-history |z| >= 2, window std 0.298, n=3)
+- 2359.HK: rnd_sales (own-history |z| >= 2, window std 0.00387, n=3)
+- 600276.SS: pe_trailing (own-history |z| >= 2, window std 9.01, n=3)
+- 600276.SS: ev_ebitda (own-history |z| >= 2, window std 7.73, n=3)
+- 600276.SS: price_book (own-history |z| >= 2, window std 0.315, n=3)
+- 600276.SS: net_margin (own-history |z| >= 2, window std 0.0191, n=3)
+- 600276.SS: net_debt_ebitda (own-history |z| >= 2, window std 0.3, n=3)
+- TEVA: ev_sales (own-history |z| >= 2, window std 0.256, n=3)
+- TEVA: price_book (own-history |z| >= 2, window std 1.52, n=3)
+- TEVA: gross_margin (own-history |z| >= 2, window std 0.00861, n=3)
+- TEVA: operating_margin (own-history |z| >= 2, window std 0.0105, n=3)
+- TEVA: net_margin (own-history |z| >= 2, window std 0.0525, n=3)
+- TEVA: roe (own-history |z| >= 2, window std 0.111, n=3)
+- TEVA: roic (own-history |z| >= 2, window std 0.0311, n=3)
+- TEVA: interest_coverage (own-history |z| >= 2, window std 1.19, n=3)
+- SDZ.SW: roe (own-history |z| >= 2, window std 0.0437, n=3)
+- SDZ.SW: rnd_sales (own-history |z| >= 2, window std 0.00149, n=3)
+- LONN.SW: price_book (own-history |z| >= 2, window std 0.601, n=3)
+- LONN.SW: net_margin (own-history |z| >= 2, window std 0.0424, n=3)
+- LONN.SW: roe (own-history |z| >= 2, window std 0.0217, n=3)
+- LONN.SW: capex_sales (own-history |z| >= 2, window std 0.0221, n=3)
+
+Own-history bands are annual statement vintages (typically 3-4 observations); z-scores over so few points are coarse by construction — read them with the printed std and n.

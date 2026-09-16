@@ -1,0 +1,257 @@
+            América Latina necesita
+           una nueva seguridad social
+            Gasto, demografía y los instrumentos que faltan
+
+
+
+
+            Héctor Villarreal · ITED, Tecnológico de Monterrey
+    XXXVIII Seminario Regional de Política Fiscal · CEPAL · Santiago, Chile
+Sesión 4: Gasto e inversión pública para cerrar brechas estructurales · Mayo 2026
+El modelo heredado ya no cierra
+
+ La seguridad social latinoamericana fue diseñada
+ para economías jóvenes apoyándose en la               Envejecimiento acelerado
+
+ formalidad.
+ Ninguna de las dos condiciones se sostiene.           Informalidad estructural
+
+
+   ▶ La región envejece antes de alcanzar el ingreso
+     de los países con estados de bienestar maduros.        Gasto público
+                                                          críticamente bajo
+   ▶ Informalidad estructural (4060 %): los
+     sistemas contributivos cubren a menos de la
+     mitad de la fuerza laboral.                            Rediseño
+                                                            necesario
+   ▶ Gasto público en salud críticamente bajo en
+     algunos países: México destina 2.6 % del PIB
+     desde el sector público  como si fuera un
+     país de ingreso bajo.
+   ▶ El resto es gasto de bolsillo: no planeado, por                              2/12
+La trampa de la formalización
+
+ Tasa de Tributación a la Formalización (FTR)                Composición del FTR
+ El costo neto de ser formal incluye contribuciones,
+ impuestos la pérdida de benecios no contributivos.                Impuestos
+
+ Si el trabajador no valora lo que recibe, la contribución
+             y
+
+
+
+ se percibe como                 .
+                     impuesto puro
+                                                                    Pérdida de
+                                                                   transferencias
+ Diagnóstico regional:                                           Contribuciones SS
+   ▶ El componente más grande del FTR no son                    (componente mayor)
+     los impuestos: son las contribuciones a
+     seguridad social.
+   ▶ La valuación que los trabajadores hacen de
+     esas contribuciones es baja  sistemas
+     opacos, las largas, conanza débil.
+
+ Ref: Banco Mundial (2025),   (In)Formalizing Jobs in LAC
+                                                                                     3/12
+Los programas paralelos empeoran la trampa
+
+ Al formalizarse, el trabajador enfrenta un costo
+ inmediato y cierto: pagar cuotas de seguridad          Costo cierto:
+ social. Ese es el componente principal del cli.
+                                                        •Cuotas de seguridad social (componente
+ Además, en muchos países puede perder acceso a
+ programas sociales  aunque esto no es
+                                                        mayor)
+ automático y depende del diseño de cada                Costos posibles:
+
+ programa.                                              • Transferencias condicionadas
+                                                        • Pensión no contributiva
+ Cli eect                                             • Acceso a salud gratuita
+ La combinación de cuotas obligatorias y pérdida        • Subsidios o becas
+ potencial de benecios eleva el FTR precisamente en
+ los trabajadores de ingreso medio-bajo que                      Uruguay eliminó el tope de ingreso
+ formalizarse.
+                                          podrían
+                                                       Ejemplo:
+
+                                                       formal para acceder a AFAM-PE 
+                                                       reconociendo que el tope desincentivaba la
+                                                       formalización.                               4/12
+Eje 1: Nuevos instrumentos nanciero-scales para salud
+
+ El nanciamiento de salud en América Latina
+ depende excesivamente de la nómina formal. Eso lo
+ hace insuciente (pocos contribuyen) e                Tres instrumentos
+
+
+ inequitativo (los informales quedan fuera o reciben   • Cuotas contributivas  rediseñadas 
+ servicios paralelos de menor calidad).                canalizadas a salud, con vínculo claro
+                                                       entre contribución y benecio
+ La propuesta no es abandonar la lógica contributiva
+                                                       •                    para no cotizantes
+                                                        copago proporcional al ingreso;
+                                                        Primas graduadas
+  es ampliarla. Un sistema de salud Bismarckiano
+ donde:                                                gobierno cubre solo a los más
+   ▶ Quien puede contribuir, contribuye
+                                                       vulnerables
+     directamente.                                     •Seguros privados de ciclo de vida   
+   ▶ Quien no cotiza, paga al menos un tramo de        prefondan el gasto de salud en la vejez
+     su prima  proporcional a su ingreso.
+   ▶ El gobierno cubre la prima completa solo para
+     los más necesitados. De lo contrario, hay
+     malos incentivos.                                                                           5/12
+Tres instrumentos para nanciar salud
+
+
+
+  1. Cuotas contributivas               2. Primas graduadas                 3. Seguros privados
+  rediseñadas                           para no cotizantes                  de ciclo de vida
+  Canalizadas exclusivamente            Copago proporcional al              Prefondan el gasto de salud
+  a salud. Vínculo                      ingreso. El gobierno cubre la       de la vejez. Descomprimen
+  contribución-benecio                 prima completa                      el presupuesto público a
+  directo y claro.                                      .
+                                                          solo para los
+
+
+
+                                                                                        .
+                                        más vulnerables
+
+
+  Que el trabajador perciba             No crea un sistema paralelo.        largo plazo
+
+
+  valor, no impuesto.
+
+                                           todos dentro del sistema de seguros  unos pagando su
+          propia prima, otros con prima pagada por el Estado. Nadie afuera en un esquema paralelo.
+          Lógica Bismarckiana ampliada:
+
+
+
+                                                                                                          6/12
+Eje 2: Consolidar transferencias en impuesto negativo sobre la renta
+
+ La proliferación de programas sociales fragmentados
+ genera el cli eect que vimos: al formalizarse, el          Condición necesaria
+ trabajador pierde múltiples benecios de golpe.
+                                                              Mayor observabilidad de ingresos. La digitalización
+                                                              de pagos y facturación electrónica en México, Brasil,
+ La propuesta
+                                                              Uruguay y Colombia lo hacen factible hoy.
+ Consolidar transferencias en un impuesto negativo
+ sobre la renta (IRN).
+ El benecio se reduce gradualmente conforme el
+ ingreso sube. No hay salto. El trabajador siempre
+ gana al formalizarse.
+
+ Ventajas: elimina duplicidades administrativas, hace
+ transparente el costo scal del piso de protección, y
+ convierte al sistema tributario en          de la política
+ social.
+                                    vehículo
+
+
+                                                                                                                      7/12
+La mecánica del impuesto negativo
+
+ Sistema actual:
+
+
+
+
+                                                Benecio neto
+ Múltiples programas con umbrales rígidos. Al
+ cruzar el umbral, pérdida abrupta.
+                                                             Sistema actual:
+
+ Con IRN:                                                  programas múltiples
+
+ Un solo mecanismo scal. El benecio
+ decrece suavemente. Cada peso adicional de
+ ingreso formal siempre deja al trabajador
+ mejor.                                                                                        IRN:
+                                                                                            transición
+
+                                                                                 ganancia     suave
+
+ El IRN como puente
+ El impuesto negativo facilita la transición
+ hacia la contribución propia. No es el
+                                                                        Umbral de                        Ingreso
+ destino  es el camino hacia la plena                                formalización
+ participación en el sistema contributivo.
+                                                                                                                   8/12
+Sin contención de pensiones, no hay espacio para salud
+
+ El gasto en pensiones  contributivas y no
+ contributivas  crece aceleradamente en toda la
+ región.
+                                                                            Espacio scal
+                                                                             disponible
+   ▶ Las promesas previsionales maduraron antes de                 absorbe               desplazada
+     que la base contributiva se ampliara.
+                                                              Pensiones                        Salud
+   ▶ Las pensiones no contributivas han sido un              (crecimiento                    (necesita
+                                                              acelerado)                      crecer)
+     avance importante en cobertura de adultos
+     mayores. Sin embargo  ya sea como piso
+     focalizado o como benecio universal              Implicación:reformar pensiones no es un tema
+     representan un costo scal creciente y su          separado de nanciar salud  es su               .
+                                                                                          condición previa
+     diseño puede debilitar el incentivo a cotizar si
+     no se integra con el pilar contributivo.
+   ▶ Sin reforma paramétrica, el gasto en pensiones
+     desplaza todo lo demás.
+                                                                                                             9/12
+La prueba de sostenibilidad scal
+
+ Cualquier propuesta que dependa de impuestos
+ generales debe demostrar que es nanciable a
+ 20 años.                                         Doble prueba para toda propuesta
+ Pensiones, salud y cuidados son un solo          1. Sostenibilidad scal
+ problema scal  compiten por el mismo           ¾Se puede nanciar a lo largo de la
+ espacio presupuestario y deben analizarse como   transición demográca sin generar
+ sistema, no como silos separados.                dinámicas de deuda insostenibles?
+ Esto requiere análisis explícito de:
+                                                  2. Incentivos a la formalización
+   ▶ Dinámica de deuda pública                    ¾Fortalece o debilita el incentivo del
+   ▶ Espacio scal real  no el teórico           trabajador a participar en el sistema
+   ▶ Restricción presupuestaria intertemporal
+                                                  contributivo?
+   ▶ Sensibilidad demográca                      Falla en cualquiera de las dos ⇒ debilidad
+                                                  estructural.                               10/12
+Una comunidad para esta agenda
+
+   ¾Cómo pueden los sistemas de salud de América Latina  con sus combinaciones de nanciamiento
+   público, contributivo y privado  mantenerse scalmente sostenibles e institucionalmente creíbles a
+                           través de la transición demográca y epidemiológica?
+ Estamos construyendo una Comunidad
+ Latinoamericana del Conocimiento sobre                           Seminario inaugural
+
+ Financiamiento de la Salud.                                      Septiembre 2026
+ Tríada fundadora:                                                Escuela de Gobierno y Transformación Pública,
+   ▶ Tecnológico de Monterrey                                     Tecnológico de Monterrey
+   ▶ Universidad de los Andes, Colombia                           Agenda
+                                                                  • Instrumentos
+                                                                    Sostenibilidadnancieros
+                                                                                   scal
+   ▶ Ponticia Universidad Católica de Chile                      •
+                                                                  • Incentivos y formalización
+                                                                  • Economía política de la reforma
+ Una agenda regional sobre los instrumentos que la región
+ necesita.                                                                                                        11/12
+    ¾Podemos diseñar sistemas de protección social
+      que la gente valore lo suciente como para
+    querer participar  y que los gobiernos puedan
+    nanciar a lo largo de la transición demográca?
+Si la respuesta es sí, hay que construir los instrumentos.
+
+
+
+
+                        Héctor Villarreal
+       hvillarreal@tec.mx · ITED, Tecnológico de Monterrey
+

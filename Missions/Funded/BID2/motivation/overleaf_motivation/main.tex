@@ -1,0 +1,69 @@
+% =====================================================================
+% BID2 — motivation section, standalone Overleaf project
+% =====================================================================
+% Self-contained preview of the motivation section drafted from the
+% ENIGH / ENSANUT / ENASEM build (Missions/Funded/BID2/motivation/).
+% Upload this whole folder — or overleaf_motivation.zip — to Overleaf and
+% compile. main.tex is the main document. No bibliography is needed: the
+% section names its data sources in prose, matching the convention in
+% Draft-June-v6.tex.
+%
+% The preamble below mirrors Draft-June-v6.tex, so what renders here is what
+% the section will look like once it is placed in the paper. When that
+% happens, this file is discarded and only motivation_section.tex moves
+% across, via \input{motivation_section}.
+%
+% CANONICAL COPY. The section is maintained at
+%   Missions/Funded/BID2/motivation/draft/motivation_section.tex
+% The copy in this folder is a snapshot for upload. Edit the canonical file
+% and re-copy; do not let the two drift.
+% =====================================================================
+
+\documentclass[12pt,a4paper]{article}
+
+%% --- Encoding and fonts ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+%% --- Language ---
+\usepackage[english]{babel}
+
+%% --- Mathematics ---
+\usepackage{amsmath, amssymb}
+
+%% --- Layout ---
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+%% --- Figures and tables ---
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{float}          % provides the [H] float specifier
+
+%% --- Cross-references and links ---
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+% The section closes with a forward reference to the model section of the
+% paper, which has no target in this standalone project. Stub it so the
+% preview reads cleanly instead of showing "??". Remove when the section is
+% placed in Draft-June-v6.tex, where the real label exists.
+\makeatletter
+\@ifundefined{r@sec:model}{\newlabel{sec:model}{{2}{1}}}{}
+\makeatother
+
+\title{BID2 --- Draft Motivation Section\\
+       \large Standalone preview; not the paper}
+\author{}                    % authors omitted in the preview
+\date{Draft of 9 August 2026}
+
+\begin{document}
+
+\maketitle
+
+\input{motivation_section}
+
+\end{document}

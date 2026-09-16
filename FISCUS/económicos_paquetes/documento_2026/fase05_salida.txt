@@ -1,0 +1,177 @@
+
+==============================================================================
+PUNTO 1 — la caída de salud: -12.2 y -7.2 nuestros contra -11.0 del género
+==============================================================================
+Función Salud (finalidad 2, función 3), GF + entidades, BRUTO
+  2024 =    970,522.5 mdp   (GF 439,024.9 + ent 531,497.6)
+  2025 =    888,903.7 mdp   (GF 326,133.5 + ent 562,770.2)
+  diferencia nominal =    -81,618.8 mdp
+  diferencia real    =   -123,351.3 mdp   -> -12.19 % real (deflactor CGPE 1.043)
+  con el deflactor implícito de CIEP (1.04252): -12.15 % real
+
+  Descuento del adeudo liquidado (Ramo 19, R023):
+    2024: R023 =   52,324.5   S038 IMSS-Bienestar =   21,623.7
+    2025: R023 =      339.8   S038 IMSS-Bienestar =        0.0
+    sin R023: 2024 918,198.0 -> 2025 888,563.8  =  -7.22 % real
+    sin R023 ni S038: 896,574.3 -> 888,563.8  =  -4.98 % real
+
+  Por ramo (GF) y entidad, 2024 -> 2025, variación real con deflactor CGPE:
+    ramo  07:      8,009.4 ->      7,053.5     -15.6 %
+    ramo  12:     88,916.7 ->     59,089.7     -36.3 %
+    ramo  13:      3,659.0 ->      3,521.2      -7.7 %
+    ramo  19:     74,226.5 ->      9,896.4     -87.2 %
+    ramo  33:    135,589.4 ->     81,220.5     -42.6 %
+    ramo  47:    128,623.9 ->    165,352.2     +23.3 %
+    ent GYN Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado:     76,252.2 ->     81,687.2      +2.7 %
+    ent GYR Instituto Mexicano del Seguro Social:    455,245.4 ->    481,083.0      +1.3 %
+
+==============================================================================
+PUNTO 1b — el perímetro de CIEP reconstruido sobre el PEF APROBADO
+==============================================================================
+línea               CIEP 24 (mdp25)  nuestro 24 nom  CIEP 25 proy  nuestro 25 apr     dif 25
+IMSS                      475,517.3       456,122.5     491,976.4       481,955.3  -10,021.1
+ISSSTE                     79,608.5        76,361.5      81,803.2        81,803.2       -0.0
+Pemex                      20,091.1        19,271.6      18,442.6        18,442.6       -0.0
+IMSS-Bienestar            134,145.2       128,623.9     165,352.2       165,352.2       +0.0
+FASSA                     141,354.8       135,589.4      81,220.5        81,220.5       -0.0
+SSa                       101,114.1        96,990.0      66,693.2        66,693.2       -0.0
+Bienestar                       0.0             0.0       2,000.0         2,000.0       +0.0
+Aportaciones SS            68,034.3        65,259.4         760.6           760.5       -0.1
+Sedena                      8,349.9         8,009.4       6,677.0         7,053.5     +376.5
+Semar                       3,814.5         3,659.0       3,521.2         3,521.2       -0.0
+TOTAL                   1,032,029.7       989,886.8     918,446.9       908,802.2   -9,644.7
+
+  CIEP, proyecto contra aprobado 2024 deflactado: -11.01 % real  (publican -11.0)
+  Su perímetro sobre el APROBADO 2025 contra aprobado 2024: -11.98 % real
+  Su base 2024 implícita en pesos nominales: 989,937.6   nuestra reconstrucción: 989,886.8   dif -50.8
+
+==============================================================================
+PUNTO 2 — la caída de educación: +0.7 nuestro contra -1.2 del género
+==============================================================================
+  Perímetro PROPIO (función Educación, GF, bruta), aprobado contra aprobado
+    2024  1,032,621.4   2025  1,084,590.9   +0.70 % real   (publicamos +0.7)
+  Perímetro de CIEP (ramos 11+38+48 completos + resto de la función), aprobado
+    2024  1,109,716.7   2025  1,161,164.8   +0.32 % real (defl. CGPE) / +0.37 % (defl. CIEP)
+    su cifra publicada del PROYECTO: 1,142,490 mdp, -1.2 % real
+
+    base 2024 implícita en su columna (mdp 2025): 1,156,366.4   -> nominal 1,109,203.1
+    nuestra reconstrucción de su base 2024 nominal: 1,109,716.7   dif +513.6
+
+  Descomposición de la brecha -1.2 -> +0.7:
+    efecto OBJETO   (proyecto -> aprobado, su perímetro): -1.2 -> +0.32   =  +1.52 pp
+    efecto PERÍMETRO (su perímetro -> el nuestro, aprobado): +0.32 -> +0.70   =  +0.38 pp
+    la Cámara movió, en su perímetro: +18,674.8 mdp nominales
+
+  Función Educación por ramo, 2024 -> 2025 (aprobado):
+    ramo  07:      3,854.1 ->      3,992.7      -0.7 %
+    ramo  08:      5,346.7 ->      5,534.2      -0.8 %
+    ramo  11:    411,848.3 ->    437,675.4      +1.9 %
+    ramo  13:      2,230.0 ->      2,138.2      -8.1 %
+    ramo  25:     82,460.5 ->     81,610.1      -5.1 %
+    ramo  33:    526,250.1 ->    553,261.9      +0.8 %
+    ramo  47:        631.7 ->        378.4     -42.6 %
+
+==============================================================================
+PUNTO 3 — Defensa: ramo contra función
+==============================================================================
+
+  2024: Ramo 07 total = 259,433.8 mdp (corte por programa)   |  259,433.8 (corte por función)
+    por función:
+      3.5     127,556.9
+      1.6     103,530.1
+      3.1      15,172.8
+      2.3       8,009.4
+      2.5       3,854.1
+      1.2       1,310.5
+    por unidad responsable (>2,000 mdp):
+      H0M Tren Maya, S.A. de C.V.                                         125,937.3
+      145 Cuerpo de Policía Militar                                        21,141.5
+      120 Comandancia I Región Militar                                     19,350.7
+      H0C Grupo Aeroportuario, Ferroviario, de Servicios Auxiliares y      15,172.8
+      110 Dirección General de Administración                              10,313.8
+      111 Jefatura del Estado Mayor de la Defensa Nacional                  9,779.4
+      132 Comandancia de la Fuerza Aérea Mexicana                           9,768.7
+      117 Dirección General de Ingenieros                                   8,333.1
+      116 Dirección General de Sanidad                                      8,122.8
+      125 Comandancia VI Región Militar                                     3,096.6
+      126 Comandancia VII Región Militar                                    2,856.9
+      115 Dirección General de Educación Militar y Rectoría de la Univ      2,812.1
+      131 Comandancia XII Región Militar                                    2,479.9
+      124 Comandancia V Región Militar                                      2,019.9
+
+  2025: Ramo 07 total = 158,287.8 mdp (corte por programa)   |  158,287.8 (corte por función)
+    por función:
+      1.6     101,948.0
+      3.5      41,772.1
+      2.3       7,053.5
+      2.5       3,992.7
+      3.1       2,255.8
+      1.2       1,265.7
+    por unidad responsable (>2,000 mdp):
+      H0M Tren Maya, S.A. de C.V.                                          40,827.8
+      120 Comandancia I Región Militar                                     20,062.2
+      145 Cuerpo de Policía Militar                                        18,862.1
+      110 Dirección General de Administración                              16,849.7
+      111 Jefatura del Estado Mayor de la Defensa Nacional                  9,767.5
+      116 Dirección General de Sanidad                                      7,053.5
+      132 Comandancia de la Fuerza Aérea Mexicana                           6,870.3
+      117 Dirección General de Ingenieros                                   3,982.4
+      125 Comandancia VI Región Militar                                     3,110.8
+      115 Dirección General de Educación Militar y Rectoría de la Univ      2,910.5
+      126 Comandancia VII Región Militar                                    2,844.8
+      131 Comandancia XII Región Militar                                    2,488.8
+      H0C Grupo Aeroportuario, Ferroviario, de Servicios Auxiliares y       2,275.5
+      112 Dirección General de Industria Militar                            2,143.2
+      124 Comandancia V Región Militar                                      2,016.3
+
+==============================================================================
+PUNTO 4 — la tasa real del costo financiero y la compensación por inflación
+==============================================================================
+  Crecimiento nominal del PIB      n = 6.598 %
+  Deflactor del PIB (CGPE)         π = 4.30 %  ->  crecimiento real implícito γ = 2.204 %
+
+  Efectos del denominador (los publicamos así):
+    crecimiento real      -1.063 pp   (publicamos -1.06)
+    inflación, denominador-2.119 pp   (publicamos -2.12)
+    tipo de cambio        -0.786 pp   (publicamos -0.79)
+    RFSPF                 +3.949 pp   (publicamos +3.9)
+    SUMA DEL MARCO        -0.018 pp   contra un cambio observado de 0.0
+
+  La compensación por inflación pagada, bajo tres convenciones:
+    deflactor del PIB, 4.3 (la que publicamos)                     +2.073 pp   ->  neto -0.046 pp
+    INPC promedio, 3.8 (el que usa el propio CGPE para la tasa real) +1.832 pp   ->  neto -0.287 pp
+    INPC dic/dic, 3.5                                              +1.688 pp   ->  neto -0.431 pp
+    solo la compensación IDENTIFICABLE en el paquete (línea 'Adecuaciones a
+    registros presupuestarios', que el CGPE declara que contiene el componente
+    inflacionario de la deuda indexada, y que además trae otras tres cosas):
+    a lo sumo 0.4                                                  +0.400 pp   ->  neto -1.719 pp
+
+  Tasa nominal efectiva sobre el acervo = costo financiero 2025 / SHRFSP 2024 est. = 7.96 %
+    real con el deflactor 4.3: 3.66 %   real con el INPC promedio 3.8: 4.16 %
+    el CGPE publica, para Cetes 28: nominal promedio 8.9, REAL promedio 4.9
+
+  VEREDICTO: la descomposición de cuatro variables NO cambia (la compensación
+  es una lectura del RFSPF, no un término aditivo). Lo que no resiste es el -0.05:
+  el efecto neto de la inflación va de -0.05 a -1.72 según qué índice se use para
+  el pago, y el paquete no identifica cuál. La cota está declarada desde 2023.
+
+==============================================================================
+PUNTO 5 — los niveles nominales del acervo
+==============================================================================
+  Cotejo del nivel nominal contra su razón a PIB publicada (la prueba de que el
+  nivel se leyó de la fuente y no se derivó del porcentaje):
+    SHRFSP 2024 aprobado       16,787,906.1 mdp   PIB  34,374.0 mmp   48.839 % calculado contra 48.8 publicado   dif +0.039 pp
+    SHRFSP 2024 estimado       17,440,245.8 mdp   PIB  33,927.7 mmp   51.404 % calculado contra 51.4 publicado   dif +0.004 pp
+    SHRFSP 2025 estimado       18,591,005.5 mdp   PIB  36,166.4 mmp   51.404 % calculado contra 51.4 publicado   dif +0.004 pp
+
+  Identidad flujo-acervo en pesos (la prueba independiente):
+    Δ acervo observado                          1,150,759.7 mdp
+    RFSPF 2025                                  1,428,348.1 mdp
+    efecto de tipo de cambio (-0.786 pp)         -284,190.8 mdp
+    RFSPF + tipo de cambio                      1,144,157.3 mdp
+    RESIDUO                                        +6,602.4 mdp   =  +0.018 % del PIB
+
+  VEREDICTO: los tres niveles son restitución de la fuente, no derivación del
+  porcentaje: las tres razones recalculadas coinciden con las publicadas y la
+  identidad flujo-acervo cierra a dos centésimas de punto del PIB con el efecto
+  de tipo de cambio dentro. Las cifras resisten.

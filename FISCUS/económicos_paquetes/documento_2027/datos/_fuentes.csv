@@ -1,0 +1,145 @@
+id,concepto,ejercicio,etapa,valor,unidad,documento,ubicacion
+pib_27,PIB nominal,2027,proyecto,39419400.0,mdp,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+pib_26_ap,PIB nominal aprobado,2026,aprobado,38715900.0,mdp,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+pib_26_es,PIB nominal estimado,2026,cierre estimado,37160700.0,mdp,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+defl_27,Deflactor del PIB,2027,proyecto,1.040,factor,CGPE 2027 (ed. SHCP),Anexo III.1 p. 68
+infl_prom_27,Inflación INPC promedio,2027,proyecto,3.2,pct,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+infl_dic_27,Inflación INPC dic./dic.,2027,proyecto,3.0,pct,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+tc_prom_27,Tipo de cambio promedio,2027,proyecto,17.9,pesos por dolar,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+tc_prom_26,Tipo de cambio promedio,2026,cierre estimado,17.6,pesos por dolar,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+tc_fin_27,Tipo de cambio fin de periodo,2027,proyecto,18.0,pesos por dolar,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+tc_fin_26,Tipo de cambio fin de periodo,2026,cierre estimado,17.8,pesos por dolar,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+cetes_prom_27,Cetes 28 dias promedio,2027,proyecto,6.1,pct,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+petro_27,Precio de la mezcla mexicana,2027,proyecto,61.8,dolares por barril,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+petro_26,Precio de la mezcla mexicana,2026,cierre estimado,78.4,dolares por barril,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+petro_26_ap,Precio de la mezcla mexicana,2026,aprobado,54.9,dolares por barril,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+plat_prod_27,Plataforma de produccion,2027,proyecto,1800.1,mbd,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+plat_prod_26,Plataforma de produccion,2026,cierre estimado,1800.0,mbd,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+plat_exp_27,Plataforma de exportacion,2027,proyecto,426.6,mbd,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+plat_exp_26,Plataforma de exportacion,2026,cierre estimado,522.4,mbd,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+plat_priv_27,Plataforma de privados,2027,proyecto,125.1,mbd,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+plat_priv_26,Plataforma de privados,2026,cierre estimado,119.0,mbd,CGPE 2027 (ed. SHCP),Anexo II.5 p. 66
+lif_total_27,Ingreso total del articulo 1o.,2027,proyecto,10636488.1,mdp,ILIF 2027,art. 1o. p. 160
+lif_total_26,Ingreso total del articulo 1o.,2026,proyecto,10193683.7,mdp,ILIF 2026,art. 1o.
+lif_imp_27,Impuestos,2027,proyecto,6263886.8,mdp,ILIF 2027,art. 1o. p. 160
+lif_imp_26,Impuestos,2026,proyecto,5838541.1,mdp,ILIF 2026,art. 1o.
+lif_isr_27,Impuesto sobre la renta,2027,proyecto,3288975.3,mdp,ILIF 2027,art. 1o. p. 160
+lif_isr_26,Impuesto sobre la renta,2026,proyecto,3070149.1,mdp,ILIF 2026,art. 1o.
+lif_iva_27,Impuesto al valor agregado,2027,proyecto,1768017.3,mdp,ILIF 2027,art. 1o. p. 160
+lif_iva_26,Impuesto al valor agregado,2026,proyecto,1589069.0,mdp,ILIF 2026,art. 1o.
+lif_ieps_27,IEPS,2027,proyecto,828256.0,mdp,ILIF 2027,art. 1o. p. 160
+lif_ieps_26,IEPS,2026,aprobado,761501.9,mdp,LIF 2026 aprobada,art. 1o.
+lif_comb_27,IEPS de combustibles automotrices,2027,proyecto,538549.2,mdp,ILIF 2027,art. 1o. p. 160
+lif_comb_26,IEPS de combustibles automotrices,2026,proyecto,473279.1,mdp,ILIF 2026,art. 1o.
+lif_cuotas_27,Cuotas y aportaciones de seguridad social,2027,proyecto,702564.7,mdp,ILIF 2027,art. 1o. p. 160
+lif_cuotas_26,Cuotas y aportaciones de seguridad social,2026,proyecto,641782.1,mdp,ILIF 2026,art. 1o.
+lif_der_27,Derechos,2027,proyecto,177185.9,mdp,ILIF 2027,art. 1o. p. 160
+lif_der_26,Derechos,2026,proyecto,157081.7,mdp,ILIF 2026,art. 1o.
+lif_apro_27,Aprovechamientos,2027,proyecto,329479.8,mdp,ILIF 2027,art. 1o. p. 160
+lif_apro_26,Aprovechamientos,2026,proyecto,203520.5,mdp,ILIF 2026,art. 1o.
+lif_ventas_27,Ingresos por ventas de bienes y servicios,2027,proyecto,1457539.9,mdp,ILIF 2027,art. 1o. p. 160
+lif_ventas_26,Ingresos por ventas de bienes y servicios,2026,proyecto,1630973.6,mdp,ILIF 2026,art. 1o.
+lif_fmp_27,Transferencias del Fondo Mexicano del Petroleo,2027,proyecto,210774.0,mdp,ILIF 2027,art. 1o. p. 160
+lif_fmp_26,Transferencias del Fondo Mexicano del Petroleo,2026,proyecto,232630.4,mdp,ILIF 2026,art. 1o.
+lif_fin_27,Ingresos derivados de financiamientos,2027,proyecto,1479959.2,mdp,ILIF 2027,art. 1o. p. 160
+lif_fin_26,Ingresos derivados de financiamientos,2026,proyecto,1472626.4,mdp,ILIF 2026,art. 1o.
+end_int_27,Endeudamiento neto interno autorizado,2027,proyecto,1700000.0,mdp,ILIF 2027,art. 2o. p. 174
+end_ext_27,Endeudamiento neto externo autorizado,2027,proyecto,13500.0,mdd,ILIF 2027,art. 2o. p. 174
+cg_ing_27,Ingresos presupuestarios,2027,proyecto,9156528.9,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_ing_26ap,Ingresos presupuestarios,2026,aprobado,8721057.3,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_ing_26es,Ingresos presupuestarios,2026,cierre estimado,8537298.7,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_petro_27,Ingresos petroleros,2027,proyecto,984539.7,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_petro_26ap,Ingresos petroleros,2026,aprobado,1204277.7,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_petro_26es,Ingresos petroleros,2026,cierre estimado,1113958.1,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_nopetro_27,Ingresos no petroleros,2027,proyecto,8171989.2,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_nopetro_26ap,Ingresos no petroleros,2026,aprobado,7516779.6,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_trib_27,Ingresos tributarios,2027,proyecto,6263886.8,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_trib_26ap,Ingresos tributarios,2026,aprobado,5838571.0,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_notrib_27,Ingresos no tributarios del Gobierno Federal,2027,proyecto,521763.5,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_notrib_26ap,Ingresos no tributarios del Gobierno Federal,2026,aprobado,377130.1,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_org_27,Ingresos de organismos y empresas,2027,proyecto,1386338.9,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_org_26ap,Ingresos de organismos y empresas,2026,aprobado,1301078.5,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_gasto_27,Gasto neto pagado,2027,proyecto,10515087.7,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_gasto_26ap,Gasto neto pagado,2026,aprobado,10114827.9,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_prog_27,Gasto programable pagado,2027,proyecto,7311129.3,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_prog_26ap,Gasto programable pagado,2026,aprobado,7015853.1,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_noprog_27,Gasto no programable,2027,proyecto,3203958.4,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_noprog_26ap,Gasto no programable,2026,aprobado,3098974.9,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_cf_27,Costo financiero,2027,proyecto,1574950.2,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_cf_26ap,Costo financiero,2026,aprobado,1572073.3,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_part_27,Participaciones,2027,proyecto,1547607.9,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_adefas_27,Adefas,2027,proyecto,81400.4,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_bal_27,Balance presupuestario,2027,proyecto,-1358558.8,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_bal_26ap,Balance presupuestario,2026,aprobado,-1393770.6,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_prim_27,Superavit economico primario,2027,proyecto,216891.3,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_prim_26ap,Superavit economico primario,2026,aprobado,178802.6,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_rfsp_27,RFSP,2027,proyecto,-1555655.8,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_rfsp_26ap,RFSP,2026,aprobado,-1587349.9,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_shrfsp_27,SHRFSP,2027,proyecto,21665995.8,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_shrfsp_26es,SHRFSP,2026,cierre estimado,20062321.6,mdp,CGPE 2027 (ed. SHCP),Anexo II.6 p. 67
+cg_shrfsp_int_27,SHRFSP interno,2027,proyecto,43.6,pct del PIB,CGPE 2027 (ed. SHCP),Anexo III.2 p. 47
+cg_shrfsp_ext_27,SHRFSP externo,2027,proyecto,11.4,pct del PIB,CGPE 2027 (ed. SHCP),Anexo III.2 p. 47
+cg_shrfsp_int_26es,SHRFSP interno,2026,cierre estimado,42.5,pct del PIB,CGPE 2027 (ed. SHCP),Anexo III.2 p. 47
+cg_shrfsp_ext_26es,SHRFSP externo,2026,cierre estimado,11.4,pct del PIB,CGPE 2027 (ed. SHCP),Anexo III.2 p. 47
+dec_gasto_27,Gasto neto total,2027,proyecto,10636488.1,mdp,Decreto PEF 2027,Anexo 1 p. 70
+dec_gasto_26,Gasto neto total,2026,proyecto,10193683.7,mdp,Decreto PEF 2026,Anexo 1
+dec_neteo_27,Neteo,2027,proyecto,1680127.3,mdp,Decreto PEF 2027,Anexo 1 p. 70
+dec_neteo_26,Neteo,2026,proyecto,1553113.1,mdp,Decreto PEF 2026,Anexo 1
+dec_gce_27,Gasto corriente estructural,2027,proyecto,1884958.2,mdp,Decreto PEF 2027,Anexo 2 p. 71
+dec_gce_26,Gasto corriente estructural,2026,proyecto,3868319.9,mdp,Decreto PEF 2026,Anexo 2
+dec_lmgce_27,Limite maximo del gasto corriente estructural,2027,proyecto,2058500.0,mdp,CGPE 2027 (ed. SHCP),p. 24
+dec_lmgce_pct_27,Limite maximo del gasto corriente estructural,2027,proyecto,5.2,pct del PIB,CGPE 2027 (ed. SHCP),Anexo III.2 p. 47
+dec_lmgce_pct_26,Limite maximo del gasto corriente estructural,2026,aprobado,10.9,pct del PIB,CGPE 2027 (ed. SHCP),Anexo III.2 p. 47
+dec_oblig_sin_27,Previsiones para gastos obligatorios,2027,proyecto,6693540.5,mdp,Decreto PEF 2027,Anexo 3 p. 71
+dec_oblig_con_27,Previsiones para gastos obligatorios con pensiones,2027,proyecto,8534286.6,mdp,Decreto PEF 2027,Anexo 3 p. 71
+dec_oblig_sin_26,Previsiones para gastos obligatorios,2026,proyecto,6702281.0,mdp,Decreto PEF 2026,Anexo 3
+dec_oblig_con_26,Previsiones para gastos obligatorios con pensiones,2026,proyecto,8406440.2,mdp,Decreto PEF 2026,Anexo 3
+dec_pemex_27,Pemex gasto programable,2027,proyecto,527121.9,mdp,Decreto PEF 2027,Anexo 1 p. 70
+dec_cfe_27,CFE gasto programable,2027,proyecto,523747.9,mdp,Decreto PEF 2027,Anexo 1 p. 70
+dec_cf_pemex_27,Costo financiero de Pemex,2027,proyecto,151540.8,mdp,Decreto PEF 2027,Anexo 1 p. 70
+dec_cf_cfe_27,Costo financiero de CFE,2027,proyecto,51467.7,mdp,Decreto PEF 2027,Anexo 1 p. 70
+ec_corriente_27,Gasto corriente (clasificacion economica),2027,proyecto,4458200.0,mdp,CGPE 2027 (ed. SHCP),p. 34
+ec_pensiones_26,Pensiones y jubilaciones (clasificacion economica),2026,proyecto,1704200.0,mdp,CGPE 2027 (ed. SHCP),p. 34
+ec_pens_pct_27,Pensiones y jubilaciones sobre gasto programable,2027,proyecto,24.8,pct,CGPE 2027 (ed. SHCP),p. 34
+ec_inv_pct_27,Gasto de inversion sobre gasto programable,2027,proyecto,15.3,pct,CGPE 2027 (ed. SHCP),p. 34
+ec_corr_pct_27,Gasto corriente sobre gasto programable,2027,proyecto,60.0,pct,CGPE 2027 (ed. SHCP),p. 34
+lfiiedb_terceros,Inversion de terceros en contratos LFIIEDB,2027,proyecto,188900.0,mdp,CGPE 2027 (ed. SHCP),p. 75
+lfiiedb_diferidos,Pagos diferidos en contratos LFIIEDB,2027,proyecto,273500.0,mdp,CGPE 2027 (ed. SHCP),p. 75
+imss_27,IMSS gasto programable,2027,proyecto,1803009.1,mdp,Decreto PEF 2027,Anexo 1 p. 70
+imss_26,IMSS gasto programable,2026,proyecto,1590308.7,mdp,Decreto PEF 2026,Anexo 1
+issste_27,ISSSTE gasto programable,2027,proyecto,571592.3,mdp,Decreto PEF 2027,Anexo 1 p. 70
+issste_26,ISSSTE gasto programable,2026,proyecto,539020.8,mdp,Decreto PEF 2026,Anexo 1
+pemex_26,Pemex gasto programable,2026,proyecto,517362.1,mdp,Decreto PEF 2026,Anexo 1
+cfe_26,CFE gasto programable,2026,proyecto,554567.5,mdp,Decreto PEF 2026,Anexo 1
+cf_pemex_26,Costo financiero de Pemex,2026,proyecto,190838.8,mdp,Decreto PEF 2026,Anexo 1
+cf_cfe_26,Costo financiero de CFE,2026,proyecto,48000.0,mdp,Decreto PEF 2026,Anexo 1
+ec_corriente_26,Gasto corriente (clasificacion economica),2026,proyecto,4138700.0,mdp,CGPE 2027 (ed. SHCP),p. 34
+ec_persona_27,Servicios personales,2027,proyecto,2031600.0,mdp,CGPE 2027 (ed. SHCP),p. 34
+ec_persona_26,Servicios personales,2026,proyecto,1846400.0,mdp,CGPE 2027 (ed. SHCP),p. 34
+ec_pensiones_27,Pensiones y jubilaciones (clasificacion economica),2027,proyecto,1840700.0,mdp,CGPE 2027 (ed. SHCP),p. 34
+ec_inv_27,Gasto de inversion,2027,proyecto,1133600.0,mdp,CGPE 2027 (ed. SHCP),p. 34
+ec_inv_26,Gasto de inversion,2026,proyecto,1251900.0,mdp,CGPE 2027 (ed. SHCP),p. 34
+ec_invfis_27,Inversion fisica,2027,proyecto,1026500.0,mdp,CGPE 2027 (ed. SHCP),p. 34
+ec_invfis_26,Inversion fisica,2026,proyecto,960100.0,mdp,CGPE 2027 (ed. SHCP),p. 34
+ec_invfin_27,Inversion financiera y otros,2027,proyecto,92300.0,mdp,CGPE 2027 (ed. SHCP),p. 34
+ec_invfin_26,Inversion financiera y otros,2026,proyecto,276400.0,mdp,CGPE 2027 (ed. SHCP),p. 34
+hidroc_26,Programa Articulacion de la Politica de Hidrocarburos,2026,proyecto,263476.0,mdp,CGPE 2027 (ed. SHCP),p. 34
+hidroc_27,Programa Articulacion de la Politica de Hidrocarburos,2027,proyecto,81100.0,mdp,CGPE 2027 (ed. SHCP),p. 34
+pc_pib_27,PIB nominal proyectado para 2027,2027,pre-criterios,39732400.0,mdp,Pre-Criterios 2027,Anexo I p. 34
+pc_defl_27,Deflactor del PIB,2027,pre-criterios,4.0,pct,Pre-Criterios 2027,Anexo I p. 34
+pc_tc_prom_27,Tipo de cambio promedio,2027,pre-criterios,18.5,pesos por dolar,Pre-Criterios 2027,Anexo I p. 34
+pc_tc_fin_27,Tipo de cambio fin de periodo,2027,pre-criterios,18.6,pesos por dolar,Pre-Criterios 2027,Anexo I p. 34
+pc_cetes_prom_27,Cetes 28 dias promedio,2027,pre-criterios,5.9,pct,Pre-Criterios 2027,Anexo I p. 34
+pc_petro_27,Precio de la mezcla mexicana,2027,pre-criterios,54.7,dolares por barril,Pre-Criterios 2027,Anexo I p. 34
+pc_plat_prod_27,Plataforma de produccion,2027,pre-criterios,1806.1,mbd,Pre-Criterios 2027,Anexo I p. 34
+pc_plat_exp_27,Plataforma de exportacion,2027,pre-criterios,427.6,mbd,Pre-Criterios 2027,Anexo I p. 34
+pc_infl_dic_27,Inflacion INPC dic./dic.,2027,pre-criterios,3.0,pct,Pre-Criterios 2027,Anexo I p. 34
+ramo54_27,Ramo 54 Mujeres,2027,proyecto,2269.4,mdp,Decreto PEF 2027,Anexo 1 p. 70
+pc_rfsp_27,RFSP,2027,pre-criterios,-1390632.3,mdp,Pre-Criterios 2027,p. 32
+pc_rfsp_pct_27,RFSP,2027,pre-criterios,-3.5,pct del PIB,Pre-Criterios 2027,p. 32
+pc_shrfsp_27,SHRFSP,2027,pre-criterios,21848685.1,mdp,Pre-Criterios 2027,p. 32
+pc_shrfsp_pct_27,SHRFSP,2027,pre-criterios,55.0,pct del PIB,Pre-Criterios 2027,p. 32
+cg_p32_pens_nc_27,"Pensiones no contributivas (Adultos Mayores, Mujeres, Discapacidad)",2027,proyecto,640291.0,mdp,CGPE 2027 (ed. SHCP),"p. 32, Programas sociales prioritarios"
+cg_p32_inv_total_27,"Prioridades de inversion, total",2027,proyecto,560172.6,mdp,CGPE 2027 (ed. SHCP),"p. 32, Prioridades de inversion"
+cg_gce_nuevos_rubros_cp25,Rubros (7) a (10) excluidos del gasto corriente estructural,2025,cuenta publica,1964499.8,mdp,CGPE 2027 (ed. SHCP),p. 24
+an_73903_27,Ramo 18 partida 73903 aportaciones de capital,2027,proyecto,81103.0,mdp,Analitico PPEF 2027 GF ramo-programa-UR-objeto,"Hoja1, ramo 18, PE 73903"

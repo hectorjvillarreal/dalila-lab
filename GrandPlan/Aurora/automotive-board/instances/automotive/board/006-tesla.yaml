@@ -72,12 +72,12 @@ slots:
     notes: "unset — back-fill listed in board open repairs (004/005/006)"
   margin:
     value: "16.3% automotive gross margin excl. regulatory credits, Q2-2026 (operating margin 1.4%)"
-    unit: "%"
-    delta: "GAAP operating income $398M, −57% YoY; FCF −$1.09B on capex +142%"
+    unit: "% — arithmetic on 10-Q $M: (20,516 − 146 − 17,053) / (20,516 − 146); 398 / 28,236"
+    delta: "Q2-2025 on same basis 15.0% ((16,661 − 439 − 13,795) / (16,661 − 439)); income from operations $398M vs $923M (−57%)"
     date: 2026-07-22
-    source: "https://www.cnbc.com/2026/07/22/tesla-tsla-q2-2026-earnings-report.html"
-    source_type: secondary
-    confidence: reported
+    source: "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm"
+    source_type: primary
+    confidence: confirmed
     decisive: false
     notes: "unset — board marks '(feed)'; awaiting feed data"
   cost_position:

@@ -16,4 +16,4 @@ Format:
 
 ## Entries
 
-*(none at scaffold creation)*
+- 2026-08-03 — CONAPO mid-2026 projections (134.4 M pop mid-2026; TGF ~1.9 for 2025; ~1.996 M projected births 2026) — known via press coverage only; read CONAPO primary tables (conciliación/proyecciones) before citing — projection, tfr — MEX — https://www.gob.mx/conapo

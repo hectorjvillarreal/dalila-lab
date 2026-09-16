@@ -1,0 +1,562 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\usetheme{Madrid}
+
+\title{Economía Poblacional}
+\subtitle{México y América Latina: envejecimiento, economía y política pública}
+\author{Héctor J. Villarreal}
+\date{23 de marzo de 2026}
+
+\begin{document}
+
+%------------------------------------------------
+\begin{frame}
+\titlepage
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Objetivo de esta segunda presentación}
+\begin{itemize}
+    \item Aplicar al caso de América Latina y México la discusión del curso sobre envejecimiento.
+    \item Sintetizar los principales hallazgos recientes de CEPAL.
+    \item Discutir los efectos económicos del envejecimiento sobre:
+    \begin{itemize}
+        \item crecimiento,
+        \item mercado laboral,
+        \item consumo,
+        \item finanzas públicas,
+        \item y estructura sectorial.
+    \end{itemize}
+    \item Extraer implicaciones para México y para una agenda de política pública.
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Mensaje central}
+\begin{itemize}
+    \item América Latina envejece con rapidez.
+    \item El proceso ocurre con menor ingreso per cápita, mayor desigualdad y Estados de bienestar menos consolidados que en Europa.
+    \item El envejecimiento es simultáneamente:
+    \begin{itemize}
+        \item un logro social,
+        \item un desafío macrofiscal,
+        \item y una oportunidad de transformación productiva.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Un punto clave para el curso}
+\begin{itemize}
+    \item No estamos frente a un cambio marginal.
+    \item Estamos frente a una transformación estructural de la economía:
+    \begin{itemize}
+        \item cambia la oferta de trabajo,
+        \item cambia la composición del consumo,
+        \item cambia la dirección de las transferencias intergeneracionales,
+        \item y cambia la presión sobre el Estado.
+    \end{itemize}
+    \item Esto es particularmente importante en América Latina.
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Magnitud del envejecimiento en América Latina y el Caribe}
+\begin{itemize}
+    \item En 2024, la población de 65 años y más se estima en alrededor de 65 millones.
+    \item Eso equivale a 9.9\% de la población total.
+    \item Para 2050, este grupo alcanzaría 138 millones.
+    \item Su peso relativo subiría a 18.9\% del total regional.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Lectura:} la proporción prácticamente se duplica en poco más de un cuarto de siglo.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Gráfica 1: el cambio etario de la región}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=10.8cm,
+    height=5.9cm,
+    xlabel={Año},
+    ylabel={Porcentaje de la población},
+    xmin=2000, xmax=2100,
+    ymin=0, ymax=80,
+    legend style={at={(0.98,0.98)},anchor=north east,font=\scriptsize},
+    xtick={2000,2025,2050,2075,2100},
+    ytick={0,20,40,60,80}
+]
+\addplot[thick] coordinates {(2000,32) (2025,25) (2050,18) (2075,15) (2100,14)};
+\addlegendentry{0-14}
+\addplot[thick,dashed] coordinates {(2000,63) (2025,65) (2050,61) (2075,55) (2100,49)};
+\addlegendentry{15-64}
+\addplot[thick,dotted] coordinates {(2000,5) (2025,10) (2050,19) (2075,28) (2100,32)};
+\addlegendentry{65+}
+\end{axis}
+\end{tikzpicture}
+
+\vspace{0.2cm}
+\small
+Perfil estilizado a partir del diagnóstico de CEPAL: cae la población joven, primero domina la edad laboral, y luego aumenta con fuerza la población mayor.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Más rápido de lo que esperábamos}
+\begin{itemize}
+    \item En 1950, la región tenía una proporción de población de 65 años y más de 3.2\%.
+    \item Hacia 2100, CEPAL reporta una proyección de 31.7\%.
+    \item La región duplicará su actual proporción de población de 65 años y más en apenas 28 años.
+    \item Llegaría a cerca de 19.7\% en 2052.
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Conclusión:} el envejecimiento avanza más rápido que la capacidad de ajuste institucional.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Envejecimiento del envejecimiento}
+\begin{itemize}
+    \item No sólo aumenta la población mayor.
+    \item Crece con especial fuerza la población de 80 años y más.
+    \item Según CEPAL:
+    \begin{itemize}
+        \item pasa de 12 millones en 2024,
+        \item a 37 millones en 2050.
+    \end{itemize}
+    \item Su peso relativo subiría de 1.9\% a 5.1\%.
+\end{itemize}
+
+\vspace{0.3cm}
+Esto importa porque en ese grupo aumenta con más fuerza la probabilidad de dependencia funcional y de demanda de cuidados de largo plazo.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Cuatro rasgos que vuelven más difícil el ajuste en LATAM}
+\begin{enumerate}
+    \item Menor nivel de desarrollo económico.
+    \item Ritmo de envejecimiento más acelerado.
+    \item Estados de bienestar menos consolidados.
+    \item Desigualdad estructural más alta.
+\end{enumerate}
+
+\vspace{0.3cm}
+Por eso América Latina no enfrenta simplemente el mismo problema que Europa, pero con menos años de retraso: enfrenta una variante más dura.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Dependencia demográfica: intuición básica}
+\[
+\text{Relación de dependencia}=
+\frac{\text{Población menor de 15}+\text{Población mayor de 65}}{\text{Población de 15 a 64}}
+\]
+
+\begin{itemize}
+    \item Primero baja por la reducción de la dependencia infantil.
+    \item Luego vuelve a subir por el crecimiento de la dependencia de personas mayores.
+\end{itemize}
+
+\vspace{0.3cm}
+El cambio en esta relación resume una parte importante del trasfondo económico del envejecimiento.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Gráfica 2: fin del bono demográfico}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=10.8cm,
+    height=5.9cm,
+    xlabel={Año},
+    ylabel={Dependientes por 100 personas de 15-64},
+    xmin=1950, xmax=2050,
+    ymin=0, ymax=100,
+    legend style={at={(0.98,0.98)},anchor=north east,font=\scriptsize},
+    xtick={1950,1975,2000,2025,2050},
+    ytick={0,20,40,60,80,100}
+]
+\addplot[thick] coordinates {(1950,80) (1970,73) (1990,62) (2010,53) (2025,55) (2050,68)};
+\addlegendentry{Dependencia total}
+\addplot[thick,dashed] coordinates {(1950,72) (1970,63) (1990,50) (2010,38) (2025,31) (2050,26)};
+\addlegendentry{Dependencia infantil}
+\addplot[thick,dotted] coordinates {(1950,8) (1970,10) (1990,12) (2010,15) (2025,24) (2050,42)};
+\addlegendentry{Dependencia de mayores}
+\end{axis}
+\end{tikzpicture}
+
+\vspace{0.2cm}
+\small
+Idea central del gráfico de CEPAL: la baja de la dependencia infantil ya no compensa el aumento de la dependencia de personas mayores.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{El bono demográfico está por terminar}
+\begin{itemize}
+    \item CEPAL proyecta que el bono demográfico regional concluye, en promedio, en 2028.
+    \item Existen grandes diferencias entre países, pero el diagnóstico regional es claro:
+    \begin{itemize}
+        \item la ventana se está cerrando,
+        \item y en varios países ya se cerró.
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.3cm}
+El problema no es sólo demográfico: es que la región no aprovechó el bono tan bien como Asia oriental.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Bono desaprovechado}
+\begin{itemize}
+    \item CEPAL subraya que América Latina no transformó su bono demográfico en ganancias económicas comparables a Asia oriental.
+    \item El dividendo no era automático.
+    \item Requería:
+    \begin{itemize}
+        \item creación de empleo,
+        \item inversión en capacidades humanas,
+        \item mayor participación de las mujeres,
+        \item y un entorno favorable a la productividad.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Mercado laboral: más personas mayores trabajando}
+\begin{itemize}
+    \item En 2024, aproximadamente un cuarto de las personas de 65 años y más participa en el mercado laboral en América Latina.
+    \item La participación es mayor entre hombres.
+    \item Esto refleja dos fuerzas:
+    \begin{itemize}
+        \item deseo de seguir activos,
+        \item necesidad de complementar ingresos.
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.3cm}
+En una región con pensiones insuficientes, trabajo y vejez se vuelven temas inseparables.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Pensiones insuficientes y participación laboral}
+\begin{itemize}
+    \item CEPAL encuentra una correlación positiva entre:
+    \begin{itemize}
+        \item insuficiencia de pensiones,
+        \item y participación laboral de personas mayores.
+    \end{itemize}
+    \item Para muchas personas mayores, trabajar no es sólo opción: es necesidad.
+\end{itemize}
+
+\vspace{0.3cm}
+Esto es crucial para México, donde la informalidad complica la construcción de trayectorias contributivas suficientes.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Otra palanca clave: la participación de las mujeres}
+\begin{itemize}
+    \item CEPAL insiste en que una parte del ajuste puede venir de una mayor participación laboral femenina.
+    \item Esto tiene doble relevancia:
+    \begin{itemize}
+        \item compensa parcialmente la desaceleración de la fuerza de trabajo,
+        \item y mejora el ingreso agregado de los hogares.
+    \end{itemize}
+    \item Pero exige políticas de cuidado, inclusión laboral y reducción de desigualdades.
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{NTA: el lenguaje adecuado para pensar el problema}
+\[
+C(a)-Y_L(a)=\tau(a)+\big[Y_A(a)-S(a)\big]
+\]
+
+\begin{itemize}
+    \item $C(a)$: consumo a la edad $a$.
+    \item $Y_L(a)$: ingreso laboral.
+    \item $\tau(a)$: transferencias netas.
+    \item $Y_A(a)-S(a)$: reasignación basada en activos.
+\end{itemize}
+
+\vspace{0.3cm}
+Las Cuentas Nacionales de Transferencias permiten ver cómo se financia el ciclo de vida.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Tres etapas del ciclo de vida económico}
+\begin{itemize}
+    \item Primera etapa: infancia y juventud
+    \begin{itemize}
+        \item consumo mayor al ingreso laboral.
+    \end{itemize}
+    \item Segunda etapa: edades laborales
+    \begin{itemize}
+        \item ingreso laboral mayor al consumo.
+    \end{itemize}
+    \item Tercera etapa: vejez
+    \begin{itemize}
+        \item vuelve a aparecer un déficit.
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.3cm}
+El problema económico es cómo se financian esas etapas deficitarias.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Gráfica 3: perfil estilizado de ingreso y consumo}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=10.8cm,
+    height=5.9cm,
+    xlabel={Edad},
+    ylabel={Índice},
+    xmin=0, xmax=90,
+    ymin=0, ymax=1.2,
+    legend style={at={(0.98,0.98)},anchor=north east,font=\scriptsize},
+    xtick={0,20,40,60,80},
+    ytick={0,0.2,0.4,0.6,0.8,1.0,1.2}
+]
+\addplot[thick] coordinates {(0,0.38) (10,0.55) (20,0.72) (30,0.90) (40,0.84) (50,0.86) (60,0.88) (70,0.86) (80,0.82) (90,0.90)};
+\addlegendentry{Consumo}
+\addplot[thick,dashed] coordinates {(0,0.00) (10,0.00) (20,0.15) (25,0.60) (30,0.90) (35,1.05) (45,1.08) (55,1.02) (60,0.88) (65,0.55) (70,0.30) (80,0.08) (90,0.00)};
+\addlegendentry{Ingreso laboral}
+\end{axis}
+\end{tikzpicture}
+
+\vspace{0.2cm}
+\small
+El perfil sintetiza el patrón mostrado por CEPAL para seis países: dos etapas deficitarias y una superavitaria.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{La gran transformación que viene}
+\begin{itemize}
+    \item Hoy, en la región, el déficit agregado de la infancia todavía domina.
+    \item Pero CEPAL proyecta que, con el tiempo, el déficit de la vejez ganará peso.
+    \item Las necesidades de financiamiento se desplazarán progresivamente hacia el final del ciclo de vida.
+\end{itemize}
+
+\vspace{0.3cm}
+Este punto es central para pensar pensiones, salud y cuidados.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Segundo bono demográfico}
+\begin{itemize}
+    \item CEPAL recupera la idea del segundo bono demográfico.
+    \item La lógica es:
+    \begin{itemize}
+        \item poblaciones más longevas acumulan más activos para financiar una vejez más larga,
+        \item si esos activos se invierten productivamente, puede aumentar la productividad.
+    \end{itemize}
+    \item No es automático.
+\end{itemize}
+
+\vspace{0.3cm}
+Requiere ahorro, instituciones y mercados de capital más profundos.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Pero América Latina enfrenta límites}
+\begin{itemize}
+    \item Menor capacidad de ahorro.
+    \item Mercados financieros menos desarrollados.
+    \item Cobertura previsional incompleta.
+    \item Alta informalidad.
+\end{itemize}
+
+\vspace{0.3cm}
+Por eso el segundo bono demográfico es una posibilidad, no una garantía.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{PIB per cápita: una descomposición útil}
+\[
+\frac{Y}{P}=\frac{Y}{L}\times\frac{L}{PET}\times\frac{PET}{P}
+\]
+
+\begin{itemize}
+    \item $\frac{Y}{L}$: productividad laboral.
+    \item $\frac{L}{PET}$: tasa de empleo.
+    \item $\frac{PET}{P}$: proporción de población en edad de trabajar.
+\end{itemize}
+
+\vspace{0.3cm}
+El envejecimiento afecta directamente los dos últimos términos, y por eso presiona el PIB per cápita.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Lo más importante: productividad}
+\begin{itemize}
+    \item CEPAL es clara:
+    \begin{itemize}
+        \item el impacto demográfico negativo no es un destino inexorable,
+        \item puede mitigarse con productividad.
+    \end{itemize}
+    \item También ayudan:
+    \begin{itemize}
+        \item mayor participación laboral femenina,
+        \item mejor salud,
+        \item vidas laborales más largas,
+        \item e innovación.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{La heterogeneidad regional importa}
+\begin{itemize}
+    \item CEPAL muestra que el impacto del envejecimiento sobre el PIB per cápita entre 2025 y 2050 no será idéntico en todos los países.
+    \item Algunos ya enfrentarán presión negativa clara.
+    \item Otros todavía conservan algo de impulso demográfico.
+\end{itemize}
+
+\vspace{0.3cm}
+Eso obliga a pensar una agenda regional, pero también agendas nacionales diferenciadas.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Pobreza y vulnerabilidad en la vejez}
+\begin{itemize}
+    \item En la región, la tasa de pobreza de 65 años y más es menor que la de niños y jóvenes.
+    \item CEPAL reporta cerca de 14.7\% para personas de 65 años y más.
+    \item Entre menores de 15 años, la tasa ronda 41.4\%.
+\end{itemize}
+
+\vspace{0.3cm}
+Pero esto no significa ausencia de vulnerabilidad: significa que la vejez depende críticamente de redes de apoyo, patrimonio y protección social.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Desigualdad y vejez}
+\begin{itemize}
+    \item La vulnerabilidad no está distribuida homogéneamente.
+    \item CEPAL subraya mayor exposición para:
+    \begin{itemize}
+        \item mujeres,
+        \item pueblos indígenas,
+        \item afrodescendientes,
+        \item migrantes,
+        \item personas con discapacidad.
+    \end{itemize}
+    \item En otras palabras, la vejez hereda desigualdades acumuladas durante la vida.
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Patrones de consumo: cambia la composición, no sólo el nivel}
+\begin{itemize}
+    \item Los hogares con personas mayores muestran patrones de gasto distintos.
+    \item Mayor peso relativo de:
+    \begin{itemize}
+        \item alojamiento,
+        \item salud,
+        \item cuidado,
+        \item servicios personales.
+    \end{itemize}
+    \item Menor peso relativo de educación.
+\end{itemize}
+
+\vspace{0.3cm}
+El envejecimiento recompone la demanda agregada.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Economía plateada: una oportunidad real, pero no automática}
+\begin{itemize}
+    \item CEPAL discute tres marcos:
+    \begin{itemize}
+        \item economía plateada,
+        \item economía de la longevidad,
+        \item economía generacional.
+    \end{itemize}
+    \item El punto común:
+    \begin{itemize}
+        \item una sociedad más longeva genera nuevas demandas,
+        \item y esas demandas pueden impulsar sectores productivos.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Sectores con mayor potencial en una región que envejece}
+\begin{itemize}
+    \item Salud.
+    \item Cuidados y cuidados de largo plazo.
+    \item Industria farmacéutica y biotecnología.
+    \item Sector financiero y asegurador.
+    \item Tecnología y servicios digitales adaptados.
+    \item Turismo senior.
+    \item Vivienda y urbanismo adaptado.
+\end{itemize}
+
+\vspace{0.3cm}
+La clave es que el envejecimiento no sólo presiona gasto: también redirige inversión y empleo.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{¿Qué significa esto para México?}
+\begin{itemize}
+    \item México comparte los grandes rasgos del diagnóstico regional:
+    \begin{itemize}
+        \item envejecimiento acelerado,
+        \item informalidad alta,
+        \item pensiones desiguales,
+        \item presión futura en salud y cuidados.
+    \end{itemize}
+    \item Esto vuelve especialmente importante:
+    \begin{itemize}
+        \item la productividad,
+        \item la formalización,
+        \item y la arquitectura fiscal.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Lectura DFD del problema}
+\begin{itemize}
+    \item El envejecimiento no es sólo un tema de bienestar.
+    \item Es también un problema de hoja de balance intertemporal:
+    \begin{itemize}
+        \item más pasivos implícitos en pensiones,
+        \item más gasto en salud,
+        \item más necesidad de cuidados,
+        \item menor impulso demográfico al crecimiento.
+    \end{itemize}
+    \item Por eso conecta directamente con deuda y sostenibilidad.
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Cierre final}
+\begin{itemize}
+    \item América Latina envejece rápido.
+    \item México no está fuera de esa historia.
+    \item El envejecimiento trae:
+    \begin{itemize}
+        \item desafíos macroeconómicos,
+        \item presiones fiscales,
+        \item y oportunidades productivas.
+    \end{itemize}
+    \item La diferencia entre crisis y adaptación dependerá de la calidad de la política pública.
+\end{itemize}
+
+\vspace{0.5cm}
+\centering
+\Large
+\textbf{La región ya no puede pensar crecimiento sin pensar demografía.}
+\end{frame}
+
+\end{document}

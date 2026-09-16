@@ -1,9 +1,9 @@
 ---
 name: dfd-demographics-monitor
-version: 0.2
-revises: 0.1
-date_revised: 2026-05-16
-revised_by: Claude Code
+version: 0.3
+revises: 0.2
+date_revised: 2026-08-03
+revised_by: Debb
 description: >
   Cross-project demographics monitoring skill for DFD, BDH, and Aurora. Activate
   when demographically-relevant material arrives — charts, papers, data releases,
@@ -18,7 +18,7 @@ description: >
   `_crossrefs/corpus/demographics/`.
 ---
 
-# DFD Demographics Monitoring Skill (v0.2)
+# DFD Demographics Monitoring Skill (v0.3)
 
 ## Purpose
 
@@ -47,6 +47,7 @@ _crossrefs/corpus/demographics/
 ├── methodology/              # methodological references (papers on demographic measurement / projection)
 ├── releases/                 # institutional data releases (UN WPP, CELADE, CONAPO, INE)
 ├── country/                  # country-specific notes, organized by ISO-3166 alpha-3 subfolder
+├── observations/             # endorsed multi-country / cross-cutting working notes
 ├── watch_items/              # open methodological threads
 └── scenario_anchors.md       # sourced anchor values for scenario classification
 ```
@@ -99,6 +100,7 @@ On a Tier-1 activation, classify along four dimensions:
 ### 1. Indicator type
 - `tfr` — total fertility rate (period or cohort)
 - `cbr` — crude birth rate
+- `desired_fertility` — stated fertility ideals / intended family size (survey-based, aspirational); NOT realized period fertility — never conflatable with observed `tfr` in retrieval
 - `mortality` — life expectancy, survival curves, death rates
 - `migration` — net migration flows, emigration pressure
 - `coupling` — partnership formation, marriage, cohabitation rates
@@ -310,7 +312,7 @@ For each project in `project_scope`, append a one-line entry to that project's
 `_cross_references.md` index:
 
 ```
-- YYYY-MM-DD — [Title](../../../_crossrefs/corpus/demographics/{path}) — [indicator(s)], [iso3], [scenario_implication]
+- YYYY-MM-DD — [Title](../../../../_crossrefs/corpus/demographics/{path}) — [indicator(s)], [iso3], [scenario_implication]
 ```
 
 If `_cross_references.md` does not exist in `GrandPlan/{Project}/docs/corpus/`, the
@@ -332,6 +334,15 @@ skill creates it on first use with a brief header explaining its role.
    instruction per PROTO-RAG-001. The promoting agent (named in `promoted_by`)
    files the build instruction under
    `_crossrefs/_build_instructions/YYYY-MM-DD_demographics_promotion_{slug}.md`.
+6. **Recurring artifacts (quarterly replicates) — closed decision, option (a).**
+   Each quarterly replicate files its own dated build instruction of record
+   in `_crossrefs/_build_instructions/`; the standing instructions document
+   governs method and is referenced via a supplementary
+   `governing_instructions:` field, not as a substitute for
+   `build_instruction:`. Ratified provisionally by Anne and concurred by Debb
+   2026-08-03 (recorded in
+   `_crossrefs/_build_instructions/2026-08-03_demographics_type_retrofit.md`
+   §5); no PROTO-RAG-001 amendment required.
 
 **Notification to Anne:**
 On any new `_pending/` arrival, the skill appends a one-line entry to
@@ -412,3 +423,14 @@ fast-transition scenario must explicitly cite the anchor source used in-note.
   Tier-1 / Tier-2 salience gate; adopts ISO-3166 alpha-3 geography; moves
   scenario anchors to a sourced separate file; standardizes drafter as
   `Claude Code`; adds explicit endorsement workflow.
+- **v0.3** (2026-08-03, Debb; per Anne's and Cath's 2026-08-03 rulings) —
+  adds `desired_fertility` to §Classification dimension 1 with an explicit
+  aspirational-vs-realized gloss (stated ideals must not be conflatable with
+  observed period TFR in retrieval); fixes the project cross-reference
+  template path in §Routing and Filing from `../../../` to `../../../../`
+  (four levels up from `GrandPlan/{Project}/docs/corpus/`; executed entries
+  already use four); adds `observations/` to the §Prerequisites scaffold tree
+  (already present in the routing table; folder now exists and is populated);
+  records the closed option-(a) decision on per-quarter build instructions
+  for quarterly replicates as §Routing and Filing endorsement-workflow
+  item 6.

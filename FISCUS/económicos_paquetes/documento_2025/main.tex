@@ -1,0 +1,115 @@
+% =====================================================================
+%  Implicaciones del Paquete Económico 2025
+%  Instituto Tecnológico y de Estudios superiores — ITED
+%  Proyecto FISCUS
+%
+%  Compila con pdflatex, dos pasadas, SIN shell-escape.
+%  Paquetes: solo los que Overleaf trae de fábrica.
+% =====================================================================
+\documentclass[11pt,letterpaper]{report}
+
+\usepackage[utf8]{inputenc}
+% lmodern ANTES de fontenc: sin el, T1 con Computer Modern obliga a generar
+% fuentes de mapa de bits al vuelo (mktexpk), que en Overleaf gratuito es una
+% de las causas habituales de que una compilacion se alargue o se caiga.
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+% El genero usa marginalia. Sin margen derecho ancho y sin marginparwidth
+% declarado, \marginpar se desborda de la caja.
+\usepackage[letterpaper,top=2.4cm,bottom=2.4cm,left=2.2cm,right=4.8cm,
+              marginparwidth=3.3cm,marginparsep=0.45cm]{geometry}
+% array: hace falta para >{...}p{} en la columna de etiqueta
+\usepackage{array}
+\usepackage{booktabs}
+% Columna de texto que ENVUELVE. Sin ella, una etiqueta larga estira la
+% tabla hasta salirse de la caja, que era el origen de los desbordes.
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage[hidelinks]{hyperref}
+
+\pgfplotsset{compat=1.18}
+
+% Números en convención mexicana: millar con coma, decimal con punto.
+% Se declara UNA vez y rige todo el documento (pacto §7).
+\sisetup{
+  group-separator = {,},
+  group-minimum-digits = 4,
+  output-decimal-marker = {.},
+  detect-weight = true,
+  detect-family = true,
+}
+
+\captionsetup{font=small, labelfont=bf, justification=raggedright, singlelinecheck=false}
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\itshape Implicaciones del Paquete Económico 2025}
+\fancyhead[R]{\footnotesize\itshape ITED}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\marginal}[1]{\marginpar{\raggedleft\footnotesize\scshape #1}}
+
+\title{\Huge\bfseries Implicaciones del\\Paquete Económico 2025}
+\author{}
+\date{}
+
+\begin{document}
+
+% ---------------------------------------------------------------- portada ---
+\begin{titlepage}
+\centering
+\vspace*{2.5cm}
+{\Huge\bfseries Implicaciones del\\[0.3em] Paquete Económico 2025\par}
+\vspace{1.2cm}
+{\Large Instituto Tecnológico y de Estudios superiores\par}
+{\Large\bfseries ITED\par}
+\vspace{0.6cm}
+{\large Proyecto FISCUS\par}
+\vspace{2.2cm}
+\begin{minipage}{0.78\textwidth}
+\centering\itshape
+Documento de análisis del Paquete Económico 2025, elaborado por el ITED a partir
+de los Criterios Generales de Política Económica, la Ley de Ingresos, el decreto
+de Presupuesto de Egresos y los analíticos presupuestarios del Presupuesto de
+Egresos aprobado.\par
+\vspace{0.8em}
+Este documento es de autoría del ITED. No es una publicación del Centro de
+Investigación Económica y Presupuestaria ni de ninguna otra institución. Donde se
+cita trabajo de terceros, se cita con documento y página.
+\end{minipage}
+\vfill
+{\large 2026\par}
+\vspace{0.6cm}
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+
+\input{capitulos/00_nota_metodo}
+\input{capitulos/00_resumen}
+\input{capitulos/01_macro}
+\input{capitulos/02_ingresos}
+\input{capitulos/03_energeticos}
+\input{capitulos/04_gasto}
+\input{capitulos/05_pensiones}
+\input{capitulos/06_salud}
+\input{capitulos/07_educacion}
+\input{capitulos/08_inversion}
+\input{capitulos/09_energia}
+\input{capitulos/10_seguridad}
+\input{capitulos/11_federalizado}
+\input{capitulos/12_deuda}
+\input{capitulos/13_horizonte}
+\input{capitulos/14_implicaciones}
+\input{capitulos/99_anexo}
+
+\end{document}

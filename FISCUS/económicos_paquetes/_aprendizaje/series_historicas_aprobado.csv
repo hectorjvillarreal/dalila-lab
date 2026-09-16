@@ -1,0 +1,11 @@
+capitulo,razon,numerador,denominador,2018,2019,2020,2021,2022,2023,2024,2025,2026
+2,Impuestos / gastos obligatorios con pensiones,art. 1o. numeral 1,"decreto, Anexo 3",,,,,,,,,
+2,Impuestos + cuotas de seguridad social / gastos obligatorios con pensiones,art. 1o. numerales 1 y 2,"decreto, Anexo 3",,,,,,,,,
+4,Pensiones y jubilaciones + costo financiero / impuestos,clasificación económica + CGPE,art. 1o. numeral 1,,,,,,,,,
+5,Pensiones IMSS / cuotas de seguridad social,tipo de gasto 4 del IMSS,art. 1o. numeral 2,,,1.306,1.463,1.545,1.593,1.627,1.603,1.575
+6,Gasto en salud del IMSS / cuotas de seguridad social,función 2.3 Salud del IMSS,art. 1o. numeral 2,,,0.854,0.852,0.866,0.841,0.851,0.798,0.867
+6,Pensiones IMSS+ISSSTE / salud IMSS+ISSSTE,tipo de gasto 4 de IMSS e ISSSTE,función 2.3 Salud de IMSS e ISSSTE,,,1.92,2.109,2.148,2.227,2.282,2.412,2.204
+7,Función Educación / pensiones y jubilaciones,"función 2.5 Educación, GF bruto","pensiones y jubilaciones, clasificación económica",,,0.815,0.764,0.733,0.709,0.689,0.662,0.688
+7,Función Educación / pensiones totales (con no contributivas),"función 2.5 Educación, GF bruto",pensiones y jubilaciones + adultas mayores + discapacidad + mujeres,,,0.718,0.669,0.601,0.556,0.518,0.501,0.505
+12,Costo financiero / impuestos,"CGPE, costo financiero del sector público",art. 1o. numeral 1,,,,,,,,,
+12,"SHRFSP / impuestos, en años de recaudación","CGPE, SHRFSP",art. 1o. numeral 1,,,,,,,,,

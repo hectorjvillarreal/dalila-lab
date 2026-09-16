@@ -1,0 +1,50 @@
+El Reto de la Eficiencia en el Financiamiento
+Cómo incentivar modelos de atención flexibles y eficaces en Latinoamérica
+Contexto (Background)
+Diagnóstico de la región: Latinoamérica enfrenta una baja inversión en salud en la mayoría de sus países, sumada a problemas de eficiencia en el uso de los recursos.
+Impacto: Esta situación limita el acceso a servicios y tecnologías, afectando de manera particular a pacientes con enfermedades de alto costo. A pesar de los diversos esfuerzos, no se han logrado transformaciones profundas, generando una alta carga de mortalidad y morbilidad evitable.
+Aislamiento institucional: Existe una notable falta de diálogo e intercambio transversal entre gobiernos, expertos y tomadores de decisión de los distintos países de la región.
+Enfocado en el Curso de Harvard: Este taller se enmarca en el curso “Building Strong Health Systems for the Future”, el cual brinda bases teóricas y evidencia sobre las principales políticas para mejorar el financiamiento de la salud a nivel global. El curso está dirigido a líderes, analistas y tomadores de decisión de organizaciones públicas y privadas de África, Medio Oriente y Latinoamérica.
+Objetivo del Taller
+Intercambiar experiencias y aplicaciones de modelos de atención flexibles y eficaces en Latinoamérica para promover una discusión profunda y amplia sobre mecanismos y estrategias que impulsen cambios sustanciales en los sistemas de salud de la región, facilitando así el acceso de la población a los servicios.
+Metodología
+Coordinación: La Comunidad Latinoamericana de Conocimiento sobre la Financiación de los Servicios de Salud (iniciativa liderada por el Tecnológico de Monterrey, en conjunto con una red de universidades asociadas como la Universidad de los Andes de Colombia y la Pontificia Universidad Católica de Chile).
+Duración total: 60 minutos. 
+Proceso metodológico:
+Introducción y motivación al tema: A cargo del Tec de Monterrey, presentada por el Profesor Héctor Villarreal (Líder Vocal de la Comunidad del Conocimiento).
+Presentación de experiencias regionales: Exposición de tres modelos de atención de países de Latinoamérica (30 minutos por presentación):
+México
+Colombia
+Costa Rica
+Discusión: Debate enfocado en políticas, programas y mecanismos para financiar e implementar modelos de atención en salud flexibles y eficaces.
+Memoria y sistematización:
+Se elaborará un documento memoria con los principales aspectos discutidos, las propuestas de política y los procesos de innovación aplicables.
+Distribución y alcance: Se compartirá con los asistentes y con el Atlantic Council como insumo para un documento en preparación sobre financiamiento de la salud en Latinoamérica. Asimismo, servirá de base para investigaciones de la Comunidad del Conocimiento en Financiamiento de Salud en Latinoamérica.
+Confidencialidad: Las posturas y comentarios incluidos en las conclusiones serán presentados de forma anónima, sin atribuirse a título personal a ningún asistente.
+Anexos Presentaciones por País:
+México:
+De la fragmentación a la integración: transformación del modelo de atención del cáncer de mama en MéxicoFrom Fragmentation to Integration: Transforming Breast Cancer Care in MexicoDescripción de la propuestaMéxico avanza hacia la transformación de la atención del cáncer de mama mediante la implementación del Modelo de Atención Universal de Cáncer de Mama (MAU-CaMa), una estrategia nacional orientada a reducir las brechas en detección, diagnóstico y acceso oportuno al tratamiento.El modelo propone transitar de procesos fragmentados hacia una ruta integrada de atención, articulando detección oportuna, priorización de mujeres con signos y síntomas, diagnóstico estandarizado, unidades de acto único, navegación de pacientes, fortalecimiento de capacidades profesionales y vinculación interinstitucional.Su implementación contempla además la homologación de procesos entre instituciones, el fortalecimiento de la infraestructura diagnóstica y terapéutica y la formación especializada del personal de salud, con un enfoque centrado en la persona, equidad y calidad.Actualmente, el MAU-CaMa se encuentra en fase de validación presidencial y próxima implementación nacional, con acciones orientadas a consolidar una red capaz de disminuir los tiempos entre la sospecha, la confirmación diagnóstica y el inicio del tratamiento.La experiencia mexicana busca demostrar que transformar los resultados en cáncer de mama requiere no solamente ampliar la cobertura, sino rediseñar la ruta completa de atención.ExpositoraDra. Anel Arellano TejedaDirectora del Modelo de Atención Universal de Cáncer de Mama (MAU-CaMa)Subsecretaría de Políticas de Salud y Bienestar PoblacionalSecretaría de Salud, México.Rol: Presentación de la estrategia nacional, arquitectura del modelo, avances de implementación, retos y oportunidades para su consolidación.Recursos requeridosPresentación audiovisual en PowerPoint/Slides, incorporando:* Diagrama de la ruta de atención MAU-CaMa.* Indicadores y datos epidemiológicos nacionales.* Mapas y visualización de la implementación territorial.* Esquema de las unidades de acto único y navegación de pacientes.
+Colombia:
+Consultorios Rosados: Una solución integral y humanizada que descentraliza y optimiza el diagnóstico de cáncer de mama.
+Descripción de la propuesta:
+Consultorios Rosados es una estrategia que se viene implementando en instituciones de salud en Colombia con el objetivo de sensibilizar y detectar de manera temprana enfermedades de la mama, identificando factores de riesgo, fomentando la cultura de la prevención y la detección temprana e implementando acciones oportunas de diagnóstico.
+Su misión principal es ampliar la cobertura de tamización con mamografías y exámenes clínicos especializados, reducir significativamente los tiempos de diagnóstico y enrutar a las pacientes diagnosticadas facilitando el acceso a tratamientos integrales y oportunos.
+Este modelo permite trabajar y generar soluciones sobre puntos críticos en la ruta de diagnóstico del cáncer de mama: concentración de capacidades y servicios en instituciones especializadas ubicadas en pocas ciudades del país, fragmentación y baja conexión entre instituciones que intervienen en el proceso diagnóstico, déficit en las capacidades del talento humano de atención primaria, déficit en la calidad diagnóstica. Estos retos no se resuelven con intervenciones aisladas, requieren una estrategia integral, articulada y que fortalezca las capacidades del talento humano y de las instituciones.
+Actualmente existen 14 Consultorios Rosados certificados en Colombia, en 9 de ellos entre enero de 2024 y junio de 2025 se realizaron 146.756 mamografías, y se logró un promedio de 38 días entre la sospecha y el inicio del tratamiento.
+Expositores:
+Jaime Guerrero Guerrero, Health System Shaping Chapter Lead, Roche Colombia. Introducción y contexto general de la estrategia Consultorios Rosados.
+Dra. Maga Rocha, Jefe de Gestión del Riesgo, Colsubsidio IPS. Presentación de la experiencia de implementación de Consultorio Rosado de Clínica Colsubsidio Calle 63.
+Recursos requeridos: 
+Slides y posiblemente un video.
+CCAV: 
+Movimiento ImpulSALUD: articulación de alianzas para la eficiencia en el sistema de salud
+Descripción: 
+Esta presentación recorre la ruta del Movimiento ImpulSALUD, una plataforma multisectorial de la región Caribe, Centroamérica y Venezuela (CCAV) creada para impulsar una transformación en la gestión y el financiamiento de las enfermedades crónicas no transmisibles (ECNT). Partiendo del modelo de incidencia revisado con la cohorte de Harvard 2025, la iniciativa plantea optimizar los recursos existentes dentro del mismo espacio fiscal, posicionando las eficiencias sanitarias como el elemento diferenciador para la sostenibilidad del sistema.  
+Abordaremos cómo la alineación con las agendas nacionales fue el disparador para co-diseñar pilotos orientados al cáncer de mama desde la atención primaria en Costa Rica y República Dominicana. A través del modelaje económico con expertos técnicos y el trabajo conjunto con autoridades locales, el Movimiento se encuentra en una fase de estructuración de intervenciones piloto pensadas para medir el impacto clínico y social, y demostrar eficiencias concretas que respalden la escalabilidad de las soluciones. 
+Expositores:
+Virginia Cozzi, líder técnica del Movimiento ImpulSALUD
+Martín Sabignoso, experto para temas de eficiencia e incentivos aliado al Movimiento ImpulSALUD
+Melissa Delgado,  directora de Asuntos Corporativos, Roche Caribe, Centroamérica y Venezuela (en caso de que se pudiera habilitar que los acompañe virtualmente).
+Recursos: 
+Slide deck para presentación de la experiencia
+Video con testimonios de aliados del movimiento ImpulSALUD

@@ -1,0 +1,60 @@
+% =====================================================================
+% PREVIEW WRAPPER — compiles motivation_section.tex on its own
+% =====================================================================
+% motivation_section.tex is a SECTION, not a document: it has no
+% \documentclass and no \begin{document}, because it is meant to be dropped
+% into Draft-June-v6.tex. Compiling it directly will always fail.
+%
+% Two ways to use the section:
+%
+%  (A) In the paper — the intended route. In Draft-June-v6.tex, after the
+%      introduction, add:
+%          \input{motivation_section}
+%      and upload motivation_section.tex plus the four figure files to the
+%      Overleaf project root. Draft-June-v6.tex stays the main document.
+%      Its preamble already provides everything the section needs
+%      (graphicx, float for [H], caption, hyperref, natbib).
+%
+%  (B) To preview the section alone — this file. Set THIS file as the
+%      Overleaf main document, or run it locally. It mirrors the packages
+%      Draft-June-v6.tex loads, so what you see here is what you will get
+%      in the paper.
+%
+% Either way the four figures must be present:
+%   fig01_age_sex_profile.pdf   fig07_composition.pdf
+%   fig06_forgone_care.pdf      fig12_pandemic_jump.pdf
+% \graphicspath below finds them in the repo without copying; in Overleaf,
+% upload them to the project root.
+% =====================================================================
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{float}          % provides the [H] float specifier
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\graphicspath{{../output/figures/}{./}}
+
+% The section closes with a forward reference to the model section of the
+% paper. In preview it has no target, so define a stub to keep the log clean.
+% Delete or ignore this when the section is placed in the paper.
+\makeatletter
+\@ifundefined{r@sec:model}{\newlabel{sec:model}{{2}{1}}}{}
+\makeatother
+
+\begin{document}
+
+\input{motivation_section}
+
+\end{document}

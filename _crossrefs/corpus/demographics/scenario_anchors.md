@@ -1,5 +1,5 @@
 ---
-type: working_note
+type: corpus_entry
 tier: data_source
 project_scope: [DFD, BDH, Aurora]
 authors: [Anne]
@@ -80,6 +80,10 @@ Open follow-ups (not gating):
   the comparator column then.
 - Confirm Mexico's TGF for vintage 2024 if INEGI publishes a successor to
   ENADID 2023 or retabulates TGF in a 2024 ENR follow-up.
+  *Checked 2026-08-03 (Anne ruling, ENR entry endorsement): ENR 2024
+  definitive (Comunicado 129/25) does NOT retabulate TGF — resolved
+  negative for this release cycle; anchor stays 1.60/2023. See
+  `releases/2026-08-03_inegi-enr2024-mex-births.md`.*
 - Confirm Panama's TGF for vintage 2024 when INEC publishes the 2024
   Estadísticas Vitales volume (expected late 2025 / early 2026).
 
@@ -101,3 +105,4 @@ Completed.
 - → Source brief: `_crossrefs/corpus/demographics/_pending/anne_scenario_anchors_brief.md`
 - → Governing skill: `_crossrefs/_skills/dfd-demographics-monitor/SKILL.md` §Scenario Discipline
 - → Fernández-Villaverde (2026) "The Demographic Future of Humanity" (standing reference for fast-transition framing)
+- → Type retrofit build instruction: `_crossrefs/_build_instructions/2026-08-03_demographics_type_retrofit.md`

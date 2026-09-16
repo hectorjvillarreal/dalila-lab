@@ -1,0 +1,43 @@
+DIFF INSTITUCIONAL 2026 -> 2027 (proyecto), deflactor 1.04
+  bruto 2026 =    11,746,796.8 mdp
+  bruto 2027 =    12,316,615.4 mdp
+  +569,818.6 nominal | +99,946.8 real | +0.82 % real
+
+--- ramo: 46 claves | 0 aparecen (0.0 mdp) | 0 desaparecen (0.0 mdp)
+
+--- programa: 564 claves | 48 aparecen (664,440.9 mdp) | 27 desaparecen (566,912.1 mdp)
+
+--- programa_por_numero: 485 claves | 41 aparecen (647,728.2 mdp) | 23 desaparecen (543,346.0 mdp)
+
+--- unidad_responsable: 1445 claves | 233 aparecen (160,182.7 mdp) | 158 desaparecen (168,280.8 mdp)
+
+--- unidad_responsable_entre_ramos: 581 claves | 84 aparecen (128,359.9 mdp) | 50 desaparecen (24,637.9 mdp)
+
+--- cambios de MODALIDAD conservando el número de programa: 4
+    ramo  06  G003 -> X003  003 Regulación y supervisión del Sistema de Ahorro para 
+    ramo  07  A015 -> E015  015 Servicios Públicos de Transporte Masivo de Personas 
+    ramo  07  A016 -> E016  016 Servicios de dirección de la Aerolínea del Estado Me
+    ramo  09  E019 -> K019  019 Servicios de operación de aeropuertos
+
+--- subfuncion: 87 claves | 0 aparecen | 0 desaparecen
+    (la función y la subfunción son catálogo nacional: es la ÚNICA agregación estable entre ejercicios. Todo perímetro de rubro se define aquí primero.)
+
+escrito _salidas/diffs_2026_2027.csv
+
+==============================================================================
+CASOS DE PRUEBA OBLIGATORIOS
+==============================================================================
+
+--- CASO DE PRUEBA: IMSS-Bienestar
+    Ha cambiado de ubicación tres veces: Ramo 19 en 2024, Ramo 47 en 2025, Ramo 56 en 2026. Un diff por ramo lo lee como extinción y nacimiento.
+    2026  ramo  56 UR AYO   AYO Servicios de Salud del Instituto Mexican     172,492.4 mdp
+    2027  ramo  56 UR AYO   AYO Servicios de Salud del Instituto Mexican     193,987.2 mdp
+    TOTAL a través de ramos:     172,492.4 ->     193,987.2  +21,494.8 nominal | +14,595.1 real | +8.14 % real
+    sin cambio de ramo: la variación es presupuestal y se puede atribuir.
+
+--- CASO DE PRUEBA: Guardia Nacional
+    Coexisten dos cosas: cambio de ramo y reducción propia. Atribuir toda la variación al cambio de ramo, o toda a la política, es falso en los dos casos.
+    2026  ramo  07 UR 148   148 Comandancia de la Guardia Nacional            23,492.8 mdp
+    2027  ramo  07 UR 148   148 Comandancia de la Guardia Nacional            31,486.6 mdp
+    TOTAL a través de ramos:      23,492.8 ->      31,486.6  +7,993.8 nominal | +7,054.1 real | +28.87 % real
+    sin cambio de ramo: la variación es presupuestal y se puede atribuir.

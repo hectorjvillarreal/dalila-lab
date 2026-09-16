@@ -1,0 +1,290 @@
+clave,descripcion,year
+J001,"Honorarios por servicios profesionales: cirugía, anestesia, etcétera, durante el parto",2018
+J002,"Hospitalización, durante el parto",2018
+J003,"Análisis clínicos y estudios médicos: Rayos X, ultrasonido, etcétera, durante el parto",2018
+J004,"Medicamentos recetados y material de curación, durante el parto",2018
+J005,"Servicios de partera, durante el parto",2018
+J006,"Otros: servicio de ambulancia, etcétera, durante el parto",2018
+J007,"Consultas médicas, durante el embarazo",2018
+J008,"Consultas, placas, puentes dentales y otros, durante el embarazo",2018
+J009,"Medicamentos recetados, durante el embarazo",2018
+J010,"Vitaminas y complementos alimenticios, durante el embarazo",2018
+J011,"Análisis clínicos y estudios médicos: rayos X, ultrasonidos, durante el embarazo",2018
+J012,Hospitalización durante el embarazo (no parto),2018
+J013,"Servicios de partera, durante el embarazo",2018
+J014,"Hierbas medicinales, remedios caseros, etcétera, durante el embarazo",2018
+J015,"Otros servicios: ambulancia, aplicación de inyecciones, vacunas, etcétera, durante el embarazo",2018
+J016,Consultas médico general,2018
+J017,"Consultas médico especialista (pediatría y ginecología, etcétera )",2018
+J018,"Consultas dentales (placas dentales o prótesis dentales, etcétera )",2018
+J019,Análisis clínicos y estudios médicos: rayos X,2018
+J020,"Medicamentos recetados para: diarrea, infecciones y malestar estomacal",2018
+J021,Medicamentos recetados para: gripe,2018
+J022,Medicamentos recetados para: piel,2018
+J023,Medicamentos recetados para: alergias,2018
+J024,Medicamentos recetados para: tos,2018
+J025,Medicamentos recetados para: infecciones de la garganta,2018
+J026,Medicamentos recetados para: fiebre,2018
+J027,Medicamentos recetados para: inflamación,2018
+J028,Medicamentos recetados para: otras infecciones (antibióticos),2018
+J029,Medicamentos recetados para: dolor de cabeza y migraña,2018
+J030,Medicamentos recetados para: otro tipo de dolores,2018
+J031,Medicamentos recetados para: presión arterial,2018
+J032,Medicamentos recetados para: diabetes,2018
+J033,Medicamentos recetados para: vitaminas,2018
+J034,Medicamentos recetados para: anticonceptivos,2018
+J035,Otros medicamentos recetados,2018
+J036,Consultas médicas para el control de peso,2018
+J037,Medicamentos y productos para el control de peso,2018
+J038,Tratamiento para el control de peso,2018
+J039,"Honorarios por servicios profesionales: cirujano, anestesista, etcétera",2018
+J040,Hospitalización (no incluye parto ni embarazo),2018
+J041,"Análisis clínicos y estudios médicos (rayos X, electros, etcétera )",2018
+J042,Medicamentos recetados y material de curación durante la atención hospitalaria (no incluye parto),2018
+J043,"Otros: servicios de ambulancia, oxígeno, suero, sondas, bolsas de diálisis y de orina, cómodos, etcétera",2018
+J044,"Medicamentos sin receta para: diarrea, infecciones y malestar estomacal",2018
+J045,Medicamentos sin receta para: gripe,2018
+J046,Medicamentos sin receta para: piel,2018
+J047,Medicamentos sin receta para: alergias,2018
+J048,Medicamentos sin receta para: tos,2018
+J049,Medicamentos sin receta para: infecciones de la garganta,2018
+J050,Medicamentos sin receta para: fiebre,2018
+J051,Medicamentos sin receta para: inflamación,2018
+J052,Medicamentos sin receta para: otras infecciones (antibióticos),2018
+J053,Medicamentos sin receta para: dolor de cabeza y migraña,2018
+J054,Medicamentos sin receta para: otro tipo de dolores,2018
+J055,Medicamentos sin receta para: vitaminas,2018
+J056,Medicamentos sin receta para: presión arterial,2018
+J057,Medicamentos sin receta para: diabetes,2018
+J058,Medicamentos sin receta para: anticonceptivos,2018
+J059,Otros medicamentos sin receta,2018
+J060,"Algodón, gasas, vendas, jeringas, etcétera",2018
+J061,"Alcohol, merthiolate, solución antiséptica, botiquín de primeros auxilios, etcétera",2018
+J062,"Consultas con el curandero, huesero, quiropráctico, etcétera",2018
+J063,"Medicamentos naturistas, hierbas medicinales, remedios caseros, Omnilife, Herbalife",2018
+J064,Medicamentos homeopáticos,2018
+J065,Anteojos y lentes de contacto e intraoculares,2018
+J066,Aparatos para sordera,2018
+J067,"Aparatos ortopédicos y para terapia, silla de ruedas, andadera, muletas, etcétera",2018
+J068,Reparación y mantenimiento de aparatos ortopédicos,2018
+J069,"Otros: pago de enfermeras y personal al cuidado de enfermos, terapias, baumanómetro, glucómetro, tiras reactivas, cómodo, etcétera",2018
+J070,Cuotas a hospitales o clínicas,2018
+J071,Cuotas a compañías de seguros,2018
+J072,Cuotas de seguro popular,2018
+J001,"Honorarios por servicios profesionales: cirugía, anestesia, etcétera",2020
+J002,Hospitalización,2020
+J003,"Análisis clínicos y estudios médicos: rayos X, ultrasonido, etcétera",2020
+J004,Medicamentos recetados y material de curación,2020
+J005,Servicios de partera,2020
+J006,"Otros: servicio de ambulancia, etcétera",2020
+J007,Consultas médicas,2020
+J008,"Consultas, placas, puentes dentales, dentaduras, amalgamas, coronas y otros",2020
+J009,Medicamentos recetados,2020
+J010,Vitaminas y complementos alimenticios,2020
+J011,"Análisis clínicos y estudios médicos: rayos X, ultrasonidos",2020
+J012,Hospitalización durante el embarazo (no parto),2020
+J013,Servicios de partera,2020
+J014,"Hierbas medicinales, remedios caseros, etcétera",2020
+J015,"Otros servicios: ambulancia, aplicación de inyecciones, vacunas, etcétera",2020
+J016,Consultas médico general,2020
+J017,"Consultas médico especialista (pediatría y ginecología, etcétera)",2020
+J018,"Consultas dentales (placas dentales o prótesis dentales, braquets,etcétera)",2020
+J019,"Análisis clínicos y estudios médicos: rayos X, tamiz",2020
+J020,"Diarrea, infecciones y malestar estomacal",2020
+J021,Gripe,2020
+J022,Piel,2020
+J023,Alergias,2020
+J024,Tos,2020
+J025,Infecciones de la garganta,2020
+J026,Fiebre,2020
+J027,Inflamación,2020
+J028,Otras infecciones (antibióticos),2020
+J029,Dolor de cabeza y migraña,2020
+J030,Otro tipo de dolores,2020
+J031,Presión arterial,2020
+J032,Diabetes,2020
+J033,Vitaminas,2020
+J034,Anticonceptivos,2020
+J035,Otros medicamentos,2020
+J036,Consultas médicas,2020
+J037,Medicamentos y productos,2020
+J038,Tratamiento,2020
+J039,"Honorarios por servicios profesionales: cirujano, anestesista, etcétera",2020
+J040,Hospitalización,2020
+J041,"Análisis clínicos y estudios médicos (rayos X, electros, etcétera)",2020
+J042,Medicamentos recetados y material de curación,2020
+J043,"Otros: servicios de ambulancia, oxígeno, suero, sondas, bolsas de diálisis y de orina, cómodos, nebulizaciones, etcétera",2020
+J044,"Diarrea, infecciones y malestar estomacal",2020
+J045,Gripe,2020
+J046,Piel,2020
+J047,Alergias,2020
+J048,Tos,2020
+J049,Infecciones de la garganta,2020
+J050,Fiebre,2020
+J051,Inflamación,2020
+J052,Otras infecciones (antibióticos),2020
+J053,Dolor de cabeza y migraña,2020
+J054,Otro tipo de dolores,2020
+J055,Vitaminas,2020
+J056,Presión arterial,2020
+J057,Diabetes,2020
+J058,Anticonceptivos,2020
+J059,Otros medicamentos,2020
+J060,"Algodón, gasas, vendas, jeringas, etcétera.",2020
+J061,"Alcohol, merthiolate, solución antiséptica, botiquín de primeros auxilios, etcétera",2020
+J062,"Consultas con el curandero, huesero, quiropráctico, etcétera",2020
+J063,"Medicamento naturista, hierbas medicinales, remedios caseros, Omnilife, Herbalife",2020
+J064,Medicamento homeopáticos,2020
+J065,Anteojos y lentes de contacto e intraoculares,2020
+J066,Aparatos para sordera,2020
+J067,"Aparatos ortopédicos y para terapia, silla de ruedas, andadera, muletas, etcétera",2020
+J068,Reparación y mantenimiento de aparatos ortopédicos,2020
+J069,"Otros: pago de enfermeras y personal al cuidado de enfermos, terapias, baumanómetro, glucómetro, tiras reactivas, cómodo, etcétera",2020
+J070,Cuotas a hospitales o clínicas,2020
+J071,Cuotas a compañías de seguros,2020
+J072,Cuotas de seguro popular,2020
+J001,"Honorarios por servicios profesionales: cirugía, anestesia, etcétera",2022
+J002,Hospitalización,2022
+J003,"Análisis clínicos y estudios médicos: rayos X, ultrasonido, etcétera",2022
+J004,Medicamentos recetados y material de curación,2022
+J005,Servicios de partera,2022
+J006,"Otros: servicio de ambulancia, etcétera",2022
+J007,Consultas médicas,2022
+J008,"Consultas, placas, puentes dentales, dentaduras, amalgamas, coronas y otros",2022
+J009,Medicamentos recetados,2022
+J010,Vitaminas y complementos alimenticios,2022
+J011,"Análisis clínicos y estudios médicos: rayos X, ultrasonidos",2022
+J012,Hospitalización durante el embarazo (no parto),2022
+J013,Servicios de partera,2022
+J014,"Hierbas medicinales, remedios caseros, etcétera",2022
+J015,"Otros servicios: ambulancia, aplicación de inyecciones, vacunas, etcétera",2022
+J016,Consultas médico general,2022
+J017,"Consultas médico especialista (pediatría y ginecología, etcétera)",2022
+J018,"Consultas dentales (placas dentales o prótesis dentales, braquets,etcétera)",2022
+J019,"Análisis clínicos y estudios médicos: rayos X, tamiz",2022
+J020,"Diarrea, infecciones y malestar estomacal",2022
+J021,Gripe,2022
+J022,Piel,2022
+J023,Alergias,2022
+J024,Tos,2022
+J025,Infecciones de la garganta,2022
+J026,Fiebre,2022
+J027,Inflamación,2022
+J028,Otras infecciones (antibióticos),2022
+J029,Dolor de cabeza y migraña,2022
+J030,Otro tipo de dolores,2022
+J031,Presión arterial,2022
+J032,Diabetes,2022
+J033,Vitaminas,2022
+J034,Anticonceptivos,2022
+J035,Otros medicamentos,2022
+J036,Consultas médicas,2022
+J037,Medicamentos y productos,2022
+J038,Tratamiento,2022
+J039,"Honorarios por servicios profesionales: cirujano, anestesista, etcétera",2022
+J040,Hospitalización,2022
+J041,"Análisis clínicos y estudios médicos (rayos X, electros, etcétera)",2022
+J042,Medicamentos recetados y material de curación,2022
+J043,"Otros: servicios de ambulancia, oxígeno, suero, sondas, bolsas de diálisis y de orina, cómodos, nebulizaciones, etcétera",2022
+J044,"Diarrea, infecciones y malestar estomacal",2022
+J045,Gripe,2022
+J046,Piel,2022
+J047,Alergias,2022
+J048,Tos,2022
+J049,Infecciones de la garganta,2022
+J050,Fiebre,2022
+J051,Inflamación,2022
+J052,Otras infecciones (antibióticos),2022
+J053,Dolor de cabeza y migraña,2022
+J054,Otro tipo de dolores,2022
+J055,Vitaminas,2022
+J056,Presión arterial,2022
+J057,Diabetes,2022
+J058,Anticonceptivos,2022
+J059,Otros medicamentos,2022
+J060,"Algodón, gasas, vendas, jeringas, etcétera.",2022
+J061,"Alcohol, merthiolate, solución antiséptica, botiquín de primeros auxilios, etcétera",2022
+J062,"Consultas con el curandero, huesero, quiropráctico, etcétera",2022
+J063,"Medicamento naturista, hierbas medicinales, remedios caseros, Omnilife, Herbalife",2022
+J064,Medicamento homeopáticos,2022
+J065,Anteojos y lentes de contacto e intraoculares,2022
+J066,Aparatos para sordera,2022
+J067,"Aparatos ortopédicos y para terapia, silla de ruedas, andadera, muletas, etcétera",2022
+J068,Reparación y mantenimiento de aparatos ortopédicos,2022
+J069,"Otros: pago de enfermeras y personal al cuidado de enfermos, terapias, baumanómetro, glucómetro, tiras reactivas, cómodo, etcétera",2022
+J070,Cuotas a hospitales o clínicas,2022
+J071,Cuotas a compañías de seguros,2022
+J072,Cuotas de seguro popular,2022
+061111,Analgésicos (para bajar la fiebre o el dolor),2024
+061112,Antibióticos (para tratar infecciones),2024
+061113,"Anticonceptivos hormonales: píldoras, parches, inyecciones, etcétera",2024
+061114,Antigripales,2024
+061115,Antiinflamatorios,2024
+061116,Expectorantes: jarabe para la tos o medicamentos descongestivos,2024
+061117,Insulina y medicamentos para el control de la diabetes,2024
+061118,Medicamentos antidiarreicos y para el malestar estomacal,2024
+061119,Medicamentos antihistamínicos (para tratar alergias),2024
+06111A,Medicamentos dermatológicos,2024
+06111B,Medicamentos gineco-obstétricos,2024
+06111C,Medicamentos nefrológicos y urológicos,2024
+06111D,Medicamentos neurológicos,2024
+06111E,Medicamentos oftalmológicos,2024
+06111F,Medicamentos para el control de peso,2024
+06111G,Medicamentos para enfermedades inmunoalérgicas,2024
+06111H,Medicamentos para enfermedades psiquiátricas,2024
+06111I,Medicamentos para la presión arterial y cardiovasculares,2024
+06111J,"Antisépticos: agua oxigenada, merthiolate, alcohol, soluciones asépticas, gel antibacterial, líquido para lentes de contacto, etcétera",2024
+06111K,"Otros medicamentos: vacunas, sueros, oxígeno, etcétera",2024
+06111L,Vitaminas y minerales,2024
+061120,Productos homeopáticos y naturistas,2024
+061211,Pruebas de embarazo,2024
+061212,"Otros productos para diagnóstico: termómetro, medidor de glucosa, medidor de presión arterial, báscula para bebé, etcétera",2024
+061221,Preservativos,2024
+061222,"Parches, inhaladores y chicles de nicotina",2024
+061223,"Otros dispositivos y productos de prevención y protección: cubrebocas, guantes, fajas postparto, calcetines para diabéticos y circulación, etcétera",2024
+061230,"Productos y dispositivos de tratamiento para uso personal: inhaladores, jeringas, nebulizadores, compresas de hielo, botiquines de primeros auxilios, etcétera",2024
+061311,Anteojos y lentes de contacto,2024
+061312,"Otros productos de apoyo para la visión: bastones para débiles visuales, prótesis oculares, etcétera",2024
+061320,Prótesis auditivas,2024
+061331,"Aparatos ortopédicos: cinturones ortopédicos, collares cervicales, muletas; andador, andadera, bastones, etcétera",2024
+061332,"Calzado terapéutico: diabético, neuropático, ortopédico, etcétera",2024
+061333,"Dispositivos médicos de soporte (ortesis): férula u otro dispositivo externo artificial que sirva para sostener la pierna, la columna, el cuello, la mano, etcétera",2024
+061334,"Dispositivos y productos de asistencia: sillas para ducha y baño, pasamanos y barandales, barras de apoyo y seguridad, rampas, etcétera",2024
+061335,Prótesis,2024
+061336,Sillas de ruedas (con y sin motor) y camas especiales,2024
+061337,Vehículos para personas con discapacidad: adaptación del vehículo,2024
+061338,"Otros productos de apoyo: productos para la incontinencia, pañales para adulto, etcétera",2024
+061401,Reparación y mantenimiento de productos médicos y auxiliares,2024
+061402,Alquiler de productos médicos y auxiliares,2024
+062110,Servicios de inmunización y vacunación,2024
+062191,"Consulta médica con especialistas: pediatría, ginecología, cardiología, ortopedia, oftalmología, etcétera",2024
+062192,Consulta médica con especialistas durante el embarazo,2024
+062193,Consulta médica general,2024
+062194,Consulta médica general durante el embarazo,2024
+062195,Consultas homeopáticas,2024
+062196,"Servicio de practicantes de medicina tradicional: curandero, yerbero, huesero, etcétera",2024
+062197,"Otros servicios médicos: acupunturistas, optometristas, fonoaudiólogos independientes, logopedas, etcétera",2024
+062198,Servicios de partera,2024
+062210,Consultas dentales,2024
+062291,Servicios de especialistas en ortodoncia,2024
+062292,"Otros servicios dentales: colocación de dentaduras postizas, prótesis dentales, etcétera",2024
+062311,Servicios curativos,2024
+062312,Servicios de rehabilitación y terapia,2024
+062313,Baños termales y terapia de gimnasia correctiva,2024
+062321,Servicios de enfermeras independientes,2024
+062322,Servicios de asistencia y cuidado personal,2024
+062323,Centros de asistencia,2024
+063101,Hospitalización general,2024
+063102,Intervenciones quirúrgicas,2024
+063103,Hospitalización durante el embarazo,2024
+063104,Hospitalización durante el parto,2024
+063105,Hospitalización general en hospitales especializados,2024
+063106,Intervenciones quirúrgicas en hospitales especializados,2024
+063200,Hospitalización general en hospitales de salud mental,2024
+064101,Servicios de laboratorio de análisis clínicos,2024
+064102,"Servicios de rayos X y estudios de gabinete: tomografía, resonancia magnética, ecografía, ultrasonido, etcétera",2024
+064103,Servicios de laboratorio de análisis clínicos y ultrasonido durante el embarazo,2024
+064201,Servicios paramédicos y de ambulancia para pacientes en general,2024
+064202,Servicios paramédicos y de ambulancia durante el embarazo,2024
+121201,Seguro de gastos médicos,2024
+121202,Seguro médico voluntario (IMSS),2024

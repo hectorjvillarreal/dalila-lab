@@ -52,13 +52,13 @@ slots:
       Eastern Europe, Latin America, Canada. Decisive for 2b (acquired legitimacy);
       note the unit — a portfolio of per-marque authorizations, not a scalar stock.
   margin:
-    value: null
-    unit: null
-    delta: null
-    date: null
-    source: null
-    source_type: null
-    confidence: null
+    value: "17.9% gross margin, H1-2026 — revenue RMB 173.6B; core profit attributable to owners RMB 9.68B"
+    unit: "% — gross margin, Geely Automobile Holdings consolidated"
+    delta: "revenue +15% YoY; core profit attributable +46% YoY; core profit per vehicle RMB 6,806 (+45% YoY)"
+    date: 2026-08-17
+    source: "https://global.geely.com/en/news/2026/geely-auto-record-h1-2026-revenue"
+    source_type: primary
+    confidence: confirmed
     decisive: false
     notes: "unset — board marks '(feed)'; awaiting feed data"
   cost_position:
@@ -72,13 +72,13 @@ slots:
     decisive: false
     notes: "unset — board marks '(feed)'; awaiting feed data"
   geographic_reach:
-    value: "106,663"
-    unit: "units — group exports, July 2026 (42.6% of monthly sales; H1-2026 cumulative 472,500)"
-    delta: "+202% YoY (July); NEV exports 62,604, +616% YoY"
-    date: 2026-08-01
-    source: "https://cnevpost.com/2026/08/01/geely-jul-2026-sales/"
-    source_type: secondary
-    confidence: reported
+    value: "110,094"
+    unit: "units — group overseas sales, August 2026 (110,094 / 270,194 total = 40.7% of monthly sales)"
+    delta: "+205% YoY; NEV exports 70,629, +446% YoY (64% of overseas sales)"
+    date: 2026-09-01
+    source: "https://www.globenewswire.com/news-release/2026/09/01/3354426/0/en/geely-auto-group-reports-270-194-sales-in-august-as-monthly-exports-exceed-100-000-for-third-consecutive-month.html"
+    source_type: primary
+    confidence: confirmed
     decisive: true
     notes: "unset — board marks '(feed)'; awaiting feed data"
   backing:

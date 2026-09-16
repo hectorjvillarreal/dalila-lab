@@ -177,6 +177,25 @@ for reform. Claude Code must identify and report:
 | Stress (TFR→1.0) | ~2038 | 36.3 | 2038–2043 (≈5 yr) |
 
 Source: `_crossrefs/corpus/demographics/country/MEX/quarterly/2026-Q2_demographic_replicate.md`.
+
+**Duration-convention footnote (v1.4, per Cath's 2026-08-03 endorsement
+condition).** Window durations in the table above are **grid-year counts on
+5-year projection steps** — the span of table years satisfying
+TDR ≤ TDR_min + 2.0 — not annual-resolution measurements. Linear
+interpolation of the same threshold gives approximately: Optimistic
+~2027–2041 (~14 yr), Central ~2030–2041 (~11 yr), Tempo-corrected
+~2028–2041 (~14 yr), Stress ~2035–2044 (~9 yr). The cross-scenario ordering
+(Central and Stress tighter than Optimistic and Tempo-corrected) is robust
+to convention; absolute durations are not, and duration comparisons across
+replicate vintages or against pre-v1.3 placeholder values are not
+resolution-comparable. Every downstream citation of a window duration must
+state its convention. IM-6 fiscal-space work anchors to the grid interval
+2033–2038 — interior to the Central window under either convention, so
+fiscal space is not overstated. Until the Q4 retabulation resolves the
+observed-TDR wedge (Q3 replicate §4), citations of the fiscal-space numbers
+also carry the Q3 §5 window-timing caveat (entry may shift later by up to
+~5 years).
+
 After the TDR minimum (in all scenarios), the ratio rises sharply as old-age
 dependency accumulates — reaching ~49–51 by 2050 in the upper three scenarios
 and ~43 in the stress scenario (where old-age dependency is partially offset
@@ -285,7 +304,7 @@ The 2026-Q2 replicate should additionally include:
 
 ---
 
-*These instructions are versioned. This is v1.3, May 2026.*
+*These instructions are versioned. This is v1.4, August 2026.*
 *v1.0 → v1.1 changes: (1) central scenario pinned to TFR=1.5 stable for Mexico
 with confirmed 2026-Q2 population implied values; (2) stress scenario floor
 anchored to Chile 1.03 (2024) as current LAC observed minimum; (3) fiscal window
@@ -304,4 +323,12 @@ reference values refined to match the 2026-Q2 replicate (Central: TDR_min=42.0
 at 2038, ≈5-yr window) — supersedes the v1.1/v1.2 placeholder values; (3)
 population implications for all four scenarios pinned to the replicate output
 (140.4M central / 143.2M tempo-corrected / 128.9M stress at 2050).*
-*Next review: 2026-Q3 replicate, July 2026.*
+*v1.3 → v1.4 changes (2026-08-03, authorized by Héctor): duration-convention
+footnote added to the §4 fiscal-window reference table per Cath's 2026-08-03
+endorsement condition on the Q2/Q3 replicates — grid-year vs. interpolated
+window durations distinguished (Central ≈5 yr grid / ~11 yr interpolated);
+cross-scenario ordering noted as convention-robust, absolute durations not;
+IM-6 anchor 2033–2038 documented as conservative interior; Q3 window-timing
+caveat (entry may lag up to ~5 yr pending Q4 retabulation) referenced
+wherever fiscal-space numbers are cited.*
+*Next review: 2026-Q4 replicate, January 2027.*

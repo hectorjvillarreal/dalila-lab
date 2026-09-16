@@ -1,0 +1,74 @@
+clave,descripcion,year
+061111,Analgésicos (para bajar la fiebre o el dolor),2024
+061112,Antibióticos (para tratar infecciones),2024
+061113,"Anticonceptivos hormonales: píldoras, parches, inyecciones, etcétera",2024
+061114,Antigripales,2024
+061115,Antiinflamatorios,2024
+061116,Expectorantes: jarabe para la tos o medicamentos descongestivos,2024
+061117,Insulina y medicamentos para el control de la diabetes,2024
+061118,Medicamentos antidiarreicos y para el malestar estomacal,2024
+061119,Medicamentos antihistamínicos (para tratar alergias),2024
+06111A,Medicamentos dermatológicos,2024
+06111B,Medicamentos gineco-obstétricos,2024
+06111C,Medicamentos nefrológicos y urológicos,2024
+06111D,Medicamentos neurológicos,2024
+06111E,Medicamentos oftalmológicos,2024
+06111F,Medicamentos para el control de peso,2024
+06111G,Medicamentos para enfermedades inmunoalérgicas,2024
+06111H,Medicamentos para enfermedades psiquiátricas,2024
+06111I,Medicamentos para la presión arterial y cardiovasculares,2024
+06111J,"Antisépticos: agua oxigenada, merthiolate, alcohol, soluciones asépticas, gel antibacterial, líquido para lentes de contacto, etcétera",2024
+06111K,"Otros medicamentos: vacunas, sueros, oxígeno, etcétera",2024
+06111L,Vitaminas y minerales,2024
+061120,Productos homeopáticos y naturistas,2024
+061211,Pruebas de embarazo,2024
+061212,"Otros productos para diagnóstico: termómetro, medidor de glucosa, medidor de presión arterial, báscula para bebé, etcétera",2024
+061221,Preservativos,2024
+061222,"Parches, inhaladores y chicles de nicotina",2024
+061223,"Otros dispositivos y productos de prevención y protección: cubrebocas, guantes, fajas postparto, calcetines para diabéticos y circulación, etcétera",2024
+061230,"Productos y dispositivos de tratamiento para uso personal: inhaladores, jeringas, nebulizadores, compresas de hielo, botiquines de primeros auxilios, etcétera",2024
+061311,Anteojos y lentes de contacto,2024
+061312,"Otros productos de apoyo para la visión: bastones para débiles visuales, prótesis oculares, etcétera",2024
+061320,Prótesis auditivas,2024
+061331,"Aparatos ortopédicos: cinturones ortopédicos, collares cervicales, muletas; andador, andadera, bastones, etcétera",2024
+061332,"Calzado terapéutico: diabético, neuropático, ortopédico, etcétera",2024
+061333,"Dispositivos médicos de soporte (ortesis): férula u otro dispositivo externo artificial que sirva para sostener la pierna, la columna, el cuello, la mano, etcétera",2024
+061334,"Dispositivos y productos de asistencia: sillas para ducha y baño, pasamanos y barandales, barras de apoyo y seguridad, rampas, etcétera",2024
+061335,Prótesis,2024
+061336,Sillas de ruedas (con y sin motor) y camas especiales,2024
+061337,Vehículos para personas con discapacidad: adaptación del vehículo,2024
+061338,"Otros productos de apoyo: productos para la incontinencia, pañales para adulto, etcétera",2024
+061401,Reparación y mantenimiento de productos médicos y auxiliares,2024
+061402,Alquiler de productos médicos y auxiliares,2024
+062110,Servicios de inmunización y vacunación,2024
+062191,"Consulta médica con especialistas: pediatría, ginecología, cardiología, ortopedia, oftalmología, etcétera",2024
+062192,Consulta médica con especialistas durante el embarazo,2024
+062193,Consulta médica general,2024
+062194,Consulta médica general durante el embarazo,2024
+062195,Consultas homeopáticas,2024
+062196,"Servicio de practicantes de medicina tradicional: curandero, yerbero, huesero, etcétera",2024
+062197,"Otros servicios médicos: acupunturistas, optometristas, fonoaudiólogos independientes, logopedas, etcétera",2024
+062198,Servicios de partera,2024
+062210,Consultas dentales,2024
+062291,Servicios de especialistas en ortodoncia,2024
+062292,"Otros servicios dentales: colocación de dentaduras postizas, prótesis dentales, etcétera",2024
+062311,Servicios curativos,2024
+062312,Servicios de rehabilitación y terapia,2024
+062313,Baños termales y terapia de gimnasia correctiva,2024
+062321,Servicios de enfermeras independientes,2024
+062322,Servicios de asistencia y cuidado personal,2024
+062323,Centros de asistencia,2024
+063101,Hospitalización general,2024
+063102,Intervenciones quirúrgicas,2024
+063103,Hospitalización durante el embarazo,2024
+063104,Hospitalización durante el parto,2024
+063105,Hospitalización general en hospitales especializados,2024
+063106,Intervenciones quirúrgicas en hospitales especializados,2024
+063200,Hospitalización general en hospitales de salud mental,2024
+064101,Servicios de laboratorio de análisis clínicos,2024
+064102,"Servicios de rayos X y estudios de gabinete: tomografía, resonancia magnética, ecografía, ultrasonido, etcétera",2024
+064103,Servicios de laboratorio de análisis clínicos y ultrasonido durante el embarazo,2024
+064201,Servicios paramédicos y de ambulancia para pacientes en general,2024
+064202,Servicios paramédicos y de ambulancia durante el embarazo,2024
+121201,Seguro de gastos médicos,2024
+121202,Seguro médico voluntario (IMSS),2024

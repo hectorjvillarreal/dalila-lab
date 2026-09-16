@@ -1,0 +1,38 @@
+#!/bin/sh
+# Versioned pre-commit dispatcher for the Dalila repository.
+#
+# Enabled with (once per clone — core.hooksPath is local config, not versioned):
+#
+#     git config core.hooksPath .githooks
+#
+# Each entry below is a self-contained hook script living with the code it
+# guards, so it is versioned, reviewable, and cannot be clobbered by another
+# project's install step. Each is expected to:
+#   - exit 0 quickly when the staged set does not concern it,
+#   - exit non-zero to block the commit,
+#   - print its own diagnostics.
+#
+# To add a hook, append its repo-relative path to HOOKS. Order matters only in
+# that a blocking hook prevents later ones from running; put pure validators
+# before hooks that mutate the index.
+#
+# Wired 2026-08-09, replacing a hand-edited .git/hooks/pre-commit that carried
+# the automotive-board hook plus a BID2 dispatch. That file is left in place as
+# a fallback if core.hooksPath is ever unset; while hooksPath is set, git
+# ignores it and THIS file is authoritative.
+
+TOP=$(git rev-parse --show-toplevel) || exit 0
+
+HOOKS="
+GrandPlan/Aurora/automotive-board/tools/pre-commit-hook.sh
+Missions/Funded/BID2/motivation/scripts/pre-commit-hook.sh
+"
+
+for h in $HOOKS; do
+    p="$TOP/$h"
+    [ -f "$p" ] || continue
+    # Run with sh rather than executing, so a missing +x bit is not fatal.
+    sh "$p" || exit 1
+done
+
+exit 0

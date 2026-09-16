@@ -1,0 +1,74 @@
+\chapter*{Nota de método}
+\addcontentsline{toc}{chapter}{Nota de método}
+
+% ESQUELETO. Las seis secciones vienen del documento 2026 y se conservan. El recuadro
+% del deflactor es obligatorio y va aquí, UNA sola vez en todo el documento.
+
+Este documento pertenece al género de las \emph{Implicaciones del Paquete Económico} y se
+aparta de él en los lugares que se declaran aquí.
+
+\section*{Uno. Está escrito bajo régimen de lectura en vivo}
+\section*{Dos. Dos líneas de comparación, siempre etiquetadas}
+
+\textbf{Línea P}, proyecto 2027 contra proyecto 2026, ex ante contra ex ante. \textbf{Línea
+G}, proyecto 2027 contra aprobado 2026, la del género, que mezcla objetos. Toda columna
+comparativa lleva su letra.
+
+\section*{Tres. Toda diferencia en millones de pesos declara si es nominal o real}
+
+\begin{recuadro}{Por qué el deflactor del PIB, y cuándo no}
+\textbf{Deflactor implícito del PIB} para todo agregado fiscal y toda razón a PIB, por
+consistencia con el denominador de esas razones y con la vara que usa la propia regla de
+gasto corriente estructural. \textbf{Índice de precios al consumidor} sólo cuando la pregunta
+es el poder de compra de una prestación individual, porque ahí la pregunta es de bienestar; y
+ese uso no aparece en ningún cuadro presupuestal. \textbf{Sensibilidad: una sola línea, aquí},
+con la inflación promedio, para que ningún capítulo mezcle las dos convenciones. Nunca se
+deriva un deflactor de agregados publicados redondeados.
+\end{recuadro}
+
+\subsection*{Por qué nuestras variaciones reales no coinciden con las del CGPE}
+
+\textbf{Ésta es la advertencia más importante de la nota, y hay que leerla antes de comparar
+cualquier cifra de este documento con la del documento oficial.}
+
+El CGPE 2027 declara un \textbf{deflactor del PIB de 4,04~\%} para 2027 ---lo escribe con
+esa precisión en la fórmula del límite máximo del gasto corriente estructural, p. 25, y lo
+publica redondeado a 4,0 en el Anexo III.1---. Este documento usa ese deflactor,
+\textbf{1,040}, en todos sus cuadros.
+
+\textbf{Las variaciones reales que el propio CGPE imprime en sus cuadros presupuestales no
+están calculadas con él.} Despejando el deflactor implícito de nueve renglones de su
+clasificación económica del gasto ---donde publica nivel de 2026, nivel de 2027 y variación
+real--- se obtiene, renglón por renglón: 1,0318, 1,0322, 1,0326, 1,0328, 1,0326, 1,0325,
+1,0320, 1,0339 y 1,0321. La \textbf{mediana es 1,0325}, y coincide con la
+\textbf{inflación promedio del INPC proyectada para 2027, 3,2~\%}, que el propio documento
+publica en su Anexo II.5.
+
+Es decir: \textbf{el CGPE deflacta sus cuadros presupuestales con el índice al consumidor y
+no con el deflactor del PIB que declara}. La diferencia es sistemática y vale
+aproximadamente \textbf{0,8 puntos porcentuales}: donde el CGPE publica $+3,6$~\% real,
+este documento publica $+2,8$~\%, y las dos cifras son correctas bajo su propia convención.
+
+Este documento \textbf{conserva el deflactor del PIB} por consistencia con las razones a PIB
+y con la vara de la propia regla de gasto, \textbf{declara la diferencia aquí una sola vez},
+y \textbf{no corrige las cifras del CGPE}: las cita como las publica y advierte cuál
+convención usa cada una.
+
+\section*{Cuatro. Hay una capa demográfica declarada}
+
+Precargada antes de la entrega, con tier \texttt{externa\_demografica}. Cuadros presupuestales
+y per cápita \emph{separados}; toda cifra per cápita declara su denominador. \textbf{Una razón
+de presión demográfica no es una prestación media:} el denominador incluye a quien no recibe.
+
+\section*{Cinco. El capítulo de deuda descompone, y declara lo que no puede identificar}
+\section*{Seis. Hay un registro de lo que no se pudo verificar}
+
+\section*{Convenciones}
+
+\begin{list}{}{\setlength{\leftmargin}{1.2em}\setlength{\itemsep}{1pt}}
+\item[] \textbf{Claves, no nombres}, y función o subfunción cuando la clave no sea estable.
+\item[] \textbf{Perímetros} declarados antes del primer cuadro y constantes dentro del capítulo.
+\item[] \textbf{Umbrales.} 0,5\,\% en niveles y 0,1 puntos en tasas y razones.
+\item[] \textbf{Tier de cada cifra:} \texttt{oficial\_primaria}, \texttt{derivada\_ciep},
+\texttt{autoral\_ited}, \texttt{externa\_demografica}.
+\end{list}

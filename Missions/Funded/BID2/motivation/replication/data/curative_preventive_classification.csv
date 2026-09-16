@@ -1,0 +1,146 @@
+scheme,clave,descripcion,class,rationale
+COICOP_2024,061111,Analgésicos (para bajar la fiebre o el dolor),curative,therapeutic-class medicines (no prescription status in COICOP)
+COICOP_2024,061112,Antibióticos (para tratar infecciones),curative,therapeutic-class medicines (no prescription status in COICOP)
+COICOP_2024,061113,"Anticonceptivos hormonales: píldoras, parches, inyecciones, etcétera",preventive,hormonal contraception
+COICOP_2024,061114,Antigripales,curative,therapeutic-class medicines (no prescription status in COICOP)
+COICOP_2024,061115,Antiinflamatorios,curative,therapeutic-class medicines (no prescription status in COICOP)
+COICOP_2024,061116,Expectorantes: jarabe para la tos o medicamentos descongestivos,curative,therapeutic-class medicines (no prescription status in COICOP)
+COICOP_2024,061117,Insulina y medicamentos para el control de la diabetes,ambiguous,chronic maintenance: insulin / diabetes control
+COICOP_2024,061118,Medicamentos antidiarreicos y para el malestar estomacal,curative,therapeutic-class medicines (no prescription status in COICOP)
+COICOP_2024,061119,Medicamentos antihistamínicos (para tratar alergias),curative,therapeutic-class medicines (no prescription status in COICOP)
+COICOP_2024,06111A,Medicamentos dermatológicos,curative,therapeutic-class medicines (no prescription status in COICOP)
+COICOP_2024,06111B,Medicamentos gineco-obstétricos,ambiguous,gyneco-obstetric medicines: treatment vs pregnancy supplementation
+COICOP_2024,06111C,Medicamentos nefrológicos y urológicos,curative,therapeutic-class medicines (no prescription status in COICOP)
+COICOP_2024,06111D,Medicamentos neurológicos,curative,therapeutic-class medicines (no prescription status in COICOP)
+COICOP_2024,06111E,Medicamentos oftalmológicos,curative,therapeutic-class medicines (no prescription status in COICOP)
+COICOP_2024,06111F,Medicamentos para el control de peso,ambiguous,weight control
+COICOP_2024,06111G,Medicamentos para enfermedades inmunoalérgicas,curative,therapeutic-class medicines (no prescription status in COICOP)
+COICOP_2024,06111H,Medicamentos para enfermedades psiquiátricas,curative,therapeutic-class medicines (no prescription status in COICOP)
+COICOP_2024,06111I,Medicamentos para la presión arterial y cardiovasculares,ambiguous,chronic maintenance: blood pressure / cardiovascular
+COICOP_2024,06111J,"Antisépticos: agua oxigenada, merthiolate, alcohol, soluciones asépticas, gel antibacterial, líquido para lentes de contacto, etcétera",ambiguous,antiseptics / first-aid supplies
+COICOP_2024,06111K,"Otros medicamentos: vacunas, sueros, oxígeno, etcétera",ambiguous,"mixed rubro: other medicines incl. vaccines, sera, oxygen"
+COICOP_2024,06111L,Vitaminas y minerales,ambiguous,vitamins and minerals
+COICOP_2024,061120,Productos homeopáticos y naturistas,ambiguous,homeopathic / naturist products
+COICOP_2024,061211,Pruebas de embarazo,preventive,pregnancy tests: screening
+COICOP_2024,061212,"Otros productos para diagnóstico: termómetro, medidor de glucosa, medidor de presión arterial, báscula para bebé, etcétera",ambiguous,diagnostic products: monitoring devices
+COICOP_2024,061221,Preservativos,preventive,"prevention products: condoms, nicotine replacement, protection"
+COICOP_2024,061222,"Parches, inhaladores y chicles de nicotina",preventive,"prevention products: condoms, nicotine replacement, protection"
+COICOP_2024,061223,"Otros dispositivos y productos de prevención y protección: cubrebocas, guantes, fajas postparto, calcetines para diabéticos y circulación, etcétera",preventive,"prevention products: condoms, nicotine replacement, protection"
+COICOP_2024,061230,"Productos y dispositivos de tratamiento para uso personal: inhaladores, jeringas, nebulizadores, compresas de hielo, botiquines de primeros auxilios, etcétera",ambiguous,personal treatment devices incl. first-aid kits
+COICOP_2024,061311,Anteojos y lentes de contacto,ambiguous,optical / hearing aids
+COICOP_2024,061312,"Otros productos de apoyo para la visión: bastones para débiles visuales, prótesis oculares, etcétera",ambiguous,optical / hearing aids
+COICOP_2024,061320,Prótesis auditivas,ambiguous,optical / hearing aids
+COICOP_2024,061331,"Aparatos ortopédicos: cinturones ortopédicos, collares cervicales, muletas; andador, andadera, bastones, etcétera",curative,orthopedic/assistive/rehab devices for realized conditions
+COICOP_2024,061332,"Calzado terapéutico: diabético, neuropático, ortopédico, etcétera",curative,orthopedic/assistive/rehab devices for realized conditions
+COICOP_2024,061333,"Dispositivos médicos de soporte (ortesis): férula u otro dispositivo externo artificial que sirva para sostener la pierna, la columna, el cuello, la mano, etcétera",curative,orthopedic/assistive/rehab devices for realized conditions
+COICOP_2024,061334,"Dispositivos y productos de asistencia: sillas para ducha y baño, pasamanos y barandales, barras de apoyo y seguridad, rampas, etcétera",curative,orthopedic/assistive/rehab devices for realized conditions
+COICOP_2024,061335,Prótesis,curative,orthopedic/assistive/rehab devices for realized conditions
+COICOP_2024,061336,Sillas de ruedas (con y sin motor) y camas especiales,curative,orthopedic/assistive/rehab devices for realized conditions
+COICOP_2024,061337,Vehículos para personas con discapacidad: adaptación del vehículo,curative,orthopedic/assistive/rehab devices for realized conditions
+COICOP_2024,061338,"Otros productos de apoyo: productos para la incontinencia, pañales para adulto, etcétera",curative,orthopedic/assistive/rehab devices for realized conditions
+COICOP_2024,061401,Reparación y mantenimiento de productos médicos y auxiliares,curative,orthopedic/assistive/rehab devices for realized conditions
+COICOP_2024,061402,Alquiler de productos médicos y auxiliares,curative,orthopedic/assistive/rehab devices for realized conditions
+COICOP_2024,062110,Servicios de inmunización y vacunación,preventive,immunization and vaccination services
+COICOP_2024,062191,"Consulta médica con especialistas: pediatría, ginecología, cardiología, ortopedia, oftalmología, etcétera",curative,"medical consultations: motive unobservable, predominantly illness-driven (stated judgment)"
+COICOP_2024,062192,Consulta médica con especialistas durante el embarazo,preventive,prenatal consultations: scheduled monitoring
+COICOP_2024,062193,Consulta médica general,curative,"medical consultations: motive unobservable, predominantly illness-driven (stated judgment)"
+COICOP_2024,062194,Consulta médica general durante el embarazo,preventive,prenatal consultations: scheduled monitoring
+COICOP_2024,062195,Consultas homeopáticas,ambiguous,alternative / other practitioners
+COICOP_2024,062196,"Servicio de practicantes de medicina tradicional: curandero, yerbero, huesero, etcétera",ambiguous,alternative / other practitioners
+COICOP_2024,062197,"Otros servicios médicos: acupunturistas, optometristas, fonoaudiólogos independientes, logopedas, etcétera",ambiguous,alternative / other practitioners
+COICOP_2024,062198,Servicios de partera,ambiguous,midwife services: delivery vs prenatal not distinguished
+COICOP_2024,062210,Consultas dentales,ambiguous,dental
+COICOP_2024,062291,Servicios de especialistas en ortodoncia,ambiguous,dental
+COICOP_2024,062292,"Otros servicios dentales: colocación de dentaduras postizas, prótesis dentales, etcétera",ambiguous,dental
+COICOP_2024,062311,Servicios curativos,curative,curative / rehabilitation / nursing / assistance services
+COICOP_2024,062312,Servicios de rehabilitación y terapia,curative,curative / rehabilitation / nursing / assistance services
+COICOP_2024,062313,Baños termales y terapia de gimnasia correctiva,ambiguous,thermal baths / corrective gymnastics
+COICOP_2024,062321,Servicios de enfermeras independientes,curative,curative / rehabilitation / nursing / assistance services
+COICOP_2024,062322,Servicios de asistencia y cuidado personal,curative,curative / rehabilitation / nursing / assistance services
+COICOP_2024,062323,Centros de asistencia,curative,curative / rehabilitation / nursing / assistance services
+COICOP_2024,063101,Hospitalización general,curative,hospitalization / surgery (incl. pregnancy and delivery inpatient)
+COICOP_2024,063102,Intervenciones quirúrgicas,curative,hospitalization / surgery (incl. pregnancy and delivery inpatient)
+COICOP_2024,063103,Hospitalización durante el embarazo,curative,hospitalization / surgery (incl. pregnancy and delivery inpatient)
+COICOP_2024,063104,Hospitalización durante el parto,curative,hospitalization / surgery (incl. pregnancy and delivery inpatient)
+COICOP_2024,063105,Hospitalización general en hospitales especializados,curative,hospitalization / surgery (incl. pregnancy and delivery inpatient)
+COICOP_2024,063106,Intervenciones quirúrgicas en hospitales especializados,curative,hospitalization / surgery (incl. pregnancy and delivery inpatient)
+COICOP_2024,063200,Hospitalización general en hospitales de salud mental,curative,hospitalization / surgery (incl. pregnancy and delivery inpatient)
+COICOP_2024,064101,Servicios de laboratorio de análisis clínicos,ambiguous,laboratory / imaging: screening vs workup not observable
+COICOP_2024,064102,"Servicios de rayos X y estudios de gabinete: tomografía, resonancia magnética, ecografía, ultrasonido, etcétera",ambiguous,laboratory / imaging: screening vs workup not observable
+COICOP_2024,064103,Servicios de laboratorio de análisis clínicos y ultrasonido durante el embarazo,preventive,prenatal laboratory / ultrasound: scheduled monitoring
+COICOP_2024,064201,Servicios paramédicos y de ambulancia para pacientes en general,curative,paramedic / ambulance services
+COICOP_2024,064202,Servicios paramédicos y de ambulancia durante el embarazo,curative,paramedic / ambulance services
+COICOP_2024,121201,Seguro de gastos médicos,ambiguous,"medical insurance premiums: financing, not care"
+COICOP_2024,121202,Seguro médico voluntario (IMSS),ambiguous,"medical insurance premiums: financing, not care"
+J_2018_2022,J001,"Honorarios por servicios profesionales: cirugía, anestesia, etcétera, durante el parto",curative,delivery (parto): realized-event hospital/professional services
+J_2018_2022,J002,"Hospitalización, durante el parto",curative,delivery (parto): realized-event hospital/professional services
+J_2018_2022,J003,"Análisis clínicos y estudios médicos: Rayos X, ultrasonido, etcétera, durante el parto",curative,delivery (parto): realized-event hospital/professional services
+J_2018_2022,J004,"Medicamentos recetados y material de curación, durante el parto",curative,delivery (parto): realized-event hospital/professional services
+J_2018_2022,J005,"Servicios de partera, durante el parto",curative,delivery (parto): realized-event hospital/professional services
+J_2018_2022,J006,"Otros: servicio de ambulancia, etcétera, durante el parto",curative,delivery (parto): realized-event hospital/professional services
+J_2018_2022,J007,"Consultas médicas, durante el embarazo",preventive,prenatal control: scheduled monitoring during pregnancy
+J_2018_2022,J008,"Consultas, placas, puentes dentales y otros, durante el embarazo",ambiguous,dental during pregnancy
+J_2018_2022,J009,"Medicamentos recetados, durante el embarazo",ambiguous,prescribed medicines in pregnancy: treatment vs supplementation not observable
+J_2018_2022,J010,"Vitaminas y complementos alimenticios, durante el embarazo",preventive,prenatal control: scheduled monitoring during pregnancy
+J_2018_2022,J011,"Análisis clínicos y estudios médicos: rayos X, ultrasonidos, durante el embarazo",preventive,prenatal control: scheduled monitoring during pregnancy
+J_2018_2022,J012,Hospitalización durante el embarazo (no parto),curative,hospitalization during pregnancy (non-delivery): complication response
+J_2018_2022,J013,"Servicios de partera, durante el embarazo",preventive,prenatal control: scheduled monitoring during pregnancy
+J_2018_2022,J014,"Hierbas medicinales, remedios caseros, etcétera, durante el embarazo",ambiguous,herbal/home remedies in pregnancy
+J_2018_2022,J015,"Otros servicios: ambulancia, aplicación de inyecciones, vacunas, etcétera, durante el embarazo",ambiguous,mixed rubro: ambulance + injections + vaccines
+J_2018_2022,J016,Consultas médico general,curative,"medical consultations: motive unobservable, predominantly illness-driven (stated judgment)"
+J_2018_2022,J017,"Consultas médico especialista (pediatría y ginecología, etcétera )",curative,"medical consultations: motive unobservable, predominantly illness-driven (stated judgment)"
+J_2018_2022,J018,"Consultas dentales (placas dentales o prótesis dentales, etcétera )",ambiguous,dental
+J_2018_2022,J019,Análisis clínicos y estudios médicos: rayos X,ambiguous,diagnostics: screening vs illness workup not observable (2022 wording includes 'tamiz')
+J_2018_2022,J020,"Medicamentos recetados para: diarrea, infecciones y malestar estomacal",curative,prescribed medicines for acute conditions
+J_2018_2022,J021,Medicamentos recetados para: gripe,curative,prescribed medicines for acute conditions
+J_2018_2022,J022,Medicamentos recetados para: piel,curative,prescribed medicines for acute conditions
+J_2018_2022,J023,Medicamentos recetados para: alergias,curative,prescribed medicines for acute conditions
+J_2018_2022,J024,Medicamentos recetados para: tos,curative,prescribed medicines for acute conditions
+J_2018_2022,J025,Medicamentos recetados para: infecciones de la garganta,curative,prescribed medicines for acute conditions
+J_2018_2022,J026,Medicamentos recetados para: fiebre,curative,prescribed medicines for acute conditions
+J_2018_2022,J027,Medicamentos recetados para: inflamación,curative,prescribed medicines for acute conditions
+J_2018_2022,J028,Medicamentos recetados para: otras infecciones (antibióticos),curative,prescribed medicines for acute conditions
+J_2018_2022,J029,Medicamentos recetados para: dolor de cabeza y migraña,curative,prescribed medicines for acute conditions
+J_2018_2022,J030,Medicamentos recetados para: otro tipo de dolores,curative,prescribed medicines for acute conditions
+J_2018_2022,J031,Medicamentos recetados para: presión arterial,ambiguous,"chronic-disease maintenance medication (hypertension, diabetes)"
+J_2018_2022,J032,Medicamentos recetados para: diabetes,ambiguous,"chronic-disease maintenance medication (hypertension, diabetes)"
+J_2018_2022,J033,Medicamentos recetados para: vitaminas,ambiguous,prescribed vitamins: supplementation
+J_2018_2022,J034,Medicamentos recetados para: anticonceptivos,preventive,contraception
+J_2018_2022,J035,Otros medicamentos recetados,curative,prescribed medicines for acute conditions
+J_2018_2022,J036,Consultas médicas para el control de peso,ambiguous,weight control: lifestyle vs treatment
+J_2018_2022,J037,Medicamentos y productos para el control de peso,ambiguous,weight control: lifestyle vs treatment
+J_2018_2022,J038,Tratamiento para el control de peso,ambiguous,weight control: lifestyle vs treatment
+J_2018_2022,J039,"Honorarios por servicios profesionales: cirujano, anestesista, etcétera",curative,hospitalization / surgery block
+J_2018_2022,J040,Hospitalización (no incluye parto ni embarazo),curative,hospitalization / surgery block
+J_2018_2022,J041,"Análisis clínicos y estudios médicos (rayos X, electros, etcétera )",curative,hospitalization / surgery block
+J_2018_2022,J042,Medicamentos recetados y material de curación durante la atención hospitalaria (no incluye parto),curative,hospitalization / surgery block
+J_2018_2022,J043,"Otros: servicios de ambulancia, oxígeno, suero, sondas, bolsas de diálisis y de orina, cómodos, etcétera",curative,hospitalization / surgery block
+J_2018_2022,J044,"Medicamentos sin receta para: diarrea, infecciones y malestar estomacal",ambiguous,over-the-counter medicines (instruction-listed ambiguous)
+J_2018_2022,J045,Medicamentos sin receta para: gripe,ambiguous,over-the-counter medicines (instruction-listed ambiguous)
+J_2018_2022,J046,Medicamentos sin receta para: piel,ambiguous,over-the-counter medicines (instruction-listed ambiguous)
+J_2018_2022,J047,Medicamentos sin receta para: alergias,ambiguous,over-the-counter medicines (instruction-listed ambiguous)
+J_2018_2022,J048,Medicamentos sin receta para: tos,ambiguous,over-the-counter medicines (instruction-listed ambiguous)
+J_2018_2022,J049,Medicamentos sin receta para: infecciones de la garganta,ambiguous,over-the-counter medicines (instruction-listed ambiguous)
+J_2018_2022,J050,Medicamentos sin receta para: fiebre,ambiguous,over-the-counter medicines (instruction-listed ambiguous)
+J_2018_2022,J051,Medicamentos sin receta para: inflamación,ambiguous,over-the-counter medicines (instruction-listed ambiguous)
+J_2018_2022,J052,Medicamentos sin receta para: otras infecciones (antibióticos),ambiguous,over-the-counter medicines (instruction-listed ambiguous)
+J_2018_2022,J053,Medicamentos sin receta para: dolor de cabeza y migraña,ambiguous,over-the-counter medicines (instruction-listed ambiguous)
+J_2018_2022,J054,Medicamentos sin receta para: otro tipo de dolores,ambiguous,over-the-counter medicines (instruction-listed ambiguous)
+J_2018_2022,J055,Medicamentos sin receta para: vitaminas,ambiguous,OTC vitamins / chronic maintenance
+J_2018_2022,J056,Medicamentos sin receta para: presión arterial,ambiguous,OTC vitamins / chronic maintenance
+J_2018_2022,J057,Medicamentos sin receta para: diabetes,ambiguous,OTC vitamins / chronic maintenance
+J_2018_2022,J058,Medicamentos sin receta para: anticonceptivos,preventive,contraception (OTC)
+J_2018_2022,J059,Otros medicamentos sin receta,ambiguous,over-the-counter medicines (instruction-listed ambiguous)
+J_2018_2022,J060,"Algodón, gasas, vendas, jeringas, etcétera",ambiguous,first-aid supplies
+J_2018_2022,J061,"Alcohol, merthiolate, solución antiséptica, botiquín de primeros auxilios, etcétera",ambiguous,first-aid supplies
+J_2018_2022,J062,"Consultas con el curandero, huesero, quiropráctico, etcétera",ambiguous,alternative medicine
+J_2018_2022,J063,"Medicamentos naturistas, hierbas medicinales, remedios caseros, Omnilife, Herbalife",ambiguous,alternative medicine
+J_2018_2022,J064,Medicamentos homeopáticos,ambiguous,alternative medicine
+J_2018_2022,J065,Anteojos y lentes de contacto e intraoculares,ambiguous,optical / hearing aids
+J_2018_2022,J066,Aparatos para sordera,ambiguous,optical / hearing aids
+J_2018_2022,J067,"Aparatos ortopédicos y para terapia, silla de ruedas, andadera, muletas, etcétera",curative,orthopedic/rehab devices for realized conditions
+J_2018_2022,J068,Reparación y mantenimiento de aparatos ortopédicos,curative,orthopedic/rehab devices for realized conditions
+J_2018_2022,J069,"Otros: pago de enfermeras y personal al cuidado de enfermos, terapias, baumanómetro, glucómetro, tiras reactivas, cómodo, etcétera",ambiguous,mixed rubro: nursing care + chronic monitoring devices
+J_2018_2022,J070,Cuotas a hospitales o clínicas,ambiguous,"insurance premiums / prepayment quotas: financing, not care"
+J_2018_2022,J071,Cuotas a compañías de seguros,ambiguous,"insurance premiums / prepayment quotas: financing, not care"
+J_2018_2022,J072,Cuotas de seguro popular,ambiguous,"insurance premiums / prepayment quotas: financing, not care"

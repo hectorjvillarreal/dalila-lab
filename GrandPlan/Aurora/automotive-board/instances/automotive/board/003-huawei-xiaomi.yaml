@@ -4,23 +4,23 @@ player: "Huawei (HIMA) / Xiaomi"
 archetype_ref: "compute-first-entrant"   # READ-ONLY pointer into ../archetypes.md
 slots:
   volume:
-    value: "Huawei HIMA 45,046 (July 2026; cumulative >1.48M); Xiaomi 185,055 (H1-2026)"
+    value: "Huawei HIMA 42,101 (August 2026; Jan–Aug retail 329,739); Xiaomi 30,153 (August 2026; Jan–Aug 246,475)"
     unit: "units"
-    delta: "HIMA second straight monthly decline; Xiaomi >30k/month for 4 straight months"
-    date: 2026-08-01
-    source: "https://cnevpost.com/2026/08/01/huawei-hima-delivers-45046-vehicles-jul-2026/ · https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/xiaomi-s-two-speed-engine-ev-deliveries-surge-while-chip-costs-cloud-the/69918005"
+    delta: "HIMA −5.52% YoY (Jan–Aug +11.42%); Xiaomi −17.15% YoY (Jan–Aug +9.65%)"
+    date: 2026-09-08
+    source: "https://cnevpost.com/2026/09/01/huawei-hima-aug-2026-deliveries/ · https://cnevpost.com/2026/09/08/xiaomi-delivers-30153-cars-aug-2026/"
     source_type: secondary
     confidence: reported
     decisive: false
     notes: >-
       HIMA run-rate toward ~1M annual target. Xiaomi 2026 target 550k.
   margin:
-    value: "Xiaomi auto loss-making ~$5,600/car (Q1 2026); 2025 group net profit ~¥39B (+44%)"
-    unit: null
-    delta: null
-    date: 2026-06-21
-    source: null
-    source_type: null
+    value: "Xiaomi smart EV / AI / new initiatives segment, Q2-2026: operating loss 2.6B yuan; gross margin 19.2%; revenue 24.9B yuan"
+    unit: "CNY / % — segment level (Xiaomi only; no HIMA figure)"
+    delta: "gross margin 26.4% in Q2-2025; operating loss 3.1B yuan in Q1-2026; revenue +25.3% QoQ"
+    date: 2026-08-21
+    source: "https://www.electrive.com/2026/08/21/xiaomi-posts-further-loss-in-q2-with-its-ev-division/"
+    source_type: secondary
     confidence: reported
     decisive: false
   segment_span:

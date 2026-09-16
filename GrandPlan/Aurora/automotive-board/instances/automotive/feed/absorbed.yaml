@@ -10,3 +10,189 @@
   absorbed: 2026-07-20
   entries_touched: ["004"]
   scaffold_touched: true
+
+- url: "https://gvwire.com/2026/09/12/trump-says-he-would-be-ok-with-china-building-cars-in-us/"
+  url_normalised: "gvwire.com/2026/09/12/trump-says-he-would-be-ok-with-china-building-cars-in-us"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.cnbc.com/2026/07/22/ted-cruz-china-auto-bill-mercedes-benz-gm.html"
+  url_normalised: "cnbc.com/2026/07/22/ted-cruz-china-auto-bill-mercedes-benz-gm.html"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.spokesman.com/stories/2026/sep/03/automakers-urge-congress-to-quickly-pass-law-banni/"
+  url_normalised: "spokesman.com/stories/2026/sep/03/automakers-urge-congress-to-quickly-pass-law-banni"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.taylorwessing.com/en/insights-and-events/insights/2026/07/tightening-of-the-bis-rules"
+  url_normalised: "taylorwessing.com/en/insights-and-events/insights/2026/07/tightening-of-the-bis-rules"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/08/24/leapmotor-profitable-h1-2026/"
+  url_normalised: "cnevpost.com/2026/08/24/leapmotor-profitable-h1-2026"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.caixinglobal.com/2026-08-25/leapmotor-slashes-2026-profit-target-despite-sales-surge-102477725.html"
+  url_normalised: "caixinglobal.com/2026-08-25/leapmotor-slashes-2026-profit-target-despite-sales-surge-102477725.html"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/09/01/leapmotor-aug-2026-deliveries/"
+  url_normalised: "cnevpost.com/2026/09/01/leapmotor-aug-2026-deliveries"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://global.geely.com/en/news/2026/geely-auto-record-h1-2026-revenue"
+  url_normalised: "global.geely.com/en/news/2026/geely-auto-record-h1-2026-revenue"
+  absorbed: 2026-09-13
+  entries_touched: ["001"]
+  scaffold_touched: false
+
+- url: "https://www.globenewswire.com/news-release/2026/09/01/3354426/0/en/geely-auto-group-reports-270-194-sales-in-august-as-monthly-exports-exceed-100-000-for-third-consecutive-month.html"
+  url_normalised: "globenewswire.com/news-release/2026/09/01/3354426/0/en/geely-auto-group-reports-270-194-sales-in-august-as-monthly-exports-exceed-100-000-for-third-consecutive-month.html"
+  absorbed: 2026-09-13
+  entries_touched: ["001"]
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/08/28/byd-h1-2026-earnings/"
+  url_normalised: "cnevpost.com/2026/08/28/byd-h1-2026-earnings"
+  absorbed: 2026-09-13
+  entries_touched: ["002"]
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/09/01/byd-aug-2026-sales/"
+  url_normalised: "cnevpost.com/2026/09/01/byd-aug-2026-sales"
+  absorbed: 2026-09-13
+  entries_touched: ["002"]
+  scaffold_touched: false
+
+- url: "https://finance.yahoo.com/markets/stocks/articles/byd-q2-2026-earnings-exports-173027599.html"
+  url_normalised: "finance.yahoo.com/markets/stocks/articles/byd-q2-2026-earnings-exports-173027599.html"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://chinaevhome.com/2026/09/08/byd-targets-up-to-2m-overseas-sales-in-2026-eyes-over-2-5m-in-2027/"
+  url_normalised: "chinaevhome.com/2026/09/08/byd-targets-up-to-2m-overseas-sales-in-2026-eyes-over-2-5m-in-2027"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/09/01/huawei-hima-aug-2026-deliveries/"
+  url_normalised: "cnevpost.com/2026/09/01/huawei-hima-aug-2026-deliveries"
+  absorbed: 2026-09-13
+  entries_touched: ["003"]
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/09/08/xiaomi-delivers-30153-cars-aug-2026/"
+  url_normalised: "cnevpost.com/2026/09/08/xiaomi-delivers-30153-cars-aug-2026"
+  absorbed: 2026-09-13
+  entries_touched: ["003"]
+  scaffold_touched: false
+
+- url: "https://www.electrive.com/2026/08/21/xiaomi-posts-further-loss-in-q2-with-its-ev-division/"
+  url_normalised: "electrive.com/2026/08/21/xiaomi-posts-further-loss-in-q2-with-its-ev-division"
+  absorbed: 2026-09-13
+  entries_touched: ["003"]
+  scaffold_touched: false
+
+- url: "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm"
+  url_normalised: "sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm"
+  absorbed: 2026-09-13
+  entries_touched: ["006"]
+  scaffold_touched: false
+
+- url: "https://www.hyundai.com/worldwide/en/company/ir/notices/view-0000000373-en-10-1-"
+  url_normalised: "hyundai.com/worldwide/en/company/ir/notices/view-0000000373-en-10-1-"
+  absorbed: 2026-09-13
+  entries_touched: ["007"]
+  scaffold_touched: false
+
+- url: "https://www.goodcarbadcar.net/polestar-2026-guidance-cut-us-exit-reaches-the-forecast/"
+  url_normalised: "goodcarbadcar.net/polestar-2026-guidance-cut-us-exit-reaches-the-forecast"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.techtimes.com/articles/327000/20260908/polestar-banned-us-new-car-sales-data-routing-exposes-geely-china-connection.htm"
+  url_normalised: "techtimes.com/articles/327000/20260908/polestar-banned-us-new-car-sales-data-routing-exposes-geely-china-connection.htm"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://carbuzz.com/lotus-us-plans-july-2026/"
+  url_normalised: "carbuzz.com/lotus-us-plans-july-2026"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.humanoidsdaily.com/news/hyundai-says-atlas-will-not-replace-workers-one-day-after-settling-a-strike-over-exactly-that"
+  url_normalised: "humanoidsdaily.com/news/hyundai-says-atlas-will-not-replace-workers-one-day-after-settling-a-strike-over-exactly-that"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.hyundaimotorgroup.com/en/news/hyundai-motor-company-charts-profit-driven-growth-roadmap-at-2026-ceo-investor-day"
+  url_normalised: "hyundaimotorgroup.com/en/news/hyundai-motor-company-charts-profit-driven-growth-roadmap-at-2026-ceo-investor-day"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.just-auto.com/news/toyotas-global-vehicle-sales-fall-5-in-july/"
+  url_normalised: "just-auto.com/news/toyotas-global-vehicle-sales-fall-5-in-july"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.irishtimes.com/business/markets/2026/09/04/volkswagen-approves-plan-to-cut-50000-jobs-in-broad-overhaul/"
+  url_normalised: "irishtimes.com/business/markets/2026/09/04/volkswagen-approves-plan-to-cut-50000-jobs-in-broad-overhaul"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.volkswagen-group.com/en/press-releases/setting-the-course-for-the-future-of-the-osnabrueck-site-20667"
+  url_normalised: "volkswagen-group.com/en/press-releases/setting-the-course-for-the-future-of-the-osnabrueck-site-20667"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://electrek.co/2026/09/03/tesla-announces-1-million-unsupervised-miles-driven-by-robotaxi/"
+  url_normalised: "electrek.co/2026/09/03/tesla-announces-1-million-unsupervised-miles-driven-by-robotaxi"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://kr-asia.com/chery-reports-higher-overseas-and-nev-revenue-in-first-interim-results"
+  url_normalised: "kr-asia.com/chery-reports-higher-overseas-and-nev-revenue-in-first-interim-results"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://autonews.gasgoo.com/articles/news/chery-group-august-sales-280100-units-up-154-year-on-year-2095109566676418560"
+  url_normalised: "autonews.gasgoo.com/articles/news/chery-group-august-sales-280100-units-up-154-year-on-year-2095109566676418560"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://autonews.gasgoo.com/articles/news/saic-motor-posts-over-70-yoy-surge-in-core-h1-2026-net-profit-2094047711321210881"
+  url_normalised: "autonews.gasgoo.com/articles/news/saic-motor-posts-over-70-yoy-surge-in-core-h1-2026-net-profit-2094047711321210881"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/08/20/luxeed-opens-pre-orders-rx-suv/"
+  url_normalised: "cnevpost.com/2026/08/20/luxeed-opens-pre-orders-rx-suv"
+  absorbed: 2026-09-13
+  entries_touched: []
+  scaffold_touched: false

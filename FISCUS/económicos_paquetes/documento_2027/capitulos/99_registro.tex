@@ -1,0 +1,168 @@
+\chapter*{Registro del documento: lo que no se pudo verificar}
+\addcontentsline{toc}{chapter}{Registro: lo que no se pudo verificar}
+
+\section*{Uno. Lo que es imposible verificar bajo régimen de lectura en vivo}
+
+Exigen el presupuesto \emph{aprobado} del mismo ejercicio, que el día de la entrega no existe:
+separar objeto de perímetro en una discrepancia contra otro documento; medir lo que cambió la
+Cámara; y adjudicar un titular del proyecto contra el presupuesto que se ejerce. \textbf{No
+son carencias de la corrida: son la definición del régimen.}
+
+Todo lo que este documento afirma sobre 2027 es \textbf{ex ante}. La línea G ---proyecto 2027
+contra aprobado 2026--- se usa donde el CGPE la publica, pero \textbf{no existe una línea que
+compare 2027 aprobado con nada}, porque ese presupuesto se discutirá hasta noviembre.
+
+Un dato del ejercicio anterior dimensiona lo que esto significa: en 2026 la Cámara añadió
+\textbf{12.641,1 mdp} a la función educativa entre el proyecto y el aprobado, lo suficiente
+para mover en más de un punto porcentual la variación de ese capítulo. \textbf{Nada de eso es
+pronóstico para 2027.}
+
+\section*{Dos. Denominadores que no se obtuvieron}
+
+Con el nombre de la fuente buscada, la ruta probada y qué respondió.
+
+\begin{list}{}{\setlength{\leftmargin}{1.4em}\setlength{\itemsep}{4pt}}
+\item[$\bullet$] \textbf{Población sin afiliación a la seguridad social.} Se buscó para
+calcular el gasto en salud por persona sin cobertura. Lo disponible es el \emph{registro de
+IMSS-Bienestar}, que es \textbf{de cobertura parcial} ---sólo las entidades adheridas--- y es
+un padrón de inscripción, no una medición de quién carece de afiliación: quien no se registra
+no aparece. \textbf{Se descartó como denominador}: habría producido una cifra falsa con
+apariencia de precisión. La fuente que haría falta es censal.
+\item[$\bullet$] \textbf{Derechohabientes del IMSS.} Se buscó para el gasto por afiliado. La
+serie disponible es de \textbf{asegurados}, que cuenta a la persona asegurada y no a sus
+familiares beneficiarios. \textbf{Asegurados no es derechohabientes}, y el cociente con ese
+denominador daría una cifra varias veces mayor que la verdadera. \textbf{Se descartó.}
+\item[$\bullet$] \textbf{Proyecciones de población de CELADE.} La API de CEPALSTAT responde
+por indicador, pero su \emph{endpoint} de catálogo devuelve 404 y el identificador del
+indicador de población no se descubrió sin adivinar. \textbf{Sustituto declarado:} el
+contraste entre CONAPO y las estimaciones del Banco Mundial, que difieren de forma
+sistemática entre \textbf{1,05 y 1,16~\%} de la población entre 2018 y 2025. Todas las
+razones por persona de este documento se moverían alrededor de un punto si se usara la otra
+fuente.
+\item[$\bullet$] \textbf{Matrícula del ciclo del ejercicio.} El ciclo más reciente que
+publica la SEP es \textbf{2025--2026} y el presupuesto es de 2027. La razón por alumno se
+publica \textbf{una sola vez, con su año declarado}, y no se usa para calcular variaciones.
+\item[$\bullet$] \textbf{Padrones de beneficiarios por programa pensionario.} El padrón de
+Bienestar está en la capa precargada, pero cruzarlo con el perímetro del Anexo 3 exigiría el
+analítico por programa. Sin él \textbf{no se publica ninguna cifra de personas
+beneficiarias}.
+\end{list}
+
+\section*{Tres. Lo que se declara fuera de alcance}
+
+\subsection*{3.1 Por fuentes que el servidor no entregó}
+
+\begin{list}{}{\setlength{\leftmargin}{1.4em}\setlength{\itemsep}{4pt}}
+\item[$\bullet$] \textbf{Los cuatro analíticos del proyecto 2027} ---los cortes por ramo,
+programa, unidad responsable y objeto del gasto, y por ramo y función, en sus versiones de
+Gobierno Federal y de entidades--- respondieron \textbf{404} en cuatro sondeos entre las 18:47 y las 20:15 del día
+de la entrega. El directorio que los contendría tampoco existe. \textbf{Control corrido en la
+misma pasada: el mismo archivo del ejercicio 2026 responde 200.} La ruta es correcta y el
+árbol de 2027 no se había creado.
+
+\textbf{Esto es lo que fija la Ruta B}, y con ella quedan fuera de alcance: el \textbf{diff
+institucional}, la composición del gasto \textbf{por programa presupuestario}, las
+\textbf{reasignaciones entre unidades responsables}, la \textbf{distribución territorial},
+la separación entre \textbf{caída de ramo y caída de función}, el \textbf{monto
+potencialmente excluible} del capítulo de la regla fiscal, y \textbf{cualquier cifra de la
+Guardia Nacional}, que en el ejercicio anterior fue el caso didáctico de por qué no se puede
+leer un ramo como si fuera una política.
+
+\item[$\bullet$] \textbf{Las dos ranuras únicas del portal de datos abiertos} ---la del
+proyecto de presupuesto por clave y la de anexos transversales por programa--- respondieron
+\textbf{503} en los mismos cuatro sondeos, y el catálogo nacional \textbf{sigue apuntando a
+los recursos del ejercicio 2026}. No es una caída temporal: es la respuesta a una ranura que no existe.
+
+Con ellas queda fuera la \textbf{auditoría de etiquetado} de los anexos transversales, que
+es la aportación más específica del método de este proyecto: cuánto del gasto programable
+aparece etiquetado, qué programas se marcan en más de un anexo, y qué proporción de lo
+etiquetado para igualdad son programas de pensión. \textbf{Las tres preguntas quedan sin responder.}
+
+\item[$\bullet$] \textbf{La exposición de motivos del PPEF 2027.} El sitio
+\texttt{ppef.hacienda.gob.mx} enumera once archivos ---la carta, los cuatro capítulos, el
+anexo y el documento completo--- y \textbf{los once dan 404}. Es el \textbf{sexto ejercicio
+consecutivo} con el mismo patrón, de 2022 a 2027.
+
+\item[$\bullet$] \textbf{Los anexos F y G de la Gaceta Parlamentaria} respondieron
+\textbf{404} en tres intentos el día de la entrega, estando enlazados en el índice. La
+miscelánea fiscal de este documento se apoya en los anexos D (Ley Federal de Derechos) y E
+(Impuesto sobre la Renta), que sí llegaron. \textbf{Al día siguiente resultó que el problema
+no era el que este documento supuso.} El índice se reescribió, las letras se reasignaron y la
+iniciativa de Código Fiscal que el índice anunciaba en la F desapareció sin haberse servido
+nunca. \textbf{Véase la Nota de actualización al final del documento}, que corrige este
+renglón y publica el mapa real de anexos.
+
+\item[$\bullet$] \textbf{Transparencia Presupuestaria.} \texttt{/es/PTP/Datos\_Abiertos}
+responde 200 con \textbf{1.923 bytes de cáscara} sin un solo enlace a archivo y sin las
+cadenas «PPEF» ni «2027». En la corrida de 2024 medía 1.919 bytes. \textbf{Dos años después,
+idéntico.}
+\end{list}
+
+\subsection*{3.2 Por decisión de método, no por falta de fuente}
+
+\begin{list}{}{\setlength{\leftmargin}{1.4em}\setlength{\itemsep}{4pt}}
+\item[$\bullet$] \textbf{La descomposición del cambio de la razón SHRFSP/PIB} en
+crecimiento, tasa real, inflación y tipo de cambio \textbf{no se publica}. Su criterio de
+aceptación ---reproducir la caída de 2022, con RFSP de 4,5~\% del PIB y el acervo bajando de
+50,7 a 49,4~\%--- no se pudo correr porque la serie histórica no está en forma legible por
+máquina. \textbf{Publicar cuatro componentes que suman el total por construcción, sin haber
+pasado la prueba, sería peor que no publicarlos.} Lo que sí se corrió y sí se publica es la
+identidad flujo--acervo, que cierra en 0,006 puntos porcentuales del PIB.
+\item[$\bullet$] \textbf{El pasivo pensionario y el supuesto de crecimiento de pensiones
+siguen congelados} para calibración, por una razón documentada en corridas anteriores: en el
+CGPE 2023 la propia fuente presentó 43,6~\% del PIB contra 52,1~\% como si fuera un cambio
+anual, cuando es una comparación entre añadas distintas de saldo, de pesos y de PIB.
+\item[$\bullet$] \textbf{No se publica un total de gasto federalizado}, porque construirlo
+exige sumar convenios de descentralización y subsidios del Ramo 23 que el analítico ausente
+no permite aislar. Se publican los dos ramos por separado, que es lo que la fuente sostiene.
+\item[$\bullet$] \textbf{No se publica ninguna cifra de agua}, porque la Comisión Nacional
+del Agua es una unidad responsable dentro del Ramo 16 y no es separable sin el analítico.
+\item[$\bullet$] \textbf{El contraste del marco macroeconómico con pronósticos externos}
+---encuesta de expectativas del banco central, \emph{World Economic Outlook} del FMI en su
+edición de abril--- \textbf{queda fuera por decisión de alcance, no por falta de fuente}:
+las dos estaban disponibles. Lo que sí se hizo es el contraste \emph{interno} contra los
+Pre-Criterios del propio Ejecutivo, en el capítulo del marco macroeconómico.
+\item[$\bullet$] \textbf{Los balances de las empresas públicas con y sin apoyos fiscales}
+quedan fuera por la misma razón: el capítulo de energéticos mira la renta petrolera y las
+asignaciones del Anexo 1, no el balance de Pemex y de CFE.
+\item[$\bullet$] \textbf{La vara externa de suficiencia en salud} ---comparar el gasto
+público contra una referencia internacional o contra una estimación de necesidad--- queda
+fuera por tercer ejercicio consecutivo, pero \textbf{este año por una razón distinta de las
+dos anteriores}: no es olvido, es que el numerador exige la clasificación funcional \emph{a
+nivel de función}, y el CGPE la publica sólo por grupo ---gobierno, desarrollo social,
+desarrollo económico---. El desglose vive en el analítico que respondió 404. \textbf{Se
+declara aquí en vez de disimularse.}
+\end{list}
+
+\subsection*{3.3 Discrepancias de la fuente que este documento no resuelve}
+
+\begin{list}{}{\setlength{\leftmargin}{1.4em}\setlength{\itemsep}{4pt}}
+\item[$\bullet$] \textbf{El CGPE 2027 circula en dos ediciones} ---la del portal de la
+Secretaría y el anexo C de la Gaceta--- que difieren en 64 bloques de texto, una docena de
+ellos cifras. Se adjudicaron tres puntos con fuente independiente: las pérdidas fiscales y
+los cuadros de ingresos a favor de la edición de la Secretaría, y el balance primario a favor
+de la Gaceta, que concuerda con el Anexo II.6 de las dos ediciones. \textbf{Los demás bloques
+no se adjudicaron}; se adoptó la edición de la Secretaría como base y las dos quedan
+archivadas.
+\item[$\bullet$] \textbf{El CGPE deflacta sus cuadros presupuestales con 1,0325} ---la
+inflación promedio del INPC--- y declara un deflactor del PIB de 4,04~\%. Este documento usa
+el deflactor del PIB y \textbf{no corrige ninguna cifra del CGPE}: las cita como las publica
+y advierte cuál convención usa cada una. La diferencia es sistemática y vale unos 0,8 puntos
+porcentuales.
+\item[$\bullet$] \textbf{El balance sin inversión ---el que la regla fiscal mide de verdad---
+no se publica desde 2026.} Verificado por búsqueda de texto en las tres piezas del paquete:
+cero apariciones en las 75 páginas del CGPE, las 308 de la iniciativa de Ley de Ingresos y
+las 252 del proyecto de decreto.
+\end{list}
+
+\section*{Cuatro. Declaración de capítulo no redactable}
+
+\textbf{Ninguno.} Los dieciséis capítulos se redactaron. Cada uno declara en su sección «Qué
+no sabemos» lo que la Ruta B le impidió afirmar, y ninguno alcanzó el punto en que su fuente
+no permitiera escribirlo.
+
+\section*{Cinco. Compuerta semántica}
+
+Se aplicó a los dieciséis titulares, a las frases del resumen ejecutivo y a los pies de los
+veinte cuadros. \textbf{Trece frases reescritas, ninguna cifra modificada.} El detalle
+por capítulo está en la bitácora de la corrida.

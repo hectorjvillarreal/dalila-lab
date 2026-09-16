@@ -7,7 +7,8 @@ demographics corpus).
 
 ## Demographics (`_crossrefs/corpus/demographics/`)
 
-*(none at scaffold creation)*
+- 2026-07-11 — [UNFPA 2026 Demographic Futures Survey — "Lives, Choices and Futures"](../../../../_crossrefs/corpus/demographics/observations/2026-07-11_unfpa-demographic-futures-survey.md) — coupling, desired_fertility, WLD, neutral
+- 2026-07-11 — [Watch item: Fertility reversibility — does constraint-relief close the desired-achieved gap?](../../../../_crossrefs/corpus/demographics/watch_items/2026-07-11_fertility-reversibility-policy-tractability.md) — watch item, WLD/MEX, neutral
 
 ## Inequality (`_crossrefs/corpus/inequality/`)
 

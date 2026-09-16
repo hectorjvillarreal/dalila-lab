@@ -1,0 +1,53 @@
+{
+  "ejercicio": 2026,
+  "etapa": "proyecto",
+  "_procedencia": {
+    "decreto": "Proyecto de Decreto de PEF 2026, PDF pp. 65-67 (Anexos 1, 2 y 3)",
+    "ilif": "ILIF 2026, artículo 1o.",
+    "cgpe": "CGPE 2026, Anexo II.6 p. 84; Anexos III.1 p. 86 y III.2 p. 87",
+    "regla": "Ninguna de estas cifras se teclea de memoria. Cada una se copia de su documento y se coteja. En la corrida 2026 se tecleó de memoria dos veces y las dos veces la cifra era falsa."
+  },
+  "decreto": {
+    "autonomos": 149220.238722, "administrativos": 2445888.923876,
+    "generales": 5696382.292607, "entidades": 2129329.459009, "empresas": 1310768.382032,
+    "fuera_de_subtotal": {"ramo40": 11807.5, "ramo32": 3400.0},
+    "neteo": 1553113.096246, "gasto_neto": 10193683.7,
+    "gce": 3868319.904030, "gce_limite": 4225300.0,
+    "oblig_sin_pensiones": 6702281.0, "oblig_con_pensiones": 8406440.2,
+    "ramo28_participaciones": 1456045.894280, "ramo30_adefas": 70855.7
+  },
+  "decreto_anterior": {
+    "neteo": 1493069.318581, "gasto_neto": 9302015.8, "gce": 3603976.680425,
+    "oblig_sin_pensiones": 6046446.8, "oblig_con_pensiones": 7684111.9
+  },
+  "ilif": {
+    "total": 10193683.7, "impuestos": 5838541.1, "cuotas": 641782.1,
+    "ventas": 1630973.6, "fmp": 232630.4, "financiamientos": 1472626.4
+  },
+  "cgpe": {
+    "rfsp": -1587349.9, "balance_presup": -1393770.6, "extrapresup": -193579.3,
+    "no_presupuestario": 500.0,
+    "ing_presup": 8721057.3, "petroleros": 1204277.7, "no_petroleros": 7516779.6,
+    "gf_no_petro": 6215701.1, "tributarios": 5838571.0, "no_tributarios": 377130.1,
+    "organismos": 1301078.5, "gasto_pagado": 10114827.9, "programable_pagado": 7015853.1,
+    "diferimiento": -78855.7, "programable_devengado": 7094708.8, "no_programable": 3098974.9,
+    "costo_financiero": 1572073.3, "participaciones": 1456045.9, "adefas": 70855.7,
+    "primario": 178802.6, "shrfsp": 20259590.7,
+    "lmgce_pct": 10.9, "shrfsp_pct": 52.3, "shrfsp_interno_pct": 41.3,
+    "shrfsp_externo_pct": 11.0,
+    "tipo_cambio_t": 18.9, "tipo_cambio_t_1": 19.9, "shrfsp_externo_pct_t_1": 12.2
+  },
+  "cgpe_anterior_estimado": {
+    "shrfsp": 18903594.9, "shrfsp_pct": 52.3, "rfsp": -1559905.4,
+    "balance_presup": -1170566.5, "costo_financiero": 1388373.6, "primario": 218307.2
+  },
+  "razones_pib_publicadas": {
+    "rfsp": -4.1, "balance_presup": -3.6, "ing_presup": 22.5, "tributarios": 15.1,
+    "gasto_pagado": 26.1, "costo_financiero": 4.1, "shrfsp": 52.3,
+    "pensiones_anexo3": 4.4
+  },
+  "notas": {
+    "primario": "El CGPE 2026 rotula «Superávit ECONÓMICO primario» donde el CGPE 2025 rotulaba «Superávit primario PRESUPUESTARIO». La diferencia son 500.0 mdp en los dos años del cuadro: el balance no presupuestario. Con el objeto bien nombrado, cierra al décimo.",
+    "ramos_fuera_de_subtotal": "En 2026 los ramos 40 y 32 se imprimen fuera del subtotal de autónomos. Sin sumarlos, el Anexo 1 falla por quince mil millones. Verificar CADA AÑO qué ramos quedan fuera del subtotal: no es constante."
+  }
+}

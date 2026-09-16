@@ -1,0 +1,158 @@
+{
+  "ejercicio": 2027,
+  "etapa": "proyecto",
+  "_procedencia": {
+    "decreto": "Proyecto de Decreto de PEF 2027, PDF pp. 69-71 (Anexos 1, 2 y 3)",
+    "ilif": "ILIF 2027, artículo 1o., articulado (PDF pp. 160-173)",
+    "cgpe": "CGPE 2027 EDICIÓN SHCP: Anexo II.6 p. 67; Anexos III.1 p. 68 y III.2 pp. 69 y 47; LMGCE p. 24",
+    "edicion": "Se usa la edición del portal de la Secretaría. La edición de la Gaceta (anexo C) difiere; ver _bitacora_corrida.md §5. Ninguna cifra de este archivo cae en los bloques que difieren, salvo el balance primario, que en las dos ediciones vale 216,891.3 mdp en el Anexo II.6.",
+    "pensiones_pct": "El CGPE no publica el cociente de pensiones a PIB. El 4.7 es el calculado sobre el Anexo 3; se corrobora contra la clasificación económica del gasto (p. 34), que pone pensiones y jubilaciones en 24.8 % del programable. NO es una restitución de cifra publicada.",
+    "regla": "Ninguna de estas cifras se teclea de memoria. Cada una se copia de su documento y se coteja."
+  },
+  "decreto": {
+    "autonomos": 155014.725043,
+    "administrativos": 2461789.785295,
+    "generales": 6056005.563671,
+    "entidades": 2374601.387244,
+    "empresas": 1253878.258481,
+    "fuera_de_subtotal": {
+      "ramo40": 11816.0,
+      "ramo32": 3509.717598
+    },
+    "neteo": 1680127.337332,
+    "gasto_neto": 10636488.1,
+    "gce": 1884958.240686,
+    "gce_limite": 2058500.0,
+    "oblig_sin_pensiones": 6693540.5,
+    "oblig_con_pensiones": 8534286.6,
+    "ramo28_participaciones": 1547607.877924,
+    "ramo30_adefas": 81400.4
+  },
+  "decreto_anterior": {
+    "neteo": 1553113.096246,
+    "gasto_neto": 10193683.7,
+    "gce": 3868319.90403,
+    "oblig_sin_pensiones": 6702281.0,
+    "oblig_con_pensiones": 8406440.2
+  },
+  "ilif": {
+    "total": 10636488.1,
+    "impuestos": 6263886.8,
+    "cuotas": 702564.7,
+    "ventas": 1457539.9,
+    "fmp": 210774.0,
+    "financiamientos": 1479959.2
+  },
+  "cgpe": {
+    "rfsp": -1555655.8,
+    "balance_presup": -1358558.8,
+    "extrapresup": -197097.0,
+    "no_presupuestario": 500.0,
+    "ing_presup": 9156528.9,
+    "petroleros": 984539.7,
+    "no_petroleros": 8171989.2,
+    "gf_no_petro": 6785650.3,
+    "tributarios": 6263886.8,
+    "no_tributarios": 521763.5,
+    "organismos": 1386338.9,
+    "gasto_pagado": 10515087.7,
+    "programable_pagado": 7311129.3,
+    "diferimiento": -121400.4,
+    "programable_devengado": 7432529.7,
+    "no_programable": 3203958.4,
+    "costo_financiero": 1574950.2,
+    "participaciones": 1547607.9,
+    "adefas": 81400.4,
+    "primario": 216891.3,
+    "shrfsp": 21665995.8,
+    "lmgce_pct": 5.2,
+    "shrfsp_pct": 55.0,
+    "shrfsp_interno_pct": 43.6,
+    "shrfsp_externo_pct": 11.4,
+    "tipo_cambio_t": 18.0,
+    "tipo_cambio_t_1": 17.8,
+    "shrfsp_externo_pct_t_1": 11.4
+  },
+  "cgpe_anterior_estimado": {
+    "shrfsp": 20062321.6,
+    "shrfsp_pct": 54.0,
+    "rfsp": -1523282.4,
+    "balance_presup": -1337479.1,
+    "costo_financiero": 1364484.4,
+    "primario": 27505.3
+  },
+  "razones_pib_publicadas": {
+    "rfsp": -3.9,
+    "balance_presup": -3.4,
+    "ing_presup": 23.2,
+    "tributarios": 15.9,
+    "gasto_pagado": 26.7,
+    "costo_financiero": 4.0,
+    "shrfsp": 55.0,
+    "pensiones_anexo3": 4.7
+  },
+  "notas": {
+    "primario": "El CGPE 2027 conserva el rótulo «Superávit económico primario». El balance no presupuestario de 500.0 mdp se arrastra de 2026: el CGPE 2027 no lo imprime como renglón propio, así que ESTA CIFRA NO ESTÁ RESTITUIDA de su documento y la prueba la hereda. Si la identidad cierra al décimo, el supuesto es bueno.",
+    "ramos_fuera_de_subtotal": "En 2027, igual que en 2026, los ramos 40 (INEGI) y 32 (TFJA) se imprimen fuera del subtotal de autónomos. Comprobado: 17,931.0 + 72,264.7 + 42,274.5 + 1,650.9 + 20,893.6 = 155,014.7, el subtotal A.",
+    "gce": "RUPTURA DE SERIE. El Anexo 2 declara que el GCE 2027 se estima «con la nueva metodología, derivada de la publicación el 9 de abril de 2026 del Decreto por el que se expide la Ley para el Fomento de la Inversión en Infraestructura Estratégica para el Desarrollo con Bienestar, y se reforman y adicionan diversas disposiciones de la LFPRH». El GCE cae de 3,868,319.9 mdp (2026) a 1,884,958.2 (2027) y el LMGCE de 10.9 % a 5.2 % del PIB. NO ES COMPARABLE con la serie anterior."
+  },
+  "gaceta_cola": {
+    "_procedencia": "Gaceta Parlamentaria 7121, anexos K y N, descargados el 2026-09-09. El anexo N es la estimación del artículo 61 de la Ley de Vivienda; el K, la nota metodológica y la propuesta de declaratoria de las ZAP 2027.",
+    "vivienda_uma_mensual_2026": 3566.22,
+    "vivienda_total_uma_declarado": 63409800,
+    "vivienda_total_pesos_declarado": 226133296956.0,
+    "vivienda_filas": [
+      {
+        "necesidad": "Mejora de vivienda",
+        "hogares": 849226,
+        "uma": 25,
+        "costo_unitario": 89155.5,
+        "monto": 75713168643.0,
+        "urbano": 357753,
+        "rural": 491473
+      },
+      {
+        "necesidad": "Ampliación de vivienda",
+        "hogares": 771091,
+        "uma": 50,
+        "costo_unitario": 178311.0,
+        "monto": 137494007301.0,
+        "urbano": 478880,
+        "rural": 292211
+      },
+      {
+        "necesidad": "Vivienda nueva",
+        "hogares": 36246,
+        "uma": 100,
+        "costo_unitario": 356622.0,
+        "monto": 12926121012.0,
+        "urbano": 22325,
+        "rural": 13921
+      }
+    ],
+    "zap_rurales_municipios": 1575,
+    "zap_rurales_antes_de_pasar_urbanos": 1645,
+    "zap_rurales_pasados_a_urbanos": 70,
+    "zap_urbanas_agebs": 43636,
+    "zap_urbanas_localidades": 4531,
+    "zap_urbanas_municipios": 2423,
+    "ramo15_mdp": 37873.6,
+    "zap_urbanas_microdatos": {
+      "_procedencia": "sisge.bienestar.gob.mx/dae/zap2027/zap_urbanas_2027_43636_variables_descarga.zip, ruta publicada dentro de la nota metodológica del anexo K y descargada el 2026-09-10. last-modified del servidor 2026-07-15, dos meses ANTES de la entrega del paquete. sha256 3e1a6ed30ddb269d932d0a2796f7745eb057854bc384b348748ccfd96ca7a4e6. La nota metodológica SÍ advierte la clave actualizada a junio de 2026 (nota al pie 23, «con fines operativos»), y SÍ publica el traslape de 25.836 AGEB con los municipios ZAP rurales; lo que no dice es que sus conteos de municipios y localidades se calculan sobre esa columna y no sobre la clave de origen.",
+      "archivo": "2027/2027_zap-urbanas-agebs_variables.zip",
+      "encabezado_en_renglon": 4,
+      "columnas": [
+        0,
+        1,
+        2,
+        3,
+        11
+      ],
+      "_columnas": "índices de CLAVE DE ENTIDAD, CLAVE DE MUNICIPIO, CLAVE DE LOCALIDAD, CLAVE DE AGEB y CLAVE DE LOCALIDAD ACTUAL A JUNIO DE 2026.",
+      "columna_traslape_rural": 10
+    },
+    "zap_urbanas_agebs_en_municipios_rurales": 25836,
+    "zap_urbanas_agebs_ya_prioritarias": 17035,
+    "zap_urbanas_agebs_agregadas_por_traslape": 8801
+  }
+}

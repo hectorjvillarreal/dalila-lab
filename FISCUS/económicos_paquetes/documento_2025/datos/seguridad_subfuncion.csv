@@ -1,0 +1,57 @@
+concepto,mdp_2024,mdp_2025,dif_nominal_mdp,dif_real_mdp,var_real_pct
+TOTAL perímetro de seguridad (15 subfunciones),387626.5,333091.1,-54535.4,-71203.3,-17.6
+-- por función y subfunción --,,,,,
+1.6.1 Seguridad Nacional,103530.1,101948.0,-1582.2,-6034.0,-5.6
+1.2.1 Justicia,84778.9,77263.3,-7515.6,-11161.1,-12.6
+1.7.1 Asuntos de Orden Público y de Segu,72976.2,35951.5,-37024.7,-40162.7,-52.8
+1.6.2 Seguridad Nacional,44088.4,34303.9,-9784.4,-11680.2,-25.4
+1.2.3 Justicia,25032.2,25242.8,210.6,-865.8,-3.3
+1.2.2 Justicia,20527.8,21241.8,714.0,-168.7,-0.8
+1.7.4 Asuntos de Orden Público y de Segu,11033.4,11396.6,363.2,-111.2,-1.0
+1.7.3 Asuntos de Orden Público y de Segu,4000.0,5578.4,1578.4,1406.4,33.7
+1.2.4 Justicia,5176.8,5046.4,-130.4,-353.0,-6.5
+1.3.2 Coordinación de la Política de Gob,4390.7,4230.5,-160.2,-349.0,-7.6
+1.8.5 Otros Servicios Generales,4320.4,3984.1,-336.4,-522.1,-11.6
+1.3.4 Coordinación de la Política de Gob,3230.2,3235.5,5.4,-133.5,-4.0
+1.6.3 Seguridad Nacional,2984.3,2760.0,-224.3,-352.6,-11.3
+1.8.4 Otros Servicios Generales,1073.4,466.9,-606.5,-652.7,-58.3
+1.7.2 Asuntos de Orden Público y de Segu,190.7,176.0,-14.6,-22.8,-11.5
+1.3.5 Coordinación de la Política de Gob,164.5,149.6,-14.9,-21.9,-12.8
+1.3.3 Coordinación de la Política de Gob,128.7,115.8,-12.9,-18.4,-13.7
+-- por ramo --,,,,,
+07 Defensa Nacional,104840.6,103213.6,-1627.0,-6135.1,-5.6
+03 Poder Judicial,78327.3,70983.6,-7343.7,-10711.7,-13.1
+36 Seguridad y Protección Ciudadana,105838.8,70422.2,-35416.6,-39967.7,-36.2
+13 Marina,44101.4,34325.2,-9776.2,-11672.6,-25.4
+49 Fiscalía General de la República,19333.4,20126.0,792.6,-38.7,-0.2
+33 Aportaciones Federales para Entidades Federativas y Municipios,9210.9,9565.5,354.6,-41.4,-0.4
+04 Gobernación,7919.4,6474.0,-1445.4,-1785.9,-21.6
+06 Hacienda y Crédito Público,4694.1,4327.6,-366.5,-568.3,-11.6
+32 Tribunal Federal de Justicia Administrativa,3304.5,3304.5,0.0,-142.1,-4.1
+35 Comisión Nacional de los Derechos Humanos,1722.1,1722.4,0.2,-73.8,-4.1
+27 Anticorrupción y Buen Gobierno,0.0,1699.0,1699.0,1699.0,
+47 Entidades no Sectorizadas,1587.9,1642.1,54.2,-14.0,-0.8
+54 Mujeres,0.0,1133.6,1133.6,1133.6,
+14 Trabajo y Previsión Social,1084.5,992.9,-91.6,-138.2,-12.2
+31 Tribunales Agrarios,959.0,891.8,-67.2,-108.4,-10.8
+"15 Desarrollo Agrario, Territorial y Urbano",846.5,790.4,-56.1,-92.5,-10.5
+"44 Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales",1097.4,500.0,-597.4,-644.5,-56.3
+11 Educación Pública,249.4,250.4,1.1,-9.6,-3.7
+12 Salud,229.3,173.9,-55.3,-65.2,-27.3
+37 Consejería Jurídica del Ejecutivo Federal,164.5,149.6,-14.9,-21.9,-12.8
+"38 Ciencia, Humanidades, Tecnología e Innovación",0.0,76.2,76.2,76.2,
+48 Cultura,68.8,61.6,-7.3,-10.2,-14.3
+"25 Previsiones y Aportaciones para los Sistemas de Educación Básica, Normal, Tecnológica y de Adultos",57.9,57.9,0.0,-2.5,-4.1
+08 Agricultura y Desarrollo Rural,37.4,35.0,-2.4,-4.0,-10.2
+10 Economía,34.9,31.5,-3.4,-4.9,-13.5
+21 Turismo,32.8,30.7,-2.1,-3.5,-10.2
+16 Medio Ambiente y Recursos Naturales,30.6,28.2,-2.4,-3.7,-11.7
+43 Instituto Federal de Telecomunicaciones,46.4,20.0,-26.3,-28.3,-58.6
+23 Provisiones Salariales y Económicas,15.0,15.1,0.1,-0.5,-3.3
+"09 Infraestructura, Comunicaciones y Transportes",16.7,13.8,-2.9,-3.6,-20.8
+18 Energía,14.7,13.1,-1.6,-2.2,-14.6
+20 Bienestar,12.7,10.8,-2.0,-2.5,-18.8
+41 Comisión Federal de Competencia Económica,25.5,7.6,-17.9,-19.0,-71.4
+55 Agencia de Transformación Digital y Telecomunicaciones,0.0,1.0,1.0,1.0,
+27 Función Pública,1636.6,0.0,-1636.6,-1707.0,-100.0
+"38 Humanidades, Ciencias, Tecnologías e Innovación",85.6,0.0,-85.6,-89.3,-100.0

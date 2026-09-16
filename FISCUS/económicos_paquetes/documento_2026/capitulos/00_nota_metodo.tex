@@ -1,0 +1,129 @@
+\chapter*{Nota de método}
+\addcontentsline{toc}{chapter}{Nota de método}
+
+Este documento pertenece al género de las \emph{Implicaciones del Paquete Económico}: la
+arquitectura en tres partes sobre la restricción presupuestal, la plantilla de capítulo, la
+densidad de cuadros. Se aparta de él en seis lugares, y los seis se declaran aquí.
+
+\section*{Uno. Está escrito bajo régimen de simulación en vivo}
+
+No se usó ninguna pieza aprobada del ejercicio 2026. Ni la Ley de Ingresos aprobada, ni el
+Presupuesto de Egresos aprobado, ni sus analíticos, ni la Cuenta Pública de 2025, ni informes
+trimestrales posteriores a la entrega del paquete. El documento del género sobre el mismo
+paquete permaneció en cuarentena, sin abrirse, durante toda la redacción.
+
+\textbf{Por qué.} Un documento escrito con el presupuesto ya aprobado es más exacto y es
+irrepetible el día que llega el paquete. Este ejercicio existe para saber qué se puede
+afirmar con lo que hay en la mano esa mañana.
+
+\section*{Dos. Dos líneas de comparación, siempre etiquetadas}
+
+\begin{list}{}{\setlength{\leftmargin}{1.2em}}
+\item[] \textbf{Línea P, primaria.} Proyecto 2026 contra \emph{proyecto} 2025. Ex ante contra
+ex ante. Es la comparación disponible el día de la entrega y la que nadie más construye.
+\item[] \textbf{Línea G, del género.} Proyecto 2026 contra \emph{aprobado} 2025. Es la que usa
+la discusión pública, y mezcla un objeto ex ante con uno ex post.
+\end{list}
+
+Toda columna comparativa lleva su letra. \textbf{Nunca conviven sin etiqueta.} Donde difieren de
+forma material, la diferencia mide lo que la Cámara cambió el año anterior, y se reporta como
+hallazgo.
+
+Hay una razón concreta para esta manía. La misma función educativa de 2026, con el mismo
+perímetro y el mismo deflactor, crece \textbf{3,4\,\%} en la línea P y \textbf{2,2\,\%} en la
+línea G. Las dos son verdaderas y el punto y dos décimas de diferencia no es ruido: es lo que
+la Cámara añadió a la función educativa en diciembre de 2024 ---12\,641,1 millones de pesos
+entre el proyecto y el aprobado de 2025--- reapareciendo como una base más alta.
+
+El precedente que obliga a etiquetar es del \emph{ejercicio anterior}, y ahí la elección de
+línea cambiaba el signo: la función educativa del proyecto de 2025 crecía \textbf{0,81\,\%}
+contra el proyecto de 2024, \textbf{0,70\,\%} de aprobado contra aprobado, y \textbf{caía
+0,47\,\%} en la línea G. Ninguna de las tres era falsa.
+
+\section*{Tres. Toda diferencia en millones de pesos declara si es nominal o real}
+
+Los cuadros llevan las dos columnas. El deflactor es el del PIB que declara el CGPE 2026:
+\textbf{4,8\,\%}. Nunca se deriva un deflactor de agregados publicados redondeados.
+
+\begin{recuadro}{Por qué el deflactor del PIB, y cuándo no}
+\textbf{La elección de índice no es una preferencia de estilo: es parte de la definición del
+objeto que se mide.} Este documento usa dos, y los usa en dominios que no se tocan.
+
+\textbf{Deflactor implícito del PIB} ---4,8\,\% para 2026, publicado por el CGPE--- para
+\emph{todo agregado fiscal y toda razón a PIB}. La razón es de consistencia: el denominador de
+esas razones es el PIB nominal, y deflactar el numerador con un índice distinto del que
+gobierna el denominador produce una serie que no es de nada. Es también el índice con el que
+la Secretaría construye el límite de gasto corriente estructural, de modo que la regla fiscal
+y este documento miden con la misma vara.
+
+\textbf{Índice de precios al consumidor} ---y sólo él--- cuando la pregunta es el
+\emph{poder de compra de una prestación individual}: cuánto compra la pensión de una persona,
+cuánto vale una beca en el bolsillo de quien la recibe. Ahí la pregunta es de bienestar y el
+consumidor es el sujeto, así que el índice del consumidor es el correcto. \textbf{Ese uso no
+aparece en ningún cuadro presupuestal de este documento}, para que nadie sume dos columnas
+construidas con varas distintas.
+
+\textbf{Sensibilidad, una sola línea y aquí.} Con la inflación promedio esperada para 2026 en
+lugar del deflactor del PIB, toda variación real de este documento sería aproximadamente
+\textbf{un punto porcentual mayor}. Esa es exactamente la distancia que separa nuestras
+cifras de las del documento del género, que usa 1,0365 sin declararlo ---tercer año
+consecutivo---. \textbf{La línea vive en este recuadro y no se repite por capítulo}, para que
+ningún cuadro mezcle las dos convenciones.
+
+\textbf{Lo prohibido, que este proyecto ha visto tres veces en el género:} deflactar con un
+índice y rotular la columna con el nombre del otro; presentar una columna del ejercicio
+anterior ya deflactada bajo el rótulo del año anterior; y derivar un deflactor de dos
+agregados publicados redondeados.
+\end{recuadro}
+
+\section*{Cuatro. Hay una capa demográfica declarada}
+
+Los denominadores de población no están en el paquete y sí están al alcance. Se usan, en
+cuadros \emph{separados} de los presupuestales, con el tier \texttt{externa\_demografica} y
+con fuente, año de referencia y liga en el archivo de fuentes. Ninguna cifra del paquete
+aparece junto a un denominador externo en la misma línea sin marca.
+
+Donde un denominador no se consiguió, \textbf{se declara y no se calcula}. Este documento no
+publica gasto por afiliado a IMSS o ISSSTE, ni gasto por alumno matriculado, y dice por qué.
+
+\section*{Cinco. El capítulo de deuda descompone, y declara lo que no puede identificar}
+
+El cambio de la razón del saldo histórico a PIB se reparte en cuatro variables: crecimiento,
+inflación por el denominador, tipo de cambio y el requerimiento del año. Las cuatro suman el
+cambio observado. La \emph{compensación por inflación} que el sector público paga sobre su
+deuda no es un término del marco sino una lectura del requerimiento, y \textbf{el paquete no
+identifica qué índice de precios le corresponde}. Se presenta como rango con su cota, nunca
+como punto.
+
+\section*{Seis. Hay un registro de lo que no se pudo verificar}
+
+Al final del documento, y no solo en la bitácora de trabajo. Incluye las verificaciones que
+son imposibles bajo régimen en vivo por construcción.
+
+\section*{Convenciones}
+
+\begin{list}{}{\setlength{\leftmargin}{1.2em}\setlength{\itemsep}{1pt}}
+\item[] \textbf{Nomenclatura.} RFSP y SHRFSP; las grafías RFSPF y SHRFSPF designan el mismo
+objeto y la equivalencia se declara aquí una sola vez.
+\item[] \textbf{Perímetros.} Declarados antes del primer cuadro de cada capítulo, enumerables
+por clave, y constantes dentro del capítulo.
+\item[] \textbf{Claves, no nombres.} Toda agregación por ramo, programa o unidad responsable
+se hace por su clave numérica. Y cuando la clave misma cambia de prefijo, por su número: la
+Pensión Mujeres Bienestar es U316 en 2025 y S316 en 2026.
+\item[] \textbf{Ramo y función son objetos distintos.} Una caída de ramo no es una caída de la
+función que su nombre sugiere.
+\item[] \textbf{Umbrales.} 0,5\,\% en niveles y 0,1 puntos en tasas y razones.
+\item[] \textbf{Definiciones de balance y deuda} adjudicadas contra \emph{Balance Fiscal en
+México} (SHCP, abril de 2023), nunca por criterio propio.
+\item[] \textbf{Tier de cada cifra:} \texttt{oficial\_primaria}, \texttt{derivada\_ciep},
+\texttt{autoral\_ited}, \texttt{externa\_demografica}. Registrado en el archivo de fuentes.
+\end{list}
+
+\section*{Validación}
+
+Treinta y tres identidades contables y de coherencia entre anexos, todas cerradas, corridas
+después de cada cambio en los datos. El bruto del proyecto ---11\,746\,796,8 millones de
+pesos--- se obtuvo por tres rutas independientes en dos servidores distintos y coincide al
+peso con el Anexo 1 del decreto. \textbf{Se valida por identidad, no por relectura:} un
+dígito mal leído rompe una suma, y una relectura lo repite.
+\clearpage

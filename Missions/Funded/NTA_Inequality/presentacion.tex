@@ -1,0 +1,427 @@
+% ===========================================================================
+%  Presentacion
+%  Cuentas Nacionales de Transferencia para Mexico, 2016-2024
+%
+%  Compilar:  pdflatex presentacion   (dos pasadas)
+%  Las figuras las genera paper.ipynb; se copian a figures/ desde paper/figures.
+% ===========================================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{array}
+
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}{\insertcaption}
+
+\definecolor{acento}{HTML}{2C6FBB}
+\definecolor{verde}{HTML}{2E8B57}
+\definecolor{naranja}{HTML}{E06A1B}
+\definecolor{gris}{HTML}{555555}
+
+\setbeamercolor{title}{fg=acento}
+\setbeamercolor{frametitle}{fg=acento}
+\setbeamercolor{structure}{fg=acento}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamertemplate{itemize item}{\textcolor{acento}{\textbullet}}
+\setbeamertemplate{itemize subitem}{\textcolor{gris}{--}}
+\setbeamertemplate{footline}{%
+  \hfill{\scriptsize\textcolor{gris}{\insertframenumber}}\hspace{1.2em}\vspace{0.6em}}
+
+\graphicspath{{figures/}}
+
+% Subtitulo gris bajo el titulo de lamina
+\newcommand{\bajada}[1]{{\small\textcolor{gris}{#1}}\vspace{0.5em}}
+% Mensaje de cierre de lamina
+\newcommand{\cierre}[1]{%
+  \vfill{\small\textcolor{acento}{\textbf{#1}}}}
+
+\title{\textbf{Cuentas Nacionales de Transferencia para México}}
+\subtitle{Quién consume, quién aporta y quién financia la diferencia, 2016--2024}
+\author{Juan Pablo López Reynosa \and Héctor Villarreal}
+\date{\today}
+
+\begin{document}
+
+% ===========================================================================
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+% ===========================================================================
+\begin{frame}{Objetivo}
+\bajada{Qué se construyó y para qué}
+
+\begin{itemize}\itemsep0.7em
+  \item Medir el \textbf{déficit del ciclo de vida} en México por edad y por sexo: cuánto consume
+        cada edad, cuánto ingreso laboral genera y quién financia la diferencia.
+  \item Construir un procedimiento \textbf{reproducible y escalable} que concilie la encuesta de
+        hogares con el sistema de cuentas nacionales.
+  \item Cubrir cinco levantamientos bienales de la ENIGH, 2016 a 2024, con 1.46 millones de
+        registros persona-año.
+\end{itemize}
+
+\cierre{La encuesta aporta la forma por edad; las cuentas nacionales aportan el nivel.}
+\end{frame}
+
+% ===========================================================================
+\begin{frame}{El procedimiento en una vista}
+\begin{center}
+\includegraphics[width=0.97\linewidth]{fig_pipeline.pdf}
+\end{center}
+\end{frame}
+
+% ===========================================================================
+\section{Resultados}
+
+\begin{frame}{El hallazgo: dos ciclos de vida distintos}
+\bajada{El perfil masculino cierra el ciclo; el femenino no lo cierra en ninguna edad}
+
+\begin{center}
+\includegraphics[width=0.92\linewidth]{fig_lcd_sexo.pdf}
+\end{center}
+
+\vspace{-0.3em}
+{\footnotesize El consumo incluye, por convención del marco, el gasto de los hogares \emph{y} el
+consumo de gobierno. El déficit del promedio nacional refleja esa definición y la agregación entre
+perfiles heterogéneos; no es un juicio sobre una edad en particular.}
+
+\cierre{Las mujeres concentran 76.3\,\% del déficit agregado.}
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Ingreso laboral}
+\bajada{La brecha por sexo domina el perfil en todas las edades activas}
+
+\begin{center}
+\includegraphics[width=0.92\linewidth]{fig_yl_sexo.pdf}
+\end{center}
+
+\cierre{El ingreso laboral femenino pasó de 41.6\,\% a 47.9\,\% del masculino entre 2016 y 2024:
+convergencia gradual, sin cambio de orden de magnitud.}
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Consumo y déficit}
+\bajada{El déficit es positivo y sostenido; lo que cambia es dónde se concentra}
+
+\begin{center}
+\includegraphics[width=0.92\linewidth]{fig_c_lcd.pdf}
+\end{center}
+
+\cierre{En términos reales el déficit agregado no crece. El de los mayores de 60 años sube
+71.7\,\% por persona, y su peso poblacional pasa de 11.3\,\% a 15.1\,\%.}
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Financiamiento por grupo de edad}
+\bajada{Los dos extremos del ciclo se financian por vías opuestas}
+
+\begin{center}
+\includegraphics[width=0.92\linewidth]{fig_financiamiento_edad.pdf}
+\end{center}
+
+\cierre{Niñez: 88.6\,\% con recursos privados. Vejez: 54.5\,\% con transferencias públicas netas.}
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Jóvenes, mujeres y adultos mayores}
+\bajada{La desigualdad por sexo también aparece del lado del financiamiento}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth]{fig_financiamiento_grupos.pdf}
+\end{center}
+
+\cierre{El déficit de las mujeres de 60 años o más duplica al de los hombres y reciben 24.0\,\%
+menos en transferencias públicas netas.}
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{El saldo intergeneracional}
+\bajada{Pesos constantes de 2024, trimestrales per cápita}
+
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+ & 2016 & 2024 & Cambio real \\
+\midrule
+Transferencia pública neta a 60 años o más & 36\,543 & 37\,943 & +3.8\,\% \\
+Pago público neto de la población de 25 a 59 & 9\,317 & 12\,960 & +39.1\,\% \\
+\addlinespace
+Peso de la población de 60 años o más & 11.3\,\% & 15.1\,\% & $+3.8$ pp \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.6em}
+El pago neto de la edad activa no creció porque le subieran los impuestos ---su pago bruto per
+cápita subió 15\,\% real--- sino porque su participación en las transferencias públicas se redujo
+a la mitad. El sistema las desplazó hacia las edades mayores, y la base demográfica que lo sostiene
+se estrecha.
+
+\cierre{Un cambio demográfico que aumente el peso de la vejez se traduce de forma directa en
+presión presupuestaria.}
+\end{frame}
+
+% ===========================================================================
+\section{Manejo de datos}
+
+\begin{frame}{Fuentes y agregados de control}
+\bajada{Toda serie macro utilizada es observada}
+
+\begin{columns}[T]
+\begin{column}{0.47\textwidth}
+\textcolor{verde}{\textbf{Sistema de Cuentas Nacionales}}
+\begin{itemize}\small\itemsep0.35em
+  \item Cuentas por sectores institucionales
+  \item Remuneración de asalariados e ingreso mixto
+  \item Excedente de explotación, consumo de capital fijo y ahorro neto
+  \item Consumo final de hogares y de gobierno
+  \item Prestaciones sociales, transferencias en especie y del exterior
+  \item Impuestos al ingreso y contribuciones sociales
+\end{itemize}
+\end{column}
+\begin{column}{0.47\textwidth}
+\textcolor{acento}{\textbf{ENIGH}}
+\begin{itemize}\small\itemsep0.35em
+  \item Población, ingresos, gasto del hogar y de las personas, trabajos
+  \item Una fila por persona y año
+  \item 257\,805 a 315\,743 registros por levantamiento
+  \item Población expandida de 120.9 a 130.3 millones
+\end{itemize}
+\end{column}
+\end{columns}
+
+\cierre{Las contribuciones sociales imputadas entran al pago público por simetría: el ingreso
+laboral las contiene y las prestaciones recibidas incluyen las que financian.}
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{La identidad contable y sus anclas}
+\bajada{Cada variable micro cierra contra un agregado del sistema de cuentas}
+
+\[
+\underbrace{C(a,t) - Y_L(a,t)}_{\text{déficit del ciclo de vida}}
+=
+\underbrace{\big(\tau^{+}(a,t) - \tau^{-}(a,t)\big)}_{\text{transferencias netas}}
++ \underbrace{\big(Y_K(a,t) - S(a,t)\big)}_{\text{reasignación por activos}}
+\]
+
+\vspace{0.3em}
+\begin{center}\small
+\begin{tabular}{ll}
+\toprule
+Variable & Agregado de control \\
+\midrule
+Ingreso laboral & Remuneración $+\ \tfrac{2}{3}$ del ingreso mixto neto \\
+Reasignación por activos & Ingreso de activos ampliado, neto de ahorro \\
+Consumo total, educación y salud & Consumo final de hogares y gobierno \\
+Transferencias públicas recibidas & Prestaciones sociales y transferencias en especie \\
+Transferencias del exterior & Transferencias netas del exterior \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.4em}
+{\footnotesize La división del ingreso mixto en dos tercios laborales y un tercio de capital es la
+convención del manual de Naciones Unidas, aplicada por igual en el micro y en el macro.}
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Cómo se concilian micro y macro}
+\bajada{Un único factor por variable y año}
+
+\[
+\lambda_v(t) = \frac{V_{macro}(t)}{\sum_i x_{iv}(t)\cdot f_i \cdot 4}
+\qquad\Longrightarrow\qquad
+x^{adj}_{iv}(t) = x_{iv}(t)\cdot\lambda_v(t)
+\]
+
+\begin{itemize}\itemsep0.5em
+  \item \textbf{Cierre exacto por construcción}: ninguna imputación previa puede mover un agregado
+        anual.
+  \item \textbf{La forma no cambia}: se preserva toda la información distributiva y etaria de la
+        encuesta; sólo cambia la escala vertical.
+  \item \textbf{El factor de expansión no se toca}: la conciliación no altera la estructura
+        demográfica.
+\end{itemize}
+
+\cierre{Los factores van de 1.9 a 9.9: la encuesta capta entre 10\,\% y 53\,\% del agregado
+correspondiente, según la variable.}
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Asignación del gasto del hogar}
+\bajada{La encuesta observa gasto del hogar; el perfil por edad exige repartirlo entre personas}
+
+\begin{itemize}\itemsep0.5em
+  \item Algoritmo iterativo de \textbf{punto fijo} que construye su propia escala de equivalencia
+        por edad a partir del dato, en vez de importar una escala externa.
+  \item Parte de un reparto per cápita, estima la participación de cada edad en el agregado,
+        redistribuye según ese perfil y repite hasta convergencia.
+  \item Conserva el total del hogar de forma exacta en cada iteración: ninguna configuración del
+        algoritmo puede mover un agregado.
+\end{itemize}
+
+\cierre{La alternativa habitual ---imponer una escala construida para otro país--- se evita por
+diseño.}
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Imputación fiscal}
+\bajada{La encuesta reporta ingreso neto, no carga fiscal}
+
+\begin{itemize}\itemsep0.5em
+  \item \textbf{Contribuciones sociales}: salario base de cotización con piso y topes por régimen.
+        Entra la contribución patronal y la de gobierno; la del trabajador ya viene descontada del
+        ingreso observado.
+  \item \textbf{Impuesto sobre la renta}: la tarifa se aplica al ingreso bruto y la encuesta
+        observa el neto, de modo que el bruto se recupera por iteración de punto fijo.
+  \item Se añade el tramo de \textbf{personas morales} sobre el ingreso de capital observado, sin
+        el alquiler imputado por no ser hecho gravable.
+  \item Todo se calcula sobre \textbf{base anual}: el salario base, sus topes y la tarifa
+        progresiva son parámetros anuales.
+\end{itemize}
+
+\cierre{La construcción se apoya en el Simulador Fiscal del CIEP, tanto en las tarifas como en el
+criterio de base gravable.}
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Transferencias dentro del hogar}
+\bajada{Hacer visible una reasignación que suele quedar implícita en un residuo}
+
+\begin{itemize}\itemsep0.5em
+  \item Para cada persona se calcula su ingreso propio y su posición de déficit o superávit.
+  \item Dentro de cada hogar se emparejan miembros deficitarios con superavitarios, y el saldo
+        neto \textbf{suma exactamente cero por hogar}.
+  \item A diferencia de un residuo contable, el método \textbf{puede dejar déficit sin cubrir}
+        cuando el hogar no tiene superávit suficiente: ese remanente se financia por fuerza desde
+        fuera del hogar.
+  \item El bloque privado queda observado, sin reescalar, porque el sistema de cuentas no publica
+        un agregado de transferencias privadas netas.
+\end{itemize}
+
+\cierre{El gobierno aparece como mediador entre generaciones, no como agente: recauda de unas
+edades y transfiere a otras.}
+\end{frame}
+
+% ===========================================================================
+\section{Cierre}
+
+\begin{frame}{Limitaciones declaradas}
+\bajada{Nueve limitaciones documentadas, con su magnitud cuantificada}
+
+\begin{itemize}\small\itemsep0.45em
+  \item \textbf{Impuesto sobre la renta.} El agregado de control es la recaudación total del
+        impuesto al ingreso. Lo que la encuesta permite imputar ---el impuesto de quienes reciben
+        sueldo y el de las rentas de capital que declaran los hogares--- equivale apenas a un
+        tercio de esa recaudación. La diferencia corresponde sobre todo a utilidades de empresas
+        que nunca llegan al hogar como ingreso observado, de modo que el nivel del impuesto por
+        edad queda sobreestimado aunque su forma sea informativa.
+  \item \textbf{Remesas.} La encuesta registra apenas una novena parte del monto que reportan las
+        cuentas nacionales, y lo hace sobre muy pocos hogares receptores. Al ajustar el total, todo
+        el faltante se carga sobre el monto que recibe cada hogar y nada sobre el número de hogares
+        que reciben, cuando lo probable es que ambos estén subregistrados. La distribución por edad
+        y sexo del canal es confiable; su nivel no.
+  \item El consumo de gobierno se imputa plano: no hay fuente de utilización de servicios públicos
+        por edad, y el gasto privado en salud puede ser inverso al beneficio público recibido.
+  \item El reescalamiento proporcional no corrige subcaptación diferencial por edad o por decil.
+\end{itemize}
+
+\cierre{El procedimiento sirve como control macroeconómico de los perfiles por edad, no como
+instrumento para medir desigualdad del ingreso de capital.}
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Reproducibilidad y escalabilidad}
+\bajada{Qué hace utilizable al procedimiento más allá de este ejercicio}
+
+\begin{itemize}\itemsep0.5em
+  \item \textbf{Cada decisión es explícita y sustituible}: mejorar la identificación de un bloque
+        no obliga a rehacer los demás.
+  \item \textbf{Pruebas de cierre reproducibles}: que ninguna imputación mueva un agregado anual,
+        y que los perfiles por edad reproduzcan exactamente el resultado de la base persona.
+  \item \textbf{La brecha se reporta, no se fuerza}: el déficit calculado por sus dos lados no
+        coincide de forma exacta, y la diferencia es analíticamente igual al bloque privado
+        observado.
+  \item \textbf{Todo se entrega dentro de un repositorio}: datos de control, cuadernos, parámetros
+        fiscales y documentos, con la cadena que los produce y su documentación de operación.
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Siguiente paso}
+\bajada{Qué habilita la base construida}
+
+\begin{itemize}\itemsep0.7em
+  \item El producto es una base con observaciones a \textbf{nivel de agente representativo},
+        construida desde la encuesta y conciliada con las cuentas nacionales.
+  \item Esa estructura permite \textbf{proyectar los perfiles} hacia adelante bajo distintos
+        escenarios demográficos y económicos.
+  \item Y evaluar el efecto de cambios de política sobre cada grupo de edad y sexo, en vez de
+        sobre el promedio nacional.
+\end{itemize}
+
+\vfill
+\begin{center}
+{\large\textcolor{acento}{\textbf{Gracias}}}
+\end{center}
+\end{frame}
+
+% ===========================================================================
+\appendix
+
+\begin{frame}{Respaldo: alquiler imputado de la vivienda propia}
+\begin{itemize}\small\itemsep0.45em
+  \item La encuesta capta gasto como desembolso: un hogar propietario consume servicio
+        habitacional sin desembolsar, y ese servicio no aparece.
+  \item El marco lo reconoce como dos cosas a la vez: consumo del servicio e ingreso del activo.
+        Entra por ambos lados de la identidad.
+  \item El reparto dentro del hogar es per cápita por los dos lados, siguiendo el criterio del
+        Simulador Fiscal del CIEP.
+  \item Tiene contraparte macro ---el excedente de operación de los hogares--- pero no agregado de
+        control propio.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Respaldo: transferencias del exterior}
+\begin{itemize}\small\itemsep0.45em
+  \item La encuesta capta entre 10.1\,\% y 12.0\,\% del agregado de control, sobre una base de
+        1.6\,\% de las personas.
+  \item El reescalamiento lleva el monto medio por receptor de 16\,088 a 145\,339 pesos
+        trimestrales.
+  \item La \textbf{forma} del canal por edad y por sexo proviene de la encuesta y es robusta al
+        ajuste; el \textbf{nivel} depende del agregado de control.
+  \item Corregirlo exige repartir el ajuste entre número de receptores y monto por receptor, con
+        un objetivo externo de incidencia.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Respaldo: composición de la muestra}
+\begin{center}\small
+\begin{tabular}{lrrrrr}
+\toprule
+Año & Registros & Hogares & Población & Edad media & 60 años o más \\
+\midrule
+2016 & 257\,805 & 70\,311 & 120.9 & 31.0 & 11.3\,\% \\
+2018 & 269\,206 & 74\,647 & 123.9 & 31.8 & 12.1\,\% \\
+2020 & 315\,743 & 89\,006 & 126.8 & 33.2 & 13.6\,\% \\
+2022 & 309\,684 & 90\,102 & 129.0 & 33.6 & 14.2\,\% \\
+2024 & 308\,598 & 91\,414 & 130.3 & 34.4 & 15.1\,\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{0.5em}
+{\footnotesize Población en millones de personas expandidas. Fuente: elaboración propia con ENIGH
+(INEGI).}
+\end{frame}
+
+\end{document}

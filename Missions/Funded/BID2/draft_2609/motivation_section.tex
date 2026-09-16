@@ -1,0 +1,339 @@
+ThinkStation PGX% =====================================================================
+% BID2---MOTIVATION SECTION (standalone; to be placed into the paper)
+% =====================================================================
+% Build date:      2026-08-09
+% Built by:        Claude Code (Fable 5), directed by Héctor J. Villarreal
+% Build instruction: motivation/CC_instrucciones_motivation-section-draft_v1.md
+% Branch:          p3-correcciones-tex
+%
+% NUMBER SOURCE. Every numeral in the prose below is taken from
+%   motivation/output/NUMBERS.md, motivation/output/VERIFICATION.md, or the
+%   per-figure tables in motivation/output/tables/ (read from the CSV, never
+%   off a figure). All ENIGH money figures are quarterly pesos per person or
+%   per household in constant Aug–Nov 2024 pesos (general INPC).
+%
+% PLACEMENT (suggestion only---Héctor and Diego decide). This reads as a new
+%   section immediately following the introduction (\ref{sec:intro}) and
+%   before the literature review, or alternatively as the opening of
+%   Section~\ref{sec:data}. It does not renumber or modify Draft-June-v6.tex.
+%   Labels use the prefix "mot_" and collide with nothing in that file.
+%
+% CITATION ROUTE. references.bib (BID2 root, 18 entries) has NO keys for
+%   ENIGH, ENSANUT, ENASEM, GHED, Searle et al. (2008) or Hosseini et al.
+%   (2021). Following the convention already used in Draft-June-v6.tex ---
+%   where ENASEM, ENIGH, ENOE and the WHO life tables are named in prose with
+%   "Authors' calculations" and no \cite---these are written as plain text so
+%   the section compiles against the existing bibliography with no .bib edits.
+%   If Héctor prefers proper entries, the six keys can be added later without
+%   touching the prose beyond wrapping the names in \citep{}.
+%
+% DECISION FLAGGED FOR HÉCTOR---fig 10 survival panel. The mortality panel of
+%   fig10_enasem_dynamics is NOT age-adjusted, and unconditional mortality by
+%   wealth tercile is flat to inverted (5.1 / 6.7 / 6.6 percent,
+%   VERIFICATION.md §5)---almost certainly age composition, since wealth
+%   accumulates and higher terciles are older in a 50+ panel. The conditional
+%   gradient is also non-monotone (17.4 / 20.1 / 10.5 percent). DECISION TAKEN
+%   HERE: the survival gradient is OMITTED from the body; the spending-response
+%   result carries the ENASEM evidence, which is the finding the mechanism
+%   needs. If Héctor wants it reinstated, the drafted sentence is parked as a
+%   comment at the end of §\ref{subsec:mot_unmet}. The age adjustment is a
+%   separate scripted rerun, not attempted here.
+%
+% DISCREPANCY NOTED (not reproduced in the prose). READTHIS.md and the build
+%   instruction paraphrase catastrophic incidence as falling from "~4–5% in
+%   the poorest deciles to about 1% in the richest". The tables do not support
+%   the upper end: in 2024 the WHO 40%-of-capacity-to-pay measure is 3.90% in
+%   decile 1 and 1.37–1.88% in deciles 4–10 (1.83% in decile 10); in 2018 it is
+%   2.49% and 1.40%. The prose below quotes the table values.
+%
+% FIGURE MANIFEST---see end of file.
+% =====================================================================
+
+\section{Health Spending in Mexican Micro-Data}
+\label{sec:motivation}
+
+The model developed below places health at the analytical centre, and it does so
+because of what household data say about how Mexican families actually spend on
+medical care. This section establishes four empirical premises from three
+independent surveys: that medical spending has a steep and stable age--sex
+profile; that the capacity to finance it is deeply unequal; that the spending is
+majority curative rather than preventive; and that low spending among poor
+households reflects unmet need rather than good health. Two conventions apply
+throughout. All spending measured here is \emph{out-of-pocket}: the in-kind
+component delivered through IMSS, ISSSTE and the SSA network does not appear
+anywhere in these profiles, so every level below understates the resources
+actually devoted to a household's health. And the household survey used for the
+profiles, ENIGH, captures only 22 to 34 percent of the out-of-pocket per-capita
+spending recorded for M\'exico in the WHO Global Health Expenditure Database;
+its evidence is therefore used for shapes, gradients and ratios, never for
+levels or national totals.
+
+\subsection{An age--sex profile that is not an artifact}
+\label{subsec:mot_profile}
+
+Out-of-pocket medical spending rises monotonically with age from young adulthood
+onward. Under a utilization-weighted allocation of household spending to
+individuals, a woman aged 85 or over is assigned roughly five times what a woman
+aged 15--29 is assigned, and a man in the oldest group roughly six and a half
+times his young-adult counterpart (Figure~\ref{fig:mot_profile}). Because
+individual spending is not observed directly in a household survey, the natural
+objection is that this profile is manufactured by the allocation rule. It is
+not. Two methods that share no assumptions---a household-level regression of
+total health spending on age--sex composition, and an NTA-style allocation using
+utilization weights estimated from ENSANUT---produce profiles that correlate at
+0.959 across the eighteen age--sex cells of the 2024 wave. Where the two are
+compared cell by cell they agree closely at exactly the ages that matter: for
+women aged 65--74 the regression gives 1{,}149 quarterly pesos against 1{,}241
+from the allocation, and for women aged 75--84, 1{,}614 against 1{,}501. The
+shape is also stable across the four ENIGH waves from 2018 to 2024. The profile
+is an estimate, and it is labelled as such wherever it is used, but it is not an
+artifact of one arbitrary rule.
+
+Two features of the profile matter for what follows. First, women spend
+distinctly more than men through the reproductive and midlife years---about 32
+percent more at ages 30--44 and 38 percent more at ages 45--59---and the gap
+narrows and can reverse at the oldest ages. Second, the estimated profile can be
+checked against a survey that observes individual spending directly. ENASEM, the
+Mexican longitudinal study of ageing, yields a 50-and-over profile that rises
+with age in the same way but sits three to four times higher in level: 3{,}836
+quarterly pesos for men aged 75--79 in 2024 against the 1{,}099 the ENIGH-based
+allocation assigns to men aged 75--84. Two independent comparisons, one
+external and one internal, therefore point the same way, and they are the reason
+this paper treats the profile as information about shape alone.
+
+\subsection{The capacity to spend is unequal}
+\label{subsec:mot_inequality}
+
+Health's share of the household budget looks almost flat across the income
+distribution: 3.5 percent in the poorest decile and 3.7 percent in the richest in
+2024, with a shallow trough in between. That flatness is an artifact of
+zeros. Among households with no member aged 65 or over, 45.5 percent of the
+poorest decile reported no health spending at all in the reference quarter,
+against 27.9 percent of the richest; the gap barely closes when the household
+does contain someone 65 or over (39.5 against 24.8 percent). Conditional on
+spending anything, the poorest decile devotes 6.1 percent of its budget to
+health, more than any other decile and well above the 3.9 to 5.1 percent
+observed higher up. The poor do not spend less because health absorbs a smaller
+share of their resources; they spend less because they more often spend nothing.
+
+When they do spend, the burden is heavier. Catastrophic spending on the WHO
+capacity-to-pay definition---health exceeding 40 percent of resources net of
+subsistence---reaches 3.9 percent of households in the poorest decile in 2024
+against 1.4 to 1.9 percent in deciles four through ten, and the ordering is
+unchanged under the alternative threshold of 25 percent of total expenditure.
+
+The premise the model leans on most heavily, however, is that inequality lives
+\emph{inside} the age profile rather than beside it. Re-estimating the profile
+separately by income tercile, a woman aged 75--84 in the top tercile is assigned
+2{,}545 quarterly pesos against 782 in the bottom tercile, a ratio of 3.3. The
+same comparison at ages 15--29 gives 446 against 150. In absolute terms the
+climb from young adulthood to old age is 2{,}099 pesos in the top tercile and
+632 in the bottom. Ageing and inequality are not two separate forces acting on
+the household budget; the second determines how steeply the first bites.
+
+\subsection{Spending responds to illness rather than preventing it}
+\label{subsec:mot_curative}
+
+Every expenditure item in the ENIGH health module was classified as
+unambiguously preventive, unambiguously curative, or genuinely ambiguous, under
+a stated rule recorded item by item in the build outputs. This is an auditable
+judgment, not a measured share, and it is reported with the bracket that
+judgment implies. In 2024, unambiguously preventive items account for 2.0
+percent of out-of-pocket health spending---a figure between 1.9 and 2.5 percent
+in every wave---unambiguously curative items for 53.6 percent, and the remaining
+44.5 percent is ambiguous: over-the-counter medicines, dental and optical
+services, chronic-disease maintenance, unqualified diagnostics and insurance
+premiums (Figure~\ref{fig:mot_composition}). Assigning the entire ambiguous
+block to prevention still leaves curative spending the majority, at 53.6 against
+46.4 percent; assigning it to treatment makes spending 98.1 percent
+curative. The licensed conclusion is therefore the weaker and more robust one:
+Mexican out-of-pocket health spending is \emph{majority curative}, and the
+preventive share lies somewhere between 2 and 46 percent depending on where the
+ambiguous block is assigned. Because the 2024 COICOP recode of the expenditure
+classification dropped prescription status, this composition is quoted
+cross-sectionally only and no trend across waves is claimed.
+
+A second survey observes the motive of care directly rather than inferring it
+from the receipt, and it agrees. In ENSANUT 2024, preventive motives---vaccination, check-up, prenatal control---account for 11.2 percent of the last
+health need reported in the poorest socioeconomic tercile, rising only to 15.9
+percent in the richest. Prevention is a minority of care everywhere and least
+common where resources are scarcest.
+
+\subsection{Low spending among the poor is unmet need}
+\label{subsec:mot_unmet}
+
+If poor households spend little because they are healthy, the zeros documented
+above are benign and there is nothing for a model of health to explain. Three
+independent lines of evidence say they are not. The first is the pattern of
+zeros itself: they are concentrated among poor households and remain elevated
+there even when the household contains an older member, which is precisely where
+need is least plausibly absent. The second is direct measurement. Among people
+who reported a health need in ENSANUT 2024, 19.2 percent in the poorest
+wellbeing tercile went without care, against 8.9 percent in the richest; forgone
+care attributed specifically to cost collapses across the same gradient, from
+3.5 percent to 0.1 percent (Figure~\ref{fig:mot_forgone}). The uninsured are the
+worst off on both margins. The 2018 wave, using the survey's coarser
+socioeconomic stratum, shows the same shape. Cost-related unmet need is a
+measured fact in these data, not an inference from a spending gradient.
+
+The third line is dynamic. Following individuals in ENASEM whose health deficits
+increased materially between 2018 and 2021 (a rise of at least 0.10 in the
+index, about a decile of its range), out-of-pocket spending rises in every
+wealth tercile---but the increase is associated with wealth, roughly doubling
+from 10{,}819 annual pesos in the bottom tercile to 21{,}230 in the top, on
+2021 spending levels of 24{,}043 against 42{,}233. The same shock is met with
+twice the response at the top of the wealth distribution. This pattern is
+descriptive and not causal: wealth in these data bundles insurance, education,
+prior health status and access to care, and no attempt is made here to separate
+them. The frailty index used to define the health decline is a reconstruction of
+the deficit-accumulation index of Searle et al.\ (2008), following the
+convention used in the project's earlier ENASEM work and reproducing its
+published results qualitatively rather than numerically; it is provisional
+pending confirmation, and the pattern reported here does not hinge on the fine
+details of its construction.
+%
+% PARKED FOR HÉCTOR (fig 10 right panel; see header). If the survival gradient
+% is to be reinstated, insert after the spending-response sentence:
+%   "Conditional on a comparable decline in health, mortality by 2024 is 10.5
+%   percent in the top wealth tercile against 17.4 and 20.1 percent in the lower
+%   two; this comparison is not age-adjusted, the terciles differ in age
+%   composition, and the ordering across the lower two terciles is not
+%   monotone, so it is reported only as suggestive."
+
+\subsection{The 2020 episode}
+\label{subsec:mot_pandemic}
+
+The pandemic wave of ENIGH converts the cross-sectional reading of the zeros
+into an observation in time. Between 2018 and 2020 real household out-of-pocket
+health spending rose in every income decile, by 76 percent in the poorest and 29
+percent in the richest, and the rise never reversed through the 2022 and 2024
+waves (Figure~\ref{fig:mot_pandemic}). The margin of adjustment was
+participation rather than intensity: the share of households spending nothing on
+health fell by 13 to 15 percentage points in every decile, while spending
+conditional on being positive rose far less---36 percent in the poorest decile
+and 7.5 percent in the richest. A placebo on food spending shows nothing
+comparable: food fell in most deciles and rose 10 percent in the poorest, where
+total monetary expenditure also rose about 10 percent, against health's 76.
+
+Two framings of the same episode point in opposite directions and both are
+reported here. In growth rates the shock is regressive, hitting the poorest
+hardest. In pesos it is not: the top two deciles still financed 36 percent of
+the aggregate increase. What the participation margin shows is that when the
+free public option became unavailable, poor households were conscripted into
+paying out of pocket rather than priced out of responding---which is only
+possible if the need had been there all along, absorbed by in-kind provision.
+The causal language stays deliberately soft: two waves and one placebo cannot
+fully exclude a health-specific change in reporting, though the same instrument
+was used in both waves. The episode merits separate treatment, which this paper
+does not pursue.
+
+\subsection{What the model must contain}
+\label{subsec:mot_bridge}
+
+Taken together these facts discipline the model that follows. Medical spending
+is a response to a realized health shock rather than a smooth investment in a
+health stock, so health must enter as a stock subject to shocks and medical
+spending as restoration rather than accumulation. The capacity to finance that
+restoration is unequal, and the inequality is embedded in the age profile
+itself, so the budget constraint must bind differently by type and must do so
+more tightly with age. And because the constraint binds, a transitory health
+shock is not transitory in its consequences: the household that cannot finance
+restoration carries the deficit forward. The model in Section~\ref{sec:model}
+is built to reproduce exactly these features.
+
+% ---------------------------------------------------------------------
+% FIGURES
+% ---------------------------------------------------------------------
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig01_age_sex_profile.pdf}
+\caption{Estimated out-of-pocket medical spending by age and sex, M\'exico 2024.
+Quarterly pesos per person, constant Aug--Nov 2024 pesos (general INPC).
+Individual spending is not observed in ENIGH; the profile is \emph{estimated}
+under two independent allocation rules---a household regression on age--sex
+composition and an NTA-style allocation with utilization weights from ENSANUT
+2024---which correlate at 0.959 across the eighteen age--sex cells. Design-based
+estimates (strata $\times$ PSU $\times$ survey weights). Out-of-pocket spending
+only; in-kind provision through IMSS, ISSSTE and SSA is excluded. Source:
+ENIGH 2024 (INEGI) and ENSANUT Continua 2024 (INSP), authors' calculations.}
+\label{fig:mot_profile}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig07_composition.pdf}
+\caption{Composition of out-of-pocket health spending by income decile under the
+stated curative/preventive classification. Every expenditure item is assigned to
+one of three classes by an auditable rule; the ambiguous block (over-the-counter
+medicines, dental, optical, chronic-disease maintenance, unqualified diagnostics,
+insurance premiums) is reported rather than allocated. Assigning it entirely to
+prevention leaves curative spending the majority; assigning it to treatment makes
+spending 98.1 percent curative. Because the 2024 COICOP recode dropped
+prescription status, the composition is comparable across deciles within a wave
+but not across waves. Source: ENIGH 2024 (INEGI), authors' calculations.}
+\label{fig:mot_composition}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig06_forgone_care.pdf}
+\caption{Forgone care among people reporting a health need, by socioeconomic
+tercile and by insurance affiliation, ENSANUT Continua 2024. The lighter series
+restricts forgone care to needs the respondent attributed to cost. Design-based
+estimates. Source: ENSANUT Continua 2024 (INSP), authors' calculations.}
+\label{fig:mot_forgone}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig12_pandemic_jump.pdf}
+\caption{Change in real household out-of-pocket health spending by income
+decile, 2018 to 2020, with food spending as a placebo and the change in the
+share of households spending zero. Constant Aug--Nov 2024 pesos (general INPC).
+The 2020 wave is pandemic-affected; the disruption is the object of interest
+here rather than a nuisance. Source: ENIGH 2018 and 2020 (INEGI), authors'
+calculations.}
+\label{fig:mot_pandemic}
+\end{figure}
+
+% ---------------------------------------------------------------------
+% METHODS FOOTNOTE---attach to the first sentence of §\ref{subsec:mot_profile}
+% if Héctor wants the machinery visible in the section rather than the appendix.
+% ---------------------------------------------------------------------
+% \footnote{All estimates are design-based (ENIGH \texttt{est\_dis} strata,
+% \texttt{upm} PSUs, \texttt{factor} weights; analogous designs for ENSANUT and
+% ENASEM). ENIGH health items are selected from each wave's shipped expenditure
+% catalogue, not from memory, and reproduce the published \texttt{salud}
+% aggregate to within 0.4 percent in every wave. Money is deflated to Aug--Nov
+% 2024 pesos with the general INPC. Full item lists, allocation code and every
+% plotted value are in the build outputs.}
+
+% ---------------------------------------------------------------------
+% ADDITIONAL EVIDENCE AVAILABLE (referenced in prose, not reproduced here).
+% Available for an appendix if wanted: validation of the estimated profile
+% against ENASEM's directly observed 50+ profile; the profile by income tercile;
+% zero-spending by decile and 65+ status; catastrophic incidence by decile under
+% both thresholds; the ENASEM spending-response and outcome panels; and the
+% four-wave stability of the profile shape.
+% ---------------------------------------------------------------------
+
+% =====================================================================
+% FIGURE MANIFEST---files to upload to the Overleaf project root
+% =====================================================================
+%   fig01_age_sex_profile.pdf
+%   fig07_composition.pdf
+%   fig06_forgone_care.pdf
+%   fig12_pandemic_jump.pdf
+%
+% Source: Missions/Funded/BID2/motivation/output/figures/
+% (.png versions of each exist in the same folder if PDF inclusion is a problem;
+% Draft-June-v6.tex currently uses .png throughout.)
+%
+% If an appendix of supporting figures is added, the additional files are:
+%   fig02_validation_enigh_vs_enasem.pdf, fig03_profile_by_income.pdf,
+%   fig04_budget_share_by_decile.pdf,     fig05_zero_spending.pdf,
+%   fig06b_forgone_by_insurance.pdf,      fig08_catastrophic.pdf,
+%   fig09_spending_distribution.pdf,      fig10_enasem_dynamics.pdf,
+%   fig11_wave_stability.pdf
+% =====================================================================

@@ -16,13 +16,13 @@ slots:
       First-ever 1M US wholesale; 5th straight US retail record; 2026 guidance >4.16M.
       Electrified ~962k (+27%); HEV 612k (+32%); BEV 269k (+17%).
   margin:
-    value: "5.8% operating margin, Q2-2026 — op profit KRW 2.85tn on record revenue KRW 49.22tn"
-    unit: "% — consolidated operating margin"
-    delta: "op profit −20.8% YoY; COGS ratio 82.2% (+3.3pp on materials); FY2026 guidance 6.3–7.3% maintained"
+    value: "5.8% operating margin, Q2-2026 — operating profit KRW 2,850,888M on revenue KRW 49,215,328M"
+    unit: "% — consolidated operating margin, K-IFRS (company-labelled tentative)"
+    delta: "operating profit −20.8% YoY; revenue +1.9% YoY; net profit KRW 2,887,962M (−11.2% YoY)"
     date: 2026-07-23
-    source: "https://www.marklines.com/en/news/348250"
-    source_type: secondary
-    confidence: reported
+    source: "https://www.hyundai.com/worldwide/en/company/ir/notices/view-0000000373-en-10-1-"
+    source_type: primary
+    confidence: confirmed
     decisive: true
     notes: >-
       Revenue record KRW 186.3tn (+6.3%). Q4 op margin 3.6% (-39.9%). Cause named as

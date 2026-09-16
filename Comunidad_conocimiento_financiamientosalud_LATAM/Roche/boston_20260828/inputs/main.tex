@@ -1,0 +1,301 @@
+% !TeX program = pdflatex
+https://healthacademy2026.com/\documentclass[10pt]{beamer}
+
+\usetheme{Madrid}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{amsmath,amssymb}
+
+\title[Financiamiento en Salud]{Financiamiento de los Sistemas de Salud}
+\subtitle{Riesgo, contrato social y economía generacional}
+\author{Curso de Economía Poblacional}
+\institute{Tecnológico de Monterrey}
+\date{\today}
+
+\begin{document}
+
+%------------------------------------------------
+\begin{frame}
+\titlepage
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Ruta Parte I}
+\begin{enumerate}
+\item Salud como riesgo y bienestar (Shafik)
+\item Seguro y pooling
+\item Beveridge vs Bismarck
+\item Informalidad y decisión microfundada
+\item Externalidades y bien público
+\item Transición demográfica y epidemiológica
+\item Economía generacional y NTA
+\end{enumerate}
+\end{frame}
+
+%================================================
+\section{Salud como Riesgo}
+
+\begin{frame}{Salud como riesgo económico}
+Ingreso individual: $y$
+
+Shock de salud:
+\[
+m \in \{0, M\}, \quad \Pr(M)=p
+\]
+
+Utilidad esperada sin seguro:
+\[
+EU = (1-p)u(y) + p\,u(y-M)
+\]
+
+\begin{itemize}
+\item La enfermedad es un shock incierto.
+\item Con aversión al riesgo, la variabilidad reduce bienestar.
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Shafik: riesgo y contrato social}
+\begin{itemize}
+\item La enfermedad no es elegida.
+\item El mercado puro genera exclusión o empobrecimiento.
+\item El financiamiento colectivo compra estabilidad.
+\end{itemize}
+
+\bigskip
+\centering
+\emph{El sistema de salud es una institución para compartir riesgo biológico.}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Seguro y bienestar}
+Prima actuarialmente justa:
+\[
+\pi = pM
+\]
+
+Consumo asegurado:
+\[
+c = y - \pi
+\]
+
+Si $u''<0$:
+\[
+u(y-\pi) > EU_{\text{sin seguro}}
+\]
+
+\bigskip
+El pooling aumenta bienestar cuando hay aversión al riesgo.
+\end{frame}
+
+%================================================
+\section{Modelos Institucionales}
+
+\begin{frame}{Tres funciones del financiamiento}
+\begin{enumerate}
+\item Recaudación
+\item Pooling
+\item Compra estratégica
+\end{enumerate}
+
+\bigskip
+La arquitectura institucional define cómo se comparten riesgos.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Modelo Beveridge (1942)}
+Financiamiento vía impuestos generales:
+
+\[
+t \sum_i y_i = \sum_i p_i M_i
+\]
+
+\begin{itemize}
+\item Universalidad basada en ciudadanía.
+\item Pool único.
+\item Salud como bien social.
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Modelo Bismarck (1883)}
+Contribución laboral:
+
+\[
+\sum_{i \in F} \tau w_i = \sum_{i \in F} p_i M_i
+\]
+
+\begin{itemize}
+\item Cobertura ligada al empleo formal.
+\item Multiplicidad de fondos.
+\item Solidaridad dentro del grupo asegurado.
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Comparación conceptual}
+\begin{itemize}
+\item Beveridge: universalidad vía impuestos.
+\item Bismarck: universalidad vía formalidad laboral.
+\item En economías con alta informalidad, Bismarck puro no es viable.
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Decisión formal/informal: parámetros del modelo}
+
+Shock de salud:
+\[
+m \in \{0,M\}, \quad \Pr(M)=p
+\]
+
+\begin{itemize}
+\item $\tau$: tasa de contribución laboral.
+\item $\kappa$: costo fijo de formalidad (regulación, cumplimiento).
+\item $\alpha$: fracción del gasto cubierta en formalidad.
+\item $\beta$: fracción cubierta en informalidad.
+\item $M$: costo del tratamiento.
+\item $p$: probabilidad del shock.
+\end{itemize}
+
+\bigskip
+\emph{El individuo compara el costo presente de contribuir contra la protección futura.}
+
+\end{frame}
+
+%-----------------------------------------
+
+%================================================
+\section{Informalidad y Microfundamentos}
+
+\begin{frame}{Decisión formal/informal}
+Formal:
+\[
+EU_F = (1-p)u(y(1-\tau)-\kappa)
++ p\,u(y(1-\tau)-\kappa-(1-\alpha)M)
+\]
+
+Informal:
+\[
+EU_I = (1-p)u(y)
++ p\,u(y-\beta M)
+\]
+
+Elige formal si:
+\[
+EU_F \ge EU_I
+\]
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Informalidad estructural en AL}
+\begin{itemize}
+\item Alta proporción fuera del sistema contributivo.
+\item Contribuciones elevadas reducen incentivos a formalizar.
+\item Resultado: pools pequeños y fragmentación.
+\end{itemize}
+
+\bigskip
+\emph{En América Latina, Bismarck nunca es puro.}
+\end{frame}
+
+%================================================
+\section{Externalidades}
+
+\begin{frame}{Prevención y externalidades}
+\[
+p_i = p(e_i,\bar e)
+\]
+
+\[
+\frac{\partial p}{\partial \bar e}<0
+\]
+
+\begin{itemize}
+\item Las decisiones individuales afectan a terceros.
+\item Vacunación y vigilancia son bienes públicos.
+\item El mercado subprovee prevención.
+\end{itemize}
+\end{frame}
+
+%================================================
+\section{Transición Demográfica y Epidemiológica}
+
+\begin{frame}{Estructura del gasto}
+\[
+G = \sum_x N(x)E[c(x)]
+\]
+
+\[
+E[c(x)] = p_C(x)M_C(x) + p_N(x)M_N(x)
+\]
+
+\begin{itemize}
+\item Transición epidemiológica: menos contagiosas, más crónicas.
+\item Las crónicas implican tratamiento prolongado.
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Demografía y presión estructural}
+\[
+\frac{\partial G}{\partial N(65+)} > 0
+\]
+
+\begin{itemize}
+\item Envejecimiento aumenta la demanda.
+\item Cambia la naturaleza del gasto.
+\end{itemize}
+
+\bigskip
+La demografía redefine el financiamiento óptimo.
+\end{frame}
+
+%================================================
+\section{Economía Generacional}
+
+\begin{frame}{Salud y NTA}
+\[
+LCD(x)=C(x)-Y^L(x)
+\]
+
+\[
+LCD(x)=\tau_H(x)+\text{otros flujos}
+\]
+
+\begin{itemize}
+\item La salud pública es transferencia en especie.
+\item Concentrada en edades avanzadas.
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Contrato intergeneracional}
+\[
+\sum_x N(x)\tau_y(x)
+=
+\sum_x N(x)\tau_H(x)
+\]
+
+\begin{itemize}
+\item Trabajadores financian.
+\item Mayores reciben.
+\item La estructura etaria altera ambos lados.
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Cierre Parte I}
+\begin{itemize}
+\item Salud = riesgo compartido.
+\item Instituciones determinan pooling.
+\item Informalidad limita cobertura.
+\item Transición epidemiológica transforma el gasto.
+\item El financiamiento es también contrato entre generaciones.
+\end{itemize}
+
+
+\end{frame}
+
+\end{document}

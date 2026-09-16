@@ -2,7 +2,7 @@
 
 **Purpose:** Authoritative register of how Missions, shared corpora, and Grand Plan projects (DFD, BDH, RF, Aurora) connect. Maintained alongside `Missions/_index.md` (master mission register) and the Dalila root `CLAUDE.md`.
 
-**Last updated:** 2026-04-28
+**Last updated:** 2026-08-08
 
 ---
 
@@ -55,6 +55,25 @@
 | Demographics corpus | Shares LAC TFR anchors and the fast-transition framing; national-source collapse tails (DANE/INE/DEIS/INEC/CONAPO) feed `_crossrefs/corpus/demographics/` |
 
 **Status:** Stage 1 of 4 (data acquisition + forensic memo) executed 2026-06-17/18 — World Bank backbone (61 CSVs) + national collapse-tail series (26 CSVs), forensic Checks 1–5, all five countries source-verified. Hard gate: Anne + Nina review `STAGE1_forensic_memo.md` before Stage 2 (ABM specification). Stages 2–4 (ABM spec, calibration, write-up) pending.
+
+---
+
+## BID2 Motivation Build — health expenditure by sex, income, and age (Mission: BID2)
+
+**Location:** `Missions/Funded/BID2/motivation/`
+**Owner:** Héctor; executed by Claude Code; coauthor briefings filed in `_crossrefs/team/` (Anne, Beth, Fina, Judy)
+**Date registered:** 2026-08-08
+**Build instruction:** `Missions/Funded/BID2/draft_2609/CC_instrucciones_motivation-health-profiles_v2.md`
+
+| Project | Connection |
+|---|---|
+| BID2 (mission) | Empirical base of the health-refocused paper's motivation section: ENIGH 2018–2024 + ENSANUT 2018/2024 + ENASEM 2018–2024 triangulation; 12 figures, NUMBERS/VERIFICATION/provenance; empirical m_j counterpart for `ge_model_gender.jl`; 2050 composition experiment consumes Anne's `demographics_2050.jl` primitives verbatim (implied 65+/20–64 = 0.747 vs her 0.744 anchor) |
+| BDH | Old-age health-financing evidence for Mexico: OOP age-sex profiles, catastrophic-spending gradients, forgone-care-by-insurance (Seguro Popular→IMSS-Bienestar transition visible), unmet-need measurement on four independent lines |
+| DFD | NTA-style age-sex utilization schedule derived from ENSANUT (`output/tables/ensanut_util_weights_2024.csv`) — candidate demographics-corpus entry pending Anne's endorsement; morbidity/mortality asymmetry (gender frailty paradox) reproduced in ENASEM microdata |
+| Demographics corpus | Composition arithmetic links the corpus' dependency-ratio anchors to health-spending aggregation (per-adult OOP ×1.47 under 2050 stationary structure); September WPP single-age swap will convert the stationary bound to a transitional number |
+| RF | Candidate fiscal-narrative event: the 2020 OOP surge (universal, participation-margin, poorest decile +76% real; fig 12) as a provision-shock episode inside RF's 2000–2025 window |
+
+**Status:** Build complete and committed 2026-08-08 (branch `p3-correcciones-tex`); scripts 00–11 re-run end to end. Open loops: Judy's confirmation of the reconstructed frailty index (provisional flag on fig 10); Beth's ratification of the curative/preventive classification and placement of the 2020 natural-experiment finding; Anne's September WPP swap triggers a `scripts/10` rerun. Standing rules: ENIGH shapes-not-levels (22–34% of GHED OOP); preventive share quoted as the 2%–46% bracket; ages 5–14 Tier-3 cell embargoed.
 
 ---
 

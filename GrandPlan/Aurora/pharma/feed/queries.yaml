@@ -1,0 +1,489 @@
+config:
+  cycles_completed: 8
+  cadence_hours: 36
+  cycle_budget: 16
+  exploration_share: 0.25
+  rotation:
+    main: 32
+    exploration: 2
+  resolved_ids:
+  - 20260816-0001
+  - 20260816-0002
+  - 20260816-0003
+  - 20260816-0004
+  - 20260816-0005
+  - 20260816-0006
+  - 20260816-0007
+  - 20260816-0008
+  - 20260816-0009
+  - 20260816-0010
+  - 20260816-0011
+  - 20260816-0012
+  - 20260816-0013
+  - 20260816-0014
+  - 20260816-0015
+  - 20260816-0016
+  - 20260816-0017
+  - 20260816-0018
+  - 20260816-0019
+  - 20260816-0020
+  - 20260816-0021
+  - 20260816-0022
+  - 20260816-0023
+  - 20260816-0024
+  - 20260816-0025
+  - 20260816-0026
+  - 20260816-0027
+  - 20260816-0028
+  - 20260816-0029
+  - 20260816-0030
+  - 20260816-0031
+  - 20260816-0032
+  - 20260816-0033
+  - 20260816-0034
+  - 20260816-0035
+  - 20260816-0036
+  - 20260816-0037
+  - 20260816-0038
+  - 20260816-0039
+  - 20260816-0040
+  - 20260816-0041
+  - 20260816-0042
+  - 20260816-0043
+  - 20260816-0044
+  - 20260816-0045
+  - 20260816-0046
+  - 20260816-0047
+  - 20260816-0048
+  - 20260816-0049
+  - 20260816-0050
+  - 20260816-0051
+  - 20260816-0052
+  - 20260816-0053
+  - 20260816-0054
+  - 20260816-0055
+  - 20260816-0056
+  - 20260816-0057
+  - 20260816-0058
+  - 20260816-0059
+  - 20260816-0060
+  - 20260816-0061
+  - 20260816-0062
+  - 20260816-0063
+  - 20260816-0064
+  - 20260816-0065
+  - 20260816-0066
+  - 20260816-0067
+  - 20260816-0068
+  - 20260816-0069
+  - 20260816-0070
+  - 20260816-0071
+  - 20260816-0072
+  - 20260816-0073
+  - 20260816-0074
+  - 20260816-0075
+  - 20260816-0076
+  - 20260816-0077
+  - 20260816-0078
+  - 20260816-0079
+  - 20260816-0080
+  - 20260816-0081
+  - 20260816-0082
+  - 20260816-0083
+  - 20260818-0001
+  - 20260818-0002
+  - 20260818-0003
+  - 20260818-0004
+  - 20260818-0005
+  - 20260818-0006
+  - 20260818-0007
+  - 20260823-0001
+  - 20260823-0002
+  - 20260823-0003
+  - 20260823-0004
+  - 20260823-0005
+  - 20260823-0006
+  - 20260823-0007
+  - 20260823-0008
+  - 20260823-0009
+  - 20260823-0010
+  - 20260823-0011
+  - 20260823-0012
+  - 20260823-0013
+  - 20260823-0014
+  - 20260826-0001
+  - 20260826-0002
+  - 20260826-0003
+  - 20260826-0004
+  - 20260826-0005
+  - 20260826-0006
+  - 20260826-0007
+  - 20260826-0008
+  - 20260826-0009
+  promotes_per_cycle:
+  - 0
+  - 0
+  - 0
+  - 23
+  - 2
+  - 3
+  - 6
+  - 4
+  next_provisional: 8
+main:
+- id: q001
+  text: patent cliff pharma
+  group: Rent extinction
+  origin: seed
+  window:
+  - 20260816-0052
+  - 20260816-0053
+- id: q002
+  text: loss of exclusivity
+  group: Rent extinction
+  origin: seed
+  window: []
+- id: q003
+  text: biosimilar launch
+  group: Rent extinction
+  origin: seed
+  window:
+  - 20260816-0001
+  - 20260816-0002
+  - 20260816-0003
+  - 20260816-0004
+  - 20260816-0005
+  - 20260823-0004
+- id: q004
+  text: generic entry approval
+  group: Rent extinction
+  origin: seed
+  window:
+  - 20260816-0006
+- id: q005
+  text: patent litigation pharma ruling
+  group: Rent extinction
+  origin: seed
+  window:
+  - 20260823-0005
+  - 20260823-0006
+- id: q006
+  text: pharma acquisition biotech
+  group: Rent replacement
+  origin: seed
+  window:
+  - 20260816-0007
+  - 20260816-0008
+  - 20260816-0009
+  - 20260816-0059
+  - 20260816-0060
+  - 20260816-0061
+  - 20260823-0007
+  - 20260823-0008
+  - 20260823-0009
+  - 20260823-0010
+- id: q007
+  text: pharma licensing deal
+  group: Rent replacement
+  origin: seed
+  window:
+  - 20260816-0010
+  - 20260816-0011
+  - 20260816-0062
+  - 20260823-0011
+- id: q008
+  text: in-licensing China biotech
+  group: Rent replacement
+  origin: seed
+  window:
+  - 20260816-0063
+  - 20260816-0064
+  - 20260816-0065
+- id: q009
+  text: pharma pipeline failure phase 3
+  group: Rent replacement
+  origin: seed
+  window:
+  - 20260816-0012
+  - 20260816-0013
+  - 20260816-0014
+  - 20260816-0015
+  - 20260816-0066
+  - 20260816-0067
+  - 20260816-0068
+  - 20260823-0012
+  - 20260823-0013
+  - 20260826-0001
+- id: q010
+  text: pharma restructuring layoffs R&D
+  group: Rent replacement
+  origin: seed
+  window:
+  - 20260816-0016
+  - 20260816-0017
+  - 20260816-0018
+  - 20260816-0069
+  - 20260816-0070
+  - 20260826-0002
+  - 20260826-0003
+  - 20260826-0004
+  - 20260826-0005
+- id: q011
+  text: India generics export
+  group: The diffusion layer
+  origin: seed
+  window:
+  - 20260816-0019
+  - 20260816-0020
+- id: q012
+  text: China API production
+  group: The diffusion layer
+  origin: seed
+  window:
+  - 20260816-0021
+  - 20260816-0022
+- id: q013
+  text: pharmaceutical precursor supply
+  group: The diffusion layer
+  origin: seed
+  window: []
+- id: q014
+  text: CDMO capacity expansion
+  group: The diffusion layer
+  origin: seed
+  window:
+  - 20260816-0029
+  - 20260816-0071
+  - 20260816-0072
+  - 20260816-0073
+  - 20260816-0074
+- id: q015
+  text: drug shortage cause
+  group: The diffusion layer
+  origin: seed
+  window:
+  - 20260816-0030
+  - 20260816-0031
+  - 20260816-0075
+  - 20260816-0076
+- id: q016
+  text: AI drug discovery deal
+  group: Frontier cost
+  origin: seed
+  window:
+  - 20260816-0032
+  - 20260816-0033
+  - 20260816-0077
+  - 20260816-0078
+  - 20260816-0079
+  - 20260816-0080
+  - 20260816-0081
+- id: q017
+  text: AI pharma partnership compute
+  group: Frontier cost
+  origin: seed
+  window:
+  - 20260816-0034
+  - 20260816-0035
+- id: q018
+  text: machine learning clinical trial design
+  group: Frontier cost
+  origin: seed
+  window:
+  - 20260826-0006
+- id: q019
+  text: drug price negotiation
+  group: The payer
+  origin: seed
+  window: []
+- id: q020
+  text: HTA reimbursement decision
+  group: The payer
+  origin: seed
+  window:
+  - 20260818-0001
+  - 20260818-0002
+  - 20260826-0007
+- id: q021
+  text: formulary exclusion
+  group: The payer
+  origin: seed
+  window: []
+- id: q022
+  text: pharmaceutical tariff
+  group: The payer
+  origin: seed
+  window:
+  - 20260816-0036
+  - 20260816-0037
+  - 20260818-0003
+- id: q023
+  text: FDA approval decision
+  group: The gate
+  origin: seed
+  window:
+  - 20260816-0038
+  - 20260818-0004
+  - 20260903-0001
+  - 20260903-0002
+- id: q024
+  text: EMA CHMP opinion
+  group: The gate
+  origin: seed
+  window:
+  - 20260816-0039
+  - 20260816-0040
+  - 20260816-0041
+- id: q025
+  text: NMPA approval
+  group: The gate
+  origin: seed
+  window:
+  - 20260818-0005
+- id: q026
+  text: PMDA approval Japan
+  group: The gate
+  origin: seed
+  window:
+  - 20260818-0006
+- id: q027
+  text: CDSCO India approval
+  group: The gate
+  origin: seed
+  window:
+  - 20260816-0047
+- id: q028
+  text: pharmaceutical export control
+  group: Instruments and walls
+  origin: seed
+  window:
+  - 20260816-0048
+  - 20260816-0049
+  - 20260816-0050
+- id: q029
+  text: biosecurity legislation pharma
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: q030
+  text: pharmaceutical industrial policy
+  group: Instruments and walls
+  origin: seed
+  window:
+  - 20260823-0001
+  - 20260903-0003
+- id: q031
+  text: onshoring drug manufacturing
+  group: Instruments and walls
+  origin: seed
+  window:
+  - 20260816-0051
+  - 20260823-0002
+provisional:
+- id: p006
+  text: aflibercept
+  group: auto-proposed
+  origin: auto
+  from_items:
+  - 20260816-0001
+  - 20260816-0002
+  - 20260823-0004
+  window: []
+exploration:
+- id: x001
+  text: Brazil pharmaceutical policy
+  group: Instruments and walls
+  origin: seed
+  window:
+  - 20260816-0083
+- id: x002
+  text: Indonesia drug manufacturing
+  group: Instruments and walls
+  origin: seed
+  window:
+  - 20260816-0023
+  - 20260818-0007
+- id: x003
+  text: Nigeria pharmaceutical production
+  group: Instruments and walls
+  origin: seed
+  window:
+  - 20260816-0024
+  - 20260816-0025
+  - 20260816-0026
+  - 20260816-0027
+  - 20260816-0028
+- id: x004
+  text: Gulf sovereign fund biotech
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x005
+  text: compulsory licensing medicine
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x006
+  text: pandemic treaty stockpile
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x007
+  text: veterinary pharmaceutical market
+  group: Instruments and walls
+  origin: seed
+  window:
+  - 20260816-0042
+  - 20260816-0043
+- id: x008
+  text: CDMO acquires drug asset
+  group: Instruments and walls
+  origin: seed
+  window:
+  - 20260816-0044
+  - 20260816-0045
+  - 20260816-0046
+  - 20260823-0014
+- id: x009
+  text: insurer acquires manufacturer
+  group: Instruments and walls
+  origin: seed
+  window:
+  - 20260816-0054
+- id: x010
+  text: pharmacy benefit manager reform
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x011
+  text: hospital compounding scale
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x012
+  text: biologics licence transfer
+  group: Instruments and walls
+  origin: seed
+  window:
+  - 20260816-0055
+  - 20260816-0056
+  - 20260816-0057
+  - 20260816-0058
+- id: x013
+  text: pharmaceutical counterfeiting enforcement
+  group: Instruments and walls
+  origin: seed
+  window:
+  - 20260816-0082
+  - 20260826-0008
+  - 20260826-0009
+- id: x014
+  text: pharmaceutical waste regulation
+  group: Instruments and walls
+  origin: seed
+  window: []
+- id: x015
+  text: state owned pharmaceutical enterprise
+  group: Instruments and walls
+  origin: seed
+  window: []
