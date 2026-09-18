@@ -1,5 +1,5 @@
 {
-  "_doc": "Interest profile for the aging-macro paper monitor. Edit freely; the script never writes here. Scores: core terms are required for eligibility; title hits count double; boosts are additive. ALERT additionally requires a macro term and one quality signal (known WP series, top venue, tracked author, or LAC geography); low_venues take -4.",
+  "_doc": "Interest profile for the aging-macro paper monitor. Edit freely; the script never writes here. Scores: core terms are required for eligibility; title hits count double; boosts are additive. ALERT additionally requires a macro term and one quality signal (known WP series, top venue, tracked author, or LAC geography); low_venues take -4. weak_core_terms count toward the score but cannot alone carry a paper to ALERT.",
   "lookback_days_first_run": 21,
   "alert_threshold": 9,
   "watch_threshold": 5,
@@ -255,5 +255,19 @@
     "medRxiv",
     "bioRxiv",
     "SSRN"
+  ],
+  "weak_core_terms": [
+    "births",
+    "birth rate",
+    "cohort",
+    "survival",
+    "elderly",
+    "old age",
+    "old-age",
+    "retirees",
+    "life cycle",
+    "life-cycle",
+    "age structure",
+    "mortality decline"
   ]
 }

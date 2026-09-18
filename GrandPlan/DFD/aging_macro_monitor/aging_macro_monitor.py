@@ -254,9 +254,11 @@ def score(item, cfg):
     s -= 4 if venue_bad else 0
     # Alert gate: a paper reaches ALERT only with a macro dimension AND one quality signal
     # (known series, top venue, tracked author, or LAC geography). Otherwise it is capped at WATCH.
+    weak = set(t.lower() for t in cfg.get("weak_core_terms", []))
+    strong_core = [t for t in core_t + core_b if t.lower() not in weak]
     quality = item["source"] in ("nber", "nep-age", "nep-dge", "nep-dem", "nep-pbe", "nep-gro", "nep-lam", "nep-mac") \
         or venue_hit or auth or geo
-    if not (macro_t or macro_b) or not quality:
+    if not (macro_t or macro_b) or not quality or not strong_core:
         s = min(s, cfg["alert_threshold"] - 1)
     return {"score": s, "core": sorted(set(core_t + core_b))[:6], "macro": sorted(set(macro_t + macro_b))[:5],
             "geo": geo[:3], "authors_hit": auth, "venue_hit": venue_hit}
@@ -382,6 +384,7 @@ def run(dry=False, use_llm=True):
     # Dedupe within run (by normalised title), then against ledger
     cand, keys = [], set()
     for it in fetched:
+        it["authors"] = [a.strip(" ,;") for a in it["authors"] if a and a.strip(" ,;")]
         k = norm_title(it["title"])
         if not k or k in keys:
             continue
