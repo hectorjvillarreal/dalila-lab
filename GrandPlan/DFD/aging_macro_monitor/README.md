@@ -21,7 +21,10 @@ Each item is scored against `profile.json`: an aging/demographic **core term is
 required**; macro terms, LAC geography, tracked authors and top venues add; low-tier
 venues subtract. **ALERT** needs a macro term, one quality signal (known series,
 top venue, tracked author, or LAC geography) and at least one strong core term
-(`weak_core_terms` such as *births* or *cohort* score but cannot carry an alert alone); everything else with a core hit is
+(`weak_core_terms` such as *births* or *cohort* score but cannot carry an alert alone);
+a tracked author waives the macro-term requirement. Items matching `exclude_terms`
+(agronomy, clinical vocabulary that shares words like *fertility* and *growth*) are
+dropped before scoring. everything else with a core hit is
 **WATCH** or dropped. A paper is recorded once in `state/seen.json` and never
 re-alerted.
 

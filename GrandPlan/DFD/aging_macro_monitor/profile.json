@@ -1,5 +1,5 @@
 {
-  "_doc": "Interest profile for the aging-macro paper monitor. Edit freely; the script never writes here. Scores: core terms are required for eligibility; title hits count double; boosts are additive. ALERT additionally requires a macro term and one quality signal (known WP series, top venue, tracked author, or LAC geography); low_venues take -4. weak_core_terms count toward the score but cannot alone carry a paper to ALERT.",
+  "_doc": "Interest profile for the aging-macro paper monitor. Edit freely; the script never writes here. Scores: core terms are required for eligibility; title hits count double; boosts are additive. ALERT additionally requires a macro term and one quality signal (known WP series, top venue, tracked author, or LAC geography); low_venues take -4. weak_core_terms count toward the score but cannot alone carry a paper to ALERT. exclude_terms drop off-domain matches (agronomy, clinical) before scoring. A tracked-author hit waives the macro-term requirement for ALERT.",
   "lookback_days_first_run": 21,
   "alert_threshold": 9,
   "watch_threshold": 5,
@@ -269,5 +269,31 @@
     "life-cycle",
     "age structure",
     "mortality decline"
+  ],
+  "exclude_terms": [
+    "soil",
+    "crop",
+    "crops",
+    "compost",
+    "agronomy",
+    "agronomic",
+    "watershed",
+    "irrigation",
+    "harvest",
+    "cultivar",
+    "seedling",
+    "plant growth",
+    "fertilizer",
+    "fertiliser",
+    "livestock",
+    "poultry",
+    "aquaculture",
+    "in vitro",
+    "embryo",
+    "sperm",
+    "oocyte",
+    "IVF",
+    "clinical trial",
+    "patients with"
   ]
 }

@@ -236,6 +236,8 @@ def score(item, cfg):
     core_b = count_hits(cfg["core_terms"], body)
     if not core_t and not core_b:
         return None
+    if count_hits(cfg.get("exclude_terms", []), title + " " + body):
+        return None
     macro_t = count_hits(cfg["macro_terms"], title)
     macro_b = count_hits(cfg["macro_terms"], body)
     geo = count_hits(cfg["geography_terms"], title + " " + body)
@@ -258,7 +260,8 @@ def score(item, cfg):
     strong_core = [t for t in core_t + core_b if t.lower() not in weak]
     quality = item["source"] in ("nber", "nep-age", "nep-dge", "nep-dem", "nep-pbe", "nep-gro", "nep-lam", "nep-mac") \
         or venue_hit or auth or geo
-    if not (macro_t or macro_b) or not quality or not strong_core:
+    # A tracked author waives the macro-term requirement (Diamond on pension design, 2026-09-17).
+    if (not (macro_t or macro_b) and not auth) or not quality or not strong_core:
         s = min(s, cfg["alert_threshold"] - 1)
     return {"score": s, "core": sorted(set(core_t + core_b))[:6], "macro": sorted(set(macro_t + macro_b))[:5],
             "geo": geo[:3], "authors_hit": auth, "venue_hit": venue_hit}
