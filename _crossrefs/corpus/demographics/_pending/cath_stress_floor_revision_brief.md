@@ -115,6 +115,10 @@ constant rather than the scenario's character. Anne owns scenario structure and
 should confirm. If she prefers a 2030 arrival, the numbers above shift slightly
 and I will rerun.
 
+**Closed 2026-09-23.** Anne had already confirmed this in
+`2026-09-23_EIC-addendum_stress-glide_NBER-triage_Anne-endorsement.md` §2; the closure is recorded in
+`2026-09-23_nota-EIC2025-v0.1_Anne-Cath-review.md` §6.
+
 ## Cross-references
 
 - → Governing instructions (v1.5, §2 scenario table and §4 fiscal window): `_crossrefs/corpus/demographics/country/MEX/DFD_TFR_forecast_instructions.md`
@@ -127,10 +131,10 @@ and I will rerun.
 
 ---
 
-## 8. Additions from Anne's record of 2026-09-24 (appended by Claude Code, 2026-09-23)
+## 8. Additions from Anne's EIC-graphs record of 2026-09-23 (appended by Claude Code, 2026-09-23)
 
 Anne's record on the EIC-rebased scenario graphs
-(`_pending/2026-09-24_EIC-rebased-scenarios_Anne-record.md`) routes two items
+(`_pending/2026-09-23_EIC-rebased-scenarios_Anne-record.md`) routes two items
 to you. Both are **not citable** until your Q4 retabulation; the graphs behind
 them (`country/MEX/mex_scenarios_eic2025.md`) are working products, not
 endorsed artifacts.
@@ -183,5 +187,41 @@ pending, so net ≈ 107–161 k/yr).
 
 ## Cross-references (additions)
 
-- → Anne's record: `_pending/2026-09-24_EIC-rebased-scenarios_Anne-record.md` §2, §3.2, §3.3
+- → Anne's record: `_pending/2026-09-23_EIC-rebased-scenarios_Anne-record.md` §2, §3.2, §3.3
 - → Working graphs: `country/MEX/mex_scenarios_eic2025.md` (+ `.py`, results CSV)
+
+## 9. Nota EIC 2025 v0.1 — delivered for your review (appended by Claude Code, 2026-09-23)
+
+Build instruction `_crossrefs/_build_instructions/2026-09-23_DFD_nota-EIC2025_build-instruction.md`
+§7 item 3: you review Step 3, the page-3 indicators and the window sentence. Files are in `GrandPlan/DFD/outputs/briefs/2026-09_EIC2025_nota/`
+(PDF `nota_EIC2025_v0.1.pdf`; numbers in `results/fiscal_indicators.csv`; assumptions and flags in
+`_assumptions.md`).
+
+- **Mortality used:** CONAPO 2023 conciliación, age- and sex-specific, 2025–2050 (improving).
+  IM-6 still carries fixed survival (§8.2); the PDF says IM-6 was not re-run.
+- **TDR minima (annual grid):** Optimista 46.5 (2027), Central 45.2 (2031), INEGI directo 42.6 (2035),
+  Estrés 41.0 (2035). Q3 Central was 42.0 at ~2038. The minimum comes earlier *and sits higher*.
+- **Ventana:** minimum ± 5 years (v0.1 choice, one constant). Central 2026–2036 against Q3 2033–2038.
+  Your timing caveat is printed verbatim.
+- **τ table** (ρ = 0.50 from IM-6 `κ_rep`, `ge_model_gender.jl:61` @ 5368693; φ = 0.45 = 1 − informality,
+  Integrated_6.tex §data, untracked): Central 16.0 / 22.6 / 36.6 %, INEGI directo 16.0 / 22.6 / 37.8 %
+  (2025 / 2035 / 2050). Holding τ at its 2025 level through coverage alone needs φ = 103 % / 106 % in 2050, so the
+  PDF says coverage alone does not suffice.
+- **g_l:** +0.37 % a.a. 2025–35 in every scenario; 2035–50 −0.45 (Central), −0.66 (INEGI directo);
+  15–64 starts falling in 2036 in all four.
+- **For your ruling:** F2 (the ventana step on an annual model), F3 (the window is earlier but shallower; the draft
+  sentence "se acorta" was dropped), F5 (φ is a share of employed workers but is applied to the 15–64
+  population, so τ is on the low side).
+
+## 10. Rulings of 2026-09-23 (appended by Claude Code, 2026-09-23)
+
+Anne and Cath reviewed the nota v0.1 and the open items of this brief. The rulings are in `2026-09-23_nota-EIC2025-v0.1_Anne-Cath-review.md`
+§3 and are not restated here. In brief:
+- §3.1: the headline is the TDR minimum (year and level) before and after, and any span goes in the Recuadro with its definition.
+- §3.2: the OADR is printed beside the TDR, and this is binding.
+- §3.3: τ = ρ · OADR / e, and φ is dropped.
+- §3.4: the growth arithmetic is endorsed.
+- §3.5: IM-6 is rerun once, at Q4.
+- §3.6: IM-6 is aligned to the CONAPO improving survival path.
+
+The v0.2 revision is executed under `_crossrefs/_build_instructions/2026-09-23_demographics_commit-endorsements_nota-v0.2.md` Step 5.

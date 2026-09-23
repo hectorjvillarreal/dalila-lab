@@ -9,7 +9,8 @@ venue: "Paper prepared for Annual Review of Economics; working paper dated 10 Au
 doi: "10.1146/annurev-economics-081026-024323 (assigned, not yet resolvable — see §Source quality)"
 date_added: 2026-08-13
 added_by: Claude Code
-endorsed_by:
+endorsed_by: Anne
+endorsement_record: _pending/2026-09-23_terra-incognita-cornerstone_Anne-endorsement.md
 build_instruction: "_crossrefs/_build_instructions/2026-09-15_demographics_terra_incognita_reconstruction.md"
 
 indicators: [tfr, cfr, cbr, births, projection, replacement_rate, dependency_ratio, growth_accounting, migration]
@@ -18,8 +19,8 @@ scenario_implication: [fast-transition, baseline-revision]
 source_reliability: primary   # academic paper with full methodology and supplemental materials
 data_vintage: 2026   # paper dated 2026-08-10; registry data through 2025, WPP 2024 revision
 cornerstone: true
-supersedes: "2026-06-20_fernandez-villaverde-demographic-future.md (April deck — superseded as the standing scenario-discipline reference)"
-workflow_status: pending-endorsement
+supersedes: "2026-06-20_fernandez-villaverde-demographic-future.md (April deck — superseded as the standing scenario-discipline reference; retired to _crossrefs/_build_instructions/ 2026-09-23)"
+workflow_status: endorsed
 reconstruction_note: "Filed 2026-09-15 under its date and name of record. See §Provenance — this text was drafted from the primary source on 2026-09-15, not recovered from an earlier draft."
 ---
 
@@ -48,7 +49,8 @@ Consequently `endorsed_by:` is **blank** and `workflow_status: pending-endorseme
 Anne's endorsement of 2026-08-13 attaches to a document that is not in the repository
 and that the drafter has never seen; it cannot be asserted over this text. Re-endorsement
 is required. `cornerstone: true` is carried because Anne's 2026-09-15 record states the
-designation as settled, but the endorsement of *this text* is open.
+designation as settled, but the endorsement of *this text* is open. *(Closed 2026-09-23: Anne
+endorsed this text after checking it against the paper; see `endorsement_record`.)*
 
 ## Core conceptual contributions
 
@@ -365,9 +367,9 @@ for Egypt, **Mexico**, and the Philippines in 2025, much lower than the WPP proj
 - **Chile is the row that moves.** Table A3 documents Chile 1.54 (2018) → 1.17 (2023)
   with WPP projecting 1.12 for 2028. Read against the registry value in the September
   deck (0.99, 2025), the **Stress column's empirical floor of 1.03 no longer holds.** That
-  decision is escalated to Héctor in Anne's 2026-09-15 record (her recommendation: declare
-  the floor unidentified and carry ~0.9 as a working value; do not anchor to Puerto Rico
-  0.87, which is US-linked and emigration-driven).
+  decision was ruled: Héctor ruled option (b) on 2026-09-15: the LAC empirical floor is
+  declared unidentified; 0.9 carried as a working value; Chile 1.03 retired; Puerto Rico
+  0.87 ruled out. Instructions v1.5.
 - **The authors' own LAC forecast is ~1.2.** The conclusion states: East Asia stuck near
   1; *"Latin America faces the same gender problem plus weak growth prospects, so we
   expect something around 1.2"*; Northern Europe near 1.5; only very religious societies
@@ -415,9 +417,11 @@ temptation."*
   2026-09-15 ruling, on two grounds: the paradoxical-reversal implication bears on the
   Stress floor, and it is the closest rival mechanism to the collapse paper's
   union-composition channel.
-- **The LAC ~1.2 landing zone against DFD Central 1.50.** A published expectation from
-  the corpus's cornerstone author that sits below our central scenario is a
-  scenario-structure question for Anne, not a monitoring note.
+- **The LAC ~1.2 landing zone against DFD Central 1.50.** Addressed 2026-09-22: INEGI EIC
+  2025 published TGF 1.23 (2024), firing the Q3 §2 trigger; a fifth scenario row
+  `EIC-2025 direct` (1.23 stable) opened per Anne's pre-committed frame, Central held at
+  1.50 as upper bracket; ratified by Héctor 2026-09-23; instructions v1.6. See
+  `releases/2026-09-22_inegi-eic2025_tgf-trigger-fired.md`.
 - **Mexico's absence from Table A2.** The paper's strongest quantitative WPP indictment
   covers 37 countries but not ours, while B.4 asserts Mexico's 2025 births came in much
   lower than projected. INEGI definitive 2024 births (1,672,227) against the July-2024
@@ -446,8 +450,14 @@ temptation."*
   Penn listing (`https://www.sas.upenn.edu/~jesusfv/research.html`, the canonical
   location) refuses automated fetches. Authenticity checked against the authors'
   own public description of the paper, the printed date, the abstract, and internal
-  consistency. **Replace with a copy pulled directly from the Penn listing when
-  convenient**, and verify the hash recorded in the build instruction.
+  consistency. **Canonical pull queued for Debb (non-blocking):** pull the PDF from the
+  Penn listing (manual browser fetch if automated fetch is refused), record its SHA-256 in
+  the build instruction, and note whether the bytes match the mirror copy. Endorsement did
+  not wait on this; the text Anne verified on 2026-09-23 is the text of record.
+- **Citation note — US teen pregnancy.** The paper states the decline two ways: 71% over
+  2007–2024 (introduction) and 74% over 2004–2024 (§6.1, attributed to Hudson and Moscoso
+  Boedo 2026). This entry uses the §6.1 figure, which is the sourced one; cite that, not the
+  introduction's.
 
 ## Citation
 
@@ -461,14 +471,23 @@ University (Norrick). Local copy:
 ## Cross-references
 
 - → Build instruction: `_crossrefs/_build_instructions/2026-09-15_demographics_terra_incognita_reconstruction.md`
-- → Supersedes as standing reference: `_crossrefs/corpus/demographics/2026-06-20_fernandez-villaverde-demographic-future.md` (April deck)
-- → LAC-specific presentation of the same research programme: `_crossrefs/corpus/demographics/_pending/2026-09-15_fernandez-villaverde-slides-latam.md`
+- → Supersedes as standing reference: `_crossrefs/_build_instructions/2026-06-20_fernandez-villaverde-demographic-future.md` (April deck, retired 2026-09-23)
+- → LAC-specific presentation of the same research programme: `_crossrefs/corpus/demographics/observations/2026-09-15_fernandez-villaverde-slides-latam.md` (routed 2026-09-15)
 - → Anne's adjudication establishing this entry as cornerstone of record: `_crossrefs/corpus/demographics/_pending/2026-09-15_FV-LAC-deck_Anne-endorsement.md`
-- → Directly rebutted in §6.3: `_crossrefs/corpus/demographics/2026-07-11_baby-busts-growth-booms.md` (Acemoglu, Autor, Beirne and Scott 2026 — the paper argues their identifying variation does not cover today's fertility regimes)
+- → Directly rebutted in §6.3: `_crossrefs/corpus/demographics/2026-07-11_baby-busts-growth-booms.md` (Acemoglu, Autor, Beirne and Scott 2026 — the paper argues their identifying variation does not cover today's fertility regimes). Path verified 2026-09-23: the 07-11 entry exists (tracked, pending Cath + Elle). A second note on the same paper is in staging at `GrandPlan/DFD/aging_macro_nber_2609/2026-09-17_baby-busts-growth-booms.md` (pending-anne); the duplicate is flagged to Anne for reconciliation
 - → Scenario anchors (CHL row implicated; no row changed by this entry): `_crossrefs/corpus/demographics/scenario_anchors.md`
-- → Governing instructions (unchanged at v1.4): `_crossrefs/corpus/demographics/country/MEX/DFD_TFR_forecast_instructions.md`
-- → Trigger of record and occurred-vs-registered wedge: `_crossrefs/corpus/demographics/country/MEX/quarterly/2026-Q3_demographic_replicate.md` §2, §7
+- → Governing instructions (v1.6 (2026-09-23)): `_crossrefs/corpus/demographics/country/MEX/DFD_TFR_forecast_instructions.md`
+- → Trigger of record and occurred-vs-registered wedge: `_crossrefs/corpus/demographics/country/MEX/quarterly/2026-Q3_demographic_replicate.md` §2, §7 — trigger fired 2026-09-22; see releases entry
 - → Project corpus cross-refs (append on endorsement, per §Routing):
     - DFD: `GrandPlan/DFD/docs/corpus/_cross_references.md`
     - BDH: `GrandPlan/BDH/docs/corpus/_cross_references.md`
     - Aurora: `GrandPlan/Aurora/docs/corpus/_cross_references.md`
+- → Endorsement record: `_crossrefs/corpus/demographics/_pending/2026-09-23_terra-incognita-cornerstone_Anne-endorsement.md`
+
+*Execution note (Claude Code, 2026-09-23, under `_crossrefs/_build_instructions/2026-09-23_demographics_commit-endorsements_nota-v0.2.md`
+Step 2):* Anne's endorsement has been applied, along with conformance edits 1–7. There are two overrides, per
+the instruction: edit 2 now reads "ratified by Héctor 2026-09-23; instructions v1.6", and edit 3 now reads
+"v1.6 (2026-09-23)". The teen-pregnancy citation note has been added. On edit 6, the 07-11 Acemoglu entry does
+exist, so the path is correct as written. The 09-17 staging note is a duplicate and has been flagged to Anne.
+The April deck was retired to `_build_instructions/`, with a stub left at its old path. Tier
+`methodological_reference` is left for Debb to confirm.
