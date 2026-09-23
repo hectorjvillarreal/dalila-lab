@@ -108,9 +108,10 @@ None can be endorsed from digests. Please attach.
   and copied verbatim into every Draft-June `.tex`. No UN medium series matches it. Narrative
   only; `demographics_2050.jl` header already corrected 2026-09-23.
 - **§5 — delivery bundle built** (cornerstone, nine notes in Anne's priority order, synthesis,
-  TAR candidates; 157 KB, one file) for Héctor to paste into Anne's session. It is not
-  committed (it would duplicate corpus text); regenerate with the concatenation listed in the
-  session summary.
+  TAR candidates) → **delivered 2026-09-23 as a private claude.ai page**: https://claude.ai/artifact/2F4J4PurfTHkPqtn1BC93v
+  (twelve files verbatim at commit 8889f49, cover note with the ask per file; rendered and
+  verbatim views). Héctor shares the link into Anne's session. Not committed as text (it
+  would duplicate corpus files); the builder is `build_delivery.py` in the session scratchpad.
 - **Inbox:** graphs line moved to "Endorsed and moved" as *decisions endorsed / artifact
   working*; Benzell line updated; this record added under Pending for the two outstanding
   items (files to Anne; fifth-row ratification).
