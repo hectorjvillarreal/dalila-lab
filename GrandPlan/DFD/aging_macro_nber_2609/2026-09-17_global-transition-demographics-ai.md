@@ -83,10 +83,17 @@ of the US level to 4.6% by 2100 under 2024 demographics, and to 1.6% under TAI.
 
 **Both ageing and transformative AI widen the divide between the richest and poorest regions.**
 
-**3. Mexico's payroll burden is revised *downward* between vintages.** The paper states that
-regions whose populations were revised upward between WPP 2017 and WPP 2024 see burdens fall,
-naming a ~2.7pp decline in MENA and roughly a point in Canada/Australia/New Zealand **and
-Mexico**.
+**3. Mexico's payroll burden is revised *downward* between vintages — but not because its
+population was revised upward.** The paper states (p. 28) that regions whose populations were
+revised upward between WPP 2017 and WPP 2024 see burdens fall, naming a ~2.7pp decline in MENA
+and roughly a point in Canada/Australia/New Zealand **and Mexico**. Its own Table 5, however,
+shows Mexico revised **downward** in every column: 2017 base 129 → 123 M; 2050 165 → 149 M;
+2100 152 → 130 M. Mexico is the only region in the list whose population fell between vintages.
+The paper's attribution is therefore contradicted by its own data for Mexico; the likely
+mechanism is the one the paper flags on p. 4 — "with the exception of Mexico, regions that never
+adopt the frontier technology under the 2017 projection also don't adopt under the 2024
+projection" — i.e. Mexico switches to adopter under 2024 demographics, and adoption, not
+population, lightens the burden. Held as the drafter's reading; the paper does not state it.
 
 ## The Tension With Kopecky — Open Question for Anne and Cath
 
@@ -104,20 +111,28 @@ mechanism separating them is exactly the one DFD cares about.
 **Which is right about Mexico turns on whether capital mobility and frontier adoption dominate
 workforce size.** This is answerable, central to DFD, and proposed as a priority item.
 
-## Scenario-Discipline Question Requiring Anne's Authority
+## Scenario-Discipline Question — RESOLVED (Anne 2026-09-23; source check Debb 2026-09-23)
 
-The Mexico downward revision in payroll burden implies the UN revised Mexico's population
-**upward** from WPP 2017 to WPP 2024. This runs against the fast-transition discipline, which
-holds that UN and CELADE medium variants are optimistic for Mexico.
+The 2026-09-17 draft of this section inferred from the payroll-burden result that the UN had
+revised Mexico's population **upward** 2017→2024, and flagged a tension with the fast-transition
+discipline. That inference reproduced the paper's p. 28 sentence and is wrong on the evidence:
 
-Concrete question, answerable from data already held: **what TFR path does WPP 2024 medium
-assume for Mexico; how does it compare to observed values (~1.55) and to CELADE; and in which
-direction did the 2017→2024 revision move Mexico?**
-
-If the UN revised Mexico up while observed TFR sits near 1.55, then either the discipline needs
-a Mexico-specific defence, or this paper's Mexican results (and Kopecky's) are optimistic in the
-same way. **Not resolved here in either direction.** Flagged as `baseline-revision` in the
-frontmatter on that basis — the classification is provisional pending Anne's determination.
+- **Direction: downward.** Paper Table 5 (WPP 2017 vs WPP 2024 medium, millions): Mexico
+  129/165/152 → 123/149/130 for 2017/2050/2100. Independent check against the primary
+  sources: WPP 2024 medium gives Mexico 148.95 M in 2050 and 130.25 M in 2100 (UN via OWID);
+  WPP 2017 medium gave 164.28 M in 2050 and 151.49 M in 2100 (UN 2017 Revision, Vol. I,
+  Table A.9). The 2050 revision is −15.3 M (−9.3%), consistent with the global pattern in Fernández-Villaverde & Norrick
+  Table A4.
+- **WPP 2024 TFR path for Mexico** (paper Table 6): 2.10 (2017), **1.67 (2050)**, 1.67 (2100),
+  against WPP 2017's 2.12 / 1.66 / 1.70. The 2024 vintage keeps Mexico well above every
+  current reading (EIC 2025 survey 1.23; Q3 registry-implied ≈1.46; F-V extrapolation 1.51),
+  which is exactly why WPP is the optimistic column by rule. *Note for Anne: the BID2
+  hard-code is recorded as "WPP 2024 Mexico TFR 2050 = 1.70"; Table 6 reads 1.67 for 2050
+  and 1.70 is WPP 2017's 2100 value — worth a one-line check of the BID2 source.*
+- **Discipline holds; no Mexico-specific defence needed.** The revision moved the way the
+  discipline predicts. `scenario_implication: neutral` stands (Anne's reversion confirmed).
+- **Kopecky tension** unchanged: not a contradiction once technology adoption is held fixed in
+  one model and endogenous in the other (Anne agrees with the drafter, 2026-09-23 §3.1).
 
 ## Pension Closure — the Quantification the Methodology Item Needed
 

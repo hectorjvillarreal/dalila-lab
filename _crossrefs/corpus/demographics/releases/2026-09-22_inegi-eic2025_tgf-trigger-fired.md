@@ -1,5 +1,5 @@
 ---
-title: "INEGI Encuesta Intercensal 2025 (Reporte de Resultados 37/26) — TGF 1.2 (2024): Q3 §2 re-anchor trigger FIRES; fifth scenario row per pre-committed frame; population, aging and migration anchors"
+title: "INEGI Encuesta Intercensal 2025 (Reporte de Resultados 37/26) — TGF 1.23 (published rounding 1.2) (2024): Q3 §2 re-anchor trigger FIRES; fifth scenario row per pre-committed frame; population, aging and migration anchors"
 date: 2026-09-22
 added_by: Claude
 endorsed_by: Anne
@@ -8,7 +8,7 @@ indicators: [tfr, births, population, median_age, dependency_ratio, migration]
 geography: [mexico, subnational]
 scenario_implication: [fast-transition, baseline-revision]
 source_reliability: primary   # INEGI official results report, published 2026-09-22
-data_vintage: 2025   # reference date 15 Oct 2025; TGF refers to births in the 12 months before enumeration, labelled 2024
+data_vintage: 2025   # reference date 15 Oct 2025; TGF refers to births in the 12 months before enumeration, labelled 2024; open-data bundle acquired 2026-09-23
 promotion_status: ready
 corpus_path: _crossrefs/corpus/demographics/releases/
 trigger_status: FIRED   # Q3 §2 re-anchor trigger; frame branch "below 1.45"
@@ -21,7 +21,7 @@ INEGI's Encuesta Intercensal 2025 (enumerated 6 Oct–14 Nov 2025, ~7.33 M dwell
 reference date 15 Oct 2025) reports total population **130,911,314** (130,393,389 in
 private dwellings + 517,925 complementary), average annual growth **0.7%** for 2020–25
 against 1.0% for 2015–20, median age **32** (29 in 2020), about **10% aged 65+**, and a
-**Tasa Global de Fecundidad of 1.2 for 2024**, down from 1.9 in 2019 (CPV 2020, same
+**Tasa Global de Fecundidad of 1.23 (published rounding 1.2) for 2024**, down from 1.9 in 2019 (CPV 2020, same
 method). All 32 entities are below 2.0: Chiapas 1.8, Guerrero 1.6, Durango and Zacatecas
 1.5; Querétaro 1.1, Baja California 1.0, **Ciudad de México 0.8**. Average children ever
 born to women 12+ fell 2.1 → 1.9 (4.9 for no schooling; 1.2 for upper-secondary or
@@ -78,12 +78,15 @@ difference load-bearing for the Q3 TDR wedge:
 
 **Survival probabilities in the OLG demographic block.** Not directly affected.
 
-**Coupling/partnership formation as upstream fertility driver.** No union-status
-tabulations in this release; the microdata (tabulados, Nov 2026 per §VII) should carry
-conjugal status by age and sex and would give an ENOE-independent 2025 coupling point
-for Mexico. Flag for acquisition.
+**Coupling/partnership formation as upstream fertility driver.** Open-data tabulado
+(105, localidad 50k) reports partnered share 12+ = 50.22% (women 48.42%). Logged as an
+EIC 2025 coupling point; not comparable with the ENOE 53.9% (base age 12+, different
+instrument, no union-type split); the paper's series (women 20–39, married vs
+cohabiting, 5-year bands) waits for the microdata (§VII, Nov 2026). Flag for acquisition
+stays open. *(Anne, 2026-09-23, correcting her own 2026-09-22 line, which said no
+union-status tabulations existed — written from the 39-page report alone.)*
 
-## Open-data addendum (2026-09-23, added by Claude — not yet endorsed by Anne)
+## Open-data addendum (2026-09-23, added by Claude; endorsed by Anne 2026-09-23 with edits — see `_pending/2026-09-23_EIC-addendum_stress-glide_NBER-triage_Anne-endorsement.md` §1)
 
 INEGI published an open-data bundle alongside the report: *Principales resultados
 por localidad de 50 000 y más habitantes* (identifier NTMPPIEG_INEGI_UES-EIC-2025,
@@ -114,19 +117,25 @@ entity). Four points bear on the entry above.
    wedge, not the CONAPO side. This is a survey estimate on a private-dwelling base
    and a different reference date, so it does not close the wedge by itself —
    **route to Cath with the Q4 retabulation**, where it becomes the third base.
+   *Definitional check (Debb, 2026-09-23, per Anne ruling 1.2):* the tabulado's ratio is
+   (0–14 + 65–130) / (15–64) per the data dictionary (indicators 88–90), so the old-age
+   cut is 65+, matching both the CONAPO shares and the WPP/OWID convention in Q3 §4. The
+   base differs: EIC uses the private-dwelling population (130.39 M) while CONAPO and
+   WPP use total population (130.91 M, i.e. +517,925 in collective dwellings, 0.4%).
+   Moving 0.4% of the population between numerator and denominator shifts the ratio
+   by at most ≈0.2 points, an order of magnitude below the ≈3-point wedge. **Check
+   passes: the comparison is like-for-like within 0.2 points.** Released to Cath.
    Median age 31.89 [31.83, 31.94]; 65+ population 13.19 M, 10.1% of the
    private-dwelling total; aging index (60+/0–14) also available by entity.
 
-3. **Correction to §DFD calibration implications, item 4:** the release *does*
-   carry union-status tabulations, at national and entity level, for population
-   12+. National: married or in unión libre **50.22%** [50.15, 50.29] (women 48.42,
-   men 52.19); never-married 36.19% (women 33.53, men 39.11); separated, divorced
-   or widowed 13.49% (women 17.93, men 8.59). Ciudad de México partnered share
-   43.39% (women 40.80), the lowest entity; Chiapas 54.31%, the highest. This is an
-   EIC-anchored 2025 coupling point, independent of the ENOE-based 53.9% carried in
-   Q3 §3 — but the two are **not directly comparable** (12+ versus adults; survey
-   versus labour-force instrument). The 20–39 sex-disaggregated cut still needs
-   microdata; the acquisition flag for that stays open.
+3. **Union status (corrects the 2026-09-22 text of item 4 above; Anne ruling 1.3).**
+   National, population 12+: married or in unión libre **50.22%** [50.15, 50.29] (women
+   48.42, men 52.19); never-married 36.19%; separated, divorced or widowed 13.49% (women
+   17.93). Ciudad de México partnered 43.39% (women 40.80), the lowest entity; Chiapas
+   54.31%, the highest. Logged as an EIC 2025 coupling point. **Not comparable** with the
+   ENOE-based 53.9% in Q3 §3 (base age 12+, different instrument, no union-type split).
+   **Do not enter the 50.22% into the collapse paper's coupling series**; that series
+   (women 20–39, married vs cohabiting, 5-year bands) waits for the microdata.
 
 4. Children ever born, women 12+: 1.93 [1.93, 1.94], consistent with the report's
    1.9.
