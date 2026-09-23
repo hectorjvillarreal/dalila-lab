@@ -117,3 +117,11 @@ None can be endorsed from digests. Please attach.
 - **Instructions:** v1.5 unchanged operationally; a "Queued for v1.6" block added to the version
   trailer listing items (1)–(6) of this record.
 - **Not done, by design:** no v1.6 issued; graphs not re-run; nothing endorsed amended.
+- **§6 — fifth row RATIFIED by Héctor 2026-09-23** (same session, after this note was first
+  written). Executed as: instructions v1.5 → **v1.6** (five-row structure; `EIC-2025 direct`
+  1.23 stable from 2025, unreconciled survey direct estimate; reference values deliberately
+  left to Q4 execution on the Q4 base; the queued Q4 block renumbered to v1.7); ratification
+  addendum on the 2026-09-22 entry; graphs note and inbox updated. **Back to Anne:** the
+  specification is yours to confirm as carried (1.23 stable from 2025) or to vary at the Q4
+  reconciliation (origin question). Second outstanding item for Héctor (§6) closed;
+  the reform-window planning note stands pending Cath.

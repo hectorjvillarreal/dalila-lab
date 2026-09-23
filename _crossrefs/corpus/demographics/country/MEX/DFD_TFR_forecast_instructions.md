@@ -94,13 +94,14 @@ not empirically grounded for LAC in the current context.
 The fast-transition scenario — anchored to observed 2024 TFR values and the
 coupling rate decline — is the DFD central scenario.
 
-**Four-scenario structure for Mexico forecasts:**
+**Five-scenario structure for Mexico forecasts (v1.6):**
 
 | Scenario | TFR anchor — Mexico | Status | Rationale |
 |----------|---------------------|--------|-----------|
 | Optimistic | CELADE medium-variant (TFR ≈ 1.6→1.7) | operational | Fertility stabilization and partial rebound |
 | **Central (fast-transition)** | **TFR = 1.5, stable from ~2026** | **operational (baseline)** | Structural drivers unabated; coupling rate decline embedded |
 | Tempo-corrected | TFR = 1.6 stable (Central + 0.10 Fischer-Dattani lift) | reported, not operational | Defensive sensitivity against the period-TFR-vs-completed-cohort objection (see §1) |
+| **EIC-2025 direct** | **TFR = 1.23 stable from 2025** (INEGI EIC 2025 survey direct estimate for 2024; published rounding 1.2) | **ratified 2026-09-23 (Héctor); reference values pending Q4 execution** | Unreconciled survey direct estimate carried as the lower fertility bracket; a bracket, not a forecast (Anne's pre-committed "below 1.45" branch, 2026-08-03; trigger fired 2026-09-22) |
 | Stress | TFR → 0.9 by 2031, stable thereafter | operational | Overshooting accelerates; **the empirical floor is declared unidentified** — 0.9 is a working value, not an observed minimum (Héctor ruling 2026-09-15, Anne option (b)) |
 
 **Central scenario note (Mexico):** TFR = 1.5 stable is the DFD central scenario,
@@ -115,6 +116,25 @@ Central. Reported defensively against the most likely reviewer objection;
 not promoted to operational. Promotion conditions: Mexico-specific Fischer-
 Dattani correction > +0.15, or ENOE evidence of coupling-rate stabilization
 (see standing considerations §1).
+
+**EIC-2025 direct scenario note (new v1.6, ratified by Héctor 2026-09-23).** The
+INEGI Encuesta Intercensal 2025 published a TGF of 1.23 [1.22, 1.24] for 2024
+(published rounding 1.2), which fired the Q3 §2 re-anchor trigger on its
+"below 1.45" branch: the point estimate is **not chased** — Central stays 1.50 as
+the upper bracket — and a fifth row opens instead. Specification as carried in
+the 2026-09-23 working graphs and confirmed by Anne (record of 2026-09-24 §3.4):
+**TFR 1.23 stable from 2025**, labelled *unreconciled survey direct estimate*.
+The EIC instrument is a survey direct estimate, not a registry rate, and likely
+runs ~0.1–0.2 low; the reconciled 2024 value is expected in 1.3–1.4. The row's
+first task is therefore its own reconciliation (Anne + Debb, Q4). Two things are
+**not** decided by the ratification: (i) the *origin* question — whether this row
+and Stress should depart from a reconciled 2025 level rather than from the
+published 1.23 / Central's 1.50 — rides with the Q4 reconciliation (Anne,
+2026-09-23 §2); (ii) reference values (2050 population, TDR minimum, window) are
+**pending Q4 execution** on the Q4 base convention; the only existing numbers
+(125.2 M at 2050 with the full assumption set, 129.1 M on fixed mortality and
+zero migration, both on the EIC base) are working values from
+`mex_scenarios_eic2025.md` and are not citable. The Q3 replicate is not amended.
 
 **Stress scenario note (revised v1.5):** TFR → 0.9 by 2031 is a stress scenario,
 not a forecast.
@@ -190,13 +210,14 @@ for reform. Claude Code must identify and report:
 - An explicit flag: *"This is the reform window. Policy interventions that
   require fiscal space are most feasible during this interval."*
 
-**2026-Q2 reference values (Mexico, all four scenarios; refined v1.3):**
+**2026-Q2 reference values (Mexico, the four v1.5 scenarios; refined v1.3; the fifth row's values are pending Q4 execution):**
 
 | Scenario | Year of TDR min | TDR at min | Window (years within +2.0 of min) |
 |----------|----------------|------------|------------------------------------|
 | Optimistic (TFR=1.65) | ~2033 | 44.1 | 2028–2038 (≈10 yr) |
 | **Central (TFR=1.50)** | **~2038** | **42.0** | **2033–2038 (≈5 yr)** |
 | Tempo-corrected (TFR=1.60) | ~2033–2038 (tied) | 43.6 | 2028–2038 (≈10 yr) |
+| EIC-2025 direct (TFR=1.23) | pending Q4 | pending Q4 | pending Q4 (working graphs: min ≈41.0 at ~2035 on the EIC base, not citable) |
 | Stress (TFR→0.9, working floor) | ~2038 | 35.5 | 2038–2043 (≈5 yr) |
 
 Source: `_crossrefs/corpus/demographics/country/MEX/quarterly/2026-Q2_demographic_replicate.md`.
@@ -331,7 +352,7 @@ The 2026-Q2 replicate should additionally include:
 
 ---
 
-*These instructions are versioned. This is v1.5, September 2026.*
+*These instructions are versioned. This is v1.6, September 2026.*
 *v1.0 → v1.1 changes: (1) central scenario pinned to TFR=1.5 stable for Mexico
 with confirmed 2026-Q2 population implied values; (2) stress scenario floor
 anchored to Chile 1.03 (2024) as current LAC observed minimum; (3) fiscal window
@@ -373,9 +394,22 @@ unchanged at 2038–2043, interpolated window ~2035–2045. (4) Consequently the
 must not be quoted; those entries are endorsed artifacts and are deliberately
 left unamended (PROTO-RAG-001 standing principle 5). Central, Optimistic and
 Tempo-corrected columns are untouched throughout.*
-*Queued for v1.6 (to be executed with the 2026-Q4 replicate; Anne's record of
+*v1.5 → v1.6 changes (2026-09-23, Héctor's ratification of the fifth scenario row
+opened by the EIC 2025 trigger): (1) scenario structure is now five rows —
+`EIC-2025 direct`, TFR 1.23 stable from 2025, unreconciled survey direct
+estimate, lower fertility bracket, positioned between Central and Stress;
+(2) Central stays 1.50 as the upper bracket, unchanged; (3) the row's reference
+values (population, TDR minimum, window) are deliberately NOT pinned — they are
+executed in the Q4 replicate on the Q4 base convention, so that the row is not
+first tabulated on a base the same replicate retires; (4) the origin question
+(departure from a reconciled 2025 level) stays with the Q4 reconciliation;
+(5) the 2026-09-22 entry's action item "bumps to v1.5 on execution" was written
+before v1.5 was taken by the stress-floor ruling; this v1.6 is that bump.
+Nothing endorsed is amended.*
+*Queued for v1.7 (to be executed with the 2026-Q4 replicate; Anne's record of
 2026-09-24, `_pending/2026-09-24_EIC-rebased-scenarios_Anne-record.md`; nothing
-below is operational until v1.6 is issued): (1) base convention — the EIC-2025
+below is operational until v1.7 is issued; renumbered from v1.6 when the fifth-row
+ratification took v1.6): (1) base convention — the EIC-2025
 age structure replaces the WPP-2023 base as primary, WPP-2023 printed as the
 documented alternative, subject to three adjustments (add the 517,925
 complementary population with CPV 2020 collective-dwelling age-sex shares; shift
@@ -391,8 +425,8 @@ of emigrants applied (70.4 % male; 22.5 % at 20–24, 19.5 % at 25–29, 15.0 % 
 (4) mortality — 1 %/yr improvement is sensitivity only until sourced (CONAPO
 conciliación assumptions → Lee-Carter on INEGI deaths 2000–2024 ex 2020–21 →
 keep as sensitivity); Cath rules on IM-6 fixed-survival alignment before it
-becomes Central; (5) fifth row `EIC-2025 direct` 1.23 stable — awaiting Héctor's
-ratification; origin question (Stress and fifth row departing from a reconciled
+becomes Central; (5) fifth row `EIC-2025 direct` 1.23 stable — RATIFIED 2026-09-23 (v1.6); reference
+values to be pinned at Q4 execution; origin question (Stress and fifth row departing from a reconciled
 2025 level rather than 1.5) rides with the Q4 reconciliation; (6) §4 fiscal
 window — the Q3 window is known late (direction endorsed); magnitude and the
 IM-6 anchor position are Cath's on the Q4 retabulation. Provisional, not

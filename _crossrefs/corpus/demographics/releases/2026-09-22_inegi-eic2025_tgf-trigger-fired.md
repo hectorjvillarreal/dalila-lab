@@ -171,6 +171,20 @@ EIC microdata once released (parity distribution by age of women 15–49).
 5. **Paper chat** flag (above).
 6. **Stress-floor decision** (2026-09-15) — upgraded in urgency; decide with item 2.
 
+## Addendum — fifth row RATIFIED (Héctor, 2026-09-23)
+
+Action item 2 above is closed at its first step: **Héctor ratified the fifth
+scenario row on 2026-09-23.** Specification as carried in the working graphs
+(`country/MEX/mex_scenarios_eic2025.md`) and confirmed by Anne (record of
+2026-09-24 §3.4): `EIC-2025 direct`, **TFR 1.23 stable from 2025**, labelled
+*unreconciled survey direct estimate*, lower fertility bracket between Central
+(1.50, upper bracket, unchanged) and Stress (→ 0.9 by 2031).
+`DFD_TFR_forecast_instructions.md` bumps to **v1.6** (the "v1.5 on execution"
+wording in item 2 predates the stress-floor ruling that took v1.5). Reference
+values for the row are executed in the Q4 replicate, not pinned here; the origin
+question rides with the Q4 reconciliation (item 1). This entry's endorsed text is
+otherwise unamended.
+
 ## Source
 
 INEGI, *Encuesta Intercensal (EIC) 2025 — Reporte de Resultados 37/26*, 22 September

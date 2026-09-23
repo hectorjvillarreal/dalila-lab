@@ -41,7 +41,7 @@ Outputs, all in this folder:
 | Optimistic TFR | UN WPP 2024 medium path itself (1.87 → 1.79 (2030) → 1.70 (2050)) | 1.65 stable approximation | removes an approximation |
 | Tempo-corrected | 1.60 stable | same | v1.5 |
 | Central | 1.50 stable from 2025 | 1.50 stable | v1.5 |
-| **EIC-2025 direct** | **1.23 stable from 2025** | not present | proposed fifth row (entry of 2026-09-22); **pending Héctor's ratification** |
+| **EIC-2025 direct** | **1.23 stable from 2025** | not present in v1.5; **v1.6 row** | fifth row (entry of 2026-09-22); **ratified by Héctor 2026-09-23**; reference values pending Q4 execution |
 | Stress | 1.50 (2025) → −0.10/yr → 0.90 from 2031 | same | v1.5; origin question open (see below) |
 | Mortality | five-year death probabilities fall 1.0 %/yr from CD-West e0≈75 (crude e0 73.5 → 77.0) | fixed | conventional improvement rate; direction of WPP 75.1 → 79.8 |
 | Net migration | **−230 k/yr**, ages 15–44 (profile peaked 20–29), constant to 2050 | zero | EIC 2020–25: 1.3 M emigrants, 150.8 k returns; entry records it as a lower bound |
@@ -172,8 +172,8 @@ product, not endorsed as a citable artifact; nothing endorsed is amended).
    30–34), not the proportional 15–44 removal used here. Lower bound stands.
    Marriage-market sex-ratio flag logged as
    `watch_items/2026-09-24_emigration-sex-ratio-marriage-market.md`.
-5. **Fifth row `EIC-2025 direct` 1.23** — correctly carried; awaiting Héctor's
-   ratification. Origin question rides with the Q4 reconciliation.
+5. **Fifth row `EIC-2025 direct` 1.23** — correctly carried; **ratified by Héctor
+   2026-09-23** (instructions v1.6). Origin question rides with the Q4 reconciliation.
 
 **Labelling rule for the headline.** Central 131.5 M / EIC-direct 125.2 M /
 Stress 119.1 M at 2050 are provisional and not citable. The Central-to-EIC-base-
