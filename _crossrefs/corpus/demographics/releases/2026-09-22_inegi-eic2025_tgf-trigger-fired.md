@@ -83,6 +83,57 @@ tabulations in this release; the microdata (tabulados, Nov 2026 per §VII) shoul
 conjugal status by age and sex and would give an ENOE-independent 2025 coupling point
 for Mexico. Flag for acquisition.
 
+## Open-data addendum (2026-09-23, added by Claude — not yet endorsed by Anne)
+
+INEGI published an open-data bundle alongside the report: *Principales resultados
+por localidad de 50 000 y más habitantes* (identifier NTMPPIEG_INEGI_UES-EIC-2025,
+modified 2026-09-22; 349 indicators at national, entity, municipal and 50k+ locality
+level, each with five estimator rows: value, standard error, lower and upper
+confidence limit, coefficient of variation). It is a tabulado with precision
+measures, **not microdata**. Local copy:
+`sources/INEGI_2026-09-22_EIC2025_datos-abiertos_105_localidad50k.zip`
+(sha256 e6ad7e8f…defa182; the CSV inside is Latin-1 encoded, 27 MB). National and
+entity rows with the demographic indicators are extracted to
+`country/MEX/eic2025_entity_indicators.csv` (165 rows, five estimator rows per
+entity). Four points bear on the entry above.
+
+1. **The 1.2 is 1.23, and sampling error is not the caveat.** National TGF 1.23,
+   standard error 0.01, confidence interval [1.22, 1.24], CV 0.47%. The report's
+   1.2 is rounding. Whatever gap exists between 1.23 and a reconciled registry
+   value is instrument bias (omission, reference-period error), not sampling noise
+   — the §Instrument-caveat argument stands and the reconciliation task is
+   unchanged. Entity CIs are also tight where it matters: Ciudad de México 0.79
+   [0.76, 0.82]; Chiapas 1.75 [1.72, 1.78]; Guerrero 1.59; Durango 1.51 [1.42, 1.59];
+   Zacatecas 1.49; Baja California 1.04 [0.95, 1.13]; Querétaro 1.06; México 1.07.
+   No entity's upper confidence limit reaches 1.8.
+
+2. **Dependency ratio observed directly, Oct 2025: total 46.40 [46.28, 46.52];
+   child 31.58; old-age 14.82** (0–14 and 65+ over 15–64, private dwellings). The Q3
+   replicate §4 wedge set the CONAPO-share-implied TDR at ≈49.3 against the Central
+   path's ≈46–47 for 2026. The EIC observation falls on the Central/WPP side of that
+   wedge, not the CONAPO side. This is a survey estimate on a private-dwelling base
+   and a different reference date, so it does not close the wedge by itself —
+   **route to Cath with the Q4 retabulation**, where it becomes the third base.
+   Median age 31.89 [31.83, 31.94]; 65+ population 13.19 M, 10.1% of the
+   private-dwelling total; aging index (60+/0–14) also available by entity.
+
+3. **Correction to §DFD calibration implications, item 4:** the release *does*
+   carry union-status tabulations, at national and entity level, for population
+   12+. National: married or in unión libre **50.22%** [50.15, 50.29] (women 48.42,
+   men 52.19); never-married 36.19% (women 33.53, men 39.11); separated, divorced
+   or widowed 13.49% (women 17.93, men 8.59). Ciudad de México partnered share
+   43.39% (women 40.80), the lowest entity; Chiapas 54.31%, the highest. This is an
+   EIC-anchored 2025 coupling point, independent of the ENOE-based 53.9% carried in
+   Q3 §3 — but the two are **not directly comparable** (12+ versus adults; survey
+   versus labour-force instrument). The 20–39 sex-disaggregated cut still needs
+   microdata; the acquisition flag for that stays open.
+
+4. Children ever born, women 12+: 1.93 [1.93, 1.94], consistent with the report's
+   1.9.
+
+Municipal and 50k+-locality rows (all 349 indicators, with CIs) are in the bundle for
+any subnational work; not extracted here.
+
 ## Implications for the fertility-collapse paper (routed)
 
 1.9 → 1.2 in five years on a consistent instrument is LAC-collapse speed. Mexico was the
@@ -116,6 +167,7 @@ EIC microdata once released (parity distribution by age of women 15–49).
 INEGI, *Encuesta Intercensal (EIC) 2025 — Reporte de Resultados 37/26*, 22 September
 2026, 39 pp. URL: https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2026/ei/EIC2025-def_RR.pdf
 (acquired 2026-09-23, sha256 e450d060…cdde66). Local copy:
-`sources/INEGI_2026-09-22_EIC2025_RR-37-26.pdf`. Fertility: p. 9–10 (Gráfica 5, note: rates
+`sources/INEGI_2026-09-22_EIC2025_RR-37-26.pdf`. Open-data bundle: https://www.inegi.org.mx/contenidos/programas/eic/2025/datosabiertos/conjunto_de_datos_eic2025_105_csv.zip
+(acquired 2026-09-23) → `sources/INEGI_2026-09-22_EIC2025_datos-abiertos_105_localidad50k.zip`; entity extract `country/MEX/eic2025_entity_indicators.csv`. Fertility: p. 9–10 (Gráfica 5, note: rates
 computed from births in the year before enumeration, presented for 2019 and 2024).
 Population: p. 5–6. Age structure: p. 7–9. Migration: p. 11–13.
