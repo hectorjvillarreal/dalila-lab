@@ -114,6 +114,8 @@ EIC microdata once released (parity distribution by age of women 15–49).
 ## Source
 
 INEGI, *Encuesta Intercensal (EIC) 2025 — Reporte de Resultados 37/26*, 22 September
-2026, 39 pp. Local copy: EIC2025-def_RR.pdf. Fertility: p. 9–10 (Gráfica 5, note: rates
+2026, 39 pp. URL: https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2026/ei/EIC2025-def_RR.pdf
+(acquired 2026-09-23, sha256 e450d060…cdde66). Local copy:
+`sources/INEGI_2026-09-22_EIC2025_RR-37-26.pdf`. Fertility: p. 9–10 (Gráfica 5, note: rates
 computed from births in the year before enumeration, presented for 2019 and 2024).
 Population: p. 5–6. Age structure: p. 7–9. Migration: p. 11–13.
