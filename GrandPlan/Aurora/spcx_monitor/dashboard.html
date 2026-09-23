@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SPCX Regime Monitor — 2026-09-19</title>
+<title>SPCX Regime Monitor — 2026-09-23</title>
 <style>
   :root { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
   body { margin:0; background:#0f1115; color:#e6e6e6; }
@@ -59,7 +59,7 @@
   <div class="chips"><span class="chip" style="background:#1b7f3b">Runs: GREEN</span><span class="chip" style="background:#1b7f3b">Fire Sales / Balance-Sheet Channel: GREEN</span><span class="chip" style="background:#c47f00">Interconnections: AMBER</span></div>
 </div>
 
-<p class="anote">MANUAL PASS 2026-09-19 (Saturday evening CST; drafted by Claude Code; NO STATE CHANGE — flag WATCH, Runs GREEN / Fire Sales GREEN / Interconnections AMBER all held). Re-sourcing after the 09-12 -&gt; 09-19 heartbeat run (09-13, 09-15..09-19 carries; 09-14 is a SERIES GAP — timer did not fire; no backfill). Sources: Nasdaq historical API (spot, from scratch), EDGAR submissions feed CIK 1181412 + daily form indices 09-14..09-18 (all five published; Form 4 counts 1250/1074/1277/1457/900) + full-text search, FRED (VIXCLS, DFII10) + Cboe same-day VIX, press via search. THREE MATERIAL FACTS, none of which completes a trigger: (1) VALOR&#x27;S 10b5-1 IN-KIND DISTRIBUTION PLAN HAS COMMENCED — Form 4 (Gracias, filed 09-15, acc. 0001213900-26-100186): 42,790,223 Class A distributed pro rata to LPs/GPs WITHOUT CONSIDERATION on 09-11 (code J, Rule 16a-9), the day after the 09-10 affiliate tranche released; Valor entities now hold 460,624,307 (from 503,414,530; -8.5%); 18.9% of the 225.86M plan cap used, 183.07M remain (plan expires 2027-09-30). (2) NASDAQ-100 QUARTERLY REBALANCE: SPCX weight ~1.28% -&gt; ~2.82% effective 09-21 (float-cap rule: float &lt;33.3% of shares -&gt; weight on 3x free float; the 08-06/08-20 releases expanded the float), forced passive buying est. ~$15.5B (Morgan Stanley) to $22B executed at the 09-18 closing cross — the 335.7M-share 09-18 print (2.97x average, record since IPO) is INDEX-MECHANICAL and is EXCLUDED from the &#x27;turnover rising into a tranche&#x27; leg for the 09-24 tranche. (3) Starship F14 slipped twice: 09-18 -&gt; 09-22 (stock +5.15% on 09-16 when the date firmed) -&gt; 09-28 07:15 CT (stock -1.36% on 09-18; first orbital attempt, 26 Starlink V3, no ship catch). JPMorgan retail flow: ~$570M net retail selling over three weeks, ~$250M in the week to 09-18 (largest weekly retail outflow the bank has recorded for the name) — retail distribution into passive/index demand; a sentiment datum, not a cluster leg while closes hold above the offer. ANALYST QUESTIONS FOR HÉCTOR (not answered here): (a) whether Valor&#x27;s commenced LP distributions belong in the Runs re-arm cluster as a supply observable (dispersed non-affiliate recipients can sell at discretion; the Form 4 does not say whether recipients are contractually restricted) or stay an observable-only item; (b) whether each lockup tranche should be read net of the lagged passive offset (float-cap weight lifts at the next quarterly rebalance, ~12-21 for the 09-24/10-09/10-24 tranches). Next tranche 09-24 (Thursday, 328.4M): the next manual pass should classify it on 09-24/25 using the 09-21..09-23 sessions for the pre-tranche turnover leg. Anthropic S-1: no flip through the 09-18 index; the 09-30 bound (ruling 09-12) stands with 8 trading days left.</p>
+
 <div class="grid">
     <div class="panel">
       <div class="panhead" style="border-color:#1b7f3b">
@@ -115,8 +115,8 @@
       <p class="ruled">Conditions belief-driven assets but does not by itself escalate any SPCX mechanism. Supplied as a backdrop gauge per brief §2.5 / §5.</p>
     </div></div>
 <footer>
-  Reading date 2026-09-19 · carried from 2026-09-18.
-  Source of truth: <code>state/2026-09-19.json</code>. Provenance: <code>run_log.md</code>.
+  Reading date 2026-09-23 · carried from 2026-09-19.
+  Source of truth: <code>state/2026-09-23.json</code>. Provenance: <code>run_log.md</code>.
   <span class="nogo">Outputs are regime states and escalation triggers — by
   construction this artifact contains no directional or price output.</span>
 </footer>
