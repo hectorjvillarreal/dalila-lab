@@ -105,8 +105,15 @@ Stress recomputation values (2050 pop 126.85 M; TDR_min 35.5 at ~2038; 2050 TDR 
   WPP 2024 148.95 M at 2050 via OWID; WPP 2017 164.28 M, Vol. I Table A.9). So the paper's sentence is
   contradicted by its own table for Mexico; the drafter's reading is that the adoption switch
   (p. 4: Mexico is the exception that adopts under 2024 demographics) explains the lighter
-  burden. Note body corrected accordingly; `scenario_implication: neutral` stands. Table 6
-  gives WPP 2024 Mexico TFR 1.67 at 2050 (not 1.70 — see the BID2 hard-code flag in the note).
+  burden. Note body corrected accordingly; `scenario_implication: neutral` stands. **Retracted
+  flag:** I first read the paper's Table 6 (1.67 at 2050) as contradicting BID2's 1.70; the
+  UN series (WPP 2024 medium via OWID) gives 1.701 at 2050, so BID2 is right and Table 6 is
+  the outlier. Anne's 1.70 stands. Separate finding from the same check: BID2's June
+  appendix also states the WPP 2024 population "peaks ~2042 at ~152 M, 150.6 M by 2050";
+  the UN series gives 148.95 M at 2050 and a peak of ≈149.9 M around 2058. Those two
+  numbers are not WPP 2024 medium; provenance unknown. Narrative only in June (not a model
+  input; n_p is set from the TFR), and the August/September draft no longer carries the
+  passage — but `demographics_2050.jl` header still does.
 - **§3.2–3.9:** standing rulings recorded in the inbox for application on file review; notes
   untouched (branch-2B hold respected).
 - **Files Anne asked for** (cornerstone, nine notes, TAR candidates) are all on disk; the gap is

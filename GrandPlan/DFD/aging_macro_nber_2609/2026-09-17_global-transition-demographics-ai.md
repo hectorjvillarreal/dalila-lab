@@ -126,9 +126,11 @@ discipline. That inference reproduced the paper's p. 28 sentence and is wrong on
 - **WPP 2024 TFR path for Mexico** (paper Table 6): 2.10 (2017), **1.67 (2050)**, 1.67 (2100),
   against WPP 2017's 2.12 / 1.66 / 1.70. The 2024 vintage keeps Mexico well above every
   current reading (EIC 2025 survey 1.23; Q3 registry-implied ≈1.46; F-V extrapolation 1.51),
-  which is exactly why WPP is the optimistic column by rule. *Note for Anne: the BID2
-  hard-code is recorded as "WPP 2024 Mexico TFR 2050 = 1.70"; Table 6 reads 1.67 for 2050
-  and 1.70 is WPP 2017's 2100 value — worth a one-line check of the BID2 source.*
+  which is exactly why WPP is the optimistic column by rule. *Source check (Debb,
+  2026-09-23): WPP 2024 medium itself gives Mexico TFR **1.701 at 2050** (1.793 at 2030,
+  1.669 at 2100; UN via OWID), so the BID2 hard-code of 1.70 is correct and it is the
+  paper's Table 6 that departs from the UN series at 2050 (1.67 — possibly a period or
+  smoothing convention; the 2100 value matches). Cite the UN figure, not Table 6.*
 - **Discipline holds; no Mexico-specific defence needed.** The revision moved the way the
   discipline predicts. `scenario_implication: neutral` stands (Anne's reversion confirmed).
 - **Kopecky tension** unchanged: not a contradiction once technology adoption is held fixed in
