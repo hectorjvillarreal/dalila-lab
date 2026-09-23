@@ -133,6 +133,17 @@ discipline. That inference reproduced the paper's p. 28 sentence and is wrong on
   smoothing convention; the 2100 value matches). Cite the UN figure, not Table 6.*
 - **Discipline holds; no Mexico-specific defence needed.** The revision moved the way the
   discipline predicts. `scenario_implication: neutral` stands (Anne's reversion confirmed).
+- **Standing rule (Anne, 2026-09-24, correcting her 2026-09-23 §3.1 mechanism argument):**
+  burden direction is not a valid proxy for population-revision direction — it depends on
+  age composition and benefit rules, not on level. Read the vintage tables. The downward
+  conclusion above holds because Table 5 was checked directly, not by the burden argument.
+- **BID2 June-appendix provenance (Debb, 2026-09-23):** the "peak ~2042 at 152 M, 150.6 M by
+  2050" claim originates in the BID2 build instruction
+  `Missions/Funded/BID2/draft_june/CC_instrucciones_Draft-June_v2.md` (commit a5b3e24), which
+  asserts it as "UN WPP 2024 revision, online edition, accessed 2026-05-24" without a table
+  reference; every Draft-June `.tex` copies that paragraph verbatim. No UN medium-variant
+  series matches it (WPP 2024: 148.95 M at 2050, peak ≈149.9 M ~2058). Narrative only;
+  `demographics_2050.jl` header already corrected 2026-09-23.
 - **Kopecky tension** unchanged: not a contradiction once technology adoption is held fixed in
   one model and endogenous in the other (Anne agrees with the drafter, 2026-09-23 §3.1).
 

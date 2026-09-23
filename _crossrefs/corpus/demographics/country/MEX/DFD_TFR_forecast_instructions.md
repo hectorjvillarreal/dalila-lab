@@ -373,4 +373,29 @@ unchanged at 2038–2043, interpolated window ~2035–2045. (4) Consequently the
 must not be quoted; those entries are endorsed artifacts and are deliberately
 left unamended (PROTO-RAG-001 standing principle 5). Central, Optimistic and
 Tempo-corrected columns are untouched throughout.*
+*Queued for v1.6 (to be executed with the 2026-Q4 replicate; Anne's record of
+2026-09-24, `_pending/2026-09-24_EIC-rebased-scenarios_Anne-record.md`; nothing
+below is operational until v1.6 is issued): (1) base convention — the EIC-2025
+age structure replaces the WPP-2023 base as primary, WPP-2023 printed as the
+documented alternative, subject to three adjustments (add the 517,925
+complementary population with CPV 2020 collective-dwelling age-sex shares; shift
+the 15 Oct 2025 reference to mid-year; reconcile the ~2.6 M 65+ gap against
+CONAPO's conciliación before adoption — if the gap survives it goes to Cath as a
+survival finding); (2) reporting rule — base effect and path effect on separate
+lines, the 2050 headline decomposed accordingly; the base moved on the EIC age
+structure (a count), not on the survey TGF (a rate); (3) migration — Central
+−230 k/yr net through 2030, linear taper to the 2015–20 net pace by 2040,
+constant after; sensitivity without taper printed alongside; EIC age-sex profile
+of emigrants applied (70.4 % male; 22.5 % at 20–24, 19.5 % at 25–29, 15.0 % at
+15–19, 14.1 % at 30–34), not proportional removal; EIC flow is a lower bound;
+(4) mortality — 1 %/yr improvement is sensitivity only until sourced (CONAPO
+conciliación assumptions → Lee-Carter on INEGI deaths 2000–2024 ex 2020–21 →
+keep as sensitivity); Cath rules on IM-6 fixed-survival alignment before it
+becomes Central; (5) fifth row `EIC-2025 direct` 1.23 stable — awaiting Héctor's
+ratification; origin question (Stress and fifth row departing from a reconciled
+2025 level rather than 1.5) rides with the Q4 reconciliation; (6) §4 fiscal
+window — the Q3 window is known late (direction endorsed); magnitude and the
+IM-6 anchor position are Cath's on the Q4 retabulation. Provisional, not
+citable, Q4 headline on the EIC base: Central 131.5 M / EIC-direct 125.2 M /
+Stress 119.1 M at 2050.*
 *Next review: 2026-Q4 replicate, January 2027.*

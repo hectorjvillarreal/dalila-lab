@@ -124,3 +124,64 @@ and I will rerun.
 - → Superseded Stress columns (endorsed; left unamended): `quarterly/2026-Q2_demographic_replicate.md` §5, `quarterly/2026-Q3_demographic_replicate.md` §5
 - → Recomputation scripts: `country/MEX/mex_population_tfr_decline.py`, `country/MEX/mex_dependency_ratio_decline.py`
 - → Related watch item (whether the floor exists at all): `_crossrefs/corpus/demographics/watch_items/2026-09-15_goldin-gender-mismatch-stress-floor.md`
+
+---
+
+## 8. Additions from Anne's record of 2026-09-24 (appended by Claude Code, 2026-09-23)
+
+Anne's record on the EIC-rebased scenario graphs
+(`_pending/2026-09-24_EIC-rebased-scenarios_Anne-record.md`) routes two items
+to you. Both are **not citable** until your Q4 retabulation; the graphs behind
+them (`country/MEX/mex_scenarios_eic2025.md`) are working products, not
+endorsed artifacts.
+
+### 8.1 The TDR minimum comes earlier than Q3 stated (record §2)
+
+On the EIC-2025 age structure (3.4 M fewer 0–14 and 2.6 M more 65+ than the
+WPP-2023 base implied), the Central total-dependency minimum moves forward to
+2030–2035 (interpolated window ≈2027–2037) and becomes shallower. Net emigration
+of working-age adults pushes the same way. **Anne endorses the direction as
+robust**: the Q3 statement (Central TDR_min 42.0 at ~2038, window 2033–2038) is
+known to be *late*, so the reform window is closer than Q3 stated.
+
+What she leaves to you:
+- the **magnitude** (it depends on the 65+ reconciliation against CONAPO's
+  conciliación and on the migration assumption below) and
+- whether the **IM-6 anchor 2033–2038 now sits at the end of the window** rather
+  than inside it — your call on the Q4 retabulation.
+
+Note the interaction with the Q3 §4 wedge: observed TDR 46.40 (WPP side) and the
+earlier minimum are the same fact seen from level and from timing.
+
+Working values (Central, EIC base, full assumption set): TDR_min 43.8 at 2035,
+grid window 2030–2035, TDR 2050 56.7, OADR 2050 32.8, population 2050 131.5 M.
+Sensitivity on the old skeleton (fixed mortality, zero migration) on the same
+base: TDR_min 42.7 at 2035, population 2050 135.6 M. The 135.6 → 131.5
+difference is the mortality-plus-migration term and must be labelled as such.
+
+### 8.2 Mortality improvement vs IM-6 fixed survival (record §3.2)
+
+The graphs carry a uniform 1 %/yr decline in age-specific mortality. Anne rules
+it **sensitivity only, not Central until sourced** (source order: CONAPO
+conciliación mortality assumptions; a Lee-Carter drift on INEGI deaths
+2000–2024 excluding 2020–21; failing both, keep 1 %/yr as sensitivity).
+
+**Interface issue she assigns to you:** IM-6 carries fixed survival
+probabilities. An improving-mortality demographic skeleton feeding a
+fixed-survival OLG is inconsistent, and the pension cost effect runs directly
+through survival. You rule on alignment before improving mortality becomes
+Central.
+
+### 8.3 Migration assumption entering the Q4 skeleton (record §3.3, for information)
+
+Central: −230 k/yr net held through 2030, tapering linearly to the 2015–20 net
+pace by 2040, constant after; sensitivity: no taper. EIC age-sex profile applied
+(70.4 % male; 22.5 % at 20–24, 19.5 % at 25–29, 15.0 % at 15–19, 14.1 % at
+30–34). The EIC flow is a lower bound. The taper target from CPV 2020 is in
+progress (gross 802,807 emigrants 2015–20 ≈ 161 k/yr; national return share
+pending, so net ≈ 107–161 k/yr).
+
+## Cross-references (additions)
+
+- → Anne's record: `_pending/2026-09-24_EIC-rebased-scenarios_Anne-record.md` §2, §3.2, §3.3
+- → Working graphs: `country/MEX/mex_scenarios_eic2025.md` (+ `.py`, results CSV)

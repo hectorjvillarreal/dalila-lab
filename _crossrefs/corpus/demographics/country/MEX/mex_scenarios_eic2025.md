@@ -7,10 +7,10 @@ endorsed_by:
 projects: [DFD, BDH]
 indicators: [tfr, population, dependency_ratio, migration, mortality]
 geography: [MEX]
-workflow_status: pending-anne
+workflow_status: working — decisions endorsed by Anne 2026-09-24; artifact not endorsed (not a replicate)
 companion_of: mex_scenarios_eic2025.py
 governing_instructions: DFD_TFR_forecast_instructions.md v1.5
-related: "../../releases/2026-09-22_inegi-eic2025_tgf-trigger-fired.md; quarterly/2026-Q3_demographic_replicate.md"
+related: "../../releases/2026-09-22_inegi-eic2025_tgf-trigger-fired.md; quarterly/2026-Q3_demographic_replicate.md; ../../_pending/2026-09-24_EIC-rebased-scenarios_Anne-record.md"
 ---
 
 ## What this is
@@ -139,7 +139,55 @@ scenario logic.
 - Nothing here is endorsed. Reference values for citation remain those of the Q3
   replicate and the v1.5 instructions until Anne and Cath rule.
 
-## For Anne
+## Anne's rulings — record of 2026-09-24
+
+Adjudicated in `_pending/2026-09-24_EIC-rebased-scenarios_Anne-record.md`. The
+**decisions** below carry into the Q4 replicate; **these graphs do not** (working
+product, not endorsed as a citable artifact; nothing endorsed is amended).
+
+1. **EIC base — finding endorsed, adoption conditional.** Central 2050 = 135.6 M
+   on the EIC base with the unchanged fertility path (vs 140.4 M) is a pure base
+   effect. Binding reporting rule for Q4: **base effect and path effect on separate
+   lines**, the 2050 headline decomposed accordingly; the base moved on the EIC
+   *age structure* (a count), not on the survey TGF (a rate). The child gap
+   (~3.4 M) is well explained (registry births 2.09 M in 2019 → 1.672 M in 2024;
+   WPP overstated Mexican births before 2019); the **65+ gap (~2.6 M) is not** —
+   it must be reconciled against CONAPO's conciliación 65+ count before the base
+   is adopted, and if it survives it goes to Cath as a survival finding. The EIC
+   structure replaces the WPP-2023 base in the Q4 skeleton as primary (WPP-2023
+   printed as the documented alternative) subject to three adjustments: add the
+   517,925 complementary population with CPV 2020 collective-dwelling age-sex
+   shares; shift the 15 Oct 2025 reference to mid-year; the 65+ reconciliation.
+2. **Earlier TDR minimum — direction endorsed; magnitude and IM-6 anchor to
+   Cath.** The Q3 window (TDR_min 42.0 at ~2038, 2033–2038) is known to be late;
+   the reform window is closer than Q3 stated. Not citable until Cath's Q4
+   retabulation. Routed via `_pending/cath_stress_floor_revision_brief.md` §8.
+3. **Mortality 1 %/yr — sensitivity only, not Central until sourced** (CONAPO
+   conciliación assumptions → Lee-Carter on INEGI deaths 2000–2024 ex 2020–21 →
+   keep as sensitivity). IM-6 carries fixed survival; Cath rules on alignment.
+4. **Net emigration −230 k/yr — enters, with a taper and an age-sex profile.**
+   Central: held through 2030, linear taper to the 2015–20 net pace by 2040,
+   constant after; sensitivity: no taper. Binding profile: EIC age-sex shares
+   (70.4 % male; 22.5 % at 20–24, 19.5 % at 25–29, 15.0 % at 15–19, 14.1 % at
+   30–34), not the proportional 15–44 removal used here. Lower bound stands.
+   Marriage-market sex-ratio flag logged as
+   `watch_items/2026-09-24_emigration-sex-ratio-marriage-market.md`.
+5. **Fifth row `EIC-2025 direct` 1.23** — correctly carried; awaiting Héctor's
+   ratification. Origin question rides with the Q4 reconciliation.
+
+**Labelling rule for the headline.** Central 131.5 M / EIC-direct 125.2 M /
+Stress 119.1 M at 2050 are provisional and not citable. The Central-to-EIC-base-
+only difference (135.6 → 131.5 M) is the **mortality-plus-migration term** and
+must be labelled as such wherever it appears.
+
+**Not re-run.** The taper and the age-sex profile are Q4 skeleton changes; the
+graphs stand as of 2026-09-23 and are superseded by the Q4 replicate when it is
+executed. The CPV 2020 taper target is in progress: gross emigrants March
+2015–March 2020 = 802,807 (537,149 men, 265,658 women; ≈161 k/yr gross); the
+national return share is not in the press release, so the net pace is bounded
+≈107–161 k/yr pending the ampliado tabulado.
+
+## For Anne (as posed 2026-09-23; answered above)
 
 1. Whether the EIC 2025 base should replace the WPP-2023 base in the Q4 replicate
    (recommended: yes, it is the source hierarchy applied).
