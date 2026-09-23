@@ -13,7 +13,11 @@
 #     - Mexico sex gap at 2050: ~5.6 years (slightly narrower than 6.1 in 2020).
 #     - Implied: male LE 2050 ≈ 77.0, female LE 2050 ≈ 82.6.
 #     - Mexico total fertility rate 2050: 1.70 (medium variant).
-#     - Population peaks ~2042 at ~152M, declines to ~150.6M by 2050.
+#     - Population 2050: ~148.9M; medium variant keeps rising slowly to a
+#       peak of ~149.9M around 2058 (UN WPP 2024 medium via OWID, checked
+#       2026-09-23; the earlier "peak ~2042 at ~152M, 150.6M by 2050" was
+#       not WPP 2024 medium — provenance unknown). Narrative only: n_p is
+#       set from the TFR path, not from the population level.
 #   • PAHO (2024) Mexico LE 2023: total 75.1, male 72.1, female 78.3.
 #     Used as the 2020 baseline reference for computing the LE lift.
 #   • Paper Section 1 / ECLAC (2022): old-age dependency ratio in Mexico
