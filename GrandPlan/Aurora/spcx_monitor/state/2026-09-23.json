@@ -63,8 +63,8 @@
     }
   },
   "macro_backdrop": {
-    "tips_10y_real_yield": "2.61 (2026-09-17, FRED DFII10; 09-18 not yet posted)",
-    "vix_level": "14.81 (2026-09-18 close, Cboe delayed quotes; FRED 09-17: 15.44)",
+    "tips_10y_real_yield": "2.63 (2026-09-22, FRED DFII10)",
+    "vix_level": "14.21 (2026-09-22, FRED VIXCLS)",
     "vix_trend": "Second bump, then a full unwind: 15.84 (09-11) -> 17.10 (09-14) -> 17.20 (09-15) -> 17.71 (09-16) -> 15.44 (09-17) -> 14.81 (09-18, Cboe) \u2014 lowest since early September. TIPS 10y real: 2.60 (09-11) -> 2.60 (09-14) -> 2.62 (09-15) -> 2.68 (09-16, HIGHEST OF THE SERIES, +13bp from 09-10's 2.55) -> 2.61 (09-17). Real rates firmed again mid-week and the equity held; still non-amplifying at these levels, but the 2.68 print is the one to watch if it recurs into the 09-24 tranche. Refreshed 09-19 (FRED direct + Cboe). || PRIOR (09-12): Bump into the tranche week, then eased: 14.32 (09-03) -> 14.53 (09-04) -> 15.72 (09-08) -> 16.46 (09-09) -> 17.84 (09-10, highest since June) -> 15.84 (09-11, Cboe). TIPS 10y real: 2.42 (09-03) -> 2.43 (09-04, 09-08) -> 2.46 (09-09) -> 2.55 (09-10, +9bp). Firmer real rates are the thing to watch; still non-amplifying at these levels. Refreshed 09-12 (FRED direct + Cboe).",
     "narrative_vs_cashflow_rotation": null,
     "broad_risk_on_off": null
