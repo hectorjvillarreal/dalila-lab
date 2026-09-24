@@ -1,7 +1,7 @@
 ---
 type: build_instruction
 build_type: commit_and_revise
-status: queued
+status: executed   # 2026-09-23; Step 4 reading left to Anne (ambiguous)
 project_scope: [DFD, BDH, Aurora]
 date_added: 2026-09-23
 added_by: [Anne, Cath]
@@ -370,3 +370,32 @@ de Población, "Nacimientos en Argentina (2012–2024)", Nivel Provincial › Ev
 Global de Fecundidad, total país. Local copy: 1790192894587_image.png. Values read from
 the chart; to be replaced by the pulled series.
 ~~~~
+
+---
+
+## Execution note (Claude Code, 2026-09-23)
+
+- **Step 1** — done. A, B and C were written verbatim, each ending in a single newline. The 09-24 Argentina copy
+  in `observations/` was removed; the copy in `~/Downloads/` is outside the tree and was left. The
+  delivery-and-corrections instruction is committed with a filing note. Commit c21af20.
+- **Step 2** — done. The cornerstone is `endorsed_by: Anne`, `workflow_status: endorsed`, with `endorsement_record`
+  set. Edits 1–7 were applied with both overrides, and the teen-pregnancy note was added. On edit 6, the 07-11
+  Acemoglu entry does exist, so the cross-reference was kept; the duplicate in 09-17 staging was flagged to Anne.
+  The April deck was retired to `_build_instructions/` with a stub left at its old path. The project cross-refs
+  already existed and are now marked endorsed. The inbox line was moved. Commit d7b2e8a.
+- **Step 3** — done in the same commit. Inbox lines were moved; Cath §7 was closed and §10 added. Batch 1 and the
+  NBER block stay pending.
+- **Step 4** — run; **reading ambiguous, not chosen**. See `corpus/demographics/country/MEX/eic2025_65plus_check.md`.
+  - 65+ on 15 Oct 2025: aged CPV 12.51 M, EIC 13.23 M, CONAPO ≈11.84 M.
+  - EIC − aged = +0.73 M (+5.8 %).
+  - Provenance: the Wayback sha256 and URL are recorded. The official endpoints were retried: CONAPO returned
+    404 or a bot challenge; the datos.gob.mx API returned 200, but its repodatos CSVs returned 403. The official
+    datos.gob.mx indicators file confirms the Wayback data exactly.
+- **Step 5** — done. The v0.2 PDF (3 pp.), CSVs and `_assumptions.md` are in `GrandPlan/DFD/outputs/briefs/2026-09_EIC2025_nota/`, and all numbers come from
+  CSV. Beyond items 1–7, the migration profile moved to EIC Gráfica 9 (F7, flagged to Anne). Inbox lines were
+  posted to Anne and to Cath (§11).
+  - A grep for "1.39" and "φ" over the nota's text sources (`.tex`, `.py`, `.md`, `.sh`) returns no hits.
+  - The numeric data files contain the digit string "1.39" inside real values: WPP's 2030 low-variant TFR 1.3926,
+    and population counts in the results CSV. These are data, not the corrected claim.
+- **Step 6** — `mexico_poblacion_2050_variantes_onu.png` is at `~/Downloads/`. That is not in the tree or a shared
+  folder, so it was not deleted. Whether it was published is Héctor's to report.

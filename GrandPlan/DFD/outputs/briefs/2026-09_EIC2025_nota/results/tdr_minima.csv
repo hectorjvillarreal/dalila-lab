@@ -1,0 +1,13 @@
+base,scenario,scenario_name,tdr_min_year_annual,tdr_min_annual,tdr_min_year_interp,tdr_min_interp,tdr_min_year_5yr_grid,tdr_min_5yr_grid,span_within_1pt_start,span_within_1pt_end,pop_2050,first_year_15_64_declines
+eic2025,optimista,Optimista — ONU (variante media),2027,46.4,2027.089,46.4,2025,46.566,2025,2032,144154715.401,2036
+eic2025,central,Central DFD,2030,45.009,2030.468,44.989,2030,45.009,2027,2035,135518483.684,2036
+eic2025,inegi,INEGI directo,2035,42.319,2034.846,42.307,2035,42.319,2031,2036,128721676.753,2036
+eic2025,estres,Estrés,2035,40.696,2035.199,40.677,2035,40.696,2034,2037,121245527.394,2036
+eic2025_conapo65_sensitivity,optimista,Optimista — ONU (variante media),2026,44.96,2026.258,44.957,2025,45.019,2025,2031,143916408.685,2036
+eic2025_conapo65_sensitivity,central,Central DFD,2030,43.758,2030.154,43.756,2030,43.758,2026,2035,135280176.969,2036
+eic2025_conapo65_sensitivity,inegi,INEGI directo,2035,41.347,2034.791,41.325,2035,41.347,2030,2036,128483370.037,2036
+eic2025_conapo65_sensitivity,estres,Estrés,2035,39.723,2035.147,39.712,2035,39.723,2034,2037,121007220.678,2036
+wpp2023_sensitivity,optimista,Optimista — ONU (variante media),2029,47.949,2029.414,47.94,2030,47.958,2025,2034,149621824.254,2047
+wpp2023_sensitivity,central,Central DFD,2034,45.771,2034.449,45.768,2035,45.772,2029,2040,140340837.213,2040
+wpp2023_sensitivity,inegi,INEGI directo,2039,41.82,2038.771,41.807,2040,42.186,2035,2040,133018277.6,2040
+wpp2023_sensitivity,estres,Estrés,2040,38.787,2040.001,38.787,2040,38.787,2038,2043,125349631.704,2040

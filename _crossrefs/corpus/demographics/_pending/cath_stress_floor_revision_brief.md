@@ -225,3 +225,17 @@ Anne and Cath reviewed the nota v0.1 and the open items of this brief. The rulin
 - §3.6: IM-6 is aligned to the CONAPO improving survival path.
 
 The v0.2 revision is executed under `_crossrefs/_build_instructions/2026-09-23_demographics_commit-endorsements_nota-v0.2.md` Step 5.
+
+## 11. Nota EIC 2025 v0.2 — for your one-pass review (appended by Claude Code, 2026-09-23)
+
+Your §3 rulings are applied in `GrandPlan/DFD/outputs/briefs/2026-09_EIC2025_nota/nota_EIC2025_v0.2.pdf`:
+- The headline is the minimum, before and after.
+- The span (within 1 point of the minimum) is in Recuadro 2 with its definition, and your timing caveat is verbatim.
+- F3 has TDR and OADR panels.
+- τ = ρ·OADR/e, with e from ENOE 2026-Q2 microdata (0.6322, 15–64). The coverage parameter is removed everywhere.
+- Implication 3 is replaced with your text.
+
+**v0.2 headline (Central / INEGI directo):** 2050 population 135.5 / 128.7 M; TDR minimum 45.0 in 2030 / 42.3 in 2035 (Q3 said 42.0 at ~2038; today 46.4, so it falls only 1.4 points); OADR 2025 → 2050 14.6 → 33.1 / 34.2; 6–14 18.8 → 15.5 M by 2031 (−17.7 %, whatever the fertility path); 15–64 starts falling in 2036 in all four scenarios. **τ = ρ·OADR/e** (ρ 0.50; e 0.63 from ENOE 2026-Q2): Central 11.6 / 16.2 / 26.2 %, INEGI directo 11.6 / 16.2 / 27.1 %, Central with CONAPO 65+ 10.4 / 15.4 / 26.0 % (2025 / 2035 / 2050). **Step 4 reading — AMBIGUOUS, not chosen:** the CPV 2020 aged forward gives 12.51 M aged 65+ on 15 Oct 2025, against 13.23 M in the EIC and ≈11.84 M in CONAPO. The gap splits about in half: CONAPO is 0.67 M below the aged census, and the EIC is 0.73 M (+5.8 %) above it, concentrated at 65–69 (+8.3 %). The EIC part cannot be separated from CONAPO's own mortality. v0.2 is on the EIC base, and the check is at `../country/MEX/eic2025_65plus_check.md`.
+
+The τ path to 2035 is identical in Central and INEGI directo (16.2 %), as you noted. The CONAPO-65+ sensitivity lowers
+2025 by 1.2 points and 2050 by 0.2.

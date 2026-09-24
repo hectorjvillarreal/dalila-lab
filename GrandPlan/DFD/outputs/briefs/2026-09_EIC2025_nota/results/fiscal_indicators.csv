@@ -1,0 +1,221 @@
+base,indicator,scenario,period,value,unit
+eic2025,tdr_min_year,central,,2030.0,year
+eic2025,tdr_min,central,,45.009,per 100 aged 15-64
+eic2025,span_1pt_start,central,,2027.0,year
+eic2025,span_1pt_end,central,,2035.0,year
+eic2025,oadr,central,2025,14.6453,per 100 aged 15-64
+eic2025,tdr,central,2025,46.5662,per 100 aged 15-64
+eic2025,ydr,central,2025,31.921,per 100 aged 15-64
+eic2025,oadr,central,2035,20.4483,per 100 aged 15-64
+eic2025,tdr,central,2035,45.3248,per 100 aged 15-64
+eic2025,ydr,central,2035,24.8765,per 100 aged 15-64
+eic2025,oadr,central,2050,33.1417,per 100 aged 15-64
+eic2025,tdr,central,2050,56.9809,per 100 aged 15-64
+eic2025,ydr,central,2050,23.8392,per 100 aged 15-64
+eic2025,tau_payg,central,2025,11.582751310472133,% of wage bill
+eic2025,tau_payg,central,2035,16.172258241342092,% of wage bill
+eic2025,tau_payg,central,2050,26.211280691161964,% of wage bill
+eic2025,pop_6_14,central,2025,18793673.4737,persons
+eic2025,pop_6_14_change_vs_2025,central,2025,0.0,%
+eic2025,pop_6_14,central,2031,15461118.9818,persons
+eic2025,pop_6_14_change_vs_2025,central,2031,-17.732320914075707,%
+eic2025,pop_6_14,central,2035,13811366.3474,persons
+eic2025,pop_6_14_change_vs_2025,central,2035,-26.510554912387285,%
+eic2025,pop_6_14,central,2050,12932917.4382,persons
+eic2025,pop_6_14_change_vs_2025,central,2050,-31.184728433755026,%
+eic2025,g_l_avg,central,2025-2035,0.37488616649632434,% per year
+eic2025,g_l_avg,central,2035-2050,-0.47507676445424085,% per year
+eic2025,g_l_first_negative_year,central,,2036.0,year
+eic2025,tdr_min_year,estres,,2035.0,year
+eic2025,tdr_min,estres,,40.696,per 100 aged 15-64
+eic2025,span_1pt_start,estres,,2034.0,year
+eic2025,span_1pt_end,estres,,2037.0,year
+eic2025,oadr,estres,2025,14.6453,per 100 aged 15-64
+eic2025,tdr,estres,2025,46.5662,per 100 aged 15-64
+eic2025,ydr,estres,2025,31.921,per 100 aged 15-64
+eic2025,oadr,estres,2035,20.4711,per 100 aged 15-64
+eic2025,tdr,estres,2035,40.6964,per 100 aged 15-64
+eic2025,ydr,estres,2035,20.2253,per 100 aged 15-64
+eic2025,oadr,estres,2050,35.4112,per 100 aged 15-64
+eic2025,tdr,estres,2050,50.2433,per 100 aged 15-64
+eic2025,ydr,estres,2050,14.8321,per 100 aged 15-64
+eic2025,tau_payg,estres,2025,11.582751310472133,% of wage bill
+eic2025,tau_payg,estres,2035,16.190290424354988,% of wage bill
+eic2025,tau_payg,estres,2050,28.006194697642986,% of wage bill
+eic2025,pop_6_14,estres,2025,18793673.4737,persons
+eic2025,pop_6_14_change_vs_2025,estres,2025,0.0,%
+eic2025,pop_6_14,estres,2031,15460956.8054,persons
+eic2025,pop_6_14_change_vs_2025,estres,2031,-17.73318384489242,%
+eic2025,pop_6_14,estres,2035,12978394.1118,persons
+eic2025,pop_6_14_change_vs_2025,estres,2035,-30.94274980374616,%
+eic2025,pop_6_14,estres,2050,7668856.9949,persons
+eic2025,pop_6_14_change_vs_2025,estres,2050,-59.194475706775194,%
+eic2025,g_l_avg,estres,2025-2035,0.3628525943548011,% per year
+eic2025,g_l_avg,estres,2035-2050,-0.9134995569483717,% per year
+eic2025,g_l_first_negative_year,estres,,2036.0,year
+eic2025,tdr_min_year,inegi,,2035.0,year
+eic2025,tdr_min,inegi,,42.319,per 100 aged 15-64
+eic2025,span_1pt_start,inegi,,2031.0,year
+eic2025,span_1pt_end,inegi,,2036.0,year
+eic2025,oadr,inegi,2025,14.6453,per 100 aged 15-64
+eic2025,tdr,inegi,2025,46.5662,per 100 aged 15-64
+eic2025,ydr,inegi,2025,31.921,per 100 aged 15-64
+eic2025,oadr,inegi,2035,20.4483,per 100 aged 15-64
+eic2025,tdr,inegi,2035,42.3191,per 100 aged 15-64
+eic2025,ydr,inegi,2035,21.8709,per 100 aged 15-64
+eic2025,oadr,inegi,2050,34.2405,per 100 aged 15-64
+eic2025,tdr,inegi,2050,54.0516,per 100 aged 15-64
+eic2025,ydr,inegi,2050,19.811,per 100 aged 15-64
+eic2025,tau_payg,inegi,2025,11.582751310472133,% of wage bill
+eic2025,tau_payg,inegi,2035,16.172258241342092,% of wage bill
+eic2025,tau_payg,inegi,2050,27.080305370748366,% of wage bill
+eic2025,pop_6_14,inegi,2025,18793673.4737,persons
+eic2025,pop_6_14_change_vs_2025,inegi,2025,0.0,%
+eic2025,pop_6_14,inegi,2031,15461118.9818,persons
+eic2025,pop_6_14_change_vs_2025,inegi,2031,-17.732320914075707,%
+eic2025,pop_6_14,inegi,2035,12692424.2023,persons
+eic2025,pop_6_14_change_vs_2025,inegi,2035,-32.464378398071744,%
+eic2025,pop_6_14,inegi,2050,10555251.9097,persons
+eic2025,pop_6_14_change_vs_2025,inegi,2050,-43.83614292080208,%
+eic2025,g_l_avg,inegi,2025-2035,0.37488616649632434,% per year
+eic2025,g_l_avg,inegi,2035-2050,-0.6912682414553117,% per year
+eic2025,g_l_first_negative_year,inegi,,2036.0,year
+eic2025,tdr_min_year,optimista,,2027.0,year
+eic2025,tdr_min,optimista,,46.4,per 100 aged 15-64
+eic2025,span_1pt_start,optimista,,2025.0,year
+eic2025,span_1pt_end,optimista,,2032.0,year
+eic2025,oadr,optimista,2025,14.6453,per 100 aged 15-64
+eic2025,tdr,optimista,2025,46.5662,per 100 aged 15-64
+eic2025,ydr,optimista,2025,31.921,per 100 aged 15-64
+eic2025,oadr,optimista,2035,20.2426,per 100 aged 15-64
+eic2025,tdr,optimista,2035,48.28,per 100 aged 15-64
+eic2025,ydr,optimista,2035,28.0374,per 100 aged 15-64
+eic2025,oadr,optimista,2050,31.5403,per 100 aged 15-64
+eic2025,tdr,optimista,2050,58.4066,per 100 aged 15-64
+eic2025,ydr,optimista,2050,26.8663,per 100 aged 15-64
+eic2025,tau_payg,optimista,2025,11.582751310472133,% of wage bill
+eic2025,tau_payg,optimista,2035,16.009573151616095,% of wage bill
+eic2025,tau_payg,optimista,2050,24.944757100071982,% of wage bill
+eic2025,pop_6_14,optimista,2025,18793673.4737,persons
+eic2025,pop_6_14_change_vs_2025,optimista,2025,0.0,%
+eic2025,pop_6_14,optimista,2031,15482739.6404,persons
+eic2025,pop_6_14_change_vs_2025,optimista,2031,-17.617278697181504,%
+eic2025,pop_6_14,optimista,2035,15242982.0265,persons
+eic2025,pop_6_14_change_vs_2025,optimista,2035,-18.893014461323187,%
+eic2025,pop_6_14,optimista,2050,15208168.6704,persons
+eic2025,pop_6_14_change_vs_2025,optimista,2050,-19.07825422378219,%
+eic2025,g_l_avg,optimista,2025-2035,0.48679446581390007,% per year
+eic2025,g_l_avg,optimista,2035-2050,-0.1987109825436928,% per year
+eic2025,g_l_first_negative_year,optimista,,2036.0,year
+eic2025_conapo65_sensitivity,tdr_min_year,central,,2030.0,year
+eic2025_conapo65_sensitivity,tdr_min,central,,43.758,per 100 aged 15-64
+eic2025_conapo65_sensitivity,span_1pt_start,central,,2026.0,year
+eic2025_conapo65_sensitivity,span_1pt_end,central,,2035.0,year
+eic2025_conapo65_sensitivity,oadr,central,2025,13.0981,per 100 aged 15-64
+eic2025_conapo65_sensitivity,tdr,central,2025,45.019,per 100 aged 15-64
+eic2025_conapo65_sensitivity,ydr,central,2025,31.921,per 100 aged 15-64
+eic2025_conapo65_sensitivity,oadr,central,2035,19.4759,per 100 aged 15-64
+eic2025_conapo65_sensitivity,tdr,central,2035,44.3524,per 100 aged 15-64
+eic2025_conapo65_sensitivity,ydr,central,2035,24.8765,per 100 aged 15-64
+eic2025_conapo65_sensitivity,oadr,central,2050,32.8656,per 100 aged 15-64
+eic2025_conapo65_sensitivity,tdr,central,2050,56.7049,per 100 aged 15-64
+eic2025_conapo65_sensitivity,ydr,central,2050,23.8392,per 100 aged 15-64
+eic2025_conapo65_sensitivity,tau_payg,central,2025,10.359093698298775,% of wage bill
+eic2025_conapo65_sensitivity,tau_payg,central,2035,15.403201453546476,% of wage bill
+eic2025_conapo65_sensitivity,tau_payg,central,2050,25.992917281957553,% of wage bill
+eic2025_conapo65_sensitivity,pop_6_14,central,2025,18793673.4737,persons
+eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,central,2025,0.0,%
+eic2025_conapo65_sensitivity,pop_6_14,central,2031,15461118.9818,persons
+eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,central,2031,-17.732320914075707,%
+eic2025_conapo65_sensitivity,pop_6_14,central,2035,13811366.3474,persons
+eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,central,2035,-26.510554912387285,%
+eic2025_conapo65_sensitivity,pop_6_14,central,2050,12932917.4382,persons
+eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,central,2050,-31.184728433755026,%
+eic2025_conapo65_sensitivity,g_l_avg,central,2025-2035,0.37488616649632434,% per year
+eic2025_conapo65_sensitivity,g_l_avg,central,2035-2050,-0.47507676445424085,% per year
+eic2025_conapo65_sensitivity,g_l_first_negative_year,central,,2036.0,year
+eic2025_conapo65_sensitivity,tdr_min_year,estres,,2035.0,year
+eic2025_conapo65_sensitivity,tdr_min,estres,,39.723,per 100 aged 15-64
+eic2025_conapo65_sensitivity,span_1pt_start,estres,,2034.0,year
+eic2025_conapo65_sensitivity,span_1pt_end,estres,,2037.0,year
+eic2025_conapo65_sensitivity,oadr,estres,2025,13.0981,per 100 aged 15-64
+eic2025_conapo65_sensitivity,tdr,estres,2025,45.019,per 100 aged 15-64
+eic2025_conapo65_sensitivity,ydr,estres,2025,31.921,per 100 aged 15-64
+eic2025_conapo65_sensitivity,oadr,estres,2035,19.4976,per 100 aged 15-64
+eic2025_conapo65_sensitivity,tdr,estres,2035,39.7228,per 100 aged 15-64
+eic2025_conapo65_sensitivity,ydr,estres,2035,20.2253,per 100 aged 15-64
+eic2025_conapo65_sensitivity,oadr,estres,2050,35.1159,per 100 aged 15-64
+eic2025_conapo65_sensitivity,tdr,estres,2050,49.948,per 100 aged 15-64
+eic2025_conapo65_sensitivity,ydr,estres,2050,14.8321,per 100 aged 15-64
+eic2025_conapo65_sensitivity,tau_payg,estres,2025,10.359093698298775,% of wage bill
+eic2025_conapo65_sensitivity,tau_payg,estres,2035,15.420363662817522,% of wage bill
+eic2025_conapo65_sensitivity,tau_payg,estres,2050,27.772646292217193,% of wage bill
+eic2025_conapo65_sensitivity,pop_6_14,estres,2025,18793673.4737,persons
+eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,estres,2025,0.0,%
+eic2025_conapo65_sensitivity,pop_6_14,estres,2031,15460956.8054,persons
+eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,estres,2031,-17.73318384489242,%
+eic2025_conapo65_sensitivity,pop_6_14,estres,2035,12978394.1118,persons
+eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,estres,2035,-30.94274980374616,%
+eic2025_conapo65_sensitivity,pop_6_14,estres,2050,7668856.9949,persons
+eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,estres,2050,-59.194475706775194,%
+eic2025_conapo65_sensitivity,g_l_avg,estres,2025-2035,0.3628525943548011,% per year
+eic2025_conapo65_sensitivity,g_l_avg,estres,2035-2050,-0.9134995569483717,% per year
+eic2025_conapo65_sensitivity,g_l_first_negative_year,estres,,2036.0,year
+eic2025_conapo65_sensitivity,tdr_min_year,inegi,,2035.0,year
+eic2025_conapo65_sensitivity,tdr_min,inegi,,41.347,per 100 aged 15-64
+eic2025_conapo65_sensitivity,span_1pt_start,inegi,,2030.0,year
+eic2025_conapo65_sensitivity,span_1pt_end,inegi,,2036.0,year
+eic2025_conapo65_sensitivity,oadr,inegi,2025,13.0981,per 100 aged 15-64
+eic2025_conapo65_sensitivity,tdr,inegi,2025,45.019,per 100 aged 15-64
+eic2025_conapo65_sensitivity,ydr,inegi,2025,31.921,per 100 aged 15-64
+eic2025_conapo65_sensitivity,oadr,inegi,2035,19.4759,per 100 aged 15-64
+eic2025_conapo65_sensitivity,tdr,inegi,2035,41.3468,per 100 aged 15-64
+eic2025_conapo65_sensitivity,ydr,inegi,2035,21.8709,per 100 aged 15-64
+eic2025_conapo65_sensitivity,oadr,inegi,2050,33.9553,per 100 aged 15-64
+eic2025_conapo65_sensitivity,tdr,inegi,2050,53.7664,per 100 aged 15-64
+eic2025_conapo65_sensitivity,ydr,inegi,2050,19.811,per 100 aged 15-64
+eic2025_conapo65_sensitivity,tau_payg,inegi,2025,10.359093698298775,% of wage bill
+eic2025_conapo65_sensitivity,tau_payg,inegi,2035,15.403201453546476,% of wage bill
+eic2025_conapo65_sensitivity,tau_payg,inegi,2050,26.854744906043198,% of wage bill
+eic2025_conapo65_sensitivity,pop_6_14,inegi,2025,18793673.4737,persons
+eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,inegi,2025,0.0,%
+eic2025_conapo65_sensitivity,pop_6_14,inegi,2031,15461118.9818,persons
+eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,inegi,2031,-17.732320914075707,%
+eic2025_conapo65_sensitivity,pop_6_14,inegi,2035,12692424.2023,persons
+eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,inegi,2035,-32.464378398071744,%
+eic2025_conapo65_sensitivity,pop_6_14,inegi,2050,10555251.9097,persons
+eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,inegi,2050,-43.83614292080208,%
+eic2025_conapo65_sensitivity,g_l_avg,inegi,2025-2035,0.37488616649632434,% per year
+eic2025_conapo65_sensitivity,g_l_avg,inegi,2035-2050,-0.6912682414553117,% per year
+eic2025_conapo65_sensitivity,g_l_first_negative_year,inegi,,2036.0,year
+eic2025_conapo65_sensitivity,tdr_min_year,optimista,,2026.0,year
+eic2025_conapo65_sensitivity,tdr_min,optimista,,44.96,per 100 aged 15-64
+eic2025_conapo65_sensitivity,span_1pt_start,optimista,,2025.0,year
+eic2025_conapo65_sensitivity,span_1pt_end,optimista,,2031.0,year
+eic2025_conapo65_sensitivity,oadr,optimista,2025,13.0981,per 100 aged 15-64
+eic2025_conapo65_sensitivity,tdr,optimista,2025,45.019,per 100 aged 15-64
+eic2025_conapo65_sensitivity,ydr,optimista,2025,31.921,per 100 aged 15-64
+eic2025_conapo65_sensitivity,oadr,optimista,2035,19.2811,per 100 aged 15-64
+eic2025_conapo65_sensitivity,tdr,optimista,2035,47.3184,per 100 aged 15-64
+eic2025_conapo65_sensitivity,ydr,optimista,2035,28.0374,per 100 aged 15-64
+eic2025_conapo65_sensitivity,oadr,optimista,2050,31.2784,per 100 aged 15-64
+eic2025_conapo65_sensitivity,tdr,optimista,2050,58.1448,per 100 aged 15-64
+eic2025_conapo65_sensitivity,ydr,optimista,2050,26.8663,per 100 aged 15-64
+eic2025_conapo65_sensitivity,tau_payg,optimista,2025,10.359093698298775,% of wage bill
+eic2025_conapo65_sensitivity,tau_payg,optimista,2035,15.249137012716997,% of wage bill
+eic2025_conapo65_sensitivity,tau_payg,optimista,2050,24.73762426098964,% of wage bill
+eic2025_conapo65_sensitivity,pop_6_14,optimista,2025,18793673.4737,persons
+eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,optimista,2025,0.0,%
+eic2025_conapo65_sensitivity,pop_6_14,optimista,2031,15482739.6404,persons
+eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,optimista,2031,-17.617278697181504,%
+eic2025_conapo65_sensitivity,pop_6_14,optimista,2035,15242982.0265,persons
+eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,optimista,2035,-18.893014461323187,%
+eic2025_conapo65_sensitivity,pop_6_14,optimista,2050,15208168.6704,persons
+eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,optimista,2050,-19.07825422378219,%
+eic2025_conapo65_sensitivity,g_l_avg,optimista,2025-2035,0.48679446581390007,% per year
+eic2025_conapo65_sensitivity,g_l_avg,optimista,2035-2050,-0.1987109825436928,% per year
+eic2025_conapo65_sensitivity,g_l_first_negative_year,optimista,,2036.0,year
+q3,q3_central_tdr_min,central,,42.0,per 100 aged 15-64
+q3,q3_central_tdr_min_year,central,,2038.0,year
+param,rho,all,,0.5,share
+param,e_15_64,all,2026-Q2,0.6322029890583497,share
