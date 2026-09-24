@@ -215,6 +215,8 @@ eic2025_conapo65_sensitivity,pop_6_14_change_vs_2025,optimista,2050,-19.07825422
 eic2025_conapo65_sensitivity,g_l_avg,optimista,2025-2035,0.48679446581390007,% per year
 eic2025_conapo65_sensitivity,g_l_avg,optimista,2035-2050,-0.1987109825436928,% per year
 eic2025_conapo65_sensitivity,g_l_first_negative_year,optimista,,2036.0,year
+eic2025,escolar_decline_born_pts,central,2031,17.5,pp
+eic2025,escolar_decline_emigration_pts,central,2031,0.2,pp
 q3,q3_central_tdr_min,central,,42.0,per 100 aged 15-64
 q3,q3_central_tdr_min_year,central,,2038.0,year
 param,rho,all,,0.5,share

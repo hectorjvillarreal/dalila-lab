@@ -43,7 +43,7 @@ def main():
     def add(base, ind, sc, period, value, unit):
         rows.append({"base": base, "indicator": ind, "scenario": sc, "period": str(period), "value": value, "unit": unit})
 
-    for (base, sc), g in res[res.base != "wpp2023_sensitivity"].groupby(["base", "scenario"]):
+    for (base, sc), g in res[~res.base.isin(["wpp2023_sensitivity", "eic2025_nomigration_decomposition"])].groupby(["base", "scenario"]):
         g = g.set_index("year")
         m = mins.loc[(base, sc)]
         add(base, "tdr_min_year", sc, "", int(m.tdr_min_year_annual), "year")
@@ -64,6 +64,17 @@ def main():
             add(base, "g_l_avg", sc, f"{a}-{b}", gl, "% per year")
         neg = g.index[(g.growth_15_64_pct < 0)]
         add(base, "g_l_first_negative_year", sc, "", int(neg.min()) if len(neg) else np.nan, "year")
+
+    # 6-14 decline to 2031 split into cohorts already born (zero-migration run) and emigration
+    c = res[(res.scenario == "central")].set_index(["base", "year"]).pop_6_14
+    total = 100 * (c[("eic2025", LOCKED_6_14_YEAR)] / c[("eic2025", 2025)] - 1)
+    born = 100 * (c[("eic2025_nomigration_decomposition", LOCKED_6_14_YEAR)] / c[("eic2025", 2025)] - 1)
+    a_pts = round(-born, 1)
+    b_pts = round(round(-total, 1) - a_pts, 1)     # so that a + b equals the printed total
+    add("eic2025", "escolar_decline_born_pts", "central", LOCKED_6_14_YEAR, a_pts, "pp")
+    add("eic2025", "escolar_decline_emigration_pts", "central", LOCKED_6_14_YEAR, b_pts, "pp")
+    if b_pts > a_pts:
+        raise SystemExit(f"STOP (review of v0.2, edit 2): emigration term {b_pts} exceeds born term {a_pts}")
 
     add("q3", "q3_central_tdr_min", "central", "", Q3_CENTRAL_MIN, "per 100 aged 15-64")
     add("q3", "q3_central_tdr_min_year", "central", "", Q3_CENTRAL_MIN_YEAR, "year")

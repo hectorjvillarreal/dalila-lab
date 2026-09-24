@@ -110,3 +110,61 @@ Daron Acemoglu, David Autor, Keelan Beirne & Andrew Scott, "Baby Busts and Growt
 Demographic Change and the Macroeconomy," NBER Working Paper 35401 (July 2026).
 DOI 10.3386/w35401. https://www.nber.org/papers/w35401
 Status: working paper, not yet peer-reviewed.
+
+---
+
+## Addendum 2026-09-23 — material carried over from the 09-17 NBER-batch note
+
+*Filing ruling, not an endorsement* (`_crossrefs/corpus/demographics/_pending/2026-09-23_nota-EIC2025-v0.2_Anne-Cath-review.md` §6). This note stays the note of record. What follows is what
+`GrandPlan/DFD/aging_macro_nber_2609/2026-09-17_baby-busts-growth-booms.md` contains that this note lacked,
+carried over by Claude Code with no new reading of the paper. The Cath + Elle review of this note proceeds as
+queued and covers this addendum.
+
+**Estimates.**
+- A 1 pp lower 1950 crude birth rate goes with 26.8 % higher growth in GDP per worker over 1970–2020 (SE 0.113).
+- The commuting-zone analogue on composition-adjusted wages is β = −0.076 (SE 0.016), about a third of the
+  cross-country coefficient. The authors attribute the gap to the lower persistence of birth rates across
+  commuting zones, not to invention versus adoption; this is untested.
+- Aggregate GDP: β = −0.006, SE 0.130, 95 % interval about [−0.26, +0.25]. "No negative impact on aggregate
+  GDP" is a failure to reject zero, not evidence for zero.
+- Identification uses WWII deaths in 31 countries (18 with age composition), which the authors call suggestive.
+- The paper uses crude birth rates, not TFR.
+
+**The fiscal premise is untouched.** The paper has no fiscal outcomes. The headline is GDP per *working-age
+adult*, and rising output per worker is compatible with a rising burden per worker. Only the aggregate-GDP
+estimate bears on the fiscal question, and it is the weakest in the paper.
+
+**Three limits on transferability.**
+1. **The estimation window is mostly the demographic dividend**, not the aging burden. The authors concede
+   that extrapolating to what lies ahead is hazardous; that concession should accompany any citation against
+   a fiscal-pressure result. For Mexico the dividend is closing now.
+2. **The mechanism presumes an economy able to automate.** Mexico adopts technology rather than inventing
+   it; the commuting-zone result is the closer analogue.
+3. **Mexico-specific: automation and informality could reverse the fiscal sign.** Formal firms automate;
+   informal ones do not. Labor scarcity could raise formal-sector productivity and measured GDP per worker
+   while pushing labor into informality and shrinking the contributory base. The growth result and a worsening
+   fiscal position could then appear together. This is testable with Mexican data, at the Anne–Cath–Diego
+   intersection, and pairs with the formality hypothesis in Krueger, Ludwig & Popova.
+
+**Proposed synthesis (not adopted; needs Anne + Cath).** Across the three NBER-conference papers:
+- Bernardino–Franco–Teles Morais: migration.
+- Krueger–Ludwig–Popova: education.
+- Acemoglu et al.: technology.
+
+Each is an adjustment margin that offsets the mechanical arithmetic of aging, so that arithmetic is an upper
+bound on fiscal pressure. Mexico plausibly has weak access to all three.
+
+**Other points.**
+- The paper cites Fernández-Villaverde et al. (2025) as the opposing view. This sharpens the "Shelf position"
+  note above.
+- For Aurora, the paper makes demography a *cause* of automation rather than a driver running in parallel.
+  Route to Elle and Gina.
+- A CROSS-TAR-001 anchor for "dividend vs burden" phases is suggested if the synthesis is adopted.
+
+**Source metadata discrepancy, unresolved.** This note says the paper was issued 6 July 2026. The 09-17 note
+has 24 June 2026, 72 pp., JEL J11/J31/O33/O40/E24, and lists the data sources. Both give NBER WP 35401.
+Check against the NBER listing.
+
+**Not found in the 09-17 note.** The review record asks for "the pairing with Kotschy & Bloom". The 09-17
+note pairs this paper with Bernardino and with Krueger–Ludwig–Popova, not with Kotschy & Bloom, so there is
+nothing of that kind to carry over.

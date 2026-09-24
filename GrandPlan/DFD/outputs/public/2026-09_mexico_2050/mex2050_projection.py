@@ -169,7 +169,9 @@ def draw(runs, un_kids_2050):
     src = ("Cómo se hizo: partimos de la población que contó el INEGI en octubre de 2025 (130.9 millones; 21.6 % menores de 15 años y "
            "10.1 % de 65 y más) y la proyectamos cada cinco años. La mortalidad, la migración y la distribución de los nacimientos por "
            "edad de la madre son las de la ONU; sólo cambia cuántos hijos tiene cada mujer. Con la población y la fecundidad de la ONU, "
-           "este método reproduce su cifra para 2050 (148.7 frente a 148.9 millones).\n"
+           "este método reproduce su cifra para 2050 (148.7 frente a 148.9 millones). "
+           "Si además se usa la emigración que midió el INEGI, las cifras de 2050 bajan cerca de 1.5 millones "
+           "(ver la nota ITED de septiembre de 2026).\n"
            "Son escenarios, no pronósticos. La cifra de 1.23 viene de una encuesta y puede quedarse algo corta; aun así, está muy lejos de "
            "lo que supone la ONU.\nFuentes: INEGI, Encuesta Intercensal 2025. ONU, World Population Prospects 2024. Registros civiles de "
            "Chile y Colombia, 2025. Elaboración propia.")

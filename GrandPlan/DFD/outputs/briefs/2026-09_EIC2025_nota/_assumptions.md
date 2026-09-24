@@ -1,15 +1,15 @@
 ---
 type: deliverable_assumptions
-deliverable: nota_EIC2025 v0.2 (preliminar)
+deliverable: nota_EIC2025 v1.0 (endorsed by Anne + Cath with the four edits applied; awaiting Héctor's title, Tres implicaciones and signature)
 build_instructions:
   - _crossrefs/_build_instructions/2026-09-23_DFD_nota-EIC2025_build-instruction.md (v0.1)
   - _crossrefs/_build_instructions/2026-09-23_demographics_commit-endorsements_nota-v0.2.md (v0.2, Step 5)
 review_record: _crossrefs/corpus/demographics/_pending/2026-09-23_nota-EIC2025-v0.1_Anne-Cath-review.md
 governing_instructions: _crossrefs/corpus/demographics/country/MEX/DFD_TFR_forecast_instructions.md v1.6
-status: v0.2 delivered 2026-09-23; awaiting Anne/Cath review of v0.2 (record §5) and Héctor sign-off; no endorsed_by
+status: v1.0 built 2026-09-23 per _crossrefs/corpus/demographics/_pending/2026-09-23_nota-EIC2025-v0.2_Anne-Cath-review.md §5; pending signature
 ---
 
-# Supuestos y estado de los resultados — v0.2
+# Supuestos y estado de los resultados — v1.0
 
 Machine-readable copy of Recuadro 2 plus everything behind it. `./build.sh` rebuilds the deliverable
 (scenarios → fiscal → figures → numbers → PDF). Every number in the PDF is a `\N{key}` macro written
@@ -114,3 +114,31 @@ third decimal.
   "La ventana de reforma ya está abierta". Héctor edits both.
 - **Implication 1** — kept as drafted; the Central minimum is now 2030, with the within-1-point span 2027–2035.
   Héctor edits.
+
+## v1.0 — the four edits of the v0.2 review (2026-09-23)
+
+The review is `_crossrefs/corpus/demographics/_pending/2026-09-23_nota-EIC2025-v0.2_Anne-Cath-review.md`.
+v0.2 was endorsed by Anne and Cath subject to four edits, which are applied here, with no further review round.
+
+1. **Recuadro 2, the older population.** The reviewers' sentence is used verbatim. Its numbers come from
+   macros: `chkEic` 13.2, `chkCenso` 12.5, `chkConapoOct` 11.8, `tauSensDif2025` 1.2, `tauSensDif2050` 0.2.
+   "EIC" is now defined on first use on page 1.
+2. **School-age split.** A decomposition run (`base = eic2025_nomigration_decomposition`: Central, same base,
+   zero migration) gives the 2031 decline without emigration, −17.52 %.
+   - **a = 17.5 pts** is cohorts already born; **b = 0.2 pts** is emigration of families; a + b = 17.7.
+   - b < a, so the argument stands. Emigration of children barely moves the figure, because children are 5.1 %
+     of emigrants.
+   - `03_fiscal.py` stops the build if b > a.
+3. **Page 3, under the τ table.** The benchmark sentence is used verbatim. Per Cath §3, the pensions paragraph
+   now comes first after the minimum.
+4. **Public chart method note.** Applied in `GrandPlan/DFD/outputs/public/2026-09_mexico_2050/`. The acceptance
+   hashes are unchanged; the new script SHA-256 and a note are in that README. The reviewers' "cerca de 1.5
+   millones" is kept verbatim, although the gap at equal fertility is 1.4 M (136.9 vs 135.5; 130.1 vs 128.7).
+
+The version string is 1.0 and the footer date is unchanged. The header reads "pendiente de firma". Figures still
+carry the `preliminar` tag, and Recuadro 2 still says "Resultados preliminares": the Q4-2026 replicate remains
+the version of record. The v0.2 PDF is archived at `_archive/nota_EIC2025_v0.2.pdf`.
+
+**Q4 item from Anne §1 (not in the note).** Test whether the EIC 65+ excess at 65–69 is age reporting that
+shifted to the universal pension threshold. The test is heaping at 65 with a deficit at 62–64, using the EIC
+single-year microdata (November 2026).

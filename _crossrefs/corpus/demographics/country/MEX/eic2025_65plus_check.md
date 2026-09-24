@@ -107,3 +107,17 @@ sensitivity row the record asks for.
   totals and 65+ **exactly**. TGF and e0 differ only in the third decimal (rounding in the official CSV). The
   Wayback copy is therefore the official CONAPO 2023 release. Replace the file with a direct official download
   when `repodatos` admits scripted access.
+
+## Anne's ruling and Q4 hypothesis (2026-09-23)
+
+From `_pending/2026-09-23_nota-EIC2025-v0.2_Anne-Cath-review.md` §1: the reading stays ambiguous and does not
+need resolving for the nota. v1.0 stays on the EIC base and prints the three 65+ counts as a range.
+
+**Q4 item.** The EIC excess is bunched at 65–69 (+8.3 %). A CONAPO undercount would be spread across ages; a
+bunched excess suggests age reporting shifting across a threshold. The universal non-contributory pension has
+started at 65 since 2021, which makes that age salient in self-report. The test uses the EIC single-year-of-age
+microdata (November 2026):
+- heaping at 65 with a deficit at 62–64 points to a reporting shift;
+- a smooth excess across ages points to CONAPO.
+
+This joins suggested checks (a) and (b) above.

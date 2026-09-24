@@ -9,6 +9,6 @@ python scripts/03_fiscal.py > build/03_fiscal.log
 python scripts/02_figures.py
 python scripts/04_numbers.py
 export PATH="$HOME/.TinyTeX/bin/x86_64-linux:$PATH"
-latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build nota_EIC2025_v0.2.tex > build/latex.log 2>&1 || { tail -40 build/latex.log; exit 1; }
-cp build/nota_EIC2025_v0.2.pdf nota_EIC2025_v0.2.pdf
-echo "pages: $(pdfinfo nota_EIC2025_v0.2.pdf 2>/dev/null | awk '/^Pages/{print $2}')"
+latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build nota_EIC2025_v1.0.tex > build/latex.log 2>&1 || { tail -40 build/latex.log; exit 1; }
+cp build/nota_EIC2025_v1.0.pdf nota_EIC2025_v1.0.pdf
+echo "pages: $(pdfinfo nota_EIC2025_v1.0.pdf 2>/dev/null | awk '/^Pages/{print $2}')"

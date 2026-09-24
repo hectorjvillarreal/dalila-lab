@@ -11,6 +11,7 @@ source_reliability: secondary
 data_vintage: 2024
 promotion_status: pending-anne
 corpus_path: _crossrefs/corpus/demographics/
+superseded_by: _crossrefs/corpus/demographics/2026-07-11_baby-busts-growth-booms.md   # addendum 2026-09-23; filing ruling in _crossrefs/corpus/demographics/_pending/2026-09-23_nota-EIC2025-v0.2_Anne-Cath-review.md §6; kept in staging as provenance
 ---
 
 ## Summary

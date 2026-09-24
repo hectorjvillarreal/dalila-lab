@@ -36,8 +36,16 @@ cd GrandPlan/DFD/outputs/public/2026-09_mexico_2050
 La primera corrida descarga cinco archivos de la ONU (~290 MB) a `data/` (ignorado por git).
 
 **Script:** `mex2050_projection.py`, SHA-256
-`8e3d947b9b3c1047ead6c6f6309726fa6c5c97bce9ec968bda9e72e3eaead1f9` (copia byte a byte del apéndice de
-la instrucción; sin ediciones).
+`12d1d03139d0243055e8bedefd7f81b1b0e2511601d1f3e643be6c0745d3db24` (2026-09-23, after edit 4).
+The original was `8e3d947b9b3c1047ead6c6f6309726fa6c5c97bce9ec968bda9e72e3eaead1f9`, a byte-for-byte copy of the
+instruction's appendix. **Edit 4** of the Anne/Cath review of the nota v0.2
+(`_crossrefs/corpus/demographics/_pending/2026-09-23_nota-EIC2025-v0.2_Anne-Cath-review.md` §4–§5) is the one
+permitted edit beyond `EIC_SHARES`: one sentence appended to the method note (`src`) after "…148.9 millones)."
+The added sentence is «Si además se usa la emigración que midió el INEGI, las cifras de 2050 bajan cerca de 1.5 millones
+(ver la nota ITED de septiembre de 2026).» After the rerun, exit was 0 and `results/scenarios.csv`
+(`7e521a13…26f6`), `results/validation.txt` (`dade4cf0…a2d0`) and `results/inputs_sha256.txt` were
+**unchanged**; only the text moved. For the record, the nota v1.0 gap at equal fertility is 1.4 M
+(136.9 vs 135.5 M; 130.1 vs 128.7 M). "Cerca de 1.5" is the reviewers' wording and was kept verbatim.
 
 **Insumos ONU** (descargados 2026-09-23 de
 `https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/`; idénticos

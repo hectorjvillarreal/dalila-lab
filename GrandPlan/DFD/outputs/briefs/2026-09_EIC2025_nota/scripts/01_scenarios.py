@@ -23,6 +23,7 @@ A brief-specific run; the corpus skeleton country/MEX/mex_scenarios_eic2025.py i
             EIC 2025 emigrants by 5-yr age and sex (RR 37/26 Gráfica 9), in every scenario.
   Fertility CONAPO 2024 ASFR shape scaled to each scenario's TFR path.
 
+Decomposition run (CSV only): Central with zero migration, base unchanged (v1.0 edit 2).
 Sensitivities (CSV only): base = CONAPO 65+ (ages 65+ of the base replaced by CONAPO's
 mid-2025 single-age values; Anne §2), and base = WPP 2024 mid-2023 (projected 2023 -> 2025
 on WPP TFR and migration, then the scenario paths).
@@ -242,8 +243,10 @@ def step(p, y, tfr, net_mig, mort, fshape, prof, srb):
     return new, births
 
 
-def project(p0, y0, key, wpp, mort, fshape, prof, pre_paths=None):
+def project(p0, y0, key, wpp, mort, fshape, prof, pre_paths=None, no_migration=False):
     tfr, mig = tfr_path(key, wpp), migration_path(key, wpp)
+    if no_migration:                               # decomposition run (v1.0 edit 2)
+        mig = {y: 0.0 for y in mig}
     if pre_paths:                                  # WPP-base sensitivity: 2023-2025 on WPP paths
         tfr = {**tfr, **pre_paths[0]}
         mig = {**mig, **pre_paths[1]}
@@ -339,6 +342,13 @@ def main():
                            "pop_2050": df.population.iloc[-1],
                            "first_year_15_64_declines": next((int(r.year) for r in df.itertuples()
                                                               if r.growth_15_64_pct < 0), None)})
+    # decomposition of the 6-14 decline (review of v0.2, edit 2): Central, same base, zero migration
+    traj, births, tfr, mig = project(p0, 2025, "central", wpp, mort, fshape, prof, no_migration=True)
+    df = indicators(traj, births, tfr, mig)
+    df.insert(0, "base", "eic2025_nomigration_decomposition")
+    df.insert(1, "scenario", "central")
+    df.insert(2, "scenario_name", "Central DFD")
+    frames.append(df)
     res = pd.concat(frames, ignore_index=True)
     mins = pd.DataFrame(minima)
     RESULTS.mkdir(exist_ok=True)

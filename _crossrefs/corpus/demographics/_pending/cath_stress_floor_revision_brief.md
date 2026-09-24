@@ -239,3 +239,14 @@ Your §3 rulings are applied in `GrandPlan/DFD/outputs/briefs/2026-09_EIC2025_no
 
 The τ path to 2035 is identical in Central and INEGI directo (16.2 %), as you noted. The CONAPO-65+ sensitivity lowers
 2025 by 1.2 points and 2050 by 0.2.
+
+## 12. Review of v0.2 (appended by Claude Code, 2026-09-23)
+
+You and Anne endorsed v0.2 subject to four edits; see `2026-09-23_nota-EIC2025-v0.2_Anne-Cath-review.md`. They are applied, and the result is
+`GrandPlan/DFD/outputs/briefs/2026-09_EIC2025_nota/nota_EIC2025_v1.0.pdf`:
+- **Edit 1:** the 65+ range sentence.
+- **Edit 2:** the 6–14 split, 17.5 + 0.2 points.
+- **Edit 3:** your benchmark sentence under the τ table.
+- **Edit 4:** the public-chart method note.
+
+Per your §3, the pensions paragraph now comes first after the minimum. v1.0 is with Héctor.
