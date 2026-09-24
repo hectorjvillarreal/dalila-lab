@@ -7,10 +7,10 @@ endorsed_by:
 projects: [DFD, BDH]
 indicators: [tfr, population, dependency_ratio, migration, mortality]
 geography: [MEX]
-workflow_status: working — decisions endorsed by Anne 2026-09-24; artifact not endorsed (not a replicate)
+workflow_status: working — decisions endorsed by Anne 2026-09-23 (EIC-graphs record); artifact not endorsed (not a replicate)
 companion_of: mex_scenarios_eic2025.py
 governing_instructions: DFD_TFR_forecast_instructions.md v1.5
-related: "../../releases/2026-09-22_inegi-eic2025_tgf-trigger-fired.md; quarterly/2026-Q3_demographic_replicate.md; ../../_pending/2026-09-24_EIC-rebased-scenarios_Anne-record.md"
+related: "../../releases/2026-09-22_inegi-eic2025_tgf-trigger-fired.md; quarterly/2026-Q3_demographic_replicate.md; ../../_pending/2026-09-23_EIC-rebased-scenarios_Anne-record.md"
 ---
 
 ## What this is
@@ -139,9 +139,9 @@ scenario logic.
 - Nothing here is endorsed. Reference values for citation remain those of the Q3
   replicate and the v1.5 instructions until Anne and Cath rule.
 
-## Anne's rulings — record of 2026-09-24
+## Anne's rulings — EIC-graphs record of 2026-09-23
 
-Adjudicated in `_pending/2026-09-24_EIC-rebased-scenarios_Anne-record.md`. The
+Adjudicated in `_pending/2026-09-23_EIC-rebased-scenarios_Anne-record.md`. The
 **decisions** below carry into the Q4 replicate; **these graphs do not** (working
 product, not endorsed as a citable artifact; nothing endorsed is amended).
 
@@ -166,12 +166,11 @@ product, not endorsed as a citable artifact; nothing endorsed is amended).
    conciliación assumptions → Lee-Carter on INEGI deaths 2000–2024 ex 2020–21 →
    keep as sensitivity). IM-6 carries fixed survival; Cath rules on alignment.
 4. **Net emigration −230 k/yr — enters, with a taper and an age-sex profile.**
-   Central: held through 2030, linear taper to the 2015–20 net pace by 2040,
-   constant after; sensitivity: no taper. Binding profile: EIC age-sex shares
+   Central: held through 2030, then by 2040 "taper to the 2015–20 net pace, bounded 107–161 k/yr (CPV 2020 ampliado: 802,807 gross emigrants Mar 2015–Mar 2020 ≈ 161 k/yr; national return share pending the ampliado tabulado); carry the range until the point is sourced." (source: INEGI comunicado 378/21), constant after; sensitivity: no taper. Binding profile: EIC age-sex shares
    (70.4 % male; 22.5 % at 20–24, 19.5 % at 25–29, 15.0 % at 15–19, 14.1 % at
    30–34), not the proportional 15–44 removal used here. Lower bound stands.
    Marriage-market sex-ratio flag logged as
-   `watch_items/2026-09-24_emigration-sex-ratio-marriage-market.md`.
+   `watch_items/2026-09-23_emigration-sex-ratio-marriage-market.md`.
 5. **Fifth row `EIC-2025 direct` 1.23** — correctly carried; **ratified by Héctor
    2026-09-23** (instructions v1.6). Origin question rides with the Q4 reconciliation.
 

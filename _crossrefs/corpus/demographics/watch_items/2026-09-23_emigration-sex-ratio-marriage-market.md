@@ -1,24 +1,26 @@
 ---
 type: research_watch_item
 status: open
-date_opened: 2026-09-24
+date_opened: 2026-09-23
 opened_by: [Anne, Claude Code]
 endorsed_by: Anne
 promoted_by:
 date_promoted:
 related_corpus: [_crossrefs/corpus/demographics/releases/2026-09-22_inegi-eic2025_tgf-trigger-fired.md, _crossrefs/corpus/demographics/country/MEX/mex_scenarios_eic2025.md, _crossrefs/corpus/demographics/watch_items/2026-09-15_goldin-gender-mismatch-stress-floor.md]
 related_projects: [DFD]
-build_instruction: "_crossrefs/corpus/demographics/_pending/2026-09-24_EIC-rebased-scenarios_Anne-record.md (record-driven execution; no separate build instruction, precedent 2026-09-23)"
+build_instruction: "_crossrefs/corpus/demographics/_pending/2026-09-23_EIC-rebased-scenarios_Anne-record.md (record-driven execution; no separate build instruction, precedent 2026-09-23)"
 ---
 
 # Male-skewed emigration and the marriage-market sex ratio at 20–29 — coupling-channel input
 
 ## Origin
 
-Opened by Anne's record of 2026-09-24 (§3.3, "paper-chat flag"), on the EIC 2025
+Opened by Anne's EIC-graphs record of 2026-09-23 (§3.3, "paper-chat flag"), on the EIC 2025
 emigration profile: net outflow 2020–25 of roughly 1.3 M out and 0.15 M back,
 70.4 % male, concentrated at 20–29 (22.5 % at 20–24, 19.5 % at 25–29, 15.0 % at
 15–19, 14.1 % at 30–34). Anne's instruction: **log; do not model yet.**
+
+The 2015–20 outflow was already ≈67% male (537,149 of 802,807); the 2020–25 outflow at 70.4% male and ≈60% higher gross volume is an intensification of an existing skew, not a new phenomenon. Read the marriage-market effect as a level that steepened, not as a regime that began in 2020.
 
 ## The mechanism to watch
 
@@ -50,7 +52,7 @@ cohabiting, 5-year bands), which waits for the EIC microdata (§VII, Nov 2026).
 
 ## Cross-references
 
-- → Origin record: `_pending/2026-09-24_EIC-rebased-scenarios_Anne-record.md` §3.3
+- → Origin record: `_pending/2026-09-23_EIC-rebased-scenarios_Anne-record.md` §3.3
 - → EIC 2025 entry (emigration and union-status figures): `releases/2026-09-22_inegi-eic2025_tgf-trigger-fired.md`
 - → Working graphs (migration profile as implemented, single-sex): `country/MEX/mex_scenarios_eic2025.md`
 - → Rival mechanism on file: `watch_items/2026-09-15_goldin-gender-mismatch-stress-floor.md`

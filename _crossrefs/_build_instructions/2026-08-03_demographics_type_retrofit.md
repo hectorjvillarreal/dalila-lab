@@ -177,6 +177,18 @@ edit is made now**:
    (a) it is supplementary, not a substitute for `build_instruction:`; the
    next revision should register it as an optional field so it stops reading
    as a schema deviation.
+5. **No unsourced statistics in build instructions** *(added 2026-09-23 by
+   Claude Code, executing Anne's
+   `2026-09-23_demographics_anne-delivery-and-corrections.md`; flagged to the
+   Architecture workspace, Debb).* A build instruction may not assert a
+   statistic (a level, a rate, a date, a projection value) without a
+   series/table reference or a script-output path on the same line. An
+   unsourced number in a build instruction is a blocking defect at execution,
+   not a narrative convenience. Concrete failure case: the BID2 June
+   instruction `CC_instrucciones_Draft-June_v2.md` asserted "peak ~2042 at
+   152 M, 150.6 M by 2050" as WPP 2024 with no table; it propagated verbatim
+   into seven manuscript files and the model header before the UN series
+   (148.95 M in 2050, peak 149.94 M in 2058) was checked on 2026-09-23.
 
 ---
 

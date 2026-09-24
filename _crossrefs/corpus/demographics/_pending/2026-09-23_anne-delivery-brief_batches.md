@@ -95,7 +95,7 @@ Repo-relative to `GrandPlan/DFD/aging_macro_nber_2609/` unless stated.
 
 - **Batch 1 built** per §Mechanics: `~/anne_batch1_2026-09-23.md`, 35,039 bytes, not committed.
   Sections: Benzell 207 lines (13,109 B; separator flagged `[edited 2026-09-23 per Anne
-  2026-09-23 §3.1 and 2026-09-24 §4]`); Kotschy & Bloom 166 lines (10,234 B; unedited since
+  2026-09-23 §3.1 and EIC-graphs record §4]`); Kotschy & Bloom 166 lines (10,234 B; unedited since
   09-17); Bernardino 144 lines (8,826 B; unedited); TAR candidates 29 lines (2,434 B; unedited).
   The private claude.ai page published earlier today (all twelve files at once) was
   **republished as batch 1 only** at the same URL so it no longer conflicts with the batch

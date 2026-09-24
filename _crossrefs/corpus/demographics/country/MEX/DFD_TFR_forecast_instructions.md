@@ -122,7 +122,7 @@ INEGI Encuesta Intercensal 2025 published a TGF of 1.23 [1.22, 1.24] for 2024
 (published rounding 1.2), which fired the Q3 §2 re-anchor trigger on its
 "below 1.45" branch: the point estimate is **not chased** — Central stays 1.50 as
 the upper bracket — and a fifth row opens instead. Specification as carried in
-the 2026-09-23 working graphs and confirmed by Anne (record of 2026-09-24 §3.4):
+the 2026-09-23 working graphs and confirmed by Anne (EIC-graphs record of 2026-09-23 §3.4):
 **TFR 1.23 stable from 2025**, labelled *unreconciled survey direct estimate*.
 The EIC instrument is a survey direct estimate, not a registry rate, and likely
 runs ~0.1–0.2 low; the reconciled 2024 value is expected in 1.3–1.4. The row's
@@ -406,8 +406,8 @@ first tabulated on a base the same replicate retires; (4) the origin question
 (5) the 2026-09-22 entry's action item "bumps to v1.5 on execution" was written
 before v1.5 was taken by the stress-floor ruling; this v1.6 is that bump.
 Nothing endorsed is amended.*
-*Queued for v1.7 (to be executed with the 2026-Q4 replicate; Anne's record of
-2026-09-24, `_pending/2026-09-24_EIC-rebased-scenarios_Anne-record.md`; nothing
+*Queued for v1.7 (to be executed with the 2026-Q4 replicate; Anne's EIC-graphs record of
+2026-09-23, `_pending/2026-09-23_EIC-rebased-scenarios_Anne-record.md`; nothing
 below is operational until v1.7 is issued; renumbered from v1.6 when the fifth-row
 ratification took v1.6): (1) base convention — the EIC-2025
 age structure replaces the WPP-2023 base as primary, WPP-2023 printed as the
@@ -418,8 +418,7 @@ CONAPO's conciliación before adoption — if the gap survives it goes to Cath a
 survival finding); (2) reporting rule — base effect and path effect on separate
 lines, the 2050 headline decomposed accordingly; the base moved on the EIC age
 structure (a count), not on the survey TGF (a rate); (3) migration — Central
-−230 k/yr net through 2030, linear taper to the 2015–20 net pace by 2040,
-constant after; sensitivity without taper printed alongside; EIC age-sex profile
+−230 k/yr net through 2030, then by 2040 "taper to the 2015–20 net pace, bounded 107–161 k/yr (CPV 2020 ampliado: 802,807 gross emigrants Mar 2015–Mar 2020 ≈ 161 k/yr; national return share pending the ampliado tabulado); carry the range until the point is sourced." (source: INEGI comunicado 378/21), constant after; sensitivity without taper printed alongside; EIC age-sex profile
 of emigrants applied (70.4 % male; 22.5 % at 20–24, 19.5 % at 25–29, 15.0 % at
 15–19, 14.1 % at 30–34), not proportional removal; EIC flow is a lower bound;
 (4) mortality — 1 %/yr improvement is sensitivity only until sourced (CONAPO

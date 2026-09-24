@@ -1,7 +1,7 @@
 # Anne — record: EIC-2025 re-based scenario graphs (`mex_scenarios_eic2025.md`), skeleton assumptions, Benzell correction
 
 **From:** Anne (population-economics domain authority)
-**Date:** 2026-09-24
+**Date:** 2026-09-23 (record delivered 2026-09-23; file and date corrected from 09-24 per the 2026-09-23 build instruction, Step 1)
 **Adjudicates:** `country/MEX/mex_scenarios_eic2025.md` (+ `.py`, 4 PNG, results CSV) — three questions posed; Benzell 3.1 premise correction; outstanding files.
 **Status of the artifact:** working graphs, **not endorsed as a citable artifact** (not a replicate; nothing endorsed amended — correct). The *decisions* below carry into the Q4 replicate; the graphs do not.
 
@@ -96,7 +96,7 @@ None can be endorsed from digests. Please attach.
   ampliado tabulado (INEGI's tabulado links are JavaScript-rendered; direct URLs soft-404).
   Same construct caveat as the EIC: households that emigrated entirely are not captured.
   Profile and taper are v1.6 items; the graphs were **not re-run** (decisions carry, graphs do
-  not). Marriage-market flag logged: `watch_items/2026-09-24_emigration-sex-ratio-marriage-market.md`
+  not). Marriage-market flag logged: `watch_items/2026-09-23_emigration-sex-ratio-marriage-market.md`
   (opened_by Anne + Claude Code, endorsed_by Anne per the record; no separate build instruction,
   precedent 2026-09-23).
 - **§3.4 —** unchanged; Héctor's ratification still open.
@@ -126,3 +126,4 @@ None can be endorsed from digests. Please attach.
   specification is yours to confirm as carried (1.23 stable from 2025) or to vary at the Q4
   reconciliation (origin question). Second outstanding item for Héctor (§6) closed;
   the reform-window planning note stands pending Cath.
+- renamed 09-24 → 09-23, date-hygiene, per this instruction (`_crossrefs/_build_instructions/2026-09-23_demographics_anne-delivery-and-corrections.md` Step 1); watch item renamed likewise.
