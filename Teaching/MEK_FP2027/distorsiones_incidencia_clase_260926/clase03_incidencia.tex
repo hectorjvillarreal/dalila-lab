@@ -7,6 +7,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[spanish,es-nodecimaldot]{babel}
+\unaccentedoperators % operadores sin acento: max, min, lim (la opción es-noaccentedoperators no existe en esta versión de babel)
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs}
 \usepackage{tikz}
@@ -40,7 +41,6 @@
 
 % Fuente al pie de cada diapositiva
 \newcommand{\fuente}[1]{\par\vfill{\small\color{cGris}#1\par}}
-\newcommand{\verificar}{\textcolor{red}{[VERIFICAR]}}
 % Resultado final de una derivación, resaltado
 \newcommand{\resultado}[1]{\colorbox{cTitulo!12}{$\displaystyle #1$}}
 
@@ -258,25 +258,25 @@
   \begin{tikzpicture}[x=0.68cm,y=0.62cm]
     \begin{scope}
       \node at (3.2,6.1) {Demanda inelástica};
-      \fill[consum] (0,1.929) rectangle (2.171,2.786);
-      \fill[produc] (0,1.586) rectangle (2.171,1.929);
+      \fill[consum] (0,1.929) rectangle (1.829,3.214);
+      \fill[produc] (0,1.414) rectangle (1.829,1.929);
       \ejes{6.4}{5.6}{$x$}{precio}
       \draw[demanda] (0,5.5) -- (4.4,0) node[above right,pos=0.9] {$D$};
       \draw[oferta] (0,0.5) -- (6,3.5) node[above,pos=0.97] {$S$};
-      \draw[guia] (2.171,1.586) -- (2.171,0) (2.171,1.929) -- (2.857,1.929);
-      \node[left] at (0,2.786) {$q$}; \node[left] at (0,1.586) {$p$};
+      \draw[guia] (1.829,1.414) -- (1.829,0) (1.829,1.929) -- (2.857,1.929);
+      \node[left] at (0,3.214) {$q$}; \node[left] at (0,1.929) {$p_0$}; \node[left] at (0,1.414) {$p$};
       \node[punto] at (2.857,1.929) {};
       \node[align=left,anchor=west] at (3.6,4.9) {\textcolor{cDemanda}{\rule{6pt}{6pt}} consumidores\\\textcolor{cOferta}{\rule{6pt}{6pt}} productores};
     \end{scope}
     \begin{scope}[xshift=7.5cm]
       \node at (3.2,6.1) {Demanda elástica};
-      \fill[consum] (0,2.167) rectangle (1.733,2.567);
-      \fill[produc] (0,1.367) rectangle (1.733,2.167);
+      \fill[consum] (0,2.167) rectangle (0.933,2.767);
+      \fill[produc] (0,0.967) rectangle (0.933,2.167);
       \ejes{6.4}{5.6}{$x$}{precio}
       \draw[demanda] (0,3) -- (6,1.5) node[below,pos=0.95] {$D$};
       \draw[oferta] (0,0.5) -- (6,3.5) node[above,pos=0.97] {$S$};
-      \draw[guia] (1.733,1.367) -- (1.733,0) (1.733,2.167) -- (3.333,2.167);
-      \node[left] at (0,2.567) {$q$}; \node[left] at (0,1.367) {$p$};
+      \draw[guia] (0.933,0.967) -- (0.933,0) (0.933,2.167) -- (3.333,2.167);
+      \node[left] at (0,2.767) {$q$}; \node[left] at (0,2.167) {$p_0$}; \node[left] at (0,0.967) {$p$};
       \node[punto] at (3.333,2.167) {};
     \end{scope}
   \end{tikzpicture}
@@ -355,11 +355,12 @@
       \node at (3.2,6.3) {Mercado que se vacía};
       \ejes{6.4}{5.6}{$L$}{salario}
       \draw[demanda] (0.3,4.76) -- (6,0.2) node[above right,pos=0.03] {$L^d$};
-      \draw[oferta] (2.6,0.2) -- (5.1,5.2) node[right,pos=0.95] {$L^s$};
-      \node[punto] at (3.571,2.143) {};
-      \draw[guia] (0,2.429) -- (3.214,2.429) (0,1.429) -- (3.214,1.429) (3.214,1.429) -- (3.214,0);
-      \draw[cuna] (3.214,1.429) -- (3.214,2.429);
-      \node[left] at (0,2.429) {$W$}; \node[left] at (0,1.429) {$w$};
+      \draw[oferta] (3.3,0) -- (3.95,5.2) node[right,pos=0.95] {$L^s$};
+      \node[punto] at (3.568,2.145) {};
+      \draw[guia] (0,2.236) -- (3.455,2.236) (0,1.236) -- (3.455,1.236) (3.455,1.236) -- (3.455,0);
+      \draw[cuna] (0.45,1.236) -- (0.45,2.236);
+      \node[right,cImpuesto] at (0.45,1.736) {cuña};
+      \node[left] at (0,2.236) {$W$}; \node[left] at (0,1.236) {$w$};
     \end{scope}
     \begin{scope}[xshift=7.5cm]
       \node at (3.2,6.3) {Con salario mínimo};
@@ -372,12 +373,12 @@
       \node[punto,label=above right:$E$] at (2.25,3.2) {};
       \node[punto,label=below left:$E'$] at (1.375,3.2) {};
       \node[punto,label=below right:$F$] at (4.5,3.2) {};
-      \draw[guia] (1.375,3.2) -- (1.375,0) (4.5,3.2) -- (4.5,0);
-      \draw[decorate,decoration={brace,mirror,amplitude=4pt},thick] (1.375,-0.15) -- (4.5,-0.15) node[midway,below=4pt] {desempleo};
+      \draw[guia] (1.375,3.2) -- (1.375,0) (2.25,3.2) -- (2.25,0);
+      \draw[decorate,decoration={brace,mirror,amplitude=4pt},thick] (1.375,-0.15) -- (2.25,-0.15) node[midway,below=4pt] {desempleo adicional};
     \end{scope}
   \end{tikzpicture}
   \par
-  $W$: costo laboral; $w$: salario neto. Izquierda: el salario neto absorbe casi toda la cuota. Derecha: el neto no puede bajar y la cuota se vuelve desempleo.
+  $W$: costo laboral; $w$: salario neto. Izquierda: el salario neto absorbe casi toda la cuota. Derecha: el neto no puede bajar y la cuota agrega desempleo.
   \fuente{Salanié, sec.~1.1.1, figs.~1.1–1.2; Gruber, cap.~19.2.}
 \end{frame}
 
@@ -492,7 +493,7 @@
 
 % 18 ----------------------------------------------------------------------
 \begin{frame}{El equilibrio con impuestos}
-  Impuesto $t_{KX}$ al uso de capital en $X$ e impuesto $t_X$ al bien $X$; $c_X, c_Y$ son costos unitarios.
+  Impuesto $t_{KX}$ al uso de capital en $X$ e impuesto $t_X$ al bien $X$; $c_X, c_Y$ son costos unitarios; $R$: ingreso.
   \begin{align*}
     \text{Precios:}\quad & p_X = c_X\big(r(1+t_{KX}),\,w\big), \qquad p_Y = c_Y(r,w)\\
     \text{Factores:}\quad & c_{Xw}X + c_{Yw}Y = L, \qquad c_{Xr}X + c_{Yr}Y = K\\
@@ -680,7 +681,7 @@
         \node[below] at (2.6,0) {$x_1$}; \node[below] at (3.6,0) {$x_0$};
         \node at (1.3,2.43) {recaudación};
         \draw[guia] (2.6,2.3) -- (3.6,2.3);
-        \draw[thin] (3.0,2.35) -- (4.2,1.3) node[below right] {carga excesiva};
+        \draw[thin] (3.1,2.3) -- (4.3,2.15) node[right] {carga excesiva};
       \end{tikzpicture}
     \end{column}
     \begin{column}{0.43\textwidth}
@@ -742,21 +743,21 @@
   \begin{tikzpicture}[x=0.68cm,y=0.6cm]
     \begin{scope}
       \node at (3.2,6.1) {Demanda inelástica};
-      \fill[ce] (2.171,2.786) -- (2.171,1.586) -- (2.857,1.929) -- cycle;
+      \fill[ce] (1.829,3.214) -- (1.829,1.414) -- (2.857,1.929) -- cycle;
       \ejes{6.4}{5.6}{$x$}{precio}
       \draw[demanda] (0,5.5) -- (4.4,0) node[above right,pos=0.9] {$D$};
       \draw[oferta] (0,0.5) -- (6,3.5) node[above,pos=0.97] {$S$};
-      \draw[guia] (2.171,1.586) -- (2.171,0) (2.857,1.929) -- (2.857,0);
-      \node[left] at (0,2.786) {$q$}; \node[left] at (0,1.586) {$p$};
+      \draw[guia] (1.829,1.414) -- (1.829,0) (2.857,1.929) -- (2.857,0);
+      \node[left] at (0,3.214) {$q$}; \node[left] at (0,1.414) {$p$};
     \end{scope}
     \begin{scope}[xshift=7.5cm]
       \node at (3.2,6.1) {Demanda elástica};
-      \fill[ce] (1.733,2.567) -- (1.733,1.367) -- (3.333,2.167) -- cycle;
+      \fill[ce] (0.933,2.767) -- (0.933,0.967) -- (3.333,2.167) -- cycle;
       \ejes{6.4}{5.6}{$x$}{precio}
       \draw[demanda] (0,3) -- (6,1.5) node[below,pos=0.95] {$D$};
       \draw[oferta] (0,0.5) -- (6,3.5) node[above,pos=0.97] {$S$};
-      \draw[guia] (1.733,1.367) -- (1.733,0) (3.333,2.167) -- (3.333,0);
-      \node[left] at (0,2.567) {$q$}; \node[left] at (0,1.367) {$p$};
+      \draw[guia] (0.933,0.967) -- (0.933,0) (3.333,2.167) -- (3.333,0);
+      \node[left] at (0,2.767) {$q$}; \node[left] at (0,0.967) {$p$};
     \end{scope}
   \end{tikzpicture}
   \par
@@ -798,7 +799,7 @@
         CE &= -VE - \tau\,h(p^1,u^1)
       \end{align*}
       \pause
-      El último paso usa el lema de Shephard. La carga excesiva es el triángulo bajo la demanda hicksiana de la utilidad final.
+      La integral usa el lema de Shephard. La carga excesiva es el triángulo bajo la demanda hicksiana de la utilidad final.
     \end{column}
     \begin{column}{0.48\textwidth}
       \centering
@@ -806,7 +807,7 @@
         \fill[recauda] (0,2) rectangle (2.5,3);
         \fill[ce] (2.5,3) -- (2.5,2) -- (3.214,2) -- cycle;
         \ejes{6}{5.5}{$x$}{precio}
-        \draw[demanda] (0,5) -- (5.5,0.6) node[above,pos=0.97] {$x(p,R)$};
+        \draw[demanda] (0,5) -- (5.5,0.6) node[above right,pos=0.85] {$x(p,R)$};
         \draw[hicks] (1.07,5) -- (4.4,0.34) node[right,pos=0.02] {$h(p,u^1)$};
         \draw[thick,cOferta] (0,2) -- (5.6,2);
         \draw[thick,cOferta,dashed] (0,3) -- (5.6,3);
@@ -899,13 +900,13 @@
         Año & $\tau$ por litro\\
         \midrule
         2014 & \$1.00\\
-        2025 & $\approx$ \$1.65$^{*}$\\
+        2025 & \$1.6451\\
         2026 (azúcares) & \$3.0818\\
         2026 (edulcorantes) & \$1.5000\\
         \bottomrule
       \end{tabular}
       \par\medskip
-      {\small Se actualiza por inflación cada año desde 2018.\\ $^{*}$\,\verificar}
+      {\small Se actualiza por inflación cada año desde 2018.}
     \end{column}
     \begin{column}{0.45\textwidth}
       \pause
@@ -917,7 +918,7 @@
       \end{block}
     \end{column}
   \end{columns}
-  \fuente{DOF, 11-12-2013; LIEPS vigente, art.~2, fr.~I, inciso G (última reforma DOF 07-11-2025). Cuota de 2025: \verificar.}
+  \fuente{DOF, 11-12-2013; LIEPS vigente, art.~2, fr.~I, inciso G (última reforma DOF 07-11-2025). Cuota de 2025: Acuerdo de actualización de cuotas del IEPS (DOF, 27-12-2024).}
 \end{frame}
 
 % 36 ----------------------------------------------------------------------
@@ -943,6 +944,8 @@
   \begin{itemize}
     \item Respuesta de la cantidad: las calorías compradas de bebidas gravadas cayeron 2.7\,\%, con sustitución hacia alimentos no gravados.\\
       {\small\color{cGris}Aguilar, Gutiérrez y Seira (2021), \emph{Journal of Health Economics} 77.}
+    \pause
+    \item La cuota de 2026 es 1.87 veces la de 2025; con la regla de la diapositiva 28, la carga excesiva crecería unas 3.5 veces, antes del argumento correctivo (con la misma elasticidad y la misma base).
     \pause
     \item Si el consumo de azúcar tiene costos que el consumidor no toma en cuenta (externalidades o internalidades de salud), la caída en la cantidad es una ganancia y no una carga excesiva.
     \pause
