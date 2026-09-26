@@ -1,0 +1,1033 @@
+% Clase 3 — Incidencia, distorsiones y pérdida de bienestar
+% Finanzas Públicas, Maestría en Economía Aplicada, Tec de Monterrey
+% Esquema aprobado: esquema.md (2026-09-25). Compilar con: latexmk -pdf clase03_incidencia.tex
+% Versión para repartir: clase03_incidencia_handout.tex (misma fuente, opción handout).
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{babel,arrows.meta,calc,positioning,decorations.pathreplacing,patterns}
+\usepackage{appendixnumberbeamer}
+
+% ---------------------------------------------------------------------------
+% Tema sobrio
+% ---------------------------------------------------------------------------
+\definecolor{cTitulo}{RGB}{0,55,100}
+\definecolor{cOferta}{RGB}{31,87,153}
+\definecolor{cDemanda}{RGB}{200,100,0}
+\definecolor{cImpuesto}{RGB}{175,30,30}
+\definecolor{cRecauda}{RGB}{40,130,80}
+\definecolor{cGris}{RGB}{110,110,110}
+
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{frametitle}{fg=cTitulo}
+\setbeamercolor{title}{fg=cTitulo}
+\setbeamercolor{structure}{fg=cTitulo}
+\setbeamercolor{block title}{bg=cTitulo!12,fg=cTitulo}
+\setbeamercolor{block body}{bg=cTitulo!4}
+\setbeamercolor{block title alerted}{bg=cImpuesto!12,fg=cImpuesto}
+\setbeamercolor{block body alerted}{bg=cImpuesto!4}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{blocks}[rounded]
+\setbeamertemplate{footline}{%
+  \hfill{\small\color{cGris}Clase 3 · Incidencia y distorsiones\quad\insertframenumber/\inserttotalframenumber}\hspace*{1em}\vspace*{0.6em}}
+
+% Fuente al pie de cada diapositiva
+\newcommand{\fuente}[1]{\par\vfill{\small\color{cGris}#1\par}}
+\newcommand{\verificar}{\textcolor{red}{[VERIFICAR]}}
+% Resultado final de una derivación, resaltado
+\newcommand{\resultado}[1]{\colorbox{cTitulo!12}{$\displaystyle #1$}}
+
+% ---------------------------------------------------------------------------
+% Estilo común de gráficas
+% ---------------------------------------------------------------------------
+\tikzset{
+  every node/.append style={font=\small},
+  eje/.style={-{Stealth[length=2mm]},thick,black!75},
+  oferta/.style={very thick,cOferta},
+  demanda/.style={very thick,cDemanda},
+  hicks/.style={very thick,cTitulo,dash pattern=on 5pt off 2pt},
+  desp/.style={very thick,dashed},
+  guia/.style={thin,dashed,black!45},
+  cuna/.style={very thick,cImpuesto,{Stealth[length=2mm]}-{Stealth[length=2mm]}},
+  consum/.style={fill=cDemanda!25},
+  produc/.style={fill=cOferta!22},
+  recauda/.style={fill=cRecauda!28},
+  ce/.style={fill=cImpuesto!45},
+  punto/.style={circle,fill=black,inner sep=1.2pt},
+  caja/.style={draw=cTitulo,rounded corners,fill=cTitulo!5,align=center,inner sep=4pt},
+}
+% \ejes{xmax}{ymax}{etiqueta x}{etiqueta y}
+\newcommand{\ejes}[4]{%
+  \draw[eje] (0,0) -- (#1,0) node[below] {#3};
+  \draw[eje] (0,0) -- (0,#2) node[left] {#4};}
+
+\title{Incidencia, distorsiones y pérdida de bienestar}
+\subtitle{Finanzas Públicas · Clase 3}
+\author{Héctor Juan Villarreal}
+\institute{Maestría en Economía Aplicada\\Escuela de Gobierno y Transformación Pública · Tec de Monterrey}
+\date{26 de septiembre de 2026}
+
+\begin{document}
+
+% =========================================================================
+% I. MOTIVACIÓN
+% =========================================================================
+\section{Motivación}
+
+% 1 -----------------------------------------------------------------------
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% 2 -----------------------------------------------------------------------
+\begin{frame}{La ley sube la cuota patronal: ¿quién la pagará?}
+  \textbf{Reforma de pensiones de 2020}
+  \begin{itemize}
+    \item Cuota patronal de cesantía en edad avanzada y vejez: de una tasa única de 3.150\,\% a una tabla por salario.
+    \item Va de 3.150\,\% (un salario mínimo) a 11.875\,\% (desde 4.01 UMA).
+    \item Sube poco a poco entre 2023 y 2030. La cuota obrera se queda en 1.125\,\%.
+  \end{itemize}
+  \pause
+  \begin{block}{La pregunta de hoy}
+    La ley dice quién entera la cuota. ¿Quién la paga? ¿Las empresas? ¿Los trabajadores, con un salario más bajo? ¿El empleo formal?
+  \end{block}
+  \pause
+  Tesis del papel matamoscas (\emph{flypaper}): el impuesto se queda donde cae. Veremos cuándo es cierta.
+  \fuente{Fuente: Ley del Seguro Social, art.~168, fr.~II, y transitorio segundo (DOF, 16-12-2020).}
+\end{frame}
+
+% 3 -----------------------------------------------------------------------
+\begin{frame}{Tres preguntas para hoy}
+  \begin{enumerate}
+    \item ¿Quién carga con el impuesto? \hfill\textcolor{cGris}{incidencia}
+    \item ¿Cuánto se pierde además de lo recaudado? \hfill\textcolor{cGris}{carga excesiva}
+    \item ¿De qué depende? \hfill\textcolor{cGris}{elasticidades}
+  \end{enumerate}
+  \vspace{1.2em}
+  \centering
+  \begin{tikzpicture}[node distance=5mm]
+    \node[caja,text width=2.6cm] (a) {Incidencia en equilibrio parcial};
+    \node[caja,text width=2.6cm,right=of a] (b) {Incidencia en equilibrio general};
+    \node[caja,text width=2.6cm,right=of b] (c) {Distorsiones y carga excesiva};
+    \node[caja,text width=2.6cm,right=of c] (d) {IEPS a bebidas azucaradas};
+    \draw[-{Stealth},thick,cTitulo] (a) -- (b);
+    \draw[-{Stealth},thick,cTitulo] (b) -- (c);
+    \draw[-{Stealth},thick,cTitulo] (c) -- (d);
+  \end{tikzpicture}
+\end{frame}
+
+% =========================================================================
+% II. INCIDENCIA EN EQUILIBRIO PARCIAL
+% =========================================================================
+\section{Incidencia en equilibrio parcial}
+
+% 4 -----------------------------------------------------------------------
+\begin{frame}{La incidencia legal no es la incidencia económica}
+  \begin{itemize}
+    \item \textbf{Incidencia legal}: quién entera el impuesto al fisco.
+    \item \textbf{Incidencia económica}: cómo cambian los recursos de cada agente cuando los precios se ajustan.
+  \end{itemize}
+  \pause
+  \begin{block}{Ejemplo}
+    El patrón entera la cuota al IMSS. Si en el nuevo equilibrio el salario neto baja, una parte de la carga es del trabajador.
+  \end{block}
+  \pause
+  \begin{itemize}
+    \item Medimos la incidencia con precios: comparamos el equilibrio antes y después del impuesto.
+    \item Es estática comparativa: no modelamos la transición entre equilibrios.
+  \end{itemize}
+  \fuente{Gruber, cap.~19.1; Salanié, cap.~1.}
+\end{frame}
+
+% 5 -----------------------------------------------------------------------
+\begin{frame}{El impuesto abre una cuña entre dos precios}
+  \begin{columns}[T]
+    \begin{column}{0.44\textwidth}
+      \begin{itemize}
+        \item $q$: precio que paga el consumidor.
+        \item $p$: precio que recibe el productor.
+        \item Impuesto ad valorem: $q = p\,(1+t)$.
+        \item La demanda responde a $q$; la oferta, a $p$.
+      \end{itemize}
+      \begin{block}{Equilibrio con impuesto}
+        \centering $D\big(p(1+t)\big) = S(p)$
+      \end{block}
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \centering
+      \begin{tikzpicture}[x=0.85cm,y=0.78cm]
+        \ejes{6.6}{5.4}{$x$}{precio}
+        \draw[demanda] (0.3,4.775) -- (6,0.5) node[above right,pos=0.95] {$D$};
+        \draw[oferta] (0,0.5) -- (6,3.5) node[above,pos=0.97] {$S$};
+        \draw[guia] (0,2.3) -- (3.6,2.3) -- (3.6,0);
+        \node[punto] at (3.6,2.3) {};
+        \draw[guia] (0,3.05) -- (2.6,3.05);
+        \draw[guia] (0,1.8) -- (2.6,1.8);
+        \draw[guia] (2.6,1.8) -- (2.6,0);
+        \draw[cuna] (2.6,1.8) -- (2.6,3.05);
+        \node[left,cImpuesto] at (2.6,2.68) {cuña};
+        \node[left] at (0,3.05) {$q$};
+        \node[left] at (0,1.8) {$p$};
+        \node[left] at (0,2.3) {$p_0$};
+        \node[below] at (2.6,0) {$x_1$};
+        \node[below] at (3.6,0) {$x_0$};
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{Salanié, sec.~1.1.2. En la gráfica, la cuña $q-p$ se dibuja como distancia vertical.}
+\end{frame}
+
+% 6 -----------------------------------------------------------------------
+\begin{frame}{Da lo mismo de qué lado se cobre}
+  \centering
+  \begin{tikzpicture}[x=0.68cm,y=0.62cm]
+    \begin{scope}
+      \node at (3.2,6.1) {Se cobra al productor};
+      \ejes{6.4}{5.4}{$x$}{precio}
+      \draw[demanda] (0.3,4.775) -- (6,0.5) node[above,pos=0.97] {$D$};
+      \draw[oferta] (0,0.5) -- (6,3.5) node[below,pos=0.97] {$S$};
+      \draw[oferta,desp] (0,1.75) -- (5.5,4.5);
+      \draw[guia] (0,3.05) -- (2.6,3.05) (0,1.8) -- (2.6,1.8) (2.6,1.8) -- (2.6,0);
+      \draw[cuna] (2.6,1.8) -- (2.6,3.05);
+      \node[left] at (0,3.05) {$q$}; \node[left] at (0,1.8) {$p$};
+      \node[below] at (2.6,0) {$x_1$};
+    \end{scope}
+    \begin{scope}[xshift=7.5cm]
+      \node at (3.2,6.1) {Se cobra al consumidor};
+      \ejes{6.4}{5.4}{$x$}{precio}
+      \draw[demanda] (0.3,4.775) -- (6,0.5) node[above,pos=0.97] {$D$};
+      \draw[oferta] (0,0.5) -- (6,3.5) node[above,pos=0.97] {$S$};
+      \draw[demanda,desp] (0.3,3.525) -- (5,0);
+      \draw[guia] (0,3.05) -- (2.6,3.05) (0,1.8) -- (2.6,1.8) (2.6,1.8) -- (2.6,0);
+      \draw[cuna] (2.6,1.8) -- (2.6,3.05);
+      \node[left] at (0,3.05) {$q$}; \node[left] at (0,1.8) {$p$};
+      \node[below] at (2.6,0) {$x_1$};
+    \end{scope}
+  \end{tikzpicture}
+  \par\smallskip
+  Línea punteada: la curva desplazada por el impuesto. Mismos $q$, $p$ y $x_1$ en los dos paneles.
+  \pause
+  \fuente{Cuándo falla: en Grecia, la cuota patronal adicional la absorbieron los patrones y la obrera, los trabajadores (Saez, Matsaganis y Tsakloglou, 2012, \emph{QJE}). Gruber, cap.~19.1; Salanié, sec.~1.1.1.}
+\end{frame}
+
+% 7 -----------------------------------------------------------------------
+\begin{frame}{Derivación: el equilibrio con impuesto}
+  Partimos de $t=0$ y definimos las elasticidades en valor absoluto:
+  \[ e_D = -\frac{p\,D'(p)}{D(p)} > 0, \qquad e_S = \frac{p\,S'(p)}{S(p)} > 0. \]
+  \begin{align*}
+    \onslide<2->{\text{Equilibrio:}\quad & D\big(p(1+t)\big) = S(p)\\}
+    \onslide<3->{\text{Diferenciamos en } t=0:\quad & D'(p)\,(dp + p\,dt) = S'(p)\,dp\\}
+    \onslide<4->{\text{Multiplicamos por } p/x:\quad & -e_D\Big(\frac{dp}{p} + dt\Big) = e_S\,\frac{dp}{p}\\}
+    \onslide<5->{\text{Despejamos:}\quad & \resultado{\frac{dp}{p} = -\frac{e_D}{e_S+e_D}\,dt}}
+  \end{align*}
+  \fuente{Salanié, sec.~1.1.1.}
+\end{frame}
+
+% 8 -----------------------------------------------------------------------
+\begin{frame}{El lado menos elástico carga con el impuesto}
+  \begin{block}{Resultado}
+    \[
+      \frac{\partial \log q}{\partial t} = \frac{e_S}{e_S+e_D}\in(0,1),
+      \qquad
+      \frac{\partial \log p}{\partial t} = -\frac{e_D}{e_S+e_D}\in(-1,0).
+    \]
+  \end{block}
+  \pause
+  \begin{itemize}
+    \item Las dos partes suman 1: el impuesto se reparte completo entre los dos lados.
+    \item El precio al consumidor sube más cuanto más elástica es la oferta frente a la demanda.
+    \item El precio al productor baja más cuanto más elástica es la demanda frente a la oferta.
+  \end{itemize}
+  \pause
+  \begin{alertblock}{Regla}
+    Carga más quien tiene menos opciones para responder.
+  \end{alertblock}
+  \fuente{Salanié, secs.~1.1.1–1.1.2.}
+\end{frame}
+
+% 9 -----------------------------------------------------------------------
+\begin{frame}{Lectura sobre la gráfica: el mismo impuesto, dos repartos}
+  \centering
+  \begin{tikzpicture}[x=0.68cm,y=0.62cm]
+    \begin{scope}
+      \node at (3.2,6.1) {Demanda inelástica};
+      \fill[consum] (0,1.929) rectangle (2.171,2.786);
+      \fill[produc] (0,1.586) rectangle (2.171,1.929);
+      \ejes{6.4}{5.6}{$x$}{precio}
+      \draw[demanda] (0,5.5) -- (4.4,0) node[above right,pos=0.9] {$D$};
+      \draw[oferta] (0,0.5) -- (6,3.5) node[above,pos=0.97] {$S$};
+      \draw[guia] (2.171,1.586) -- (2.171,0) (2.171,1.929) -- (2.857,1.929);
+      \node[left] at (0,2.786) {$q$}; \node[left] at (0,1.586) {$p$};
+      \node[punto] at (2.857,1.929) {};
+      \node[align=left,anchor=west] at (3.6,4.9) {\textcolor{cDemanda}{\rule{6pt}{6pt}} consumidores\\\textcolor{cOferta}{\rule{6pt}{6pt}} productores};
+    \end{scope}
+    \begin{scope}[xshift=7.5cm]
+      \node at (3.2,6.1) {Demanda elástica};
+      \fill[consum] (0,2.167) rectangle (1.733,2.567);
+      \fill[produc] (0,1.367) rectangle (1.733,2.167);
+      \ejes{6.4}{5.6}{$x$}{precio}
+      \draw[demanda] (0,3) -- (6,1.5) node[below,pos=0.95] {$D$};
+      \draw[oferta] (0,0.5) -- (6,3.5) node[above,pos=0.97] {$S$};
+      \draw[guia] (1.733,1.367) -- (1.733,0) (1.733,2.167) -- (3.333,2.167);
+      \node[left] at (0,2.567) {$q$}; \node[left] at (0,1.367) {$p$};
+      \node[punto] at (3.333,2.167) {};
+    \end{scope}
+  \end{tikzpicture}
+  \par
+  El rectángulo de recaudación se divide según las elasticidades.
+  \pause
+  \begin{alertblock}{Pregunta}
+    ¿Quién carga con un impuesto a los cigarros? ¿Y a los boletos de avión de temporada baja?
+  \end{alertblock}
+\end{frame}
+
+% 10 ----------------------------------------------------------------------
+\begin{frame}{Casos extremos: traslado completo o nulo}
+  \begin{columns}[T]
+    \begin{column}{0.42\textwidth}
+      \begin{itemize}
+        \item $e_S=\infty$ o $e_D=0$: traslado (\emph{pass-through}) completo; el consumidor carga con todo.
+        \item $e_S=0$: el productor carga con todo; el precio al consumidor no se mueve.
+      \end{itemize}
+      \pause
+      \begin{block}{La tierra: capitalización fiscal}
+        Un impuesto anual a la tierra reduce su precio en el valor presente de los impuestos. Lo carga quien es dueño cuando se anuncia.
+      \end{block}
+    \end{column}
+    \begin{column}{0.56\textwidth}
+      \centering
+      \begin{tikzpicture}[x=0.45cm,y=0.55cm]
+        \begin{scope}
+          \node at (3,6.1) {$e_S=\infty$};
+          \ejes{6.4}{5.5}{$x$}{}
+          \draw[demanda] (0,5) -- (6,0.5) node[right,pos=0.06] {$D$};
+          \draw[oferta] (0,2) -- (6,2) node[above,pos=0.95] {$S$};
+          \draw[oferta,desp] (0,3.2) -- (6,3.2);
+          \draw[cuna] (6.25,2) -- (6.25,3.2);
+          \node[right,cImpuesto] at (6.25,2.6) {$t$};
+        \end{scope}
+        \begin{scope}[xshift=3.9cm]
+          \node at (1.3,6.1) {$e_S=0$};
+          \ejes{6.4}{5.5}{$x$}{}
+          \draw[demanda] (0,5) -- (6,0.5) node[right,pos=0.06] {$D$};
+          \draw[demanda,desp] (0,3.8) -- (5.07,0);
+          \draw[oferta] (3,0) -- (3,5.2) node[right] {$S$};
+          \draw[cuna] (3.4,1.55) -- (3.4,2.75);
+          \node[right,cImpuesto] at (3.4,1.8) {$t$};
+        \end{scope}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{Salanié, sec.~1.1.2 y final del cap.~1; Gruber, cap.~19.1.}
+\end{frame}
+
+% 11 ----------------------------------------------------------------------
+\begin{frame}{Cuanto más elásticos los dos lados, más cae la cantidad}
+  El nuevo equilibrio está sobre la curva de oferta, así que $d\log x = e_S\, d\log p$:
+  \begin{block}{Resultado}
+    \[ \frac{\partial \log x}{\partial t} = -\frac{e_S\,e_D}{e_S+e_D} \equiv -\varepsilon \]
+  \end{block}
+  \pause
+  \begin{itemize}
+    \item $\varepsilon$ es la mitad de la media armónica de $e_S$ y $e_D$.
+    \item Si cualquiera de los dos lados es inelástico, la cantidad casi no se mueve.
+    \item Si los dos son elásticos, la cantidad cae mucho.
+  \end{itemize}
+  \pause
+  \begin{alertblock}{Adelanto}
+    Esta caída de la cantidad es la que genera la carga excesiva.
+  \end{alertblock}
+  \fuente{Salanié, sec.~1.1.1.}
+\end{frame}
+
+% 12 ----------------------------------------------------------------------
+\begin{frame}{La teoría: con oferta de trabajo inelástica, la cuota recae sobre el salario}
+  \centering
+  \begin{tikzpicture}[x=0.68cm,y=0.6cm]
+    \begin{scope}
+      \node at (3.2,6.3) {Mercado que se vacía};
+      \ejes{6.4}{5.6}{$L$}{salario}
+      \draw[demanda] (0.3,4.76) -- (6,0.2) node[above right,pos=0.03] {$L^d$};
+      \draw[oferta] (2.6,0.2) -- (5.1,5.2) node[right,pos=0.95] {$L^s$};
+      \node[punto] at (3.571,2.143) {};
+      \draw[guia] (0,2.429) -- (3.214,2.429) (0,1.429) -- (3.214,1.429) (3.214,1.429) -- (3.214,0);
+      \draw[cuna] (3.214,1.429) -- (3.214,2.429);
+      \node[left] at (0,2.429) {$W$}; \node[left] at (0,1.429) {$w$};
+    \end{scope}
+    \begin{scope}[xshift=7.5cm]
+      \node at (3.2,6.3) {Con salario mínimo};
+      \ejes{6.4}{5.6}{$L$}{salario}
+      \draw[demanda] (0.3,4.76) -- (6,0.2) node[above right,pos=0.03] {$L^d$};
+      \draw[demanda,desp] (0,4.3) -- (5.375,0);
+      \draw[oferta] (0,0.5) -- (6,4.1) node[above,pos=0.97] {$L^s$};
+      \draw[thick,cImpuesto] (0,3.2) -- (6,3.2);
+      \node[left] at (0,3.2) {$\underline{w}$};
+      \node[punto,label=above right:$E$] at (2.25,3.2) {};
+      \node[punto,label=below left:$E'$] at (1.375,3.2) {};
+      \node[punto,label=below right:$F$] at (4.5,3.2) {};
+      \draw[guia] (1.375,3.2) -- (1.375,0) (4.5,3.2) -- (4.5,0);
+      \draw[decorate,decoration={brace,mirror,amplitude=4pt},thick] (1.375,-0.15) -- (4.5,-0.15) node[midway,below=4pt] {desempleo};
+    \end{scope}
+  \end{tikzpicture}
+  \par
+  $W$: costo laboral; $w$: salario neto. Izquierda: el salario neto absorbe casi toda la cuota. Derecha: el neto no puede bajar y la cuota se vuelve desempleo.
+  \fuente{Salanié, sec.~1.1.1, figs.~1.1–1.2; Gruber, cap.~19.2.}
+\end{frame}
+
+% 13 ----------------------------------------------------------------------
+\begin{frame}{En la práctica, la carga no siempre llega al salario}
+  \small
+  \begin{enumerate}
+    \item \textbf{Suecia.} Una rebaja de la cuota patronal a jóvenes no movió su salario neto y subió su empleo. Las empresas repartieron la ganancia entre toda su plantilla.\\
+      {\color{cGris}Saez, Schoefer y Seim (2019), \emph{AER}.}
+    \pause
+    \item \textbf{Vínculo contribución-beneficio.} Si el trabajador valora lo que compra la cuota, esa parte no es impuesto: la oferta de trabajo se desplaza y el salario absorbe la cuota sin pérdida de empleo.\\
+      {\color{cGris}Summers (1989), \emph{AER P\&P} 79(2).}\\
+      En la reforma de 2020, la cuota patronal va a la subcuenta de retiro, cesantía en edad avanzada y vejez de la cuenta individual (AFORE).
+    \pause
+    \item \textbf{México, 1997.} La reforma ligó la pensión al salario declarado y redujo la subdeclaración de salarios ante el IMSS: los trabajadores valoran el vínculo.\\
+      {\color{cGris}Kumler, Verhoogen y Frías (2020), \emph{REStat}.}
+  \end{enumerate}
+\end{frame}
+
+% 14 ----------------------------------------------------------------------
+\begin{frame}{La informalidad vuelve más elástica la oferta de trabajo formal}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Dos márgenes: empresas que no se registran y empresas formales que contratan sin registro.\\
+          {\small\color{cGris}Ulyssea (2018, \emph{AER}; 2020, \emph{Annual Review of Economics}).}
+        \item Con esa salida, una cuota mayor recae menos en el salario y más en el empleo formal.
+        \item El Seguro Popular redujo el registro en el IMSS en empresas de hasta 50 trabajadores.\\
+          {\small\color{cGris}Bosch y Campos-Vázquez (2014), \emph{AEJ: Policy}.}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \pause
+      \begin{block}{Respuesta a la pregunta del inicio}
+        \begin{itemize}
+          \item Teoría: la cuota recae en el salario.
+          \item Evidencia: a veces se queda donde cae.
+          \item Informalidad: el ajuste se va al empleo formal.
+        \end{itemize}
+        Decide el vínculo contribución-beneficio: cuánto valoran los trabajadores lo que compra la cuota.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% 15 ----------------------------------------------------------------------
+\begin{frame}{Con poder de mercado, el traslado puede superar 100\,\%}
+  Monopolio con costo marginal constante $c$ e impuesto específico $\tau$:
+  \[ \max_p\ (p - c - \tau)\,D(p) \]
+  \begin{align*}
+    \onslide<2->{\text{Demanda lineal, } D(p)=d-p:\quad & p = \tfrac12\,(d + c + \tau) & \frac{dp}{d\tau} &= \tfrac12\\}
+    \onslide<3->{\text{Elasticidad constante } e_D>1:\quad & p = (c+\tau)\,\frac{e_D}{e_D-1} & \frac{dp}{d\tau} &= \frac{e_D}{e_D-1} > 1}
+  \end{align*}
+  \onslide<4->{
+  \begin{itemize}
+    \item Con competencia, el traslado nunca pasa de 100\,\%. Con poder de mercado, sí puede.
+    \item Ad valorem y específico ya no son equivalentes: a igual recaudación, el ad valorem reduce menos la producción.
+  \end{itemize}}
+  \fuente{Salanié, sec.~1.1.2; Gruber, cap.~19.2. Versión con impuesto específico: propia.}
+\end{frame}
+
+% =========================================================================
+% III. INCIDENCIA EN EQUILIBRIO GENERAL
+% =========================================================================
+\section{Incidencia en equilibrio general}
+
+% 16 ----------------------------------------------------------------------
+\begin{frame}{Solo las personas cargan con impuestos}
+  \begin{columns}[T]
+    \begin{column}{0.46\textwidth}
+      \centering
+      \begin{tikzpicture}[x=0.7cm,y=0.62cm]
+        \node at (3,6) {Comidas en un municipio};
+        \ejes{6.4}{5.4}{$x$}{precio}
+        \draw[demanda] (0,3) -- (6,3) node[above,pos=0.06] {$D$};
+        \draw[oferta] (0,1) -- (5,3.5) node[right] {$S$};
+        \draw[oferta,desp] (0,2) -- (4,4) node[right] {$S+$imp.};
+        \node[punto] at (4,3) {}; \node[punto] at (2,3) {};
+        \draw[guia] (2,3) -- (2,0) (4,3) -- (4,0);
+        \node[below] at (2,0) {$x_1$}; \node[below] at (4,0) {$x_0$};
+      \end{tikzpicture}
+      \par\small El precio no sube: el restaurante «paga».
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \begin{itemize}
+        \item Municipio hipotético con un impuesto a las comidas en restaurantes. Los clientes pueden comer en el municipio vecino: demanda perfectamente elástica.
+        \pause
+        \item El restaurante no es una persona. La carga pasa a quienes le venden factores: trabajadores, dueños del capital y dueños de los locales.
+        \pause
+        \item Dos carreteras entre dos ciudades, una con peaje: los autos se pasan a la otra hasta que las dos cuestan lo mismo. El peaje lo sienten todos.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{Gruber, cap.~19.3; Salanié, sec.~1.2.3.}
+\end{frame}
+
+% 17 ----------------------------------------------------------------------
+\begin{frame}{El modelo de Harberger: supuestos}
+  \begin{itemize}
+    \item Dos bienes, $X$ y $Y$, producidos con capital $K$ y trabajo $L$.
+    \item Rendimientos constantes a escala en los dos sectores.
+    \item Oferta total de cada factor fija; movilidad perfecta entre sectores.
+    \item Mercados competitivos.
+    \item Preferencias idénticas y homotéticas: la demanda agregada no depende de quién recibe el ingreso.
+  \end{itemize}
+  \pause
+  \begin{block}{Qué permite}
+    Seguir el impuesto de un mercado a los precios de los factores y, por esa vía, al ingreso del trabajo y del capital.
+  \end{block}
+  \fuente{Salanié, sec.~1.2.1 (Harberger, 1962).}
+\end{frame}
+
+% 18 ----------------------------------------------------------------------
+\begin{frame}{El equilibrio con impuestos}
+  Impuesto $t_{KX}$ al uso de capital en $X$ e impuesto $t_X$ al bien $X$; $c_X, c_Y$ son costos unitarios.
+  \begin{align*}
+    \text{Precios:}\quad & p_X = c_X\big(r(1+t_{KX}),\,w\big), \qquad p_Y = c_Y(r,w)\\
+    \text{Factores:}\quad & c_{Xw}X + c_{Yw}Y = L, \qquad c_{Xr}X + c_{Yr}Y = K\\
+    \text{Bienes:}\quad & X\big(p_X(1+t_X),\,p_Y,\,R\big) = X, \qquad Y\big(p_X(1+t_X),\,p_Y,\,R\big) = Y
+  \end{align*}
+  \pause
+  \begin{itemize}
+    \item Seis ecuaciones y seis incógnitas: $p_X, p_Y, r, w, X, Y$.
+    \item Por la ley de Walras, una ecuación sobra: solo se determinan precios relativos.
+    \item El factor gana la misma remuneración neta en los dos sectores.
+  \end{itemize}
+  \fuente{Salanié, secs.~1.2.1–1.2.2.}
+\end{frame}
+
+% 19 ----------------------------------------------------------------------
+\begin{frame}{Tres equivalencias ahorran trabajo}
+  \begin{columns}[c]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \begin{tikzpicture}[x=1.6cm,y=1cm]
+        \node at (0.5,2.3) {Sector $X$}; \node at (1.5,2.3) {Sector $Y$};
+        \node[left] at (0,1.5) {Capital}; \node[left] at (0,0.5) {Trabajo};
+        \fill[cImpuesto!15] (0,0) rectangle (1,2);
+        \fill[cOferta!15] (0,0) rectangle (2,1);
+        \draw[thick,cTitulo] (0,0) rectangle (2,2) (1,0) -- (1,2) (0,1) -- (2,1);
+        \node at (0.5,1.5) {$t_{KX}$}; \node at (1.5,1.5) {$t_{KY}$};
+        \node at (0.5,0.5) {$t_{LX}$}; \node at (1.5,0.5) {$t_{LY}$};
+        \draw[decorate,decoration={brace,amplitude=5pt,mirror},thick,cImpuesto] (0,-0.1) -- (1,-0.1) node[midway,below=6pt,align=center] {$\equiv$ impuesto\\al bien $X$};
+        \draw[decorate,decoration={brace,amplitude=5pt},thick,cOferta] (2.1,1) -- (2.1,0) node[midway,right=6pt,align=left] {lo carga\\el trabajo};
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{enumerate}
+        \item El rendimiento neto de cada factor se iguala entre sectores.
+        \pause
+        \item Gravar $K$ y $L$ en $X$ a la misma tasa equivale a gravar el bien $X$.
+        \pause
+        \item Un impuesto uniforme a un factor lo carga ese factor (su oferta es fija).
+      \end{enumerate}
+      \pause
+      \begin{block}{Consecuencia}
+        Un impuesto uniforme al ingreso equivale a un IVA uniforme.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \fuente{Salanié, sec.~1.2.3.}
+\end{frame}
+
+% 20 ----------------------------------------------------------------------
+\begin{frame}{Dos canales: sustitución de factores y efecto volumen}
+  \small
+  Notación (cambios porcentuales $\hat z = dz/z$, a partir de un equilibrio sin impuestos):
+  \begin{itemize}
+    \item $\lambda^* = \lambda_{LX}-\lambda_{KX}$: positivo si $X$ usa relativamente menos capital ($\lambda_{KX}=K_X/K$).
+    \item $s_{KX}$: participación del capital en el costo de $X$; $\sigma_X,\sigma_Y$: elasticidades de sustitución; $e_D$: elasticidad de la demanda relativa $X/Y$.
+  \end{itemize}
+  \begin{block}{Resultado}
+    \[ D\,(\hat w - \hat r) = \textcolor{cOferta}{\sigma_X a_X\,dt_{KX}} \;-\; \textcolor{cDemanda}{e_D\,\lambda^*\,(s_{KX}\,dt_{KX} + dt_X)}, \qquad D>0 \]
+  \end{block}
+  \pause
+  \begin{itemize}
+    \item $a_X>0$ y $D>0$ combinan participaciones y elasticidades.
+    \item \textcolor{cOferta}{Sustitución de factores}: términos con $\sigma$. \textcolor{cDemanda}{Efecto volumen}: términos con $e_D$.
+  \end{itemize}
+  \fuente{Salanié, sec.~1.2.4. Álgebra completa en el apéndice A2.}
+\end{frame}
+
+% 21 ----------------------------------------------------------------------
+\begin{frame}{Gravar el capital en un sector puede recaer sobre todo el capital}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \centering
+      \begin{tikzpicture}[node distance=4mm and 3mm, every node/.style={font=\small}]
+        \node[caja] (t) {$t_{KX}$ sube};
+        \node[caja,below left=6mm and -8mm of t,text width=2.5cm] (s) {$X$ usa menos $K$ por unidad};
+        \node[caja,below right=6mm and -8mm of t,text width=2.5cm] (v) {sube $p_X$, cae la demanda de $X$};
+        \node[caja,below=of s,text width=2.5cm] (s2) {$r/w$ baja};
+        \node[caja,below=of v,text width=2.5cm] (v2) {cae la demanda del factor intensivo en $X$};
+        \draw[-{Stealth},thick] (t) -- (s) node[midway,left] {sustitución};
+        \draw[-{Stealth},thick] (t) -- (v) node[midway,right] {volumen};
+        \draw[-{Stealth},thick] (s) -- (s2);
+        \draw[-{Stealth},thick] (v) -- (v2);
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.43\textwidth}
+      \begin{itemize}
+        \item $X$ intensivo en capital: los dos canales bajan $r/w$.
+        \item $e_D=0$: solo opera la sustitución; baja $r/w$.
+        \item Con $\sigma_X=\sigma_Y=e_D=1$ (Cobb-Douglas), los capitalistas cargan con todo el impuesto.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \pause
+  \begin{alertblock}{Pregunta}
+    Si $X$ usa mucho trabajo, ¿puede ganar el capital con el impuesto?
+  \end{alertblock}
+  \fuente{Salanié, sec.~1.2.4.}
+\end{frame}
+
+% 22 ----------------------------------------------------------------------
+\begin{frame}{Un impuesto a un bien recae sobre el factor que ese bien usa con intensidad}
+  \begin{itemize}
+    \item Con $dt_X>0$ solo opera el efecto volumen: cae la demanda relativa de $X$.
+    \item Pierde el factor que $X$ usa con más intensidad. Si $X$ es intensivo en capital, baja $r/w$.
+  \end{itemize}
+  \pause
+  \begin{block}{Límites del modelo}
+    \begin{itemize}
+      \item Sin efectos ingreso: las preferencias homotéticas idénticas los eliminan.
+      \item Economía cerrada: con capital móvil entre países, el capital carga menos.
+      \item Estático: en el ciclo de vida, la misma persona vive del trabajo y luego del capital.
+    \end{itemize}
+  \end{block}
+  \fuente{Salanié, secs.~1.2.4–1.2.5.}
+  \note{Descanso de 10 minutos al terminar esta diapositiva.}
+\end{frame}
+
+% =========================================================================
+% IV. DISTORSIONES Y CARGA EXCESIVA
+% =========================================================================
+\section{Distorsiones y carga excesiva}
+
+% 23 ----------------------------------------------------------------------
+\begin{frame}{De quién paga a cuánto se pierde}
+  \begin{itemize}
+    \item La incidencia reparte la carga del impuesto.
+    \item La \textbf{carga excesiva} mide lo que se pierde por encima de lo recaudado.
+  \end{itemize}
+  \pause
+  \begin{block}{Por qué hay pérdida}
+    Sin impuestos: $\text{TMS} = \text{precio relativo} = \text{TMT}$. El equilibrio es un óptimo de Pareto.\\[2pt]
+    Con impuestos: el consumidor ve $q$ y el productor ve $p$. Ahora $\text{TMS}\neq\text{TMT}$.
+  \end{block}
+  \pause
+  El sistema de precios manda señales distintas a cada agente y ya no coordina bien.
+  \fuente{Salanié, cap.~2 (introducción); Gruber, cap.~20.1.}
+\end{frame}
+
+% 24 ----------------------------------------------------------------------
+\begin{frame}{Un ejemplo con dos bienes}
+  \begin{itemize}
+    \item Un consumidor con $U = C_1 C_2$ y una unidad del bien 1.
+    \item Una empresa transforma el bien 1 en el bien 2: $X_2 = X_1/c$. Precio del bien 1 igual a 1.
+    \item Impuesto específico $\tau$ al bien 2; lo recaudado se devuelve de suma fija, $T=\tau C_2$.
+  \end{itemize}
+  \begin{align*}
+    \onslide<2->{\text{Restricción:}\quad & C_1 + (c+\tau)\,C_2 = 1 + T\\}
+    \onslide<3->{\text{Consumidor:}\quad & \text{TMS} = \frac{C_2}{C_1} = \frac{1}{c+\tau}\\}
+    \onslide<4->{\text{Tecnología:}\quad & \text{TMT} = \frac{1}{c}}
+  \end{align*}
+  \onslide<4->{Con $\tau>0$ las dos tasas difieren: la asignación ya no es eficiente.}
+  \fuente{Salanié, cap.~2 (introducción).}
+\end{frame}
+
+% 25 ----------------------------------------------------------------------
+\begin{frame}{Devolver lo recaudado no elimina la pérdida}
+  \begin{align*}
+    \onslide<1->{\text{Con } T=\tau C_2:\quad & C_1 = \frac{c+\tau}{2c+\tau}, \qquad C_2 = \frac{1}{2c+\tau}\\}
+    \onslide<2->{\text{Utilidad:}\quad & U(\tau) = \frac{c+\tau}{(2c+\tau)^2}, \qquad U^* = U(0) = \frac{1}{4c}\\}
+    \onslide<3->{\text{Pérdida:}\quad & \resultado{U^* - U(\tau) = \frac{\tau^2}{4c\,(2c+\tau)^2}}}
+  \end{align*}
+  \onslide<4->{
+  \begin{block}{Lectura}
+    \begin{itemize}
+      \item La pérdida es de segundo orden en $\tau$.
+      \item Existe aunque el consumidor recupere todo lo recaudado: el precio relativo lo lleva a consumir poco del bien 2.
+    \end{itemize}
+  \end{block}}
+  \fuente{Salanié, cap.~2 (introducción).}
+\end{frame}
+
+% 26 ----------------------------------------------------------------------
+\begin{frame}{El triángulo de Harberger}
+  \begin{columns}[c]
+    \begin{column}{0.55\textwidth}
+      \centering
+      \begin{tikzpicture}[x=0.9cm,y=0.8cm]
+        \fill[recauda] (0,1.8) rectangle (2.6,3.05);
+        \fill[ce] (2.6,3.05) -- (2.6,1.8) -- (3.6,2.3) -- cycle;
+        \ejes{6.6}{5.4}{$x$}{precio}
+        \draw[demanda] (0.3,4.775) -- (6,0.5) node[right,pos=0.03] {$D$};
+        \draw[oferta] (0,0.5) -- (6,3.5) node[above,pos=0.97] {$S$};
+        \draw[guia] (2.6,1.8) -- (2.6,0) (3.6,2.3) -- (3.6,0);
+        \node[left] at (0,3.05) {$q$}; \node[left] at (0,2.3) {$p_0$}; \node[left] at (0,1.8) {$p$};
+        \node[below] at (2.6,0) {$x_1$}; \node[below] at (3.6,0) {$x_0$};
+        \node at (1.3,2.43) {recaudación};
+        \draw[guia] (2.6,2.3) -- (3.6,2.3);
+        \draw[thin] (3.0,2.35) -- (4.2,1.3) node[below right] {carga excesiva};
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.43\textwidth}
+      \begin{itemize}
+        \item Los consumidores pierden el área entre $p_0$ y $q$ a la izquierda de la demanda.
+        \item Los productores pierden el área entre $p$ y $p_0$ a la izquierda de la oferta.
+        \item El fisco recauda el rectángulo.
+      \end{itemize}
+      \pause
+      \begin{block}{}
+        Pérdidas menos recaudación: queda el triángulo. Son intercambios que valían la pena y ya no ocurren.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \fuente{Gruber, fig.~20-1; Salanié, fig.~2.3 (gráfica redibujada).}
+\end{frame}
+
+% 27 ----------------------------------------------------------------------
+\begin{frame}{Derivación: carga excesiva $\approx \tfrac12\, t^2\, \varepsilon\, p\,x$}
+  \begin{align*}
+    \onslide<1->{\text{Área: } \tfrac12\times\text{cuña}\times\text{caída}\quad & CE \approx \tfrac12\,(t\,p)\,(-dx)\\}
+    \onslide<2->{\text{Diapositiva 11:}\quad & -dx = \varepsilon\, t\, x, \qquad \varepsilon = \frac{e_S\,e_D}{e_S+e_D}\\}
+    \onslide<3->{\text{Sustituimos:}\quad & \resultado{CE \approx \tfrac12\, t^2\, \varepsilon\; p\,x}\\}
+    \onslide<4->{\text{Frente a lo recaudado:}\quad & \frac{CE}{t\,p\,x} \approx \tfrac12\,\varepsilon\, t}
+  \end{align*}
+  \onslide<5->{
+  \begin{block}{Fórmula de Harberger}
+    La carga excesiva depende de la tasa al cuadrado, de las elasticidades y del tamaño del mercado.
+  \end{block}}
+  \fuente{Salanié, sec.~2.2; Gruber, cap.~20.1 y apéndice.}
+\end{frame}
+
+% 28 ----------------------------------------------------------------------
+\begin{frame}{La carga excesiva crece con el cuadrado de la tasa}
+  \begin{itemize}
+    \item Duplicar la tasa cuadruplica la carga excesiva.
+    \item La carga excesiva por peso recaudado crece en proporción a la tasa: $\tfrac12\,\varepsilon\,t$.
+  \end{itemize}
+  \pause
+  \begin{block}{Orden de magnitud: IVA de 20\,\% con demanda de elasticidad unitaria}
+    \centering
+    \begin{tabular}{lcc}
+      \toprule
+      Oferta & $\varepsilon$ & Carga excesiva / recaudación\\
+      \midrule
+      $e_S = 1$ & $0.5$ & 5\,\%\\
+      $e_S = \infty$ & $1$ & 10\,\%\\
+      \bottomrule
+    \end{tabular}
+  \end{block}
+  \pause
+  Argumento para suavizar las tasas en el tiempo y para bases amplias. Entre bienes distintos hay que matizarlo: regla de Ramsey (13 de octubre).
+  \fuente{Salanié, sec.~2.2.}
+\end{frame}
+
+% 29 ----------------------------------------------------------------------
+\begin{frame}{Más elasticidad, más carga excesiva}
+  \centering
+  \begin{tikzpicture}[x=0.68cm,y=0.6cm]
+    \begin{scope}
+      \node at (3.2,6.1) {Demanda inelástica};
+      \fill[ce] (2.171,2.786) -- (2.171,1.586) -- (2.857,1.929) -- cycle;
+      \ejes{6.4}{5.6}{$x$}{precio}
+      \draw[demanda] (0,5.5) -- (4.4,0) node[above right,pos=0.9] {$D$};
+      \draw[oferta] (0,0.5) -- (6,3.5) node[above,pos=0.97] {$S$};
+      \draw[guia] (2.171,1.586) -- (2.171,0) (2.857,1.929) -- (2.857,0);
+      \node[left] at (0,2.786) {$q$}; \node[left] at (0,1.586) {$p$};
+    \end{scope}
+    \begin{scope}[xshift=7.5cm]
+      \node at (3.2,6.1) {Demanda elástica};
+      \fill[ce] (1.733,2.567) -- (1.733,1.367) -- (3.333,2.167) -- cycle;
+      \ejes{6.4}{5.6}{$x$}{precio}
+      \draw[demanda] (0,3) -- (6,1.5) node[below,pos=0.95] {$D$};
+      \draw[oferta] (0,0.5) -- (6,3.5) node[above,pos=0.97] {$S$};
+      \draw[guia] (1.733,1.367) -- (1.733,0) (3.333,2.167) -- (3.333,0);
+      \node[left] at (0,2.567) {$q$}; \node[left] at (0,1.367) {$p$};
+    \end{scope}
+  \end{tikzpicture}
+  \par
+  Misma cuña, triángulos distintos. Contraste con la diapositiva 9: la elasticidad que protege de la incidencia genera carga excesiva.
+  \pause
+  \begin{alertblock}{Pregunta}
+    ¿Qué bien preferirían gravar para minimizar la carga excesiva?
+  \end{alertblock}
+  \fuente{Gruber, fig.~20-2 (gráfica redibujada).}
+\end{frame}
+
+% 30 ----------------------------------------------------------------------
+\begin{frame}{La carga excesiva depende solo del efecto sustitución}
+  \begin{itemize}
+    \item Un impuesto de suma fija también quita ingreso: genera efecto ingreso, pero no distorsiona.
+    \item Lo que distingue a un impuesto distorsionante es el cambio en precios relativos: el efecto sustitución.
+  \end{itemize}
+  \pause
+  \begin{block}{Consecuencia}
+    La carga excesiva se mide con la demanda \textbf{compensada} (hicksiana), $h(p,u)$: la que mantiene fija la utilidad.
+  \end{block}
+  \pause
+  \begin{itemize}
+    \item Elasticidades compensadas: para medir la carga excesiva.
+    \item Elasticidades no compensadas: para predecir el cambio en el comportamiento.
+  \end{itemize}
+  \fuente{Salanié, sec.~2.3; Gruber, cap.~20.1 y apéndice.}
+\end{frame}
+
+% 31 ----------------------------------------------------------------------
+\begin{frame}{Medir con la función de gasto}
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      \small
+      Oferta perfectamente elástica: el precio pasa de $p^0$ a $p^1=p^0+\tau$.
+      \begin{align*}
+        VE &= e(p^0, u^1) - R < 0\\
+        -VE &= e(p^1,u^1) - e(p^0,u^1) = \int_{p^0}^{p^1} h(p,u^1)\,dp\\
+        CE &= -VE - \tau\,h(p^1,u^1)
+      \end{align*}
+      \pause
+      El último paso usa el lema de Shephard. La carga excesiva es el triángulo bajo la demanda hicksiana de la utilidad final.
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \begin{tikzpicture}[x=0.8cm,y=0.75cm]
+        \fill[recauda] (0,2) rectangle (2.5,3);
+        \fill[ce] (2.5,3) -- (2.5,2) -- (3.214,2) -- cycle;
+        \ejes{6}{5.5}{$x$}{precio}
+        \draw[demanda] (0,5) -- (5.5,0.6) node[above,pos=0.97] {$x(p,R)$};
+        \draw[hicks] (1.07,5) -- (4.4,0.34) node[right,pos=0.02] {$h(p,u^1)$};
+        \draw[thick,cOferta] (0,2) -- (5.6,2);
+        \draw[thick,cOferta,dashed] (0,3) -- (5.6,3);
+        \node[left] at (0,2) {$p^0$}; \node[left] at (0,3) {$p^1$};
+        \draw[guia] (2.5,2) -- (2.5,0) (3.75,2) -- (3.75,0);
+        \node[below] at (2.5,0) {$x^1$}; \node[below] at (3.75,0) {$x^0$};
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{Salanié, sec.~2.2; Varian, cap.~10. Comparación con VC y con el excedente de Dupuit-Marshall: apéndice A1.}
+\end{frame}
+
+% 32 ----------------------------------------------------------------------
+\begin{frame}{Que la cantidad no cambie no significa que no haya carga excesiva}
+  Impuesto proporcional $t$ al ingreso: $C = (1-t)(wL + R) \equiv sL + M$.
+  \begin{align*}
+    \onslide<2->{\text{Slutsky:}\quad & \frac{\partial L}{\partial t} = \textcolor{cOferta}{-\,w\,S} \;\textcolor{cDemanda}{-\,(wL+R)\,\frac{\partial L}{\partial M}}, \qquad S = \Big(\frac{\partial L}{\partial s}\Big)_U > 0\\}
+    \onslide<3->{\text{Cobb-Douglas:}\quad & U = a\log C + (1-a)\log(\bar L - L)\ \Rightarrow\ L = a\bar L - (1-a)\frac{R}{w}}
+  \end{align*}
+  \onslide<4->{
+  \begin{block}{Lectura}
+    \begin{itemize}
+      \item La oferta de trabajo no depende de $t$: el efecto \textcolor{cOferta}{sustitución} y el efecto \textcolor{cDemanda}{ingreso} se cancelan.
+      \item Pero $S>0$: la elasticidad compensada es positiva y hay carga excesiva.
+    \end{itemize}
+  \end{block}}
+  \fuente{Salanié, secs.~2.1.1 y 2.3.}
+\end{frame}
+
+% 33 ----------------------------------------------------------------------
+\begin{frame}{La carga excesiva marginal es de primer orden}
+  \begin{columns}[c]
+    \begin{column}{0.52\textwidth}
+      \centering
+      \begin{tikzpicture}[x=0.85cm,y=0.78cm]
+        \fill[cImpuesto!20] (3.125,2.5) -- (3.125,1.5) -- (4.375,1.5) -- cycle;
+        \fill[ce] (2.5,1.5) -- (2.5,3) -- (3.125,2.5) -- (3.125,1.5) -- cycle;
+        \ejes{6.4}{5.4}{$x$}{precio}
+        \draw[demanda] (0,5) -- (6,0.2) node[above,pos=0.97] {$D$};
+        \draw[thick,cOferta] (0,1.5) -- (6,1.5) node[above,pos=0.97] {$S$};
+        \draw[guia] (0,2.5) -- (3.125,2.5) (0,3) -- (2.5,3) (2.5,1.5) -- (2.5,0) (3.125,1.5) -- (3.125,0) (4.375,1.5) -- (4.375,0);
+        \node[left] at (0,3) {$q_2$}; \node[left] at (0,2.5) {$q_1$}; \node[left] at (0,1.5) {$p$};
+        \node[below] at (2.5,0) {$x_2$}; \node[below] at (3.125,0) {$x_1$}; \node[below] at (4.375,0) {$x_0$};
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \begin{itemize}
+        \item Con $t=0$, un impuesto pequeño genera un triángulo casi nulo (segundo orden).
+        \item Si ya existe $t>0$, subir la tasa en $dt$ agrega el trapecio oscuro:
+      \end{itemize}
+      \[ dCE \approx t\,p\,(-dx) \]
+      \pause
+      \begin{block}{}
+        Los intercambios que se pierden al subir una tasa alta valen mucho: la brecha entre demanda y oferta ya es grande.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \fuente{Salanié, fig.~2.4; Gruber, fig.~20-3 (gráfica redibujada).}
+\end{frame}
+
+% 34 ----------------------------------------------------------------------
+\begin{frame}{Cada peso adicional cuesta más de un peso}
+  Oferta perfectamente elástica, $p$ fijo; $\eta = -\dfrac{t}{x}\dfrac{dx}{dt}$ es la elasticidad de la base respecto a la tasa.
+  \begin{align*}
+    \onslide<2->{\text{Recaudación:}\quad & R = t\,p\,x \ \Rightarrow\ dR = p\,x\,dt + t\,p\,dx\\}
+    \onslide<3->{\text{Carga excesiva marginal:}\quad & dCE = -t\,p\,dx\\}
+    \onslide<4->{\text{Por peso recaudado:}\quad & \frac{dCE}{dR} = \frac{-t\,dx}{x\,dt + t\,dx} = \resultado{\frac{\eta}{1-\eta}}}
+  \end{align*}
+  \onslide<5->{
+  \begin{block}{Lectura}
+    Con $\eta = 0.2$, cada peso adicional recaudado cuesta 25 centavos más en carga excesiva. Si $\eta \to 1$ (el máximo de la curva de Laffer), el costo se dispara.\\
+    Implicación: bases amplias y tasas estables.
+  \end{block}}
+  \fuente{Salanié, sec.~2.2; Gruber, cap.~20.1; Browning (1976). Derivación propia.}
+  \note{Browning (1976, JPE 84(2): 283--298) estima el costo marginal de los fondos públicos entre 1.09 y 1.16 por dólar recaudado con impuestos al trabajo en EUA. Salanié reporta 10--50\,\% de costo social de los fondos públicos en modelos de equilibrio general computable.}
+\end{frame}
+
+% =========================================================================
+% V. APLICACIÓN MEXICANA
+% =========================================================================
+\section{IEPS a bebidas azucaradas}
+
+% 35 ----------------------------------------------------------------------
+\begin{frame}{El IEPS a bebidas azucaradas es un impuesto específico por litro}
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \centering
+      \begin{tabular}{lr}
+        \toprule
+        Año & $\tau$ por litro\\
+        \midrule
+        2014 & \$1.00\\
+        2025 & $\approx$ \$1.65$^{*}$\\
+        2026 (azúcares) & \$3.0818\\
+        2026 (edulcorantes) & \$1.5000\\
+        \bottomrule
+      \end{tabular}
+      \par\medskip
+      {\small Se actualiza por inflación cada año desde 2018.\\ $^{*}$\,\verificar}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \pause
+      \begin{block}{Qué predice la teoría}
+        \begin{itemize}
+          \item Oferta muy elástica: traslado cercano a 100\,\%.
+          \item Con poder de mercado: puede superar 100\,\% (diapositiva 15).
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \fuente{DOF, 11-12-2013; LIEPS vigente, art.~2, fr.~I, inciso G (última reforma DOF 07-11-2025). Cuota de 2025: \verificar.}
+\end{frame}
+
+% 36 ----------------------------------------------------------------------
+\begin{frame}{En refrescos, el precio subió más que el impuesto}
+  \small
+  Con la cuota de 1 peso por litro (2014):
+  \begin{itemize}
+    \item \textbf{Grogger (2017)}, precios del INPC y control sintético: los refrescos subieron más que el impuesto.
+    \item \textbf{Colchero et al. (2015)}: traslado cercano a 1 peso por litro en promedio; más de 100\,\% en bebidas carbonatadas, menos en no carbonatadas; mayor en envases chicos.
+    \item \textbf{Campos-Vázquez y Medina-Cortina (2019)}: 1.12 pesos por litro en refrescos; menos traslado donde hay más competencia entre tiendas.
+  \end{itemize}
+  \pause
+  Lectura: diapositiva 8 (oferta elástica, traslado completo) y diapositiva 15 (poder de mercado, traslado mayor a 100\,\%).
+  \pause
+  \begin{alertblock}{Pregunta}
+    Si el precio subió más que el impuesto, ¿qué nos dice sobre la competencia en el mercado?
+  \end{alertblock}
+  \fuente{Grogger (2017), \emph{AJAE} 99(2); Colchero et al. (2015), \emph{PLOS ONE} 10(12); Campos-Vázquez y Medina-Cortina (2019), \emph{Latin American Economic Review} 28.}
+\end{frame}
+
+% 37 ----------------------------------------------------------------------
+\begin{frame}{Cuando el impuesto corrige una falla, el triángulo cambia de signo}
+  \begin{itemize}
+    \item Respuesta de la cantidad: las calorías compradas de bebidas gravadas cayeron 2.7\,\%, con sustitución hacia alimentos no gravados.\\
+      {\small\color{cGris}Aguilar, Gutiérrez y Seira (2021), \emph{Journal of Health Economics} 77.}
+    \pause
+    \item Si el consumo de azúcar tiene costos que el consumidor no toma en cuenta (externalidades o internalidades de salud), la caída en la cantidad es una ganancia y no una carga excesiva.
+    \pause
+    \item Incidencia distributiva: si los hogares de menor ingreso gastan una parte mayor de su ingreso en refrescos, el impuesto es regresivo.
+  \end{itemize}
+  \pause
+  \begin{block}{Pregunta abierta}
+    ¿Qué traslado cabe esperar con la cuota de 2026?
+  \end{block}
+\end{frame}
+
+% =========================================================================
+% VI. CIERRE
+% =========================================================================
+\section{Cierre}
+
+% 38 ----------------------------------------------------------------------
+\begin{frame}{Ideas centrales}
+  \begin{enumerate}
+    \item La ley no decide quién paga; las elasticidades sí.
+    \item En equilibrio general, la carga viaja a los factores.
+    \item La carga excesiva crece con la elasticidad compensada y con el cuadrado de la tasa.
+    \item Lo que protege de la incidencia genera carga excesiva.
+  \end{enumerate}
+\end{frame}
+
+% 39 ----------------------------------------------------------------------
+\begin{frame}{Próximas sesiones}
+  \begin{block}{6 de octubre: taller del Simulador Fiscal del CIEP}
+    Correremos con el simulador los números del IEPS de las diapositivas 35–37.
+  \end{block}
+  \begin{block}{13 de octubre: IVA e impuestos verdes}
+    \begin{itemize}
+      \item Un IVA uniforme equivale a gravar todos los factores (Harberger). ¿Por qué tasas diferenciadas?
+      \item Impuestos verdes: cuando el triángulo es ganancia y no pérdida. Caso: el IEPS a combustibles.
+      \item Anticipo: la regla de Ramsey (Salanié, cap.~3, sec.~3.1).
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+% =========================================================================
+% APÉNDICE
+% =========================================================================
+\appendix
+\section{Apéndice}
+
+% A1 ----------------------------------------------------------------------
+\begin{frame}{A1. Variación equivalente, variación compensada y excedente}
+  \begin{itemize}
+    \item Variación equivalente: usa la utilidad final, $VE = e(p^0,u^1) - R$. El triángulo va bajo $h(p,u^1)$.
+    \item Variación compensada: usa la utilidad inicial, $VC = R - e(p^1,u^0)$. El triángulo va bajo $h(p,u^0)$.
+    \item Excedente de Dupuit-Marshall: usa la demanda $x(p,R)$.
+  \end{itemize}
+  \pause
+  \begin{block}{Cuándo coinciden}
+    Las tres medidas coinciden solo si no hay efecto ingreso, con utilidad cuasilineal $U = u(x) + m$. En general dan números distintos para la misma carga excesiva.
+  \end{block}
+  \fuente{Salanié, sec.~2.2; Varian, cap.~10.}
+\end{frame}
+
+% A2 ----------------------------------------------------------------------
+\begin{frame}{A2. Harberger: álgebra de sombreros (1/2)}
+  \small
+  Participaciones: $\lambda_{KX}=K_X/K$ (uso de factores), $s_{KX}=rK_X/(p_X X)$ (costo); $\lambda^*=\lambda_{LX}-\lambda_{KX}$, $s^*=s_{LX}-s_{LY}$.
+  \begin{align*}
+    \text{Factores fijos:}\quad & \lambda_{KX}\hat K_X + \lambda_{KY}\hat K_Y = 0, \qquad \lambda_{LX}\hat L_X + \lambda_{LY}\hat L_Y = 0\\
+    \text{Sustitución:}\quad & \hat K_X - \hat L_X = \sigma_X(\hat w - \hat r - dt_{KX}), \qquad \hat K_Y - \hat L_Y = \sigma_Y(\hat w - \hat r)\\
+    \text{Producción:}\quad & \lambda^*(\hat X - \hat Y) = (\sigma_X a_X + \sigma_Y a_Y)(\hat w - \hat r) - \sigma_X a_X\,dt_{KX}\quad (1)
+  \end{align*}
+  con $a_X = s_{KX}\lambda_{LX} + s_{LX}\lambda_{KX}$ y $a_Y = s_{KY}\lambda_{LY} + s_{LY}\lambda_{KY}$.
+  \fuente{Salanié, sec.~1.2.4.}
+\end{frame}
+
+\begin{frame}{A2. Harberger: álgebra de sombreros (2/2)}
+  \small
+  \begin{align*}
+    \text{Demanda homotética:}\quad & \hat X - \hat Y = -e_D\,(\hat p_X + dt_X - \hat p_Y) \quad (2)\\
+    \text{Precios:}\quad & \hat p_X - \hat p_Y = s^*(\hat w - \hat r) + s_{KX}\,dt_{KX} \quad (3)\\
+    \text{(2) y (3):}\quad & \hat X - \hat Y = -e_D\big(s^*(\hat w - \hat r) + s_{KX}\,dt_{KX} + dt_X\big) \quad (4)\\
+    \text{(1) y (4):}\quad & D\,(\hat w - \hat r) = (\sigma_X a_X - e_D\lambda^* s_{KX})\,dt_{KX} - e_D\lambda^*\,dt_X
+  \end{align*}
+  con $D = \sigma_X a_X + \sigma_Y a_Y + e_D\,\lambda^* s^* > 0$, porque $\lambda^*$ y $s^*$ tienen el mismo signo.
+  \par\medskip
+  Cobb-Douglas ($\sigma_X=\sigma_Y=e_D=1$): $D=1$ y $\hat w - \hat r = \lambda_{KX}\,dt_{KX}$. Con $\hat w = 0$: $d(rK) = -rK_X\,dt_{KX}$, es decir, menos la recaudación.
+  \fuente{Salanié, sec.~1.2.4.}
+\end{frame}
+
+\end{document}
