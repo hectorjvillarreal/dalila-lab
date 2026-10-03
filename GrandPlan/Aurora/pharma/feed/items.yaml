@@ -1716,3 +1716,173 @@
   query_id: q030
   lane: main
   promote: null
+- id: 20261003-0001
+  date_seen: '2026-10-03'
+  date_published: '2026-08-31'
+  headline: Lilly to acquire Merida Biosciences to advance treatments for serious autoimmune and allergic
+    diseases
+  why: up to US$2.875B, Lilly's 13th acquisition of 2026 — obesity windfall recycled into immunology ahead
+    of LOE; primary release, fell between cycles 8 and 9
+  url: https://www.prnewswire.com/news-releases/lilly-to-acquire-merida-biosciences-to-advance-treatments-for-serious-autoimmune-and-allergic-diseases-302864686.html
+  source_domain: prnewswire.com
+  entities:
+  - Eli Lilly
+  - Merida Biosciences
+  query_id: q006
+  lane: main
+  promote: null
+- id: 20261003-0002
+  date_seen: '2026-10-03'
+  date_published: '2026-09-21'
+  headline: Telix signs agreement to acquire ITM
+  why: US$1.65B upfront (mostly stock) + up to US$700M milestones; radiopharma consolidation buying isotope
+    supply (Bruce Power reactor access) and manufacturing — vertical integration of a scarce input
+  url: https://www.sec.gov/Archives/edgar/data/0002007191/000162828026062813/a20260921telixitmpresent.htm
+  source_domain: sec.gov
+  entities:
+  - Telix Pharmaceuticals
+  - ITM Isotope Technologies Munich
+  query_id: q006
+  lane: main
+  promote: null
+- id: 20261003-0003
+  date_seen: '2026-10-03'
+  date_published: '2026-09-24'
+  headline: InnoCare Signs Research Deal With Lilly Worth Up to $3.35 Billion
+  why: discovery-platform deal on up to five undisclosed targets, ~US$100M near-term vs US$3.25B milestones
+    — China as outsourced discovery engine, not just asset source
+  url: https://www.biopharminternational.com/view/innocare-research-deal-lilly-3-35-billion
+  source_domain: biopharminternational.com
+  entities:
+  - InnoCare Pharma
+  - Eli Lilly
+  query_id: q007
+  lane: main
+  promote: null
+- id: 20261003-0004
+  date_seen: '2026-10-03'
+  date_published: '2026-09-29'
+  headline: Novo and Hengrui Pharma enter exclusive license agreement for once-weekly oral GLP-1/GIP dual
+    receptor agonist HRS-1596
+  why: US$300M upfront / US$2.6B total for a phase-1-ready oral incretin — Novo buying its next-gen obesity
+    franchise from China as semaglutide LOE nears
+  url: https://www.globenewswire.com/news-release/2026/09/29/3370376/0/en/novo-and-hengrui-pharma-enter-exclusive-license-agreement-for-once-weekly-oral-glp-1-gip-dual-receptor-agonist-hrs-1596.html
+  source_domain: globenewswire.com
+  entities:
+  - Novo Nordisk
+  - Jiangsu Hengrui Pharmaceuticals
+  query_id: q007
+  lane: main
+  promote: null
+- id: 20261003-0005
+  date_seen: '2026-10-03'
+  date_published: '2026-10-02'
+  headline: Abogen Announces Licensing and Option Agreement with Novartis to Advance mRNA-Encoded T-Cell
+    Engager and other potential RNA programs
+  why: US$575M upfront, up to US$7.8B total for in vivo mRNA-encoded TCE (ABO2203) in autoimmunity plus
+    platform options — among the largest China upfronts of the year
+  url: https://www.biospace.com/press-releases/abogen-announces-licensing-and-option-agreement-with-novartis-to-advance-mrna-encoded-t-cell-engager-and-other-potential-rna-programs
+  source_domain: biospace.com
+  entities:
+  - Novartis
+  - Abogen Biosciences
+  query_id: q008
+  lane: main
+  promote: null
+- id: 20261003-0006
+  date_seen: '2026-10-03'
+  date_published: '2026-09-15'
+  headline: GSK bags Chimagen’s trispecific T cell engager in deal worth up to $750M
+  why: outright purchase of preclinical myeloma trispecific (ph1 2027); GSK's second Chimagen buy after
+    2024 — repeat-buyer relationship with one Chinese platform
+  url: https://www.biospace.com/deals/gsk-bags-chimagens-trispecific-t-cell-engager-in-deal-worth-up-to-750m
+  source_domain: biospace.com
+  entities:
+  - GSK
+  - Chimagen Biosciences
+  query_id: q008
+  lane: main
+  promote: null
+- id: 20261003-0007
+  date_seen: '2026-10-03'
+  date_published: '2026-09-08'
+  headline: Ionis Pharmaceuticals Shares Fall After Pelacarsen Phase 3 Trial Misses Primary Endpoint
+  why: Lp(a)HORIZON (8,300 pts, 6 yrs) lowered Lp(a) but missed MACE — the Lp(a) hypothesis takes its
+    first outcomes hit; Novartis disclosed 09-04; Ionis's second CV ph3 miss after eplontersen in July
+  url: https://finance.yahoo.com/healthcare/articles/ionis-pharmaceuticals-shares-fall-pelacarsen-105436737.html
+  source_domain: finance.yahoo.com
+  entities:
+  - Ionis Pharmaceuticals
+  - Novartis
+  query_id: q009
+  lane: main
+  promote: null
+- id: 20261003-0008
+  date_seen: '2026-10-03'
+  date_published: '2026-09-02'
+  headline: Ultragenyx Announces Phase 3 Aspire results in Angelman Syndrome
+  why: apazunersen ASO missed primary (Bayley-4) and key secondary; shares -40%; breakthrough/PRIME-designated
+    asset failing registrational test
+  url: https://www.globenewswire.com/news-release/2026/09/02/3355481/20739/en/ultragenyx-announces-phase-3-aspire-results-in-angelman-syndrome.html
+  source_domain: globenewswire.com
+  entities:
+  - Ultragenyx
+  query_id: q009
+  lane: main
+  promote: null
+- id: 20261003-0009
+  date_seen: '2026-10-03'
+  date_published: '2026-09-24'
+  headline: Bristol Myers Squibb Plans 265 New Jersey Job Cuts Through May 2027
+  why: third NJ WARN notice of 2026 (Princeton, cuts 12-17-2026 to 05-21-2027); >1,700 NJ layoffs since
+    2025 as Eliquis/Opdivo LOE approaches
+  url: https://wdhafm.com/2026/09/24/bristol-myers-squibb-plans-265-new-jersey-job-cuts-through-may-2027/
+  source_domain: wdhafm.com
+  entities:
+  - Bristol Myers Squibb
+  query_id: q010
+  lane: main
+  promote: null
+- id: 20261003-0010
+  date_seen: '2026-10-03'
+  date_published: '2026-09-29'
+  headline: US pharma tariffs widen today, with zero duty for select Indian medicines
+  why: 09-29 the 100% Section 232 duty on patented drugs extends to all covered importers; India + 19
+    jurisdictions get zero duty on specified specialty drugs/APIs; generics stay outside scope
+  url: https://www.business-standard.com/amp/world-news/trump-100-percent-pharma-tariff-india-select-drugs-exemption-126092900121_1.html
+  source_domain: business-standard.com
+  entities:
+  - United States
+  - India
+  query_id: q011
+  lane: main
+  promote: null
+- id: 20261003-0011
+  date_seen: '2026-10-03'
+  date_published: '2026-10-03'
+  headline: FG pushes local drug production, eyes African pharma market
+  why: 70% essential-medicines self-sufficiency target, API backward-integration incentives, AfCFTA export
+    ambition; industry asks 2-yr extension of executive order expiring March 2027
+  url: https://www.vanguardngr.com/2026/10/fg-pushes-local-drug-production-eyes-african-pharma-market/
+  source_domain: vanguardngr.com
+  entities:
+  - Nigeria
+  - PMGMAN
+  - NAFDAC
+  query_id: x003
+  lane: exploration
+  promote: null
+- id: 20261003-0012
+  date_seen: '2026-10-03'
+  date_published: '2026-09-18'
+  headline: Member States advance negotiations on pathogen access and benefit-sharing ahead of UN General
+    Assembly meeting on pandemics
+  why: IGWG8 closed without PABS annex text; Pandemic Agreement still cannot open for signature; UNGA
+    HLM 09-25 declaration only calls for "timely completion"
+  url: https://www.who.int/news/item/18-09-2026-member-states-advance-negotiations-on-pathogen-access-and-benefit-sharing-ahead-of-un-general-assembly-meeting-on-pandemics
+  source_domain: who.int
+  entities:
+  - WHO
+  query_id: x006
+  lane: exploration
+  promote: null

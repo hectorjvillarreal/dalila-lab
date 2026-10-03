@@ -19,17 +19,17 @@ fiercebiotech.com:
   rejected: 7
   weight: 0.33
 biospace.com:
-  surfaced: 7
+  surfaced: 9
   promoted: 1
   rejected: 6
   weight: 0.66
 finance.yahoo.com:
-  surfaced: 1
+  surfaced: 2
   promoted: 1
   rejected: 0
   weight: 1.0
 globenewswire.com:
-  surfaced: 11
+  surfaced: 13
   promoted: 5
   rejected: 6
   weight: 1.0
@@ -74,7 +74,7 @@ channelstv.com:
   rejected: 1
   weight: 0.98
 vanguardngr.com:
-  surfaced: 1
+  surfaced: 2
   promoted: 0
   rejected: 1
   weight: 0.98
@@ -139,7 +139,7 @@ investor.elanco.com:
   rejected: 1
   weight: 0.98
 sec.gov:
-  surfaced: 4
+  surfaced: 5
   promoted: 0
   rejected: 4
   weight: 0.49
@@ -154,7 +154,7 @@ contractpharma.com:
   rejected: 0
   weight: 1.0
 prnewswire.com:
-  surfaced: 3
+  surfaced: 4
   promoted: 2
   rejected: 1
   weight: 1.0
@@ -299,7 +299,7 @@ endpoints.news:
   rejected: 1
   weight: 0.98
 business-standard.com:
-  surfaced: 2
+  surfaced: 3
   promoted: 1
   rejected: 1
   weight: 1.0
@@ -354,6 +354,21 @@ fda.gov:
   rejected: 0
   weight: 1.0
 whitehouse.gov:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+biopharminternational.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+wdhafm.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+who.int:
   surfaced: 1
   promoted: 0
   rejected: 0
