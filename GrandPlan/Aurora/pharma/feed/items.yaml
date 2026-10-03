@@ -1669,7 +1669,7 @@
   - FDA
   query_id: q023
   lane: main
-  promote: null
+  promote: true
 - id: 20260903-0002
   date_seen: '2026-09-03'
   date_published: '2026-08-13'
@@ -1687,7 +1687,7 @@
   - FDA
   query_id: q023
   lane: main
-  promote: null
+  promote: true
 - id: 20260903-0003
   date_seen: '2026-09-03'
   date_published: '2026-08-31'
@@ -1715,7 +1715,7 @@
   - White House
   query_id: q030
   lane: main
-  promote: null
+  promote: true
 - id: 20261003-0001
   date_seen: '2026-10-03'
   date_published: '2026-08-31'
@@ -1730,7 +1730,7 @@
   - Merida Biosciences
   query_id: q006
   lane: main
-  promote: null
+  promote: true
 - id: 20261003-0002
   date_seen: '2026-10-03'
   date_published: '2026-09-21'
