@@ -437,6 +437,10 @@ def write_outputs(roster, panel, all_ratios, raws, failures):
                 row.append("NA" if v is None else f"{v:.4f}")
             row.append(cell.get("oh_n", "NA"))
         rows.append(row)
+    # Compare against the prior vintage before this run's raw lands in history/,
+    # or the "most recent" file is this run's own and the check is a no-op.
+    restatements, prior_vintage = detect_restatements(raws)
+
     with guarded_open("panel.csv", "w") as f:
         w = csv.writer(f)
         w.writerow(header)
@@ -447,8 +451,6 @@ def write_outputs(roster, panel, all_ratios, raws, failures):
         w.writerows(rows)
     with guarded_open(f"history/{stamp}_raw.yaml", "x") as f:
         yaml.safe_dump(raws, f, sort_keys=False, allow_unicode=True, width=120)
-
-    restatements, prior_vintage = detect_restatements(raws)
 
     # NA inventory, grouped per ratio
     na_lines = []
