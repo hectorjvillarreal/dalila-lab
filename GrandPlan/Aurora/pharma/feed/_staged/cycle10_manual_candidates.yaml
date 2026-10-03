@@ -1,0 +1,11 @@
+# Manual candidates staged outside a cycle, per Héctor's instruction (2026-10-03).
+# NOT yet in items.yaml. At cycle 10, append these to that cycle's candidates
+# file before `python3 harness.py cycle <file>`, then delete this file in the
+# same commit. Intake stays loose; promote is set by Héctor only.
+- query_id: q009
+  headline: Amgen Announces Positive Topline Phase 3 Results for Dazodalibep in Moderate-to-Severe Systemic Sjögren's Disease
+  url: https://www.amgen.com/newsroom/press-releases/2026/09/amgen-announces-positive-topline-phase-3-results-for-dazodalibep-in-moderatetosevere-systemic-sjgrens-disease
+  source_domain: amgen.com
+  date_published: '2026-09-22'
+  entities: [Amgen]
+  why: OASIZ 301 met primary (ESSDAI, wk 48) — rent replacement for an incumbent facing Prolia/XGEVA erosion and IRA caps on Enbrel/Otezla; manual add from 10-03 Amgen sweep (q009 is the nearest query, phase-3 outcomes in the rent-replacement group)
