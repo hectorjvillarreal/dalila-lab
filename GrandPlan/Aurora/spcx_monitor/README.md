@@ -57,6 +57,29 @@ python spcx_monitor.py status    # top-line regime read in the terminal
 Open `dashboard.html` in a browser to view the five panels, the macro context
 panel, and the top strip (consolidated read + coincidence flag).
 
+### Manual-pass checklist (added 2026-10-08)
+
+The 10-07 pass attributed a -2.5% day to yields/oil when the FT's $40B
+debt-plan report was already out; the 09-17 Fed hike went unrecorded for three
+weeks. Every manual pass now runs ALL of these, not just tape + EDGAR:
+
+1. **Tape** — Nasdaq historical API, re-sourced from scratch; if the day's close
+   is not posted yet, mark it as derived and re-verify next pass.
+2. **EDGAR** — issuer submissions feed (CIK 1181412) + S-1-family full-text
+   search for Anthropic.
+3. **Fixed press sweep** (one search each; record the driver of any |move| >
+   2% or any volume > 1.25x, or write "no driver found"):
+   SpaceX debt / financing / bonds · SpaceX CDS / credit spreads · SPCX lockup /
+   unlock · SpaceX Q3 earnings date (arms the 1.3B tranche) · Starship next
+   flight · Anthropic IPO / S-1 timing · Grain 800 MHz / spectrum M&A ·
+   SPCX analyst notes.
+4. **Macro** — `fetch-macro` (TIPS 10y, VIX, Fed funds target upper bound);
+   any change in the Fed target goes into `vix_trend` with its date.
+5. **Issuer debt facts** — `fire_sales.observables.issuer_debt_outstanding`
+   is refreshed from each 10-Q/10-K (XBRL companyfacts). Facts only: dollar
+   debt and CDS are press-only for regime purposes until a signed 8-K
+   (ruling 2026-10-08).
+
 ## Automation (daily systemd timer on Dalila)
 
 A **systemd user timer** runs the full daily cycle so the regime time series

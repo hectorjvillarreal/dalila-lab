@@ -165,6 +165,7 @@ MACRO_BACKDROP = {
     "observables": [
         "tips_10y_real_yield",       # FRED DFII10 — opportunity cost anchor for non-cash-flow assets
         "vix_level",                 # FRED VIXCLS
+        "fed_funds_target_upper",    # FRED DFEDTARU — policy-rate step (added 10-08 after the 09-17 hike went unrecorded)
         "vix_trend",
         "narrative_vs_cashflow_rotation",  # bitcoin vs. cash-flow assets — the canary
         "broad_risk_on_off",

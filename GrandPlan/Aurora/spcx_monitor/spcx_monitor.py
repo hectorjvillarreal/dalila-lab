@@ -24,7 +24,7 @@ USAGE.
                                              # latest one (values carried forward)
   python spcx_monitor.py render              # rebuild dashboard.html + run_log.md
   python spcx_monitor.py status              # print top-line regime read
-  python spcx_monitor.py fetch-macro [DATE]  # optional: pull TIPS-10y & VIX from
+  python spcx_monitor.py fetch-macro [DATE]  # optional: pull TIPS-10y, VIX & Fed target from
                                              # FRED into a day-file (network needed)
 
 Stdlib only — no third-party dependencies, no install step.
@@ -475,7 +475,10 @@ def render_dashboard():
 FRED = {
     "tips_10y_real_yield": "DFII10",
     "vix_level": "VIXCLS",
+    "fed_funds_target_upper": "DFEDTARU",
 }
+# Step series: also report the date and prior level of the last change.
+FRED_STEP = {"DFEDTARU"}
 
 
 def fetch_macro(d):
@@ -491,13 +494,18 @@ def fetch_macro(d):
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
             with urllib.request.urlopen(req, timeout=15) as r:
                 rows = r.read().decode().strip().splitlines()
-            # last row with a numeric value
-            for line in reversed(rows[1:]):
-                parts = line.split(",")
-                if len(parts) == 2 and parts[1] not in (".", ""):
-                    data["macro_backdrop"][key] = f"{parts[1]} ({parts[0]}, FRED {series})"
-                    got[key] = parts[1]
-                    break
+            pts = [p for p in (l.split(",") for l in rows[1:])
+                   if len(p) == 2 and p[1] not in (".", "")]
+            if pts:
+                date, val = pts[-1]
+                text = f"{val} ({date}, FRED {series})"
+                if series in FRED_STEP:
+                    prev = next((p for p in reversed(pts) if p[1] != val), None)
+                    if prev is not None:
+                        chg = pts[pts.index(prev) + 1][0]
+                        text = f"{val} ({date}, FRED {series}; last change {chg} from {prev[1]})"
+                data["macro_backdrop"][key] = text
+                got[key] = val
         except Exception as e:  # network blocked / offline — leave unset, never fake
             print(f"  · {series}: fetch failed ({e}); left unset (no fabrication).")
     save_day(d, data)
