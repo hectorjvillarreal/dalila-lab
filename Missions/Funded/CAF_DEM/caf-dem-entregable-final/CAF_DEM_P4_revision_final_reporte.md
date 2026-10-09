@@ -152,5 +152,5 @@ Persisten dos cajas sobrellenas de 2 pt en tablas de §3.1 que este pase no toc�
 
 ## Pendiente
 
-- Commit y push a `p4-revision-final`: sin hacer, a la espera de confirmación.
+- Commit local f9d65c3 en `p4-revision-final`; push pendiente de confirmación.
 - Revisión de Héctor y Juan Pablo.
