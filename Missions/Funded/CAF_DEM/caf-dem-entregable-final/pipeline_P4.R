@@ -137,7 +137,7 @@ adv <- paste0("Las proyecciones de gasto en salud y pensiones (tipo = 'Proyecci�
   "). Tras la corrección ", if (nrow(alertas) == 0) "ninguna proyección excede el rango histórico observado según el control automático del pipeline." else paste0(nrow(alertas), " serie(s) siguen excediendo el rango histórico y conservan advertencia textual."),
   " Las series con MASE > 2 respecto del método ingenuo (", paste(paste(podadas$pais, tolower(podadas$Indicador), sep = ": "), collapse = "; "),
   ") se conservan en la base marcadas como no informativas y no deben citarse como estimación puntual. El balance primario no se grafica: es estacionario y su extrapolación univariada no aporta información más allá de su media. ",
-  "Las series 'Crecimiento nominal del PIB' y 'Balance fiscal global' se incorporaron del WEO abril 2025 para el cálculo del diferencial (r - g) de la Sección 6.")
+  "Las series 'Crecimiento nominal del PIB' y 'Balance fiscal global' se incorporaron del WEO abril 2025 para el cálculo del diferencial (r - g) de la Sección 6. Para México, los intereses provienen de la SHCP ('Pago de intereses del sector público', perímetro RFSP, 2015-2024), porque la diferencia entre balance primario y global del WEO incluye partidas de los RFSP que no son intereses.")
 dic <- bind_rows(dic, tibble(Campo = "ADVERTENCIA DE USO", Descripción = adv)); write_excel_csv(dic, "base_analisis_P4_diccionario.csv")
 exportar_tex(dic, "anexo_diccionario_base.tex", alinear = c("l","l"))
 cat("\nLISTO. Opción:", eleg, "| alertas:", nrow(alertas), "| podadas:", nrow(podadas), "\n")
