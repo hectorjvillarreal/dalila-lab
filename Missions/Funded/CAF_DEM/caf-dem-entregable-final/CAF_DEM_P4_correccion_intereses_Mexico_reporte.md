@@ -33,7 +33,13 @@ entrega: sábado 10 de octubre de 2026
 | 2023 | 1.045,1 | 3,28 | 3,11 | 4,71 |
 | 2024 | 1.150,4 | 3,39 | 3,21 | 5,17 |
 
-La cifra de 2024 coincide con la de IMCO (1,15 billones de pesos, 3,4 % del PIB). **No se obtuvo el porcentaje del PIB que publica la SHCP**, porque los datos abiertos sólo traen montos en pesos. Si se necesita como contraste, hay que tomarlo del informe trimestral del cuarto trimestre de 2024.
+La cifra de 2024 coincide con la de IMCO (1,15 billones de pesos, 3,4 % del PIB).
+
+**Contraste con la SHCP.** El informe sobre la situación económica, las finanzas públicas y la deuda pública del cuarto trimestre de 2024 publica el costo financiero en % del PIB (cuadro "Situación financiera del Sector Público", p. 36 del PDF de la Gaceta Parlamentaria, 1 de febrero de 2025). Da 3,3 % en 2023 y 3,4 % en 2024, igual que nuestro cálculo con el PIB del WEO (3,28 y 3,39). La nota (a) lo menciona.
+
+El mismo cuadro explica el "3,7 %" de las instrucciones del 8 de octubre, que no se reproducía: es la cifra **programada** para 2024 (1.264,0 mmdp), no la observada.
+
+**Ramo 34 (decisión de Héctor, 9 de octubre).** Se conserva la serie XAC21 completa, con Ramo 34: 3,39 % en 2024.
 
 **Perímetros (opción b).** El numerador tiene perímetro presupuestario. El denominador es la deuda neta del WEO (51,4 % del PIB en 2024), que para México coincide con el SHRFSP. Como el perímetro de los intereses es más estrecho, la tasa implícita de México está sesgada a la baja. Esto se declara en la nota (a) de la Tabla de espacio fiscal, en la nota (b) de la Tabla de síntesis, en la ficha de México y en §6.2.
 
@@ -112,7 +118,7 @@ La frase de Conclusiones que comparten los Pasos 2 y 3 quedó coherente con ambo
 
 ## 5. Verificación
 
-- [x] Tres compilaciones con pdflatex (TinyTeX): 0 errores, 0 referencias o citas indefinidas, 105 páginas. Persisten las dos cajas que se salen del margen por 2,1 pt (l. 648 y 690, §3.1), que son anteriores a este cambio.
+- [x] Tres compilaciones con pdflatex (TinyTeX): 0 errores, 0 referencias o citas indefinidas, 105 páginas. Las dos cajas que se salían del margen en §3.1 se corrigieron después (ver «Ajustes posteriores»).
 - [x] `grep RFSP main.tex tablas/*.tex`: sin menciones en el texto. Sólo queda en `anexo_diccionario_base.tex`, como registro de la serie anterior.
 - [x] `grep 5,2`: sólo Panamá, más un 5,25 de Costa Rica que no tiene relación.
 - [x] `grep` de las frases del árbitro: cero coincidencias.
@@ -121,8 +127,17 @@ La frase de Conclusiones que comparten los Pasos 2 y 3 quedó coherente con ambo
 
 **Diff:** `git diff f9d65c3 4ea046a`. Rama `p4-intereses-mexico` publicada en origin. `main.pdf` actualizado en el commit.
 
+## Ajustes posteriores (9 de octubre, por indicación de Héctor)
+
+- **Ramo 34:** se conserva (3,39 %).
+- **Cociente de Chile:** §6.3 dice ahora "entre cinco y siete veces y media" y Conclusiones "entre casi cuatro y siete veces y media". El cociente máximo es 7,5.
+- **Porcentaje de la SHCP:** incorporado como contraste en la nota (a) de la Tabla de espacio fiscal. La fuente de la nota incluye ahora el informe del cuarto trimestre de 2024.
+- **Cajas que se salían del margen:** en las tablas del Pilar 1 y del Pilar 2 (§3.1), la primera columna pasa de 1,6 a 1,7 cm, porque "Colombia" no cabía. El log ya no tiene ninguna caja sobrellena.
+- Se compiló tres veces: 0 errores, 0 referencias indefinidas, 0 cajas sobrellenas, 105 páginas.
+- Zip para Overleaf: `caf_dem_p4_overleaf_v3.zip`. Sustituye al v2.
+
 ## Pendiente
 
-- Revisión de Héctor y Juan Pablo antes de fusionar.
-- Si se quiere, el porcentaje del PIB que publica la SHCP para 2024, como contraste.
-- Redondeo heredado: §6.3 dice que en Chile el aumento es "entre cinco y siete veces" la brecha, pero el cociente máximo es 7,5. Conclusiones usa el mismo redondeo.
+- Visto bueno de Héctor y revisión de Juan Pablo.
+- Subir `caf_dem_p4_overleaf_v3.zip` a Overleaf.
+- Envío a CAF. El plazo contractual es el 22 de octubre.
