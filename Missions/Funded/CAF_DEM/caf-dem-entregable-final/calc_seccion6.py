@@ -13,11 +13,13 @@ esa=w[w['WEO Subject Code']=='GGXWDN_NGDP'].set_index('ISO')['Estimates Start Af
 g=ngdp.T.pct_change().T*100          # crecimiento nominal del PIB, %
 intr=pb-ob                           # pago neto de intereses, % del PIB
 intr_weo=intr.copy()
-# México (revisión final, 8 oct 2026): pb-ob del WEO arrastra partidas de los RFSP que no son intereses
-# (5,9 % del PIB en 2024). Se sustituye 2015-2024 por los intereses del sector público federal en el
-# perímetro RFSP (SHCP), mismo perímetro que la deuda neta (SHRFSP). No hay serie SHCP equivalente para
-# 2025-2030, por lo que la ventana de proyección de México no se calcula.
-shcp=pd.read_csv('weo/shcp_rfsp_intereses_mex.csv').set_index('anio')['intereses_mmdp']
+# México (corrección 9 oct 2026): pb-ob del WEO arrastra partidas de los RFSP que no son intereses
+# (5,9 % del PIB en 2024). Se sustituye 2015-2024 por el costo financiero del sector público presupuestario
+# (SHCP, clave XAC21; incluye el costo de los programas de apoyo a ahorradores y deudores, XAC2120).
+# La deuda neta sigue siendo la del WEO, que para México coincide con el SHRFSP: numerador y denominador
+# tienen perímetros distintos (opción b, decisión de Héctor del 9 oct) y r implícita queda sesgada a la baja.
+# No hay serie SHCP equivalente para 2025-2030, por lo que la ventana de proyección de México no se calcula.
+shcp=pd.read_csv('weo/shcp_costo_financiero_presupuestario_mex.csv').set_index('anio')['costo_financiero_mmdp']
 for y in range(2015,2025): intr.loc['MEX',str(y)]=100*shcp[y]/ngdp.loc['MEX',str(y)]
 for y in range(2025,2031): intr.loc['MEX',str(y)]=np.nan
 bl=bn.T.shift(1).T                   # deuda neta en t-1, % del PIB
@@ -58,11 +60,11 @@ for c in iso:
             nota='Préstamo/endeudamiento neto; la diferencia con el balance primario es el pago neto de intereses' if c!='MEX'
                  else 'Préstamo/endeudamiento neto. Para México la diferencia con el balance primario no es una medida de intereses (incluye partidas de los RFSP); los intereses se toman de la SHCP'))
 for y in range(2015,2025):
-    out.append(dict(pais='México',iso3='MEX',anio=y,indicador='Pago de intereses del sector público',codigo_indicador='SHCP_RF213000SPFC',
+    out.append(dict(pais='México',iso3='MEX',anio=y,indicador='Costo financiero del sector público',codigo_indicador='SHCP_XAC21',
         tipo='Observado',modelo=np.nan,valor=round(intr.loc['MEX',str(y)],4),unidad='% del PIB',
-        cobertura_institucional='Sector público federal (perímetro RFSP)',
-        fuente='SHCP, Estadísticas Oportunas de Finanzas Públicas (RFSP, clave RF213000SPFC); PIB nominal del WEO abril 2025',
-        nota='Intereses, comisiones y gastos de la deuda, pagado, suma anual; mismo perímetro que la deuda neta (SHRFSP). Sustituye a balance primario menos balance global del WEO en el cálculo de r'))
+        cobertura_institucional='Sector público presupuestario',
+        fuente='SHCP, Estadísticas Oportunas de Finanzas Públicas (ingreso, gasto y financiamiento, clave XAC21); PIB nominal del WEO abril 2025',
+        nota='Costo financiero pagado, suma anual: intereses, comisiones y gastos de la deuda (XAC2110) más costo de los programas de apoyo a ahorradores y deudores de la banca (XAC2120). Perímetro presupuestario, distinto del de la deuda neta (SHRFSP). Sustituye a balance primario menos balance global del WEO en el cálculo de r'))
 pd.DataFrame(out).to_csv('weo/series_nuevas_P4.csv',index=False)
 # --- 6.3 presión demográfica ---
 b=pd.read_csv('base_analisis_P3.csv')
