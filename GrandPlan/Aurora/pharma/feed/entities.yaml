@@ -56,8 +56,8 @@ Dr. Reddy's Laboratories:
   count: 1
   last_seen: '2026-08-16'
 Sun Pharma:
-  count: 1
-  last_seen: '2026-08-16'
+  count: 2
+  last_seen: '2026-09-03'
 NMPA:
   count: 2
   last_seen: '2026-08-16'
@@ -143,8 +143,8 @@ Eli Lilly and Company:
   count: 1
   last_seen: '2026-08-16'
 FDA:
-  count: 4
-  last_seen: '2026-08-26'
+  count: 6
+  last_seen: '2026-09-03'
 Alfasigma:
   count: 1
   last_seen: '2026-08-16'
@@ -238,3 +238,42 @@ Meritain Health:
 US Senate:
   count: 1
   last_seen: '2026-08-26'
+Revolution Medicines:
+  count: 1
+  last_seen: '2026-09-03'
+Bristol Myers Squibb:
+  count: 1
+  last_seen: '2026-09-03'
+Alcon:
+  count: 1
+  last_seen: '2026-09-03'
+Astellas Pharma:
+  count: 1
+  last_seen: '2026-09-03'
+BeOne Medicines:
+  count: 1
+  last_seen: '2026-09-03'
+BridgeBio:
+  count: 1
+  last_seen: '2026-09-03'
+CSL:
+  count: 1
+  last_seen: '2026-09-03'
+Kyowa Kirin:
+  count: 1
+  last_seen: '2026-09-03'
+Teva Pharmaceuticals:
+  count: 1
+  last_seen: '2026-09-03'
+UCB:
+  count: 1
+  last_seen: '2026-09-03'
+White House:
+  count: 1
+  last_seen: '2026-09-03'
+Eli Lilly:
+  count: 1
+  last_seen: '2026-10-03'
+Merida Biosciences:
+  count: 1
+  last_seen: '2026-10-03'

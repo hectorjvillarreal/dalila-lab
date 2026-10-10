@@ -1,11 +1,11 @@
 config:
-  cycles_completed: 9
+  cycles_completed: 10
   cadence_hours: 36
   cycle_budget: 16
   exploration_share: 0.25
   rotation:
-    main: 12
-    exploration: 6
+    main: 24
+    exploration: 10
   resolved_ids:
   - 20260816-0001
   - 20260816-0002
@@ -120,6 +120,21 @@ config:
   - 20260826-0007
   - 20260826-0008
   - 20260826-0009
+  - 20260903-0001
+  - 20260903-0002
+  - 20260903-0003
+  - 20261003-0001
+  - 20261003-0002
+  - 20261003-0003
+  - 20261003-0004
+  - 20261003-0005
+  - 20261003-0006
+  - 20261003-0007
+  - 20261003-0008
+  - 20261003-0009
+  - 20261003-0010
+  - 20261003-0011
+  - 20261003-0012
   promotes_per_cycle:
   - 0
   - 0
@@ -130,7 +145,8 @@ config:
   - 6
   - 4
   - 0
-  next_provisional: 8
+  - 4
+  next_provisional: 10
 main:
 - id: q001
   text: patent cliff pharma
@@ -223,6 +239,7 @@ main:
   - 20260826-0001
   - 20261003-0007
   - 20261003-0008
+  - 20261009-0011
 - id: q010
   text: pharma restructuring layoffs R&D
   group: Rent replacement
@@ -268,6 +285,8 @@ main:
   - 20260816-0072
   - 20260816-0073
   - 20260816-0074
+  - 20261009-0001
+  - 20261009-0002
 - id: q015
   text: drug shortage cause
   group: The diffusion layer
@@ -289,6 +308,8 @@ main:
   - 20260816-0079
   - 20260816-0080
   - 20260816-0081
+  - 20261009-0003
+  - 20261009-0004
 - id: q017
   text: AI pharma partnership compute
   group: Frontier cost
@@ -337,6 +358,11 @@ main:
   - 20260818-0004
   - 20260903-0001
   - 20260903-0002
+  - 20261009-0005
+  - 20261009-0006
+  - 20261009-0007
+  - 20261009-0008
+  - 20261009-0009
 - id: q024
   text: EMA CHMP opinion
   group: The gate
@@ -345,6 +371,7 @@ main:
   - 20260816-0039
   - 20260816-0040
   - 20260816-0041
+  - 20261009-0010
 - id: q025
   text: NMPA approval
   group: The gate
@@ -399,6 +426,24 @@ provisional:
   - 20260816-0001
   - 20260816-0002
   - 20260823-0004
+  window: []
+- id: p008
+  text: metastatic
+  group: auto-proposed
+  origin: auto
+  from_items:
+  - 20260816-0039
+  - 20260823-0012
+  - 20260903-0001
+  window: []
+- id: p009
+  text: program
+  group: auto-proposed
+  origin: auto
+  from_items:
+  - 20260816-0056
+  - 20260823-0007
+  - 20260903-0003
   window: []
 exploration:
 - id: x001

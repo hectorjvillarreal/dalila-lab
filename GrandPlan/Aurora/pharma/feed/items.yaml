@@ -1886,3 +1886,162 @@
   query_id: x006
   lane: exploration
   promote: false
+- id: 20261009-0001
+  date_seen: '2026-10-09'
+  date_published: '2026-10-05'
+  headline: Curia invests $28 million to expand sterile API manufacturing at Valladolid, Spain
+  why: Steroid and non-steroid sterile API capacity (grams to metric tons), completion Q4 2028; follows
+    a $4M Annex-1 upgrade in 2025 — European sterile-API capacity, not US onshoring
+  url: https://www.contractpharma.com/?p=94000
+  source_domain: contractpharma.com
+  entities:
+  - Curia
+  query_id: q014
+  lane: main
+  promote: null
+- id: 20261009-0002
+  date_seen: '2026-10-09'
+  date_published: '2026-09-29'
+  headline: ESTEVE CDMO invests additional $17.5M in Illinois site
+  why: Morton Grove, IL total now $33M — a mid-size European CDMO adding US small-molecule capacity the
+    same day the Section 232 second phase began
+  url: https://www.contractpharma.com/breaking-news/esteve-cdmo-invests-additional-17-5m-in-illinois-site/
+  source_domain: contractpharma.com
+  entities:
+  - ESTEVE
+  query_id: q014
+  lane: main
+  promote: null
+- id: 20261009-0003
+  date_seen: '2026-10-09'
+  date_published: '2026-09-21'
+  headline: AbbVie and Iambic Announce Collaboration to Accelerate AI-driven Drug Discovery
+  why: Multi-year small-molecule discovery deal across immunology, neuroscience, oncology on Iambic's
+    Enchant v3 / NeuralPLexer; upfront + milestones + tiered royalties, amounts undisclosed
+  url: https://news.abbvie.com/2026-09-21-AbbVie-and-Iambic-Announce-Collaboration-to-Accelerate-AI-driven-Drug-Discovery
+  source_domain: news.abbvie.com
+  entities:
+  - AbbVie
+  - Iambic
+  query_id: q016
+  lane: main
+  promote: null
+- id: 20261009-0004
+  date_seen: '2026-10-09'
+  date_published: '2026-09-16'
+  headline: Novo and Anthropic will collaborate to advance drug discovery with Claude
+  why: Frontier-LLM vendor (not an AI-biotech) as discovery partner — R&D plus agentic software engineering;
+    no financial terms seen; primary page 403'd, date from release URL
+  url: https://www.globenewswire.com/news-release/2026/09/16/3363106/0/en/novo-and-anthropic-will-collaborate-to-advance-drug-discovery-with-claude.html
+  source_domain: globenewswire.com
+  entities:
+  - Novo Nordisk
+  - Anthropic
+  query_id: q016
+  lane: main
+  promote: null
+- id: 20261009-0005
+  date_seen: '2026-10-09'
+  date_published: '2026-10-08'
+  headline: FDA approves atezolizumab in combination with chemotherapy for Stage III mismatch repair deficient
+    colon cancer
+  why: Adjuvant IO + FOLFOX in dMMR stage III colon — Tecentriq's 12th US indication; label extension
+    that lengthens an aging PD-L1 franchise ahead of LOE
+  url: https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-combination-chemotherapy-stage-iii-mismatch-repair-deficient-colon-cancer
+  source_domain: fda.gov
+  entities:
+  - Roche
+  - Genentech
+  query_id: q023
+  lane: main
+  promote: null
+- id: 20261009-0006
+  date_seen: '2026-10-09'
+  date_published: '2026-10-07'
+  headline: FDA approves tucatinib with trastuzumab and pertuzumab for the maintenance treatment of HER2-positive
+    breast cancer
+  why: Moves Tukysa (Seagen asset) into first-line maintenance — line-of-therapy expansion for an acquired
+    asset
+  url: https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-tucatinib-trastuzumab-and-pertuzumab-maintenance-treatment-her2-positive-breast-cancer
+  source_domain: fda.gov
+  entities:
+  - Pfizer
+  query_id: q023
+  lane: main
+  promote: null
+- id: 20261009-0007
+  date_seen: '2026-10-09'
+  date_published: '2026-10-02'
+  headline: FDA approves pirtobrutinib for previously untreated chronic lymphocytic leukemia or small
+    lymphocytic lymphoma
+  why: Non-covalent BTKi (Loxo asset) reaches frontline CLL against ibrutinib/acalabrutinib/zanubrutinib
+    incumbents
+  url: https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pirtobrutinib-previously-untreated-chronic-lymphocytic-leukemia-or-small-lymphocytic
+  source_domain: fda.gov
+  entities:
+  - Eli Lilly
+  query_id: q023
+  lane: main
+  promote: null
+- id: 20261009-0008
+  date_seen: '2026-10-09'
+  date_published: '2026-09-18'
+  headline: FDA approves imlunestrant in combination with abemaciclib for ER-positive, HER2-negative,
+    ESR1-mutated advanced or metastatic breast cancer
+  why: Oral SERD paired with Lilly's own CDK4/6 — in-house combination extends Verzenio, which is on the
+    IPAY-2028 negotiation list
+  url: https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-imlunestrant-combination-abemaciclib-er-positive-her2-negative-esr1-mutated-advanced-or
+  source_domain: fda.gov
+  entities:
+  - Eli Lilly
+  query_id: q023
+  lane: main
+  promote: null
+- id: 20261009-0009
+  date_seen: '2026-10-09'
+  date_published: '2026-09-24'
+  headline: FDA approves belzutifan in combination with lenvatinib for advanced renal cell carcinoma with
+    a clear cell component
+  why: Welireg combination label — part of Merck's post-Keytruda-LOE (exclusivity expired 09-04) rent-replacement
+    stack
+  url: https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-belzutifan-combination-lenvatinib-advanced-renal-cell-carcinoma-clear-cell-component
+  source_domain: fda.gov
+  entities:
+  - Merck
+  - Eisai
+  query_id: q023
+  lane: main
+  promote: null
+- id: 20261009-0010
+  date_seen: '2026-10-09'
+  date_published: '2026-09-18'
+  headline: Meeting highlights from the CHMP 14-17 September 2026
+  why: 12 positive opinions (8 new actives incl. denecimig, gefurulimab, povorcitinib, relacorilant; 2
+    biosimilars incl. omalizumab; 2 generics incl. tofacitinib, ruxolitinib) + 11 extensions (Keytruda,
+    Enhertu, Ocrevus, Cosentyx); no negatives; Xervyteg refusal confirmed
+  url: https://www.ema.europa.eu/en/news/meeting-highlights-committee-medicinal-products-human-use-chmp-14-17-september-2026
+  source_domain: ema.europa.eu
+  entities:
+  - EMA
+  - Novo Nordisk
+  - Alexion
+  - Incyte
+  - Corcept
+  query_id: q024
+  lane: main
+  promote: null
+- id: 20261009-0011
+  date_seen: '2026-10-09'
+  date_published: '2026-09-22'
+  headline: Amgen Announces Positive Topline Phase 3 Results for Dazodalibep in Moderate-to-Severe Systemic
+    Sjögren's Disease
+  why: OASIZ 301 met primary (ESSDAI, wk 48) — rent replacement for an incumbent facing Prolia/XGEVA erosion
+    and IRA caps on Enbrel/Otezla; manual add from 10-03 Amgen sweep (q009 is the nearest query, phase-3
+    outcomes in the rent-replacement group)
+  url: https://www.amgen.com/newsroom/press-releases/2026/09/amgen-announces-positive-topline-phase-3-results-for-dazodalibep-in-moderatetosevere-systemic-sjgrens-disease
+  source_domain: amgen.com
+  entities:
+  - Amgen
+  query_id: q009
+  lane: main
+  promote: null
