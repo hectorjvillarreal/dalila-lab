@@ -140,6 +140,39 @@ Teardown: `systemctl --user disable --now spcx-render.timer`, then
 `git worktree remove /home/hectorjuan/Dalila-spcx`, then
 `rm ~/.local/bin/spcx_render.sh`. Optionally `loginctl disable-linger hectorjuan`.
 
+### S-1 flip checks (Interconnections de-escalation observable)
+
+The Anthropic public S-1 flip is checked on EDGAR at every manual pass. On top
+of that, two one-shot checks bracket the re-pinned no-flip bound (2026-10-31,
+ruling 10-03). Both are **report-only**: they never edit state, classify, or
+commit; the analyst reads the result into the next manual pass.
+
+| Check | When | Where | Notes |
+| --- | --- | --- | --- |
+| Cloud routine `trig_01DvdE4u1tH5qDYjuBx6TFBD` | 2026-10-31 22:00 UTC (16:00 CST) | claude.ai/code/routines | Prompt carries verification state through 10-09. Its environment blocked sec.gov on the 09-01 and 09-30 firings, so it may fall back to a press-only null. |
+| Local backstop `spcx-s1-recheck.timer` | Mon 2026-11-02 09:00 CST (`Persistent=true`) | `~/.local/bin/spcx_s1_recheck.py` (stdlib); unit `~/.config/systemd/user/spcx-s1-recheck.{service,timer}`; log `~/.spcx_s1_recheck.log` | Runs from Dalila, so EDGAR is reachable. Writes `~/spcx_s1_recheck_<date>.md` plus a desktop notification. |
+
+The backstop runs four checks: the daily form indices 10-09..10-30 (Form 4 row
+count as freshness guard; Anthropic rows in S-1/S-1/A/DRS/F-1), a full-text
+search for `"Anthropic PBC"` and `Anthropic` in the same forms, an EDGAR
+company search, and SPCX issuer filings since 10-09 (an 8-K is flagged for a
+signed debt financing under the 10-08 ruling and for the Q3 earnings date). It
+ends with one verdict line: FILED, NOT YET FILED (VERIFIED), or INCONCLUSIVE.
+
+Two EDGAR behaviours are built in:
+
+- **EDGAR answers 403, not 404, for a daily index not yet published.** The
+  script fetches a known index first (`form.20261009.idx`) as a control: if the
+  control loads, a 403 on a later date means "unpublished"; if the control fails,
+  sec.gov is blocked and every request is counted as an error.
+- **An unpublished index is not a null.** Any missing business day other than
+  10-12 (Columbus Day, EDGAR closed) makes the verdict INCONCLUSIVE, never
+  VERIFIED.
+
+Manual re-run: `~/.local/bin/spcx_s1_recheck.py`. After 11-02:
+`systemctl --user disable spcx-s1-recheck.timer`. The timer is dated and will
+not fire again, but disabling it keeps `list-timers` clean.
+
 ## Run-log convention (deliverable §5.2)
 
 `run_log.md` is regenerated on every `render` from the dated state files, so the
