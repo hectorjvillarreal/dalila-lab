@@ -1,0 +1,724 @@
+% Consumo e impuestos verdes · Parte 1: IVA
+% Finanzas Públicas, Maestría en Economía Aplicada, Tec de Monterrey
+% Esquema aprobado: CLAUDE.md de esta carpeta (2026-10-12). Compilar con: latexmk -pdf consumo_iva.tex
+% Versión para repartir: consumo_iva_handout.tex (misma fuente, opción handout).
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\unaccentedoperators % operadores sin acento: max, min (la opción es-noaccentedoperators no existe en esta versión de babel)
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{babel,arrows.meta,calc,positioning,decorations.pathreplacing,patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% ---------------------------------------------------------------------------
+% Tema sobrio (igual al de la sesión del 26 de septiembre)
+% ---------------------------------------------------------------------------
+\definecolor{cTitulo}{RGB}{0,55,100}
+\definecolor{cOferta}{RGB}{31,87,153}
+\definecolor{cDemanda}{RGB}{200,100,0}
+\definecolor{cImpuesto}{RGB}{175,30,30}
+\definecolor{cRecauda}{RGB}{40,130,80}
+\definecolor{cGris}{RGB}{110,110,110}
+
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{frametitle}{fg=cTitulo}
+\setbeamercolor{title}{fg=cTitulo}
+\setbeamercolor{structure}{fg=cTitulo}
+\setbeamercolor{block title}{bg=cTitulo!12,fg=cTitulo}
+\setbeamercolor{block body}{bg=cTitulo!4}
+\setbeamercolor{block title alerted}{bg=cImpuesto!12,fg=cImpuesto}
+\setbeamercolor{block body alerted}{bg=cImpuesto!4}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{blocks}[rounded]
+\setbeamertemplate{footline}{%
+  \hfill{\small\color{cGris}Consumo e impuestos verdes · IVA\quad\insertframenumber/\inserttotalframenumber}\hspace*{1em}\vspace*{0.6em}}
+
+% Fuente al pie de cada diapositiva
+\newcommand{\fuente}[1]{\par\vfill{\small\color{cGris}#1\par}}
+% Resultado final de una derivación, resaltado
+\newcommand{\resultado}[1]{\colorbox{cTitulo!12}{$\displaystyle #1$}}
+
+% ---------------------------------------------------------------------------
+% Estilo común de gráficas
+% ---------------------------------------------------------------------------
+\tikzset{
+  every node/.append style={font=\small},
+  eje/.style={-{Stealth[length=2mm]},thick,black!75},
+  flecha/.style={-{Stealth[length=2mm]},thick,cTitulo},
+  guia/.style={thin,dashed,black!45},
+  punto/.style={circle,fill=black,inner sep=1.2pt},
+  caja/.style={draw=cTitulo,rounded corners,fill=cTitulo!5,align=center,inner sep=4pt},
+  cajafisco/.style={draw=cRecauda,rounded corners,fill=cRecauda!10,align=center,inner sep=3pt},
+}
+
+\title{IVA en México: eficiencia, equidad y lecciones internacionales}
+\subtitle{Consumo e impuestos verdes · Parte 1}
+\author{Héctor Juan Villarreal}
+\institute{Finanzas Públicas · Maestría en Economía Aplicada\\Escuela de Gobierno y Transformación Pública · Tec de Monterrey}
+\date{Octubre de 2026}
+
+\begin{document}
+
+% =========================================================================
+% I. MOTIVACIÓN
+% =========================================================================
+\section{Motivación}
+
+% 1 -----------------------------------------------------------------------
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% 2 -----------------------------------------------------------------------
+\begin{frame}{Dos paradigmas}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Paradigma viejo}
+        Eficiencia contra equidad.\\[3pt]
+        En los ochenta y noventa: \emph{recauda con eficiencia y redistribuye con el gasto}. El impuesto no se ocupa de quién es pobre.
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \pause
+      \begin{block}{Paradigma nuevo}
+        La equidad sí importa en el diseño del impuesto.\\[3pt]
+        La pregunta deja de ser «¿eficiencia o equidad?» y pasa a ser «¿con qué instrumento logro cada cosa?».
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vspace{0.8em}
+  {\small Impuestos directos: ISR, predial. Indirectos: IVA, IEPS. Las cuotas de seguridad social son la tercera pieza (sesión del 26 de septiembre).}
+  \pause
+  \begin{alertblock}{Pregunta}
+    ¿Qué cambió?
+  \end{alertblock}
+\end{frame}
+
+% 3 -----------------------------------------------------------------------
+\begin{frame}{México recauda muy poco. ¿Qué pasó?}
+  \begin{columns}[T]
+    \begin{column}{0.42\textwidth}
+      \begin{itemize}
+        \item Hay IVA en 175 jurisdicciones. Francia lo aplicó en 1954.
+        \item En los países en desarrollo es la principal fuente de recaudación.
+        \item México cobra 16\,\% y recauda menos que el promedio de América Latina.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.56\textwidth}
+      \centering
+      % Categoría 5110 de la OCDE (impuestos generales sobre bienes y servicios), 2021,
+      % base Revenue Statistics in LAC consultada el 12-10-2026. El gráfico 1 de Barreix et al.
+      % traía México 4.3, Uruguay 7.9, Brasil 12.5, ALC 6.4: no coinciden con la base actual.
+      \begin{tikzpicture}
+        \begin{axis}[
+          width=8.2cm, height=4.3cm,
+          ybar, bar width=14pt, bar shift=0pt,
+          ymin=0, ymax=14.5,
+          ylabel={Impuestos generales al consumo,\\\% del PIB (2021)},
+          ylabel style={align=center},
+          ylabel style={font=\small},
+          symbolic x coords={Brasil,Chile,Uruguay,OCDE,ALC,Colombia,México},
+          xtick={Brasil,Chile,Uruguay,OCDE,ALC,Colombia,México},
+          x tick label style={font=\small,rotate=35,anchor=north east,inner sep=1pt},
+          y tick label style={font=\small},
+          nodes near coords,
+          every node near coord/.append style={font=\small},
+          axis lines*=left,
+          enlarge x limits=0.09,
+        ]
+          \addplot[fill=cOferta!55,draw=cOferta] coordinates {(Brasil,12.1) (Chile,9.5) (Uruguay,7.0) (Colombia,6.7)};
+          \addplot[fill=cGris!40,draw=cGris] coordinates {(OCDE,7.1) (ALC,6.6)};
+          \addplot[fill=cImpuesto!60,draw=cImpuesto] coordinates {(México,4.2)};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \pause
+  \begin{alertblock}{Pregunta}
+    Con una tasa de 16\,\%, ¿por qué recaudamos tan poco?
+  \end{alertblock}
+  \fuente{Categoría 5110; Brasil suma ICMS, PIS/COFINS e ISS. Base OCDE-BID-CEPAL-CIAT de \emph{Estadísticas tributarias en ALC} (octubre de 2026). 175 jurisdicciones: OCDE (2024), citada por Barreix et al.}
+\end{frame}
+
+% 4 -----------------------------------------------------------------------
+\begin{frame}{Objetivo de hoy}
+  \begin{block}{Tender un puente}
+    De la evidencia internacional sobre eficiencia (FMI) a las propuestas de equidad de América Latina (Barreix), y de ahí a la reforma fiscal en México.
+  \end{block}
+  \vspace{0.6em}
+  \centering
+  \begin{tikzpicture}[node distance=4mm]
+    \node[caja,text width=2.2cm] (a) {Mecánica del IVA};
+    \node[caja,text width=2.2cm,right=of a] (b) {No gravar insumos};
+    \node[caja,text width=2.2cm,right=of b] (c) {¿Tasa uniforme?};
+    \node[caja,text width=2.2cm,right=of c] (d) {Incidencia y ganancias};
+    \node[caja,text width=2.2cm,right=of d] (e) {Barreix y México};
+    \draw[flecha] (a) -- (b);
+    \draw[flecha] (b) -- (c);
+    \draw[flecha] (c) -- (d);
+    \draw[flecha] (d) -- (e);
+    \node[below=3mm of b,text width=2.4cm,align=center,color=cGris] {FMI};
+    \node[below=3mm of c,text width=2.4cm,align=center,color=cGris] {FMI y Salanié\\(entra al parcial)};
+    \node[below=3mm of e,text width=2.4cm,align=center,color=cGris] {Barreix et al.};
+  \end{tikzpicture}
+  \fuente{de Mooij, Hebous y Keen (2025), IMF WP/25/165; Barreix, Rocha y Tostes Neto (2025), CIATBlog.}
+\end{frame}
+
+% =========================================================================
+% II. MECÁNICA
+% =========================================================================
+\section{Mecánica}
+
+% 5 -----------------------------------------------------------------------
+\begin{frame}{IVA e impuesto a las ventas: los dos gravan el consumo, solo que…}
+  \centering
+  \begin{tikzpicture}[x=1cm,y=1cm]
+    \node[caja,text width=2.3cm] (p) at (0,0) {Proveedor de insumos\\vende 100};
+    \node[caja,text width=2.3cm] (f) at (3.8,0) {Fabricante\\vende 300};
+    \node[caja,text width=2.3cm] (m) at (7.6,0) {Minorista\\vende 500};
+    \node[caja,text width=2.3cm] (c) at (11.4,0) {Consumidor\\paga 580};
+    \draw[flecha] (p) -- (f); \draw[flecha] (f) -- (m); \draw[flecha] (m) -- (c);
+    \onslide<2->{
+    \node[cajafisco,text width=2.6cm] at (0,-1.6) {IVA cobrado 16\\acredita 0\\\textbf{entera 16}};
+    \node[cajafisco,text width=2.6cm] at (3.8,-1.6) {IVA cobrado 48\\acredita 16\\\textbf{entera 32}};
+    \node[cajafisco,text width=2.6cm] at (7.6,-1.6) {IVA cobrado 80\\acredita 48\\\textbf{entera 32}};
+    \node[align=center,text width=2.8cm,color=cRecauda] at (11.4,-1.6) {Total: $16+32+32$\\$= 80 = 0.16\times 500$};}
+  \end{tikzpicture}
+  \par\medskip
+  \begin{itemize}
+    \onslide<3->{\item Cada empresa paga débito menos crédito. Lo recaudado es $t$ por la venta final: igual que un impuesto a las ventas al menudeo.}
+    \onslide<4->{\item La diferencia es el \textbf{cobro fraccionado}: si el minorista evade, el fisco ya cobró 48 de los 80. Y cada factura deja huella documental.}
+    \onslide<5->{\item Un impuesto a los ingresos brutos cobra en cada venta sin acreditar: el impuesto se acumula en cascada.}
+  \end{itemize}
+  \fuente{Tasa de 16\,\%. de Mooij, Hebous y Keen (2025), sec.~2.3.}
+\end{frame}
+
+% 6 -----------------------------------------------------------------------
+\begin{frame}{Principio de destino: se grava donde se consume}
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \begin{itemize}
+        \item \textbf{Exportaciones a tasa cero}: salen sin IVA y la empresa recupera el IVA de sus insumos.
+        \item \textbf{Importaciones gravadas}: pagan la misma tasa que el producto nacional.
+        \item Resultado: el IVA no distingue entre lo hecho aquí y lo hecho afuera. Es neutral al comercio.
+      \end{itemize}
+      \pause
+      \begin{block}{«El impuesto interno del libre comercio»}
+        Por eso fue condición para entrar a la Unión Europea. Un arancel, en cambio, grava la producción y viola la eficiencia productiva.
+      \end{block}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \pause
+      \begin{block}{Brasil, hoy}
+        Su ICMS estatal se cobra en buena parte en origen: el estado productor se queda con la recaudación.\\[3pt]
+        La reforma lleva el nuevo IBS al principio de destino, con una transición de 50 años.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \fuente{de Mooij, Hebous y Keen (2025), secs.~2.1 y 2.3; Barreix, Rocha y Tostes Neto (2025).}
+\end{frame}
+
+% 7 -----------------------------------------------------------------------
+\begin{frame}{Tasa cero no es lo mismo que exención}
+  \begin{columns}[T]
+    \begin{column}{0.44\textwidth}
+      \centering
+      \begin{tabular}{lcc}
+        \toprule
+        & Cobra IVA & Acredita\\
+        \midrule
+        Tasa general & sí & sí\\
+        Tasa cero & no & sí\\
+        Exención & no & \textcolor{cImpuesto}{\textbf{no}}\\
+        \bottomrule
+      \end{tabular}
+      \par\medskip
+      \raggedright
+      Con la exención, el IVA de los insumos se queda pegado: se vuelve un impuesto a los insumos.
+      \par\medskip
+      {\small México: alimentos y medicinas a tasa cero (LIVA, art.~2-A). Exenciones: arts.~9 (enajenación), 15 (servicios) y 20 (uso o goce temporal).}
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \pause
+      \begin{block}{Exentamos al fabricante de la diapositiva 5}
+        \small
+        \begin{itemize}
+          \item No recupera los 16 de IVA de sus insumos: vende en 316, sin IVA.
+          \item El minorista no tiene IVA que acreditar: vende en 516 y cobra $0.16\times516 = 82.56$.
+          \item Recaudación: $16 + 0 + 82.56 = 98.56$, no 80.
+          \item El consumidor paga 598.56, no 580.
+        \end{itemize}
+      \end{block}
+      \pause
+      Exentar una etapa intermedia \textbf{sube} la recaudación y el precio final: el impuesto se cobra dos veces sobre lo mismo.
+    \end{column}
+  \end{columns}
+  \fuente{Ley del Impuesto al Valor Agregado, arts.~2-A, 9, 15 y 20. Ejemplo propio; supone que el fabricante traslada el IVA no acreditable.}
+\end{frame}
+
+% =========================================================================
+% III. EFICIENCIA EN LA PRODUCCIÓN
+% =========================================================================
+\section{Eficiencia en la producción}
+
+% 8 -----------------------------------------------------------------------
+\begin{frame}{No gravar insumos: Diamond y Mirrlees (1971)}
+  \begin{itemize}
+    \item Gravar el consumo y gravar la producción distorsionan los dos. Uno pensaría que conviene usar un poco de cada uno.
+    \pause
+    \item No es así: si el gobierno puede gravar el consumo final a las tasas que quiera, conviene gravar \textbf{solo} el consumo.
+    \pause
+    \item Gravar insumos deja la economía dentro de su frontera de posibilidades: se produce menos de lo que se podría. Y esa producción extra tendría algún buen uso.
+  \end{itemize}
+  \pause
+  \begin{block}{Eficiencia productiva}
+    El sistema fiscal no debe alterar cómo se organiza la producción: qué insumos se usan ni quién produce qué.
+  \end{block}
+  \pause
+  {\small Supuestos: competencia; rentas (utilidades extraordinarias) gravables a la tasa que se quiera; ninguna restricción para gravar el consumo.}
+  \fuente{Diamond y Mirrlees (1971), \emph{AER} 61(1): 8--27 y 61(3): 261--278; de Mooij, Hebous y Keen (2025), sec.~2.1 y nota 4; Salanié, sec.~3.2.}
+\end{frame}
+
+% 9 -----------------------------------------------------------------------
+\begin{frame}{Cuánto cuesta gravar insumos}
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \[
+        \frac{CE}{\text{costo}} = \tfrac12\,\alpha\,(1-\alpha)\,\sigma\,t^2
+      \]
+      {\small $\alpha$: participación de insumos gravados; $\sigma$: sustitución entre insumos; $t$: tasa ad valorem.}
+      \pause
+      \begin{itemize}
+        \item Pariente de $\tfrac12\,t^2\,\varepsilon$ (26 de septiembre, diap.~27).
+        \item $\alpha(1-\alpha)$: pérdida chica si se grava casi ningún insumo o casi todos (los precios relativos no cambian).
+      \end{itemize}
+      \pause
+      \begin{block}{Ejemplo del FMI}
+        Con $\sigma=2$, $\alpha=0.5$ y $t=5$\,\%: 0.06\,\% del costo y 0.82\,\% de lo recaudado.
+      \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[
+          width=7.2cm, height=5.2cm,
+          xmin=0, xmax=1, ymin=0, ymax=0.075,
+          xlabel={$\alpha$ (con $t=5$\,\%)},
+          ylabel={$CE$, \% del costo},
+          xlabel style={font=\small}, ylabel style={font=\small},
+          tick label style={font=\small},
+          yticklabel style={/pgf/number format/fixed,/pgf/number format/precision=2},
+          scaled y ticks=false,
+          axis lines*=left,
+          domain=0:1, samples=60,
+        ]
+          \addplot[very thick,cImpuesto] {100*0.5*x*(1-x)*2*0.05^2};
+          \addplot[very thick,cOferta,dash pattern=on 5pt off 2pt] {100*0.5*x*(1-x)*1*0.05^2};
+          \node[cImpuesto,font=\small] at (axis cs:0.5,0.069) {$\sigma=2$};
+          \node[cOferta,font=\small] at (axis cs:0.5,0.025) {$\sigma=1$};
+          \node[punto] at (axis cs:0.5,0.0625) {};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{Keen (2014), \emph{Indian Growth and Development Review} 7(2): 181--201; FMI, fig.~1 (redibujada).}
+\end{frame}
+
+% 10 ----------------------------------------------------------------------
+\begin{frame}{La cascada no es, por sí sola, ineficiente}
+  \begin{itemize}
+    \item Un impuesto de 5\,\% sobre un insumo, y otra vez sobre lo que se produce con él: $1.05\times1.05 = 1.1025$. La tasa efectiva es 10.25\,\%.
+    \pause
+    \item Si cada unidad de producto requiere una cantidad fija de insumo (coeficientes técnicos fijos), nadie cambia cómo produce: \textbf{no hay carga excesiva}.
+    \pause
+    \item El costo viene de otro lado:
+      \begin{itemize}
+        \item de la \textbf{sustitución}: la empresa usa menos del insumo gravado aunque sea el mejor;
+        \item de la \textbf{integración vertical} para brincarse etapas, que cuesta;
+        \item de la \textbf{opacidad}: nadie sabe cuál es la tasa efectiva sobre cada bien.
+      \end{itemize}
+  \end{itemize}
+  \pause
+  \begin{block}{Contraste con Barreix et al.}
+    Barreix et al. llaman «efecto cascada» a lo que dejan las exenciones y lo tratan como ineficiencia. El FMI matiza: la cascada importa en la medida en que hay sustitución, integración u opacidad.
+  \end{block}
+  \fuente{de Mooij, Hebous y Keen (2025), sec.~2.1, notas 7 y 8; Barreix, Rocha y Tostes Neto (2025).}
+\end{frame}
+
+% 11 ----------------------------------------------------------------------
+\begin{frame}{Las exenciones deshacen el IVA}
+  \begin{itemize}
+    \item Una exención es un impuesto a los insumos: trae todas las distorsiones de la cascada.
+    \item Empuja al \textbf{autosuministro}: la empresa hace en casa lo que compraría, para no cargar IVA que no puede acreditar.
+    \item Vuelve opacas las tasas efectivas.
+    \item Las importaciones llegan con tasa cero en origen y sin IVA en sus insumos: ganan ventaja frente al producto nacional exento.
+  \end{itemize}
+  \pause
+  \begin{block}{Política industrial vía IVA}
+    \begin{itemize}
+      \item Tasa reducida a un insumo que compran contribuyentes registrados: no tiene efecto, porque el comprador acredita todo.
+      \item Exención a ese insumo: contraproducente.
+    \end{itemize}
+  \end{block}
+  \pause
+  \begin{alertblock}{Pregunta}
+    Si exentamos un insumo que compran empresas registradas, ¿el precio final baja o sube?
+  \end{alertblock}
+  \fuente{de Mooij, Hebous y Keen (2025), secs.~2.3 y 3.3.}
+\end{frame}
+
+% =========================================================================
+% IV. ¿TASA UNIFORME?
+% =========================================================================
+\section{¿Tasa uniforme?}
+
+% 12 ----------------------------------------------------------------------
+\begin{frame}{Un IVA distorsiona en dos márgenes}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{block}{1. Entre bienes}
+        Si los bienes pagan tasas distintas, los precios relativos cambian: la tortilla con tasa cero frente al refresco con 16\,\%.
+      \end{block}
+      \pause
+      \begin{block}{2. Entre consumo y ocio}
+        El ocio no se puede gravar. Con IVA, conviene más pintar la casa uno mismo que trabajar horas extra para pagarle al pintor.
+      \end{block}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \pause
+      \begin{alertblock}{Un IVA uniforme es un impuesto al trabajo}
+        Grava todo lo que el salario compra, igual que un impuesto al salario. Lo vimos con Harberger: sesión del 26 de septiembre, diap.~19.
+      \end{alertblock}
+      \pause
+      Por eso la tasa uniforme no elimina toda distorsión. Quita la primera y deja la segunda.
+    \end{column}
+  \end{columns}
+  \fuente{de Mooij, Hebous y Keen (2025), sec.~2.2.}
+\end{frame}
+
+% 13 ----------------------------------------------------------------------
+\begin{frame}{La regla de Ramsey}
+  Precios al productor fijos y normalizados a 1: $q_i = 1 + t_i$. El gobierno necesita recaudar $R$.
+  \begin{align*}
+    \onslide<2->{\text{Problema:}\quad & \max_{t}\ V(q, I) \quad\text{s.a.}\quad \textstyle\sum_k t_k\, x_k(q,I) \ge R\\}
+    \onslide<3->{\text{Condición para } t_i\text{ (Roy):}\quad & -\alpha\, x_i + \lambda\Big(x_i + \textstyle\sum_k t_k\, \frac{\partial x_k}{\partial q_i}\Big) = 0\\}
+    \onslide<4->{\text{Slutsky y simetría:}\quad & \tfrac{\partial x_k}{\partial q_i} = S_{ik} - x_i\,\tfrac{\partial x_k}{\partial I}, \qquad S_{ik} = S_{ki}\\}
+    \onslide<5->{\text{Resultado:}\quad & \resultado{\frac{\sum_k t_k\, S_{ik}}{x_i} = -\theta \quad \text{para todo } i}}
+  \end{align*}
+  \onslide<6->{
+  \begin{block}{Lectura}
+    $\sum_k t_k S_{ik}$ es, en primera aproximación, cuánto cae la demanda \emph{compensada} de $i$ por todos los impuestos. La regla pide que caiga \textbf{en la misma proporción} para todos los bienes. No pide tasas iguales.
+  \end{block}}
+  \fuente{Salanié, cap.~3, sec.~3.1. $\alpha$: utilidad marginal del ingreso; $\theta>0$ no depende de $i$.}
+\end{frame}
+
+% 14 ----------------------------------------------------------------------
+\begin{frame}{La elasticidad inversa es un caso particular}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      Si las demandas compensadas son independientes ($S_{ik}=0$ para $i\neq k$):
+      \[
+        t_i\,\frac{S_{ii}}{x_i} = -\theta
+        \quad\Longrightarrow\quad
+        \resultado{\frac{t_i}{1+t_i} = \frac{\theta}{e_i}}
+      \]
+      con $e_i$ la elasticidad compensada de $i$, en valor absoluto.
+      \pause
+      \begin{itemize}
+        \item Más tasa a lo que tiene demanda inelástica.
+        \item Lectura del FMI: demanda inelástica quiere decir que el bien \textbf{acompaña al ocio}. Si sube su precio y no lo dejo, trabajo más para pagarlo.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \pause
+      \begin{block}{Corlett y Hague (1953)}
+        Gravar menos lo que acompaña al trabajo: guarderías, transporte al trabajo.\\[3pt]
+        Gravar más lo que acompaña al ocio: películas en línea, quizá alcohol.
+      \end{block}
+      \pause
+      \begin{alertblock}{Pregunta}
+        ¿Qué bien gravarían más y cuál menos? ¿Por qué?
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \fuente{Salanié, sec.~3.1.3; de Mooij, Hebous y Keen (2025), sec.~2.2; Corlett y Hague (1953), \emph{RES} 21(1): 21--30.}
+\end{frame}
+
+% 15 ----------------------------------------------------------------------
+\begin{frame}{Atkinson y Stiglitz: con buen ISR, basta una tasa}
+  \begin{block}{Resultado}
+    Si hay un impuesto óptimo al ingreso y las preferencias son \textbf{débilmente separables} entre consumo y ocio, la tasa uniforme es óptima: los impuestos indirectos no agregan nada.
+  \end{block}
+  \pause
+  \begin{itemize}
+    \item Es la versión formal del paradigma viejo de la diapositiva 2: recauda con el IVA, redistribuye con el ISR y el gasto.
+    \item Lo que justifica una tasa distinta es la relación de cada bien con el ocio, no quién lo consume.
+  \end{itemize}
+  \pause
+  \begin{block}{Lo que dice el FMI}
+    \begin{itemize}
+      \item No hay teorema que haga óptima la uniformidad siempre, pero apartarse de ella exige razones contundentes.
+      \item Cuanto más ricos los instrumentos para redistribuir, más débil el caso para diferenciar tasas.
+    \end{itemize}
+  \end{block}
+  \fuente{Atkinson y Stiglitz (1976), \emph{JPubE} 6(1--2): 55--75; Salanié, sec.~5.2; de Mooij, Hebous y Keen (2025), sec.~2.2.}
+\end{frame}
+
+% 16 ----------------------------------------------------------------------
+\begin{frame}{Redistribuir con tasas reducidas rinde poco}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Los ricos también comen}
+        La tasa cero a la tortilla ayuda al hogar pobre, pero el hogar rico compra más alimentos en pesos y se lleva más subsidio.
+      \end{block}
+      \pause
+      Lo que cuenta es qué tan \textbf{distintas} son las canastas de ricos y pobres. Si se parecen, diferenciar tasas redistribuye muy poco (Sah, 1983).
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \pause
+      \begin{block}{México, 2026}
+        \begin{itemize}
+          \item Tasa cero: 1.5\,\% del PIB (alimentos, 1.26\,\%).
+          \item Exenciones: 0.21\,\% del PIB.
+          \item La mitad más rica (deciles VI a X) se lleva 58.5\,\% de la tasa cero en alimentos.
+        \end{itemize}
+      \end{block}
+      \pause
+      Como proporción de su ingreso, pesa más en los deciles bajos. Es progresiva, pero cara.
+    \end{column}
+  \end{columns}
+  \fuente{SHCP (2026), \emph{Renuncias Recaudatorias 2026}, cuadros 3.3.1--3.3.2, gráficas 28--29; Sah (1983), \emph{JPubE} 20(1): 89--101.}
+\end{frame}
+
+% =========================================================================
+% V. INCIDENCIA Y GANANCIAS
+% =========================================================================
+\section{Incidencia y ganancias}
+
+% 17 ----------------------------------------------------------------------
+\begin{frame}{¿Quién paga el IVA?}
+  \begin{columns}[T]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \item \textbf{Tasa general}: traslado casi completo (zona euro, 1999--2013; Alemania).
+        \item \textbf{Tasas reducidas}: alrededor de 30\,\% en la zona euro.
+        \item \textbf{Restaurantes} en Francia y Suecia: 14--25\,\%.
+      \end{itemize}
+      \pause
+      \begin{block}{Lectura con la sesión anterior}
+        Traslado $= \frac{e_S}{e_S+e_D}$ (diap.~8). Base amplia: poco a dónde sustituir, $e_D$ chica, traslado alto. Tasa a un solo sector: el consumidor sí sustituye.
+      \end{block}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \pause
+      \begin{alertblock}{¿Y en países en desarrollo?}
+        Casi no hay evidencia.\\[3pt]
+        La informalidad podría reducir el traslado: es fácil salirse del IVA (sesión del 26 de septiembre, diap.~14).\\[3pt]
+        Con una tasa cero que no se traslada, el subsidio se queda en el vendedor.
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \fuente{de Mooij, Hebous y Keen (2025), sec.~2.5; Benedek et al. (2020), \emph{ITPF} 27(4): 890--930.}
+\end{frame}
+
+% 18 ----------------------------------------------------------------------
+\begin{frame}{Cuánto se gana con un IVA}
+  \[
+    \text{Ganancia} \approx \Delta\,\text{CMFP} \times \text{recaudación inicial}
+  \]
+  {\small CMFP: costo marginal de los fondos públicos.}
+  \begin{align*}
+    \onslide<2->{\text{Auriol y Warlters (2012):}\ & \text{mediana } 1.23 \text{ sin IVA},\ 1.17 \text{ con IVA}\ \Rightarrow\ \Delta = 0.06\\}
+    \onslide<3->{\text{Recaudación de 12 a 15 \% del PIB:}\ & 0.06\times 12 = 0.72 \ \text{a}\ 0.06\times15 = 0.9 \ \text{(\% del PIB)}}
+  \end{align*}
+  \onslide<4->{
+  \begin{itemize}
+    \item Es una comparación entre 38 países africanos, no una caída medida en el tiempo. El FMI lo llama un supuesto «heroico».
+    \item Con un segundo método del FMI, la ganancia va de 0.3 a 2.1\,\% del PIB.
+    \item No es una ganancia de una vez: se repite cada año.
+  \end{itemize}}
+  \onslide<5->{
+  \begin{block}{Enlace con la sesión anterior}
+    Cada peso adicional cuesta $1+\frac{\eta}{1-\eta}$ (diap.~34). El IVA ayuda porque su base responde poco a la tasa: baja $\eta$.
+  \end{block}}
+  \fuente{de Mooij, Hebous y Keen (2025), sec.~2.4; Auriol y Warlters (2012), \emph{JDE} 97(1): 58--72.}
+\end{frame}
+
+% =========================================================================
+% VI. BARREIX
+% =========================================================================
+\section{Barreix: el puente hacia la equidad}
+
+% 19 ----------------------------------------------------------------------
+\begin{frame}{IVA personalizado: cobrar parejo y devolver a quien lo necesita}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Base amplia y tasa uniforme.
+        \item El fisco devuelve a los hogares pobres el IVA que pagan en una canasta típica.
+        \item Se paga por transferencia electrónica, con los padrones de los programas sociales.
+      \end{itemize}
+      \pause
+      \begin{block}{Es Atkinson y Stiglitz en la práctica}
+        El IVA recauda; la devolución focalizada redistribuye. El FMI lo cita como alternativa a las tasas reducidas (nota 28).
+      \end{block}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \pause
+      \begin{block}{En América Latina}
+        \small
+        \begin{itemize}
+          \item Uruguay (2012): hogares vulnerables, si pagan con tarjeta.
+          \item Ecuador (2017): adultos mayores pobres y personas con discapacidad.
+          \item Colombia (2020): compensación a hogares pobres.
+          \item Bolivia (2021): según las facturas a nombre de la persona.
+          \item Argentina (2016): 15\,\% con tarjeta de débito a jubilados y a la AUH; efecto muy limitado.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \fuente{Barreix et al. (2022), «El IVA personalizado revisado», BID, IDB-DP-939 (doi 10.18235/0004147), pp.~20--21; de Mooij, Hebous y Keen (2025), nota 28.}
+\end{frame}
+
+% 20 ----------------------------------------------------------------------
+\begin{frame}{Brasil: tres innovaciones}
+  \small
+  \begin{columns}[T]
+    \begin{column}{0.36\textwidth}
+      \begin{block}{1. IVA dual}
+        CBS federal; IBS estatal y municipal. Un comité gestor recauda el IBS y lo reparte por destino. Transición de 50 años.
+      \end{block}
+      \begin{block}{3. Cashback}
+        Hogares con hasta medio salario mínimo per cápita: 100\,\% de la CBS y 20\,\% del IBS en gas, luz, agua, drenaje y telecom.; 20\,\% en lo demás. Antes: Devolve ICMS (Rio Grande do Sul, 2021).
+      \end{block}
+    \end{column}
+    \begin{column}{0.62\textwidth}
+      \begin{block}{2. Pago fraccionado (\emph{split payment})}
+        \centering
+        \begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+          \node[caja,text width=1.9cm] (prov) at (0,0) {Proveedor\\vende 100};
+          \node[caja,text width=1.9cm] (comp) at (6.2,0) {Comprador\\paga 126.5};
+          \node[caja,text width=2.1cm] (ent) at (3.1,-1.5) {Entidad\\de pago};
+          \node[cajafisco,text width=2.4cm] (fis) at (3.1,-3.3) {Fisco y comité gestor};
+          \draw[flecha] (prov) -- node[above] {100 + 26.5 de IBS/CBS} (comp);
+          \draw[flecha] (comp) |- (ent);
+          \draw[flecha,cRecauda] ([xshift=-4mm]ent.south) -- node[left,align=right,font=\small] {¿tiene\\créditos?} ([xshift=-4mm]fis.north);
+          \draw[flecha,cRecauda] ([xshift=4mm]ent.south) -- node[right,align=left,font=\small] {si no:\\26.5} ([xshift=4mm]fis.north);
+          \draw[flecha] (ent.west) -| node[pos=0.3,above] {100} (prov.south);
+        \end{tikzpicture}
+        \par
+        Si el proveedor no tiene créditos, la entidad de pago separa los 26.5 y le pasa 100. El 26.5\,\% es una tasa estimada, no fijada en ley.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \fuente{Barreix, Rocha y Tostes Neto (2025), gráfico 3 (redibujado); LC 214/2025, arts.~31--35, 113 y 118.}
+\end{frame}
+
+% 21 ----------------------------------------------------------------------
+\begin{frame}{FMI y Barreix: ¿visiones complementarias?}
+  \begin{columns}[T]
+    \begin{column}{0.46\textwidth}
+      \begin{block}{En qué coinciden}
+        \begin{itemize}
+          \item Tasa uniforme.
+          \item Nada de exenciones amplias.
+        \end{itemize}
+        El FMI pone la eficiencia; Barreix pone la equidad, vía devoluciones.
+      \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \pause
+      \begin{alertblock}{Lectura crítica}
+        \begin{enumerate}
+          \item La reforma brasileña no es uniforme: tasas reducidas en 30\,\% y 60\,\% y tasa cero, Zona Franca de Manaos, Simples Nacional. ¿El cashback y las tasas reducidas se duplican?
+          \pause
+          \item Barreix et al. (cuadro 1): la informalidad vuelve «invisibles» a los deciles bajos. Pero el cashback también necesita identificarlos.
+        \end{enumerate}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \fuente{Barreix, Rocha y Tostes Neto (2025) y nota larga de los mismos autores (mayo de 2025), cuadro 1; de Mooij, Hebous y Keen (2025), sec.~2.2.}
+\end{frame}
+
+% =========================================================================
+% VII. MÉXICO
+% =========================================================================
+\section{México}
+
+% 22 ----------------------------------------------------------------------
+\begin{frame}{La oportunidad para México}
+  \begin{itemize}
+    \item \textbf{Base erosionada}: tasa cero en alimentos y medicinas, exenciones, tasa de 8\,\% en la región fronteriza (estímulo vigente en 2026).
+    \item \textbf{Informalidad}: buena parte del consumo pasa por vendedores que no cobran IVA.
+    \item \textbf{Recaudación baja frente a pares} (diapositiva 3).
+  \end{itemize}
+  \pause
+  \begin{block}{Cuánto deja de entrar}
+    Tasa cero y exenciones del IVA: 638.7 mil millones de pesos en 2026, 1.7\,\% del PIB.\\[2pt]
+    {\small No todo se recaudaría: con el IVA a los alimentos, parte del consumo se iría a la informalidad.}
+  \end{block}
+  \pause
+  \begin{block}{Lo que ya existe}
+    Factura electrónica (CFDI) en toda la cadena y transferencias sociales pagadas a cuentas bancarias.
+  \end{block}
+  \fuente{SHCP (2026), \emph{Renuncias Recaudatorias 2026}, cuadros 3.3.1 y 3.3.2 (suma propia); decreto de estímulos fiscales en las regiones fronterizas norte y sur (DOF, 31-12-2025).}
+\end{frame}
+
+% 23 ----------------------------------------------------------------------
+\begin{frame}{Riesgos y desafíos}
+  \begin{itemize}
+    \item \textbf{Padrones}: devolver exige saber a quién. ¿Los padrones de los programas sociales sirven para eso?
+    \item \textbf{Política}: gravar alimentos y medicinas es muy impopular, aunque se devuelva más de lo que se cobra.
+    \item \textbf{Liquidez}: el hogar paga el IVA hoy y recibe la devolución después. Si tarda, el pobre financia al fisco.
+    \item \textbf{Confianza}: si la gente no ve llegar la devolución, la reforma se cae.
+  \end{itemize}
+  \pause
+  \begin{alertblock}{La informalidad del lado del hogar}
+    El hogar que vive del trabajo informal no aparece en el SAT ni siempre en los padrones. ¿A quién se le devuelve?
+  \end{alertblock}
+\end{frame}
+
+% 24 ----------------------------------------------------------------------
+\begin{frame}{Para la reforma fiscal: ¿qué harían?}
+  Propuestas para discutir, no conclusiones:
+  \begin{enumerate}
+    \item Avanzar a la tasa única con un plan gradual.
+    \item Un piloto de IVA personalizado en un grupo bien identificado.
+    \item Más administración tributaria y más factura electrónica.
+    \item Explicar con claridad cómo se protege a los hogares vulnerables, antes de cobrar.
+  \end{enumerate}
+  \pause
+  \begin{alertblock}{Pregunta}
+    ¿Por dónde empezarían y qué dejarían para después?
+  \end{alertblock}
+\end{frame}
+
+% =========================================================================
+% VIII. PUENTE
+% =========================================================================
+\section{Puente}
+
+% 25 ----------------------------------------------------------------------
+\begin{frame}{El IVA es eficiente, pero en México se percibe injusto}
+  \begin{itemize}
+    \item Un IVA amplio y uniforme, con devoluciones focalizadas, puede ser eficiente y justo a la vez.
+    \pause
+    \item El FMI pone el marco de eficiencia; Barreix, el puente hacia la equidad.
+  \end{itemize}
+  \pause
+  \begin{alertblock}{Recaudar no es corregir}
+    Si el objetivo es corregir un daño ---el CO$_2$ de la gasolina, el azúcar del refresco---, la herramienta no es una tasa distinta de IVA. Es un impuesto específico.
+  \end{alertblock}
+  \pause
+  \centering\large Después del descanso: impuestos verdes.
+  \fuente{de Mooij, Hebous y Keen (2025), sec.~3.3.}
+\end{frame}
+
+\end{document}

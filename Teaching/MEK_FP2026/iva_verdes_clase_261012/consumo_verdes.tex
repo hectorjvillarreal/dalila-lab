@@ -1,0 +1,454 @@
+% Consumo e impuestos verdes · Parte 2: impuestos correctivos
+% Finanzas Públicas, Maestría en Economía Aplicada, Tec de Monterrey
+% Esquema aprobado: CLAUDE.md de esta carpeta (2026-10-12). Compilar con: latexmk -pdf consumo_verdes.tex
+% Versión para repartir: consumo_verdes_handout.tex (misma fuente, opción handout).
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\unaccentedoperators % operadores sin acento: max, min (la opción es-noaccentedoperators no existe en esta versión de babel)
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{babel,arrows.meta,calc,positioning,decorations.pathreplacing,patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% ---------------------------------------------------------------------------
+% Tema sobrio (igual al de la sesión del 26 de septiembre)
+% ---------------------------------------------------------------------------
+\definecolor{cTitulo}{RGB}{0,55,100}
+\definecolor{cOferta}{RGB}{31,87,153}
+\definecolor{cDemanda}{RGB}{200,100,0}
+\definecolor{cImpuesto}{RGB}{175,30,30}
+\definecolor{cRecauda}{RGB}{40,130,80}
+\definecolor{cGris}{RGB}{110,110,110}
+
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{frametitle}{fg=cTitulo}
+\setbeamercolor{title}{fg=cTitulo}
+\setbeamercolor{structure}{fg=cTitulo}
+\setbeamercolor{block title}{bg=cTitulo!12,fg=cTitulo}
+\setbeamercolor{block body}{bg=cTitulo!4}
+\setbeamercolor{block title alerted}{bg=cImpuesto!12,fg=cImpuesto}
+\setbeamercolor{block body alerted}{bg=cImpuesto!4}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{blocks}[rounded]
+\setbeamertemplate{footline}{%
+  \hfill{\small\color{cGris}Consumo e impuestos verdes · Impuestos verdes\quad\insertframenumber/\inserttotalframenumber}\hspace*{1em}\vspace*{0.6em}}
+
+% Fuente al pie de cada diapositiva
+\newcommand{\fuente}[1]{\par\vfill{\small\color{cGris}#1\par}}
+% Resultado final de una derivación, resaltado
+\newcommand{\resultado}[1]{\colorbox{cTitulo!12}{$\displaystyle #1$}}
+% \ejes{xmax}{ymax}{etiqueta x}{etiqueta y}
+\newcommand{\ejes}[4]{%
+  \draw[eje] (0,0) -- (#1,0) node[below] {#3};
+  \draw[eje] (0,0) -- (0,#2) node[left] {#4};}
+
+% ---------------------------------------------------------------------------
+% Estilo común de gráficas
+% ---------------------------------------------------------------------------
+\tikzset{
+  every node/.append style={font=\small},
+  eje/.style={-{Stealth[length=2mm]},thick,black!75},
+  flecha/.style={-{Stealth[length=2mm]},thick,cTitulo},
+  guia/.style={thin,dashed,black!45},
+  punto/.style={circle,fill=black,inner sep=1.2pt},
+  caja/.style={draw=cTitulo,rounded corners,fill=cTitulo!5,align=center,inner sep=4pt},
+  cajafisco/.style={draw=cRecauda,rounded corners,fill=cRecauda!10,align=center,inner sep=3pt},
+  demanda/.style={very thick,cDemanda},
+  oferta/.style={very thick,cOferta},
+  social/.style={very thick,cImpuesto},
+  cuna/.style={very thick,cImpuesto,{Stealth[length=2mm]}-{Stealth[length=2mm]}},
+  gana/.style={fill=cRecauda!35},
+  pierde/.style={fill=cImpuesto!35},
+}
+
+\title{Consumo e impuestos verdes}
+\subtitle{Parte 2: impuestos correctivos}
+\author{Héctor Juan Villarreal}
+\institute{Finanzas Públicas · Maestría en Economía Aplicada\\Escuela de Gobierno y Transformación Pública · Tec de Monterrey}
+\date{Octubre de 2026}
+
+
+\begin{document}
+
+% =========================================================================
+% I. TEORÍA
+% =========================================================================
+\section{Teoría}
+
+% 1 -----------------------------------------------------------------------
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% 2 -----------------------------------------------------------------------
+\begin{frame}{Cuando el triángulo es ganancia}
+  \begin{columns}[T]
+    \begin{column}{0.42\textwidth}
+      \begin{itemize}
+        \item La refinería paga el crudo y los salarios: es su \textbf{costo marginal privado}.
+        \item No paga el aire sucio de la colonia de al lado: el \textbf{daño marginal}.
+        \item Costo social $=$ privado $+$ daño. El mercado produce $x_m$; lo eficiente es $x^*$.
+      \end{itemize}
+      \pause
+      \begin{block}{Impuesto pigouviano}
+        $\tau^*$ = daño marginal en el óptimo. La cantidad cae de $x_m$ a $x^*$ y la sociedad \textbf{gana} el triángulo verde.
+      \end{block}
+    \end{column}
+    \begin{column}{0.56\textwidth}
+      \centering
+      \begin{tikzpicture}[x=0.95cm,y=0.85cm]
+        \onslide<2->{\fill[gana] (3.143,2.8) -- (4.286,3.2) -- (4.286,2.0) -- cycle;}
+        \ejes{6.4}{5.6}{$x$}{pesos}
+        \draw[demanda] (0,5) -- (6,0.8) node[below,pos=0.97] {$D$};
+        \draw[oferta] (0,0.5) -- (6,2.6);
+        \node[cOferta,below right] at (0.4,0.64) {CMg privado};
+        \draw[social] (0,1.7) -- (6,3.8) node[pos=0.85,above=2pt] {CMg social};
+        \draw[guia] (4.286,2.0) -- (4.286,0) (3.143,1.6) -- (3.143,0);
+        \node[punto] at (4.286,2.0) {}; \node[punto] at (3.143,2.8) {};
+        \node[below] at (4.286,0) {$x_m$}; \node[below] at (3.143,0) {$x^*$};
+        \onslide<2->{\draw[cuna] (3.143,1.6) -- (3.143,2.8);
+        \node[left,cImpuesto] at (3.143,2.2) {$\tau^*$};}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{Gruber, caps.~5.1 y 5.3; gráfica propia. Contraste: sesión del 26 de septiembre, diap.~37.}
+\end{frame}
+
+% 3 -----------------------------------------------------------------------
+\begin{frame}{Derivación mínima}
+  Un bien $x$ con beneficio $B(x)$, costo $C(x)$ y daño a terceros $D(x)$.
+  \begin{align*}
+    \onslide<2->{\text{Bienestar social:}\quad & W(x) = B(x) - C(x) - D(x)\\}
+    \onslide<3->{\text{Mercado, con impuesto } \tau\text{:}\quad & B'(x) = C'(x) + \tau\\}
+    \onslide<4->{\text{Óptimo social:}\quad & B'(x^*) = C'(x^*) + D'(x^*)\\}
+    \onslide<5->{\text{El mercado llega a } x^* \text{ si y solo si:}\quad & \resultado{\tau^* = D'(x^*)}}
+  \end{align*}
+  \onslide<6->{
+  \begin{block}{Dos detalles}
+    \begin{itemize}
+      \item El impuesto se fija con el daño marginal \emph{en el óptimo}, no en el nivel actual de contaminación.
+      \item Con $\tau=0$, el mercado iguala $B'$ con $C'$ y se pasa de $x^*$.
+    \end{itemize}
+  \end{block}}
+  \fuente{Gruber, cap.~5.3; Salanié, cap.~10, sec.~10.1.1.}
+\end{frame}
+
+% 4 -----------------------------------------------------------------------
+\begin{frame}{Específico y sobre el uso, no tasa diferenciada de IVA}
+  \begin{enumerate}
+    \item \textbf{El daño depende de la cantidad, no del precio.} Un litro de gasolina emite lo mismo si cuesta 20 o 25 pesos. Toca un impuesto específico, $\tau$ por litro.
+    \pause
+    \item \textbf{El daño es el mismo en consumo final que como insumo.} El diésel de un tráiler contamina igual que el de una camioneta familiar. Un IVA diferenciado solo alcanzaría al consumidor final: la empresa lo acredita.
+  \end{enumerate}
+  \pause
+  \begin{alertblock}{¿Y Diamond y Mirrlees?}
+    Gravar el combustible de una fábrica es la excepción a la eficiencia productiva, no su violación: corrige un precio que ya estaba mal.
+  \end{alertblock}
+  \pause
+  \begin{block}{Orden de los impuestos}
+    El IVA se aplica sobre el precio que ya incluye el impuesto específico. El específico mueve el precio relativo; el IVA, el nivel general.
+  \end{block}
+  \fuente{de Mooij, Hebous y Keen (2025), sec.~3.3.}
+\end{frame}
+
+% 5 -----------------------------------------------------------------------
+\begin{frame}{Precio o cantidad}
+  \small
+  El costo de abatir puede salir alto o bajo. ¿Fijar el precio ($\tau$) o la cantidad ($\bar a$)?
+  \par\smallskip
+  \centering
+  \begin{tikzpicture}[x=0.62cm,y=0.4cm]
+    \begin{scope}
+      \node at (3.2,9.2) {Daño marginal plano (CO$_2$)};
+      \onslide<2->{\fill[pierde] (3.33,2.0) -- (4.17,2.5) -- (3.33,2.5) -- cycle;
+      \fill[pierde] (2.5,2.5) -- (3.33,3.0) -- (3.33,2.5) -- cycle;}
+      \ejes{6.4}{8.4}{abatir}{pesos}
+      \draw[social] (0,2.5) -- (6,2.5);
+      \node[cImpuesto,above right] at (0,2.5) {DMg $=\tau$};
+      \draw[oferta] (0,0) -- (6,3.6) node[right] {bajo};
+      \draw[oferta,dash pattern=on 5pt off 2pt] (0,1) -- (6,4.6) node[right] {alto};
+      \node[cOferta,align=center] at (5.2,6.6) {CMg de\\abatir};
+      \draw[guia] (3.33,0) -- (3.33,6.5) node[above] {$\bar a$};
+    \end{scope}
+    \begin{scope}[xshift=8.6cm]
+      \node at (3.2,9.2) {Daño marginal empinado (umbral)};
+      \onslide<2->{\fill[pierde] (3.077,1.846) -- (3.72,2.231) -- (3.72,0.56) -- cycle;
+      \fill[pierde] (2.05,3.9) -- (2.05,2.231) -- (2.692,2.615) -- cycle;}
+      \ejes{6.4}{8.4}{abatir}{pesos}
+      \draw[social] (0,8) -- (4,0);
+      \node[cImpuesto,right] at (0.3,7.9) {DMg};
+      \draw[oferta] (0,0) -- (6,3.6) node[right] {bajo};
+      \draw[oferta,dash pattern=on 5pt off 2pt] (0,1) -- (6,4.6) node[right] {alto};
+      \draw[guia] (0,2.231) -- (6,2.231) node[right] {$\tau$};
+      \draw[guia] (2.885,0) -- (2.885,6.5) node[above] {$\bar a$};
+    \end{scope}
+  \end{tikzpicture}
+  \par
+  \raggedright
+  \onslide<2->{En rojo, lo que se pierde: a la izquierda con la cuota, a la derecha con el impuesto.}
+  \onslide<3->{\par\textbf{Weitzman:} impuesto si el daño marginal es plano (acervo, como el CO$_2$); cuota si es empinado (umbrales).}
+  \fuente{Weitzman (1974), \emph{RES} 41(4): 477--491; Gruber, cap.~5.4. Gráfica propia.}
+\end{frame}
+
+% 6 -----------------------------------------------------------------------
+\begin{frame}{Con impuestos distorsionantes: recaudar y corregir}
+  \begin{itemize}
+    \item Hasta aquí el gobierno podía recaudar sin costo. En la realidad, cada peso cuesta más de un peso (sesión del 26 de septiembre, diap.~34).
+    \pause
+    \item Sandmo (1975): el impuesto óptimo a un bien que contamina tiene dos componentes que se suman.
+  \end{itemize}
+  \pause
+  \[
+    \tau_i \;=\; \underbrace{\text{componente Ramsey}}_{\text{recaudar, como en la parte 1}} \;+\; \underbrace{\text{componente pigouviano}}_{\text{corregir el daño}}
+  \]
+  \pause
+  \begin{block}{Lectura}
+    \begin{itemize}
+      \item El daño solo entra en el impuesto al bien que contamina. Las demás tasas siguen la regla de Ramsey.
+      \item La recaudación y la corrección son dos tareas distintas, aunque las cumpla un mismo impuesto.
+    \end{itemize}
+  \end{block}
+  \fuente{Sandmo (1975), \emph{Swedish Journal of Economics} 77(1): 86--98; de Mooij, Hebous y Keen (2025), nota 84; Salanié, sec.~10.1.2.}
+\end{frame}
+
+% 7 -----------------------------------------------------------------------
+\begin{frame}{¿Doble dividendo?}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Versión débil}
+        Usar la recaudación verde para bajar otro impuesto distorsionante es mejor que devolverla de suma fija.\\
+        \emph{Casi nadie la discute.}
+      \end{block}
+      \begin{block}{Versión fuerte}
+        Además de limpiar el aire, el cambio mejora la eficiencia del resto del sistema fiscal: «sale gratis».
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \pause
+      \begin{alertblock}{Bovenberg y de Mooij (1994)}
+        \begin{itemize}
+          \item El impuesto verde sube los precios y baja el salario real: agrava la distorsión en el mercado de trabajo (\textbf{efecto interacción}).
+          \item Ese efecto suele ser mayor que la ganancia por reciclar la recaudación.
+          \item El impuesto ambiental óptimo queda \textbf{por debajo} del pigouviano.
+        \end{itemize}
+      \end{alertblock}
+      \pause
+      {\small De Mooij es coautor del artículo del FMI de la parte 1.}
+    \end{column}
+  \end{columns}
+  \fuente{Bovenberg y de Mooij (1994), \emph{AER} 84(4): 1085--1089; Salanié, sec.~10.2.}
+\end{frame}
+
+% 8 -----------------------------------------------------------------------
+\begin{frame}{¿Quién paga el impuesto verde?}
+  \begin{itemize}
+    \item En los países ricos, un impuesto al carbono suele ser \textbf{regresivo}: todos usan energía, y los pobres gastan en ella una parte mayor de su ingreso.
+    \pause
+    \item En países de ingreso bajo y medio puede ser \textbf{progresivo}: el auto y el combustible se concentran arriba. Dorband et al. (2019) lo encuentran, en promedio, para países con ingreso per cápita menor a 15 mil dólares (PPA de 2011).
+    \pause
+    \item Un metaanálisis de 53 estudios: es más probable que resulte progresivo en países de menor ingreso y en transporte.
+  \end{itemize}
+  \pause
+  \begin{block}{Lo que decide}
+    El uso de la recaudación. Si se devuelve como una transferencia igual por persona, el hogar pobre recibe, en proporción a su ingreso, mucho más de lo que paga el rico.
+  \end{block}
+  \fuente{Dorband, Jakob, Kalkuhl y Steckel (2019), \emph{World Development} 115: 246--257; Ohlendorf, Jakob, Minx, Schröder y Steckel (2021), \emph{Environmental and Resource Economics} 78(1): 1--42.}
+\end{frame}
+
+% 9 -----------------------------------------------------------------------
+\begin{frame}{Internalidades: el daño que uno se hace a sí mismo}
+  \begin{itemize}
+    \item Una \textbf{internalidad} es un costo que el consumidor no toma en cuenta al decidir, aunque lo pague él: el fumador que mañana sí va a dejarlo.
+    \item El IEPS a bebidas azucaradas: en 2026, 3.0818 pesos por litro con azúcares añadidos y 1.50 con edulcorantes (sesión del 26 de septiembre, diap.~35--37).
+  \end{itemize}
+  \pause
+  \begin{block}{Aquí el caso del impuesto específico es menos claro}
+    \begin{itemize}
+      \item El daño del CO$_2$ es por litro de combustible. El del azúcar depende de quién bebe y cuánto: no es igual para todos los litros.
+      \item Y el que paga el impuesto es el mismo que se beneficia de la corrección.
+    \end{itemize}
+  \end{block}
+  \fuente{de Mooij, Hebous y Keen (2025), sec.~3.3; Gruber, cap.~6; LIEPS, art.~2, fr.~I, inciso G (reforma DOF 07-11-2025).}
+\end{frame}
+
+% =========================================================================
+% II. MÉXICO
+% =========================================================================
+\section{México}
+
+% 10 ----------------------------------------------------------------------
+\begin{frame}{IEPS a gasolinas y diésel: ¿pigouviano o recaudatorio?}
+  \begin{columns}[T]
+    \begin{column}{0.46\textwidth}
+      \centering
+      \begin{tabular}{lr}
+        \toprule
+        Cuota 2026 & \$ por litro\\
+        \midrule
+        Gasolina, menos de 91 oct. & 6.7001\\
+        Gasolina, 91 oct. o más & 5.6579\\
+        Diésel & 7.3634\\
+        \bottomrule
+      \end{tabular}
+      \par\smallskip
+      \raggedright
+      {\small Cuota fija por litro; se actualiza cada año por inflación.}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \pause
+      \begin{itemize}
+        \item Cada semana Hacienda publica un \textbf{estímulo}: un porcentaje de la cuota que no se cobra, para suavizar el precio.
+        \item En varias semanas de 2022 el estímulo llegó a 100\,\%: la cuota quedó en cero y hubo estímulos adicionales.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \pause
+  \begin{alertblock}{Un estímulo es un subsidio que va contra Pigou}
+    Abarata justo lo que contamina. Y como el consumo de gasolina se concentra en los hogares de mayor ingreso, el subsidio también.
+  \end{alertblock}
+  \fuente{LIEPS, art.~2, fr.~I, inciso D; Acuerdo 179/2025 de actualización de cuotas (DOF, 22-12-2025); acuerdos semanales de estímulos fiscales (DOF, 2022).}
+\end{frame}
+
+% 11 ----------------------------------------------------------------------
+\begin{frame}{IEPS a combustibles fósiles: el «impuesto al carbono» de 2014}
+  \begin{columns}[T]
+    \begin{column}{0.46\textwidth}
+      \centering
+      \begin{tabular}{lr}
+        \toprule
+        Cuota 2026 & \\
+        \midrule
+        Gasolinas & 17.76 ¢/litro\\
+        Diésel & 21.55 ¢/litro\\
+        Combustóleo & 23.00 ¢/litro\\
+        Carbón mineral & 47.12 \$/tonelada\\
+        \bottomrule
+      \end{tabular}
+      \par\smallskip
+      \raggedright
+      {\small La cuota sigue el contenido de carbono de cada combustible.}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \pause
+      \begin{block}{¿Cuánto vale una tonelada de CO$_2$?}
+        \begin{itemize}
+          \item Precio implícito del impuesto mexicano: 3.9 dólares por tonelada (Banco Mundial, abril de 2025). Cubre 29\,\% de las emisiones.
+          \item Costo social del carbono de la EPA de Estados Unidos: 190 dólares por tonelada.
+        \end{itemize}
+      \end{block}
+      \pause
+      Cobramos unas 50 veces menos que el daño estimado.
+    \end{column}
+  \end{columns}
+  \fuente{LIEPS, art.~2, fr.~I, inciso H; Acuerdo 179/2025 (DOF, 22-12-2025); Banco Mundial (2025), \emph{State and Trends of Carbon Pricing}; US EPA (2023), \emph{Report on the Social Cost of Greenhouse Gases} (dólares de 2020, emisiones de 2020, descuento de 2\,\%).}
+\end{frame}
+
+% 12 ----------------------------------------------------------------------
+\begin{frame}{Impuestos verdes estatales: muchos en la ley, pocos en la caja}
+  \begin{columns}[T]
+    \begin{column}{0.44\textwidth}
+      \begin{itemize}
+        \item 26 entidades los contemplan en su ley de ingresos; solo 13 esperan recaudar algo.
+        \item 2,590.7 millones de pesos en 2023: en promedio, 3.5\,\% de sus ingresos por impuestos.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[
+          width=5.6cm, height=4.6cm,
+          xbar, bar width=10pt,
+          xmin=0, xmax=55,
+          xlabel={\% del total},
+          xlabel style={font=\small},
+          symbolic y coords={Residuos,Suelo y agua,Emisiones al aire,Extracción},
+          ytick=data,
+          y tick label style={font=\small},
+          x tick label style={font=\small},
+          nodes near coords,
+          every node near coord/.append style={font=\small},
+          axis lines*=left,
+          enlarge y limits=0.18,
+        ]
+          \addplot[fill=cRecauda!50,draw=cRecauda] coordinates {(0.6,Residuos) (25.9,Suelo y agua) (30.4,Emisiones al aire) (43.2,Extracción)};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \pause
+  \begin{block}{Lectura}
+    Lo que más recauda es la extracción de materiales, no las emisiones. ¿Corrige un daño o es una base fácil de cobrar?
+  \end{block}
+  \fuente{CIEP, Sánchez Salazar (2023), «Impuestos verdes: una oportunidad para fortalecer la recaudación subnacional», 25-10-2023. Datos de las leyes de ingresos estatales de 2023.}
+\end{frame}
+
+% 13 ----------------------------------------------------------------------
+\begin{frame}{Para discutir: ¿qué está bien y qué no?}
+  Dos afirmaciones de la nota del CIEP:
+  \begin{enumerate}
+    \item «La hipótesis del doble dividendo, planteada por Pearce (1991), sirve para justificar un aumento en la recaudación por medio de una reforma fiscal verde.»
+    \item «Es necesario que se grave a la producción final, puesto que gravar a productos intermedios aumenta los costos.»
+  \end{enumerate}
+  \pause
+  \begin{itemize}
+    \item Contrasten con la diapositiva 7 (Bovenberg y de Mooij) y con la diapositiva 4 (el daño es el mismo como insumo).
+    \item Una idea de la nota que sí se sostiene: rediseñar la tenencia según el tamaño y las características del motor.
+  \end{itemize}
+  \pause
+  \begin{alertblock}{Pregunta}
+    ¿Cuál de las dos afirmaciones defenderían y cuál corregirían? ¿Por qué?
+  \end{alertblock}
+  \fuente{CIEP (2023), citado arriba; Pearce (1991), \emph{Economic Journal} 101(407): 938--948.}
+\end{frame}
+
+% =========================================================================
+% III. CIERRE
+% =========================================================================
+\section{Cierre}
+
+% 14 ----------------------------------------------------------------------
+\begin{frame}{Ideas centrales: impuestos verdes}
+  \begin{enumerate}
+    \item Corregir pide un impuesto específico, sobre la emisión, donde ocurra: en el consumo o en la producción.
+    \item Precio o cantidad depende de la forma del daño marginal.
+    \item Con impuestos distorsionantes, el óptimo queda por debajo de Pigou. El doble dividendo fuerte rara vez aparece.
+    \item Quién paga depende de qué se hace con lo recaudado.
+  \end{enumerate}
+\end{frame}
+
+% 15 ----------------------------------------------------------------------
+\begin{frame}{Cierre de la sesión}
+  \begin{columns}[T]
+    \begin{column}{0.32\textwidth}
+      \begin{block}{El IVA recauda}
+        Base amplia, tasa uniforme, sin gravar insumos.
+      \end{block}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \begin{block}{Los verdes corrigen}
+        Impuestos específicos, aun sobre insumos.
+      \end{block}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \begin{block}{Las transferencias redistribuyen}
+        Mejor que las tasas reducidas.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vspace{1em}
+  \begin{alertblock}{Primer parcial: 20 de octubre}
+    De teoría. La parte de tasa uniforme (Ramsey, Atkinson y Stiglitz) entra.
+  \end{alertblock}
+  \begin{block}{Próxima sesión: 27 de octubre}
+    Un marco unitario para el sistema fiscal (Kaplow) y la digitalización. El pago fraccionado y la factura electrónica son el puente.
+  \end{block}
+\end{frame}
+
+\end{document}
