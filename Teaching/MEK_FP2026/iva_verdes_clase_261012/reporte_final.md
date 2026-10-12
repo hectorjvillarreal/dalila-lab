@@ -38,7 +38,7 @@ Entregables, compilados con `latexmk -pdf`, sin errores:
 - Estímulo semanal al IEPS de gasolinas en 2026 (porcentajes de octubre): solo se encontró en prensa. Quedó solo lo de 2022 («en varias semanas llegó a 100 %»), sin fecha DOF exacta.
 - Participación de deciles altos en el subsidio a gasolinas (Fundar 62 %, SHCP 2020): la metodología o el original no se verificaron. En la diap. 10 queda el argumento sin cifra.
 - Cuotas 2025 de gasolinas (solo fuente secundaria). «El gas natural no paga el IEPS al carbono» (quitado).
-- Costo social del carbono de la EPA (190 USD/t, 2 %): confirmado solo por fuentes secundarias, no en el PDF de la EPA. **Sí está en la diap. 11** porque es una cifra estándar. Si prefiere quitarla, también hay que quitar «unas 50 veces menos».
+- Costo social del carbono de la EPA (190 USD/t, 2 %): confirmado solo por fuentes secundarias. Quitado de la diap. 11 junto con «unas 50 veces menos»; en su lugar va una pregunta a la clase sin cifra.
 
 ## Desviaciones del esquema
 
