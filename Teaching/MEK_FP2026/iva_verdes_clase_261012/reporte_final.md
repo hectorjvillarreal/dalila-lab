@@ -36,7 +36,7 @@ Entregables, compilados con `latexmk -pdf`, sin errores:
 - Esqueleto: «3.8 % del PIB», «4–6 % en AL», «0.5–2 % del PIB», «1–1.5 % del PIB», «+2–3 % del ingreso de hogares pobres» y Paraguay como caso de IVA personalizado. Paraguay no aparece en Barreix et al. (2022).
 - Distribución por decil (decil I 4.8 % frente a decil X 13.1 %): está leída de etiquetas de gráfica. Solo usé el 58.5 % del texto.
 - Estímulo semanal al IEPS de gasolinas en 2026 (porcentajes de octubre): solo se encontró en prensa. Quedó solo lo de 2022 («en varias semanas llegó a 100 %»), sin fecha DOF exacta.
-- Participación de deciles altos en el subsidio a gasolinas (Fundar 62 %, SHCP 2020): la metodología o el original no se verificaron. En la diap. 10 queda el argumento sin cifra.
+- Participación de deciles altos en el subsidio a gasolinas (Fundar 62 %, SHCP 2020): la metodología o el original no se verificaron. Nunca entró a las diapositivas; también se quitó de la diap. 10 la frase cualitativa sobre la concentración del subsidio en los hogares de mayor ingreso.
 - Cuotas 2025 de gasolinas (solo fuente secundaria). «El gas natural no paga el IEPS al carbono» (quitado).
 - Costo social del carbono de la EPA (190 USD/t, 2 %): confirmado solo por fuentes secundarias. Quitado de la diap. 11 junto con «unas 50 veces menos»; en su lugar va una pregunta a la clase sin cifra.
 
