@@ -24,7 +24,6 @@ Entregables, compilados con `latexmk -pdf`, sin errores:
 | Brasil: CBS/IBS, comité gestor, transición de 50 años (2029–2078), pago fraccionado, cashback (100 % CBS, 20 % IBS) | EC 132/2023; LC 214/2025, arts. 31–35, 113, 118 |
 | IEPS gasolinas 2026: 6.7001 / 5.6579; diésel 7.3634 $/l | Acuerdo 179/2025, DOF 22-12-2025 |
 | IEPS carbono 2026: gasolinas 17.7591, diésel 21.5491, combustóleo 22.9975 ¢/l; carbón mineral 47.1189 $/t | Acuerdo 179/2025, DOF 22-12-2025 |
-| Precio implícito 3.9 USD/tCO₂e, 29 % de emisiones | Banco Mundial, *State and Trends of Carbon Pricing 2025* |
 | IEPS bebidas 2026: 3.0818 y 1.50 $/l | LIEPS art. 2, I, G (DOF 07-11-2025) |
 | CIEP: 26 entidades / 13 recaudan; 2,590.7 mdp; 3.5 %; 43.2 / 30.4 / 25.9 / 0.6 % | Nota del CIEP (PDF en la carpeta); datos de leyes de ingresos 2023 |
 | Referencias de revistas (Diamond-Mirrlees, Keen 2014, Corlett-Hague, Atkinson-Stiglitz, Sah, Benedek et al., Auriol-Warlters, Weitzman, Sandmo, Bovenberg-de Mooij, Pearce, Dorband et al., Ohlendorf et al.) | Crossref y bibliografía del FMI |
@@ -38,6 +37,7 @@ Entregables, compilados con `latexmk -pdf`, sin errores:
 - Estímulo semanal al IEPS de gasolinas en 2026 (porcentajes de octubre): solo se encontró en prensa. Quedó solo lo de 2022 («en varias semanas llegó a 100 %»), sin fecha DOF exacta.
 - Participación de deciles altos en el subsidio a gasolinas (Fundar 62 %, SHCP 2020): la metodología o el original no se verificaron. Nunca entró a las diapositivas; también se quitó de la diap. 10 la frase cualitativa sobre la concentración del subsidio en los hogares de mayor ingreso.
 - Cuotas 2025 de gasolinas (solo fuente secundaria). «El gas natural no paga el IEPS al carbono» (quitado).
+- Precio implícito del Banco Mundial (3.9 USD/tCO₂e, 29 % de emisiones, *State and Trends of Carbon Pricing 2025*): estaba verificado, pero se quitó de la diap. 11 a petición del profesor. La pregunta ahora pide calcular el precio por tonelada a partir de la cuota de la gasolina.
 - Costo social del carbono de la EPA (190 USD/t, 2 %): confirmado solo por fuentes secundarias. Quitado de la diap. 11 junto con «unas 50 veces menos»; en su lugar va una pregunta a la clase sin cifra.
 
 ## Desviaciones del esquema
