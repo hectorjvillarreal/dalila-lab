@@ -35,7 +35,7 @@ pasos = [("Ingresos\ndisponibles", 20.7, "total"),
          ("Participa-\nciones", -4.2, "resta"),
          ("Adefas\ny otros", -0.3, "resta"),
          ("Pensiones", -6.3, "resta"),
-         ("Gasto propio\nIMSS, ISSSTE\ny CFE", -2.1, "resta"),
+         ("Operación de\nIMSS, ISSSTE\ny CFE (con\ningresos propios)", -2.1, "resta"),
          ("Bolsa", 4.0, "bolsa")]
 fig, ax = plt.subplots(figsize=(12.5, 4.3))
 nivel = 0.0
