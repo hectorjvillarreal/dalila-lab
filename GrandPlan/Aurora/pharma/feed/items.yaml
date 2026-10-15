@@ -2045,3 +2045,92 @@
   query_id: q009
   lane: main
   promote: null
+- id: 20261015-0001
+  date_seen: '2026-10-15'
+  date_published: '2026-10-12'
+  headline: Foresee Pharmaceuticals Announces China NMPA Approval of CAMCEVI® 42 mg for the Treatment
+    of Advanced Prostate Cancer; Changchun GeneScience Pharmaceutical will Commercialize in China
+  why: 6-month leuprolide depot cleared in China via a domestic licensing partner — new formulation, not
+    a new active
+  url: https://www.prnewswire.com/news-releases/foresee-pharmaceuticals-announces-china-nmpa-approval-of-camcevi-42-mg-for-the-treatment-of-advanced-prostate-cancer-changchun-genescience-pharmaceutical-will-commercialize-in-china-302905441.html
+  source_domain: prnewswire.com
+  entities:
+  - Foresee Pharmaceuticals
+  - GenSci
+  - NMPA
+  query_id: q025
+  lane: main
+  promote: null
+- id: 20261015-0002
+  date_seen: '2026-10-15'
+  date_published: '2026-09-28'
+  headline: Jaypirca® (pirtobrutinib) Approved in China for a New Indication in Chronic Lymphocytic Leukemia
+    (CLL) /Small Lymphocytic Lymphoma (SLL) Across All Lines of Therapy
+  why: China all-lines CLL label lands four days ahead of the FDA 1L CLL approval (cycle 10) — near-synchronous
+    US/China label expansion via Innovent commercialization
+  url: https://www.prnewswire.com/news-releases/jaypirca-pirtobrutinib-approved-in-china-for-a-new-indication-in-chronic-lymphocytic-leukemia-cll-small-lymphocytic-lymphoma-sll-across-all-lines-of-therapy-302891339.html
+  source_domain: prnewswire.com
+  entities:
+  - Innovent
+  - Eli Lilly
+  - NMPA
+  query_id: q025
+  lane: main
+  promote: null
+- id: 20261015-0003
+  date_seen: '2026-10-15'
+  date_published: '2026-10-13'
+  headline: Rhythm Pharmaceuticals Announces Commercial Launch of IMCIVREE® (setmelanotide) in Japan for
+    Patients with Acquired Hypothalamic Obesity
+  why: NHI price listing + launch of a first-in-Japan acquired-HO therapy; MHLW approval itself was August
+    (launch is the new event)
+  url: https://stockhouse.com/news/press-releases/2026/10/13/rhythm-pharmaceuticals-announces-commercial-launch-of-imcivree-xae-setmelanotide
+  source_domain: stockhouse.com
+  entities:
+  - Rhythm Pharmaceuticals
+  - MHLW
+  query_id: q026
+  lane: main
+  promote: null
+- id: 20261015-0004
+  date_seen: '2026-10-15'
+  date_published: '2026-10-02'
+  headline: Bayer to invest 2.2 billion U.S. dollars in a new manufacturing site in the United States
+  why: New Albany OH campus, ~600 jobs, drug substance 2031 / drug product 2034 — announced three days
+    after the Section 232 100% tariff reached all firms (09-29)
+  url: https://www.bayer.com/media/en-us/bayer-to-invest-2-billion-us-dollars-in-a-new-manufacturing-site-in-the-united-states/
+  source_domain: bayer.com
+  entities:
+  - Bayer
+  query_id: q031
+  lane: main
+  promote: null
+- id: 20261015-0005
+  date_seen: '2026-10-15'
+  date_published: '2026-09-23'
+  headline: FDA approves lirafugratinib for previously treated, unresectable, locally advanced or metastatic
+    cholangiocarcinoma
+  why: second FGFR2 cholangiocarcinoma approval in weeks (after China's tinengotinib) — missed by cycle
+    10's q023 sweep
+  url: https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-lirafugratinib-previously-treated-unresectable-locally-advanced-or-metastatic
+  source_domain: fda.gov
+  entities:
+  - Elevar Therapeutics
+  - FDA
+  query_id: p008
+  lane: provisional
+  promote: null
+- id: 20261015-0006
+  date_seen: '2026-10-15'
+  date_published: '2026-10-09'
+  headline: 'Postapproval Manufacturing Changes to Biosimilar and Interchangeable Biosimilar Products:
+    Questions and Answers'
+  why: final guidance on manufacturing changes after biosimilar licensure — the regulatory lane closest
+    to licence/site transfer for biologics
+  url: https://www.fda.gov/regulatory-information/search-fda-guidance-documents/postapproval-manufacturing-changes-biosimilar-and-interchangeable-biosimilar-products-questions-and
+  source_domain: fda.gov
+  entities:
+  - FDA
+  query_id: x012
+  lane: exploration
+  promote: null

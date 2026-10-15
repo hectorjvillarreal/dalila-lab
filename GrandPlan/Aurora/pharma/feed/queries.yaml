@@ -1,11 +1,11 @@
 config:
-  cycles_completed: 10
+  cycles_completed: 11
   cadence_hours: 36
   cycle_budget: 16
   exploration_share: 0.25
   rotation:
-    main: 24
-    exploration: 10
+    main: 2
+    exploration: 14
   resolved_ids:
   - 20260816-0001
   - 20260816-0002
@@ -146,6 +146,7 @@ config:
   - 4
   - 0
   - 4
+  - 0
   next_provisional: 10
 main:
 - id: q001
@@ -378,12 +379,15 @@ main:
   origin: seed
   window:
   - 20260818-0005
+  - 20261015-0001
+  - 20261015-0002
 - id: q026
   text: PMDA approval Japan
   group: The gate
   origin: seed
   window:
   - 20260818-0006
+  - 20261015-0003
 - id: q027
   text: CDSCO India approval
   group: The gate
@@ -417,6 +421,7 @@ main:
   window:
   - 20260816-0051
   - 20260823-0002
+  - 20261015-0004
 provisional:
 - id: p006
   text: aflibercept
@@ -435,7 +440,8 @@ provisional:
   - 20260816-0039
   - 20260823-0012
   - 20260903-0001
-  window: []
+  window:
+  - 20261015-0005
 - id: p009
   text: program
   group: auto-proposed
@@ -527,6 +533,7 @@ exploration:
   - 20260816-0056
   - 20260816-0057
   - 20260816-0058
+  - 20261015-0006
 - id: x013
   text: pharmaceutical counterfeiting enforcement
   group: Instruments and walls

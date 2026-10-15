@@ -1,40 +1,46 @@
-PHARMA INSTANCE — state as of 2026-10-09 22:42
+PHARMA INSTANCE — state as of 2026-10-15 12:18
 
-items awaiting promote flag .......... 11
-oldest unflagged item ................ 0 days
-cycles since last promote flag ....... 0
+items awaiting promote flag .......... 17
+oldest unflagged item ................ 6 days
+cycles since last promote flag ....... 1
 feed calibration ..................... active
 provisional queries pending .......... 3
 roster size .......................... 20
-panel last refreshed ................. 6 days ago
+panel last refreshed ................. 12 days ago
 
 ---
 
-## Feed — latest cycle report (verbatim: feed/_reports/20261009_2242_cycle.md)
+## Feed — latest cycle report (verbatim: feed/_reports/20261015_1218_cycle.md)
 
-# Feed cycle report — cycle 10
+# Feed cycle report — cycle 11
 
-Machine-authored by harness.py, 2026-10-09 22:42. No judgment in this file; all figures are counts.
+Machine-authored by harness.py, 2026-10-15 12:18. No judgment in this file; all figures are counts.
 
-- items retrieved this cycle: 11 (main: 11)
+- items retrieved this cycle: 6 (exploration: 1, main: 4, provisional: 1)
 - duplicates discarded: 0
-- items awaiting promote flag (total): 11
-- promotes recorded since last cycle: 4
+- items awaiting promote flag (total): 17
+- promotes recorded since last cycle: 0
 - queries retired: none
-- provisional queries added: p008 (metastatic), p009 (program)
+- provisional queries added: none
 - provisional graduated to main: none
-- source weight changes: infectiousdiseaseadvisor.com 0.98->1.0, fiercebiotech.com 0.33->0.34, biospace.com 0.66->0.55, deccanherald.com 0.98->1.0, bloominglobal.com 0.98->1.0, pyfa.co.id 0.98->1.0, channelstv.com 0.98->1.0, vanguardngr.com 0.98->0.76, premiumtimesng.com 0.98->1.0, thenationonlineng.net 0.98->1.0, pharmanewsonline.com 0.98->1.0, ashp.org 0.74->0.76, pharmexec.com 0.84->0.86, bioxconomy.com 0.98->1.0, entrytoregulatory.com 0.98->1.0, investor.elanco.com 0.98->1.0, sec.gov 0.49->0.43, thepharmaletter.com 0.98->1.0, einpresswire.com 0.98->1.0, drugdiscoverynews.com 0.98->1.0, theinsurer.com 0.98->1.0, biopharmadive.com 0.74->0.76, medcitynews.com 0.98->1.0, scmp.com 0.98->1.0, investing.com 0.98->1.0, gurufocus.com 0.98->1.0, stockstotrade.com 0.98->1.0, xtalks.com 0.98->1.0, pharmtech.com 0.59->0.6, zamann-pharma.com 0.98->1.0, beckershospitalreview.com 0.74->0.76, techtimes.com 0.98->1.0, pakistantoday.com.pk 0.98->1.0, pureglobal.com 0.98->1.0, blueteq.com 0.98->1.0, onclive.com 0.98->1.0, en.antaranews.com 0.98->1.0, plutusias.com 0.98->1.0, endpoints.news 0.98->1.0, investor.jazzpharma.com 0.98->1.0, investors.eyepoint.bio 0.98->1.0, allsci.com 0.98->1.0
-- entity counts moved: Sun Pharma 1->2, FDA 4->6, Revolution Medicines 0->1, Bristol Myers Squibb 0->1, Alcon 0->1, Astellas Pharma 0->1, BeOne Medicines 0->1, BridgeBio 0->1, CSL 0->1, Kyowa Kirin 0->1, Teva Pharmaceuticals 0->1, UCB 0->1, White House 0->1, Eli Lilly 0->1, Merida Biosciences 0->1
+- source weight changes: none
+- entity counts moved: none
 - cadence: 36h (unchanged)
-- next cycle due: 2026-10-11 10:42
+- next cycle due: 2026-10-17 00:18
 - calibration: active
 
 ## Noticed, not handled
 
 - rules.md (human-owned) does not exist; harness ran on seeds.md alone
 
-### Unflagged items (11 awaiting promote flag)
+### Unflagged items (17 awaiting promote flag)
 
+- "Postapproval Manufacturing Changes to Biosimilar and Interchangeable Biosimilar Products: Questions and Answers" — final guidance on manufacturing changes after biosimilar licensure — the regulatory lane closest to licence/site transfer for biologics — 2026-10-15 — https://www.fda.gov/regulatory-information/search-fda-guidance-documents/postapproval-manufacturing-changes-biosimilar-and-interchangeable-biosimilar-products-questions-and — [exploration] — 20261015-0006
+- "FDA approves lirafugratinib for previously treated, unresectable, locally advanced or metastatic cholangiocarcinoma" — second FGFR2 cholangiocarcinoma approval in weeks (after China's tinengotinib) — missed by cycle 10's q023 sweep — 2026-10-15 — https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-lirafugratinib-previously-treated-unresectable-locally-advanced-or-metastatic — [provisional] — 20261015-0005
+- "Bayer to invest 2.2 billion U.S. dollars in a new manufacturing site in the United States" — New Albany OH campus, ~600 jobs, drug substance 2031 / drug product 2034 — announced three days after the Section 232 100% tariff reached all firms (09-29) — 2026-10-15 — https://www.bayer.com/media/en-us/bayer-to-invest-2-billion-us-dollars-in-a-new-manufacturing-site-in-the-united-states/ — [main] — 20261015-0004
+- "Rhythm Pharmaceuticals Announces Commercial Launch of IMCIVREE® (setmelanotide) in Japan for Patients with Acquired Hypothalamic Obesity" — NHI price listing + launch of a first-in-Japan acquired-HO therapy; MHLW approval itself was August (launch is the new event) — 2026-10-15 — https://stockhouse.com/news/press-releases/2026/10/13/rhythm-pharmaceuticals-announces-commercial-launch-of-imcivree-xae-setmelanotide — [main] — 20261015-0003
+- "Jaypirca® (pirtobrutinib) Approved in China for a New Indication in Chronic Lymphocytic Leukemia (CLL) /Small Lymphocytic Lymphoma (SLL) Across All Lines of Therapy" — China all-lines CLL label lands four days ahead of the FDA 1L CLL approval (cycle 10) — near-synchronous US/China label expansion via Innovent commercialization — 2026-10-15 — https://www.prnewswire.com/news-releases/jaypirca-pirtobrutinib-approved-in-china-for-a-new-indication-in-chronic-lymphocytic-leukemia-cll-small-lymphocytic-lymphoma-sll-across-all-lines-of-therapy-302891339.html — [main] — 20261015-0002
+- "Foresee Pharmaceuticals Announces China NMPA Approval of CAMCEVI® 42 mg for the Treatment of Advanced Prostate Cancer; Changchun GeneScience Pharmaceutical will Commercialize in China" — 6-month leuprolide depot cleared in China via a domestic licensing partner — new formulation, not a new active — 2026-10-15 — https://www.prnewswire.com/news-releases/foresee-pharmaceuticals-announces-china-nmpa-approval-of-camcevi-42-mg-for-the-treatment-of-advanced-prostate-cancer-changchun-genescience-pharmaceutical-will-commercialize-in-china-302905441.html — [main] — 20261015-0001
 - "Amgen Announces Positive Topline Phase 3 Results for Dazodalibep in Moderate-to-Severe Systemic Sjögren's Disease" — OASIZ 301 met primary (ESSDAI, wk 48) — rent replacement for an incumbent facing Prolia/XGEVA erosion and IRA caps on Enbrel/Otezla; manual add from 10-03 Amgen sweep (q009 is the nearest query, phase-3 outcomes in the rent-replacement group) — 2026-10-09 — https://www.amgen.com/newsroom/press-releases/2026/09/amgen-announces-positive-topline-phase-3-results-for-dazodalibep-in-moderatetosevere-systemic-sjgrens-disease — [main] — 20261009-0011
 - "Meeting highlights from the CHMP 14-17 September 2026" — 12 positive opinions (8 new actives incl. denecimig, gefurulimab, povorcitinib, relacorilant; 2 biosimilars incl. omalizumab; 2 generics incl. tofacitinib, ruxolitinib) + 11 extensions (Keytruda, Enhertu, Ocrevus, Cosentyx); no negatives; Xervyteg refusal confirmed — 2026-10-09 — https://www.ema.europa.eu/en/news/meeting-highlights-committee-medicinal-products-human-use-chmp-14-17-september-2026 — [main] — 20261009-0010
 - "FDA approves belzutifan in combination with lenvatinib for advanced renal cell carcinoma with a clear cell component" — Welireg combination label — part of Merck's post-Keytruda-LOE (exclusivity expired 09-04) rent-replacement stack — 2026-10-09 — https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-belzutifan-combination-lenvatinib-advanced-renal-cell-carcinoma-clear-cell-component — [main] — 20261009-0009

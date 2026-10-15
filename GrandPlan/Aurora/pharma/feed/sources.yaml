@@ -154,7 +154,7 @@ contractpharma.com:
   rejected: 0
   weight: 1.0
 prnewswire.com:
-  surfaced: 4
+  surfaced: 6
   promoted: 3
   rejected: 1
   weight: 1.0
@@ -349,7 +349,7 @@ grassley.senate.gov:
   rejected: 0
   weight: 1.0
 fda.gov:
-  surfaced: 7
+  surfaced: 9
   promoted: 2
   rejected: 0
   weight: 1.0
@@ -384,6 +384,16 @@ ema.europa.eu:
   rejected: 0
   weight: 1.0
 amgen.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+stockhouse.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+bayer.com:
   surfaced: 1
   promoted: 0
   rejected: 0
