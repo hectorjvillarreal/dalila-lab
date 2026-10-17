@@ -4,13 +4,13 @@ player: "Volkswagen Group"
 archetype_ref: "declining-span-adapting-incumbent"   # READ-ONLY pointer into ../archetypes.md
 slots:
   volume:
-    value: "~8.98M"
-    unit: "units — global, 2025"
-    delta: "-0.5% YoY"
-    date: 2026-06-21
-    source: null
-    source_type: null
-    confidence: reported
+    value: "6,011,000"
+    unit: "deliveries — group, global, Jan–Sep 2026 (Q3 alone 1,885,300)"
+    delta: "−9.0% YoY (6,604,300); Q3 −14.3% YoY; China Jan–Sep 1,378,800 (−30.2%), China Q3 405,800 (−38.5%)"
+    date: 2026-10-12
+    source: "https://www.volkswagen-group.com/en/press-releases/volkswagen-group-delivers-6-million-vehicles-through-september-around-40-percent-of-the-order-book-in-europe-are-all-electric-models-20737"
+    source_type: primary
+    confidence: confirmed
     decisive: false
   china_dependence:
     value: "high"
