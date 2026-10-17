@@ -292,3 +292,185 @@
   absorbed: 2026-08-15
   entries_touched: []
   scaffold_touched: false
+
+# --- Feed pass 003 (2026-10-17), window 2026-09-13..10-17 ---
+
+- url: "https://www.usnews.com/news/politics/articles/2026-09-18/auto-industry-urges-trump-to-keep-chinese-automakers-out-ahead-of-xi-meeting"
+  url_normalised: "usnews.com/news/politics/articles/2026-09-18/auto-industry-urges-trump-to-keep-chinese-automakers-out-ahead-of-xi-meeting"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.govinfo.gov/content/pkg/BILLS-119s4429rs/xhtml/BILLS-119s4429rs.html"
+  url_normalised: "govinfo.gov/content/pkg/BILLS-119s4429rs/xhtml/BILLS-119s4429rs.html"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/"
+  url_normalised: "whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.mfa.gov.cn/eng/xw/zyxw/202609/t20260925_12031181.html"
+  url_normalised: "mfa.gov.cn/eng/xw/zyxw/202609/t20260925_12031181.html"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.americanmanufacturing.org/blog/the-dealmaking-was-relatively-muted-during-the-trump-xi-summit/"
+  url_normalised: "americanmanufacturing.org/blog/the-dealmaking-was-relatively-muted-during-the-trump-xi-summit"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.yahoo.com/news/politics/articles/mercedes-trips-china-car-bill-141000195.html"
+  url_normalised: "yahoo.com/news/politics/articles/mercedes-trips-china-car-bill-141000195.html"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/10/01/leapmotor-sept-2026-deliveries/"
+  url_normalised: "cnevpost.com/2026/10/01/leapmotor-sept-2026-deliveries"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/10/13/leapmotor-starts-b10-production-spain-a05-european-debut/"
+  url_normalised: "cnevpost.com/2026/10/13/leapmotor-starts-b10-production-spain-a05-european-debut"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/10/01/byd-sept-2026-sales/"
+  url_normalised: "cnevpost.com/2026/10/01/byd-sept-2026-sales"
+  absorbed: 2026-10-17
+  entries_touched: ["002"]
+  scaffold_touched: false
+
+- url: "https://capital.com/en-gb/news/china-s-byd-sales-rise-in-september-as-export-boom-sustains"
+  url_normalised: "capital.com/en-gb/news/china-s-byd-sales-rise-in-september-as-export-boom-sustains"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/04/28/byd-reports-drop-in-q1-2026-net-profit/"
+  url_normalised: "cnevpost.com/2026/04/28/byd-reports-drop-in-q1-2026-net-profit"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://m.huxiu.com/article/4887101.html"
+  url_normalised: "m.huxiu.com/article/4887101.html"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.volkswagen-group.com/de/ad-hoc/volkswagen-ag-aktualisiert-die-prognose-fuer-das-geschaeftsjahr-2026-20701"
+  url_normalised: "volkswagen-group.com/de/ad-hoc/volkswagen-ag-aktualisiert-die-prognose-fuer-das-geschaeftsjahr-2026-20701"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.volkswagen-group.com/en/press-releases/volkswagen-group-delivers-6-million-vehicles-through-september-around-40-percent-of-the-order-book-in-europe-are-all-electric-models-20737"
+  url_normalised: "volkswagen-group.com/en/press-releases/volkswagen-group-delivers-6-million-vehicles-through-september-around-40-percent-of-the-order-book-in-europe-are-all-electric-models-20737"
+  absorbed: 2026-10-17
+  entries_touched: ["005"]
+  scaffold_touched: false
+
+- url: "https://www.timeslive.co.za/motoring/2026-10-15-italy-has-no-car-plants-available-for-chinese-buyers-says-minister/"
+  url_normalised: "timeslive.co.za/motoring/2026-10-15-italy-has-no-car-plants-available-for-chinese-buyers-says-minister"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.autonews.com/stellantis/ane-stellantis-capacity-europe-1014/"
+  url_normalised: "autonews.com/stellantis/ane-stellantis-capacity-europe-1014"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.hyundai.com/worldwide/en/company/ir/notices/view-0000000377-en-50-1-2026"
+  url_normalised: "hyundai.com/worldwide/en/company/ir/notices/view-0000000377-en-50-1-2026"
+  absorbed: 2026-10-17
+  entries_touched: ["007"]
+  scaffold_touched: false
+
+- url: "https://www.prnewswire.com/news-releases/hyundai-motor-america-reports-record-breaking-september-2026-and-q3-sales-302895757.html"
+  url_normalised: "prnewswire.com/news-releases/hyundai-motor-america-reports-record-breaking-september-2026-and-q3-sales-302895757.html"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.sec.gov/Archives/edgar/data/0001318605/000162828026064366/exhibit991111111.htm"
+  url_normalised: "sec.gov/Archives/edgar/data/0001318605/000162828026064366/exhibit991111111.htm"
+  absorbed: 2026-10-17
+  entries_touched: ["006"]
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/10/09/tesla-china-sept-2026-wholesale/"
+  url_normalised: "cnevpost.com/2026/10/09/tesla-china-sept-2026-wholesale"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/10/01/geely-sept-2026-sales/"
+  url_normalised: "cnevpost.com/2026/10/01/geely-sept-2026-sales"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/10/01/huawei-hima-sept-2026-deliveries/"
+  url_normalised: "cnevpost.com/2026/10/01/huawei-hima-sept-2026-deliveries"
+  absorbed: 2026-10-17
+  entries_touched: ["003"]
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/10/01/huawei-seres-sign-5-year-deal-upgrade-aito/"
+  url_normalised: "cnevpost.com/2026/10/01/huawei-seres-sign-5-year-deal-upgrade-aito"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/10/13/xiaomi-auto-sept-2026-deliveries-2/"
+  url_normalised: "cnevpost.com/2026/10/13/xiaomi-auto-sept-2026-deliveries-2"
+  absorbed: 2026-10-17
+  entries_touched: ["003"]
+  scaffold_touched: false
+
+- url: "https://www.timeslive.co.za/motoring/2026-09-29-toyota-august-sales-production-fall-for-second-straight-month/"
+  url_normalised: "timeslive.co.za/motoring/2026-09-29-toyota-august-sales-production-fall-for-second-straight-month"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://auto.ifeng.com/c/8xBTQRlDxRY"
+  url_normalised: "auto.ifeng.com/c/8xBTQRlDxRY"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://bostondynamics.com/news/boston-dynamics-opens-robotics-metaplant-application-center-to-train-humanoid-robots-for-manufacturing-tasks/"
+  url_normalised: "bostondynamics.com/news/boston-dynamics-opens-robotics-metaplant-application-center-to-train-humanoid-robots-for-manufacturing-tasks"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.jama.or.jp/release/press_conference/2026/3772/"
+  url_normalised: "jama.or.jp/release/press_conference/2026/3772"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://telex.hu/gazdasag/2026/10/13/szeged-byd-gyartas-autoipar-kinai-auto-autoipar"
+  url_normalised: "telex.hu/gazdasag/2026/10/13/szeged-byd-gyartas-autoipar-kinai-auto-autoipar"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/10/09/china-eu-make-progress-hybrid-trade/"
+  url_normalised: "cnevpost.com/2026/10/09/china-eu-make-progress-hybrid-trade"
+  absorbed: 2026-10-17
+  entries_touched: []
+  scaffold_touched: false
