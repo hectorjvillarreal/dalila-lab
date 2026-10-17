@@ -1,0 +1,5 @@
+# Microdatos y derivados a nivel persona de la ENIGH: no se versionan (instrucción 6.1)
+data/raw/
+data/derived/enigh_personas.parquet
+data/derived/r1_forma_sbc.parquet
+src/__pycache__/

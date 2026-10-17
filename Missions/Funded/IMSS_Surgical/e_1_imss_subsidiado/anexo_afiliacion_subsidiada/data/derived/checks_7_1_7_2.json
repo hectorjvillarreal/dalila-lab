@@ -1,0 +1,68 @@
+{
+ "7.1": [
+  [
+   "Asegurados dic. 2025",
+   21800692,
+   21800692.0,
+   true
+  ],
+  [
+   "  hombres",
+   13102667,
+   13102667.0,
+   true
+  ],
+  [
+   "  mujeres",
+   8698025,
+   8698025.0,
+   true
+  ],
+  [
+   "TIMSS dic. 2025",
+   551894,
+   551894.0,
+   true
+  ],
+  [
+   "Total = stock 2025 de Pob Emp & Nuevos",
+   22352586,
+   22352586.0,
+   true
+  ],
+  [
+   "SBC promedio ponderado (pesos/día)",
+   627.21,
+   627.21,
+   true
+  ],
+  [
+   "Aportación federal SEM-A 2025 reconstruida (mdp de 2026)",
+   146457,
+   144610.24558969712,
+   true
+  ]
+ ],
+ "7.2": [
+  [
+   "Cuotas obrero-patronales",
+   634265.0299469321,
+   625443
+  ],
+  [
+   "Aportaciones del Gobierno Federal",
+   157892.05945352247,
+   158947
+  ],
+  [
+   "Otros ingresos",
+   59153.88650343703,
+   46643
+  ],
+  [
+   "Total sin pensiones en curso de pago",
+   851310.9759038916,
+   831033
+  ]
+ ]
+}

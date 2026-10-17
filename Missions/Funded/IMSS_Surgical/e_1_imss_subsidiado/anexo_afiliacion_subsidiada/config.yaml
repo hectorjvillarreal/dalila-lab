@@ -1,0 +1,75 @@
+# Anexo preliminar del Núcleo 13 — afiliación subsidiada al SEM
+# Instrucción: 20261017_BDH_N13_anexo-afiliacion-subsidiada_build_v1.1
+# Todas las rutas son relativas a la raíz de Dalila (dalila_root, relativo a esta carpeta).
+
+dalila_root: ../../../../..
+
+inputs:
+  informe_pdf: Missions/Funded/IMSS_Surgical/e_1_imss_subsidiado/_informe-situacion-financiera_imss.pdf
+  libro_finanzas: "Missions/Funded/IMSS_Surgical/e_1_imss_subsidiado/Req inf fin_Modelo de demanda quirúrgica_070926.xlsx"
+  conapo_zip: GrandPlan/DFD/outputs/briefs/2026-09_EIC2025_nota/data/raw/CONAPO_2023_ConDem50a19_ProyPob20a70.zip
+  enigh_bundle: Missions/Funded/BID2/motivation/data/enigh/2024/bundle
+
+horizonte:
+  anio_base: 2025          # stock observado (dic. 2025)
+  anio_inicial: 2026
+  anio_final: 2054         # 2055 no se reporta (instrucción 3.5)
+  anios_reporte: [2026, 2030, 2040, 2054]
+
+parametros:
+  uma_dic2025: 113.14      # pesos/día, Informe Cuadro A.3 nota 2
+  uma_2024: 108.57         # pesos/día, Informe Cuadro I.2 nota 1 (pág. PDF 26)
+  inflacion_2026: 0.037    # libro, Sup_Fin; lleva pesos de dic. 2025 a pesos de 2026
+  cf_patron: 0.2040        # fracción de la UMA, Cuadro A.3
+  cf_gf: 0.1483
+  excedente: 0.0150        # 1.10 patrón + 0.40 trabajador sobre (SBC − 3 UMA)
+  excedente_patron: 0.0110
+  umbral_excedente_uma: 3.0
+  gmp_privado: 0.01425     # 1.05 patrón + 0.375 trabajador (% del SBC)
+  sm_2025: 278.80          # pesos/día, zona general, Informe sección I.1.3
+  sbc_crec_uma_2025: 0.026 # SBC en veces UMA: 5.41 → 5.55 (Informe, pág. PDF 23)
+  tope_sbc_uma: 25
+  dias: 365
+  especie_sem_2026: 494275 # mdp de 2026, Cuadro V.13
+  dh_total_informe: 79178109  # Cuadro I.4, cierre 2025
+  pib_2026: 38715900       # mdp, Informe nota 51
+  edad_min_titular: 15
+
+escenarios:
+  base: {S: S1, G: G1, U: U1, T: T2, C: C1, F: F0, pi_m: 0.0, perfil: estilizado_3}
+  S:
+    S1: {p0: 20, p1: 50}
+    S2: {p0: 10, p1: 30}
+    S3: {p0: 40, p1: 70}
+  G: [G1, G2]
+  U: [U1, U2]
+  T:
+    T1: {tau0: 0.10, tau1: 0.40, mu1: 0.30}
+    T2: {tau: 0.90, mu: 1.0}
+  C: [C1, C2]
+  F:
+    F0: {cotizantes_2030: 0}
+    F1: {cotizantes_2030: 3000000, anio_inicio: 2026, anio_meta: 2030}
+  pi_m: [0.0, 0.01, 0.02]
+  perfil:
+    plano: {razon_65: 1.0}
+    estilizado_2: {razon_65: 2.0}
+    estilizado_3: {razon_65: 3.0}
+    estilizado_4: {razon_65: 4.0}
+
+# Malla mínima (instrucción, sección 5): cada corrida cambia un solo bloque respecto de la base.
+malla:
+  - {id: base}
+  - {id: S2, S: S2}
+  - {id: S3, S: S3}
+  - {id: T1, T: T1}
+  - {id: G2, G: G2}
+  - {id: U2, U: U2}
+  - {id: U2_hInforme, U: U2, hb: informe}   # sensibilidad añadida: h_b = familiares / cotizantes del Informe
+  - {id: pim1, pi_m: 0.01}
+  - {id: pim2, pi_m: 0.02}
+  - {id: C2, C: C2}
+  - {id: F1, F: F1}
+  - {id: plano, perfil: plano}
+  - {id: estilizado_2, perfil: estilizado_2}
+  - {id: estilizado_4, perfil: estilizado_4}

@@ -1,0 +1,147 @@
+# REPORT — Anexo preliminar del Núcleo 13: afiliación subsidiada al SEM
+
+**Instrucción:** `20261017_BDH_N13_anexo-afiliacion-subsidiada_build_v1.1` (Beth). **Ejecutó:** Claude Code, 2026-10-17, autorizado por Héctor.
+**Rótulo:** ejercicio preliminar de ITED; usa insumos institucionales, pero no es una proyección del IMSS. Las conclusiones de sostenibilidad corresponden a Cath.
+**Reproducir:** `conda activate dalila && python src/run_all.py` (unos 70 s). Todas las cifras están en `NUMBERS.md`.
+
+---
+
+## 1. Resumen
+
+### Escenario base (S1 · G1 · U1 · T2 · C1 · F0 · π_m = 0 · perfil 65+/20-64 = 3.0)
+
+Montos en mdp de 2026. Entre paréntesis: puntos del SBC; % de los ingresos del SEM.
+
+| | 2030 | 2040 | 2054 |
+|---|---|---|---|
+| Personas cubiertas (Bloque A) | 56.5 M | 57.9 M | 57.0 M |
+| Titulares afiliados | 19.3 M | 20.8 M | 21.3 M |
+| Pagos de afiliados | 211,406 (3.27; 34.6 %) | 239,104 (2.53; 28.7 %) | 257,856 (1.76; 21.4 %) |
+| Pagos federales del Bloque A | 94,471 (1.46; 15.5 %) | 93,878 (0.99; 11.3 %) | 87,703 (0.60; 7.3 %) |
+| Costo del Bloque B | 0 | 0 | 0 |
+| Costo de atención | 322,752 (5.00; 52.8 %) | 345,576 (3.66; 41.5 %) | 362,727 (2.47; 30.1 %) |
+| Saldo para el SEM | −16,875 (−0.26; −2.8 %) | −12,594 (−0.13; −1.5 %) | −17,167 (−0.12; −1.4 %) |
+
+En 2026, el costo de atención del Bloque A equivale a 0.81 % del PIB y los pagos federales a 0.24 %. Es la única columna en % del PIB, porque el Informe solo da el PIB de 2026.
+
+### Lo que hay que saber antes de leer las cifras
+
+1. **El Bloque B no tiene costo en S1 ni en S2.** La razón es el salario mínimo.
+   - Ningún formal cotiza por debajo del salario mínimo, que equivale a 2.46 UMA en 2025, 2.69 en 2026 y 3.65 en 2030.
+   - El umbral m1 de S1 es 2.46 UMA de 2026 (percentil 50 del titular informal) y el de S2 es 1.66.
+   - Solo S3 (m1 = 3.29) tiene costo: 14,319 mdp en 2026, 10,320 en 2027 y 4,819 en 2028, para unos 4.6 millones de formales. Desde 2029 el salario mínimo rebasa m1 y el costo es cero.
+   - **La regla de no arbitraje la cumple el salario mínimo antes que el Bloque B.**
+2. **Con T2, el saldo no depende de S ni de G.** La v1.1 fija que afiliado + Gobierno Federal = P* + E(m) por titular, y con adopción fija el ingreso total del SEM no cambia. S y G solo mueven quién paga.
+   - En 2054, los pagos federales totales van de 53,575 mdp (S2) a 138,236 (S3) y 186,103 (G2), frente a 87,703 en la base.
+3. **El costo crece con la población cubierta y los ingresos del SEM crecen con la formalización institucional.** El costo del Bloque A pasa de 56.4 % a 30.1 % de los ingresos del SEM entre 2026 y 2054. La caída se debe a que el denominador crece (cotizantes de 22.35 a 46.8 millones), no a que el Bloque A se abarate.
+
+### Las tres sensibilidades que más mueven el saldo de 2054
+
+En puntos del SBC; la base es −0.12.
+
+| # | Sensibilidad | Saldo 2054 | Por qué |
+|---|---|---|---|
+| 1 | Crecimiento real del costo per cápita π_m = 2 % | −1.95 (−285,957 mdp) | El costo se acumula 28 años; el ingreso por titular no se indexa al costo |
+| 2 | U2 individual con h_b de la ENIGH | +0.96 (+140,919 mdp) | La ENIGH da 0.80 beneficiarios por titular. El precio por persona, P*/1.80, cobra más de un P* por hogar de 3 personas. **Es un artefacto de R2:** con la razón del Informe (1.83 familiares por cotizante) el saldo es −0.23 |
+| 3 | π_m = 1 % | −0.91 (−133,708 mdp) | Igual que el punto 1 |
+
+---
+
+## 2. Verificaciones de la sección 7
+
+| # | Verificación | Resultado | ¿Pasa? |
+|---|---|---|---|
+| 7.1 | Asegurados dic. 2025: 21,800,692 (H 13,102,667; M 8,698,025) | Idéntico | sí |
+| 7.1 | TIMSS dic. 2025: 551,894 | Idéntico | sí |
+| 7.1 | Total 22,352,586 = stock 2025 de `Pob Emp & Nuevos` | Idéntico | sí |
+| 7.1 | SBC promedio ponderado 627.21 | 627.21 (627.2063) | sí |
+| 7.1 | Aportación federal SEM-A 2025 reconstruida, a menos de 3 % de 146,457 | 144,610 (−1.26 %) | sí |
+| 7.2 | Libro de Finanzas frente al Cuadro II.14 | Cuotas +8,822; GF −1,055; otros +12,511; total 851,311 frente a 831,033 (+20,278). Se usa el libro | reportado |
+| 7.3 | Retención de hombres ≈ 0.94 | 0.941 | sí |
+| 7.3 | Retención de mujeres ≈ 0.92 | 0.921 | sí |
+| 7.3 | Retención de 15 a 24 años: 0.81 a 0.85 | 0.830 (H 0.845, M 0.806) | sí |
+| 7.3 | Antigüedad cero en 2025 ≈ 1.69 M | 1,689,393 | sí |
+| 7.4 | Población ENIGH expandida / con IMSS | 130,325,969 / 53,630,567 | reportado |
+| 7.4 | Contraste con los 70.7 M del Núcleo 13 y los 79.2 M del Informe | El método del Anexo I (tasa IMSS por edad y sexo × CONAPO 2025) da **54.6 M**, no 70.7 M. Ver sección 6 | **discrepancia** |
+| 7.4 | Proporción de ocupados sin cobertura contributiva, por decil de hogares | Decil I 92.2 % … decil X 26.3 % (`enigh_informalidad_por_decil.csv`) | reportado |
+| 7.5 | Ingreso − costo = saldo, en cada escenario y año | Desviación máxima 0 | sí |
+| 7.5 | A + B + C = total | Desviación máxima 0 | sí |
+| 7.6.1 | π_I ≥ π_F en toda la malla 0–25 UMA (paso 0.1) × S × G × U | 0 violaciones | sí |
+| 7.6.2 | Diferencia = 0 en G2 y (1 − s)·F_g en G1, ±1 peso | 0 casos fuera | sí |
+| 7.6.3 | Costo_B = 0 si m ≥ m1; Costo_B ≤ F_p | 0 / 0 casos | sí |
+| 7.6.4 | Afiliado + Gobierno Federal = P* + E(m) | 0 casos | sí |
+| 7.6.5 | Pago vigente frente a π_I antes de la reforma | 213 puntos de la malla con π_I < π_F^vig. Es el arbitraje que crearía el subsidio sin Bloque B; en la práctica casi todos quedan bajo el salario mínimo | documentado |
+| 7.6.6 | Brecha GMP | `brecha_GMP.csv`: 0.01425 · m · UMA · 365 por titular. No se corrige con el Bloque B | documentado |
+| 7.7 | π_m mayor ⇒ costo mayor | 0 años fallan | sí |
+| 7.7 | T1: más subsidio ⇒ más adopción | 0 violaciones | sí |
+| 7.7 | Costo fiscal S3 > S1 > S2 | 0 años fallan | sí |
+| 7.8 | Ningún año 2055 en las salidas | 0 (las tablas van de 2025 o 2026 a 2054) | sí |
+| 7.9 | Todo en pesos de 2026 | Pesos de dic. 2025 × 1.037 (inflación 2026 de `Sup_Fin`). La ENIGH se usa en múltiplos de la UMA de 2024, así que no necesita deflactor | sí |
+
+**Prueba C (sección 4.5)**
+
+| | 2030 | 2040 | 2054 |
+|---|---|---|---|
+| Formalidad implícita (cotizantes / ocupados) | 36.5 % | 46.0 % | 63.1 % |
+| Edades con más cotizantes que ocupados | ninguna | ninguna | mujeres de 24 a 37 años, exceso de 896,273 |
+
+La formalidad implícita en 2025 es 34.0 %. Esto confirma la tensión del Anexo I del Núcleo 13 con un método independiente (ocupados en vez de derechohabientes). En C2, la población objetivo baja a 0.96 (2030), 0.81 (2040) y 0.57 (2054) de la de C1.
+
+---
+
+## 3. Respaldos y dirección probable del sesgo
+
+| Respaldo | Qué se hizo | Sesgo probable |
+|---|---|---|
+| R1 — distribución del SBC | Forma del ingreso subordinado principal (P001-P009) de asalariados con IMSS por prestación en la ENIGH (45,754 obs.), reescalada al SBC promedio del libro por grupo de edad y sexo; piso en el salario mínimo (12.3 % de la masa de la forma queda debajo y se trunca); tope 25 UMA | Subestima la cola baja del SBC porque los trabajadores con salario mínimo se apilan en el piso; **el costo del Bloque B en S3 es una cota inferior** |
+| R2 — beneficiarios por titular | h_b = 0.80 en la ENIGH, contra 1.83 familiares por cotizante y 3.54 derechohabientes por cotizante en el Informe | La ENIGH subestima beneficiarios porque no ve a los de otros hogares ni a los no adscritos. **U2 con h_b de la ENIGH sobrestima el ingreso**; la corrida con h_b del Informe lo acota |
+| R3 — perfil de costo | Sin perfil NTA. Ancla de nivel: 494,275 mdp / 79,178,109 DH = 6,242.57 pesos por derechohabiente; forma escalonada 65+/20-64 = 3 (sensibilidades 1, 2 y 4), normalizada sobre la estructura por edad de los afiliados al IMSS en la ENIGH; sin diferencia por sexo | La población objetivo es más joven: 5,622 pesos por persona cubierta en 2026. Un perfil con costos altos en la infancia y por sexo (maternidad) podría elevarlo |
+| R4 — antigüedad | Se lee como años desde el primer registro | Hay 85,615 personas con antigüedad cero y 50 años o más, lo que es compatible con reingresos o con tiempo cotizado. **La retención es indicativa, no una tasa de desafiliación** |
+
+---
+
+## 4. Decisiones que tomé por mi cuenta (para revisión de Héctor)
+
+1. **[REVISAR] Pesos de 2026:** la UMA de 2026 se toma como 113.14 × 1.037 = 117.33. Con eso, F_p = 8,736, F_g = 6,351 y P* = 15,087 pesos. La instrucción ilustra con pesos de dic. 2025 (8,424; 6,124; 14,549).
+2. **[REVISAR] Umbrales m0 y m1:** son los percentiles de la ENIGH llevados a 2026 con un factor de 1.0689 (2.6 % de crecimiento del SBC en UMA en 2025, según el Informe, por el crecimiento real del SBC de 2026 en `Sup_Inc`). Después quedan **fijos en UMA**. Como los ingresos crecen, el subsidio se reduce con el tiempo.
+3. **[REVISAR] Crecimiento del ingreso informal y formal:** columna «Total» del crecimiento real del SBC en `Sup_Inc_Aseg&Sal`.
+4. **[REVISAR] Ingreso laboral de la ENIGH:** claves P001-P022 (sin P010 ni P017, que no existen) más los ingresos de negocios agropecuarios y no agropecuarios por persona. Suma 2.9 % más que `ingtrab` de `concentradohogar`.
+5. **[REVISAR] Cobertura contributiva:** `inst_1` a `inst_4` (IMSS, ISSSTE, ISSSTE estatal, Pemex/Defensa/Marina) por cualquier motivo de afiliación. Ocupado es quien tiene registro en `trabajos`. El titular es el ocupado sin cobertura con mayor ingreso laboral y al menos 15 años.
+6. **[REVISAR] Proyección de la población objetivo:** se reponderan los microdatos con CONAPO(edad, sexo, t) / ENIGH(edad, sexo), con 90+ agrupado. La estructura del hogar no se reconstruye año con año.
+7. **[REVISAR] U2:** los umbrales se recalculan como los mismos percentiles del **ingreso per cápita** de las personas objetivo. Usar los del titular subsidiaría casi a todos.
+8. **[REVISAR] C2 como índice:** C2 se iguala con C1 en 2025 y sigue la dinámica de max(0, ocupados − cotizantes). La resta literal da 43.4 M en 2025 frente a 32.5 M informales de C1, porque incluye a ocupados con ISSSTE y a beneficiarios.
+9. **[REVISAR] F1:** cada año se mueve una fracción uniforme de todos los hogares objetivo (con sus miembros sin cobertura), con cobertura completa (τ = 1, μ = 1). El SBC de los nuevos cotizantes es max(m, salario mínimo). Después de 2030 la fracción se mantiene constante. Resultado: 2.93 derechohabientes por cotizante en 2030, coherente con la calibración del Núcleo 13.
+10. **[REVISAR] Cotizantes por edad:** se replica el modelo de cohortes del Anexo H del Núcleo 13 sumando todas las causas de salida de las bases biométricas. El factor de calibración queda entre 0.9962 y 1.0041 (el Núcleo 13 reporta entre 0.9955 y 1.0042).
+11. **[REVISAR] Masa salarial para los puntos del SBC:** cotizantes del libro × 627.21 × 1.037 × crecimiento real × 365 días. El IMSS usa 337 días cotizados; con 337 días los puntos subirían alrededor de 8 %.
+12. **Sensibilidad añadida:** `U2_hInforme` (h_b = 1.83) para acotar el artefacto de R2.
+13. **% del PIB:** solo para 2026, porque el Informe no trae el PIB de otros años.
+14. **Documentación:** cada módulo de `src/` tiene su `.md` companion.
+
+---
+
+## 5. Hallazgos que van más allá de la instrucción
+
+- **Lo que dice la v1.1 sobre E(m) no se cumple en S3.** La sección 4.2 dice que E(m) opera «muy por arriba de m1 en todos los escenarios S», pero el m1 de S3 es 3.29 UMA, arriba del umbral de 3. El efecto es menor: E(m) es muy pequeño entre 3 y 3.29.
+- **El Bloque B es casi vacío por construcción.** Ver el resumen. Para Beth: el instrumento relevante contra el arbitraje es el salto del informal subsidiado al primer empleo formal **en el salario mínimo** (8,736 pesos de cuota patronal fija en 2026), no la comparación al mismo m. Esa brecha cae sola: la cuota fija baja de 14.3 % del salario mínimo en 2025 a 9.66 % en 2030 y 8.57 % en 2054.
+- **Discrepancia con el Núcleo 13 (7.4).** Con `inst_1` ponderado, la tasa IMSS de la ENIGH es 41.2 % y da 54.6 M de derechohabientes en 2025, no 70.7 M. El Anexo I habla de tasas de 44 % a 59 % por rango. Probé `inst_1 | inst_5` (IMSS-Bienestar): 44.7 %, tampoco cuadra. **Hay que revisarlo con Juan Pablo antes de anexar:** si el Núcleo 13 usó otra variable, su derechohabiencia está sobrestimada alrededor de 30 %.
+
+---
+
+## 6. Pendientes que requieren datos del IMSS en una fase posterior
+
+- Distribución del SBC por tramo de ingreso (sustituye a R1; decide el costo del Bloque B en S3).
+- Derechohabientes por titular, por edad y sexo del titular (sustituye a R2; decide U2).
+- Perfiles de gasto del SEM por edad y sexo (sustituye a R3).
+- Definición de antigüedad en las matrices (R4).
+- Vigencia de las bases biométricas: la nota de la hoja de salidas dice que se usaron en el Informe 2022-2023 (probabilidades dinámicas 2023-2025, la última constante). Confirmar si aplican a la valuación 2025-2026.
+
+## 7. Productos
+
+- `config.yaml` — escenarios y malla.
+- `src/` — un módulo por bloque, cada uno con su `.md`.
+- `outputs/F0_inventario.md`.
+- `outputs/tables/` — 15 CSV.
+- `outputs/figures/` — 3 PNG.
+- `NUMBERS.md`.
+- `ANEXO_borrador.md`.
+- `data/derived/` — parquet; la ENIGH no se versiona en crudo.
