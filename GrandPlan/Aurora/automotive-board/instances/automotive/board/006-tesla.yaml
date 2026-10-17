@@ -4,13 +4,13 @@ player: "Tesla"
 archetype_ref: "frontier-disruptor"   # READ-ONLY pointer into ../archetypes.md
 slots:
   volume:
-    value: "480,126"
-    unit: "deliveries — global, Q2-2026 (record quarter)"
-    delta: "+25% YoY"
-    date: 2026-07-22
-    source: "https://www.cnbc.com/2026/07/22/tesla-tsla-q2-2026-earnings-report.html"
-    source_type: secondary
-    confidence: reported
+    value: "486,532"
+    unit: "deliveries — global, Q3-2026 (production 464,391)"
+    delta: "Model 3/Y 478,237; other models 8,295; storage deployed 13.7 GWh; Q2-2026 480,126"
+    date: 2026-10-02
+    source: "https://www.sec.gov/Archives/edgar/data/0001318605/000162828026064366/exhibit991111111.htm"
+    source_type: primary
+    confidence: confirmed
     decisive: false
     notes: "Overtaken by BYD (2.26M BEV) as the world's largest EV maker in 2025."
   segment_span:
