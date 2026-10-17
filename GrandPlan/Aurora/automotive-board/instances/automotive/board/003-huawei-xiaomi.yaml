@@ -4,11 +4,11 @@ player: "Huawei (HIMA) / Xiaomi"
 archetype_ref: "compute-first-entrant"   # READ-ONLY pointer into ../archetypes.md
 slots:
   volume:
-    value: "Huawei HIMA 42,101 (August 2026; Jan–Aug retail 329,739); Xiaomi 30,153 (August 2026; Jan–Aug 246,475)"
+    value: "Huawei HIMA 37,490 (September 2026; Jan–Sep 367,229); Xiaomi 40,015 (September 2026, CPCA; Jan–Sep 286,490)"
     unit: "units"
-    delta: "HIMA −5.52% YoY (Jan–Aug +11.42%); Xiaomi −17.15% YoY (Jan–Aug +9.65%)"
-    date: 2026-09-08
-    source: "https://cnevpost.com/2026/09/01/huawei-hima-aug-2026-deliveries/ · https://cnevpost.com/2026/09/08/xiaomi-delivers-30153-cars-aug-2026/"
+    delta: "HIMA −29.15% YoY, −10.95% MoM (Jan–Sep +5.27%); Xiaomi −4.61% YoY (Jan–Sep +7.41%; Q3 101,435, −6.77% YoY)"
+    date: 2026-10-13
+    source: "https://cnevpost.com/2026/10/01/huawei-hima-sept-2026-deliveries/ · https://cnevpost.com/2026/10/13/xiaomi-auto-sept-2026-deliveries-2/"
     source_type: secondary
     confidence: reported
     decisive: false
