@@ -4,13 +4,13 @@ player: "Hyundai Motor Group"
 archetype_ref: "mixture"   # READ-ONLY pointer into ../archetypes.md — not a corner
 slots:
   volume:
-    value: "4,138,389"
-    unit: "units — HMC, 2025"
-    delta: "flat YoY"
-    date: 2026-07-14
-    source: null
-    source_type: null
-    confidence: reported
+    value: "2,886,763"
+    unit: "units — HMC sales, Jan–Sep 2026 (company-labelled tentative; September alone 307,998)"
+    delta: "−7.0% YoY (domestic 448,181 −16.3%; overseas 2,438,582 −5.1%); September −16.0% YoY"
+    date: 2026-10-01
+    source: "https://www.hyundai.com/worldwide/en/company/ir/notices/view-0000000377-en-50-1-2026"
+    source_type: primary
+    confidence: confirmed
     decisive: false
     notes: >-
       First-ever 1M US wholesale; 5th straight US retail record; 2026 guidance >4.16M.
