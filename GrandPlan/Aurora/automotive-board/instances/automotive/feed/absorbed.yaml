@@ -196,3 +196,99 @@
   absorbed: 2026-09-13
   entries_touched: []
   scaffold_touched: false
+
+# --- Pass-001 back-fill (task 20261017_AURORA_TASK_feed-pass-003 §1) ---
+# The 15 records below were captured to inbox.md by feed pass 001 (2026-08-15) but never
+# absorbed. absorbed: carries the original pass-001 intake date; absorption was written
+# retroactively on 2026-10-17. entries_touched = entries whose slots pass 001 wrote from
+# the item (per pass-001 slot commits); [] where no slot was written.
+
+- url: "https://finance.biggo.com/news/6127aa85-5769-47da-a87e-95c390dd686c"
+  url_normalised: "finance.biggo.com/news/6127aa85-5769-47da-a87e-95c390dd686c"
+  absorbed: 2026-08-15
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.cnbc.com/2026/07/22/tesla-tsla-q2-2026-earnings-report.html"
+  url_normalised: "cnbc.com/2026/07/22/tesla-tsla-q2-2026-earnings-report.html"
+  absorbed: 2026-08-15
+  entries_touched: ["006"]
+  scaffold_touched: false
+
+- url: "https://www.marklines.com/en/news/348250"
+  url_normalised: "marklines.com/en/news/348250"
+  absorbed: 2026-08-15
+  entries_touched: ["007"]
+  scaffold_touched: false
+
+- url: "https://www.volkswagen-group.com/en/press-releases/volkswagen-group-stays-on-track-in-challenging-environment-and-expects-improved-margin-in-the-second-half-of-the-year-20542"
+  url_normalised: "volkswagen-group.com/en/press-releases/volkswagen-group-stays-on-track-in-challenging-environment-and-expects-improved-margin-in-the-second-half-of-the-year-20542"
+  absorbed: 2026-08-15
+  entries_touched: ["005"]
+  scaffold_touched: false
+
+- url: "https://www.globenewswire.com/news-release/2026/07/28/3334374/0/en/Chery-Group-Surpasses-20-Million-Global-Sales-Milestone-Premium-Brand-LUXEED-Embarks-on-Global-Journey.html"
+  url_normalised: "globenewswire.com/news-release/2026/07/28/3334374/0/en/Chery-Group-Surpasses-20-Million-Global-Sales-Milestone-Premium-Brand-LUXEED-Embarks-on-Global-Journey.html"
+  absorbed: 2026-08-15
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/08/01/geely-jul-2026-sales/"
+  url_normalised: "cnevpost.com/2026/08/01/geely-jul-2026-sales"
+  absorbed: 2026-08-15
+  entries_touched: ["001"]
+  scaffold_touched: false
+
+- url: "https://cnevpost.com/2026/08/01/huawei-hima-delivers-45046-vehicles-jul-2026/"
+  url_normalised: "cnevpost.com/2026/08/01/huawei-hima-delivers-45046-vehicles-jul-2026"
+  absorbed: 2026-08-15
+  entries_touched: ["003"]
+  scaffold_touched: false
+
+- url: "https://autonews.gasgoo.com/articles/news/cherys-july-exports-exceed-200000-for-first-time-nevs-approach-130000-2084181986791886849"
+  url_normalised: "autonews.gasgoo.com/articles/news/cherys-july-exports-exceed-200000-for-first-time-nevs-approach-130000-2084181986791886849"
+  absorbed: 2026-08-15
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://global.toyota/pages/global_toyota/ir/financial-results/2027_1q_summary_en.pdf"
+  url_normalised: "global.toyota/pages/global_toyota/ir/financial-results/2027_1q_summary_en.pdf"
+  absorbed: 2026-08-15
+  entries_touched: ["004"]
+  scaffold_touched: false
+
+- url: "https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/byd-s-two-track-reality-record-exports-abroad-profit-erosion-at-home/69941113"
+  url_normalised: "ad-hoc-news.de/boerse/news/unternehmensnachrichten/byd-s-two-track-reality-record-exports-abroad-profit-erosion-at-home/69941113"
+  absorbed: 2026-08-15
+  entries_touched: ["002"]
+  scaffold_touched: false
+
+- url: "https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/xiaomi-s-two-speed-engine-ev-deliveries-surge-while-chip-costs-cloud-the/69918005"
+  url_normalised: "ad-hoc-news.de/boerse/news/unternehmensnachrichten/xiaomi-s-two-speed-engine-ev-deliveries-surge-while-chip-costs-cloud-the/69918005"
+  absorbed: 2026-08-15
+  entries_touched: ["003"]
+  scaffold_touched: false
+
+- url: "https://www.media.stellantis.com/em-en/leapmotor/press/leapmotor-achieves-june-delivery-record-of-93-376-units-and-delivers-outstanding-h1-2026-performance-leading-nev-start-ups-in-china"
+  url_normalised: "media.stellantis.com/em-en/leapmotor/press/leapmotor-achieves-june-delivery-record-of-93-376-units-and-delivers-outstanding-h1-2026-performance-leading-nev-start-ups-in-china"
+  absorbed: 2026-08-15
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.stellantis.com/en/news/press-releases/2026/may/stellantis-and-leapmotor-announce-their-intention-to-take-their-strategic-partnership-to-the-next-level"
+  url_normalised: "stellantis.com/en/news/press-releases/2026/may/stellantis-and-leapmotor-announce-their-intention-to-take-their-strategic-partnership-to-the-next-level"
+  absorbed: 2026-08-15
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.detroitnews.com/story/business/autos/chrysler/2026/07/07/stellantis-leapmotor-partnership-selling-small-chinese-made-suv-in-mexico/90834715007/"
+  url_normalised: "detroitnews.com/story/business/autos/chrysler/2026/07/07/stellantis-leapmotor-partnership-selling-small-chinese-made-suv-in-mexico/90834715007"
+  absorbed: 2026-08-15
+  entries_touched: []
+  scaffold_touched: false
+
+- url: "https://www.autoevolution.com/news/mg-parent-company-saic-posts-new-sales-milestone-other-chinese-automakers-should-take-note-272815.html"
+  url_normalised: "autoevolution.com/news/mg-parent-company-saic-posts-new-sales-milestone-other-chinese-automakers-should-take-note-272815.html"
+  absorbed: 2026-08-15
+  entries_touched: []
+  scaffold_touched: false
