@@ -55,11 +55,11 @@ slots:
     decisive: true
     notes: "unset — board marks '(feed)'; awaiting feed data"
   geographic_reach:
-    value: "189,466"
-    unit: "units — overseas sales, August 2026 (43.03% of 440,293 NEV sales)"
-    delta: "+134.45% YoY"
-    date: 2026-09-01
-    source: "https://cnevpost.com/2026/09/01/byd-aug-2026-sales/"
+    value: "180,700"
+    unit: "units — overseas sales, September 2026 (38.98% of 463,561 NEV sales)"
+    delta: "+153.59% YoY; Jan–Sep overseas 1,342,960 (+92.66% YoY); domestic Sep 282,861 (−12.97% YoY)"
+    date: 2026-10-01
+    source: "https://cnevpost.com/2026/10/01/byd-sept-2026-sales/"
     source_type: secondary
     confidence: reported
     decisive: false
