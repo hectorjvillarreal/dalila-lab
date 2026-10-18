@@ -41,6 +41,11 @@ Las desagregaciones por seguro, la retención y el modelo de cohortes son **reco
 | Cotizantes_2054 | 46.8 millones | Libro, hoja `Pob Emp & Nuevos` | — | confirmada (46,801,970) |
 | SM_real | +8.97 % (2026); +7.97, 7.99, 7.92, 7.92 % (2027-2030); +0.5 % después | Libro, hoja `Sup_Fin` | — | confirmada |
 | Inflacion_2026 | 3.70 % | Libro, hoja `Sup_Fin` | — | confirmada |
+| SM_2024 | 248.93 pesos/día (resto del país); 374.89 en la Zona Libre de la Frontera Norte | Resolución del H. Consejo de Representantes de la CONASAMI, DOF 12/12/2023 (dof.gob.mx, nota 5711066) | — | nueva (v1.2); verificada en el DOF |
+| h_b_Informe | 1.0729 = 40,980,786 familiares / 38,197,323 titulares | Informe, Cuadro I.4 (los titulares incluyen pensionados y Seguro Facultativo) | pág. PDF 33 | nueva (v1.2) |
+| Ocupacion_hospitalaria_2025 | 75.7 % segundo nivel; 83.7 % tercer nivel | Informe, texto de capacidad hospitalaria | pág. PDF 115 | nueva (v1.2) |
+| PEF2026_salud_no_contributivo | SSa 68,964.2; IMSS-Bienestar 177,591.9; FASSA 87,344.2; Bienestar 4,128.0; total 338,028.3 mdp de 2027 | CIEP, «PPEF 2027: Gasto en salud por subsistema», Cuadro 1 (cifras del PEF 2026; proporcionado por Héctor el 08-10-2026) | — | nueva (v1.2); solo contexto |
+| Inflacion_2027 | 3.82 % | Libro, hoja `Sup_Fin` | — | nueva (v1.2) |
 | N13_DH_2025 | 70.69 millones | Informe del Núcleo 13, Anexo I, Tabla I.1 | — | referencia de contraste |
 
 ## 2. Cifras calculadas (generadas por `src/`, archivo `data/derived/numbers_computed.json`)
@@ -116,6 +121,12 @@ Las desagregaciones por seguro, la retención y el modelo de cohortes son **reco
 | GF_SEM-A_2025_reconstruida | 144,610.2 | 14.83 % UMA × 365 × 22,352,586 + 0.05 % × SBC 627.21 × 365 × 22,352,586, × 1.037 |
 | Informe_DH_por_cotizante | 3.5422 | Informe Cuadro I.4 (79,178,109) / cotizantes dic. 2025 del libro (22,352,586) |
 | Informe_familiares_por_cotizante | 1.8334 | Informe Cuadro I.4 familiares (40,980,786) / cotizantes del libro |
+| PEF2026_Bienestar_mdp2027 | 4,128 | CIEP, «PPEF 2027: Gasto en salud por subsistema», Cuadro 1 (PEF 2026 en mdp de 2027; proporcionado por Héctor 08-10-2026) |
+| PEF2026_FASSA_mdp2027 | 87,344.2 | CIEP, «PPEF 2027: Gasto en salud por subsistema», Cuadro 1 (PEF 2026 en mdp de 2027; proporcionado por Héctor 08-10-2026) |
+| PEF2026_IMSS-Bienestar_mdp2027 | 177,591.9 | CIEP, «PPEF 2027: Gasto en salud por subsistema», Cuadro 1 (PEF 2026 en mdp de 2027; proporcionado por Héctor 08-10-2026) |
+| PEF2026_SSa_mdp2027 | 68,964.2 | CIEP, «PPEF 2027: Gasto en salud por subsistema», Cuadro 1 (PEF 2026 en mdp de 2027; proporcionado por Héctor 08-10-2026) |
+| PEF2026_no_contrib_total_mdp2026 | 325,590.7 | Idem / (1 + 3.82 %, inflación 2027 de Sup_Fin) |
+| PEF2026_no_contrib_total_mdp2027 | 338,028.3 | Suma SSa + IMSS-Bienestar + FASSA + Bienestar |
 | P_star | 15,086.91 | 0.3523 × UMA × 365, pesos de 2026 |
 | R1_n_obs | 45,754 | ENIGH 2024; asalariados con IMSS por prestación e ingreso subordinado principal > 0 (P001-P009) |
 | R1_share_bajo_SM | 0.1233 | Proporción media (grupos edad×sexo) de la forma ENIGH reescalada que queda bajo el SM 2025 y se trunca |
@@ -134,11 +145,97 @@ Las desagregaciones por seguro, la retención y el modelo de cohortes son **reco
 | S3_B_formales_2028 | 4,599,157 | Idem, formales con m < m1 |
 | S3_B_formales_2029 | 0 | Idem, formales con m < m1 |
 | SBC_ponderado_libro_calc | 627.21 | Sal SEM-Emp_dic25 × Mat_Aseg SEM_dic25 (asegurados; generaciones en transición y actual) |
+| SM2026_cuota_D2 | 3,681 | c × SM × 337 |
+| SM2026_cuota_D2_pct | 3.47 | c, como % del salario |
+| SM2026_cuota_patronal_vigente | 8,066 | 0.2040 × UMA × 337, formal de salario mínimo 2026 |
+| SM2026_cuota_patronal_vigente_pct | 7.6 | Como % del salario |
+| SM_2024 | 248.93 | Resolución del H. Consejo de Representantes de la CONASAMI, DOF 12/12/2023 (resto del país; ZLFN 374.89) |
+| SM_2024_en_UMA2024 | 2.2928 | 248.93 / 108.57 |
 | SM_en_UMA_2025 | 2.4642 | SM 2025 / UMA dic. 2025 × Π(1 + SM real, Sup_Fin) |
 | SM_en_UMA_2026 | 2.6852 | SM 2025 / UMA dic. 2025 × Π(1 + SM real, Sup_Fin) |
 | SM_en_UMA_2030 | 3.6464 | SM 2025 / UMA dic. 2025 × Π(1 + SM real, Sup_Fin) |
 | SM_en_UMA_2054 | 4.11 | SM 2025 / UMA dic. 2025 × Π(1 + SM real, Sup_Fin) |
 | UMA_2026_real | 117.3262 | UMA dic. 2025 × (1 + inflación 2026 de Sup_Fin) |
+| aseq_decil10_oop | 19,829 | ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo |
+| aseq_decil10_prima | 21,982 | Prima D2-G2 media de los hogares objetivo del decil, 2026 |
+| aseq_decil1_oop | 2,574 | ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo |
+| aseq_decil1_prima | 353 | Prima D2-G2 media de los hogares objetivo del decil, 2026 |
+| aseq_decil2_oop | 3,161 | ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo |
+| aseq_decil2_prima | 1,817 | Prima D2-G2 media de los hogares objetivo del decil, 2026 |
+| aseq_decil3_oop | 3,925 | ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo |
+| aseq_decil3_prima | 2,824 | Prima D2-G2 media de los hogares objetivo del decil, 2026 |
+| aseq_decil4_oop | 4,690 | ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo |
+| aseq_decil4_prima | 3,555 | Prima D2-G2 media de los hogares objetivo del decil, 2026 |
+| aseq_decil5_oop | 5,773 | ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo |
+| aseq_decil5_prima | 4,097 | Prima D2-G2 media de los hogares objetivo del decil, 2026 |
+| aseq_decil6_oop | 5,685 | ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo |
+| aseq_decil6_prima | 4,714 | Prima D2-G2 media de los hogares objetivo del decil, 2026 |
+| aseq_decil7_oop | 6,145 | ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo |
+| aseq_decil7_prima | 5,472 | Prima D2-G2 media de los hogares objetivo del decil, 2026 |
+| aseq_decil8_oop | 7,842 | ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo |
+| aseq_decil8_prima | 6,485 | Prima D2-G2 media de los hogares objetivo del decil, 2026 |
+| aseq_decil9_oop | 10,679 | ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo |
+| aseq_decil9_prima | 8,637 | Prima D2-G2 media de los hogares objetivo del decil, 2026 |
+| aseq_p10_m | 0.559 | Percentil del ingreso laboral del titular informal, UMA de 2026 |
+| aseq_p10_pcthog_D1_G1 | 0 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p10_pcthog_D2_G1 | 0 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p10_pcthog_D2_G2 | 0 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p10_pctlab_D1_G1 | 0 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p10_pctlab_D2_G1 | 0 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p10_pctlab_D2_G2 | 0 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p10_prima_D1_G1 | 0 | Prima anual determinada, D1_G1, S1, 2026 (pesos de 2026) |
+| aseq_p10_prima_D2_G1 | 0 | Prima anual determinada, D2_G1, S1, 2026 (pesos de 2026) |
+| aseq_p10_prima_D2_G2 | 0 | Prima anual determinada, D2_G2, S1, 2026 (pesos de 2026) |
+| aseq_p20_m | 1.195 | Percentil del ingreso laboral del titular informal, UMA de 2026 |
+| aseq_p20_pcthog_D1_G1 | 0 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p20_pcthog_D2_G1 | 0 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p20_pcthog_D2_G2 | 0 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p20_pctlab_D1_G1 | 0 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p20_pctlab_D2_G1 | 0 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p20_pctlab_D2_G2 | 0 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p20_prima_D1_G1 | 1 | Prima anual determinada, D1_G1, S1, 2026 (pesos de 2026) |
+| aseq_p20_prima_D2_G1 | 0 | Prima anual determinada, D2_G1, S1, 2026 (pesos de 2026) |
+| aseq_p20_prima_D2_G2 | 0 | Prima anual determinada, D2_G2, S1, 2026 (pesos de 2026) |
+| aseq_p30_m | 1.656 | Percentil del ingreso laboral del titular informal, UMA de 2026 |
+| aseq_p30_pcthog_D1_G1 | 3.08 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p30_pcthog_D2_G1 | 1.8 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p30_pcthog_D2_G2 | 0.5 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p30_pctlab_D1_G1 | 7.77 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p30_pctlab_D2_G1 | 4.54 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p30_pctlab_D2_G2 | 1.27 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p30_prima_D1_G1 | 5,509 | Prima anual determinada, D1_G1, S1, 2026 (pesos de 2026) |
+| aseq_p30_prima_D2_G1 | 3,216 | Prima anual determinada, D2_G1, S1, 2026 (pesos de 2026) |
+| aseq_p30_prima_D2_G2 | 898 | Prima anual determinada, D2_G2, S1, 2026 (pesos de 2026) |
+| aseq_p50_m | 2.456 | Percentil del ingreso laboral del titular informal, UMA de 2026 |
+| aseq_p50_pcthog_D1_G1 | 6.9 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p50_pcthog_D2_G1 | 4.57 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p50_pcthog_D2_G2 | 1.67 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p50_pctlab_D1_G1 | 14.34 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p50_pctlab_D2_G1 | 9.5 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p50_pctlab_D2_G2 | 3.47 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p50_prima_D1_G1 | 15,087 | Prima anual determinada, D1_G1, S1, 2026 (pesos de 2026) |
+| aseq_p50_prima_D2_G1 | 9,998 | Prima anual determinada, D2_G1, S1, 2026 (pesos de 2026) |
+| aseq_p50_prima_D2_G2 | 3,647 | Prima anual determinada, D2_G2, S1, 2026 (pesos de 2026) |
+| aseq_p70_m | 3.293 | Percentil del ingreso laboral del titular informal, UMA de 2026 |
+| aseq_p70_pcthog_D1_G1 | 5.84 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p70_pcthog_D2_G1 | 4.42 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p70_pcthog_D2_G2 | 2 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p70_pctlab_D1_G1 | 10.83 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p70_pctlab_D2_G1 | 8.21 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p70_pctlab_D2_G2 | 3.71 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p70_prima_D1_G1 | 15,275 | Prima anual determinada, D1_G1, S1, 2026 (pesos de 2026) |
+| aseq_p70_prima_D2_G1 | 11,576 | Prima anual determinada, D2_G1, S1, 2026 (pesos de 2026) |
+| aseq_p70_prima_D2_G2 | 5,225 | Prima anual determinada, D2_G2, S1, 2026 (pesos de 2026) |
+| aseq_p90_m | 5.7 | Percentil del ingreso laboral del titular informal, UMA de 2026 |
+| aseq_p90_pcthog_D1_G1 | 4.42 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p90_pcthog_D2_G1 | 4.39 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p90_pcthog_D2_G2 | 2.72 | Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%) |
+| aseq_p90_pctlab_D1_G1 | 6.89 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p90_pctlab_D2_G1 | 6.84 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p90_pctlab_D2_G2 | 4.24 | Prima / ingreso laboral anual del titular (%) |
+| aseq_p90_prima_D1_G1 | 16,821 | Prima anual determinada, D1_G1, S1, 2026 (pesos de 2026) |
+| aseq_p90_prima_D2_G1 | 16,695 | Prima anual determinada, D2_G1, S1, 2026 (pesos de 2026) |
+| aseq_p90_prima_D2_G2 | 10,344 | Prima anual determinada, D2_G2, S1, 2026 (pesos de 2026) |
 | base_A_costo_mdp_2026 | 311,913 | resultados_malla.csv, corrida base, Bloque A, 2026 |
 | base_A_costo_mdp_2030 | 322,752 | resultados_malla.csv, corrida base, Bloque A, 2030 |
 | base_A_costo_mdp_2040 | 345,576 | resultados_malla.csv, corrida base, Bloque A, 2040 |
@@ -212,6 +309,21 @@ Las desagregaciones por seguro, la retención y el modelo de cohortes son **reco
 | base_A_titulares_2030 | 19,294,185 | resultados_malla.csv, corrida base, Bloque A, 2030 |
 | base_A_titulares_2040 | 20,818,621 | resultados_malla.csv, corrida base, Bloque A, 2040 |
 | base_A_titulares_2054 | 21,307,283 | resultados_malla.csv, corrida base, Bloque A, 2054 |
+| chk12_00_6.1 | 0 | 6.1 regresión v1.1 (máx. desviación, mdp o personas) |
+| chk12_01_6.2 | -0 | 6.2 neutralidad de c en 2026 (diferencia %) |
+| chk12_02_6.3.1 | 0 | 6.3.1 igualdad ±1 peso en G2 (casos fuera) |
+| chk12_03_6.3.2 | 0 | 6.3.2 π_I ≥ π_F (violaciones) |
+| chk12_04_6.3.3 | 0 | 6.3.3 subsidio B ≤ s·c·w·d (violaciones) |
+| chk12_05_6.4 | 0 | 6.4 determinados = cobrados + no cobrados (máx. desviación) |
+| chk12_06_6.4 | 0 | 6.4 ingreso − costo = saldo (máx. desviación) |
+| chk12_07_6.4 | 0 | 6.4 A + B + C = total (máx. desviación) |
+| chk12_08_6.5 | 0 | 6.5 τ mayor ⇒ más cobertura (años que fallan) |
+| chk12_09_6.5 | 0 | 6.5 ρ menor ⇒ peor saldo (años que fallan) |
+| chk12_10_6.5 | 0 | 6.5 μ mayor ⇒ más costo (años que fallan) |
+| chk12_11_7.7 | 0 | 7.7 π_m mayor ⇒ costo mayor (años que fallan) |
+| chk12_12_7.7 | 0 | 7.7 S3 > S1 > S2 en costo fiscal (años que fallan) |
+| chk12_13_7.8 | 0 | 7.8 años 2055 en las salidas |
+| chk12_6.6_prima_mediana_dif_pct | -1.44 | 6.6 prima de la mediana D2-G2 frente a ~3,700 pesos (tolerancia ±25 %) |
 | chk_7.5_0 | 0 | 7.5 ingreso − costo = saldo (máx. desviación, mdp) |
 | chk_7.5_1 | 0 | 7.5 A + B + C = total (máx. desviación, mdp) |
 | chk_7.6.1 | 0 | 7.6.1 no arbitraje (violaciones tras la reforma) |
@@ -227,7 +339,15 @@ Las desagregaciones por seguro, la retención y el modelo de cohortes son **reco
 | cohortes_k_max | 1.0041 | Idem |
 | cohortes_k_min | 0.9962 | Factor de calibración del modelo de cohortes (total del libro / total simulado) |
 | costo_per_capita_DH_2026 | 6,242.57 | Especie SEM 2026 (Cuadro V.13) / DH total (Cuadro I.4), pesos de 2026 |
+| excl_2030 | 8,663,208 | Reponderado con CONAPO |
+| excl_2054 | 10,120,262 | Reponderado con CONAPO |
+| excl_65mas_2024 | 1,596,095 | Idem, 65 años o más |
+| excl_65mas_2030 | 1,721,878 | Idem, 65 años o más |
+| excl_65mas_2054 | 3,829,072 | Idem, 65 años o más |
+| excl_65mas_pct | 19.5 | Idem, % del total |
+| excl_total_2024 | 8,195,479 | ENIGH 2024; sin cobertura contributiva y fuera de hogares con ocupado sin cobertura |
 | factor_ingreso_2024_2026 | 1.0689 | (1 + 2.6 %) × (1 + crec. real SBC 2026, Sup_Inc) |
+| hb_informe_titulares | 1.0729 | Informe Cuadro I.4: 40,980,786 familiares / 38,197,323 titulares |
 | ingreso_SEM_mdp_2026 | 552,894 | Libro, Ingresos IMSS: SEM-A + SEM-GMP |
 | ingreso_SEM_mdp_2030 | 611,178 | Libro, Ingresos IMSS: SEM-A + SEM-GMP |
 | ingreso_SEM_mdp_2040 | 833,059 | Libro, Ingresos IMSS: SEM-A + SEM-GMP |
@@ -243,11 +363,14 @@ Las desagregaciones por seguro, la retención y el modelo de cohortes son **reco
 | m_tit_p30 | 1.5488 | ENIGH 2024; percentil ponderado del ingreso laboral diario del titular / UMA 2024 |
 | m_tit_p40 | 1.9255 | ENIGH 2024; percentil ponderado del ingreso laboral diario del titular / UMA 2024 |
 | m_tit_p50 | 2.2979 | ENIGH 2024; percentil ponderado del ingreso laboral diario del titular / UMA 2024 |
+| m_tit_p50_vs_SM2024 | 1.0022 | Mediana del titular informal / SM 2024, ambos en UMA de 2024 |
 | m_tit_p70 | 3.0808 | ENIGH 2024; percentil ponderado del ingreso laboral diario del titular / UMA 2024 |
 | masa_sbc_mdp_2026 | 5,606,895 | Cotizantes del libro × SBC 627.21 × 1.037 × crecimiento real (Sup_Inc) × 365 |
 | masa_sbc_mdp_2030 | 6,460,244 | Cotizantes del libro × SBC 627.21 × 1.037 × crecimiento real (Sup_Inc) × 365 |
 | masa_sbc_mdp_2040 | 9,440,405 | Cotizantes del libro × SBC 627.21 × 1.037 × crecimiento real (Sup_Inc) × 365 |
 | masa_sbc_mdp_2054 | 14,677,540 | Cotizantes del libro × SBC 627.21 × 1.037 × crecimiento real (Sup_Inc) × 365 |
+| ocupacion_hosp_2o_nivel_2025 | 75.7 | Informe, sección de capacidad (pág. PDF 115) |
+| ocupacion_hosp_3er_nivel_2025 | 83.7 | Informe, pág. PDF 115 |
 | sens_C2_GF_mdp_2030 | 90,842 | sensibilidades.csv (pagos federales A + B + C) |
 | sens_C2_GF_mdp_2054 | 50,147 | sensibilidades.csv (pagos federales A + B + C) |
 | sens_C2_GF_pts_sbc_2030 | 1.406 | sensibilidades.csv |
@@ -400,3 +523,555 @@ Las desagregaciones por seguro, la retención y el modelo de cohortes son **reco
 | umbral_tit_S2_m1 | 1.6555 | Idem |
 | umbral_tit_S3_m0 | 2.0582 | Percentil ENIGH × factor_ingreso_2024_2026; fijo en UMA después |
 | umbral_tit_S3_m1 | 3.2931 | Idem |
+| v11_saldo_pts_337_2030 | -0.283 | Saldo base v1.1 en puntos del SBC con masa de 337 días (= 365-días × 365/337) |
+| v11_saldo_pts_337_2054 | -0.127 | Saldo base v1.1 en puntos del SBC con masa de 337 días (= 365-días × 365/337) |
+| v12_C2_pagos_GF_2030 | 70,935 | sensibilidades_v12.csv |
+| v12_C2_pagos_GF_2054 | 47,449 | sensibilidades_v12.csv |
+| v12_C2_personas_cubiertas_2030 | 30,190,132 | sensibilidades_v12.csv |
+| v12_C2_personas_cubiertas_2054 | 18,115,436 | sensibilidades_v12.csv |
+| v12_C2_pim1_pagos_GF_2030 | 70,935 | sensibilidades_v12.csv |
+| v12_C2_pim1_pagos_GF_2054 | 47,449 | sensibilidades_v12.csv |
+| v12_C2_pim1_personas_cubiertas_2030 | 30,190,132 | sensibilidades_v12.csv |
+| v12_C2_pim1_personas_cubiertas_2054 | 18,115,436 | sensibilidades_v12.csv |
+| v12_C2_pim1_saldo_2030 | -85,553 | sensibilidades_v12.csv |
+| v12_C2_pim1_saldo_2054 | -86,656 | sensibilidades_v12.csv |
+| v12_C2_pim1_saldo_pts_sbc_2030 | -1.434 | sensibilidades_v12.csv |
+| v12_C2_pim1_saldo_pts_sbc_2054 | -0.639 | sensibilidades_v12.csv |
+| v12_C2_saldo_2030 | -77,852 | sensibilidades_v12.csv |
+| v12_C2_saldo_2054 | -45,934 | sensibilidades_v12.csv |
+| v12_C2_saldo_pts_sbc_2030 | -1.305 | sensibilidades_v12.csv |
+| v12_C2_saldo_pts_sbc_2054 | -0.339 | sensibilidades_v12.csv |
+| v12_C_D2_GF_2030 | 17,591 | bloque_C_vs_status_quo.csv, D2, 2030 |
+| v12_C_D2_GF_2040 | 18,981 | bloque_C_vs_status_quo.csv, D2, 2040 |
+| v12_C_D2_GF_2054 | 19,426 | bloque_C_vs_status_quo.csv, D2, 2054 |
+| v12_C_D2_costo_2030 | 50,184 | bloque_C_vs_status_quo.csv, D2, 2030 |
+| v12_C_D2_costo_2040 | 53,733 | bloque_C_vs_status_quo.csv, D2, 2040 |
+| v12_C_D2_costo_2054 | 56,399 | bloque_C_vs_status_quo.csv, D2, 2054 |
+| v12_C_D2_ingresos_2030 | 38,672 | bloque_C_vs_status_quo.csv, D2, 2030 |
+| v12_C_D2_ingresos_2040 | 43,556 | bloque_C_vs_status_quo.csv, D2, 2040 |
+| v12_C_D2_ingresos_2054 | 47,302 | bloque_C_vs_status_quo.csv, D2, 2054 |
+| v12_C_D2_neto_2030 | -11,512 | bloque_C_vs_status_quo.csv, D2, 2030 |
+| v12_C_D2_neto_2040 | -10,177 | bloque_C_vs_status_quo.csv, D2, 2040 |
+| v12_C_D2_neto_2054 | -9,098 | bloque_C_vs_status_quo.csv, D2, 2054 |
+| v12_C_D2_neto_pts_2030 | -0.193 | bloque_C_vs_status_quo.csv, D2, 2030 |
+| v12_C_D2_neto_pts_2040 | -0.117 | bloque_C_vs_status_quo.csv, D2, 2040 |
+| v12_C_D2_neto_pts_2054 | -0.067 | bloque_C_vs_status_quo.csv, D2, 2054 |
+| v12_C_dh_por_cot_2030 | 2.93 | bloque_C_vs_status_quo.csv, vigente, 2030 |
+| v12_C_dh_por_cot_2040 | 2.78 | bloque_C_vs_status_quo.csv, vigente, 2040 |
+| v12_C_dh_por_cot_2054 | 2.68 | bloque_C_vs_status_quo.csv, vigente, 2054 |
+| v12_C_vigente_GF_2030 | 17,591 | bloque_C_vs_status_quo.csv, vigente, 2030 |
+| v12_C_vigente_GF_2040 | 18,981 | bloque_C_vs_status_quo.csv, vigente, 2040 |
+| v12_C_vigente_GF_2054 | 19,426 | bloque_C_vs_status_quo.csv, vigente, 2054 |
+| v12_C_vigente_costo_2030 | 50,184 | bloque_C_vs_status_quo.csv, vigente, 2030 |
+| v12_C_vigente_costo_2040 | 53,733 | bloque_C_vs_status_quo.csv, vigente, 2040 |
+| v12_C_vigente_costo_2054 | 56,399 | bloque_C_vs_status_quo.csv, vigente, 2054 |
+| v12_C_vigente_ingresos_2030 | 44,429 | bloque_C_vs_status_quo.csv, vigente, 2030 |
+| v12_C_vigente_ingresos_2040 | 48,492 | bloque_C_vs_status_quo.csv, vigente, 2040 |
+| v12_C_vigente_ingresos_2054 | 50,452 | bloque_C_vs_status_quo.csv, vigente, 2054 |
+| v12_C_vigente_neto_2030 | -5,755 | bloque_C_vs_status_quo.csv, vigente, 2030 |
+| v12_C_vigente_neto_2040 | -5,241 | bloque_C_vs_status_quo.csv, vigente, 2040 |
+| v12_C_vigente_neto_2054 | -5,947 | bloque_C_vs_status_quo.csv, vigente, 2054 |
+| v12_C_vigente_neto_pts_2030 | -0.096 | bloque_C_vs_status_quo.csv, vigente, 2030 |
+| v12_C_vigente_neto_pts_2040 | -0.06 | bloque_C_vs_status_quo.csv, vigente, 2040 |
+| v12_C_vigente_neto_pts_2054 | -0.044 | bloque_C_vs_status_quo.csv, vigente, 2054 |
+| v12_D1_pagos_GF_2030 | 99,860 | sensibilidades_v12.csv |
+| v12_D1_pagos_GF_2054 | 112,559 | sensibilidades_v12.csv |
+| v12_D1_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_D1_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_D1_saldo_2030 | -44,342 | sensibilidades_v12.csv |
+| v12_D1_saldo_2054 | -48,850 | sensibilidades_v12.csv |
+| v12_D1_saldo_pts_sbc_2030 | -0.743 | sensibilidades_v12.csv |
+| v12_D1_saldo_pts_sbc_2054 | -0.36 | sensibilidades_v12.csv |
+| v12_F1_pagos_GF_2030 | 81,037 | sensibilidades_v12.csv |
+| v12_F1_pagos_GF_2054 | 90,798 | sensibilidades_v12.csv |
+| v12_F1_personas_cubiertas_2030 | 35,789,694 | sensibilidades_v12.csv |
+| v12_F1_personas_cubiertas_2054 | 36,116,060 | sensibilidades_v12.csv |
+| v12_F1_saldo_2030 | -81,144 | sensibilidades_v12.csv |
+| v12_F1_saldo_2054 | -78,191 | sensibilidades_v12.csv |
+| v12_F1_saldo_pts_sbc_2030 | -1.36 | sensibilidades_v12.csv |
+| v12_F1_saldo_pts_sbc_2054 | -0.577 | sensibilidades_v12.csv |
+| v12_G1_pagos_GF_2030 | 28,802 | sensibilidades_v12.csv |
+| v12_G1_pagos_GF_2054 | 34,983 | sensibilidades_v12.csv |
+| v12_G1_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_G1_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_G1_saldo_2030 | -92,204 | sensibilidades_v12.csv |
+| v12_G1_saldo_2054 | -92,336 | sensibilidades_v12.csv |
+| v12_G1_saldo_pts_sbc_2030 | -1.546 | sensibilidades_v12.csv |
+| v12_G1_saldo_pts_sbc_2054 | -0.681 | sensibilidades_v12.csv |
+| v12_S1_B_total | 0 | Σ 2026-2054 del Bloque B en la base (S1) |
+| v12_S2_pagos_GF_2030 | 69,852 | sensibilidades_v12.csv |
+| v12_S2_pagos_GF_2054 | 77,720 | sensibilidades_v12.csv |
+| v12_S2_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_S2_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_S2_saldo_2030 | -81,941 | sensibilidades_v12.csv |
+| v12_S2_saldo_2054 | -81,651 | sensibilidades_v12.csv |
+| v12_S2_saldo_pts_sbc_2030 | -1.374 | sensibilidades_v12.csv |
+| v12_S2_saldo_pts_sbc_2054 | -0.603 | sensibilidades_v12.csv |
+| v12_S3_B_mdp_2026 | 10,162 | resultados_v12.csv, S3, Bloque B |
+| v12_S3_B_mdp_2030 | 1,104 | resultados_v12.csv, S3, Bloque B |
+| v12_S3_B_mdp_2054 | 15,243 | resultados_v12.csv, S3, Bloque B |
+| v12_S3_pagos_GF_2030 | 82,922 | sensibilidades_v12.csv |
+| v12_S3_pagos_GF_2054 | 108,705 | sensibilidades_v12.csv |
+| v12_S3_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_S3_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_S3_saldo_2030 | -78,950 | sensibilidades_v12.csv |
+| v12_S3_saldo_2054 | -77,716 | sensibilidades_v12.csv |
+| v12_S3_saldo_pts_sbc_2030 | -1.324 | sensibilidades_v12.csv |
+| v12_S3_saldo_pts_sbc_2054 | -0.573 | sensibilidades_v12.csv |
+| v12_T1_pagos_GF_2030 | 36,548 | sensibilidades_v12.csv |
+| v12_T1_pagos_GF_2054 | 42,933 | sensibilidades_v12.csv |
+| v12_T1_personas_cubiertas_2030 | 14,340,450 | sensibilidades_v12.csv |
+| v12_T1_personas_cubiertas_2054 | 14,959,794 | sensibilidades_v12.csv |
+| v12_T1_saldo_2030 | -49,135 | sensibilidades_v12.csv |
+| v12_T1_saldo_2054 | -56,647 | sensibilidades_v12.csv |
+| v12_T1_saldo_pts_sbc_2030 | -0.824 | sensibilidades_v12.csv |
+| v12_T1_saldo_pts_sbc_2054 | -0.418 | sensibilidades_v12.csv |
+| v12_U2_enigh_pagos_GF_2030 | 122,748 | sensibilidades_v12.csv |
+| v12_U2_enigh_pagos_GF_2054 | 126,002 | sensibilidades_v12.csv |
+| v12_U2_enigh_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_U2_enigh_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_U2_enigh_saldo_2030 | -11,223 | sensibilidades_v12.csv |
+| v12_U2_enigh_saldo_2054 | -11,887 | sensibilidades_v12.csv |
+| v12_U2_enigh_saldo_pts_sbc_2030 | -0.188 | sensibilidades_v12.csv |
+| v12_U2_enigh_saldo_pts_sbc_2054 | -0.088 | sensibilidades_v12.csv |
+| v12_U2_informe_pagos_GF_2030 | 108,127 | sensibilidades_v12.csv |
+| v12_U2_informe_pagos_GF_2054 | 111,248 | sensibilidades_v12.csv |
+| v12_U2_informe_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_U2_informe_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_U2_informe_saldo_2030 | -25,843 | sensibilidades_v12.csv |
+| v12_U2_informe_saldo_2054 | -26,641 | sensibilidades_v12.csv |
+| v12_U2_informe_saldo_pts_sbc_2030 | -0.433 | sensibilidades_v12.csv |
+| v12_U2_informe_saldo_pts_sbc_2054 | -0.197 | sensibilidades_v12.csv |
+| v12_base_pagos_GF_2030 | 73,769 | sensibilidades_v12.csv |
+| v12_base_pagos_GF_2054 | 82,984 | sensibilidades_v12.csv |
+| v12_base_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_base_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_base_saldo_2030 | -80,962 | sensibilidades_v12.csv |
+| v12_base_saldo_2054 | -80,335 | sensibilidades_v12.csv |
+| v12_base_saldo_pts_sbc_2030 | -1.357 | sensibilidades_v12.csv |
+| v12_base_saldo_pts_sbc_2054 | -0.593 | sensibilidades_v12.csv |
+| v12_c | 0.0347 | D2: 0.2040 × Σ formales / Σ (formales × SBC en UMA), 2026, distribución R1 × cotizantes del libro |
+| v12_estilizado_2_pagos_GF_2030 | 73,769 | sensibilidades_v12.csv |
+| v12_estilizado_2_pagos_GF_2054 | 82,984 | sensibilidades_v12.csv |
+| v12_estilizado_2_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_estilizado_2_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_estilizado_2_saldo_2030 | -89,175 | sensibilidades_v12.csv |
+| v12_estilizado_2_saldo_2054 | -78,497 | sensibilidades_v12.csv |
+| v12_estilizado_2_saldo_pts_sbc_2030 | -1.495 | sensibilidades_v12.csv |
+| v12_estilizado_2_saldo_pts_sbc_2054 | -0.579 | sensibilidades_v12.csv |
+| v12_estilizado_4_pagos_GF_2030 | 73,769 | sensibilidades_v12.csv |
+| v12_estilizado_4_pagos_GF_2054 | 82,984 | sensibilidades_v12.csv |
+| v12_estilizado_4_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_estilizado_4_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_estilizado_4_saldo_2030 | -74,174 | sensibilidades_v12.csv |
+| v12_estilizado_4_saldo_2054 | -81,855 | sensibilidades_v12.csv |
+| v12_estilizado_4_saldo_pts_sbc_2030 | -1.244 | sensibilidades_v12.csv |
+| v12_estilizado_4_saldo_pts_sbc_2054 | -0.604 | sensibilidades_v12.csv |
+| v12_indexacion_mdp_2030 | 11,611 | efecto_indexacion.csv: recaudación D2 − cuota fija vigente, formales |
+| v12_indexacion_mdp_2040 | 35,589 | efecto_indexacion.csv: recaudación D2 − cuota fija vigente, formales |
+| v12_indexacion_mdp_2054 | 98,909 | efecto_indexacion.csv: recaudación D2 − cuota fija vigente, formales |
+| v12_indexacion_pts_2030 | 0.195 | Idem, puntos del SBC |
+| v12_indexacion_pts_2040 | 0.408 | Idem, puntos del SBC |
+| v12_indexacion_pts_2054 | 0.73 | Idem, puntos del SBC |
+| v12_indexacion_sem_2030 | 1.9 | Idem, % ingresos SEM |
+| v12_indexacion_sem_2040 | 4.27 | Idem, % ingresos SEM |
+| v12_indexacion_sem_2054 | 8.2 | Idem, % ingresos SEM |
+| v12_mu100_pagos_GF_2030 | 73,769 | sensibilidades_v12.csv |
+| v12_mu100_pagos_GF_2054 | 82,984 | sensibilidades_v12.csv |
+| v12_mu100_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_mu100_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_mu100_saldo_2030 | -63,031 | sensibilidades_v12.csv |
+| v12_mu100_saldo_2054 | -60,184 | sensibilidades_v12.csv |
+| v12_mu100_saldo_pts_sbc_2030 | -1.057 | sensibilidades_v12.csv |
+| v12_mu100_saldo_pts_sbc_2054 | -0.444 | sensibilidades_v12.csv |
+| v12_mu130_pagos_GF_2030 | 73,769 | sensibilidades_v12.csv |
+| v12_mu130_pagos_GF_2054 | 82,984 | sensibilidades_v12.csv |
+| v12_mu130_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_mu130_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_mu130_saldo_2030 | -116,823 | sensibilidades_v12.csv |
+| v12_mu130_saldo_2054 | -120,638 | sensibilidades_v12.csv |
+| v12_mu130_saldo_pts_sbc_2030 | -1.959 | sensibilidades_v12.csv |
+| v12_mu130_saldo_pts_sbc_2054 | -0.89 | sensibilidades_v12.csv |
+| v12_pim1_pagos_GF_2030 | 73,769 | sensibilidades_v12.csv |
+| v12_pim1_pagos_GF_2054 | 82,984 | sensibilidades_v12.csv |
+| v12_pim1_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_pim1_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_pim1_saldo_2030 | -88,970 | sensibilidades_v12.csv |
+| v12_pim1_saldo_2054 | -151,555 | sensibilidades_v12.csv |
+| v12_pim1_saldo_pts_sbc_2030 | -1.492 | sensibilidades_v12.csv |
+| v12_pim1_saldo_pts_sbc_2054 | -1.118 | sensibilidades_v12.csv |
+| v12_pim2_pagos_GF_2030 | 73,769 | sensibilidades_v12.csv |
+| v12_pim2_pagos_GF_2054 | 82,984 | sensibilidades_v12.csv |
+| v12_pim2_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_pim2_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_pim2_saldo_2030 | -97,220 | sensibilidades_v12.csv |
+| v12_pim2_saldo_2054 | -244,596 | sensibilidades_v12.csv |
+| v12_pim2_saldo_pts_sbc_2030 | -1.63 | sensibilidades_v12.csv |
+| v12_pim2_saldo_pts_sbc_2054 | -1.805 | sensibilidades_v12.csv |
+| v12_plano_pagos_GF_2030 | 73,769 | sensibilidades_v12.csv |
+| v12_plano_pagos_GF_2054 | 82,984 | sensibilidades_v12.csv |
+| v12_plano_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_plano_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_plano_saldo_2030 | -99,316 | sensibilidades_v12.csv |
+| v12_plano_saldo_2054 | -76,227 | sensibilidades_v12.csv |
+| v12_plano_saldo_pts_sbc_2030 | -1.665 | sensibilidades_v12.csv |
+| v12_plano_saldo_pts_sbc_2054 | -0.562 | sensibilidades_v12.csv |
+| v12_regresion_v11_pagos_GF_2030 | 94,471 | sensibilidades_v12.csv |
+| v12_regresion_v11_pagos_GF_2054 | 87,703 | sensibilidades_v12.csv |
+| v12_regresion_v11_personas_cubiertas_2030 | 56,513,089 | sensibilidades_v12.csv |
+| v12_regresion_v11_personas_cubiertas_2054 | 57,028,432 | sensibilidades_v12.csv |
+| v12_regresion_v11_saldo_2030 | -16,875 | sensibilidades_v12.csv |
+| v12_regresion_v11_saldo_2054 | -17,167 | sensibilidades_v12.csv |
+| v12_regresion_v11_saldo_pts_sbc_2030 | -0.261 | sensibilidades_v12.csv |
+| v12_regresion_v11_saldo_pts_sbc_2054 | -0.117 | sensibilidades_v12.csv |
+| v12_rho100_pagos_GF_2030 | 73,769 | sensibilidades_v12.csv |
+| v12_rho100_pagos_GF_2054 | 82,984 | sensibilidades_v12.csv |
+| v12_rho100_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_rho100_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_rho100_saldo_2030 | -66,793 | sensibilidades_v12.csv |
+| v12_rho100_saldo_2054 | -60,886 | sensibilidades_v12.csv |
+| v12_rho100_saldo_pts_sbc_2030 | -1.12 | sensibilidades_v12.csv |
+| v12_rho100_saldo_pts_sbc_2054 | -0.449 | sensibilidades_v12.csv |
+| v12_rho50_pagos_GF_2030 | 73,769 | sensibilidades_v12.csv |
+| v12_rho50_pagos_GF_2054 | 82,984 | sensibilidades_v12.csv |
+| v12_rho50_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_rho50_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_rho50_saldo_2030 | -95,131 | sensibilidades_v12.csv |
+| v12_rho50_saldo_2054 | -99,784 | sensibilidades_v12.csv |
+| v12_rho50_saldo_pts_sbc_2030 | -1.595 | sensibilidades_v12.csv |
+| v12_rho50_saldo_pts_sbc_2054 | -0.736 | sensibilidades_v12.csv |
+| v12_tau30_pagos_GF_2030 | 44,261 | sensibilidades_v12.csv |
+| v12_tau30_pagos_GF_2054 | 49,791 | sensibilidades_v12.csv |
+| v12_tau30_personas_cubiertas_2030 | 18,837,696 | sensibilidades_v12.csv |
+| v12_tau30_personas_cubiertas_2054 | 19,009,477 | sensibilidades_v12.csv |
+| v12_tau30_saldo_2030 | -48,577 | sensibilidades_v12.csv |
+| v12_tau30_saldo_2054 | -48,201 | sensibilidades_v12.csv |
+| v12_tau30_saldo_pts_sbc_2030 | -0.814 | sensibilidades_v12.csv |
+| v12_tau30_saldo_pts_sbc_2054 | -0.356 | sensibilidades_v12.csv |
+| v12_tau70_pagos_GF_2030 | 103,276 | sensibilidades_v12.csv |
+| v12_tau70_pagos_GF_2054 | 116,178 | sensibilidades_v12.csv |
+| v12_tau70_personas_cubiertas_2030 | 43,954,625 | sensibilidades_v12.csv |
+| v12_tau70_personas_cubiertas_2054 | 44,355,447 | sensibilidades_v12.csv |
+| v12_tau70_saldo_2030 | -113,346 | sensibilidades_v12.csv |
+| v12_tau70_saldo_2054 | -112,469 | sensibilidades_v12.csv |
+| v12_tau70_saldo_pts_sbc_2030 | -1.9 | sensibilidades_v12.csv |
+| v12_tau70_saldo_pts_sbc_2054 | -0.83 | sensibilidades_v12.csv |
+| v12_tau90_pagos_GF_2030 | 132,784 | sensibilidades_v12.csv |
+| v12_tau90_pagos_GF_2054 | 149,372 | sensibilidades_v12.csv |
+| v12_tau90_personas_cubiertas_2030 | 56,513,089 | sensibilidades_v12.csv |
+| v12_tau90_personas_cubiertas_2054 | 57,028,432 | sensibilidades_v12.csv |
+| v12_tau90_saldo_2030 | -145,731 | sensibilidades_v12.csv |
+| v12_tau90_saldo_2054 | -144,604 | sensibilidades_v12.csv |
+| v12_tau90_saldo_pts_sbc_2030 | -2.443 | sensibilidades_v12.csv |
+| v12_tau90_saldo_pts_sbc_2054 | -1.067 | sensibilidades_v12.csv |
+| v12_umbral_fijo_pagos_GF_2030 | 73,304 | sensibilidades_v12.csv |
+| v12_umbral_fijo_pagos_GF_2054 | 79,556 | sensibilidades_v12.csv |
+| v12_umbral_fijo_personas_cubiertas_2030 | 31,396,161 | sensibilidades_v12.csv |
+| v12_umbral_fijo_personas_cubiertas_2054 | 31,682,462 | sensibilidades_v12.csv |
+| v12_umbral_fijo_saldo_2030 | -81,078 | sensibilidades_v12.csv |
+| v12_umbral_fijo_saldo_2054 | -81,192 | sensibilidades_v12.csv |
+| v12_umbral_fijo_saldo_pts_sbc_2030 | -1.359 | sensibilidades_v12.csv |
+| v12_umbral_fijo_saldo_pts_sbc_2054 | -0.599 | sensibilidades_v12.csv |
+| v12b_A_GF_cuota_fija_mdp_2026 | 65,081 | resultados_v12.csv, base, A, 2026 |
+| v12b_A_GF_cuota_fija_mdp_2030 | 68,074 | resultados_v12.csv, base, A, 2030 |
+| v12b_A_GF_cuota_fija_mdp_2040 | 73,453 | resultados_v12.csv, base, A, 2040 |
+| v12b_A_GF_cuota_fija_mdp_2054 | 75,177 | resultados_v12.csv, base, A, 2054 |
+| v12b_A_GF_cuota_fija_pts_2026 | 1.257 | Idem, puntos del SBC (337 días) |
+| v12b_A_GF_cuota_fija_pts_2030 | 1.141 | Idem, puntos del SBC (337 días) |
+| v12b_A_GF_cuota_fija_pts_2040 | 0.843 | Idem, puntos del SBC (337 días) |
+| v12b_A_GF_cuota_fija_pts_2054 | 0.555 | Idem, puntos del SBC (337 días) |
+| v12b_A_GF_cuota_fija_sem_2026 | 11.77 | Idem, % de los ingresos del SEM |
+| v12b_A_GF_cuota_fija_sem_2030 | 11.14 | Idem, % de los ingresos del SEM |
+| v12b_A_GF_cuota_fija_sem_2040 | 8.82 | Idem, % de los ingresos del SEM |
+| v12b_A_GF_cuota_fija_sem_2054 | 6.23 | Idem, % de los ingresos del SEM |
+| v12b_A_GF_subsidio_mdp_2026 | 5,251 | resultados_v12.csv, base, A, 2026 |
+| v12b_A_GF_subsidio_mdp_2030 | 5,695 | resultados_v12.csv, base, A, 2030 |
+| v12b_A_GF_subsidio_mdp_2040 | 6,700 | resultados_v12.csv, base, A, 2040 |
+| v12b_A_GF_subsidio_mdp_2054 | 7,807 | resultados_v12.csv, base, A, 2054 |
+| v12b_A_GF_subsidio_pts_2026 | 0.101 | Idem, puntos del SBC (337 días) |
+| v12b_A_GF_subsidio_pts_2030 | 0.095 | Idem, puntos del SBC (337 días) |
+| v12b_A_GF_subsidio_pts_2040 | 0.077 | Idem, puntos del SBC (337 días) |
+| v12b_A_GF_subsidio_pts_2054 | 0.058 | Idem, puntos del SBC (337 días) |
+| v12b_A_GF_subsidio_sem_2026 | 0.95 | Idem, % de los ingresos del SEM |
+| v12b_A_GF_subsidio_sem_2030 | 0.93 | Idem, % de los ingresos del SEM |
+| v12b_A_GF_subsidio_sem_2040 | 0.8 | Idem, % de los ingresos del SEM |
+| v12b_A_GF_subsidio_sem_2054 | 0.65 | Idem, % de los ingresos del SEM |
+| v12b_A_costo_mdp_2026 | 190,614 | resultados_v12.csv, base, A, 2026 |
+| v12b_A_costo_mdp_2030 | 197,237 | resultados_v12.csv, base, A, 2030 |
+| v12b_A_costo_mdp_2040 | 211,185 | resultados_v12.csv, base, A, 2040 |
+| v12b_A_costo_mdp_2054 | 221,667 | resultados_v12.csv, base, A, 2054 |
+| v12b_A_costo_pts_2026 | 3.682 | Idem, puntos del SBC (337 días) |
+| v12b_A_costo_pts_2030 | 3.307 | Idem, puntos del SBC (337 días) |
+| v12b_A_costo_pts_2040 | 2.423 | Idem, puntos del SBC (337 días) |
+| v12b_A_costo_pts_2054 | 1.636 | Idem, puntos del SBC (337 días) |
+| v12b_A_costo_sem_2026 | 34.48 | Idem, % de los ingresos del SEM |
+| v12b_A_costo_sem_2030 | 32.27 | Idem, % de los ingresos del SEM |
+| v12b_A_costo_sem_2040 | 25.35 | Idem, % de los ingresos del SEM |
+| v12b_A_costo_sem_2054 | 18.37 | Idem, % de los ingresos del SEM |
+| v12b_A_no_cobrado_mdp_2026 | 13,034 | resultados_v12.csv, base, A, 2026 |
+| v12b_A_no_cobrado_mdp_2030 | 14,169 | resultados_v12.csv, base, A, 2030 |
+| v12b_A_no_cobrado_mdp_2040 | 16,795 | resultados_v12.csv, base, A, 2040 |
+| v12b_A_no_cobrado_mdp_2054 | 19,449 | resultados_v12.csv, base, A, 2054 |
+| v12b_A_no_cobrado_pts_2026 | 0.252 | Idem, puntos del SBC (337 días) |
+| v12b_A_no_cobrado_pts_2030 | 0.238 | Idem, puntos del SBC (337 días) |
+| v12b_A_no_cobrado_pts_2040 | 0.193 | Idem, puntos del SBC (337 días) |
+| v12b_A_no_cobrado_pts_2054 | 0.144 | Idem, puntos del SBC (337 días) |
+| v12b_A_no_cobrado_sem_2026 | 2.36 | Idem, % de los ingresos del SEM |
+| v12b_A_no_cobrado_sem_2030 | 2.32 | Idem, % de los ingresos del SEM |
+| v12b_A_no_cobrado_sem_2040 | 2.02 | Idem, % de los ingresos del SEM |
+| v12b_A_no_cobrado_sem_2054 | 1.61 | Idem, % de los ingresos del SEM |
+| v12b_A_pagos_GF_mdp_2026 | 70,332 | resultados_v12.csv, base, A, 2026 |
+| v12b_A_pagos_GF_mdp_2030 | 73,769 | resultados_v12.csv, base, A, 2030 |
+| v12b_A_pagos_GF_mdp_2040 | 80,153 | resultados_v12.csv, base, A, 2040 |
+| v12b_A_pagos_GF_mdp_2054 | 82,984 | resultados_v12.csv, base, A, 2054 |
+| v12b_A_pagos_GF_pts_2026 | 1.359 | Idem, puntos del SBC (337 días) |
+| v12b_A_pagos_GF_pts_2030 | 1.237 | Idem, puntos del SBC (337 días) |
+| v12b_A_pagos_GF_pts_2040 | 0.92 | Idem, puntos del SBC (337 días) |
+| v12b_A_pagos_GF_pts_2054 | 0.612 | Idem, puntos del SBC (337 días) |
+| v12b_A_pagos_GF_sem_2026 | 12.72 | Idem, % de los ingresos del SEM |
+| v12b_A_pagos_GF_sem_2030 | 12.07 | Idem, % de los ingresos del SEM |
+| v12b_A_pagos_GF_sem_2040 | 9.62 | Idem, % de los ingresos del SEM |
+| v12b_A_pagos_GF_sem_2054 | 6.88 | Idem, % de los ingresos del SEM |
+| v12b_A_pagos_determinados_mdp_2026 | 52,137 | resultados_v12.csv, base, A, 2026 |
+| v12b_A_pagos_determinados_mdp_2030 | 56,676 | resultados_v12.csv, base, A, 2030 |
+| v12b_A_pagos_determinados_mdp_2040 | 67,181 | resultados_v12.csv, base, A, 2040 |
+| v12b_A_pagos_determinados_mdp_2054 | 77,796 | resultados_v12.csv, base, A, 2054 |
+| v12b_A_pagos_determinados_pts_2026 | 1.007 | Idem, puntos del SBC (337 días) |
+| v12b_A_pagos_determinados_pts_2030 | 0.95 | Idem, puntos del SBC (337 días) |
+| v12b_A_pagos_determinados_pts_2040 | 0.771 | Idem, puntos del SBC (337 días) |
+| v12b_A_pagos_determinados_pts_2054 | 0.574 | Idem, puntos del SBC (337 días) |
+| v12b_A_pagos_determinados_sem_2026 | 9.43 | Idem, % de los ingresos del SEM |
+| v12b_A_pagos_determinados_sem_2030 | 9.27 | Idem, % de los ingresos del SEM |
+| v12b_A_pagos_determinados_sem_2040 | 8.06 | Idem, % de los ingresos del SEM |
+| v12b_A_pagos_determinados_sem_2054 | 6.45 | Idem, % de los ingresos del SEM |
+| v12b_A_pagos_privados_mdp_2026 | 39,103 | resultados_v12.csv, base, A, 2026 |
+| v12b_A_pagos_privados_mdp_2030 | 42,507 | resultados_v12.csv, base, A, 2030 |
+| v12b_A_pagos_privados_mdp_2040 | 50,386 | resultados_v12.csv, base, A, 2040 |
+| v12b_A_pagos_privados_mdp_2054 | 58,347 | resultados_v12.csv, base, A, 2054 |
+| v12b_A_pagos_privados_pts_2026 | 0.755 | Idem, puntos del SBC (337 días) |
+| v12b_A_pagos_privados_pts_2030 | 0.713 | Idem, puntos del SBC (337 días) |
+| v12b_A_pagos_privados_pts_2040 | 0.578 | Idem, puntos del SBC (337 días) |
+| v12b_A_pagos_privados_pts_2054 | 0.431 | Idem, puntos del SBC (337 días) |
+| v12b_A_pagos_privados_sem_2026 | 7.07 | Idem, % de los ingresos del SEM |
+| v12b_A_pagos_privados_sem_2030 | 6.95 | Idem, % de los ingresos del SEM |
+| v12b_A_pagos_privados_sem_2040 | 6.05 | Idem, % de los ingresos del SEM |
+| v12b_A_pagos_privados_sem_2054 | 4.84 | Idem, % de los ingresos del SEM |
+| v12b_A_personas_cubiertas_2026 | 30,823,063 | resultados_v12.csv, base, A, 2026 |
+| v12b_A_personas_cubiertas_2030 | 31,396,161 | resultados_v12.csv, base, A, 2030 |
+| v12b_A_personas_cubiertas_2040 | 32,153,893 | resultados_v12.csv, base, A, 2040 |
+| v12b_A_personas_cubiertas_2054 | 31,682,462 | resultados_v12.csv, base, A, 2054 |
+| v12b_A_saldo_mdp_2026 | -81,179 | resultados_v12.csv, base, A, 2026 |
+| v12b_A_saldo_mdp_2030 | -80,962 | resultados_v12.csv, base, A, 2030 |
+| v12b_A_saldo_mdp_2040 | -80,647 | resultados_v12.csv, base, A, 2040 |
+| v12b_A_saldo_mdp_2054 | -80,335 | resultados_v12.csv, base, A, 2054 |
+| v12b_A_saldo_pts_2026 | -1.568 | Idem, puntos del SBC (337 días) |
+| v12b_A_saldo_pts_2030 | -1.357 | Idem, puntos del SBC (337 días) |
+| v12b_A_saldo_pts_2040 | -0.925 | Idem, puntos del SBC (337 días) |
+| v12b_A_saldo_pts_2054 | -0.593 | Idem, puntos del SBC (337 días) |
+| v12b_A_saldo_sem_2026 | -14.68 | Idem, % de los ingresos del SEM |
+| v12b_A_saldo_sem_2030 | -13.25 | Idem, % de los ingresos del SEM |
+| v12b_A_saldo_sem_2040 | -9.68 | Idem, % de los ingresos del SEM |
+| v12b_A_saldo_sem_2054 | -6.66 | Idem, % de los ingresos del SEM |
+| v12b_A_titulares_o_formales_2026 | 10,247,696 | resultados_v12.csv, base, A, 2026 |
+| v12b_A_titulares_o_formales_2030 | 10,718,991 | resultados_v12.csv, base, A, 2030 |
+| v12b_A_titulares_o_formales_2040 | 11,565,901 | resultados_v12.csv, base, A, 2040 |
+| v12b_A_titulares_o_formales_2054 | 11,837,379 | resultados_v12.csv, base, A, 2054 |
+| v12b_B_GF_cuota_fija_mdp_2026 | 0 | resultados_v12.csv, base, B, 2026 |
+| v12b_B_GF_cuota_fija_mdp_2030 | 0 | resultados_v12.csv, base, B, 2030 |
+| v12b_B_GF_cuota_fija_mdp_2040 | 0 | resultados_v12.csv, base, B, 2040 |
+| v12b_B_GF_cuota_fija_mdp_2054 | 0 | resultados_v12.csv, base, B, 2054 |
+| v12b_B_GF_cuota_fija_pts_2026 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_GF_cuota_fija_pts_2030 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_GF_cuota_fija_pts_2040 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_GF_cuota_fija_pts_2054 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_GF_cuota_fija_sem_2026 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_GF_cuota_fija_sem_2030 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_GF_cuota_fija_sem_2040 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_GF_cuota_fija_sem_2054 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_GF_subsidio_mdp_2026 | 0 | resultados_v12.csv, base, B, 2026 |
+| v12b_B_GF_subsidio_mdp_2030 | 0 | resultados_v12.csv, base, B, 2030 |
+| v12b_B_GF_subsidio_mdp_2040 | 0 | resultados_v12.csv, base, B, 2040 |
+| v12b_B_GF_subsidio_mdp_2054 | 0 | resultados_v12.csv, base, B, 2054 |
+| v12b_B_GF_subsidio_pts_2026 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_GF_subsidio_pts_2030 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_GF_subsidio_pts_2040 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_GF_subsidio_pts_2054 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_GF_subsidio_sem_2026 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_GF_subsidio_sem_2030 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_GF_subsidio_sem_2040 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_GF_subsidio_sem_2054 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_costo_mdp_2026 | 0 | resultados_v12.csv, base, B, 2026 |
+| v12b_B_costo_mdp_2030 | 0 | resultados_v12.csv, base, B, 2030 |
+| v12b_B_costo_mdp_2040 | 0 | resultados_v12.csv, base, B, 2040 |
+| v12b_B_costo_mdp_2054 | 0 | resultados_v12.csv, base, B, 2054 |
+| v12b_B_costo_pts_2026 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_costo_pts_2030 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_costo_pts_2040 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_costo_pts_2054 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_costo_sem_2026 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_costo_sem_2030 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_costo_sem_2040 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_costo_sem_2054 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_no_cobrado_mdp_2026 | 0 | resultados_v12.csv, base, B, 2026 |
+| v12b_B_no_cobrado_mdp_2030 | 0 | resultados_v12.csv, base, B, 2030 |
+| v12b_B_no_cobrado_mdp_2040 | 0 | resultados_v12.csv, base, B, 2040 |
+| v12b_B_no_cobrado_mdp_2054 | 0 | resultados_v12.csv, base, B, 2054 |
+| v12b_B_no_cobrado_pts_2026 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_no_cobrado_pts_2030 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_no_cobrado_pts_2040 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_no_cobrado_pts_2054 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_no_cobrado_sem_2026 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_no_cobrado_sem_2030 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_no_cobrado_sem_2040 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_no_cobrado_sem_2054 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_pagos_GF_mdp_2026 | 0 | resultados_v12.csv, base, B, 2026 |
+| v12b_B_pagos_GF_mdp_2030 | 0 | resultados_v12.csv, base, B, 2030 |
+| v12b_B_pagos_GF_mdp_2040 | 0 | resultados_v12.csv, base, B, 2040 |
+| v12b_B_pagos_GF_mdp_2054 | 0 | resultados_v12.csv, base, B, 2054 |
+| v12b_B_pagos_GF_pts_2026 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_pagos_GF_pts_2030 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_pagos_GF_pts_2040 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_pagos_GF_pts_2054 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_pagos_GF_sem_2026 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_pagos_GF_sem_2030 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_pagos_GF_sem_2040 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_pagos_GF_sem_2054 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_pagos_determinados_mdp_2026 | 0 | resultados_v12.csv, base, B, 2026 |
+| v12b_B_pagos_determinados_mdp_2030 | 0 | resultados_v12.csv, base, B, 2030 |
+| v12b_B_pagos_determinados_mdp_2040 | 0 | resultados_v12.csv, base, B, 2040 |
+| v12b_B_pagos_determinados_mdp_2054 | 0 | resultados_v12.csv, base, B, 2054 |
+| v12b_B_pagos_determinados_pts_2026 | -0 | Idem, puntos del SBC (337 días) |
+| v12b_B_pagos_determinados_pts_2030 | -0 | Idem, puntos del SBC (337 días) |
+| v12b_B_pagos_determinados_pts_2040 | -0 | Idem, puntos del SBC (337 días) |
+| v12b_B_pagos_determinados_pts_2054 | -0 | Idem, puntos del SBC (337 días) |
+| v12b_B_pagos_determinados_sem_2026 | -0 | Idem, % de los ingresos del SEM |
+| v12b_B_pagos_determinados_sem_2030 | -0 | Idem, % de los ingresos del SEM |
+| v12b_B_pagos_determinados_sem_2040 | -0 | Idem, % de los ingresos del SEM |
+| v12b_B_pagos_determinados_sem_2054 | -0 | Idem, % de los ingresos del SEM |
+| v12b_B_pagos_privados_mdp_2026 | 0 | resultados_v12.csv, base, B, 2026 |
+| v12b_B_pagos_privados_mdp_2030 | 0 | resultados_v12.csv, base, B, 2030 |
+| v12b_B_pagos_privados_mdp_2040 | 0 | resultados_v12.csv, base, B, 2040 |
+| v12b_B_pagos_privados_mdp_2054 | 0 | resultados_v12.csv, base, B, 2054 |
+| v12b_B_pagos_privados_pts_2026 | -0 | Idem, puntos del SBC (337 días) |
+| v12b_B_pagos_privados_pts_2030 | -0 | Idem, puntos del SBC (337 días) |
+| v12b_B_pagos_privados_pts_2040 | -0 | Idem, puntos del SBC (337 días) |
+| v12b_B_pagos_privados_pts_2054 | -0 | Idem, puntos del SBC (337 días) |
+| v12b_B_pagos_privados_sem_2026 | -0 | Idem, % de los ingresos del SEM |
+| v12b_B_pagos_privados_sem_2030 | -0 | Idem, % de los ingresos del SEM |
+| v12b_B_pagos_privados_sem_2040 | -0 | Idem, % de los ingresos del SEM |
+| v12b_B_pagos_privados_sem_2054 | -0 | Idem, % de los ingresos del SEM |
+| v12b_B_saldo_mdp_2026 | 0 | resultados_v12.csv, base, B, 2026 |
+| v12b_B_saldo_mdp_2030 | 0 | resultados_v12.csv, base, B, 2030 |
+| v12b_B_saldo_mdp_2040 | 0 | resultados_v12.csv, base, B, 2040 |
+| v12b_B_saldo_mdp_2054 | 0 | resultados_v12.csv, base, B, 2054 |
+| v12b_B_saldo_pts_2026 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_saldo_pts_2030 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_saldo_pts_2040 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_saldo_pts_2054 | 0 | Idem, puntos del SBC (337 días) |
+| v12b_B_saldo_sem_2026 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_saldo_sem_2030 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_saldo_sem_2040 | 0 | Idem, % de los ingresos del SEM |
+| v12b_B_saldo_sem_2054 | 0 | Idem, % de los ingresos del SEM |
+| v12b_GF_pct_pib_2026 | 0.182 | Pagos federales 2026 / PIB 2026 |
+| v12b_Total_GF_cuota_fija_mdp_2026 | 65,081 | resultados_v12.csv, base, Total, 2026 |
+| v12b_Total_GF_cuota_fija_mdp_2030 | 68,074 | resultados_v12.csv, base, Total, 2030 |
+| v12b_Total_GF_cuota_fija_mdp_2040 | 73,453 | resultados_v12.csv, base, Total, 2040 |
+| v12b_Total_GF_cuota_fija_mdp_2054 | 75,177 | resultados_v12.csv, base, Total, 2054 |
+| v12b_Total_GF_cuota_fija_pts_2026 | 1.257 | Idem, puntos del SBC (337 días) |
+| v12b_Total_GF_cuota_fija_pts_2030 | 1.141 | Idem, puntos del SBC (337 días) |
+| v12b_Total_GF_cuota_fija_pts_2040 | 0.843 | Idem, puntos del SBC (337 días) |
+| v12b_Total_GF_cuota_fija_pts_2054 | 0.555 | Idem, puntos del SBC (337 días) |
+| v12b_Total_GF_cuota_fija_sem_2026 | 11.77 | Idem, % de los ingresos del SEM |
+| v12b_Total_GF_cuota_fija_sem_2030 | 11.14 | Idem, % de los ingresos del SEM |
+| v12b_Total_GF_cuota_fija_sem_2040 | 8.82 | Idem, % de los ingresos del SEM |
+| v12b_Total_GF_cuota_fija_sem_2054 | 6.23 | Idem, % de los ingresos del SEM |
+| v12b_Total_GF_subsidio_mdp_2026 | 5,251 | resultados_v12.csv, base, Total, 2026 |
+| v12b_Total_GF_subsidio_mdp_2030 | 5,695 | resultados_v12.csv, base, Total, 2030 |
+| v12b_Total_GF_subsidio_mdp_2040 | 6,700 | resultados_v12.csv, base, Total, 2040 |
+| v12b_Total_GF_subsidio_mdp_2054 | 7,807 | resultados_v12.csv, base, Total, 2054 |
+| v12b_Total_GF_subsidio_pts_2026 | 0.101 | Idem, puntos del SBC (337 días) |
+| v12b_Total_GF_subsidio_pts_2030 | 0.095 | Idem, puntos del SBC (337 días) |
+| v12b_Total_GF_subsidio_pts_2040 | 0.077 | Idem, puntos del SBC (337 días) |
+| v12b_Total_GF_subsidio_pts_2054 | 0.058 | Idem, puntos del SBC (337 días) |
+| v12b_Total_GF_subsidio_sem_2026 | 0.95 | Idem, % de los ingresos del SEM |
+| v12b_Total_GF_subsidio_sem_2030 | 0.93 | Idem, % de los ingresos del SEM |
+| v12b_Total_GF_subsidio_sem_2040 | 0.8 | Idem, % de los ingresos del SEM |
+| v12b_Total_GF_subsidio_sem_2054 | 0.65 | Idem, % de los ingresos del SEM |
+| v12b_Total_costo_mdp_2026 | 190,614 | resultados_v12.csv, base, Total, 2026 |
+| v12b_Total_costo_mdp_2030 | 197,237 | resultados_v12.csv, base, Total, 2030 |
+| v12b_Total_costo_mdp_2040 | 211,185 | resultados_v12.csv, base, Total, 2040 |
+| v12b_Total_costo_mdp_2054 | 221,667 | resultados_v12.csv, base, Total, 2054 |
+| v12b_Total_costo_pts_2026 | 3.682 | Idem, puntos del SBC (337 días) |
+| v12b_Total_costo_pts_2030 | 3.307 | Idem, puntos del SBC (337 días) |
+| v12b_Total_costo_pts_2040 | 2.423 | Idem, puntos del SBC (337 días) |
+| v12b_Total_costo_pts_2054 | 1.636 | Idem, puntos del SBC (337 días) |
+| v12b_Total_costo_sem_2026 | 34.48 | Idem, % de los ingresos del SEM |
+| v12b_Total_costo_sem_2030 | 32.27 | Idem, % de los ingresos del SEM |
+| v12b_Total_costo_sem_2040 | 25.35 | Idem, % de los ingresos del SEM |
+| v12b_Total_costo_sem_2054 | 18.37 | Idem, % de los ingresos del SEM |
+| v12b_Total_no_cobrado_mdp_2026 | 13,034 | resultados_v12.csv, base, Total, 2026 |
+| v12b_Total_no_cobrado_mdp_2030 | 14,169 | resultados_v12.csv, base, Total, 2030 |
+| v12b_Total_no_cobrado_mdp_2040 | 16,795 | resultados_v12.csv, base, Total, 2040 |
+| v12b_Total_no_cobrado_mdp_2054 | 19,449 | resultados_v12.csv, base, Total, 2054 |
+| v12b_Total_no_cobrado_pts_2026 | 0.252 | Idem, puntos del SBC (337 días) |
+| v12b_Total_no_cobrado_pts_2030 | 0.238 | Idem, puntos del SBC (337 días) |
+| v12b_Total_no_cobrado_pts_2040 | 0.193 | Idem, puntos del SBC (337 días) |
+| v12b_Total_no_cobrado_pts_2054 | 0.144 | Idem, puntos del SBC (337 días) |
+| v12b_Total_no_cobrado_sem_2026 | 2.36 | Idem, % de los ingresos del SEM |
+| v12b_Total_no_cobrado_sem_2030 | 2.32 | Idem, % de los ingresos del SEM |
+| v12b_Total_no_cobrado_sem_2040 | 2.02 | Idem, % de los ingresos del SEM |
+| v12b_Total_no_cobrado_sem_2054 | 1.61 | Idem, % de los ingresos del SEM |
+| v12b_Total_pagos_GF_mdp_2026 | 70,332 | resultados_v12.csv, base, Total, 2026 |
+| v12b_Total_pagos_GF_mdp_2030 | 73,769 | resultados_v12.csv, base, Total, 2030 |
+| v12b_Total_pagos_GF_mdp_2040 | 80,153 | resultados_v12.csv, base, Total, 2040 |
+| v12b_Total_pagos_GF_mdp_2054 | 82,984 | resultados_v12.csv, base, Total, 2054 |
+| v12b_Total_pagos_GF_pts_2026 | 1.359 | Idem, puntos del SBC (337 días) |
+| v12b_Total_pagos_GF_pts_2030 | 1.237 | Idem, puntos del SBC (337 días) |
+| v12b_Total_pagos_GF_pts_2040 | 0.92 | Idem, puntos del SBC (337 días) |
+| v12b_Total_pagos_GF_pts_2054 | 0.612 | Idem, puntos del SBC (337 días) |
+| v12b_Total_pagos_GF_sem_2026 | 12.72 | Idem, % de los ingresos del SEM |
+| v12b_Total_pagos_GF_sem_2030 | 12.07 | Idem, % de los ingresos del SEM |
+| v12b_Total_pagos_GF_sem_2040 | 9.62 | Idem, % de los ingresos del SEM |
+| v12b_Total_pagos_GF_sem_2054 | 6.88 | Idem, % de los ingresos del SEM |
+| v12b_Total_pagos_determinados_mdp_2026 | 52,137 | resultados_v12.csv, base, Total, 2026 |
+| v12b_Total_pagos_determinados_mdp_2030 | 56,676 | resultados_v12.csv, base, Total, 2030 |
+| v12b_Total_pagos_determinados_mdp_2040 | 67,181 | resultados_v12.csv, base, Total, 2040 |
+| v12b_Total_pagos_determinados_mdp_2054 | 77,796 | resultados_v12.csv, base, Total, 2054 |
+| v12b_Total_pagos_determinados_pts_2026 | 1.007 | Idem, puntos del SBC (337 días) |
+| v12b_Total_pagos_determinados_pts_2030 | 0.95 | Idem, puntos del SBC (337 días) |
+| v12b_Total_pagos_determinados_pts_2040 | 0.771 | Idem, puntos del SBC (337 días) |
+| v12b_Total_pagos_determinados_pts_2054 | 0.574 | Idem, puntos del SBC (337 días) |
+| v12b_Total_pagos_determinados_sem_2026 | 9.43 | Idem, % de los ingresos del SEM |
+| v12b_Total_pagos_determinados_sem_2030 | 9.27 | Idem, % de los ingresos del SEM |
+| v12b_Total_pagos_determinados_sem_2040 | 8.06 | Idem, % de los ingresos del SEM |
+| v12b_Total_pagos_determinados_sem_2054 | 6.45 | Idem, % de los ingresos del SEM |
+| v12b_Total_pagos_privados_mdp_2026 | 39,103 | resultados_v12.csv, base, Total, 2026 |
+| v12b_Total_pagos_privados_mdp_2030 | 42,507 | resultados_v12.csv, base, Total, 2030 |
+| v12b_Total_pagos_privados_mdp_2040 | 50,386 | resultados_v12.csv, base, Total, 2040 |
+| v12b_Total_pagos_privados_mdp_2054 | 58,347 | resultados_v12.csv, base, Total, 2054 |
+| v12b_Total_pagos_privados_pts_2026 | 0.755 | Idem, puntos del SBC (337 días) |
+| v12b_Total_pagos_privados_pts_2030 | 0.713 | Idem, puntos del SBC (337 días) |
+| v12b_Total_pagos_privados_pts_2040 | 0.578 | Idem, puntos del SBC (337 días) |
+| v12b_Total_pagos_privados_pts_2054 | 0.431 | Idem, puntos del SBC (337 días) |
+| v12b_Total_pagos_privados_sem_2026 | 7.07 | Idem, % de los ingresos del SEM |
+| v12b_Total_pagos_privados_sem_2030 | 6.95 | Idem, % de los ingresos del SEM |
+| v12b_Total_pagos_privados_sem_2040 | 6.05 | Idem, % de los ingresos del SEM |
+| v12b_Total_pagos_privados_sem_2054 | 4.84 | Idem, % de los ingresos del SEM |
+| v12b_Total_saldo_mdp_2026 | -81,179 | resultados_v12.csv, base, Total, 2026 |
+| v12b_Total_saldo_mdp_2030 | -80,962 | resultados_v12.csv, base, Total, 2030 |
+| v12b_Total_saldo_mdp_2040 | -80,647 | resultados_v12.csv, base, Total, 2040 |
+| v12b_Total_saldo_mdp_2054 | -80,335 | resultados_v12.csv, base, Total, 2054 |
+| v12b_Total_saldo_pts_2026 | -1.568 | Idem, puntos del SBC (337 días) |
+| v12b_Total_saldo_pts_2030 | -1.357 | Idem, puntos del SBC (337 días) |
+| v12b_Total_saldo_pts_2040 | -0.925 | Idem, puntos del SBC (337 días) |
+| v12b_Total_saldo_pts_2054 | -0.593 | Idem, puntos del SBC (337 días) |
+| v12b_Total_saldo_sem_2026 | -14.68 | Idem, % de los ingresos del SEM |
+| v12b_Total_saldo_sem_2030 | -13.25 | Idem, % de los ingresos del SEM |
+| v12b_Total_saldo_sem_2040 | -9.68 | Idem, % de los ingresos del SEM |
+| v12b_Total_saldo_sem_2054 | -6.66 | Idem, % de los ingresos del SEM |
+| v12b_costo_pct_pib_2026 | 0.492 | Costo 2026 / PIB 2026 |
+| v12b_cubiertos_pct_DH_2026 | 38.9 | Personas cubiertas / 79,178,109 DH (Cuadro I.4) |
+| v12b_cubiertos_pct_DH_2030 | 39.7 | Personas cubiertas / 79,178,109 DH (Cuadro I.4) |
+| v12b_cubiertos_pct_DH_2040 | 40.6 | Personas cubiertas / 79,178,109 DH (Cuadro I.4) |
+| v12b_cubiertos_pct_DH_2054 | 40 | Personas cubiertas / 79,178,109 DH (Cuadro I.4) |
+| v12b_saldo_pct_pib_2026 | -0.21 | Saldo 2026 / PIB 2026 |

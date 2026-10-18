@@ -6,6 +6,115 @@
 
 ---
 
+# v1.2 — Tasa proporcional única y pago creíble (2026-10-17)
+
+**Instrucción:** `20261017_BDH_N13_anexo-afiliacion-subsidiada_build_v1.2` (Beth y Cath). Producto para el anexo: `ANEXO_borrador_v2.md`. Lo que sigue a esta sección es el reporte de la v1.1, que se conserva: la prueba de regresión 6.1 la reproduce exactamente.
+
+## v1.2.1 Escenario base
+
+D2 · G2 · S1 con umbrales indexados · U1 · τ = 0.50 · ρ = 0.75 · μ = 1.10 · C1 · F0 · π_m = 0 · perfil 3.0 · 337 días.
+
+Montos en mdp de 2026.
+
+| | 2026 | 2030 | 2040 | 2054 |
+|---|---|---|---|---|
+| Personas cubiertas | 30.8 M | 31.4 M | 32.2 M | 31.7 M |
+| Pagos determinados | 52,137 | 56,676 | 67,181 | 77,796 |
+| Pagos cobrados | 39,103 | 42,507 | 50,386 | 58,347 |
+| Pagos federales (F_g + subsidio) | 70,332 | 73,769 | 80,153 | 82,984 |
+| Costo de atención | 190,614 | 197,237 | 211,185 | 221,667 |
+| **Saldo sin fuente asignada** | **−81,179** | **−80,962** | **−80,647** | **−80,335** |
+| Saldo en puntos del SBC | −1.57 | −1.36 | −0.93 | −0.59 |
+| Saldo en % de los ingresos del SEM | −14.7 | −13.2 | −9.7 | −6.7 |
+
+- **Tasa neutral:** c = **0.03467** (3.467 %; Beth esperaba alrededor de 3.5 %).
+- **Prima de la mediana (D2-G2):** **3,647 pesos al año**, 3.5 % del ingreso laboral del titular y 1.7 % del ingreso del hogar. Con D1-G1 (v1.1) era de 15,087 pesos, 14.3 % del ingreso laboral.
+- **Bloque B en la base:** 0 en todos los años (S1).
+- **Población excluida:** 8,195,479 personas (19.5 % de 65 años o más). En 2054 serían 10.1 M, con 3.8 M de 65 años o más.
+- **Cobertura frente a la derechohabiencia actual:** la población cubierta equivale a 39.7 % de los derechohabientes de 2030.
+
+## v1.2.2 Efecto de indexación (fuera del saldo del esquema de informales)
+
+| | 2030 | 2040 | 2054 |
+|---|---|---|---|
+| Recaudación D2 − cuota fija vigente, formales (mdp) | 11,611 | 35,589 | 98,909 |
+| Puntos del SBC | 0.19 | 0.41 | 0.73 |
+| % de los ingresos del SEM | 1.9 | 4.3 | 8.2 |
+
+## v1.2.3 Bloque C contra el status quo: el número que regresa al Núcleo 13
+
+Escenario: +3 M de cotizantes al 2030, sin Bloque A, solo cobertura en especie.
+
+| | 2030 | 2054 |
+|---|---|---|
+| Efecto neto para el SEM con D2 | −11,512 mdp (−0.19 pts) | −9,098 mdp (−0.07 pts) |
+| Efecto neto para el SEM con la cuota vigente | −5,755 mdp (−0.10 pts) | −5,947 mdp (−0.04 pts) |
+| Costo federal (F_g) | 17,591 mdp | 19,426 mdp |
+| Derechohabientes por cotizante | 2.93 | 2.68 |
+
+**Lectura para Cath:** con solo la cobertura en especie, formalizar a estos hogares **no** alivia el SEM. Los nuevos cotizantes ganan cerca del salario mínimo y cada uno trae casi 3 derechohabientes.
+
+## v1.2.4 Las sensibilidades que más mueven el saldo de 2054
+
+Base: −0.59 puntos del SBC.
+
+| # | Sensibilidad | Saldo 2054 (pts SBC) |
+|---|---|---|
+| 1 | Costo per cápita +2 % real anual | −1.80 |
+| 2 | Costo per cápita +1 % real anual | −1.12 |
+| 3 | U2 con h_b de la ENIGH (0.80) | −0.09 |
+| 4 | Adopción 0.90 (solo con descuento automático) | −1.07 |
+
+En 2030 el orden cambia y la adopción domina: con 0.90, el saldo es −2.44 puntos.
+
+## v1.2.5 Verificaciones 6.1 a 6.6, además de las de la sección 7 de la v1.1
+
+| # | Verificación | Resultado | ¿Pasa? |
+|---|---|---|---|
+| 6.1 | Regresión: D1·G1·τ 0.90·ρ 1·μ 1·umbrales fijos·365 días reproduce la v1.1 | Desviación máxima 0 (saldo 2030 = −16,875; pagos federales 2054 = 87,703) | sí |
+| 6.2 | Neutralidad de c en 2026 (±0.1 %) | 0.0000 % | sí |
+| 6.3.1 | Igualdad ±1 peso en G2, malla 0-25 UMA × S × G, años 2026 y 2054 | 0 casos fuera | sí |
+| 6.3.2 | π_I ≥ π_F | 0 violaciones | sí |
+| 6.3.3 | Subsidio B ≤ s·c·w·d | 0 violaciones | sí |
+| 6.4 | Determinados = cobrados + no cobrados; ingreso − costo = saldo; A + B + C = total; indexación fuera del saldo | Desviación 0 en todas | sí |
+| 6.5 | τ ↑ ⇒ más cobertura; ρ ↓ ⇒ peor saldo; μ ↑ ⇒ más costo | 0 años fallan en cada una | sí |
+| 6.6 | Prima de la mediana D2-G2 ≈ 3,700 (±25 %) | 3,647 (−1.4 %) | sí |
+| 7.7 / 7.8 | Monotonicidad π_m y S; sin año 2055 | 0 / 0 | sí |
+
+## v1.2.6 Correcciones de datos
+
+- **4.1 Beneficiarios por titular del Informe:** 40,980,786 / 38,197,323 = 1.0729. U2 se rehizo con ese valor (se quitó el de 1.83).
+  - Los 3.54 derechohabientes por cotizante incluyen a pensionados y sus familias. La calibración del Núcleo 13 («unos 3 derechohabientes por cotizante») puede estar inflada por ese motivo.
+  - **[REVISAR]** Los 38.2 M de titulares incluyen 8.4 M del Seguro Facultativo, casi todos estudiantes sin beneficiarios. El 1.07 probablemente **subestima** los beneficiarios por trabajador; el valor verdadero estaría entre 1.07 y 1.83.
+- **4.2 Diferencia de derechohabientes con el Núcleo 13 (54.6 frente a 70.7 M): NO RESUELTO.**
+  - Los cuadernos `Ingresos_borrador.ipynb` y `reporte_final_borrador.ipynb` no están en Dalila. Busqué en todo el directorio personal; el Anexo B del Núcleo 13 dice que se entregaron en archivo aparte.
+  - Sigue siendo bloqueante para integrar el anexo. Se necesita que Juan Pablo los comparta.
+- **4.3 Salario mínimo 2024:** 248.93 pesos diarios (resto del país; 374.89 en la Zona Libre de la Frontera Norte), según la Resolución del H. Consejo de Representantes de la CONASAMI, DOF 12/12/2023 (verificado en dof.gob.mx). Equivale a 2.2928 UMA de 2024; la mediana del titular informal es 2.2979, es decir, 1.002 veces el salario mínimo.
+- **1.5 Días:** con masa de 337 días, el saldo base de la v1.1 pasa de −0.26 a −0.28 puntos del SBC en 2030, y de −0.12 a −0.13 en 2054.
+- **3.4 Gasto no contributivo, PEF 2026 (CIEP, Cuadro 1):** 338,028.3 mdp de 2027, que equivalen a 325,590.7 mdp de 2026 (÷ 1.0382). Solo es contexto: se cita para decir que los pagos federales son brutos.
+
+## v1.2.7 Decisiones propias (para revisión de Héctor)
+
+1. **[REVISAR] c con la distribución R1:** usa el SBC de la distribución R1 de 2026, con piso en el salario mínimo, multiplicado por los cotizantes del libro, no el promedio del libro sin piso. La indexación (1.4) usa la misma masa, así que incluye el efecto de que el salario mínimo suba más rápido que la UMA.
+2. **[REVISAR] Comparación «mismo ingreso anual»:** el subsidio se evalúa con el ingreso anualizado m̃ = w·d/365 para los formales. El excedente usa el umbral anual de 3 UMA × 337 días para formales e informales. Sin esto, la igualdad de 6.3.1 falla por diferencias de días.
+3. **[REVISAR] U2 en D2:** cada miembro paga c sobre el ingreso corriente per cápita del hogar. F_g se reparte entre (1 + h_b).
+4. **[REVISAR] El cobro ρ se aplica a toda la prima determinada, incluido el excedente.** Los formales del Bloque C pagan completo.
+5. **[REVISAR] Asequibilidad:**
+   - El ingreso del hogar es la mediana de los titulares en ±2.5 percentiles alrededor de cada percentil.
+   - El gasto de bolsillo es `concentradohogar.salud` (cuidados de la salud) × 4, solo con conversión de precios (UMA 2026 / UMA 2024). El ingreso lleva además el crecimiento real a 2026.
+6. **[REVISAR] Umbrales indexados con el crecimiento real del SBC.** Después de 2030 crecen más rápido que el salario mínimo (+0.5 %). Por eso, en S3, el costo del Bloque B vuelve a crecer: 10,162 mdp en 2026, 1,104 en 2030 y 15,243 en 2054.
+7. **[REVISAR] Bloque C contra el status quo:**
+   - Solo cobertura en especie, sin prestaciones en dinero, GMP ni otros seguros.
+   - SBC = max(ingreso, salario mínimo), con cobertura completa del hogar (μ = 1).
+   - Mismos hogares y misma trayectoria que el F1 de la v1.1.
+8. **Frontmatter:** `build_type: revision` no existe en PROTO-RAG-001. Se archivó como `retrofit`, el valor más cercano.
+9. **PEF:** las cifras del cuadro del CIEP se rotulan como PEF 2026 en mdp de 2027, según confirmó Héctor.
+10. La configuración v1.1 se conserva íntegra en `config.yaml` (`base`, `malla`). La v1.2 está en `base_v12` y `malla_v12`.
+
+---
+
+# v1.1 — Reporte original
+
 ## 1. Resumen
 
 ### Escenario base (S1 · G1 · U1 · T2 · C1 · F0 · π_m = 0 · perfil 65+/20-64 = 3.0)

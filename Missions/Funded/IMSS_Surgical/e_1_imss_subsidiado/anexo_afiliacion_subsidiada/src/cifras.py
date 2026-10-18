@@ -41,6 +41,11 @@ SEMILLA = [
     ("Cotizantes_2054", "46.8 millones", "Libro, hoja `Pob Emp & Nuevos`", "—", "confirmada (46,801,970)"),
     ("SM_real", "+8.97 % (2026); +7.97, 7.99, 7.92, 7.92 % (2027-2030); +0.5 % después", "Libro, hoja `Sup_Fin`", "—", "confirmada"),
     ("Inflacion_2026", "3.70 %", "Libro, hoja `Sup_Fin`", "—", "confirmada"),
+    ("SM_2024", "248.93 pesos/día (resto del país); 374.89 en la Zona Libre de la Frontera Norte", "Resolución del H. Consejo de Representantes de la CONASAMI, DOF 12/12/2023 (dof.gob.mx, nota 5711066)", "—", "nueva (v1.2); verificada en el DOF"),
+    ("h_b_Informe", "1.0729 = 40,980,786 familiares / 38,197,323 titulares", "Informe, Cuadro I.4 (los titulares incluyen pensionados y Seguro Facultativo)", "pág. PDF 33", "nueva (v1.2)"),
+    ("Ocupacion_hospitalaria_2025", "75.7 % segundo nivel; 83.7 % tercer nivel", "Informe, texto de capacidad hospitalaria", "pág. PDF 115", "nueva (v1.2)"),
+    ("PEF2026_salud_no_contributivo", "SSa 68,964.2; IMSS-Bienestar 177,591.9; FASSA 87,344.2; Bienestar 4,128.0; total 338,028.3 mdp de 2027", "CIEP, «PPEF 2027: Gasto en salud por subsistema», Cuadro 1 (cifras del PEF 2026; proporcionado por Héctor el 08-10-2026)", "—", "nueva (v1.2); solo contexto"),
+    ("Inflacion_2027", "3.82 %", "Libro, hoja `Sup_Fin`", "—", "nueva (v1.2)"),
     ("N13_DH_2025", "70.69 millones", "Informe del Núcleo 13, Anexo I, Tabla I.1", "—", "referencia de contraste"),
 ]
 

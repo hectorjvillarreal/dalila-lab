@@ -1,0 +1,16 @@
+{
+ "6.1 regresión v1.1 (máx. desviación, mdp o personas)": 0.0,
+ "6.2 neutralidad de c en 2026 (diferencia %)": -1.5916448427647453e-14,
+ "6.3.1 igualdad ±1 peso en G2 (casos fuera)": 0,
+ "6.3.2 π_I ≥ π_F (violaciones)": 0,
+ "6.3.3 subsidio B ≤ s·c·w·d (violaciones)": 0,
+ "6.4 determinados = cobrados + no cobrados (máx. desviación)": 1.4551915228366852e-11,
+ "6.4 ingreso − costo = saldo (máx. desviación)": 0.0,
+ "6.4 A + B + C = total (máx. desviación)": 0.0,
+ "6.5 τ mayor ⇒ más cobertura (años que fallan)": 0,
+ "6.5 ρ menor ⇒ peor saldo (años que fallan)": 0,
+ "6.5 μ mayor ⇒ más costo (años que fallan)": 0,
+ "7.7 π_m mayor ⇒ costo mayor (años que fallan)": 0,
+ "7.7 S3 > S1 > S2 en costo fiscal (años que fallan)": 0,
+ "7.8 años 2055 en las salidas": 0
+}

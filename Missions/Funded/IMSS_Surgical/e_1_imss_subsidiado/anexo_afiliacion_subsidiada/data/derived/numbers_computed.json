@@ -443,6 +443,66 @@
   "valor": 6242.57,
   "fuente": "Especie SEM 2026 (Cuadro V.13) / DH total (Cuadro I.4), pesos de 2026"
  },
+ "v12_c": {
+  "valor": 0.03467,
+  "fuente": "D2: 0.2040 × Σ formales / Σ (formales × SBC en UMA), 2026, distribución R1 × cotizantes del libro"
+ },
+ "chk12_00_6.1": {
+  "valor": 0.0,
+  "fuente": "6.1 regresión v1.1 (máx. desviación, mdp o personas)"
+ },
+ "chk12_01_6.2": {
+  "valor": -1.5916448427647453e-14,
+  "fuente": "6.2 neutralidad de c en 2026 (diferencia %)"
+ },
+ "chk12_02_6.3.1": {
+  "valor": 0,
+  "fuente": "6.3.1 igualdad ±1 peso en G2 (casos fuera)"
+ },
+ "chk12_03_6.3.2": {
+  "valor": 0,
+  "fuente": "6.3.2 π_I ≥ π_F (violaciones)"
+ },
+ "chk12_04_6.3.3": {
+  "valor": 0,
+  "fuente": "6.3.3 subsidio B ≤ s·c·w·d (violaciones)"
+ },
+ "chk12_05_6.4": {
+  "valor": 1.4551915228366852e-11,
+  "fuente": "6.4 determinados = cobrados + no cobrados (máx. desviación)"
+ },
+ "chk12_06_6.4": {
+  "valor": 0.0,
+  "fuente": "6.4 ingreso − costo = saldo (máx. desviación)"
+ },
+ "chk12_07_6.4": {
+  "valor": 0.0,
+  "fuente": "6.4 A + B + C = total (máx. desviación)"
+ },
+ "chk12_08_6.5": {
+  "valor": 0,
+  "fuente": "6.5 τ mayor ⇒ más cobertura (años que fallan)"
+ },
+ "chk12_09_6.5": {
+  "valor": 0,
+  "fuente": "6.5 ρ menor ⇒ peor saldo (años que fallan)"
+ },
+ "chk12_10_6.5": {
+  "valor": 0,
+  "fuente": "6.5 μ mayor ⇒ más costo (años que fallan)"
+ },
+ "chk12_11_7.7": {
+  "valor": 0,
+  "fuente": "7.7 π_m mayor ⇒ costo mayor (años que fallan)"
+ },
+ "chk12_12_7.7": {
+  "valor": 0,
+  "fuente": "7.7 S3 > S1 > S2 en costo fiscal (años que fallan)"
+ },
+ "chk12_13_7.8": {
+  "valor": 0,
+  "fuente": "7.8 años 2055 en las salidas"
+ },
  "GF_SEM-A_2025_reconstruida": {
   "valor": 144610.2,
   "fuente": "14.83 % UMA × 365 × 22,352,586 + 0.05 % × SBC 627.21 × 365 × 22,352,586, × 1.037"
@@ -1410,5 +1470,2625 @@
  "F1_DH_por_cotizante_2030": {
   "valor": 2.929,
   "fuente": "Idem"
+ },
+ "PEF2026_SSa_mdp2027": {
+  "valor": 68964.2,
+  "fuente": "CIEP, «PPEF 2027: Gasto en salud por subsistema», Cuadro 1 (PEF 2026 en mdp de 2027; proporcionado por Héctor 08-10-2026)"
+ },
+ "PEF2026_IMSS-Bienestar_mdp2027": {
+  "valor": 177591.9,
+  "fuente": "CIEP, «PPEF 2027: Gasto en salud por subsistema», Cuadro 1 (PEF 2026 en mdp de 2027; proporcionado por Héctor 08-10-2026)"
+ },
+ "PEF2026_FASSA_mdp2027": {
+  "valor": 87344.2,
+  "fuente": "CIEP, «PPEF 2027: Gasto en salud por subsistema», Cuadro 1 (PEF 2026 en mdp de 2027; proporcionado por Héctor 08-10-2026)"
+ },
+ "PEF2026_Bienestar_mdp2027": {
+  "valor": 4128.0,
+  "fuente": "CIEP, «PPEF 2027: Gasto en salud por subsistema», Cuadro 1 (PEF 2026 en mdp de 2027; proporcionado por Héctor 08-10-2026)"
+ },
+ "PEF2026_no_contrib_total_mdp2027": {
+  "valor": 338028.3,
+  "fuente": "Suma SSa + IMSS-Bienestar + FASSA + Bienestar"
+ },
+ "PEF2026_no_contrib_total_mdp2026": {
+  "valor": 325590.7,
+  "fuente": "Idem / (1 + 3.82 %, inflación 2027 de Sup_Fin)"
+ },
+ "SM_2024": {
+  "valor": 248.93,
+  "fuente": "Resolución del H. Consejo de Representantes de la CONASAMI, DOF 12/12/2023 (resto del país; ZLFN 374.89)"
+ },
+ "SM_2024_en_UMA2024": {
+  "valor": 2.2928,
+  "fuente": "248.93 / 108.57"
+ },
+ "m_tit_p50_vs_SM2024": {
+  "valor": 1.0022,
+  "fuente": "Mediana del titular informal / SM 2024, ambos en UMA de 2024"
+ },
+ "hb_informe_titulares": {
+  "valor": 1.0729,
+  "fuente": "Informe Cuadro I.4: 40,980,786 familiares / 38,197,323 titulares"
+ },
+ "ocupacion_hosp_2o_nivel_2025": {
+  "valor": 75.7,
+  "fuente": "Informe, sección de capacidad (pág. PDF 115)"
+ },
+ "ocupacion_hosp_3er_nivel_2025": {
+  "valor": 83.7,
+  "fuente": "Informe, pág. PDF 115"
+ },
+ "v11_saldo_pts_337_2030": {
+  "valor": -0.283,
+  "fuente": "Saldo base v1.1 en puntos del SBC con masa de 337 días (= 365-días × 365/337)"
+ },
+ "v11_saldo_pts_337_2054": {
+  "valor": -0.127,
+  "fuente": "Saldo base v1.1 en puntos del SBC con masa de 337 días (= 365-días × 365/337)"
+ },
+ "chk12_6.6_prima_mediana_dif_pct": {
+  "valor": -1.44,
+  "fuente": "6.6 prima de la mediana D2-G2 frente a ~3,700 pesos (tolerancia ±25 %)"
+ },
+ "aseq_p10_m": {
+  "valor": 0.559,
+  "fuente": "Percentil del ingreso laboral del titular informal, UMA de 2026"
+ },
+ "aseq_p10_prima_D2_G2": {
+  "valor": 0,
+  "fuente": "Prima anual determinada, D2_G2, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p10_pctlab_D2_G2": {
+  "valor": 0.0,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p10_pcthog_D2_G2": {
+  "valor": 0.0,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p10_prima_D2_G1": {
+  "valor": 0,
+  "fuente": "Prima anual determinada, D2_G1, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p10_pctlab_D2_G1": {
+  "valor": 0.0,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p10_pcthog_D2_G1": {
+  "valor": 0.0,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p10_prima_D1_G1": {
+  "valor": 0,
+  "fuente": "Prima anual determinada, D1_G1, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p10_pctlab_D1_G1": {
+  "valor": 0.0,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p10_pcthog_D1_G1": {
+  "valor": 0.0,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p20_m": {
+  "valor": 1.195,
+  "fuente": "Percentil del ingreso laboral del titular informal, UMA de 2026"
+ },
+ "aseq_p20_prima_D2_G2": {
+  "valor": 0,
+  "fuente": "Prima anual determinada, D2_G2, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p20_pctlab_D2_G2": {
+  "valor": 0.0,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p20_pcthog_D2_G2": {
+  "valor": 0.0,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p20_prima_D2_G1": {
+  "valor": 0,
+  "fuente": "Prima anual determinada, D2_G1, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p20_pctlab_D2_G1": {
+  "valor": 0.0,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p20_pcthog_D2_G1": {
+  "valor": 0.0,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p20_prima_D1_G1": {
+  "valor": 1,
+  "fuente": "Prima anual determinada, D1_G1, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p20_pctlab_D1_G1": {
+  "valor": 0.0,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p20_pcthog_D1_G1": {
+  "valor": 0.0,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p30_m": {
+  "valor": 1.656,
+  "fuente": "Percentil del ingreso laboral del titular informal, UMA de 2026"
+ },
+ "aseq_p30_prima_D2_G2": {
+  "valor": 898,
+  "fuente": "Prima anual determinada, D2_G2, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p30_pctlab_D2_G2": {
+  "valor": 1.27,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p30_pcthog_D2_G2": {
+  "valor": 0.5,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p30_prima_D2_G1": {
+  "valor": 3216,
+  "fuente": "Prima anual determinada, D2_G1, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p30_pctlab_D2_G1": {
+  "valor": 4.54,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p30_pcthog_D2_G1": {
+  "valor": 1.8,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p30_prima_D1_G1": {
+  "valor": 5509,
+  "fuente": "Prima anual determinada, D1_G1, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p30_pctlab_D1_G1": {
+  "valor": 7.77,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p30_pcthog_D1_G1": {
+  "valor": 3.08,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p50_m": {
+  "valor": 2.456,
+  "fuente": "Percentil del ingreso laboral del titular informal, UMA de 2026"
+ },
+ "aseq_p50_prima_D2_G2": {
+  "valor": 3647,
+  "fuente": "Prima anual determinada, D2_G2, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p50_pctlab_D2_G2": {
+  "valor": 3.47,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p50_pcthog_D2_G2": {
+  "valor": 1.67,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p50_prima_D2_G1": {
+  "valor": 9998,
+  "fuente": "Prima anual determinada, D2_G1, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p50_pctlab_D2_G1": {
+  "valor": 9.5,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p50_pcthog_D2_G1": {
+  "valor": 4.57,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p50_prima_D1_G1": {
+  "valor": 15087,
+  "fuente": "Prima anual determinada, D1_G1, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p50_pctlab_D1_G1": {
+  "valor": 14.34,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p50_pcthog_D1_G1": {
+  "valor": 6.9,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p70_m": {
+  "valor": 3.293,
+  "fuente": "Percentil del ingreso laboral del titular informal, UMA de 2026"
+ },
+ "aseq_p70_prima_D2_G2": {
+  "valor": 5225,
+  "fuente": "Prima anual determinada, D2_G2, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p70_pctlab_D2_G2": {
+  "valor": 3.71,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p70_pcthog_D2_G2": {
+  "valor": 2.0,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p70_prima_D2_G1": {
+  "valor": 11576,
+  "fuente": "Prima anual determinada, D2_G1, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p70_pctlab_D2_G1": {
+  "valor": 8.21,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p70_pcthog_D2_G1": {
+  "valor": 4.42,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p70_prima_D1_G1": {
+  "valor": 15275,
+  "fuente": "Prima anual determinada, D1_G1, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p70_pctlab_D1_G1": {
+  "valor": 10.83,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p70_pcthog_D1_G1": {
+  "valor": 5.84,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p90_m": {
+  "valor": 5.7,
+  "fuente": "Percentil del ingreso laboral del titular informal, UMA de 2026"
+ },
+ "aseq_p90_prima_D2_G2": {
+  "valor": 10344,
+  "fuente": "Prima anual determinada, D2_G2, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p90_pctlab_D2_G2": {
+  "valor": 4.24,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p90_pcthog_D2_G2": {
+  "valor": 2.72,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p90_prima_D2_G1": {
+  "valor": 16695,
+  "fuente": "Prima anual determinada, D2_G1, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p90_pctlab_D2_G1": {
+  "valor": 6.84,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p90_pcthog_D2_G1": {
+  "valor": 4.39,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_p90_prima_D1_G1": {
+  "valor": 16821,
+  "fuente": "Prima anual determinada, D1_G1, S1, 2026 (pesos de 2026)"
+ },
+ "aseq_p90_pctlab_D1_G1": {
+  "valor": 6.89,
+  "fuente": "Prima / ingreso laboral anual del titular (%)"
+ },
+ "aseq_p90_pcthog_D1_G1": {
+  "valor": 4.42,
+  "fuente": "Prima / ingreso corriente anual del hogar, mediana de titulares en ±2.5 percentiles (%)"
+ },
+ "aseq_decil1_oop": {
+  "valor": 2574,
+  "fuente": "ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo"
+ },
+ "aseq_decil1_prima": {
+  "valor": 353,
+  "fuente": "Prima D2-G2 media de los hogares objetivo del decil, 2026"
+ },
+ "aseq_decil2_oop": {
+  "valor": 3161,
+  "fuente": "ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo"
+ },
+ "aseq_decil2_prima": {
+  "valor": 1817,
+  "fuente": "Prima D2-G2 media de los hogares objetivo del decil, 2026"
+ },
+ "aseq_decil3_oop": {
+  "valor": 3925,
+  "fuente": "ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo"
+ },
+ "aseq_decil3_prima": {
+  "valor": 2824,
+  "fuente": "Prima D2-G2 media de los hogares objetivo del decil, 2026"
+ },
+ "aseq_decil4_oop": {
+  "valor": 4690,
+  "fuente": "ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo"
+ },
+ "aseq_decil4_prima": {
+  "valor": 3555,
+  "fuente": "Prima D2-G2 media de los hogares objetivo del decil, 2026"
+ },
+ "aseq_decil5_oop": {
+  "valor": 5773,
+  "fuente": "ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo"
+ },
+ "aseq_decil5_prima": {
+  "valor": 4097,
+  "fuente": "Prima D2-G2 media de los hogares objetivo del decil, 2026"
+ },
+ "aseq_decil6_oop": {
+  "valor": 5685,
+  "fuente": "ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo"
+ },
+ "aseq_decil6_prima": {
+  "valor": 4714,
+  "fuente": "Prima D2-G2 media de los hogares objetivo del decil, 2026"
+ },
+ "aseq_decil7_oop": {
+  "valor": 6145,
+  "fuente": "ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo"
+ },
+ "aseq_decil7_prima": {
+  "valor": 5472,
+  "fuente": "Prima D2-G2 media de los hogares objetivo del decil, 2026"
+ },
+ "aseq_decil8_oop": {
+  "valor": 7842,
+  "fuente": "ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo"
+ },
+ "aseq_decil8_prima": {
+  "valor": 6485,
+  "fuente": "Prima D2-G2 media de los hogares objetivo del decil, 2026"
+ },
+ "aseq_decil9_oop": {
+  "valor": 10679,
+  "fuente": "ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo"
+ },
+ "aseq_decil9_prima": {
+  "valor": 8637,
+  "fuente": "Prima D2-G2 media de los hogares objetivo del decil, 2026"
+ },
+ "aseq_decil10_oop": {
+  "valor": 19829,
+  "fuente": "ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo"
+ },
+ "aseq_decil10_prima": {
+  "valor": 21982,
+  "fuente": "Prima D2-G2 media de los hogares objetivo del decil, 2026"
+ },
+ "SM2026_cuota_patronal_vigente": {
+  "valor": 8066,
+  "fuente": "0.2040 × UMA × 337, formal de salario mínimo 2026"
+ },
+ "SM2026_cuota_patronal_vigente_pct": {
+  "valor": 7.6,
+  "fuente": "Como % del salario"
+ },
+ "SM2026_cuota_D2": {
+  "valor": 3681,
+  "fuente": "c × SM × 337"
+ },
+ "SM2026_cuota_D2_pct": {
+  "valor": 3.47,
+  "fuente": "c, como % del salario"
+ },
+ "excl_total_2024": {
+  "valor": 8195479,
+  "fuente": "ENIGH 2024; sin cobertura contributiva y fuera de hogares con ocupado sin cobertura"
+ },
+ "excl_65mas_2024": {
+  "valor": 1596095,
+  "fuente": "Idem, 65 años o más"
+ },
+ "excl_65mas_pct": {
+  "valor": 19.5,
+  "fuente": "Idem, % del total"
+ },
+ "excl_2030": {
+  "valor": 8663208,
+  "fuente": "Reponderado con CONAPO"
+ },
+ "excl_65mas_2030": {
+  "valor": 1721878,
+  "fuente": "Idem, 65 años o más"
+ },
+ "excl_2054": {
+  "valor": 10120262,
+  "fuente": "Reponderado con CONAPO"
+ },
+ "excl_65mas_2054": {
+  "valor": 3829072,
+  "fuente": "Idem, 65 años o más"
+ },
+ "v12_base_saldo_2030": {
+  "valor": -80962,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_base_saldo_pts_sbc_2030": {
+  "valor": -1.357,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_base_pagos_GF_2030": {
+  "valor": 73769,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_base_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_base_saldo_2054": {
+  "valor": -80335,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_base_saldo_pts_sbc_2054": {
+  "valor": -0.593,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_base_pagos_GF_2054": {
+  "valor": 82984,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_base_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_regresion_v11_saldo_2030": {
+  "valor": -16875,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_regresion_v11_saldo_pts_sbc_2030": {
+  "valor": -0.261,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_regresion_v11_pagos_GF_2030": {
+  "valor": 94471,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_regresion_v11_personas_cubiertas_2030": {
+  "valor": 56513089,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_regresion_v11_saldo_2054": {
+  "valor": -17167,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_regresion_v11_saldo_pts_sbc_2054": {
+  "valor": -0.117,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_regresion_v11_pagos_GF_2054": {
+  "valor": 87703,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_regresion_v11_personas_cubiertas_2054": {
+  "valor": 57028432,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_S2_saldo_2030": {
+  "valor": -81941,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_S2_saldo_pts_sbc_2030": {
+  "valor": -1.374,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_S2_pagos_GF_2030": {
+  "valor": 69852,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_S2_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_S2_saldo_2054": {
+  "valor": -81651,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_S2_saldo_pts_sbc_2054": {
+  "valor": -0.603,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_S2_pagos_GF_2054": {
+  "valor": 77720,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_S2_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_S3_saldo_2030": {
+  "valor": -78950,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_S3_saldo_pts_sbc_2030": {
+  "valor": -1.324,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_S3_pagos_GF_2030": {
+  "valor": 82922,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_S3_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_S3_saldo_2054": {
+  "valor": -77716,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_S3_saldo_pts_sbc_2054": {
+  "valor": -0.573,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_S3_pagos_GF_2054": {
+  "valor": 108705,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_S3_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_G1_saldo_2030": {
+  "valor": -92204,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_G1_saldo_pts_sbc_2030": {
+  "valor": -1.546,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_G1_pagos_GF_2030": {
+  "valor": 28802,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_G1_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_G1_saldo_2054": {
+  "valor": -92336,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_G1_saldo_pts_sbc_2054": {
+  "valor": -0.681,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_G1_pagos_GF_2054": {
+  "valor": 34983,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_G1_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_D1_saldo_2030": {
+  "valor": -44342,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_D1_saldo_pts_sbc_2030": {
+  "valor": -0.743,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_D1_pagos_GF_2030": {
+  "valor": 99860,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_D1_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_D1_saldo_2054": {
+  "valor": -48850,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_D1_saldo_pts_sbc_2054": {
+  "valor": -0.36,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_D1_pagos_GF_2054": {
+  "valor": 112559,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_D1_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau30_saldo_2030": {
+  "valor": -48577,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau30_saldo_pts_sbc_2030": {
+  "valor": -0.814,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau30_pagos_GF_2030": {
+  "valor": 44261,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau30_personas_cubiertas_2030": {
+  "valor": 18837696,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau30_saldo_2054": {
+  "valor": -48201,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau30_saldo_pts_sbc_2054": {
+  "valor": -0.356,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau30_pagos_GF_2054": {
+  "valor": 49791,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau30_personas_cubiertas_2054": {
+  "valor": 19009477,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau70_saldo_2030": {
+  "valor": -113346,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau70_saldo_pts_sbc_2030": {
+  "valor": -1.9,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau70_pagos_GF_2030": {
+  "valor": 103276,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau70_personas_cubiertas_2030": {
+  "valor": 43954625,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau70_saldo_2054": {
+  "valor": -112469,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau70_saldo_pts_sbc_2054": {
+  "valor": -0.83,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau70_pagos_GF_2054": {
+  "valor": 116178,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau70_personas_cubiertas_2054": {
+  "valor": 44355447,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau90_saldo_2030": {
+  "valor": -145731,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau90_saldo_pts_sbc_2030": {
+  "valor": -2.443,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau90_pagos_GF_2030": {
+  "valor": 132784,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau90_personas_cubiertas_2030": {
+  "valor": 56513089,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau90_saldo_2054": {
+  "valor": -144604,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau90_saldo_pts_sbc_2054": {
+  "valor": -1.067,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau90_pagos_GF_2054": {
+  "valor": 149372,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_tau90_personas_cubiertas_2054": {
+  "valor": 57028432,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_T1_saldo_2030": {
+  "valor": -49135,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_T1_saldo_pts_sbc_2030": {
+  "valor": -0.824,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_T1_pagos_GF_2030": {
+  "valor": 36548,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_T1_personas_cubiertas_2030": {
+  "valor": 14340450,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_T1_saldo_2054": {
+  "valor": -56647,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_T1_saldo_pts_sbc_2054": {
+  "valor": -0.418,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_T1_pagos_GF_2054": {
+  "valor": 42933,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_T1_personas_cubiertas_2054": {
+  "valor": 14959794,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_rho50_saldo_2030": {
+  "valor": -95131,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_rho50_saldo_pts_sbc_2030": {
+  "valor": -1.595,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_rho50_pagos_GF_2030": {
+  "valor": 73769,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_rho50_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_rho50_saldo_2054": {
+  "valor": -99784,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_rho50_saldo_pts_sbc_2054": {
+  "valor": -0.736,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_rho50_pagos_GF_2054": {
+  "valor": 82984,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_rho50_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_rho100_saldo_2030": {
+  "valor": -66793,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_rho100_saldo_pts_sbc_2030": {
+  "valor": -1.12,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_rho100_pagos_GF_2030": {
+  "valor": 73769,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_rho100_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_rho100_saldo_2054": {
+  "valor": -60886,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_rho100_saldo_pts_sbc_2054": {
+  "valor": -0.449,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_rho100_pagos_GF_2054": {
+  "valor": 82984,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_rho100_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_mu100_saldo_2030": {
+  "valor": -63031,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_mu100_saldo_pts_sbc_2030": {
+  "valor": -1.057,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_mu100_pagos_GF_2030": {
+  "valor": 73769,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_mu100_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_mu100_saldo_2054": {
+  "valor": -60184,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_mu100_saldo_pts_sbc_2054": {
+  "valor": -0.444,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_mu100_pagos_GF_2054": {
+  "valor": 82984,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_mu100_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_mu130_saldo_2030": {
+  "valor": -116823,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_mu130_saldo_pts_sbc_2030": {
+  "valor": -1.959,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_mu130_pagos_GF_2030": {
+  "valor": 73769,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_mu130_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_mu130_saldo_2054": {
+  "valor": -120638,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_mu130_saldo_pts_sbc_2054": {
+  "valor": -0.89,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_mu130_pagos_GF_2054": {
+  "valor": 82984,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_mu130_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_U2_enigh_saldo_2030": {
+  "valor": -11223,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_U2_enigh_saldo_pts_sbc_2030": {
+  "valor": -0.188,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_U2_enigh_pagos_GF_2030": {
+  "valor": 122748,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_U2_enigh_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_U2_enigh_saldo_2054": {
+  "valor": -11887,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_U2_enigh_saldo_pts_sbc_2054": {
+  "valor": -0.088,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_U2_enigh_pagos_GF_2054": {
+  "valor": 126002,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_U2_enigh_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_U2_informe_saldo_2030": {
+  "valor": -25843,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_U2_informe_saldo_pts_sbc_2030": {
+  "valor": -0.433,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_U2_informe_pagos_GF_2030": {
+  "valor": 108127,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_U2_informe_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_U2_informe_saldo_2054": {
+  "valor": -26641,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_U2_informe_saldo_pts_sbc_2054": {
+  "valor": -0.197,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_U2_informe_pagos_GF_2054": {
+  "valor": 111248,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_U2_informe_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_pim1_saldo_2030": {
+  "valor": -88970,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_pim1_saldo_pts_sbc_2030": {
+  "valor": -1.492,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_pim1_pagos_GF_2030": {
+  "valor": 73769,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_pim1_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_pim1_saldo_2054": {
+  "valor": -151555,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_pim1_saldo_pts_sbc_2054": {
+  "valor": -1.118,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_pim1_pagos_GF_2054": {
+  "valor": 82984,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_pim1_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_pim2_saldo_2030": {
+  "valor": -97220,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_pim2_saldo_pts_sbc_2030": {
+  "valor": -1.63,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_pim2_pagos_GF_2030": {
+  "valor": 73769,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_pim2_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_pim2_saldo_2054": {
+  "valor": -244596,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_pim2_saldo_pts_sbc_2054": {
+  "valor": -1.805,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_pim2_pagos_GF_2054": {
+  "valor": 82984,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_pim2_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_C2_saldo_2030": {
+  "valor": -77852,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_C2_saldo_pts_sbc_2030": {
+  "valor": -1.305,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_C2_pagos_GF_2030": {
+  "valor": 70935,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_C2_personas_cubiertas_2030": {
+  "valor": 30190132,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_C2_saldo_2054": {
+  "valor": -45934,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_C2_saldo_pts_sbc_2054": {
+  "valor": -0.339,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_C2_pagos_GF_2054": {
+  "valor": 47449,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_C2_personas_cubiertas_2054": {
+  "valor": 18115436,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_F1_saldo_2030": {
+  "valor": -81144,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_F1_saldo_pts_sbc_2030": {
+  "valor": -1.36,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_F1_pagos_GF_2030": {
+  "valor": 81037,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_F1_personas_cubiertas_2030": {
+  "valor": 35789694,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_F1_saldo_2054": {
+  "valor": -78191,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_F1_saldo_pts_sbc_2054": {
+  "valor": -0.577,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_F1_pagos_GF_2054": {
+  "valor": 90798,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_F1_personas_cubiertas_2054": {
+  "valor": 36116060,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_plano_saldo_2030": {
+  "valor": -99316,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_plano_saldo_pts_sbc_2030": {
+  "valor": -1.665,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_plano_pagos_GF_2030": {
+  "valor": 73769,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_plano_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_plano_saldo_2054": {
+  "valor": -76227,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_plano_saldo_pts_sbc_2054": {
+  "valor": -0.562,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_plano_pagos_GF_2054": {
+  "valor": 82984,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_plano_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_estilizado_2_saldo_2030": {
+  "valor": -89175,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_estilizado_2_saldo_pts_sbc_2030": {
+  "valor": -1.495,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_estilizado_2_pagos_GF_2030": {
+  "valor": 73769,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_estilizado_2_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_estilizado_2_saldo_2054": {
+  "valor": -78497,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_estilizado_2_saldo_pts_sbc_2054": {
+  "valor": -0.579,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_estilizado_2_pagos_GF_2054": {
+  "valor": 82984,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_estilizado_2_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_estilizado_4_saldo_2030": {
+  "valor": -74174,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_estilizado_4_saldo_pts_sbc_2030": {
+  "valor": -1.244,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_estilizado_4_pagos_GF_2030": {
+  "valor": 73769,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_estilizado_4_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_estilizado_4_saldo_2054": {
+  "valor": -81855,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_estilizado_4_saldo_pts_sbc_2054": {
+  "valor": -0.604,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_estilizado_4_pagos_GF_2054": {
+  "valor": 82984,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_estilizado_4_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_umbral_fijo_saldo_2030": {
+  "valor": -81078,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_umbral_fijo_saldo_pts_sbc_2030": {
+  "valor": -1.359,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_umbral_fijo_pagos_GF_2030": {
+  "valor": 73304,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_umbral_fijo_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_umbral_fijo_saldo_2054": {
+  "valor": -81192,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_umbral_fijo_saldo_pts_sbc_2054": {
+  "valor": -0.599,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_umbral_fijo_pagos_GF_2054": {
+  "valor": 79556,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_umbral_fijo_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_C2_pim1_saldo_2030": {
+  "valor": -85553,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_C2_pim1_saldo_pts_sbc_2030": {
+  "valor": -1.434,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_C2_pim1_pagos_GF_2030": {
+  "valor": 70935,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_C2_pim1_personas_cubiertas_2030": {
+  "valor": 30190132,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_C2_pim1_saldo_2054": {
+  "valor": -86656,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_C2_pim1_saldo_pts_sbc_2054": {
+  "valor": -0.639,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_C2_pim1_pagos_GF_2054": {
+  "valor": 47449,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12_C2_pim1_personas_cubiertas_2054": {
+  "valor": 18115436,
+  "fuente": "sensibilidades_v12.csv"
+ },
+ "v12b_A_personas_cubiertas_2026": {
+  "valor": 30823063,
+  "fuente": "resultados_v12.csv, base, A, 2026"
+ },
+ "v12b_A_titulares_o_formales_2026": {
+  "valor": 10247696,
+  "fuente": "resultados_v12.csv, base, A, 2026"
+ },
+ "v12b_A_pagos_determinados_mdp_2026": {
+  "valor": 52137,
+  "fuente": "resultados_v12.csv, base, A, 2026"
+ },
+ "v12b_A_pagos_determinados_pts_2026": {
+  "valor": 1.007,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_pagos_determinados_sem_2026": {
+  "valor": 9.43,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_pagos_privados_mdp_2026": {
+  "valor": 39103,
+  "fuente": "resultados_v12.csv, base, A, 2026"
+ },
+ "v12b_A_pagos_privados_pts_2026": {
+  "valor": 0.755,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_pagos_privados_sem_2026": {
+  "valor": 7.07,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_no_cobrado_mdp_2026": {
+  "valor": 13034,
+  "fuente": "resultados_v12.csv, base, A, 2026"
+ },
+ "v12b_A_no_cobrado_pts_2026": {
+  "valor": 0.252,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_no_cobrado_sem_2026": {
+  "valor": 2.36,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_GF_cuota_fija_mdp_2026": {
+  "valor": 65081,
+  "fuente": "resultados_v12.csv, base, A, 2026"
+ },
+ "v12b_A_GF_cuota_fija_pts_2026": {
+  "valor": 1.257,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_GF_cuota_fija_sem_2026": {
+  "valor": 11.77,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_GF_subsidio_mdp_2026": {
+  "valor": 5251,
+  "fuente": "resultados_v12.csv, base, A, 2026"
+ },
+ "v12b_A_GF_subsidio_pts_2026": {
+  "valor": 0.101,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_GF_subsidio_sem_2026": {
+  "valor": 0.95,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_pagos_GF_mdp_2026": {
+  "valor": 70332,
+  "fuente": "resultados_v12.csv, base, A, 2026"
+ },
+ "v12b_A_pagos_GF_pts_2026": {
+  "valor": 1.359,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_pagos_GF_sem_2026": {
+  "valor": 12.72,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_costo_mdp_2026": {
+  "valor": 190614,
+  "fuente": "resultados_v12.csv, base, A, 2026"
+ },
+ "v12b_A_costo_pts_2026": {
+  "valor": 3.682,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_costo_sem_2026": {
+  "valor": 34.48,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_saldo_mdp_2026": {
+  "valor": -81179,
+  "fuente": "resultados_v12.csv, base, A, 2026"
+ },
+ "v12b_A_saldo_pts_2026": {
+  "valor": -1.568,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_saldo_sem_2026": {
+  "valor": -14.68,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_pagos_determinados_mdp_2026": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2026"
+ },
+ "v12b_B_pagos_determinados_pts_2026": {
+  "valor": -0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_pagos_determinados_sem_2026": {
+  "valor": -0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_pagos_privados_mdp_2026": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2026"
+ },
+ "v12b_B_pagos_privados_pts_2026": {
+  "valor": -0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_pagos_privados_sem_2026": {
+  "valor": -0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_no_cobrado_mdp_2026": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2026"
+ },
+ "v12b_B_no_cobrado_pts_2026": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_no_cobrado_sem_2026": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_GF_cuota_fija_mdp_2026": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2026"
+ },
+ "v12b_B_GF_cuota_fija_pts_2026": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_GF_cuota_fija_sem_2026": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_GF_subsidio_mdp_2026": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2026"
+ },
+ "v12b_B_GF_subsidio_pts_2026": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_GF_subsidio_sem_2026": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_pagos_GF_mdp_2026": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2026"
+ },
+ "v12b_B_pagos_GF_pts_2026": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_pagos_GF_sem_2026": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_costo_mdp_2026": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2026"
+ },
+ "v12b_B_costo_pts_2026": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_costo_sem_2026": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_saldo_mdp_2026": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2026"
+ },
+ "v12b_B_saldo_pts_2026": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_saldo_sem_2026": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_pagos_determinados_mdp_2026": {
+  "valor": 52137,
+  "fuente": "resultados_v12.csv, base, Total, 2026"
+ },
+ "v12b_Total_pagos_determinados_pts_2026": {
+  "valor": 1.007,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_pagos_determinados_sem_2026": {
+  "valor": 9.43,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_pagos_privados_mdp_2026": {
+  "valor": 39103,
+  "fuente": "resultados_v12.csv, base, Total, 2026"
+ },
+ "v12b_Total_pagos_privados_pts_2026": {
+  "valor": 0.755,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_pagos_privados_sem_2026": {
+  "valor": 7.07,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_no_cobrado_mdp_2026": {
+  "valor": 13034,
+  "fuente": "resultados_v12.csv, base, Total, 2026"
+ },
+ "v12b_Total_no_cobrado_pts_2026": {
+  "valor": 0.252,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_no_cobrado_sem_2026": {
+  "valor": 2.36,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_GF_cuota_fija_mdp_2026": {
+  "valor": 65081,
+  "fuente": "resultados_v12.csv, base, Total, 2026"
+ },
+ "v12b_Total_GF_cuota_fija_pts_2026": {
+  "valor": 1.257,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_GF_cuota_fija_sem_2026": {
+  "valor": 11.77,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_GF_subsidio_mdp_2026": {
+  "valor": 5251,
+  "fuente": "resultados_v12.csv, base, Total, 2026"
+ },
+ "v12b_Total_GF_subsidio_pts_2026": {
+  "valor": 0.101,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_GF_subsidio_sem_2026": {
+  "valor": 0.95,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_pagos_GF_mdp_2026": {
+  "valor": 70332,
+  "fuente": "resultados_v12.csv, base, Total, 2026"
+ },
+ "v12b_Total_pagos_GF_pts_2026": {
+  "valor": 1.359,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_pagos_GF_sem_2026": {
+  "valor": 12.72,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_costo_mdp_2026": {
+  "valor": 190614,
+  "fuente": "resultados_v12.csv, base, Total, 2026"
+ },
+ "v12b_Total_costo_pts_2026": {
+  "valor": 3.682,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_costo_sem_2026": {
+  "valor": 34.48,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_saldo_mdp_2026": {
+  "valor": -81179,
+  "fuente": "resultados_v12.csv, base, Total, 2026"
+ },
+ "v12b_Total_saldo_pts_2026": {
+  "valor": -1.568,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_saldo_sem_2026": {
+  "valor": -14.68,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_cubiertos_pct_DH_2026": {
+  "valor": 38.9,
+  "fuente": "Personas cubiertas / 79,178,109 DH (Cuadro I.4)"
+ },
+ "v12b_A_personas_cubiertas_2030": {
+  "valor": 31396161,
+  "fuente": "resultados_v12.csv, base, A, 2030"
+ },
+ "v12b_A_titulares_o_formales_2030": {
+  "valor": 10718991,
+  "fuente": "resultados_v12.csv, base, A, 2030"
+ },
+ "v12b_A_pagos_determinados_mdp_2030": {
+  "valor": 56676,
+  "fuente": "resultados_v12.csv, base, A, 2030"
+ },
+ "v12b_A_pagos_determinados_pts_2030": {
+  "valor": 0.95,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_pagos_determinados_sem_2030": {
+  "valor": 9.27,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_pagos_privados_mdp_2030": {
+  "valor": 42507,
+  "fuente": "resultados_v12.csv, base, A, 2030"
+ },
+ "v12b_A_pagos_privados_pts_2030": {
+  "valor": 0.713,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_pagos_privados_sem_2030": {
+  "valor": 6.95,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_no_cobrado_mdp_2030": {
+  "valor": 14169,
+  "fuente": "resultados_v12.csv, base, A, 2030"
+ },
+ "v12b_A_no_cobrado_pts_2030": {
+  "valor": 0.238,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_no_cobrado_sem_2030": {
+  "valor": 2.32,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_GF_cuota_fija_mdp_2030": {
+  "valor": 68074,
+  "fuente": "resultados_v12.csv, base, A, 2030"
+ },
+ "v12b_A_GF_cuota_fija_pts_2030": {
+  "valor": 1.141,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_GF_cuota_fija_sem_2030": {
+  "valor": 11.14,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_GF_subsidio_mdp_2030": {
+  "valor": 5695,
+  "fuente": "resultados_v12.csv, base, A, 2030"
+ },
+ "v12b_A_GF_subsidio_pts_2030": {
+  "valor": 0.095,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_GF_subsidio_sem_2030": {
+  "valor": 0.93,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_pagos_GF_mdp_2030": {
+  "valor": 73769,
+  "fuente": "resultados_v12.csv, base, A, 2030"
+ },
+ "v12b_A_pagos_GF_pts_2030": {
+  "valor": 1.237,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_pagos_GF_sem_2030": {
+  "valor": 12.07,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_costo_mdp_2030": {
+  "valor": 197237,
+  "fuente": "resultados_v12.csv, base, A, 2030"
+ },
+ "v12b_A_costo_pts_2030": {
+  "valor": 3.307,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_costo_sem_2030": {
+  "valor": 32.27,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_saldo_mdp_2030": {
+  "valor": -80962,
+  "fuente": "resultados_v12.csv, base, A, 2030"
+ },
+ "v12b_A_saldo_pts_2030": {
+  "valor": -1.357,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_saldo_sem_2030": {
+  "valor": -13.25,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_pagos_determinados_mdp_2030": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2030"
+ },
+ "v12b_B_pagos_determinados_pts_2030": {
+  "valor": -0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_pagos_determinados_sem_2030": {
+  "valor": -0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_pagos_privados_mdp_2030": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2030"
+ },
+ "v12b_B_pagos_privados_pts_2030": {
+  "valor": -0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_pagos_privados_sem_2030": {
+  "valor": -0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_no_cobrado_mdp_2030": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2030"
+ },
+ "v12b_B_no_cobrado_pts_2030": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_no_cobrado_sem_2030": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_GF_cuota_fija_mdp_2030": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2030"
+ },
+ "v12b_B_GF_cuota_fija_pts_2030": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_GF_cuota_fija_sem_2030": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_GF_subsidio_mdp_2030": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2030"
+ },
+ "v12b_B_GF_subsidio_pts_2030": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_GF_subsidio_sem_2030": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_pagos_GF_mdp_2030": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2030"
+ },
+ "v12b_B_pagos_GF_pts_2030": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_pagos_GF_sem_2030": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_costo_mdp_2030": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2030"
+ },
+ "v12b_B_costo_pts_2030": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_costo_sem_2030": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_saldo_mdp_2030": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2030"
+ },
+ "v12b_B_saldo_pts_2030": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_saldo_sem_2030": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_pagos_determinados_mdp_2030": {
+  "valor": 56676,
+  "fuente": "resultados_v12.csv, base, Total, 2030"
+ },
+ "v12b_Total_pagos_determinados_pts_2030": {
+  "valor": 0.95,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_pagos_determinados_sem_2030": {
+  "valor": 9.27,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_pagos_privados_mdp_2030": {
+  "valor": 42507,
+  "fuente": "resultados_v12.csv, base, Total, 2030"
+ },
+ "v12b_Total_pagos_privados_pts_2030": {
+  "valor": 0.713,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_pagos_privados_sem_2030": {
+  "valor": 6.95,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_no_cobrado_mdp_2030": {
+  "valor": 14169,
+  "fuente": "resultados_v12.csv, base, Total, 2030"
+ },
+ "v12b_Total_no_cobrado_pts_2030": {
+  "valor": 0.238,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_no_cobrado_sem_2030": {
+  "valor": 2.32,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_GF_cuota_fija_mdp_2030": {
+  "valor": 68074,
+  "fuente": "resultados_v12.csv, base, Total, 2030"
+ },
+ "v12b_Total_GF_cuota_fija_pts_2030": {
+  "valor": 1.141,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_GF_cuota_fija_sem_2030": {
+  "valor": 11.14,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_GF_subsidio_mdp_2030": {
+  "valor": 5695,
+  "fuente": "resultados_v12.csv, base, Total, 2030"
+ },
+ "v12b_Total_GF_subsidio_pts_2030": {
+  "valor": 0.095,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_GF_subsidio_sem_2030": {
+  "valor": 0.93,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_pagos_GF_mdp_2030": {
+  "valor": 73769,
+  "fuente": "resultados_v12.csv, base, Total, 2030"
+ },
+ "v12b_Total_pagos_GF_pts_2030": {
+  "valor": 1.237,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_pagos_GF_sem_2030": {
+  "valor": 12.07,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_costo_mdp_2030": {
+  "valor": 197237,
+  "fuente": "resultados_v12.csv, base, Total, 2030"
+ },
+ "v12b_Total_costo_pts_2030": {
+  "valor": 3.307,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_costo_sem_2030": {
+  "valor": 32.27,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_saldo_mdp_2030": {
+  "valor": -80962,
+  "fuente": "resultados_v12.csv, base, Total, 2030"
+ },
+ "v12b_Total_saldo_pts_2030": {
+  "valor": -1.357,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_saldo_sem_2030": {
+  "valor": -13.25,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_cubiertos_pct_DH_2030": {
+  "valor": 39.7,
+  "fuente": "Personas cubiertas / 79,178,109 DH (Cuadro I.4)"
+ },
+ "v12b_A_personas_cubiertas_2040": {
+  "valor": 32153893,
+  "fuente": "resultados_v12.csv, base, A, 2040"
+ },
+ "v12b_A_titulares_o_formales_2040": {
+  "valor": 11565901,
+  "fuente": "resultados_v12.csv, base, A, 2040"
+ },
+ "v12b_A_pagos_determinados_mdp_2040": {
+  "valor": 67181,
+  "fuente": "resultados_v12.csv, base, A, 2040"
+ },
+ "v12b_A_pagos_determinados_pts_2040": {
+  "valor": 0.771,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_pagos_determinados_sem_2040": {
+  "valor": 8.06,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_pagos_privados_mdp_2040": {
+  "valor": 50386,
+  "fuente": "resultados_v12.csv, base, A, 2040"
+ },
+ "v12b_A_pagos_privados_pts_2040": {
+  "valor": 0.578,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_pagos_privados_sem_2040": {
+  "valor": 6.05,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_no_cobrado_mdp_2040": {
+  "valor": 16795,
+  "fuente": "resultados_v12.csv, base, A, 2040"
+ },
+ "v12b_A_no_cobrado_pts_2040": {
+  "valor": 0.193,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_no_cobrado_sem_2040": {
+  "valor": 2.02,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_GF_cuota_fija_mdp_2040": {
+  "valor": 73453,
+  "fuente": "resultados_v12.csv, base, A, 2040"
+ },
+ "v12b_A_GF_cuota_fija_pts_2040": {
+  "valor": 0.843,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_GF_cuota_fija_sem_2040": {
+  "valor": 8.82,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_GF_subsidio_mdp_2040": {
+  "valor": 6700,
+  "fuente": "resultados_v12.csv, base, A, 2040"
+ },
+ "v12b_A_GF_subsidio_pts_2040": {
+  "valor": 0.077,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_GF_subsidio_sem_2040": {
+  "valor": 0.8,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_pagos_GF_mdp_2040": {
+  "valor": 80153,
+  "fuente": "resultados_v12.csv, base, A, 2040"
+ },
+ "v12b_A_pagos_GF_pts_2040": {
+  "valor": 0.92,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_pagos_GF_sem_2040": {
+  "valor": 9.62,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_costo_mdp_2040": {
+  "valor": 211185,
+  "fuente": "resultados_v12.csv, base, A, 2040"
+ },
+ "v12b_A_costo_pts_2040": {
+  "valor": 2.423,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_costo_sem_2040": {
+  "valor": 25.35,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_saldo_mdp_2040": {
+  "valor": -80647,
+  "fuente": "resultados_v12.csv, base, A, 2040"
+ },
+ "v12b_A_saldo_pts_2040": {
+  "valor": -0.925,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_saldo_sem_2040": {
+  "valor": -9.68,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_pagos_determinados_mdp_2040": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2040"
+ },
+ "v12b_B_pagos_determinados_pts_2040": {
+  "valor": -0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_pagos_determinados_sem_2040": {
+  "valor": -0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_pagos_privados_mdp_2040": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2040"
+ },
+ "v12b_B_pagos_privados_pts_2040": {
+  "valor": -0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_pagos_privados_sem_2040": {
+  "valor": -0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_no_cobrado_mdp_2040": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2040"
+ },
+ "v12b_B_no_cobrado_pts_2040": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_no_cobrado_sem_2040": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_GF_cuota_fija_mdp_2040": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2040"
+ },
+ "v12b_B_GF_cuota_fija_pts_2040": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_GF_cuota_fija_sem_2040": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_GF_subsidio_mdp_2040": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2040"
+ },
+ "v12b_B_GF_subsidio_pts_2040": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_GF_subsidio_sem_2040": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_pagos_GF_mdp_2040": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2040"
+ },
+ "v12b_B_pagos_GF_pts_2040": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_pagos_GF_sem_2040": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_costo_mdp_2040": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2040"
+ },
+ "v12b_B_costo_pts_2040": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_costo_sem_2040": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_saldo_mdp_2040": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2040"
+ },
+ "v12b_B_saldo_pts_2040": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_saldo_sem_2040": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_pagos_determinados_mdp_2040": {
+  "valor": 67181,
+  "fuente": "resultados_v12.csv, base, Total, 2040"
+ },
+ "v12b_Total_pagos_determinados_pts_2040": {
+  "valor": 0.771,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_pagos_determinados_sem_2040": {
+  "valor": 8.06,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_pagos_privados_mdp_2040": {
+  "valor": 50386,
+  "fuente": "resultados_v12.csv, base, Total, 2040"
+ },
+ "v12b_Total_pagos_privados_pts_2040": {
+  "valor": 0.578,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_pagos_privados_sem_2040": {
+  "valor": 6.05,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_no_cobrado_mdp_2040": {
+  "valor": 16795,
+  "fuente": "resultados_v12.csv, base, Total, 2040"
+ },
+ "v12b_Total_no_cobrado_pts_2040": {
+  "valor": 0.193,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_no_cobrado_sem_2040": {
+  "valor": 2.02,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_GF_cuota_fija_mdp_2040": {
+  "valor": 73453,
+  "fuente": "resultados_v12.csv, base, Total, 2040"
+ },
+ "v12b_Total_GF_cuota_fija_pts_2040": {
+  "valor": 0.843,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_GF_cuota_fija_sem_2040": {
+  "valor": 8.82,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_GF_subsidio_mdp_2040": {
+  "valor": 6700,
+  "fuente": "resultados_v12.csv, base, Total, 2040"
+ },
+ "v12b_Total_GF_subsidio_pts_2040": {
+  "valor": 0.077,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_GF_subsidio_sem_2040": {
+  "valor": 0.8,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_pagos_GF_mdp_2040": {
+  "valor": 80153,
+  "fuente": "resultados_v12.csv, base, Total, 2040"
+ },
+ "v12b_Total_pagos_GF_pts_2040": {
+  "valor": 0.92,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_pagos_GF_sem_2040": {
+  "valor": 9.62,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_costo_mdp_2040": {
+  "valor": 211185,
+  "fuente": "resultados_v12.csv, base, Total, 2040"
+ },
+ "v12b_Total_costo_pts_2040": {
+  "valor": 2.423,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_costo_sem_2040": {
+  "valor": 25.35,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_saldo_mdp_2040": {
+  "valor": -80647,
+  "fuente": "resultados_v12.csv, base, Total, 2040"
+ },
+ "v12b_Total_saldo_pts_2040": {
+  "valor": -0.925,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_saldo_sem_2040": {
+  "valor": -9.68,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_cubiertos_pct_DH_2040": {
+  "valor": 40.6,
+  "fuente": "Personas cubiertas / 79,178,109 DH (Cuadro I.4)"
+ },
+ "v12b_A_personas_cubiertas_2054": {
+  "valor": 31682462,
+  "fuente": "resultados_v12.csv, base, A, 2054"
+ },
+ "v12b_A_titulares_o_formales_2054": {
+  "valor": 11837379,
+  "fuente": "resultados_v12.csv, base, A, 2054"
+ },
+ "v12b_A_pagos_determinados_mdp_2054": {
+  "valor": 77796,
+  "fuente": "resultados_v12.csv, base, A, 2054"
+ },
+ "v12b_A_pagos_determinados_pts_2054": {
+  "valor": 0.574,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_pagos_determinados_sem_2054": {
+  "valor": 6.45,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_pagos_privados_mdp_2054": {
+  "valor": 58347,
+  "fuente": "resultados_v12.csv, base, A, 2054"
+ },
+ "v12b_A_pagos_privados_pts_2054": {
+  "valor": 0.431,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_pagos_privados_sem_2054": {
+  "valor": 4.84,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_no_cobrado_mdp_2054": {
+  "valor": 19449,
+  "fuente": "resultados_v12.csv, base, A, 2054"
+ },
+ "v12b_A_no_cobrado_pts_2054": {
+  "valor": 0.144,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_no_cobrado_sem_2054": {
+  "valor": 1.61,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_GF_cuota_fija_mdp_2054": {
+  "valor": 75177,
+  "fuente": "resultados_v12.csv, base, A, 2054"
+ },
+ "v12b_A_GF_cuota_fija_pts_2054": {
+  "valor": 0.555,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_GF_cuota_fija_sem_2054": {
+  "valor": 6.23,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_GF_subsidio_mdp_2054": {
+  "valor": 7807,
+  "fuente": "resultados_v12.csv, base, A, 2054"
+ },
+ "v12b_A_GF_subsidio_pts_2054": {
+  "valor": 0.058,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_GF_subsidio_sem_2054": {
+  "valor": 0.65,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_pagos_GF_mdp_2054": {
+  "valor": 82984,
+  "fuente": "resultados_v12.csv, base, A, 2054"
+ },
+ "v12b_A_pagos_GF_pts_2054": {
+  "valor": 0.612,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_pagos_GF_sem_2054": {
+  "valor": 6.88,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_costo_mdp_2054": {
+  "valor": 221667,
+  "fuente": "resultados_v12.csv, base, A, 2054"
+ },
+ "v12b_A_costo_pts_2054": {
+  "valor": 1.636,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_costo_sem_2054": {
+  "valor": 18.37,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_A_saldo_mdp_2054": {
+  "valor": -80335,
+  "fuente": "resultados_v12.csv, base, A, 2054"
+ },
+ "v12b_A_saldo_pts_2054": {
+  "valor": -0.593,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_A_saldo_sem_2054": {
+  "valor": -6.66,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_pagos_determinados_mdp_2054": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2054"
+ },
+ "v12b_B_pagos_determinados_pts_2054": {
+  "valor": -0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_pagos_determinados_sem_2054": {
+  "valor": -0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_pagos_privados_mdp_2054": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2054"
+ },
+ "v12b_B_pagos_privados_pts_2054": {
+  "valor": -0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_pagos_privados_sem_2054": {
+  "valor": -0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_no_cobrado_mdp_2054": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2054"
+ },
+ "v12b_B_no_cobrado_pts_2054": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_no_cobrado_sem_2054": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_GF_cuota_fija_mdp_2054": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2054"
+ },
+ "v12b_B_GF_cuota_fija_pts_2054": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_GF_cuota_fija_sem_2054": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_GF_subsidio_mdp_2054": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2054"
+ },
+ "v12b_B_GF_subsidio_pts_2054": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_GF_subsidio_sem_2054": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_pagos_GF_mdp_2054": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2054"
+ },
+ "v12b_B_pagos_GF_pts_2054": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_pagos_GF_sem_2054": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_costo_mdp_2054": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2054"
+ },
+ "v12b_B_costo_pts_2054": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_costo_sem_2054": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_B_saldo_mdp_2054": {
+  "valor": 0,
+  "fuente": "resultados_v12.csv, base, B, 2054"
+ },
+ "v12b_B_saldo_pts_2054": {
+  "valor": 0.0,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_B_saldo_sem_2054": {
+  "valor": 0.0,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_pagos_determinados_mdp_2054": {
+  "valor": 77796,
+  "fuente": "resultados_v12.csv, base, Total, 2054"
+ },
+ "v12b_Total_pagos_determinados_pts_2054": {
+  "valor": 0.574,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_pagos_determinados_sem_2054": {
+  "valor": 6.45,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_pagos_privados_mdp_2054": {
+  "valor": 58347,
+  "fuente": "resultados_v12.csv, base, Total, 2054"
+ },
+ "v12b_Total_pagos_privados_pts_2054": {
+  "valor": 0.431,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_pagos_privados_sem_2054": {
+  "valor": 4.84,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_no_cobrado_mdp_2054": {
+  "valor": 19449,
+  "fuente": "resultados_v12.csv, base, Total, 2054"
+ },
+ "v12b_Total_no_cobrado_pts_2054": {
+  "valor": 0.144,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_no_cobrado_sem_2054": {
+  "valor": 1.61,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_GF_cuota_fija_mdp_2054": {
+  "valor": 75177,
+  "fuente": "resultados_v12.csv, base, Total, 2054"
+ },
+ "v12b_Total_GF_cuota_fija_pts_2054": {
+  "valor": 0.555,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_GF_cuota_fija_sem_2054": {
+  "valor": 6.23,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_GF_subsidio_mdp_2054": {
+  "valor": 7807,
+  "fuente": "resultados_v12.csv, base, Total, 2054"
+ },
+ "v12b_Total_GF_subsidio_pts_2054": {
+  "valor": 0.058,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_GF_subsidio_sem_2054": {
+  "valor": 0.65,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_pagos_GF_mdp_2054": {
+  "valor": 82984,
+  "fuente": "resultados_v12.csv, base, Total, 2054"
+ },
+ "v12b_Total_pagos_GF_pts_2054": {
+  "valor": 0.612,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_pagos_GF_sem_2054": {
+  "valor": 6.88,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_costo_mdp_2054": {
+  "valor": 221667,
+  "fuente": "resultados_v12.csv, base, Total, 2054"
+ },
+ "v12b_Total_costo_pts_2054": {
+  "valor": 1.636,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_costo_sem_2054": {
+  "valor": 18.37,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_Total_saldo_mdp_2054": {
+  "valor": -80335,
+  "fuente": "resultados_v12.csv, base, Total, 2054"
+ },
+ "v12b_Total_saldo_pts_2054": {
+  "valor": -0.593,
+  "fuente": "Idem, puntos del SBC (337 días)"
+ },
+ "v12b_Total_saldo_sem_2054": {
+  "valor": -6.66,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "v12b_cubiertos_pct_DH_2054": {
+  "valor": 40.0,
+  "fuente": "Personas cubiertas / 79,178,109 DH (Cuadro I.4)"
+ },
+ "v12b_costo_pct_pib_2026": {
+  "valor": 0.492,
+  "fuente": "Costo 2026 / PIB 2026"
+ },
+ "v12b_GF_pct_pib_2026": {
+  "valor": 0.182,
+  "fuente": "Pagos federales 2026 / PIB 2026"
+ },
+ "v12b_saldo_pct_pib_2026": {
+  "valor": -0.21,
+  "fuente": "Saldo 2026 / PIB 2026"
+ },
+ "v12_indexacion_mdp_2030": {
+  "valor": 11611,
+  "fuente": "efecto_indexacion.csv: recaudación D2 − cuota fija vigente, formales"
+ },
+ "v12_indexacion_pts_2030": {
+  "valor": 0.195,
+  "fuente": "Idem, puntos del SBC"
+ },
+ "v12_indexacion_sem_2030": {
+  "valor": 1.9,
+  "fuente": "Idem, % ingresos SEM"
+ },
+ "v12_C_D2_ingresos_2030": {
+  "valor": 38672,
+  "fuente": "bloque_C_vs_status_quo.csv, D2, 2030"
+ },
+ "v12_C_D2_costo_2030": {
+  "valor": 50184,
+  "fuente": "bloque_C_vs_status_quo.csv, D2, 2030"
+ },
+ "v12_C_D2_neto_2030": {
+  "valor": -11512,
+  "fuente": "bloque_C_vs_status_quo.csv, D2, 2030"
+ },
+ "v12_C_D2_neto_pts_2030": {
+  "valor": -0.193,
+  "fuente": "bloque_C_vs_status_quo.csv, D2, 2030"
+ },
+ "v12_C_D2_GF_2030": {
+  "valor": 17591,
+  "fuente": "bloque_C_vs_status_quo.csv, D2, 2030"
+ },
+ "v12_C_dh_por_cot_2030": {
+  "valor": 2.93,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2030"
+ },
+ "v12_C_vigente_ingresos_2030": {
+  "valor": 44429,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2030"
+ },
+ "v12_C_vigente_costo_2030": {
+  "valor": 50184,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2030"
+ },
+ "v12_C_vigente_neto_2030": {
+  "valor": -5755,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2030"
+ },
+ "v12_C_vigente_neto_pts_2030": {
+  "valor": -0.096,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2030"
+ },
+ "v12_C_vigente_GF_2030": {
+  "valor": 17591,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2030"
+ },
+ "v12_indexacion_mdp_2040": {
+  "valor": 35589,
+  "fuente": "efecto_indexacion.csv: recaudación D2 − cuota fija vigente, formales"
+ },
+ "v12_indexacion_pts_2040": {
+  "valor": 0.408,
+  "fuente": "Idem, puntos del SBC"
+ },
+ "v12_indexacion_sem_2040": {
+  "valor": 4.27,
+  "fuente": "Idem, % ingresos SEM"
+ },
+ "v12_C_D2_ingresos_2040": {
+  "valor": 43556,
+  "fuente": "bloque_C_vs_status_quo.csv, D2, 2040"
+ },
+ "v12_C_D2_costo_2040": {
+  "valor": 53733,
+  "fuente": "bloque_C_vs_status_quo.csv, D2, 2040"
+ },
+ "v12_C_D2_neto_2040": {
+  "valor": -10177,
+  "fuente": "bloque_C_vs_status_quo.csv, D2, 2040"
+ },
+ "v12_C_D2_neto_pts_2040": {
+  "valor": -0.117,
+  "fuente": "bloque_C_vs_status_quo.csv, D2, 2040"
+ },
+ "v12_C_D2_GF_2040": {
+  "valor": 18981,
+  "fuente": "bloque_C_vs_status_quo.csv, D2, 2040"
+ },
+ "v12_C_dh_por_cot_2040": {
+  "valor": 2.78,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2040"
+ },
+ "v12_C_vigente_ingresos_2040": {
+  "valor": 48492,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2040"
+ },
+ "v12_C_vigente_costo_2040": {
+  "valor": 53733,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2040"
+ },
+ "v12_C_vigente_neto_2040": {
+  "valor": -5241,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2040"
+ },
+ "v12_C_vigente_neto_pts_2040": {
+  "valor": -0.06,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2040"
+ },
+ "v12_C_vigente_GF_2040": {
+  "valor": 18981,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2040"
+ },
+ "v12_indexacion_mdp_2054": {
+  "valor": 98909,
+  "fuente": "efecto_indexacion.csv: recaudación D2 − cuota fija vigente, formales"
+ },
+ "v12_indexacion_pts_2054": {
+  "valor": 0.73,
+  "fuente": "Idem, puntos del SBC"
+ },
+ "v12_indexacion_sem_2054": {
+  "valor": 8.2,
+  "fuente": "Idem, % ingresos SEM"
+ },
+ "v12_C_D2_ingresos_2054": {
+  "valor": 47302,
+  "fuente": "bloque_C_vs_status_quo.csv, D2, 2054"
+ },
+ "v12_C_D2_costo_2054": {
+  "valor": 56399,
+  "fuente": "bloque_C_vs_status_quo.csv, D2, 2054"
+ },
+ "v12_C_D2_neto_2054": {
+  "valor": -9098,
+  "fuente": "bloque_C_vs_status_quo.csv, D2, 2054"
+ },
+ "v12_C_D2_neto_pts_2054": {
+  "valor": -0.067,
+  "fuente": "bloque_C_vs_status_quo.csv, D2, 2054"
+ },
+ "v12_C_D2_GF_2054": {
+  "valor": 19426,
+  "fuente": "bloque_C_vs_status_quo.csv, D2, 2054"
+ },
+ "v12_C_dh_por_cot_2054": {
+  "valor": 2.68,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2054"
+ },
+ "v12_C_vigente_ingresos_2054": {
+  "valor": 50452,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2054"
+ },
+ "v12_C_vigente_costo_2054": {
+  "valor": 56399,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2054"
+ },
+ "v12_C_vigente_neto_2054": {
+  "valor": -5947,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2054"
+ },
+ "v12_C_vigente_neto_pts_2054": {
+  "valor": -0.044,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2054"
+ },
+ "v12_C_vigente_GF_2054": {
+  "valor": 19426,
+  "fuente": "bloque_C_vs_status_quo.csv, vigente, 2054"
+ },
+ "v12_S3_B_mdp_2026": {
+  "valor": 10162,
+  "fuente": "resultados_v12.csv, S3, Bloque B"
+ },
+ "v12_S3_B_mdp_2030": {
+  "valor": 1104,
+  "fuente": "resultados_v12.csv, S3, Bloque B"
+ },
+ "v12_S3_B_mdp_2054": {
+  "valor": 15243,
+  "fuente": "resultados_v12.csv, S3, Bloque B"
+ },
+ "v12_S1_B_total": {
+  "valor": 0.0,
+  "fuente": "Σ 2026-2054 del Bloque B en la base (S1)"
  }
 }

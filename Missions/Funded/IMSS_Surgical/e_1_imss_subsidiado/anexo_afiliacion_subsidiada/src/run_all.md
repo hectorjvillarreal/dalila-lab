@@ -2,7 +2,7 @@
 
 Orquestador.
 
-Borra el registro de cifras y corre, en orden: libro, conapo, enigh, cotizantes, esquemas, proyeccion, f0_inventario, reporte, cifras. `conda activate dalila && python src/run_all.py` (≈ 70 s).
+Borra el registro de cifras y corre, en orden: libro, conapo, enigh, cotizantes, esquemas, proyeccion, f0_inventario, reporte, v12, cifras. `conda activate dalila && python src/run_all.py` (≈ 70 s).
 
 - **Insumos:** —
 - **Salidas:** Todo `data/derived/` y `outputs/`

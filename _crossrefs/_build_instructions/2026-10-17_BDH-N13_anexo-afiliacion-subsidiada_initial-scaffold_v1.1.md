@@ -20,6 +20,7 @@ added_by: Beth
 endorsed_by: []          # vacío = revisión pendiente: Cath (prueba fiscal de los resultados). La autorización para ejecutar la da Héctor.
 protocol: PROTO-RAG-001
 status: executed
+superseded_by: 20261017_BDH_N13_anexo-afiliacion-subsidiada_build_v1.2   # parcial: solo en lo que la v1.2 modifica (su sección 0)
 executed: 2026-10-17   # Claude Code; productos en anexo_afiliacion_subsidiada/ (REPORT.md, NUMBERS.md, ANEXO_borrador.md)
 executor: Claude Code (Dalila)
 ---
