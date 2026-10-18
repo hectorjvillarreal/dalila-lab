@@ -1,0 +1,61 @@
+escenario_masa,concepto,anio,mdp,pts_salario
+base,Ingreso del nuevo seguro (2 %),2027,109377.53641082419,2.0
+base,Ingreso del nuevo seguro (2 %),2030,124109.33954966419,2.0
+base,Ingreso del nuevo seguro (2 %),2040,178193.99169001862,2.0
+base,Ingreso del nuevo seguro (2 %),2054,274823.62171643134,2.0
+base,Déficit de GMP,2027,74270.4,1.3580558209144318
+base,Déficit de GMP,2030,91887.6,1.4807523806575382
+base,Déficit de GMP,2040,137449.0,1.5426895003183105
+base,Déficit de GMP,2054,198153.75,1.4420430730256448
+base,Depósito a la reserva (+) o retiro para GMP (−),2027,35107.1364108242,0.6419441790855683
+base,Depósito a la reserva (+) o retiro para GMP (−),2030,32221.739549664184,0.5192476193424618
+base,Depósito a la reserva (+) o retiro para GMP (−),2040,0.0,0.0
+base,Depósito a la reserva (+) o retiro para GMP (−),2054,0.0,0.0
+base,Gasto en cuidados,2027,0.0,0.0
+base,Gasto en cuidados,2030,0.0,0.0
+base,Gasto en cuidados,2040,54311.838156618236,0.6095810261784541
+base,Gasto en cuidados,2054,90236.71818303096,0.6566882251201759
+base,Déficit no cubierto,2027,0.0,0.0
+base,Déficit no cubierto,2030,0.0,0.0
+base,Déficit no cubierto,2040,0.0,0.0
+base,Déficit no cubierto,2054,0.0,0.0
+M3,Ingreso del nuevo seguro (2 %),2027,108552.13994210333,2.0
+M3,Ingreso del nuevo seguro (2 %),2030,119897.6322379716,2.0
+M3,Ingreso del nuevo seguro (2 %),2040,154882.31567572677,2.0
+M3,Ingreso del nuevo seguro (2 %),2054,211411.42909026303,2.0
+M3,Déficit de GMP,2027,74968.22964726266,1.3812390927944347
+M3,Déficit de GMP,2030,95328.48579005113,1.5901646097705102
+M3,Déficit de GMP,2040,155530.7054703593,2.008372676916712
+M3,Déficit de GMP,2054,247123.05619666088,2.3378400804542183
+M3,Depósito a la reserva (+) o retiro para GMP (−),2027,33583.910294840665,0.6187609072055652
+M3,Depósito a la reserva (+) o retiro para GMP (−),2030,24569.146447920473,0.40983539022948984
+M3,Depósito a la reserva (+) o retiro para GMP (−),2040,-648.3897946325305,-0.008372676916712016
+M3,Depósito a la reserva (+) o retiro para GMP (−),2054,-35711.62710639785,-0.33784008045421815
+M3,Gasto en cuidados,2027,0.0,0.0
+M3,Gasto en cuidados,2030,0.0,0.0
+M3,Gasto en cuidados,2040,0.0,0.0
+M3,Gasto en cuidados,2054,0.0,0.0
+M3,Déficit no cubierto,2027,0.0,0.0
+M3,Déficit no cubierto,2030,0.0,0.0
+M3,Déficit no cubierto,2040,0.0,0.0
+M3,Déficit no cubierto,2054,0.0,0.0
+M2,Ingreso del nuevo seguro (2 %),2027,107726.74347338246,2.0
+M2,Ingreso del nuevo seguro (2 %),2030,115685.92492627898,2.0
+M2,Ingreso del nuevo seguro (2 %),2040,131570.63966143486,2.0
+M2,Ingreso del nuevo seguro (2 %),2054,147999.23646409472,2.0
+M2,Déficit de GMP,2027,75666.05929452532,1.4047776226192372
+M2,Déficit de GMP,2030,98769.37158010228,1.7075434482292156
+M2,Déficit de GMP,2040,173612.4109407186,2.639075273745998
+M2,Déficit de GMP,2054,296092.3623933218,4.001268783101529
+M2,Depósito a la reserva (+) o retiro para GMP (−),2027,32060.684178857147,0.595222377380763
+M2,Depósito a la reserva (+) o retiro para GMP (−),2030,16916.553346176705,0.29245655177078456
+M2,Depósito a la reserva (+) o retiro para GMP (−),2040,0.0,0.0
+M2,Depósito a la reserva (+) o retiro para GMP (−),2054,0.0,0.0
+M2,Gasto en cuidados,2027,0.0,0.0
+M2,Gasto en cuidados,2030,0.0,0.0
+M2,Gasto en cuidados,2040,0.0,0.0
+M2,Gasto en cuidados,2054,0.0,0.0
+M2,Déficit no cubierto,2027,0.0,0.0
+M2,Déficit no cubierto,2030,0.0,0.0
+M2,Déficit no cubierto,2040,42041.77127928374,0.6390752737459976
+M2,Déficit no cubierto,2054,148093.1259292271,2.0012687831015286

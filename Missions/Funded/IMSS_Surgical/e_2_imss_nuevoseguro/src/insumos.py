@@ -9,7 +9,7 @@ from functools import cache
 import numpy as np
 import pandas as pd
 
-from comun import CFG, MDP, P, YEARS, interpola
+from comun import CFG, MDP, P, TABLAS, YEARS, interpola
 
 import common as c1          # experimento 1 (v1.2)
 import proyeccion as pr1
@@ -74,6 +74,13 @@ class Insumos2:
         f25 = fm.loc[2025]
         self.formalidad = fm
         self.formalidad_esc = {"base": fm, "M2": fm * 0 + f25, "M3": (f25 + fm) / 2}
+        # MH (v1.3): desde la formalidad de 2025 del libro, sube al paso de la serie histórica 2005-2025
+        # ((razón 2025 − razón 2005) / 20, extremos exactos), con tope en la formalidad de la base
+        h = pd.read_csv(TABLAS / "formalidad_historica.csv").set_index("anio").razon_pct
+        self.paso_historico = (h.loc[2025] - h.loc[2005]) / 20 / 100
+        mh = pd.Series({t: f25 + self.paso_historico * (t - 2025) for t in fm.index})
+        self.formalidad_mh_sin_tope = mh
+        self.formalidad_esc["MH"] = np.minimum(mh, fm)
         self.factor = {e: (v / fm).loc[2026:2054] for e, v in self.formalidad_esc.items()}
         self.m2 = self.factor["M2"]
 

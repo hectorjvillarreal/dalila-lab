@@ -369,7 +369,7 @@
  },
  "M3_formalidad_2030": {
   "valor": 35.23,
-  "fuente": "Formalidad implícita del escenario M3 (%)"
+  "fuente": "Formalidad M3 2030 (%)"
  },
  "M3_factor_masa_2030": {
   "valor": 0.9661,
@@ -2927,6 +2927,866 @@
   "valor": 0.0,
   "fuente": "8.4 K2: identidad de la reserva (máx. desviación, mdp)"
  },
+ "k2p_base_ingreso_2027": {
+  "valor": 109378,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_ingreso_pts_2027": {
+  "valor": 2.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_ingreso_2030": {
+  "valor": 124109,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_ingreso_pts_2030": {
+  "valor": 2.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_ingreso_2040": {
+  "valor": 178194,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_ingreso_pts_2040": {
+  "valor": 2.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_ingreso_2054": {
+  "valor": 274824,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_ingreso_pts_2054": {
+  "valor": 2.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_deficit_2027": {
+  "valor": 74270,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_deficit_pts_2027": {
+  "valor": 1.358,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_deficit_2030": {
+  "valor": 91888,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_deficit_pts_2030": {
+  "valor": 1.481,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_deficit_2040": {
+  "valor": 137449,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_deficit_pts_2040": {
+  "valor": 1.543,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_deficit_2054": {
+  "valor": 198154,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_deficit_pts_2054": {
+  "valor": 1.442,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_mov_reserva_2027": {
+  "valor": 35107,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_mov_reserva_pts_2027": {
+  "valor": 0.642,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_mov_reserva_2030": {
+  "valor": 32222,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_mov_reserva_pts_2030": {
+  "valor": 0.519,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_mov_reserva_2040": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_mov_reserva_pts_2040": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_mov_reserva_2054": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_mov_reserva_pts_2054": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_cuidados_2027": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_cuidados_pts_2027": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_cuidados_2030": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_cuidados_pts_2030": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_cuidados_2040": {
+  "valor": 54312,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_cuidados_pts_2040": {
+  "valor": 0.61,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_cuidados_2054": {
+  "valor": 90237,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_cuidados_pts_2054": {
+  "valor": 0.657,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_no_cubierto_2027": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_no_cubierto_pts_2027": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_no_cubierto_2030": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_no_cubierto_pts_2030": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_no_cubierto_2040": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_no_cubierto_pts_2040": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_base_no_cubierto_2054": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_base_no_cubierto_pts_2054": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_ingreso_2027": {
+  "valor": 108552,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_ingreso_pts_2027": {
+  "valor": 2.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_ingreso_2030": {
+  "valor": 119898,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_ingreso_pts_2030": {
+  "valor": 2.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_ingreso_2040": {
+  "valor": 154882,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_ingreso_pts_2040": {
+  "valor": 2.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_ingreso_2054": {
+  "valor": 211411,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_ingreso_pts_2054": {
+  "valor": 2.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_deficit_2027": {
+  "valor": 74968,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_deficit_pts_2027": {
+  "valor": 1.381,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_deficit_2030": {
+  "valor": 95328,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_deficit_pts_2030": {
+  "valor": 1.59,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_deficit_2040": {
+  "valor": 155531,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_deficit_pts_2040": {
+  "valor": 2.008,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_deficit_2054": {
+  "valor": 247123,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_deficit_pts_2054": {
+  "valor": 2.338,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_mov_reserva_2027": {
+  "valor": 33584,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_mov_reserva_pts_2027": {
+  "valor": 0.619,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_mov_reserva_2030": {
+  "valor": 24569,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_mov_reserva_pts_2030": {
+  "valor": 0.41,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_mov_reserva_2040": {
+  "valor": -648,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_mov_reserva_pts_2040": {
+  "valor": -0.008,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_mov_reserva_2054": {
+  "valor": -35712,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_mov_reserva_pts_2054": {
+  "valor": -0.338,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_cuidados_2027": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_cuidados_pts_2027": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_cuidados_2030": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_cuidados_pts_2030": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_cuidados_2040": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_cuidados_pts_2040": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_cuidados_2054": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_cuidados_pts_2054": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_no_cubierto_2027": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_no_cubierto_pts_2027": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_no_cubierto_2030": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_no_cubierto_pts_2030": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_no_cubierto_2040": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_no_cubierto_pts_2040": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M3_no_cubierto_2054": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M3_no_cubierto_pts_2054": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_ingreso_2027": {
+  "valor": 107727,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_ingreso_pts_2027": {
+  "valor": 2.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_ingreso_2030": {
+  "valor": 115686,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_ingreso_pts_2030": {
+  "valor": 2.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_ingreso_2040": {
+  "valor": 131571,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_ingreso_pts_2040": {
+  "valor": 2.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_ingreso_2054": {
+  "valor": 147999,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_ingreso_pts_2054": {
+  "valor": 2.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_deficit_2027": {
+  "valor": 75666,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_deficit_pts_2027": {
+  "valor": 1.405,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_deficit_2030": {
+  "valor": 98769,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_deficit_pts_2030": {
+  "valor": 1.708,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_deficit_2040": {
+  "valor": 173612,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_deficit_pts_2040": {
+  "valor": 2.639,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_deficit_2054": {
+  "valor": 296092,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_deficit_pts_2054": {
+  "valor": 4.001,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_mov_reserva_2027": {
+  "valor": 32061,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_mov_reserva_pts_2027": {
+  "valor": 0.595,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_mov_reserva_2030": {
+  "valor": 16917,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_mov_reserva_pts_2030": {
+  "valor": 0.292,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_mov_reserva_2040": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_mov_reserva_pts_2040": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_mov_reserva_2054": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_mov_reserva_pts_2054": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_cuidados_2027": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_cuidados_pts_2027": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_cuidados_2030": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_cuidados_pts_2030": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_cuidados_2040": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_cuidados_pts_2040": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_cuidados_2054": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_cuidados_pts_2054": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_no_cubierto_2027": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_no_cubierto_pts_2027": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_no_cubierto_2030": {
+  "valor": 0,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_no_cubierto_pts_2030": {
+  "valor": 0.0,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_no_cubierto_2040": {
+  "valor": 42042,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_no_cubierto_pts_2040": {
+  "valor": 0.639,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "k2p_M2_no_cubierto_2054": {
+  "valor": 148093,
+  "fuente": "cuadro_principal_K2.csv, mdp de 2026"
+ },
+ "k2p_M2_no_cubierto_pts_2054": {
+  "valor": 2.001,
+  "fuente": "cuadro_principal_K2.csv, puntos del salario"
+ },
+ "res_base_K2_ultimo": {
+  "valor": 2054,
+  "fuente": "resumen_K2_K1.csv: último año con cobertura completa de GMP"
+ },
+ "res_base_K2_deficit_no_cubierto_2054": {
+  "valor": 0,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_base_K2_vp_deficit_no_cubierto": {
+  "valor": 0,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_base_K2_vp_cuidados": {
+  "valor": 747074,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_base_K2_vp_reserva_final": {
+  "valor": 54861,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_base_K2_vp_cuidados_mas_reserva": {
+  "valor": 801935,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_base_K1_ultimo": {
+  "valor": 2054,
+  "fuente": "resumen_K2_K1.csv: último año con cobertura completa de GMP"
+ },
+ "res_base_K1_deficit_no_cubierto_2054": {
+  "valor": 0,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_base_K1_vp_deficit_no_cubierto": {
+  "valor": 0,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_base_K1_vp_cuidados": {
+  "valor": 801935,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_base_K1_vp_reserva_final": {
+  "valor": 0,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_base_K1_vp_cuidados_mas_reserva": {
+  "valor": 801935,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M3_K2_ultimo": {
+  "valor": 2054,
+  "fuente": "resumen_K2_K1.csv: último año con cobertura completa de GMP"
+ },
+ "res_M3_K2_deficit_no_cubierto_2054": {
+  "valor": 0,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M3_K2_vp_deficit_no_cubierto": {
+  "valor": 0,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M3_K2_vp_cuidados": {
+  "valor": 6498,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M3_K2_vp_reserva_final": {
+  "valor": 30155,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M3_K2_vp_cuidados_mas_reserva": {
+  "valor": 36653,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M3_K1_ultimo": {
+  "valor": 2034,
+  "fuente": "resumen_K2_K1.csv: último año con cobertura completa de GMP"
+ },
+ "res_M3_K1_deficit_no_cubierto_2054": {
+  "valor": 35712,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M3_K1_vp_deficit_no_cubierto": {
+  "valor": 114602,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M3_K1_vp_cuidados": {
+  "valor": 151254,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M3_K1_vp_reserva_final": {
+  "valor": 0,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M3_K1_vp_cuidados_mas_reserva": {
+  "valor": 151254,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M2_K2_ultimo": {
+  "valor": 2037,
+  "fuente": "resumen_K2_K1.csv: último año con cobertura completa de GMP"
+ },
+ "res_M2_K2_deficit_no_cubierto_2054": {
+  "valor": 148093,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M2_K2_vp_deficit_no_cubierto": {
+  "valor": 728630,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M2_K2_vp_cuidados": {
+  "valor": 0,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M2_K2_vp_reserva_final": {
+  "valor": 0,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M2_K2_vp_cuidados_mas_reserva": {
+  "valor": 0,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M2_K1_ultimo": {
+  "valor": 2032,
+  "fuente": "resumen_K2_K1.csv: último año con cobertura completa de GMP"
+ },
+ "res_M2_K1_deficit_no_cubierto_2054": {
+  "valor": 148093,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M2_K1_vp_deficit_no_cubierto": {
+  "valor": 831627,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M2_K1_vp_cuidados": {
+  "valor": 102997,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M2_K1_vp_reserva_final": {
+  "valor": 0,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "res_M2_K1_vp_cuidados_mas_reserva": {
+  "valor": 102997,
+  "fuente": "resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026"
+ },
+ "sens13_K2_base_0": {
+  "valor": 2054,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, con provisiones, masa del libro"
+ },
+ "sens13_K2_base_1": {
+  "valor": 2054,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, masa del libro"
+ },
+ "sens13_K2_base_2": {
+  "valor": 2054,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, con provisiones, S-masa"
+ },
+ "sens13_K2_base_3": {
+  "valor": 2054,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, S-masa"
+ },
+ "sens13_K2_M3_0": {
+  "valor": 2054,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, con provisiones, masa del libro"
+ },
+ "sens13_K2_M3_1": {
+  "valor": 2054,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, masa del libro"
+ },
+ "sens13_K2_M3_2": {
+  "valor": 2045,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, con provisiones, S-masa"
+ },
+ "sens13_K2_M3_3": {
+  "valor": 2051,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, S-masa"
+ },
+ "sens13_K2_MH_0": {
+  "valor": 2049,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, con provisiones, masa del libro"
+ },
+ "sens13_K2_MH_1": {
+  "valor": 2050,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, masa del libro"
+ },
+ "sens13_K2_MH_2": {
+  "valor": 2043,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, con provisiones, S-masa"
+ },
+ "sens13_K2_MH_3": {
+  "valor": 2047,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, S-masa"
+ },
+ "sens13_K2_M2_0": {
+  "valor": 2037,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, con provisiones, masa del libro"
+ },
+ "sens13_K2_M2_1": {
+  "valor": 2042,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, masa del libro"
+ },
+ "sens13_K2_M2_2": {
+  "valor": 2036,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, con provisiones, S-masa"
+ },
+ "sens13_K2_M2_3": {
+  "valor": 2039,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, S-masa"
+ },
+ "sens13_K1_base_0": {
+  "valor": 2054,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, con provisiones, masa del libro"
+ },
+ "sens13_K1_base_1": {
+  "valor": 2054,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, masa del libro"
+ },
+ "sens13_K1_base_2": {
+  "valor": 2054,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, con provisiones, S-masa"
+ },
+ "sens13_K1_base_3": {
+  "valor": 2054,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, S-masa"
+ },
+ "sens13_K1_M3_0": {
+  "valor": 2034,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, con provisiones, masa del libro"
+ },
+ "sens13_K1_M3_1": {
+  "valor": 2041,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, masa del libro"
+ },
+ "sens13_K1_M3_2": {
+  "valor": 2033,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, con provisiones, S-masa"
+ },
+ "sens13_K1_M3_3": {
+  "valor": 2036,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, S-masa"
+ },
+ "sens13_K1_MH_0": {
+  "valor": 2034,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, con provisiones, masa del libro"
+ },
+ "sens13_K1_MH_1": {
+  "valor": 2039,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, masa del libro"
+ },
+ "sens13_K1_MH_2": {
+  "valor": 2033,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, con provisiones, S-masa"
+ },
+ "sens13_K1_MH_3": {
+  "valor": 2036,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, S-masa"
+ },
+ "sens13_K1_M2_0": {
+  "valor": 2032,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, con provisiones, masa del libro"
+ },
+ "sens13_K1_M2_1": {
+  "valor": 2034,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, masa del libro"
+ },
+ "sens13_K1_M2_2": {
+  "valor": 2031,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, con provisiones, S-masa"
+ },
+ "sens13_K1_M2_3": {
+  "valor": 2033,
+  "fuente": "sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, S-masa"
+ },
+ "MH_paso_pts_anio": {
+  "valor": 0.3274,
+  "fuente": "(razón 2025 − razón 2005) / 20, serie histórica de la v1.2"
+ },
+ "MH_formalidad_2054": {
+  "valor": 43.49,
+  "fuente": "Formalidad de MH en 2054 (%)"
+ },
+ "MH_sin_tope_2026": {
+  "valor": 34.32,
+  "fuente": "MH sin tope, 2026 (%)"
+ },
+ "base_formalidad_2026": {
+  "valor": 34.08,
+  "fuente": "Formalidad base, 2026 (%)"
+ },
+ "MH_anios_con_tope": {
+  "valor": 2,
+  "fuente": "Años en que el tope en la base es activo"
+ },
+ "MH_formalidad_2030": {
+  "valor": 35.63,
+  "fuente": "Formalidad MH 2030 (%)"
+ },
+ "MH_formalidad_2035": {
+  "valor": 37.27,
+  "fuente": "Formalidad MH 2035 (%)"
+ },
+ "M3_formalidad_2035": {
+  "valor": 37.38,
+  "fuente": "Formalidad M3 2035 (%)"
+ },
+ "k2_pesos_por_dh65_2040": {
+  "valor": 5631,
+  "fuente": "Base, K2, base ENIGH, pesos de 2026 por persona al año"
+ },
+ "k2_pesos_por_dh80_2040": {
+  "valor": 26318,
+  "fuente": "Base, K2, base ENIGH, pesos de 2026 por persona al año"
+ },
+ "k2_pesos_por_dh65_2054": {
+  "valor": 6696,
+  "fuente": "Base, K2, base ENIGH, pesos de 2026 por persona al año"
+ },
+ "k2_pesos_por_dh80_2054": {
+  "valor": 23771,
+  "fuente": "Base, K2, base ENIGH, pesos de 2026 por persona al año"
+ },
+ "chk13_00": {
+  "valor": 2e-09,
+  "fuente": "6.1 regresión v1.2: ingreso_vs_GMP (máx. desviación)"
+ },
+ "chk13_01": {
+  "valor": 0.0,
+  "fuente": "6.1 regresión v1.2: valor_presente (máx. desviación)"
+ },
+ "chk13_02": {
+  "valor": 4e-09,
+  "fuente": "6.1 regresión v1.2: remanente_por_mayor (máx. desviación)"
+ },
+ "chk13_03": {
+  "valor": 0.0,
+  "fuente": "6.1 regresión v1.2: resumen_escenarios (máx. desviación)"
+ },
+ "chk13_04": {
+  "valor": 0.0,
+  "fuente": "6.1 regresión v1.2: sensibilidad_provisiones_masa (máx. desviación)"
+ },
+ "chk13_05": {
+  "valor": 0.0,
+  "fuente": "6.1 regresión v1.2: reserva_K2 (máx. desviación)"
+ },
+ "chk13_06": {
+  "valor": 0.0,
+  "fuente": "6.2 resumen K2/K1 frente a la v1.2 (máx. desviación, mdp)"
+ },
+ "chk13_07": {
+  "valor": 0,
+  "fuente": "6.2 fechas que no corresponden a la v1.2 (primer año sin cobertura − 1)"
+ },
+ "chk13_08": {
+  "valor": 0,
+  "fuente": "6.3 MH ≤ base en todos los años (años que fallan)"
+ },
+ "chk13_09": {
+  "valor": 0,
+  "fuente": "6.3 MH entre M2 y M3, 2035-2054: formalidad (años que fallan)"
+ },
+ "chk13_10": {
+  "valor": 9,
+  "fuente": "6.3 MH por encima de M3, 2026-2034 (años; informativo)"
+ },
+ "chk13_11": {
+  "valor": 0,
+  "fuente": "6.3 MH entre M2 y M3, 2035-2054: masa y déficit ajustado (años que fallan)"
+ },
+ "chk13_12": {
+  "valor": 0,
+  "fuente": "6.3 último año con cobertura de MH entre M2 y M3 (columnas que fallan)"
+ },
+ "chk13_13": {
+  "valor": 0.0,
+  "fuente": "6.4 reserva final en VP = (inicio 2054 + movimiento 2054) descontada a 2026 (máx. desviación)"
+ },
+ "chk13_14": {
+  "valor": 0.0,
+  "fuente": "6.4 reserva final en K1 (máximo)"
+ },
  "cuna_sm_uma_2026": {
   "valor": 2.685,
   "fuente": "SM en veces la UMA (Sup_Fin)"
@@ -4505,6 +5365,6 @@
  },
  "chk_3.6": {
   "valor": 0,
-  "fuente": "3.6/8.7 apariciones de 2055 en las tablas"
+  "fuente": "3.6/6.7 apariciones de 2055 en las tablas"
  }
 }

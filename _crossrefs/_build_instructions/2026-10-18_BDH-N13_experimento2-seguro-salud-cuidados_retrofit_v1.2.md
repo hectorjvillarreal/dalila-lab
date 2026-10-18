@@ -18,7 +18,7 @@ agents_involved: [Beth, Cath, Claude Code]
 added_by: Beth
 endorsed_by: [Cath]      # aval de Cath a las secciones 1 y 4 de la v1.1; la v1.2 no lo condiciona
 protocol: PROTO-RAG-001
-status: executed
+status: superseded   # por 20261018_BDH_N13_experimento2-seguro-salud-cuidados_build_v1.3 (18-10-2026)
 executed: 2026-10-18   # Claude Code; e_2_imss_nuevoseguro/ (REPORT.md sección 'Experimento 2, v1.2', ANEXO_experimento2_borrador_v3.md). Verificaciones 8.1-8.7 cumplidas; K2 cambia en M3 y M2; la fecha de M3 depende de las provisiones; serie de formalización con fuentes primarias (IMSS, ENOE); variante opcional de personas mayores no construida (sin proyección de pensionados en el Informe)
 executor: Claude Code (Dalila)
 ---

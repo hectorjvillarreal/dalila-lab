@@ -370,7 +370,8 @@ Montos en millones de pesos de 2026 (mdp) salvo indicación. «Puntos del salari
 | M3_factor_masa_2040 | 0.8692 | Masa M3 / masa base |
 | M3_factor_masa_2054 | 0.7693 | Masa M3 / masa base |
 | M3_formalidad_2027 | 34.26 | Formalidad implícita del escenario M3 (%) |
-| M3_formalidad_2030 | 35.23 | Formalidad implícita del escenario M3 (%) |
+| M3_formalidad_2030 | 35.23 | Formalidad M3 2030 (%) |
+| M3_formalidad_2035 | 37.38 | Formalidad M3 2035 (%) |
 | M3_formalidad_2040 | 40.02 | Formalidad implícita del escenario M3 (%) |
 | M3_formalidad_2054 | 48.56 | Formalidad implícita del escenario M3 (%) |
 | M3_holgura_min | -35,712 | Mínimo de ingreso − déficit de GMP, 2027-2054 (mdp de 2026) |
@@ -498,6 +499,12 @@ Montos en millones de pesos de 2026 (mdp) salvo indicación. «Puntos del salari
 | M3_sinprov_smasa_margen_min_anio | 2,054 | sensibilidad_provisiones_masa.csv |
 | M3_sinprov_smasa_vp_k1_deficit_no_cubierto | 225,331 | sensibilidad_provisiones_masa.csv, mdp de 2026 |
 | M3_sinprov_smasa_vp_k2_deficit_no_cubierto | 59,216 | sensibilidad_provisiones_masa.csv, mdp de 2026 |
+| MH_anios_con_tope | 2 | Años en que el tope en la base es activo |
+| MH_formalidad_2030 | 35.63 | Formalidad MH 2030 (%) |
+| MH_formalidad_2035 | 37.27 | Formalidad MH 2035 (%) |
+| MH_formalidad_2054 | 43.49 | Formalidad de MH en 2054 (%) |
+| MH_paso_pts_anio | 0.3274 | (razón 2025 − razón 2005) / 20, serie histórica de la v1.2 |
+| MH_sin_tope_2026 | 34.32 | MH sin tope, 2026 (%) |
 | RT_prima_cuna | 1.9078 | Prima de RT en el Cuadro X-2.2 (Informe, Cuadro A.3) |
 | SEM_V13_menos_libro_2026 | 9,232 | Ingresos del SEM: Cuadro V.13 − libro (SEM-A + SEM-GMP), mdp |
 | SEM_V13_menos_libro_2030 | 15,148 | Ingresos del SEM: Cuadro V.13 − libro (SEM-A + SEM-GMP), mdp |
@@ -606,6 +613,7 @@ Montos en millones de pesos de 2026 (mdp) salvo indicación. «Puntos del salari
 | base_factor_masa_2030 | 1 | Masa base / masa base |
 | base_factor_masa_2040 | 1 | Masa base / masa base |
 | base_factor_masa_2054 | 1 | Masa base / masa base |
+| base_formalidad_2026 | 34.08 | Formalidad base, 2026 (%) |
 | base_formalidad_2027 | 34.52 | Formalidad implícita del escenario base (%) |
 | base_formalidad_2030 | 36.47 | Formalidad implícita del escenario base (%) |
 | base_formalidad_2040 | 46.04 | Formalidad implícita del escenario base (%) |
@@ -745,6 +753,21 @@ Montos en millones de pesos de 2026 (mdp) salvo indicación. «Puntos del salari
 | chk12_07 | 0 | 8.3 S-masa: razón ingreso nuevo / ingreso GMP constante en la base (rango) |
 | chk12_08 | 0 | 8.4 K2: años con faltante de GMP y retiro para cuidados |
 | chk12_09 | 0 | 8.4 K2: identidad de la reserva (máx. desviación, mdp) |
+| chk13_00 | 0 | 6.1 regresión v1.2: ingreso_vs_GMP (máx. desviación) |
+| chk13_01 | 0 | 6.1 regresión v1.2: valor_presente (máx. desviación) |
+| chk13_02 | 0 | 6.1 regresión v1.2: remanente_por_mayor (máx. desviación) |
+| chk13_03 | 0 | 6.1 regresión v1.2: resumen_escenarios (máx. desviación) |
+| chk13_04 | 0 | 6.1 regresión v1.2: sensibilidad_provisiones_masa (máx. desviación) |
+| chk13_05 | 0 | 6.1 regresión v1.2: reserva_K2 (máx. desviación) |
+| chk13_06 | 0 | 6.2 resumen K2/K1 frente a la v1.2 (máx. desviación, mdp) |
+| chk13_07 | 0 | 6.2 fechas que no corresponden a la v1.2 (primer año sin cobertura − 1) |
+| chk13_08 | 0 | 6.3 MH ≤ base en todos los años (años que fallan) |
+| chk13_09 | 0 | 6.3 MH entre M2 y M3, 2035-2054: formalidad (años que fallan) |
+| chk13_10 | 9 | 6.3 MH por encima de M3, 2026-2034 (años; informativo) |
+| chk13_11 | 0 | 6.3 MH entre M2 y M3, 2035-2054: masa y déficit ajustado (años que fallan) |
+| chk13_12 | 0 | 6.3 último año con cobertura de MH entre M2 y M3 (columnas que fallan) |
+| chk13_13 | 0 | 6.4 reserva final en VP = (inicio 2054 + movimiento 2054) descontada a 2026 (máx. desviación) |
+| chk13_14 | 0 | 6.4 reserva final en K1 (máximo) |
 | chk_00_3.1 | 0 | 3.1 masa con tope = base de la tasa D2 de la v1.2 (máx. desviación relativa) |
 | chk_01_3.1 | 1.02267 | 3.1 masa con tope / denominador anterior de la v1.2, 2027 (razón) |
 | chk_02_3.1 | 1.01399 | 3.1 masa con tope / denominador anterior de la v1.2, 2054 (razón) |
@@ -761,7 +784,7 @@ Montos en millones de pesos de 2026 (mdp) salvo indicación. «Puntos del salari
 | chk_13_7.1 | 0 | 7.1 regresión v1.0: ingreso_vs_GMP (máx. desviación) |
 | chk_14_7.1 | 0 | 7.1 regresión v1.0: valor_presente (máx. desviación) |
 | chk_15_7.1 | 0 | 7.1 regresión v1.0: remanente_por_mayor (máx. desviación) |
-| chk_3.6 | 0 | 3.6/8.7 apariciones de 2055 en las tablas |
+| chk_3.6 | 0 | 3.6/6.7 apariciones de 2055 en las tablas |
 | chk_cuna_0 | 0 | 3.5/7.5 (b) = (a) − 3 puntos en todo nivel hasta 25 UMA (máx. desviación, puntos) |
 | chk_cuna_1 | 0 | 3.5 tasas de cesantía y vejez fuera de la tabla de 1.5 (casos) |
 | chk_cuna_2 | 0 | 3.5 tabla 2030 = art. 168 fr. II a) del DOF 16-12-2020 (celdas distintas) |
@@ -1156,6 +1179,130 @@ Montos en millones de pesos de 2026 (mdp) salvo indicación. «Puntos del salari
 | formalidad_implicita_2054 | 0.6313 | Cotizantes / ocupados (prueba C de la v1.2) |
 | fuente_enoe_descarga | 2026-10-18 12:55-13:01 CST (inegi.org.mx, microdatos ENOE T4 2005-2025; ver data/raw/enoe/descargas.log) | Microdatos ENOE T4 2005-2025, inegi.org.mx/contenidos/programas/enoe/15ymas/microdatos/ |
 | fuente_memoria_sha256 | 12e667d918383b3c | 01-Asegurados.xlsx, descargado 2026-10-18 (imss.gob.mx, Memoria Estadística 2025, 01-Asegurados.xlsx) |
+| k2_pesos_por_dh65_2040 | 5,631 | Base, K2, base ENIGH, pesos de 2026 por persona al año |
+| k2_pesos_por_dh65_2054 | 6,696 | Base, K2, base ENIGH, pesos de 2026 por persona al año |
+| k2_pesos_por_dh80_2040 | 26,318 | Base, K2, base ENIGH, pesos de 2026 por persona al año |
+| k2_pesos_por_dh80_2054 | 23,771 | Base, K2, base ENIGH, pesos de 2026 por persona al año |
+| k2p_M2_cuidados_2027 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_cuidados_2030 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_cuidados_2040 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_cuidados_2054 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_cuidados_pts_2027 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_cuidados_pts_2030 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_cuidados_pts_2040 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_cuidados_pts_2054 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_deficit_2027 | 75,666 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_deficit_2030 | 98,769 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_deficit_2040 | 173,612 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_deficit_2054 | 296,092 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_deficit_pts_2027 | 1.405 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_deficit_pts_2030 | 1.708 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_deficit_pts_2040 | 2.639 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_deficit_pts_2054 | 4.001 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_ingreso_2027 | 107,727 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_ingreso_2030 | 115,686 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_ingreso_2040 | 131,571 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_ingreso_2054 | 147,999 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_ingreso_pts_2027 | 2 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_ingreso_pts_2030 | 2 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_ingreso_pts_2040 | 2 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_ingreso_pts_2054 | 2 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_mov_reserva_2027 | 32,061 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_mov_reserva_2030 | 16,917 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_mov_reserva_2040 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_mov_reserva_2054 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_mov_reserva_pts_2027 | 0.595 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_mov_reserva_pts_2030 | 0.292 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_mov_reserva_pts_2040 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_mov_reserva_pts_2054 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_no_cubierto_2027 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_no_cubierto_2030 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_no_cubierto_2040 | 42,042 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_no_cubierto_2054 | 148,093 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M2_no_cubierto_pts_2027 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_no_cubierto_pts_2030 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_no_cubierto_pts_2040 | 0.639 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M2_no_cubierto_pts_2054 | 2.001 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_cuidados_2027 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_cuidados_2030 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_cuidados_2040 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_cuidados_2054 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_cuidados_pts_2027 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_cuidados_pts_2030 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_cuidados_pts_2040 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_cuidados_pts_2054 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_deficit_2027 | 74,968 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_deficit_2030 | 95,328 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_deficit_2040 | 155,531 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_deficit_2054 | 247,123 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_deficit_pts_2027 | 1.381 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_deficit_pts_2030 | 1.59 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_deficit_pts_2040 | 2.008 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_deficit_pts_2054 | 2.338 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_ingreso_2027 | 108,552 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_ingreso_2030 | 119,898 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_ingreso_2040 | 154,882 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_ingreso_2054 | 211,411 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_ingreso_pts_2027 | 2 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_ingreso_pts_2030 | 2 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_ingreso_pts_2040 | 2 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_ingreso_pts_2054 | 2 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_mov_reserva_2027 | 33,584 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_mov_reserva_2030 | 24,569 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_mov_reserva_2040 | -648 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_mov_reserva_2054 | -35,712 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_mov_reserva_pts_2027 | 0.619 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_mov_reserva_pts_2030 | 0.41 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_mov_reserva_pts_2040 | -0.008 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_mov_reserva_pts_2054 | -0.338 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_no_cubierto_2027 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_no_cubierto_2030 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_no_cubierto_2040 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_no_cubierto_2054 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_M3_no_cubierto_pts_2027 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_no_cubierto_pts_2030 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_no_cubierto_pts_2040 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_M3_no_cubierto_pts_2054 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_cuidados_2027 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_cuidados_2030 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_cuidados_2040 | 54,312 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_cuidados_2054 | 90,237 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_cuidados_pts_2027 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_cuidados_pts_2030 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_cuidados_pts_2040 | 0.61 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_cuidados_pts_2054 | 0.657 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_deficit_2027 | 74,270 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_deficit_2030 | 91,888 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_deficit_2040 | 137,449 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_deficit_2054 | 198,154 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_deficit_pts_2027 | 1.358 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_deficit_pts_2030 | 1.481 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_deficit_pts_2040 | 1.543 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_deficit_pts_2054 | 1.442 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_ingreso_2027 | 109,378 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_ingreso_2030 | 124,109 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_ingreso_2040 | 178,194 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_ingreso_2054 | 274,824 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_ingreso_pts_2027 | 2 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_ingreso_pts_2030 | 2 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_ingreso_pts_2040 | 2 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_ingreso_pts_2054 | 2 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_mov_reserva_2027 | 35,107 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_mov_reserva_2030 | 32,222 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_mov_reserva_2040 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_mov_reserva_2054 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_mov_reserva_pts_2027 | 0.642 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_mov_reserva_pts_2030 | 0.519 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_mov_reserva_pts_2040 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_mov_reserva_pts_2054 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_no_cubierto_2027 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_no_cubierto_2030 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_no_cubierto_2040 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_no_cubierto_2054 | 0 | cuadro_principal_K2.csv, mdp de 2026 |
+| k2p_base_no_cubierto_pts_2027 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_no_cubierto_pts_2030 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_no_cubierto_pts_2040 | 0 | cuadro_principal_K2.csv, puntos del salario |
+| k2p_base_no_cubierto_pts_2054 | 0 | cuadro_principal_K2.csv, puntos del salario |
 | masa25_2027 | 5,468,877 | Σ cotizantes × SBC (R1, tope 25 UMA, piso SM) × UMA × 337, mdp de 2026 |
 | masa25_2030 | 6,205,467 | Σ cotizantes × SBC (R1, tope 25 UMA, piso SM) × UMA × 337, mdp de 2026 |
 | masa25_2040 | 8,909,700 | Σ cotizantes × SBC (R1, tope 25 UMA, piso SM) × UMA × 337, mdp de 2026 |
@@ -1170,6 +1317,74 @@ Montos en millones de pesos de 2026 (mdp) salvo indicación. «Puntos del salari
 | r_ingresoGMP_masa_2040 | 1.551 | Ingreso de GMP (Cuadro V.24) / masa propia base (%) |
 | r_ingresoGMP_masa_2054 | 1.544 | Ingreso de GMP (Cuadro V.24) / masa propia base (%) |
 | r_ingresoGMP_masa_caida_pct | -8.66 | Caída porcentual de r(t), 2027-2054 |
+| res_M2_K1_deficit_no_cubierto_2054 | 148,093 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M2_K1_ultimo | 2,032 | resumen_K2_K1.csv: último año con cobertura completa de GMP |
+| res_M2_K1_vp_cuidados | 102,997 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M2_K1_vp_cuidados_mas_reserva | 102,997 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M2_K1_vp_deficit_no_cubierto | 831,627 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M2_K1_vp_reserva_final | 0 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M2_K2_deficit_no_cubierto_2054 | 148,093 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M2_K2_ultimo | 2,037 | resumen_K2_K1.csv: último año con cobertura completa de GMP |
+| res_M2_K2_vp_cuidados | 0 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M2_K2_vp_cuidados_mas_reserva | 0 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M2_K2_vp_deficit_no_cubierto | 728,630 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M2_K2_vp_reserva_final | 0 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M3_K1_deficit_no_cubierto_2054 | 35,712 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M3_K1_ultimo | 2,034 | resumen_K2_K1.csv: último año con cobertura completa de GMP |
+| res_M3_K1_vp_cuidados | 151,254 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M3_K1_vp_cuidados_mas_reserva | 151,254 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M3_K1_vp_deficit_no_cubierto | 114,602 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M3_K1_vp_reserva_final | 0 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M3_K2_deficit_no_cubierto_2054 | 0 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M3_K2_ultimo | 2,054 | resumen_K2_K1.csv: último año con cobertura completa de GMP |
+| res_M3_K2_vp_cuidados | 6,498 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M3_K2_vp_cuidados_mas_reserva | 36,653 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M3_K2_vp_deficit_no_cubierto | 0 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_M3_K2_vp_reserva_final | 30,155 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_base_K1_deficit_no_cubierto_2054 | 0 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_base_K1_ultimo | 2,054 | resumen_K2_K1.csv: último año con cobertura completa de GMP |
+| res_base_K1_vp_cuidados | 801,935 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_base_K1_vp_cuidados_mas_reserva | 801,935 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_base_K1_vp_deficit_no_cubierto | 0 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_base_K1_vp_reserva_final | 0 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_base_K2_deficit_no_cubierto_2054 | 0 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_base_K2_ultimo | 2,054 | resumen_K2_K1.csv: último año con cobertura completa de GMP |
+| res_base_K2_vp_cuidados | 747,074 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_base_K2_vp_cuidados_mas_reserva | 801,935 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_base_K2_vp_deficit_no_cubierto | 0 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| res_base_K2_vp_reserva_final | 54,861 | resumen_K2_K1.csv, mdp de 2026; VP descontado al 3 % real a 2026 |
+| sens13_K1_M2_0 | 2,032 | sensibilidad_v13.csv, último año con cobertura completa, con provisiones, masa del libro |
+| sens13_K1_M2_1 | 2,034 | sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, masa del libro |
+| sens13_K1_M2_2 | 2,031 | sensibilidad_v13.csv, último año con cobertura completa, con provisiones, S-masa |
+| sens13_K1_M2_3 | 2,033 | sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, S-masa |
+| sens13_K1_M3_0 | 2,034 | sensibilidad_v13.csv, último año con cobertura completa, con provisiones, masa del libro |
+| sens13_K1_M3_1 | 2,041 | sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, masa del libro |
+| sens13_K1_M3_2 | 2,033 | sensibilidad_v13.csv, último año con cobertura completa, con provisiones, S-masa |
+| sens13_K1_M3_3 | 2,036 | sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, S-masa |
+| sens13_K1_MH_0 | 2,034 | sensibilidad_v13.csv, último año con cobertura completa, con provisiones, masa del libro |
+| sens13_K1_MH_1 | 2,039 | sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, masa del libro |
+| sens13_K1_MH_2 | 2,033 | sensibilidad_v13.csv, último año con cobertura completa, con provisiones, S-masa |
+| sens13_K1_MH_3 | 2,036 | sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, S-masa |
+| sens13_K1_base_0 | 2,054 | sensibilidad_v13.csv, último año con cobertura completa, con provisiones, masa del libro |
+| sens13_K1_base_1 | 2,054 | sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, masa del libro |
+| sens13_K1_base_2 | 2,054 | sensibilidad_v13.csv, último año con cobertura completa, con provisiones, S-masa |
+| sens13_K1_base_3 | 2,054 | sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, S-masa |
+| sens13_K2_M2_0 | 2,037 | sensibilidad_v13.csv, último año con cobertura completa, con provisiones, masa del libro |
+| sens13_K2_M2_1 | 2,042 | sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, masa del libro |
+| sens13_K2_M2_2 | 2,036 | sensibilidad_v13.csv, último año con cobertura completa, con provisiones, S-masa |
+| sens13_K2_M2_3 | 2,039 | sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, S-masa |
+| sens13_K2_M3_0 | 2,054 | sensibilidad_v13.csv, último año con cobertura completa, con provisiones, masa del libro |
+| sens13_K2_M3_1 | 2,054 | sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, masa del libro |
+| sens13_K2_M3_2 | 2,045 | sensibilidad_v13.csv, último año con cobertura completa, con provisiones, S-masa |
+| sens13_K2_M3_3 | 2,051 | sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, S-masa |
+| sens13_K2_MH_0 | 2,049 | sensibilidad_v13.csv, último año con cobertura completa, con provisiones, masa del libro |
+| sens13_K2_MH_1 | 2,050 | sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, masa del libro |
+| sens13_K2_MH_2 | 2,043 | sensibilidad_v13.csv, último año con cobertura completa, con provisiones, S-masa |
+| sens13_K2_MH_3 | 2,047 | sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, S-masa |
+| sens13_K2_base_0 | 2,054 | sensibilidad_v13.csv, último año con cobertura completa, con provisiones, masa del libro |
+| sens13_K2_base_1 | 2,054 | sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, masa del libro |
+| sens13_K2_base_2 | 2,054 | sensibilidad_v13.csv, último año con cobertura completa, con provisiones, S-masa |
+| sens13_K2_base_3 | 2,054 | sensibilidad_v13.csv, último año con cobertura completa, sin provisiones, S-masa |
 | sm_uma_2027 | 2.899 | SM en veces la UMA (Sup_Fin; v1.2) |
 | sm_uma_2030 | 3.646 | SM en veces la UMA (Sup_Fin; v1.2) |
 | sm_uma_2040 | 3.833 | SM en veces la UMA (Sup_Fin; v1.2) |

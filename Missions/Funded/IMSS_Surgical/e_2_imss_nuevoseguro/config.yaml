@@ -4,15 +4,17 @@
 
 dalila_root: ../../../..
 
-# Corrida activa. v1.0 y v1.1 reproducen las corridas anteriores (pruebas de regresión 7.1 y 8.1); v1.2 es la instrucción
-# 20261018_BDH_N13_experimento2-seguro-salud-cuidados_build_v1.2.
-corrida: v1.2
+# Corrida activa. v1.0, v1.1 y v1.2 reproducen las corridas anteriores (pruebas de regresión 7.1, 8.1 y 6.1); v1.3 es la
+# instrucción 20261018_BDH_N13_experimento2-seguro-salud-cuidados_build_v1.3.
+corrida: v1.3
 corridas:
   v1.0: {escenarios: [base, M2], ajuste_ingreso_gmp: false, rt_cuna: 1.80, personas: [DH_total, PAMF], k2_regla: v1.1}
   v1.1: {escenarios: [base, M3, M2], ajuste_ingreso_gmp: true, rt_cuna: 1.9078, personas: [ENIGH, Informe_max], k2_regla: v1.1}
   # v1.2: K2 suspende el retiro fijo para cuidados en años con faltante de GMP (regla de Beth); sensibilidades sin
   # provisiones y S-masa (ingreso del nuevo seguro al ritmo del ingreso de GMP del Informe) en tablas aparte
   v1.2: {escenarios: [base, M3, M2], ajuste_ingreso_gmp: true, rt_cuna: 1.9078, personas: [ENIGH, Informe_max], k2_regla: v1.2}
+  # v1.3: mismo modelo que la v1.2; K2 es la regla principal (K1 = variante sin reserva); MH solo en sensibilidades
+  v1.3: {escenarios: [base, M3, M2], ajuste_ingreso_gmp: true, rt_cuna: 1.9078, personas: [ENIGH, Informe_max], k2_regla: v1.2}
 exp1: Missions/Funded/IMSS_Surgical/e_1_imss_subsidiado/anexo_afiliacion_subsidiada   # módulos y derivados de la v1.2
 informe_pdf: Missions/Funded/IMSS_Surgical/e_1_imss_subsidiado/_informe-situacion-financiera_imss.pdf
 

@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 
 FUENTE = ("Ejercicio preliminar ITED; no es una proyección del IMSS ni una propuesta del IMSS o del Gobierno. "
           "Fuentes: Informe IMSS 2025-2026 (Cuadro V.24); libro de Finanzas 07/09/2026; CONAPO; ENIGH 2024.")
-ANEXO = "ANEXO_experimento2_borrador_v3.md"
+ANEXO = "ANEXO_experimento2_borrador_v4.md"
 
 # (clave, valor, fuente, estado) — instrucción, sección 6, más las cifras que la ejecución añadió
 SEMILLA = [
@@ -59,22 +59,27 @@ SEMILLA = [
 
 
 def figura():
+    """v1.3: K2 es la regla principal. Por escenario: ingreso y déficit de GMP, faltante cubierto con la reserva,
+    déficit no cubierto y saldo de la reserva."""
     d = pd.read_parquet(DERIVED / "ingreso_vs_GMP.parquet")
     reg = json.loads(NUMBERS_JSON.read_text())
     escs = [e for e in ("base", "M3", "M2") if e in set(d.escenario_masa)]
     titulos = {"base": "Base (formalización institucional)", "M3": "M3 (mitad de la formalización)", "M2": "M2 (formalidad constante)"}
     FIGURAS.mkdir(parents=True, exist_ok=True)
-    fig, axs = plt.subplots(1, len(escs), figsize=(12, 4.6), sharey=True)
-    ymax = float(d[["ingreso_NS", "deficit_GMP"]].max().max()) / 1000 * 1.06
+    fig, axs = plt.subplots(1, len(escs), figsize=(12, 4.8), sharey=True)
+    ymax = float(d[["ingreso_NS", "deficit_GMP", "k2_reserva_fin"]].max().max()) / 1000 * 1.06
     for ax, e in zip(axs, escs):
         x = d[d.escenario_masa == e].set_index("anio")
         t, i, dd = x.index, x.ingreso_NS / 1000, x.deficit_GMP / 1000
+        cub = i + x.k2_retiro_gmp / 1000
         ax.fill_between(t, dd, i, where=i >= dd, color=AZUL, alpha=0.15, lw=0, interpolate=True)
-        ax.fill_between(t, dd, i, where=i < dd, color=NARANJA, alpha=0.25, lw=0, interpolate=True)
+        ax.fill_between(t, i, cub, where=cub > i + 1e-9, color=GRIS, alpha=0.35, lw=0, interpolate=True)
+        ax.fill_between(t, cub, dd, where=dd > cub + 1e-9, color=NARANJA, alpha=0.35, lw=0, interpolate=True)
         ax.plot(t, i, color=AZUL, lw=2.2, label="Ingreso del nuevo seguro (2 %)")
         ax.plot(t, dd, color=TINTA, lw=1.8, label="Déficit de GMP")
-        p = reg[f"{e}_k1_primer_anio_no_cubre"]["valor"]
-        sub = "cubre todo el horizonte" if p == "ninguno" else f"sin cobertura desde {p}"
+        ax.plot(t, x.k2_reserva_fin / 1000, color=GRIS, lw=1.4, ls="--", label="Saldo de la reserva (K2)")
+        u = reg[f"res_{e}_K2_ultimo"]["valor"]
+        sub = "con reserva, cubre todo el horizonte" if u == 2054 else f"con reserva, cubre hasta {u}"
         ax.set_title(f"{titulos[e]}\n{sub}", fontsize=9.5, color=TINTA, loc="left")
         ax.set_xticks([2027, 2035, 2045, 2054])   # 2055 no se reporta (3.6)
         ax.set_xlim(2027, 2054)
@@ -83,8 +88,8 @@ def figura():
         ax.grid(axis="y", color="#ebeae6", lw=0.8)
     axs[0].set_ylabel("Miles de millones de pesos de 2026", fontsize=8, color=TINTA2)
     axs[0].legend(fontsize=7.5, frameon=False, loc="upper left")
-    fig.text(0.01, 0.01, FUENTE + "\nAzul: remanente para cuidados (K1); naranja: déficit no cubierto. El déficit de M3 y M2 incluye "
-             "la menor recaudación de GMP con menos cotizantes.", fontsize=6.5, color=TINTA2)
+    fig.text(0.01, 0.01, FUENTE + "\nAzul: excedente (a la reserva hasta 2034; a cuidados desde 2035); gris: faltante cubierto con la reserva; "
+             "naranja: déficit no cubierto. El déficit de M3 y M2 incluye la menor recaudación de GMP con menos cotizantes.", fontsize=6.5, color=TINTA2)
     fig.tight_layout(rect=(0, 0.06, 1, 1))
     fig.savefig(FIGURAS / "ingreso_vs_GMP.png", dpi=160)
     plt.close(fig)
@@ -144,11 +149,13 @@ def cifras_sin_registro() -> list[str]:
 def main():
     figura()
     n = sin_2055()
-    record("chk_3.6", n, "3.6/8.7 apariciones de 2055 en las tablas")
+    record("chk_3.6", n, "3.6/6.7 apariciones de 2055 en las tablas")
     numbers_md()
     faltan = cifras_sin_registro()
-    return {"3.6/8.7 apariciones de 2055 en las tablas": n, "3.7/8.7 cifras del borrador v3 sin registro en NUMBERS.md": len(faltan),
-            "3.7 detalle": ", ".join(faltan)}
+    anexo = (PROJECT / ANEXO).read_text(encoding="utf8") if (PROJECT / ANEXO).exists() else ""
+    primer = len(re.findall(r"primer año sin cobertura", anexo, flags=re.I))
+    return {"3.6/6.7 apariciones de 2055 en las tablas": n, "3.7/6.7 cifras del borrador v4 sin registro en NUMBERS.md": len(faltan),
+            "3.7 detalle": ", ".join(faltan), "6.5 «primer año sin cobertura» en el borrador v4": primer}
 
 
 if __name__ == "__main__":

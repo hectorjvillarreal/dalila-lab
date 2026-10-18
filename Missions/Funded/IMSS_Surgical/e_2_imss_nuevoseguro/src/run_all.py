@@ -7,6 +7,7 @@ import json
 import cambios_exp1
 import cuna_legal
 import formalidad
+import k2_principal
 import nuevo_seguro
 import salidas
 import sensibilidades_v12
@@ -16,7 +17,7 @@ if __name__ == "__main__":
     NUMBERS_JSON.unlink(missing_ok=True)
     DERIVED.mkdir(parents=True, exist_ok=True)
     chk = {}
-    for mod in (nuevo_seguro, sensibilidades_v12, cuna_legal, cambios_exp1, formalidad, salidas):
+    for mod in (nuevo_seguro, sensibilidades_v12, k2_principal, cuna_legal, cambios_exp1, formalidad, salidas):
         print(f"→ {mod.__name__}")
         chk.update(mod.main())
     (DERIVED / "checks.json").write_text(json.dumps(chk, ensure_ascii=False, indent=1))

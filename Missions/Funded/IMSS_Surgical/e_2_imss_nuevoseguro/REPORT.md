@@ -3,7 +3,7 @@
 **Instrucción:** `20261018_BDH_N13_experimento2-seguro-salud-cuidados_build_v1.0` (Beth; lectura fiscal pendiente de Cath), archivada en `_crossrefs/_build_instructions/2026-10-18_BDH-N13_experimento2-seguro-salud-cuidados_initial-scaffold_v1.0.md`.
 **Ejecutó:** Claude Code, 2026-10-18, autorizado por Héctor.
 **Rótulo:** diseño de análisis de ITED; no es una proyección ni una propuesta del IMSS o del Gobierno. Tasas legales (incidencia legal), no incidencia económica.
-**Reproducir:** `conda activate dalila && python src/run_all.py` (unos 3 s). Reutiliza los módulos y derivados de la v1.2 del experimento 1 (`../e_1_imss_subsidiado/anexo_afiliacion_subsidiada/`) sin escribir en ellos. Todas las cifras están en `NUMBERS.md`.
+**Reproducir:** `conda activate dalila && python src/run_all.py` (unos 30 s; la serie de formalización lee los microdatos de la ENOE de `data/raw/`). Reutiliza los módulos y derivados de la v1.2 del experimento 1 (`../e_1_imss_subsidiado/anexo_afiliacion_subsidiada/`) sin escribir en ellos. Todas las cifras están en `NUMBERS.md`.
 
 **Decisiones de Héctor (18-10-2026), previas a la ejecución:**
 
@@ -13,6 +13,83 @@
 4. El contraste 3.3 se hace con **horizontes iguales**.
 5. «% de los ingresos del SEM» usa los ingresos del **Informe** (Cuadro V.13).
 6. Se aceptan los 79,178,109 derechohabientes como base (ver [REVISAR] 2).
+
+---
+
+## Experimento 2, v1.3 (2026-10-18)
+
+**Instrucción:** `20261018_BDH_N13_experimento2-seguro-salud-cuidados_build_v1.3` (Beth; K2 como regla principal a propuesta de Cath, decisión de Héctor). Archivada en `_crossrefs/_build_instructions/2026-10-18_BDH-N13_experimento2-seguro-salud-cuidados_retrofit_v1.3.md`; la v1.2 queda como `superseded`. Producto: `ANEXO_experimento2_borrador_v4.md`; el v3 se conserva. Corrida activa: `corrida: v1.3`. Es el mismo modelo que la v1.2: cambian la presentación, el escenario MH y la convención de fechas. **Es la última versión de modelo antes de redacción.**
+
+**Decisiones de Héctor al ejecutar (18-10):**
+
+- MH tiene tope en la formalidad de la base.
+- La reserva final es el saldo de cierre de 2054.
+
+### E2v13.1 Resumen K2 y K1 (`tablas/resumen_K2_K1.csv`)
+
+| | Base, K2 | Base, K1 | M3, K2 | M3, K1 | M2, K2 | M2, K1 |
+|---|---|---|---|---|---|---|
+| Último año con cobertura completa | 2054 | 2054 | 2054 | 2034 | 2037 | 2032 |
+| Déficit no cubierto en 2054 | 0 | 0 | 0 | 35,712 | 148,093 | 148,093 |
+| Déficit no cubierto, VP | 0 | 0 | 0 | 114,602 | 728,630 | 831,627 |
+| Cuidados, VP | 747,074 | 801,935 | 6,498 | 151,254 | 0 | 102,997 |
+| Reserva final, VP | 54,861 | 0 | 30,155 | 0 | 0 | 0 |
+| Cuidados más reserva final, VP | 801,935 | 801,935 | 36,653 | 151,254 | 0 | 102,997 |
+
+- **Reserva final:** es el saldo de cierre de 2054 (125,518 mdp en la base), descontado a 2026. La instrucción citaba la reserva de *inicio* de 2054 (135,034 mdp, unos 59,000 en VP); se usó el cierre, como define la verificación 6.4 (decisión de Héctor).
+- **Equivalencia en la base:** K2 y K1 dan exactamente el mismo valor presente, 801,935, porque la reserva rinde 3 % real, la misma tasa de descuento, y la base no tiene faltantes.
+
+### E2v13.2 MH y Cuadro X-2.3 ampliado (`tablas/sensibilidad_v13.csv`)
+
+- **MH:**
+  - Parte de 34.0 % en 2025 y sube 0.3274 puntos por año: (37.68 − 31.14) / 20, con los extremos exactos de la serie.
+  - Llega a 43.49 % en 2054; la instrucción esperaba unos 43.6 %, porque usaba un paso redondeado de 0.33.
+  - Tiene tope en la formalidad de la base, que solo actúa en 2026 y 2027: sin tope, MH daría 34.32 % en 2026 frente a 34.08 % de la base.
+  - De 2026 a 2034 queda por encima de M3 (35.63 % frente a 35.23 % en 2030), porque la proyección institucional formaliza más despacio al principio.
+- **Último año con cobertura completa:**
+
+| Regla | Escenario | Con prov., libro | Sin prov., libro | Con prov., S-masa | Sin prov., S-masa |
+|---|---|---|---|---|---|
+| K2 | Base | 2054 | 2054 | 2054 | 2054 |
+| K2 | M3 | 2054 | 2054 | 2045 | 2051 |
+| K2 | MH | 2049 | 2050 | 2043 | 2047 |
+| K2 | M2 | 2037 | 2042 | 2036 | 2039 |
+| K1 | Base | 2054 | 2054 | 2054 | 2054 |
+| K1 | M3 | 2034 | 2041 | 2033 | 2036 |
+| K1 | MH | 2034 | 2039 | 2033 | 2036 |
+| K1 | M2 | 2032 | 2034 | 2031 | 2033 |
+
+- **Oración del texto:** «Si la formalización avanzara al ritmo de 2005-2025, la formalidad llegaría a 43.49 % en 2054, entre M2 y M3; con reserva, el 2 % cubriría el déficit de GMP hasta 2049.»
+
+### E2v13.3 Frase de apertura
+
+«Con una reserva que se acumula hasta 2034, el 2 % cubre el déficit de GMP en todo el horizonte con la formalización que supone la proyección institucional y también con la mitad de esa formalización; con formalidad constante, lo cubre hasta 2037. Sin reserva, la cobertura con la mitad de la formalización llega hasta 2034 (2041 sin las provisiones de GMP), y con formalidad constante hasta 2032 (2034).»
+
+Coincide con los Cuadros X-2.2 y X-2.3. Todas las celdas de la plantilla correspondían, así que no hubo que ajustarla.
+
+### E2v13.4 Año de descuento
+
+- Todos los valores presentes del anexo, desde la v1.0, se descuentan al 3 % real a **2026**, el mismo año y la misma tasa que los valores presentes del Informe.
+- No hubo que unificar nada y ninguna cifra cambió.
+- El borrador v4 lo declara en la sección de datos.
+
+### E2v13.5 Verificaciones (sección 6)
+
+| # | Resultado | Estado |
+|---|---|---|
+| 6.1 | La configuración v1.2 reproduce sus seis tablas: `ingreso_vs_GMP`, `valor_presente`, `remanente_por_mayor`, `resumen_escenarios`, `sensibilidad_provisiones_masa` y `reserva_K2`. Desviación máxima de 3.7e-9 mdp, la precisión del CSV | ✓ |
+| 6.2 | Resumen K2/K1 frente a la v1.2: desviación 1.5e-11 mdp; 0 fechas que no correspondan (último año = primer año sin cobertura − 1) | ✓ |
+| 6.3 | MH ≤ base en todos los años: 0 fallas. Entre M2 y M3 de 2035 a 2054 en formalidad, masa y déficit ajustado: 0 fallas. Último año con cobertura de MH entre los de M2 y M3 en las 8 columnas: 0 fallas. De 2026 a 2034, MH queda por encima de M3 (9 años; informativo) | ✓, con la salvedad de 2026-2034 (decisión de Héctor) |
+| 6.4 | Reserva final en VP = (inicio de 2054 + movimiento de 2054) descontada a 2026: desviación 0. En K1 es 0 | ✓ |
+| 6.5 | «Primer año sin cobertura» en el borrador v4: 0 apariciones. La frase de apertura coincide con los cuadros | ✓ |
+| 6.6 | El documento no contiene las secciones eliminadas (se revisó tras actualizarlo) | ✓ |
+| 6.7 | Sin 2055 en las tablas; todas las cifras del borrador v4 están en `NUMBERS.md` | ✓ |
+
+### E2v13.6 Decisiones propias [REVISAR]
+
+1. **[REVISAR] Cuadro X-2.4 (K1 sin reserva):** contiene el remanente y el déficit no cubierto de K1 por año. Es el «cuadro aparte» de la sección 1.1.
+2. **[REVISAR] Numeración de cuadros del borrador v4:** X-2.1 principal (K2), X-2.2 resumen K2/K1, X-2.3 sensibilidades (como pide la instrucción), X-2.4 K1, X-2.5 trayectoria de la reserva y X-2.6 cuña legal.
+3. **[REVISAR] «Remanente» con K2:** con K2 la fila se llama «gasto en cuidados», porque incluye el retiro fijo de la reserva. El término «remanente» se reserva para K1.
 
 ---
 
