@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="349.2pt" height="197.352pt" viewBox="0 0 349.2 197.352" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-18T13:38:21.274102</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 197.352 
+L 349.2 197.352 
+L 349.2 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 10.548 70.917766 
+L 100.944 70.917766 
+Q 101.6136 70.917766 101.6136 70.286897 
+L 101.6136 29.280414 
+Q 101.6136 28.649545 100.944 28.649545 
+L 10.548 28.649545 
+Q 9.8784 28.649545 9.8784 29.280414 
+L 9.8784 70.286897 
+Q 9.8784 70.917766 10.548 70.917766 
+z
+" clip-path="url(#p736f74a5ef)" style="fill: #eef3fa; stroke: #1f5fa8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 10.548 168.702455 
+L 100.944 168.702455 
+Q 101.6136 168.702455 101.6136 168.071586 
+L 101.6136 127.065103 
+Q 101.6136 126.434234 100.944 126.434234 
+L 10.548 126.434234 
+Q 9.8784 126.434234 9.8784 127.065103 
+L 9.8784 168.071586 
+Q 9.8784 168.702455 10.548 168.702455 
+z
+" clip-path="url(#p736f74a5ef)" style="fill: #eef3fa; stroke: #1f5fa8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 119.358 122.964455 
+L 226.494 122.964455 
+Q 227.1636 122.964455 227.1636 122.333586 
+L 227.1636 75.018414 
+Q 227.1636 74.387545 226.494 74.387545 
+L 119.358 74.387545 
+Q 118.6884 74.387545 118.6884 75.018414 
+L 118.6884 122.333586 
+Q 118.6884 122.964455 119.358 122.964455 
+z
+" clip-path="url(#p736f74a5ef)" style="fill: #f4f4f4; stroke: #555555; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 248.256 130.850317 
+L 338.652 130.850317 
+Q 339.3216 130.850317 339.3216 130.219448 
+L 339.3216 67.132552 
+Q 339.3216 66.501683 338.652 66.501683 
+L 248.256 66.501683 
+Q 247.5864 66.501683 247.5864 67.132552 
+L 247.5864 130.219448 
+Q 247.5864 130.850317 248.256 130.850317 
+z
+" clip-path="url(#p736f74a5ef)" style="fill: #fff4e8; stroke: #d9822b; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 102.90858 50.141224 
+Q 174.599793 63.189583 245.081047 76.01772 
+" clip-path="url(#p736f74a5ef)" style="fill: none; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 241.503831 73.333782 
+L 245.081047 76.01772 
+L 240.787567 77.26913 
+z
+" clip-path="url(#p736f74a5ef)" style="fill: #555555; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 102.90858 147.210776 
+Q 174.599793 134.162417 245.081047 121.33428 
+" clip-path="url(#p736f74a5ef)" style="fill: none; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 240.787567 120.08287 
+L 245.081047 121.33428 
+L 241.503831 124.018218 
+z
+" clip-path="url(#p736f74a5ef)" style="fill: #555555; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 228.49434 98.676 
+Q 237.374061 98.676 245.023944 98.676 
+" clip-path="url(#p736f74a5ef)" style="fill: none; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 241.023944 96.676 
+L 245.023944 98.676 
+L 241.023944 100.676 
+z
+" clip-path="url(#p736f74a5ef)" style="fill: #555555; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 9px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(12.780844 41.755655)">Hogar sin seguridad</text>
+    <text style="font-size: 9px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(17.241469 52.123655)">social contributiva</text>
+    <text style="font-size: 9px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(21.178969 62.491655)">(titular informal)</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(17.344828 144.714782)">Trabajador formal</text>
+    <text style="font-size: 9px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(31.896703 155.146907)">y su patrón</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(137.107133 91.063719)">Gobierno Federal:</text>
+    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(123.029672 100.916281)">aportación fija por titular</text>
+    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(119.431117 110.708281)">y subsidio a ingresos bajos</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(264.038766 85.464)">SEM del IMSS</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(293.454 95.832)"/>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(253.078453 106.2)">Cobertura médica</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(263.401734 116.568)">para el hogar</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; text-anchor: middle; fill: #555555" x="194.688" y="18.873034" transform="rotate(-0 194.688 18.873034)">Cuota proporcional al ingreso (menos el subsidio)</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; text-anchor: middle; fill: #555555" x="194.688" y="182.898966" transform="rotate(-0 194.688 182.898966)">Misma cuota proporcional por el mismo ingreso</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p736f74a5ef">
+   <rect x="7.2" y="7.2" width="334.8" height="182.952"/>
+  </clipPath>
+ </defs>
+</svg>

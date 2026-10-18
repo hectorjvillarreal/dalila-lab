@@ -1,0 +1,17 @@
+concepto,unidad,anio,valor_informe,ubicacion_informe,valor_anexos,fuente_anexos,diferencia_pct,mayor_a_1pct,nota
+Derechohabientes IMSS,millones,2025,70.69,"Anexo I, Tabla I.1",79.178,"Informe al Ejecutivo 2025-2026, Cuadro I.4 (semilla DH_total)",12.01,1,Fuentes distintas: el informe aplica tasas de la ENIGH a CONAPO; los anexos usan el registro administrativo [REVISAR-JP]
+"Derechohabientes IMSS, mismo método que el Anexo I",millones,2025,70.69,"Anexo I, Tabla I.1",54.631,"Experimento 1, ENIGH_IMSS_escalado_CONAPO_2025",-22.72,1,Réplica del método del Anexo I con la ENIGH 2024; no reproduce los 70.69 millones [REVISAR-JP]
+Cotizantes SEM,millones,2025,22.35,"Anexo I, Tabla I.1",22.353,"Libro de Finanzas, cotizantes dic. 2025 (Informe_DH_por_cotizante)",0.01,0,
+Cotizantes SEM,millones,2030,25.23,"Anexo I, Tabla I.1",25.234,"Experimento 2, cotizantes_2030",0.01,0,
+Cotizantes SEM,millones,2040,33.88,"Anexo I, Tabla I.1",33.885,"Experimento 2, cotizantes_2040",0.01,0,
+"Cotizantes SEM (informe 2055, anexos 2054)",millones,2054,46.69,"Anexo I, Tabla I.1 (2055)",46.802,"Experimento 2, cotizantes_2054",0.24,0,Años distintos: el informe llega a 2055 y la sección 10 a 2054
+"Ingresos del SEM, libro",miles de millones de pesos de 2026,2030,611.2,Tabla 5,611.178,"Experimento 1, ingreso_SEM_mdp_2030 (libro)",-0.0,0,Misma fuente
+"Ingresos del SEM, libro frente a Cuadro V.13",miles de millones de pesos de 2026,2030,611.2,Tabla 5,626.325,"Informe al Ejecutivo, Cuadro V.13 (denominador común de la sección 10)",2.47,1,"La sección 10 expresa los saldos como % de los ingresos del Cuadro V.13, no del libro [REVISAR-JP]"
+"Ingresos del SEM, libro frente a Cuadro V.13",miles de millones de pesos de 2026,2040,833.1,Tabla 5,835.679,"Informe al Ejecutivo, Cuadro V.13",0.31,0,
+"Ingresos del SEM, libro (informe 2055, anexos 2054)",miles de millones de pesos de 2026,2054,1215.3,Tabla 5 (2055),1206.423,"Experimento 2, SEM_ingresos_libro_2054",-0.73,0,Años distintos (2055 frente a 2054)
+Ingresos totales del IMSS,miles de millones de pesos de 2026,2025,851.3,"Anexo M, Tabla M.2",851.311,"Experimento 1, NUMBERS.md semilla Ingresos_2025_libro",0.0,0,Misma fuente
+Tasa efectiva del SEM,% del SBC,2026,9.6,Sección 2 (texto),9.6,"Experimento 1, NUMBERS.md semilla Tasa_efectiva_SEM (Cuadro A.4)",0.0,0,
+Prima de equilibrio del SEM,% del SBC,2026,12.9,Sección 2 (texto),12.94,"Experimento 1, NUMBERS.md semilla Prima_eq_SEM (Cuadro V.13)",0.31,0,
+Prima de financiamiento del SEM,% del SBC,2026,8.9,Sección 2 (texto),8.93,"Experimento 1, NUMBERS.md semilla Prima_fin_SEM (Cuadro V.14)",0.34,0,
+Gasto de bolsillo en salud por hogar,pesos al año,2024,6421,"Sección 3 (texto, cita CIEP)",5773.0,"Experimento 1, aseq_decil5_oop (ENIGH 2024, hogares objetivo, pesos de 2026)",-10.09,1,Conceptos distintos: promedio nacional de todos los hogares (pesos de 2024) frente a hogares sin seguridad social del decil V; no son comparables y la sección 10 no los mezcla
+Población de 65 años o más,millones,2025,,No se publica en el informe (reporta 60 años o más),11.698,"Experimento 2, CONAPO_65mas_2025",,,Sin cifra del informe que conciliar
