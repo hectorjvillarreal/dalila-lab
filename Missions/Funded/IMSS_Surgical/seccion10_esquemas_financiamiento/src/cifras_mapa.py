@@ -22,8 +22,20 @@ MAPA = [
     ("10a", "3,647", "", "1", "aseq_p50_prima_D2_G2", 1, 0),
     ("10a", "3.5", "", "1", "aseq_p50_pctlab_D2_G2", 1, 1),
     ("10a", "1.7", "", "1", "aseq_p50_pcthog_D2_G2", 1, 1),
-    ("10a", "15,087", "", "1", "aseq_p50_prima_D1_G1", 1, 0),
-    ("10a", "14.3", "", "1", "aseq_p50_pctlab_D1_G1", 1, 1),
+    ("10a", "15,087", "", "1", "aseq_p50_prima_D1_G1", 1, 0),          # solo v1
+    ("10a", "14.3", "", "1", "aseq_p50_pctlab_D1_G1", 1, 1),           # solo v1
+    ("10a", "8,736", "", "1", "s10v11_p50_fija_patronal", 1, 0),
+    ("10a", "8.3", "", "1", "s10v11_p50_fija_patronal_pctlab", 1, 1),
+    ("10a", "31", "", "1", "v12b_A_personas_cubiertas_2030", M, 0),  # frase de apertura (redondeo de Beth)
+    ("10a", "80", "al año", "1", "v12b_Total_saldo_mdp_2054", -MM, 0),  # «unos 80 mil millones al año» (81 en 2030, 80 en 2054)
+    ("10a", "41.2", "", "1", "s10v11_pct_pob_imss_2030_sin", 1, 1),
+    ("10a", "63.9", "", "1", "s10v11_pct_pob_imss_2030_con", 1, 1),
+    ("10a", "13.2", "", "1", "s10v11_saldo_pct_tabla5_2030", -1, 1),
+    ("10a", "4,921", "", "1", "s10v11_U2_pago_hogar_p50", 1, 0),
+    ("10a", "2.1", "", "1", "s10v11_U2_pct_hogar_p50", 1, 1),
+    ("10a", "0.4", "", "1", "v12_U2_informe_saldo_pts_sbc_2030", -1, 1),
+    ("10a", "12.0", "", "1", "s10v11_costo_pp_70M_dif_pct", 1, 1),
+    ("10a", "105", "", "1", "s10v11_saldo_mdp_2030_70M", -MM, 0),
     ("10a", "1.3", "percentil 30", "1", "aseq_p30_pctlab_D2_G2", 1, 1),
     ("10a", "1.3", "puntos", "1", "v12b_Total_saldo_pts_2030", -1, 1),
     ("10a", "50", "", "1", "config:escenarios.base_v12.tau=0.50", P, 0),
@@ -49,6 +61,7 @@ MAPA = [
     ("10a", "12.9", "", "1", "v12b_Total_saldo_sem_2030", -1, 1),
     ("10a", "80", "", "1", "v12b_Total_saldo_mdp_2054", -MM, 0),
     ("10a", "0.6", "", "1", "v12b_Total_saldo_pts_2054", -1, 1),
+    ("10a", "1.8", "sube de 0.6", "1", "v12_pim2_saldo_pts_sbc_2054", -1, 1),
     ("10a", "25", "", "1", "semilla:Denominador_puntos_v12 (tope de 25 UMA)=25", 1, 0),
     ("10a", "3", "millones", "1", "config:escenarios.F.F1.cotizantes_2030=3000000", M, 0),
     ("10a", "2.9", "", "1", "v12_C_dh_por_cot_2030", 1, 1),
@@ -70,7 +83,8 @@ MAPA = [
     ("10a", "70.7", "", "1", "semilla:N13_DH_2025=70.69", 1, 1),
     ("10a", "54.6", "", "1", "ENIGH_IMSS_escalado_CONAPO_2025", M, 1),
     # ---------------- 10b (experimento 2)
-    ("10b", "2,631", "", "2", "semilla:GMP_V24_base (VP del saldo)=-2631460", -MM, 0),
+    ("10b", "2,631", "", "2", "semilla:GMP_V24_base (VP del saldo)=-2631460", -MM, 0),     # solo v1
+    ("10b", "2.6", "", "2", "semilla:GMP_V24_base (VP del saldo, billones)=-2631460", -1e-6, 1),
     ("10b", "3", "", "2", "semilla:Tasa_descuento=3 / base_reduccion_cuna_legal_pts_2027=3", 1, 0),
     ("10b", "5", "", "2", "semilla:Infonavit_tasa=5", 1, 0),
     ("10b", "25", "", "2", "semilla:Infonavit_tasa (tope de 25 UMA)=25", 1, 0),

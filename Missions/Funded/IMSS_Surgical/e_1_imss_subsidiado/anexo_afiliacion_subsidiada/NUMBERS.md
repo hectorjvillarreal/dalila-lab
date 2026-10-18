@@ -491,6 +491,27 @@ Las desagregaciones por seguro, la retención y el modelo de cohortes son **reco
 | masa_sbc_mdp_2054 | 14,677,540 | Cotizantes del libro × SBC 627.21 × 1.037 × crecimiento real (Sup_Inc) × 365 |
 | ocupacion_hosp_2o_nivel_2025 | 75.7 | Informe, sección de capacidad (pág. PDF 115) |
 | ocupacion_hosp_3er_nivel_2025 | 83.7 | Informe, pág. PDF 115 |
+| s10v11_DH_enigh_2030 | 56,826,731 | Tasa IMSS (inst_1) por edad y sexo de la ENIGH 2024 × CONAPO 2030 |
+| s10v11_U2_pago_hogar_p50 | 4,921 | U2 (cada integrante paga 3.467 % del ingreso por persona del hogar, subsidio por persona), hogares con titular en ±2.5 percentiles de la mediana, 2026; mediana del pago anual del hogar (pesos de 2026) |
+| s10v11_U2_pct_hogar_p50 | 2.1 | U2 (cada integrante paga 3.467 % del ingreso por persona del hogar, subsidio por persona), hogares con titular en ±2.5 percentiles de la mediana, 2026; mediana del pago / ingreso corriente del hogar (%) |
+| s10v11_costo_pp_70M_dif_pct | 12 | Costo por persona del SEM con 70.69 M de DH (N13) frente a 79,178,109 (Cuadro I.4): (79.18 / 70.69 − 1) × 100 |
+| s10v11_p10_fija_patronal | 0 | seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2 |
+| s10v11_p10_fija_patronal_pctlab | 0 | seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2; % del ingreso laboral del titular |
+| s10v11_p20_fija_patronal | 0 | seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2 |
+| s10v11_p20_fija_patronal_pctlab | 0.001 | seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2; % del ingreso laboral del titular |
+| s10v11_p30_fija_patronal | 3,190 | seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2 |
+| s10v11_p30_fija_patronal_pctlab | 4.499 | seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2; % del ingreso laboral del titular |
+| s10v11_p50_fija_patronal | 8,736 | seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2 |
+| s10v11_p50_fija_patronal_pctlab | 8.305 | seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2; % del ingreso laboral del titular |
+| s10v11_p70_fija_patronal | 9,072 | seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2 |
+| s10v11_p70_fija_patronal_pctlab | 6.433 | seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2; % del ingreso laboral del titular |
+| s10v11_p90_fija_patronal | 10,618 | seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2 |
+| s10v11_p90_fija_patronal_pctlab | 4.35 | seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2; % del ingreso laboral del titular |
+| s10v11_pct_pob_imss_2030_con | 63.9 | (DH ENIGH 2030 + personas cubiertas por el esquema) / población CONAPO 2030 (%) |
+| s10v11_pct_pob_imss_2030_sin | 41.2 | DH ENIGH 2030 / población CONAPO 2030 (%) |
+| s10v11_pob_conapo_2030 | 138,033,990 | CONAPO 2023, población total 2030 |
+| s10v11_saldo_mdp_2030_70M | -104,645 | Saldo base 2030 con el costo por persona escalado por 79.18 / 70.69 (sin otra corrida), mdp de 2026 |
+| s10v11_saldo_pct_tabla5_2030 | -13.2 | Saldo base 2030 / ingresos del SEM de la Tabla 5 del Núcleo 13 (611.2 mil mdp) (%) |
 | sens_C2_GF_mdp_2030 | 90,842 | sensibilidades.csv (pagos federales A + B + C) |
 | sens_C2_GF_mdp_2054 | 50,147 | sensibilidades.csv (pagos federales A + B + C) |
 | sens_C2_GF_pts_sbc_2030 | 1.406 | sensibilidades.csv |

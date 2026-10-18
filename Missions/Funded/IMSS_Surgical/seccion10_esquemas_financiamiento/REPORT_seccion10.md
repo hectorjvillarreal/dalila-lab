@@ -210,3 +210,128 @@ Noto Sans instalada se ve bien. Las figuras no tienen el problema.
    conciliación de derechohabientes] en la nota de 10a. En el .docx aparecen resaltadas en amarillo y se retiran al
    cerrar la redacción.
 9. **«Anexo X»** se deja literal: Héctor decide después dónde van los anexos.
+
+---
+
+# v1.1 — correcciones de fondo, figuras y paginación (18-10-2026)
+
+Instrucción: `20261018_BDH_N13_seccion10-esquemas-financiamiento_build_v1.1` (Beth; revisión de Beth y Cath). La v1 se conserva.
+
+| Archivo nuevo | Contenido |
+|---|---|
+| `N13_seccion10_esquemas_financiamiento_v1.1.md` / `.docx` | Texto y .docx de la v1.1 |
+| `Nucleo13_Informe_Resultados_Oct2026 atendido JP_con_seccion10_v1.1.docx` | Copia de JP con la v1.1 al final (fuera de git) |
+| `tablas/seccion10_cifras_v1.1.csv`, `data/verificaciones_v1.1.json` | Registro de cifras y verificaciones de la v1.1 |
+| `figuras/` | F10a_2, F10b_2, F10b_3 y F10b_4 cambian; todas se redibujan a 5.4 in (85 % del ancho de texto). La v1 queda en git |
+| `e_1…/src/seccion10_v11.py` (+ `.md`) | Cifras nuevas de 1.1, 1.3, 1.5 y 1.9; claves `s10v11_*` en `NUMBERS.md` del experimento 1; incluido en `run_all.py` |
+
+Orden: `e_1…/src/seccion10_v11.py` → `cifras.main()` → `figuras.py` → `verificar.py v1.1` → `conciliacion.py` → `docx_seccion10.py v1.1`.
+
+## 1. Cifras nuevas y su cálculo
+
+| Punto | Cifra | Cálculo | Clave |
+|---|---|---|---|
+| 1.1 | 8,736 pesos; 8.3 % del ingreso laboral (mediana) | (1 − s) × 20.40 % × UMA 2026 × 365, más el excedente sobre 3 UMA con 337 días, igual que la serie de la cuota proporcional. Mismo subsidio y umbrales que la Figura 10.2. Por percentil: 0, 0, 3,190, 8,736, 9,072 y 10,618 pesos (P10 a P90). Con subsidio total en P10 y P20, ambas cuotas valen 0 | `s10v11_p{q}_fija_patronal`, `…_pctlab` |
+| 1.5 | 4,921 pesos; 2.1 % del ingreso del hogar (hogar mediano, afiliación individual) | Cada integrante paga 3.467 % del ingreso por persona del hogar, con el subsidio por persona; más el excedente de quien trabaja. Mediana de los hogares con titular en ±2.5 percentiles de la mediana, 2026 | `s10v11_U2_pago_hogar_p50`, `…_pct_hogar_p50` |
+| 1.3 | +12.0 % de costo por persona; saldo de 2030 de unos 105 mil millones | 79,178,109 / 70,690,000 − 1. El saldo 2030 (−80,962 mdp) menos el costo (197,237) × 0.120 = −104,645. Sin otra corrida | `s10v11_costo_pp_70M_dif_pct`, `s10v11_saldo_mdp_2030_70M` |
+| 1.3.2 | 41.2 % → 63.9 % de la población con IMSS en 2030 | Tasa IMSS por edad y sexo de la ENIGH 2024 × CONAPO 2030 = 56.83 M, entre 138.03 M de población; con el esquema se suman 31.4 M (hogares sin seguridad social: no se traslapan) | `s10v11_DH_enigh_2030`, `s10v11_pct_pob_imss_2030_*` |
+| 1.9 | 13.2 % (nota al pie) | −80,962 / 611,200 (Tabla 5 de JP; igual al libro, 611,178). También en `tablas/conciliacion_seccion10.csv` | `s10v11_saldo_pct_tabla5_2030` |
+
+Verificación 5.2: en la mediana, 3,647 (cuota proporcional) < 8,736 (cuota fija patronal) < 15,087 (cuota fija completa). Cumple. La referencia de Beth era de unos 8,700 pesos y 8.3 %.
+
+**Días.** La cuota proporcional de la Figura 10.2 usa 365 días para el ingreso anual y 337 días para el umbral del excedente (`asequibilidad` en `v12.py`). La nueva serie usa los mismos. La primera versión de `seccion10_v11.py` usaba 365 en los dos y movía 0.1 puntos en P70 y P90; se corrigió antes de redactar.
+
+## 2. Derechohabientes y población con IMSS
+
+- **El conteo sí interviene.** El costo por persona del SEM es el gasto en especie de 2026 (Cuadro V.13, 494,275 mdp) entre los 79,178,109 derechohabientes del Cuadro I.4: `e_1…/src/proyeccion.py`, línea 402 (`costo_per_capita_DH_2026`, `ins.c_bar`). Ese costo por persona entra al costo de los bloques A y C (`c_edad`, líneas 151 y 295).
+- Por eso la frase «no cambia los resultados» se sustituyó por la redacción prevista en la instrucción: con 70.7 millones, el costo por persona sube 12.0 % y el saldo de 2030 llega a unos 105 mil millones. La marca **[REVISAR-JP: conciliación de derechohabientes]** se mantiene.
+- **Cobertura:** con el conteo de la ENIGH, la población con IMSS pasaría de 41.2 % a 63.9 % de la población nacional en 2030.
+- La nota de derechohabientes ahora dice qué conteo usa cada cifra.
+
+## 3. Los 326 mil millones
+
+Se quedan, con su fuente: CIEP, «PPEF 2027: Gasto en salud por subsistema», Cuadro 1. Es el PEF 2026: Secretaría de Salud, IMSS-Bienestar, FASSA y Bienestar, que suman 338,028 mdp de 2027 y equivalen a 325,591 mdp de 2026 con la inflación de 2027 del libro. Está en `NUMBERS.md` del experimento 1 (`PEF2026_*`). La oración pasa al párrafo «Saldo para el SEM», después del saldo, sin «alcanza» ni «puede reasignarse».
+
+## 4. Provisiones
+
+El Informe del IMSS solo las define con una nota al pie del Cuadro V.19 (pág. PDF 147): «Se refiere a las provisiones para la operación». La misma nota acompaña los Cuadros V.17 a V.20. La Tabla 10.2 dice ahora «recursos que el IMSS aparta para su operación, según la nota del Cuadro V.19 del Informe». **[REVISAR]** La nota es casi circular; si Beth prefiere, se cambia por «con provisiones (véase el Informe del IMSS, Cuadro V.19)».
+
+## 5. Ritmo histórico
+
+**6.5 puntos** en la sección 10 y en el anexo. Es la resta exacta 37.685 − 31.137 = 6.548 (`e_2…/tablas/formalidad_historica.csv`; `form_hist_cambio_pts` = 6.5). Se corrigió la limitación 7 de `ANEXO_experimento2_borrador_v4.md` (decía 6.6) y se dejó constancia en `e_2…/REPORT.md`. No cambia ninguna corrida.
+
+## 6. Verificaciones
+
+| # | Resultado |
+|---|---|
+| 5.1 | Cumple. El diff de la v1 a la v1.1 tiene 72 líneas: los cambios de las secciones 1 a 4. Se movieron dos figuras (sección 4, abajo); el texto no cambió de orden |
+| 5.2 | Cumple: las cifras nuevas están en `NUMBERS.md` con su cálculo. 3,647 < 8,736 < 15,087 |
+| 5.3 | Cumple: «cuota fija vigente» aparece 2 veces. Una es la frase que pide 1.1.1 («la parte patronal de la cuota fija vigente»); la otra, el status quo de los 3 millones de cotizantes, igual que en la Figura 10.4 |
+| 5.4 | Cumple: fila nueva en la Tabla 10.1. La base usa `pi_m: 0.0` (`e_1…/config.yaml`, escenario `base_v12`) |
+| 5.5 | Cumple: sección 2 de este apartado |
+| 5.6 | Cumple: 0 apariciones de «el mismo método de la sección 4.2», «la base», «[REVISAR-Beth]» y «2,631 mil millones» |
+| 5.7 | Cumple: 6.5 en los dos documentos |
+| 5.8 | Cumple: 0 expresiones prohibidas, 0 «el trabajador paga» y 0 «el patrón paga». Además, «Hoy el patrón paga una cuota fija» pasó a «Hoy la ley pone a cargo del patrón una cuota fija» |
+| 5.9 | Cumple. Texto corrido: 10a 8,213 caracteres (4.56 cuartillas), 10b 6,906 (3.84), introducción 697. Fernández Huerta: 86.5 (10a), 88.3 (10b), 91.0 (introducción). Promedio de palabras por oración: 17.1 y 17.3. Páginas en la copia de JP: 10a ≈ 5.6 (págs. 55-60) y 10b ≈ 6.4 (págs. 60-66) |
+| 5.10 | 0 tablas partidas. Huecos: ver sección 4 abajo |
+| 5.11 | Cumple: hash `3f4002b8…a8cf88` antes y después. La copia conserva sus 57 comentarios y 191 cambios con control. Su nota al pie pasa a ser la 1 y la de la sección, la 2 |
+| v1.0 | 8.2: 163 cifras, 152 respaldadas en `NUMBERS.md` y 11 en `config.yaml`; 0 sin respaldo. 8.5 a 8.9 cumplen |
+
+Oraciones de más de 40 palabras: la segunda oración de la frase de apertura de Beth (46 palabras, 1.8) y la frase obligatoria 1 de 10b (42). Las dos son textos dictados y se dejaron literales **[REVISAR]**. La oración de 1.3 (41 palabras con «;») se partió en dos.
+
+### Paginación (sección 4 de la instrucción)
+
+- **Tablas.** Ninguna fila se parte. Las tablas se conservan completas en una página y repiten el encabezado si cruzan de página. Las celdas tienen 50 twips de margen vertical, en lugar de los 100 de JP. Los anchos de columna se eligen para que la tabla quede lo más baja posible.
+- **Figuras.** Van en línea, a 5.4 in, con la leyenda y la fuente pegadas. Los títulos también quedan pegados a lo que sigue. Los esquemas 10.1 y 10.5 y las Figuras 10.2, 10.3, 10.6 y 10.7 son un poco más bajos.
+- **Dos figuras flotadas.** Las Figuras 10.3 y 10.7 no cabían al final de su página y dejaban huecos de 33 % y 45 %. Ahora van después del párrafo que les sigue («Más formalidad…» y «Lo que queda para cuidados»). El texto conserva su orden y la referencia «(Figura 10.x)» no cambia **[REVISAR]**.
+- **Huecos que quedan.** Se midieron como la franja blanca más alta del área de texto, en PDF de LibreOffice:
+  - Copia de JP: 33 % en la pág. 56 (la Tabla 10.1 no cabe después de 10a.3 y pasa entera a la 57) y 29 % en la pág. 64. Al final de 10b queda 45 %, lo que se permite.
+  - .docx de la sección sola: 36 % en la pág. 2 por la misma Tabla 10.1, y 32 % en la pág. 10.
+  - Para quitar el de la Tabla 10.1 habría que dejar que se parta (con encabezado repetido) o adelantarla a 10a.2. No se hizo ninguna de las dos **[REVISAR]**.
+- Word pagina distinto que LibreOffice, así que los números de página y los huecos pueden moverse un poco.
+
+**Nota de visualización.** El documento de JP tiene activado el control de cambios (`trackRevisions` en `settings.xml`). LibreOffice pinta de dorado, con barra al margen, tanto la sección 10 como su propio Anexo M. El XML de la sección no tiene marcas de inserción (`w:ins` = 0): en Word se ve como texto normal.
+
+## 7. Diff resumido
+
+- **10a.1:** primera oración directa (1.11), verificada contra la definición de `A_personas_objetivo_2024`. La cuota fija se describe como «a cargo del patrón por ley» (1.7).
+- **10a.2:** cuarta viñeta en incidencia legal (1.7). En el ejemplo, la parte patronal de la cuota fija con el mismo subsidio: 8,736 pesos, 8.3 % (1.1).
+- **10a.3:** fila «Costo de atención por persona» en la Tabla 10.1 (1.2).
+- **10a.4:**
+  - frase de apertura de Beth, sin marca (1.8);
+  - «Cobertura» con 41.2 % → 63.9 % (1.3.2);
+  - «Asequibilidad» con 8.3 % y la oración sobre el peso de cada cuota (1.1.2);
+  - leyenda de la Figura 10.2 (1.1.3);
+  - «Saldo para el SEM» con la nota al pie de la Tabla 5 (1.9), los 326 mil millones con su fuente (1.10) y la nueva causa del descenso en puntos (1.2.2);
+  - «Más formalidad»: «con 2.9 derechohabientes por cotizante, incluido él» y «su cuota y el Gobierno Federal» (1.6);
+  - efecto sobre los formales con las dos oraciones de 1.4.
+- **10a.5:** afiliación individual en tres oraciones (1.5).
+- **10a.7:** 31 millones, 80 mil millones y «Con el supuesto ilustrativo…» (1.8 y 1.6).
+- **Nota de derechohabientes:** conteo usado y sensibilidad con 70.7 millones (1.3).
+- **10b.1:** 2.6 billones (2.4.1).
+- **10b.2:** el ejemplo usa «5.55 veces la UMA de ese año» (2.4.4).
+- **10b.3:** las provisiones se definen con la nota del Cuadro V.19 (2.3).
+- **10b.4:**
+  - leyenda de la Figura 10.6 sobre la reserva (3.2);
+  - método de las personas de 65+ y cota superior de los pesos por persona (2.1);
+  - cuña con la oración sobre la cuota proporcional y la advertencia del escalón (2.2);
+  - leyenda de la Figura 10.8: «no están a escala» (3.4).
+- **10b.7:** «con la formalización de la proyección del IMSS» en lugar de «en la base» (2.4.3).
+- **Figuras:**
+  - 10.2: nueva serie y rótulo (3.1);
+  - 10.6: anotaciones «el ingreso del año alcanza hasta 2032 / 2034» (3.2);
+  - 10.7: líneas continuas, marcador cada 5 años y mismos colores que la 10.6 (3.3);
+  - 10.8: anotación «lectura por UMA; criterio pendiente con el IMSS» (3.4).
+
+## 8. Decisiones propias [REVISAR]
+
+1. **Rango 0.2 a 0.4 en la afiliación individual.** Depende de cuántos beneficiarios por titular se supongan: 0.80 según la ENIGH y 1.07 según el Informe.
+2. **Redondeo de la frase de Beth.** Se usan 31 millones y 80 mil millones en la frase de apertura y en 10a.7. El cuerpo conserva 31.4 millones y 81 mil millones (2030). El «80 al año» se respalda con el saldo de 2054 (80); el de 2030 es 81.
+3. **Oración de 2.2, más precisa que la de la instrucción:** «Con la cuota proporcional, la cuña es menor que sin ella por debajo del salario promedio y mayor por encima». En la Figura 10.8, a 5.55 UMA, las dos líneas casi coinciden (26.2 frente a 26.5 en 2030).
+4. **«Cota superior» se aplica a los pesos por persona**, no al número de personas (2.1).
+5. **«La cuota proporcional, antes del subsidio, pesa lo mismo en todos los niveles» (1.1.2).** Se agregó «antes del subsidio» porque con subsidio pesa 0 % en los ingresos bajos.
+6. **Primera oración de 10a.1:** la del ejemplo de la instrucción sustituye las dos oraciones de la v1, que eran redundantes.
+7. **Ejemplo de 10b (2.4.4).** La cuña de 2026 se calcula a 5.55 UMA de 2026, la misma posición relativa del salario promedio de diciembre de 2025. Ese nivel se rotula «salario promedio», como en la Figura 10.8.
+8. **Provisiones:** se definen con la nota del Informe (sección 4 de este apartado).
+9. **Paginación:** dos figuras flotadas, celdas de tabla más compactas que en JP y un hueco de 33 % a 36 % que sigue en la página de la Tabla 10.1.
+10. **Oraciones de más de 40 palabras:** quedan dos, ambas dictadas.

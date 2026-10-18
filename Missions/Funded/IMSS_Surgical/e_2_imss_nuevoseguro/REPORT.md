@@ -387,3 +387,9 @@ Los dos cuadros difieren también en 2031 y 2036 (−97,653 y −135,137 en el V
 | `tablas/cuna_legal_por_salario.csv` | Componente por componente, (a), (b) y (c), 2026 y 2030; incluye las dos lecturas de 1.01 SM |
 | `figuras/ingreso_vs_GMP.png` | Ingreso frente a déficit, remanente sombreado, M2 punteado |
 | `ANEXO_experimento2_borrador.md` | Borrador del anexo, unas 3 páginas |
+
+---
+
+## Corrección del 18-10-2026 (sección 10 v1.1, punto 2.4.2)
+
+`ANEXO_experimento2_borrador_v4.md`, limitación 7: el cambio de la formalidad 2005-2025 pasa de «6.6 puntos» a **6.5 puntos**. El 6.6 era la resta de los extremos ya redondeados (37.7 − 31.1). La resta exacta es 37.685 − 31.137 = 6.548 (`tablas/formalidad_historica.csv`), y así está registrada en `NUMBERS.md` (`form_hist_cambio_pts` = 6.5). La sección 10 usa la misma cifra. No cambia ninguna corrida.

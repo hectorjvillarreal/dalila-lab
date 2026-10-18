@@ -4562,5 +4562,89 @@
  "v13_cifras_en_borrador": {
   "valor": 169,
   "fuente": "Cifras en puntos o % del SEM del borrador (sustituibles)"
+ },
+ "s10v11_p10_fija_patronal": {
+  "valor": 0,
+  "fuente": "seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2"
+ },
+ "s10v11_p10_fija_patronal_pctlab": {
+  "valor": 0.0,
+  "fuente": "seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2; % del ingreso laboral del titular"
+ },
+ "s10v11_p20_fija_patronal": {
+  "valor": 0,
+  "fuente": "seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2"
+ },
+ "s10v11_p20_fija_patronal_pctlab": {
+  "valor": 0.001,
+  "fuente": "seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2; % del ingreso laboral del titular"
+ },
+ "s10v11_p30_fija_patronal": {
+  "valor": 3190,
+  "fuente": "seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2"
+ },
+ "s10v11_p30_fija_patronal_pctlab": {
+  "valor": 4.499,
+  "fuente": "seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2; % del ingreso laboral del titular"
+ },
+ "s10v11_p50_fija_patronal": {
+  "valor": 8736,
+  "fuente": "seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2"
+ },
+ "s10v11_p50_fija_patronal_pctlab": {
+  "valor": 8.305,
+  "fuente": "seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2; % del ingreso laboral del titular"
+ },
+ "s10v11_p70_fija_patronal": {
+  "valor": 9072,
+  "fuente": "seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2"
+ },
+ "s10v11_p70_fija_patronal_pctlab": {
+  "valor": 6.433,
+  "fuente": "seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2; % del ingreso laboral del titular"
+ },
+ "s10v11_p90_fija_patronal": {
+  "valor": 10618,
+  "fuente": "seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2"
+ },
+ "s10v11_p90_fija_patronal_pctlab": {
+  "valor": 4.35,
+  "fuente": "seccion10_v11_cuota_fija_patronal.csv: (1 − s) × 20.40 % × UMA 2026 × 365 + excedente, mismo subsidio que la Figura 10.2; % del ingreso laboral del titular"
+ },
+ "s10v11_U2_pago_hogar_p50": {
+  "valor": 4921,
+  "fuente": "U2 (cada integrante paga 3.467 % del ingreso por persona del hogar, subsidio por persona), hogares con titular en ±2.5 percentiles de la mediana, 2026; mediana del pago anual del hogar (pesos de 2026)"
+ },
+ "s10v11_U2_pct_hogar_p50": {
+  "valor": 2.1,
+  "fuente": "U2 (cada integrante paga 3.467 % del ingreso por persona del hogar, subsidio por persona), hogares con titular en ±2.5 percentiles de la mediana, 2026; mediana del pago / ingreso corriente del hogar (%)"
+ },
+ "s10v11_costo_pp_70M_dif_pct": {
+  "valor": 12.0,
+  "fuente": "Costo por persona del SEM con 70.69 M de DH (N13) frente a 79,178,109 (Cuadro I.4): (79.18 / 70.69 − 1) × 100"
+ },
+ "s10v11_saldo_mdp_2030_70M": {
+  "valor": -104645,
+  "fuente": "Saldo base 2030 con el costo por persona escalado por 79.18 / 70.69 (sin otra corrida), mdp de 2026"
+ },
+ "s10v11_saldo_pct_tabla5_2030": {
+  "valor": -13.2,
+  "fuente": "Saldo base 2030 / ingresos del SEM de la Tabla 5 del Núcleo 13 (611.2 mil mdp) (%)"
+ },
+ "s10v11_DH_enigh_2030": {
+  "valor": 56826731,
+  "fuente": "Tasa IMSS (inst_1) por edad y sexo de la ENIGH 2024 × CONAPO 2030"
+ },
+ "s10v11_pob_conapo_2030": {
+  "valor": 138033990,
+  "fuente": "CONAPO 2023, población total 2030"
+ },
+ "s10v11_pct_pob_imss_2030_sin": {
+  "valor": 41.2,
+  "fuente": "DH ENIGH 2030 / población CONAPO 2030 (%)"
+ },
+ "s10v11_pct_pob_imss_2030_con": {
+  "valor": 63.9,
+  "fuente": "(DH ENIGH 2030 + personas cubiertas por el esquema) / población CONAPO 2030 (%)"
  }
 }

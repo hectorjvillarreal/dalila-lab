@@ -9,6 +9,7 @@ Cotizantes SEM,millones,2040,33.88,"Anexo I, Tabla I.1",33.885,"Experimento 2, c
 "Ingresos del SEM, libro frente a Cuadro V.13",miles de millones de pesos de 2026,2030,611.2,Tabla 5,626.325,"Informe al Ejecutivo, Cuadro V.13 (denominador común de la sección 10)",2.47,1,"La sección 10 expresa los saldos como % de los ingresos del Cuadro V.13, no del libro [REVISAR-JP]"
 "Ingresos del SEM, libro frente a Cuadro V.13",miles de millones de pesos de 2026,2040,833.1,Tabla 5,835.679,"Informe al Ejecutivo, Cuadro V.13",0.31,0,
 "Ingresos del SEM, libro (informe 2055, anexos 2054)",miles de millones de pesos de 2026,2054,1215.3,Tabla 5 (2055),1206.423,"Experimento 2, SEM_ingresos_libro_2054",-0.73,0,Años distintos (2055 frente a 2054)
+"Saldo de 10a en 2030 como % de los ingresos del SEM (v1.1, nota al pie)",% de los ingresos del SEM,2030,-13.2,Con los ingresos de la Tabla 5 (611.2 mil mdp),-12.93,"Experimento 1, v12b_Total_saldo_sem_2030 (Cuadro V.13, 626.3 mil mdp)",-2.05,1,La sección usa el Cuadro V.13 (decisión de Héctor); la nota al pie da la cifra con la Tabla 5
 Ingresos totales del IMSS,miles de millones de pesos de 2026,2025,851.3,"Anexo M, Tabla M.2",851.311,"Experimento 1, NUMBERS.md semilla Ingresos_2025_libro",0.0,0,Misma fuente
 Tasa efectiva del SEM,% del SBC,2026,9.6,Sección 2 (texto),9.6,"Experimento 1, NUMBERS.md semilla Tasa_efectiva_SEM (Cuadro A.4)",0.0,0,
 Prima de equilibrio del SEM,% del SBC,2026,12.9,Sección 2 (texto),12.94,"Experimento 1, NUMBERS.md semilla Prima_eq_SEM (Cuadro V.13)",0.31,0,

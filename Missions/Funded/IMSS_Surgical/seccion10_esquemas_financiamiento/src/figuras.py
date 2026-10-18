@@ -17,7 +17,7 @@ AQUI = Path(__file__).resolve().parents[1]
 E1 = AQUI.parent / "e_1_imss_subsidiado" / "anexo_afiliacion_subsidiada" / "outputs" / "tables"
 E2 = AQUI.parent / "e_2_imss_nuevoseguro" / "tablas"
 FIG = AQUI / "figuras"
-ANCHO = 6.0          # pulgadas: se inserta a este ancho en el documento (ancho útil 6.4 in)
+ANCHO = 5.4          # pulgadas: se inserta a este ancho en el documento (85 % del ancho útil de 6.375 in; v1.1)
 
 plt.rcParams.update({"font.family": ["Noto Sans", "DejaVu Sans"], "font.size": 9, "axes.titlesize": 9,
                      "axes.labelsize": 9, "xtick.labelsize": 9, "ytick.labelsize": 9, "legend.fontsize": 9,
@@ -65,17 +65,17 @@ def _flecha(ax, p, q, texto="", dx=0.0, dy=0.0, color=GRIS_T):
 # ---------------------------------------------------------------- 10a
 def f10a_1():
     """Esquema de la afiliación subsidiada."""
-    fig, ax = plt.subplots(figsize=(ANCHO, 3.3))
-    ax.set_xlim(0, 10)
+    fig, ax = plt.subplots(figsize=(ANCHO, 2.9))
+    ax.set_xlim(-0.15, 10.2)
     ax.set_ylim(-0.3, 5.5)
     ax.axis("off")
-    _caja(ax, 0.1, 3.5, 2.7, 1.3, "Hogar sin seguridad\nsocial contributiva\n(titular informal)")
-    _caja(ax, 0.1, 0.4, 2.7, 1.3, "Trabajador formal\ny su patrón")
-    _caja(ax, 3.35, 1.85, 3.2, 1.5, "Gobierno Federal:\naportación fija por titular\ny subsidio a ingresos bajos", color="#f4f4f4", borde=GRIS_T, fs=8.5)
-    _caja(ax, 7.2, 1.6, 2.7, 2.0, "SEM del IMSS\n\nCobertura médica\npara el hogar", color="#fff4e8", borde="#d9822b", peso="bold")
-    _flecha(ax, (2.8, 4.15), (7.2, 3.3))
-    _flecha(ax, (2.8, 1.05), (7.2, 1.9))
-    _flecha(ax, (6.55, 2.6), (7.2, 2.6))
+    _caja(ax, 0.0, 3.5, 3.05, 1.3, "Hogar sin seguridad\nsocial contributiva\n(titular informal)")
+    _caja(ax, 0.0, 0.4, 3.05, 1.3, "Trabajador formal\ny su patrón")
+    _caja(ax, 3.5, 1.85, 3.05, 1.5, "Gobierno Federal:\naportación fija\npor titular y subsidio\na ingresos bajos", color="#f4f4f4", borde=GRIS_T, fs=8.5)
+    _caja(ax, 7.1, 1.6, 2.95, 2.0, "SEM del IMSS\n\nCobertura médica\npara el hogar", color="#fff4e8", borde="#d9822b", peso="bold")
+    _flecha(ax, (3.05, 4.15), (7.1, 3.3))
+    _flecha(ax, (3.05, 1.05), (7.1, 1.9))
+    _flecha(ax, (6.55, 2.6), (7.1, 2.6))
     ax.text(5.6, 5.2, "Cuota proporcional al ingreso (menos el subsidio)", ha="center", va="center", fontsize=8.5, color=GRIS_T)
     ax.text(5.6, 0.0, "Misma cuota proporcional por el mismo ingreso", ha="center", va="center", fontsize=8.5, color=GRIS_T)
     datos = pd.DataFrame([{"actor": "Hogar informal", "aporta": "cuota proporcional al ingreso menos subsidio", "recibe": "cobertura médica del SEM"},
@@ -86,25 +86,24 @@ def f10a_1():
 
 def f10a_2():
     """Asequibilidad: pago anual como % del ingreso laboral del titular, por percentil."""
-    a = pd.read_csv(E1 / "asequibilidad.csv")
-    a = a[a.percentil.isin([10, 20, 30, 50, 70, 90])]
-    fig, ax = plt.subplots(figsize=(ANCHO, 2.9))
+    a = pd.read_csv(E1 / "seccion10_v11_cuota_fija_patronal.csv")   # misma cuota proporcional que asequibilidad.csv
+    fig, ax = plt.subplots(figsize=(ANCHO, 2.6))
     x = range(len(a))
     w = 0.38
-    ax.bar([i - w / 2 for i in x], a.pct_ingreso_laboral_D2_G2, w, color="#1f5fa8", label="Cuota proporcional con subsidio")
-    ax.bar([i + w / 2 for i in x], a.pct_ingreso_laboral_D1_G1, w, color="#c9c9c9", hatch="//", edgecolor="#8a8a8a", lw=0,
-           label="Cuota fija vigente (precio único)")
-    for i, (u, v) in enumerate(zip(a.pct_ingreso_laboral_D2_G2, a.pct_ingreso_laboral_D1_G1)):
+    ax.bar([i - w / 2 for i in x], a.pct_proporcional, w, color="#1f5fa8", label="Cuota proporcional, con subsidio")
+    ax.bar([i + w / 2 for i in x], a.pct_fija_patronal, w, color="#c9c9c9", hatch="//", edgecolor="#8a8a8a", lw=0,
+           label="Parte patronal de la cuota fija, con el mismo subsidio")
+    for i, (u, v) in enumerate(zip(a.pct_proporcional, a.pct_fija_patronal)):
         ax.text(i - w / 2, u + 0.3, f"{u:.1f}", ha="center", fontsize=8.5, color=TINTA)
         ax.text(i + w / 2, v + 0.3, f"{v:.1f}", ha="center", fontsize=8.5, color=GRIS_T)
     ax.set_xticks(list(x), [f"P{p}" for p in a.percentil])
     ax.set_xlabel("Percentil del ingreso laboral del titular informal")
     ax.set_ylabel("% del ingreso laboral anual")
-    ax.set_ylim(0, 17)
+    ax.set_ylim(0, 12.5)
     ax.legend(frameon=False, loc="upper left")
     _estilo(ax)
-    _guardar(fig, "F10a_2_asequibilidad", a[["percentil", "ingreso_laboral_anual", "prima_D2_G2", "pct_ingreso_laboral_D2_G2",
-                                            "prima_D1_G1", "pct_ingreso_laboral_D1_G1"]])
+    _guardar(fig, "F10a_2_asequibilidad", a[["percentil", "ingreso_laboral_anual", "subsidio", "prima_proporcional", "pct_proporcional",
+                                            "prima_fija_patronal", "pct_fija_patronal"]])
 
 
 def f10a_3():
@@ -113,7 +112,7 @@ def f10a_3():
     r = r[(r.corrida == "base") & (r.bloque == "Total") & (r.anio.isin([2026, 2030, 2040, 2054]))].set_index("anio")
     d = pd.DataFrame({"anio": r.index, "cuotas_cobradas": r.pagos_privados_pts_sbc.values, "aportacion_federal": r.pagos_GF_pts_sbc.values,
                       "costo_atencion": r.costo_pts_sbc.values, "saldo": r.saldo_pts_sbc.values})
-    fig, ax = plt.subplots(figsize=(ANCHO, 2.9))
+    fig, ax = plt.subplots(figsize=(ANCHO, 2.5))
     x = range(len(d))
     w = 0.36
     ax.bar([i - w / 2 for i in x], d.cuotas_cobradas, w, color=COMP["cobrado"], label="Cuotas cobradas")
@@ -156,21 +155,21 @@ def f10a_4():
 # ---------------------------------------------------------------- 10b
 def f10b_1():
     """Esquema: del 5 % actual al nuevo seguro."""
-    fig, ax = plt.subplots(figsize=(ANCHO, 3.2))
+    fig, ax = plt.subplots(figsize=(ANCHO, 2.5))
     ax.set_xlim(-0.3, 10.2)
     ax.set_ylim(0, 5.4)
     ax.axis("off")
     _caja(ax, 0.0, 2.0, 2.5, 1.4, "Aportación\npatronal al\nInfonavit hoy:\n5 % del salario", color="#f4f4f4", borde=GRIS_T, peso="bold", fs=8.5)
     _caja(ax, 3.2, 3.6, 2.6, 1.1, "3 puntos que se\ndejan de cobrar", color="#f4f4f4", borde=GRIS_T, fs=8.5)
-    _caja(ax, 3.2, 0.7, 2.6, 1.1, "2 puntos al nuevo\nseguro solidario", color="#eef3fa", borde="#1f5fa8", peso="bold", fs=8.5)
-    _caja(ax, 6.55, 3.6, 3.4, 1.2, "1.º Déficit de gastos\nmédicos de pensionados", color="#fff4e8", borde="#d9822b", fs=8.5)
-    _caja(ax, 6.55, 1.9, 3.4, 1.2, "2.º Reserva\n(lo que sobra, hasta 2034)", color="#eef3fa", borde="#1f5fa8", fs=8.5)
-    _caja(ax, 6.55, 0.2, 3.4, 1.2, "3.º Cuidados en la vejez\n(lo que sobra, desde 2035)", color="#eef8f1", borde="#2e8b57", fs=8.5)
+    _caja(ax, 3.2, 0.6, 2.6, 1.4, "2 puntos al\nnuevo seguro\nsolidario", color="#eef3fa", borde="#1f5fa8", peso="bold", fs=8.5)
+    _caja(ax, 6.55, 3.75, 3.4, 1.4, "1.º Déficit de\ngastos médicos\nde pensionados", color="#fff4e8", borde="#d9822b", fs=8.5)
+    _caja(ax, 6.55, 1.95, 3.4, 1.4, "2.º Reserva\n(lo que sobra,\nhasta 2034)", color="#eef3fa", borde="#1f5fa8", fs=8.5)
+    _caja(ax, 6.55, 0.15, 3.4, 1.4, "3.º Cuidados\nen la vejez (lo que\nsobra, desde 2035)", color="#eef8f1", borde="#2e8b57", fs=8.5)
     _flecha(ax, (2.5, 2.9), (3.2, 4.15))
-    _flecha(ax, (2.5, 2.5), (3.2, 1.25))
-    _flecha(ax, (5.8, 1.25), (6.55, 4.2))
-    _flecha(ax, (8.25, 3.6), (8.25, 3.1))
-    _flecha(ax, (8.25, 1.9), (8.25, 1.4))
+    _flecha(ax, (2.5, 2.5), (3.2, 1.3))
+    _flecha(ax, (5.8, 1.3), (6.55, 4.45))
+    _flecha(ax, (8.25, 3.75), (8.25, 3.35))
+    _flecha(ax, (8.25, 1.95), (8.25, 1.55))
     ax.text(4.5, 2.65, "El Infonavit conserva\nsu patrimonio", ha="center", va="center", fontsize=8.5, color=GRIS_T, style="italic")
     datos = pd.DataFrame([{"paso": 1, "destino": "Déficit de GMP", "regla": "primero"},
                           {"paso": 2, "destino": "Reserva al 3 % real", "regla": "excedente hasta 2034"},
@@ -181,7 +180,7 @@ def f10b_1():
 def f10b_2():
     """Ingreso del nuevo seguro (continua) frente al déficit de GMP (punteada), por escenario."""
     d = pd.read_csv(E2 / "ingreso_vs_GMP.csv")
-    fig, ax = plt.subplots(figsize=(ANCHO, 3.6))
+    fig, ax = plt.subplots(figsize=(ANCHO, 3.2))
     filas = []
     for e in ("base", "M3", "M2"):
         x = d[d.escenario_masa == e].set_index("anio")
@@ -193,7 +192,7 @@ def f10b_2():
             t = int(cruce.min())
             ax.plot([t], [x.deficit_GMP[t] / 1000], marker=mk, color=col, ms=6, ls="none")
             xy = (2027.6, 185) if e == "M2" else (2037.5, 60)
-            ax.annotate(f"{nom.lower()}: desde {t}\nel déficit rebasa el ingreso", (t, x.deficit_GMP[t] / 1000), xytext=xy,
+            ax.annotate(f"{nom.lower()}: el ingreso del año\nalcanza hasta {t - 1}", (t, x.deficit_GMP[t] / 1000), xytext=xy,
                         fontsize=8.5, color=col, arrowprops=dict(arrowstyle="-", color=col, lw=0.8))
         for t in x.index:
             filas.append({"escenario": nom, "anio": t, "ingreso_nuevo_seguro_mdp": x.ingreso_NS[t], "deficit_GMP_mdp": x.deficit_GMP[t]})
@@ -213,12 +212,13 @@ def f10b_2():
 def f10b_3():
     """Saldo de la reserva por escenario, con el agotamiento en formalidad constante."""
     d = pd.read_csv(E2 / "ingreso_vs_GMP.csv")
-    fig, ax = plt.subplots(figsize=(ANCHO, 2.9))
+    fig, ax = plt.subplots(figsize=(ANCHO, 2.6))
     filas = []
     for e in ("base", "M3", "M2"):
         x = d[d.escenario_masa == e].set_index("anio")
         nom, col, ls, mk = ESC[e]
-        ax.plot(x.index, x.k2_reserva_fin / 1000, color=col, lw=2, ls=ls, label=nom)
+        marcas = [i for i, t in enumerate(x.index) if t % 5 == 0]
+        ax.plot(x.index, x.k2_reserva_fin / 1000, color=col, lw=2, ls="-", marker=mk, ms=4.5, markevery=marcas, label=nom)
         for t in x.index:
             filas.append({"escenario": nom, "anio": t, "reserva_cierre_mdp": x.k2_reserva_fin[t]})
         post = x.loc[2035:]
@@ -229,10 +229,10 @@ def f10b_3():
             ax.annotate(f"se agota en {t}", (t, 0), xytext=(t + 1.2, 35), fontsize=8.5, color=col,
                         arrowprops=dict(arrowstyle="-", color=col, lw=0.8))
     ax.axvline(2034.5, color="#999999", lw=0.8, ls=":")
-    ax.text(2034.7, ax.get_ylim()[1] * 0.97, "desde 2035: retiros", fontsize=8.5, color=GRIS_T, va="top")
+    ax.set_ylim(0, 320)
+    ax.text(2034.7, 316, "desde 2035: retiros", fontsize=8.5, color=GRIS_T, va="top")
     ax.set_xlim(2027, 2054)
     ax.set_xticks([2027, 2030, 2035, 2040, 2045, 2050, 2054])
-    ax.set_ylim(0, None)
     ax.set_ylabel("Miles de millones de pesos de 2026")
     ax.legend(frameon=False, ncol=2, fontsize=8.5, loc="upper center", bbox_to_anchor=(0.5, -0.12))
     _estilo(ax)
@@ -253,7 +253,8 @@ def f10b_4():
                                 ("b_experimento2", "Seguro solidario", "#1f5fa8", "--", "s"),
                                 ("c_experimento2_mas_D2", "Seguro solidario y cuota proporcional", "#d9822b", "-.", "^")):
         ax.plot(x, t[col], color=c, ls=ls, marker=mk, lw=1.6, ms=5, label=nom)
-    ax.annotate("escalón justo arriba\ndel salario mínimo", (1, t.a_ley_vigente.iloc[1]), xytext=(1.6, t.a_ley_vigente.iloc[1] + 2.0),
+    ax.annotate("escalón justo arriba del salario mínimo\n(lectura por UMA; criterio pendiente con el IMSS)", (1, t.a_ley_vigente.iloc[1]),
+                xytext=(1.35, t.a_ley_vigente.iloc[1] + 2.6),
                 fontsize=8.5, color=GRIS_T, arrowprops=dict(arrowstyle="-", color=GRIS_T, lw=0.8))
     ax.set_xticks(x, [etq[n] for n in t.nivel])
     ax.set_ylabel("% del salario base de cotización")

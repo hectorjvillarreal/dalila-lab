@@ -1,17 +1,20 @@
 """Verificaciones del texto de la sección 10 (instrucción 20261018_BDH_N13_seccion10-esquemas-financiamiento_build_v1.0):
 extensión (8.1), cifras con respaldo (8.2), expresiones prohibidas (8.4), años (8.5), legibilidad (8.6), apartados (8.7),
-frases obligatorias (8.8) y términos definidos (8.9). Escribe tablas/seccion10_cifras.csv y data/verificaciones.json."""
+frases obligatorias (8.8) y términos definidos (8.9). Desde la v1.1 (instrucción …_build_v1.1) agrega 5.3, 5.6, 5.7 y 5.8.
+Escribe tablas/seccion10_cifras.csv y data/verificaciones.json de la versión indicada (por omisión, la v1.1)."""
 
 from __future__ import annotations
 
 import json
 import re
+import sys
 from pathlib import Path
 
 import pandas as pd
 
 AQUI = Path(__file__).resolve().parents[1]
-MD = AQUI / "N13_seccion10_esquemas_financiamiento_v1.md"
+VERSION = sys.argv[1] if len(sys.argv) > 1 else "v1.1"
+MD = AQUI / f"N13_seccion10_esquemas_financiamiento_{VERSION}.md"
 E1 = AQUI.parent / "e_1_imss_subsidiado" / "anexo_afiliacion_subsidiada"
 E2 = AQUI.parent / "e_2_imss_nuevoseguro"
 APARTADOS = ["El problema", "La idea", "Supuestos", "Resultados", "Qué tan robusto es", "Lo que el ejercicio no dice", "En resumen"]
@@ -36,7 +39,7 @@ FRASE2 = ("La reserva no crea recursos: cambia cuándo y para qué se usan. En c
 TERMINOS = {"UMA": r"La UMA \(Unidad de Medida y Actualización\)", "SBC": r"salario base de cotización \(SBC\)",
             "cuota fija": r"cuota fija por trabajador igual a", "GMP": r"gastos médicos de pensionados \(GMP\)",
             "cuña contributiva legal": r"La cuña contributiva legal es", "valor presente": r"El valor presente suma",
-            "provisiones": r"provisiones \(montos que el IMSS separa"}
+            "provisiones": r"provisiones \((montos que el IMSS separa|recursos que el IMSS aparta)"}
 TERM_BUSCA = {"UMA": r"\bUMA\b", "SBC": r"\bSBC\b|salario base de cotización", "cuota fija": r"cuota fija",
               "GMP": r"\bGMP\b", "cuña contributiva legal": r"cuña contributiva legal|cuña legal", "valor presente": r"valor presente",
               "provisiones": r"provisiones"}
@@ -59,6 +62,7 @@ def texto_corrido(t: str) -> str:
 
 def limpio(t: str) -> str:
     t = re.sub(r"\[REVISAR[^\]]*\]", "", t)
+    t = re.sub(r"\[\^\d+\]:?", "", t)       # llamadas y marcas de notas al pie
     t = re.sub(r"[*_`]", "", t)
     return re.sub(r"^- ", "", t, flags=re.M)
 
@@ -141,7 +145,7 @@ def cifras(txt: str) -> tuple[pd.DataFrame, list]:
             s = ln.strip()
             if not s or s.startswith(("#", "![")):
                 continue
-            s2 = re.sub(r"\[REVISAR[^\]]*\]", "", s)   # las marcas de revisión no son cifras de la sección
+            s2 = re.sub(r"\[REVISAR[^\]]*\]|\[\^\d+\]:?", "", s)   # las marcas de revisión y de nota no son cifras
             s2 = re.sub(r"(sección|secciones|Figura|Tabla|Cuadro|Anexo|percentil|P)\s*[\dA-Z.]+(?:\s+y\s+[\d.]+)?", "", s2)
             s2 = re.sub(r"\b10[ab]\.\d\b|\b10[ab]\b|Cuadro [IVXA]+\.\d+", "", s2)
             s2 = re.sub(r"\b\d{4}-\d{4}\b", "", s2)
@@ -168,10 +172,10 @@ def cifras(txt: str) -> tuple[pd.DataFrame, list]:
     fig = AQUI / "figuras"
     a = pd.read_csv(fig / "F10a_2_asequibilidad.csv")
     for _, r in a.iterrows():
-        for col, k in (("pct_ingreso_laboral_D2_G2", "D2_G2"), ("pct_ingreso_laboral_D1_G1", "D1_G1")):
-            clave = f"aseq_p{int(r.percentil)}_pctlab_{k}"
+        for col, k in (("pct_proporcional", "aseq_p{}_pctlab_D2_G2"), ("pct_fija_patronal", "s10v11_p{}_fija_patronal_pctlab")):
+            clave = k.format(int(r.percentil))
             val = regs["1"].get(clave, {}).get("valor")
-            ok = val is not None and round(float(val), 1) == round(float(r[col]), 1)
+            ok = val is not None and abs(float(val) - float(r[col])) < 0.006   # el registro guarda 2 o 3 decimales
             filas.append({"experimento": "1", "clave_NUMBERS": clave, "valor_exacto": val, "factor": 1, "valor_redondeado": f"{r[col]:.1f}",
                           "ubicacion": "Figura 10.2", "coincide": ok, "fuente": "NUMBERS.md"})
             if not ok:
@@ -257,14 +261,28 @@ def main():
     # 8.2 cifras
     c, sin = cifras(txt)
     (AQUI / "tablas").mkdir(exist_ok=True)
-    c.to_csv(AQUI / "tablas" / "seccion10_cifras.csv", index=False)
+    c.to_csv(AQUI / "tablas" / ("seccion10_cifras.csv" if VERSION == "v1" else f"seccion10_cifras_{VERSION}.csv"), index=False)
     chk["8.2 cifras registradas en seccion10_cifras.csv (texto, tablas y figuras)"] = len(c)
     chk["8.2 de ellas, respaldadas en NUMBERS.md"] = int(((c.fuente == "NUMBERS.md") & c.coincide).sum())
     chk["8.2 de ellas, parámetros del escenario en config.yaml (no están en NUMBERS.md)"] = int(((c.fuente == "config.yaml") & c.coincide).sum())
     chk["8.2/8.3 cifras sin respaldo o que no coinciden"] = len(sin)
-    det = {"prohibidas": hits, "sin_respaldo": sin, "terminos_mal": malos}
+    # v1.1: 5.3, 5.6, 5.7 y 5.8
+    plano_v = limpio(txt)
+    cfv = [plano_v[max(0, m.start() - 60):m.end() + 40].replace("\n", " ") for m in re.finditer(r"[Cc]uota fija vigente", plano_v)]
+    cfv_mal = [c for c in cfv if not re.search(r"Figura 10\.4|3 millones|parte patronal de la cuota fija vigente|con la cuota fija vigente y", c)]
+    chk["5.3 «cuota fija vigente» fuera del status quo"] = len(cfv_mal)
+    internos = ["el mismo método de la sección 4.2", "[REVISAR-Beth]", "2,631 mil millones"]
+    n_int = sum(txt.count(x) for x in internos) + len(re.findall(r"\b[Ee]n la base\b|\bla base,", plano_v))
+    chk["5.6 términos internos o retirados"] = n_int
+    anexo = (E2 / "ANEXO_experimento2_borrador_v4.md").read_text(encoding="utf8")
+    m_s = re.search(r"formalidad subió (\d+\.\d) puntos", plano_v)
+    m_a = re.search(r"\((\d+\.\d) puntos en 20 años", anexo)
+    chk["5.7 ritmo histórico igual en la sección y en el anexo"] = int(bool(m_s and m_a and m_s.group(1) == m_a.group(1)))
+    paga = [plano_v[max(0, m.start() - 40):m.end() + 60].replace("\n", " ") for m in re.finditer(r"\bel (trabajador|patrón) paga\b", plano_v, flags=re.I)]
+    chk["5.8 «el trabajador paga» / «el patrón paga»"] = len(paga)
+    det = {"prohibidas": hits, "sin_respaldo": sin, "terminos_mal": malos, "cuota_fija_vigente": cfv, "paga": paga}
     (AQUI / "data").mkdir(exist_ok=True)
-    (AQUI / "data" / "verificaciones.json").write_text(json.dumps({"checks": chk, "detalle": det}, ensure_ascii=False, indent=1))
+    (AQUI / "data" / f"verificaciones_{VERSION}.json").write_text(json.dumps({"checks": chk, "detalle": det}, ensure_ascii=False, indent=1))
     return chk, det
 
 

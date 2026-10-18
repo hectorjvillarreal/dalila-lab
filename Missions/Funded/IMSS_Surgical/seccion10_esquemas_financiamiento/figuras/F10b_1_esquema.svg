@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="349.2pt" height="191.808pt" viewBox="0 0 349.2 191.808" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="315.72pt" height="153pt" viewBox="0 0 315.72 153" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-18T13:38:21.591195</dc:date>
+    <dc:date>2026-10-18T14:24:54.489127</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -21,177 +21,181 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 191.808 
-L 349.2 191.808 
-L 349.2 0 
+   <path d="M 0 153 
+L 315.72 153 
+L 315.72 0 
 L 0 0 
 z
 " style="fill: #ffffff"/>
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 16.765714 119.5584 
-L 96.48 119.5584 
-Q 97.117714 119.5584 97.117714 118.901333 
-L 97.117714 72.906667 
-Q 97.117714 72.2496 96.48 72.2496 
-L 16.765714 72.2496 
-Q 16.128 72.2496 16.128 72.906667 
-L 16.128 118.901333 
-Q 16.128 119.5584 16.765714 119.5584 
+    <path d="M 15.809143 94.98 
+L 87.552 94.98 
+Q 88.125943 94.98 88.125943 94.466667 
+L 88.125943 58.533333 
+Q 88.125943 58.02 87.552 58.02 
+L 15.809143 58.02 
+Q 15.2352 58.02 15.2352 58.533333 
+L 15.2352 94.466667 
+Q 15.2352 94.98 15.809143 94.98 
 z
-" clip-path="url(#pd5987f91dc)" style="fill: #f4f4f4; stroke: #555555; stroke-linejoin: miter"/>
+" clip-path="url(#pd4ef1559f1)" style="fill: #f4f4f4; stroke: #555555; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
-    <path d="M 118.8 66.993067 
-L 201.702857 66.993067 
-Q 202.340571 66.993067 202.340571 66.336 
-L 202.340571 30.197333 
-Q 202.340571 29.540267 201.702857 29.540267 
-L 118.8 29.540267 
-Q 118.162286 29.540267 118.162286 30.197333 
-L 118.162286 66.336 
-Q 118.162286 66.993067 118.8 66.993067 
+    <path d="M 107.64 53.913333 
+L 182.252571 53.913333 
+Q 182.826514 53.913333 182.826514 53.4 
+L 182.826514 25.166667 
+Q 182.826514 24.653333 182.252571 24.653333 
+L 107.64 24.653333 
+Q 107.066057 24.653333 107.066057 25.166667 
+L 107.066057 53.4 
+Q 107.066057 53.913333 107.64 53.913333 
 z
-" clip-path="url(#pd5987f91dc)" style="fill: #f4f4f4; stroke: #555555; stroke-linejoin: miter"/>
+" clip-path="url(#pd4ef1559f1)" style="fill: #f4f4f4; stroke: #555555; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
-    <path d="M 118.8 162.267733 
-L 201.702857 162.267733 
-Q 202.340571 162.267733 202.340571 161.610667 
-L 202.340571 125.472 
-Q 202.340571 124.814933 201.702857 124.814933 
-L 118.8 124.814933 
-Q 118.162286 124.814933 118.162286 125.472 
-L 118.162286 161.610667 
-Q 118.162286 162.267733 118.8 162.267733 
+    <path d="M 107.64 130.913333 
+L 182.252571 130.913333 
+Q 182.826514 130.913333 182.826514 130.4 
+L 182.826514 94.466667 
+Q 182.826514 93.953333 182.252571 93.953333 
+L 107.64 93.953333 
+Q 107.066057 93.953333 107.066057 94.466667 
+L 107.066057 130.4 
+Q 107.066057 130.913333 107.64 130.913333 
 z
-" clip-path="url(#pd5987f91dc)" style="fill: #eef3fa; stroke: #1f5fa8; stroke-linejoin: miter"/>
+" clip-path="url(#pd4ef1559f1)" style="fill: #eef3fa; stroke: #1f5fa8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
-    <path d="M 225.617143 66.993067 
-L 334.028571 66.993067 
-Q 334.666286 66.993067 334.666286 66.336 
-L 334.666286 26.912 
-Q 334.666286 26.254933 334.028571 26.254933 
-L 225.617143 26.254933 
-Q 224.979429 26.254933 224.979429 26.912 
-L 224.979429 66.336 
-Q 224.979429 66.993067 225.617143 66.993067 
+    <path d="M 203.775429 50.063333 
+L 301.345714 50.063333 
+Q 301.919657 50.063333 301.919657 49.55 
+L 301.919657 13.616667 
+Q 301.919657 13.103333 301.345714 13.103333 
+L 203.775429 13.103333 
+Q 203.201486 13.103333 203.201486 13.616667 
+L 203.201486 49.55 
+Q 203.201486 50.063333 203.775429 50.063333 
 z
-" clip-path="url(#pd5987f91dc)" style="fill: #fff4e8; stroke: #d9822b; stroke-linejoin: miter"/>
+" clip-path="url(#pd4ef1559f1)" style="fill: #fff4e8; stroke: #d9822b; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
-    <path d="M 225.617143 122.843733 
-L 334.028571 122.843733 
-Q 334.666286 122.843733 334.666286 122.186667 
-L 334.666286 82.762667 
-Q 334.666286 82.1056 334.028571 82.1056 
-L 225.617143 82.1056 
-Q 224.979429 82.1056 224.979429 82.762667 
-L 224.979429 122.186667 
-Q 224.979429 122.843733 225.617143 122.843733 
+    <path d="M 203.775429 96.263333 
+L 301.345714 96.263333 
+Q 301.919657 96.263333 301.919657 95.75 
+L 301.919657 59.816667 
+Q 301.919657 59.303333 301.345714 59.303333 
+L 203.775429 59.303333 
+Q 203.201486 59.303333 203.201486 59.816667 
+L 203.201486 95.75 
+Q 203.201486 96.263333 203.775429 96.263333 
 z
-" clip-path="url(#pd5987f91dc)" style="fill: #eef3fa; stroke: #1f5fa8; stroke-linejoin: miter"/>
+" clip-path="url(#pd4ef1559f1)" style="fill: #eef3fa; stroke: #1f5fa8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
-    <path d="M 225.617143 178.6944 
-L 334.028571 178.6944 
-Q 334.666286 178.6944 334.666286 178.037333 
-L 334.666286 138.613333 
-Q 334.666286 137.956267 334.028571 137.956267 
-L 225.617143 137.956267 
-Q 224.979429 137.956267 224.979429 138.613333 
-L 224.979429 178.037333 
-Q 224.979429 178.6944 225.617143 178.6944 
+    <path d="M 203.775429 142.463333 
+L 301.345714 142.463333 
+Q 301.919657 142.463333 301.919657 141.95 
+L 301.919657 106.016667 
+Q 301.919657 105.503333 301.345714 105.503333 
+L 203.775429 105.503333 
+Q 203.201486 105.503333 203.201486 106.016667 
+L 203.201486 141.95 
+Q 203.201486 142.463333 203.775429 142.463333 
 z
-" clip-path="url(#pd5987f91dc)" style="fill: #eef8f1; stroke: #2e8b57; stroke-linejoin: miter"/>
+" clip-path="url(#pd4ef1559f1)" style="fill: #eef8f1; stroke: #2e8b57; stroke-linejoin: miter"/>
    </g>
    <g id="patch_8">
-    <path d="M 97.434976 87.57627 
-Q 107.639565 68.8008 117.256868 51.105882 
-" clip-path="url(#pd5987f91dc)" style="fill: none; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 113.58951 53.665274 
-L 117.256868 51.105882 
-L 117.103966 55.575404 
+    <path d="M 88.61378 69.670856 
+Q 97.596191 55.324696 105.925949 42.020911 
+" clip-path="url(#pd4ef1559f1)" style="fill: none; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 102.108082 44.349835 
+L 105.925949 42.020911 
+L 105.498368 46.472559 
 z
-" clip-path="url(#pd5987f91dc)" style="fill: #555555; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
+" clip-path="url(#pd4ef1559f1)" style="fill: #555555; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
    </g>
    <g id="patch_9">
-    <path d="M 97.434976 104.23173 
-Q 107.639565 123.0072 117.256868 140.702118 
-" clip-path="url(#pd5987f91dc)" style="fill: none; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 117.103966 136.232596 
-L 117.256868 140.702118 
-L 113.58951 138.142726 
+    <path d="M 88.643206 83.306429 
+Q 97.595492 97.032554 105.875932 109.72857 
+" clip-path="url(#pd4ef1559f1)" style="fill: none; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 105.365977 105.285604 
+L 105.875932 109.72857 
+L 102.015586 107.470755 
 z
-" clip-path="url(#pd5987f91dc)" style="fill: #555555; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
+" clip-path="url(#pd4ef1559f1)" style="fill: #555555; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
    </g>
    <g id="patch_10">
-    <path d="M 202.18234 141.598136 
-Q 213.660516 95.080576 224.844067 49.757042 
-" clip-path="url(#pd5987f91dc)" style="fill: none; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 221.944049 53.161436 
-L 224.844067 49.757042 
-L 225.827572 54.119692 
+    <path d="M 182.766866 110.501401 
+Q 193.014054 72.008131 202.944869 34.703308 
+" clip-path="url(#pd4ef1559f1)" style="fill: none; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 199.983185 38.054194 
+L 202.944869 34.703308 
+L 203.848567 39.083186 
 z
-" clip-path="url(#pd5987f91dc)" style="fill: #555555; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
+" clip-path="url(#pd4ef1559f1)" style="fill: #555555; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
    </g>
    <g id="patch_11">
-    <path d="M 279.822857 68.337198 
-Q 279.822857 74.55149 279.822857 79.535944 
-" clip-path="url(#pd5987f91dc)" style="fill: none; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 281.822857 75.535944 
-L 279.822857 79.535944 
-L 277.822857 75.535944 
+    <path d="M 252.560571 51.547689 
+Q 252.560571 54.682875 252.560571 56.588224 
+" clip-path="url(#pd4ef1559f1)" style="fill: none; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 254.560571 52.588224 
+L 252.560571 56.588224 
+L 250.560571 52.588224 
 z
-" clip-path="url(#pd5987f91dc)" style="fill: #555555; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
+" clip-path="url(#pd4ef1559f1)" style="fill: #555555; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
    </g>
    <g id="patch_12">
-    <path d="M 279.822857 124.187865 
-Q 279.822857 130.402156 279.822857 135.386611 
-" clip-path="url(#pd5987f91dc)" style="fill: none; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 281.822857 131.386611 
-L 279.822857 135.386611 
-L 277.822857 131.386611 
+    <path d="M 252.560571 97.747689 
+Q 252.560571 100.882875 252.560571 102.788224 
+" clip-path="url(#pd4ef1559f1)" style="fill: none; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 254.560571 98.788224 
+L 252.560571 102.788224 
+L 250.560571 98.788224 
 z
-" clip-path="url(#pd5987f91dc)" style="fill: #555555; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
+" clip-path="url(#pd4ef1559f1)" style="fill: #555555; stroke: #555555; stroke-width: 1.1; stroke-linecap: round"/>
    </g>
    <g id="text_1">
-    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(33.123013 83.425734)">Aportación</text>
-    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(33.335513 93.217734)">patronal al</text>
-    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(26.823717 103.060734)">Infonavit hoy:</text>
-    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(26.149693 112.852734)">5 % del salario</text>
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(28.180728 64.021734)">Aportación</text>
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(28.393228 73.813734)">patronal al</text>
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(21.881431 83.656734)">Infonavit hoy:</text>
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(21.207407 93.448734)">5 % del salario</text>
    </g>
    <g id="text_2">
-    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(128.426897 45.580667)">3 puntos que se</text>
-    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(128.79346 55.372667)">dejan de cobrar</text>
+    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(113.121754 36.597333)">3 puntos que se</text>
+    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(113.488317 46.389333)">dejan de cobrar</text>
    </g>
    <g id="text_3">
-    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(122.632952 140.855333)">2 puntos al nuevo</text>
-    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(126.028968 150.647333)">seguro solidario</text>
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(121.57859 104.851333)">2 puntos al</text>
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(116.028356 114.643333)">nuevo seguro</text>
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(126.495973 124.435333)">solidario</text>
    </g>
    <g id="text_4">
-    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(240.425357 43.932953)">1.º Déficit de gastos</text>
-    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(230.30106 53.785516)">médicos de pensionados</text>
+    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(227.443071 23.971052)">1.º Déficit de</text>
+    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(221.552173 33.823615)">gastos médicos</text>
+    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(220.872173 43.615615)">de pensionados</text>
    </g>
    <g id="text_5">
-    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(257.777974 99.788667)">2.º Reserva</text>
-    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(228.360006 109.580667)">(lo que sobra, hasta 2034)</text>
+    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(230.515689 70.201333)">2.º Reserva</text>
+    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(225.271587 79.993333)">(lo que sobra,</text>
+    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(229.491704 89.785333)">hasta 2034)</text>
    </g>
    <g id="text_6">
-    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(233.056256 155.639333)">3.º Cuidados en la vejez</text>
-    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(227.266295 165.431333)">(lo que sobra, desde 2035)</text>
+    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(227.66022 116.401333)">3.º Cuidados</text>
+    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(217.009321 126.193333)">en la vejez (lo que</text>
+    <text style="font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #1a1a1a" transform="translate(214.794009 135.985333)">sobra, desde 2035)</text>
    </g>
    <g id="text_7">
-    <text style="font-style: italic; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #555555" transform="translate(120.984749 94.881917)">El Infonavit conserva</text>
-    <text style="font-style: italic; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #555555" transform="translate(133.714163 104.673917)">su patrimonio</text>
+    <text style="font-style: italic; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #555555" transform="translate(105.679606 75.118583)">El Infonavit conserva</text>
+    <text style="font-style: italic; font-size: 8.5px; font-family: 'Noto Sans', 'DejaVu Sans'; fill: #555555" transform="translate(118.40902 84.910583)">su patrimonio</text>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="pd5987f91dc">
-   <rect x="7.2" y="7.2" width="334.8" height="177.408"/>
+  <clipPath id="pd4ef1559f1">
+   <rect x="7.2" y="7.2" width="301.32" height="138.6"/>
   </clipPath>
  </defs>
 </svg>
