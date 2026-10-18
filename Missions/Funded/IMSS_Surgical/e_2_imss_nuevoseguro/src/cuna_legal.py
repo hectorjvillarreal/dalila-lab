@@ -92,6 +92,7 @@ def main():
     from nuevo_seguro import _max_dif
     v10 = tabla(ins, CFG["corridas"]["v1.0"]["rt_cuna"])
     chk["7.1 regresión v1.0: cuna_legal_por_salario (máx. desviación)"] = _max_dif(v10, pd.read_csv(PROJECT / "data" / "v10" / "cuna_legal_por_salario.csv"))
+    chk["8.1 regresión v1.1: cuna_legal_por_salario (máx. desviación)"] = _max_dif(t, pd.read_csv(PROJECT / "data" / "v11" / "cuna_legal_por_salario.csv"))
     chk = {k.replace("3.5 (b)", "3.5/7.5 (b)"): v for k, v in chk.items()}
     piv = t.set_index(["anio", "nivel", "componente"])
     for anio in K["anios"]:
@@ -117,6 +118,27 @@ def main():
             record(f"cuna_{anio}_{key}_c_menos_a", round(float(x.c_experimento2_mas_D2 - x.a_ley_vigente), 3),
                    "Cambio de la cuña legal a cargo del patrón, (c) − (a), puntos del SBC")
     record("RT_prima_cuna", CFG["corridas"][CFG["corrida"]]["rt_cuna"], "Prima de RT en el Cuadro X-2.2 (Informe, Cuadro A.3)")
+    # v1.2, sección 6: escalón con la columna (c), D2 en salarios altos y cuña sin la aportación federal
+    for anio in K["anios"]:
+        for c, cn in (("a", "a_ley_vigente"), ("b", "b_experimento2"), ("c", "c_experimento2_mas_D2")):
+            sm_p = piv.loc[(anio, "Salario mínimo", "Total a cargo del patrón (incidencia legal)"), cn]
+            p101 = piv.loc[(anio, "1.01 SM, lectura por UMA", "Total a cargo del patrón (incidencia legal)"), cn]
+            record(f"escalon_{anio}_uma_patron_salto_{c}", round(float(p101 - sm_p), 3), f"Salto del total a cargo del patrón entre SM y 1.01 SM, lectura por UMA, columna ({c})")
+        x = piv.loc[(anio, "25 UMA", "Total a cargo del patrón (incidencia legal)")]
+        record(f"cuna_{anio}_25uma_c_menos_b", round(float(x.c_experimento2_mas_D2 - x.b_experimento2), 3), "(c) − (b) en 25 UMA: efecto de D2 en salarios altos")
+    tot = t[t.componente.isin(["Total a cargo del patrón (incidencia legal)", "Cuotas obreras", "Aportación federal (incluye cuota social)", "Cuña legal total"])]
+    w = tot.pivot_table(index=["anio", "nivel", "sbc_uma"], columns="componente", values=["a_ley_vigente", "b_experimento2", "c_experimento2_mas_D2"], sort=False)
+    rows = []
+    for (anio, nivel, sbc), r in w.iterrows():
+        for c in ("a_ley_vigente", "b_experimento2", "c_experimento2_mas_D2"):
+            pat, obr = r[(c, "Total a cargo del patrón (incidencia legal)")], r[(c, "Cuotas obreras")]
+            fed, con = r[(c, "Aportación federal (incluye cuota social)")], r[(c, "Cuña legal total")]
+            rows.append({"anio": anio, "nivel": nivel, "sbc_uma": sbc, "columna": c, "patron": pat, "obrera": obr,
+                         "cuna_legal_sin_federal": pat + obr, "aportacion_federal": fed, "cuna_con_federal": con})
+            record(f"cuna_{anio}_{nivel}_sinfed_{c[0]}", round(float(pat + obr), 3), "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC")
+    cr = pd.DataFrame(rows)
+    table(cr, "cuna_legal_resumen_v12")
+    chk["8.6 cuña sin aportación federal ≥ cuña con ella (niveles que fallan)"] = int((cr.cuna_legal_sin_federal >= cr.cuna_con_federal).sum())
     for i, (k, v) in enumerate(chk.items()):
         record(f"chk_cuna_{i}", round(v, 9) if isinstance(v, float) else v, k)
     return chk

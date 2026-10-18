@@ -16,6 +16,139 @@
 
 ---
 
+## Experimento 2, v1.2 (2026-10-18)
+
+**Instrucción:** `20261018_BDH_N13_experimento2-seguro-salud-cuidados_build_v1.2` (Beth; Cath avaló la v1.1). Archivada en `_crossrefs/_build_instructions/2026-10-18_BDH-N13_experimento2-seguro-salud-cuidados_retrofit_v1.2.md`. Producto: `ANEXO_experimento2_borrador_v3.md`; el v2 se conserva. Corrida activa: `corrida: v1.2`. Las configuraciones v1.0 y v1.1 siguen en `config.yaml` para las pruebas de regresión.
+
+### E2v12.1 Con y sin provisiones (sección 1)
+
+Primer año sin cobertura de GMP con la masa del libro:
+
+| | Base | M3 | M2 |
+|---|---|---|---|
+| K1, con provisiones | ninguno | 2035 | 2033 |
+| K1, sin provisiones | ninguno | 2042 | 2035 |
+| K2, con provisiones | ninguno | ninguno | 2038 |
+| K2, sin provisiones | ninguno | ninguno | 2043 |
+| Déficit no cubierto, VP, K1 (con / sin) | 0 / 0 | 114,602 / 99,808 | 831,627 / 755,864 |
+| Déficit no cubierto, VP, K2 (con / sin) | 0 / 0 | 0 / 0 | 728,630 / 607,575 |
+| Margen mínimo y año (con) | 19,991 (2036) | −35,712 (2054) | −148,093 (2054) |
+| Margen mínimo y año (sin) | 37,200 (2027) | −35,167 (2054) | −147,549 (2054) |
+
+**La fecha sí depende de las provisiones**, sobre todo en M3: sin ellas, M3 cubre hasta 2041 y no hasta 2034. La explicación es que la interpolación reparte el pico de provisiones de 2036 entre 2032 y 2040, justo cuando M3 está casi en equilibrio. Por eso la frase de apertura agrega el rango: «… con formalidad constante, lo cubre hasta 2032 (hasta 2034 sin las provisiones de GMP); con la mitad de esa formalización, hasta 2034 (hasta 2041 sin las provisiones de GMP)».
+
+### E2v12.2 Consistencia de masa y S-masa (sección 2)
+
+**Diagnóstico r(t)** = ingreso de GMP del Cuadro V.24 / masa propia de la base: 1.691 % en 2027, 1.634 % en 2030, 1.551 % en 2036 y en 2040, y 1.544 % en 2054. La caída 2027-2054 es de −8.69 %. Casi toda ocurre antes de 2036; después la razón queda casi plana. Eso sugiere que el libro y el Informe difieren sobre todo en el **nivel** de la masa de los primeros años, más que en su crecimiento de largo plazo.
+
+**S-masa:**
+
+| | Base | M3 | M2 |
+|---|---|---|---|
+| K1, primer año sin cobertura (con / sin provisiones) | ninguno / ninguno | 2034 / 2037 | 2032 / 2034 |
+| K2, primer año sin cobertura (con / sin) | ninguno / ninguno | 2046 / 2052 | 2037 / 2040 |
+| Margen de 2036 (con provisiones) | 7,272 | −16,937 | −41,145 |
+| Margen de 2040 (con provisiones) | 26,034 | −13,435 | −52,904 |
+| Déficit no cubierto, VP, K1 (con) | 0 | 280,658 | 976,427 |
+
+La referencia de Cath se reproduce: en la base, el margen de 2036 baja de 19,991 a 7,272 mdp (ella estimó unos 7,300) y el de 2040 de 40,745 a 26,034 (unos 26,000). La base sigue cubriendo todo el horizonte.
+
+**[REVISAR] Asimetría de S-masa.** S-masa toma el nivel propio de 2027, que es el más bajo de las dos fuentes, y le aplica el crecimiento del Informe, que es el más lento. Es la combinación más conservadora. Una variante con nivel y crecimiento del Informe daría más ingreso; no se corrió porque la instrucción no la pide.
+
+### E2v12.3 Orden de usos en K2 (sección 3)
+
+**Lo que hacía el código v1.1** (`tablas/k2_v11_anios_con_faltante.csv`): desde 2035, en los años con faltante de GMP, la reserva cubría primero el faltante y, con lo que quedaba, pagaba además el retiro fijo para cuidados. Eso adelantaba el agotamiento de la reserva.
+
+- **M3:** pagó cuidados en 15 años con faltante de GMP (2035-2040 y 2042-2050), 134,154 mdp en total.
+- **M2:** pagó cuidados en 3 años (2035-2037), 16,643 mdp.
+- **Base:** no tiene años con faltante.
+
+**La v1.2 aplica la regla de Beth y K2 sí cambia** (`tablas/k2_cambios_v11_v12.csv`):
+
+| | Antes (v1.1) | Después (v1.2) |
+|---|---|---|
+| M3: primer año sin cobertura, K2 | 2051 | ninguno |
+| M3: cuidados, VP (K2) | 90,603 | 6,498 |
+| M3: déficit no cubierto, VP (K2) | 53,950 | 0 |
+| M3: reserva al cierre de 2054 | 0 | 68,993 |
+| M2: cuidados, VP (K2) | 12,387 | 0 |
+| M2: déficit no cubierto, VP (K2) | 741,017 | 728,630 |
+| Base | sin cambio | sin cambio |
+
+**Trayectoria de la reserva** (`tablas/reserva_K2.csv`, con provisiones):
+
+- **Base:** 271,337 mdp al inicio de 2035 y 135,034 al inicio de 2054. Retira 271,337 para cuidados (20 × 13,567) y no se agota.
+- **M3:** retira 227,552 para GMP y 9,557 para cuidados, y no se agota.
+- **M2:** retira 119,940 para GMP y se agota en 2038.
+
+### E2v12.4 Serie histórica de formalización (sección 4)
+
+`tablas/formalidad_historica.csv`, solo con fuentes primarias:
+
+- **Numerador:** puestos de trabajo afiliados al IMSS al 31 de diciembre (Memoria Estadística 2025, Cuadro I.2, fila Nacional).
+- **Denominador:** población ocupada de 15 años o más de la ENOE, cuarto trimestre, calculada con los microdatos del INEGI (SDEMT; `fac` hasta 2019, `fac_tri` desde 2020).
+- **Por qué el cuarto trimestre:** el cuadro de la Memoria es al cierre del año, así que el cuarto trimestre empata mejor con ese corte que el promedio anual.
+- **Descargas:** el 18-10-2026. Los 21 archivos de la ENOE y la Memoria están en `data/raw/` (no versionados). Las fechas están en `data/raw/descargas.json` y en el registro.
+
+| | 2005 | 2010 | 2015 | 2020 | 2025 |
+|---|---|---|---|---|---|
+| Puestos de trabajo IMSS (31-dic) | 13,061,565 | 14,738,783 | 17,884,033 | 19,773,732 | 22,517,076 |
+| Ocupados ENOE T4 (15+) | 41,949,328 | 45,147,139 | 50,768,849 | 53,084,911 | 59,751,051 |
+
+- **Serie:** de 31.1 % en 2005 a 37.7 % en 2025, 6.5 puntos en 20 años. El máximo es 37.7 % en 2025.
+- **Proyección base:** 29.1 puntos en 29 años.
+- **Empalme con el libro:** en 2025, la serie da 37.7 % y la formalidad implícita del libro 34.0 %, una diferencia de 3.7 puntos. Las dos razones se reportan sin ajustar porque difieren por definición:
+  - la serie cuenta puestos de trabajo (una persona puede tener varios) sobre ocupados de la ENOE;
+  - el libro cuenta cotizantes sobre ocupados estimados con CONAPO y la tasa de ocupación de la ENIGH, unos 65.7 millones frente a 59.8 millones de la ENOE.
+- **Oración del borrador (limitación 7):** «Entre 2005 y 2025, la razón … pasó de 31.1 % a 37.7 % (6.6 puntos en 20 años); la proyección supone 29.1 puntos en 29 años…»
+
+### E2v12.5 Personas mayores (sección 5)
+
+- Se agregó la nota obligatoria: en la base, las cifras de 2040 y 2054 son una cota superior.
+- **Variante opcional: no construida.** El Informe no trae una proyección anual de pensionados del IMSS, solo la del RJP (grupo cerrado, Gráfica VIII.1).
+
+### E2v12.6 Cuña legal (sección 6)
+
+- **2026, ley vigente:** mínimo 26.53 %, promedio 25.102 %, 25 UMA 22.705 %. Con la columna (c): −7.13, −3.209 y −0.349 puntos.
+- **2030, ley vigente:** mínimo 24.793 %, promedio 29.464 %. Con la columna (c): −5.128 (la instrucción decía 5.127; la diferencia es de redondeo), −3.209 y −0.349 puntos.
+- **Escalón a 1.01 SM, lectura por UMA, 2030:** +4.435 puntos con la ley vigente y +4.49 con la columna (c). En 2026: +0.426 y +0.501.
+- **D2 en 25 UMA:** (c) − (b) = +2.651 puntos, en 2026 y en 2030.
+- **Aportación federal fuera de la cuña:**
+  - En el salario promedio de 2030, la cuña legal (patrón y trabajador) pasa de 32.023 % a 29.023 %, y la aportación federal es de 2.922 %.
+  - Con la definición anterior, que la sumaba, pasa de 34.945 % a 31.945 %.
+  - Tabla completa en `tablas/cuna_legal_resumen_v12.csv`.
+
+### E2v12.7 Verificaciones (sección 8)
+
+| Verificación | Resultado |
+|---|---|
+| 8.1 regresión v1.1: ingreso_vs_GMP (máx. desviación) | 1.9e-09 |
+| 8.1 regresión v1.1: valor_presente (máx. desviación) | 4.7e-10 |
+| 8.1 regresión v1.1: remanente_por_mayor (máx. desviación) | 3.7e-09 |
+| 8.1 regresión v1.1: resumen_escenarios (máx. desviación) | 4.7e-10 |
+| 8.2 años con déficit sin provisiones > con provisiones | 0 |
+| 8.2 déficit con provisiones frente a la v1.1 (máx. desviación, mdp) | 0.000 |
+| 8.3 S-masa: ingreso 2027 = ingreso base 2027 (desviación, mdp) | 1.5e-11 |
+| 8.3 S-masa: razón ingreso nuevo / ingreso GMP constante en la base (rango) | 2.2e-16 |
+| 8.4 K2: años con faltante de GMP y retiro para cuidados | 0 |
+| 8.4 K2: identidad de la reserva (máx. desviación, mdp) | 1.2e-10 |
+| 8.1 regresión v1.1: cuna_legal_por_salario (máx. desviación) | 7.1e-15 |
+| 8.6 cuña sin aportación federal ≥ cuña con ella (niveles que fallan) | 0 |
+| 8.1 regresión v1.1: exp1_cambios_denominador (máx. desviación) | 9.7e-17 |
+| 8.5 serie de formalización: años sin fuente primaria | 0 |
+| 3.6/8.7 apariciones de 2055 en las tablas | 0 |
+| 3.7/8.7 cifras del borrador v3 sin registro en NUMBERS.md | 0 |
+
+Todas se cumplen. Las desviaciones de las regresiones (≤ 3.7e-9 mdp) son la precisión del texto del CSV. Las verificaciones de la v1.0 y la v1.1 (3.1-3.7 y 7.1-7.4) siguen cumpliéndose con los mismos valores.
+
+### E2v12.8 Decisiones propias [REVISAR]
+
+1. **[REVISAR] Retiro fijo cuando la reserva no alcanza.** En los años sin faltante, el retiro para cuidados se paga hasta donde alcance la reserva, de forma parcial si hace falta. La instrucción dice «solo si la reserva alcanza», lo que también admite la lectura de todo o nada. No cambia ninguna cifra reportada: en la base la reserva nunca baja del retiro fijo.
+2. **[REVISAR] S-masa:** la asimetría descrita en E2v12.2.
+3. **[REVISAR] Serie de formalización:** puestos de trabajo (no personas) al 31 de diciembre, frente a ocupados del cuarto trimestre. Ver E2v12.4.
+
+---
+
 ## Experimento 2, v1.1 (2026-10-18)
 
 **Instrucción:** `20261018_BDH_N13_experimento2-seguro-salud-cuidados_build_v1.1` (Beth y Cath). Archivada en `_crossrefs/_build_instructions/2026-10-18_BDH-N13_experimento2-seguro-salud-cuidados_retrofit_v1.1.md`. Producto: `ANEXO_experimento2_borrador_v2.md`. El primer borrador (`ANEXO_experimento2_borrador.md`) se conserva como registro de la v1.0, pero varias de sus cifras ya no están en el registro: las de M2 cambiaron y la base de adscripciones se eliminó.

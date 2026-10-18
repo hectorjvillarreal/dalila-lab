@@ -8,5 +8,6 @@ Sección 1.5: contribuciones obligatorias sobre la nómina por nivel de salario,
 - **Escalón:** el nivel 1.01 SM se reporta con dos lecturas, por UMA y primer tramo tras el mínimo.
 - **Verificaciones 3.5 y 7.5:** (b) = (a) − 3; tasas de cesantía y vejez iguales a la tabla de 1.5 y, en 2030, al art. 168 fr. II a). **7.1:** con RT de 1.80 % reproduce la tabla de la v1.0.
 - **Lectura agregada (v1.1, 3.4):** registra (c) − (a) en el mínimo, el promedio y 25 UMA.
+- **v1.2 (sección 6):** escalón por columna; (c) − (b) en 25 UMA; cuña legal total sin la aportación federal (patrón + trabajador), con la aportación federal aparte → `tablas/cuna_legal_resumen_v12.csv`. Verificaciones 8.6 y 8.1 (regresión de la tabla v1.1).
 - **Salida:** `tablas/cuna_legal_por_salario.csv`
 - **Instrucciones:** `..._build_v1.0`, `20261018_BDH_N13_experimento2-seguro-salud-cuidados_build_v1.1`

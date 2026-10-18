@@ -868,11 +868,11 @@
   "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
  },
  "M3_k2_cuidados_2040": {
-  "valor": 9557,
+  "valor": 0,
   "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
  },
  "M3_k2_reserva_fin_2040": {
-  "valor": 149629,
+  "valor": 211449,
   "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
  },
  "M3_reduccion_cuna_legal_2040": {
@@ -920,11 +920,11 @@
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
  "M3_k2_cuidados_pts_2040": {
-  "valor": 0.123,
+  "valor": 0.0,
   "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M3_k2_cuidados_sem_2040": {
-  "valor": 1.14,
+  "valor": 0.0,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
  "M3_reduccion_cuna_legal_pts_2040": {
@@ -1212,7 +1212,7 @@
   "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
  },
  "M3_k2_reserva_fin_2054": {
-  "valor": 0,
+  "valor": 68993,
   "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
  },
  "M3_reduccion_cuna_legal_2054": {
@@ -1496,15 +1496,15 @@
   "fuente": "Años 2027-2054 con I < D"
  },
  "M3_k2_primer_anio_no_cubre": {
-  "valor": 2051,
+  "valor": "ninguno",
   "fuente": "Primer año con déficit no cubierto tras usar la reserva (K2)"
  },
  "M3_k2_reserva_max": {
-  "valor": 191144,
+  "valor": 217030,
   "fuente": "Reserva máxima K2 (mdp de 2026)"
  },
  "M3_k2_reserva_max_anio": {
-  "valor": 2034,
+  "valor": 2044,
   "fuente": "Año de la reserva máxima K2"
  },
  "M3_k2_retiro_anual": {
@@ -1652,11 +1652,11 @@
   "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
  },
  "VP_M3_k2_cuidados": {
-  "valor": 90603,
+  "valor": 6498,
   "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
  },
  "VP_M3_k2_no_cubierto": {
-  "valor": 53950,
+  "valor": 0,
   "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
  },
  "VP_M3_reduccion": {
@@ -1664,7 +1664,7 @@
   "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
  },
  "VP_M3_k2_reserva_final": {
-  "valor": 0,
+  "valor": 30155,
   "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
  },
  "VP_M2_masa": {
@@ -1688,11 +1688,11 @@
   "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
  },
  "VP_M2_k2_cuidados": {
-  "valor": 12387,
+  "valor": 0,
   "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
  },
  "VP_M2_k2_no_cubierto": {
-  "valor": 741017,
+  "valor": 728630,
   "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
  },
  "VP_M2_reduccion": {
@@ -1924,11 +1924,11 @@
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
  "M3_ENIGH_k2_pesos_por_dh65_2040": {
-  "valor": 991,
+  "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
  "M3_ENIGH_k2_pesos_por_dh80_2040": {
-  "valor": 4631,
+  "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
  "M3_ENIGH_k1_pesos_por_dh65_2054": {
@@ -1988,11 +1988,11 @@
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
  "M3_Informe_max_k2_pesos_por_dh65_2040": {
-  "valor": 409,
+  "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
  "M3_Informe_max_k2_pesos_por_dh80_2040": {
-  "valor": 1721,
+  "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
  "M3_Informe_max_k1_pesos_por_dh65_2054": {
@@ -2202,6 +2202,730 @@
  "chk_15_7.1": {
   "valor": 0.0,
   "fuente": "7.1 regresión v1.0: remanente_por_mayor (máx. desviación)"
+ },
+ "base_conprov_libro_k1_primer_anio_sin_cobertura": {
+  "valor": "ninguno",
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "base_conprov_libro_k2_primer_anio_sin_cobertura": {
+  "valor": "ninguno",
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "base_conprov_libro_vp_k1_deficit_no_cubierto": {
+  "valor": 0,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_conprov_libro_vp_k2_deficit_no_cubierto": {
+  "valor": 0,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_conprov_libro_margen_min": {
+  "valor": 19991,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_conprov_libro_margen_2036": {
+  "valor": 19991,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_conprov_libro_margen_2040": {
+  "valor": 40745,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_conprov_libro_margen_min_anio": {
+  "valor": 2036,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "base_conprov_smasa_k1_primer_anio_sin_cobertura": {
+  "valor": "ninguno",
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "base_conprov_smasa_k2_primer_anio_sin_cobertura": {
+  "valor": "ninguno",
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "base_conprov_smasa_vp_k1_deficit_no_cubierto": {
+  "valor": 0,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_conprov_smasa_vp_k2_deficit_no_cubierto": {
+  "valor": 0,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_conprov_smasa_margen_min": {
+  "valor": 7272,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_conprov_smasa_margen_2036": {
+  "valor": 7272,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_conprov_smasa_margen_2040": {
+  "valor": 26034,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_conprov_smasa_margen_min_anio": {
+  "valor": 2036,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "base_sinprov_libro_k1_primer_anio_sin_cobertura": {
+  "valor": "ninguno",
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "base_sinprov_libro_k2_primer_anio_sin_cobertura": {
+  "valor": "ninguno",
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "base_sinprov_libro_vp_k1_deficit_no_cubierto": {
+  "valor": 0,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_sinprov_libro_vp_k2_deficit_no_cubierto": {
+  "valor": 0,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_sinprov_libro_margen_min": {
+  "valor": 37200,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_sinprov_libro_margen_2036": {
+  "valor": 39568,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_sinprov_libro_margen_2040": {
+  "valor": 45093,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_sinprov_libro_margen_min_anio": {
+  "valor": 2027,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "base_sinprov_smasa_k1_primer_anio_sin_cobertura": {
+  "valor": "ninguno",
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "base_sinprov_smasa_k2_primer_anio_sin_cobertura": {
+  "valor": "ninguno",
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "base_sinprov_smasa_vp_k1_deficit_no_cubierto": {
+  "valor": 0,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_sinprov_smasa_vp_k2_deficit_no_cubierto": {
+  "valor": 0,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_sinprov_smasa_margen_min": {
+  "valor": 26849,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_sinprov_smasa_margen_2036": {
+  "valor": 26849,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_sinprov_smasa_margen_2040": {
+  "valor": 30382,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "base_sinprov_smasa_margen_min_anio": {
+  "valor": 2036,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M3_conprov_libro_k1_primer_anio_sin_cobertura": {
+  "valor": 2035,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M3_conprov_libro_k2_primer_anio_sin_cobertura": {
+  "valor": "ninguno",
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M3_conprov_libro_vp_k1_deficit_no_cubierto": {
+  "valor": 114602,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_conprov_libro_vp_k2_deficit_no_cubierto": {
+  "valor": 0,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_conprov_libro_margen_min": {
+  "valor": -35712,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_conprov_libro_margen_2036": {
+  "valor": -5398,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_conprov_libro_margen_2040": {
+  "valor": -648,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_conprov_libro_margen_min_anio": {
+  "valor": 2054,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M3_conprov_smasa_k1_primer_anio_sin_cobertura": {
+  "valor": 2034,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M3_conprov_smasa_k2_primer_anio_sin_cobertura": {
+  "valor": 2046,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M3_conprov_smasa_vp_k1_deficit_no_cubierto": {
+  "valor": 280658,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_conprov_smasa_vp_k2_deficit_no_cubierto": {
+  "valor": 154961,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_conprov_smasa_margen_min": {
+  "valor": -54018,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_conprov_smasa_margen_2036": {
+  "valor": -16937,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_conprov_smasa_margen_2040": {
+  "valor": -13435,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_conprov_smasa_margen_min_anio": {
+  "valor": 2054,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M3_sinprov_libro_k1_primer_anio_sin_cobertura": {
+  "valor": 2042,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M3_sinprov_libro_k2_primer_anio_sin_cobertura": {
+  "valor": "ninguno",
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M3_sinprov_libro_vp_k1_deficit_no_cubierto": {
+  "valor": 99808,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_sinprov_libro_vp_k2_deficit_no_cubierto": {
+  "valor": 0,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_sinprov_libro_margen_min": {
+  "valor": -35167,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_sinprov_libro_margen_2036": {
+  "valor": 14179,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_sinprov_libro_margen_2040": {
+  "valor": 3700,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_sinprov_libro_margen_min_anio": {
+  "valor": 2054,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M3_sinprov_smasa_k1_primer_anio_sin_cobertura": {
+  "valor": 2037,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M3_sinprov_smasa_k2_primer_anio_sin_cobertura": {
+  "valor": 2052,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M3_sinprov_smasa_vp_k1_deficit_no_cubierto": {
+  "valor": 225331,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_sinprov_smasa_vp_k2_deficit_no_cubierto": {
+  "valor": 59216,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_sinprov_smasa_margen_min": {
+  "valor": -53474,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_sinprov_smasa_margen_2036": {
+  "valor": 2640,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_sinprov_smasa_margen_2040": {
+  "valor": -9087,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M3_sinprov_smasa_margen_min_anio": {
+  "valor": 2054,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M2_conprov_libro_k1_primer_anio_sin_cobertura": {
+  "valor": 2033,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M2_conprov_libro_k2_primer_anio_sin_cobertura": {
+  "valor": 2038,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M2_conprov_libro_vp_k1_deficit_no_cubierto": {
+  "valor": 831627,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_conprov_libro_vp_k2_deficit_no_cubierto": {
+  "valor": 728630,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_conprov_libro_margen_min": {
+  "valor": -148093,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_conprov_libro_margen_2036": {
+  "valor": -30787,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_conprov_libro_margen_2040": {
+  "valor": -42042,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_conprov_libro_margen_min_anio": {
+  "valor": 2054,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M2_conprov_smasa_k1_primer_anio_sin_cobertura": {
+  "valor": 2032,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M2_conprov_smasa_k2_primer_anio_sin_cobertura": {
+  "valor": 2037,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M2_conprov_smasa_vp_k1_deficit_no_cubierto": {
+  "valor": 976427,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_conprov_smasa_vp_k2_deficit_no_cubierto": {
+  "valor": 885956,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_conprov_smasa_margen_min": {
+  "valor": -160909,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_conprov_smasa_margen_2036": {
+  "valor": -41145,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_conprov_smasa_margen_2040": {
+  "valor": -52904,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_conprov_smasa_margen_min_anio": {
+  "valor": 2054,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M2_sinprov_libro_k1_primer_anio_sin_cobertura": {
+  "valor": 2035,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M2_sinprov_libro_k2_primer_anio_sin_cobertura": {
+  "valor": 2043,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M2_sinprov_libro_vp_k1_deficit_no_cubierto": {
+  "valor": 755864,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_sinprov_libro_vp_k2_deficit_no_cubierto": {
+  "valor": 607575,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_sinprov_libro_margen_min": {
+  "valor": -147549,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_sinprov_libro_margen_2036": {
+  "valor": -11210,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_sinprov_libro_margen_2040": {
+  "valor": -37694,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_sinprov_libro_margen_min_anio": {
+  "valor": 2054,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M2_sinprov_smasa_k1_primer_anio_sin_cobertura": {
+  "valor": 2034,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M2_sinprov_smasa_k2_primer_anio_sin_cobertura": {
+  "valor": 2040,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "M2_sinprov_smasa_vp_k1_deficit_no_cubierto": {
+  "valor": 891400,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_sinprov_smasa_vp_k2_deficit_no_cubierto": {
+  "valor": 764901,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_sinprov_smasa_margen_min": {
+  "valor": -160365,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_sinprov_smasa_margen_2036": {
+  "valor": -21568,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_sinprov_smasa_margen_2040": {
+  "valor": -48556,
+  "fuente": "sensibilidad_provisiones_masa.csv, mdp de 2026"
+ },
+ "M2_sinprov_smasa_margen_min_anio": {
+  "valor": 2054,
+  "fuente": "sensibilidad_provisiones_masa.csv"
+ },
+ "r_ingresoGMP_masa_2027": {
+  "valor": 1.691,
+  "fuente": "Ingreso de GMP (Cuadro V.24) / masa propia base (%)"
+ },
+ "r_ingresoGMP_masa_2030": {
+  "valor": 1.634,
+  "fuente": "Ingreso de GMP (Cuadro V.24) / masa propia base (%)"
+ },
+ "r_ingresoGMP_masa_2036": {
+  "valor": 1.551,
+  "fuente": "Ingreso de GMP (Cuadro V.24) / masa propia base (%)"
+ },
+ "r_ingresoGMP_masa_2040": {
+  "valor": 1.551,
+  "fuente": "Ingreso de GMP (Cuadro V.24) / masa propia base (%)"
+ },
+ "r_ingresoGMP_masa_2054": {
+  "valor": 1.544,
+  "fuente": "Ingreso de GMP (Cuadro V.24) / masa propia base (%)"
+ },
+ "r_ingresoGMP_masa_caida_pct": {
+  "valor": -8.66,
+  "fuente": "Caída porcentual de r(t), 2027-2054"
+ },
+ "base_k2v12_saldo_inicio_2035": {
+  "valor": 271337,
+  "fuente": "reserva_K2.csv, mdp de 2026"
+ },
+ "base_k2v12_saldo_inicio_2040": {
+  "valor": 242526,
+  "fuente": "reserva_K2.csv, mdp de 2026"
+ },
+ "base_k2v12_saldo_inicio_2045": {
+  "valor": 209125,
+  "fuente": "reserva_K2.csv, mdp de 2026"
+ },
+ "base_k2v12_saldo_inicio_2050": {
+  "valor": 170405,
+  "fuente": "reserva_K2.csv, mdp de 2026"
+ },
+ "base_k2v12_saldo_inicio_2054": {
+  "valor": 135034,
+  "fuente": "reserva_K2.csv, mdp de 2026"
+ },
+ "base_k2v12_retiros_GMP": {
+  "valor": 0,
+  "fuente": "reserva_K2.csv, Σ 2035-2054"
+ },
+ "base_k2v12_retiros_cuidados": {
+  "valor": 271337,
+  "fuente": "reserva_K2.csv, Σ 2035-2054"
+ },
+ "base_k2v12_agotamiento": {
+  "valor": "no se agota",
+  "fuente": "reserva_K2.csv"
+ },
+ "base_k2v12_saldo_cierre_2054": {
+  "valor": 125518,
+  "fuente": "reserva_K2.csv"
+ },
+ "M3_k2v12_saldo_inicio_2035": {
+  "valor": 191144,
+  "fuente": "reserva_K2.csv, mdp de 2026"
+ },
+ "M3_k2v12_saldo_inicio_2040": {
+  "valor": 205920,
+  "fuente": "reserva_K2.csv, mdp de 2026"
+ },
+ "M3_k2v12_saldo_inicio_2045": {
+  "valor": 217030,
+  "fuente": "reserva_K2.csv, mdp de 2026"
+ },
+ "M3_k2v12_saldo_inicio_2050": {
+  "valor": 186168,
+  "fuente": "reserva_K2.csv, mdp de 2026"
+ },
+ "M3_k2v12_saldo_inicio_2054": {
+  "valor": 101655,
+  "fuente": "reserva_K2.csv, mdp de 2026"
+ },
+ "M3_k2v12_retiros_GMP": {
+  "valor": 227552,
+  "fuente": "reserva_K2.csv, Σ 2035-2054"
+ },
+ "M3_k2v12_retiros_cuidados": {
+  "valor": 9557,
+  "fuente": "reserva_K2.csv, Σ 2035-2054"
+ },
+ "M3_k2v12_agotamiento": {
+  "valor": "no se agota",
+  "fuente": "reserva_K2.csv"
+ },
+ "M3_k2v12_saldo_cierre_2054": {
+  "valor": 68993,
+  "fuente": "reserva_K2.csv"
+ },
+ "M2_k2v12_saldo_inicio_2035": {
+  "valor": 110952,
+  "fuente": "reserva_K2.csv, mdp de 2026"
+ },
+ "M2_k2v12_saldo_inicio_2040": {
+  "valor": 0,
+  "fuente": "reserva_K2.csv, mdp de 2026"
+ },
+ "M2_k2v12_saldo_inicio_2045": {
+  "valor": 0,
+  "fuente": "reserva_K2.csv, mdp de 2026"
+ },
+ "M2_k2v12_saldo_inicio_2050": {
+  "valor": 0,
+  "fuente": "reserva_K2.csv, mdp de 2026"
+ },
+ "M2_k2v12_saldo_inicio_2054": {
+  "valor": 0,
+  "fuente": "reserva_K2.csv, mdp de 2026"
+ },
+ "M2_k2v12_retiros_GMP": {
+  "valor": 119940,
+  "fuente": "reserva_K2.csv, Σ 2035-2054"
+ },
+ "M2_k2v12_retiros_cuidados": {
+  "valor": 0,
+  "fuente": "reserva_K2.csv, Σ 2035-2054"
+ },
+ "M2_k2v12_agotamiento": {
+  "valor": 2038,
+  "fuente": "reserva_K2.csv"
+ },
+ "M2_k2v12_saldo_cierre_2054": {
+  "valor": 0,
+  "fuente": "reserva_K2.csv"
+ },
+ "base_k2v11_anios_faltante_con_pago": {
+  "valor": 0,
+  "fuente": "k2_v11_anios_con_faltante.csv"
+ },
+ "base_k2v11_pago_cuidados_con_faltante": {
+  "valor": 0,
+  "fuente": "Σ pagos a cuidados de la v1.1 en años con faltante"
+ },
+ "M3_k2v11_anios_faltante_con_pago": {
+  "valor": 15,
+  "fuente": "k2_v11_anios_con_faltante.csv"
+ },
+ "M3_k2v11_pago_cuidados_con_faltante": {
+  "valor": 134154,
+  "fuente": "Σ pagos a cuidados de la v1.1 en años con faltante"
+ },
+ "M2_k2v11_anios_faltante_con_pago": {
+  "valor": 3,
+  "fuente": "k2_v11_anios_con_faltante.csv"
+ },
+ "M2_k2v11_pago_cuidados_con_faltante": {
+  "valor": 16643,
+  "fuente": "Σ pagos a cuidados de la v1.1 en años con faltante"
+ },
+ "base_k2cambio_primer_antes_v11": {
+  "valor": "ninguno",
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "base_k2cambio_primer_despues_v12": {
+  "valor": "ninguno",
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "base_k2cambio_vp_cuidados_antes_v11": {
+  "valor": 747074,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "base_k2cambio_vp_cuidados_despues_v12": {
+  "valor": 747074,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "base_k2cambio_vp_no_cubierto_antes_v11": {
+  "valor": 0,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "base_k2cambio_vp_no_cubierto_despues_v12": {
+  "valor": 0,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "base_k2cambio_reserva_2054_antes_v11": {
+  "valor": 125518,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "base_k2cambio_reserva_2054_despues_v12": {
+  "valor": 125518,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "base_k2cambio_cuidados_2040_antes_v11": {
+  "valor": 54312,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "base_k2cambio_cuidados_2040_despues_v12": {
+  "valor": 54312,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "base_k2cambio_cuidados_2054_antes_v11": {
+  "valor": 90237,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "base_k2cambio_cuidados_2054_despues_v12": {
+  "valor": 90237,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M3_k2cambio_primer_antes_v11": {
+  "valor": 2051,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M3_k2cambio_primer_despues_v12": {
+  "valor": "ninguno",
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M3_k2cambio_vp_cuidados_antes_v11": {
+  "valor": 90603,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M3_k2cambio_vp_cuidados_despues_v12": {
+  "valor": 6498,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M3_k2cambio_vp_no_cubierto_antes_v11": {
+  "valor": 53950,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M3_k2cambio_vp_no_cubierto_despues_v12": {
+  "valor": 0,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M3_k2cambio_reserva_2054_antes_v11": {
+  "valor": 0,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M3_k2cambio_reserva_2054_despues_v12": {
+  "valor": 68993,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M3_k2cambio_cuidados_2040_antes_v11": {
+  "valor": 9557,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M3_k2cambio_cuidados_2040_despues_v12": {
+  "valor": 0,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M3_k2cambio_cuidados_2054_antes_v11": {
+  "valor": 0,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M3_k2cambio_cuidados_2054_despues_v12": {
+  "valor": 0,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M2_k2cambio_primer_antes_v11": {
+  "valor": 2038,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M2_k2cambio_primer_despues_v12": {
+  "valor": 2038,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M2_k2cambio_vp_cuidados_antes_v11": {
+  "valor": 12387,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M2_k2cambio_vp_cuidados_despues_v12": {
+  "valor": 0,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M2_k2cambio_vp_no_cubierto_antes_v11": {
+  "valor": 741017,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M2_k2cambio_vp_no_cubierto_despues_v12": {
+  "valor": 728630,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M2_k2cambio_reserva_2054_antes_v11": {
+  "valor": 0,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M2_k2cambio_reserva_2054_despues_v12": {
+  "valor": 0,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M2_k2cambio_cuidados_2040_antes_v11": {
+  "valor": 0,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M2_k2cambio_cuidados_2040_despues_v12": {
+  "valor": 0,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M2_k2cambio_cuidados_2054_antes_v11": {
+  "valor": 0,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "M2_k2cambio_cuidados_2054_despues_v12": {
+  "valor": 0,
+  "fuente": "k2_cambios_v11_v12.csv"
+ },
+ "chk12_00": {
+  "valor": 2e-09,
+  "fuente": "8.1 regresión v1.1: ingreso_vs_GMP (máx. desviación)"
+ },
+ "chk12_01": {
+  "valor": 0.0,
+  "fuente": "8.1 regresión v1.1: valor_presente (máx. desviación)"
+ },
+ "chk12_02": {
+  "valor": 4e-09,
+  "fuente": "8.1 regresión v1.1: remanente_por_mayor (máx. desviación)"
+ },
+ "chk12_03": {
+  "valor": 0.0,
+  "fuente": "8.1 regresión v1.1: resumen_escenarios (máx. desviación)"
+ },
+ "chk12_04": {
+  "valor": 0,
+  "fuente": "8.2 años con déficit sin provisiones > con provisiones"
+ },
+ "chk12_05": {
+  "valor": 0.0,
+  "fuente": "8.2 déficit con provisiones frente a la v1.1 (máx. desviación, mdp)"
+ },
+ "chk12_06": {
+  "valor": 0.0,
+  "fuente": "8.3 S-masa: ingreso 2027 = ingreso base 2027 (desviación, mdp)"
+ },
+ "chk12_07": {
+  "valor": 0.0,
+  "fuente": "8.3 S-masa: razón ingreso nuevo / ingreso GMP constante en la base (rango)"
+ },
+ "chk12_08": {
+  "valor": 0,
+  "fuente": "8.4 K2: años con faltante de GMP y retiro para cuidados"
+ },
+ "chk12_09": {
+  "valor": 0.0,
+  "fuente": "8.4 K2: identidad de la reserva (máx. desviación, mdp)"
  },
  "cuna_sm_uma_2026": {
   "valor": 2.685,
@@ -3367,6 +4091,254 @@
   "valor": 1.9078,
   "fuente": "Prima de RT en el Cuadro X-2.2 (Informe, Cuadro A.3)"
  },
+ "escalon_2026_uma_patron_salto_a": {
+  "valor": 0.426,
+  "fuente": "Salto del total a cargo del patrón entre SM y 1.01 SM, lectura por UMA, columna (a)"
+ },
+ "escalon_2026_uma_patron_salto_b": {
+  "valor": 0.426,
+  "fuente": "Salto del total a cargo del patrón entre SM y 1.01 SM, lectura por UMA, columna (b)"
+ },
+ "escalon_2026_uma_patron_salto_c": {
+  "valor": 0.501,
+  "fuente": "Salto del total a cargo del patrón entre SM y 1.01 SM, lectura por UMA, columna (c)"
+ },
+ "cuna_2026_25uma_c_menos_b": {
+  "valor": 2.651,
+  "fuente": "(c) − (b) en 25 UMA: efecto de D2 en salarios altos"
+ },
+ "escalon_2030_uma_patron_salto_a": {
+  "valor": 4.435,
+  "fuente": "Salto del total a cargo del patrón entre SM y 1.01 SM, lectura por UMA, columna (a)"
+ },
+ "escalon_2030_uma_patron_salto_b": {
+  "valor": 4.435,
+  "fuente": "Salto del total a cargo del patrón entre SM y 1.01 SM, lectura por UMA, columna (b)"
+ },
+ "escalon_2030_uma_patron_salto_c": {
+  "valor": 4.49,
+  "fuente": "Salto del total a cargo del patrón entre SM y 1.01 SM, lectura por UMA, columna (c)"
+ },
+ "cuna_2030_25uma_c_menos_b": {
+  "valor": 2.651,
+  "fuente": "(c) − (b) en 25 UMA: efecto de D2 en salarios altos"
+ },
+ "cuna_2026_Salario mínimo_sinfed_a": {
+  "valor": 26.53,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_Salario mínimo_sinfed_b": {
+  "valor": 23.53,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_Salario mínimo_sinfed_c": {
+  "valor": 19.4,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_sinfed_a": {
+  "valor": 29.331,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_sinfed_b": {
+  "valor": 26.331,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_sinfed_c": {
+  "valor": 22.276,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_sinfed_a": {
+  "valor": 26.981,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_sinfed_b": {
+  "valor": 23.981,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_sinfed_c": {
+  "valor": 19.926,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_2 UMA_sinfed_a": {
+  "valor": 30.834,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_2 UMA_sinfed_b": {
+  "valor": 27.834,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_2 UMA_sinfed_c": {
+  "valor": 21.101,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_3 UMA_sinfed_a": {
+  "valor": 28.609,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_3 UMA_sinfed_b": {
+  "valor": 25.609,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_3 UMA_sinfed_c": {
+  "valor": 22.276,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_4 UMA_sinfed_a": {
+  "valor": 27.871,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_4 UMA_sinfed_b": {
+  "valor": 24.871,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_4 UMA_sinfed_c": {
+  "valor": 23.238,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_5.55 UMA_sinfed_a": {
+  "valor": 27.661,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_5.55 UMA_sinfed_b": {
+  "valor": 24.661,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_5.55 UMA_sinfed_c": {
+  "valor": 24.452,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_10 UMA_sinfed_a": {
+  "valor": 26.386,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_10 UMA_sinfed_b": {
+  "valor": 23.386,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_10 UMA_sinfed_c": {
+  "valor": 24.813,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_25 UMA_sinfed_a": {
+  "valor": 25.432,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_25 UMA_sinfed_b": {
+  "valor": 22.432,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2026_25 UMA_sinfed_c": {
+  "valor": 25.083,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_Salario mínimo_sinfed_a": {
+  "valor": 24.793,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_Salario mínimo_sinfed_b": {
+  "valor": 21.793,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_Salario mínimo_sinfed_c": {
+  "valor": 19.666,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_sinfed_a": {
+  "valor": 31.677,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_sinfed_b": {
+  "valor": 28.677,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_sinfed_c": {
+  "valor": 26.605,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_sinfed_a": {
+  "valor": 25.802,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_sinfed_b": {
+  "valor": 22.802,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_sinfed_c": {
+  "valor": 20.73,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_2 UMA_sinfed_a": {
+  "valor": 32.535,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_2 UMA_sinfed_b": {
+  "valor": 29.535,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_2 UMA_sinfed_c": {
+  "valor": 22.802,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_3 UMA_sinfed_a": {
+  "valor": 31.485,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_3 UMA_sinfed_b": {
+  "valor": 28.485,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_3 UMA_sinfed_c": {
+  "valor": 25.152,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_4 UMA_sinfed_a": {
+  "valor": 31.335,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_4 UMA_sinfed_b": {
+  "valor": 28.335,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_4 UMA_sinfed_c": {
+  "valor": 26.702,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_5.55 UMA_sinfed_a": {
+  "valor": 32.023,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_5.55 UMA_sinfed_b": {
+  "valor": 29.023,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_5.55 UMA_sinfed_c": {
+  "valor": 28.814,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_10 UMA_sinfed_a": {
+  "valor": 30.748,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_10 UMA_sinfed_b": {
+  "valor": 27.748,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_10 UMA_sinfed_c": {
+  "valor": 29.175,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_25 UMA_sinfed_a": {
+  "valor": 29.794,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_25 UMA_sinfed_b": {
+  "valor": 26.794,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
+ "cuna_2030_25 UMA_sinfed_c": {
+  "valor": 29.445,
+  "fuente": "Cuña legal total sin la aportación federal (patrón + trabajador), % del SBC"
+ },
  "chk_cuna_0": {
   "valor": 0.0,
   "fuente": "3.5/7.5 (b) = (a) − 3 puntos en todo nivel hasta 25 UMA (máx. desviación, puntos)"
@@ -3382,6 +4354,14 @@
  "chk_cuna_3": {
   "valor": 0.0,
   "fuente": "7.1 regresión v1.0: cuna_legal_por_salario (máx. desviación)"
+ },
+ "chk_cuna_4": {
+  "valor": 0.0,
+  "fuente": "8.1 regresión v1.1: cuna_legal_por_salario (máx. desviación)"
+ },
+ "chk_cuna_5": {
+  "valor": 0,
+  "fuente": "8.6 cuña sin aportación federal ≥ cuña con ella (niveles que fallan)"
  },
  "exp1_cifras_cambiadas": {
   "valor": 186,
@@ -3432,11 +4412,99 @@
   "fuente": "7.4 experimento 1: montos en mdp de resultados_v12 sin cambio (máx. desviación)"
  },
  "chk_exp1_1": {
+  "valor": 9.71445146547012e-17,
+  "fuente": "8.1 regresión v1.1: exp1_cambios_denominador (máx. desviación)"
+ },
+ "chk_exp1_2": {
   "valor": 0,
   "fuente": "7.4 experimento 1: cifras cambiadas que no son puntos ni % del SEM"
  },
+ "form_hist_anios_faltantes": {
+  "valor": 0,
+  "fuente": "Años 2005-2025 sin dato de la ENOE"
+ },
+ "form_hist_2005": {
+  "valor": 31.1,
+  "fuente": "Puestos de trabajo IMSS (31-dic) / ocupados ENOE T4, 15+ (%)"
+ },
+ "form_hist_2025": {
+  "valor": 37.7,
+  "fuente": "Idem, 2025"
+ },
+ "form_hist_cambio_pts": {
+  "valor": 6.5,
+  "fuente": "Cambio 2005-2025, puntos porcentuales"
+ },
+ "form_hist_max": {
+  "valor": 37.7,
+  "fuente": "Máximo de la serie 2005-2025 (%)"
+ },
+ "form_hist_max_anio": {
+  "valor": 2025,
+  "fuente": "Año del máximo"
+ },
+ "form_libro_2025": {
+  "valor": 34.0,
+  "fuente": "Formalidad implícita del libro: cotizantes / ocupados (CONAPO × ENIGH), 2025 (%)"
+ },
+ "form_hist_menos_libro_2025": {
+  "valor": 3.7,
+  "fuente": "Serie histórica 2025 − formalidad implícita del libro (puntos)"
+ },
+ "form_proy_cambio_pts": {
+  "valor": 29.1,
+  "fuente": "Cambio 2025-2054 en la proyección base (puntos)"
+ },
+ "ENOE_ocupados_T4_2005": {
+  "valor": 41949328,
+  "fuente": "ENOE T4, ocupados de 15+ (INEGI, microdatos)"
+ },
+ "IMSS_puestos_dic_2005": {
+  "valor": 13061565,
+  "fuente": "IMSS, Memoria Estadística 2025, Cuadro I.2, Nacional"
+ },
+ "ENOE_ocupados_T4_2010": {
+  "valor": 45147139,
+  "fuente": "ENOE T4, ocupados de 15+ (INEGI, microdatos)"
+ },
+ "IMSS_puestos_dic_2010": {
+  "valor": 14738783,
+  "fuente": "IMSS, Memoria Estadística 2025, Cuadro I.2, Nacional"
+ },
+ "ENOE_ocupados_T4_2015": {
+  "valor": 50768849,
+  "fuente": "ENOE T4, ocupados de 15+ (INEGI, microdatos)"
+ },
+ "IMSS_puestos_dic_2015": {
+  "valor": 17884033,
+  "fuente": "IMSS, Memoria Estadística 2025, Cuadro I.2, Nacional"
+ },
+ "ENOE_ocupados_T4_2020": {
+  "valor": 53084911,
+  "fuente": "ENOE T4, ocupados de 15+ (INEGI, microdatos)"
+ },
+ "IMSS_puestos_dic_2020": {
+  "valor": 19773732,
+  "fuente": "IMSS, Memoria Estadística 2025, Cuadro I.2, Nacional"
+ },
+ "ENOE_ocupados_T4_2025": {
+  "valor": 59751051,
+  "fuente": "ENOE T4, ocupados de 15+ (INEGI, microdatos)"
+ },
+ "IMSS_puestos_dic_2025": {
+  "valor": 22517076,
+  "fuente": "IMSS, Memoria Estadística 2025, Cuadro I.2, Nacional"
+ },
+ "fuente_memoria_sha256": {
+  "valor": "12e667d918383b3c",
+  "fuente": "01-Asegurados.xlsx, descargado 2026-10-18 (imss.gob.mx, Memoria Estadística 2025, 01-Asegurados.xlsx)"
+ },
+ "fuente_enoe_descarga": {
+  "valor": "2026-10-18 12:55-13:01 CST (inegi.org.mx, microdatos ENOE T4 2005-2025; ver data/raw/enoe/descargas.log)",
+  "fuente": "Microdatos ENOE T4 2005-2025, inegi.org.mx/contenidos/programas/enoe/15ymas/microdatos/"
+ },
  "chk_3.6": {
   "valor": 0,
-  "fuente": "3.6/7.6 apariciones de 2055 en las tablas"
+  "fuente": "3.6/8.7 apariciones de 2055 en las tablas"
  }
 }

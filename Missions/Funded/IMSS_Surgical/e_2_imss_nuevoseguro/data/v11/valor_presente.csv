@@ -1,0 +1,42 @@
+bloque,escenario_masa,concepto,vp_mdp2026,fuente
+Experimento 2027-2054,base,Masa salarial con tope de 25 UMA (337 días),163267573.83509082,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,base,Ingreso del nuevo seguro,3265351.476701817,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,base,Déficit de GMP (Cuadro V.24 interpolado),2463416.1708928463,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,base,K1: remanente para cuidados,801935.3058089697,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,base,K1: déficit no cubierto,0.0,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,base,K2: cuidados,747074.1174129106,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,base,K2: déficit no cubierto,0.0,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,base,Reducción de las contribuciones legales sobre la nómina (3 puntos),4898027.215052724,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,base,K2: reserva al cierre de 2054,54861.18839605889,Saldo final descontado a 2026
+Experimento 2027-2054,M3,Masa salarial con tope de 25 UMA (337 días),141747833.7227415,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,M3,Ingreso del nuevo seguro,2834956.6744548306,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,M3,Déficit de GMP (Cuadro V.24 interpolado),2798303.9910693634,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,M3,K1: remanente para cuidados,151254.27493670507,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,M3,K1: déficit no cubierto,114601.59155123799,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,M3,K2: cuidados,90603.05514417277,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,M3,K2: déficit no cubierto,53950.37175870572,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,M3,Reducción de las contribuciones legales sobre la nómina (3 puntos),4252435.011682245,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,M3,K2: reserva al cierre de 2054,0.0,Saldo final descontado a 2026
+Experimento 2027-2054,M2,Masa salarial con tope de 25 UMA (337 días),120228093.61039224,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,M2,Ingreso del nuevo seguro,2404561.8722078456,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,M2,Déficit de GMP (Cuadro V.24 interpolado),3133191.8112458806,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,M2,K1: remanente para cuidados,102997.46208057569,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,M2,K1: déficit no cubierto,831627.4011186113,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,M2,K2: cuidados,12387.402741460377,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,M2,K2: déficit no cubierto,741017.341779496,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,M2,Reducción de las contribuciones legales sobre la nómina (3 puntos),3606842.8083117674,Cálculo propio; descuento al 3 % real a 2026
+Experimento 2027-2054,M2,K2: reserva al cierre de 2054,0.0,Saldo final descontado a 2026
+Informe: 30 años desde 2026,base,"Volumen de salarios, Informe (Cuadro V.15)",176481700.0,"Informe, Cuadro V.15"
+Informe: 30 años desde 2026,base,Masa salarial propia con tope de 25 UMA,174402197.0678698,"Cálculo propio, mismo horizonte"
+Informe: 30 años desde 2026,base,Masa salarial propia sin tope,178288615.2486587,"Cálculo propio, mismo horizonte"
+Informe: 30 años desde 2026,base,2 % × volumen de salarios del Informe,3529634.0,Contraste obligatorio 1.1
+Informe: 30 años desde 2026,base,2 % × masa propia con tope,3488043.9413573965,Cálculo propio
+Informe: 30 años desde 2026,base,"Déficit de GMP, Cuadro V.24 (publicado)",2631460.0,"Informe, Cuadro V.24"
+Informe: 30 años desde 2026,base,"Déficit de GMP, serie interpolada, descuento a fin de año",2618336.272434287,Verificación de la interpolación
+Informe: 30 años desde 2026,base,"Déficit de GMP, serie interpolada, descuento a mitad de año",2579923.3893090626,Convención alternativa
+Informe: 30 años desde 2026,base,"Ingresos de GMP, serie interpolada",2751304.3653253866,"Frente a 2,750,260 del Cuadro V.24"
+Informe: 30 años desde 2026,base,Brecha de primas 1.6 puntos × volumen de salarios,2823707.2,Contraste 1.2 (Cuadro II.16)
+Informe: 30 años desde 2026,base,  menos: redondeo de las primas (3.1 − 1.5 frente a 3.053 − 1.500),82699.20000000019,Cuadros V.19 y V.20
+Informe: 30 años desde 2026,base,  menos: otros ingresos de GMP (fuera de la prima de financiamiento),103662.0,Cuadro V.20
+Informe: 30 años desde 2026,base,  menos: diferencia entre Cuadro V.19 y Cuadro V.24 (escenario base),5887.0,Cuadros V.19 y V.24
+Informe: 30 años desde 2026,base,  residuo,-1.0,Debe ser ≈ 0

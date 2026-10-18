@@ -23,7 +23,8 @@ def cambios() -> pd.DataFrame:
     a = json.loads(ANTES.read_text())
     b = json.loads((EXP1 / "data" / "derived" / "numbers_computed.json").read_text())
     rows = []
-    for k in sorted(set(a) | set(b)):
+    # solo cifras que ya existían en la v1.2: las claves que el experimento 1 agregó después (v1.3: X1_*, chk13_*) no son cambios
+    for k in sorted(a):
         va, vb = a.get(k, {}).get("valor"), b.get(k, {}).get("valor")
         if va != vb:
             dif = vb - va if isinstance(va, (int, float)) and isinstance(vb, (int, float)) else np.nan
@@ -57,7 +58,9 @@ def main():
     table(c, "exp1_cambios_denominador")
     cs = contraste_sem()
     table(cs, "contraste_ingresos_SEM_V13_libro")
+    from nuevo_seguro import _max_dif
     chk = {"7.4 experimento 1: montos en mdp de resultados_v12 sin cambio (máx. desviación)": montos_sin_cambio(),
+           "8.1 regresión v1.1: exp1_cambios_denominador (máx. desviación)": _max_dif(c, pd.read_csv(PROJECT / "data" / "v11" / "exp1_cambios_denominador.csv")),
            "7.4 experimento 1: cifras cambiadas que no son puntos ni % del SEM": int((c.tipo == "otro").sum())}
     record("exp1_cifras_cambiadas", len(c), "Cifras del registro del experimento 1 que cambian por el denominador común")
     record("exp1_cifras_cambiadas_pts", int((c.tipo == "puntos del salario").sum()), "Idem, puntos del salario")

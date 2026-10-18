@@ -22,15 +22,20 @@ def corrida(nombre: str | None = None) -> dict:
     return CFG["corridas"][nombre or CFG["corrida"]]
 
 
-def simular(ins: Insumos2, esc: str, ajuste: bool) -> pd.DataFrame:
+def simular(ins: Insumos2, esc: str, ajuste: bool, k2_regla: str = "v1.1", sin_prov: bool = False,
+            s_masa: bool = False) -> pd.DataFrame:
     masa = ins.masa_esc(esc)
-    I = P["ns_tasa"] * masa
     razon = masa / ins.masa_esc("base")
     ing = ins.gmp_ing.loc[YEARS]
-    D0 = ins.gmp_def.loc[YEARS]
-    # v1.1: con menos cotizantes también baja lo que recauda GMP; su gasto no se ajusta (supuesto [REVISAR])
-    D = D0 + ing * (1 - razon) if ajuste else D0
+    if s_masa:
+        # v1.2, S-masa: el ingreso crece al ritmo del ingreso de GMP del Informe, desde el nivel propio de 2027
+        I = P["ns_tasa"] * ins.masa_esc("base")[YEARS[0]] * ing / ing[YEARS[0]] * razon
+    else:
+        I = P["ns_tasa"] * masa
     prov = ins.gmp_prov.loc[YEARS]
+    D0 = ins.gmp_def.loc[YEARS] - (prov if sin_prov else 0.0)
+    # v1.1: con menos cotizantes también baja lo que recauda GMP; su gasto no se ajusta (supuesto aprobado)
+    D = D0 + ing * (1 - razon) if ajuste else D0
     r = P["r"]
     rows = []
     R, W = 0.0, None
@@ -38,24 +43,41 @@ def simular(ins: Insumos2, esc: str, ajuste: bool) -> pd.DataFrame:
         exc = I[t] - D[t]
         # K1: el remanente anual se gasta en cuidados; el déficit que el ingreso no cubre queda como déficit no cubierto
         u1, f1 = max(0.0, exc), max(0.0, -exc)
-        # K2: reserva hasta 2034; desde 2035, cuidados = remanente + 1/20 de la reserva de inicio de 2035 (monto fijo real)
-        pre = R * (1 + r) + exc
         if t == P["k2_inicio"]:
             W = P["k2_fraccion"] * R
-        if pre < 0:
-            u2, f2 = 0.0, -pre
+        if k2_regla == "v1.1":
+            # v1.1: desde 2035, cuidados = remanente + retiro fijo, acotado por lo disponible, aun con faltante de GMP
+            pre = R * (1 + r) + exc
+            if pre < 0:
+                u2, f2 = 0.0, -pre
+            else:
+                u2 = min(max(0.0, exc) + W, pre) if t >= P["k2_inicio"] else 0.0
+                f2 = 0.0
+            R_fin = pre - u2 + f2
+            extra = {}
         else:
-            u2 = min(max(0.0, exc) + W, pre) if t >= P["k2_inicio"] else 0.0
-            f2 = 0.0
-        R_fin = pre - u2 + f2
+            # v1.2 (regla de Beth): el ingreso cubre GMP; el faltante sale de la reserva; el retiro fijo para cuidados
+            # solo en años sin faltante de GMP y hasta donde alcance la reserva
+            interes = R * r
+            disp = R + interes
+            dep = max(0.0, exc) if t < P["k2_inicio"] else 0.0
+            rem = max(0.0, exc) if t >= P["k2_inicio"] else 0.0
+            ret_gmp = min(-exc, disp) if exc < 0 else 0.0
+            f2 = -exc - ret_gmp if exc < 0 else 0.0
+            ret_cui = min(W, disp) if (t >= P["k2_inicio"] and exc >= 0) else 0.0
+            u2 = rem + ret_cui
+            R_fin = R + interes + dep - ret_gmp - ret_cui
+            extra = {"k2_intereses": interes, "k2_deposito": dep, "k2_retiro_gmp": ret_gmp, "k2_retiro_cuidados": ret_cui,
+                     "k2_remanente_del_anio": rem}
         rows.append({"escenario_masa": esc, "anio": t, "masa_tope25": masa[t], "ingreso_NS": I[t], "deficit_GMP": D[t],
                      "ingreso_GMP_informe": ing[t], "k1_remanente_cuidados": u1, "k1_deficit_no_cubierto": f1,
                      "k1_reserva_fin": 0.0, "k2_reserva_inicio": R, "k2_cuidados": u2, "k2_deficit_no_cubierto": f2,
                      "k2_reserva_fin": R_fin, "reduccion_cuna_legal": P["reduccion_cuna"] * masa[t],
                      "infonavit_5pct_teorico": P["infonavit_tasa"] * masa[t], "ingresos_SEM_informe": ins.sem[t]})
         if ajuste:
-            rows[-1].update({"razon_masa": razon[t], "deficit_GMP_institucional": D0[t], "ingreso_GMP_ajustado": ing[t] * razon[t],
-                             "provisiones_GMP": prov[t], "margen_sin_provisiones": exc + prov[t]})
+            rows[-1].update({"razon_masa": razon[t], "deficit_GMP_institucional": ins.gmp_def[t], "ingreso_GMP_ajustado": ing[t] * razon[t],
+                             "provisiones_GMP": prov[t], "margen_sin_provisiones": exc + (0.0 if sin_prov else prov[t])})
+        rows[-1].update(extra)
         R = R_fin
     d = pd.DataFrame(rows)
     for col in COLS_RAZON:
@@ -158,7 +180,7 @@ def por_mayor(ins: Insumos2, sims: dict, nombres) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def resumen(sims: dict) -> pd.DataFrame:
+def resumen(sims: dict, ins: Insumos2) -> pd.DataFrame:
     """Sección 1.3 de la v1.1: por escenario, primer año sin cobertura (K1 y K2), déficit no cubierto y remanente."""
     df = descuento(YEARS)
     rows = []
@@ -167,7 +189,7 @@ def resumen(sims: dict) -> pd.DataFrame:
         k1 = x.index[x.k1_deficit_no_cubierto > 0]
         k2 = x.index[x.k2_deficit_no_cubierto > 0]
         rows.append({"escenario_masa": esc,
-                     "formalidad_2054_pct": np.nan,
+                     "formalidad_2054_pct": ins.formalidad_esc[esc].loc[2054] * 100,
                      "k1_primer_anio_sin_cobertura": int(k1.min()) if len(k1) else None,
                      "k2_primer_anio_sin_cobertura": int(k2.min()) if len(k2) else None,
                      "k1_deficit_no_cubierto_2054": x.k1_deficit_no_cubierto.iloc[-1],
@@ -234,11 +256,11 @@ def verificaciones(ins: Insumos2, sims: dict, info: dict) -> dict:
 def calcular(nombre: str | None = None) -> dict:
     ins = cargar()
     cr = corrida(nombre)
-    sims = {e: simular(ins, e, cr["ajuste_ingreso_gmp"]) for e in cr["escenarios"]}
+    sims = {e: simular(ins, e, cr["ajuste_ingreso_gmp"], cr.get("k2_regla", "v1.1")) for e in cr["escenarios"]}
     con, info = contrastes(ins)
     return {"ins": ins, "sims": sims, "ingreso_vs_GMP": pd.concat(sims.values(), ignore_index=True),
             "valor_presente": pd.concat([valor_presente(sims), con], ignore_index=True),
-            "remanente_por_mayor": por_mayor(ins, sims, cr["personas"]), "resumen": resumen(sims), "info": info}
+            "remanente_por_mayor": por_mayor(ins, sims, cr["personas"]), "resumen": resumen(sims, ins), "info": info}
 
 
 def _max_dif(a: pd.DataFrame, b: pd.DataFrame) -> float:
@@ -275,7 +297,6 @@ def main():
     pm = r["remanente_por_mayor"]
     table(pm, "remanente_por_mayor")
     rs = r["resumen"]
-    rs["formalidad_2054_pct"] = rs.escenario_masa.map(lambda e: ins.formalidad_esc[e].loc[2054] * 100)
     table(rs, "resumen_escenarios")
     chk = verificaciones(ins, sims, info)
     chk.update(regresion_v10())

@@ -1,0 +1,47 @@
+→ nuevo_seguro
+→ sensibilidades_v12
+→ cuna_legal
+→ cambios_exp1
+→ formalidad
+→ salidas
+{
+ "3.1 masa con tope = base de la tasa D2 de la v1.2 (máx. desviación relativa)": 2.220446049250313e-16,
+ "3.1 masa con tope / denominador anterior de la v1.2, 2027 (razón)": 1.022669572759902,
+ "3.1 masa con tope / denominador anterior de la v1.2, 2054 (razón)": 1.0139901727334744,
+ "3.1 proporción de la masa por encima del tope, 2027 (%)": 1.7360476871746133,
+ "3.1 proporción de la masa por encima del tope, 2054 (%)": 2.714500490334304,
+ "3.2 Cuadro V.24 transcrito = PDF (celdas distintas)": 0,
+ "3.2 interpolación preserva los años ancla (máx. desviación, mdp)": 0.0,
+ "3.2 VP del déficit interpolado frente al Cuadro V.24 (%)": -0.4987241898304795,
+ "3.3 VP 2 % × masa propia frente a 2 % × volumen del Informe, mismo horizonte (%)": -1.178310800570359,
+ "3.4 identidad de la reserva (máx. desviación, mdp)": 5.820766091346741e-11,
+ "7.2 base: déficit ajustado = Cuadro V.24 (máx. desviación, mdp)": 0.0,
+ "7.2 déficit M2 > M3 > base en años con ganancia de formalización (años que fallan)": 0,
+ "7.3 base ENIGH de 65+ / población nacional de 65+, máximo 2027-2054 (%)": 46.55226440454464,
+ "7.1 regresión v1.0: ingreso_vs_GMP (máx. desviación)": 1.862645149230957e-09,
+ "7.1 regresión v1.0: valor_presente (máx. desviación)": 4.656612873077393e-10,
+ "7.1 regresión v1.0: remanente_por_mayor (máx. desviación)": 3.725290298461914e-09,
+ "8.1 regresión v1.1: ingreso_vs_GMP (máx. desviación)": 1.862645149230957e-09,
+ "8.1 regresión v1.1: valor_presente (máx. desviación)": 4.656612873077393e-10,
+ "8.1 regresión v1.1: remanente_por_mayor (máx. desviación)": 3.725290298461914e-09,
+ "8.1 regresión v1.1: resumen_escenarios (máx. desviación)": 4.656612873077393e-10,
+ "8.2 años con déficit sin provisiones > con provisiones": 0,
+ "8.2 déficit con provisiones frente a la v1.1 (máx. desviación, mdp)": 0.0,
+ "8.3 S-masa: ingreso 2027 = ingreso base 2027 (desviación, mdp)": 1.4551915228366852e-11,
+ "8.3 S-masa: razón ingreso nuevo / ingreso GMP constante en la base (rango)": 2.220446049250313e-16,
+ "8.4 K2: años con faltante de GMP y retiro para cuidados": 0,
+ "8.4 K2: identidad de la reserva (máx. desviación, mdp)": 1.1641532182693481e-10,
+ "3.5/7.5 (b) = (a) − 3 puntos en todo nivel hasta 25 UMA (máx. desviación, puntos)": 0.0,
+ "3.5 tasas de cesantía y vejez fuera de la tabla de 1.5 (casos)": 0,
+ "3.5 tabla 2030 = art. 168 fr. II a) del DOF 16-12-2020 (celdas distintas)": 0,
+ "7.1 regresión v1.0: cuna_legal_por_salario (máx. desviación)": 7.105427357601002e-15,
+ "8.1 regresión v1.1: cuna_legal_por_salario (máx. desviación)": 7.105427357601002e-15,
+ "8.6 cuña sin aportación federal ≥ cuña con ella (niveles que fallan)": 0,
+ "7.4 experimento 1: montos en mdp de resultados_v12 sin cambio (máx. desviación)": 0.0,
+ "8.1 regresión v1.1: exp1_cambios_denominador (máx. desviación)": 9.71445146547012e-17,
+ "7.4 experimento 1: cifras cambiadas que no son puntos ni % del SEM": 0,
+ "8.5 serie de formalización: años sin fuente primaria": 0,
+ "3.6/8.7 apariciones de 2055 en las tablas": 0,
+ "3.7/8.7 cifras del borrador v3 sin registro en NUMBERS.md": 0,
+ "3.7 detalle": ""
+}

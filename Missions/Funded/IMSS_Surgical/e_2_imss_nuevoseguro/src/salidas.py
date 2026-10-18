@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 
 FUENTE = ("Ejercicio preliminar ITED; no es una proyección del IMSS ni una propuesta del IMSS o del Gobierno. "
           "Fuentes: Informe IMSS 2025-2026 (Cuadro V.24); libro de Finanzas 07/09/2026; CONAPO; ENIGH 2024.")
-ANEXO = "ANEXO_experimento2_borrador_v2.md"
+ANEXO = "ANEXO_experimento2_borrador_v3.md"
 
 # (clave, valor, fuente, estado) — instrucción, sección 6, más las cifras que la ejecución añadió
 SEMILLA = [
@@ -46,6 +46,14 @@ SEMILLA = [
     ("Obreras y federales", "Obrera: excedente 0.40, PD 0.25, GMP 0.375, IV 0.625, CyV 1.125; federal: cuota fija 14.83 % UMA, PD 0.05, GMP 0.075, IV 0.125", "Informe, Cuadro A.3", "nueva"),
     ("Art_36_LSS", "«Corresponde al patrón pagar íntegramente la cuota señalada para los trabajadores, en los casos en que éstos perciban como cuota diaria el salario mínimo.»", "Ley del Seguro Social, art. 36, texto vigente publicado por la Cámara de Diputados (última reforma DOF 15-01-2026)", "verificada (v1.1); coincide con la redacción citada"),
     ("Criterio_SUA_1.01SM", "No encontrado", "Búsqueda en documentación pública del IMSS y del DOF (18-10-2026); la página del SUA requiere sesión", "pendiente de confirmación con el IMSS (visita de Juan Pablo)"),
+    ("Decision_aprobada_M3", "M3 se mide desde 2025 (34.0 % → 48.56 % en 2054), con la misma referencia que M2", "Instrucción v1.2, sección 0 (Beth y Cath)", "decisión aprobada"),
+    ("Decision_aprobada_puntos", "Los puntos del salario de cada escenario usan la masa de ese escenario (misma definición, valores propios)", "Instrucción v1.2, sección 0", "decisión aprobada"),
+    ("Decision_aprobada_ENIGH", "Tasa de afiliación de 65+ de la ENIGH por grupos quinquenales (85 y más) y sexo", "Instrucción v1.2, sección 0", "decisión aprobada"),
+    ("Decision_aprobada_formalizacion", "La limitación sobre la formalización no usa «sin precedente histórico»; se sustituye por la serie 2005-2025", "Instrucción v1.2, secciones 0 y 4", "decisión aprobada"),
+    ("Regla_K2_v12", "Desde 2035: el ingreso cubre GMP; el faltante sale de la reserva; el retiro fijo de 1/20 de la reserva de inicio de 2035 va a cuidados solo en años sin faltante y hasta donde alcance la reserva; agotada la reserva, el faltante es déficit no cubierto", "Instrucción v1.2, sección 3.2 (decisión de Beth)", "aplicada en la v1.2"),
+    ("IMSS_puestos_Memoria", "Puestos de trabajo afiliados al IMSS al 31 de diciembre, 1997-2025, fila Nacional (modalidades 10, 13, 14, 17, 30, 34, 35, 36, 38, 42, 43 y 44)", "IMSS, Memoria Estadística 2025, capítulo I, Cuadro I.2 (imss.gob.mx/sites/all/statics/pdf/estadisticas/memoria/2025/01-Asegurados.xlsx), descargado el 18-10-2026", "nueva (v1.2); numerador de la serie de formalización"),
+    ("ENOE_ocupados_T4", "Población ocupada de 15 años o más, cuarto trimestre de 2005 a 2025: tabla SDEMT, r_def = 0, c_res ∈ {1, 3}, clase2 = 1, 15 ≤ eda ≤ 97, factor fac (2005-2019) o fac_tri (2020-2025)", "INEGI, ENOE, microdatos (inegi.org.mx/contenidos/programas/enoe/15ymas/microdatos/), descargados el 18-10-2026", "nueva (v1.2); denominador de la serie de formalización; cuarto trimestre para empatar con el corte de diciembre del IMSS"),
+    ("Proyeccion_pensionados_IMSS", "No existe en el Informe una proyección anual de pensionados del IMSS (solo la del RJP, grupo cerrado, Gráfica VIII.1)", "Informe 2025-2026, revisión de los capítulos II, V y VIII", "la variante opcional de personas mayores (v1.2, 5.2) no se construye"),
     ("Infonavit_recaudacion_efectiva", "No obtenida", "Estados financieros del Infonavit 2024-2025", "omitida, como manda la instrucción"),
 ]
 
@@ -136,10 +144,10 @@ def cifras_sin_registro() -> list[str]:
 def main():
     figura()
     n = sin_2055()
-    record("chk_3.6", n, "3.6/7.6 apariciones de 2055 en las tablas")
+    record("chk_3.6", n, "3.6/8.7 apariciones de 2055 en las tablas")
     numbers_md()
     faltan = cifras_sin_registro()
-    return {"3.6/7.6 apariciones de 2055 en las tablas": n, "3.7/7.6 cifras del borrador v2 sin registro en NUMBERS.md": len(faltan),
+    return {"3.6/8.7 apariciones de 2055 en las tablas": n, "3.7/8.7 cifras del borrador v3 sin registro en NUMBERS.md": len(faltan),
             "3.7 detalle": ", ".join(faltan)}
 
 
