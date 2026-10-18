@@ -6,6 +6,12 @@
 
 ---
 
+# Experimento 2 — Cuota del Infonavit a un nuevo seguro solidario de salud y cuidados (2026-10-18)
+
+Por decisión de Héctor, el experimento 2 vive en su propia carpeta: `../../e_2_imss_nuevoseguro/`. Ahí están su reporte (`REPORT.md`, sección «Experimento 2»), su registro de cifras (`NUMBERS.md`, sección «Experimento 2») y su borrador (`ANEXO_experimento2_borrador.md`). Reutiliza los módulos y derivados de esta v1.2 sin escribir en ellos. La única combinación permitida con este experimento es la columna (c) de su tabla de cuña contributiva legal, que usa la tasa D2 (3.467 %).
+
+---
+
 # v1.2 — Tasa proporcional única y pago creíble (2026-10-17)
 
 **Instrucción:** `20261017_BDH_N13_anexo-afiliacion-subsidiada_build_v1.2` (Beth y Cath). Producto para el anexo: `ANEXO_borrador_v2.md`. Lo que sigue a esta sección es el reporte de la v1.1, que se conserva: la prueba de regresión 6.1 la reproduce exactamente.

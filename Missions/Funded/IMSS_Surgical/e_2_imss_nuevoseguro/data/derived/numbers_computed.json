@@ -1,0 +1,2426 @@
+{
+ "masa25_2027": {
+  "valor": 5468877,
+  "fuente": "Σ cotizantes × SBC (R1, tope 25 UMA, piso SM) × UMA × 337, mdp de 2026"
+ },
+ "cotizantes_2027": {
+  "valor": 23213820,
+  "fuente": "Libro de Finanzas, `Pob Emp & Nuevos` (modelo de cohortes de la v1.2)"
+ },
+ "sm_uma_2027": {
+  "valor": 2.899,
+  "fuente": "SM en veces la UMA (Sup_Fin; v1.2)"
+ },
+ "prop_sobre_tope_2027": {
+  "valor": 1.74,
+  "fuente": "% de la masa sin tope que rebasa 25 UMA (forma R1 sin tope)"
+ },
+ "M2_factor_2027": {
+  "valor": 0.9849,
+  "fuente": "Formalidad implícita 2025 / formalidad implícita t (prueba C de la v1.2)"
+ },
+ "formalidad_implicita_2027": {
+  "valor": 0.3452,
+  "fuente": "Cotizantes / ocupados (prueba C de la v1.2)"
+ },
+ "DH65_2027": {
+  "valor": 14295992,
+  "fuente": "0.166 × 79,178,109 × (CONAPO 65+ t / CONAPO 65+ 2025)"
+ },
+ "DH80_2027": {
+  "valor": 3084411,
+  "fuente": "DH65 × (CONAPO 80+ / CONAPO 65+)"
+ },
+ "SEM_ingresos_2027": {
+  "valor": 578176,
+  "fuente": "Informe, Cuadro V.13, interpolación lineal"
+ },
+ "GMP_deficit_2027": {
+  "valor": 74270,
+  "fuente": "Informe, Cuadro V.24 (base), interpolación lineal"
+ },
+ "base_ingreso_NS_2027": {
+  "valor": 109378,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_k1_remanente_cuidados_2027": {
+  "valor": 35107,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_k1_deficit_no_cubierto_2027": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_k2_cuidados_2027": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_k2_reserva_fin_2027": {
+  "valor": 35107,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_reduccion_cuna_legal_2027": {
+  "valor": 164066,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_infonavit_5pct_teorico_2027": {
+  "valor": 273444,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_ingreso_NS_pts_2027": {
+  "valor": 2.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_ingreso_NS_sem_2027": {
+  "valor": 18.92,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "base_deficit_GMP_pts_2027": {
+  "valor": 1.358,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_deficit_GMP_sem_2027": {
+  "valor": 12.85,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "base_k1_remanente_cuidados_pts_2027": {
+  "valor": 0.642,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_k1_remanente_cuidados_sem_2027": {
+  "valor": 6.07,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "base_k2_cuidados_pts_2027": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_k2_cuidados_sem_2027": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "base_reduccion_cuna_legal_pts_2027": {
+  "valor": 3.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_reduccion_cuna_legal_sem_2027": {
+  "valor": 28.38,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_ingreso_NS_2027": {
+  "valor": 107727,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_k1_remanente_cuidados_2027": {
+  "valor": 33456,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_k1_deficit_no_cubierto_2027": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_k2_cuidados_2027": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_k2_reserva_fin_2027": {
+  "valor": 33456,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_reduccion_cuna_legal_2027": {
+  "valor": 161590,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_infonavit_5pct_teorico_2027": {
+  "valor": 269317,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_ingreso_NS_pts_2027": {
+  "valor": 2.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_ingreso_NS_sem_2027": {
+  "valor": 18.63,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_deficit_GMP_pts_2027": {
+  "valor": 1.379,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_deficit_GMP_sem_2027": {
+  "valor": 12.85,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_k1_remanente_cuidados_pts_2027": {
+  "valor": 0.621,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_k1_remanente_cuidados_sem_2027": {
+  "valor": 5.79,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_k2_cuidados_pts_2027": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_k2_cuidados_sem_2027": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_reduccion_cuna_legal_pts_2027": {
+  "valor": 3.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_reduccion_cuna_legal_sem_2027": {
+  "valor": 27.95,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "masa25_2030": {
+  "valor": 6205467,
+  "fuente": "Σ cotizantes × SBC (R1, tope 25 UMA, piso SM) × UMA × 337, mdp de 2026"
+ },
+ "cotizantes_2030": {
+  "valor": 25233767,
+  "fuente": "Libro de Finanzas, `Pob Emp & Nuevos` (modelo de cohortes de la v1.2)"
+ },
+ "sm_uma_2030": {
+  "valor": 3.646,
+  "fuente": "SM en veces la UMA (Sup_Fin; v1.2)"
+ },
+ "prop_sobre_tope_2030": {
+  "valor": 1.81,
+  "fuente": "% de la masa sin tope que rebasa 25 UMA (forma R1 sin tope)"
+ },
+ "M2_factor_2030": {
+  "valor": 0.9321,
+  "fuente": "Formalidad implícita 2025 / formalidad implícita t (prueba C de la v1.2)"
+ },
+ "formalidad_implicita_2030": {
+  "valor": 0.3647,
+  "fuente": "Cotizantes / ocupados (prueba C de la v1.2)"
+ },
+ "DH65_2030": {
+  "valor": 16182171,
+  "fuente": "0.166 × 79,178,109 × (CONAPO 65+ t / CONAPO 65+ 2025)"
+ },
+ "DH80_2030": {
+  "valor": 3486854,
+  "fuente": "DH65 × (CONAPO 80+ / CONAPO 65+)"
+ },
+ "SEM_ingresos_2030": {
+  "valor": 626325,
+  "fuente": "Informe, Cuadro V.13, interpolación lineal"
+ },
+ "GMP_deficit_2030": {
+  "valor": 91888,
+  "fuente": "Informe, Cuadro V.24 (base), interpolación lineal"
+ },
+ "base_ingreso_NS_2030": {
+  "valor": 124109,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_k1_remanente_cuidados_2030": {
+  "valor": 32222,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_k1_deficit_no_cubierto_2030": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_k2_cuidados_2030": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_k2_reserva_fin_2030": {
+  "valor": 139975,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_reduccion_cuna_legal_2030": {
+  "valor": 186164,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_infonavit_5pct_teorico_2030": {
+  "valor": 310273,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_ingreso_NS_pts_2030": {
+  "valor": 2.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_ingreso_NS_sem_2030": {
+  "valor": 19.82,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "base_deficit_GMP_pts_2030": {
+  "valor": 1.481,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_deficit_GMP_sem_2030": {
+  "valor": 14.67,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "base_k1_remanente_cuidados_pts_2030": {
+  "valor": 0.519,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_k1_remanente_cuidados_sem_2030": {
+  "valor": 5.14,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "base_k2_cuidados_pts_2030": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_k2_cuidados_sem_2030": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "base_reduccion_cuna_legal_pts_2030": {
+  "valor": 3.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_reduccion_cuna_legal_sem_2030": {
+  "valor": 29.72,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_ingreso_NS_2030": {
+  "valor": 115686,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_k1_remanente_cuidados_2030": {
+  "valor": 23798,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_k1_deficit_no_cubierto_2030": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_k2_cuidados_2030": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_k2_reserva_fin_2030": {
+  "valor": 119838,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_reduccion_cuna_legal_2030": {
+  "valor": 173529,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_infonavit_5pct_teorico_2030": {
+  "valor": 289215,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_ingreso_NS_pts_2030": {
+  "valor": 2.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_ingreso_NS_sem_2030": {
+  "valor": 18.47,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_deficit_GMP_pts_2030": {
+  "valor": 1.589,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_deficit_GMP_sem_2030": {
+  "valor": 14.67,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_k1_remanente_cuidados_pts_2030": {
+  "valor": 0.411,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_k1_remanente_cuidados_sem_2030": {
+  "valor": 3.8,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_k2_cuidados_pts_2030": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_k2_cuidados_sem_2030": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_reduccion_cuna_legal_pts_2030": {
+  "valor": 3.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_reduccion_cuna_legal_sem_2030": {
+  "valor": 27.71,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "masa25_2040": {
+  "valor": 8909700,
+  "fuente": "Σ cotizantes × SBC (R1, tope 25 UMA, piso SM) × UMA × 337, mdp de 2026"
+ },
+ "cotizantes_2040": {
+  "valor": 33884896,
+  "fuente": "Libro de Finanzas, `Pob Emp & Nuevos` (modelo de cohortes de la v1.2)"
+ },
+ "sm_uma_2040": {
+  "valor": 3.833,
+  "fuente": "SM en veces la UMA (Sup_Fin; v1.2)"
+ },
+ "prop_sobre_tope_2040": {
+  "valor": 2.12,
+  "fuente": "% de la masa sin tope que rebasa 25 UMA (forma R1 sin tope)"
+ },
+ "M2_factor_2040": {
+  "valor": 0.7384,
+  "fuente": "Formalidad implícita 2025 / formalidad implícita t (prueba C de la v1.2)"
+ },
+ "formalidad_implicita_2040": {
+  "valor": 0.4604,
+  "fuente": "Cotizantes / ocupados (prueba C de la v1.2)"
+ },
+ "DH65_2040": {
+  "valor": 23340899,
+  "fuente": "0.166 × 79,178,109 × (CONAPO 65+ t / CONAPO 65+ 2025)"
+ },
+ "DH80_2040": {
+  "valor": 5553803,
+  "fuente": "DH65 × (CONAPO 80+ / CONAPO 65+)"
+ },
+ "SEM_ingresos_2040": {
+  "valor": 835679,
+  "fuente": "Informe, Cuadro V.13, interpolación lineal"
+ },
+ "GMP_deficit_2040": {
+  "valor": 137449,
+  "fuente": "Informe, Cuadro V.24 (base), interpolación lineal"
+ },
+ "base_ingreso_NS_2040": {
+  "valor": 178194,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_k1_remanente_cuidados_2040": {
+  "valor": 40745,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_k1_deficit_no_cubierto_2040": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_k2_cuidados_2040": {
+  "valor": 54312,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_k2_reserva_fin_2040": {
+  "valor": 236235,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_reduccion_cuna_legal_2040": {
+  "valor": 267291,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_infonavit_5pct_teorico_2040": {
+  "valor": 445485,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_ingreso_NS_pts_2040": {
+  "valor": 2.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_ingreso_NS_sem_2040": {
+  "valor": 21.32,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "base_deficit_GMP_pts_2040": {
+  "valor": 1.543,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_deficit_GMP_sem_2040": {
+  "valor": 16.45,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "base_k1_remanente_cuidados_pts_2040": {
+  "valor": 0.457,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_k1_remanente_cuidados_sem_2040": {
+  "valor": 4.88,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "base_k2_cuidados_pts_2040": {
+  "valor": 0.61,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_k2_cuidados_sem_2040": {
+  "valor": 6.5,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "base_reduccion_cuna_legal_pts_2040": {
+  "valor": 3.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_reduccion_cuna_legal_sem_2040": {
+  "valor": 31.98,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_ingreso_NS_2040": {
+  "valor": 131571,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_k1_remanente_cuidados_2040": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_k1_deficit_no_cubierto_2040": {
+  "valor": 5878,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_k2_cuidados_2040": {
+  "valor": 9131,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_k2_reserva_fin_2040": {
+  "valor": 117101,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_reduccion_cuna_legal_2040": {
+  "valor": 197356,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_infonavit_5pct_teorico_2040": {
+  "valor": 328927,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_ingreso_NS_pts_2040": {
+  "valor": 2.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_ingreso_NS_sem_2040": {
+  "valor": 15.74,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_deficit_GMP_pts_2040": {
+  "valor": 2.089,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_deficit_GMP_sem_2040": {
+  "valor": 16.45,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_k1_remanente_cuidados_pts_2040": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_k1_remanente_cuidados_sem_2040": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_k2_cuidados_pts_2040": {
+  "valor": 0.139,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_k2_cuidados_sem_2040": {
+  "valor": 1.09,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_reduccion_cuna_legal_pts_2040": {
+  "valor": 3.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_reduccion_cuna_legal_sem_2040": {
+  "valor": 23.62,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "masa25_2054": {
+  "valor": 13741181,
+  "fuente": "Σ cotizantes × SBC (R1, tope 25 UMA, piso SM) × UMA × 337, mdp de 2026"
+ },
+ "cotizantes_2054": {
+  "valor": 46801970,
+  "fuente": "Libro de Finanzas, `Pob Emp & Nuevos` (modelo de cohortes de la v1.2)"
+ },
+ "sm_uma_2054": {
+  "valor": 4.11,
+  "fuente": "SM en veces la UMA (Sup_Fin; v1.2)"
+ },
+ "prop_sobre_tope_2054": {
+  "valor": 2.71,
+  "fuente": "% de la masa sin tope que rebasa 25 UMA (forma R1 sin tope)"
+ },
+ "M2_factor_2054": {
+  "valor": 0.5385,
+  "fuente": "Formalidad implícita 2025 / formalidad implícita t (prueba C de la v1.2)"
+ },
+ "formalidad_implicita_2054": {
+  "valor": 0.6313,
+  "fuente": "Cotizantes / ocupados (prueba C de la v1.2)"
+ },
+ "DH65_2054": {
+  "valor": 33012741,
+  "fuente": "0.166 × 79,178,109 × (CONAPO 65+ t / CONAPO 65+ 2025)"
+ },
+ "DH80_2054": {
+  "valor": 10286912,
+  "fuente": "DH65 × (CONAPO 80+ / CONAPO 65+)"
+ },
+ "SEM_ingresos_2054": {
+  "valor": 1194783,
+  "fuente": "Informe, Cuadro V.13, interpolación lineal"
+ },
+ "GMP_deficit_2054": {
+  "valor": 198154,
+  "fuente": "Informe, Cuadro V.24 (base), interpolación lineal"
+ },
+ "base_ingreso_NS_2054": {
+  "valor": 274824,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_k1_remanente_cuidados_2054": {
+  "valor": 76670,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_k1_deficit_no_cubierto_2054": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_k2_cuidados_2054": {
+  "valor": 90237,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_k2_reserva_fin_2054": {
+  "valor": 125518,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_reduccion_cuna_legal_2054": {
+  "valor": 412235,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_infonavit_5pct_teorico_2054": {
+  "valor": 687059,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_ingreso_NS_pts_2054": {
+  "valor": 2.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_ingreso_NS_sem_2054": {
+  "valor": 23.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "base_deficit_GMP_pts_2054": {
+  "valor": 1.442,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_deficit_GMP_sem_2054": {
+  "valor": 16.58,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "base_k1_remanente_cuidados_pts_2054": {
+  "valor": 0.558,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_k1_remanente_cuidados_sem_2054": {
+  "valor": 6.42,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "base_k2_cuidados_pts_2054": {
+  "valor": 0.657,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_k2_cuidados_sem_2054": {
+  "valor": 7.55,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "base_reduccion_cuna_legal_pts_2054": {
+  "valor": 3.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "base_reduccion_cuna_legal_sem_2054": {
+  "valor": 34.5,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_ingreso_NS_2054": {
+  "valor": 147999,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_k1_remanente_cuidados_2054": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_k1_deficit_no_cubierto_2054": {
+  "valor": 50155,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_k2_cuidados_2054": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_k2_reserva_fin_2054": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_reduccion_cuna_legal_2054": {
+  "valor": 221999,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_infonavit_5pct_teorico_2054": {
+  "valor": 369998,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_ingreso_NS_pts_2054": {
+  "valor": 2.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_ingreso_NS_sem_2054": {
+  "valor": 12.39,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_deficit_GMP_pts_2054": {
+  "valor": 2.678,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_deficit_GMP_sem_2054": {
+  "valor": 16.58,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_k1_remanente_cuidados_pts_2054": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_k1_remanente_cuidados_sem_2054": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_k2_cuidados_pts_2054": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_k2_cuidados_sem_2054": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_reduccion_cuna_legal_pts_2054": {
+  "valor": 3.0,
+  "fuente": "Puntos del salario (masa con tope, 337 días)"
+ },
+ "M2_reduccion_cuna_legal_sem_2054": {
+  "valor": 18.58,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "DH65_2025": {
+  "valor": 13143566,
+  "fuente": "0.166 × 79,178,109"
+ },
+ "DH65_PAMF_2025": {
+  "valor": 10557358,
+  "fuente": "0.166 × 63,598,543 (adscripciones a médico familiar)"
+ },
+ "CONAPO_65mas_2025": {
+  "valor": 11698499,
+  "fuente": "CONAPO 2023, población de 65 años o más, 2025"
+ },
+ "DH65_entre_CONAPO65_2025": {
+  "valor": 112.4,
+  "fuente": "DH65 (instrucción) / población nacional de 65+ (%)"
+ },
+ "DH65_PAMF_entre_CONAPO65_2025": {
+  "valor": 90.2,
+  "fuente": "DH65 con base PAMF / población nacional de 65+ (%)"
+ },
+ "DH65_PAMF_2027": {
+  "valor": 11483026,
+  "fuente": "0.166 × 63,598,543 × crecimiento CONAPO 65+"
+ },
+ "DH80_PAMF_2027": {
+  "valor": 2477504,
+  "fuente": "DH65_PAMF × CONAPO 80+/65+"
+ },
+ "DH65_PAMF_2030": {
+  "valor": 12998069,
+  "fuente": "0.166 × 63,598,543 × crecimiento CONAPO 65+"
+ },
+ "DH80_PAMF_2030": {
+  "valor": 2800759,
+  "fuente": "DH65_PAMF × CONAPO 80+/65+"
+ },
+ "DH65_PAMF_2040": {
+  "valor": 18748202,
+  "fuente": "0.166 × 63,598,543 × crecimiento CONAPO 65+"
+ },
+ "DH80_PAMF_2040": {
+  "valor": 4461003,
+  "fuente": "DH65_PAMF × CONAPO 80+/65+"
+ },
+ "DH65_PAMF_2054": {
+  "valor": 26516953,
+  "fuente": "0.166 × 63,598,543 × crecimiento CONAPO 65+"
+ },
+ "DH80_PAMF_2054": {
+  "valor": 8262796,
+  "fuente": "DH65_PAMF × CONAPO 80+/65+"
+ },
+ "base_k1_primer_anio_no_cubre": {
+  "valor": "ninguno",
+  "fuente": "Primer año en que I < D (K1)"
+ },
+ "base_k1_anios_no_cubre": {
+  "valor": 0,
+  "fuente": "Años 2027-2054 con I < D"
+ },
+ "base_k2_primer_anio_no_cubre": {
+  "valor": "ninguno",
+  "fuente": "Primer año con déficit no cubierto tras usar la reserva (K2)"
+ },
+ "base_k2_reserva_max": {
+  "valor": 271337,
+  "fuente": "Reserva máxima K2 (mdp de 2026)"
+ },
+ "base_k2_reserva_max_anio": {
+  "valor": 2034,
+  "fuente": "Año de la reserva máxima K2"
+ },
+ "base_k2_retiro_anual": {
+  "valor": 13567,
+  "fuente": "1/20 de la reserva al inicio de 2035 (mdp de 2026)"
+ },
+ "base_k2_reserva_inicio_2035": {
+  "valor": 271337,
+  "fuente": "Reserva K2 al inicio de 2035"
+ },
+ "base_holgura_min": {
+  "valor": 19991,
+  "fuente": "Mínimo de ingreso − déficit de GMP, 2027-2054 (mdp de 2026)"
+ },
+ "base_holgura_min_anio": {
+  "valor": 2036,
+  "fuente": "Año de la holgura mínima"
+ },
+ "base_holgura_min_pts": {
+  "valor": 0.259,
+  "fuente": "Holgura mínima en puntos del salario"
+ },
+ "base_cubre_desde": {
+  "valor": 2027,
+  "fuente": "Primer año con I ≥ D"
+ },
+ "base_deja_de_cubrir": {
+  "valor": "no deja de cubrir",
+  "fuente": "Primer año posterior a 2027 con I < D"
+ },
+ "M2_k1_primer_anio_no_cubre": {
+  "valor": 2035,
+  "fuente": "Primer año en que I < D (K1)"
+ },
+ "M2_k1_anios_no_cubre": {
+  "valor": 20,
+  "fuente": "Años 2027-2054 con I < D"
+ },
+ "M2_k2_primer_anio_no_cubre": {
+  "valor": 2047,
+  "fuente": "Primer año con déficit no cubierto tras usar la reserva (K2)"
+ },
+ "M2_k2_reserva_max": {
+  "valor": 182617,
+  "fuente": "Reserva máxima K2 (mdp de 2026)"
+ },
+ "M2_k2_reserva_max_anio": {
+  "valor": 2034,
+  "fuente": "Año de la reserva máxima K2"
+ },
+ "M2_k2_retiro_anual": {
+  "valor": 9131,
+  "fuente": "1/20 de la reserva al inicio de 2035 (mdp de 2026)"
+ },
+ "M2_k2_reserva_inicio_2035": {
+  "valor": 182617,
+  "fuente": "Reserva K2 al inicio de 2035"
+ },
+ "M2_holgura_min": {
+  "valor": -50155,
+  "fuente": "Mínimo de ingreso − déficit de GMP, 2027-2054 (mdp de 2026)"
+ },
+ "M2_holgura_min_anio": {
+  "valor": 2054,
+  "fuente": "Año de la holgura mínima"
+ },
+ "M2_holgura_min_pts": {
+  "valor": -0.678,
+  "fuente": "Holgura mínima en puntos del salario"
+ },
+ "M2_cubre_desde": {
+  "valor": 2027,
+  "fuente": "Primer año con I ≥ D"
+ },
+ "M2_deja_de_cubrir": {
+  "valor": 2035,
+  "fuente": "Primer año posterior a 2027 con I < D"
+ },
+ "VP_base_masa": {
+  "valor": 163267574,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_base_ingreso": {
+  "valor": 3265351,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_base_deficit": {
+  "valor": 2463416,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_base_k1_remanente": {
+  "valor": 801935,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_base_k1_no_cubierto": {
+  "valor": 0,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_base_k2_cuidados": {
+  "valor": 747074,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_base_k2_no_cubierto": {
+  "valor": 0,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_base_reduccion": {
+  "valor": 4898027,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_base_k2_reserva_final": {
+  "valor": 54861,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M2_masa": {
+  "valor": 120228094,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M2_ingreso": {
+  "valor": 2404562,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M2_deficit": {
+  "valor": 2463416,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M2_k1_remanente": {
+  "valor": 144160,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M2_k1_no_cubierto": {
+  "valor": 203014,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M2_k2_cuidados": {
+  "valor": 71748,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M2_k2_no_cubierto": {
+  "valor": 130603,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M2_reduccion": {
+  "valor": 3606843,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M2_k2_reserva_final": {
+  "valor": 0,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "contraste_masa_vp": {
+  "valor": 174402197,
+  "fuente": "valor_presente.csv, horizonte del Informe (30 años desde 2026)"
+ },
+ "contraste_masa_vp_sin": {
+  "valor": 178288615,
+  "fuente": "valor_presente.csv, horizonte del Informe (30 años desde 2026)"
+ },
+ "contraste_def_vp": {
+  "valor": 2618336,
+  "fuente": "valor_presente.csv, horizonte del Informe (30 años desde 2026)"
+ },
+ "contraste_def_vp_mid": {
+  "valor": 2579923,
+  "fuente": "valor_presente.csv, horizonte del Informe (30 años desde 2026)"
+ },
+ "contraste_ing_vp": {
+  "valor": 2751304,
+  "fuente": "valor_presente.csv, horizonte del Informe (30 años desde 2026)"
+ },
+ "contraste_brecha": {
+  "valor": 2823707,
+  "fuente": "valor_presente.csv, horizonte del Informe (30 años desde 2026)"
+ },
+ "contraste_redondeo": {
+  "valor": 82699,
+  "fuente": "valor_presente.csv, horizonte del Informe (30 años desde 2026)"
+ },
+ "contraste_v19_v24": {
+  "valor": 5887,
+  "fuente": "valor_presente.csv, horizonte del Informe (30 años desde 2026)"
+ },
+ "contraste_resto": {
+  "valor": -1,
+  "fuente": "valor_presente.csv, horizonte del Informe (30 años desde 2026)"
+ },
+ "contraste_ns_informe": {
+  "valor": 3529634,
+  "fuente": "0.02 × 176,481,700"
+ },
+ "contraste_ns_propio": {
+  "valor": 3488044,
+  "fuente": "0.02 × masa propia, mismo horizonte"
+ },
+ "GMP_prima_eq_exacta": {
+  "valor": 3.053,
+  "fuente": "5,388,234 / 176,481,700 (Cuadros V.19 y V.15)"
+ },
+ "GMP_prima_fin_exacta": {
+  "valor": 1.5,
+  "fuente": "2,647,226 / 176,481,700 (Cuadros V.20 y V.15)"
+ },
+ "base_DH_total_k1_pesos_por_dh65_2027": {
+  "valor": 2456,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_DH_total_k1_pesos_por_dh80_2027": {
+  "valor": 11382,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_DH_total_k2_pesos_por_dh65_2027": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_DH_total_k2_pesos_por_dh80_2027": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_DH_total_k1_pesos_por_dh65_2030": {
+  "valor": 1991,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_DH_total_k1_pesos_por_dh80_2030": {
+  "valor": 9241,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_DH_total_k2_pesos_por_dh65_2030": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_DH_total_k2_pesos_por_dh80_2030": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_DH_total_k1_pesos_por_dh65_2040": {
+  "valor": 1746,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_DH_total_k1_pesos_por_dh80_2040": {
+  "valor": 7336,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_DH_total_k2_pesos_por_dh65_2040": {
+  "valor": 2327,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_DH_total_k2_pesos_por_dh80_2040": {
+  "valor": 9779,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_DH_total_k1_pesos_por_dh65_2054": {
+  "valor": 2322,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_DH_total_k1_pesos_por_dh80_2054": {
+  "valor": 7453,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_DH_total_k2_pesos_por_dh65_2054": {
+  "valor": 2733,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_DH_total_k2_pesos_por_dh80_2054": {
+  "valor": 8772,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_PAMF_k1_pesos_por_dh65_2027": {
+  "valor": 3057,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_PAMF_k1_pesos_por_dh80_2027": {
+  "valor": 14170,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_PAMF_k2_pesos_por_dh65_2027": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_PAMF_k2_pesos_por_dh80_2027": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_PAMF_k1_pesos_por_dh65_2030": {
+  "valor": 2479,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_PAMF_k1_pesos_por_dh80_2030": {
+  "valor": 11505,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_PAMF_k2_pesos_por_dh65_2030": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_PAMF_k2_pesos_por_dh80_2030": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_PAMF_k1_pesos_por_dh65_2040": {
+  "valor": 2173,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_PAMF_k1_pesos_por_dh80_2040": {
+  "valor": 9134,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_PAMF_k2_pesos_por_dh65_2040": {
+  "valor": 2897,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_PAMF_k2_pesos_por_dh80_2040": {
+  "valor": 12175,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_PAMF_k1_pesos_por_dh65_2054": {
+  "valor": 2891,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_PAMF_k1_pesos_por_dh80_2054": {
+  "valor": 9279,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_PAMF_k2_pesos_por_dh65_2054": {
+  "valor": 3403,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_PAMF_k2_pesos_por_dh80_2054": {
+  "valor": 10921,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_DH_total_k1_pesos_por_dh65_2027": {
+  "valor": 2340,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_DH_total_k1_pesos_por_dh80_2027": {
+  "valor": 10847,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_DH_total_k2_pesos_por_dh65_2027": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_DH_total_k2_pesos_por_dh80_2027": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_DH_total_k1_pesos_por_dh65_2030": {
+  "valor": 1471,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_DH_total_k1_pesos_por_dh80_2030": {
+  "valor": 6825,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_DH_total_k2_pesos_por_dh65_2030": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_DH_total_k2_pesos_por_dh80_2030": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_DH_total_k1_pesos_por_dh65_2040": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_DH_total_k1_pesos_por_dh80_2040": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_DH_total_k2_pesos_por_dh65_2040": {
+  "valor": 391,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_DH_total_k2_pesos_por_dh80_2040": {
+  "valor": 1644,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_DH_total_k1_pesos_por_dh65_2054": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_DH_total_k1_pesos_por_dh80_2054": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_DH_total_k2_pesos_por_dh65_2054": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_DH_total_k2_pesos_por_dh80_2054": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_PAMF_k1_pesos_por_dh65_2027": {
+  "valor": 2914,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_PAMF_k1_pesos_por_dh80_2027": {
+  "valor": 13504,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_PAMF_k2_pesos_por_dh65_2027": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_PAMF_k2_pesos_por_dh80_2027": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_PAMF_k1_pesos_por_dh65_2030": {
+  "valor": 1831,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_PAMF_k1_pesos_por_dh80_2030": {
+  "valor": 8497,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_PAMF_k2_pesos_por_dh65_2030": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_PAMF_k2_pesos_por_dh80_2030": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_PAMF_k1_pesos_por_dh65_2040": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_PAMF_k1_pesos_por_dh80_2040": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_PAMF_k2_pesos_por_dh65_2040": {
+  "valor": 487,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_PAMF_k2_pesos_por_dh80_2040": {
+  "valor": 2047,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_PAMF_k1_pesos_por_dh65_2054": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_PAMF_k1_pesos_por_dh80_2054": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_PAMF_k2_pesos_por_dh65_2054": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_PAMF_k2_pesos_por_dh80_2054": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "chk_00_3.1": {
+  "valor": 0.0,
+  "fuente": "3.1 masa con tope = base de la tasa D2 de la v1.2 (máx. desviación relativa)"
+ },
+ "chk_01_3.1": {
+  "valor": 1.02267,
+  "fuente": "3.1 masa con tope / denominador en puntos de la v1.2, 2027 (razón)"
+ },
+ "chk_02_3.1": {
+  "valor": 1.01399,
+  "fuente": "3.1 masa con tope / denominador en puntos de la v1.2, 2054 (razón)"
+ },
+ "chk_03_3.1": {
+  "valor": 1.736048,
+  "fuente": "3.1 proporción de la masa por encima del tope, 2027 (%)"
+ },
+ "chk_04_3.1": {
+  "valor": 2.7145,
+  "fuente": "3.1 proporción de la masa por encima del tope, 2054 (%)"
+ },
+ "chk_05_3.2": {
+  "valor": 0,
+  "fuente": "3.2 Cuadro V.24 transcrito = PDF (celdas distintas)"
+ },
+ "chk_06_3.2": {
+  "valor": 0.0,
+  "fuente": "3.2 interpolación preserva los años ancla (máx. desviación, mdp)"
+ },
+ "chk_07_3.2": {
+  "valor": -0.498724,
+  "fuente": "3.2 VP del déficit interpolado frente al Cuadro V.24 (%)"
+ },
+ "chk_08_3.3": {
+  "valor": -1.178311,
+  "fuente": "3.3 VP 2 % × masa propia frente a 2 % × volumen del Informe, mismo horizonte (%)"
+ },
+ "chk_09_3.4": {
+  "valor": 0.0,
+  "fuente": "3.4 identidad de la reserva (máx. desviación, mdp)"
+ },
+ "cuna_sm_uma_2026": {
+  "valor": 2.685,
+  "fuente": "SM en veces la UMA (Sup_Fin)"
+ },
+ "cuna_2026_Salario mínimo_patron_a": {
+  "valor": 26.422,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_Salario mínimo_patron_b": {
+  "valor": 23.422,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_Salario mínimo_patron_c": {
+  "valor": 19.292,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_Salario mínimo_total_a": {
+  "valor": 36.204,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_Salario mínimo_total_b": {
+  "valor": 33.204,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_Salario mínimo_total_c": {
+  "valor": 29.074,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_Salario mínimo_cyv_a": {
+  "valor": 3.15,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_Salario mínimo_cyv_b": {
+  "valor": 3.15,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_Salario mínimo_cyv_c": {
+  "valor": 3.15,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_Salario mínimo_obrera_a": {
+  "valor": 0.0,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_Salario mínimo_obrera_b": {
+  "valor": 0.0,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_Salario mínimo_obrera_c": {
+  "valor": 0.0,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_Salario mínimo_federal_a": {
+  "valor": 9.782,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_Salario mínimo_federal_b": {
+  "valor": 9.782,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_Salario mínimo_federal_c": {
+  "valor": 9.782,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_patron_a": {
+  "valor": 26.848,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_patron_b": {
+  "valor": 23.848,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_patron_c": {
+  "valor": 19.793,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_total_a": {
+  "valor": 37.803,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_total_b": {
+  "valor": 34.803,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_total_c": {
+  "valor": 30.748,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_cyv_a": {
+  "valor": 6.026,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_cyv_b": {
+  "valor": 6.026,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_cyv_c": {
+  "valor": 6.026,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_obrera_a": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_obrera_b": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_obrera_c": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_federal_a": {
+  "valor": 8.58,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_federal_b": {
+  "valor": 8.58,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, lectura por UMA_federal_c": {
+  "valor": 8.58,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_patron_a": {
+  "valor": 24.498,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_patron_b": {
+  "valor": 21.498,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_patron_c": {
+  "valor": 17.443,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_total_a": {
+  "valor": 36.284,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_total_b": {
+  "valor": 33.284,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_total_c": {
+  "valor": 29.229,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_cyv_a": {
+  "valor": 3.676,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_cyv_b": {
+  "valor": 3.676,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_cyv_c": {
+  "valor": 3.676,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_obrera_a": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_obrera_b": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_obrera_c": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_federal_a": {
+  "valor": 9.411,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_federal_b": {
+  "valor": 9.411,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_1.01 SM, primer tramo tras el mínimo_federal_c": {
+  "valor": 9.411,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_2 UMA_patron_a": {
+  "valor": 28.351,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_2 UMA_patron_b": {
+  "valor": 25.351,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_2 UMA_patron_c": {
+  "valor": 18.618,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_2 UMA_total_a": {
+  "valor": 43.022,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_2 UMA_total_b": {
+  "valor": 40.022,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_2 UMA_total_c": {
+  "valor": 33.289,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_2 UMA_cyv_a": {
+  "valor": 4.851,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_2 UMA_cyv_b": {
+  "valor": 4.851,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_2 UMA_cyv_c": {
+  "valor": 4.851,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_2 UMA_obrera_a": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_2 UMA_obrera_b": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_2 UMA_obrera_c": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_2 UMA_federal_a": {
+  "valor": 12.296,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_2 UMA_federal_b": {
+  "valor": 12.296,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_2 UMA_federal_c": {
+  "valor": 12.296,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_3 UMA_patron_a": {
+  "valor": 26.126,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_3 UMA_patron_b": {
+  "valor": 23.126,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_3 UMA_patron_c": {
+  "valor": 19.793,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_3 UMA_total_a": {
+  "valor": 36.281,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_3 UMA_total_b": {
+  "valor": 33.281,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_3 UMA_total_c": {
+  "valor": 29.948,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_3 UMA_cyv_a": {
+  "valor": 6.026,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_3 UMA_cyv_b": {
+  "valor": 6.026,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_3 UMA_cyv_c": {
+  "valor": 6.026,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_3 UMA_obrera_a": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_3 UMA_obrera_b": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_3 UMA_obrera_c": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_3 UMA_federal_a": {
+  "valor": 7.78,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_3 UMA_federal_b": {
+  "valor": 7.78,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_3 UMA_federal_c": {
+  "valor": 7.78,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_4 UMA_patron_a": {
+  "valor": 25.288,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_4 UMA_patron_b": {
+  "valor": 22.288,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_4 UMA_patron_c": {
+  "valor": 20.655,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_4 UMA_total_a": {
+  "valor": 33.285,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_4 UMA_total_b": {
+  "valor": 30.285,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_4 UMA_total_c": {
+  "valor": 28.652,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_4 UMA_cyv_a": {
+  "valor": 6.613,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_4 UMA_cyv_b": {
+  "valor": 6.613,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_4 UMA_cyv_c": {
+  "valor": 6.613,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_4 UMA_obrera_a": {
+  "valor": 2.475,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_4 UMA_obrera_b": {
+  "valor": 2.475,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_4 UMA_obrera_c": {
+  "valor": 2.475,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_4 UMA_federal_a": {
+  "valor": 5.522,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_4 UMA_federal_b": {
+  "valor": 5.522,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_4 UMA_federal_c": {
+  "valor": 5.522,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_5.55 UMA_patron_a": {
+  "valor": 24.994,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_5.55 UMA_patron_b": {
+  "valor": 21.994,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_5.55 UMA_patron_c": {
+  "valor": 21.785,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_5.55 UMA_total_a": {
+  "valor": 30.475,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_5.55 UMA_total_b": {
+  "valor": 27.475,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_5.55 UMA_total_c": {
+  "valor": 27.266,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_5.55 UMA_cyv_a": {
+  "valor": 7.513,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_5.55 UMA_cyv_b": {
+  "valor": 7.513,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_5.55 UMA_cyv_c": {
+  "valor": 7.513,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_5.55 UMA_obrera_a": {
+  "valor": 2.559,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_5.55 UMA_obrera_b": {
+  "valor": 2.559,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_5.55 UMA_obrera_c": {
+  "valor": 2.559,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_5.55 UMA_federal_a": {
+  "valor": 2.922,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_5.55 UMA_federal_b": {
+  "valor": 2.922,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_5.55 UMA_federal_c": {
+  "valor": 2.922,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_10 UMA_patron_a": {
+  "valor": 23.623,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_10 UMA_patron_b": {
+  "valor": 20.623,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_10 UMA_patron_c": {
+  "valor": 22.05,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_10 UMA_total_a": {
+  "valor": 28.011,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_10 UMA_total_b": {
+  "valor": 25.011,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_10 UMA_total_c": {
+  "valor": 26.438,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_10 UMA_cyv_a": {
+  "valor": 7.513,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_10 UMA_cyv_b": {
+  "valor": 7.513,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_10 UMA_cyv_c": {
+  "valor": 7.513,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_10 UMA_obrera_a": {
+  "valor": 2.655,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_10 UMA_obrera_b": {
+  "valor": 2.655,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_10 UMA_obrera_c": {
+  "valor": 2.655,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_10 UMA_federal_a": {
+  "valor": 1.733,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_10 UMA_federal_b": {
+  "valor": 1.733,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_10 UMA_federal_c": {
+  "valor": 1.733,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_25 UMA_patron_a": {
+  "valor": 22.597,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_25 UMA_patron_b": {
+  "valor": 19.597,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_25 UMA_patron_c": {
+  "valor": 22.248,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_25 UMA_total_a": {
+  "valor": 26.167,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_25 UMA_total_b": {
+  "valor": 23.167,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_25 UMA_total_c": {
+  "valor": 25.818,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_25 UMA_cyv_a": {
+  "valor": 7.513,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_25 UMA_cyv_b": {
+  "valor": 7.513,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_25 UMA_cyv_c": {
+  "valor": 7.513,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_25 UMA_obrera_a": {
+  "valor": 2.727,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_25 UMA_obrera_b": {
+  "valor": 2.727,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_25 UMA_obrera_c": {
+  "valor": 2.727,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_25 UMA_federal_a": {
+  "valor": 0.843,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_25 UMA_federal_b": {
+  "valor": 0.843,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2026_25 UMA_federal_c": {
+  "valor": 0.843,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "escalon_2026_uma_cyv": {
+  "valor": 6.026,
+  "fuente": "Tasa patronal de cesantía y vejez a 1.01 SM, 1.01 SM, lectura por UMA"
+ },
+ "escalon_2026_uma_cyv_salto": {
+  "valor": 2.876,
+  "fuente": "Salto frente a 3.150 % del salario mínimo (puntos)"
+ },
+ "escalon_2026_uma_patron_salto": {
+  "valor": 0.426,
+  "fuente": "Salto del total a cargo del patrón entre SM y 1.01 SM, ley vigente (puntos; neto del fin del art. 36)"
+ },
+ "escalon_2026_primer_cyv": {
+  "valor": 3.676,
+  "fuente": "Tasa patronal de cesantía y vejez a 1.01 SM, 1.01 SM, primer tramo tras el mínimo"
+ },
+ "escalon_2026_primer_cyv_salto": {
+  "valor": 0.526,
+  "fuente": "Salto frente a 3.150 % del salario mínimo (puntos)"
+ },
+ "escalon_2026_primer_patron_salto": {
+  "valor": -1.924,
+  "fuente": "Salto del total a cargo del patrón entre SM y 1.01 SM, ley vigente (puntos; neto del fin del art. 36)"
+ },
+ "cuna_sm_uma_2030": {
+  "valor": 3.646,
+  "fuente": "SM en veces la UMA (Sup_Fin)"
+ },
+ "cuna_2030_Salario mínimo_patron_a": {
+  "valor": 24.685,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_Salario mínimo_patron_b": {
+  "valor": 21.685,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_Salario mínimo_patron_c": {
+  "valor": 19.558,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_Salario mínimo_total_a": {
+  "valor": 31.955,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_Salario mínimo_total_b": {
+  "valor": 28.955,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_Salario mínimo_total_c": {
+  "valor": 26.827,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_Salario mínimo_cyv_a": {
+  "valor": 3.15,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_Salario mínimo_cyv_b": {
+  "valor": 3.15,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_Salario mínimo_cyv_c": {
+  "valor": 3.15,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_Salario mínimo_obrera_a": {
+  "valor": 0.0,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_Salario mínimo_obrera_b": {
+  "valor": 0.0,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_Salario mínimo_obrera_c": {
+  "valor": 0.0,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_Salario mínimo_federal_a": {
+  "valor": 7.269,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_Salario mínimo_federal_b": {
+  "valor": 7.269,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_Salario mínimo_federal_c": {
+  "valor": 7.269,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_patron_a": {
+  "valor": 29.12,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_patron_b": {
+  "valor": 26.12,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_patron_c": {
+  "valor": 24.048,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_total_a": {
+  "valor": 37.545,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_total_b": {
+  "valor": 34.545,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_total_c": {
+  "valor": 32.473,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_cyv_a": {
+  "valor": 10.077,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_cyv_b": {
+  "valor": 10.077,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_cyv_c": {
+  "valor": 10.077,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_obrera_a": {
+  "valor": 2.449,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_obrera_b": {
+  "valor": 2.449,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_obrera_c": {
+  "valor": 2.449,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_federal_a": {
+  "valor": 5.976,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_federal_b": {
+  "valor": 5.976,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, lectura por UMA_federal_c": {
+  "valor": 5.976,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_patron_a": {
+  "valor": 23.245,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_patron_b": {
+  "valor": 20.245,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_patron_c": {
+  "valor": 18.173,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_total_a": {
+  "valor": 32.69,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_total_b": {
+  "valor": 29.69,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_total_c": {
+  "valor": 27.618,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_cyv_a": {
+  "valor": 4.202,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_cyv_b": {
+  "valor": 4.202,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_cyv_c": {
+  "valor": 4.202,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_obrera_a": {
+  "valor": 2.449,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_obrera_b": {
+  "valor": 2.449,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_obrera_c": {
+  "valor": 2.449,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_federal_a": {
+  "valor": 6.996,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_federal_b": {
+  "valor": 6.996,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_1.01 SM, primer tramo tras el mínimo_federal_c": {
+  "valor": 6.996,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_2 UMA_patron_a": {
+  "valor": 30.052,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_2 UMA_patron_b": {
+  "valor": 27.052,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_2 UMA_patron_c": {
+  "valor": 20.319,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_2 UMA_total_a": {
+  "valor": 44.723,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_2 UMA_total_b": {
+  "valor": 41.723,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_2 UMA_total_c": {
+  "valor": 34.99,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_2 UMA_cyv_a": {
+  "valor": 6.552,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_2 UMA_cyv_b": {
+  "valor": 6.552,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_2 UMA_cyv_c": {
+  "valor": 6.552,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_2 UMA_obrera_a": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_2 UMA_obrera_b": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_2 UMA_obrera_c": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_2 UMA_federal_a": {
+  "valor": 12.296,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_2 UMA_federal_b": {
+  "valor": 12.296,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_2 UMA_federal_c": {
+  "valor": 12.296,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_3 UMA_patron_a": {
+  "valor": 29.002,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_3 UMA_patron_b": {
+  "valor": 26.002,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_3 UMA_patron_c": {
+  "valor": 22.669,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_3 UMA_total_a": {
+  "valor": 39.157,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_3 UMA_total_b": {
+  "valor": 36.157,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_3 UMA_total_c": {
+  "valor": 32.824,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_3 UMA_cyv_a": {
+  "valor": 8.902,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_3 UMA_cyv_b": {
+  "valor": 8.902,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_3 UMA_cyv_c": {
+  "valor": 8.902,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_3 UMA_obrera_a": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_3 UMA_obrera_b": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_3 UMA_obrera_c": {
+  "valor": 2.375,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_3 UMA_federal_a": {
+  "valor": 7.78,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_3 UMA_federal_b": {
+  "valor": 7.78,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_3 UMA_federal_c": {
+  "valor": 7.78,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_4 UMA_patron_a": {
+  "valor": 28.752,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_4 UMA_patron_b": {
+  "valor": 25.752,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_4 UMA_patron_c": {
+  "valor": 24.119,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_4 UMA_total_a": {
+  "valor": 36.749,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_4 UMA_total_b": {
+  "valor": 33.749,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_4 UMA_total_c": {
+  "valor": 32.116,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_4 UMA_cyv_a": {
+  "valor": 10.077,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_4 UMA_cyv_b": {
+  "valor": 10.077,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_4 UMA_cyv_c": {
+  "valor": 10.077,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_4 UMA_obrera_a": {
+  "valor": 2.475,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_4 UMA_obrera_b": {
+  "valor": 2.475,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_4 UMA_obrera_c": {
+  "valor": 2.475,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_4 UMA_federal_a": {
+  "valor": 5.522,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_4 UMA_federal_b": {
+  "valor": 5.522,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_4 UMA_federal_c": {
+  "valor": 5.522,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_5.55 UMA_patron_a": {
+  "valor": 29.356,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_5.55 UMA_patron_b": {
+  "valor": 26.356,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_5.55 UMA_patron_c": {
+  "valor": 26.147,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_5.55 UMA_total_a": {
+  "valor": 34.837,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_5.55 UMA_total_b": {
+  "valor": 31.837,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_5.55 UMA_total_c": {
+  "valor": 31.628,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_5.55 UMA_cyv_a": {
+  "valor": 11.875,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_5.55 UMA_cyv_b": {
+  "valor": 11.875,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_5.55 UMA_cyv_c": {
+  "valor": 11.875,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_5.55 UMA_obrera_a": {
+  "valor": 2.559,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_5.55 UMA_obrera_b": {
+  "valor": 2.559,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_5.55 UMA_obrera_c": {
+  "valor": 2.559,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_5.55 UMA_federal_a": {
+  "valor": 2.922,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_5.55 UMA_federal_b": {
+  "valor": 2.922,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_5.55 UMA_federal_c": {
+  "valor": 2.922,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_10 UMA_patron_a": {
+  "valor": 27.985,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_10 UMA_patron_b": {
+  "valor": 24.985,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_10 UMA_patron_c": {
+  "valor": 26.412,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_10 UMA_total_a": {
+  "valor": 32.373,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_10 UMA_total_b": {
+  "valor": 29.373,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_10 UMA_total_c": {
+  "valor": 30.8,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_10 UMA_cyv_a": {
+  "valor": 11.875,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_10 UMA_cyv_b": {
+  "valor": 11.875,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_10 UMA_cyv_c": {
+  "valor": 11.875,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_10 UMA_obrera_a": {
+  "valor": 2.655,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_10 UMA_obrera_b": {
+  "valor": 2.655,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_10 UMA_obrera_c": {
+  "valor": 2.655,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_10 UMA_federal_a": {
+  "valor": 1.733,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_10 UMA_federal_b": {
+  "valor": 1.733,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_10 UMA_federal_c": {
+  "valor": 1.733,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_25 UMA_patron_a": {
+  "valor": 26.959,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_25 UMA_patron_b": {
+  "valor": 23.959,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_25 UMA_patron_c": {
+  "valor": 26.61,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_25 UMA_total_a": {
+  "valor": 30.529,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_25 UMA_total_b": {
+  "valor": 27.529,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_25 UMA_total_c": {
+  "valor": 30.18,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_25 UMA_cyv_a": {
+  "valor": 11.875,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_25 UMA_cyv_b": {
+  "valor": 11.875,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_25 UMA_cyv_c": {
+  "valor": 11.875,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_25 UMA_obrera_a": {
+  "valor": 2.727,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_25 UMA_obrera_b": {
+  "valor": 2.727,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_25 UMA_obrera_c": {
+  "valor": 2.727,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_25 UMA_federal_a": {
+  "valor": 0.843,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_25 UMA_federal_b": {
+  "valor": 0.843,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "cuna_2030_25 UMA_federal_c": {
+  "valor": 0.843,
+  "fuente": "cuna_legal_por_salario.csv, % del SBC"
+ },
+ "escalon_2030_uma_cyv": {
+  "valor": 10.077,
+  "fuente": "Tasa patronal de cesantía y vejez a 1.01 SM, 1.01 SM, lectura por UMA"
+ },
+ "escalon_2030_uma_cyv_salto": {
+  "valor": 6.927,
+  "fuente": "Salto frente a 3.150 % del salario mínimo (puntos)"
+ },
+ "escalon_2030_uma_patron_salto": {
+  "valor": 4.435,
+  "fuente": "Salto del total a cargo del patrón entre SM y 1.01 SM, ley vigente (puntos; neto del fin del art. 36)"
+ },
+ "escalon_2030_primer_cyv": {
+  "valor": 4.202,
+  "fuente": "Tasa patronal de cesantía y vejez a 1.01 SM, 1.01 SM, primer tramo tras el mínimo"
+ },
+ "escalon_2030_primer_cyv_salto": {
+  "valor": 1.052,
+  "fuente": "Salto frente a 3.150 % del salario mínimo (puntos)"
+ },
+ "escalon_2030_primer_patron_salto": {
+  "valor": -1.44,
+  "fuente": "Salto del total a cargo del patrón entre SM y 1.01 SM, ley vigente (puntos; neto del fin del art. 36)"
+ },
+ "chk_cuna_0": {
+  "valor": 0.0,
+  "fuente": "3.5 (b) = (a) − 3 puntos en todo nivel hasta 25 UMA (máx. desviación, puntos)"
+ },
+ "chk_cuna_1": {
+  "valor": 0,
+  "fuente": "3.5 tasas de cesantía y vejez fuera de la tabla de 1.5 (casos)"
+ },
+ "chk_cuna_2": {
+  "valor": 0,
+  "fuente": "3.5 tabla 2030 = art. 168 fr. II a) del DOF 16-12-2020 (celdas distintas)"
+ },
+ "chk_3.6": {
+  "valor": 0,
+  "fuente": "3.6 apariciones de 2055 en las tablas"
+ }
+}

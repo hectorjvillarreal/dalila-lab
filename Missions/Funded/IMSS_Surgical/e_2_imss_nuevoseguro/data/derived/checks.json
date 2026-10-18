@@ -1,0 +1,18 @@
+{
+ "3.1 masa con tope = base de la tasa D2 de la v1.2 (máx. desviación relativa)": 2.220446049250313e-16,
+ "3.1 masa con tope / denominador en puntos de la v1.2, 2027 (razón)": 1.022669572759902,
+ "3.1 masa con tope / denominador en puntos de la v1.2, 2054 (razón)": 1.0139901727334744,
+ "3.1 proporción de la masa por encima del tope, 2027 (%)": 1.7360476871746133,
+ "3.1 proporción de la masa por encima del tope, 2054 (%)": 2.714500490334304,
+ "3.2 Cuadro V.24 transcrito = PDF (celdas distintas)": 0,
+ "3.2 interpolación preserva los años ancla (máx. desviación, mdp)": 0.0,
+ "3.2 VP del déficit interpolado frente al Cuadro V.24 (%)": -0.4987241898304795,
+ "3.3 VP 2 % × masa propia frente a 2 % × volumen del Informe, mismo horizonte (%)": -1.178310800570359,
+ "3.4 identidad de la reserva (máx. desviación, mdp)": 5.820766091346741e-11,
+ "3.5 (b) = (a) − 3 puntos en todo nivel hasta 25 UMA (máx. desviación, puntos)": 0.0,
+ "3.5 tasas de cesantía y vejez fuera de la tabla de 1.5 (casos)": 0,
+ "3.5 tabla 2030 = art. 168 fr. II a) del DOF 16-12-2020 (celdas distintas)": 0,
+ "3.6 apariciones de 2055 en las tablas": 0,
+ "3.7 cifras del anexo sin registro en NUMBERS.md": 0,
+ "3.7 detalle": ""
+}

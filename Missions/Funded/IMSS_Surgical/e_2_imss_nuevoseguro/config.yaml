@@ -1,0 +1,74 @@
+# Experimento 2 del anexo del Núcleo 13 — cuota del Infonavit a un nuevo seguro solidario de salud y cuidados en la vejez
+# Instrucción: 20261018_BDH_N13_experimento2-seguro-salud-cuidados_build_v1.0
+# Rutas relativas a la raíz de Dalila (dalila_root, relativo a esta carpeta).
+
+dalila_root: ../../../..
+exp1: Missions/Funded/IMSS_Surgical/e_1_imss_subsidiado/anexo_afiliacion_subsidiada   # módulos y derivados de la v1.2
+informe_pdf: Missions/Funded/IMSS_Surgical/e_1_imss_subsidiado/_informe-situacion-financiera_imss.pdf
+
+horizonte:
+  anio_inicial: 2027       # inicio de la reforma
+  anio_final: 2054         # 2055 no se reporta (3.6)
+  anios_reporte: [2027, 2030, 2040, 2054]
+  vp_base: 2026            # año al que se descuenta, como en el Informe
+  informe: [2026, 2055]    # horizonte de los valores presentes del Informe (solo para contrastes con horizontes iguales)
+
+parametros:
+  ns_tasa: 0.02            # nuevo seguro, % del SBC con tope de 25 UMA (supuesto del experimento)
+  infonavit_tasa: 0.05     # Ley del Infonavit, art. 29; Informe, nota 176
+  reduccion_cuna: 0.03     # 0.05 − 0.02
+  r: 0.03                  # tasa real de descuento, Informe Cuadro II.16 nota 1
+  dias: 337                # Informe, Cuadro II.18
+  k2_inicio: 2035          # K2: nada para cuidados antes de este año
+  k2_fraccion: 0.05        # K2: 1/20 de la reserva por año a partir de k2_inicio
+  dh_total: 79178109       # Informe, Cuadro I.4
+  dh_65mas_pamf_2025: 0.166  # Informe, Gráfica I.31 (población adscrita a médico familiar, 65 y más)
+  pamf_2025: 63598543      # Informe, texto del Cuadro I.4 y Gráfica I.23: adscripciones a UMF (sensibilidad del denominador)
+  vol_salarios_vp: 176481700 # Informe, Cuadro V.15 (base), mdp de 2026, VP 2026-2055
+  gmp_prima_fin: 0.015     # Informe, Cuadro II.16
+  gmp_prima_eq: 0.031      # Informe, Cuadro II.16 (3.05 en Cuadro V.20)
+  c_d2: 0.03467            # corrida v1.2 (tasa proporcional D2 del experimento 1)
+
+# Informe, Cuadro V.24, escenario base (mdp de 2026). 2055 solo sirve para interpolar 2052-2054.
+gmp_v24:
+  pagina_pdf: 161
+  anios: [2026, 2031, 2036, 2041, 2046, 2051, 2055]
+  ingresos: [89499, 104369, 119537, 142886, 169522, 197734, 217061]
+  saldo: [-68398, -97760, -134117, -138282, -157934, -180930, -203895]
+  vp_ingresos: 2750260
+  vp_saldo: -2631460
+
+# Para explicar el contraste de 1.2 (brecha de primas × volumen de salarios frente al déficit del Cuadro V.24).
+contraste_gmp:
+  v19_vp_gasto: 5388234        # Cuadro V.19, total del gasto, VP
+  v19_vp_ingresos: 2750887     # Cuadro V.19
+  v19_vp_saldo: -2637347       # Cuadro V.19
+  v20_aportaciones: 2647226    # Cuadro V.20, aportaciones futuras (cuotas y aportaciones) = 1.50 % del VPSF
+  v20_otros_ingresos: 103662   # Cuadro V.20, otros ingresos
+  v20_reserva: 46532           # Cuadro V.20, reserva al 31-12-2025 actualizada
+  v20_prima_eq: 0.0305         # Cuadro V.20
+
+# Informe, Cuadro V.13: ingresos del SEM (mdp de 2026), para expresar en % de los ingresos del SEM.
+sem_v13:
+  anios: [2026, 2031, 2036, 2041, 2046, 2051, 2055]
+  ingresos: [562126, 642375, 740391, 859501, 995073, 1131634, 1215833]
+  vp_ingresos: 16456453
+
+# Cuña contributiva legal (sección 1.5), % del SBC salvo indicación.
+cuna:
+  anios: [2026, 2030]
+  niveles_uma: [2, 3, 4, 5.55, 10, 25]     # además del salario mínimo y 1.01 SM
+  patron: {pd: 0.70, gmp: 1.05, iv: 1.75, rt: 1.80, gps: 1.00, retiro: 2.00, excedente: 1.10, cf_uma: 20.40}
+  obrera: {pd: 0.25, gmp: 0.375, iv: 0.625, cyv: 1.125, excedente: 0.40}
+  federal: {pd: 0.05, gmp: 0.075, iv: 0.125, cf_uma: 14.83}
+  # DOF 16-12-2020, Segundo Transitorio (tabla verificada contra la imagen del DOF); límites superiores en UMA
+  cyv_tramos: ["1.00 SM", "1.01 SM a 1.50 UMA", "1.51 a 2.00 UMA", "2.01 a 2.50 UMA", "2.51 a 3.00 UMA",
+               "3.01 a 3.50 UMA", "3.51 a 4.00 UMA", "4.01 UMA o más"]
+  cyv_limite_uma: [null, 1.50, 2.00, 2.50, 3.00, 3.50, 4.00, null]
+  cyv: {2025: [3.150, 3.544, 4.426, 4.954, 5.307, 5.559, 5.747, 6.422],
+        2026: [3.150, 3.676, 4.851, 5.556, 6.026, 6.361, 6.613, 7.513],
+        2030: [3.150, 4.202, 6.552, 7.962, 8.902, 9.573, 10.077, 11.875]}
+  # Cuota social (art. 168 fr. IV), pesos por día cotizado a dic. 2025 (Informe, Cuadro A.3 nota 8); se indexa al INPC,
+  # igual que la UMA, así que es constante en UMA reales. Hasta 4 UMA; mismos tramos que cesantía y vejez.
+  cuota_social_dic2025: [12.18, 11.33, 10.48, 9.63, 8.78, 7.93, 7.08, 0.0]
+  uma_dic2025: 113.14

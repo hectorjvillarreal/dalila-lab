@@ -1,0 +1,289 @@
+anio,nivel,sbc_uma,debajo_del_SM,tramo_cyv,componente,a_ley_vigente,b_experimento2,c_experimento2_mas_D2
+2026,Salario mínimo,2.6852,False,1.00 SM,SEM cuota fija,7.597302158456067,7.597302158456067,3.467
+2026,Salario mínimo,2.6852,False,1.00 SM,SEM excedente,0.0,0.0,0.0
+2026,Salario mínimo,2.6852,False,1.00 SM,SEM prestaciones en dinero,0.7,0.7,0.7
+2026,Salario mínimo,2.6852,False,1.00 SM,SEM GMP,1.05,1.05,1.05
+2026,Salario mínimo,2.6852,False,1.00 SM,Invalidez y Vida,1.75,1.75,1.75
+2026,Salario mínimo,2.6852,False,1.00 SM,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2026,Salario mínimo,2.6852,False,1.00 SM,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2026,Salario mínimo,2.6852,False,1.00 SM,Retiro,2.0,2.0,2.0
+2026,Salario mínimo,2.6852,False,1.00 SM,Cesantía y vejez,3.15,3.15,3.15
+2026,Salario mínimo,2.6852,False,1.00 SM,Infonavit,5.0,0.0,0.0
+2026,Salario mínimo,2.6852,False,1.00 SM,Nuevo seguro,0.0,2.0,2.0
+2026,Salario mínimo,2.6852,False,1.00 SM,Cuota obrera a cargo del patrón (art. 36 LSS),2.375,2.375,2.375
+2026,Salario mínimo,2.6852,False,1.00 SM,Total a cargo del patrón (incidencia legal),26.422302158456066,23.422302158456066,19.292
+2026,Salario mínimo,2.6852,False,1.00 SM,Cuotas obreras,0.0,0.0,0.0
+2026,Salario mínimo,2.6852,False,1.00 SM,Aportación federal (incluye cuota social),9.782164961274756,9.782164961274756,9.782164961274756
+2026,Salario mínimo,2.6852,False,1.00 SM,Cuña legal total,36.20446711973082,33.20446711973082,29.074164961274757
+2026,"1.01 SM, lectura por UMA",2.712,False,2.51 a 3.00 UMA,SEM cuota fija,7.522081345006007,7.522081345006007,3.467
+2026,"1.01 SM, lectura por UMA",2.712,False,2.51 a 3.00 UMA,SEM excedente,0.0,0.0,0.0
+2026,"1.01 SM, lectura por UMA",2.712,False,2.51 a 3.00 UMA,SEM prestaciones en dinero,0.7,0.7,0.7
+2026,"1.01 SM, lectura por UMA",2.712,False,2.51 a 3.00 UMA,SEM GMP,1.05,1.05,1.05
+2026,"1.01 SM, lectura por UMA",2.712,False,2.51 a 3.00 UMA,Invalidez y Vida,1.75,1.75,1.75
+2026,"1.01 SM, lectura por UMA",2.712,False,2.51 a 3.00 UMA,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2026,"1.01 SM, lectura por UMA",2.712,False,2.51 a 3.00 UMA,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2026,"1.01 SM, lectura por UMA",2.712,False,2.51 a 3.00 UMA,Retiro,2.0,2.0,2.0
+2026,"1.01 SM, lectura por UMA",2.712,False,2.51 a 3.00 UMA,Cesantía y vejez,6.026,6.026,6.026
+2026,"1.01 SM, lectura por UMA",2.712,False,2.51 a 3.00 UMA,Infonavit,5.0,0.0,0.0
+2026,"1.01 SM, lectura por UMA",2.712,False,2.51 a 3.00 UMA,Nuevo seguro,0.0,2.0,2.0
+2026,"1.01 SM, lectura por UMA",2.712,False,2.51 a 3.00 UMA,Cuota obrera a cargo del patrón (art. 36 LSS),0.0,0.0,0.0
+2026,"1.01 SM, lectura por UMA",2.712,False,2.51 a 3.00 UMA,Total a cargo del patrón (incidencia legal),26.84808134500601,23.84808134500601,19.793
+2026,"1.01 SM, lectura por UMA",2.712,False,2.51 a 3.00 UMA,Cuotas obreras,2.375,2.375,2.375
+2026,"1.01 SM, lectura por UMA",2.712,False,2.51 a 3.00 UMA,Aportación federal (incluye cuota social),8.579708405407578,8.579708405407578,8.579708405407578
+2026,"1.01 SM, lectura por UMA",2.712,False,2.51 a 3.00 UMA,Cuña legal total,37.80278975041359,34.80278975041359,30.74770840540758
+2026,"1.01 SM, primer tramo tras el mínimo",2.712,False,1.01 SM a 1.50 UMA,SEM cuota fija,7.522081345006007,7.522081345006007,3.467
+2026,"1.01 SM, primer tramo tras el mínimo",2.712,False,1.01 SM a 1.50 UMA,SEM excedente,0.0,0.0,0.0
+2026,"1.01 SM, primer tramo tras el mínimo",2.712,False,1.01 SM a 1.50 UMA,SEM prestaciones en dinero,0.7,0.7,0.7
+2026,"1.01 SM, primer tramo tras el mínimo",2.712,False,1.01 SM a 1.50 UMA,SEM GMP,1.05,1.05,1.05
+2026,"1.01 SM, primer tramo tras el mínimo",2.712,False,1.01 SM a 1.50 UMA,Invalidez y Vida,1.75,1.75,1.75
+2026,"1.01 SM, primer tramo tras el mínimo",2.712,False,1.01 SM a 1.50 UMA,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2026,"1.01 SM, primer tramo tras el mínimo",2.712,False,1.01 SM a 1.50 UMA,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2026,"1.01 SM, primer tramo tras el mínimo",2.712,False,1.01 SM a 1.50 UMA,Retiro,2.0,2.0,2.0
+2026,"1.01 SM, primer tramo tras el mínimo",2.712,False,1.01 SM a 1.50 UMA,Cesantía y vejez,3.676,3.676,3.676
+2026,"1.01 SM, primer tramo tras el mínimo",2.712,False,1.01 SM a 1.50 UMA,Infonavit,5.0,0.0,0.0
+2026,"1.01 SM, primer tramo tras el mínimo",2.712,False,1.01 SM a 1.50 UMA,Nuevo seguro,0.0,2.0,2.0
+2026,"1.01 SM, primer tramo tras el mínimo",2.712,False,1.01 SM a 1.50 UMA,Cuota obrera a cargo del patrón (art. 36 LSS),0.0,0.0,0.0
+2026,"1.01 SM, primer tramo tras el mínimo",2.712,False,1.01 SM a 1.50 UMA,Total a cargo del patrón (incidencia legal),24.498081345006007,21.498081345006007,17.442999999999998
+2026,"1.01 SM, primer tramo tras el mínimo",2.712,False,1.01 SM a 1.50 UMA,Cuotas obreras,2.375,2.375,2.375
+2026,"1.01 SM, primer tramo tras el mínimo",2.712,False,1.01 SM a 1.50 UMA,Aportación federal (incluye cuota social),9.41076741913018,9.41076741913018,9.41076741913018
+2026,"1.01 SM, primer tramo tras el mínimo",2.712,False,1.01 SM a 1.50 UMA,Cuña legal total,36.28384876413619,33.28384876413619,29.22876741913018
+2026,2 UMA,2.0,True,1.51 a 2.00 UMA,SEM cuota fija,10.2,10.2,3.467
+2026,2 UMA,2.0,True,1.51 a 2.00 UMA,SEM excedente,0.0,0.0,0.0
+2026,2 UMA,2.0,True,1.51 a 2.00 UMA,SEM prestaciones en dinero,0.7,0.7,0.7
+2026,2 UMA,2.0,True,1.51 a 2.00 UMA,SEM GMP,1.05,1.05,1.05
+2026,2 UMA,2.0,True,1.51 a 2.00 UMA,Invalidez y Vida,1.75,1.75,1.75
+2026,2 UMA,2.0,True,1.51 a 2.00 UMA,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2026,2 UMA,2.0,True,1.51 a 2.00 UMA,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2026,2 UMA,2.0,True,1.51 a 2.00 UMA,Retiro,2.0,2.0,2.0
+2026,2 UMA,2.0,True,1.51 a 2.00 UMA,Cesantía y vejez,4.851,4.851,4.851
+2026,2 UMA,2.0,True,1.51 a 2.00 UMA,Infonavit,5.0,0.0,0.0
+2026,2 UMA,2.0,True,1.51 a 2.00 UMA,Nuevo seguro,0.0,2.0,2.0
+2026,2 UMA,2.0,True,1.51 a 2.00 UMA,Cuota obrera a cargo del patrón (art. 36 LSS),0.0,0.0,0.0
+2026,2 UMA,2.0,True,1.51 a 2.00 UMA,Total a cargo del patrón (incidencia legal),28.351,25.351,18.618
+2026,2 UMA,2.0,True,1.51 a 2.00 UMA,Cuotas obreras,2.375,2.375,2.375
+2026,2 UMA,2.0,True,1.51 a 2.00 UMA,Aportación federal (incluye cuota social),12.296430086618349,12.296430086618349,12.296430086618349
+2026,2 UMA,2.0,True,1.51 a 2.00 UMA,Cuña legal total,43.02243008661835,40.02243008661835,33.289430086618346
+2026,3 UMA,3.0,False,2.51 a 3.00 UMA,SEM cuota fija,6.8,6.8,3.467
+2026,3 UMA,3.0,False,2.51 a 3.00 UMA,SEM excedente,0.0,0.0,0.0
+2026,3 UMA,3.0,False,2.51 a 3.00 UMA,SEM prestaciones en dinero,0.7,0.7,0.7
+2026,3 UMA,3.0,False,2.51 a 3.00 UMA,SEM GMP,1.05,1.05,1.05
+2026,3 UMA,3.0,False,2.51 a 3.00 UMA,Invalidez y Vida,1.75,1.75,1.75
+2026,3 UMA,3.0,False,2.51 a 3.00 UMA,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2026,3 UMA,3.0,False,2.51 a 3.00 UMA,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2026,3 UMA,3.0,False,2.51 a 3.00 UMA,Retiro,2.0,2.0,2.0
+2026,3 UMA,3.0,False,2.51 a 3.00 UMA,Cesantía y vejez,6.026,6.026,6.026
+2026,3 UMA,3.0,False,2.51 a 3.00 UMA,Infonavit,5.0,0.0,0.0
+2026,3 UMA,3.0,False,2.51 a 3.00 UMA,Nuevo seguro,0.0,2.0,2.0
+2026,3 UMA,3.0,False,2.51 a 3.00 UMA,Cuota obrera a cargo del patrón (art. 36 LSS),0.0,0.0,0.0
+2026,3 UMA,3.0,False,2.51 a 3.00 UMA,Total a cargo del patrón (incidencia legal),26.126,23.126,19.793
+2026,3 UMA,3.0,False,2.51 a 3.00 UMA,Cuotas obreras,2.375,2.375,2.375
+2026,3 UMA,3.0,False,2.51 a 3.00 UMA,Aportación federal (incluye cuota social),7.780098992398798,7.780098992398798,7.780098992398798
+2026,3 UMA,3.0,False,2.51 a 3.00 UMA,Cuña legal total,36.281098992398796,33.281098992398796,29.948098992398798
+2026,4 UMA,4.0,False,3.51 a 4.00 UMA,SEM cuota fija,5.1,5.1,3.467
+2026,4 UMA,4.0,False,3.51 a 4.00 UMA,SEM excedente,0.275,0.275,0.275
+2026,4 UMA,4.0,False,3.51 a 4.00 UMA,SEM prestaciones en dinero,0.7,0.7,0.7
+2026,4 UMA,4.0,False,3.51 a 4.00 UMA,SEM GMP,1.05,1.05,1.05
+2026,4 UMA,4.0,False,3.51 a 4.00 UMA,Invalidez y Vida,1.75,1.75,1.75
+2026,4 UMA,4.0,False,3.51 a 4.00 UMA,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2026,4 UMA,4.0,False,3.51 a 4.00 UMA,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2026,4 UMA,4.0,False,3.51 a 4.00 UMA,Retiro,2.0,2.0,2.0
+2026,4 UMA,4.0,False,3.51 a 4.00 UMA,Cesantía y vejez,6.613,6.613,6.613
+2026,4 UMA,4.0,False,3.51 a 4.00 UMA,Infonavit,5.0,0.0,0.0
+2026,4 UMA,4.0,False,3.51 a 4.00 UMA,Nuevo seguro,0.0,2.0,2.0
+2026,4 UMA,4.0,False,3.51 a 4.00 UMA,Cuota obrera a cargo del patrón (art. 36 LSS),0.0,0.0,0.0
+2026,4 UMA,4.0,False,3.51 a 4.00 UMA,Total a cargo del patrón (incidencia legal),25.288,22.288,20.655
+2026,4 UMA,4.0,False,3.51 a 4.00 UMA,Cuotas obreras,2.475,2.475,2.475
+2026,4 UMA,4.0,False,3.51 a 4.00 UMA,Aportación federal (incluye cuota social),5.521933445289022,5.521933445289022,5.521933445289022
+2026,4 UMA,4.0,False,3.51 a 4.00 UMA,Cuña legal total,33.28493344528903,30.284933445289024,28.651933445289025
+2026,5.55 UMA,5.55,False,4.01 UMA o más,SEM cuota fija,3.6756756756756754,3.6756756756756754,3.467
+2026,5.55 UMA,5.55,False,4.01 UMA o más,SEM excedente,0.5054054054054055,0.5054054054054055,0.5054054054054055
+2026,5.55 UMA,5.55,False,4.01 UMA o más,SEM prestaciones en dinero,0.7,0.7,0.7
+2026,5.55 UMA,5.55,False,4.01 UMA o más,SEM GMP,1.05,1.05,1.05
+2026,5.55 UMA,5.55,False,4.01 UMA o más,Invalidez y Vida,1.75,1.75,1.75
+2026,5.55 UMA,5.55,False,4.01 UMA o más,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2026,5.55 UMA,5.55,False,4.01 UMA o más,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2026,5.55 UMA,5.55,False,4.01 UMA o más,Retiro,2.0,2.0,2.0
+2026,5.55 UMA,5.55,False,4.01 UMA o más,Cesantía y vejez,7.513,7.513,7.513
+2026,5.55 UMA,5.55,False,4.01 UMA o más,Infonavit,5.0,0.0,0.0
+2026,5.55 UMA,5.55,False,4.01 UMA o más,Nuevo seguro,0.0,2.0,2.0
+2026,5.55 UMA,5.55,False,4.01 UMA o más,Cuota obrera a cargo del patrón (art. 36 LSS),0.0,0.0,0.0
+2026,5.55 UMA,5.55,False,4.01 UMA o más,Total a cargo del patrón (incidencia legal),24.99408108108108,21.99408108108108,21.785405405405406
+2026,5.55 UMA,5.55,False,4.01 UMA o más,Cuotas obreras,2.5587837837837837,2.5587837837837837,2.5587837837837837
+2026,5.55 UMA,5.55,False,4.01 UMA o más,Aportación federal (incluye cuota social),2.9220720720720723,2.9220720720720723,2.9220720720720723
+2026,5.55 UMA,5.55,False,4.01 UMA o más,Cuña legal total,30.47493693693694,27.47493693693694,27.266261261261263
+2026,10 UMA,10.0,False,4.01 UMA o más,SEM cuota fija,2.04,2.04,3.467
+2026,10 UMA,10.0,False,4.01 UMA o más,SEM excedente,0.77,0.77,0.77
+2026,10 UMA,10.0,False,4.01 UMA o más,SEM prestaciones en dinero,0.7,0.7,0.7
+2026,10 UMA,10.0,False,4.01 UMA o más,SEM GMP,1.05,1.05,1.05
+2026,10 UMA,10.0,False,4.01 UMA o más,Invalidez y Vida,1.75,1.75,1.75
+2026,10 UMA,10.0,False,4.01 UMA o más,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2026,10 UMA,10.0,False,4.01 UMA o más,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2026,10 UMA,10.0,False,4.01 UMA o más,Retiro,2.0,2.0,2.0
+2026,10 UMA,10.0,False,4.01 UMA o más,Cesantía y vejez,7.513,7.513,7.513
+2026,10 UMA,10.0,False,4.01 UMA o más,Infonavit,5.0,0.0,0.0
+2026,10 UMA,10.0,False,4.01 UMA o más,Nuevo seguro,0.0,2.0,2.0
+2026,10 UMA,10.0,False,4.01 UMA o más,Cuota obrera a cargo del patrón (art. 36 LSS),0.0,0.0,0.0
+2026,10 UMA,10.0,False,4.01 UMA o más,Total a cargo del patrón (incidencia legal),23.623,20.623,22.05
+2026,10 UMA,10.0,False,4.01 UMA o más,Cuotas obreras,2.6550000000000002,2.6550000000000002,2.6550000000000002
+2026,10 UMA,10.0,False,4.01 UMA o más,Aportación federal (incluye cuota social),1.733,1.733,1.733
+2026,10 UMA,10.0,False,4.01 UMA o más,Cuña legal total,28.011000000000003,25.011000000000003,26.438000000000002
+2026,25 UMA,25.0,False,4.01 UMA o más,SEM cuota fija,0.816,0.816,3.467
+2026,25 UMA,25.0,False,4.01 UMA o más,SEM excedente,0.9680000000000001,0.9680000000000001,0.9680000000000001
+2026,25 UMA,25.0,False,4.01 UMA o más,SEM prestaciones en dinero,0.7,0.7,0.7
+2026,25 UMA,25.0,False,4.01 UMA o más,SEM GMP,1.05,1.05,1.05
+2026,25 UMA,25.0,False,4.01 UMA o más,Invalidez y Vida,1.75,1.75,1.75
+2026,25 UMA,25.0,False,4.01 UMA o más,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2026,25 UMA,25.0,False,4.01 UMA o más,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2026,25 UMA,25.0,False,4.01 UMA o más,Retiro,2.0,2.0,2.0
+2026,25 UMA,25.0,False,4.01 UMA o más,Cesantía y vejez,7.513,7.513,7.513
+2026,25 UMA,25.0,False,4.01 UMA o más,Infonavit,5.0,0.0,0.0
+2026,25 UMA,25.0,False,4.01 UMA o más,Nuevo seguro,0.0,2.0,2.0
+2026,25 UMA,25.0,False,4.01 UMA o más,Cuota obrera a cargo del patrón (art. 36 LSS),0.0,0.0,0.0
+2026,25 UMA,25.0,False,4.01 UMA o más,Total a cargo del patrón (incidencia legal),22.597,19.597,22.248
+2026,25 UMA,25.0,False,4.01 UMA o más,Cuotas obreras,2.7270000000000003,2.7270000000000003,2.7270000000000003
+2026,25 UMA,25.0,False,4.01 UMA o más,Aportación federal (incluye cuota social),0.8432,0.8432,0.8432
+2026,25 UMA,25.0,False,4.01 UMA o más,Cuña legal total,26.1672,23.1672,25.8182
+2030,Salario mínimo,3.6464,False,1.00 SM,SEM cuota fija,5.594597971774082,5.594597971774082,3.467
+2030,Salario mínimo,3.6464,False,1.00 SM,SEM excedente,0.1949915045659572,0.1949915045659572,0.1949915045659572
+2030,Salario mínimo,3.6464,False,1.00 SM,SEM prestaciones en dinero,0.7,0.7,0.7
+2030,Salario mínimo,3.6464,False,1.00 SM,SEM GMP,1.05,1.05,1.05
+2030,Salario mínimo,3.6464,False,1.00 SM,Invalidez y Vida,1.75,1.75,1.75
+2030,Salario mínimo,3.6464,False,1.00 SM,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2030,Salario mínimo,3.6464,False,1.00 SM,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2030,Salario mínimo,3.6464,False,1.00 SM,Retiro,2.0,2.0,2.0
+2030,Salario mínimo,3.6464,False,1.00 SM,Cesantía y vejez,3.15,3.15,3.15
+2030,Salario mínimo,3.6464,False,1.00 SM,Infonavit,5.0,0.0,0.0
+2030,Salario mínimo,3.6464,False,1.00 SM,Nuevo seguro,0.0,2.0,2.0
+2030,Salario mínimo,3.6464,False,1.00 SM,Cuota obrera a cargo del patrón (art. 36 LSS),2.445906001660348,2.445906001660348,2.445906001660348
+2030,Salario mínimo,3.6464,False,1.00 SM,Total a cargo del patrón (incidencia legal),24.685495478000387,21.685495478000387,19.557897506226304
+2030,Salario mínimo,3.6464,False,1.00 SM,Cuotas obreras,0.0,0.0,0.0
+2030,Salario mínimo,3.6464,False,1.00 SM,Aportación federal (incluye cuota social),7.269416846492945,7.269416846492945,7.269416846492945
+2030,Salario mínimo,3.6464,False,1.00 SM,Cuña legal total,31.954912324493332,28.954912324493332,26.82731435271925
+2030,"1.01 SM, lectura por UMA",3.6828,False,3.51 a 4.00 UMA,SEM cuota fija,5.539205912647606,5.539205912647606,3.467
+2030,"1.01 SM, lectura por UMA",3.6828,False,3.51 a 4.00 UMA,SEM excedente,0.20395198471876952,0.20395198471876952,0.20395198471876952
+2030,"1.01 SM, lectura por UMA",3.6828,False,3.51 a 4.00 UMA,SEM prestaciones en dinero,0.7,0.7,0.7
+2030,"1.01 SM, lectura por UMA",3.6828,False,3.51 a 4.00 UMA,SEM GMP,1.05,1.05,1.05
+2030,"1.01 SM, lectura por UMA",3.6828,False,3.51 a 4.00 UMA,Invalidez y Vida,1.75,1.75,1.75
+2030,"1.01 SM, lectura por UMA",3.6828,False,3.51 a 4.00 UMA,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2030,"1.01 SM, lectura por UMA",3.6828,False,3.51 a 4.00 UMA,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2030,"1.01 SM, lectura por UMA",3.6828,False,3.51 a 4.00 UMA,Retiro,2.0,2.0,2.0
+2030,"1.01 SM, lectura por UMA",3.6828,False,3.51 a 4.00 UMA,Cesantía y vejez,10.077,10.077,10.077
+2030,"1.01 SM, lectura por UMA",3.6828,False,3.51 a 4.00 UMA,Infonavit,5.0,0.0,0.0
+2030,"1.01 SM, lectura por UMA",3.6828,False,3.51 a 4.00 UMA,Nuevo seguro,0.0,2.0,2.0
+2030,"1.01 SM, lectura por UMA",3.6828,False,3.51 a 4.00 UMA,Cuota obrera a cargo del patrón (art. 36 LSS),0.0,0.0,0.0
+2030,"1.01 SM, lectura por UMA",3.6828,False,3.51 a 4.00 UMA,Total a cargo del patrón (incidencia legal),29.120157897366376,26.120157897366376,24.04795198471877
+2030,"1.01 SM, lectura por UMA",3.6828,False,3.51 a 4.00 UMA,Cuotas obreras,2.4491643580795524,2.4491643580795524,2.4491643580795524
+2030,"1.01 SM, lectura por UMA",3.6828,False,3.51 a 4.00 UMA,Aportación federal (incluye cuota social),5.975946061025416,5.975946061025416,5.975946061025416
+2030,"1.01 SM, lectura por UMA",3.6828,False,3.51 a 4.00 UMA,Cuña legal total,37.54526831647134,34.54526831647134,32.47306240382374
+2030,"1.01 SM, primer tramo tras el mínimo",3.6828,False,1.01 SM a 1.50 UMA,SEM cuota fija,5.539205912647606,5.539205912647606,3.467
+2030,"1.01 SM, primer tramo tras el mínimo",3.6828,False,1.01 SM a 1.50 UMA,SEM excedente,0.20395198471876952,0.20395198471876952,0.20395198471876952
+2030,"1.01 SM, primer tramo tras el mínimo",3.6828,False,1.01 SM a 1.50 UMA,SEM prestaciones en dinero,0.7,0.7,0.7
+2030,"1.01 SM, primer tramo tras el mínimo",3.6828,False,1.01 SM a 1.50 UMA,SEM GMP,1.05,1.05,1.05
+2030,"1.01 SM, primer tramo tras el mínimo",3.6828,False,1.01 SM a 1.50 UMA,Invalidez y Vida,1.75,1.75,1.75
+2030,"1.01 SM, primer tramo tras el mínimo",3.6828,False,1.01 SM a 1.50 UMA,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2030,"1.01 SM, primer tramo tras el mínimo",3.6828,False,1.01 SM a 1.50 UMA,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2030,"1.01 SM, primer tramo tras el mínimo",3.6828,False,1.01 SM a 1.50 UMA,Retiro,2.0,2.0,2.0
+2030,"1.01 SM, primer tramo tras el mínimo",3.6828,False,1.01 SM a 1.50 UMA,Cesantía y vejez,4.202,4.202,4.202
+2030,"1.01 SM, primer tramo tras el mínimo",3.6828,False,1.01 SM a 1.50 UMA,Infonavit,5.0,0.0,0.0
+2030,"1.01 SM, primer tramo tras el mínimo",3.6828,False,1.01 SM a 1.50 UMA,Nuevo seguro,0.0,2.0,2.0
+2030,"1.01 SM, primer tramo tras el mínimo",3.6828,False,1.01 SM a 1.50 UMA,Cuota obrera a cargo del patrón (art. 36 LSS),0.0,0.0,0.0
+2030,"1.01 SM, primer tramo tras el mínimo",3.6828,False,1.01 SM a 1.50 UMA,Total a cargo del patrón (incidencia legal),23.245157897366376,20.245157897366376,18.17295198471877
+2030,"1.01 SM, primer tramo tras el mínimo",3.6828,False,1.01 SM a 1.50 UMA,Cuotas obreras,2.4491643580795524,2.4491643580795524,2.4491643580795524
+2030,"1.01 SM, primer tramo tras el mínimo",3.6828,False,1.01 SM a 1.50 UMA,Aportación federal (incluye cuota social),6.995922401666732,6.995922401666732,6.995922401666732
+2030,"1.01 SM, primer tramo tras el mínimo",3.6828,False,1.01 SM a 1.50 UMA,Cuña legal total,32.69024465711266,29.69024465711266,27.618038744465057
+2030,2 UMA,2.0,True,1.51 a 2.00 UMA,SEM cuota fija,10.2,10.2,3.467
+2030,2 UMA,2.0,True,1.51 a 2.00 UMA,SEM excedente,0.0,0.0,0.0
+2030,2 UMA,2.0,True,1.51 a 2.00 UMA,SEM prestaciones en dinero,0.7,0.7,0.7
+2030,2 UMA,2.0,True,1.51 a 2.00 UMA,SEM GMP,1.05,1.05,1.05
+2030,2 UMA,2.0,True,1.51 a 2.00 UMA,Invalidez y Vida,1.75,1.75,1.75
+2030,2 UMA,2.0,True,1.51 a 2.00 UMA,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2030,2 UMA,2.0,True,1.51 a 2.00 UMA,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2030,2 UMA,2.0,True,1.51 a 2.00 UMA,Retiro,2.0,2.0,2.0
+2030,2 UMA,2.0,True,1.51 a 2.00 UMA,Cesantía y vejez,6.552,6.552,6.552
+2030,2 UMA,2.0,True,1.51 a 2.00 UMA,Infonavit,5.0,0.0,0.0
+2030,2 UMA,2.0,True,1.51 a 2.00 UMA,Nuevo seguro,0.0,2.0,2.0
+2030,2 UMA,2.0,True,1.51 a 2.00 UMA,Cuota obrera a cargo del patrón (art. 36 LSS),0.0,0.0,0.0
+2030,2 UMA,2.0,True,1.51 a 2.00 UMA,Total a cargo del patrón (incidencia legal),30.052,27.052,20.319
+2030,2 UMA,2.0,True,1.51 a 2.00 UMA,Cuotas obreras,2.375,2.375,2.375
+2030,2 UMA,2.0,True,1.51 a 2.00 UMA,Aportación federal (incluye cuota social),12.296430086618349,12.296430086618349,12.296430086618349
+2030,2 UMA,2.0,True,1.51 a 2.00 UMA,Cuña legal total,44.72343008661835,41.72343008661835,34.990430086618346
+2030,3 UMA,3.0,True,2.51 a 3.00 UMA,SEM cuota fija,6.8,6.8,3.467
+2030,3 UMA,3.0,True,2.51 a 3.00 UMA,SEM excedente,0.0,0.0,0.0
+2030,3 UMA,3.0,True,2.51 a 3.00 UMA,SEM prestaciones en dinero,0.7,0.7,0.7
+2030,3 UMA,3.0,True,2.51 a 3.00 UMA,SEM GMP,1.05,1.05,1.05
+2030,3 UMA,3.0,True,2.51 a 3.00 UMA,Invalidez y Vida,1.75,1.75,1.75
+2030,3 UMA,3.0,True,2.51 a 3.00 UMA,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2030,3 UMA,3.0,True,2.51 a 3.00 UMA,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2030,3 UMA,3.0,True,2.51 a 3.00 UMA,Retiro,2.0,2.0,2.0
+2030,3 UMA,3.0,True,2.51 a 3.00 UMA,Cesantía y vejez,8.902,8.902,8.902
+2030,3 UMA,3.0,True,2.51 a 3.00 UMA,Infonavit,5.0,0.0,0.0
+2030,3 UMA,3.0,True,2.51 a 3.00 UMA,Nuevo seguro,0.0,2.0,2.0
+2030,3 UMA,3.0,True,2.51 a 3.00 UMA,Cuota obrera a cargo del patrón (art. 36 LSS),0.0,0.0,0.0
+2030,3 UMA,3.0,True,2.51 a 3.00 UMA,Total a cargo del patrón (incidencia legal),29.002,26.002,22.669
+2030,3 UMA,3.0,True,2.51 a 3.00 UMA,Cuotas obreras,2.375,2.375,2.375
+2030,3 UMA,3.0,True,2.51 a 3.00 UMA,Aportación federal (incluye cuota social),7.780098992398798,7.780098992398798,7.780098992398798
+2030,3 UMA,3.0,True,2.51 a 3.00 UMA,Cuña legal total,39.1570989923988,36.1570989923988,32.8240989923988
+2030,4 UMA,4.0,False,3.51 a 4.00 UMA,SEM cuota fija,5.1,5.1,3.467
+2030,4 UMA,4.0,False,3.51 a 4.00 UMA,SEM excedente,0.275,0.275,0.275
+2030,4 UMA,4.0,False,3.51 a 4.00 UMA,SEM prestaciones en dinero,0.7,0.7,0.7
+2030,4 UMA,4.0,False,3.51 a 4.00 UMA,SEM GMP,1.05,1.05,1.05
+2030,4 UMA,4.0,False,3.51 a 4.00 UMA,Invalidez y Vida,1.75,1.75,1.75
+2030,4 UMA,4.0,False,3.51 a 4.00 UMA,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2030,4 UMA,4.0,False,3.51 a 4.00 UMA,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2030,4 UMA,4.0,False,3.51 a 4.00 UMA,Retiro,2.0,2.0,2.0
+2030,4 UMA,4.0,False,3.51 a 4.00 UMA,Cesantía y vejez,10.077,10.077,10.077
+2030,4 UMA,4.0,False,3.51 a 4.00 UMA,Infonavit,5.0,0.0,0.0
+2030,4 UMA,4.0,False,3.51 a 4.00 UMA,Nuevo seguro,0.0,2.0,2.0
+2030,4 UMA,4.0,False,3.51 a 4.00 UMA,Cuota obrera a cargo del patrón (art. 36 LSS),0.0,0.0,0.0
+2030,4 UMA,4.0,False,3.51 a 4.00 UMA,Total a cargo del patrón (incidencia legal),28.752,25.752,24.119
+2030,4 UMA,4.0,False,3.51 a 4.00 UMA,Cuotas obreras,2.475,2.475,2.475
+2030,4 UMA,4.0,False,3.51 a 4.00 UMA,Aportación federal (incluye cuota social),5.521933445289022,5.521933445289022,5.521933445289022
+2030,4 UMA,4.0,False,3.51 a 4.00 UMA,Cuña legal total,36.748933445289026,33.748933445289026,32.11593344528902
+2030,5.55 UMA,5.55,False,4.01 UMA o más,SEM cuota fija,3.6756756756756754,3.6756756756756754,3.467
+2030,5.55 UMA,5.55,False,4.01 UMA o más,SEM excedente,0.5054054054054055,0.5054054054054055,0.5054054054054055
+2030,5.55 UMA,5.55,False,4.01 UMA o más,SEM prestaciones en dinero,0.7,0.7,0.7
+2030,5.55 UMA,5.55,False,4.01 UMA o más,SEM GMP,1.05,1.05,1.05
+2030,5.55 UMA,5.55,False,4.01 UMA o más,Invalidez y Vida,1.75,1.75,1.75
+2030,5.55 UMA,5.55,False,4.01 UMA o más,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2030,5.55 UMA,5.55,False,4.01 UMA o más,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2030,5.55 UMA,5.55,False,4.01 UMA o más,Retiro,2.0,2.0,2.0
+2030,5.55 UMA,5.55,False,4.01 UMA o más,Cesantía y vejez,11.875,11.875,11.875
+2030,5.55 UMA,5.55,False,4.01 UMA o más,Infonavit,5.0,0.0,0.0
+2030,5.55 UMA,5.55,False,4.01 UMA o más,Nuevo seguro,0.0,2.0,2.0
+2030,5.55 UMA,5.55,False,4.01 UMA o más,Cuota obrera a cargo del patrón (art. 36 LSS),0.0,0.0,0.0
+2030,5.55 UMA,5.55,False,4.01 UMA o más,Total a cargo del patrón (incidencia legal),29.35608108108108,26.35608108108108,26.147405405405404
+2030,5.55 UMA,5.55,False,4.01 UMA o más,Cuotas obreras,2.5587837837837837,2.5587837837837837,2.5587837837837837
+2030,5.55 UMA,5.55,False,4.01 UMA o más,Aportación federal (incluye cuota social),2.9220720720720723,2.9220720720720723,2.9220720720720723
+2030,5.55 UMA,5.55,False,4.01 UMA o más,Cuña legal total,34.83693693693694,31.836936936936937,31.62826126126126
+2030,10 UMA,10.0,False,4.01 UMA o más,SEM cuota fija,2.04,2.04,3.467
+2030,10 UMA,10.0,False,4.01 UMA o más,SEM excedente,0.77,0.77,0.77
+2030,10 UMA,10.0,False,4.01 UMA o más,SEM prestaciones en dinero,0.7,0.7,0.7
+2030,10 UMA,10.0,False,4.01 UMA o más,SEM GMP,1.05,1.05,1.05
+2030,10 UMA,10.0,False,4.01 UMA o más,Invalidez y Vida,1.75,1.75,1.75
+2030,10 UMA,10.0,False,4.01 UMA o más,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2030,10 UMA,10.0,False,4.01 UMA o más,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2030,10 UMA,10.0,False,4.01 UMA o más,Retiro,2.0,2.0,2.0
+2030,10 UMA,10.0,False,4.01 UMA o más,Cesantía y vejez,11.875,11.875,11.875
+2030,10 UMA,10.0,False,4.01 UMA o más,Infonavit,5.0,0.0,0.0
+2030,10 UMA,10.0,False,4.01 UMA o más,Nuevo seguro,0.0,2.0,2.0
+2030,10 UMA,10.0,False,4.01 UMA o más,Cuota obrera a cargo del patrón (art. 36 LSS),0.0,0.0,0.0
+2030,10 UMA,10.0,False,4.01 UMA o más,Total a cargo del patrón (incidencia legal),27.985,24.985,26.412
+2030,10 UMA,10.0,False,4.01 UMA o más,Cuotas obreras,2.6550000000000002,2.6550000000000002,2.6550000000000002
+2030,10 UMA,10.0,False,4.01 UMA o más,Aportación federal (incluye cuota social),1.733,1.733,1.733
+2030,10 UMA,10.0,False,4.01 UMA o más,Cuña legal total,32.373,29.373,30.8
+2030,25 UMA,25.0,False,4.01 UMA o más,SEM cuota fija,0.816,0.816,3.467
+2030,25 UMA,25.0,False,4.01 UMA o más,SEM excedente,0.9680000000000001,0.9680000000000001,0.9680000000000001
+2030,25 UMA,25.0,False,4.01 UMA o más,SEM prestaciones en dinero,0.7,0.7,0.7
+2030,25 UMA,25.0,False,4.01 UMA o más,SEM GMP,1.05,1.05,1.05
+2030,25 UMA,25.0,False,4.01 UMA o más,Invalidez y Vida,1.75,1.75,1.75
+2030,25 UMA,25.0,False,4.01 UMA o más,Riesgos de Trabajo (prima promedio),1.8,1.8,1.8
+2030,25 UMA,25.0,False,4.01 UMA o más,Guarderías y Prestaciones Sociales,1.0,1.0,1.0
+2030,25 UMA,25.0,False,4.01 UMA o más,Retiro,2.0,2.0,2.0
+2030,25 UMA,25.0,False,4.01 UMA o más,Cesantía y vejez,11.875,11.875,11.875
+2030,25 UMA,25.0,False,4.01 UMA o más,Infonavit,5.0,0.0,0.0
+2030,25 UMA,25.0,False,4.01 UMA o más,Nuevo seguro,0.0,2.0,2.0
+2030,25 UMA,25.0,False,4.01 UMA o más,Cuota obrera a cargo del patrón (art. 36 LSS),0.0,0.0,0.0
+2030,25 UMA,25.0,False,4.01 UMA o más,Total a cargo del patrón (incidencia legal),26.959,23.959,26.61
+2030,25 UMA,25.0,False,4.01 UMA o más,Cuotas obreras,2.7270000000000003,2.7270000000000003,2.7270000000000003
+2030,25 UMA,25.0,False,4.01 UMA o más,Aportación federal (incluye cuota social),0.8432,0.8432,0.8432
+2030,25 UMA,25.0,False,4.01 UMA o más,Cuña legal total,30.5292,27.5292,30.1802
