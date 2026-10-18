@@ -8,6 +8,9 @@ nuevos: usa la configuración base_v12 y las salidas ya calculadas. Registra en 
 - 1.3  sensibilidad del costo por persona al conteo de derechohabientes (79.2 millones del Informe frente a 70.7 del
        Núcleo 13), escalando el costo sin otra corrida; y la proporción de la población con IMSS en 2030 (método ENIGH);
 - 1.9  saldo de 2030 como % de los ingresos del SEM del libro (Tabla 5 del Núcleo 13).
+
+v1.2 (instrucción …_build_v1.2): saldo de 2030 y 2054 con tres conteos de derechohabientes (79.2, 70.7 y 54.6 millones) y
+aportación federal de 2030 con afiliación individual (salidas existentes de sensibilidades_v12).
 """
 
 from __future__ import annotations
@@ -99,6 +102,40 @@ def derechohabientes(ins):
     return b, saldo_70, imss30, total30
 
 
+def v12(ins):
+    """Sección 10 v1.2: saldo de 2030 y 2054 con tres conteos de derechohabientes (escalando el costo por persona, sin otra
+    corrida) y aportación federal de 2030 con afiliación individual (salidas existentes de sensibilidades_v12)."""
+    import json
+    from common import NUMBERS_JSON
+    reg = json.loads(NUMBERS_JSON.read_text())
+    conteos = {"79M": DH_INFORME, "71M": DH_N13, "55M": reg["ENIGH_IMSS_escalado_CONAPO_2025"]["valor"]}
+    r = load("resultados_v12")
+    filas = []
+    for anio in (2030, 2054):
+        b = r[(r.corrida == "base") & (r.bloque == "Total") & (r.anio == anio)].iloc[0]
+        for k, n in conteos.items():
+            f = DH_INFORME / n
+            saldo = b.saldo - b.costo * (f - 1)
+            pts = b.saldo_pts_sbc * saldo / b.saldo
+            filas.append({"anio": anio, "conteo": k, "derechohabientes": n, "factor": f, "saldo_mdp": saldo, "saldo_pts_sbc": pts})
+            src = f"Saldo base {anio} con el costo por persona escalado por 79,178,109 / {n:,.0f} (sin otra corrida)"
+            record(f"s10v12_saldo_mdp_{anio}_{k}", round(saldo), src + ", mdp de 2026")
+            record(f"s10v12_saldo_pts_{anio}_{k}", round(pts, 3), src + ", puntos del salario")
+        record("s10v12_factor_55M", round(DH_INFORME / conteos["55M"], 4), "79,178,109 / conteo ENIGH × CONAPO 2025")
+        record("s10v12_costo_pp_55M_dif_pct", round((DH_INFORME / conteos["55M"] - 1) * 100, 1), "(79.18 / 54.63 − 1) × 100")
+    table(pd.DataFrame(filas), "seccion10_v12_saldo_por_conteo")
+    from common import TABLES
+    s = pd.read_csv(TABLES / "sensibilidades_v12.csv").set_index("corrida")
+    for c in ("base", "U2_enigh", "U2_informe"):
+        record(f"s10v12_GF_2030_{c}", round(s.loc[c, "pagos_GF_2030"]), f"sensibilidades_v12.csv, {c}, pagos_GF_2030 (aportación fija + subsidio), mdp de 2026")
+    for c in ("U2_enigh", "U2_informe"):
+        mejora = s.loc[c, "saldo_2030"] - s.loc["base", "saldo_2030"]
+        dgf = s.loc[c, "pagos_GF_2030"] - s.loc["base", "pagos_GF_2030"]
+        record(f"s10v12_mejora_saldo_2030_{c}", round(mejora), f"sensibilidades_v12.csv: saldo 2030 de {c} − base (mdp)")
+        record(f"s10v12_parte_GF_mejora_pct_{c}", round(dgf / mejora * 100, 1), f"Aumento de la aportación federal / mejora del saldo, {c}, 2030 (%)")
+    return pd.DataFrame(filas)
+
+
 def main():
     ins = Insumos()
     tit = ins.tit
@@ -115,6 +152,7 @@ def main():
     print(a.round(2).to_string(index=False))
     print(f"U2 hogar mediano: {pago:,.0f} pesos, {pct:.2f} % del ingreso del hogar")
     print(f"saldo 2030 {b.saldo:,.0f}; con 70.69 M: {s70:,.0f}; % Tabla 5: {b.saldo / SEM_TABLA5_2030 * 100:.1f}")
+    print(v12(ins).round(3).to_string(index=False))
     print(f"DH ENIGH 2030 {i30:,.0f} / {p30:,.0f} = {i30 / p30 * 100:.1f} %; con esquema {(i30 + b.personas_cubiertas) / p30 * 100:.1f} %")
 
 

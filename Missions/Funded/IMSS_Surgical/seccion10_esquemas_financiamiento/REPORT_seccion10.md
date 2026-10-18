@@ -335,3 +335,112 @@ Oraciones de más de 40 palabras: la segunda oración de la frase de apertura de
 8. **Provisiones:** se definen con la nota del Informe (sección 4 de este apartado).
 9. **Paginación:** dos figuras flotadas, celdas de tabla más compactas que en JP y un hueco de 33 % a 36 % que sigue en la página de la Tabla 10.1.
 10. **Oraciones de más de 40 palabras:** quedan dos, ambas dictadas.
+
+---
+
+# v1.2 — sensibilidad a derechohabientes, composición del déficit de GMP y aportación federal con afiliación individual (18-10-2026)
+
+Instrucción: `20261018_BDH_N13_seccion10-esquemas-financiamiento_build_v1.2` (Beth; revisión de Beth y Cath de la v1.1). La v1.1 se conserva.
+
+**Salidas nuevas:**
+- `N13_seccion10_esquemas_financiamiento_v1.2.md` y `.docx`.
+- `…_con_seccion10_v1.2.docx` (fuera de git).
+- `tablas/seccion10_cifras_v1.2.csv` y `data/verificaciones_v1.2.json`.
+- En el experimento 1: `outputs/tables/seccion10_v12_saldo_por_conteo.csv` y las claves `s10v12_*`. Se calculan en la función `v12()` de `src/seccion10_v11.py`.
+- En el experimento 2: las semillas `GMP_V19_componentes` y `GMP_V19_vs_V24` en `NUMBERS.md`, vía `src/salidas.py`.
+- Las figuras no cambian.
+
+## 1. Cifras nuevas y su cálculo
+
+**Saldo con tres conteos de derechohabientes.** Se escala el costo por persona por 79,178,109 / conteo, sin otra corrida, con los conteos sin redondear. Los puntos del salario se escalan igual.
+
+| Conteo | Factor | Saldo 2030 (mdp) | Puntos 2030 | Saldo 2054 (mdp) | Puntos 2054 |
+|---|---|---|---|---|---|
+| 79,178,109 (Informe) | 1.000 | −80,962 | −1.31 | −80,335 | −0.58 |
+| 70,690,000 (este informe) | 1.120 | −104,645 | −1.69 | −106,952 | −0.78 |
+| 54,630,948 (ENIGH × CONAPO) | 1.449 | −169,586 | −2.73 | −179,936 | −1.31 |
+
+Verificación 5.2: el saldo con 70.7 millones es igual al de la v1.1 (−104,645), y con 54.6 millones es mayor. Coincide con la referencia de Cath: el costo sube 44.9 % y el saldo ronda 170.
+
+**Composición del déficit de GMP.** Cuadro V.19, pág. PDF 147, transcrito celda por celda; mdp de 2026:
+
+| Concepto | 2026 | Valor presente |
+|---|---|---|
+| Gastos de administración | 43,581 | 1,009,572 |
+| Provisiones | 123 | 151,550 |
+| Total del gasto | 157,897 | 5,388,234 |
+| Déficit | −68,398 | −2,637,347 |
+
+Coincide con la tabla de referencia de la instrucción. Las notas del cuadro dicen:
+- **Nota 3:** el gasto de administración «se integra a partir de la proporción del gasto que se asigna a este seguro de los siguientes rubros: i) servicios de personal y pasivos laborales del IMSS en su carácter de patrón por jubilaciones y pensiones».
+- **Nota 4:** las provisiones se refieren a «provisiones para la operación».
+
+**Aportación federal con afiliación individual, 2030.** Viene de `sensibilidades_v12.csv`, columna `pagos_GF_2030` (aportación fija más subsidio); es una salida existente y no requirió otra corrida.
+
+| Variante | Aportación federal | Saldo | Mejora frente a la base | Parte de la mejora que viene de la aportación federal |
+|---|---|---|---|---|
+| Por hogar (base) | 73,769 | −80,962 | — | — |
+| Individual, 0.80 beneficiarios por titular (ENIGH) | 122,748 | −11,223 | 69,739 | 70.2 % |
+| Individual, 1.07 (Informe) | 108,127 | −25,843 | 55,118 | 62.3 % |
+
+El costo no cambia entre variantes. El resto de la mejora son pagos privados mayores. La oración dictada («la mejora viene sobre todo de una mayor aportación federal») se sostiene, así que no hay marca [REVISAR-Cath] por este punto.
+
+## 2. Diferencias entre los Cuadros V.19 y V.24
+
+El Cuadro V.24 (pág. PDF 161) es el escenario base del ejercicio de rebalanceo y solo trae ingresos y saldo; no desglosa el gasto. Por eso la Tabla 10.2 y el párrafo nuevo dicen «según el desglose del Cuadro V.19». El modelo sigue usando el V.24.
+
+| Año | Ingresos V.19 | Ingresos V.24 | Saldo V.19 | Saldo V.24 |
+|---|---|---|---|---|
+| 2026 | 89,499 | 89,499 | −68,398 | −68,398 |
+| 2031 | 104,386 | 104,369 | −97,653 | −97,760 |
+| 2036 | 119,537 | 119,537 | −135,137 | −134,117 |
+| 2041 | 142,886 | 142,886 | −138,282 | −138,282 |
+| 2046 | 169,523 | 169,522 | −157,934 | −157,934 |
+| 2051 | 197,736 | 197,734 | −180,930 | −180,930 |
+| 2055 | 217,063 | 217,061 | −203,895 | −203,895 |
+| Valor presente | 2,750,887 | 2,750,260 | −2,637,347 | −2,631,460 |
+
+En 2036 los ingresos coinciden pero el saldo difiere en 1,020: el gasto de ese año tampoco es igual entre cuadros. En 2031 difieren ingresos (17) y saldo (107). En valor presente el déficit del V.19 es 5,887 mayor; los dos cuadros se citan como «unos 2.6 billones».
+
+## 3. Marcas [REVISAR-Cath] (solo en este reporte)
+
+1. **Oración nueva de 10a.5:** «El conteo del Informe probablemente sobrestima a los derechohabientes y el de la ENIGH probablemente los subestima; el saldo verdadero está dentro de ese rango.» Es lectura de Cath. Se apoya en dos hechos: el conteo máximo del Informe da 112.4 % de la población nacional de 65 años o más, y la ENIGH registra lo que declaran los hogares. Va en el texto sin marca.
+2. La afiliación individual no necesitó marca (sección 1).
+
+## 4. Verificaciones
+
+| # | Resultado |
+|---|---|
+| 5.1 | Cumple: el diff de la v1.1 a la v1.2 abarca las secciones 1 a 4 (lista abajo). |
+| 5.2 | Cumple (sección 1). |
+| 5.3 | Cumple: el V.19 está transcrito contra la pág. PDF 147 y el V.24 contra la 161; las diferencias se reportan. |
+| 5.4 | Cumple: aportación federal registrada con su fuente (`sensibilidades_v12.csv`, salida existente). |
+| 5.5 | Cumple: cada figura va después de su primera mención. La 10.3 va justo después de «Saldo para el SEM» y su nota; la 10.4, después de «Más formalidad». La 10.7 sigue flotada después de «Lo que queda para cuidados», como en la v1.1. |
+| 5.6 | Cumple: 0 expresiones prohibidas y 0 «paga(r) pensiones». El párrafo nuevo de 10b.1 describe lo que contiene el déficit. |
+| 5.7 | Cumple. Texto corrido: 10a 8,808 caracteres (4.89 cuartillas), 10b 7,611 (4.23). Fernández Huerta: 86.2 y 87.5. Páginas en la copia de JP: 10a ≈ 6.3 (págs. 55-61), 10b ≈ 6.7 (págs. 61-67). 0 tablas partidas. |
+| 5.8 | Cumple: hash `3f4002b8…a8cf88` antes y después; la copia conserva los 57 comentarios y los cambios con control. |
+| v1.0 | 8.2: 171 cifras, 160 respaldadas en `NUMBERS.md` y 11 en `config.yaml`; 0 sin respaldo. 8.9: 0 términos sin definir (provisiones se define en 10b.1). |
+
+**Oraciones de más de 40 palabras:** las mismas dos dictadas de la v1.1 (frase de apertura de 10a, 46 palabras; frase obligatoria 1 de 10b, 42). El párrafo nuevo de 10b.1 se dictó como una oración de 52 palabras, con «según el desglose del Cuadro V.19» y la cifra en mil millones. Se partió en tres oraciones sin cambiar su contenido **[REVISAR]**.
+
+**Paginación (LibreOffice).** Huecos mayores a un tercio de página en la copia de JP:
+- **Pág. 62: 46 %.** La Tabla 10.2 creció por la nueva definición del déficit (cerca de 6 in con título y fuente) y pasa entera a la pág. 63.
+- **Pág. 56: 33 %.** La Tabla 10.1, como en la v1.1.
+
+Al volver la Figura 10.3 a su lugar, la pág. 58 queda con 27 %. En el .docx de la sección sola hay huecos de 36 % en la pág. 2 y de 50 % en la pág. 8 (Tabla 10.2). Para quitarlos habría que dejar partirse las Tablas 10.1 y 10.2 con encabezado repetido, lo que contradice la verificación 5.7 **[REVISAR]**.
+
+## 5. Diff resumido
+
+- **10a.4, «Saldo para el SEM»:**
+  - «unos 81 mil millones en 2030» (4.3);
+  - la oración de los 326 mil millones va al final del párrafo (4.1);
+  - la Figura 10.3 regresa justo después del párrafo y su nota, antes de «Más formalidad» (4.2).
+- **10a.5:**
+  - «Cuatro supuestos» y viñeta nueva «Conteo de derechohabientes», en primer lugar (1.2.1);
+  - la afiliación individual explica de dónde viene la mejora (3).
+- **10a.7:** el punto del saldo agrega «; depende del conteo de derechohabientes (sección 10a.5)» (1.2.3).
+- **Nota sobre derechohabientes:** se acorta (1.2.2). Dice qué conteo usa cada cálculo, que la diferencia está en conciliación y remite a 10a.5; la marca se mantiene.
+- **10b.1:** párrafo nuevo sobre la composición del déficit (2.2.2).
+- **Tabla 10.2:** fila «Déficit de GMP» (2.2.1).
+- **10b.5:** oración sobre el déficit completo como supuesto más exigente, en la viñeta de provisiones (2.2.4).
+- **10b.6:** viñeta nueva sobre la atención médica, la administración y las pensiones del personal (2.2.3).

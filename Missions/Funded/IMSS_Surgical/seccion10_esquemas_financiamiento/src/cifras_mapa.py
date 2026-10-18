@@ -36,6 +36,9 @@ MAPA = [
     ("10a", "0.4", "", "1", "v12_U2_informe_saldo_pts_sbc_2030", -1, 1),
     ("10a", "12.0", "", "1", "s10v11_costo_pp_70M_dif_pct", 1, 1),
     ("10a", "105", "", "1", "s10v11_saldo_mdp_2030_70M", -MM, 0),
+    ("10a", "170", "", "1", "s10v12_saldo_mdp_2030_55M", -MM, 0),       # v1.2
+    ("10a", "108", "", "1", "s10v12_GF_2030_U2_informe", MM, 0),
+    ("10a", "123", "", "1", "s10v12_GF_2030_U2_enigh", MM, 0),
     ("10a", "1.3", "percentil 30", "1", "aseq_p30_pctlab_D2_G2", 1, 1),
     ("10a", "1.3", "puntos", "1", "v12b_Total_saldo_pts_2030", -1, 1),
     ("10a", "50", "", "1", "config:escenarios.base_v12.tau=0.50", P, 0),
@@ -85,6 +88,9 @@ MAPA = [
     # ---------------- 10b (experimento 2)
     ("10b", "2,631", "", "2", "semilla:GMP_V24_base (VP del saldo)=-2631460", -MM, 0),     # solo v1
     ("10b", "2.6", "", "2", "semilla:GMP_V24_base (VP del saldo, billones)=-2631460", -1e-6, 1),
+    ("10b", "1.0", "", "2", "semilla:GMP_V19_componentes=1009572", 1e-6, 1),   # v1.2: administración, VP
+    ("10b", "1,010", "", "2", "semilla:GMP_V19_componentes=1009572", MM, 0),
+    ("10b", "152", "", "2", "semilla:GMP_V19_componentes=151550", MM, 0),      # provisiones, VP
     ("10b", "3", "", "2", "semilla:Tasa_descuento=3 / base_reduccion_cuna_legal_pts_2027=3", 1, 0),
     ("10b", "5", "", "2", "semilla:Infonavit_tasa=5", 1, 0),
     ("10b", "25", "", "2", "semilla:Infonavit_tasa (tope de 25 UMA)=25", 1, 0),

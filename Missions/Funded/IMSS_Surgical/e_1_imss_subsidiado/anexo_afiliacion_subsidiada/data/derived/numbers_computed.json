@@ -4646,5 +4646,89 @@
  "s10v11_pct_pob_imss_2030_con": {
   "valor": 63.9,
   "fuente": "(DH ENIGH 2030 + personas cubiertas por el esquema) / población CONAPO 2030 (%)"
+ },
+ "s10v12_saldo_mdp_2030_79M": {
+  "valor": -80962,
+  "fuente": "Saldo base 2030 con el costo por persona escalado por 79,178,109 / 79,178,109 (sin otra corrida), mdp de 2026"
+ },
+ "s10v12_saldo_pts_2030_79M": {
+  "valor": -1.305,
+  "fuente": "Saldo base 2030 con el costo por persona escalado por 79,178,109 / 79,178,109 (sin otra corrida), puntos del salario"
+ },
+ "s10v12_saldo_mdp_2030_71M": {
+  "valor": -104645,
+  "fuente": "Saldo base 2030 con el costo por persona escalado por 79,178,109 / 70,690,000 (sin otra corrida), mdp de 2026"
+ },
+ "s10v12_saldo_pts_2030_71M": {
+  "valor": -1.686,
+  "fuente": "Saldo base 2030 con el costo por persona escalado por 79,178,109 / 70,690,000 (sin otra corrida), puntos del salario"
+ },
+ "s10v12_saldo_mdp_2030_55M": {
+  "valor": -169586,
+  "fuente": "Saldo base 2030 con el costo por persona escalado por 79,178,109 / 54,630,948 (sin otra corrida), mdp de 2026"
+ },
+ "s10v12_saldo_pts_2030_55M": {
+  "valor": -2.733,
+  "fuente": "Saldo base 2030 con el costo por persona escalado por 79,178,109 / 54,630,948 (sin otra corrida), puntos del salario"
+ },
+ "s10v12_factor_55M": {
+  "valor": 1.4493,
+  "fuente": "79,178,109 / conteo ENIGH × CONAPO 2025"
+ },
+ "s10v12_costo_pp_55M_dif_pct": {
+  "valor": 44.9,
+  "fuente": "(79.18 / 54.63 − 1) × 100"
+ },
+ "s10v12_saldo_mdp_2054_79M": {
+  "valor": -80335,
+  "fuente": "Saldo base 2054 con el costo por persona escalado por 79,178,109 / 79,178,109 (sin otra corrida), mdp de 2026"
+ },
+ "s10v12_saldo_pts_2054_79M": {
+  "valor": -0.585,
+  "fuente": "Saldo base 2054 con el costo por persona escalado por 79,178,109 / 79,178,109 (sin otra corrida), puntos del salario"
+ },
+ "s10v12_saldo_mdp_2054_71M": {
+  "valor": -106952,
+  "fuente": "Saldo base 2054 con el costo por persona escalado por 79,178,109 / 70,690,000 (sin otra corrida), mdp de 2026"
+ },
+ "s10v12_saldo_pts_2054_71M": {
+  "valor": -0.778,
+  "fuente": "Saldo base 2054 con el costo por persona escalado por 79,178,109 / 70,690,000 (sin otra corrida), puntos del salario"
+ },
+ "s10v12_saldo_mdp_2054_55M": {
+  "valor": -179936,
+  "fuente": "Saldo base 2054 con el costo por persona escalado por 79,178,109 / 54,630,948 (sin otra corrida), mdp de 2026"
+ },
+ "s10v12_saldo_pts_2054_55M": {
+  "valor": -1.309,
+  "fuente": "Saldo base 2054 con el costo por persona escalado por 79,178,109 / 54,630,948 (sin otra corrida), puntos del salario"
+ },
+ "s10v12_GF_2030_base": {
+  "valor": 73769,
+  "fuente": "sensibilidades_v12.csv, base, pagos_GF_2030 (aportación fija + subsidio), mdp de 2026"
+ },
+ "s10v12_GF_2030_U2_enigh": {
+  "valor": 122748,
+  "fuente": "sensibilidades_v12.csv, U2_enigh, pagos_GF_2030 (aportación fija + subsidio), mdp de 2026"
+ },
+ "s10v12_GF_2030_U2_informe": {
+  "valor": 108127,
+  "fuente": "sensibilidades_v12.csv, U2_informe, pagos_GF_2030 (aportación fija + subsidio), mdp de 2026"
+ },
+ "s10v12_mejora_saldo_2030_U2_enigh": {
+  "valor": 69739,
+  "fuente": "sensibilidades_v12.csv: saldo 2030 de U2_enigh − base (mdp)"
+ },
+ "s10v12_parte_GF_mejora_pct_U2_enigh": {
+  "valor": 70.2,
+  "fuente": "Aumento de la aportación federal / mejora del saldo, U2_enigh, 2030 (%)"
+ },
+ "s10v12_mejora_saldo_2030_U2_informe": {
+  "valor": 55118,
+  "fuente": "sensibilidades_v12.csv: saldo 2030 de U2_informe − base (mdp)"
+ },
+ "s10v12_parte_GF_mejora_pct_U2_informe": {
+  "valor": 62.3,
+  "fuente": "Aumento de la aportación federal / mejora del saldo, U2_informe, 2030 (%)"
  }
 }

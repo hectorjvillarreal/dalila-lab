@@ -1,0 +1,172 @@
+experimento,clave_NUMBERS,valor_exacto,factor,valor_redondeado,ubicacion,coincide,fuente
+1,A_personas_objetivo_2024,59193354.0,1e-06,59.2,"texto 10a, línea 8",True,NUMBERS.md
+1,A_titulares_2024,19655021.0,1e-06,19.7,"texto 10a, línea 8",True,NUMBERS.md
+1,semilla:CF_patron=20.40,20.4,1,20.40,"texto 10a, línea 10",True,NUMBERS.md
+1,SM2026_cuota_patronal_vigente_pct,7.6,1,7.6,"texto 10a, línea 10",True,NUMBERS.md
+1,v12_c,0.03467,100,3.467,"texto 10a, línea 14",True,NUMBERS.md
+1,config:escenarios.S.S1.p0=20,20.0,1,20,"texto 10a, línea 19",True,config.yaml
+1,semilla:CF_GF=14.83,14.83,1,14.83,"texto 10a, línea 20",True,NUMBERS.md
+1,aseq_p50_m,2.456,1,2.46,"texto 10a, línea 29",True,NUMBERS.md
+1,aseq_p50_prima_D2_G2,3647.0,1,"3,647","texto 10a, línea 29",True,NUMBERS.md
+1,aseq_p50_pctlab_D2_G2,3.47,1,3.5,"texto 10a, línea 29",True,NUMBERS.md
+1,aseq_p50_pcthog_D2_G2,1.67,1,1.7,"texto 10a, línea 29",True,NUMBERS.md
+1,s10v11_p50_fija_patronal,8736.0,1,"8,736","texto 10a, línea 29",True,NUMBERS.md
+1,s10v11_p50_fija_patronal_pctlab,8.305,1,8.3,"texto 10a, línea 29",True,NUMBERS.md
+1,aseq_p30_pctlab_D2_G2,1.27,1,1.3,"texto 10a, línea 29",True,NUMBERS.md
+1,config:escenarios.base_v12.tau=0.50,0.5,100,50,"texto 10a, línea 39",True,config.yaml
+1,config:escenarios.base_v12.rho=0.75,0.75,100,75,"texto 10a, línea 40",True,config.yaml
+1,config:escenarios.base_v12.mu=1.10,1.1,sobrecosto,10,"texto 10a, línea 41",True,config.yaml
+1,semilla:Dias_cotizados=337,337.0,1,337,"texto 10a, línea 42",True,NUMBERS.md
+1,config:malla_v12.pim2=0.02,0.02,100,2,"texto 10a, línea 45",True,config.yaml
+1,v12b_Total_saldo_pts_2054,-0.585,-1,0.6,"texto 10a, línea 45",True,NUMBERS.md
+1,v12_pim2_saldo_pts_sbc_2054,-1.78,-1,1.8,"texto 10a, línea 45",True,NUMBERS.md
+1,v12b_A_personas_cubiertas_2030,31396161.0,1e-06,31,"texto 10a, línea 51",True,NUMBERS.md
+1,aseq_p50_pctlab_D2_G2,3.47,1,3.5,"texto 10a, línea 51",True,NUMBERS.md
+1,v12b_Total_saldo_mdp_2054,-80335.0,-0.001,80,"texto 10a, línea 51",True,NUMBERS.md
+1,v12b_Total_saldo_pts_2030,-1.305,-1,1.3,"texto 10a, línea 51",True,NUMBERS.md
+1,v12b_Total_saldo_pts_2054,-0.585,-1,0.6,"texto 10a, línea 51",True,NUMBERS.md
+1,v12b_A_personas_cubiertas_2030,31396161.0,1e-06,31.4,"texto 10a, línea 53",True,NUMBERS.md
+1,s10v11_pct_pob_imss_2030_sin,41.2,1,41.2,"texto 10a, línea 53",True,NUMBERS.md
+1,s10v11_pct_pob_imss_2030_con,63.9,1,63.9,"texto 10a, línea 53",True,NUMBERS.md
+1,excl_total_2024,8195479.0,1e-06,8.2,"texto 10a, línea 53",True,NUMBERS.md
+1,excl_65mas_pct,19.5,1,19.5,"texto 10a, línea 53",True,NUMBERS.md
+1,aseq_p10_pctlab_D2_G2,0.0,1,0,"texto 10a, línea 55",True,NUMBERS.md
+1,aseq_p90_pctlab_D2_G2,4.24,1,4.2,"texto 10a, línea 55",True,NUMBERS.md
+1,s10v11_p50_fija_patronal_pctlab,8.305,1,8.3,"texto 10a, línea 55",True,NUMBERS.md
+1,aseq_decil5_prima,4097.0,1,"4,097","texto 10a, línea 55",True,NUMBERS.md
+1,aseq_decil5_oop,5773.0,1,"5,773","texto 10a, línea 55",True,NUMBERS.md
+1,v12b_A_pagos_determinados_mdp_2030,56676.0,0.001,57,"texto 10a, línea 63",True,NUMBERS.md
+1,v12b_A_pagos_privados_mdp_2030,42507.0,0.001,43,"texto 10a, línea 63",True,NUMBERS.md
+1,v12b_Total_pagos_GF_mdp_2030,73769.0,0.001,74,"texto 10a, línea 63",True,NUMBERS.md
+1,v12b_A_GF_cuota_fija_mdp_2030,68074.0,0.001,68,"texto 10a, línea 63",True,NUMBERS.md
+1,v12b_A_GF_subsidio_mdp_2030,5695.0,0.001,6,"texto 10a, línea 63",True,NUMBERS.md
+1,v12b_Total_costo_mdp_2030,197237.0,0.001,197,"texto 10a, línea 63",True,NUMBERS.md
+1,v12b_Total_saldo_mdp_2030,-80962.0,-0.001,81,"texto 10a, línea 63",True,NUMBERS.md
+1,v12b_Total_saldo_sem_2030,-12.93,-1,12.9,"texto 10a, línea 63",True,NUMBERS.md
+1,v12b_Total_saldo_mdp_2054,-80335.0,-0.001,80,"texto 10a, línea 63",True,NUMBERS.md
+1,v12b_Total_saldo_pts_2030,-1.305,-1,1.3,"texto 10a, línea 63",True,NUMBERS.md
+1,v12b_Total_saldo_pts_2054,-0.585,-1,0.6,"texto 10a, línea 63",True,NUMBERS.md
+1,PEF2026_no_contrib_total_mdp2026,325590.7,0.001,326,"texto 10a, línea 63",True,NUMBERS.md
+1,s10v11_saldo_pct_tabla5_2030,-13.2,-1,13.2,"texto 10a, línea 65",True,NUMBERS.md
+1,semilla:Denominador_puntos_v12 (tope de 25 UMA)=25,25.0,1,25,"texto 10a, línea 71",True,NUMBERS.md
+1,semilla:Dias_cotizados=337,337.0,1,337,"texto 10a, línea 71",True,NUMBERS.md
+1,config:escenarios.F.F1.cotizantes_2030=3000000,3000000.0,1e-06,3,"texto 10a, línea 73",True,config.yaml
+1,v12_C_dh_por_cot_2030,2.93,1,2.9,"texto 10a, línea 73",True,NUMBERS.md
+1,v12_C_vigente_neto_2030,-5755.0,0.001,−6,"texto 10a, línea 73",True,NUMBERS.md
+1,v12_C_D2_neto_2030,-11512.0,0.001,−12,"texto 10a, línea 73",True,NUMBERS.md
+1,v12_C_D2_GF_2030,17591.0,0.001,18,"texto 10a, línea 73",True,NUMBERS.md
+1,config:escenarios.F.F1.cotizantes_2030=3000000,3000000.0,1e-06,3,"texto 10a, línea 77",True,config.yaml
+1,v12_indexacion_mdp_2030,11611.0,0.001,12,"texto 10a, línea 81",True,NUMBERS.md
+1,v12_indexacion_mdp_2054,98909.0,0.001,99,"texto 10a, línea 81",True,NUMBERS.md
+1,v12_indexacion_pts_2054,0.72,1,0.7,"texto 10a, línea 81",True,NUMBERS.md
+1,semilla:DH_total=79178109,79178109.0,1e-06,79.2,"texto 10a, línea 88",True,NUMBERS.md
+1,v12b_Total_saldo_mdp_2030,-80962.0,-0.001,81,"texto 10a, línea 88",True,NUMBERS.md
+1,semilla:N13_DH_2025=70.69,70.69,1,70.7,"texto 10a, línea 88",True,NUMBERS.md
+1,s10v11_saldo_mdp_2030_70M,-104645.0,-0.001,105,"texto 10a, línea 88",True,NUMBERS.md
+1,ENIGH_IMSS_escalado_CONAPO_2025,54630948.0,1e-06,54.6,"texto 10a, línea 88",True,NUMBERS.md
+1,s10v12_saldo_mdp_2030_55M,-169586.0,-0.001,170,"texto 10a, línea 88",True,NUMBERS.md
+1,config:malla_v12.tau70=0.70,0.7,100,70,"texto 10a, línea 89",True,config.yaml
+1,v12_tau70_saldo_pts_sbc_2030,-1.827,-1,1.8,"texto 10a, línea 89",True,NUMBERS.md
+1,config:malla_v12.tau30=0.30,0.3,100,30,"texto 10a, línea 89",True,config.yaml
+1,v12_tau30_saldo_pts_sbc_2030,-0.783,-1,0.8,"texto 10a, línea 89",True,NUMBERS.md
+1,v12_rho50_saldo_pts_sbc_2030,-1.533,-1,1.5,"texto 10a, línea 90",True,NUMBERS.md
+1,config:malla_v12.pim2=0.02,0.02,100,2,"texto 10a, línea 91",True,config.yaml
+1,v12_pim2_saldo_pts_sbc_2054,-1.78,-1,1.8,"texto 10a, línea 91",True,NUMBERS.md
+1,s10v11_U2_pago_hogar_p50,4921.0,1,"4,921","texto 10a, línea 93",True,NUMBERS.md
+1,s10v11_U2_pct_hogar_p50,2.1,1,2.1,"texto 10a, línea 93",True,NUMBERS.md
+1,aseq_p50_pcthog_D2_G2,1.67,1,1.7,"texto 10a, línea 93",True,NUMBERS.md
+1,v12_U2_enigh_saldo_pts_sbc_2030,-0.181,-1,0.2,"texto 10a, línea 93",True,NUMBERS.md
+1,v12_U2_informe_saldo_pts_sbc_2030,-0.416,-1,0.4,"texto 10a, línea 93",True,NUMBERS.md
+1,s10v12_GF_2030_U2_informe,108127.0,0.001,108,"texto 10a, línea 93",True,NUMBERS.md
+1,s10v12_GF_2030_U2_enigh,122748.0,0.001,123,"texto 10a, línea 93",True,NUMBERS.md
+1,v12b_Total_pagos_GF_mdp_2030,73769.0,0.001,74,"texto 10a, línea 93",True,NUMBERS.md
+1,aseq_p50_pctlab_D2_G2,3.47,1,3.5,"texto 10a, línea 104",True,NUMBERS.md
+1,v12b_A_personas_cubiertas_2030,31396161.0,1e-06,31,"texto 10a, línea 105",True,NUMBERS.md
+1,v12b_Total_saldo_mdp_2054,-80335.0,-0.001,80,"texto 10a, línea 106",True,NUMBERS.md
+1,v12b_Total_saldo_pts_2030,-1.305,-1,1.3,"texto 10a, línea 106",True,NUMBERS.md
+1,v12b_Total_saldo_pts_2054,-0.585,-1,0.6,"texto 10a, línea 106",True,NUMBERS.md
+1,config:escenarios.F.F1.cotizantes_2030=3000000,3000000.0,1e-06,3,"texto 10a, línea 107",True,config.yaml
+1,v12_C_vigente_neto_2030,-5755.0,0.001,−6,"texto 10a, línea 107",True,NUMBERS.md
+1,semilla:N13_DH_2025=70.69,70.69,1,70.7,"texto 10a, línea 109",True,NUMBERS.md
+1,semilla:DH_total=79178109,79178109.0,1e-06,79.2,"texto 10a, línea 109",True,NUMBERS.md
+1,ENIGH_IMSS_escalado_CONAPO_2025,54630948.0,1e-06,54.6,"texto 10a, línea 109",True,NUMBERS.md
+2,"semilla:GMP_V24_base (VP del saldo, billones)=-2631460",-2631460.0,-1e-06,2.6,"texto 10b, línea 8",True,NUMBERS.md
+2,"semilla:GMP_V24_base (VP del saldo, billones)=-2631460",-2631460.0,-1e-06,2.6,"texto 10b, línea 8",True,NUMBERS.md
+2,semilla:Tasa_descuento=3 / base_reduccion_cuna_legal_pts_2027=3,3.0,1,3,"texto 10b, línea 8",True,NUMBERS.md
+2,semilla:GMP_V19_componentes=1009572,1009572.0,1e-06,1.0,"texto 10b, línea 10",True,NUMBERS.md
+2,semilla:GMP_V19_componentes=1009572,1009572.0,0.001,"1,010","texto 10b, línea 10",True,NUMBERS.md
+2,semilla:GMP_V19_componentes=151550,151550.0,0.001,152,"texto 10b, línea 10",True,NUMBERS.md
+2,semilla:Infonavit_tasa=5,5.0,1,5,"texto 10b, línea 12",True,NUMBERS.md
+2,semilla:Infonavit_tasa=5,5.0,1,5,"texto 10b, línea 18",True,NUMBERS.md
+2,semilla:Infonavit_tasa (tope de 25 UMA)=25,25.0,1,25,"texto 10b, línea 18",True,NUMBERS.md
+2,semilla:NS_tasa=2,2.0,1,2,"texto 10b, línea 19",True,NUMBERS.md
+2,semilla:Tasa_descuento=3 / base_reduccion_cuna_legal_pts_2027=3,3.0,1,3,"texto 10b, línea 20",True,NUMBERS.md
+2,semilla:Tasa_descuento=3 / base_reduccion_cuna_legal_pts_2027=3,3.0,1,3,"texto 10b, línea 20",True,NUMBERS.md
+2,semilla:Infonavit_tasa (tope de 25 UMA)=25,25.0,1,25,"texto 10b, línea 20",True,NUMBERS.md
+2,semilla:Infonavit_tasa=5,5.0,1,5,"texto 10b, línea 26",True,NUMBERS.md
+2,semilla:SBC_prom_dic2025=627.87,627.87,1,627.87,"texto 10b, línea 30",True,NUMBERS.md
+2,semilla:SBC_prom_dic2025 (veces la UMA)=5.55,5.55,1,5.55,"texto 10b, línea 30",True,NUMBERS.md
+2,semilla:Infonavit_tasa=5,5.0,1,5,"texto 10b, línea 30",True,NUMBERS.md
+2,semilla:NS_tasa=2,2.0,1,2,"texto 10b, línea 30",True,NUMBERS.md
+2,semilla:Tasa_descuento=3 / base_reduccion_cuna_legal_pts_2027=3,3.0,1,3,"texto 10b, línea 30",True,NUMBERS.md
+2,cuna_2026_5.55 UMA_patron_a,25.102,1,25.1,"texto 10b, línea 30",True,NUMBERS.md
+2,cuna_2026_5.55 UMA_patron_b,22.102,1,22.1,"texto 10b, línea 30",True,NUMBERS.md
+2,semilla:NS_tasa=2,2.0,1,2,"texto 10b, línea 30",True,NUMBERS.md
+2,semilla:Tasa_descuento=3 / base_reduccion_cuna_legal_pts_2027=3,3.0,1,3,"texto 10b, línea 41",True,NUMBERS.md
+2,semilla:NS_tasa=2,2.0,1,2,"texto 10b, línea 49",True,NUMBERS.md
+2,base_ingreso_NS_2027,109378.0,0.001,109,"texto 10b, línea 51",True,NUMBERS.md
+2,base_deficit_GMP_2027,74270.0,0.001,74,"texto 10b, línea 51",True,NUMBERS.md
+2,base_ingreso_NS_2054,274824.0,0.001,275,"texto 10b, línea 51",True,NUMBERS.md
+2,base_deficit_GMP_2054,198154.0,0.001,198,"texto 10b, línea 51",True,NUMBERS.md
+2,base_k2v12_saldo_inicio_2035,271337.0,0.001,271,"texto 10b, línea 59",True,NUMBERS.md
+2,k2_pesos_por_dh65_2040,5631.0,1,"5,631","texto 10b, línea 61",True,NUMBERS.md
+2,k2_pesos_por_dh65_2054,6696.0,1,"6,696","texto 10b, línea 61",True,NUMBERS.md
+2,k2_pesos_por_dh80_2040,26318.0,1,"26,318","texto 10b, línea 61",True,NUMBERS.md
+2,k2_pesos_por_dh80_2054,23771.0,1,"23,771","texto 10b, línea 61",True,NUMBERS.md
+2,cuna_2026_Salario mínimo_patron_a,26.53,1,26.5,"texto 10b, línea 69",True,NUMBERS.md
+2,cuna_2026_5.55 UMA_patron_a,25.102,1,25.1,"texto 10b, línea 69",True,NUMBERS.md
+2,semilla:Infonavit_tasa (tope de 25 UMA)=25,25.0,1,25,"texto 10b, línea 69",True,NUMBERS.md
+2,cuna_2026_25 UMA_patron_a,22.705,1,22.7,"texto 10b, línea 69",True,NUMBERS.md
+2,cuna_2030_Salario mínimo_patron_a,24.793,1,24.8,"texto 10b, línea 69",True,NUMBERS.md
+2,cuna_2030_5.55 UMA_patron_a,29.464,1,29.5,"texto 10b, línea 69",True,NUMBERS.md
+2,semilla:Tasa_descuento=3 / base_reduccion_cuna_legal_pts_2027=3,3.0,1,3,"texto 10b, línea 69",True,NUMBERS.md
+2,cuna_2026_sm_c_menos_a,-7.13,-1,7.1,"texto 10b, línea 69",True,NUMBERS.md
+2,cuna_2026_prom_c_menos_a,-3.209,-1,3.2,"texto 10b, línea 69",True,NUMBERS.md
+2,cuna_2026_25uma_c_menos_a,-0.349,-1,0.3,"texto 10b, línea 69",True,NUMBERS.md
+2,semilla:Infonavit_tasa (tope de 25 UMA)=25,25.0,1,25,"texto 10b, línea 69",True,NUMBERS.md
+2,escalon_2030_uma_patron_salto_a,4.435,1,4.4,"texto 10b, línea 69",True,NUMBERS.md
+2,escalon_2030_uma_patron_salto_c,4.49,1,4.5,"texto 10b, línea 69",True,NUMBERS.md
+2,base_reduccion_cuna_legal_2027,164066.0,0.001,164,"texto 10b, línea 77",True,NUMBERS.md
+2,semilla:Infonavit_tasa=5,5.0,1,5,"texto 10b, línea 77",True,NUMBERS.md
+2,base_infonavit_5pct_teorico_2027,273444.0,0.001,273,"texto 10b, línea 77",True,NUMBERS.md
+2,form_hist_cambio_pts,6.5,1,6.5,"texto 10b, línea 92",True,NUMBERS.md
+2,form_proy_cambio_pts,29.1,1,29.1,"texto 10b, línea 92",True,NUMBERS.md
+2,MH_formalidad_2054,43.49,1,43.5,"texto 10b, línea 92",True,NUMBERS.md
+2,base_conprov_smasa_margen_min,7272.0,0.001,7,"texto 10b, línea 94",True,NUMBERS.md
+2,semilla:NS_tasa=2,2.0,1,2,"texto 10b, línea 106",True,NUMBERS.md
+2,res_base_K2_vp_cuidados_mas_reserva,801935.0,0.001,802,"texto 10b, línea 107",True,NUMBERS.md
+2,k2_pesos_por_dh65_2040,5631.0,1,"5,631","texto 10b, línea 108",True,NUMBERS.md
+2,semilla:Tasa_descuento=3 / base_reduccion_cuna_legal_pts_2027=3,3.0,1,3,"texto 10b, línea 109",True,NUMBERS.md
+2,semilla:Infonavit_tasa (tope de 25 UMA)=25,25.0,1,25,"texto 10b, línea 109",True,NUMBERS.md
+1,aseq_p10_pctlab_D2_G2,0.0,1,0.0,Figura 10.2,True,NUMBERS.md
+1,s10v11_p10_fija_patronal_pctlab,0.0,1,0.0,Figura 10.2,True,NUMBERS.md
+1,aseq_p20_pctlab_D2_G2,0.0,1,0.0,Figura 10.2,True,NUMBERS.md
+1,s10v11_p20_fija_patronal_pctlab,0.001,1,0.0,Figura 10.2,True,NUMBERS.md
+1,aseq_p30_pctlab_D2_G2,1.27,1,1.3,Figura 10.2,True,NUMBERS.md
+1,s10v11_p30_fija_patronal_pctlab,4.499,1,4.5,Figura 10.2,True,NUMBERS.md
+1,aseq_p50_pctlab_D2_G2,3.47,1,3.5,Figura 10.2,True,NUMBERS.md
+1,s10v11_p50_fija_patronal_pctlab,8.305,1,8.3,Figura 10.2,True,NUMBERS.md
+1,aseq_p70_pctlab_D2_G2,3.71,1,3.7,Figura 10.2,True,NUMBERS.md
+1,s10v11_p70_fija_patronal_pctlab,6.433,1,6.4,Figura 10.2,True,NUMBERS.md
+1,aseq_p90_pctlab_D2_G2,4.24,1,4.2,Figura 10.2,True,NUMBERS.md
+1,s10v11_p90_fija_patronal_pctlab,4.35,1,4.4,Figura 10.2,True,NUMBERS.md
+1,v12b_Total_saldo_pts_2026,-1.539,1,-1.5,Figura 10.3,True,NUMBERS.md
+1,v12b_Total_saldo_pts_2030,-1.305,1,-1.3,Figura 10.3,True,NUMBERS.md
+1,v12b_Total_saldo_pts_2040,-0.905,1,-0.9,Figura 10.3,True,NUMBERS.md
+1,v12b_Total_saldo_pts_2054,-0.585,1,-0.6,Figura 10.3,True,NUMBERS.md
+1,v12_C_D2_neto_2030,-11512.0,0.001,-12,Figura 10.4,True,NUMBERS.md
+1,v12_C_vigente_neto_2030,-5755.0,0.001,-6,Figura 10.4,True,NUMBERS.md
+1,v12_C_D2_neto_2040,-10177.0,0.001,-10,Figura 10.4,True,NUMBERS.md
+1,v12_C_vigente_neto_2040,-5241.0,0.001,-5,Figura 10.4,True,NUMBERS.md
+1,v12_C_D2_neto_2054,-9098.0,0.001,-9,Figura 10.4,True,NUMBERS.md
+1,v12_C_vigente_neto_2054,-5947.0,0.001,-6,Figura 10.4,True,NUMBERS.md

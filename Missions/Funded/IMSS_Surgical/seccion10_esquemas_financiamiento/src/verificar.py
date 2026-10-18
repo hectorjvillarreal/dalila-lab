@@ -39,7 +39,7 @@ FRASE2 = ("La reserva no crea recursos: cambia cuándo y para qué se usan. En c
 TERMINOS = {"UMA": r"La UMA \(Unidad de Medida y Actualización\)", "SBC": r"salario base de cotización \(SBC\)",
             "cuota fija": r"cuota fija por trabajador igual a", "GMP": r"gastos médicos de pensionados \(GMP\)",
             "cuña contributiva legal": r"La cuña contributiva legal es", "valor presente": r"El valor presente suma",
-            "provisiones": r"provisiones \((montos que el IMSS separa|recursos que el IMSS aparta)"}
+            "provisiones": r"provisiones( \((montos que el IMSS separa|recursos que el IMSS aparta)| para la operación)"}
 TERM_BUSCA = {"UMA": r"\bUMA\b", "SBC": r"\bSBC\b|salario base de cotización", "cuota fija": r"cuota fija",
               "GMP": r"\bGMP\b", "cuña contributiva legal": r"cuña contributiva legal|cuña legal", "valor presente": r"valor presente",
               "provisiones": r"provisiones"}
@@ -280,7 +280,19 @@ def main():
     chk["5.7 ritmo histórico igual en la sección y en el anexo"] = int(bool(m_s and m_a and m_s.group(1) == m_a.group(1)))
     paga = [plano_v[max(0, m.start() - 40):m.end() + 60].replace("\n", " ") for m in re.finditer(r"\bel (trabajador|patrón) paga\b", plano_v, flags=re.I)]
     chk["5.8 «el trabajador paga» / «el patrón paga»"] = len(paga)
-    det = {"prohibidas": hits, "sin_respaldo": sin, "terminos_mal": malos, "cuota_fija_vigente": cfv, "paga": paga}
+    # v1.2: 5.5 cada figura después de su primera mención; 5.6 el seguro no «paga pensiones»
+    lineas = txt.split("\n")
+    orden_mal = []
+    for n in range(1, 9):
+        img = next((i for i, l in enumerate(lineas) if l.startswith("![") and f"Figura 10.{n}." in "\n".join(lineas[i:i + 3])), None)
+        cita = next((i for i, l in enumerate(lineas) if not l.startswith(("![", "**Figura", "*Fuente")) and re.search(rf"Figura 10\.{n}\b", l)), None)
+        if img is None or cita is None or img < cita:
+            orden_mal.append(n)
+    chk["5.5 figuras antes de su primera mención"] = len(orden_mal)
+    pens = [plano_v[max(0, m.start() - 60):m.end() + 40] for m in re.finditer(r"\bpaga(r|n|ría)? (las |sus )?pensiones", plano_v, flags=re.I)]
+    chk["5.6 «paga pensiones» como propósito"] = len(pens)
+    det = {"prohibidas": hits, "sin_respaldo": sin, "terminos_mal": malos, "cuota_fija_vigente": cfv, "paga": paga,
+           "figuras_fuera_de_orden": orden_mal, "pensiones": pens}
     (AQUI / "data").mkdir(exist_ok=True)
     (AQUI / "data" / f"verificaciones_{VERSION}.json").write_text(json.dumps({"checks": chk, "detalle": det}, ensure_ascii=False, indent=1))
     return chk, det

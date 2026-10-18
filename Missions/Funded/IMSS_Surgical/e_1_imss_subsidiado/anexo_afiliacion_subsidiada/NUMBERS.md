@@ -512,6 +512,27 @@ Las desagregaciones por seguro, la retención y el modelo de cohortes son **reco
 | s10v11_pob_conapo_2030 | 138,033,990 | CONAPO 2023, población total 2030 |
 | s10v11_saldo_mdp_2030_70M | -104,645 | Saldo base 2030 con el costo por persona escalado por 79.18 / 70.69 (sin otra corrida), mdp de 2026 |
 | s10v11_saldo_pct_tabla5_2030 | -13.2 | Saldo base 2030 / ingresos del SEM de la Tabla 5 del Núcleo 13 (611.2 mil mdp) (%) |
+| s10v12_GF_2030_U2_enigh | 122,748 | sensibilidades_v12.csv, U2_enigh, pagos_GF_2030 (aportación fija + subsidio), mdp de 2026 |
+| s10v12_GF_2030_U2_informe | 108,127 | sensibilidades_v12.csv, U2_informe, pagos_GF_2030 (aportación fija + subsidio), mdp de 2026 |
+| s10v12_GF_2030_base | 73,769 | sensibilidades_v12.csv, base, pagos_GF_2030 (aportación fija + subsidio), mdp de 2026 |
+| s10v12_costo_pp_55M_dif_pct | 44.9 | (79.18 / 54.63 − 1) × 100 |
+| s10v12_factor_55M | 1.4493 | 79,178,109 / conteo ENIGH × CONAPO 2025 |
+| s10v12_mejora_saldo_2030_U2_enigh | 69,739 | sensibilidades_v12.csv: saldo 2030 de U2_enigh − base (mdp) |
+| s10v12_mejora_saldo_2030_U2_informe | 55,118 | sensibilidades_v12.csv: saldo 2030 de U2_informe − base (mdp) |
+| s10v12_parte_GF_mejora_pct_U2_enigh | 70.2 | Aumento de la aportación federal / mejora del saldo, U2_enigh, 2030 (%) |
+| s10v12_parte_GF_mejora_pct_U2_informe | 62.3 | Aumento de la aportación federal / mejora del saldo, U2_informe, 2030 (%) |
+| s10v12_saldo_mdp_2030_55M | -169,586 | Saldo base 2030 con el costo por persona escalado por 79,178,109 / 54,630,948 (sin otra corrida), mdp de 2026 |
+| s10v12_saldo_mdp_2030_71M | -104,645 | Saldo base 2030 con el costo por persona escalado por 79,178,109 / 70,690,000 (sin otra corrida), mdp de 2026 |
+| s10v12_saldo_mdp_2030_79M | -80,962 | Saldo base 2030 con el costo por persona escalado por 79,178,109 / 79,178,109 (sin otra corrida), mdp de 2026 |
+| s10v12_saldo_mdp_2054_55M | -179,936 | Saldo base 2054 con el costo por persona escalado por 79,178,109 / 54,630,948 (sin otra corrida), mdp de 2026 |
+| s10v12_saldo_mdp_2054_71M | -106,952 | Saldo base 2054 con el costo por persona escalado por 79,178,109 / 70,690,000 (sin otra corrida), mdp de 2026 |
+| s10v12_saldo_mdp_2054_79M | -80,335 | Saldo base 2054 con el costo por persona escalado por 79,178,109 / 79,178,109 (sin otra corrida), mdp de 2026 |
+| s10v12_saldo_pts_2030_55M | -2.733 | Saldo base 2030 con el costo por persona escalado por 79,178,109 / 54,630,948 (sin otra corrida), puntos del salario |
+| s10v12_saldo_pts_2030_71M | -1.686 | Saldo base 2030 con el costo por persona escalado por 79,178,109 / 70,690,000 (sin otra corrida), puntos del salario |
+| s10v12_saldo_pts_2030_79M | -1.305 | Saldo base 2030 con el costo por persona escalado por 79,178,109 / 79,178,109 (sin otra corrida), puntos del salario |
+| s10v12_saldo_pts_2054_55M | -1.309 | Saldo base 2054 con el costo por persona escalado por 79,178,109 / 54,630,948 (sin otra corrida), puntos del salario |
+| s10v12_saldo_pts_2054_71M | -0.778 | Saldo base 2054 con el costo por persona escalado por 79,178,109 / 70,690,000 (sin otra corrida), puntos del salario |
+| s10v12_saldo_pts_2054_79M | -0.585 | Saldo base 2054 con el costo por persona escalado por 79,178,109 / 79,178,109 (sin otra corrida), puntos del salario |
 | sens_C2_GF_mdp_2030 | 90,842 | sensibilidades.csv (pagos federales A + B + C) |
 | sens_C2_GF_mdp_2054 | 50,147 | sensibilidades.csv (pagos federales A + B + C) |
 | sens_C2_GF_pts_sbc_2030 | 1.406 | sensibilidades.csv |
