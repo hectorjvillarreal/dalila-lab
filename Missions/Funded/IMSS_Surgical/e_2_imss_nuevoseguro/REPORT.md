@@ -16,6 +16,103 @@
 
 ---
 
+## Experimento 2, v1.1 (2026-10-18)
+
+**Instrucción:** `20261018_BDH_N13_experimento2-seguro-salud-cuidados_build_v1.1` (Beth y Cath). Archivada en `_crossrefs/_build_instructions/2026-10-18_BDH-N13_experimento2-seguro-salud-cuidados_retrofit_v1.1.md`. Producto: `ANEXO_experimento2_borrador_v2.md`. El primer borrador (`ANEXO_experimento2_borrador.md`) se conserva como registro de la v1.0, pero varias de sus cifras ya no están en el registro: las de M2 cambiaron y la base de adscripciones se eliminó.
+
+**Decisiones de Héctor sobre la ejecución (18-10):**
+
+- El borrador v2 del experimento 1 (`ANEXO_borrador_v2.md`) queda intacto; solo se publican las tablas de cambios hasta que Beth decida.
+- La limitación «sin precedente histórico» se redacta sin esa afirmación si no se encuentra una serie. No se encontró una serie primaria comparable (cotizantes entre ocupados), así que el borrador describe el supuesto sin compararlo con la historia.
+
+**Corrida activa:** `config.yaml` → `corrida: v1.1`. Con `corrida: v1.0` se reproduce la corrida anterior.
+
+### E2v11.1 Resultados por escenario de formalidad (sección 1.3)
+
+Con la formalización que supone la proyección institucional, el 2 % cubre el déficit de GMP en todo el horizonte. Con formalidad constante, lo cubre hasta 2032; con la mitad de esa formalización, hasta 2034.
+
+| | Base | M3 | M2 |
+|---|---|---|---|
+| Formalidad implícita en 2054 | 63.13 % | 48.56 % | 34.0 % |
+| Primer año sin cobertura, K1 | ninguno | 2035 | 2033 |
+| Primer año sin cobertura, K2 | ninguno | 2051 | 2038 |
+| Años sin cobertura 2027-2054, K1 | 0 | 19 | 22 |
+| Déficit no cubierto en 2054 (mdp) | 0 | 35,712 | 148,093 |
+| Déficit no cubierto, VP (K1 / K2) | 0 / 0 | 114,602 / 53,950 | 831,627 / 741,017 |
+| Remanente, VP (K1) | 801,935 | 151,254 | 102,997 |
+
+- **Qué cambió frente a la v1.0:** el ajuste del ingreso de GMP adelanta en dos años el primer año sin cobertura de M2 (de 2035 a 2033). El déficit de M2 en 2054 sube de 198,154 a 296,092 mdp.
+- **M3:** queda casi en equilibrio alrededor de 2040 (déficit no cubierto de 648 mdp ese año) y después se abre la brecha.
+- **Margen de 2036 (sección 5):** en la base, con provisiones, es de 19,991 mdp. Sin las provisiones de GMP del Cuadro V.19 es de 39,568 mdp, y el mínimo pasa a 2027 (37,200 mdp).
+
+### E2v11.2 Remanente por persona mayor con base ENIGH (sección 2)
+
+- **Base ENIGH:** 46.62 % de las personas de 65+ declara afiliación al IMSS (`inst_1`); entre las de 80+, 41.84 %. Se usan grupos quinquenales (85 y más) por sexo; la celda más chica tiene 1,329 observaciones.
+- **Conteo:** con CONAPO, 5,923,223 personas de 65+ con IMSS en 2027 y 13,476,177 en 2054, 46.6 % y 45.9 % de la población nacional de 65+ (verificación 7.3).
+- **Remanente K1 de la base:** 5,927 pesos por persona de 65+ en 2027 y 5,689 en 2054; por persona de 80+, 30,602 y 20,197. Es más del doble que con el conteo máximo del Informe (2,456 pesos en 2027), que equivale a 112.4 % de la población nacional de 65+ y queda solo en nota.
+
+### E2v11.3 Criterio del SUA para 1.01 SM (sección 3.3)
+
+- **Tramo vacío desde 2023:** el salario mínimo de 2023 era de 207.44 pesos (DOF 07-12-2022) y la UMA de 103.74 (DOF 10-01-2023), así que el mínimo equivalía a 2.00 UMA. Se confirma que el tramo «1.01 SM a 1.50 UMA» está vacío desde que empezó el calendario.
+- **Fuentes revisadas, solo del IMSS y del DOF:**
+  - El art. 168 vigente (Cámara de Diputados, última reforma DOF 15-01-2026) no trae regla para ese caso.
+  - El decreto del 16-12-2020 tampoco.
+  - La página del SUA en imss.gob.mx requiere sesión.
+  - Las búsquedas en imss.gob.mx no dieron guía ni preguntas frecuentes con el criterio.
+- **Resultado:** no encontrado. Queda **pendiente de confirmación con el IMSS** (visita de Juan Pablo). El borrador presenta las dos lecturas.
+- **Escalón a 1.01 SM con la lectura por UMA:** +0.426 puntos en 2026 y +4.435 en 2030. Con el primer tramo: −1.924 y −1.44 puntos.
+- **Art. 36:** la redacción verificada contra el texto vigente de la Cámara de Diputados coincide con la citada.
+
+### E2v11.4 Experimento 1: denominador común y fuente única de ingresos del SEM (sección 4)
+
+En las salidas v1.2 del experimento 1, el denominador de los puntos del salario es ahora la masa R1 con tope y piso (337 días) y los ingresos del SEM son los del Cuadro V.13. Cambian 186 cifras del registro: 123 en puntos del salario y 63 en % de los ingresos del SEM. Los montos en mdp no cambian. La tabla completa está en `tablas/exp1_cambios_denominador.csv`. Selección:
+
+| Cifra del experimento 1 | Antes | Después |
+|---|---|---|
+| Saldo total, puntos del salario, 2026 | −1.568 | −1.539 |
+| Saldo total, puntos del salario, 2030 | −1.357 | −1.305 |
+| Saldo total, puntos del salario, 2054 | −0.593 | −0.585 |
+| Saldo total, % ingresos del SEM, 2026 | −14.68 | −14.44 |
+| Saldo total, % ingresos del SEM, 2030 | −13.25 | −12.93 |
+| Saldo total, % ingresos del SEM, 2054 | −6.66 | −6.72 |
+| Pagos federales del Bloque A, puntos, 2030 | 1.237 | 1.189 |
+| Efecto de indexación, puntos, 2054 | 0.730 | 0.720 |
+| Efecto de indexación, % SEM, 2054 | 8.20 | 8.28 |
+| Bloque C con D2, efecto neto, puntos, 2030 | −0.193 | −0.186 |
+
+**Contraste de ingresos del SEM (sección 4.4), mdp de 2026:**
+
+| | 2026 | 2030 | 2040 | 2054 |
+|---|---|---|---|---|
+| Cuadro V.13 − libro (SEM-A + SEM-GMP) | 9,232 | 15,148 | 2,620 | −11,640 |
+| Diferencia, % del libro | 1.67 | 2.48 | 0.31 | −0.96 |
+
+`ANEXO_borrador_v2.md` del experimento 1 **sigue citando las cifras anteriores**, por ejemplo «1.36 puntos del SBC y 13.2 % de los ingresos del SEM» en 2030, que ahora son 1.305 y 12.93. Hay que actualizarlo cuando Beth lo indique.
+
+### E2v11.5 Verificaciones (sección 7)
+
+| # | Resultado | Estado |
+|---|---|---|
+| 7.1 | La configuración v1.0 reproduce las cuatro tablas de la corrida anterior (`data/v10/`). La desviación máxima es de 3.7e-9 mdp, la precisión del texto del CSV; la cuña legal, 7e-15. | ✓ |
+| 7.2 | En la base, el déficit ajustado es igual al del Cuadro V.24 (desviación 0). El déficit de M2 es mayor que el de M3 y el de M3 mayor que el de la base en todos los años: 0 fallas. | ✓ |
+| 7.3 | Base ENIGH de 65+ ≤ 100 % de la población nacional: el máximo es 46.6 %. | ✓ |
+| 7.4 | Experimento 1: montos en mdp de `resultados_v12` sin cambio (desviación 0); 0 cifras cambiadas fuera de puntos y % del SEM. Sus verificaciones internas (7.1-7.8 y 6.x) dan los mismos resultados que antes. | ✓ |
+| 7.5 | Columna (b) = (a) − 3 con la prima de RT de 1.9078 %: desviación 0. | ✓ |
+| 7.6 | Sin 2055 en las tablas; las cifras del borrador v2 están todas en `NUMBERS.md` (0 faltantes). | ✓ |
+
+Las verificaciones 3.1-3.5 de la v1.0 siguen cumpliéndose con los mismos valores.
+
+### E2v11.6 Decisiones propias [REVISAR]
+
+1. **[REVISAR] Referencia de M3.** M3 toma, año por año, la mitad de la ganancia de formalidad sobre **2025** (la misma referencia de M2): 48.56 % en 2054. La instrucción decía 48.8 %, que usa 2027 como punto de partida.
+2. **[REVISAR] Puntos del salario por escenario.** En el Cuadro X-2.1 (b), cada escenario se expresa sobre su propia masa, con la misma construcción R1. Así, el ingreso siempre es 2.00 puntos y el déficit sube en puntos cuando la masa baja. La alternativa sería dividir todo entre la masa de la base.
+3. **[REVISAR] Gasto de GMP sin ajuste en M3 y M2**, como pide la instrucción (sección 1.1).
+4. **[REVISAR] Lectura del Cuadro X-2.3 en 2030.** La afirmación de 3.4 vale para 2026. En 2030 el orden cambia: la tasa en el mínimo (24.793 %) queda por debajo de la del promedio (29.464 %). Hay dos razones: el calendario de cesantía y vejez sube más en los tramos altos, y el mínimo crece en UMA. El borrador limita la lectura a 2026.
+5. **[REVISAR] Grupos de edad de la ENIGH.** Se usan grupos quinquenales y no edad simple: con edad simple, las celdas de 85 años o más quedarían con pocas observaciones. La tasa se mantiene constante por edad y sexo en el horizonte.
+6. **[REVISAR] Limitación sobre la formalización.** Se redactó sin la afirmación «sin precedente histórico» (decisión de Héctor): describe el supuesto, unos 29 puntos en 29 años, y aclara que el anexo no lo compara con la historia.
+
+---
+
 ## Experimento 2
 
 ### E2.1 Resumen

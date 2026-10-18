@@ -1,4 +1,4 @@
-"""Figura del experimento 2, verificaciones 3.6 y 3.7, y NUMBERS.md (sección «Experimento 2»)."""
+"""Figura del experimento 2 (base, M3 y M2), verificaciones 3.6/7.6 y 3.7, y NUMBERS.md (sección «Experimento 2»)."""
 
 from __future__ import annotations
 
@@ -16,7 +16,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 
 FUENTE = ("Ejercicio preliminar ITED; no es una proyección del IMSS ni una propuesta del IMSS o del Gobierno. "
-          "Fuentes: Informe IMSS 2025-2026 (Cuadro V.24); libro de Finanzas 07/09/2026.")
+          "Fuentes: Informe IMSS 2025-2026 (Cuadro V.24); libro de Finanzas 07/09/2026; CONAPO; ENIGH 2024.")
+ANEXO = "ANEXO_experimento2_borrador_v2.md"
 
 # (clave, valor, fuente, estado) — instrucción, sección 6, más las cifras que la ejecución añadió
 SEMILLA = [
@@ -31,45 +32,52 @@ SEMILLA = [
     ("Tasa_descuento", "3 % real", "Informe, Cuadro II.16, nota 1", "confirmada"),
     ("DH_65mas_2025", "16.6 % de la población adscrita a médico familiar", "Informe, Gráfica I.31", "confirmada"),
     ("DH_total", "79,178,109", "Informe, Cuadro I.4", "confirmada"),
-    ("PAMF_2025", "63,598,543 adscripciones a médico familiar (60,266,622 personas por CURP)", "Informe, texto del Cuadro I.4 y Gráfica I.23", "nueva; base propia de la proporción de la Gráfica I.31"),
+    ("PAMF_2025", "63,598,543 adscripciones a médico familiar (60,266,622 personas por CURP)", "Informe, texto del Cuadro I.4 y Gráfica I.23", "solo para la regresión v1.0; la v1.1 elimina esta base"),
+    ("ENIGH_IMSS_65mas", "Tasa de afiliación al IMSS (poblacion.inst_1 = 1) por grupo quinquenal (65-69 … 85+) y sexo, ponderada con factor", "ENIGH 2024 (INEGI), tabla poblacion", "nueva (v1.1); base de personas mayores, × CONAPO por año; mismo método del experimento 1"),
+    ("GMP_V19_provisiones", "123 / 9,971 / 19,577 / 541 / 540 / 542 / 545 mdp de 2026 (2026, 2031, …, 2051 y año final)", "Informe, Cuadro V.19, fila Provisiones", "nueva (v1.1); margen sin provisiones"),
+    ("SM_2023 / UMA_2023", "207.44 pesos/día (resto del país) / 103.74 pesos/día (vigente desde el 1-02-2023): el SM equivale a 2.00 UMA", "DOF 07-12-2022, Resolución del Consejo de Representantes de la CONASAMI; DOF 10-01-2023, INEGI, valor de la UMA", "nueva (v1.1); el tramo «1.01 SM a 1.50 UMA» ya estaba vacío en 2023"),
     ("Vivienda_al_pensionarse", "71.45 % (base) / 57.45 % (riesgo); 83 % en 2026-2035, baja a 50 % al final del horizonte (base)", "Informe, Cuadro II.18 y nota 3", "confirmada"),
     ("CyV_patronal_2025_2026_2030", "Tabla de la sección 1.5 de la instrucción", "DOF 16-12-2020, Segundo Transitorio (tabla en imagen, leída) y art. 168 fr. II a) (texto); Informe, Cuadro A.3 nota 6 (2025)", "verificada en el DOF: coincide en todas las celdas"),
     ("Cuota_social_dic2025", "1 SM 12.18; 1.01 SM-1.50 UMA 11.33; 1.51-2 10.48; 2.01-2.5 9.63; 2.51-3 8.78; 3.01-3.5 7.93; 3.51-4 7.08 pesos por día", "Informe, Cuadro A.3, nota 8", "nueva; se mantiene constante en UMA reales (se indexa al INPC)"),
     ("c_D2", "3.467 % (0.0346703)", "Corrida v1.2", "confirmada"),
     ("SBC_prom_dic2025", "5.55 veces la UMA (627.87 pesos/día)", "Informe, sección I.1.3", "confirmada en la v1.2; nivel «promedio» de la tabla de cuña"),
     ("Patronales SEM, SIV, SGPS, Retiro", "Cuota fija 20.40 % UMA; excedente 1.10 %; prestaciones en dinero 0.70 %; GMP 1.05 %; IV 1.75 %; GPS 1.00 %; Retiro 2.00 %", "Informe, Cuadro A.3; libro, hoja `Tasas de Contribución`", "confirmada"),
-    ("RT_prima_promedio", "1.80 %", "Libro, hoja `Tasas de Contribución`, nota 2 (promedio 2023-2025)", "confirmada; el Informe, Cuadro A.3, reporta 1.9078 % (mar. 2025-feb. 2026). Se usa 1.80 como en la instrucción"),
+    ("RT_prima_promedio", "1.9078 % en el Cuadro X-2.2; 1.80 % en las proyecciones de masa e ingreso", "Informe, Cuadro A.3, nota 1 (vigencia mar. 2025-feb. 2026); libro, hoja `Tasas de Contribución`, nota 2 (promedio 2023-2025)", "v1.1: el cuadro de cuña usa 1.9078 %; la regresión v1.0 usa 1.80 %"),
     ("Obreras y federales", "Obrera: excedente 0.40, PD 0.25, GMP 0.375, IV 0.625, CyV 1.125; federal: cuota fija 14.83 % UMA, PD 0.05, GMP 0.075, IV 0.125", "Informe, Cuadro A.3", "nueva"),
-    ("Art_36_LSS", "Con salario mínimo, el patrón cubre íntegramente la cuota de la persona trabajadora", "Ley del Seguro Social, art. 36", "nueva; texto citado de fuentes secundarias (IMCP), no del DOF"),
+    ("Art_36_LSS", "«Corresponde al patrón pagar íntegramente la cuota señalada para los trabajadores, en los casos en que éstos perciban como cuota diaria el salario mínimo.»", "Ley del Seguro Social, art. 36, texto vigente publicado por la Cámara de Diputados (última reforma DOF 15-01-2026)", "verificada (v1.1); coincide con la redacción citada"),
+    ("Criterio_SUA_1.01SM", "No encontrado", "Búsqueda en documentación pública del IMSS y del DOF (18-10-2026); la página del SUA requiere sesión", "pendiente de confirmación con el IMSS (visita de Juan Pablo)"),
     ("Infonavit_recaudacion_efectiva", "No obtenida", "Estados financieros del Infonavit 2024-2025", "omitida, como manda la instrucción"),
 ]
 
 
 def figura():
     d = pd.read_parquet(DERIVED / "ingreso_vs_GMP.parquet")
-    b = d[d.escenario_masa == "base"].set_index("anio")
-    m2 = d[d.escenario_masa == "M2"].set_index("anio")
+    reg = json.loads(NUMBERS_JSON.read_text())
+    escs = [e for e in ("base", "M3", "M2") if e in set(d.escenario_masa)]
+    titulos = {"base": "Base (formalización institucional)", "M3": "M3 (mitad de la formalización)", "M2": "M2 (formalidad constante)"}
     FIGURAS.mkdir(parents=True, exist_ok=True)
-    fig, ax = plt.subplots(figsize=(9, 4.6))
-    x = b.index
-    i, dd = b.ingreso_NS / 1000, b.deficit_GMP / 1000
-    ax.fill_between(x, dd, i, where=i >= dd, color=AZUL, alpha=0.15, lw=0, label="Remanente para cuidados (K1)")
-    ax.plot(x, i, color=AZUL, lw=2.2)
-    ax.plot(x, dd, color=NARANJA, lw=2.2)
-    ax.plot(x, m2.ingreso_NS / 1000, color=AZUL, lw=1.2, ls="--")
-    ax.text(x[-1] + 0.4, i.iloc[-1], "Ingreso del nuevo seguro (2 %)", color=TINTA2, fontsize=8, va="center")
-    ax.text(x[-1] + 0.4, dd.iloc[-1], "Déficit de GMP (Cuadro V.24)", color=TINTA2, fontsize=8, va="center")
-    ax.text(x[-1] + 0.4, m2.ingreso_NS.iloc[-1] / 1000, "Ingreso con formalidad\nconstante (M2)", color=TINTA2, fontsize=8, va="center")
-    ax.set_xlim(2027, 2063)
-    ax.set_xticks([2027, 2030, 2035, 2040, 2045, 2050, 2054])   # 2055 no se reporta (3.6)
-    ax.set_ylim(0, None)
-    ax.set_title("Nuevo seguro solidario frente al déficit de GMP, 2027-2054 (miles de millones de pesos de 2026)",
-                 fontsize=10, color=TINTA, loc="left")
-    ax.legend(fontsize=8, frameon=False, loc="upper left")
-    _estilo(ax)
-    ax.grid(axis="y", color="#ebeae6", lw=0.8)
-    fig.text(0.01, 0.01, FUENTE, fontsize=6.5, color=TINTA2)
-    fig.tight_layout(rect=(0, 0.04, 1, 1))
+    fig, axs = plt.subplots(1, len(escs), figsize=(12, 4.6), sharey=True)
+    ymax = float(d[["ingreso_NS", "deficit_GMP"]].max().max()) / 1000 * 1.06
+    for ax, e in zip(axs, escs):
+        x = d[d.escenario_masa == e].set_index("anio")
+        t, i, dd = x.index, x.ingreso_NS / 1000, x.deficit_GMP / 1000
+        ax.fill_between(t, dd, i, where=i >= dd, color=AZUL, alpha=0.15, lw=0, interpolate=True)
+        ax.fill_between(t, dd, i, where=i < dd, color=NARANJA, alpha=0.25, lw=0, interpolate=True)
+        ax.plot(t, i, color=AZUL, lw=2.2, label="Ingreso del nuevo seguro (2 %)")
+        ax.plot(t, dd, color=TINTA, lw=1.8, label="Déficit de GMP")
+        p = reg[f"{e}_k1_primer_anio_no_cubre"]["valor"]
+        sub = "cubre todo el horizonte" if p == "ninguno" else f"sin cobertura desde {p}"
+        ax.set_title(f"{titulos[e]}\n{sub}", fontsize=9.5, color=TINTA, loc="left")
+        ax.set_xticks([2027, 2035, 2045, 2054])   # 2055 no se reporta (3.6)
+        ax.set_xlim(2027, 2054)
+        ax.set_ylim(0, ymax)
+        _estilo(ax)
+        ax.grid(axis="y", color="#ebeae6", lw=0.8)
+    axs[0].set_ylabel("Miles de millones de pesos de 2026", fontsize=8, color=TINTA2)
+    axs[0].legend(fontsize=7.5, frameon=False, loc="upper left")
+    fig.text(0.01, 0.01, FUENTE + "\nAzul: remanente para cuidados (K1); naranja: déficit no cubierto. El déficit de M3 y M2 incluye "
+             "la menor recaudación de GMP con menos cotizantes.", fontsize=6.5, color=TINTA2)
+    fig.tight_layout(rect=(0, 0.06, 1, 1))
     fig.savefig(FIGURAS / "ingreso_vs_GMP.png", dpi=160)
     plt.close(fig)
 
@@ -102,16 +110,17 @@ def numbers_md():
 
 
 NUM = re.compile(r"(?<![\w.-])\d{1,3}(?:,\d{3})+(?:\.\d+)?|(?<![\w.-])\d+(?:\.\d+)?")
+NUM_REG = re.compile(r"(?<![\w.])-?\d{1,3}(?:,\d{3})+(?:\.\d+)?|(?<![\w.])-?\d+(?:\.\d+)?")   # el registro escribe negativos con «-»
 NO_CIFRA = {"97"}   # «Ley 97»
 
 
 def cifras_sin_registro() -> list[str]:
     """3.7: cifras del borrador del anexo que no aparecen en NUMBERS.md (salvo redondeo o expresión en %).
     Se omiten años, enteros de hasta 30 (numerales, parámetros de diseño como 5 %, 2 %, 25 UMA) y nombres como «Ley 97»."""
-    anexo = PROJECT / "ANEXO_experimento2_borrador.md"
+    anexo = PROJECT / ANEXO
     if not anexo.exists():
         return ["(falta el borrador)"]
-    reg = [float(t.replace(",", "")) for t in NUM.findall((PROJECT / "NUMBERS.md").read_text(encoding="utf8"))]
+    reg = [float(t.replace(",", "")) for t in NUM_REG.findall((PROJECT / "NUMBERS.md").read_text(encoding="utf8"))]
     cand = reg + [v * 100 for v in reg]
     faltan = []
     for tok in NUM.findall(anexo.read_text(encoding="utf8")):
@@ -127,10 +136,10 @@ def cifras_sin_registro() -> list[str]:
 def main():
     figura()
     n = sin_2055()
-    record("chk_3.6", n, "3.6 apariciones de 2055 en las tablas")
+    record("chk_3.6", n, "3.6/7.6 apariciones de 2055 en las tablas")
     numbers_md()
     faltan = cifras_sin_registro()
-    return {"3.6 apariciones de 2055 en las tablas": n, "3.7 cifras del anexo sin registro en NUMBERS.md": len(faltan),
+    return {"3.6/7.6 apariciones de 2055 en las tablas": n, "3.7/7.6 cifras del borrador v2 sin registro en NUMBERS.md": len(faltan),
             "3.7 detalle": ", ".join(faltan)}
 
 

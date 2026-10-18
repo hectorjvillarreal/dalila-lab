@@ -47,6 +47,8 @@ SEMILLA = [
     ("PEF2026_salud_no_contributivo", "SSa 68,964.2; IMSS-Bienestar 177,591.9; FASSA 87,344.2; Bienestar 4,128.0; total 338,028.3 mdp de 2027", "CIEP, «PPEF 2027: Gasto en salud por subsistema», Cuadro 1 (cifras del PEF 2026; proporcionado por Héctor el 08-10-2026)", "—", "nueva (v1.2); solo contexto"),
     ("Inflacion_2027", "3.82 %", "Libro, hoja `Sup_Fin`", "—", "nueva (v1.2)"),
     ("N13_DH_2025", "70.69 millones", "Informe del Núcleo 13, Anexo I, Tabla I.1", "—", "referencia de contraste"),
+    ("Ingresos_SEM_V13", "562,126 / 642,375 / 740,391 / 859,501 / 995,073 / 1,131,634 / 1,215,833 mdp de 2026 (2026, 2031, …, 2051 y año final), interpolación lineal", "Informe, Cuadro V.13", "pág. PDF 141", "nueva (18-10); denominador de «% de los ingresos del SEM» de las salidas v1.2, común con el experimento 2 (decisión de Héctor)"),
+    ("Denominador_puntos_v12", "Masa R1: cotizantes del libro × SBC R1 con tope de 25 UMA y piso en el SM × UMA × 337 días (la base de la tasa D2)", "Cálculo propio", "—", "nueva (18-10); denominador común con el experimento 2. El libro de Finanzas se sigue usando para cotizantes, salarios y supuestos, no para el denominador de ingresos del SEM. Las corridas v1.1 conservan sus denominadores"),
 ]
 
 

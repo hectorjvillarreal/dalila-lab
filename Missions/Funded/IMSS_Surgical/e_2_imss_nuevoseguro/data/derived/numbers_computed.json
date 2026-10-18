@@ -15,32 +15,84 @@
   "valor": 1.74,
   "fuente": "% de la masa sin tope que rebasa 25 UMA (forma R1 sin tope)"
  },
- "M2_factor_2027": {
-  "valor": 0.9849,
-  "fuente": "Formalidad implícita 2025 / formalidad implícita t (prueba C de la v1.2)"
- },
  "formalidad_implicita_2027": {
   "valor": 0.3452,
   "fuente": "Cotizantes / ocupados (prueba C de la v1.2)"
  },
+ "base_formalidad_2027": {
+  "valor": 34.52,
+  "fuente": "Formalidad implícita del escenario base (%)"
+ },
+ "base_factor_masa_2027": {
+  "valor": 1.0,
+  "fuente": "Masa base / masa base"
+ },
+ "M3_formalidad_2027": {
+  "valor": 34.26,
+  "fuente": "Formalidad implícita del escenario M3 (%)"
+ },
+ "M3_factor_masa_2027": {
+  "valor": 0.9925,
+  "fuente": "Masa M3 / masa base"
+ },
+ "M2_formalidad_2027": {
+  "valor": 34.0,
+  "fuente": "Formalidad implícita del escenario M2 (%)"
+ },
+ "M2_factor_masa_2027": {
+  "valor": 0.9849,
+  "fuente": "Masa M2 / masa base"
+ },
  "DH65_2027": {
   "valor": 14295992,
-  "fuente": "0.166 × 79,178,109 × (CONAPO 65+ t / CONAPO 65+ 2025)"
+  "fuente": "Conteo máximo: 0.166 × 79,178,109 × (CONAPO 65+ t / CONAPO 65+ 2025)"
  },
  "DH80_2027": {
   "valor": 3084411,
-  "fuente": "DH65 × (CONAPO 80+ / CONAPO 65+)"
+  "fuente": "Conteo máximo: DH65 × (CONAPO 80+ / CONAPO 65+)"
+ },
+ "ENIGH65_2027": {
+  "valor": 5923223,
+  "fuente": "Tasa IMSS (inst_1) de la ENIGH 2024 por grupo quinquenal y sexo × CONAPO, 65+"
+ },
+ "ENIGH80_2027": {
+  "valor": 1147234,
+  "fuente": "Idem, 80+"
+ },
+ "ENIGH65_entre_CONAPO65_2027": {
+  "valor": 46.6,
+  "fuente": "Base ENIGH 65+ / población nacional de 65+ (%)"
+ },
+ "DH65_entre_CONAPO65_2027": {
+  "valor": 112.4,
+  "fuente": "Conteo máximo 65+ / población nacional de 65+ (%)"
  },
  "SEM_ingresos_2027": {
   "valor": 578176,
   "fuente": "Informe, Cuadro V.13, interpolación lineal"
  },
+ "SEM_ingresos_libro_2027": {
+  "valor": 561611,
+  "fuente": "Libro de Finanzas, SEM-A + SEM-GMP"
+ },
  "GMP_deficit_2027": {
   "valor": 74270,
   "fuente": "Informe, Cuadro V.24 (base), interpolación lineal"
  },
+ "GMP_ingresos_2027": {
+  "valor": 92473,
+  "fuente": "Informe, Cuadro V.24 (base), ingresos, interpolación lineal"
+ },
+ "GMP_provisiones_2027": {
+  "valor": 2093,
+  "fuente": "Informe, Cuadro V.19, provisiones, interpolación lineal"
+ },
  "base_ingreso_NS_2027": {
   "valor": 109378,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_deficit_GMP_2027": {
+  "valor": 74270,
   "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
  },
  "base_k1_remanente_cuidados_2027": {
@@ -67,9 +119,13 @@
   "valor": 273444,
   "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
  },
+ "base_masa_tope25_2027": {
+  "valor": 5468877,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
  "base_ingreso_NS_pts_2027": {
   "valor": 2.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_ingreso_NS_sem_2027": {
   "valor": 18.92,
@@ -77,7 +133,7 @@
  },
  "base_deficit_GMP_pts_2027": {
   "valor": 1.358,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_deficit_GMP_sem_2027": {
   "valor": 12.85,
@@ -85,15 +141,23 @@
  },
  "base_k1_remanente_cuidados_pts_2027": {
   "valor": 0.642,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_k1_remanente_cuidados_sem_2027": {
   "valor": 6.07,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
+ "base_k1_deficit_no_cubierto_pts_2027": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "base_k1_deficit_no_cubierto_sem_2027": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
  "base_k2_cuidados_pts_2027": {
   "valor": 0.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_k2_cuidados_sem_2027": {
   "valor": 0.0,
@@ -101,18 +165,106 @@
  },
  "base_reduccion_cuna_legal_pts_2027": {
   "valor": 3.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_reduccion_cuna_legal_sem_2027": {
   "valor": 28.38,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_ingreso_NS_2027": {
+  "valor": 108552,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_deficit_GMP_2027": {
+  "valor": 74968,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_k1_remanente_cuidados_2027": {
+  "valor": 33584,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_k1_deficit_no_cubierto_2027": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_k2_cuidados_2027": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_k2_reserva_fin_2027": {
+  "valor": 33584,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_reduccion_cuna_legal_2027": {
+  "valor": 162828,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_infonavit_5pct_teorico_2027": {
+  "valor": 271380,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_masa_tope25_2027": {
+  "valor": 5427607,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_ingreso_NS_pts_2027": {
+  "valor": 2.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_ingreso_NS_sem_2027": {
+  "valor": 18.77,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_deficit_GMP_pts_2027": {
+  "valor": 1.381,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_deficit_GMP_sem_2027": {
+  "valor": 12.97,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_k1_remanente_cuidados_pts_2027": {
+  "valor": 0.619,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_k1_remanente_cuidados_sem_2027": {
+  "valor": 5.81,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_k1_deficit_no_cubierto_pts_2027": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_k1_deficit_no_cubierto_sem_2027": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_k2_cuidados_pts_2027": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_k2_cuidados_sem_2027": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_reduccion_cuna_legal_pts_2027": {
+  "valor": 3.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_reduccion_cuna_legal_sem_2027": {
+  "valor": 28.16,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
  "M2_ingreso_NS_2027": {
   "valor": 107727,
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
+ "M2_deficit_GMP_2027": {
+  "valor": 75666,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
  "M2_k1_remanente_cuidados_2027": {
-  "valor": 33456,
+  "valor": 32061,
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
  "M2_k1_deficit_no_cubierto_2027": {
@@ -124,7 +276,7 @@
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
  "M2_k2_reserva_fin_2027": {
-  "valor": 33456,
+  "valor": 32061,
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
  "M2_reduccion_cuna_legal_2027": {
@@ -135,33 +287,45 @@
   "valor": 269317,
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
+ "M2_masa_tope25_2027": {
+  "valor": 5386337,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
  "M2_ingreso_NS_pts_2027": {
   "valor": 2.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_ingreso_NS_sem_2027": {
   "valor": 18.63,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
  "M2_deficit_GMP_pts_2027": {
-  "valor": 1.379,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "valor": 1.405,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_deficit_GMP_sem_2027": {
-  "valor": 12.85,
+  "valor": 13.09,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
  "M2_k1_remanente_cuidados_pts_2027": {
-  "valor": 0.621,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "valor": 0.595,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_k1_remanente_cuidados_sem_2027": {
-  "valor": 5.79,
+  "valor": 5.55,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_k1_deficit_no_cubierto_pts_2027": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M2_k1_deficit_no_cubierto_sem_2027": {
+  "valor": 0.0,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
  "M2_k2_cuidados_pts_2027": {
   "valor": 0.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_k2_cuidados_sem_2027": {
   "valor": 0.0,
@@ -169,7 +333,7 @@
  },
  "M2_reduccion_cuna_legal_pts_2027": {
   "valor": 3.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_reduccion_cuna_legal_sem_2027": {
   "valor": 27.95,
@@ -191,32 +355,84 @@
   "valor": 1.81,
   "fuente": "% de la masa sin tope que rebasa 25 UMA (forma R1 sin tope)"
  },
- "M2_factor_2030": {
-  "valor": 0.9321,
-  "fuente": "Formalidad implícita 2025 / formalidad implícita t (prueba C de la v1.2)"
- },
  "formalidad_implicita_2030": {
   "valor": 0.3647,
   "fuente": "Cotizantes / ocupados (prueba C de la v1.2)"
  },
+ "base_formalidad_2030": {
+  "valor": 36.47,
+  "fuente": "Formalidad implícita del escenario base (%)"
+ },
+ "base_factor_masa_2030": {
+  "valor": 1.0,
+  "fuente": "Masa base / masa base"
+ },
+ "M3_formalidad_2030": {
+  "valor": 35.23,
+  "fuente": "Formalidad implícita del escenario M3 (%)"
+ },
+ "M3_factor_masa_2030": {
+  "valor": 0.9661,
+  "fuente": "Masa M3 / masa base"
+ },
+ "M2_formalidad_2030": {
+  "valor": 34.0,
+  "fuente": "Formalidad implícita del escenario M2 (%)"
+ },
+ "M2_factor_masa_2030": {
+  "valor": 0.9321,
+  "fuente": "Masa M2 / masa base"
+ },
  "DH65_2030": {
   "valor": 16182171,
-  "fuente": "0.166 × 79,178,109 × (CONAPO 65+ t / CONAPO 65+ 2025)"
+  "fuente": "Conteo máximo: 0.166 × 79,178,109 × (CONAPO 65+ t / CONAPO 65+ 2025)"
  },
  "DH80_2030": {
   "valor": 3486854,
-  "fuente": "DH65 × (CONAPO 80+ / CONAPO 65+)"
+  "fuente": "Conteo máximo: DH65 × (CONAPO 80+ / CONAPO 65+)"
+ },
+ "ENIGH65_2030": {
+  "valor": 6704827,
+  "fuente": "Tasa IMSS (inst_1) de la ENIGH 2024 por grupo quinquenal y sexo × CONAPO, 65+"
+ },
+ "ENIGH80_2030": {
+  "valor": 1295372,
+  "fuente": "Idem, 80+"
+ },
+ "ENIGH65_entre_CONAPO65_2030": {
+  "valor": 46.6,
+  "fuente": "Base ENIGH 65+ / población nacional de 65+ (%)"
+ },
+ "DH65_entre_CONAPO65_2030": {
+  "valor": 112.4,
+  "fuente": "Conteo máximo 65+ / población nacional de 65+ (%)"
  },
  "SEM_ingresos_2030": {
   "valor": 626325,
   "fuente": "Informe, Cuadro V.13, interpolación lineal"
  },
+ "SEM_ingresos_libro_2030": {
+  "valor": 611178,
+  "fuente": "Libro de Finanzas, SEM-A + SEM-GMP"
+ },
  "GMP_deficit_2030": {
   "valor": 91888,
   "fuente": "Informe, Cuadro V.24 (base), interpolación lineal"
  },
+ "GMP_ingresos_2030": {
+  "valor": 101395,
+  "fuente": "Informe, Cuadro V.24 (base), ingresos, interpolación lineal"
+ },
+ "GMP_provisiones_2030": {
+  "valor": 8001,
+  "fuente": "Informe, Cuadro V.19, provisiones, interpolación lineal"
+ },
  "base_ingreso_NS_2030": {
   "valor": 124109,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_deficit_GMP_2030": {
+  "valor": 91888,
   "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
  },
  "base_k1_remanente_cuidados_2030": {
@@ -243,9 +459,13 @@
   "valor": 310273,
   "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
  },
+ "base_masa_tope25_2030": {
+  "valor": 6205467,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
  "base_ingreso_NS_pts_2030": {
   "valor": 2.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_ingreso_NS_sem_2030": {
   "valor": 19.82,
@@ -253,7 +473,7 @@
  },
  "base_deficit_GMP_pts_2030": {
   "valor": 1.481,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_deficit_GMP_sem_2030": {
   "valor": 14.67,
@@ -261,15 +481,23 @@
  },
  "base_k1_remanente_cuidados_pts_2030": {
   "valor": 0.519,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_k1_remanente_cuidados_sem_2030": {
   "valor": 5.14,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
+ "base_k1_deficit_no_cubierto_pts_2030": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "base_k1_deficit_no_cubierto_sem_2030": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
  "base_k2_cuidados_pts_2030": {
   "valor": 0.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_k2_cuidados_sem_2030": {
   "valor": 0.0,
@@ -277,18 +505,106 @@
  },
  "base_reduccion_cuna_legal_pts_2030": {
   "valor": 3.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_reduccion_cuna_legal_sem_2030": {
   "valor": 29.72,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_ingreso_NS_2030": {
+  "valor": 119898,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_deficit_GMP_2030": {
+  "valor": 95328,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_k1_remanente_cuidados_2030": {
+  "valor": 24569,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_k1_deficit_no_cubierto_2030": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_k2_cuidados_2030": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_k2_reserva_fin_2030": {
+  "valor": 121577,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_reduccion_cuna_legal_2030": {
+  "valor": 179846,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_infonavit_5pct_teorico_2030": {
+  "valor": 299744,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_masa_tope25_2030": {
+  "valor": 5994882,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_ingreso_NS_pts_2030": {
+  "valor": 2.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_ingreso_NS_sem_2030": {
+  "valor": 19.14,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_deficit_GMP_pts_2030": {
+  "valor": 1.59,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_deficit_GMP_sem_2030": {
+  "valor": 15.22,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_k1_remanente_cuidados_pts_2030": {
+  "valor": 0.41,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_k1_remanente_cuidados_sem_2030": {
+  "valor": 3.92,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_k1_deficit_no_cubierto_pts_2030": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_k1_deficit_no_cubierto_sem_2030": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_k2_cuidados_pts_2030": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_k2_cuidados_sem_2030": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_reduccion_cuna_legal_pts_2030": {
+  "valor": 3.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_reduccion_cuna_legal_sem_2030": {
+  "valor": 28.71,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
  "M2_ingreso_NS_2030": {
   "valor": 115686,
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
+ "M2_deficit_GMP_2030": {
+  "valor": 98769,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
  "M2_k1_remanente_cuidados_2030": {
-  "valor": 23798,
+  "valor": 16917,
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
  "M2_k1_deficit_no_cubierto_2030": {
@@ -300,7 +616,7 @@
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
  "M2_k2_reserva_fin_2030": {
-  "valor": 119838,
+  "valor": 103179,
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
  "M2_reduccion_cuna_legal_2030": {
@@ -311,33 +627,45 @@
   "valor": 289215,
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
+ "M2_masa_tope25_2030": {
+  "valor": 5784296,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
  "M2_ingreso_NS_pts_2030": {
   "valor": 2.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_ingreso_NS_sem_2030": {
   "valor": 18.47,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
  "M2_deficit_GMP_pts_2030": {
-  "valor": 1.589,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "valor": 1.708,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_deficit_GMP_sem_2030": {
-  "valor": 14.67,
+  "valor": 15.77,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
  "M2_k1_remanente_cuidados_pts_2030": {
-  "valor": 0.411,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "valor": 0.292,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_k1_remanente_cuidados_sem_2030": {
-  "valor": 3.8,
+  "valor": 2.7,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M2_k1_deficit_no_cubierto_pts_2030": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M2_k1_deficit_no_cubierto_sem_2030": {
+  "valor": 0.0,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
  "M2_k2_cuidados_pts_2030": {
   "valor": 0.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_k2_cuidados_sem_2030": {
   "valor": 0.0,
@@ -345,7 +673,7 @@
  },
  "M2_reduccion_cuna_legal_pts_2030": {
   "valor": 3.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_reduccion_cuna_legal_sem_2030": {
   "valor": 27.71,
@@ -367,32 +695,84 @@
   "valor": 2.12,
   "fuente": "% de la masa sin tope que rebasa 25 UMA (forma R1 sin tope)"
  },
- "M2_factor_2040": {
-  "valor": 0.7384,
-  "fuente": "Formalidad implícita 2025 / formalidad implícita t (prueba C de la v1.2)"
- },
  "formalidad_implicita_2040": {
   "valor": 0.4604,
   "fuente": "Cotizantes / ocupados (prueba C de la v1.2)"
  },
+ "base_formalidad_2040": {
+  "valor": 46.04,
+  "fuente": "Formalidad implícita del escenario base (%)"
+ },
+ "base_factor_masa_2040": {
+  "valor": 1.0,
+  "fuente": "Masa base / masa base"
+ },
+ "M3_formalidad_2040": {
+  "valor": 40.02,
+  "fuente": "Formalidad implícita del escenario M3 (%)"
+ },
+ "M3_factor_masa_2040": {
+  "valor": 0.8692,
+  "fuente": "Masa M3 / masa base"
+ },
+ "M2_formalidad_2040": {
+  "valor": 34.0,
+  "fuente": "Formalidad implícita del escenario M2 (%)"
+ },
+ "M2_factor_masa_2040": {
+  "valor": 0.7384,
+  "fuente": "Masa M2 / masa base"
+ },
  "DH65_2040": {
   "valor": 23340899,
-  "fuente": "0.166 × 79,178,109 × (CONAPO 65+ t / CONAPO 65+ 2025)"
+  "fuente": "Conteo máximo: 0.166 × 79,178,109 × (CONAPO 65+ t / CONAPO 65+ 2025)"
  },
  "DH80_2040": {
   "valor": 5553803,
-  "fuente": "DH65 × (CONAPO 80+ / CONAPO 65+)"
+  "fuente": "Conteo máximo: DH65 × (CONAPO 80+ / CONAPO 65+)"
+ },
+ "ENIGH65_2040": {
+  "valor": 9645418,
+  "fuente": "Tasa IMSS (inst_1) de la ENIGH 2024 por grupo quinquenal y sexo × CONAPO, 65+"
+ },
+ "ENIGH80_2040": {
+  "valor": 2063704,
+  "fuente": "Idem, 80+"
+ },
+ "ENIGH65_entre_CONAPO65_2040": {
+  "valor": 46.4,
+  "fuente": "Base ENIGH 65+ / población nacional de 65+ (%)"
+ },
+ "DH65_entre_CONAPO65_2040": {
+  "valor": 112.4,
+  "fuente": "Conteo máximo 65+ / población nacional de 65+ (%)"
  },
  "SEM_ingresos_2040": {
   "valor": 835679,
   "fuente": "Informe, Cuadro V.13, interpolación lineal"
  },
+ "SEM_ingresos_libro_2040": {
+  "valor": 833059,
+  "fuente": "Libro de Finanzas, SEM-A + SEM-GMP"
+ },
  "GMP_deficit_2040": {
   "valor": 137449,
   "fuente": "Informe, Cuadro V.24 (base), interpolación lineal"
  },
+ "GMP_ingresos_2040": {
+  "valor": 138216,
+  "fuente": "Informe, Cuadro V.24 (base), ingresos, interpolación lineal"
+ },
+ "GMP_provisiones_2040": {
+  "valor": 4348,
+  "fuente": "Informe, Cuadro V.19, provisiones, interpolación lineal"
+ },
  "base_ingreso_NS_2040": {
   "valor": 178194,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_deficit_GMP_2040": {
+  "valor": 137449,
   "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
  },
  "base_k1_remanente_cuidados_2040": {
@@ -419,9 +799,13 @@
   "valor": 445485,
   "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
  },
+ "base_masa_tope25_2040": {
+  "valor": 8909700,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
  "base_ingreso_NS_pts_2040": {
   "valor": 2.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_ingreso_NS_sem_2040": {
   "valor": 21.32,
@@ -429,7 +813,7 @@
  },
  "base_deficit_GMP_pts_2040": {
   "valor": 1.543,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_deficit_GMP_sem_2040": {
   "valor": 16.45,
@@ -437,15 +821,23 @@
  },
  "base_k1_remanente_cuidados_pts_2040": {
   "valor": 0.457,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_k1_remanente_cuidados_sem_2040": {
   "valor": 4.88,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
+ "base_k1_deficit_no_cubierto_pts_2040": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "base_k1_deficit_no_cubierto_sem_2040": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
  "base_k2_cuidados_pts_2040": {
   "valor": 0.61,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_k2_cuidados_sem_2040": {
   "valor": 6.5,
@@ -453,14 +845,102 @@
  },
  "base_reduccion_cuna_legal_pts_2040": {
   "valor": 3.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_reduccion_cuna_legal_sem_2040": {
   "valor": 31.98,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
+ "M3_ingreso_NS_2040": {
+  "valor": 154882,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_deficit_GMP_2040": {
+  "valor": 155531,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_k1_remanente_cuidados_2040": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_k1_deficit_no_cubierto_2040": {
+  "valor": 648,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_k2_cuidados_2040": {
+  "valor": 9557,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_k2_reserva_fin_2040": {
+  "valor": 149629,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_reduccion_cuna_legal_2040": {
+  "valor": 232323,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_infonavit_5pct_teorico_2040": {
+  "valor": 387206,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_masa_tope25_2040": {
+  "valor": 7744116,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_ingreso_NS_pts_2040": {
+  "valor": 2.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_ingreso_NS_sem_2040": {
+  "valor": 18.53,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_deficit_GMP_pts_2040": {
+  "valor": 2.008,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_deficit_GMP_sem_2040": {
+  "valor": 18.61,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_k1_remanente_cuidados_pts_2040": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_k1_remanente_cuidados_sem_2040": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_k1_deficit_no_cubierto_pts_2040": {
+  "valor": 0.008,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_k1_deficit_no_cubierto_sem_2040": {
+  "valor": 0.08,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_k2_cuidados_pts_2040": {
+  "valor": 0.123,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_k2_cuidados_sem_2040": {
+  "valor": 1.14,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_reduccion_cuna_legal_pts_2040": {
+  "valor": 3.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_reduccion_cuna_legal_sem_2040": {
+  "valor": 27.8,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
  "M2_ingreso_NS_2040": {
   "valor": 131571,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_deficit_GMP_2040": {
+  "valor": 173612,
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
  "M2_k1_remanente_cuidados_2040": {
@@ -468,15 +948,15 @@
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
  "M2_k1_deficit_no_cubierto_2040": {
-  "valor": 5878,
+  "valor": 42042,
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
  "M2_k2_cuidados_2040": {
-  "valor": 9131,
+  "valor": 0,
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
  "M2_k2_reserva_fin_2040": {
-  "valor": 117101,
+  "valor": 0,
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
  "M2_reduccion_cuna_legal_2040": {
@@ -487,41 +967,53 @@
   "valor": 328927,
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
+ "M2_masa_tope25_2040": {
+  "valor": 6578532,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
  "M2_ingreso_NS_pts_2040": {
   "valor": 2.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_ingreso_NS_sem_2040": {
   "valor": 15.74,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
  "M2_deficit_GMP_pts_2040": {
-  "valor": 2.089,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "valor": 2.639,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_deficit_GMP_sem_2040": {
-  "valor": 16.45,
+  "valor": 20.78,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
  "M2_k1_remanente_cuidados_pts_2040": {
   "valor": 0.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_k1_remanente_cuidados_sem_2040": {
   "valor": 0.0,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
+ "M2_k1_deficit_no_cubierto_pts_2040": {
+  "valor": 0.639,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M2_k1_deficit_no_cubierto_sem_2040": {
+  "valor": 5.03,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
  "M2_k2_cuidados_pts_2040": {
-  "valor": 0.139,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_k2_cuidados_sem_2040": {
-  "valor": 1.09,
+  "valor": 0.0,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
  "M2_reduccion_cuna_legal_pts_2040": {
   "valor": 3.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_reduccion_cuna_legal_sem_2040": {
   "valor": 23.62,
@@ -543,32 +1035,84 @@
   "valor": 2.71,
   "fuente": "% de la masa sin tope que rebasa 25 UMA (forma R1 sin tope)"
  },
- "M2_factor_2054": {
-  "valor": 0.5385,
-  "fuente": "Formalidad implícita 2025 / formalidad implícita t (prueba C de la v1.2)"
- },
  "formalidad_implicita_2054": {
   "valor": 0.6313,
   "fuente": "Cotizantes / ocupados (prueba C de la v1.2)"
  },
+ "base_formalidad_2054": {
+  "valor": 63.13,
+  "fuente": "Formalidad implícita del escenario base (%)"
+ },
+ "base_factor_masa_2054": {
+  "valor": 1.0,
+  "fuente": "Masa base / masa base"
+ },
+ "M3_formalidad_2054": {
+  "valor": 48.56,
+  "fuente": "Formalidad implícita del escenario M3 (%)"
+ },
+ "M3_factor_masa_2054": {
+  "valor": 0.7693,
+  "fuente": "Masa M3 / masa base"
+ },
+ "M2_formalidad_2054": {
+  "valor": 34.0,
+  "fuente": "Formalidad implícita del escenario M2 (%)"
+ },
+ "M2_factor_masa_2054": {
+  "valor": 0.5385,
+  "fuente": "Masa M2 / masa base"
+ },
  "DH65_2054": {
   "valor": 33012741,
-  "fuente": "0.166 × 79,178,109 × (CONAPO 65+ t / CONAPO 65+ 2025)"
+  "fuente": "Conteo máximo: 0.166 × 79,178,109 × (CONAPO 65+ t / CONAPO 65+ 2025)"
  },
  "DH80_2054": {
   "valor": 10286912,
-  "fuente": "DH65 × (CONAPO 80+ / CONAPO 65+)"
+  "fuente": "Conteo máximo: DH65 × (CONAPO 80+ / CONAPO 65+)"
+ },
+ "ENIGH65_2054": {
+  "valor": 13476177,
+  "fuente": "Tasa IMSS (inst_1) de la ENIGH 2024 por grupo quinquenal y sexo × CONAPO, 65+"
+ },
+ "ENIGH80_2054": {
+  "valor": 3796023,
+  "fuente": "Idem, 80+"
+ },
+ "ENIGH65_entre_CONAPO65_2054": {
+  "valor": 45.9,
+  "fuente": "Base ENIGH 65+ / población nacional de 65+ (%)"
+ },
+ "DH65_entre_CONAPO65_2054": {
+  "valor": 112.4,
+  "fuente": "Conteo máximo 65+ / población nacional de 65+ (%)"
  },
  "SEM_ingresos_2054": {
   "valor": 1194783,
   "fuente": "Informe, Cuadro V.13, interpolación lineal"
  },
+ "SEM_ingresos_libro_2054": {
+  "valor": 1206423,
+  "fuente": "Libro de Finanzas, SEM-A + SEM-GMP"
+ },
  "GMP_deficit_2054": {
   "valor": 198154,
   "fuente": "Informe, Cuadro V.24 (base), interpolación lineal"
  },
+ "GMP_ingresos_2054": {
+  "valor": 212229,
+  "fuente": "Informe, Cuadro V.24 (base), ingresos, interpolación lineal"
+ },
+ "GMP_provisiones_2054": {
+  "valor": 544,
+  "fuente": "Informe, Cuadro V.19, provisiones, interpolación lineal"
+ },
  "base_ingreso_NS_2054": {
   "valor": 274824,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
+ "base_deficit_GMP_2054": {
+  "valor": 198154,
   "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
  },
  "base_k1_remanente_cuidados_2054": {
@@ -595,9 +1139,13 @@
   "valor": 687059,
   "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
  },
+ "base_masa_tope25_2054": {
+  "valor": 13741181,
+  "fuente": "ingreso_vs_GMP.csv, base, mdp de 2026"
+ },
  "base_ingreso_NS_pts_2054": {
   "valor": 2.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_ingreso_NS_sem_2054": {
   "valor": 23.0,
@@ -605,7 +1153,7 @@
  },
  "base_deficit_GMP_pts_2054": {
   "valor": 1.442,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_deficit_GMP_sem_2054": {
   "valor": 16.58,
@@ -613,15 +1161,23 @@
  },
  "base_k1_remanente_cuidados_pts_2054": {
   "valor": 0.558,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_k1_remanente_cuidados_sem_2054": {
   "valor": 6.42,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
+ "base_k1_deficit_no_cubierto_pts_2054": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "base_k1_deficit_no_cubierto_sem_2054": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
  "base_k2_cuidados_pts_2054": {
   "valor": 0.657,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_k2_cuidados_sem_2054": {
   "valor": 7.55,
@@ -629,14 +1185,102 @@
  },
  "base_reduccion_cuna_legal_pts_2054": {
   "valor": 3.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "base_reduccion_cuna_legal_sem_2054": {
   "valor": 34.5,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
+ "M3_ingreso_NS_2054": {
+  "valor": 211411,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_deficit_GMP_2054": {
+  "valor": 247123,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_k1_remanente_cuidados_2054": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_k1_deficit_no_cubierto_2054": {
+  "valor": 35712,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_k2_cuidados_2054": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_k2_reserva_fin_2054": {
+  "valor": 0,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_reduccion_cuna_legal_2054": {
+  "valor": 317117,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_infonavit_5pct_teorico_2054": {
+  "valor": 528529,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_masa_tope25_2054": {
+  "valor": 10570571,
+  "fuente": "ingreso_vs_GMP.csv, M3, mdp de 2026"
+ },
+ "M3_ingreso_NS_pts_2054": {
+  "valor": 2.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_ingreso_NS_sem_2054": {
+  "valor": 17.69,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_deficit_GMP_pts_2054": {
+  "valor": 2.338,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_deficit_GMP_sem_2054": {
+  "valor": 20.68,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_k1_remanente_cuidados_pts_2054": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_k1_remanente_cuidados_sem_2054": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_k1_deficit_no_cubierto_pts_2054": {
+  "valor": 0.338,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_k1_deficit_no_cubierto_sem_2054": {
+  "valor": 2.99,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_k2_cuidados_pts_2054": {
+  "valor": 0.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_k2_cuidados_sem_2054": {
+  "valor": 0.0,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
+ "M3_reduccion_cuna_legal_pts_2054": {
+  "valor": 3.0,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M3_reduccion_cuna_legal_sem_2054": {
+  "valor": 26.54,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
  "M2_ingreso_NS_2054": {
   "valor": 147999,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
+ "M2_deficit_GMP_2054": {
+  "valor": 296092,
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
  "M2_k1_remanente_cuidados_2054": {
@@ -644,7 +1288,7 @@
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
  "M2_k1_deficit_no_cubierto_2054": {
-  "valor": 50155,
+  "valor": 148093,
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
  "M2_k2_cuidados_2054": {
@@ -663,33 +1307,45 @@
   "valor": 369998,
   "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
  },
+ "M2_masa_tope25_2054": {
+  "valor": 7399962,
+  "fuente": "ingreso_vs_GMP.csv, M2, mdp de 2026"
+ },
  "M2_ingreso_NS_pts_2054": {
   "valor": 2.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_ingreso_NS_sem_2054": {
   "valor": 12.39,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
  "M2_deficit_GMP_pts_2054": {
-  "valor": 2.678,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "valor": 4.001,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_deficit_GMP_sem_2054": {
-  "valor": 16.58,
+  "valor": 24.78,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
  "M2_k1_remanente_cuidados_pts_2054": {
   "valor": 0.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_k1_remanente_cuidados_sem_2054": {
   "valor": 0.0,
   "fuente": "% de los ingresos del SEM (Cuadro V.13)"
  },
+ "M2_k1_deficit_no_cubierto_pts_2054": {
+  "valor": 2.001,
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
+ },
+ "M2_k1_deficit_no_cubierto_sem_2054": {
+  "valor": 12.39,
+  "fuente": "% de los ingresos del SEM (Cuadro V.13)"
+ },
  "M2_k2_cuidados_pts_2054": {
   "valor": 0.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_k2_cuidados_sem_2054": {
   "valor": 0.0,
@@ -697,7 +1353,7 @@
  },
  "M2_reduccion_cuna_legal_pts_2054": {
   "valor": 3.0,
-  "fuente": "Puntos del salario (masa con tope, 337 días)"
+  "fuente": "Puntos del salario (masa del escenario con tope, 337 días)"
  },
  "M2_reduccion_cuna_legal_sem_2054": {
   "valor": 18.58,
@@ -705,11 +1361,7 @@
  },
  "DH65_2025": {
   "valor": 13143566,
-  "fuente": "0.166 × 79,178,109"
- },
- "DH65_PAMF_2025": {
-  "valor": 10557358,
-  "fuente": "0.166 × 63,598,543 (adscripciones a médico familiar)"
+  "fuente": "Conteo máximo: 0.166 × 79,178,109"
  },
  "CONAPO_65mas_2025": {
   "valor": 11698499,
@@ -717,47 +1369,71 @@
  },
  "DH65_entre_CONAPO65_2025": {
   "valor": 112.4,
-  "fuente": "DH65 (instrucción) / población nacional de 65+ (%)"
+  "fuente": "Conteo máximo / población nacional de 65+ (%)"
  },
- "DH65_PAMF_entre_CONAPO65_2025": {
-  "valor": 90.2,
-  "fuente": "DH65 con base PAMF / población nacional de 65+ (%)"
+ "ENIGH_tasa_IMSS_65mas": {
+  "valor": 46.62,
+  "fuente": "ENIGH 2024, % de 65+ con inst_1 = 1 (ponderado)"
  },
- "DH65_PAMF_2027": {
-  "valor": 11483026,
-  "fuente": "0.166 × 63,598,543 × crecimiento CONAPO 65+"
+ "ENIGH_tasa_IMSS_80mas": {
+  "valor": 41.84,
+  "fuente": "ENIGH 2024, % de 80+ con inst_1 = 1 (ponderado)"
  },
- "DH80_PAMF_2027": {
-  "valor": 2477504,
-  "fuente": "DH65_PAMF × CONAPO 80+/65+"
+ "ENIGH65_2025": {
+  "valor": 5445347,
+  "fuente": "Base ENIGH, 65+, 2025"
  },
- "DH65_PAMF_2030": {
-  "valor": 12998069,
-  "fuente": "0.166 × 63,598,543 × crecimiento CONAPO 65+"
+ "ENIGH_n_min_celda": {
+  "valor": 1329,
+  "fuente": "Observaciones mínimas por celda grupo × sexo (65+)"
  },
- "DH80_PAMF_2030": {
-  "valor": 2800759,
-  "fuente": "DH65_PAMF × CONAPO 80+/65+"
+ "ENIGH_tasa_65_H": {
+  "valor": 46.77,
+  "fuente": "Tasa IMSS por grupo quinquenal (85 = 85 y más) y sexo, ENIGH 2024 (%)"
  },
- "DH65_PAMF_2040": {
-  "valor": 18748202,
-  "fuente": "0.166 × 63,598,543 × crecimiento CONAPO 65+"
+ "ENIGH_tasa_65_M": {
+  "valor": 47.0,
+  "fuente": "Tasa IMSS por grupo quinquenal (85 = 85 y más) y sexo, ENIGH 2024 (%)"
  },
- "DH80_PAMF_2040": {
-  "valor": 4461003,
-  "fuente": "DH65_PAMF × CONAPO 80+/65+"
+ "ENIGH_tasa_70_H": {
+  "valor": 50.42,
+  "fuente": "Tasa IMSS por grupo quinquenal (85 = 85 y más) y sexo, ENIGH 2024 (%)"
  },
- "DH65_PAMF_2054": {
-  "valor": 26516953,
-  "fuente": "0.166 × 63,598,543 × crecimiento CONAPO 65+"
+ "ENIGH_tasa_70_M": {
+  "valor": 49.3,
+  "fuente": "Tasa IMSS por grupo quinquenal (85 = 85 y más) y sexo, ENIGH 2024 (%)"
  },
- "DH80_PAMF_2054": {
-  "valor": 8262796,
-  "fuente": "DH65_PAMF × CONAPO 80+/65+"
+ "ENIGH_tasa_75_H": {
+  "valor": 47.7,
+  "fuente": "Tasa IMSS por grupo quinquenal (85 = 85 y más) y sexo, ENIGH 2024 (%)"
+ },
+ "ENIGH_tasa_75_M": {
+  "valor": 46.33,
+  "fuente": "Tasa IMSS por grupo quinquenal (85 = 85 y más) y sexo, ENIGH 2024 (%)"
+ },
+ "ENIGH_tasa_80_H": {
+  "valor": 43.35,
+  "fuente": "Tasa IMSS por grupo quinquenal (85 = 85 y más) y sexo, ENIGH 2024 (%)"
+ },
+ "ENIGH_tasa_80_M": {
+  "valor": 45.48,
+  "fuente": "Tasa IMSS por grupo quinquenal (85 = 85 y más) y sexo, ENIGH 2024 (%)"
+ },
+ "ENIGH_tasa_85_H": {
+  "valor": 40.53,
+  "fuente": "Tasa IMSS por grupo quinquenal (85 = 85 y más) y sexo, ENIGH 2024 (%)"
+ },
+ "ENIGH_tasa_85_M": {
+  "valor": 37.28,
+  "fuente": "Tasa IMSS por grupo quinquenal (85 = 85 y más) y sexo, ENIGH 2024 (%)"
  },
  "base_k1_primer_anio_no_cubre": {
   "valor": "ninguno",
   "fuente": "Primer año en que I < D (K1)"
+ },
+ "base_k1_cubre_hasta": {
+  "valor": 2054,
+  "fuente": "Último año cubierto antes del primero sin cobertura (K1)"
  },
  "base_k1_anios_no_cubre": {
   "valor": 0,
@@ -795,44 +1471,108 @@
   "valor": 0.259,
   "fuente": "Holgura mínima en puntos del salario"
  },
- "base_cubre_desde": {
+ "base_margen_sin_prov_min": {
+  "valor": 37200,
+  "fuente": "Mínimo de ingreso − (déficit − provisiones de GMP), 2027-2054"
+ },
+ "base_margen_sin_prov_min_anio": {
   "valor": 2027,
-  "fuente": "Primer año con I ≥ D"
+  "fuente": "Año del margen mínimo sin provisiones"
  },
- "base_deja_de_cubrir": {
-  "valor": "no deja de cubrir",
-  "fuente": "Primer año posterior a 2027 con I < D"
+ "base_margen_sin_prov_2036": {
+  "valor": 39568,
+  "fuente": "Margen sin provisiones en 2036"
  },
- "M2_k1_primer_anio_no_cubre": {
+ "M3_k1_primer_anio_no_cubre": {
   "valor": 2035,
   "fuente": "Primer año en que I < D (K1)"
  },
- "M2_k1_anios_no_cubre": {
-  "valor": 20,
+ "M3_k1_cubre_hasta": {
+  "valor": 2034,
+  "fuente": "Último año cubierto antes del primero sin cobertura (K1)"
+ },
+ "M3_k1_anios_no_cubre": {
+  "valor": 19,
   "fuente": "Años 2027-2054 con I < D"
  },
- "M2_k2_primer_anio_no_cubre": {
-  "valor": 2047,
+ "M3_k2_primer_anio_no_cubre": {
+  "valor": 2051,
   "fuente": "Primer año con déficit no cubierto tras usar la reserva (K2)"
  },
- "M2_k2_reserva_max": {
-  "valor": 182617,
+ "M3_k2_reserva_max": {
+  "valor": 191144,
   "fuente": "Reserva máxima K2 (mdp de 2026)"
  },
- "M2_k2_reserva_max_anio": {
+ "M3_k2_reserva_max_anio": {
   "valor": 2034,
   "fuente": "Año de la reserva máxima K2"
  },
+ "M3_k2_retiro_anual": {
+  "valor": 9557,
+  "fuente": "1/20 de la reserva al inicio de 2035 (mdp de 2026)"
+ },
+ "M3_k2_reserva_inicio_2035": {
+  "valor": 191144,
+  "fuente": "Reserva K2 al inicio de 2035"
+ },
+ "M3_holgura_min": {
+  "valor": -35712,
+  "fuente": "Mínimo de ingreso − déficit de GMP, 2027-2054 (mdp de 2026)"
+ },
+ "M3_holgura_min_anio": {
+  "valor": 2054,
+  "fuente": "Año de la holgura mínima"
+ },
+ "M3_holgura_min_pts": {
+  "valor": -0.338,
+  "fuente": "Holgura mínima en puntos del salario"
+ },
+ "M3_margen_sin_prov_min": {
+  "valor": -35167,
+  "fuente": "Mínimo de ingreso − (déficit − provisiones de GMP), 2027-2054"
+ },
+ "M3_margen_sin_prov_min_anio": {
+  "valor": 2054,
+  "fuente": "Año del margen mínimo sin provisiones"
+ },
+ "M3_margen_sin_prov_2036": {
+  "valor": 14179,
+  "fuente": "Margen sin provisiones en 2036"
+ },
+ "M2_k1_primer_anio_no_cubre": {
+  "valor": 2033,
+  "fuente": "Primer año en que I < D (K1)"
+ },
+ "M2_k1_cubre_hasta": {
+  "valor": 2032,
+  "fuente": "Último año cubierto antes del primero sin cobertura (K1)"
+ },
+ "M2_k1_anios_no_cubre": {
+  "valor": 22,
+  "fuente": "Años 2027-2054 con I < D"
+ },
+ "M2_k2_primer_anio_no_cubre": {
+  "valor": 2038,
+  "fuente": "Primer año con déficit no cubierto tras usar la reserva (K2)"
+ },
+ "M2_k2_reserva_max": {
+  "valor": 122984,
+  "fuente": "Reserva máxima K2 (mdp de 2026)"
+ },
+ "M2_k2_reserva_max_anio": {
+  "valor": 2032,
+  "fuente": "Año de la reserva máxima K2"
+ },
  "M2_k2_retiro_anual": {
-  "valor": 9131,
+  "valor": 5548,
   "fuente": "1/20 de la reserva al inicio de 2035 (mdp de 2026)"
  },
  "M2_k2_reserva_inicio_2035": {
-  "valor": 182617,
+  "valor": 110952,
   "fuente": "Reserva K2 al inicio de 2035"
  },
  "M2_holgura_min": {
-  "valor": -50155,
+  "valor": -148093,
   "fuente": "Mínimo de ingreso − déficit de GMP, 2027-2054 (mdp de 2026)"
  },
  "M2_holgura_min_anio": {
@@ -840,16 +1580,20 @@
   "fuente": "Año de la holgura mínima"
  },
  "M2_holgura_min_pts": {
-  "valor": -0.678,
+  "valor": -2.001,
   "fuente": "Holgura mínima en puntos del salario"
  },
- "M2_cubre_desde": {
-  "valor": 2027,
-  "fuente": "Primer año con I ≥ D"
+ "M2_margen_sin_prov_min": {
+  "valor": -147549,
+  "fuente": "Mínimo de ingreso − (déficit − provisiones de GMP), 2027-2054"
  },
- "M2_deja_de_cubrir": {
-  "valor": 2035,
-  "fuente": "Primer año posterior a 2027 con I < D"
+ "M2_margen_sin_prov_min_anio": {
+  "valor": 2054,
+  "fuente": "Año del margen mínimo sin provisiones"
+ },
+ "M2_margen_sin_prov_2036": {
+  "valor": -11210,
+  "fuente": "Margen sin provisiones en 2036"
  },
  "VP_base_masa": {
   "valor": 163267574,
@@ -887,6 +1631,42 @@
   "valor": 54861,
   "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
  },
+ "VP_M3_masa": {
+  "valor": 141747834,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M3_ingreso": {
+  "valor": 2834957,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M3_deficit": {
+  "valor": 2798304,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M3_k1_remanente": {
+  "valor": 151254,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M3_k1_no_cubierto": {
+  "valor": 114602,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M3_k2_cuidados": {
+  "valor": 90603,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M3_k2_no_cubierto": {
+  "valor": 53950,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M3_reduccion": {
+  "valor": 4252435,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
+ "VP_M3_k2_reserva_final": {
+  "valor": 0,
+  "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
+ },
  "VP_M2_masa": {
   "valor": 120228094,
   "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
@@ -896,23 +1676,23 @@
   "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
  },
  "VP_M2_deficit": {
-  "valor": 2463416,
+  "valor": 3133192,
   "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
  },
  "VP_M2_k1_remanente": {
-  "valor": 144160,
+  "valor": 102997,
   "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
  },
  "VP_M2_k1_no_cubierto": {
-  "valor": 203014,
+  "valor": 831627,
   "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
  },
  "VP_M2_k2_cuidados": {
-  "valor": 71748,
+  "valor": 12387,
   "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
  },
  "VP_M2_k2_no_cubierto": {
-  "valor": 130603,
+  "valor": 741017,
   "fuente": "valor_presente.csv, 2027-2054, 3 % real, mdp de 2026"
  },
  "VP_M2_reduccion": {
@@ -975,259 +1755,387 @@
   "valor": 1.5,
   "fuente": "2,647,226 / 176,481,700 (Cuadros V.20 y V.15)"
  },
- "base_DH_total_k1_pesos_por_dh65_2027": {
+ "base_ENIGH_k1_pesos_por_dh65_2027": {
+  "valor": 5927,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_ENIGH_k1_pesos_por_dh80_2027": {
+  "valor": 30602,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_ENIGH_k2_pesos_por_dh65_2027": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_ENIGH_k2_pesos_por_dh80_2027": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_ENIGH_k1_pesos_por_dh65_2030": {
+  "valor": 4806,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_ENIGH_k1_pesos_por_dh80_2030": {
+  "valor": 24875,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_ENIGH_k2_pesos_por_dh65_2030": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_ENIGH_k2_pesos_por_dh80_2030": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_ENIGH_k1_pesos_por_dh65_2040": {
+  "valor": 4224,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_ENIGH_k1_pesos_por_dh80_2040": {
+  "valor": 19744,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_ENIGH_k2_pesos_por_dh65_2040": {
+  "valor": 5631,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_ENIGH_k2_pesos_por_dh80_2040": {
+  "valor": 26318,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_ENIGH_k1_pesos_por_dh65_2054": {
+  "valor": 5689,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_ENIGH_k1_pesos_por_dh80_2054": {
+  "valor": 20197,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_ENIGH_k2_pesos_por_dh65_2054": {
+  "valor": 6696,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_ENIGH_k2_pesos_por_dh80_2054": {
+  "valor": 23771,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "base_Informe_max_k1_pesos_por_dh65_2027": {
   "valor": 2456,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_DH_total_k1_pesos_por_dh80_2027": {
+ "base_Informe_max_k1_pesos_por_dh80_2027": {
   "valor": 11382,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_DH_total_k2_pesos_por_dh65_2027": {
+ "base_Informe_max_k2_pesos_por_dh65_2027": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_DH_total_k2_pesos_por_dh80_2027": {
+ "base_Informe_max_k2_pesos_por_dh80_2027": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_DH_total_k1_pesos_por_dh65_2030": {
+ "base_Informe_max_k1_pesos_por_dh65_2030": {
   "valor": 1991,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_DH_total_k1_pesos_por_dh80_2030": {
+ "base_Informe_max_k1_pesos_por_dh80_2030": {
   "valor": 9241,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_DH_total_k2_pesos_por_dh65_2030": {
+ "base_Informe_max_k2_pesos_por_dh65_2030": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_DH_total_k2_pesos_por_dh80_2030": {
+ "base_Informe_max_k2_pesos_por_dh80_2030": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_DH_total_k1_pesos_por_dh65_2040": {
+ "base_Informe_max_k1_pesos_por_dh65_2040": {
   "valor": 1746,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_DH_total_k1_pesos_por_dh80_2040": {
+ "base_Informe_max_k1_pesos_por_dh80_2040": {
   "valor": 7336,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_DH_total_k2_pesos_por_dh65_2040": {
+ "base_Informe_max_k2_pesos_por_dh65_2040": {
   "valor": 2327,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_DH_total_k2_pesos_por_dh80_2040": {
+ "base_Informe_max_k2_pesos_por_dh80_2040": {
   "valor": 9779,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_DH_total_k1_pesos_por_dh65_2054": {
+ "base_Informe_max_k1_pesos_por_dh65_2054": {
   "valor": 2322,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_DH_total_k1_pesos_por_dh80_2054": {
+ "base_Informe_max_k1_pesos_por_dh80_2054": {
   "valor": 7453,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_DH_total_k2_pesos_por_dh65_2054": {
+ "base_Informe_max_k2_pesos_por_dh65_2054": {
   "valor": 2733,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_DH_total_k2_pesos_por_dh80_2054": {
+ "base_Informe_max_k2_pesos_por_dh80_2054": {
   "valor": 8772,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_PAMF_k1_pesos_por_dh65_2027": {
-  "valor": 3057,
+ "M3_ENIGH_k1_pesos_por_dh65_2027": {
+  "valor": 5670,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_PAMF_k1_pesos_por_dh80_2027": {
-  "valor": 14170,
+ "M3_ENIGH_k1_pesos_por_dh80_2027": {
+  "valor": 29274,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_PAMF_k2_pesos_por_dh65_2027": {
+ "M3_ENIGH_k2_pesos_por_dh65_2027": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_PAMF_k2_pesos_por_dh80_2027": {
+ "M3_ENIGH_k2_pesos_por_dh80_2027": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_PAMF_k1_pesos_por_dh65_2030": {
-  "valor": 2479,
+ "M3_ENIGH_k1_pesos_por_dh65_2030": {
+  "valor": 3664,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_PAMF_k1_pesos_por_dh80_2030": {
-  "valor": 11505,
+ "M3_ENIGH_k1_pesos_por_dh80_2030": {
+  "valor": 18967,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_PAMF_k2_pesos_por_dh65_2030": {
+ "M3_ENIGH_k2_pesos_por_dh65_2030": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_PAMF_k2_pesos_por_dh80_2030": {
+ "M3_ENIGH_k2_pesos_por_dh80_2030": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "base_PAMF_k1_pesos_por_dh65_2040": {
-  "valor": 2173,
-  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
- },
- "base_PAMF_k1_pesos_por_dh80_2040": {
-  "valor": 9134,
-  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
- },
- "base_PAMF_k2_pesos_por_dh65_2040": {
-  "valor": 2897,
-  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
- },
- "base_PAMF_k2_pesos_por_dh80_2040": {
-  "valor": 12175,
-  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
- },
- "base_PAMF_k1_pesos_por_dh65_2054": {
-  "valor": 2891,
-  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
- },
- "base_PAMF_k1_pesos_por_dh80_2054": {
-  "valor": 9279,
-  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
- },
- "base_PAMF_k2_pesos_por_dh65_2054": {
-  "valor": 3403,
-  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
- },
- "base_PAMF_k2_pesos_por_dh80_2054": {
-  "valor": 10921,
-  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
- },
- "M2_DH_total_k1_pesos_por_dh65_2027": {
-  "valor": 2340,
-  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
- },
- "M2_DH_total_k1_pesos_por_dh80_2027": {
-  "valor": 10847,
-  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
- },
- "M2_DH_total_k2_pesos_por_dh65_2027": {
+ "M3_ENIGH_k1_pesos_por_dh65_2040": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_DH_total_k2_pesos_por_dh80_2027": {
+ "M3_ENIGH_k1_pesos_por_dh80_2040": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_DH_total_k1_pesos_por_dh65_2030": {
-  "valor": 1471,
+ "M3_ENIGH_k2_pesos_por_dh65_2040": {
+  "valor": 991,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_DH_total_k1_pesos_por_dh80_2030": {
-  "valor": 6825,
+ "M3_ENIGH_k2_pesos_por_dh80_2040": {
+  "valor": 4631,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_DH_total_k2_pesos_por_dh65_2030": {
+ "M3_ENIGH_k1_pesos_por_dh65_2054": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_DH_total_k2_pesos_por_dh80_2030": {
+ "M3_ENIGH_k1_pesos_por_dh80_2054": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_DH_total_k1_pesos_por_dh65_2040": {
+ "M3_ENIGH_k2_pesos_por_dh65_2054": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_DH_total_k1_pesos_por_dh80_2040": {
+ "M3_ENIGH_k2_pesos_por_dh80_2054": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_DH_total_k2_pesos_por_dh65_2040": {
-  "valor": 391,
+ "M3_Informe_max_k1_pesos_por_dh65_2027": {
+  "valor": 2349,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_DH_total_k2_pesos_por_dh80_2040": {
-  "valor": 1644,
+ "M3_Informe_max_k1_pesos_por_dh80_2027": {
+  "valor": 10888,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_DH_total_k1_pesos_por_dh65_2054": {
+ "M3_Informe_max_k2_pesos_por_dh65_2027": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_DH_total_k1_pesos_por_dh80_2054": {
+ "M3_Informe_max_k2_pesos_por_dh80_2027": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_DH_total_k2_pesos_por_dh65_2054": {
+ "M3_Informe_max_k1_pesos_por_dh65_2030": {
+  "valor": 1518,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M3_Informe_max_k1_pesos_por_dh80_2030": {
+  "valor": 7046,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M3_Informe_max_k2_pesos_por_dh65_2030": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_DH_total_k2_pesos_por_dh80_2054": {
+ "M3_Informe_max_k2_pesos_por_dh80_2030": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_PAMF_k1_pesos_por_dh65_2027": {
-  "valor": 2914,
-  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
- },
- "M2_PAMF_k1_pesos_por_dh80_2027": {
-  "valor": 13504,
-  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
- },
- "M2_PAMF_k2_pesos_por_dh65_2027": {
+ "M3_Informe_max_k1_pesos_por_dh65_2040": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_PAMF_k2_pesos_por_dh80_2027": {
+ "M3_Informe_max_k1_pesos_por_dh80_2040": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_PAMF_k1_pesos_por_dh65_2030": {
-  "valor": 1831,
+ "M3_Informe_max_k2_pesos_por_dh65_2040": {
+  "valor": 409,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_PAMF_k1_pesos_por_dh80_2030": {
-  "valor": 8497,
+ "M3_Informe_max_k2_pesos_por_dh80_2040": {
+  "valor": 1721,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_PAMF_k2_pesos_por_dh65_2030": {
+ "M3_Informe_max_k1_pesos_por_dh65_2054": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_PAMF_k2_pesos_por_dh80_2030": {
+ "M3_Informe_max_k1_pesos_por_dh80_2054": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_PAMF_k1_pesos_por_dh65_2040": {
+ "M3_Informe_max_k2_pesos_por_dh65_2054": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_PAMF_k1_pesos_por_dh80_2040": {
+ "M3_Informe_max_k2_pesos_por_dh80_2054": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_PAMF_k2_pesos_por_dh65_2040": {
-  "valor": 487,
+ "M2_ENIGH_k1_pesos_por_dh65_2027": {
+  "valor": 5413,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_PAMF_k2_pesos_por_dh80_2040": {
-  "valor": 2047,
+ "M2_ENIGH_k1_pesos_por_dh80_2027": {
+  "valor": 27946,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_PAMF_k1_pesos_por_dh65_2054": {
+ "M2_ENIGH_k2_pesos_por_dh65_2027": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_PAMF_k1_pesos_por_dh80_2054": {
+ "M2_ENIGH_k2_pesos_por_dh80_2027": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_PAMF_k2_pesos_por_dh65_2054": {
+ "M2_ENIGH_k1_pesos_por_dh65_2030": {
+  "valor": 2523,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_ENIGH_k1_pesos_por_dh80_2030": {
+  "valor": 13059,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_ENIGH_k2_pesos_por_dh65_2030": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
- "M2_PAMF_k2_pesos_por_dh80_2054": {
+ "M2_ENIGH_k2_pesos_por_dh80_2030": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_ENIGH_k1_pesos_por_dh65_2040": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_ENIGH_k1_pesos_por_dh80_2040": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_ENIGH_k2_pesos_por_dh65_2040": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_ENIGH_k2_pesos_por_dh80_2040": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_ENIGH_k1_pesos_por_dh65_2054": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_ENIGH_k1_pesos_por_dh80_2054": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_ENIGH_k2_pesos_por_dh65_2054": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_ENIGH_k2_pesos_por_dh80_2054": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_Informe_max_k1_pesos_por_dh65_2027": {
+  "valor": 2243,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_Informe_max_k1_pesos_por_dh80_2027": {
+  "valor": 10394,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_Informe_max_k2_pesos_por_dh65_2027": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_Informe_max_k2_pesos_por_dh80_2027": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_Informe_max_k1_pesos_por_dh65_2030": {
+  "valor": 1045,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_Informe_max_k1_pesos_por_dh80_2030": {
+  "valor": 4852,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_Informe_max_k2_pesos_por_dh65_2030": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_Informe_max_k2_pesos_por_dh80_2030": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_Informe_max_k1_pesos_por_dh65_2040": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_Informe_max_k1_pesos_por_dh80_2040": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_Informe_max_k2_pesos_por_dh65_2040": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_Informe_max_k2_pesos_por_dh80_2040": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_Informe_max_k1_pesos_por_dh65_2054": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_Informe_max_k1_pesos_por_dh80_2054": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_Informe_max_k2_pesos_por_dh65_2054": {
+  "valor": 0,
+  "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
+ },
+ "M2_Informe_max_k2_pesos_por_dh80_2054": {
   "valor": 0,
   "fuente": "remanente_por_mayor.csv, pesos de 2026 por persona al año"
  },
@@ -1237,11 +2145,11 @@
  },
  "chk_01_3.1": {
   "valor": 1.02267,
-  "fuente": "3.1 masa con tope / denominador en puntos de la v1.2, 2027 (razón)"
+  "fuente": "3.1 masa con tope / denominador anterior de la v1.2, 2027 (razón)"
  },
  "chk_02_3.1": {
   "valor": 1.01399,
-  "fuente": "3.1 masa con tope / denominador en puntos de la v1.2, 2054 (razón)"
+  "fuente": "3.1 masa con tope / denominador anterior de la v1.2, 2054 (razón)"
  },
  "chk_03_3.1": {
   "valor": 1.736048,
@@ -1271,32 +2179,56 @@
   "valor": 0.0,
   "fuente": "3.4 identidad de la reserva (máx. desviación, mdp)"
  },
+ "chk_10_7.2": {
+  "valor": 0.0,
+  "fuente": "7.2 base: déficit ajustado = Cuadro V.24 (máx. desviación, mdp)"
+ },
+ "chk_11_7.2": {
+  "valor": 0,
+  "fuente": "7.2 déficit M2 > M3 > base en años con ganancia de formalización (años que fallan)"
+ },
+ "chk_12_7.3": {
+  "valor": 46.552264,
+  "fuente": "7.3 base ENIGH de 65+ / población nacional de 65+, máximo 2027-2054 (%)"
+ },
+ "chk_13_7.1": {
+  "valor": 0.0,
+  "fuente": "7.1 regresión v1.0: ingreso_vs_GMP (máx. desviación)"
+ },
+ "chk_14_7.1": {
+  "valor": 0.0,
+  "fuente": "7.1 regresión v1.0: valor_presente (máx. desviación)"
+ },
+ "chk_15_7.1": {
+  "valor": 0.0,
+  "fuente": "7.1 regresión v1.0: remanente_por_mayor (máx. desviación)"
+ },
  "cuna_sm_uma_2026": {
   "valor": 2.685,
   "fuente": "SM en veces la UMA (Sup_Fin)"
  },
  "cuna_2026_Salario mínimo_patron_a": {
-  "valor": 26.422,
+  "valor": 26.53,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_Salario mínimo_patron_b": {
-  "valor": 23.422,
+  "valor": 23.53,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_Salario mínimo_patron_c": {
-  "valor": 19.292,
+  "valor": 19.4,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_Salario mínimo_total_a": {
-  "valor": 36.204,
+  "valor": 36.312,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_Salario mínimo_total_b": {
-  "valor": 33.204,
+  "valor": 33.312,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_Salario mínimo_total_c": {
-  "valor": 29.074,
+  "valor": 29.182,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_Salario mínimo_cyv_a": {
@@ -1336,27 +2268,27 @@
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_1.01 SM, lectura por UMA_patron_a": {
-  "valor": 26.848,
+  "valor": 26.956,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_1.01 SM, lectura por UMA_patron_b": {
-  "valor": 23.848,
+  "valor": 23.956,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_1.01 SM, lectura por UMA_patron_c": {
-  "valor": 19.793,
+  "valor": 19.901,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_1.01 SM, lectura por UMA_total_a": {
-  "valor": 37.803,
+  "valor": 37.911,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_1.01 SM, lectura por UMA_total_b": {
-  "valor": 34.803,
+  "valor": 34.911,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_1.01 SM, lectura por UMA_total_c": {
-  "valor": 30.748,
+  "valor": 30.856,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_1.01 SM, lectura por UMA_cyv_a": {
@@ -1396,27 +2328,27 @@
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_1.01 SM, primer tramo tras el mínimo_patron_a": {
-  "valor": 24.498,
+  "valor": 24.606,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_1.01 SM, primer tramo tras el mínimo_patron_b": {
-  "valor": 21.498,
+  "valor": 21.606,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_1.01 SM, primer tramo tras el mínimo_patron_c": {
-  "valor": 17.443,
+  "valor": 17.551,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_1.01 SM, primer tramo tras el mínimo_total_a": {
-  "valor": 36.284,
+  "valor": 36.392,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_1.01 SM, primer tramo tras el mínimo_total_b": {
-  "valor": 33.284,
+  "valor": 33.392,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_1.01 SM, primer tramo tras el mínimo_total_c": {
-  "valor": 29.229,
+  "valor": 29.337,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_1.01 SM, primer tramo tras el mínimo_cyv_a": {
@@ -1456,27 +2388,27 @@
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_2 UMA_patron_a": {
-  "valor": 28.351,
+  "valor": 28.459,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_2 UMA_patron_b": {
-  "valor": 25.351,
+  "valor": 25.459,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_2 UMA_patron_c": {
-  "valor": 18.618,
+  "valor": 18.726,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_2 UMA_total_a": {
-  "valor": 43.022,
+  "valor": 43.13,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_2 UMA_total_b": {
-  "valor": 40.022,
+  "valor": 40.13,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_2 UMA_total_c": {
-  "valor": 33.289,
+  "valor": 33.397,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_2 UMA_cyv_a": {
@@ -1516,27 +2448,27 @@
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_3 UMA_patron_a": {
-  "valor": 26.126,
+  "valor": 26.234,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_3 UMA_patron_b": {
-  "valor": 23.126,
+  "valor": 23.234,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_3 UMA_patron_c": {
-  "valor": 19.793,
+  "valor": 19.901,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_3 UMA_total_a": {
-  "valor": 36.281,
+  "valor": 36.389,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_3 UMA_total_b": {
-  "valor": 33.281,
+  "valor": 33.389,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_3 UMA_total_c": {
-  "valor": 29.948,
+  "valor": 30.056,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_3 UMA_cyv_a": {
@@ -1576,27 +2508,27 @@
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_4 UMA_patron_a": {
-  "valor": 25.288,
+  "valor": 25.396,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_4 UMA_patron_b": {
-  "valor": 22.288,
+  "valor": 22.396,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_4 UMA_patron_c": {
-  "valor": 20.655,
+  "valor": 20.763,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_4 UMA_total_a": {
-  "valor": 33.285,
+  "valor": 33.393,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_4 UMA_total_b": {
-  "valor": 30.285,
+  "valor": 30.393,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_4 UMA_total_c": {
-  "valor": 28.652,
+  "valor": 28.76,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_4 UMA_cyv_a": {
@@ -1636,27 +2568,27 @@
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_5.55 UMA_patron_a": {
-  "valor": 24.994,
+  "valor": 25.102,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_5.55 UMA_patron_b": {
-  "valor": 21.994,
+  "valor": 22.102,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_5.55 UMA_patron_c": {
-  "valor": 21.785,
+  "valor": 21.893,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_5.55 UMA_total_a": {
-  "valor": 30.475,
+  "valor": 30.583,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_5.55 UMA_total_b": {
-  "valor": 27.475,
+  "valor": 27.583,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_5.55 UMA_total_c": {
-  "valor": 27.266,
+  "valor": 27.374,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_5.55 UMA_cyv_a": {
@@ -1696,27 +2628,27 @@
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_10 UMA_patron_a": {
-  "valor": 23.623,
+  "valor": 23.731,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_10 UMA_patron_b": {
-  "valor": 20.623,
+  "valor": 20.731,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_10 UMA_patron_c": {
-  "valor": 22.05,
+  "valor": 22.158,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_10 UMA_total_a": {
-  "valor": 28.011,
+  "valor": 28.119,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_10 UMA_total_b": {
-  "valor": 25.011,
+  "valor": 25.119,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_10 UMA_total_c": {
-  "valor": 26.438,
+  "valor": 26.546,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_10 UMA_cyv_a": {
@@ -1756,27 +2688,27 @@
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_25 UMA_patron_a": {
-  "valor": 22.597,
+  "valor": 22.705,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_25 UMA_patron_b": {
-  "valor": 19.597,
+  "valor": 19.705,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_25 UMA_patron_c": {
-  "valor": 22.248,
+  "valor": 22.356,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_25 UMA_total_a": {
-  "valor": 26.167,
+  "valor": 26.275,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_25 UMA_total_b": {
-  "valor": 23.167,
+  "valor": 23.275,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_25 UMA_total_c": {
-  "valor": 25.818,
+  "valor": 25.926,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2026_25 UMA_cyv_a": {
@@ -1844,27 +2776,27 @@
   "fuente": "SM en veces la UMA (Sup_Fin)"
  },
  "cuna_2030_Salario mínimo_patron_a": {
-  "valor": 24.685,
+  "valor": 24.793,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_Salario mínimo_patron_b": {
-  "valor": 21.685,
+  "valor": 21.793,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_Salario mínimo_patron_c": {
-  "valor": 19.558,
+  "valor": 19.666,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_Salario mínimo_total_a": {
-  "valor": 31.955,
+  "valor": 32.063,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_Salario mínimo_total_b": {
-  "valor": 28.955,
+  "valor": 29.063,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_Salario mínimo_total_c": {
-  "valor": 26.827,
+  "valor": 26.935,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_Salario mínimo_cyv_a": {
@@ -1904,27 +2836,27 @@
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_1.01 SM, lectura por UMA_patron_a": {
-  "valor": 29.12,
+  "valor": 29.228,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_1.01 SM, lectura por UMA_patron_b": {
-  "valor": 26.12,
+  "valor": 26.228,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_1.01 SM, lectura por UMA_patron_c": {
-  "valor": 24.048,
+  "valor": 24.156,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_1.01 SM, lectura por UMA_total_a": {
-  "valor": 37.545,
+  "valor": 37.653,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_1.01 SM, lectura por UMA_total_b": {
-  "valor": 34.545,
+  "valor": 34.653,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_1.01 SM, lectura por UMA_total_c": {
-  "valor": 32.473,
+  "valor": 32.581,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_1.01 SM, lectura por UMA_cyv_a": {
@@ -1964,27 +2896,27 @@
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_1.01 SM, primer tramo tras el mínimo_patron_a": {
-  "valor": 23.245,
+  "valor": 23.353,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_1.01 SM, primer tramo tras el mínimo_patron_b": {
-  "valor": 20.245,
+  "valor": 20.353,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_1.01 SM, primer tramo tras el mínimo_patron_c": {
-  "valor": 18.173,
+  "valor": 18.281,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_1.01 SM, primer tramo tras el mínimo_total_a": {
-  "valor": 32.69,
+  "valor": 32.798,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_1.01 SM, primer tramo tras el mínimo_total_b": {
-  "valor": 29.69,
+  "valor": 29.798,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_1.01 SM, primer tramo tras el mínimo_total_c": {
-  "valor": 27.618,
+  "valor": 27.726,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_1.01 SM, primer tramo tras el mínimo_cyv_a": {
@@ -2024,27 +2956,27 @@
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_2 UMA_patron_a": {
-  "valor": 30.052,
+  "valor": 30.16,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_2 UMA_patron_b": {
-  "valor": 27.052,
+  "valor": 27.16,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_2 UMA_patron_c": {
-  "valor": 20.319,
+  "valor": 20.427,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_2 UMA_total_a": {
-  "valor": 44.723,
+  "valor": 44.831,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_2 UMA_total_b": {
-  "valor": 41.723,
+  "valor": 41.831,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_2 UMA_total_c": {
-  "valor": 34.99,
+  "valor": 35.098,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_2 UMA_cyv_a": {
@@ -2084,27 +3016,27 @@
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_3 UMA_patron_a": {
-  "valor": 29.002,
+  "valor": 29.11,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_3 UMA_patron_b": {
-  "valor": 26.002,
+  "valor": 26.11,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_3 UMA_patron_c": {
-  "valor": 22.669,
+  "valor": 22.777,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_3 UMA_total_a": {
-  "valor": 39.157,
+  "valor": 39.265,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_3 UMA_total_b": {
-  "valor": 36.157,
+  "valor": 36.265,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_3 UMA_total_c": {
-  "valor": 32.824,
+  "valor": 32.932,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_3 UMA_cyv_a": {
@@ -2144,27 +3076,27 @@
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_4 UMA_patron_a": {
-  "valor": 28.752,
+  "valor": 28.86,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_4 UMA_patron_b": {
-  "valor": 25.752,
+  "valor": 25.86,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_4 UMA_patron_c": {
-  "valor": 24.119,
+  "valor": 24.227,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_4 UMA_total_a": {
-  "valor": 36.749,
+  "valor": 36.857,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_4 UMA_total_b": {
-  "valor": 33.749,
+  "valor": 33.857,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_4 UMA_total_c": {
-  "valor": 32.116,
+  "valor": 32.224,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_4 UMA_cyv_a": {
@@ -2204,27 +3136,27 @@
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_5.55 UMA_patron_a": {
-  "valor": 29.356,
+  "valor": 29.464,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_5.55 UMA_patron_b": {
-  "valor": 26.356,
+  "valor": 26.464,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_5.55 UMA_patron_c": {
-  "valor": 26.147,
+  "valor": 26.255,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_5.55 UMA_total_a": {
-  "valor": 34.837,
+  "valor": 34.945,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_5.55 UMA_total_b": {
-  "valor": 31.837,
+  "valor": 31.945,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_5.55 UMA_total_c": {
-  "valor": 31.628,
+  "valor": 31.736,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_5.55 UMA_cyv_a": {
@@ -2264,27 +3196,27 @@
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_10 UMA_patron_a": {
-  "valor": 27.985,
+  "valor": 28.093,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_10 UMA_patron_b": {
-  "valor": 24.985,
+  "valor": 25.093,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_10 UMA_patron_c": {
-  "valor": 26.412,
+  "valor": 26.52,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_10 UMA_total_a": {
-  "valor": 32.373,
+  "valor": 32.481,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_10 UMA_total_b": {
-  "valor": 29.373,
+  "valor": 29.481,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_10 UMA_total_c": {
-  "valor": 30.8,
+  "valor": 30.908,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_10 UMA_cyv_a": {
@@ -2324,27 +3256,27 @@
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_25 UMA_patron_a": {
-  "valor": 26.959,
+  "valor": 27.067,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_25 UMA_patron_b": {
-  "valor": 23.959,
+  "valor": 24.067,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_25 UMA_patron_c": {
-  "valor": 26.61,
+  "valor": 26.718,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_25 UMA_total_a": {
-  "valor": 30.529,
+  "valor": 30.637,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_25 UMA_total_b": {
-  "valor": 27.529,
+  "valor": 27.637,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_25 UMA_total_c": {
-  "valor": 30.18,
+  "valor": 30.288,
   "fuente": "cuna_legal_por_salario.csv, % del SBC"
  },
  "cuna_2030_25 UMA_cyv_a": {
@@ -2407,9 +3339,37 @@
   "valor": -1.44,
   "fuente": "Salto del total a cargo del patrón entre SM y 1.01 SM, ley vigente (puntos; neto del fin del art. 36)"
  },
+ "cuna_2026_sm_c_menos_a": {
+  "valor": -7.13,
+  "fuente": "Cambio de la cuña legal a cargo del patrón, (c) − (a), puntos del SBC"
+ },
+ "cuna_2030_sm_c_menos_a": {
+  "valor": -5.128,
+  "fuente": "Cambio de la cuña legal a cargo del patrón, (c) − (a), puntos del SBC"
+ },
+ "cuna_2026_prom_c_menos_a": {
+  "valor": -3.209,
+  "fuente": "Cambio de la cuña legal a cargo del patrón, (c) − (a), puntos del SBC"
+ },
+ "cuna_2030_prom_c_menos_a": {
+  "valor": -3.209,
+  "fuente": "Cambio de la cuña legal a cargo del patrón, (c) − (a), puntos del SBC"
+ },
+ "cuna_2026_25uma_c_menos_a": {
+  "valor": -0.349,
+  "fuente": "Cambio de la cuña legal a cargo del patrón, (c) − (a), puntos del SBC"
+ },
+ "cuna_2030_25uma_c_menos_a": {
+  "valor": -0.349,
+  "fuente": "Cambio de la cuña legal a cargo del patrón, (c) − (a), puntos del SBC"
+ },
+ "RT_prima_cuna": {
+  "valor": 1.9078,
+  "fuente": "Prima de RT en el Cuadro X-2.2 (Informe, Cuadro A.3)"
+ },
  "chk_cuna_0": {
   "valor": 0.0,
-  "fuente": "3.5 (b) = (a) − 3 puntos en todo nivel hasta 25 UMA (máx. desviación, puntos)"
+  "fuente": "3.5/7.5 (b) = (a) − 3 puntos en todo nivel hasta 25 UMA (máx. desviación, puntos)"
  },
  "chk_cuna_1": {
   "valor": 0,
@@ -2419,8 +3379,64 @@
   "valor": 0,
   "fuente": "3.5 tabla 2030 = art. 168 fr. II a) del DOF 16-12-2020 (celdas distintas)"
  },
+ "chk_cuna_3": {
+  "valor": 0.0,
+  "fuente": "7.1 regresión v1.0: cuna_legal_por_salario (máx. desviación)"
+ },
+ "exp1_cifras_cambiadas": {
+  "valor": 186,
+  "fuente": "Cifras del registro del experimento 1 que cambian por el denominador común"
+ },
+ "exp1_cifras_cambiadas_pts": {
+  "valor": 123,
+  "fuente": "Idem, puntos del salario"
+ },
+ "exp1_cifras_cambiadas_sem": {
+  "valor": 63,
+  "fuente": "Idem, % de los ingresos del SEM"
+ },
+ "SEM_V13_menos_libro_2026": {
+  "valor": 9232,
+  "fuente": "Ingresos del SEM: Cuadro V.13 − libro (SEM-A + SEM-GMP), mdp"
+ },
+ "SEM_V13_menos_libro_pct_2026": {
+  "valor": 1.67,
+  "fuente": "Idem, % del libro"
+ },
+ "SEM_V13_menos_libro_2030": {
+  "valor": 15148,
+  "fuente": "Ingresos del SEM: Cuadro V.13 − libro (SEM-A + SEM-GMP), mdp"
+ },
+ "SEM_V13_menos_libro_pct_2030": {
+  "valor": 2.48,
+  "fuente": "Idem, % del libro"
+ },
+ "SEM_V13_menos_libro_2040": {
+  "valor": 2620,
+  "fuente": "Ingresos del SEM: Cuadro V.13 − libro (SEM-A + SEM-GMP), mdp"
+ },
+ "SEM_V13_menos_libro_pct_2040": {
+  "valor": 0.31,
+  "fuente": "Idem, % del libro"
+ },
+ "SEM_V13_menos_libro_2054": {
+  "valor": -11640,
+  "fuente": "Ingresos del SEM: Cuadro V.13 − libro (SEM-A + SEM-GMP), mdp"
+ },
+ "SEM_V13_menos_libro_pct_2054": {
+  "valor": -0.96,
+  "fuente": "Idem, % del libro"
+ },
+ "chk_exp1_0": {
+  "valor": 0.0,
+  "fuente": "7.4 experimento 1: montos en mdp de resultados_v12 sin cambio (máx. desviación)"
+ },
+ "chk_exp1_1": {
+  "valor": 0,
+  "fuente": "7.4 experimento 1: cifras cambiadas que no son puntos ni % del SEM"
+ },
  "chk_3.6": {
   "valor": 0,
-  "fuente": "3.6 apariciones de 2055 en las tablas"
+  "fuente": "3.6/7.6 apariciones de 2055 en las tablas"
  }
 }

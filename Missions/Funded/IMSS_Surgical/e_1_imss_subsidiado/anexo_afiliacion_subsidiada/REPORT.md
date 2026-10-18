@@ -10,6 +10,8 @@
 
 Por decisión de Héctor, el experimento 2 vive en su propia carpeta: `../../e_2_imss_nuevoseguro/`. Ahí están su reporte (`REPORT.md`, sección «Experimento 2»), su registro de cifras (`NUMBERS.md`, sección «Experimento 2») y su borrador (`ANEXO_experimento2_borrador.md`). Reutiliza los módulos y derivados de esta v1.2 sin escribir en ellos. La única combinación permitida con este experimento es la columna (c) de su tabla de cuña contributiva legal, que usa la tasa D2 (3.467 %).
 
+**Denominador común (instrucción v1.1 del experimento 2, sección 4).** Desde el 18-10-2026, las salidas v1.2 de este anexo usan dos referencias nuevas. Los puntos del salario se miden sobre la masa R1 con tope y piso (337 días), la misma base de la tasa D2. El % de los ingresos del SEM se mide sobre el Cuadro V.13 del Informe. El libro de Finanzas se sigue usando para cotizantes, salarios y supuestos. Los montos en mdp no cambian. Cambian 186 cifras del registro (123 en puntos y 63 en %); la tabla de cambios está en `../../e_2_imss_nuevoseguro/tablas/exp1_cambios_denominador.csv`. Por ejemplo, el saldo total de 2030 pasa de −1.357 a −1.305 puntos y de −13.25 % a −12.93 % de los ingresos del SEM. **`ANEXO_borrador_v2.md` sigue citando las cifras anteriores** y se actualiza cuando Beth lo indique. Las tablas de las secciones v1.2.1 a v1.2.4 de este reporte también tienen los valores anteriores en puntos y en %; los vigentes están en `NUMBERS.md`.
+
 ---
 
 # v1.2 — Tasa proporcional única y pago creíble (2026-10-17)

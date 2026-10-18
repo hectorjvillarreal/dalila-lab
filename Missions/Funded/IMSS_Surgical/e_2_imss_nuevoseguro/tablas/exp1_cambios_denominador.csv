@@ -1,0 +1,187 @@
+clave,antes,despues,diferencia,tipo,fuente_despues
+v12_C2_pim1_saldo_pts_sbc_2030,-1.434,-1.379,0.05499999999999994,puntos del salario,sensibilidades_v12.csv
+v12_C2_pim1_saldo_pts_sbc_2054,-0.639,-0.631,0.008000000000000007,puntos del salario,sensibilidades_v12.csv
+v12_C2_saldo_pts_sbc_2030,-1.305,-1.255,0.050000000000000044,puntos del salario,sensibilidades_v12.csv
+v12_C2_saldo_pts_sbc_2054,-0.339,-0.334,0.0050000000000000044,puntos del salario,sensibilidades_v12.csv
+v12_C_D2_neto_pts_2030,-0.193,-0.186,0.007000000000000006,puntos del salario,"bloque_C_vs_status_quo.csv, D2, 2030"
+v12_C_D2_neto_pts_2040,-0.117,-0.114,0.0030000000000000027,puntos del salario,"bloque_C_vs_status_quo.csv, D2, 2040"
+v12_C_D2_neto_pts_2054,-0.067,-0.066,0.0010000000000000009,puntos del salario,"bloque_C_vs_status_quo.csv, D2, 2054"
+v12_C_vigente_neto_pts_2030,-0.096,-0.093,0.0030000000000000027,puntos del salario,"bloque_C_vs_status_quo.csv, vigente, 2030"
+v12_C_vigente_neto_pts_2040,-0.06,-0.059,0.0010000000000000009,puntos del salario,"bloque_C_vs_status_quo.csv, vigente, 2040"
+v12_C_vigente_neto_pts_2054,-0.044,-0.043,0.0010000000000000009,puntos del salario,"bloque_C_vs_status_quo.csv, vigente, 2054"
+v12_D1_saldo_pts_sbc_2030,-0.743,-0.715,0.028000000000000025,puntos del salario,sensibilidades_v12.csv
+v12_D1_saldo_pts_sbc_2054,-0.36,-0.355,0.0050000000000000044,puntos del salario,sensibilidades_v12.csv
+v12_F1_saldo_pts_sbc_2030,-1.36,-1.308,0.052000000000000046,puntos del salario,sensibilidades_v12.csv
+v12_F1_saldo_pts_sbc_2054,-0.577,-0.569,0.008000000000000007,puntos del salario,sensibilidades_v12.csv
+v12_G1_saldo_pts_sbc_2030,-1.546,-1.486,0.06000000000000005,puntos del salario,sensibilidades_v12.csv
+v12_G1_saldo_pts_sbc_2054,-0.681,-0.672,0.009000000000000008,puntos del salario,sensibilidades_v12.csv
+v12_S2_saldo_pts_sbc_2030,-1.374,-1.32,0.05400000000000005,puntos del salario,sensibilidades_v12.csv
+v12_S2_saldo_pts_sbc_2054,-0.603,-0.594,0.009000000000000008,puntos del salario,sensibilidades_v12.csv
+v12_S3_saldo_pts_sbc_2030,-1.324,-1.272,0.052000000000000046,puntos del salario,sensibilidades_v12.csv
+v12_S3_saldo_pts_sbc_2054,-0.573,-0.566,0.007000000000000006,puntos del salario,sensibilidades_v12.csv
+v12_T1_saldo_pts_sbc_2030,-0.824,-0.792,0.03199999999999992,puntos del salario,sensibilidades_v12.csv
+v12_T1_saldo_pts_sbc_2054,-0.418,-0.412,0.006000000000000005,puntos del salario,sensibilidades_v12.csv
+v12_U2_enigh_saldo_pts_sbc_2030,-0.188,-0.181,0.007000000000000006,puntos del salario,sensibilidades_v12.csv
+v12_U2_enigh_saldo_pts_sbc_2054,-0.088,-0.087,0.0010000000000000009,puntos del salario,sensibilidades_v12.csv
+v12_U2_informe_saldo_pts_sbc_2030,-0.433,-0.416,0.017000000000000015,puntos del salario,sensibilidades_v12.csv
+v12_U2_informe_saldo_pts_sbc_2054,-0.197,-0.194,0.0030000000000000027,puntos del salario,sensibilidades_v12.csv
+v12_base_saldo_pts_sbc_2030,-1.357,-1.305,0.052000000000000046,puntos del salario,sensibilidades_v12.csv
+v12_base_saldo_pts_sbc_2054,-0.593,-0.585,0.008000000000000007,puntos del salario,sensibilidades_v12.csv
+v12_estilizado_2_saldo_pts_sbc_2030,-1.495,-1.437,0.05800000000000005,puntos del salario,sensibilidades_v12.csv
+v12_estilizado_2_saldo_pts_sbc_2054,-0.579,-0.571,0.008000000000000007,puntos del salario,sensibilidades_v12.csv
+v12_estilizado_4_saldo_pts_sbc_2030,-1.244,-1.195,0.04899999999999993,puntos del salario,sensibilidades_v12.csv
+v12_estilizado_4_saldo_pts_sbc_2054,-0.604,-0.596,0.008000000000000007,puntos del salario,sensibilidades_v12.csv
+v12_indexacion_pts_2030,0.195,0.187,-0.008000000000000007,puntos del salario,"Idem, puntos del salario (masa R1, denominador común)"
+v12_indexacion_pts_2040,0.408,0.399,-0.008999999999999952,puntos del salario,"Idem, puntos del salario (masa R1, denominador común)"
+v12_indexacion_pts_2054,0.73,0.72,-0.010000000000000009,puntos del salario,"Idem, puntos del salario (masa R1, denominador común)"
+v12_indexacion_sem_2030,1.9,1.85,-0.04999999999999982,% ingresos del SEM,"Idem, % ingresos SEM (Cuadro V.13)"
+v12_indexacion_sem_2040,4.27,4.26,-0.009999999999999787,% ingresos del SEM,"Idem, % ingresos SEM (Cuadro V.13)"
+v12_indexacion_sem_2054,8.2,8.28,0.08000000000000007,% ingresos del SEM,"Idem, % ingresos SEM (Cuadro V.13)"
+v12_mu100_saldo_pts_sbc_2030,-1.057,-1.016,0.040999999999999925,puntos del salario,sensibilidades_v12.csv
+v12_mu100_saldo_pts_sbc_2054,-0.444,-0.438,0.006000000000000005,puntos del salario,sensibilidades_v12.csv
+v12_mu130_saldo_pts_sbc_2030,-1.959,-1.883,0.07600000000000007,puntos del salario,sensibilidades_v12.csv
+v12_mu130_saldo_pts_sbc_2054,-0.89,-0.878,0.01200000000000001,puntos del salario,sensibilidades_v12.csv
+v12_pim1_saldo_pts_sbc_2030,-1.492,-1.434,0.05800000000000005,puntos del salario,sensibilidades_v12.csv
+v12_pim1_saldo_pts_sbc_2054,-1.118,-1.103,0.015000000000000124,puntos del salario,sensibilidades_v12.csv
+v12_pim2_saldo_pts_sbc_2030,-1.63,-1.567,0.06299999999999994,puntos del salario,sensibilidades_v12.csv
+v12_pim2_saldo_pts_sbc_2054,-1.805,-1.78,0.02499999999999991,puntos del salario,sensibilidades_v12.csv
+v12_plano_saldo_pts_sbc_2030,-1.665,-1.6,0.06499999999999995,puntos del salario,sensibilidades_v12.csv
+v12_plano_saldo_pts_sbc_2054,-0.562,-0.555,0.007000000000000006,puntos del salario,sensibilidades_v12.csv
+v12_regresion_v11_saldo_pts_sbc_2030,-0.261,-0.251,0.010000000000000009,puntos del salario,sensibilidades_v12.csv
+v12_regresion_v11_saldo_pts_sbc_2054,-0.117,-0.115,0.0020000000000000018,puntos del salario,sensibilidades_v12.csv
+v12_rho100_saldo_pts_sbc_2030,-1.12,-1.076,0.04400000000000004,puntos del salario,sensibilidades_v12.csv
+v12_rho100_saldo_pts_sbc_2054,-0.449,-0.443,0.006000000000000005,puntos del salario,sensibilidades_v12.csv
+v12_rho50_saldo_pts_sbc_2030,-1.595,-1.533,0.062000000000000055,puntos del salario,sensibilidades_v12.csv
+v12_rho50_saldo_pts_sbc_2054,-0.736,-0.726,0.010000000000000009,puntos del salario,sensibilidades_v12.csv
+v12_tau30_saldo_pts_sbc_2030,-0.814,-0.783,0.030999999999999917,puntos del salario,sensibilidades_v12.csv
+v12_tau30_saldo_pts_sbc_2054,-0.356,-0.351,0.0050000000000000044,puntos del salario,sensibilidades_v12.csv
+v12_tau70_saldo_pts_sbc_2030,-1.9,-1.827,0.07299999999999995,puntos del salario,sensibilidades_v12.csv
+v12_tau70_saldo_pts_sbc_2054,-0.83,-0.818,0.01200000000000001,puntos del salario,sensibilidades_v12.csv
+v12_tau90_saldo_pts_sbc_2030,-2.443,-2.348,0.0950000000000002,puntos del salario,sensibilidades_v12.csv
+v12_tau90_saldo_pts_sbc_2054,-1.067,-1.052,0.014999999999999902,puntos del salario,sensibilidades_v12.csv
+v12_umbral_fijo_saldo_pts_sbc_2030,-1.359,-1.307,0.052000000000000046,puntos del salario,sensibilidades_v12.csv
+v12_umbral_fijo_saldo_pts_sbc_2054,-0.599,-0.591,0.008000000000000007,puntos del salario,sensibilidades_v12.csv
+v12b_A_GF_cuota_fija_pts_2026,1.257,1.234,-0.02299999999999991,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_GF_cuota_fija_pts_2030,1.141,1.097,-0.04400000000000004,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_GF_cuota_fija_pts_2040,0.843,0.824,-0.019000000000000017,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_GF_cuota_fija_pts_2054,0.555,0.547,-0.008000000000000007,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_GF_cuota_fija_sem_2026,11.77,11.58,-0.1899999999999995,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_GF_cuota_fija_sem_2030,11.14,10.87,-0.27000000000000135,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_GF_cuota_fija_sem_2040,8.82,8.79,-0.030000000000001137,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_GF_cuota_fija_sem_2054,6.23,6.29,0.05999999999999961,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_GF_subsidio_pts_2026,0.101,0.1,-0.0010000000000000009,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_GF_subsidio_pts_2030,0.095,0.092,-0.0030000000000000027,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_GF_subsidio_pts_2040,0.077,0.075,-0.0020000000000000018,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_GF_subsidio_pts_2054,0.058,0.057,-0.0010000000000000009,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_GF_subsidio_sem_2026,0.95,0.93,-0.019999999999999907,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_GF_subsidio_sem_2030,0.93,0.91,-0.020000000000000018,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_costo_pts_2026,3.682,3.614,-0.06800000000000006,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_costo_pts_2030,3.307,3.178,-0.129,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_costo_pts_2040,2.423,2.37,-0.052999999999999936,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_costo_pts_2054,1.636,1.613,-0.02299999999999991,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_costo_sem_2026,34.48,33.91,-0.5700000000000003,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_costo_sem_2030,32.27,31.49,-0.7800000000000047,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_costo_sem_2040,25.35,25.27,-0.08000000000000185,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_costo_sem_2054,18.37,18.55,0.17999999999999972,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_no_cobrado_pts_2026,0.252,0.247,-0.0050000000000000044,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_no_cobrado_pts_2030,0.238,0.228,-0.009999999999999981,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_no_cobrado_pts_2040,0.193,0.189,-0.0040000000000000036,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_no_cobrado_pts_2054,0.144,0.142,-0.0020000000000000018,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_no_cobrado_sem_2026,2.36,2.32,-0.040000000000000036,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_no_cobrado_sem_2030,2.32,2.26,-0.06000000000000005,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_no_cobrado_sem_2040,2.02,2.01,-0.010000000000000231,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_no_cobrado_sem_2054,1.61,1.63,0.019999999999999796,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_pagos_GF_pts_2026,1.359,1.334,-0.02499999999999991,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_pagos_GF_pts_2030,1.237,1.189,-0.04800000000000004,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_pagos_GF_pts_2040,0.92,0.9,-0.020000000000000018,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_pagos_GF_pts_2054,0.612,0.604,-0.008000000000000007,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_pagos_GF_sem_2026,12.72,12.51,-0.21000000000000085,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_pagos_GF_sem_2030,12.07,11.78,-0.2900000000000009,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_pagos_GF_sem_2040,9.62,9.59,-0.02999999999999936,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_pagos_GF_sem_2054,6.88,6.95,0.07000000000000028,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_pagos_determinados_pts_2026,1.007,0.989,-0.017999999999999905,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_pagos_determinados_pts_2030,0.95,0.913,-0.03699999999999992,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_pagos_determinados_pts_2040,0.771,0.754,-0.017000000000000015,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_pagos_determinados_pts_2054,0.574,0.566,-0.008000000000000007,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_pagos_determinados_sem_2026,9.43,9.27,-0.16000000000000014,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_pagos_determinados_sem_2030,9.27,9.05,-0.21999999999999886,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_pagos_determinados_sem_2040,8.06,8.04,-0.02000000000000135,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_pagos_determinados_sem_2054,6.45,6.51,0.05999999999999961,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_pagos_privados_pts_2026,0.755,0.741,-0.014000000000000012,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_pagos_privados_pts_2030,0.713,0.685,-0.027999999999999914,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_pagos_privados_pts_2040,0.578,0.566,-0.01200000000000001,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_pagos_privados_pts_2054,0.431,0.425,-0.006000000000000005,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_pagos_privados_sem_2026,7.07,6.96,-0.11000000000000032,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_pagos_privados_sem_2030,6.95,6.79,-0.16000000000000014,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_pagos_privados_sem_2040,6.05,6.03,-0.019999999999999574,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_pagos_privados_sem_2054,4.84,4.88,0.040000000000000036,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_saldo_pts_2026,-1.568,-1.539,0.029000000000000137,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_saldo_pts_2030,-1.357,-1.305,0.052000000000000046,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_saldo_pts_2040,-0.925,-0.905,0.020000000000000018,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_saldo_pts_2054,-0.593,-0.585,0.008000000000000007,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_A_saldo_sem_2026,-14.68,-14.44,0.2400000000000002,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_saldo_sem_2030,-13.25,-12.93,0.3200000000000003,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_saldo_sem_2040,-9.68,-9.65,0.02999999999999936,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_A_saldo_sem_2054,-6.66,-6.72,-0.05999999999999961,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_GF_cuota_fija_pts_2026,1.257,1.234,-0.02299999999999991,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_GF_cuota_fija_pts_2030,1.141,1.097,-0.04400000000000004,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_GF_cuota_fija_pts_2040,0.843,0.824,-0.019000000000000017,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_GF_cuota_fija_pts_2054,0.555,0.547,-0.008000000000000007,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_GF_cuota_fija_sem_2026,11.77,11.58,-0.1899999999999995,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_GF_cuota_fija_sem_2030,11.14,10.87,-0.27000000000000135,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_GF_cuota_fija_sem_2040,8.82,8.79,-0.030000000000001137,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_GF_cuota_fija_sem_2054,6.23,6.29,0.05999999999999961,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_GF_subsidio_pts_2026,0.101,0.1,-0.0010000000000000009,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_GF_subsidio_pts_2030,0.095,0.092,-0.0030000000000000027,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_GF_subsidio_pts_2040,0.077,0.075,-0.0020000000000000018,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_GF_subsidio_pts_2054,0.058,0.057,-0.0010000000000000009,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_GF_subsidio_sem_2026,0.95,0.93,-0.019999999999999907,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_GF_subsidio_sem_2030,0.93,0.91,-0.020000000000000018,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_costo_pts_2026,3.682,3.614,-0.06800000000000006,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_costo_pts_2030,3.307,3.178,-0.129,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_costo_pts_2040,2.423,2.37,-0.052999999999999936,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_costo_pts_2054,1.636,1.613,-0.02299999999999991,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_costo_sem_2026,34.48,33.91,-0.5700000000000003,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_costo_sem_2030,32.27,31.49,-0.7800000000000047,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_costo_sem_2040,25.35,25.27,-0.08000000000000185,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_costo_sem_2054,18.37,18.55,0.17999999999999972,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_no_cobrado_pts_2026,0.252,0.247,-0.0050000000000000044,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_no_cobrado_pts_2030,0.238,0.228,-0.009999999999999981,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_no_cobrado_pts_2040,0.193,0.189,-0.0040000000000000036,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_no_cobrado_pts_2054,0.144,0.142,-0.0020000000000000018,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_no_cobrado_sem_2026,2.36,2.32,-0.040000000000000036,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_no_cobrado_sem_2030,2.32,2.26,-0.06000000000000005,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_no_cobrado_sem_2040,2.02,2.01,-0.010000000000000231,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_no_cobrado_sem_2054,1.61,1.63,0.019999999999999796,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_pagos_GF_pts_2026,1.359,1.334,-0.02499999999999991,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_pagos_GF_pts_2030,1.237,1.189,-0.04800000000000004,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_pagos_GF_pts_2040,0.92,0.9,-0.020000000000000018,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_pagos_GF_pts_2054,0.612,0.604,-0.008000000000000007,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_pagos_GF_sem_2026,12.72,12.51,-0.21000000000000085,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_pagos_GF_sem_2030,12.07,11.78,-0.2900000000000009,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_pagos_GF_sem_2040,9.62,9.59,-0.02999999999999936,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_pagos_GF_sem_2054,6.88,6.95,0.07000000000000028,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_pagos_determinados_pts_2026,1.007,0.989,-0.017999999999999905,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_pagos_determinados_pts_2030,0.95,0.913,-0.03699999999999992,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_pagos_determinados_pts_2040,0.771,0.754,-0.017000000000000015,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_pagos_determinados_pts_2054,0.574,0.566,-0.008000000000000007,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_pagos_determinados_sem_2026,9.43,9.27,-0.16000000000000014,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_pagos_determinados_sem_2030,9.27,9.05,-0.21999999999999886,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_pagos_determinados_sem_2040,8.06,8.04,-0.02000000000000135,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_pagos_determinados_sem_2054,6.45,6.51,0.05999999999999961,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_pagos_privados_pts_2026,0.755,0.741,-0.014000000000000012,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_pagos_privados_pts_2030,0.713,0.685,-0.027999999999999914,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_pagos_privados_pts_2040,0.578,0.566,-0.01200000000000001,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_pagos_privados_pts_2054,0.431,0.425,-0.006000000000000005,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_pagos_privados_sem_2026,7.07,6.96,-0.11000000000000032,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_pagos_privados_sem_2030,6.95,6.79,-0.16000000000000014,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_pagos_privados_sem_2040,6.05,6.03,-0.019999999999999574,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_pagos_privados_sem_2054,4.84,4.88,0.040000000000000036,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_saldo_pts_2026,-1.568,-1.539,0.029000000000000137,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_saldo_pts_2030,-1.357,-1.305,0.052000000000000046,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_saldo_pts_2040,-0.925,-0.905,0.020000000000000018,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_saldo_pts_2054,-0.593,-0.585,0.008000000000000007,puntos del salario,"Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
+v12b_Total_saldo_sem_2026,-14.68,-14.44,0.2400000000000002,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_saldo_sem_2030,-13.25,-12.93,0.3200000000000003,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_saldo_sem_2040,-9.68,-9.65,0.02999999999999936,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
+v12b_Total_saldo_sem_2054,-6.66,-6.72,-0.05999999999999961,% ingresos del SEM,"Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"

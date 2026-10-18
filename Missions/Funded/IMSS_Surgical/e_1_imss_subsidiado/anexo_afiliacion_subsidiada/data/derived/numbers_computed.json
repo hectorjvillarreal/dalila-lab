@@ -1900,7 +1900,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_base_saldo_pts_sbc_2030": {
-  "valor": -1.357,
+  "valor": -1.305,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_base_pagos_GF_2030": {
@@ -1916,7 +1916,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_base_saldo_pts_sbc_2054": {
-  "valor": -0.593,
+  "valor": -0.585,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_base_pagos_GF_2054": {
@@ -1932,7 +1932,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_regresion_v11_saldo_pts_sbc_2030": {
-  "valor": -0.261,
+  "valor": -0.251,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_regresion_v11_pagos_GF_2030": {
@@ -1948,7 +1948,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_regresion_v11_saldo_pts_sbc_2054": {
-  "valor": -0.117,
+  "valor": -0.115,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_regresion_v11_pagos_GF_2054": {
@@ -1964,7 +1964,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_S2_saldo_pts_sbc_2030": {
-  "valor": -1.374,
+  "valor": -1.32,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_S2_pagos_GF_2030": {
@@ -1980,7 +1980,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_S2_saldo_pts_sbc_2054": {
-  "valor": -0.603,
+  "valor": -0.594,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_S2_pagos_GF_2054": {
@@ -1996,7 +1996,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_S3_saldo_pts_sbc_2030": {
-  "valor": -1.324,
+  "valor": -1.272,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_S3_pagos_GF_2030": {
@@ -2012,7 +2012,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_S3_saldo_pts_sbc_2054": {
-  "valor": -0.573,
+  "valor": -0.566,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_S3_pagos_GF_2054": {
@@ -2028,7 +2028,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_G1_saldo_pts_sbc_2030": {
-  "valor": -1.546,
+  "valor": -1.486,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_G1_pagos_GF_2030": {
@@ -2044,7 +2044,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_G1_saldo_pts_sbc_2054": {
-  "valor": -0.681,
+  "valor": -0.672,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_G1_pagos_GF_2054": {
@@ -2060,7 +2060,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_D1_saldo_pts_sbc_2030": {
-  "valor": -0.743,
+  "valor": -0.715,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_D1_pagos_GF_2030": {
@@ -2076,7 +2076,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_D1_saldo_pts_sbc_2054": {
-  "valor": -0.36,
+  "valor": -0.355,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_D1_pagos_GF_2054": {
@@ -2092,7 +2092,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_tau30_saldo_pts_sbc_2030": {
-  "valor": -0.814,
+  "valor": -0.783,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_tau30_pagos_GF_2030": {
@@ -2108,7 +2108,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_tau30_saldo_pts_sbc_2054": {
-  "valor": -0.356,
+  "valor": -0.351,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_tau30_pagos_GF_2054": {
@@ -2124,7 +2124,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_tau70_saldo_pts_sbc_2030": {
-  "valor": -1.9,
+  "valor": -1.827,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_tau70_pagos_GF_2030": {
@@ -2140,7 +2140,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_tau70_saldo_pts_sbc_2054": {
-  "valor": -0.83,
+  "valor": -0.818,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_tau70_pagos_GF_2054": {
@@ -2156,7 +2156,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_tau90_saldo_pts_sbc_2030": {
-  "valor": -2.443,
+  "valor": -2.348,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_tau90_pagos_GF_2030": {
@@ -2172,7 +2172,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_tau90_saldo_pts_sbc_2054": {
-  "valor": -1.067,
+  "valor": -1.052,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_tau90_pagos_GF_2054": {
@@ -2188,7 +2188,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_T1_saldo_pts_sbc_2030": {
-  "valor": -0.824,
+  "valor": -0.792,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_T1_pagos_GF_2030": {
@@ -2204,7 +2204,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_T1_saldo_pts_sbc_2054": {
-  "valor": -0.418,
+  "valor": -0.412,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_T1_pagos_GF_2054": {
@@ -2220,7 +2220,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_rho50_saldo_pts_sbc_2030": {
-  "valor": -1.595,
+  "valor": -1.533,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_rho50_pagos_GF_2030": {
@@ -2236,7 +2236,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_rho50_saldo_pts_sbc_2054": {
-  "valor": -0.736,
+  "valor": -0.726,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_rho50_pagos_GF_2054": {
@@ -2252,7 +2252,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_rho100_saldo_pts_sbc_2030": {
-  "valor": -1.12,
+  "valor": -1.076,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_rho100_pagos_GF_2030": {
@@ -2268,7 +2268,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_rho100_saldo_pts_sbc_2054": {
-  "valor": -0.449,
+  "valor": -0.443,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_rho100_pagos_GF_2054": {
@@ -2284,7 +2284,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_mu100_saldo_pts_sbc_2030": {
-  "valor": -1.057,
+  "valor": -1.016,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_mu100_pagos_GF_2030": {
@@ -2300,7 +2300,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_mu100_saldo_pts_sbc_2054": {
-  "valor": -0.444,
+  "valor": -0.438,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_mu100_pagos_GF_2054": {
@@ -2316,7 +2316,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_mu130_saldo_pts_sbc_2030": {
-  "valor": -1.959,
+  "valor": -1.883,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_mu130_pagos_GF_2030": {
@@ -2332,7 +2332,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_mu130_saldo_pts_sbc_2054": {
-  "valor": -0.89,
+  "valor": -0.878,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_mu130_pagos_GF_2054": {
@@ -2348,7 +2348,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_U2_enigh_saldo_pts_sbc_2030": {
-  "valor": -0.188,
+  "valor": -0.181,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_U2_enigh_pagos_GF_2030": {
@@ -2364,7 +2364,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_U2_enigh_saldo_pts_sbc_2054": {
-  "valor": -0.088,
+  "valor": -0.087,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_U2_enigh_pagos_GF_2054": {
@@ -2380,7 +2380,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_U2_informe_saldo_pts_sbc_2030": {
-  "valor": -0.433,
+  "valor": -0.416,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_U2_informe_pagos_GF_2030": {
@@ -2396,7 +2396,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_U2_informe_saldo_pts_sbc_2054": {
-  "valor": -0.197,
+  "valor": -0.194,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_U2_informe_pagos_GF_2054": {
@@ -2412,7 +2412,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_pim1_saldo_pts_sbc_2030": {
-  "valor": -1.492,
+  "valor": -1.434,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_pim1_pagos_GF_2030": {
@@ -2428,7 +2428,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_pim1_saldo_pts_sbc_2054": {
-  "valor": -1.118,
+  "valor": -1.103,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_pim1_pagos_GF_2054": {
@@ -2444,7 +2444,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_pim2_saldo_pts_sbc_2030": {
-  "valor": -1.63,
+  "valor": -1.567,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_pim2_pagos_GF_2030": {
@@ -2460,7 +2460,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_pim2_saldo_pts_sbc_2054": {
-  "valor": -1.805,
+  "valor": -1.78,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_pim2_pagos_GF_2054": {
@@ -2476,7 +2476,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_C2_saldo_pts_sbc_2030": {
-  "valor": -1.305,
+  "valor": -1.255,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_C2_pagos_GF_2030": {
@@ -2492,7 +2492,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_C2_saldo_pts_sbc_2054": {
-  "valor": -0.339,
+  "valor": -0.334,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_C2_pagos_GF_2054": {
@@ -2508,7 +2508,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_F1_saldo_pts_sbc_2030": {
-  "valor": -1.36,
+  "valor": -1.308,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_F1_pagos_GF_2030": {
@@ -2524,7 +2524,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_F1_saldo_pts_sbc_2054": {
-  "valor": -0.577,
+  "valor": -0.569,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_F1_pagos_GF_2054": {
@@ -2540,7 +2540,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_plano_saldo_pts_sbc_2030": {
-  "valor": -1.665,
+  "valor": -1.6,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_plano_pagos_GF_2030": {
@@ -2556,7 +2556,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_plano_saldo_pts_sbc_2054": {
-  "valor": -0.562,
+  "valor": -0.555,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_plano_pagos_GF_2054": {
@@ -2572,7 +2572,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_estilizado_2_saldo_pts_sbc_2030": {
-  "valor": -1.495,
+  "valor": -1.437,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_estilizado_2_pagos_GF_2030": {
@@ -2588,7 +2588,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_estilizado_2_saldo_pts_sbc_2054": {
-  "valor": -0.579,
+  "valor": -0.571,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_estilizado_2_pagos_GF_2054": {
@@ -2604,7 +2604,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_estilizado_4_saldo_pts_sbc_2030": {
-  "valor": -1.244,
+  "valor": -1.195,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_estilizado_4_pagos_GF_2030": {
@@ -2620,7 +2620,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_estilizado_4_saldo_pts_sbc_2054": {
-  "valor": -0.604,
+  "valor": -0.596,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_estilizado_4_pagos_GF_2054": {
@@ -2636,7 +2636,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_umbral_fijo_saldo_pts_sbc_2030": {
-  "valor": -1.359,
+  "valor": -1.307,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_umbral_fijo_pagos_GF_2030": {
@@ -2652,7 +2652,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_umbral_fijo_saldo_pts_sbc_2054": {
-  "valor": -0.599,
+  "valor": -0.591,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_umbral_fijo_pagos_GF_2054": {
@@ -2668,7 +2668,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_C2_pim1_saldo_pts_sbc_2030": {
-  "valor": -1.434,
+  "valor": -1.379,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_C2_pim1_pagos_GF_2030": {
@@ -2684,7 +2684,7 @@
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_C2_pim1_saldo_pts_sbc_2054": {
-  "valor": -0.639,
+  "valor": -0.631,
   "fuente": "sensibilidades_v12.csv"
  },
  "v12_C2_pim1_pagos_GF_2054": {
@@ -2708,96 +2708,96 @@
   "fuente": "resultados_v12.csv, base, A, 2026"
  },
  "v12b_A_pagos_determinados_pts_2026": {
-  "valor": 1.007,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.989,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_pagos_determinados_sem_2026": {
-  "valor": 9.43,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 9.27,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_pagos_privados_mdp_2026": {
   "valor": 39103,
   "fuente": "resultados_v12.csv, base, A, 2026"
  },
  "v12b_A_pagos_privados_pts_2026": {
-  "valor": 0.755,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.741,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_pagos_privados_sem_2026": {
-  "valor": 7.07,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 6.96,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_no_cobrado_mdp_2026": {
   "valor": 13034,
   "fuente": "resultados_v12.csv, base, A, 2026"
  },
  "v12b_A_no_cobrado_pts_2026": {
-  "valor": 0.252,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.247,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_no_cobrado_sem_2026": {
-  "valor": 2.36,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 2.32,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_GF_cuota_fija_mdp_2026": {
   "valor": 65081,
   "fuente": "resultados_v12.csv, base, A, 2026"
  },
  "v12b_A_GF_cuota_fija_pts_2026": {
-  "valor": 1.257,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 1.234,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_GF_cuota_fija_sem_2026": {
-  "valor": 11.77,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 11.58,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_GF_subsidio_mdp_2026": {
   "valor": 5251,
   "fuente": "resultados_v12.csv, base, A, 2026"
  },
  "v12b_A_GF_subsidio_pts_2026": {
-  "valor": 0.101,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.1,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_GF_subsidio_sem_2026": {
-  "valor": 0.95,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 0.93,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_pagos_GF_mdp_2026": {
   "valor": 70332,
   "fuente": "resultados_v12.csv, base, A, 2026"
  },
  "v12b_A_pagos_GF_pts_2026": {
-  "valor": 1.359,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 1.334,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_pagos_GF_sem_2026": {
-  "valor": 12.72,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 12.51,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_costo_mdp_2026": {
   "valor": 190614,
   "fuente": "resultados_v12.csv, base, A, 2026"
  },
  "v12b_A_costo_pts_2026": {
-  "valor": 3.682,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 3.614,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_costo_sem_2026": {
-  "valor": 34.48,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 33.91,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_saldo_mdp_2026": {
   "valor": -81179,
   "fuente": "resultados_v12.csv, base, A, 2026"
  },
  "v12b_A_saldo_pts_2026": {
-  "valor": -1.568,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": -1.539,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_saldo_sem_2026": {
-  "valor": -14.68,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": -14.44,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_pagos_determinados_mdp_2026": {
   "valor": 0,
@@ -2805,11 +2805,11 @@
  },
  "v12b_B_pagos_determinados_pts_2026": {
   "valor": -0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_pagos_determinados_sem_2026": {
   "valor": -0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_pagos_privados_mdp_2026": {
   "valor": 0,
@@ -2817,11 +2817,11 @@
  },
  "v12b_B_pagos_privados_pts_2026": {
   "valor": -0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_pagos_privados_sem_2026": {
   "valor": -0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_no_cobrado_mdp_2026": {
   "valor": 0,
@@ -2829,11 +2829,11 @@
  },
  "v12b_B_no_cobrado_pts_2026": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_no_cobrado_sem_2026": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_GF_cuota_fija_mdp_2026": {
   "valor": 0,
@@ -2841,11 +2841,11 @@
  },
  "v12b_B_GF_cuota_fija_pts_2026": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_GF_cuota_fija_sem_2026": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_GF_subsidio_mdp_2026": {
   "valor": 0,
@@ -2853,11 +2853,11 @@
  },
  "v12b_B_GF_subsidio_pts_2026": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_GF_subsidio_sem_2026": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_pagos_GF_mdp_2026": {
   "valor": 0,
@@ -2865,11 +2865,11 @@
  },
  "v12b_B_pagos_GF_pts_2026": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_pagos_GF_sem_2026": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_costo_mdp_2026": {
   "valor": 0,
@@ -2877,11 +2877,11 @@
  },
  "v12b_B_costo_pts_2026": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_costo_sem_2026": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_saldo_mdp_2026": {
   "valor": 0,
@@ -2889,107 +2889,107 @@
  },
  "v12b_B_saldo_pts_2026": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_saldo_sem_2026": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_pagos_determinados_mdp_2026": {
   "valor": 52137,
   "fuente": "resultados_v12.csv, base, Total, 2026"
  },
  "v12b_Total_pagos_determinados_pts_2026": {
-  "valor": 1.007,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.989,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_pagos_determinados_sem_2026": {
-  "valor": 9.43,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 9.27,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_pagos_privados_mdp_2026": {
   "valor": 39103,
   "fuente": "resultados_v12.csv, base, Total, 2026"
  },
  "v12b_Total_pagos_privados_pts_2026": {
-  "valor": 0.755,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.741,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_pagos_privados_sem_2026": {
-  "valor": 7.07,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 6.96,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_no_cobrado_mdp_2026": {
   "valor": 13034,
   "fuente": "resultados_v12.csv, base, Total, 2026"
  },
  "v12b_Total_no_cobrado_pts_2026": {
-  "valor": 0.252,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.247,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_no_cobrado_sem_2026": {
-  "valor": 2.36,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 2.32,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_GF_cuota_fija_mdp_2026": {
   "valor": 65081,
   "fuente": "resultados_v12.csv, base, Total, 2026"
  },
  "v12b_Total_GF_cuota_fija_pts_2026": {
-  "valor": 1.257,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 1.234,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_GF_cuota_fija_sem_2026": {
-  "valor": 11.77,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 11.58,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_GF_subsidio_mdp_2026": {
   "valor": 5251,
   "fuente": "resultados_v12.csv, base, Total, 2026"
  },
  "v12b_Total_GF_subsidio_pts_2026": {
-  "valor": 0.101,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.1,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_GF_subsidio_sem_2026": {
-  "valor": 0.95,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 0.93,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_pagos_GF_mdp_2026": {
   "valor": 70332,
   "fuente": "resultados_v12.csv, base, Total, 2026"
  },
  "v12b_Total_pagos_GF_pts_2026": {
-  "valor": 1.359,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 1.334,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_pagos_GF_sem_2026": {
-  "valor": 12.72,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 12.51,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_costo_mdp_2026": {
   "valor": 190614,
   "fuente": "resultados_v12.csv, base, Total, 2026"
  },
  "v12b_Total_costo_pts_2026": {
-  "valor": 3.682,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 3.614,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_costo_sem_2026": {
-  "valor": 34.48,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 33.91,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_saldo_mdp_2026": {
   "valor": -81179,
   "fuente": "resultados_v12.csv, base, Total, 2026"
  },
  "v12b_Total_saldo_pts_2026": {
-  "valor": -1.568,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": -1.539,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_saldo_sem_2026": {
-  "valor": -14.68,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": -14.44,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_cubiertos_pct_DH_2026": {
   "valor": 38.9,
@@ -3008,96 +3008,96 @@
   "fuente": "resultados_v12.csv, base, A, 2030"
  },
  "v12b_A_pagos_determinados_pts_2030": {
-  "valor": 0.95,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.913,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_pagos_determinados_sem_2030": {
-  "valor": 9.27,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 9.05,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_pagos_privados_mdp_2030": {
   "valor": 42507,
   "fuente": "resultados_v12.csv, base, A, 2030"
  },
  "v12b_A_pagos_privados_pts_2030": {
-  "valor": 0.713,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.685,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_pagos_privados_sem_2030": {
-  "valor": 6.95,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 6.79,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_no_cobrado_mdp_2030": {
   "valor": 14169,
   "fuente": "resultados_v12.csv, base, A, 2030"
  },
  "v12b_A_no_cobrado_pts_2030": {
-  "valor": 0.238,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.228,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_no_cobrado_sem_2030": {
-  "valor": 2.32,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 2.26,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_GF_cuota_fija_mdp_2030": {
   "valor": 68074,
   "fuente": "resultados_v12.csv, base, A, 2030"
  },
  "v12b_A_GF_cuota_fija_pts_2030": {
-  "valor": 1.141,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 1.097,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_GF_cuota_fija_sem_2030": {
-  "valor": 11.14,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 10.87,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_GF_subsidio_mdp_2030": {
   "valor": 5695,
   "fuente": "resultados_v12.csv, base, A, 2030"
  },
  "v12b_A_GF_subsidio_pts_2030": {
-  "valor": 0.095,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.092,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_GF_subsidio_sem_2030": {
-  "valor": 0.93,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 0.91,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_pagos_GF_mdp_2030": {
   "valor": 73769,
   "fuente": "resultados_v12.csv, base, A, 2030"
  },
  "v12b_A_pagos_GF_pts_2030": {
-  "valor": 1.237,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 1.189,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_pagos_GF_sem_2030": {
-  "valor": 12.07,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 11.78,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_costo_mdp_2030": {
   "valor": 197237,
   "fuente": "resultados_v12.csv, base, A, 2030"
  },
  "v12b_A_costo_pts_2030": {
-  "valor": 3.307,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 3.178,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_costo_sem_2030": {
-  "valor": 32.27,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 31.49,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_saldo_mdp_2030": {
   "valor": -80962,
   "fuente": "resultados_v12.csv, base, A, 2030"
  },
  "v12b_A_saldo_pts_2030": {
-  "valor": -1.357,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": -1.305,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_saldo_sem_2030": {
-  "valor": -13.25,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": -12.93,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_pagos_determinados_mdp_2030": {
   "valor": 0,
@@ -3105,11 +3105,11 @@
  },
  "v12b_B_pagos_determinados_pts_2030": {
   "valor": -0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_pagos_determinados_sem_2030": {
   "valor": -0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_pagos_privados_mdp_2030": {
   "valor": 0,
@@ -3117,11 +3117,11 @@
  },
  "v12b_B_pagos_privados_pts_2030": {
   "valor": -0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_pagos_privados_sem_2030": {
   "valor": -0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_no_cobrado_mdp_2030": {
   "valor": 0,
@@ -3129,11 +3129,11 @@
  },
  "v12b_B_no_cobrado_pts_2030": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_no_cobrado_sem_2030": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_GF_cuota_fija_mdp_2030": {
   "valor": 0,
@@ -3141,11 +3141,11 @@
  },
  "v12b_B_GF_cuota_fija_pts_2030": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_GF_cuota_fija_sem_2030": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_GF_subsidio_mdp_2030": {
   "valor": 0,
@@ -3153,11 +3153,11 @@
  },
  "v12b_B_GF_subsidio_pts_2030": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_GF_subsidio_sem_2030": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_pagos_GF_mdp_2030": {
   "valor": 0,
@@ -3165,11 +3165,11 @@
  },
  "v12b_B_pagos_GF_pts_2030": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_pagos_GF_sem_2030": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_costo_mdp_2030": {
   "valor": 0,
@@ -3177,11 +3177,11 @@
  },
  "v12b_B_costo_pts_2030": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_costo_sem_2030": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_saldo_mdp_2030": {
   "valor": 0,
@@ -3189,107 +3189,107 @@
  },
  "v12b_B_saldo_pts_2030": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_saldo_sem_2030": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_pagos_determinados_mdp_2030": {
   "valor": 56676,
   "fuente": "resultados_v12.csv, base, Total, 2030"
  },
  "v12b_Total_pagos_determinados_pts_2030": {
-  "valor": 0.95,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.913,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_pagos_determinados_sem_2030": {
-  "valor": 9.27,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 9.05,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_pagos_privados_mdp_2030": {
   "valor": 42507,
   "fuente": "resultados_v12.csv, base, Total, 2030"
  },
  "v12b_Total_pagos_privados_pts_2030": {
-  "valor": 0.713,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.685,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_pagos_privados_sem_2030": {
-  "valor": 6.95,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 6.79,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_no_cobrado_mdp_2030": {
   "valor": 14169,
   "fuente": "resultados_v12.csv, base, Total, 2030"
  },
  "v12b_Total_no_cobrado_pts_2030": {
-  "valor": 0.238,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.228,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_no_cobrado_sem_2030": {
-  "valor": 2.32,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 2.26,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_GF_cuota_fija_mdp_2030": {
   "valor": 68074,
   "fuente": "resultados_v12.csv, base, Total, 2030"
  },
  "v12b_Total_GF_cuota_fija_pts_2030": {
-  "valor": 1.141,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 1.097,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_GF_cuota_fija_sem_2030": {
-  "valor": 11.14,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 10.87,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_GF_subsidio_mdp_2030": {
   "valor": 5695,
   "fuente": "resultados_v12.csv, base, Total, 2030"
  },
  "v12b_Total_GF_subsidio_pts_2030": {
-  "valor": 0.095,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.092,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_GF_subsidio_sem_2030": {
-  "valor": 0.93,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 0.91,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_pagos_GF_mdp_2030": {
   "valor": 73769,
   "fuente": "resultados_v12.csv, base, Total, 2030"
  },
  "v12b_Total_pagos_GF_pts_2030": {
-  "valor": 1.237,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 1.189,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_pagos_GF_sem_2030": {
-  "valor": 12.07,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 11.78,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_costo_mdp_2030": {
   "valor": 197237,
   "fuente": "resultados_v12.csv, base, Total, 2030"
  },
  "v12b_Total_costo_pts_2030": {
-  "valor": 3.307,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 3.178,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_costo_sem_2030": {
-  "valor": 32.27,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 31.49,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_saldo_mdp_2030": {
   "valor": -80962,
   "fuente": "resultados_v12.csv, base, Total, 2030"
  },
  "v12b_Total_saldo_pts_2030": {
-  "valor": -1.357,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": -1.305,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_saldo_sem_2030": {
-  "valor": -13.25,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": -12.93,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_cubiertos_pct_DH_2030": {
   "valor": 39.7,
@@ -3308,96 +3308,96 @@
   "fuente": "resultados_v12.csv, base, A, 2040"
  },
  "v12b_A_pagos_determinados_pts_2040": {
-  "valor": 0.771,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.754,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_pagos_determinados_sem_2040": {
-  "valor": 8.06,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 8.04,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_pagos_privados_mdp_2040": {
   "valor": 50386,
   "fuente": "resultados_v12.csv, base, A, 2040"
  },
  "v12b_A_pagos_privados_pts_2040": {
-  "valor": 0.578,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.566,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_pagos_privados_sem_2040": {
-  "valor": 6.05,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 6.03,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_no_cobrado_mdp_2040": {
   "valor": 16795,
   "fuente": "resultados_v12.csv, base, A, 2040"
  },
  "v12b_A_no_cobrado_pts_2040": {
-  "valor": 0.193,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.189,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_no_cobrado_sem_2040": {
-  "valor": 2.02,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 2.01,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_GF_cuota_fija_mdp_2040": {
   "valor": 73453,
   "fuente": "resultados_v12.csv, base, A, 2040"
  },
  "v12b_A_GF_cuota_fija_pts_2040": {
-  "valor": 0.843,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.824,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_GF_cuota_fija_sem_2040": {
-  "valor": 8.82,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 8.79,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_GF_subsidio_mdp_2040": {
   "valor": 6700,
   "fuente": "resultados_v12.csv, base, A, 2040"
  },
  "v12b_A_GF_subsidio_pts_2040": {
-  "valor": 0.077,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.075,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_GF_subsidio_sem_2040": {
   "valor": 0.8,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_pagos_GF_mdp_2040": {
   "valor": 80153,
   "fuente": "resultados_v12.csv, base, A, 2040"
  },
  "v12b_A_pagos_GF_pts_2040": {
-  "valor": 0.92,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.9,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_pagos_GF_sem_2040": {
-  "valor": 9.62,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 9.59,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_costo_mdp_2040": {
   "valor": 211185,
   "fuente": "resultados_v12.csv, base, A, 2040"
  },
  "v12b_A_costo_pts_2040": {
-  "valor": 2.423,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 2.37,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_costo_sem_2040": {
-  "valor": 25.35,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 25.27,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_saldo_mdp_2040": {
   "valor": -80647,
   "fuente": "resultados_v12.csv, base, A, 2040"
  },
  "v12b_A_saldo_pts_2040": {
-  "valor": -0.925,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": -0.905,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_saldo_sem_2040": {
-  "valor": -9.68,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": -9.65,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_pagos_determinados_mdp_2040": {
   "valor": 0,
@@ -3405,11 +3405,11 @@
  },
  "v12b_B_pagos_determinados_pts_2040": {
   "valor": -0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_pagos_determinados_sem_2040": {
   "valor": -0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_pagos_privados_mdp_2040": {
   "valor": 0,
@@ -3417,11 +3417,11 @@
  },
  "v12b_B_pagos_privados_pts_2040": {
   "valor": -0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_pagos_privados_sem_2040": {
   "valor": -0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_no_cobrado_mdp_2040": {
   "valor": 0,
@@ -3429,11 +3429,11 @@
  },
  "v12b_B_no_cobrado_pts_2040": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_no_cobrado_sem_2040": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_GF_cuota_fija_mdp_2040": {
   "valor": 0,
@@ -3441,11 +3441,11 @@
  },
  "v12b_B_GF_cuota_fija_pts_2040": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_GF_cuota_fija_sem_2040": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_GF_subsidio_mdp_2040": {
   "valor": 0,
@@ -3453,11 +3453,11 @@
  },
  "v12b_B_GF_subsidio_pts_2040": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_GF_subsidio_sem_2040": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_pagos_GF_mdp_2040": {
   "valor": 0,
@@ -3465,11 +3465,11 @@
  },
  "v12b_B_pagos_GF_pts_2040": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_pagos_GF_sem_2040": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_costo_mdp_2040": {
   "valor": 0,
@@ -3477,11 +3477,11 @@
  },
  "v12b_B_costo_pts_2040": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_costo_sem_2040": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_saldo_mdp_2040": {
   "valor": 0,
@@ -3489,107 +3489,107 @@
  },
  "v12b_B_saldo_pts_2040": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_saldo_sem_2040": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_pagos_determinados_mdp_2040": {
   "valor": 67181,
   "fuente": "resultados_v12.csv, base, Total, 2040"
  },
  "v12b_Total_pagos_determinados_pts_2040": {
-  "valor": 0.771,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.754,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_pagos_determinados_sem_2040": {
-  "valor": 8.06,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 8.04,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_pagos_privados_mdp_2040": {
   "valor": 50386,
   "fuente": "resultados_v12.csv, base, Total, 2040"
  },
  "v12b_Total_pagos_privados_pts_2040": {
-  "valor": 0.578,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.566,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_pagos_privados_sem_2040": {
-  "valor": 6.05,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 6.03,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_no_cobrado_mdp_2040": {
   "valor": 16795,
   "fuente": "resultados_v12.csv, base, Total, 2040"
  },
  "v12b_Total_no_cobrado_pts_2040": {
-  "valor": 0.193,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.189,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_no_cobrado_sem_2040": {
-  "valor": 2.02,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 2.01,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_GF_cuota_fija_mdp_2040": {
   "valor": 73453,
   "fuente": "resultados_v12.csv, base, Total, 2040"
  },
  "v12b_Total_GF_cuota_fija_pts_2040": {
-  "valor": 0.843,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.824,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_GF_cuota_fija_sem_2040": {
-  "valor": 8.82,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 8.79,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_GF_subsidio_mdp_2040": {
   "valor": 6700,
   "fuente": "resultados_v12.csv, base, Total, 2040"
  },
  "v12b_Total_GF_subsidio_pts_2040": {
-  "valor": 0.077,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.075,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_GF_subsidio_sem_2040": {
   "valor": 0.8,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_pagos_GF_mdp_2040": {
   "valor": 80153,
   "fuente": "resultados_v12.csv, base, Total, 2040"
  },
  "v12b_Total_pagos_GF_pts_2040": {
-  "valor": 0.92,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.9,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_pagos_GF_sem_2040": {
-  "valor": 9.62,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 9.59,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_costo_mdp_2040": {
   "valor": 211185,
   "fuente": "resultados_v12.csv, base, Total, 2040"
  },
  "v12b_Total_costo_pts_2040": {
-  "valor": 2.423,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 2.37,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_costo_sem_2040": {
-  "valor": 25.35,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 25.27,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_saldo_mdp_2040": {
   "valor": -80647,
   "fuente": "resultados_v12.csv, base, Total, 2040"
  },
  "v12b_Total_saldo_pts_2040": {
-  "valor": -0.925,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": -0.905,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_saldo_sem_2040": {
-  "valor": -9.68,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": -9.65,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_cubiertos_pct_DH_2040": {
   "valor": 40.6,
@@ -3608,96 +3608,96 @@
   "fuente": "resultados_v12.csv, base, A, 2054"
  },
  "v12b_A_pagos_determinados_pts_2054": {
-  "valor": 0.574,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.566,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_pagos_determinados_sem_2054": {
-  "valor": 6.45,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 6.51,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_pagos_privados_mdp_2054": {
   "valor": 58347,
   "fuente": "resultados_v12.csv, base, A, 2054"
  },
  "v12b_A_pagos_privados_pts_2054": {
-  "valor": 0.431,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.425,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_pagos_privados_sem_2054": {
-  "valor": 4.84,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 4.88,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_no_cobrado_mdp_2054": {
   "valor": 19449,
   "fuente": "resultados_v12.csv, base, A, 2054"
  },
  "v12b_A_no_cobrado_pts_2054": {
-  "valor": 0.144,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.142,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_no_cobrado_sem_2054": {
-  "valor": 1.61,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 1.63,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_GF_cuota_fija_mdp_2054": {
   "valor": 75177,
   "fuente": "resultados_v12.csv, base, A, 2054"
  },
  "v12b_A_GF_cuota_fija_pts_2054": {
-  "valor": 0.555,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.547,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_GF_cuota_fija_sem_2054": {
-  "valor": 6.23,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 6.29,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_GF_subsidio_mdp_2054": {
   "valor": 7807,
   "fuente": "resultados_v12.csv, base, A, 2054"
  },
  "v12b_A_GF_subsidio_pts_2054": {
-  "valor": 0.058,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.057,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_GF_subsidio_sem_2054": {
   "valor": 0.65,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_pagos_GF_mdp_2054": {
   "valor": 82984,
   "fuente": "resultados_v12.csv, base, A, 2054"
  },
  "v12b_A_pagos_GF_pts_2054": {
-  "valor": 0.612,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.604,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_pagos_GF_sem_2054": {
-  "valor": 6.88,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 6.95,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_costo_mdp_2054": {
   "valor": 221667,
   "fuente": "resultados_v12.csv, base, A, 2054"
  },
  "v12b_A_costo_pts_2054": {
-  "valor": 1.636,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 1.613,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_costo_sem_2054": {
-  "valor": 18.37,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 18.55,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_A_saldo_mdp_2054": {
   "valor": -80335,
   "fuente": "resultados_v12.csv, base, A, 2054"
  },
  "v12b_A_saldo_pts_2054": {
-  "valor": -0.593,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": -0.585,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_A_saldo_sem_2054": {
-  "valor": -6.66,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": -6.72,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_pagos_determinados_mdp_2054": {
   "valor": 0,
@@ -3705,11 +3705,11 @@
  },
  "v12b_B_pagos_determinados_pts_2054": {
   "valor": -0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_pagos_determinados_sem_2054": {
   "valor": -0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_pagos_privados_mdp_2054": {
   "valor": 0,
@@ -3717,11 +3717,11 @@
  },
  "v12b_B_pagos_privados_pts_2054": {
   "valor": -0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_pagos_privados_sem_2054": {
   "valor": -0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_no_cobrado_mdp_2054": {
   "valor": 0,
@@ -3729,11 +3729,11 @@
  },
  "v12b_B_no_cobrado_pts_2054": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_no_cobrado_sem_2054": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_GF_cuota_fija_mdp_2054": {
   "valor": 0,
@@ -3741,11 +3741,11 @@
  },
  "v12b_B_GF_cuota_fija_pts_2054": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_GF_cuota_fija_sem_2054": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_GF_subsidio_mdp_2054": {
   "valor": 0,
@@ -3753,11 +3753,11 @@
  },
  "v12b_B_GF_subsidio_pts_2054": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_GF_subsidio_sem_2054": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_pagos_GF_mdp_2054": {
   "valor": 0,
@@ -3765,11 +3765,11 @@
  },
  "v12b_B_pagos_GF_pts_2054": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_pagos_GF_sem_2054": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_costo_mdp_2054": {
   "valor": 0,
@@ -3777,11 +3777,11 @@
  },
  "v12b_B_costo_pts_2054": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_costo_sem_2054": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_B_saldo_mdp_2054": {
   "valor": 0,
@@ -3789,107 +3789,107 @@
  },
  "v12b_B_saldo_pts_2054": {
   "valor": 0.0,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_B_saldo_sem_2054": {
   "valor": 0.0,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_pagos_determinados_mdp_2054": {
   "valor": 77796,
   "fuente": "resultados_v12.csv, base, Total, 2054"
  },
  "v12b_Total_pagos_determinados_pts_2054": {
-  "valor": 0.574,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.566,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_pagos_determinados_sem_2054": {
-  "valor": 6.45,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 6.51,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_pagos_privados_mdp_2054": {
   "valor": 58347,
   "fuente": "resultados_v12.csv, base, Total, 2054"
  },
  "v12b_Total_pagos_privados_pts_2054": {
-  "valor": 0.431,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.425,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_pagos_privados_sem_2054": {
-  "valor": 4.84,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 4.88,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_no_cobrado_mdp_2054": {
   "valor": 19449,
   "fuente": "resultados_v12.csv, base, Total, 2054"
  },
  "v12b_Total_no_cobrado_pts_2054": {
-  "valor": 0.144,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.142,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_no_cobrado_sem_2054": {
-  "valor": 1.61,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 1.63,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_GF_cuota_fija_mdp_2054": {
   "valor": 75177,
   "fuente": "resultados_v12.csv, base, Total, 2054"
  },
  "v12b_Total_GF_cuota_fija_pts_2054": {
-  "valor": 0.555,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.547,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_GF_cuota_fija_sem_2054": {
-  "valor": 6.23,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 6.29,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_GF_subsidio_mdp_2054": {
   "valor": 7807,
   "fuente": "resultados_v12.csv, base, Total, 2054"
  },
  "v12b_Total_GF_subsidio_pts_2054": {
-  "valor": 0.058,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.057,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_GF_subsidio_sem_2054": {
   "valor": 0.65,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_pagos_GF_mdp_2054": {
   "valor": 82984,
   "fuente": "resultados_v12.csv, base, Total, 2054"
  },
  "v12b_Total_pagos_GF_pts_2054": {
-  "valor": 0.612,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 0.604,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_pagos_GF_sem_2054": {
-  "valor": 6.88,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 6.95,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_costo_mdp_2054": {
   "valor": 221667,
   "fuente": "resultados_v12.csv, base, Total, 2054"
  },
  "v12b_Total_costo_pts_2054": {
-  "valor": 1.636,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": 1.613,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_costo_sem_2054": {
-  "valor": 18.37,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": 18.55,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_Total_saldo_mdp_2054": {
   "valor": -80335,
   "fuente": "resultados_v12.csv, base, Total, 2054"
  },
  "v12b_Total_saldo_pts_2054": {
-  "valor": -0.593,
-  "fuente": "Idem, puntos del SBC (337 días)"
+  "valor": -0.585,
+  "fuente": "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)"
  },
  "v12b_Total_saldo_sem_2054": {
-  "valor": -6.66,
-  "fuente": "Idem, % de los ingresos del SEM"
+  "valor": -6.72,
+  "fuente": "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)"
  },
  "v12b_cubiertos_pct_DH_2054": {
   "valor": 40.0,
@@ -3912,12 +3912,12 @@
   "fuente": "efecto_indexacion.csv: recaudación D2 − cuota fija vigente, formales"
  },
  "v12_indexacion_pts_2030": {
-  "valor": 0.195,
-  "fuente": "Idem, puntos del SBC"
+  "valor": 0.187,
+  "fuente": "Idem, puntos del salario (masa R1, denominador común)"
  },
  "v12_indexacion_sem_2030": {
-  "valor": 1.9,
-  "fuente": "Idem, % ingresos SEM"
+  "valor": 1.85,
+  "fuente": "Idem, % ingresos SEM (Cuadro V.13)"
  },
  "v12_C_D2_ingresos_2030": {
   "valor": 38672,
@@ -3932,7 +3932,7 @@
   "fuente": "bloque_C_vs_status_quo.csv, D2, 2030"
  },
  "v12_C_D2_neto_pts_2030": {
-  "valor": -0.193,
+  "valor": -0.186,
   "fuente": "bloque_C_vs_status_quo.csv, D2, 2030"
  },
  "v12_C_D2_GF_2030": {
@@ -3956,7 +3956,7 @@
   "fuente": "bloque_C_vs_status_quo.csv, vigente, 2030"
  },
  "v12_C_vigente_neto_pts_2030": {
-  "valor": -0.096,
+  "valor": -0.093,
   "fuente": "bloque_C_vs_status_quo.csv, vigente, 2030"
  },
  "v12_C_vigente_GF_2030": {
@@ -3968,12 +3968,12 @@
   "fuente": "efecto_indexacion.csv: recaudación D2 − cuota fija vigente, formales"
  },
  "v12_indexacion_pts_2040": {
-  "valor": 0.408,
-  "fuente": "Idem, puntos del SBC"
+  "valor": 0.399,
+  "fuente": "Idem, puntos del salario (masa R1, denominador común)"
  },
  "v12_indexacion_sem_2040": {
-  "valor": 4.27,
-  "fuente": "Idem, % ingresos SEM"
+  "valor": 4.26,
+  "fuente": "Idem, % ingresos SEM (Cuadro V.13)"
  },
  "v12_C_D2_ingresos_2040": {
   "valor": 43556,
@@ -3988,7 +3988,7 @@
   "fuente": "bloque_C_vs_status_quo.csv, D2, 2040"
  },
  "v12_C_D2_neto_pts_2040": {
-  "valor": -0.117,
+  "valor": -0.114,
   "fuente": "bloque_C_vs_status_quo.csv, D2, 2040"
  },
  "v12_C_D2_GF_2040": {
@@ -4012,7 +4012,7 @@
   "fuente": "bloque_C_vs_status_quo.csv, vigente, 2040"
  },
  "v12_C_vigente_neto_pts_2040": {
-  "valor": -0.06,
+  "valor": -0.059,
   "fuente": "bloque_C_vs_status_quo.csv, vigente, 2040"
  },
  "v12_C_vigente_GF_2040": {
@@ -4024,12 +4024,12 @@
   "fuente": "efecto_indexacion.csv: recaudación D2 − cuota fija vigente, formales"
  },
  "v12_indexacion_pts_2054": {
-  "valor": 0.73,
-  "fuente": "Idem, puntos del SBC"
+  "valor": 0.72,
+  "fuente": "Idem, puntos del salario (masa R1, denominador común)"
  },
  "v12_indexacion_sem_2054": {
-  "valor": 8.2,
-  "fuente": "Idem, % ingresos SEM"
+  "valor": 8.28,
+  "fuente": "Idem, % ingresos SEM (Cuadro V.13)"
  },
  "v12_C_D2_ingresos_2054": {
   "valor": 47302,
@@ -4044,7 +4044,7 @@
   "fuente": "bloque_C_vs_status_quo.csv, D2, 2054"
  },
  "v12_C_D2_neto_pts_2054": {
-  "valor": -0.067,
+  "valor": -0.066,
   "fuente": "bloque_C_vs_status_quo.csv, D2, 2054"
  },
  "v12_C_D2_GF_2054": {
@@ -4068,7 +4068,7 @@
   "fuente": "bloque_C_vs_status_quo.csv, vigente, 2054"
  },
  "v12_C_vigente_neto_pts_2054": {
-  "valor": -0.044,
+  "valor": -0.043,
   "fuente": "bloque_C_vs_status_quo.csv, vigente, 2054"
  },
  "v12_C_vigente_GF_2054": {

@@ -174,8 +174,8 @@ def registrar(r12, ind, bc):
                         record(f"v12b_{bl}_{c}_{y}", round(a[c]), f"resultados_v12.csv, base, {bl}, {y}")
                     continue
                 record(f"v12b_{bl}_{c}_mdp_{y}", round(a[c]), f"resultados_v12.csv, base, {bl}, {y}")
-                record(f"v12b_{bl}_{c}_pts_{y}", round(a[f"{c}_pts_sbc"], 3), "Idem, puntos del SBC (337 días)")
-                record(f"v12b_{bl}_{c}_sem_{y}", round(a[f"{c}_pct_sem"], 2), "Idem, % de los ingresos del SEM")
+                record(f"v12b_{bl}_{c}_pts_{y}", round(a[f"{c}_pts_sbc"], 3), "Idem, puntos del salario (masa R1 con tope y piso, 337 días; denominador común)")
+                record(f"v12b_{bl}_{c}_sem_{y}", round(a[f"{c}_pct_sem"], 2), "Idem, % de los ingresos del SEM (Informe, Cuadro V.13)")
         cub = t.loc[("base", "A", y), "personas_cubiertas"]
         record(f"v12b_cubiertos_pct_DH_{y}", round(cub / P["dh_total_informe"] * 100, 1), "Personas cubiertas / 79,178,109 DH (Cuadro I.4)")
     a = t.loc[("base", "Total", 2026)]
@@ -185,8 +185,8 @@ def registrar(r12, ind, bc):
     for y in (2030, 2040, 2054):
         r = ind.set_index("anio").loc[y]
         record(f"v12_indexacion_mdp_{y}", round(r.diferencia), "efecto_indexacion.csv: recaudación D2 − cuota fija vigente, formales")
-        record(f"v12_indexacion_pts_{y}", round(r.diferencia_pts_sbc, 3), "Idem, puntos del SBC")
-        record(f"v12_indexacion_sem_{y}", round(r.diferencia_pct_sem, 2), "Idem, % ingresos SEM")
+        record(f"v12_indexacion_pts_{y}", round(r.diferencia_pts_sbc, 3), "Idem, puntos del salario (masa R1, denominador común)")
+        record(f"v12_indexacion_sem_{y}", round(r.diferencia_pct_sem, 2), "Idem, % ingresos SEM (Cuadro V.13)")
         for cuota in ("D2", "vigente"):
             x = bc[(bc.anio == y) & (bc.cuota == cuota)].iloc[0]
             src = f"bloque_C_vs_status_quo.csv, {cuota}, {y}"
@@ -239,7 +239,7 @@ def figuras(r12, s):
     ax[1].bar(a.index, y, color=GRIS, width=0.8)
     ax[1].axhline(0, color=TINTA2, lw=0.8)
     ax[1].set_ylim(y.min() * 1.2, 0.05)
-    ax[1].set_title("Saldo sin fuente asignada (puntos del SBC, 337 días)", fontsize=10, color=TINTA, loc="left")
+    ax[1].set_title("Saldo sin fuente asignada (puntos del salario, masa común R1, 337 días)", fontsize=10, color=TINTA, loc="left")
     for yr in REP:
         ax[1].text(yr, y.loc[yr] - 0.04, f"{y.loc[yr]:.2f}", ha="center", va="top", fontsize=7.5, color=TINTA2)
     for x in ax:
@@ -263,7 +263,7 @@ def figuras(r12, s):
                 fontsize=7.5, color=TINTA2)
     lo, hi = d.saldo_pts_sbc_2054.min(), d.saldo_pts_sbc_2054.max()
     ax.set_xlim(lo - 0.3, max(hi, 0) + 0.3)
-    ax.set_xlabel("Saldo total sin fuente asignada en 2054 (puntos del SBC)", fontsize=8, color=TINTA2)
+    ax.set_xlabel("Saldo total sin fuente asignada en 2054 (puntos del salario, masa común)", fontsize=8, color=TINTA2)
     ax.set_title("Sensibilidad del saldo de 2054, v1.2", fontsize=10, color=TINTA, loc="left")
     _estilo(ax)
     ax.grid(axis="x", color="#ebeae6", lw=0.8)

@@ -41,6 +41,14 @@ parametros:
   pef2026_salud_no_contrib_mdp2027: {SSa: 68964.2, IMSS-Bienestar: 177591.9, FASSA: 87344.2, Bienestar: 4128.0}
   inflacion_2027: 0.0382   # libro, Sup_Fin
 
+# Denominador común con el experimento 2 (instrucción 20261018_..._experimento2_build_v1.1, sección 4).
+# Solo para las salidas v1.2: puntos del salario sobre la masa R1 (tope 25 UMA, piso SM, 337 días) e
+# ingresos del SEM del Informe, Cuadro V.13 (interpolación lineal). El libro se sigue usando para cotizantes,
+# salarios y supuestos. Las corridas v1.1 conservan sus denominadores originales.
+sem_v13:
+  anios: [2026, 2031, 2036, 2041, 2046, 2051, 2055]
+  ingresos: [562126, 642375, 740391, 859501, 995073, 1131634, 1215833]
+
 escenarios:
   # Defaults comunes: reproducen la v1.1 (D1, cobro completo, umbrales fijos en UMA, 365 días).
   defaults: {D: D1, rho: 1.0, umbral: fijo, dias: 365, hb: enigh, tau: 0.9, mu: 1.0}

@@ -6,7 +6,7 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from comun import CFG, P, record, table
+from comun import CFG, P, PROJECT, record, table
 from insumos import Insumos2, cargar
 
 K = CFG["cuna"]
@@ -29,13 +29,13 @@ def tramo(w: float, sm: float, lectura: str = "uma") -> int:
     return 7
 
 
-def componentes(w: float, sm: float, anio: int, col: str, lectura: str = "uma") -> dict:
+def componentes(w: float, sm: float, anio: int, col: str, lectura: str = "uma", rt: float = 1.9078) -> dict:
     i = tramo(w, sm, lectura)
     pa, ob, fe = K["patron"], K["obrera"], K["federal"]
     exc = max(0.0, w - 3.0) / w
     d = {"SEM cuota fija": pa["cf_uma"] / w if col != "c" else P["c_d2"] * 100,
          "SEM excedente": pa["excedente"] * exc, "SEM prestaciones en dinero": pa["pd"], "SEM GMP": pa["gmp"],
-         "Invalidez y Vida": pa["iv"], "Riesgos de Trabajo (prima promedio)": pa["rt"],
+         "Invalidez y Vida": pa["iv"], "Riesgos de Trabajo (prima promedio)": rt,
          "Guarderías y Prestaciones Sociales": pa["gps"], "Retiro": pa["retiro"],
          "Cesantía y vejez": K["cyv"][anio][i],
          "Infonavit": P["infonavit_tasa"] * 100 if col == "a" else 0.0,
@@ -53,7 +53,7 @@ def componentes(w: float, sm: float, anio: int, col: str, lectura: str = "uma") 
     return d
 
 
-def tabla(ins: Insumos2) -> pd.DataFrame:
+def tabla(ins: Insumos2, rt: float) -> pd.DataFrame:
     rows = []
     for anio in K["anios"]:
         sm = ins.sm[anio]
@@ -61,7 +61,7 @@ def tabla(ins: Insumos2) -> pd.DataFrame:
                    ("1.01 SM, primer tramo tras el mínimo", 1.01 * sm, "primer")]
         niveles += [(f"{w:g} UMA", float(w), "uma") for w in K["niveles_uma"]]
         for nombre, w, lect in niveles:
-            cols = {c: componentes(w, sm, anio, c, lect) for c in ("a", "b", "c")}
+            cols = {c: componentes(w, sm, anio, c, lect, rt) for c in ("a", "b", "c")}
             for comp in cols["a"]:
                 rows.append({"anio": anio, "nivel": nombre, "sbc_uma": round(w, 4), "debajo_del_SM": w < sm - 1e-9,
                              "tramo_cyv": K["cyv_tramos"][tramo(w, sm, lect)], "componente": comp,
@@ -85,9 +85,14 @@ def verificar(t: pd.DataFrame) -> dict:
 
 def main():
     ins = cargar()
-    t = tabla(ins)
+    t = tabla(ins, CFG["corridas"][CFG["corrida"]]["rt_cuna"])
     table(t, "cuna_legal_por_salario")
     chk = verificar(t)
+    # 7.1: con la prima de RT de la v1.0 (1.80) se reproduce la tabla de la corrida del 18-10
+    from nuevo_seguro import _max_dif
+    v10 = tabla(ins, CFG["corridas"]["v1.0"]["rt_cuna"])
+    chk["7.1 regresión v1.0: cuna_legal_por_salario (máx. desviación)"] = _max_dif(v10, pd.read_csv(PROJECT / "data" / "v10" / "cuna_legal_por_salario.csv"))
+    chk = {k.replace("3.5 (b)", "3.5/7.5 (b)"): v for k, v in chk.items()}
     piv = t.set_index(["anio", "nivel", "componente"])
     for anio in K["anios"]:
         record(f"cuna_sm_uma_{anio}", round(ins.sm[anio], 3), "SM en veces la UMA (Sup_Fin)")
@@ -106,8 +111,14 @@ def main():
             record(f"escalon_{anio}_{k}_cyv_salto", round(float(cy - 3.150), 3), "Salto frente a 3.150 % del salario mínimo (puntos)")
             record(f"escalon_{anio}_{k}_patron_salto", round(float(p - sm_p), 3),
                    "Salto del total a cargo del patrón entre SM y 1.01 SM, ley vigente (puntos; neto del fin del art. 36)")
+    for nivel, key in (("Salario mínimo", "sm"), ("5.55 UMA", "prom"), ("25 UMA", "25uma")):
+        for anio in K["anios"]:
+            x = piv.loc[(anio, nivel, "Total a cargo del patrón (incidencia legal)")]
+            record(f"cuna_{anio}_{key}_c_menos_a", round(float(x.c_experimento2_mas_D2 - x.a_ley_vigente), 3),
+                   "Cambio de la cuña legal a cargo del patrón, (c) − (a), puntos del SBC")
+    record("RT_prima_cuna", CFG["corridas"][CFG["corrida"]]["rt_cuna"], "Prima de RT en el Cuadro X-2.2 (Informe, Cuadro A.3)")
     for i, (k, v) in enumerate(chk.items()):
-        record(f"chk_cuna_{i}", v, k)
+        record(f"chk_cuna_{i}", round(v, 9) if isinstance(v, float) else v, k)
     return chk
 
 

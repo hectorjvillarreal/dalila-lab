@@ -3,6 +3,13 @@
 # Rutas relativas a la raíz de Dalila (dalila_root, relativo a esta carpeta).
 
 dalila_root: ../../../..
+
+# Corrida activa. v1.0 reproduce la corrida del 18-10 (prueba de regresión 7.1); v1.1 es la instrucción
+# 20261018_BDH_N13_experimento2-seguro-salud-cuidados_build_v1.1.
+corrida: v1.1
+corridas:
+  v1.0: {escenarios: [base, M2], ajuste_ingreso_gmp: false, rt_cuna: 1.80, personas: [DH_total, PAMF]}
+  v1.1: {escenarios: [base, M3, M2], ajuste_ingreso_gmp: true, rt_cuna: 1.9078, personas: [ENIGH, Informe_max]}
 exp1: Missions/Funded/IMSS_Surgical/e_1_imss_subsidiado/anexo_afiliacion_subsidiada   # módulos y derivados de la v1.2
 informe_pdf: Missions/Funded/IMSS_Surgical/e_1_imss_subsidiado/_informe-situacion-financiera_imss.pdf
 
@@ -23,7 +30,8 @@ parametros:
   k2_fraccion: 0.05        # K2: 1/20 de la reserva por año a partir de k2_inicio
   dh_total: 79178109       # Informe, Cuadro I.4
   dh_65mas_pamf_2025: 0.166  # Informe, Gráfica I.31 (población adscrita a médico familiar, 65 y más)
-  pamf_2025: 63598543      # Informe, texto del Cuadro I.4 y Gráfica I.23: adscripciones a UMF (sensibilidad del denominador)
+  pamf_2025: 63598543      # Informe, texto del Cuadro I.4 y Gráfica I.23: adscripciones a UMF (solo corrida v1.0)
+  enigh_grupos_65: [65, 70, 75, 80, 85]   # grupos quinquenales (85 y más) para la tasa de afiliación al IMSS de la ENIGH
   vol_salarios_vp: 176481700 # Informe, Cuadro V.15 (base), mdp de 2026, VP 2026-2055
   gmp_prima_fin: 0.015     # Informe, Cuadro II.16
   gmp_prima_eq: 0.031      # Informe, Cuadro II.16 (3.05 en Cuadro V.20)
@@ -37,6 +45,11 @@ gmp_v24:
   saldo: [-68398, -97760, -134117, -138282, -157934, -180930, -203895]
   vp_ingresos: 2750260
   vp_saldo: -2631460
+
+# Provisiones de GMP (Informe, Cuadro V.19), mdp de 2026, para el margen sin provisiones (v1.1, sección 5).
+gmp_v19_provisiones:
+  anios: [2026, 2031, 2036, 2041, 2046, 2051, 2055]
+  valores: [123, 9971, 19577, 541, 540, 542, 545]
 
 # Para explicar el contraste de 1.2 (brecha de primas × volumen de salarios frente al déficit del Cuadro V.24).
 contraste_gmp:
@@ -58,7 +71,7 @@ sem_v13:
 cuna:
   anios: [2026, 2030]
   niveles_uma: [2, 3, 4, 5.55, 10, 25]     # además del salario mínimo y 1.01 SM
-  patron: {pd: 0.70, gmp: 1.05, iv: 1.75, rt: 1.80, gps: 1.00, retiro: 2.00, excedente: 1.10, cf_uma: 20.40}
+  patron: {pd: 0.70, gmp: 1.05, iv: 1.75, gps: 1.00, retiro: 2.00, excedente: 1.10, cf_uma: 20.40}   # RT: según la corrida
   obrera: {pd: 0.25, gmp: 0.375, iv: 0.625, cyv: 1.125, excedente: 0.40}
   federal: {pd: 0.05, gmp: 0.075, iv: 0.125, cf_uma: 14.83}
   # DOF 16-12-2020, Segundo Transitorio (tabla verificada contra la imagen del DOF); límites superiores en UMA

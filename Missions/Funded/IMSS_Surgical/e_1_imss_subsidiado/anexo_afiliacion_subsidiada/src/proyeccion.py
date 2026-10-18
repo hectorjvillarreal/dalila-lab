@@ -72,6 +72,10 @@ class Insumos:
         self.wf = {t: f.share.values * self.cot_g.loc[t].reindex(list(zip(f.grupo_edad, f.sexo))).values for t in YEARS}
         self.mf = {t: np.minimum(P["tope_sbc_uma"], np.maximum(f.m25.values * self.G[t], self.sm[t])) for t in YEARS}
         self.c = P["cf_patron"] * self.wf[2026].sum() / (self.wf[2026] * self.mf[2026]).sum()
+        # denominador común con el experimento 2 (solo salidas v1.2): masa R1 por día e ingresos del SEM del Cuadro V.13
+        self.masa_r1_dia = {t: (self.wf[t] * self.mf[t]).sum() * UMA / MDP for t in YEARS}
+        v = CFG["sem_v13"]
+        self.sem_v13 = pd.Series(np.interp(YEARS, v["anios"], v["ingresos"]), index=YEARS)
 
     def _sbc_promedio(self):
         s = load("libro_sbc_dic25")
@@ -250,8 +254,9 @@ def correr(ins: Insumos, rid: str, ov: dict, base: str = "base") -> pd.DataFrame
     tot = d.groupby(["corrida", "anio"], as_index=False)[num].sum()
     tot["bloque"] = "Total"
     d = pd.concat([d, tot], ignore_index=True)
-    d["masa_sbc"] = d.anio.map(ins.masa_dia) * d_f
-    d["ingreso_sem"] = d.anio.map(ins.sem)
+    masa_dia, sem = (ins.masa_r1_dia, ins.sem_v13) if base == "base_v12" else (ins.masa_dia, ins.sem)
+    d["masa_sbc"] = d.anio.map(masa_dia) * d_f
+    d["ingreso_sem"] = d.anio.map(sem)
     for c in ("pagos_determinados", "pagos_privados", "no_cobrado", "GF_cuota_fija", "GF_subsidio", "pagos_GF",
               "costo", "ingreso", "saldo"):
         d[f"{c}_pts_sbc"] = d[c] / d.masa_sbc * 100
@@ -312,8 +317,8 @@ def bloque_c_status_quo(ins: Insumos) -> pd.DataFrame:
                          "GF": (w_t * f * (fg + sub)).sum() / MDP, "ingresos_SEM": ing / MDP, "costo": costo / MDP,
                          "efecto_neto_SEM": (ing - costo) / MDP})
     d = pd.DataFrame(rows)
-    d["efecto_neto_pts_sbc"] = d.efecto_neto_SEM / (d.anio.map(ins.masa_dia) * d_f) * 100
-    d["efecto_neto_pct_sem"] = d.efecto_neto_SEM / d.anio.map(ins.sem) * 100
+    d["efecto_neto_pts_sbc"] = d.efecto_neto_SEM / (d.anio.map(ins.masa_r1_dia) * d_f) * 100
+    d["efecto_neto_pct_sem"] = d.efecto_neto_SEM / d.anio.map(ins.sem_v13) * 100
     return d
 
 
@@ -327,8 +332,8 @@ def efecto_indexacion(ins: Insumos) -> pd.DataFrame:
         sq = P["cf_patron"] * UMA * d_f * wf.sum() / MDP
         rows.append({"anio": t, "recaudacion_D2": d2, "recaudacion_vigente": sq, "diferencia": d2 - sq})
     d = pd.DataFrame(rows)
-    d["diferencia_pts_sbc"] = d.diferencia / (d.anio.map(ins.masa_dia) * d_f) * 100
-    d["diferencia_pct_sem"] = d.diferencia / d.anio.map(ins.sem) * 100
+    d["diferencia_pts_sbc"] = d.diferencia / (d.anio.map(ins.masa_r1_dia) * d_f) * 100
+    d["diferencia_pct_sem"] = d.diferencia / d.anio.map(ins.sem_v13) * 100
     return d
 
 

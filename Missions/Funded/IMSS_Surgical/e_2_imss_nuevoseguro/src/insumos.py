@@ -1,5 +1,6 @@
 """Masa salarial con tope de 25 UMA y 337 días (cotizantes del libro × distribución R1, como en la v1.2),
-sensibilidad M2, derechohabientes de 65+ y 80+, e ingresos del SEM y déficit de GMP del Informe interpolados."""
+escenarios de formalidad M2 y M3, personas mayores con IMSS (ENIGH × CONAPO; conteo máximo del Informe),
+e ingresos del SEM, ingresos y déficit de GMP y provisiones del Informe interpolados."""
 
 from __future__ import annotations
 
@@ -65,11 +66,16 @@ class Insumos2:
         self.masa = pd.DataFrame(rows).set_index("anio")
         self.masa["prop_sobre_tope"] = 1 - self.masa.masa_tope25 / self.masa.masa_sin_tope
 
-        # M2: cotizantes al ritmo de los ocupados (formalidad implícita de 2025 constante), con la prueba C de la v1.2
+        # Escenarios de formalidad, con la prueba C de la v1.2 (formalidad implícita = cotizantes / ocupados):
+        # M2 mantiene la formalidad de 2025 (cotizantes al ritmo de los ocupados); M3 toma, año por año,
+        # la mitad de la ganancia institucional sobre 2025. Factor = formalidad del escenario / formalidad base.
         pc = c1.load("prueba_c_agregado").set_index("anio")
-        fm = pc.formalidad_implicita
-        self.m2 = (fm.loc[2025] / fm).reindex(range(2026, 2055))
+        fm = pc.formalidad_implicita.reindex(range(2025, 2055))
+        f25 = fm.loc[2025]
         self.formalidad = fm
+        self.formalidad_esc = {"base": fm, "M2": fm * 0 + f25, "M3": (f25 + fm) / 2}
+        self.factor = {e: (v / fm).loc[2026:2054] for e, v in self.formalidad_esc.items()}
+        self.m2 = self.factor["M2"]
 
         # derechohabientes de 65+ y 80+: 16.6 % de 65+ (Gráfica I.31) × DH totales (Cuadro I.4), proyectados con CONAPO
         pop = c1.load("conapo_pob")
@@ -83,15 +89,35 @@ class Insumos2:
         self.dh80_pamf = self.dh65_pamf * p80 / p65
         self.p65, self.p80 = p65, p80
 
+        # Base ENIGH (v1.1): tasa de afiliación al IMSS (inst_1) por grupo quinquenal (85 y más) y sexo, × CONAPO
+        per = c1.load("enigh_personas")
+        per = per[per.edad >= 65].copy()
+        cortes = P["enigh_grupos_65"] + [200]
+        per["g"] = pd.cut(per.edad, cortes, right=False, labels=P["enigh_grupos_65"]).astype(int)
+        tasa = per.groupby(["g", "sexo"]).apply(lambda x: (x.factor * x.imss).sum() / x.factor.sum(), include_groups=False)
+        self.enigh_tasa = tasa.rename("tasa_imss")
+        self.enigh_n = per.groupby(["g", "sexo"]).size().rename("n")
+        self.enigh_tasa65 = float((per.factor * per.imss).sum() / per.factor.sum())
+        m80 = per.edad >= 80
+        self.enigh_tasa80 = float((per.factor * per.imss)[m80].sum() / per.factor[m80].sum())
+        pp = pop[pop.edad >= 65].copy()
+        pp["g"] = pd.cut(pp.edad, cortes, right=False, labels=P["enigh_grupos_65"]).astype(int)
+        pp["imss"] = pp.pob * tasa.reindex(pd.MultiIndex.from_arrays([pp.g, pp.sexo])).values
+        self.enigh65 = pp.groupby("anio").imss.sum()
+        self.enigh80 = pp[pp.edad >= 80].groupby("anio").imss.sum()
+
         g = CFG["gmp_v24"]
         self.gmp_ing = interpola(g["anios"], g["ingresos"], ANIOS_INF)
         self.gmp_def = -interpola(g["anios"], g["saldo"], ANIOS_INF)       # déficit en positivo
         v = CFG["sem_v13"]
         self.sem = interpola(v["anios"], v["ingresos"], ANIOS_INF)
+        pv = CFG["gmp_v19_provisiones"]
+        self.gmp_prov = interpola(pv["anios"], pv["valores"], ANIOS_INF)
+        self.sem_libro = ins.sem                 # libro de Finanzas, SEM-A + SEM-GMP (denominador anterior de la v1.2)
 
     def masa_esc(self, esc: str) -> pd.Series:
         b = self.masa.masa_tope25.loc[YEARS]
-        return b if esc == "base" else b * self.m2.loc[YEARS]
+        return b if esc == "base" else b * self.factor[esc].loc[YEARS]
 
 
 @cache
