@@ -1,0 +1,13 @@
+{
+ "3.1 montos en mdp que cambian (v2 → v3)": 0,
+ "3.2 cifras sustituidas sin registro o con valor distinto en NUMBERS.md": 0,
+ "3.3 cifras que cambian de texto": 112,
+ "3.3 claves distintas entre ellas": 109,
+ "3.3 de ellas, entre las 186 de exp1_cambios_denominador.csv": 83,
+ "3.3 de ellas, registradas en la v1.3 (columnas C2 y años sin clave previa del Cuadro X.1)": 26,
+ "3.4 líneas que cambian fuera de cifras y de la oración del denominador": 0,
+ "3.5 apariciones de 2055 en el borrador v3 fuera de la oración del v2 que dice que no se reporta": 0,
+ "mapeo: celdas del v2 que no coinciden con el valor anterior": 0,
+ "mapeo_detalle": [],
+ "sin_registro": []
+}

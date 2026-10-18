@@ -6,6 +6,40 @@
 
 ---
 
+# v1.3 — Borrador con el denominador común (2026-10-18)
+
+**Instrucción:** `20261018_BDH_N13_anexo-afiliacion-subsidiada_build_v1.3` (Beth; revisión pendiente de Cath). Archivada en `_crossrefs/_build_instructions/2026-10-18_BDH-N13_anexo-afiliacion-subsidiada_retrofit_v1.3.md`. Producto: `ANEXO_borrador_v3.md`; el v2 se conserva. Lo genera `src/borrador_v3.py`, dentro de `run_all.py`.
+
+- **Cifras sustituidas:** el borrador tiene 169 cifras en puntos del salario o en % de los ingresos del SEM (166 claves). **112 cambian de texto**; las otras 57 quedan iguales con el redondeo del v2.
+  - Por sección: Cuadro X.1 (b) 37 de 54; Cuadro X.1 (c) 26 de 54; Cuadro X.2 41 de 46; X.4 texto 2 de 2; X.5 2 de 6; X.6 3 de 6; X.7 texto 1 de 1.
+  - Ejemplo: en 2030, «1.36 puntos del SBC y 13.2 % de los ingresos del SEM» pasa a «1.30 puntos del SBC y 12.9 %». El valor es −1.3047; el REPORT de la v1.1 del experimento 2 lo cita como −1.305.
+- **Oración nueva (X.3):** sustituye a la oración anterior sobre el denominador. Dice que los puntos se miden sobre la masa R1 con tope de 25 UMA y piso en el mínimo (337 días), que el % del SEM usa el Cuadro V.13 y que el libro se usa para cotizantes, salarios y supuestos.
+- **Oraciones marcadas [REVISAR]:** ninguna. Se revisaron todas las afirmaciones comparativas y siguen siendo ciertas con las cifras nuevas:
+  - el costo per cápita sigue siendo la sensibilidad que más mueve el saldo de 2054 (−1.195 puntos frente a la base);
+  - el saldo sigue bajando en puntos;
+  - el esquema individual sigue mejorando el saldo.
+- **Trazabilidad:** `outputs/tables/exp1_borrador_v2_a_v3.csv`, una fila por cifra con clave en `NUMBERS.md`, texto anterior, texto nuevo, sección y si cambia.
+- **Registro nuevo:** cada celda de los paneles (b) y (c) del Cuadro X.1 (claves `X1_*`). Las columnas C2 y algunos años no tenían clave antes.
+
+**Verificaciones (sección 3):**
+
+| # | Resultado | Estado |
+|---|---|---|
+| 3.1 | Montos en mdp que cambian del v2 al v3: 0 | ✓ |
+| 3.2 | Cifras sustituidas sin registro o con valor distinto en `NUMBERS.md`: 0. Además, antes de sustituir, cada celda del v2 se comparó con el valor anterior (commit `2253249`): 0 discrepancias | ✓ |
+| 3.3 | De las 112 cifras que cambian (109 claves distintas), 83 claves están entre las 186 de `exp1_cambios_denominador.csv`. Las otras 26 son celdas del Cuadro X.1 que no tenían clave antes de la v1.3 (columnas C2 y años sin registro previo) y ahora están registradas | ✓, con esa salvedad |
+| 3.4 | Líneas que cambian fuera de las cifras y de la oración del denominador: 0 | ✓ |
+| 3.5 | Sin 2055 en el borrador fuera de la oración del v2 que explica que no se reporta, que se conserva porque el diff no puede tocar la redacción | ✓ |
+
+**Diff resumido:**
+
+- 1 oración sustituida (X.3).
+- 2 cifras en el texto de X.4 y 1 en el texto de X.7.
+- 63 celdas del Cuadro X.1, 41 del Cuadro X.2, 2 de X.5 y 3 de X.6.
+- Nada más.
+
+---
+
 # Experimento 2 — Cuota del Infonavit a un nuevo seguro solidario de salud y cuidados (2026-10-18)
 
 Por decisión de Héctor, el experimento 2 vive en su propia carpeta: `../../e_2_imss_nuevoseguro/`. Ahí están su reporte (`REPORT.md`, sección «Experimento 2»), su registro de cifras (`NUMBERS.md`, sección «Experimento 2») y su borrador (`ANEXO_experimento2_borrador.md`). Reutiliza los módulos y derivados de esta v1.2 sin escribir en ellos. La única combinación permitida con este experimento es la columna (c) de su tabla de cuña contributiva legal, que usa la tasa D2 (3.467 %).

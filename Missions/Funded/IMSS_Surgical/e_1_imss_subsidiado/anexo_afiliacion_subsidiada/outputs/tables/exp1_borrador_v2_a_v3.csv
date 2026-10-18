@@ -1,0 +1,170 @@
+clave,texto_anterior,texto_nuevo,seccion,fila,columna,cambia
+v12b_Total_saldo_pts_2030,1.36,1.30,X.4 texto,Saldo sin fuente asignada,2030 puntos,True
+v12b_Total_saldo_sem_2030,13.2,12.9,X.4 texto,Saldo sin fuente asignada,2030 % SEM,True
+v12b_A_pagos_determinados_pts_2026,1.01,0.99,Cuadro X.1 (b),Pagos determinados,C1_2026,True
+v12b_A_pagos_determinados_pts_2030,0.95,0.91,Cuadro X.1 (b),Pagos determinados,C1_2030,True
+v12b_A_pagos_determinados_pts_2040,0.77,0.75,Cuadro X.1 (b),Pagos determinados,C1_2040,True
+v12b_A_pagos_determinados_pts_2054,0.57,0.57,Cuadro X.1 (b),Pagos determinados,C1_2054,False
+X1_pts_sbc_determinados_C2_2040,0.63,0.61,Cuadro X.1 (b),Pagos determinados,C2_2040,True
+X1_pts_sbc_determinados_C2_2054,0.33,0.32,Cuadro X.1 (b),Pagos determinados,C2_2054,True
+v12b_A_pagos_privados_pts_2026,0.76,0.74,Cuadro X.1 (b),Pagos cobrados,C1_2026,True
+v12b_A_pagos_privados_pts_2030,0.71,0.68,Cuadro X.1 (b),Pagos cobrados,C1_2030,True
+v12b_A_pagos_privados_pts_2040,0.58,0.57,Cuadro X.1 (b),Pagos cobrados,C1_2040,True
+v12b_A_pagos_privados_pts_2054,0.43,0.42,Cuadro X.1 (b),Pagos cobrados,C1_2054,True
+X1_pts_sbc_cobrados_C2_2040,0.47,0.46,Cuadro X.1 (b),Pagos cobrados,C2_2040,True
+X1_pts_sbc_cobrados_C2_2054,0.25,0.24,Cuadro X.1 (b),Pagos cobrados,C2_2054,True
+v12b_A_no_cobrado_pts_2026,0.25,0.25,Cuadro X.1 (b),Prima no cobrada,C1_2026,False
+v12b_A_no_cobrado_pts_2030,0.24,0.23,Cuadro X.1 (b),Prima no cobrada,C1_2030,True
+v12b_A_no_cobrado_pts_2040,0.19,0.19,Cuadro X.1 (b),Prima no cobrada,C1_2040,False
+v12b_A_no_cobrado_pts_2054,0.14,0.14,Cuadro X.1 (b),Prima no cobrada,C1_2054,False
+X1_pts_sbc_no_cobrada_C2_2040,0.16,0.15,Cuadro X.1 (b),Prima no cobrada,C2_2040,True
+X1_pts_sbc_no_cobrada_C2_2054,0.08,0.08,Cuadro X.1 (b),Prima no cobrada,C2_2054,False
+v12b_A_GF_cuota_fija_pts_2026,1.26,1.23,Cuadro X.1 (b),GF: cuota fija F_g,C1_2026,True
+v12b_A_GF_cuota_fija_pts_2030,1.14,1.10,Cuadro X.1 (b),GF: cuota fija F_g,C1_2030,True
+v12b_A_GF_cuota_fija_pts_2040,0.84,0.82,Cuadro X.1 (b),GF: cuota fija F_g,C1_2040,True
+v12b_A_GF_cuota_fija_pts_2054,0.55,0.55,Cuadro X.1 (b),GF: cuota fija F_g,C1_2054,False
+X1_pts_sbc_GF_fija_C2_2040,0.69,0.67,Cuadro X.1 (b),GF: cuota fija F_g,C2_2040,True
+X1_pts_sbc_GF_fija_C2_2054,0.32,0.31,Cuadro X.1 (b),GF: cuota fija F_g,C2_2054,True
+v12b_A_GF_subsidio_pts_2026,0.10,0.10,Cuadro X.1 (b),GF: subsidio,C1_2026,False
+v12b_A_GF_subsidio_pts_2030,0.10,0.09,Cuadro X.1 (b),GF: subsidio,C1_2030,True
+v12b_A_GF_subsidio_pts_2040,0.08,0.08,Cuadro X.1 (b),GF: subsidio,C1_2040,False
+v12b_A_GF_subsidio_pts_2054,0.06,0.06,Cuadro X.1 (b),GF: subsidio,C1_2054,False
+X1_pts_sbc_GF_subsidio_C2_2040,0.06,0.06,Cuadro X.1 (b),GF: subsidio,C2_2040,False
+X1_pts_sbc_GF_subsidio_C2_2054,0.03,0.03,Cuadro X.1 (b),GF: subsidio,C2_2054,False
+v12b_B_GF_subsidio_pts_2026,0.00,0.00,Cuadro X.1 (b),GF: Bloque B,C1_2026,False
+v12b_B_GF_subsidio_pts_2030,0.00,0.00,Cuadro X.1 (b),GF: Bloque B,C1_2030,False
+v12b_B_GF_subsidio_pts_2040,0.00,0.00,Cuadro X.1 (b),GF: Bloque B,C1_2040,False
+v12b_B_GF_subsidio_pts_2054,0.00,0.00,Cuadro X.1 (b),GF: Bloque B,C1_2054,False
+X1_pts_sbc_GF_bloqueB_C2_2040,0.00,0.00,Cuadro X.1 (b),GF: Bloque B,C2_2040,False
+X1_pts_sbc_GF_bloqueB_C2_2054,0.00,0.00,Cuadro X.1 (b),GF: Bloque B,C2_2054,False
+v12b_Total_costo_pts_2026,3.68,3.61,Cuadro X.1 (b),Costo de atención,C1_2026,True
+v12b_Total_costo_pts_2030,3.31,3.18,Cuadro X.1 (b),Costo de atención,C1_2030,True
+v12b_Total_costo_pts_2040,2.42,2.37,Cuadro X.1 (b),Costo de atención,C1_2040,True
+v12b_Total_costo_pts_2054,1.64,1.61,Cuadro X.1 (b),Costo de atención,C1_2054,True
+X1_pts_sbc_costo_C2_2040,1.97,1.93,Cuadro X.1 (b),Costo de atención,C2_2040,True
+X1_pts_sbc_costo_C2_2054,0.94,0.92,Cuadro X.1 (b),Costo de atención,C2_2054,True
+v12b_Total_saldo_pts_2026,−1.57,−1.54,Cuadro X.1 (b),Saldo sin fuente asignada (π_m = 0),C1_2026,True
+v12b_Total_saldo_pts_2030,−1.36,−1.30,Cuadro X.1 (b),Saldo sin fuente asignada (π_m = 0),C1_2030,True
+v12b_Total_saldo_pts_2040,−0.93,−0.91,Cuadro X.1 (b),Saldo sin fuente asignada (π_m = 0),C1_2040,True
+v12b_Total_saldo_pts_2054,−0.59,−0.58,Cuadro X.1 (b),Saldo sin fuente asignada (π_m = 0),C1_2054,True
+X1_pts_sbc_saldo_C2_2040,−0.75,−0.74,Cuadro X.1 (b),Saldo sin fuente asignada (π_m = 0),C2_2040,True
+X1_pts_sbc_saldo_C2_2054,−0.34,−0.33,Cuadro X.1 (b),Saldo sin fuente asignada (π_m = 0),C2_2054,True
+X1_pts_sbc_saldo_pim1_C1_2026,−1.57,−1.54,Cuadro X.1 (b),Saldo sin fuente asignada (π_m = 1 %),C1_2026,True
+X1_pts_sbc_saldo_pim1_C1_2030,−1.49,−1.43,Cuadro X.1 (b),Saldo sin fuente asignada (π_m = 1 %),C1_2030,True
+X1_pts_sbc_saldo_pim1_C1_2040,−1.29,−1.26,Cuadro X.1 (b),Saldo sin fuente asignada (π_m = 1 %),C1_2040,True
+X1_pts_sbc_saldo_pim1_C1_2054,−1.12,−1.10,Cuadro X.1 (b),Saldo sin fuente asignada (π_m = 1 %),C1_2054,True
+X1_pts_sbc_saldo_pim1_C2_2040,−1.05,−1.03,Cuadro X.1 (b),Saldo sin fuente asignada (π_m = 1 %),C2_2040,True
+X1_pts_sbc_saldo_pim1_C2_2054,−0.64,−0.63,Cuadro X.1 (b),Saldo sin fuente asignada (π_m = 1 %),C2_2054,True
+v12b_A_pagos_determinados_sem_2026,9.4,9.3,Cuadro X.1 (c),Pagos determinados,C1_2026,True
+v12b_A_pagos_determinados_sem_2030,9.3,9.0,Cuadro X.1 (c),Pagos determinados,C1_2030,True
+v12b_A_pagos_determinados_sem_2040,8.1,8.0,Cuadro X.1 (c),Pagos determinados,C1_2040,True
+v12b_A_pagos_determinados_sem_2054,6.4,6.5,Cuadro X.1 (c),Pagos determinados,C1_2054,True
+X1_pct_sem_determinados_C2_2040,6.6,6.6,Cuadro X.1 (c),Pagos determinados,C2_2040,False
+X1_pct_sem_determinados_C2_2054,3.7,3.7,Cuadro X.1 (c),Pagos determinados,C2_2054,False
+v12b_A_pagos_privados_sem_2026,7.1,7.0,Cuadro X.1 (c),Pagos cobrados,C1_2026,True
+v12b_A_pagos_privados_sem_2030,7.0,6.8,Cuadro X.1 (c),Pagos cobrados,C1_2030,True
+v12b_A_pagos_privados_sem_2040,6.0,6.0,Cuadro X.1 (c),Pagos cobrados,C1_2040,False
+v12b_A_pagos_privados_sem_2054,4.8,4.9,Cuadro X.1 (c),Pagos cobrados,C1_2054,True
+X1_pct_sem_cobrados_C2_2040,4.9,4.9,Cuadro X.1 (c),Pagos cobrados,C2_2040,False
+X1_pct_sem_cobrados_C2_2054,2.8,2.8,Cuadro X.1 (c),Pagos cobrados,C2_2054,False
+v12b_A_no_cobrado_sem_2026,2.4,2.3,Cuadro X.1 (c),Prima no cobrada,C1_2026,True
+v12b_A_no_cobrado_sem_2030,2.3,2.3,Cuadro X.1 (c),Prima no cobrada,C1_2030,False
+v12b_A_no_cobrado_sem_2040,2.0,2.0,Cuadro X.1 (c),Prima no cobrada,C1_2040,False
+v12b_A_no_cobrado_sem_2054,1.6,1.6,Cuadro X.1 (c),Prima no cobrada,C1_2054,False
+X1_pct_sem_no_cobrada_C2_2040,1.6,1.6,Cuadro X.1 (c),Prima no cobrada,C2_2040,False
+X1_pct_sem_no_cobrada_C2_2054,0.9,0.9,Cuadro X.1 (c),Prima no cobrada,C2_2054,False
+v12b_A_GF_cuota_fija_sem_2026,11.8,11.6,Cuadro X.1 (c),GF: cuota fija F_g,C1_2026,True
+v12b_A_GF_cuota_fija_sem_2030,11.1,10.9,Cuadro X.1 (c),GF: cuota fija F_g,C1_2030,True
+v12b_A_GF_cuota_fija_sem_2040,8.8,8.8,Cuadro X.1 (c),GF: cuota fija F_g,C1_2040,False
+v12b_A_GF_cuota_fija_sem_2054,6.2,6.3,Cuadro X.1 (c),GF: cuota fija F_g,C1_2054,True
+X1_pct_sem_GF_fija_C2_2040,7.2,7.2,Cuadro X.1 (c),GF: cuota fija F_g,C2_2040,False
+X1_pct_sem_GF_fija_C2_2054,3.6,3.6,Cuadro X.1 (c),GF: cuota fija F_g,C2_2054,False
+v12b_A_GF_subsidio_sem_2026,0.9,0.9,Cuadro X.1 (c),GF: subsidio,C1_2026,False
+v12b_A_GF_subsidio_sem_2030,0.9,0.9,Cuadro X.1 (c),GF: subsidio,C1_2030,False
+v12b_A_GF_subsidio_sem_2040,0.8,0.8,Cuadro X.1 (c),GF: subsidio,C1_2040,False
+v12b_A_GF_subsidio_sem_2054,0.6,0.7,Cuadro X.1 (c),GF: subsidio,C1_2054,True
+X1_pct_sem_GF_subsidio_C2_2040,0.7,0.7,Cuadro X.1 (c),GF: subsidio,C2_2040,False
+X1_pct_sem_GF_subsidio_C2_2054,0.4,0.4,Cuadro X.1 (c),GF: subsidio,C2_2054,False
+v12b_B_GF_subsidio_sem_2026,0.0,0.0,Cuadro X.1 (c),GF: Bloque B,C1_2026,False
+v12b_B_GF_subsidio_sem_2030,0.0,0.0,Cuadro X.1 (c),GF: Bloque B,C1_2030,False
+v12b_B_GF_subsidio_sem_2040,0.0,0.0,Cuadro X.1 (c),GF: Bloque B,C1_2040,False
+v12b_B_GF_subsidio_sem_2054,0.0,0.0,Cuadro X.1 (c),GF: Bloque B,C1_2054,False
+X1_pct_sem_GF_bloqueB_C2_2040,0.0,0.0,Cuadro X.1 (c),GF: Bloque B,C2_2040,False
+X1_pct_sem_GF_bloqueB_C2_2054,0.0,0.0,Cuadro X.1 (c),GF: Bloque B,C2_2054,False
+v12b_Total_costo_sem_2026,34.5,33.9,Cuadro X.1 (c),Costo de atención,C1_2026,True
+v12b_Total_costo_sem_2030,32.3,31.5,Cuadro X.1 (c),Costo de atención,C1_2030,True
+v12b_Total_costo_sem_2040,25.4,25.3,Cuadro X.1 (c),Costo de atención,C1_2040,True
+v12b_Total_costo_sem_2054,18.4,18.6,Cuadro X.1 (c),Costo de atención,C1_2054,True
+X1_pct_sem_costo_C2_2040,20.7,20.6,Cuadro X.1 (c),Costo de atención,C2_2040,True
+X1_pct_sem_costo_C2_2054,10.5,10.6,Cuadro X.1 (c),Costo de atención,C2_2054,True
+v12b_Total_saldo_sem_2026,−14.7,−14.4,Cuadro X.1 (c),Saldo sin fuente asignada (π_m = 0),C1_2026,True
+v12b_Total_saldo_sem_2030,−13.2,−12.9,Cuadro X.1 (c),Saldo sin fuente asignada (π_m = 0),C1_2030,True
+v12b_Total_saldo_sem_2040,−9.7,−9.7,Cuadro X.1 (c),Saldo sin fuente asignada (π_m = 0),C1_2040,False
+v12b_Total_saldo_sem_2054,−6.7,−6.7,Cuadro X.1 (c),Saldo sin fuente asignada (π_m = 0),C1_2054,False
+X1_pct_sem_saldo_C2_2040,−7.9,−7.9,Cuadro X.1 (c),Saldo sin fuente asignada (π_m = 0),C2_2040,False
+X1_pct_sem_saldo_C2_2054,−3.8,−3.8,Cuadro X.1 (c),Saldo sin fuente asignada (π_m = 0),C2_2054,False
+X1_pct_sem_saldo_pim1_C1_2026,−14.7,−14.4,Cuadro X.1 (c),Saldo sin fuente asignada (π_m = 1 %),C1_2026,True
+X1_pct_sem_saldo_pim1_C1_2030,−14.6,−14.2,Cuadro X.1 (c),Saldo sin fuente asignada (π_m = 1 %),C1_2030,True
+X1_pct_sem_saldo_pim1_C1_2040,−13.5,−13.4,Cuadro X.1 (c),Saldo sin fuente asignada (π_m = 1 %),C1_2040,True
+X1_pct_sem_saldo_pim1_C1_2054,−12.6,−12.7,Cuadro X.1 (c),Saldo sin fuente asignada (π_m = 1 %),C1_2054,True
+X1_pct_sem_saldo_pim1_C2_2040,−11.0,−10.9,Cuadro X.1 (c),Saldo sin fuente asignada (π_m = 1 %),C2_2040,True
+X1_pct_sem_saldo_pim1_C2_2054,−7.2,−7.3,Cuadro X.1 (c),Saldo sin fuente asignada (π_m = 1 %),C2_2054,True
+v12_C_D2_neto_pts_2030,−0.19,−0.19,X.5,Efecto neto (pts SBC),2030 D2,False
+v12_C_vigente_neto_pts_2030,−0.10,−0.09,X.5,Efecto neto (pts SBC),2030 vigente,True
+v12_C_D2_neto_pts_2040,−0.12,−0.11,X.5,Efecto neto (pts SBC),2040 D2,True
+v12_C_vigente_neto_pts_2040,−0.06,−0.06,X.5,Efecto neto (pts SBC),2040 vigente,False
+v12_C_D2_neto_pts_2054,−0.07,−0.07,X.5,Efecto neto (pts SBC),2054 D2,False
+v12_C_vigente_neto_pts_2054,−0.04,−0.04,X.5,Efecto neto (pts SBC),2054 vigente,False
+v12_indexacion_pts_2030,0.19,0.19,X.6,Puntos del SBC,2030,False
+v12_indexacion_sem_2030,1.9,1.9,X.6,% de los ingresos del SEM,2030,False
+v12_indexacion_pts_2040,0.41,0.40,X.6,Puntos del SBC,2040,True
+v12_indexacion_sem_2040,4.3,4.3,X.6,% de los ingresos del SEM,2040,False
+v12_indexacion_pts_2054,0.73,0.72,X.6,Puntos del SBC,2054,True
+v12_indexacion_sem_2054,8.2,8.3,X.6,% de los ingresos del SEM,2054,True
+v12_base_saldo_pts_sbc_2030,−1.36,−1.30,Cuadro X.2,Base,Saldo 2030 (pts SBC),True
+v12_base_saldo_pts_sbc_2054,−0.59,−0.58,Cuadro X.2,Base,Saldo 2054 (pts SBC),True
+v12_S2_saldo_pts_sbc_2030,−1.37,−1.32,Cuadro X.2,S2 focalizado,Saldo 2030 (pts SBC),True
+v12_S2_saldo_pts_sbc_2054,−0.60,−0.59,Cuadro X.2,S2 focalizado,Saldo 2054 (pts SBC),True
+v12_S3_saldo_pts_sbc_2030,−1.32,−1.27,Cuadro X.2,S3 amplio,Saldo 2030 (pts SBC),True
+v12_S3_saldo_pts_sbc_2054,−0.57,−0.57,Cuadro X.2,S3 amplio,Saldo 2054 (pts SBC),False
+v12_G1_saldo_pts_sbc_2030,−1.55,−1.49,Cuadro X.2,G1: el informal paga F_g,Saldo 2030 (pts SBC),True
+v12_G1_saldo_pts_sbc_2054,−0.68,−0.67,Cuadro X.2,G1: el informal paga F_g,Saldo 2054 (pts SBC),True
+v12_D1_saldo_pts_sbc_2030,−0.74,−0.71,Cuadro X.2,D1: precio plano en UMA (v1.1),Saldo 2030 (pts SBC),True
+v12_D1_saldo_pts_sbc_2054,−0.36,−0.36,Cuadro X.2,D1: precio plano en UMA (v1.1),Saldo 2054 (pts SBC),False
+v12_tau30_saldo_pts_sbc_2030,−0.81,−0.78,Cuadro X.2,Adopción 0.30,Saldo 2030 (pts SBC),True
+v12_tau30_saldo_pts_sbc_2054,−0.36,−0.35,Cuadro X.2,Adopción 0.30,Saldo 2054 (pts SBC),True
+v12_tau70_saldo_pts_sbc_2030,−1.90,−1.83,Cuadro X.2,Adopción 0.70,Saldo 2030 (pts SBC),True
+v12_tau70_saldo_pts_sbc_2054,−0.83,−0.82,Cuadro X.2,Adopción 0.70,Saldo 2054 (pts SBC),True
+v12_tau90_saldo_pts_sbc_2030,−2.44,−2.35,Cuadro X.2,Adopción 0.90 (solo con descuento automático),Saldo 2030 (pts SBC),True
+v12_tau90_saldo_pts_sbc_2054,−1.07,−1.05,Cuadro X.2,Adopción 0.90 (solo con descuento automático),Saldo 2054 (pts SBC),True
+v12_T1_saldo_pts_sbc_2030,−0.82,−0.79,Cuadro X.2,Afiliación voluntaria (T1),Saldo 2030 (pts SBC),True
+v12_T1_saldo_pts_sbc_2054,−0.42,−0.41,Cuadro X.2,Afiliación voluntaria (T1),Saldo 2054 (pts SBC),True
+v12_rho50_saldo_pts_sbc_2030,−1.59,−1.53,Cuadro X.2,Cobro 0.50,Saldo 2030 (pts SBC),True
+v12_rho50_saldo_pts_sbc_2054,−0.74,−0.73,Cuadro X.2,Cobro 0.50,Saldo 2054 (pts SBC),True
+v12_rho100_saldo_pts_sbc_2030,−1.12,−1.08,Cuadro X.2,Cobro 1.00,Saldo 2030 (pts SBC),True
+v12_rho100_saldo_pts_sbc_2054,−0.45,−0.44,Cuadro X.2,Cobro 1.00,Saldo 2054 (pts SBC),True
+v12_mu100_saldo_pts_sbc_2030,−1.06,−1.02,Cuadro X.2,Selección 1.00,Saldo 2030 (pts SBC),True
+v12_mu100_saldo_pts_sbc_2054,−0.44,−0.44,Cuadro X.2,Selección 1.00,Saldo 2054 (pts SBC),False
+v12_mu130_saldo_pts_sbc_2030,−1.96,−1.88,Cuadro X.2,Selección 1.30,Saldo 2030 (pts SBC),True
+v12_mu130_saldo_pts_sbc_2054,−0.89,−0.88,Cuadro X.2,Selección 1.30,Saldo 2054 (pts SBC),True
+v12_U2_enigh_saldo_pts_sbc_2030,−0.19,−0.18,Cuadro X.2,"Individual, beneficiarios ENIGH (0.80)",Saldo 2030 (pts SBC),True
+v12_U2_enigh_saldo_pts_sbc_2054,−0.09,−0.09,Cuadro X.2,"Individual, beneficiarios ENIGH (0.80)",Saldo 2054 (pts SBC),False
+v12_U2_informe_saldo_pts_sbc_2030,−0.43,−0.42,Cuadro X.2,"Individual, beneficiarios Informe (1.07)",Saldo 2030 (pts SBC),True
+v12_U2_informe_saldo_pts_sbc_2054,−0.20,−0.19,Cuadro X.2,"Individual, beneficiarios Informe (1.07)",Saldo 2054 (pts SBC),True
+v12_pim1_saldo_pts_sbc_2030,−1.49,−1.43,Cuadro X.2,Costo per cápita +1 % real anual,Saldo 2030 (pts SBC),True
+v12_pim1_saldo_pts_sbc_2054,−1.12,−1.10,Cuadro X.2,Costo per cápita +1 % real anual,Saldo 2054 (pts SBC),True
+v12_pim2_saldo_pts_sbc_2030,−1.63,−1.57,Cuadro X.2,Costo per cápita +2 % real anual,Saldo 2030 (pts SBC),True
+v12_pim2_saldo_pts_sbc_2054,−1.80,−1.78,Cuadro X.2,Costo per cápita +2 % real anual,Saldo 2054 (pts SBC),True
+v12_C2_saldo_pts_sbc_2030,−1.31,−1.25,Cuadro X.2,C2: población ligada a la formalización,Saldo 2030 (pts SBC),True
+v12_C2_saldo_pts_sbc_2054,−0.34,−0.33,Cuadro X.2,C2: población ligada a la formalización,Saldo 2054 (pts SBC),True
+v12_F1_saldo_pts_sbc_2030,−1.36,−1.31,Cuadro X.2,F1 dentro del esquema,Saldo 2030 (pts SBC),True
+v12_F1_saldo_pts_sbc_2054,−0.58,−0.57,Cuadro X.2,F1 dentro del esquema,Saldo 2054 (pts SBC),True
+v12_plano_saldo_pts_sbc_2030,−1.67,−1.60,Cuadro X.2,Perfil de costo plano,Saldo 2030 (pts SBC),True
+v12_plano_saldo_pts_sbc_2054,−0.56,−0.55,Cuadro X.2,Perfil de costo plano,Saldo 2054 (pts SBC),True
+v12_estilizado_2_saldo_pts_sbc_2030,−1.50,−1.44,Cuadro X.2,Perfil 65+/20-64 = 2,Saldo 2030 (pts SBC),True
+v12_estilizado_2_saldo_pts_sbc_2054,−0.58,−0.57,Cuadro X.2,Perfil 65+/20-64 = 2,Saldo 2054 (pts SBC),True
+v12_estilizado_4_saldo_pts_sbc_2030,−1.24,−1.20,Cuadro X.2,Perfil 65+/20-64 = 4,Saldo 2030 (pts SBC),True
+v12_estilizado_4_saldo_pts_sbc_2054,−0.60,−0.60,Cuadro X.2,Perfil 65+/20-64 = 4,Saldo 2054 (pts SBC),False
+v12_umbral_fijo_saldo_pts_sbc_2030,−1.36,−1.31,Cuadro X.2,Umbrales fijos en UMA,Saldo 2030 (pts SBC),True
+v12_umbral_fijo_saldo_pts_sbc_2054,−0.60,−0.59,Cuadro X.2,Umbrales fijos en UMA,Saldo 2054 (pts SBC),True
+v12_pim2_saldo_pts_sbc_2054,−1.80,−1.78,X.7 texto,Costo per cápita +2 %,2054 puntos,True

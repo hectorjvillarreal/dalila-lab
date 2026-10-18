@@ -48,6 +48,7 @@ SEMILLA = [
     ("Inflacion_2027", "3.82 %", "Libro, hoja `Sup_Fin`", "—", "nueva (v1.2)"),
     ("N13_DH_2025", "70.69 millones", "Informe del Núcleo 13, Anexo I, Tabla I.1", "—", "referencia de contraste"),
     ("Ingresos_SEM_V13", "562,126 / 642,375 / 740,391 / 859,501 / 995,073 / 1,131,634 / 1,215,833 mdp de 2026 (2026, 2031, …, 2051 y año final), interpolación lineal", "Informe, Cuadro V.13", "pág. PDF 141", "nueva (18-10); denominador de «% de los ingresos del SEM» de las salidas v1.2, común con el experimento 2 (decisión de Héctor)"),
+    ("Decision_v13", "ANEXO_borrador_v3.md: solo cambian las cifras en puntos del salario y en % de los ingresos del SEM (denominador común y Cuadro V.13) y la oración del denominador; montos y redacción sin cambio", "Instrucción 20261018_BDH_N13_anexo-afiliacion-subsidiada_build_v1.3 (decisión de Beth, 18-10-2026)", "—", "nueva (v1.3); trazabilidad en outputs/tables/exp1_borrador_v2_a_v3.csv"),
     ("Denominador_puntos_v12", "Masa R1: cotizantes del libro × SBC R1 con tope de 25 UMA y piso en el SM × UMA × 337 días (la base de la tasa D2)", "Cálculo propio", "—", "nueva (18-10); denominador común con el experimento 2. El libro de Finanzas se sigue usando para cotizantes, salarios y supuestos, no para el denominador de ingresos del SEM. Las corridas v1.1 conservan sus denominadores"),
 ]
 

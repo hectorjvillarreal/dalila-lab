@@ -48,6 +48,7 @@ Las desagregaciones por seguro, la retención y el modelo de cohortes son **reco
 | Inflacion_2027 | 3.82 % | Libro, hoja `Sup_Fin` | — | nueva (v1.2) |
 | N13_DH_2025 | 70.69 millones | Informe del Núcleo 13, Anexo I, Tabla I.1 | — | referencia de contraste |
 | Ingresos_SEM_V13 | 562,126 / 642,375 / 740,391 / 859,501 / 995,073 / 1,131,634 / 1,215,833 mdp de 2026 (2026, 2031, …, 2051 y año final), interpolación lineal | Informe, Cuadro V.13 | pág. PDF 141 | nueva (18-10); denominador de «% de los ingresos del SEM» de las salidas v1.2, común con el experimento 2 (decisión de Héctor) |
+| Decision_v13 | ANEXO_borrador_v3.md: solo cambian las cifras en puntos del salario y en % de los ingresos del SEM (denominador común y Cuadro V.13) y la oración del denominador; montos y redacción sin cambio | Instrucción 20261018_BDH_N13_anexo-afiliacion-subsidiada_build_v1.3 (decisión de Beth, 18-10-2026) | — | nueva (v1.3); trazabilidad en outputs/tables/exp1_borrador_v2_a_v3.csv |
 | Denominador_puntos_v12 | Masa R1: cotizantes del libro × SBC R1 con tope de 25 UMA y piso en el SM × UMA × 337 días (la base de la tasa D2) | Cálculo propio | — | nueva (18-10); denominador común con el experimento 2. El libro de Finanzas se sigue usando para cotizantes, salarios y supuestos, no para el denominador de ingresos del SEM. Las corridas v1.1 conservan sus denominadores |
 
 ## 2. Cifras calculadas (generadas por `src/`, archivo `data/derived/numbers_computed.json`)
@@ -158,6 +159,114 @@ Las desagregaciones por seguro, la retención y el modelo de cohortes son **reco
 | SM_en_UMA_2030 | 3.6464 | SM 2025 / UMA dic. 2025 × Π(1 + SM real, Sup_Fin) |
 | SM_en_UMA_2054 | 4.11 | SM 2025 / UMA dic. 2025 × Π(1 + SM real, Sup_Fin) |
 | UMA_2026_real | 117.3262 | UMA dic. 2025 × (1 + inflación 2026 de Sup_Fin) |
+| X1_pct_sem_GF_bloqueB_C1_2026 | 0 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_bloqueB_C1_2030 | 0 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_bloqueB_C1_2040 | 0 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_bloqueB_C1_2054 | 0 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_bloqueB_C2_2040 | 0 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_bloqueB_C2_2054 | 0 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_fija_C1_2026 | 11.58 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_fija_C1_2030 | 10.87 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_fija_C1_2040 | 8.79 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_fija_C1_2054 | 6.29 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_fija_C2_2040 | 7.16 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_fija_C2_2054 | 3.6 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_subsidio_C1_2026 | 0.93 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_subsidio_C1_2030 | 0.91 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_subsidio_C1_2040 | 0.8 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_subsidio_C1_2054 | 0.65 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_subsidio_C2_2040 | 0.65 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_GF_subsidio_C2_2054 | 0.37 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_cobrados_C1_2026 | 6.96 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_cobrados_C1_2030 | 6.79 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_cobrados_C1_2040 | 6.03 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_cobrados_C1_2054 | 4.88 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_cobrados_C2_2040 | 4.91 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_cobrados_C2_2054 | 2.79 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_costo_C1_2026 | 33.91 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_costo_C1_2030 | 31.49 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_costo_C1_2040 | 25.27 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_costo_C1_2054 | 18.55 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_costo_C2_2040 | 20.59 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_costo_C2_2054 | 10.61 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_determinados_C1_2026 | 9.27 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_determinados_C1_2030 | 9.05 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_determinados_C1_2040 | 8.04 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_determinados_C1_2054 | 6.51 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_determinados_C2_2040 | 6.55 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_determinados_C2_2054 | 3.72 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_no_cobrada_C1_2026 | 2.32 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_no_cobrada_C1_2030 | 2.26 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_no_cobrada_C1_2040 | 2.01 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_no_cobrada_C1_2054 | 1.63 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_no_cobrada_C2_2040 | 1.64 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_no_cobrada_C2_2054 | 0.93 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_saldo_C1_2026 | -14.44 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_saldo_C1_2030 | -12.93 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_saldo_C1_2040 | -9.65 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_saldo_C1_2054 | -6.72 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_saldo_C2_2040 | -7.86 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_saldo_C2_2054 | -3.84 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_saldo_pim1_C1_2026 | -14.44 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_saldo_pim1_C1_2030 | -14.21 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_saldo_pim1_C1_2040 | -13.43 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_saldo_pim1_C1_2054 | -12.68 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_saldo_pim1_C2_2040 | -10.94 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pct_sem_saldo_pim1_C2_2054 | -7.25 | cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_bloqueB_C1_2026 | 0 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_bloqueB_C1_2030 | 0 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_bloqueB_C1_2040 | 0 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_bloqueB_C1_2054 | 0 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_bloqueB_C2_2040 | 0 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_bloqueB_C2_2054 | 0 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_fija_C1_2026 | 1.234 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_fija_C1_2030 | 1.097 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_fija_C1_2040 | 0.824 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_fija_C1_2054 | 0.547 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_fija_C2_2040 | 0.672 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_fija_C2_2054 | 0.313 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_subsidio_C1_2026 | 0.1 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_subsidio_C1_2030 | 0.092 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_subsidio_C1_2040 | 0.075 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_subsidio_C1_2054 | 0.057 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_subsidio_C2_2040 | 0.061 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_GF_subsidio_C2_2054 | 0.032 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_cobrados_C1_2026 | 0.741 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_cobrados_C1_2030 | 0.685 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_cobrados_C1_2040 | 0.566 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_cobrados_C1_2054 | 0.425 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_cobrados_C2_2040 | 0.461 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_cobrados_C2_2054 | 0.243 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_costo_C1_2026 | 3.614 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_costo_C1_2030 | 3.178 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_costo_C1_2040 | 2.37 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_costo_C1_2054 | 1.613 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_costo_C2_2040 | 1.931 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_costo_C2_2054 | 0.922 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_determinados_C1_2026 | 0.989 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_determinados_C1_2030 | 0.913 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_determinados_C1_2040 | 0.754 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_determinados_C1_2054 | 0.566 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_determinados_C2_2040 | 0.614 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_determinados_C2_2054 | 0.324 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_no_cobrada_C1_2026 | 0.247 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_no_cobrada_C1_2030 | 0.228 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_no_cobrada_C1_2040 | 0.189 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_no_cobrada_C1_2054 | 0.142 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_no_cobrada_C2_2040 | 0.154 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_no_cobrada_C2_2054 | 0.081 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_saldo_C1_2026 | -1.539 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_saldo_C1_2030 | -1.305 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_saldo_C1_2040 | -0.905 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_saldo_C1_2054 | -0.585 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_saldo_C2_2040 | -0.738 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_saldo_C2_2054 | -0.334 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_saldo_pim1_C1_2026 | -1.539 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_saldo_pim1_C1_2030 | -1.434 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_saldo_pim1_C1_2040 | -1.259 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_saldo_pim1_C1_2054 | -1.103 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_saldo_pim1_C2_2040 | -1.026 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
+| X1_pts_sbc_saldo_pim1_C2_2054 | -0.631 | cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13 |
 | aseq_decil10_oop | 19,829 | ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo |
 | aseq_decil10_prima | 21,982 | Prima D2-G2 media de los hogares objetivo del decil, 2026 |
 | aseq_decil1_oop | 2,574 | ENIGH 2024, concentradohogar.salud (cuidados de la salud) × 4, pesos de 2026, hogares objetivo |
@@ -326,6 +435,15 @@ Las desagregaciones por seguro, la retención y el modelo de cohortes son **reco
 | chk12_12_7.7 | 0 | 7.7 S3 > S1 > S2 en costo fiscal (años que fallan) |
 | chk12_13_7.8 | 0 | 7.8 años 2055 en las salidas |
 | chk12_6.6_prima_mediana_dif_pct | -1.44 | 6.6 prima de la mediana D2-G2 frente a ~3,700 pesos (tolerancia ±25 %) |
+| chk13_0 | 0 | 3.1 montos en mdp que cambian (v2 → v3) |
+| chk13_1 | 0 | 3.2 cifras sustituidas sin registro o con valor distinto en NUMBERS.md |
+| chk13_2 | 112 | 3.3 cifras que cambian de texto |
+| chk13_3 | 109 | 3.3 claves distintas entre ellas |
+| chk13_4 | 83 | 3.3 de ellas, entre las 186 de exp1_cambios_denominador.csv |
+| chk13_5 | 26 | 3.3 de ellas, registradas en la v1.3 (columnas C2 y años sin clave previa del Cuadro X.1) |
+| chk13_6 | 0 | 3.4 líneas que cambian fuera de cifras y de la oración del denominador |
+| chk13_7 | 0 | 3.5 apariciones de 2055 en el borrador v3 fuera de la oración del v2 que dice que no se reporta |
+| chk13_8 | 0 | mapeo: celdas del v2 que no coinciden con el valor anterior |
 | chk_7.5_0 | 0 | 7.5 ingreso − costo = saldo (máx. desviación, mdp) |
 | chk_7.5_1 | 0 | 7.5 A + B + C = total (máx. desviación, mdp) |
 | chk_7.6.1 | 0 | 7.6.1 no arbitraje (violaciones tras la reforma) |
@@ -1077,3 +1195,4 @@ Las desagregaciones por seguro, la retención y el modelo de cohortes son **reco
 | v12b_cubiertos_pct_DH_2040 | 40.6 | Personas cubiertas / 79,178,109 DH (Cuadro I.4) |
 | v12b_cubiertos_pct_DH_2054 | 40 | Personas cubiertas / 79,178,109 DH (Cuadro I.4) |
 | v12b_saldo_pct_pib_2026 | -0.21 | Saldo 2026 / PIB 2026 |
+| v13_cifras_en_borrador | 169 | Cifras en puntos o % del SEM del borrador (sustituibles) |

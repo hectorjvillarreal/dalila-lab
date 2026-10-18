@@ -115,6 +115,12 @@ def excluidos(ins):
         record(f"excl_65mas_{y}", round(r.excluidos_65mas), "Idem, 65 años o más")
 
 
+SLUG_X1 = {"Personas cubiertas (millones)": "personas", "Pagos determinados": "determinados", "Pagos cobrados": "cobrados",
+           "Prima no cobrada": "no_cobrada", "GF: cuota fija F_g": "GF_fija", "GF: subsidio": "GF_subsidio",
+           "GF: Bloque B": "GF_bloqueB", "Costo de atención": "costo", "Saldo sin fuente asignada (π_m = 0)": "saldo",
+           "Saldo sin fuente asignada (π_m = 1 %)": "saldo_pim1"}
+
+
 def cuadro_x1(r12):
     base = r12[(r12.corrida == "base")].set_index(["bloque", "anio"])
     c2 = r12[(r12.corrida == "C2")].set_index(["bloque", "anio"])
@@ -137,7 +143,14 @@ def cuadro_x1(r12):
         fila("Saldo sin fuente asignada (π_m = 0)", lambda c, y: src[c].loc[("Total", y), f"saldo{suf}"])
         fila("Saldo sin fuente asignada (π_m = 1 %)",
              lambda c, y: (p1 if c == "C1" else c2p1).loc[y, f"saldo{suf}"])
-        table(pd.DataFrame(rows), f"cuadro_X1_{panel}")
+        x1 = pd.DataFrame(rows)
+        table(x1, f"cuadro_X1_{panel}")
+        # v1.3: cada celda del Cuadro X.1 queda en el registro (trazabilidad del borrador v3)
+        if panel != "mdp":
+            for _, r in x1[x1.concepto != "Personas cubiertas (millones)"].iterrows():
+                for col in x1.columns[1:]:
+                    record(f"X1_{panel}_{SLUG_X1[r.concepto]}_{col}", round(float(r[col]), 3 if panel == "pts_sbc" else 2),
+                           f"cuadro_X1_{panel}.csv; denominador común (masa R1) y Cuadro V.13")
 
 
 def sensibilidades(r12):

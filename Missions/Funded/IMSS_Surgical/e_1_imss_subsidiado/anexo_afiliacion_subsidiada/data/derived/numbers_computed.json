@@ -1895,6 +1895,438 @@
   "valor": 3829072,
   "fuente": "Idem, 65 años o más"
  },
+ "X1_pts_sbc_determinados_C1_2026": {
+  "valor": 0.989,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_determinados_C1_2030": {
+  "valor": 0.913,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_determinados_C1_2040": {
+  "valor": 0.754,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_determinados_C1_2054": {
+  "valor": 0.566,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_determinados_C2_2040": {
+  "valor": 0.614,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_determinados_C2_2054": {
+  "valor": 0.324,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_cobrados_C1_2026": {
+  "valor": 0.741,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_cobrados_C1_2030": {
+  "valor": 0.685,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_cobrados_C1_2040": {
+  "valor": 0.566,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_cobrados_C1_2054": {
+  "valor": 0.425,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_cobrados_C2_2040": {
+  "valor": 0.461,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_cobrados_C2_2054": {
+  "valor": 0.243,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_no_cobrada_C1_2026": {
+  "valor": 0.247,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_no_cobrada_C1_2030": {
+  "valor": 0.228,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_no_cobrada_C1_2040": {
+  "valor": 0.189,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_no_cobrada_C1_2054": {
+  "valor": 0.142,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_no_cobrada_C2_2040": {
+  "valor": 0.154,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_no_cobrada_C2_2054": {
+  "valor": 0.081,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_fija_C1_2026": {
+  "valor": 1.234,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_fija_C1_2030": {
+  "valor": 1.097,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_fija_C1_2040": {
+  "valor": 0.824,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_fija_C1_2054": {
+  "valor": 0.547,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_fija_C2_2040": {
+  "valor": 0.672,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_fija_C2_2054": {
+  "valor": 0.313,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_subsidio_C1_2026": {
+  "valor": 0.1,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_subsidio_C1_2030": {
+  "valor": 0.092,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_subsidio_C1_2040": {
+  "valor": 0.075,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_subsidio_C1_2054": {
+  "valor": 0.057,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_subsidio_C2_2040": {
+  "valor": 0.061,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_subsidio_C2_2054": {
+  "valor": 0.032,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_bloqueB_C1_2026": {
+  "valor": 0.0,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_bloqueB_C1_2030": {
+  "valor": 0.0,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_bloqueB_C1_2040": {
+  "valor": 0.0,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_bloqueB_C1_2054": {
+  "valor": 0.0,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_bloqueB_C2_2040": {
+  "valor": 0.0,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_GF_bloqueB_C2_2054": {
+  "valor": 0.0,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_costo_C1_2026": {
+  "valor": 3.614,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_costo_C1_2030": {
+  "valor": 3.178,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_costo_C1_2040": {
+  "valor": 2.37,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_costo_C1_2054": {
+  "valor": 1.613,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_costo_C2_2040": {
+  "valor": 1.931,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_costo_C2_2054": {
+  "valor": 0.922,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_saldo_C1_2026": {
+  "valor": -1.539,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_saldo_C1_2030": {
+  "valor": -1.305,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_saldo_C1_2040": {
+  "valor": -0.905,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_saldo_C1_2054": {
+  "valor": -0.585,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_saldo_C2_2040": {
+  "valor": -0.738,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_saldo_C2_2054": {
+  "valor": -0.334,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_saldo_pim1_C1_2026": {
+  "valor": -1.539,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_saldo_pim1_C1_2030": {
+  "valor": -1.434,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_saldo_pim1_C1_2040": {
+  "valor": -1.259,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_saldo_pim1_C1_2054": {
+  "valor": -1.103,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_saldo_pim1_C2_2040": {
+  "valor": -1.026,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pts_sbc_saldo_pim1_C2_2054": {
+  "valor": -0.631,
+  "fuente": "cuadro_X1_pts_sbc.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_determinados_C1_2026": {
+  "valor": 9.27,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_determinados_C1_2030": {
+  "valor": 9.05,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_determinados_C1_2040": {
+  "valor": 8.04,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_determinados_C1_2054": {
+  "valor": 6.51,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_determinados_C2_2040": {
+  "valor": 6.55,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_determinados_C2_2054": {
+  "valor": 3.72,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_cobrados_C1_2026": {
+  "valor": 6.96,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_cobrados_C1_2030": {
+  "valor": 6.79,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_cobrados_C1_2040": {
+  "valor": 6.03,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_cobrados_C1_2054": {
+  "valor": 4.88,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_cobrados_C2_2040": {
+  "valor": 4.91,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_cobrados_C2_2054": {
+  "valor": 2.79,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_no_cobrada_C1_2026": {
+  "valor": 2.32,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_no_cobrada_C1_2030": {
+  "valor": 2.26,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_no_cobrada_C1_2040": {
+  "valor": 2.01,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_no_cobrada_C1_2054": {
+  "valor": 1.63,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_no_cobrada_C2_2040": {
+  "valor": 1.64,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_no_cobrada_C2_2054": {
+  "valor": 0.93,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_fija_C1_2026": {
+  "valor": 11.58,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_fija_C1_2030": {
+  "valor": 10.87,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_fija_C1_2040": {
+  "valor": 8.79,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_fija_C1_2054": {
+  "valor": 6.29,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_fija_C2_2040": {
+  "valor": 7.16,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_fija_C2_2054": {
+  "valor": 3.6,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_subsidio_C1_2026": {
+  "valor": 0.93,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_subsidio_C1_2030": {
+  "valor": 0.91,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_subsidio_C1_2040": {
+  "valor": 0.8,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_subsidio_C1_2054": {
+  "valor": 0.65,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_subsidio_C2_2040": {
+  "valor": 0.65,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_subsidio_C2_2054": {
+  "valor": 0.37,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_bloqueB_C1_2026": {
+  "valor": 0.0,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_bloqueB_C1_2030": {
+  "valor": 0.0,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_bloqueB_C1_2040": {
+  "valor": 0.0,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_bloqueB_C1_2054": {
+  "valor": 0.0,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_bloqueB_C2_2040": {
+  "valor": 0.0,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_GF_bloqueB_C2_2054": {
+  "valor": 0.0,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_costo_C1_2026": {
+  "valor": 33.91,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_costo_C1_2030": {
+  "valor": 31.49,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_costo_C1_2040": {
+  "valor": 25.27,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_costo_C1_2054": {
+  "valor": 18.55,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_costo_C2_2040": {
+  "valor": 20.59,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_costo_C2_2054": {
+  "valor": 10.61,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_saldo_C1_2026": {
+  "valor": -14.44,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_saldo_C1_2030": {
+  "valor": -12.93,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_saldo_C1_2040": {
+  "valor": -9.65,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_saldo_C1_2054": {
+  "valor": -6.72,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_saldo_C2_2040": {
+  "valor": -7.86,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_saldo_C2_2054": {
+  "valor": -3.84,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_saldo_pim1_C1_2026": {
+  "valor": -14.44,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_saldo_pim1_C1_2030": {
+  "valor": -14.21,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_saldo_pim1_C1_2040": {
+  "valor": -13.43,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_saldo_pim1_C1_2054": {
+  "valor": -12.68,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_saldo_pim1_C2_2040": {
+  "valor": -10.94,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
+ "X1_pct_sem_saldo_pim1_C2_2054": {
+  "valor": -7.25,
+  "fuente": "cuadro_X1_pct_sem.csv; denominador común (masa R1) y Cuadro V.13"
+ },
  "v12_base_saldo_2030": {
   "valor": -80962,
   "fuente": "sensibilidades_v12.csv"
@@ -4090,5 +4522,45 @@
  "v12_S1_B_total": {
   "valor": 0.0,
   "fuente": "Σ 2026-2054 del Bloque B en la base (S1)"
+ },
+ "chk13_0": {
+  "valor": 0,
+  "fuente": "3.1 montos en mdp que cambian (v2 → v3)"
+ },
+ "chk13_1": {
+  "valor": 0,
+  "fuente": "3.2 cifras sustituidas sin registro o con valor distinto en NUMBERS.md"
+ },
+ "chk13_2": {
+  "valor": 112,
+  "fuente": "3.3 cifras que cambian de texto"
+ },
+ "chk13_3": {
+  "valor": 109,
+  "fuente": "3.3 claves distintas entre ellas"
+ },
+ "chk13_4": {
+  "valor": 83,
+  "fuente": "3.3 de ellas, entre las 186 de exp1_cambios_denominador.csv"
+ },
+ "chk13_5": {
+  "valor": 26,
+  "fuente": "3.3 de ellas, registradas en la v1.3 (columnas C2 y años sin clave previa del Cuadro X.1)"
+ },
+ "chk13_6": {
+  "valor": 0,
+  "fuente": "3.4 líneas que cambian fuera de cifras y de la oración del denominador"
+ },
+ "chk13_7": {
+  "valor": 0,
+  "fuente": "3.5 apariciones de 2055 en el borrador v3 fuera de la oración del v2 que dice que no se reporta"
+ },
+ "chk13_8": {
+  "valor": 0,
+  "fuente": "mapeo: celdas del v2 que no coinciden con el valor anterior"
+ },
+ "v13_cifras_en_borrador": {
+  "valor": 169,
+  "fuente": "Cifras en puntos o % del SEM del borrador (sustituibles)"
  }
 }
