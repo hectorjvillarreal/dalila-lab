@@ -100,18 +100,16 @@ ax.set_xlim(0, 4.7); ax.set_xlabel("% del PIB")
 ax.spines["left"].set_visible(False); ax.tick_params(axis="y", length=0)
 guarda(fig, "l5_deuda_bolsa_2027.pdf")
 
-# Lámina 15: regla fiscal, % del PIB (LIF 2027 y CGPE 2027; razones con el PIB de SHCP)
+# Lámina 15: techo frente a programado, Gobierno Federal, % del PIB (LIF 2027; PIB de SHCP)
 # Techo: 1.7 bdp internos + 13,500 mdd externos ≈ 1.94 bdp ≈ 4.9 %; programado: 1.57 bdp ≈ 4.0 %.
-fig, ax = plt.subplots(figsize=(11.5, 3.0))
-etq = ["Techo de endeudamiento autorizado\nal Gobierno Federal (LIF 2027)",
-       "Endeudamiento programado\ndel Gobierno Federal (LIF 2027)",
-       "Meta de RFSP\n(CGPE 2027)"]
-vals = [4.9, 4.0, 3.9]
-y = [2, 1, 0]
-ax.barh(y, vals, color=[PETROLEO, GRIS, GRIS_CLARO], height=0.6)
+fig, ax = plt.subplots(figsize=(9.0, 1.7))
+etq = ["Techo autorizado\n(LIF 2027, art. 2o)", "Endeudamiento programado\n(LIF 2027, art. 1o)"]
+vals = [4.9, 4.0]
+y = [1, 0]
+ax.barh(y, vals, color=[PETROLEO, GRIS], height=0.6)
 for yi, v in zip(y, vals):
     ax.text(v + 0.06, yi, f"{v:.1f}", va="center", fontsize=21, fontweight="bold",
-            color=PETROLEO if yi == 2 else GRIS)
+            color=PETROLEO if yi == 1 else GRIS)
 ax.set_yticks(y, etq, fontsize=15)
 ax.set_xlim(0, 5.6); ax.set_xlabel("% del PIB")
 ax.spines["left"].set_visible(False); ax.tick_params(axis="y", length=0)
