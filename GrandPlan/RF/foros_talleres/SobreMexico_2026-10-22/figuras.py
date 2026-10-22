@@ -21,7 +21,7 @@ def guarda(fig, nombre):
 # que por identidad presupuestaria igualan al gasto neto total.
 fig, ax = plt.subplots(figsize=(7.2, 4.2))
 vals = [9.16, 10.64]
-b = ax.bar(["Ingresos\npresupuestarios", "Gasto neto total\n(ingresos LIF con\nfinanciamiento)"], vals,
+b = ax.bar(["Ingresos\npresupuestarios", "Gasto neto total,\nPPEF 2027"], vals,
            color=[GRIS_CLARO, PETROLEO], width=0.55)
 for r, v in zip(b, vals):
     ax.text(r.get_x() + r.get_width()/2, v + 0.15, f"{v:.2f}", ha="center", fontsize=20, fontweight="bold")
