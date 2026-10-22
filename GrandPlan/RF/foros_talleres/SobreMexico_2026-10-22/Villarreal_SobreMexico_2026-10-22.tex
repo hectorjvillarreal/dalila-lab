@@ -6,7 +6,7 @@
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{tikz}
-\usetikzlibrary{positioning,arrows.meta}
+\usetikzlibrary{positioning,arrows.meta,calc}
 
 % Paleta neutra: gris oscuro y azul petróleo
 \definecolor{gris}{HTML}{2F3A40}
@@ -103,14 +103,29 @@
   \fuente{Bolsa: actualización 2026, elaboración propia con datos de SHCP. Inversión: Paquete Económico 2027; fuente: CIEP (2026) con información de SHCP.}
 \end{frame}
 
-% ---------- 5. La deuda ya compite por la Bolsa ----------
-\begin{frame}{Pagar intereses ya cuesta lo mismo que todo el margen de decisión}
+% ---------- 5. La deuda ya cuesta tanto como la Bolsa ----------
+\begin{frame}{La deuda ya cuesta tanto como el margen de decisión}
   \centering
-  \includegraphics[height=0.47\textheight]{fig/l5_deuda_bolsa_2027.pdf}\par
   \vspace{0.2em}
-  {\normalsize La deuda ya compite por la Bolsa.\par}
-  \fuente{\raggedright Bolsa: actualización 2026, elaboración propia con datos de SHCP. Costo financiero e inversión: PPEF 2027; fuente: CIEP con datos de SHCP.
-  Razones calculadas con el PIB de SHCP; con un PIB más conservador serían algo mayores.\par}
+  \begin{tikzpicture}
+    \node[draw=petroleo, line width=1.5pt, fill=fondo, rounded corners=4pt,
+          minimum width=5.6cm, minimum height=3.4cm, align=center, text=gris] (b) {
+      {\small Bolsa: margen de decisión}\\[0.3em]
+      {\color{petroleo}\bfseries\fontsize{30}{34}\selectfont 4.0\,\%}\\[0.2em]
+      {\small del PIB}\\[0.5em]
+      {\footnotesize\color{grisclaro} Actualización 2026}};
+    \node[draw=gris, line width=1.5pt, fill=white, rounded corners=4pt,
+          minimum width=5.6cm, minimum height=3.4cm, align=center, text=gris,
+          right=1.6cm of b] (d) {
+      {\small Intereses de la deuda}\\[0.3em]
+      {\color{gris}\bfseries\fontsize{30}{34}\selectfont 4.0\,\%}\\[0.2em]
+      {\small del PIB}\\[0.5em]
+      {\footnotesize\color{grisclaro} PPEF 2027 \;(3.8 en 2026)}};
+    \node[font=\bfseries\fontsize{30}{34}\selectfont, text=petroleo] at ($(b.east)!0.5!(d.west)$) {=};
+  \end{tikzpicture}\par
+  \vspace{0.7em}
+  {\large Por cada peso que queda para decidir, otro peso se va en intereses.\par}
+  \fuente{\raggedright Bolsa y costo financiero 2026: actualización 2026, elaboración propia con datos de SHCP. Costo financiero 2027: PPEF 2027; fuente: CIEP con datos de SHCP. Razones con el PIB de SHCP; con un PIB más conservador serían algo mayores.\par}
 \end{frame}
 
 % ---------- 6. Lo que se aprobó para 2027 ----------
