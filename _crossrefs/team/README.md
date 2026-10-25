@@ -31,4 +31,5 @@ Current contents:
 | Anne | `20261025_AURORA_briefing_anne_sftm-mexico-review.md` — review request for the demographic lens (§3.4) of the SFTM México note; open questions 2, 6, 8 | Aurora/capital |
 | Nina | `20261025_AURORA_briefing_nina_sftm-mexico-review.md` — review request for the macro-financial lens (§3.3) of the SFTM México note; open questions 3, 7, 8 | Aurora/capital |
 | Elle | `20261025_AURORA_briefing_elle_sftm-mexico-endorsement.md` — endorsement request for the synthesis, mechanism and §3.1 of the SFTM México note; status of her four review comments; open questions 0, 4, 5 | Aurora/capital |
+| Debb | `20261025_AURORA_briefing_debb_sftm-mexico-review.md` — review of the SFTM México note for PROTO-RAG-001 conformance, filing, knowledge-base hygiene and editing; rulings asked on endorsement_record, ingestion_record, filenames, location | Aurora/capital |
 | Judy | `20260808_BID2_briefing_judy_frailty.md` — frailty index reconstruction and confirmation questions | BID2/motivation |
