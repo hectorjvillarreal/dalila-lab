@@ -72,5 +72,6 @@ Completas de Mortalidade 2024; Projeções da População, revisão 2024. US Cen
 estimates and the Jan 2026 blog on net international migration. CDC/NCHS Data Brief 571 (21 Oct 2026)
 and Mortality in the United States 2024. UN, World Population Prospects 2024.
 
-The earlier UN-only version of this folder (commit `eae76db`) and its private dashboard
-(https://claude.ai/artifact/AjhwcMqtEHTno71EoNdwdU) are superseded.
+Interactive version (private dashboard, same results, updated 2026-10-24):
+https://claude.ai/artifact/AjhwcMqtEHTno71EoNdwdU. The earlier UN-only version of this folder
+(commit `eae76db`) is superseded.
