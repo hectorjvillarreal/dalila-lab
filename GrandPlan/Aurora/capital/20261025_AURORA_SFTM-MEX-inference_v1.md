@@ -24,6 +24,15 @@ build_instruction: "20261025_BUILD-AURORA_saving-for-the-machines_mexico_v1.1.md
 **Closure.** The paper's economy is **closed** (§2), so its interest rate is set at home. Any
 statement about a world rate is [I] under a small-open-economy closure that we add.
 
+**Conditional on σ (read first; added after Elle's review, 2026-10-25).** The severe reading rests
+on strong task complementarity, and σ here is a U.S. calibration.
+- The 11.7%-vs-2.2% gap opens only below σ ≈ 0.31. At σ = 1, a fixed 23% saving rate still gives
+  6.5% growth in 2045 (Table 4A, Cor. 2).
+- Every downstream use of σ = 0.2 in this note is conditional on México's σ being low. That covers
+  the depreciation figures in the energy channel (§1) and the wage-below-trend-by-2032 timing
+  (§3.2, item 4).
+- México's σ is unestimated. It is gating open question 0 (§4).
+
 ## One-line summary
 
 Fernández-Villaverde shows that in a standard task model the **size** of an automation growth boom
@@ -72,6 +81,14 @@ heterogeneity, financial frictions and "limited physical resources" would cap th
      automates under BAU, because its labour is too cheap. It adopts only under 2024 demographics
      combined with accelerating AI, and then in 2097. Aging makes labour scarcer and pulls that
      date forward. That is the optimistic read: automation filling in for the missing cohort.
+   - **Seam: the 2097 date uses stale demographics (Elle's review, 2026-10-25).**
+     - **[C]** BKY's 2097 rests on WPP 2024, with México's TFR near 1.7 in 2050. Current data are
+       lower: EIC 2025 TFR 1.23, and the 15–64 population falling from 2036 (§3.4).
+     - **[C]** BKY's own vintage switch already points the same way. Lower fertility moved México
+       from never adopting (2017 vintage) to adopting in 2097 (2024 vintage).
+     - **[I]** By BKY's mechanism, earlier labour scarcity pulls adoption forward. So 2097 is
+       likely late on current demographics, by an amount we cannot size without re-running the
+       model (open question 8).
 4. **The bottom line [I].** The paper's ideas carry over to México; its optimism does not. For a
    bystander, what plays the part of the paper's saving response is **hosting**. That means
    machine capital and power generation physically in México, taxed at source on
@@ -85,7 +102,9 @@ heterogeneity, financial frictions and "limited physical resources" would cap th
     with twenty-year buildings and power plants.
   - At δ = 20% and σ = 0.2, growth falls from 11.6% to 4.6%. The household saves 79% of output,
     because replacing machines alone takes 64% of it. A fixed 23% saving rate does not even cover
-    depreciation, and output in 2045 is half its trend (Online Appendix A, Table A.1).
+    depreciation, and output in 2045 is half its trend (Online Appendix A, Table A.1). With σ = 1
+    the same depreciation leaves 14.9% growth, so the severe version is conditional on low σ (open
+    question 0).
 - **[I] For a bystander,** generation is the part of machine capital that cannot be imported as a
   service. A data centre hosted in México needs power generated in México. So the energy
   build-out is where México is a participant, if it is one at all.
@@ -276,7 +295,7 @@ required return plus a sovereign spread.
    - **[I]** It is more necessary because both the compensation need and the debt-service
      burden (below) grow.
    - **[I]** Timing: the paper's automation wave runs 2025–2045, and with σ = 0.2 the wage falls
-     below trend by 2032 [M]. If anything like that timing applied, the RF horizon would sit in
+     below trend by 2032 [M]. That timing holds only with σ = 0.2 (open question 0). If anything like that timing applied, the RF horizon would sit in
      the early, most painful part of the transition. That is a big if. The U.S. calibration is
      not a México forecast.
 5. **Government budget constraint.** This is qualitative, and it is the IM-6 calibration hook.
@@ -436,9 +455,13 @@ scenario, built on national data:
 
 ## 4. Open methodological questions and hooks
 
-**Open questions surfaced.** Any of these could be promoted to a watch item.
+**Open questions surfaced.** Any of these could be promoted to a watch item. Two of them gate the
+next iteration. Question 0 gates every severe figure, and question 1 gates the IM-6 hook.
 
-1. **Which closure for México?** The paper is closed-economy. Before IM-6 can carry a world-rate
+0. **σ for México (gate; added after Elle's review).** How complementary are México's tasks? The
+   severe reading needs σ below about 0.31. At σ = 1, a fixed saving rate still gives 6.5% growth.
+   Every σ = 0.2 figure in this note waits on it. *(Elle / Cath)*
+1. **Which closure for México? (gate)** The paper is closed-economy. Before IM-6 can carry a world-rate
    shifter, someone has to establish IM-6's own interest-rate closure: small open economy with
    exogenous r, closed, or hybrid. The DFD RAG summary of IM-6 does not state it. *(Cath)*
 2. **México's wage premium over machine-cost parity**, the analogue of w0/ψ_ℓ0. It sets how far
@@ -456,6 +479,9 @@ scenario, built on national data:
 7. **Monitoring.** The paper's observable implications are a long-end jump with the short rate
    unchanged, and investment tracking the capital share. Both could be added to Aurora's existing
    watch infrastructure (U.S. real long yields and Udibono long yields side by side). *(Nina)*
+8. **México's automation-adoption date on current demographics (added after Elle's review).**
+   BKY date it at 2097 on WPP 2024. On EIC 2025 (TFR 1.23, 15–64 falling from 2036) the date is
+   likely earlier. Re-derive it, or keep the seam flagged. *(Anne / Nina)*
 
 **Hooks (from the build instruction §5, kept; not in scope now):**
 - **IM-6:** a world-rate shifter and a capital-share shifter, reading the OLG fiscal response.
