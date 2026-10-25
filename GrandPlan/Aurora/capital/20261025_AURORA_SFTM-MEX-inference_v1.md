@@ -10,7 +10,16 @@ venue: "Working paper, University of Pennsylvania; first draft dated 2026-10-20 
 doi: "none yet; PDF held locally at GrandPlan/Aurora/capital/Saving_Machines.pdf"
 date_added: 2026-10-25
 added_by: Claude          # drafted in the Elle / Cath / Nina / Anne lenses of the build instruction
-endorsed_by:              # pending: Elle (synthesis, §1, §3.1), Cath (§3.2), Nina (§3.3), Anne (§3.4)
+endorsed_by: Elle         # partial, per section; see endorsement_record
+endorsement_record:
+  - {section: "§2 What the paper says", by: Elle, date: 2026-10-25, status: endorsed, note: "internal checks hold (ρ, γ, g → r* = 5.1%; wage-premium reciprocity; yield ordering); §8.3-derived figures ride on Cath's §3.2 check"}
+  - {section: "§3.1 Participant/bystander, energy capital", by: Elle, date: 2026-10-25, status: endorsed}
+  - {section: "§1 Synthesis", by: Elle, date: 2026-10-25, status: held, note: "option (b): endorse once Cath, Nina and Anne return and the comment-3 flags clear; keep '2097 likely late, size unknown' aligned with Anne's §3.4 ruling"}
+  - {section: "§3.2 Fiscal structure", by: Cath, status: pending}
+  - {section: "§3.3 Macro-financial transmission", by: Nina, status: pending}
+  - {section: "§3.4 Demographic realism", by: Anne, status: pending}
+# Elle accepted the BKY correction (2097 = BKY's 2024 vintage, not 2017) on 2026-10-25.
+# Source: Elle's doc comment of 2026-10-25 (Claude Doc XxVSKpppC35Z8N8A6sFkiU).
 build_instruction: "20261025_BUILD-AURORA_saving-for-the-machines_mexico_v1.1.md"
 ---
 
