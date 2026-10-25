@@ -9,15 +9,15 @@ venue: "INEGI, Comunicado de prensa 87/26 (25 septiembre 2026); Reporte de Resul
 doi: "https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2026/enr/ENR2025_CP.pdf"
 date_added: 2026-10-24
 added_by: Claude Code
-endorsed_by:
+endorsed_by: Anne
 build_instruction: "_crossrefs/_build_instructions/2026-10-24_demographics_mex_enr2025_update.md"
 
-indicators: [cbr]
+indicators: [births, cbr]
 geography: [MEX]
 scenario_implication: neutral
 source_reliability: primary
 data_vintage: 2025
-workflow_status: pending-endorsement
+workflow_status: endorsed
 ---
 
 # INEGI ENR 2025 — registered births flat (+0.4%), occurred births still falling
@@ -76,13 +76,15 @@ occurrence) would show whether the jump is concentrated in a few states.
 - **Rule-of-85 anchor: the registration basis matters (flag only, nothing
   re-pinned).** A year's registrations have run 5–13% above that year's
   occurred births in every year since 2016 (2016: 2.29 M vs 2.18 M; 2022:
-  1.89 M vs 1.67 M occurred to date).
+  1.89 M vs 1.67 M occurred to date (four registration years;
+  incomplete)).
   Mechanically, 2025 registered births give 125.9 M at e₀ = 75 (134.3 M at
   e₀ = 80), essentially the endorsed 2024 anchor (125.4 / 133.8 M).
   *Illustrative only, not for citation:* completing 2024 occurred births from
-  Table 1 tail ratios (+5.6% to +7.7% beyond two years) gives ≈1.46–1.49 M.
-  The stationary population would then be ≈109–112 M at e₀ = 75
-  (≈117–119 M at e₀ = 80). The endorsed ENR 2024 entry and the Q3 replicate
+  Table 1 tail ratios (+6.0% (sensitivity) to +7.6% (2016–18 mature cohorts);
+  2019–20 excluded (pandemic registration disruption)) gives ≈1.46–1.49 M.
+  The stationary population would then be ≈109.8–111.5 M at e₀ = 75
+  (≈117.1–118.9 M at e₀ = 80). The endorsed ENR 2024 entry and the Q3 replicate
   are **not amended** (PROTO §5). Whether the anchor moves to the occurrence
   basis is Anne's call at Q4.
 - **Scenario positioning unchanged.** Same-year −2.6% is consistent with the
@@ -119,6 +121,7 @@ Geografía.
 ## Cross-references
 
 - → Build instruction: `_crossrefs/_build_instructions/2026-10-24_demographics_mex_enr2025_update.md`
+- → Endorsement record (Anne, 2026-10-24; three edits applied, Q4 rulings §2.1–§2.3): `_pending/2026-10-24_inegi-enr2025_Anne-endorsement.md`
 - → Sources: `sources/INEGI_2026-09-25_ENR2025_CP-87-26.pdf` (sha256 `53859a85…6e18`), `sources/INEGI_2026-09-25_ENR2025_RR-38-26.pdf` (sha256 `fb536335…3f82`), Table 1 transcription `sources/INEGI_2026-09-25_ENR2025_RR-38-26_tabla1.csv`
 - → Predecessor (endorsed, not amended): `releases/2026-08-03_inegi-enr2024-mex-births.md`
 - → Q3 replicate (proxy method, §2): `country/MEX/quarterly/2026-Q3_demographic_replicate.md`

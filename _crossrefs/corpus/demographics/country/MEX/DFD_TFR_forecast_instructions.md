@@ -430,5 +430,17 @@ values to be pinned at Q4 execution; origin question (Stress and fifth row depar
 window — the Q3 window is known late (direction endorsed); magnitude and the
 IM-6 anchor position are Cath's on the Q4 retabulation. Provisional, not
 citable, Q4 headline on the EIC base: Central 131.5 M / EIC-direct 125.2 M /
-Stress 119.1 M at 2050.*
+Stress 119.1 M at 2050. (7) registry fertility and the Rule-of-85 basis (Anne, ENR 2025 record of
+2026-10-24, `_pending/2026-10-24_inegi-enr2025_Anne-endorsement.md` §2): retire the Q3 ratio proxy
+(1.60 × crude-rate ratio), printed once in Q4 as a continuity line labelled *retired*; compute a direct
+registry TGF for 2024 from ENR microdata by year of occurrence (5-year ASFRs, completed births; women
+15–49 from the EIC 2025 base shifted to mid-2024; mother's age "no especificado" pro rata, share and
+unadjusted result printed); registry TGF near 1.3–1.4 → EIC instrument bias confirmed, fifth row a sound
+lower bracket; near 1.5 → the EIC 1.23 needs another explanation before it carries weight; the same
+calculation decides the origin question in (5). Rule-of-85 anchor on completed births by year of
+occurrence, e₀ = 75 and 80, completion factor printed as a range; the registered-basis series (125.4 M,
+2024) carried one quarter as a labelled continuity line, then dropped; the replicate states in one
+sentence that ~125 → ~110 M is a change of basis, not new information about fertility. Completion
+factor: base 2016–18 cohorts (+7.5 to +7.7 %), 2019–20 excluded (pandemic), 2022 not a bound
+(truncated), lower sensitivity +6 %; pre-2016 registrations excluded throughout.*
 *Next review: 2026-Q4 replicate, January 2027.*

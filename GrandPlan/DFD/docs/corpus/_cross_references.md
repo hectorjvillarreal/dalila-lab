@@ -13,6 +13,7 @@ work. Maintained by the skills that produce the upstream entries (currently:
 - 2026-08-13 — [Fernández-Villaverde & Norrick (2026), "Terra Incognita: The Economics of a Shrinking World"](../../../../_crossrefs/corpus/demographics/2026-08-13_fernandez-villaverde-norrick_terra-incognita.md) — cornerstone; tfr, projection, replacement_rate, growth_accounting, WLD/LAC/MEX, fast-transition + baseline-revision — **endorsed (Anne) 2026-09-23**
 - 2026-09-15 — [Fernández-Villaverde (2026), "A Recent Population History of Latin America and the Caribbean"](../../../../_crossrefs/corpus/demographics/observations/2026-09-15_fernandez-villaverde-slides-latam.md) — tfr, births, projection, LAC/MEX/CHL/COL/CRI, fast-transition
 - 2026-09-15 — [Watch item: Goldin (2026) gender mismatch — paradoxical reversal and the Stress-column floor](../../../../_crossrefs/corpus/demographics/watch_items/2026-09-15_goldin-gender-mismatch-stress-floor.md) — watch item, LAC/MEX/CHL, fast-transition
+- 2026-10-24 — [INEGI ENR 2025 — registered births flat (+0.4%), occurred births still falling](../../../../_crossrefs/corpus/demographics/releases/2026-10-24_inegi-enr2025-mex-births.md) — births, cbr, MEX, neutral — **endorsed (Anne) 2026-10-24**; Q4: registry TGF direct, Rule-of-85 on occurrence basis
 
 ## Inequality (`_crossrefs/corpus/inequality/`)
 
