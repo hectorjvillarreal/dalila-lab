@@ -51,6 +51,27 @@ Its margins are which machines it hosts, who owns them, and what a higher world 
 sovereign. On each of those, the inference runs against México unless it hosts the machine capital
 and the generation that powers it.
 
+## Results at a glance
+
+The paper's results hold as stated, conditional on low σ. Every México result is inference, and
+two gates stand before any quantitative pass. This table restates §§1–3; endorsement follows the
+source sections.
+
+| # | Result | Number | Tag | Depends on / status |
+|---|---|---|---|---|
+| 1 | Same technology, very different growth depending on saving | 11.7% vs 2.2% growth in 2045 (σ = 0.2, full automation, s fixed at 23%) | [M] Table 4A | Needs σ below ~0.31; at σ = 1, fixed saving still gives 6.5%. Verified |
+| 2 | Saving rises because the capital share rises, not thrift | Capital share 1/3 → 1; plow-back 0.69 → ~0.55 | [M] Prop. 10–11 | Verified |
+| 3 | Long real yields jump on impact; the short rate does not | 10y 5.1% → 13.6% (σ = 1) / 9.3% (σ = 0.2) | [M] §9.2 | Needs beliefs to update; markets do not price it today |
+| 4 | Workers without assets lose heavily | −40% to −66% of consumption | [M] Table 6 | Common comparative advantage; less with dispersion |
+| 5 | The paper's economy is closed; its rate is set at home | r = ρ + γg_C = R − δ | [M] §2, Prop. 13 | Every world-rate claim below is ours |
+| 6 | México's lever is hosting, not saving | — | [I] | Small-open-economy closure; hosting evidence absent (Q4) |
+| 7 | Rate channel: higher world rates raise México's debt cost, long end first | Interest cost 3.4% of GDP (2024), 4.0% (PPEF 2027) | [C] figures, [I] chain | Cath checking the figures; the world-rate race (Q3) |
+| 8 | Tax base shifts to capital México cannot tax at source; RF target harder and more necessary | RF 17% → 25% of GDP by 2036 | [C] target, [I] incidence | 17% base unsourced; the location-rent exception |
+| 9 | The paper's compensation stays affordable only with a domestic output boom; a bystander's does not fade | Paper: transfer peaks at 4–20% of GDP, below 4% by 2055 | [M] + [I] | México's wage premium over machine cost (Q2) |
+| 10 | Domestic saving capacity peaks now and then declines | 15–64 falls from 2036; contribution rate 11.6% → 26.2% of the wage bill (2050) | [C] Nota EIC 2025 | Anne's transcription check (14.6, −0.48 not in the PDF) |
+| 11 | Two pushbacks: aging lowers r*; labour scarcity speeds adoption | BKY adoption 2097, likely late | [C] | Q3, Q8 |
+| 12 | Gates before any IM-6 or RF iteration | σ for México; IM-6 closure (closed as built) | Open | Q0 (Elle / Cath), Q1 (Cath) |
+
 ---
 
 ## 1. Elle — synthesis (top)
