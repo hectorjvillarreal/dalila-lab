@@ -1,3 +1,2 @@
-Mexico: UN inputs -> 2050 = 148.71 M; UN published 148.95 M (-0.16 %)
-Brazil: UN inputs -> 2050 = 217.28 M; UN published 217.49 M (-0.10 %)
-United States: UN inputs -> 2050 = 378.13 M; UN published 380.85 M (-0.71 %)
+Brazil, IBGE inputs: 2050 total 218.28 M vs IBGE 218.37 M; 65+ 23.13 % vs IBGE 23.21 %
+Mexico, INEGI anchors: IBGE-pattern scales (below 60 / above 70) M 1.138/0.789, F 1.043/0.925; deaths at 2024 rates on the 2025 base 819k vs INEGI registered 2024 820k; implied e0 2024 M 73.8 F 80.4
