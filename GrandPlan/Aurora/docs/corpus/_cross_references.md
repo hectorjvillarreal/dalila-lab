@@ -12,6 +12,7 @@ demographics corpus).
 - 2026-08-13 — [Fernández-Villaverde & Norrick (2026), "Terra Incognita: The Economics of a Shrinking World"](../../../../_crossrefs/corpus/demographics/2026-08-13_fernandez-villaverde-norrick_terra-incognita.md) — cornerstone; modernity conjecture, Pareto-tail cohort argument, empty-planet growth, WLD, fast-transition — **endorsed (Anne) 2026-09-23**
 - 2026-09-15 — [Fernández-Villaverde (2026), "A Recent Population History of Latin America and the Caribbean"](../../../../_crossrefs/corpus/demographics/observations/2026-09-15_fernandez-villaverde-slides-latam.md) — tfr, projection, LAC, fast-transition
 - 2026-09-15 — [Watch item: Goldin (2026) gender mismatch — paradoxical reversal and the Stress-column floor](../../../../_crossrefs/corpus/demographics/watch_items/2026-09-15_goldin-gender-mismatch-stress-floor.md) — watch item, LAC/MEX/CHL, fast-transition
+- 2026-09-22 — [INEGI Encuesta Intercensal 2025 (RR 37/26) — TGF 1.23 (published rounding 1.2) for 2024; Q3 re-anchor trigger fired](../../../../_crossrefs/corpus/demographics/releases/2026-09-22_inegi-eic2025_tgf-trigger-fired.md) — tfr, population, migration, MEX, fast-transition + baseline-revision — **endorsed (Anne) 2026-09-23**; all 32 entities below 2.0 (CDMX 0.8); emigration ~1.3 M 2020–25
 
 ## Inequality (`_crossrefs/corpus/inequality/`)
 
