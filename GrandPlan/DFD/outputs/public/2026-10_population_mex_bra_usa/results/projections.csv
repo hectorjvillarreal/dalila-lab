@@ -1,0 +1,79 @@
+country,scenario,year,pop_millions
+Mexico,central,2025,130.911
+Mexico,central,2030,131.698
+Mexico,central,2035,132.010
+Mexico,central,2040,131.807
+Mexico,central,2045,130.845
+Mexico,central,2050,128.920
+Mexico,low,2025,130.911
+Mexico,low,2030,131.432
+Mexico,low,2035,130.972
+Mexico,low,2040,129.789
+Mexico,low,2045,127.909
+Mexico,low,2050,125.113
+Mexico,high,2025,130.911
+Mexico,high,2030,131.963
+Mexico,high,2035,133.049
+Mexico,high,2040,133.825
+Mexico,high,2045,133.785
+Mexico,high,2050,132.752
+Mexico,un_medium,2025,131.947
+Mexico,un_medium,2030,136.905
+Mexico,un_medium,2035,141.151
+Mexico,un_medium,2040,144.624
+Mexico,un_medium,2045,147.240
+Mexico,un_medium,2050,148.946
+Brazil,central,2025,213.400
+Brazil,central,2030,216.143
+Brazil,central,2035,217.820
+Brazil,central,2040,218.393
+Brazil,central,2045,217.679
+Brazil,central,2050,215.629
+Brazil,low,2025,213.400
+Brazil,low,2030,215.758
+Brazil,low,2035,216.327
+Brazil,low,2040,215.480
+Brazil,low,2045,213.399
+Brazil,low,2050,210.007
+Brazil,high,2025,213.400
+Brazil,high,2030,216.527
+Brazil,high,2035,219.314
+Brazil,high,2040,221.307
+Brazil,high,2045,221.963
+Brazil,high,2050,221.272
+Brazil,un_medium,2025,212.812
+Brazil,un_medium,2030,216.074
+Brazil,un_medium,2035,218.200
+Brazil,un_medium,2040,219.237
+Brazil,un_medium,2045,219.026
+Brazil,un_medium,2050,217.489
+United States,central,2025,341.785
+United States,central,2030,344.264
+United States,central,2035,345.627
+United States,central,2040,345.481
+United States,central,2045,343.800
+United States,central,2050,340.947
+United States,low,2025,341.785
+United States,low,2030,343.699
+United States,low,2035,343.391
+United States,low,2040,341.072
+United States,low,2045,337.294
+United States,low,2050,332.409
+United States,high,2025,341.785
+United States,high,2030,344.828
+United States,high,2035,347.863
+United States,high,2040,349.891
+United States,high,2045,350.308
+United States,high,2050,349.496
+United States,central_mig_1M,2025,341.785
+United States,central_mig_1M,2030,347.659
+United States,central_mig_1M,2035,352.769
+United States,central_mig_1M,2040,356.709
+United States,central_mig_1M,2045,359.367
+United States,central_mig_1M,2050,360.981
+United States,un_medium,2025,347.276
+United States,un_medium,2030,355.650
+United States,un_medium,2035,363.285
+United States,un_medium,2040,370.209
+United States,un_medium,2045,376.106
+United States,un_medium,2050,380.847

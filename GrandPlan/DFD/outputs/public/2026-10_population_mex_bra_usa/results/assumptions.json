@@ -1,0 +1,83 @@
+{
+  "Mexico": {
+    "base_2025_millions": 130.911,
+    "base": "INEGI Encuesta Intercensal 2025 count (15 Oct 2025), UN 2025 age-sex structure rescaled to EIC shares 0-14 = 21.6 %, 65+ = 10.1 %",
+    "tfr_central": 1.23,
+    "tfr_range": [
+      1.03,
+      1.43
+    ],
+    "tfr_source": "INEGI EIC 2025, TGF for 2024 (survey direct estimate; registry-based figures run higher)",
+    "e0_anchor": {
+      "year": 2026,
+      "male": 72.75,
+      "female": 79.24,
+      "source": "CONAPO, 2026 (projection-year value)",
+      "un_e0_same_year": [
+        72.82,
+        78.35
+      ],
+      "mx_scale": [
+        1.0048,
+        0.9233
+      ]
+    },
+    "net_migration": "INEGI EIC 2025 net emigration: -230k/yr to 2030, tapering to -134k/yr by 2040 (midpoint of the 107-161k CPV 2020 range); EIC age-sex profile",
+    "un_tfr_2025": 1.869,
+    "un_2025_millions": 131.947
+  },
+  "Brazil": {
+    "base_2025_millions": 213.4,
+    "base": "IBGE population estimate, 1 Jul 2025 (213.4 M), UN 2025 age-sex structure rescaled proportionally",
+    "tfr_central": 1.48,
+    "tfr_range": [
+      1.28,
+      1.68
+    ],
+    "tfr_source": "IBGE TFR 2023 (1.57) scaled by the 2024 fall in births (2,376,901 vs 2,523,267, -5.8 %, IBGE Registro Civil 2024), women 15-49 assumed flat",
+    "e0_anchor": {
+      "year": 2024,
+      "male": 73.3,
+      "female": 79.9,
+      "source": "IBGE Tábuas Completas de Mortalidade 2024",
+      "un_e0_same_year": [
+        72.95,
+        79.15
+      ],
+      "mx_scale": [
+        0.9752,
+        0.9349
+      ]
+    },
+    "net_migration": "UN WPP 2024 net migration path (exception: no national estimate published; IBGE's 2024 revision identifies net emigration as its largest correction)",
+    "un_tfr_2025": 1.6,
+    "un_2025_millions": 212.812
+  },
+  "United States": {
+    "base_2025_millions": 341.785,
+    "base": "US Census Bureau Vintage 2025, resident population by single year of age and sex, 1 Jul 2025 (341.8 M)",
+    "tfr_central": 1.576,
+    "tfr_range": [
+      1.376,
+      1.776
+    ],
+    "tfr_source": "CDC/NCHS final 2025 age-specific rates (Data Brief 571), summed: 5 x 315.2 / 1000",
+    "e0_anchor": {
+      "year": 2024,
+      "male": 76.5,
+      "female": 81.4,
+      "source": "CDC/NCHS, Mortality in the United States 2024",
+      "un_e0_same_year": [
+        77.05,
+        81.98
+      ],
+      "mx_scale": [
+        1.0451,
+        1.0556
+      ]
+    },
+    "net_migration": "Census Bureau Vintage 2025: net international migration 321k in 2026 'if current trends continue', held constant",
+    "un_tfr_2025": 1.623,
+    "un_2025_millions": 347.276
+  }
+}
