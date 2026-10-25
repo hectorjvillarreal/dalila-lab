@@ -28,7 +28,8 @@ Validation
     gets plausibility checks against INEGI instead (CONAPO excluded at Héctor's request, 2026-10-24);
     there is no national US projection on file.
 Outputs
-    results/projections_national.csv (country, scenario, year, pop_millions, share_65plus_pct; scenarios central,
+    results/projections_national.csv (country, scenario, year, pop_millions, share_65plus_pct, oadr = 65+ per
+    100 aged 15-64; scenarios central,
     low, high, central_mig_1M for the US, plus reference paths un_medium, ibge_2024),
     results/validation.txt, results/inputs_sha256.txt, results/assumptions.json
     The UN medium totals are carried only as a reference line, read from data/un_extract_mex_bra_usa.json.
@@ -297,6 +298,7 @@ def project(base, surv, tfr_fn, pat_fn, mig_fn, prof):
 
 def tot(mf): return sum(mf[0]) + sum(mf[1])
 def share65(mf): return 100 * (sum(mf[0][65:]) + sum(mf[1][65:])) / tot(mf)
+def oadr(mf): return 100 * (sum(mf[0][65:]) + sum(mf[1][65:])) / (sum(mf[0][15:65]) + sum(mf[1][15:65]))
 
 
 def tfr_path(level, delta): return lambda y: level + delta * min(1.0, max(0.0, (y - 2025) / 10))
@@ -362,23 +364,23 @@ def main():
         "United States": (us_base(), lambda y, s: usS[(y, s)], lambda y: pattern_from_groups(US_ASFR_2025),
                           lambda y: 321_000.0, generic, TFR["USA"]),
     }
-    row = lambda c, sc, y, mf: rows.append([c, sc, y, f"{tot(mf)/1e6:.3f}", f"{share65(mf):.3f}"])
+    row = lambda c, sc, y, mf: rows.append([c, sc, y, f"{tot(mf)/1e6:.3f}", f"{share65(mf):.3f}", f"{oadr(mf):.3f}"])
     for name, (base, surv, pat, mig, prof, level) in setups.items():
         scen = [("central", 0.0, mig), ("low", -0.2, mig), ("high", 0.2, mig)]
         if name == "United States": scen.append(("central_mig_1M", 0.0, lambda y: 1_000_000.0))
         for sc, d, mg in scen:
             r = project(base, surv, tfr_path(level, d), pat, mg, prof)
             for y, mf in r.items(): row(name, sc, y, mf)
-            print(f"{name:14s} {sc:15s} pop 2050 {tot(r[2050])/1e6:6.1f} M  65+ 2025 {share65(r[2025]):.1f} %  2050 {share65(r[2050]):.1f} %")
+            print(f"{name:14s} {sc:15s} pop 2050 {tot(r[2050])/1e6:6.1f} M  65+ 2025 {share65(r[2025]):.1f} %  2050 {share65(r[2050]):.1f} %  OADR 2025 {oadr(r[2025]):.1f}  2050 {oadr(r[2050]):.1f}")
     # reference paths: national agencies and UN medium (reference only, never an input)
     for y in range(Y0, Y1 + 1):
         p = bra_single(y); row("Brazil", "ibge_2024", y, (p["M"], p["F"]))
     un = json.load(open(os.path.join(DATA, "un_extract_mex_bra_usa.json")))
     for iso, name in (("MEX", "Mexico"), ("BRA", "Brazil"), ("USA", "United States")):
         for r in un[iso]["tot"]:
-            if Y0 <= int(r["Time"]) <= Y1: rows.append([name, "un_medium", int(r["Time"]), f"{float(r['PopTotal'])/1000:.3f}", ""])
+            if Y0 <= int(r["Time"]) <= Y1: rows.append([name, "un_medium", int(r["Time"]), f"{float(r['PopTotal'])/1000:.3f}", "", ""])
     with open(os.path.join(RES, "projections_national.csv"), "w", newline="") as h:
-        w = csv.writer(h); w.writerow(["country", "scenario", "year", "pop_millions", "share_65plus_pct"]); w.writerows(rows)
+        w = csv.writer(h); w.writerow(["country", "scenario", "year", "pop_millions", "share_65plus_pct", "oadr"]); w.writerows(rows)
     assume = {}
     for name, (base, surv, *_rest) in setups.items():
         lvl = setups[name][5]

@@ -1,365 +1,365 @@
-country,scenario,year,pop_millions,share_65plus_pct
-Mexico,central,2025,130.911,10.109
-Mexico,central,2026,131.147,10.549
-Mexico,central,2027,131.366,11.043
-Mexico,central,2028,131.566,11.510
-Mexico,central,2029,131.747,11.995
-Mexico,central,2030,131.908,12.481
-Mexico,central,2031,132.048,12.941
-Mexico,central,2032,132.174,13.360
-Mexico,central,2033,132.284,13.831
-Mexico,central,2034,132.378,14.299
-Mexico,central,2035,132.454,14.784
-Mexico,central,2036,132.507,15.351
-Mexico,central,2037,132.535,15.955
-Mexico,central,2038,132.536,16.541
-Mexico,central,2039,132.509,17.106
-Mexico,central,2040,132.453,17.653
-Mexico,central,2041,132.364,18.147
-Mexico,central,2042,132.227,18.599
-Mexico,central,2043,132.042,19.077
-Mexico,central,2044,131.810,19.568
-Mexico,central,2045,131.532,20.087
-Mexico,central,2046,131.205,20.575
-Mexico,central,2047,130.829,21.120
-Mexico,central,2048,130.403,21.627
-Mexico,central,2049,129.931,22.137
-Mexico,central,2050,129.413,22.615
-Mexico,low,2025,130.911,10.109
-Mexico,low,2026,131.147,10.549
-Mexico,low,2027,131.345,11.045
-Mexico,low,2028,131.504,11.515
-Mexico,low,2029,131.623,12.006
-Mexico,low,2030,131.702,12.500
-Mexico,low,2031,131.738,12.971
-Mexico,low,2032,131.741,13.404
-Mexico,low,2033,131.708,13.892
-Mexico,low,2034,131.639,14.379
-Mexico,low,2035,131.532,14.888
-Mexico,low,2036,131.384,15.483
-Mexico,low,2037,131.212,16.116
-Mexico,low,2038,131.016,16.733
-Mexico,low,2039,130.795,17.330
-Mexico,low,2040,130.548,17.911
-Mexico,low,2041,130.270,18.438
-Mexico,low,2042,129.948,18.925
-Mexico,low,2043,129.583,19.439
-Mexico,low,2044,129.173,19.967
-Mexico,low,2045,128.720,20.525
-Mexico,low,2046,128.222,21.054
-Mexico,low,2047,127.676,21.642
-Mexico,low,2048,127.084,22.192
-Mexico,low,2049,126.447,22.747
-Mexico,low,2050,125.765,23.271
-Mexico,high,2025,130.911,10.109
-Mexico,high,2026,131.147,10.549
-Mexico,high,2027,131.386,11.041
-Mexico,high,2028,131.628,11.504
-Mexico,high,2029,131.871,11.984
-Mexico,high,2030,132.115,12.461
-Mexico,high,2031,132.357,12.910
-Mexico,high,2032,132.606,13.316
-Mexico,high,2033,132.861,13.771
-Mexico,high,2034,133.118,14.219
-Mexico,high,2035,133.376,14.682
-Mexico,high,2036,133.631,15.222
-Mexico,high,2037,133.857,15.798
-Mexico,high,2038,134.055,16.354
-Mexico,high,2039,134.222,16.887
-Mexico,high,2040,134.358,17.403
-Mexico,high,2041,134.458,17.864
-Mexico,high,2042,134.505,18.284
-Mexico,high,2043,134.502,18.728
-Mexico,high,2044,134.449,19.184
-Mexico,high,2045,134.346,19.666
-Mexico,high,2046,134.193,20.117
-Mexico,high,2047,133.987,20.623
-Mexico,high,2048,133.731,21.089
-Mexico,high,2049,133.427,21.557
-Mexico,high,2050,133.078,21.993
-Brazil,central,2025,213.421,11.558
-Brazil,central,2026,214.136,11.972
-Brazil,central,2027,214.831,12.396
-Brazil,central,2028,215.504,12.823
-Brazil,central,2029,216.156,13.257
-Brazil,central,2030,216.785,13.694
-Brazil,central,2031,217.379,14.127
-Brazil,central,2032,217.925,14.555
-Brazil,central,2033,218.423,14.975
-Brazil,central,2034,218.872,15.390
-Brazil,central,2035,219.270,15.803
-Brazil,central,2036,219.617,16.216
-Brazil,central,2037,219.909,16.631
-Brazil,central,2038,220.147,17.048
-Brazil,central,2039,220.329,17.467
-Brazil,central,2040,220.455,17.897
-Brazil,central,2041,220.523,18.348
-Brazil,central,2042,220.532,18.825
-Brazil,central,2043,220.485,19.331
-Brazil,central,2044,220.379,19.861
-Brazil,central,2045,220.214,20.408
-Brazil,central,2046,219.990,20.959
-Brazil,central,2047,219.707,21.507
-Brazil,central,2048,219.365,22.047
-Brazil,central,2049,218.966,22.582
-Brazil,central,2050,218.508,23.106
-Brazil,low,2025,213.421,11.558
-Brazil,low,2026,214.136,11.972
-Brazil,low,2027,214.800,12.398
-Brazil,low,2028,215.411,12.829
-Brazil,low,2029,215.971,13.269
-Brazil,low,2030,216.479,13.713
-Brazil,low,2031,216.922,14.157
-Brazil,low,2032,217.288,14.597
-Brazil,low,2033,217.578,15.033
-Brazil,low,2034,217.790,15.467
-Brazil,low,2035,217.926,15.901
-Brazil,low,2036,217.981,16.338
-Brazil,low,2037,217.986,16.778
-Brazil,low,2038,217.937,17.221
-Brazil,low,2039,217.836,17.667
-Brazil,low,2040,217.681,18.125
-Brazil,low,2041,217.471,18.606
-Brazil,low,2042,217.206,19.114
-Brazil,low,2043,216.886,19.652
-Brazil,low,2044,216.509,20.216
-Brazil,low,2045,216.075,20.799
-Brazil,low,2046,215.584,21.388
-Brazil,low,2047,215.033,21.974
-Brazil,low,2048,214.425,22.555
-Brazil,low,2049,213.757,23.132
-Brazil,low,2050,213.030,23.700
-Brazil,high,2025,213.421,11.558
-Brazil,high,2026,214.136,11.972
-Brazil,high,2027,214.862,12.394
-Brazil,high,2028,215.597,12.818
-Brazil,high,2029,216.341,13.246
-Brazil,high,2030,217.092,13.674
-Brazil,high,2031,217.837,14.098
-Brazil,high,2032,218.562,14.512
-Brazil,high,2033,219.268,14.917
-Brazil,high,2034,219.953,15.315
-Brazil,high,2035,220.615,15.707
-Brazil,high,2036,221.253,16.096
-Brazil,high,2037,221.833,16.487
-Brazil,high,2038,222.356,16.878
-Brazil,high,2039,222.822,17.272
-Brazil,high,2040,223.228,17.675
-Brazil,high,2041,223.574,18.098
-Brazil,high,2042,223.859,18.546
-Brazil,high,2043,224.084,19.020
-Brazil,high,2044,224.250,19.518
-Brazil,high,2045,224.356,20.031
-Brazil,high,2046,224.401,20.547
-Brazil,high,2047,224.388,21.058
-Brazil,high,2048,224.317,21.561
-Brazil,high,2049,224.191,22.056
-Brazil,high,2050,224.011,22.538
-United States,central,2025,341.785,18.906
-United States,central,2026,342.400,19.339
-United States,central,2027,342.976,19.739
-United States,central,2028,343.506,20.123
-United States,central,2029,343.985,20.486
-United States,central,2030,344.408,20.801
-United States,central,2031,344.769,21.051
-United States,central,2032,345.066,21.259
-United States,central,2033,345.292,21.448
-United States,central,2034,345.451,21.647
-United States,central,2035,345.541,21.872
-United States,central,2036,345.559,22.092
-United States,central,2037,345.492,22.230
-United States,central,2038,345.356,22.314
-United States,central,2039,345.155,22.372
-United States,central,2040,344.888,22.446
-United States,central,2041,344.555,22.502
-United States,central,2042,344.161,22.585
-United States,central,2043,343.711,22.674
-United States,central,2044,343.209,22.786
-United States,central,2045,342.656,22.949
-United States,central,2046,342.056,23.111
-United States,central,2047,341.415,23.283
-United States,central,2048,340.736,23.465
-United States,central,2049,340.026,23.635
-United States,central,2050,339.288,23.840
-United States,low,2025,341.785,18.906
-United States,low,2026,342.400,19.339
-United States,low,2027,342.930,19.742
-United States,low,2028,343.370,20.131
-United States,low,2029,343.713,20.502
-United States,low,2030,343.955,20.829
-United States,low,2031,344.091,21.092
-United States,low,2032,344.118,21.318
-United States,low,2033,344.032,21.527
-United States,low,2034,343.835,21.749
-United States,low,2035,343.527,22.000
-United States,low,2036,343.106,22.250
-United States,low,2037,342.603,22.417
-United States,low,2038,342.034,22.531
-United States,low,2039,341.402,22.618
-United States,low,2040,340.709,22.721
-United States,low,2041,339.953,22.807
-United States,low,2042,339.141,22.919
-United States,low,2043,338.276,23.039
-United States,low,2044,337.361,23.181
-United States,low,2045,336.399,23.376
-United States,low,2046,335.394,23.570
-United States,low,2047,334.348,23.775
-United States,low,2048,333.268,23.990
-United States,low,2049,332.155,24.195
-United States,low,2050,331.013,24.436
-United States,high,2025,341.785,18.906
-United States,high,2026,342.400,19.339
-United States,high,2027,343.021,19.736
-United States,high,2028,343.642,20.115
-United States,high,2029,344.257,20.470
-United States,high,2030,344.861,20.774
-United States,high,2031,345.447,21.009
-United States,high,2032,346.013,21.201
-United States,high,2033,346.552,21.370
-United States,high,2034,347.068,21.546
-United States,high,2035,347.555,21.745
-United States,high,2036,348.012,21.936
-United States,high,2037,348.381,22.045
-United States,high,2038,348.678,22.101
-United States,high,2039,348.907,22.131
-United States,high,2040,349.067,22.177
-United States,high,2041,349.157,22.206
-United States,high,2042,349.181,22.260
-United States,high,2043,349.147,22.321
-United States,high,2044,349.057,22.404
-United States,high,2045,348.913,22.537
-United States,high,2046,348.721,22.669
-United States,high,2047,348.484,22.811
-United States,high,2048,348.210,22.961
-United States,high,2049,347.906,23.099
-United States,high,2050,347.574,23.272
-United States,central_mig_1M,2025,341.785,18.906
-United States,central_mig_1M,2026,343.079,19.300
-United States,central_mig_1M,2027,344.348,19.661
-United States,central_mig_1M,2028,345.584,20.003
-United States,central_mig_1M,2029,346.784,20.323
-United States,central_mig_1M,2030,347.942,20.594
-United States,central_mig_1M,2031,349.052,20.798
-United States,central_mig_1M,2032,350.111,20.961
-United States,central_mig_1M,2033,351.114,21.104
-United States,central_mig_1M,2034,352.062,21.256
-United States,central_mig_1M,2035,352.952,21.432
-United States,central_mig_1M,2036,353.783,21.603
-United States,central_mig_1M,2037,354.539,21.693
-United States,central_mig_1M,2038,355.237,21.731
-United States,central_mig_1M,2039,355.878,21.743
-United States,central_mig_1M,2040,356.461,21.772
-United States,central_mig_1M,2041,356.985,21.783
-United States,central_mig_1M,2042,357.454,21.820
-United States,central_mig_1M,2043,357.872,21.864
-United States,central_mig_1M,2044,358.242,21.930
-United States,central_mig_1M,2045,358.565,22.045
-United States,central_mig_1M,2046,358.845,22.160
-United States,central_mig_1M,2047,359.084,22.285
-United States,central_mig_1M,2048,359.289,22.420
-United States,central_mig_1M,2049,359.464,22.545
-United States,central_mig_1M,2050,359.613,22.704
-Brazil,ibge_2024,2025,213.421,11.558
-Brazil,ibge_2024,2026,214.212,11.973
-Brazil,ibge_2024,2027,214.960,12.397
-Brazil,ibge_2024,2028,215.667,12.826
-Brazil,ibge_2024,2029,216.338,13.262
-Brazil,ibge_2024,2030,216.973,13.702
-Brazil,ibge_2024,2031,217.563,14.139
-Brazil,ibge_2024,2032,218.096,14.570
-Brazil,ibge_2024,2033,218.574,14.995
-Brazil,ibge_2024,2034,218.998,15.415
-Brazil,ibge_2024,2035,219.367,15.834
-Brazil,ibge_2024,2036,219.682,16.252
-Brazil,ibge_2024,2037,219.941,16.673
-Brazil,ibge_2024,2038,220.144,17.096
-Brazil,ibge_2024,2039,220.293,17.521
-Brazil,ibge_2024,2040,220.386,17.957
-Brazil,ibge_2024,2041,220.425,18.414
-Brazil,ibge_2024,2042,220.410,18.897
-Brazil,ibge_2024,2043,220.342,19.407
-Brazil,ibge_2024,2044,220.220,19.942
-Brazil,ibge_2024,2045,220.046,20.494
-Brazil,ibge_2024,2046,219.817,21.049
-Brazil,ibge_2024,2047,219.535,21.600
-Brazil,ibge_2024,2048,219.200,22.144
-Brazil,ibge_2024,2049,218.811,22.681
-Brazil,ibge_2024,2050,218.369,23.206
-Mexico,un_medium,2025,131.947,
-Mexico,un_medium,2026,132.998,
-Mexico,un_medium,2027,134.018,
-Mexico,un_medium,2028,135.009,
-Mexico,un_medium,2029,135.971,
-Mexico,un_medium,2030,136.905,
-Mexico,un_medium,2031,137.811,
-Mexico,un_medium,2032,138.690,
-Mexico,un_medium,2033,139.542,
-Mexico,un_medium,2034,140.362,
-Mexico,un_medium,2035,141.151,
-Mexico,un_medium,2036,141.909,
-Mexico,un_medium,2037,142.638,
-Mexico,un_medium,2038,143.336,
-Mexico,un_medium,2039,143.998,
-Mexico,un_medium,2040,144.624,
-Mexico,un_medium,2041,145.218,
-Mexico,un_medium,2042,145.777,
-Mexico,un_medium,2043,146.300,
-Mexico,un_medium,2044,146.788,
-Mexico,un_medium,2045,147.240,
-Mexico,un_medium,2046,147.654,
-Mexico,un_medium,2047,148.030,
-Mexico,un_medium,2048,148.372,
-Mexico,un_medium,2049,148.678,
-Mexico,un_medium,2050,148.946,
-Brazil,un_medium,2025,212.812,
-Brazil,un_medium,2026,213.563,
-Brazil,un_medium,2027,214.261,
-Brazil,un_medium,2028,214.911,
-Brazil,un_medium,2029,215.515,
-Brazil,un_medium,2030,216.074,
-Brazil,un_medium,2031,216.587,
-Brazil,un_medium,2032,217.055,
-Brazil,un_medium,2033,217.479,
-Brazil,un_medium,2034,217.861,
-Brazil,un_medium,2035,218.200,
-Brazil,un_medium,2036,218.495,
-Brazil,un_medium,2037,218.747,
-Brazil,un_medium,2038,218.956,
-Brazil,un_medium,2039,219.118,
-Brazil,un_medium,2040,219.237,
-Brazil,un_medium,2041,219.307,
-Brazil,un_medium,2042,219.320,
-Brazil,un_medium,2043,219.277,
-Brazil,un_medium,2044,219.179,
-Brazil,un_medium,2045,219.026,
-Brazil,un_medium,2046,218.821,
-Brazil,un_medium,2047,218.565,
-Brazil,un_medium,2048,218.258,
-Brazil,un_medium,2049,217.898,
-Brazil,un_medium,2050,217.489,
-United States,un_medium,2025,347.276,
-United States,un_medium,2026,349.035,
-United States,un_medium,2027,350.728,
-United States,un_medium,2028,352.404,
-United States,un_medium,2029,354.050,
-United States,un_medium,2030,355.650,
-United States,un_medium,2031,357.223,
-United States,un_medium,2032,358.770,
-United States,un_medium,2033,360.294,
-United States,un_medium,2034,361.802,
-United States,un_medium,2035,363.285,
-United States,un_medium,2036,364.732,
-United States,un_medium,2037,366.152,
-United States,un_medium,2038,367.551,
-United States,un_medium,2039,368.907,
-United States,un_medium,2040,370.209,
-United States,un_medium,2041,371.469,
-United States,un_medium,2042,372.705,
-United States,un_medium,2043,373.901,
-United States,un_medium,2044,375.029,
-United States,un_medium,2045,376.106,
-United States,un_medium,2046,377.132,
-United States,un_medium,2047,378.118,
-United States,un_medium,2048,379.064,
-United States,un_medium,2049,379.967,
-United States,un_medium,2050,380.847,
+country,scenario,year,pop_millions,share_65plus_pct,oadr
+Mexico,central,2025,130.911,10.109,14.791
+Mexico,central,2026,131.147,10.549,15.362
+Mexico,central,2027,131.366,11.043,16.021
+Mexico,central,2028,131.566,11.510,16.634
+Mexico,central,2029,131.747,11.995,17.274
+Mexico,central,2030,131.908,12.481,17.916
+Mexico,central,2031,132.048,12.941,18.530
+Mexico,central,2032,132.174,13.360,19.080
+Mexico,central,2033,132.284,13.831,19.732
+Mexico,central,2034,132.378,14.299,20.396
+Mexico,central,2035,132.454,14.784,21.113
+Mexico,central,2036,132.507,15.351,22.033
+Mexico,central,2037,132.535,15.955,23.026
+Mexico,central,2038,132.536,16.541,23.995
+Mexico,central,2039,132.509,17.106,24.932
+Mexico,central,2040,132.453,17.653,25.845
+Mexico,central,2041,132.364,18.147,26.734
+Mexico,central,2042,132.227,18.599,27.550
+Mexico,central,2043,132.042,19.077,28.418
+Mexico,central,2044,131.810,19.568,29.314
+Mexico,central,2045,131.532,20.087,30.270
+Mexico,central,2046,131.205,20.575,31.170
+Mexico,central,2047,130.829,21.120,32.187
+Mexico,central,2048,130.403,21.627,33.131
+Mexico,central,2049,129.931,22.137,34.082
+Mexico,central,2050,129.413,22.615,34.973
+Mexico,low,2025,130.911,10.109,14.791
+Mexico,low,2026,131.147,10.549,15.362
+Mexico,low,2027,131.345,11.045,16.021
+Mexico,low,2028,131.504,11.515,16.634
+Mexico,low,2029,131.623,12.006,17.274
+Mexico,low,2030,131.702,12.500,17.916
+Mexico,low,2031,131.738,12.971,18.530
+Mexico,low,2032,131.741,13.404,19.080
+Mexico,low,2033,131.708,13.892,19.732
+Mexico,low,2034,131.639,14.379,20.396
+Mexico,low,2035,131.532,14.888,21.113
+Mexico,low,2036,131.384,15.483,22.033
+Mexico,low,2037,131.212,16.116,23.026
+Mexico,low,2038,131.016,16.733,23.995
+Mexico,low,2039,130.795,17.330,24.932
+Mexico,low,2040,130.548,17.911,25.845
+Mexico,low,2041,130.270,18.438,26.734
+Mexico,low,2042,129.948,18.925,27.556
+Mexico,low,2043,129.583,19.439,28.438
+Mexico,low,2044,129.173,19.967,29.356
+Mexico,low,2045,128.720,20.525,30.342
+Mexico,low,2046,128.222,21.054,31.281
+Mexico,low,2047,127.676,21.642,32.349
+Mexico,low,2048,127.084,22.192,33.355
+Mexico,low,2049,126.447,22.747,34.382
+Mexico,low,2050,125.765,23.271,35.360
+Mexico,high,2025,130.911,10.109,14.791
+Mexico,high,2026,131.147,10.549,15.362
+Mexico,high,2027,131.386,11.041,16.021
+Mexico,high,2028,131.628,11.504,16.634
+Mexico,high,2029,131.871,11.984,17.274
+Mexico,high,2030,132.115,12.461,17.916
+Mexico,high,2031,132.357,12.910,18.530
+Mexico,high,2032,132.606,13.316,19.080
+Mexico,high,2033,132.861,13.771,19.732
+Mexico,high,2034,133.118,14.219,20.396
+Mexico,high,2035,133.376,14.682,21.113
+Mexico,high,2036,133.631,15.222,22.033
+Mexico,high,2037,133.857,15.798,23.026
+Mexico,high,2038,134.055,16.354,23.995
+Mexico,high,2039,134.222,16.887,24.932
+Mexico,high,2040,134.358,17.403,25.845
+Mexico,high,2041,134.458,17.864,26.734
+Mexico,high,2042,134.505,18.284,27.543
+Mexico,high,2043,134.502,18.728,28.398
+Mexico,high,2044,134.449,19.184,29.273
+Mexico,high,2045,134.346,19.666,30.199
+Mexico,high,2046,134.193,20.117,31.060
+Mexico,high,2047,133.987,20.623,32.027
+Mexico,high,2048,133.731,21.089,32.909
+Mexico,high,2049,133.427,21.557,33.788
+Mexico,high,2050,133.078,21.993,34.594
+Brazil,central,2025,213.421,11.558,16.760
+Brazil,central,2026,214.136,11.972,17.381
+Brazil,central,2027,214.831,12.396,18.014
+Brazil,central,2028,215.504,12.823,18.657
+Brazil,central,2029,216.156,13.257,19.308
+Brazil,central,2030,216.785,13.694,19.956
+Brazil,central,2031,217.379,14.127,20.609
+Brazil,central,2032,217.925,14.555,21.260
+Brazil,central,2033,218.423,14.975,21.893
+Brazil,central,2034,218.872,15.390,22.523
+Brazil,central,2035,219.270,15.803,23.166
+Brazil,central,2036,219.617,16.216,23.825
+Brazil,central,2037,219.909,16.631,24.505
+Brazil,central,2038,220.147,17.048,25.200
+Brazil,central,2039,220.329,17.467,25.910
+Brazil,central,2040,220.455,17.897,26.653
+Brazil,central,2041,220.523,18.348,27.459
+Brazil,central,2042,220.532,18.825,28.324
+Brazil,central,2043,220.485,19.331,29.254
+Brazil,central,2044,220.379,19.861,30.245
+Brazil,central,2045,220.214,20.408,31.282
+Brazil,central,2046,219.990,20.959,32.343
+Brazil,central,2047,219.707,21.507,33.408
+Brazil,central,2048,219.365,22.047,34.474
+Brazil,central,2049,218.966,22.582,35.541
+Brazil,central,2050,218.508,23.106,36.598
+Brazil,low,2025,213.421,11.558,16.760
+Brazil,low,2026,214.136,11.972,17.381
+Brazil,low,2027,214.800,12.398,18.014
+Brazil,low,2028,215.411,12.829,18.657
+Brazil,low,2029,215.971,13.269,19.308
+Brazil,low,2030,216.479,13.713,19.956
+Brazil,low,2031,216.922,14.157,20.609
+Brazil,low,2032,217.288,14.597,21.260
+Brazil,low,2033,217.578,15.033,21.893
+Brazil,low,2034,217.790,15.467,22.523
+Brazil,low,2035,217.926,15.901,23.166
+Brazil,low,2036,217.981,16.338,23.825
+Brazil,low,2037,217.986,16.778,24.505
+Brazil,low,2038,217.937,17.221,25.200
+Brazil,low,2039,217.836,17.667,25.910
+Brazil,low,2040,217.681,18.125,26.653
+Brazil,low,2041,217.471,18.606,27.459
+Brazil,low,2042,217.206,19.114,28.330
+Brazil,low,2043,216.886,19.652,29.273
+Brazil,low,2044,216.509,20.216,30.283
+Brazil,low,2045,216.075,20.799,31.348
+Brazil,low,2046,215.584,21.388,32.446
+Brazil,low,2047,215.033,21.974,33.559
+Brazil,low,2048,214.425,22.555,34.682
+Brazil,low,2049,213.757,23.132,35.818
+Brazil,low,2050,213.030,23.700,36.956
+Brazil,high,2025,213.421,11.558,16.760
+Brazil,high,2026,214.136,11.972,17.381
+Brazil,high,2027,214.862,12.394,18.014
+Brazil,high,2028,215.597,12.818,18.657
+Brazil,high,2029,216.341,13.246,19.308
+Brazil,high,2030,217.092,13.674,19.956
+Brazil,high,2031,217.837,14.098,20.609
+Brazil,high,2032,218.562,14.512,21.260
+Brazil,high,2033,219.268,14.917,21.893
+Brazil,high,2034,219.953,15.315,22.523
+Brazil,high,2035,220.615,15.707,23.166
+Brazil,high,2036,221.253,16.096,23.825
+Brazil,high,2037,221.833,16.487,24.505
+Brazil,high,2038,222.356,16.878,25.200
+Brazil,high,2039,222.822,17.272,25.910
+Brazil,high,2040,223.228,17.675,26.653
+Brazil,high,2041,223.574,18.098,27.459
+Brazil,high,2042,223.859,18.546,28.318
+Brazil,high,2043,224.084,19.020,29.236
+Brazil,high,2044,224.250,19.518,30.206
+Brazil,high,2045,224.356,20.031,31.216
+Brazil,high,2046,224.401,20.547,32.240
+Brazil,high,2047,224.388,21.058,33.259
+Brazil,high,2048,224.317,21.561,34.269
+Brazil,high,2049,224.191,22.056,35.268
+Brazil,high,2050,224.011,22.538,36.246
+United States,central,2025,341.785,18.906,29.604
+United States,central,2026,342.400,19.339,30.394
+United States,central,2027,342.976,19.739,31.132
+United States,central,2028,343.506,20.123,31.843
+United States,central,2029,343.985,20.486,32.515
+United States,central,2030,344.408,20.801,33.088
+United States,central,2031,344.769,21.051,33.526
+United States,central,2032,345.066,21.259,33.891
+United States,central,2033,345.292,21.448,34.223
+United States,central,2034,345.451,21.647,34.587
+United States,central,2035,345.541,21.872,35.015
+United States,central,2036,345.559,22.092,35.451
+United States,central,2037,345.492,22.230,35.696
+United States,central,2038,345.356,22.314,35.833
+United States,central,2039,345.155,22.372,35.923
+United States,central,2040,344.888,22.446,36.051
+United States,central,2041,344.555,22.502,36.139
+United States,central,2042,344.161,22.585,36.283
+United States,central,2043,343.711,22.674,36.439
+United States,central,2044,343.209,22.786,36.642
+United States,central,2045,342.656,22.949,36.955
+United States,central,2046,342.056,23.111,37.265
+United States,central,2047,341.415,23.283,37.596
+United States,central,2048,340.736,23.465,37.947
+United States,central,2049,340.026,23.635,38.271
+United States,central,2050,339.288,23.840,38.675
+United States,low,2025,341.785,18.906,29.604
+United States,low,2026,342.400,19.339,30.394
+United States,low,2027,342.930,19.742,31.132
+United States,low,2028,343.370,20.131,31.843
+United States,low,2029,343.713,20.502,32.515
+United States,low,2030,343.955,20.829,33.088
+United States,low,2031,344.091,21.092,33.526
+United States,low,2032,344.118,21.318,33.891
+United States,low,2033,344.032,21.527,34.223
+United States,low,2034,343.835,21.749,34.587
+United States,low,2035,343.527,22.000,35.015
+United States,low,2036,343.106,22.250,35.451
+United States,low,2037,342.603,22.417,35.696
+United States,low,2038,342.034,22.531,35.833
+United States,low,2039,341.402,22.618,35.923
+United States,low,2040,340.709,22.721,36.051
+United States,low,2041,339.953,22.807,36.139
+United States,low,2042,339.141,22.919,36.291
+United States,low,2043,338.276,23.039,36.462
+United States,low,2044,337.361,23.181,36.689
+United States,low,2045,336.399,23.376,37.033
+United States,low,2046,335.394,23.570,37.384
+United States,low,2047,334.348,23.775,37.765
+United States,low,2048,333.268,23.990,38.174
+United States,low,2049,332.155,24.195,38.567
+United States,low,2050,331.013,24.436,39.050
+United States,high,2025,341.785,18.906,29.604
+United States,high,2026,342.400,19.339,30.394
+United States,high,2027,343.021,19.736,31.132
+United States,high,2028,343.642,20.115,31.843
+United States,high,2029,344.257,20.470,32.515
+United States,high,2030,344.861,20.774,33.088
+United States,high,2031,345.447,21.009,33.526
+United States,high,2032,346.013,21.201,33.891
+United States,high,2033,346.552,21.370,34.223
+United States,high,2034,347.068,21.546,34.587
+United States,high,2035,347.555,21.745,35.015
+United States,high,2036,348.012,21.936,35.451
+United States,high,2037,348.381,22.045,35.696
+United States,high,2038,348.678,22.101,35.833
+United States,high,2039,348.907,22.131,35.923
+United States,high,2040,349.067,22.177,36.051
+United States,high,2041,349.157,22.206,36.139
+United States,high,2042,349.181,22.260,36.275
+United States,high,2043,349.147,22.321,36.416
+United States,high,2044,349.057,22.404,36.596
+United States,high,2045,348.913,22.537,36.876
+United States,high,2046,348.721,22.669,37.147
+United States,high,2047,348.484,22.811,37.429
+United States,high,2048,348.210,22.961,37.722
+United States,high,2049,347.906,23.099,37.980
+United States,high,2050,347.574,23.272,38.308
+United States,central_mig_1M,2025,341.785,18.906,29.604
+United States,central_mig_1M,2026,343.079,19.300,30.308
+United States,central_mig_1M,2027,344.348,19.661,30.957
+United States,central_mig_1M,2028,345.584,20.003,31.574
+United States,central_mig_1M,2029,346.784,20.323,32.150
+United States,central_mig_1M,2030,347.942,20.594,32.626
+United States,central_mig_1M,2031,349.052,20.798,32.967
+United States,central_mig_1M,2032,350.111,20.961,33.235
+United States,central_mig_1M,2033,351.114,21.104,33.470
+United States,central_mig_1M,2034,352.062,21.256,33.736
+United States,central_mig_1M,2035,352.952,21.432,34.062
+United States,central_mig_1M,2036,353.783,21.603,34.394
+United States,central_mig_1M,2037,354.539,21.693,34.543
+United States,central_mig_1M,2038,355.237,21.731,34.589
+United States,central_mig_1M,2039,355.878,21.743,34.592
+United States,central_mig_1M,2040,356.461,21.772,34.630
+United States,central_mig_1M,2041,356.985,21.783,34.633
+United States,central_mig_1M,2042,357.454,21.820,34.688
+United States,central_mig_1M,2043,357.872,21.864,34.755
+United States,central_mig_1M,2044,358.242,21.930,34.865
+United States,central_mig_1M,2045,358.565,22.045,35.076
+United States,central_mig_1M,2046,358.845,22.160,35.284
+United States,central_mig_1M,2047,359.084,22.285,35.512
+United States,central_mig_1M,2048,359.289,22.420,35.757
+United States,central_mig_1M,2049,359.464,22.545,35.980
+United States,central_mig_1M,2050,359.613,22.704,36.275
+Brazil,ibge_2024,2025,213.421,11.558,16.760
+Brazil,ibge_2024,2026,214.212,11.973,17.387
+Brazil,ibge_2024,2027,214.960,12.397,18.027
+Brazil,ibge_2024,2028,215.667,12.826,18.675
+Brazil,ibge_2024,2029,216.338,13.262,19.332
+Brazil,ibge_2024,2030,216.973,13.702,19.985
+Brazil,ibge_2024,2031,217.563,14.139,20.642
+Brazil,ibge_2024,2032,218.096,14.570,21.298
+Brazil,ibge_2024,2033,218.574,14.995,21.936
+Brazil,ibge_2024,2034,218.998,15.415,22.570
+Brazil,ibge_2024,2035,219.367,15.834,23.218
+Brazil,ibge_2024,2036,219.682,16.252,23.882
+Brazil,ibge_2024,2037,219.941,16.673,24.567
+Brazil,ibge_2024,2038,220.144,17.096,25.268
+Brazil,ibge_2024,2039,220.293,17.521,25.983
+Brazil,ibge_2024,2040,220.386,17.957,26.732
+Brazil,ibge_2024,2041,220.425,18.414,27.531
+Brazil,ibge_2024,2042,220.410,18.897,28.393
+Brazil,ibge_2024,2043,220.342,19.407,29.323
+Brazil,ibge_2024,2044,220.220,19.942,30.317
+Brazil,ibge_2024,2045,220.046,20.494,31.359
+Brazil,ibge_2024,2046,219.817,21.049,32.428
+Brazil,ibge_2024,2047,219.535,21.600,33.503
+Brazil,ibge_2024,2048,219.200,22.144,34.581
+Brazil,ibge_2024,2049,218.811,22.681,35.663
+Brazil,ibge_2024,2050,218.369,23.206,36.735
+Mexico,un_medium,2025,131.947,,
+Mexico,un_medium,2026,132.998,,
+Mexico,un_medium,2027,134.018,,
+Mexico,un_medium,2028,135.009,,
+Mexico,un_medium,2029,135.971,,
+Mexico,un_medium,2030,136.905,,
+Mexico,un_medium,2031,137.811,,
+Mexico,un_medium,2032,138.690,,
+Mexico,un_medium,2033,139.542,,
+Mexico,un_medium,2034,140.362,,
+Mexico,un_medium,2035,141.151,,
+Mexico,un_medium,2036,141.909,,
+Mexico,un_medium,2037,142.638,,
+Mexico,un_medium,2038,143.336,,
+Mexico,un_medium,2039,143.998,,
+Mexico,un_medium,2040,144.624,,
+Mexico,un_medium,2041,145.218,,
+Mexico,un_medium,2042,145.777,,
+Mexico,un_medium,2043,146.300,,
+Mexico,un_medium,2044,146.788,,
+Mexico,un_medium,2045,147.240,,
+Mexico,un_medium,2046,147.654,,
+Mexico,un_medium,2047,148.030,,
+Mexico,un_medium,2048,148.372,,
+Mexico,un_medium,2049,148.678,,
+Mexico,un_medium,2050,148.946,,
+Brazil,un_medium,2025,212.812,,
+Brazil,un_medium,2026,213.563,,
+Brazil,un_medium,2027,214.261,,
+Brazil,un_medium,2028,214.911,,
+Brazil,un_medium,2029,215.515,,
+Brazil,un_medium,2030,216.074,,
+Brazil,un_medium,2031,216.587,,
+Brazil,un_medium,2032,217.055,,
+Brazil,un_medium,2033,217.479,,
+Brazil,un_medium,2034,217.861,,
+Brazil,un_medium,2035,218.200,,
+Brazil,un_medium,2036,218.495,,
+Brazil,un_medium,2037,218.747,,
+Brazil,un_medium,2038,218.956,,
+Brazil,un_medium,2039,219.118,,
+Brazil,un_medium,2040,219.237,,
+Brazil,un_medium,2041,219.307,,
+Brazil,un_medium,2042,219.320,,
+Brazil,un_medium,2043,219.277,,
+Brazil,un_medium,2044,219.179,,
+Brazil,un_medium,2045,219.026,,
+Brazil,un_medium,2046,218.821,,
+Brazil,un_medium,2047,218.565,,
+Brazil,un_medium,2048,218.258,,
+Brazil,un_medium,2049,217.898,,
+Brazil,un_medium,2050,217.489,,
+United States,un_medium,2025,347.276,,
+United States,un_medium,2026,349.035,,
+United States,un_medium,2027,350.728,,
+United States,un_medium,2028,352.404,,
+United States,un_medium,2029,354.050,,
+United States,un_medium,2030,355.650,,
+United States,un_medium,2031,357.223,,
+United States,un_medium,2032,358.770,,
+United States,un_medium,2033,360.294,,
+United States,un_medium,2034,361.802,,
+United States,un_medium,2035,363.285,,
+United States,un_medium,2036,364.732,,
+United States,un_medium,2037,366.152,,
+United States,un_medium,2038,367.551,,
+United States,un_medium,2039,368.907,,
+United States,un_medium,2040,370.209,,
+United States,un_medium,2041,371.469,,
+United States,un_medium,2042,372.705,,
+United States,un_medium,2043,373.901,,
+United States,un_medium,2044,375.029,,
+United States,un_medium,2045,376.106,,
+United States,un_medium,2046,377.132,,
+United States,un_medium,2047,378.118,,
+United States,un_medium,2048,379.064,,
+United States,un_medium,2049,379.967,,
+United States,un_medium,2050,380.847,,

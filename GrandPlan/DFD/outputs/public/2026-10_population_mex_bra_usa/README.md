@@ -21,8 +21,17 @@ Interactive version (private dashboard, same results): https://claude.ai/artifac
 | Brazil | 11.6 | 13.7 | 17.9 | **23.1** | 22.5–23.7 | IBGE 2024: 23.2 |
 | United States | 18.9 | 20.8 | 22.4 | **23.8** | 23.3–24.4 | — |
 
-US sensitivity: with net migration of 1 M/yr instead of 321k, the 2050 population is 359.6 M and
-the 65+ share 22.7 %.
+| Old-age dependency ratio (65+ per 100 aged 15–64) | 2025 | 2050 central | 2050 range | Official 2050 |
+|---|---|---|---|---|
+| Mexico | 14.8 | **35.0** | 34.6–35.4 | — |
+| Brazil | 16.8 | **36.6** | 36.2–37.0 | IBGE 2024: 36.7 |
+| United States | 29.6 | **38.7** | 38.3–39.1 | — |
+
+The 2025 ratios match the agencies' own published figures (INEGI EIC 2025: 14.82; IBGE: 16.76).
+The fertility band is narrow because anyone born after 2025 is still under 25 in 2050.
+
+US sensitivity: with net migration of 1 M/yr instead of 321k, the 2050 population is 359.6 M, the
+65+ share 22.7 % and the dependency ratio 36.3.
 
 ## Method and inputs (`projection_national.py`)
 
@@ -71,10 +80,11 @@ against. Instead, its mortality is fitted to INEGI's 2024 registered deaths, and
 ## Files
 
 - `projection_national.py`: engine; writes `results/projections_national.csv` (country, scenario,
-  year, population, 65+ share; reference paths `ibge_2024` and `un_medium`),
+  year, population, 65+ share, old-age dependency ratio; reference paths `ibge_2024` and `un_medium`),
   `results/validation.txt`, `results/assumptions.json` and `results/inputs_sha256.txt`.
 - `charts_observed.py`: population figures `figures/population_*_2025_2050.png`.
-- `share65_chart.py`: `figures/share65_2025_2050.png`.
+- `ageing_charts.py`: `figures/share65_2025_2050.png` (share aged 65+) and `figures/oadr_2025_2050.png`
+  (old-age dependency ratio).
 - `data/census_nc-est2025-agesex-res.csv`: Census Bureau Vintage 2025.
 - `data/cdc/nvsr75-05.txt`: text of NVSR 75(5), US life tables 2024 (pdftotext). The PDF itself is
   ignored by git.
@@ -95,7 +105,7 @@ against. Instead, its mortality is fitted to INEGI's 2024 registered deaths, and
 ```
 cd GrandPlan/DFD/outputs/public/2026-10_population_mex_bra_usa
 ~/miniforge3/envs/dalila/bin/python projection_national.py
-~/miniforge3/envs/dalila/bin/python charts_observed.py && ~/miniforge3/envs/dalila/bin/python share65_chart.py
+~/miniforge3/envs/dalila/bin/python charts_observed.py && ~/miniforge3/envs/dalila/bin/python ageing_charts.py
 ```
 
 ## Sources
