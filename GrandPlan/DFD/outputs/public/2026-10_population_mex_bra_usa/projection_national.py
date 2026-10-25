@@ -29,7 +29,7 @@ Validation
     there is no national US projection on file.
 Outputs
     results/projections_national.csv (country, scenario, year, pop_millions, share_65plus_pct, oadr = 65+ per
-    100 aged 15-64; scenarios central,
+    100 aged 20-64; scenarios central,
     low, high, central_mig_1M for the US, plus reference paths un_medium, ibge_2024),
     results/validation.txt, results/inputs_sha256.txt, results/assumptions.json
     The UN medium totals are carried only as a reference line, read from data/un_extract_mex_bra_usa.json.
@@ -298,7 +298,7 @@ def project(base, surv, tfr_fn, pat_fn, mig_fn, prof):
 
 def tot(mf): return sum(mf[0]) + sum(mf[1])
 def share65(mf): return 100 * (sum(mf[0][65:]) + sum(mf[1][65:])) / tot(mf)
-def oadr(mf): return 100 * (sum(mf[0][65:]) + sum(mf[1][65:])) / (sum(mf[0][15:65]) + sum(mf[1][15:65]))
+def oadr(mf): return 100 * (sum(mf[0][65:]) + sum(mf[1][65:])) / (sum(mf[0][20:65]) + sum(mf[1][20:65]))   # 65+ per 100 aged 20-64
 
 
 def tfr_path(level, delta): return lambda y: level + delta * min(1.0, max(0.0, (y - 2025) / 10))

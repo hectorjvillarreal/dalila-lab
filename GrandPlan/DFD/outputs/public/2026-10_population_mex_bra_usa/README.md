@@ -21,17 +21,19 @@ Interactive version (private dashboard, same results): https://claude.ai/artifac
 | Brazil | 11.6 | 13.7 | 17.9 | **23.1** | 22.5–23.7 | IBGE 2024: 23.2 |
 | United States | 18.9 | 20.8 | 22.4 | **23.8** | 23.3–24.4 | — |
 
-| Old-age dependency ratio (65+ per 100 aged 15–64) | 2025 | 2050 central | 2050 range | Official 2050 |
+| Old-age dependency ratio (65+ per 100 aged 20–64) | 2025 | 2050 central | 2050 range | Official 2050 |
 |---|---|---|---|---|
-| Mexico | 14.8 | **35.0** | 34.6–35.4 | — |
-| Brazil | 16.8 | **36.6** | 36.2–37.0 | IBGE 2024: 36.7 |
-| United States | 29.6 | **38.7** | 38.3–39.1 | — |
+| Mexico | 16.8 | **37.8** | 37.7–37.9 | — |
+| Brazil | 18.6 | **39.8** | 39.7–39.9 | IBGE 2024: 39.9 (same definition, from its single-age tables) |
+| United States | 32.9 | **42.3** | 42.2–42.4 | — |
 
-The 2025 ratios match the agencies' own published figures (INEGI EIC 2025: 14.82; IBGE: 16.76).
-The fertility band is narrow because anyone born after 2025 is still under 25 in 2050.
+The working-age denominator starts at 20, not 15 (changed at Héctor's request on 2026-10-25 as more
+realistic). On the conventional 15–64 basis the 2025 ratios match the agencies' published figures
+(INEGI EIC 2025: 14.82; IBGE: 16.76). The fertility band is almost invisible, because anyone born
+after 2030 is still under 20 in 2050 and so falls outside the denominator.
 
 US sensitivity: with net migration of 1 M/yr instead of 321k, the 2050 population is 359.6 M, the
-65+ share 22.7 % and the dependency ratio 36.3.
+65+ share 22.7 % and the dependency ratio 39.6.
 
 ## Method and inputs (`projection_national.py`)
 
@@ -80,11 +82,11 @@ against. Instead, its mortality is fitted to INEGI's 2024 registered deaths, and
 ## Files
 
 - `projection_national.py`: engine; writes `results/projections_national.csv` (country, scenario,
-  year, population, 65+ share, old-age dependency ratio; reference paths `ibge_2024` and `un_medium`),
+  year, population, 65+ share, old-age dependency ratio (65+ / 20–64); reference paths `ibge_2024` and `un_medium`),
   `results/validation.txt`, `results/assumptions.json` and `results/inputs_sha256.txt`.
 - `charts_observed.py`: population figures `figures/population_*_2025_2050.png`.
 - `ageing_charts.py`: `figures/share65_2025_2050.png` (share aged 65+) and `figures/oadr_2025_2050.png`
-  (old-age dependency ratio).
+  (old-age dependency ratio, 65+ per 100 aged 20–64).
 - `data/census_nc-est2025-agesex-res.csv`: Census Bureau Vintage 2025.
 - `data/cdc/nvsr75-05.txt`: text of NVSR 75(5), US life tables 2024 (pdftotext). The PDF itself is
   ignored by git.

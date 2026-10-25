@@ -1,5 +1,5 @@
 """ageing_charts.py — ageing charts from results/projections_national.csv (run projection_national.py first):
-the share aged 65+ (figures/share65_2025_2050.png) and the old-age dependency ratio, 65+ per 100 aged 15-64
+the share aged 65+ (figures/share65_2025_2050.png) and the old-age dependency ratio, 65+ per 100 aged 20-64
 (figures/oadr_2025_2050.png).
 
 One panel each, three countries (central path, fertility ±0.2 band), with IBGE's own projection
@@ -32,9 +32,9 @@ METRICS = {
     "share65": dict(field="share_65plus_pct", unit=" %", ylim=(6, 26), step=2, gap=0.75, file="share65_2025_2050.png",
                     ylabel="Población de 65 años y más, % del total", title="Población de 65 años y más, 2025–2050",
                     subtitle="Porcentaje de la población total, si se mantienen las tendencias actuales"),
-    "oadr": dict(field="oadr", unit="", ylim=(10, 42), step=5, gap=1.3, file="oadr_2025_2050.png",
-                 ylabel="Personas de 65+ por cada 100 de 15 a 64 años", title="Razón de dependencia de la vejez, 2025–2050",
-                 subtitle="Personas de 65 años y más por cada 100 de 15 a 64 años, si se mantienen las tendencias actuales"),
+    "oadr": dict(field="oadr", unit="", ylim=(10, 46), step=5, gap=1.3, file="oadr_2025_2050.png",
+                 ylabel="Personas de 65+ por cada 100 de 20 a 64 años", title="Razón de dependencia de la vejez, 2025–2050",
+                 subtitle="Personas de 65 años y más por cada 100 de 20 a 64 años, si se mantienen las tendencias actuales"),
 }
 
 
