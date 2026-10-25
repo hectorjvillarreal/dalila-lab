@@ -1,0 +1,1459 @@
+Location,LocID,Variant,Time,PopTotal_thousands
+Mexico,484,Medium,2024,130861.007
+Mexico,484,Medium,2025,131946.9
+Mexico,484,Medium,2026,132997.658
+Mexico,484,Medium,2027,134017.708
+Mexico,484,Medium,2028,135008.697
+Mexico,484,Medium,2029,135970.891
+Mexico,484,Medium,2030,136904.738
+Mexico,484,Medium,2031,137811.065
+Mexico,484,Medium,2032,138690.193
+Mexico,484,Medium,2033,139542.085
+Mexico,484,Medium,2034,140362.027
+Mexico,484,Medium,2035,141150.819
+Mexico,484,Medium,2036,141909.163
+Mexico,484,Medium,2037,142637.546
+Mexico,484,Medium,2038,143336.22
+Mexico,484,Medium,2039,143998.292
+Mexico,484,Medium,2040,144624.323
+Mexico,484,Medium,2041,145217.774
+Mexico,484,Medium,2042,145777.456
+Mexico,484,Medium,2043,146300.007
+Mexico,484,Medium,2044,146787.717
+Mexico,484,Medium,2045,147240.092
+Mexico,484,Medium,2046,147654.16
+Mexico,484,Medium,2047,148030.146
+Mexico,484,Medium,2048,148372.231
+Mexico,484,Medium,2049,148677.897
+Mexico,484,Medium,2050,148946.274
+Mexico,484,High,2024,130993.527
+Mexico,484,High,2025,132344.565
+Mexico,484,High,2026,133660.773
+Mexico,484,High,2027,134946.674
+Mexico,484,High,2028,136203.904
+Mexico,484,High,2029,137512.685
+Mexico,484,High,2030,138873.385
+Mexico,484,High,2031,140206.728
+Mexico,484,High,2032,141512.779
+Mexico,484,High,2033,142791.095
+Mexico,484,High,2034,144090.068
+Mexico,484,High,2035,145409.911
+Mexico,484,High,2036,146697.239
+Mexico,484,High,2037,147952.221
+Mexico,484,High,2038,149174.911
+Mexico,484,High,2039,150358.844
+Mexico,484,High,2040,151506.127
+Mexico,484,High,2041,152622.611
+Mexico,484,High,2042,153709.897
+Mexico,484,High,2043,154767.314
+Mexico,484,High,2044,155799.472
+Mexico,484,High,2045,156807.971
+Mexico,484,High,2046,157791.758
+Mexico,484,High,2047,158752.891
+Mexico,484,High,2048,159697.391
+Mexico,484,High,2049,160624.394
+Mexico,484,High,2050,161534.472
+Mexico,484,Low,2024,130728.488
+Mexico,484,Low,2025,131549.242
+Mexico,484,Low,2026,132334.565
+Mexico,484,Low,2027,133088.791
+Mexico,484,Low,2028,133813.579
+Mexico,484,Low,2029,134428.965
+Mexico,484,Low,2030,134935.536
+Mexico,484,Low,2031,135414.582
+Mexico,484,Low,2032,135866.702
+Mexico,484,Low,2033,136292.253
+Mexico,484,Low,2034,136633.638
+Mexico,484,Low,2035,136892.224
+Mexico,484,Low,2036,137122.44
+Mexico,484,Low,2037,137324.924
+Mexico,484,Low,2038,137500.067
+Mexico,484,Low,2039,137640.845
+Mexico,484,Low,2040,137747.117
+Mexico,484,Low,2041,137821.177
+Mexico,484,Low,2042,137860.448
+Mexico,484,Low,2043,137860.241
+Mexico,484,Low,2044,137821.777
+Mexico,484,Low,2045,137743.628
+Mexico,484,Low,2046,137621.915
+Mexico,484,Low,2047,137455.944
+Mexico,484,Low,2048,137248.916
+Mexico,484,Low,2049,136997.41
+Mexico,484,Low,2050,136699.805
+Mexico,484,Constant fertility,2024,130870.79
+Mexico,484,Constant fertility,2025,131988.31
+Mexico,484,Constant fertility,2026,133091.752
+Mexico,484,Constant fertility,2027,134183.169
+Mexico,484,Constant fertility,2028,135263.492
+Mexico,484,Constant fertility,2029,136330.318
+Mexico,484,Constant fertility,2030,137382.782
+Mexico,484,Constant fertility,2031,138419.696
+Mexico,484,Constant fertility,2032,139438.86
+Mexico,484,Constant fertility,2033,140439.108
+Mexico,484,Constant fertility,2034,141414.078
+Mexico,484,Constant fertility,2035,142362.774
+Mexico,484,Constant fertility,2036,143285.307
+Mexico,484,Constant fertility,2037,144181.28
+Mexico,484,Constant fertility,2038,145050.155
+Mexico,484,Constant fertility,2039,145885.878
+Mexico,484,Constant fertility,2040,146690.021
+Mexico,484,Constant fertility,2041,147466.612
+Mexico,484,Constant fertility,2042,148214.53
+Mexico,484,Constant fertility,2043,148930.222
+Mexico,484,Constant fertility,2044,149614.902
+Mexico,484,Constant fertility,2045,150268.506
+Mexico,484,Constant fertility,2046,150889.821
+Mexico,484,Constant fertility,2047,151480.283
+Mexico,484,Constant fertility,2048,152043.83
+Mexico,484,Constant fertility,2049,152577.533
+Mexico,484,Constant fertility,2050,153081.328
+Mexico,484,Instant replacement,2024,130961.507
+Mexico,484,Instant replacement,2025,132259.87
+Mexico,484,Instant replacement,2026,133543.019
+Mexico,484,Instant replacement,2027,134813.16
+Mexico,484,Instant replacement,2028,136071.274
+Mexico,484,Instant replacement,2029,137314.997
+Mexico,484,Instant replacement,2030,138543.369
+Mexico,484,Instant replacement,2031,139755.024
+Mexico,484,Instant replacement,2032,140947.951
+Mexico,484,Instant replacement,2033,142121.046
+Mexico,484,Instant replacement,2034,143267.835
+Mexico,484,Instant replacement,2035,144387.229
+Mexico,484,Instant replacement,2036,145479.41
+Mexico,484,Instant replacement,2037,146544.116
+Mexico,484,Instant replacement,2038,147581.027
+Mexico,484,Instant replacement,2039,148584.43
+Mexico,484,Instant replacement,2040,149556.849
+Mexico,484,Instant replacement,2041,150503.974
+Mexico,484,Instant replacement,2042,151426.308
+Mexico,484,Instant replacement,2043,152321.878
+Mexico,484,Instant replacement,2044,153192.995
+Mexico,484,Instant replacement,2045,154040.199
+Mexico,484,Instant replacement,2046,154862.269
+Mexico,484,Instant replacement,2047,155660.458
+Mexico,484,Instant replacement,2048,156438.809
+Mexico,484,Instant replacement,2049,157194.538
+Mexico,484,Instant replacement,2050,157927.715
+Mexico,484,Zero migration,2024,130913.297
+Mexico,484,Zero migration,2025,132106.575
+Mexico,484,Zero migration,2026,133269.492
+Mexico,484,Zero migration,2027,134403.661
+Mexico,484,Zero migration,2028,135509.109
+Mexico,484,Zero migration,2029,136587.628
+Mexico,484,Zero migration,2030,137639.369
+Mexico,484,Zero migration,2031,138664.608
+Mexico,484,Zero migration,2032,139663.324
+Mexico,484,Zero migration,2033,140634.095
+Mexico,484,Zero migration,2034,141576.074
+Mexico,484,Zero migration,2035,142488.733
+Mexico,484,Zero migration,2036,143371.359
+Mexico,484,Zero migration,2037,144224.209
+Mexico,484,Zero migration,2038,145047.188
+Mexico,484,Zero migration,2039,145838.033
+Mexico,484,Zero migration,2040,146594.756
+Mexico,484,Zero migration,2041,147315.764
+Mexico,484,Zero migration,2042,148000.377
+Mexico,484,Zero migration,2043,148649.019
+Mexico,484,Zero migration,2044,149262.723
+Mexico,484,Zero migration,2045,149841.354
+Mexico,484,Zero migration,2046,150383.654
+Mexico,484,Zero migration,2047,150888.747
+Mexico,484,Zero migration,2048,151357.755
+Mexico,484,Zero migration,2049,151792.233
+Mexico,484,Zero migration,2050,152192.266
+Mexico,484,Constant mortality,2024,130855.573
+Mexico,484,Constant mortality,2025,131925.308
+Mexico,484,Constant mortality,2026,132949.203
+Mexico,484,Constant mortality,2027,133931.478
+Mexico,484,Constant mortality,2028,134873.581
+Mexico,484,Constant mortality,2029,135775.662
+Mexico,484,Constant mortality,2030,136638.017
+Mexico,484,Constant mortality,2031,137461.415
+Mexico,484,Constant mortality,2032,138246.453
+Mexico,484,Constant mortality,2033,138993.153
+Mexico,484,Constant mortality,2034,139696.901
+Mexico,484,Constant mortality,2035,140358.772
+Mexico,484,Constant mortality,2036,140979.168
+Mexico,484,Constant mortality,2037,141557.959
+Mexico,484,Constant mortality,2038,142095.188
+Mexico,484,Constant mortality,2039,142584.329
+Mexico,484,Constant mortality,2040,143025.982
+Mexico,484,Constant mortality,2041,143423.899
+Mexico,484,Constant mortality,2042,143777.14
+Mexico,484,Constant mortality,2043,144082.187
+Mexico,484,Constant mortality,2044,144341.825
+Mexico,484,Constant mortality,2045,144555.967
+Mexico,484,Constant mortality,2046,144722.027
+Mexico,484,Constant mortality,2047,144840.934
+Mexico,484,Constant mortality,2048,144917.106
+Mexico,484,Constant mortality,2049,144948.049
+Mexico,484,Constant mortality,2050,144933.168
+Mexico,484,No change,2024,130865.356
+Mexico,484,No change,2025,131966.71
+Mexico,484,No change,2026,133043.258
+Mexico,484,No change,2027,134096.831
+Mexico,484,No change,2028,135128.144
+Mexico,484,No change,2029,136134.674
+Mexico,484,No change,2030,137115.387
+Mexico,484,No change,2031,138069.03
+Mexico,484,No change,2032,138993.678
+Mexico,484,No change,2033,139888.215
+Mexico,484,No change,2034,140746.387
+Mexico,484,No change,2035,141567.477
+Mexico,484,No change,2036,142351.285
+Mexico,484,No change,2037,143096.804
+Mexico,484,No change,2038,143803.294
+Mexico,484,No change,2039,144465.064
+Mexico,484,No change,2040,145083.709
+Mexico,484,No change,2041,145663.535
+Mexico,484,No change,2042,146203.667
+Mexico,484,No change,2043,146700.378
+Mexico,484,No change,2044,147155.351
+Mexico,484,No change,2045,147568.909
+Mexico,484,No change,2046,147940.203
+Mexico,484,No change,2047,148271.334
+Mexico,484,No change,2048,148566.45
+Mexico,484,No change,2049,148822.627
+Mexico,484,No change,2050,149040.046
+Mexico,484,Momentum,2024,131008.886
+Mexico,484,Momentum,2025,132400.234
+Mexico,484,Momentum,2026,133771.894
+Mexico,484,Momentum,2027,135123.042
+Mexico,484,Momentum,2028,136452.796
+Mexico,484,Momentum,2029,137760.138
+Mexico,484,Momentum,2030,139043.604
+Mexico,484,Momentum,2031,140301.174
+Mexico,484,Momentum,2032,141530.669
+Mexico,484,Momentum,2033,142729.557
+Mexico,484,Momentum,2034,143895.23
+Mexico,484,Momentum,2035,145025.509
+Mexico,484,Momentum,2036,146118.821
+Mexico,484,Momentum,2037,147173.957
+Mexico,484,Momentum,2038,148189.946
+Mexico,484,Momentum,2039,149165.985
+Mexico,484,Momentum,2040,150102.061
+Mexico,484,Momentum,2041,150999.095
+Mexico,484,Momentum,2042,151858.303
+Mexico,484,Momentum,2043,152681.307
+Mexico,484,Momentum,2044,153469.62
+Mexico,484,Momentum,2045,154224.549
+Mexico,484,Momentum,2046,154947.016
+Mexico,484,Momentum,2047,155637.862
+Mexico,484,Momentum,2048,156298.307
+Mexico,484,Momentum,2049,156929.674
+Mexico,484,Momentum,2050,157533.264
+Mexico,484,Instant replacement zero migration,2024,131013.798
+Mexico,484,Instant replacement zero migration,2025,132419.685
+Mexico,484,Instant replacement zero migration,2026,133815.433
+Mexico,484,Instant replacement zero migration,2027,135200.478
+Mexico,484,Instant replacement zero migration,2028,136574.212
+Mexico,484,Instant replacement zero migration,2029,137935.804
+Mexico,484,Instant replacement zero migration,2030,139284.013
+Mexico,484,Instant replacement zero migration,2031,140616.917
+Mexico,484,Instant replacement zero migration,2032,141932.149
+Mexico,484,Instant replacement zero migration,2033,143227.22
+Mexico,484,Instant replacement zero migration,2034,144499.498
+Mexico,484,Instant replacement zero migration,2035,145746.552
+Mexico,484,Instant replacement zero migration,2036,146967.153
+Mexico,484,Instant replacement zero migration,2037,148160.79
+Mexico,484,Instant replacement zero migration,2038,149326.79
+Mexico,484,Instant replacement zero migration,2039,150464.071
+Mexico,484,Instant replacement zero migration,2040,151572.641
+Mexico,484,Instant replacement zero migration,2041,152653.166
+Mexico,484,Instant replacement zero migration,2042,153706.641
+Mexico,484,Instant replacement zero migration,2043,154734.867
+Mexico,484,Instant replacement zero migration,2044,155738.886
+Mexico,484,Instant replacement zero migration,2045,156719.614
+Mexico,484,Instant replacement zero migration,2046,157677.585
+Mexico,484,Instant replacement zero migration,2047,158612.992
+Mexico,484,Instant replacement zero migration,2048,159526.827
+Mexico,484,Instant replacement zero migration,2049,160420.38
+Mexico,484,Instant replacement zero migration,2050,161294.708
+Mexico,484,No fertility below age 18,2024,130795.373
+Mexico,484,No fertility below age 18,2025,131751.076
+Mexico,484,No fertility below age 18,2026,132673.468
+Mexico,484,No fertility below age 18,2027,133566.698
+Mexico,484,No fertility below age 18,2028,134432.443
+Mexico,484,No fertility below age 18,2029,135271.062
+Mexico,484,No fertility below age 18,2030,136083.488
+Mexico,484,No fertility below age 18,2031,136871.342
+Mexico,484,No fertility below age 18,2032,137635.628
+Mexico,484,No fertility below age 18,2033,138376.329
+Mexico,484,No fertility below age 18,2034,139088.019
+Mexico,484,No fertility below age 18,2035,139770.64
+Mexico,484,No fertility below age 18,2036,140424.384
+Mexico,484,No fertility below age 18,2037,141049.782
+Mexico,484,No fertility below age 18,2038,141647.38
+Mexico,484,No fertility below age 18,2039,142210.518
+Mexico,484,No fertility below age 18,2040,142739.902
+Mexico,484,No fertility below age 18,2041,143238.957
+Mexico,484,No fertility below age 18,2042,143705.231
+Mexico,484,No fertility below age 18,2043,144132.896
+Mexico,484,No fertility below age 18,2044,144522.625
+Mexico,484,No fertility below age 18,2045,144873.568
+Mexico,484,No fertility below age 18,2046,145182.701
+Mexico,484,No fertility below age 18,2047,145450.278
+Mexico,484,No fertility below age 18,2048,145680.427
+Mexico,484,No fertility below age 18,2049,145870.57
+Mexico,484,No fertility below age 18,2050,146019.916
+Mexico,484,Accelerated ABR decline,2024,130829.897
+Mexico,484,Accelerated ABR decline,2025,131829.62
+Mexico,484,Accelerated ABR decline,2026,132751.076
+Mexico,484,Accelerated ABR decline,2027,133607.701
+Mexico,484,Accelerated ABR decline,2028,134408.477
+Mexico,484,Accelerated ABR decline,2029,135159.384
+Mexico,484,Accelerated ABR decline,2030,135865.995
+Mexico,484,Accelerated ABR decline,2031,136533.673
+Mexico,484,Accelerated ABR decline,2032,137166.887
+Mexico,484,Accelerated ABR decline,2033,137773.865
+Mexico,484,Accelerated ABR decline,2034,138356.042
+Mexico,484,Accelerated ABR decline,2035,138913.593
+Mexico,484,Accelerated ABR decline,2036,139445.979
+Mexico,484,Accelerated ABR decline,2037,139952.485
+Mexico,484,Accelerated ABR decline,2038,140432.755
+Mexico,484,Accelerated ABR decline,2039,140880.29
+Mexico,484,Accelerated ABR decline,2040,141296.227
+Mexico,484,Accelerated ABR decline,2041,141684.16
+Mexico,484,Accelerated ABR decline,2042,142042.691
+Mexico,484,Accelerated ABR decline,2043,142367.958
+Mexico,484,Accelerated ABR decline,2044,142661.001
+Mexico,484,Accelerated ABR decline,2045,142919.419
+Mexico,484,Accelerated ABR decline,2046,143138.367
+Mexico,484,Accelerated ABR decline,2047,143316.56
+Mexico,484,Accelerated ABR decline,2048,143456.785
+Mexico,484,Accelerated ABR decline,2049,143555.364
+Mexico,484,Accelerated ABR decline,2050,143610.7
+Mexico,484,Accelarated ABR decline w/rec.,2024,130829.897
+Mexico,484,Accelarated ABR decline w/rec.,2025,131829.62
+Mexico,484,Accelarated ABR decline w/rec.,2026,132751.076
+Mexico,484,Accelarated ABR decline w/rec.,2027,133607.701
+Mexico,484,Accelarated ABR decline w/rec.,2028,134408.477
+Mexico,484,Accelarated ABR decline w/rec.,2029,135159.384
+Mexico,484,Accelarated ABR decline w/rec.,2030,135865.995
+Mexico,484,Accelarated ABR decline w/rec.,2031,136533.673
+Mexico,484,Accelarated ABR decline w/rec.,2032,137166.887
+Mexico,484,Accelarated ABR decline w/rec.,2033,137773.865
+Mexico,484,Accelarated ABR decline w/rec.,2034,138371.332
+Mexico,484,Accelarated ABR decline w/rec.,2035,138971.24
+Mexico,484,Accelarated ABR decline w/rec.,2036,139567.195
+Mexico,484,Accelarated ABR decline w/rec.,2037,140154.059
+Mexico,484,Accelarated ABR decline w/rec.,2038,140727.869
+Mexico,484,Accelarated ABR decline w/rec.,2039,141279.316
+Mexico,484,Accelarated ABR decline w/rec.,2040,141807.008
+Mexico,484,Accelarated ABR decline w/rec.,2041,142312.296
+Mexico,484,Accelarated ABR decline w/rec.,2042,142791.742
+Mexico,484,Accelarated ABR decline w/rec.,2043,143237.416
+Mexico,484,Accelarated ABR decline w/rec.,2044,143647.331
+Mexico,484,Accelarated ABR decline w/rec.,2045,144019.394
+Mexico,484,Accelarated ABR decline w/rec.,2046,144349.383
+Mexico,484,Accelarated ABR decline w/rec.,2047,144636.608
+Mexico,484,Accelarated ABR decline w/rec.,2048,144884.146
+Mexico,484,Accelarated ABR decline w/rec.,2049,145088.082
+Mexico,484,Accelarated ABR decline w/rec.,2050,145246.359
+Mexico,484,Median PI,2024,130861.007
+Mexico,484,Median PI,2025,131946.9
+Mexico,484,Median PI,2026,132997.658
+Mexico,484,Median PI,2027,134017.708
+Mexico,484,Median PI,2028,135008.697
+Mexico,484,Median PI,2029,135970.891
+Mexico,484,Median PI,2030,136904.738
+Mexico,484,Median PI,2031,137811.064
+Mexico,484,Median PI,2032,138690.194
+Mexico,484,Median PI,2033,139542.085
+Mexico,484,Median PI,2034,140362.026
+Mexico,484,Median PI,2035,141150.819
+Mexico,484,Median PI,2036,141909.163
+Mexico,484,Median PI,2037,142637.546
+Mexico,484,Median PI,2038,143336.22
+Mexico,484,Median PI,2039,143998.292
+Mexico,484,Median PI,2040,144624.324
+Mexico,484,Median PI,2041,145217.774
+Mexico,484,Median PI,2042,145777.456
+Mexico,484,Median PI,2043,146300.007
+Mexico,484,Median PI,2044,146787.717
+Mexico,484,Median PI,2045,147240.092
+Mexico,484,Median PI,2046,147654.16
+Mexico,484,Median PI,2047,148030.145
+Mexico,484,Median PI,2048,148372.232
+Mexico,484,Median PI,2049,148677.898
+Mexico,484,Median PI,2050,148946.274
+Mexico,484,Upper 80 PI,2024,131021.114
+Mexico,484,Upper 80 PI,2025,132435.308
+Mexico,484,Upper 80 PI,2026,133832.008
+Mexico,484,Upper 80 PI,2027,135212.491
+Mexico,484,Upper 80 PI,2028,136564.993
+Mexico,484,Upper 80 PI,2029,137905.553
+Mexico,484,Upper 80 PI,2030,139221.574
+Mexico,484,Upper 80 PI,2031,140518.545
+Mexico,484,Upper 80 PI,2032,141784.539
+Mexico,484,Upper 80 PI,2033,143026.964
+Mexico,484,Upper 80 PI,2034,144294.1
+Mexico,484,Upper 80 PI,2035,145548.327
+Mexico,484,Upper 80 PI,2036,146761.273
+Mexico,484,Upper 80 PI,2037,147909.567
+Mexico,484,Upper 80 PI,2038,149032.022
+Mexico,484,Upper 80 PI,2039,150156.353
+Mexico,484,Upper 80 PI,2040,151240.476
+Mexico,484,Upper 80 PI,2041,152321.244
+Mexico,484,Upper 80 PI,2042,153417.57
+Mexico,484,Upper 80 PI,2043,154502.736
+Mexico,484,Upper 80 PI,2044,155581.93
+Mexico,484,Upper 80 PI,2045,156584.669
+Mexico,484,Upper 80 PI,2046,157446.006
+Mexico,484,Upper 80 PI,2047,158299.369
+Mexico,484,Upper 80 PI,2048,159266.07
+Mexico,484,Upper 80 PI,2049,160188.86
+Mexico,484,Upper 80 PI,2050,161007.833
+Mexico,484,Lower 80 PI,2024,130716.051
+Mexico,484,Lower 80 PI,2025,131491.163
+Mexico,484,Lower 80 PI,2026,132216.735
+Mexico,484,Lower 80 PI,2027,132896.454
+Mexico,484,Lower 80 PI,2028,133525.334
+Mexico,484,Lower 80 PI,2029,134126.964
+Mexico,484,Lower 80 PI,2030,134668.583
+Mexico,484,Lower 80 PI,2031,135199.563
+Mexico,484,Lower 80 PI,2032,135691.334
+Mexico,484,Lower 80 PI,2033,136088.12
+Mexico,484,Lower 80 PI,2034,136469.792
+Mexico,484,Lower 80 PI,2035,136801.039
+Mexico,484,Lower 80 PI,2036,137054.238
+Mexico,484,Lower 80 PI,2037,137316.12
+Mexico,484,Lower 80 PI,2038,137565.59
+Mexico,484,Lower 80 PI,2039,137771.522
+Mexico,484,Lower 80 PI,2040,137970.321
+Mexico,484,Lower 80 PI,2041,138108.778
+Mexico,484,Lower 80 PI,2042,138154.265
+Mexico,484,Lower 80 PI,2043,138254.233
+Mexico,484,Lower 80 PI,2044,138340.853
+Mexico,484,Lower 80 PI,2045,138275.386
+Mexico,484,Lower 80 PI,2046,138183.18
+Mexico,484,Lower 80 PI,2047,138069.568
+Mexico,484,Lower 80 PI,2048,137910.026
+Mexico,484,Lower 80 PI,2049,137673.137
+Mexico,484,Lower 80 PI,2050,137313.73
+Mexico,484,Upper 95 PI,2024,131105.419
+Mexico,484,Upper 95 PI,2025,132698.106
+Mexico,484,Upper 95 PI,2026,134283.939
+Mexico,484,Upper 95 PI,2027,135857.731
+Mexico,484,Upper 95 PI,2028,137412.177
+Mexico,484,Upper 95 PI,2029,138950.14
+Mexico,484,Upper 95 PI,2030,140458.438
+Mexico,484,Upper 95 PI,2031,141983.704
+Mexico,484,Upper 95 PI,2032,143509.684
+Mexico,484,Upper 95 PI,2033,144993.273
+Mexico,484,Upper 95 PI,2034,146490.281
+Mexico,484,Upper 95 PI,2035,148016.44
+Mexico,484,Upper 95 PI,2036,149508.887
+Mexico,484,Upper 95 PI,2037,150914.435
+Mexico,484,Upper 95 PI,2038,152302.154
+Mexico,484,Upper 95 PI,2039,153645.244
+Mexico,484,Upper 95 PI,2040,154969.991
+Mexico,484,Upper 95 PI,2041,156298.565
+Mexico,484,Upper 95 PI,2042,157492.467
+Mexico,484,Upper 95 PI,2043,158691.315
+Mexico,484,Upper 95 PI,2044,159926.927
+Mexico,484,Upper 95 PI,2045,161114.519
+Mexico,484,Upper 95 PI,2046,162320.496
+Mexico,484,Upper 95 PI,2047,163520.732
+Mexico,484,Upper 95 PI,2048,164736.601
+Mexico,484,Upper 95 PI,2049,165942.244
+Mexico,484,Upper 95 PI,2050,167142.48
+Mexico,484,Lower 95 PI,2024,130634.887
+Mexico,484,Lower 95 PI,2025,131255.196
+Mexico,484,Lower 95 PI,2026,131802.032
+Mexico,484,Lower 95 PI,2027,132278.204
+Mexico,484,Lower 95 PI,2028,132690.264
+Mexico,484,Lower 95 PI,2029,133041.117
+Mexico,484,Lower 95 PI,2030,133342.205
+Mexico,484,Lower 95 PI,2031,133613.804
+Mexico,484,Lower 95 PI,2032,133806.39
+Mexico,484,Lower 95 PI,2033,133932.275
+Mexico,484,Lower 95 PI,2034,134062.701
+Mexico,484,Lower 95 PI,2035,134206.393
+Mexico,484,Lower 95 PI,2036,134236.363
+Mexico,484,Lower 95 PI,2037,134232.136
+Mexico,484,Lower 95 PI,2038,134298.592
+Mexico,484,Lower 95 PI,2039,134253.001
+Mexico,484,Lower 95 PI,2040,134184.251
+Mexico,484,Lower 95 PI,2041,134145.197
+Mexico,484,Lower 95 PI,2042,134005.158
+Mexico,484,Lower 95 PI,2043,133777.332
+Mexico,484,Lower 95 PI,2044,133472.445
+Mexico,484,Lower 95 PI,2045,133147.626
+Mexico,484,Lower 95 PI,2046,132731.903
+Mexico,484,Lower 95 PI,2047,132297.128
+Mexico,484,Lower 95 PI,2048,131902.452
+Mexico,484,Lower 95 PI,2049,131415.742
+Mexico,484,Lower 95 PI,2050,130845.708
+Brazil,76,Medium,2024,211998.573
+Brazil,76,Medium,2025,212812.405
+Brazil,76,Medium,2026,213562.666
+Brazil,76,Medium,2027,214261.025
+Brazil,76,Medium,2028,214911.373
+Brazil,76,Medium,2029,215515.171
+Brazil,76,Medium,2030,216074.411
+Brazil,76,Medium,2031,216587.35
+Brazil,76,Medium,2032,217055.384
+Brazil,76,Medium,2033,217479.384
+Brazil,76,Medium,2034,217860.883
+Brazil,76,Medium,2035,218199.707
+Brazil,76,Medium,2036,218495.204
+Brazil,76,Medium,2037,218747.241
+Brazil,76,Medium,2038,218955.562
+Brazil,76,Medium,2039,219118.373
+Brazil,76,Medium,2040,219237.084
+Brazil,76,Medium,2041,219307.149
+Brazil,76,Medium,2042,219319.761
+Brazil,76,Medium,2043,219276.52
+Brazil,76,Medium,2044,219178.995
+Brazil,76,Medium,2045,219026.196
+Brazil,76,Medium,2046,218821.033
+Brazil,76,Medium,2047,218565.368
+Brazil,76,Medium,2048,218258.22
+Brazil,76,Medium,2049,217897.826
+Brazil,76,Medium,2050,217489.299
+Brazil,76,High,2024,212195.655
+Brazil,76,High,2025,213401.765
+Brazil,76,High,2026,214540.752
+Brazil,76,High,2027,215624.516
+Brazil,76,High,2028,216657.022
+Brazil,76,High,2029,217754.172
+Brazil,76,High,2030,218916.533
+Brazil,76,High,2031,220026.973
+Brazil,76,High,2032,221087.63
+Brazil,76,High,2033,222099.793
+Brazil,76,High,2034,223138.25
+Brazil,76,High,2035,224202.023
+Brazil,76,High,2036,225216.703
+Brazil,76,High,2037,226182.358
+Brazil,76,High,2038,227098.853
+Brazil,76,High,2039,227964.862
+Brazil,76,High,2040,228782.769
+Brazil,76,High,2041,229549.538
+Brazil,76,High,2042,230258.223
+Brazil,76,High,2043,230912.457
+Brazil,76,High,2044,231515.894
+Brazil,76,High,2045,232069.651
+Brazil,76,High,2046,232578.88
+Brazil,76,High,2047,233047.72
+Brazil,76,High,2048,233477.37
+Brazil,76,High,2049,233867.997
+Brazil,76,High,2050,234226.422
+Brazil,76,Low,2024,211801.492
+Brazil,76,Low,2025,212223.046
+Brazil,76,Low,2026,212584.583
+Brazil,76,Low,2027,212897.534
+Brazil,76,Low,2028,213165.723
+Brazil,76,Low,2029,213276.924
+Brazil,76,Low,2030,213234.084
+Brazil,76,Low,2031,213149.832
+Brazil,76,Low,2032,213025.275
+Brazil,76,Low,2033,212861.114
+Brazil,76,Low,2034,212585.837
+Brazil,76,Low,2035,212199.904
+Brazil,76,Low,2036,211776.229
+Brazil,76,Low,2037,211314.697
+Brazil,76,Low,2038,210815.069
+Brazil,76,Low,2039,210275.386
+Brazil,76,Low,2040,209696.607
+Brazil,76,Low,2041,209073.451
+Brazil,76,Low,2042,208396.198
+Brazil,76,Low,2043,207665.439
+Brazil,76,Low,2044,206881.677
+Brazil,76,Low,2045,206042.84
+Brazil,76,Low,2046,205150.666
+Brazil,76,Low,2047,204205.826
+Brazil,76,Low,2048,203206.228
+Brazil,76,Low,2049,202149.16
+Brazil,76,Low,2050,201038.916
+Brazil,76,Constant fertility,2024,212001.611
+Brazil,76,Constant fertility,2025,212831.718
+Brazil,76,Constant fertility,2026,213614.62
+Brazil,76,Constant fertility,2027,214355.655
+Brazil,76,Constant fertility,2028,215055.157
+Brazil,76,Constant fertility,2029,215710.807
+Brazil,76,Constant fertility,2030,216322.296
+Brazil,76,Constant fertility,2031,216888.191
+Brazil,76,Constant fertility,2032,217410.935
+Brazil,76,Constant fertility,2033,217890.343
+Brazil,76,Constant fertility,2034,218325.967
+Brazil,76,Constant fertility,2035,218718.114
+Brazil,76,Constant fertility,2036,219066.209
+Brazil,76,Constant fertility,2037,219368.358
+Brazil,76,Constant fertility,2038,219622.242
+Brazil,76,Constant fertility,2039,219827.685
+Brazil,76,Constant fertility,2040,219986.109
+Brazil,76,Constant fertility,2041,220092.479
+Brazil,76,Constant fertility,2042,220140.889
+Brazil,76,Constant fertility,2043,220133.364
+Brazil,76,Constant fertility,2044,220071.405
+Brazil,76,Constant fertility,2045,219955.479
+Brazil,76,Constant fertility,2046,219787.532
+Brazil,76,Constant fertility,2047,219569.105
+Brazil,76,Constant fertility,2048,219300.024
+Brazil,76,Constant fertility,2049,218979.209
+Brazil,76,Constant fertility,2050,218612.49
+Brazil,76,Instant replacement,2024,212373.908
+Brazil,76,Instant replacement,2025,213945.067
+Brazil,76,Instant replacement,2026,215462.176
+Brazil,76,Instant replacement,2027,216931.317
+Brazil,76,Instant replacement,2028,218353.429
+Brazil,76,Instant replacement,2029,219726.321
+Brazil,76,Instant replacement,2030,221049.717
+Brazil,76,Instant replacement,2031,222322.407
+Brazil,76,Instant replacement,2032,223547.103
+Brazil,76,Instant replacement,2033,224723.691
+Brazil,76,Instant replacement,2034,225851.653
+Brazil,76,Instant replacement,2035,226931.437
+Brazil,76,Instant replacement,2036,227962.448
+Brazil,76,Instant replacement,2037,228942.873
+Brazil,76,Instant replacement,2038,229871.184
+Brazil,76,Instant replacement,2039,230748.267
+Brazil,76,Instant replacement,2040,231577.465
+Brazil,76,Instant replacement,2041,232356.78
+Brazil,76,Instant replacement,2042,233083.7
+Brazil,76,Instant replacement,2043,233764.04
+Brazil,76,Instant replacement,2044,234402.978
+Brazil,76,Instant replacement,2045,235004.008
+Brazil,76,Instant replacement,2046,235571.823
+Brazil,76,Instant replacement,2047,236110.492
+Brazil,76,Instant replacement,2048,236622.048
+Brazil,76,Instant replacement,2049,237107.04
+Brazil,76,Instant replacement,2050,237572.505
+Brazil,76,Zero migration,2024,212111.327
+Brazil,76,Zero migration,2025,213148.533
+Brazil,76,Zero migration,2026,214116.065
+Brazil,76,Zero migration,2027,215019.288
+Brazil,76,Zero migration,2028,215861.269
+Brazil,76,Zero migration,2029,216645.641
+Brazil,76,Zero migration,2030,217374.74
+Brazil,76,Zero migration,2031,218048.694
+Brazil,76,Zero migration,2032,218666.305
+Brazil,76,Zero migration,2033,219228.121
+Brazil,76,Zero migration,2034,219736.441
+Brazil,76,Zero migration,2035,220191.204
+Brazil,76,Zero migration,2036,220591.513
+Brazil,76,Zero migration,2037,220937.112
+Brazil,76,Zero migration,2038,221228.908
+Brazil,76,Zero migration,2039,221465.543
+Brazil,76,Zero migration,2040,221647.414
+Brazil,76,Zero migration,2041,221775.237
+Brazil,76,Zero migration,2042,221846.364
+Brazil,76,Zero migration,2043,221860.472
+Brazil,76,Zero migration,2044,221818.482
+Brazil,76,Zero migration,2045,221720.788
+Brazil,76,Zero migration,2046,221569.851
+Brazil,76,Zero migration,2047,221367.457
+Brazil,76,Zero migration,2048,221114.203
+Brazil,76,Zero migration,2049,220810.024
+Brazil,76,Zero migration,2050,220455.978
+Brazil,76,Constant mortality,2024,211978.557
+Brazil,76,Constant mortality,2025,212746.606
+Brazil,76,Constant mortality,2026,213439.182
+Brazil,76,Constant mortality,2027,214067.023
+Brazil,76,Constant mortality,2028,214633.027
+Brazil,76,Constant mortality,2029,215137.708
+Brazil,76,Constant mortality,2030,215582.206
+Brazil,76,Constant mortality,2031,215963.688
+Brazil,76,Constant mortality,2032,216283.121
+Brazil,76,Constant mortality,2033,216541.304
+Brazil,76,Constant mortality,2034,216738.826
+Brazil,76,Constant mortality,2035,216874.359
+Brazil,76,Constant mortality,2036,216947.296
+Brazil,76,Constant mortality,2037,216958.825
+Brazil,76,Constant mortality,2038,216909.35
+Brazil,76,Constant mortality,2039,216796.638
+Brazil,76,Constant mortality,2040,216621.981
+Brazil,76,Constant mortality,2041,216381.446
+Brazil,76,Constant mortality,2042,216067.253
+Brazil,76,Constant mortality,2043,215682.565
+Brazil,76,Constant mortality,2044,215230.011
+Brazil,76,Constant mortality,2045,214708.843
+Brazil,76,Constant mortality,2046,214122.723
+Brazil,76,Constant mortality,2047,213474.305
+Brazil,76,Constant mortality,2048,212763.497
+Brazil,76,Constant mortality,2049,211990.204
+Brazil,76,Constant mortality,2050,211159.987
+Brazil,76,No change,2024,211981.593
+Brazil,76,No change,2025,212765.912
+Brazil,76,No change,2026,213491.107
+Brazil,76,No change,2027,214161.582
+Brazil,76,No change,2028,214776.677
+Brazil,76,No change,2029,215333.128
+Brazil,76,No change,2030,215829.784
+Brazil,76,No change,2031,216264.133
+Brazil,76,No change,2032,216638.183
+Brazil,76,No change,2033,216951.687
+Brazil,76,No change,2034,217203.259
+Brazil,76,No change,2035,217392.061
+Brazil,76,No change,2036,217517.568
+Brazil,76,No change,2037,217579.216
+Brazil,76,No change,2038,217575.361
+Brazil,76,No change,2039,217505.382
+Brazil,76,No change,2040,217370.578
+Brazil,76,No change,2041,217166.524
+Brazil,76,No change,2042,216888.32
+Brazil,76,No change,2043,216539.531
+Brazil,76,No change,2044,216122.708
+Brazil,76,No change,2045,215638.514
+Brazil,76,No change,2046,215089.63
+Brazil,76,No change,2047,214478.389
+Brazil,76,No change,2048,213805.48
+Brazil,76,No change,2049,213071.47
+Brazil,76,No change,2050,212282.624
+Brazil,76,Momentum,2024,212465.957
+Brazil,76,Momentum,2025,214214.835
+Brazil,76,Momentum,2026,215894.566
+Brazil,76,Momentum,2027,217503.842
+Brazil,76,Momentum,2028,219041.568
+Brazil,76,Momentum,2029,220506.564
+Brazil,76,Momentum,2030,221897.848
+Brazil,76,Momentum,2031,223214.737
+Brazil,76,Momentum,2032,224456.717
+Brazil,76,Momentum,2033,225623.13
+Brazil,76,Momentum,2034,226713.098
+Brazil,76,Momentum,2035,227725.858
+Brazil,76,Momentum,2036,228660.47
+Brazil,76,Momentum,2037,229516.087
+Brazil,76,Momentum,2038,230292.801
+Brazil,76,Momentum,2039,230991.368
+Brazil,76,Momentum,2040,231613.891
+Brazil,76,Momentum,2041,232164.121
+Brazil,76,Momentum,2042,232646.62
+Brazil,76,Momentum,2043,233066.734
+Brazil,76,Momentum,2044,233430.005
+Brazil,76,Momentum,2045,233741.541
+Brazil,76,Momentum,2046,234006.333
+Brazil,76,Momentum,2047,234229.209
+Brazil,76,Momentum,2048,234414.709
+Brazil,76,Momentum,2049,234566.769
+Brazil,76,Momentum,2050,234688.898
+Brazil,76,Instant replacement zero migration,2024,212486.663
+Brazil,76,Instant replacement zero migration,2025,214281.89
+Brazil,76,Instant replacement zero migration,2026,216018.347
+Brazil,76,Instant replacement zero migration,2027,217695.772
+Brazil,76,Instant replacement zero migration,2028,219314.178
+Brazil,76,Instant replacement zero migration,2029,220873.418
+Brazil,76,Instant replacement zero migration,2030,222373.428
+Brazil,76,Instant replacement zero migration,2031,223814.78
+Brazil,76,Instant replacement zero migration,2032,225197.507
+Brazil,76,Instant replacement zero migration,2033,226521.053
+Brazil,76,Instant replacement zero migration,2034,227785.535
+Brazil,76,Instant replacement zero migration,2035,228991.411
+Brazil,76,Instant replacement zero migration,2036,230137.752
+Brazil,76,Instant replacement zero migration,2037,231222.499
+Brazil,76,Instant replacement zero migration,2038,232245.168
+Brazil,76,Instant replacement zero migration,2039,233207.016
+Brazil,76,Instant replacement zero migration,2040,234110.312
+Brazil,76,Instant replacement zero migration,2041,234958.248
+Brazil,76,Instant replacement zero migration,2042,235754.486
+Brazil,76,Instant replacement zero migration,2043,236502.956
+Brazil,76,Instant replacement zero migration,2044,237208.218
+Brazil,76,Instant replacement zero migration,2045,237875.19
+Brazil,76,Instant replacement zero migration,2046,238508.149
+Brazil,76,Instant replacement zero migration,2047,239111.143
+Brazil,76,Instant replacement zero migration,2048,239687.848
+Brazil,76,Instant replacement zero migration,2049,240240.585
+Brazil,76,Instant replacement zero migration,2050,240772.437
+Brazil,76,No fertility below age 18,2024,211932.316
+Brazil,76,No fertility below age 18,2025,212617.218
+Brazil,76,No fertility below age 18,2026,213245.017
+Brazil,76,No fertility below age 18,2027,213826.272
+Brazil,76,No fertility below age 18,2028,214364.259
+Brazil,76,No fertility below age 18,2029,214859.994
+Brazil,76,No fertility below age 18,2030,215315.096
+Brazil,76,No fertility below age 18,2031,215727.6
+Brazil,76,No fertility below age 18,2032,216098.984
+Brazil,76,No fertility below age 18,2033,216430.473
+Brazil,76,No fertility below age 18,2034,216723.615
+Brazil,76,No fertility below age 18,2035,216978.005
+Brazil,76,No fertility below age 18,2036,217193.28
+Brazil,76,No fertility below age 18,2037,217369.688
+Brazil,76,No fertility below age 18,2038,217506.62
+Brazil,76,No fertility below age 18,2039,217601.693
+Brazil,76,No fertility below age 18,2040,217655.943
+Brazil,76,No fertility below age 18,2041,217664.667
+Brazil,76,No fertility below age 18,2042,217618.489
+Brazil,76,No fertility below age 18,2043,217517.748
+Brazil,76,No fertility below age 18,2044,217363.043
+Brazil,76,No fertility below age 18,2045,217152.922
+Brazil,76,No fertility below age 18,2046,216889.832
+Brazil,76,No fertility below age 18,2047,216575.25
+Brazil,76,No fertility below age 18,2048,216207.932
+Brazil,76,No fertility below age 18,2049,215785.925
+Brazil,76,No fertility below age 18,2050,215314.204
+Brazil,76,Accelerated ABR decline,2024,211971.209
+Brazil,76,Accelerated ABR decline,2025,212710.807
+Brazil,76,Accelerated ABR decline,2026,213352.747
+Brazil,76,Accelerated ABR decline,2027,213917.386
+Brazil,76,Accelerated ABR decline,2028,214415.207
+Brazil,76,Accelerated ABR decline,2029,214852.503
+Brazil,76,Accelerated ABR decline,2030,215235.179
+Brazil,76,Accelerated ABR decline,2031,215571.304
+Brazil,76,Accelerated ABR decline,2032,215870.13
+Brazil,76,Accelerated ABR decline,2033,216132.19
+Brazil,76,Accelerated ABR decline,2034,216358.922
+Brazil,76,Accelerated ABR decline,2035,216550.679
+Brazil,76,Accelerated ABR decline,2036,216706.937
+Brazil,76,Accelerated ABR decline,2037,216827.154
+Brazil,76,Accelerated ABR decline,2038,216911.157
+Brazil,76,Accelerated ABR decline,2039,216957.548
+Brazil,76,Accelerated ABR decline,2040,216967.116
+Brazil,76,Accelerated ABR decline,2041,216934.255
+Brazil,76,Accelerated ABR decline,2042,216849.67
+Brazil,76,Accelerated ABR decline,2043,216714.52
+Brazil,76,Accelerated ABR decline,2044,216529.682
+Brazil,76,Accelerated ABR decline,2045,216293.187
+Brazil,76,Accelerated ABR decline,2046,216006.668
+Brazil,76,Accelerated ABR decline,2047,215670.878
+Brazil,76,Accelerated ABR decline,2048,215283.959
+Brazil,76,Accelerated ABR decline,2049,214843.394
+Brazil,76,Accelerated ABR decline,2050,214353.674
+Brazil,76,Accelarated ABR decline w/rec.,2024,211971.209
+Brazil,76,Accelarated ABR decline w/rec.,2025,212710.807
+Brazil,76,Accelarated ABR decline w/rec.,2026,213352.747
+Brazil,76,Accelarated ABR decline w/rec.,2027,213917.386
+Brazil,76,Accelarated ABR decline w/rec.,2028,214415.207
+Brazil,76,Accelarated ABR decline w/rec.,2029,214852.503
+Brazil,76,Accelarated ABR decline w/rec.,2030,215235.179
+Brazil,76,Accelarated ABR decline w/rec.,2031,215571.304
+Brazil,76,Accelarated ABR decline w/rec.,2032,215870.13
+Brazil,76,Accelarated ABR decline w/rec.,2033,216132.19
+Brazil,76,Accelarated ABR decline w/rec.,2034,216372.359
+Brazil,76,Accelarated ABR decline w/rec.,2035,216600.592
+Brazil,76,Accelarated ABR decline w/rec.,2036,216810.138
+Brazil,76,Accelarated ABR decline w/rec.,2037,216996.212
+Brazil,76,Accelarated ABR decline w/rec.,2038,217155.422
+Brazil,76,Accelarated ABR decline w/rec.,2039,217284.007
+Brazil,76,Accelarated ABR decline w/rec.,2040,217380.834
+Brazil,76,Accelarated ABR decline w/rec.,2041,217435.456
+Brazil,76,Accelarated ABR decline w/rec.,2042,217434.685
+Brazil,76,Accelarated ABR decline w/rec.,2043,217379.824
+Brazil,76,Accelarated ABR decline w/rec.,2044,217271.775
+Brazil,76,Accelarated ABR decline w/rec.,2045,217108.296
+Brazil,76,Accelarated ABR decline w/rec.,2046,216890.943
+Brazil,76,Accelarated ABR decline w/rec.,2047,216620.655
+Brazil,76,Accelarated ABR decline w/rec.,2048,216295.522
+Brazil,76,Accelarated ABR decline w/rec.,2049,215912.791
+Brazil,76,Accelarated ABR decline w/rec.,2050,215477.201
+Brazil,76,Median PI,2024,211998.574
+Brazil,76,Median PI,2025,212812.405
+Brazil,76,Median PI,2026,213562.666
+Brazil,76,Median PI,2027,214261.025
+Brazil,76,Median PI,2028,214911.373
+Brazil,76,Median PI,2029,215515.17
+Brazil,76,Median PI,2030,216074.411
+Brazil,76,Median PI,2031,216587.35
+Brazil,76,Median PI,2032,217055.384
+Brazil,76,Median PI,2033,217479.384
+Brazil,76,Median PI,2034,217860.883
+Brazil,76,Median PI,2035,218199.708
+Brazil,76,Median PI,2036,218495.204
+Brazil,76,Median PI,2037,218747.241
+Brazil,76,Median PI,2038,218955.562
+Brazil,76,Median PI,2039,219118.373
+Brazil,76,Median PI,2040,219237.084
+Brazil,76,Median PI,2041,219307.149
+Brazil,76,Median PI,2042,219319.761
+Brazil,76,Median PI,2043,219276.52
+Brazil,76,Median PI,2044,219178.994
+Brazil,76,Median PI,2045,219026.197
+Brazil,76,Median PI,2046,218821.034
+Brazil,76,Median PI,2047,218565.368
+Brazil,76,Median PI,2048,218258.22
+Brazil,76,Median PI,2049,217897.826
+Brazil,76,Median PI,2050,217489.3
+Brazil,76,Upper 80 PI,2024,212146.155
+Brazil,76,Upper 80 PI,2025,213271.717
+Brazil,76,Upper 80 PI,2026,214364.9
+Brazil,76,Upper 80 PI,2027,215428.354
+Brazil,76,Upper 80 PI,2028,216428.161
+Brazil,76,Upper 80 PI,2029,217384.667
+Brazil,76,Upper 80 PI,2030,218344.715
+Brazil,76,Upper 80 PI,2031,219297.618
+Brazil,76,Upper 80 PI,2032,220224.167
+Brazil,76,Upper 80 PI,2033,221095.682
+Brazil,76,Upper 80 PI,2034,221958.99
+Brazil,76,Upper 80 PI,2035,222789.97
+Brazil,76,Upper 80 PI,2036,223455.484
+Brazil,76,Upper 80 PI,2037,224053.997
+Brazil,76,Upper 80 PI,2038,224680.64
+Brazil,76,Upper 80 PI,2039,225324.445
+Brazil,76,Upper 80 PI,2040,226001.939
+Brazil,76,Upper 80 PI,2041,226593.35
+Brazil,76,Upper 80 PI,2042,227062.452
+Brazil,76,Upper 80 PI,2043,227466.093
+Brazil,76,Upper 80 PI,2044,227892.815
+Brazil,76,Upper 80 PI,2045,228243.013
+Brazil,76,Upper 80 PI,2046,228450.579
+Brazil,76,Upper 80 PI,2047,228671.226
+Brazil,76,Upper 80 PI,2048,228881.484
+Brazil,76,Upper 80 PI,2049,229069.269
+Brazil,76,Upper 80 PI,2050,229167.746
+Brazil,76,Lower 80 PI,2024,211866.319
+Brazil,76,Lower 80 PI,2025,212384.993
+Brazil,76,Lower 80 PI,2026,212796.616
+Brazil,76,Lower 80 PI,2027,213137.533
+Brazil,76,Lower 80 PI,2028,213386.738
+Brazil,76,Lower 80 PI,2029,213567.631
+Brazil,76,Lower 80 PI,2030,213662.782
+Brazil,76,Lower 80 PI,2031,213688.274
+Brazil,76,Lower 80 PI,2032,213688.95
+Brazil,76,Lower 80 PI,2033,213606.283
+Brazil,76,Lower 80 PI,2034,213445.65
+Brazil,76,Lower 80 PI,2035,213218.97
+Brazil,76,Lower 80 PI,2036,212950.869
+Brazil,76,Lower 80 PI,2037,212639.544
+Brazil,76,Lower 80 PI,2038,212264.435
+Brazil,76,Lower 80 PI,2039,211849.015
+Brazil,76,Lower 80 PI,2040,211416.397
+Brazil,76,Lower 80 PI,2041,210964.96
+Brazil,76,Lower 80 PI,2042,210482.587
+Brazil,76,Lower 80 PI,2043,209977.476
+Brazil,76,Lower 80 PI,2044,209404.598
+Brazil,76,Lower 80 PI,2045,208662.757
+Brazil,76,Lower 80 PI,2046,207881.964
+Brazil,76,Lower 80 PI,2047,207037.473
+Brazil,76,Lower 80 PI,2048,206193.907
+Brazil,76,Lower 80 PI,2049,205340.404
+Brazil,76,Lower 80 PI,2050,204287.4
+Brazil,76,Upper 95 PI,2024,212227.736
+Brazil,76,Upper 95 PI,2025,213533.64
+Brazil,76,Upper 95 PI,2026,214820.048
+Brazil,76,Upper 95 PI,2027,216103.894
+Brazil,76,Upper 95 PI,2028,217350.767
+Brazil,76,Upper 95 PI,2029,218547.566
+Brazil,76,Upper 95 PI,2030,219743.972
+Brazil,76,Upper 95 PI,2031,220895.884
+Brazil,76,Upper 95 PI,2032,221928.618
+Brazil,76,Upper 95 PI,2033,222879.86
+Brazil,76,Upper 95 PI,2034,223916.162
+Brazil,76,Upper 95 PI,2035,224957.622
+Brazil,76,Upper 95 PI,2036,225932.646
+Brazil,76,Upper 95 PI,2037,226833.746
+Brazil,76,Upper 95 PI,2038,227638.25
+Brazil,76,Upper 95 PI,2039,228465.468
+Brazil,76,Upper 95 PI,2040,229295.633
+Brazil,76,Upper 95 PI,2041,230114.853
+Brazil,76,Upper 95 PI,2042,230847.531
+Brazil,76,Upper 95 PI,2043,231441.116
+Brazil,76,Upper 95 PI,2044,232062.285
+Brazil,76,Upper 95 PI,2045,232662.9
+Brazil,76,Upper 95 PI,2046,233171.379
+Brazil,76,Upper 95 PI,2047,233666.981
+Brazil,76,Upper 95 PI,2048,234228.966
+Brazil,76,Upper 95 PI,2049,234885.287
+Brazil,76,Upper 95 PI,2050,235504.97
+Brazil,76,Lower 95 PI,2024,211787.259
+Brazil,76,Lower 95 PI,2025,212149.851
+Brazil,76,Lower 95 PI,2026,212402.383
+Brazil,76,Lower 95 PI,2027,212532.084
+Brazil,76,Lower 95 PI,2028,212562.955
+Brazil,76,Lower 95 PI,2029,212507.138
+Brazil,76,Lower 95 PI,2030,212306.936
+Brazil,76,Lower 95 PI,2031,212095.614
+Brazil,76,Lower 95 PI,2032,211854.356
+Brazil,76,Lower 95 PI,2033,211410.464
+Brazil,76,Lower 95 PI,2034,210925.526
+Brazil,76,Lower 95 PI,2035,210429.709
+Brazil,76,Lower 95 PI,2036,209811.247
+Brazil,76,Lower 95 PI,2037,209293.528
+Brazil,76,Lower 95 PI,2038,208761.303
+Brazil,76,Lower 95 PI,2039,208032.747
+Brazil,76,Lower 95 PI,2040,207263.803
+Brazil,76,Lower 95 PI,2041,206528.634
+Brazil,76,Lower 95 PI,2042,205723.334
+Brazil,76,Lower 95 PI,2043,204740.421
+Brazil,76,Lower 95 PI,2044,203716.985
+Brazil,76,Lower 95 PI,2045,202730.946
+Brazil,76,Lower 95 PI,2046,201660.624
+Brazil,76,Lower 95 PI,2047,200413.463
+Brazil,76,Lower 95 PI,2048,199094.737
+Brazil,76,Lower 95 PI,2049,197751.77
+Brazil,76,Lower 95 PI,2050,196480.906
+United States of America,840,Medium,2024,345426.571
+United States of America,840,Medium,2025,347275.807
+United States of America,840,Medium,2026,349035.494
+United States of America,840,Medium,2027,350728.355
+United States of America,840,Medium,2028,352404.085
+United States of America,840,Medium,2029,354050.268
+United States of America,840,Medium,2030,355649.881
+United States of America,840,Medium,2031,357222.715
+United States of America,840,Medium,2032,358769.974
+United States of America,840,Medium,2033,360294.008
+United States of America,840,Medium,2034,361801.811
+United States of America,840,Medium,2035,363284.716
+United States of America,840,Medium,2036,364731.66
+United States of America,840,Medium,2037,366152.37
+United States of America,840,Medium,2038,367551.455
+United States of America,840,Medium,2039,368906.818
+United States of America,840,Medium,2040,370209.316
+United States of America,840,Medium,2041,371469.478
+United States of America,840,Medium,2042,372704.772
+United States of America,840,Medium,2043,373900.677
+United States of America,840,Medium,2044,375029.246
+United States of America,840,Medium,2045,376106.472
+United States of America,840,Medium,2046,377131.727
+United States of America,840,Medium,2047,378117.767
+United States of America,840,Medium,2048,379063.744
+United States of America,840,Medium,2049,379966.906
+United States of America,840,Medium,2050,380846.91
+United States of America,840,High,2024,345706.987
+United States of America,840,High,2025,348117.36
+United States of America,840,High,2026,350439.021
+United States of America,840,High,2027,352695.061
+United States of America,840,High,2028,354935.459
+United States of America,840,High,2029,357318.394
+United States of America,840,High,2030,359827.307
+United States of America,840,High,2031,362312.192
+United States of America,840,High,2032,364774.448
+United States of America,840,High,2033,367216.483
+United States of America,840,High,2034,369761.484
+United States of America,840,High,2035,372401.569
+United States of America,840,High,2036,375010.357
+United States of America,840,High,2037,377597.525
+United States of America,840,High,2038,380167.34
+United States of America,840,High,2039,382697.215
+United States of America,840,High,2040,385177.426
+United States of America,840,High,2041,387618.099
+United States of America,840,High,2042,390036.966
+United States of America,840,High,2043,392420.363
+United States of America,840,High,2044,394742.153
+United States of America,840,High,2045,397020.243
+United States of America,840,High,2046,399255.328
+United States of America,840,High,2047,401461.7
+United States of America,840,High,2048,403640.823
+United States of America,840,High,2049,405793.319
+United States of America,840,High,2050,407943.187
+United States of America,840,Low,2024,345146.155
+United States of America,840,Low,2025,346434.28
+United States of America,840,Low,2026,347632.124
+United States of America,840,Low,2027,348762.169
+United States of America,840,Low,2028,349873.921
+United States of America,840,Low,2029,350784.477
+United States of America,840,Low,2030,351476.048
+United States of America,840,Low,2031,352137.612
+United States of America,840,Low,2032,352769.571
+United States of America,840,Low,2033,353373.516
+United States of America,840,Low,2034,353839.578
+United States of America,840,Low,2035,354157.943
+United States of America,840,Low,2036,354432.994
+United States of America,840,Low,2037,354674.941
+United States of America,840,Low,2038,354889.329
+United States of America,840,Low,2039,355055.321
+United States of America,840,Low,2040,355165.34
+United States of America,840,Low,2041,355231.468
+United States of America,840,Low,2042,355272.416
+United States of America,840,Low,2043,355274.497
+United States of America,840,Low,2044,355210.542
+United States of America,840,Low,2045,355096.92
+United States of America,840,Low,2046,354932.396
+United States of America,840,Low,2047,354728.485
+United States of America,840,Low,2048,354482.258
+United States of America,840,Low,2049,354188.141
+United States of America,840,Low,2050,353862.259
+United States of America,840,Constant fertility,2024,345427.385
+United States of America,840,Constant fertility,2025,347276.454
+United States of America,840,Constant fertility,2026,349032.888
+United States of America,840,Constant fertility,2027,350723.144
+United States of America,840,Constant fertility,2028,352396.938
+United States of America,840,Constant fertility,2029,354038.852
+United States of America,840,Constant fertility,2030,355631.5
+United States of America,840,Constant fertility,2031,357195.582
+United States of America,840,Constant fertility,2032,358732.369
+United States of America,840,Constant fertility,2033,360240.976
+United States of America,840,Constant fertility,2034,361730.237
+United States of America,840,Constant fertility,2035,363190.573
+United States of America,840,Constant fertility,2036,364604.61
+United States of America,840,Constant fertility,2037,365983.078
+United States of America,840,Constant fertility,2038,367330.682
+United States of America,840,Constant fertility,2039,368621.351
+United States of America,840,Constant fertility,2040,369847.557
+United States of America,840,Constant fertility,2041,371022.77
+United States of America,840,Constant fertility,2042,372167.488
+United States of America,840,Constant fertility,2043,373268.979
+United States of America,840,Constant fertility,2044,374300.196
+United States of America,840,Constant fertility,2045,375275.425
+United States of America,840,Constant fertility,2046,376197.667
+United States of America,840,Constant fertility,2047,377086.679
+United States of America,840,Constant fertility,2048,377939.795
+United States of America,840,Constant fertility,2049,378754.533
+United States of America,840,Constant fertility,2050,379549.611
+United States of America,840,Instant replacement,2024,345937.769
+United States of America,840,Instant replacement,2025,348808.503
+United States of America,840,Instant replacement,2026,351588.122
+United States of America,840,Instant replacement,2027,354302.496
+United States of America,840,Instant replacement,2028,357001.137
+United States of America,840,Instant replacement,2029,359668.8
+United States of America,840,Instant replacement,2030,362288.367
+United States of America,840,Instant replacement,2031,364881.58
+United States of America,840,Instant replacement,2032,367451.485
+United States of America,840,Instant replacement,2033,369999.344
+United States of America,840,Instant replacement,2034,372536.111
+United States of America,840,Instant replacement,2035,375054.48
+United States of America,840,Instant replacement,2036,377538.709
+United States of America,840,Instant replacement,2037,379999.95
+United States of America,840,Instant replacement,2038,382443.128
+United States of America,840,Instant replacement,2039,384841.398
+United States of America,840,Instant replacement,2040,387185.502
+United States of America,840,Instant replacement,2041,389487.444
+United States of America,840,Instant replacement,2042,391766.408
+United States of America,840,Instant replacement,2043,394008.669
+United States of America,840,Instant replacement,2044,396186.101
+United States of America,840,Instant replacement,2045,398312.943
+United States of America,840,Instant replacement,2046,400394.648
+United States of America,840,Instant replacement,2047,402455.05
+United States of America,840,Instant replacement,2048,404496.666
+United States of America,840,Instant replacement,2049,406523.816
+United States of America,840,Instant replacement,2050,408563.393
+United States of America,840,Zero migration,2024,344783.509
+United States of America,840,Zero migration,2025,345364.806
+United States of America,840,Zero migration,2026,345891.127
+United States of America,840,Zero migration,2027,346358.121
+United States of America,840,Zero migration,2028,346764.267
+United States of America,840,Zero migration,2029,347110.757
+United States of America,840,Zero migration,2030,347397.224
+United States of America,840,Zero migration,2031,347619.298
+United States of America,840,Zero migration,2032,347775.03
+United States of America,840,Zero migration,2033,347867.191
+United States of America,840,Zero migration,2034,347892.532
+United States of America,840,Zero migration,2035,347850.454
+United States of America,840,Zero migration,2036,347745.364
+United States of America,840,Zero migration,2037,347574.771
+United States of America,840,Zero migration,2038,347336.833
+United States of America,840,Zero migration,2039,347032.34
+United States of America,840,Zero migration,2040,346659.475
+United States of America,840,Zero migration,2041,346216.361
+United States of America,840,Zero migration,2042,345701.606
+United States of America,840,Zero migration,2043,345117.052
+United States of America,840,Zero migration,2044,344464.965
+United States of America,840,Zero migration,2045,343751.214
+United States of America,840,Zero migration,2046,342977.21
+United States of America,840,Zero migration,2047,342139.466
+United States of America,840,Zero migration,2048,341241.08
+United States of America,840,Zero migration,2049,340287.957
+United States of America,840,Zero migration,2050,339286.296
+United States of America,840,Constant mortality,2024,345417.165
+United States of America,840,Constant mortality,2025,347228.367
+United States of America,840,Constant mortality,2026,348912.518
+United States of America,840,Constant mortality,2027,350492.199
+United States of America,840,Constant mortality,2028,352017.639
+United States of America,840,Constant mortality,2029,353476.9
+United States of America,840,Constant mortality,2030,354852.231
+United States of America,840,Constant mortality,2031,356165.797
+United States of America,840,Constant mortality,2032,357420.081
+United States of America,840,Constant mortality,2033,358617.404
+United States of America,840,Constant mortality,2034,359766.11
+United States of America,840,Constant mortality,2035,360859.063
+United States of America,840,Constant mortality,2036,361886.911
+United States of America,840,Constant mortality,2037,362861.365
+United States of America,840,Constant mortality,2038,363789.377
+United States of America,840,Constant mortality,2039,364652.638
+United States of America,840,Constant mortality,2040,365444.127
+United States of America,840,Constant mortality,2041,366176.335
+United States of America,840,Constant mortality,2042,366869.265
+United States of America,840,Constant mortality,2043,367509.444
+United States of America,840,Constant mortality,2044,368070.894
+United States of America,840,Constant mortality,2045,368570.383
+United States of America,840,Constant mortality,2046,369008.101
+United States of America,840,Constant mortality,2047,369400.121
+United States of America,840,Constant mortality,2048,369750.111
+United States of America,840,Constant mortality,2049,370055.461
+United States of America,840,Constant mortality,2050,370336.807
+United States of America,840,No change,2024,345417.979
+United States of America,840,No change,2025,347229.014
+United States of America,840,No change,2026,348909.919
+United States of America,840,No change,2027,350487.006
+United States of America,840,No change,2028,352010.523
+United States of America,840,No change,2029,353465.543
+United States of America,840,No change,2030,354833.946
+United States of America,840,No change,2031,356138.808
+United States of America,840,No change,2032,357382.685
+United States of America,840,No change,2033,358564.665
+United States of America,840,No change,2034,359694.93
+United States of America,840,No change,2035,360765.438
+United States of America,840,No change,2036,361760.541
+United States of America,840,No change,2037,362692.942
+United States of America,840,No change,2038,363569.702
+United States of America,840,No change,2039,364368.551
+United States of America,840,No change,2040,365084.082
+United States of America,840,No change,2041,365731.72
+United States of America,840,No change,2042,366334.489
+United States of America,840,No change,2043,366880.704
+United States of America,840,No change,2044,367345.278
+United States of America,840,No change,2045,367743.269
+United States of America,840,No change,2046,368078.484
+United States of America,840,No change,2047,368373.973
+United States of America,840,No change,2048,368631.577
+United States of America,840,No change,2049,368848.96
+United States of America,840,No change,2050,369045.82
+United States of America,840,Momentum,2024,345286.249
+United States of America,840,Momentum,2025,346850.38
+United States of America,840,Momentum,2026,348315.34
+United States of America,840,Momentum,2027,349679.546
+United States of America,840,Momentum,2028,350941.449
+United States of America,840,Momentum,2029,352099.32
+United States of America,840,Momentum,2030,353151.469
+United States of America,840,Momentum,2031,354097.371
+United States of America,840,Momentum,2032,354937.667
+United States of America,840,Momentum,2033,355673.705
+United States of America,840,Momentum,2034,356307
+United States of America,840,Momentum,2035,356839.579
+United States of America,840,Momentum,2036,357273.321
+United States of America,840,Momentum,2037,357609.281
+United States of America,840,Momentum,2038,357848.619
+United States of America,840,Momentum,2039,357992.134
+United States of America,840,Momentum,2040,358040.687
+United States of America,840,Momentum,2041,357996.417
+United States of America,840,Momentum,2042,357862.764
+United States of America,840,Momentum,2043,357644.087
+United States of America,840,Momentum,2044,357345.371
+United States of America,840,Momentum,2045,356972.95
+United States of America,840,Momentum,2046,356535.182
+United States of America,840,Momentum,2047,356042.155
+United States of America,840,Momentum,2048,355505.198
+United States of America,840,Momentum,2049,354937.41
+United States of America,840,Momentum,2050,354353.251
+United States of America,840,Instant replacement zero migration,2024,345294.707
+United States of America,840,Instant replacement zero migration,2025,346894.525
+United States of America,840,Instant replacement zero migration,2026,348431.747
+United States of America,840,Instant replacement zero migration,2027,349904.904
+United States of America,840,Instant replacement zero migration,2028,351311.916
+United States of America,840,Instant replacement zero migration,2029,352650.524
+United States of America,840,Instant replacement zero migration,2030,353919.714
+United States of America,840,Instant replacement zero migration,2031,355116.556
+United States of America,840,Instant replacement zero migration,2032,356240.34
+United States of America,840,Instant replacement zero migration,2033,357292.357
+United States of America,840,Instant replacement zero migration,2034,358272.718
+United States of America,840,Instant replacement zero migration,2035,359181.846
+United States of America,840,Instant replacement zero migration,2036,360019.819
+United States of America,840,Instant replacement zero migration,2037,360785.66
+United States of America,840,Instant replacement zero migration,2038,361478.121
+United States of America,840,Instant replacement zero migration,2039,362094.159
+United States of America,840,Instant replacement zero migration,2040,362632.477
+United States of America,840,Instant replacement zero migration,2041,363093.274
+United States of America,840,Instant replacement zero migration,2042,363477.401
+United States of America,840,Instant replacement zero migration,2043,363788.083
+United States of America,840,Instant replacement zero migration,2044,364028.314
+United States of America,840,Instant replacement zero migration,2045,364203.565
+United States of America,840,Instant replacement zero migration,2046,364321.296
+United States of America,840,Instant replacement zero migration,2047,364388.292
+United States of America,840,Instant replacement zero migration,2048,364411.371
+United States of America,840,Instant replacement zero migration,2049,364403.313
+United States of America,840,Instant replacement zero migration,2050,364377.48
+United States of America,840,No fertility below age 18,2024,345409.379
+United States of America,840,No fertility below age 18,2025,347225.55
+United States of America,840,No fertility below age 18,2026,348954.829
+United States of America,840,No fertility below age 18,2027,350619.858
+United States of America,840,No fertility below age 18,2028,352269.976
+United States of America,840,No fertility below age 18,2029,353892.309
+United States of America,840,No fertility below age 18,2030,355469.504
+United States of America,840,No fertility below age 18,2031,357021.117
+United States of America,840,No fertility below age 18,2032,358548.2
+United States of America,840,No fertility below age 18,2033,360053.067
+United States of America,840,No fertility below age 18,2034,361542.738
+United States of America,840,No fertility below age 18,2035,363008.486
+United States of America,840,No fertility below age 18,2036,364439.08
+United States of America,840,No fertility below age 18,2037,365844.133
+United States of America,840,No fertility below age 18,2038,367228.062
+United States of America,840,No fertility below age 18,2039,368568.482
+United States of America,840,No fertility below age 18,2040,369856.2
+United States of America,840,No fertility below age 18,2041,371101.825
+United States of America,840,No fertility below age 18,2042,372322.73
+United States of America,840,No fertility below age 18,2043,373504.231
+United States of America,840,No fertility below age 18,2044,374618.219
+United States of America,840,No fertility below age 18,2045,375680.545
+United States of America,840,No fertility below age 18,2046,376690.484
+United States of America,840,No fertility below age 18,2047,377660.668
+United States of America,840,No fertility below age 18,2048,378590.117
+United States of America,840,No fertility below age 18,2049,379475.934
+United States of America,840,No fertility below age 18,2050,380337.599
+United States of America,840,Accelerated ABR decline,2024,345416.364
+United States of America,840,Accelerated ABR decline,2025,347237.053
+United States of America,840,Accelerated ABR decline,2026,348963.586
+United States of America,840,Accelerated ABR decline,2027,350630.365
+United States of America,840,Accelerated ABR decline,2028,352294.844
+United States of America,840,Accelerated ABR decline,2029,353941.052
+United States of America,840,Accelerated ABR decline,2030,355540.682
+United States of America,840,Accelerated ABR decline,2031,357113.526
+United States of America,840,Accelerated ABR decline,2032,358660.796
+United States of America,840,Accelerated ABR decline,2033,360184.839
+United States of America,840,Accelerated ABR decline,2034,361692.65
+United States of America,840,Accelerated ABR decline,2035,363175.565
+United States of America,840,Accelerated ABR decline,2036,364622.515
+United States of America,840,Accelerated ABR decline,2037,366043.231
+United States of America,840,Accelerated ABR decline,2038,367442.328
+United States of America,840,Accelerated ABR decline,2039,368797.697
+United States of America,840,Accelerated ABR decline,2040,370100.194
+United States of America,840,Accelerated ABR decline,2041,371360.331
+United States of America,840,Accelerated ABR decline,2042,372595.541
+United States of America,840,Accelerated ABR decline,2043,373791.268
+United States of America,840,Accelerated ABR decline,2044,374919.501
+United States of America,840,Accelerated ABR decline,2045,375996.178
+United States of America,840,Accelerated ABR decline,2046,377020.614
+United States of America,840,Accelerated ABR decline,2047,378005.497
+United States of America,840,Accelerated ABR decline,2048,378949.909
+United States of America,840,Accelerated ABR decline,2049,379851.021
+United States of America,840,Accelerated ABR decline,2050,380728.418
+United States of America,840,Accelarated ABR decline w/rec.,2024,345416.364
+United States of America,840,Accelarated ABR decline w/rec.,2025,347237.053
+United States of America,840,Accelarated ABR decline w/rec.,2026,348963.586
+United States of America,840,Accelarated ABR decline w/rec.,2027,350630.365
+United States of America,840,Accelarated ABR decline w/rec.,2028,352294.844
+United States of America,840,Accelarated ABR decline w/rec.,2029,353941.052
+United States of America,840,Accelarated ABR decline w/rec.,2030,355540.682
+United States of America,840,Accelarated ABR decline w/rec.,2031,357113.526
+United States of America,840,Accelarated ABR decline w/rec.,2032,358660.796
+United States of America,840,Accelarated ABR decline w/rec.,2033,360184.839
+United States of America,840,Accelarated ABR decline w/rec.,2034,361698.45
+United States of America,840,Accelarated ABR decline w/rec.,2035,363197.568
+United States of America,840,Accelarated ABR decline w/rec.,2036,364663.313
+United States of America,840,Accelarated ABR decline w/rec.,2037,366098.813
+United States of America,840,Accelarated ABR decline w/rec.,2038,367504.289
+United States of America,840,Accelarated ABR decline w/rec.,2039,368859.645
+United States of America,840,Accelarated ABR decline w/rec.,2040,370162.137
+United States of America,840,Accelarated ABR decline w/rec.,2041,371422.269
+United States of America,840,Accelarated ABR decline w/rec.,2042,372657.475
+United States of America,840,Accelarated ABR decline w/rec.,2043,373853.197
+United States of America,840,Accelarated ABR decline w/rec.,2044,374981.427
+United States of America,840,Accelarated ABR decline w/rec.,2045,376058.101
+United States of America,840,Accelarated ABR decline w/rec.,2046,377082.534
+United States of America,840,Accelarated ABR decline w/rec.,2047,378067.414
+United States of America,840,Accelarated ABR decline w/rec.,2048,379011.82
+United States of America,840,Accelarated ABR decline w/rec.,2049,379912.929
+United States of America,840,Accelarated ABR decline w/rec.,2050,380790.328
+United States of America,840,Median PI,2024,345426.571
+United States of America,840,Median PI,2025,347275.808
+United States of America,840,Median PI,2026,349035.494
+United States of America,840,Median PI,2027,350728.355
+United States of America,840,Median PI,2028,352404.085
+United States of America,840,Median PI,2029,354050.267
+United States of America,840,Median PI,2030,355649.881
+United States of America,840,Median PI,2031,357222.715
+United States of America,840,Median PI,2032,358769.974
+United States of America,840,Median PI,2033,360294.008
+United States of America,840,Median PI,2034,361801.811
+United States of America,840,Median PI,2035,363284.716
+United States of America,840,Median PI,2036,364731.66
+United States of America,840,Median PI,2037,366152.37
+United States of America,840,Median PI,2038,367551.455
+United States of America,840,Median PI,2039,368906.818
+United States of America,840,Median PI,2040,370209.316
+United States of America,840,Median PI,2041,371469.478
+United States of America,840,Median PI,2042,372704.772
+United States of America,840,Median PI,2043,373900.677
+United States of America,840,Median PI,2044,375029.246
+United States of America,840,Median PI,2045,376106.473
+United States of America,840,Median PI,2046,377131.728
+United States of America,840,Median PI,2047,378117.767
+United States of America,840,Median PI,2048,379063.745
+United States of America,840,Median PI,2049,379966.906
+United States of America,840,Median PI,2050,380846.91
+United States of America,840,Upper 80 PI,2024,345660.759
+United States of America,840,Upper 80 PI,2025,347987.711
+United States of America,840,Upper 80 PI,2026,350254.55
+United States of America,840,Upper 80 PI,2027,352535.911
+United States of America,840,Upper 80 PI,2028,354814.792
+United States of America,840,Upper 80 PI,2029,357133.089
+United States of America,840,Upper 80 PI,2030,359519.76
+United States of America,840,Upper 80 PI,2031,361914.27
+United States of America,840,Upper 80 PI,2032,364231.05
+United States of America,840,Upper 80 PI,2033,366612.818
+United States of America,840,Upper 80 PI,2034,369145.008
+United States of America,840,Upper 80 PI,2035,371575.562
+United States of America,840,Upper 80 PI,2036,373943.297
+United States of America,840,Upper 80 PI,2037,376409.065
+United States of America,840,Upper 80 PI,2038,378813.953
+United States of America,840,Upper 80 PI,2039,381090.727
+United States of America,840,Upper 80 PI,2040,383337.499
+United States of America,840,Upper 80 PI,2041,385586.018
+United States of America,840,Upper 80 PI,2042,387884.368
+United States of America,840,Upper 80 PI,2043,390034.305
+United States of America,840,Upper 80 PI,2044,392114.56
+United States of America,840,Upper 80 PI,2045,394269.972
+United States of America,840,Upper 80 PI,2046,396255.879
+United States of America,840,Upper 80 PI,2047,398187.399
+United States of America,840,Upper 80 PI,2048,400252.988
+United States of America,840,Upper 80 PI,2049,402308.282
+United States of America,840,Upper 80 PI,2050,404275.727
+United States of America,840,Lower 80 PI,2024,345219.451
+United States of America,840,Lower 80 PI,2025,346611.857
+United States of America,840,Lower 80 PI,2026,347837.545
+United States of America,840,Lower 80 PI,2027,348970.714
+United States of America,840,Lower 80 PI,2028,350000.572
+United States of America,840,Lower 80 PI,2029,350893.92
+United States of America,840,Lower 80 PI,2030,351742.943
+United States of America,840,Lower 80 PI,2031,352552.668
+United States of America,840,Lower 80 PI,2032,353220.257
+United States of America,840,Lower 80 PI,2033,353816.034
+United States of America,840,Lower 80 PI,2034,354517.261
+United States of America,840,Lower 80 PI,2035,355210.017
+United States of America,840,Lower 80 PI,2036,355803.197
+United States of America,840,Lower 80 PI,2037,356329.798
+United States of America,840,Lower 80 PI,2038,356712.527
+United States of America,840,Lower 80 PI,2039,357074.261
+United States of America,840,Lower 80 PI,2040,357297.677
+United States of America,840,Lower 80 PI,2041,357344.082
+United States of America,840,Lower 80 PI,2042,357435.146
+United States of America,840,Lower 80 PI,2043,357381.114
+United States of America,840,Lower 80 PI,2044,357198.022
+United States of America,840,Lower 80 PI,2045,357038.198
+United States of America,840,Lower 80 PI,2046,356688.955
+United States of America,840,Lower 80 PI,2047,356288.013
+United States of America,840,Lower 80 PI,2048,355997.467
+United States of America,840,Lower 80 PI,2049,355709.063
+United States of America,840,Lower 80 PI,2050,355347.986
+United States of America,840,Upper 95 PI,2024,345771.74
+United States of America,840,Upper 95 PI,2025,348354.532
+United States of America,840,Upper 95 PI,2026,350908.15
+United States of America,840,Upper 95 PI,2027,353481.17
+United States of America,840,Upper 95 PI,2028,356146.789
+United States of America,840,Upper 95 PI,2029,358892.7
+United States of America,840,Upper 95 PI,2030,361697.248
+United States of America,840,Upper 95 PI,2031,364455.056
+United States of America,840,Upper 95 PI,2032,367173.354
+United States of America,840,Upper 95 PI,2033,369922.443
+United States of America,840,Upper 95 PI,2034,372809.995
+United States of America,840,Upper 95 PI,2035,375774.541
+United States of America,840,Upper 95 PI,2036,378704.301
+United States of America,840,Upper 95 PI,2037,381755.139
+United States of America,840,Upper 95 PI,2038,384807.534
+United States of America,840,Upper 95 PI,2039,387879.063
+United States of America,840,Upper 95 PI,2040,390880.853
+United States of America,840,Upper 95 PI,2041,393754.889
+United States of America,840,Upper 95 PI,2042,396696.445
+United States of America,840,Upper 95 PI,2043,399705.111
+United States of America,840,Upper 95 PI,2044,402831.43
+United States of America,840,Upper 95 PI,2045,405804.483
+United States of America,840,Upper 95 PI,2046,408456.383
+United States of America,840,Upper 95 PI,2047,411137.027
+United States of America,840,Upper 95 PI,2048,414070.635
+United States of America,840,Upper 95 PI,2049,417152.476
+United States of America,840,Upper 95 PI,2050,420028.468
+United States of America,840,Lower 95 PI,2024,345126.256
+United States of America,840,Lower 95 PI,2025,346314.755
+United States of America,840,Lower 95 PI,2026,347286.584
+United States of America,840,Lower 95 PI,2027,348058.437
+United States of America,840,Lower 95 PI,2028,348656.934
+United States of America,840,Lower 95 PI,2029,349255.788
+United States of America,840,Lower 95 PI,2030,349807.569
+United States of America,840,Lower 95 PI,2031,350221.891
+United States of America,840,Lower 95 PI,2032,350557.739
+United States of America,840,Lower 95 PI,2033,350842.538
+United States of America,840,Lower 95 PI,2034,350952.893
+United States of America,840,Lower 95 PI,2035,350920.869
+United States of America,840,Lower 95 PI,2036,350830.13
+United States of America,840,Lower 95 PI,2037,350669.036
+United States of America,840,Lower 95 PI,2038,350513.445
+United States of America,840,Lower 95 PI,2039,350213.206
+United States of America,840,Lower 95 PI,2040,349854.244
+United States of America,840,Lower 95 PI,2041,349381.847
+United States of America,840,Lower 95 PI,2042,348721.096
+United States of America,840,Lower 95 PI,2043,347672.053
+United States of America,840,Lower 95 PI,2044,346830.707
+United States of America,840,Lower 95 PI,2045,346374.259
+United States of America,840,Lower 95 PI,2046,345605.687
+United States of America,840,Lower 95 PI,2047,344421.257
+United States of America,840,Lower 95 PI,2048,343371.254
+United States of America,840,Lower 95 PI,2049,342792.039
+United States of America,840,Lower 95 PI,2050,342098.703
