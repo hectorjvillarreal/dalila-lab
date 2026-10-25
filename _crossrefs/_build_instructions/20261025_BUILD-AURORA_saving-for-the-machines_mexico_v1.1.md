@@ -25,7 +25,7 @@ source_document:
   held_by: Héctor (full PDF at GrandPlan/Aurora/capital/Saving_Machines.pdf; slides not in the tree)
 target_runtime: Claude Code session under Aurora, Dalila
 retention: indefinite (_crossrefs/_build_instructions/) as provenance
-# Filing convention (id scheme, exact path) pending Héctor's decision, per compute-brief note.
+# Filed in _crossrefs/_build_instructions/ by Héctor's decision of 2026-10-25 (original filename kept).
 ---
 
 # Saving for the Machines — México fiscal-demographic inference pass (v1.1)

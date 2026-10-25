@@ -514,9 +514,8 @@ Other works cited in the inferences, with full references in the cited corpus en
 
 ## 7. Cross-references
 
-- → Build instruction: `GrandPlan/Aurora/capital/20261025_BUILD-AURORA_saving-for-the-machines_mexico_v1.1.md`
-  (supersedes v1 in the same folder). *Filing to `_crossrefs/_build_instructions/` is pending
-  Héctor's decision on the filing convention, per the instruction's frontmatter.*
+- → Build instruction: `_crossrefs/_build_instructions/20261025_BUILD-AURORA_saving-for-the-machines_mexico_v1.1.md`
+  (supersedes v1, filed alongside it). Filed by Héctor's decision of 2026-10-25.
 - → Source PDF: `GrandPlan/Aurora/capital/Saving_Machines.pdf` (kept untracked: unpublished draft)
 - → Claude Doc rendering of this note (private until shared): https://claude.ai/artifact/XxVSKpppC35Z8N8A6sFkiU
 - → Ingestion record: `GrandPlan/Aurora/capital/_ingestion/`
