@@ -1,0 +1,501 @@
+% Digitalización e impuestos: ¿qué cambia cuando el gobierno sabe más? (Jacobs, 2017)
+% Finanzas Públicas, Maestría en Economía Aplicada, Tec de Monterrey
+% Esquema aprobado: esquema_jacobs.md (2026-10-26). Compilar con: latexmk -pdf jacobs_digitalizacion.tex
+% Versión para repartir: jacobs_digitalizacion_handout.tex (misma fuente, opción handout).
+% Las notas del presentador van en \note{}; para verlas, compilar con \setbeameroption{show notes}.
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\unaccentedoperators % operadores sin acento (la opción es-noaccentedoperators no existe en esta versión de babel)
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{babel,arrows.meta,calc,positioning,decorations.pathreplacing,patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% ---------------------------------------------------------------------------
+% Tema sobrio (igual al de las sesiones anteriores)
+% ---------------------------------------------------------------------------
+\definecolor{cTitulo}{RGB}{0,55,100}
+\definecolor{cOferta}{RGB}{31,87,153}
+\definecolor{cDemanda}{RGB}{200,100,0}
+\definecolor{cImpuesto}{RGB}{175,30,30}
+\definecolor{cRecauda}{RGB}{40,130,80}
+\definecolor{cGris}{RGB}{110,110,110}
+
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{frametitle}{fg=cTitulo}
+\setbeamercolor{title}{fg=cTitulo}
+\setbeamercolor{structure}{fg=cTitulo}
+\setbeamercolor{block title}{bg=cTitulo!12,fg=cTitulo}
+\setbeamercolor{block body}{bg=cTitulo!4}
+\setbeamercolor{block title alerted}{bg=cImpuesto!12,fg=cImpuesto}
+\setbeamercolor{block body alerted}{bg=cImpuesto!4}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{blocks}[rounded]
+\setbeamertemplate{footline}{%
+  \hfill{\small\color{cGris}Digitalización · Jacobs (2017)\quad\insertframenumber/\inserttotalframenumber}\hspace*{1em}\vspace*{0.6em}}
+
+% Fuente al pie de cada diapositiva
+\newcommand{\fuente}[1]{\par\vfill{\small\color{cGris}#1\par}}
+% Resultado final de una derivación, resaltado
+\newcommand{\resultado}[1]{\colorbox{cTitulo!12}{$\displaystyle #1$}}
+
+% ---------------------------------------------------------------------------
+% Estilo común de gráficas
+% ---------------------------------------------------------------------------
+\tikzset{
+  every node/.append style={font=\small},
+  eje/.style={-{Stealth[length=2mm]},thick,black!75},
+  flecha/.style={-{Stealth[length=2mm]},thick,cTitulo},
+  guia/.style={thin,dashed,black!45},
+  punto/.style={circle,fill=black,inner sep=1.2pt},
+  caja/.style={draw=cTitulo,rounded corners,fill=cTitulo!5,align=center,inner sep=4pt},
+  cajafisco/.style={draw=cRecauda,rounded corners,fill=cRecauda!10,align=center,inner sep=3pt},
+}
+
+\title{Digitalización e impuestos: ¿qué cambia cuando el gobierno sabe más?}
+\subtitle{Digitalización de las finanzas públicas · Segunda sección}
+\author{Héctor Juan Villarreal}
+\institute{Finanzas Públicas · Maestría en Economía Aplicada\\Escuela de Gobierno y Transformación Pública · Tec de Monterrey}
+\date{Octubre de 2026}
+
+\begin{document}
+
+% =========================================================================
+% I. EL PROBLEMA DE FONDO ES DE INFORMACIÓN · 22 min
+% =========================================================================
+\section{Información}
+
+% 1 -----------------------------------------------------------------------
+\begin{frame}[plain]
+  \titlepage
+  \note{Lectura: Jacobs, B. (2017), «Digitalization and Taxation», cap.~2 en S. Gupta, M. Keen, A. Shah y G. Verdier (eds.), \emph{Digital Revolutions in Public Finance}, FMI, pp.~25--55. El capítulo es técnico; hoy el peso está en las aplicaciones.}
+\end{frame}
+
+% 2 -----------------------------------------------------------------------
+\begin{frame}{De Kaplow a Jacobs: el problema es de información}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Lo que nos dejó Kaplow}
+        \begin{itemize}
+          \item En Mirrlees, el gobierno ve el ingreso, no la capacidad (Kaplow, diap.~27).
+          \item En México, el instrumento para redistribuir es débil (Kaplow, diap.~17).
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \pause
+      \begin{block}{Lo que propone Jacobs}
+        La digitalización puede aflojar las restricciones de información. Nunca las elimina.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \pause
+  \vspace{1em}
+  \begin{alertblock}{Pregunta para hoy}
+    ¿Qué cambia cuando el gobierno sabe más?
+  \end{alertblock}
+  \fuente{Jacobs, introducción, pp.~25--26.}
+\end{frame}
+
+% 3 -----------------------------------------------------------------------
+\begin{frame}{Con información perfecta, no habría disyuntiva}
+  \begin{itemize}
+    \item Si el gobierno viera todo sin costo, cobraría \textbf{impuestos de suma fija individualizados}: según la capacidad, las necesidades, la herencia o la suerte de cada quien.
+    \item Tampoco habría evasión: sabría cuánto gana, ahorra y consume cada persona.
+  \end{itemize}
+  \pause
+  \begin{block}{Segundo teorema del bienestar}
+    Con mercados perfectos, cualquier asignación eficiente se alcanza con mercados y transferencias de suma fija. La eficiencia y la distribución se deciden por separado.
+  \end{block}
+  {\small\color{cGris}Repaso: el primer teorema dice que el equilibrio competitivo es eficiente. Jacobs solo usa el segundo.}
+  \pause
+  \begin{block}{Enlace}
+    Kaplow, diap.~6: si todos fuéramos iguales, bastaría la suma fija. Aquí las personas sí difieren, pero el gobierno lo vería todo.
+  \end{block}
+  \fuente{Jacobs, introducción, p.~25.}
+\end{frame}
+
+% 4 -----------------------------------------------------------------------
+\begin{frame}{Dos cosas que el gobierno no ve}
+  \begin{columns}[T]
+    \begin{column}{0.44\textwidth}
+      \centering
+      \begin{tikzpicture}[scale=0.8]
+        \draw[eje] (0,0) -- (5.2,0);
+        \draw[eje] (0,0) -- (0,4.8);
+        \node[below] at (2.6,0) {bienestar del menos capaz};
+        \node[above,rotate=90] at (0,2.4) {bienestar del más capaz};
+        \draw[very thick,cOferta] plot[domain=6:84,samples=60] ({4.5*cos(\x)},{4.3*sin(\x)});
+        \draw[very thick,cImpuesto] (1.54,4.04) .. controls (2.4,3.6) and (2.95,2.7) .. (3.0,1.1);
+        \onslide<3->{\draw[very thick,cRecauda,dashed] (1.54,4.04) .. controls (2.9,3.75) and (3.6,2.9) .. (3.75,1.6);}
+        \node[punto] at (1.54,4.04) {};
+        \node[anchor=south west] at (1.3,4.12) {sin redistribuir};
+        \draw[very thick,cOferta] (0.2,-0.95) -- +(0.5,0) node[right,black] {primer mejor};
+        \draw[very thick,cImpuesto] (0.2,-1.4) -- +(0.5,0) node[right,black] {segundo mejor};
+        \onslide<3->{\draw[very thick,cRecauda,dashed] (0.2,-1.85) -- +(0.5,0) node[right,black] {con más información};}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \begin{block}{(a) El resultado verdadero}
+        Cuánto ganó o consumió cada quien: de ahí la evasión. Como las multas no pueden ser infinitas, manda la \textbf{tecnología de fiscalización}.
+      \end{block}
+      \pause
+      \begin{block}{(b) Las características y la conducta}
+        La capacidad y el esfuerzo: de ahí la disyuntiva entre equidad y eficiencia de Mirrlees.
+      \end{block}
+      \onslide<3->{Más información empuja hacia afuera la frontera de segundo mejor. No la lleva a la de primer mejor.}
+    \end{column}
+  \end{columns}
+  \fuente{Jacobs, pp.~25--28 y 32--33; Allingham y Sandmo (1972) y Mirrlees (1999), citados por Jacobs. Gráfica propia.}
+  \note{Las dos fronteras se tocan en el punto sin redistribución: si el gobierno no quiere redistribuir, no necesita saber la capacidad de nadie.}
+\end{frame}
+
+% 5 -----------------------------------------------------------------------
+\begin{frame}{En el modelo de Mirrlees, la digitalización no sirve de nada}
+  \begin{itemize}
+    \item Mirrlees supone que el ingreso se ve sin error y que la capacidad no se ve. Más datos no cambian ninguna de las dos cosas.
+    \item Con los supuestos de Atkinson-Stiglitz pasa lo mismo: todo se redistribuye con el ISR (Kaplow, diap.~13).
+    \item La promesa de la digitalización depende de que esos supuestos fallen. Y en la realidad fallan.
+  \end{itemize}
+  \pause
+  \begin{block}{¿Y si algún día se pudiera medir la capacidad?}
+    Jacobs duda, por cuatro razones. No está claro qué medir: el salario por hora ya depende de la educación y del esfuerzo. Hasta el IQ cambia. Medirla abre problemas filosóficos, políticos y legales. Y quien sepa que lo van a gravar por su capacidad, la va a esconder.
+  \end{block}
+  \fuente{Jacobs, pp.~33--34 (nota~9) y 36--37.}
+\end{frame}
+
+% 6 -----------------------------------------------------------------------
+\begin{frame}{Dos canales: fiscalizar mejor y diseñar mejor}
+  \centering
+  \begin{tikzpicture}[node distance=5mm and 9mm]
+    \node[caja,text width=3.0cm] (d) {Digitalización:\\más información};
+    \node[caja,text width=5.6cm,right=of d,yshift=9mm] (c1) {\textbf{Canal 1. Fiscalizar mejor}\\ver lo que ya se grava (5 ideas)};
+    \node[caja,text width=5.6cm,right=of d,yshift=-9mm] (c2) {\textbf{Canal 2. Diseñar mejor}\\condicionar el impuesto en más información (8 ideas)};
+    \draw[flecha] (d.east) -- (c1.west);
+    \draw[flecha] (d.east) -- (c2.west);
+    \node[right=3mm of c1,text width=2.0cm,align=left,color=cGris] {diaps.~7--11};
+    \node[right=3mm of c2,text width=2.0cm,align=left,color=cGris] {diaps.~12--16};
+  \end{tikzpicture}
+  \par\medskip\raggedright
+  \pause
+  En los dos canales: la misma recaudación con tasas más bajas, o más redistribución con las mismas tasas.
+  \pause
+  \begin{block}{Ojo}
+    La digitalización privada también ayuda a eludir, con planeación fiscal más agresiva. Por eso no es obvio si las tasas óptimas suben o bajan.
+  \end{block}
+  \fuente{Jacobs, pp.~26--27 y conclusión, pp.~50--51. Diagrama propio.}
+\end{frame}
+
+% =========================================================================
+% II. CANAL 1: FISCALIZAR MEJOR · 15 min
+% =========================================================================
+\section{Fiscalizar mejor}
+
+% 7 -----------------------------------------------------------------------
+\begin{frame}{La evasión cae cuando alguien más informa}
+  \renewcommand{\arraystretch}{1.25}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.56\textwidth}@{}}
+    \toprule
+    \textbf{Quién informa} & \textbf{Qué ve el fisco} \\
+    \midrule
+    El patrón & El salario de sus empleados \\
+    Bancos, fondos, aseguradoras & Intereses, saldos y rendimientos \\
+    El pago con tarjeta & Las ventas de la empresa: el consumidor reporta \\
+    Nadie & El ingreso del trabajador por cuenta propia \\
+    \bottomrule
+  \end{tabular}
+  \par\medskip
+  \pause
+  \begin{itemize}
+    \item Quien evade prefiere el efectivo. Si mucho se paga en efectivo, la digitalización ayuda poco.
+    \item Sin efectivo, el trueque se vuelve negocio.
+  \end{itemize}
+  \pause
+  Enlace: la informalidad vuelve más elástica la base formal (26 de septiembre, diap.~14).
+  \fuente{Jacobs, «Digitalization and Tax Enforcement», pp.~28 y 31--32; nota~3 (p.~29).}
+\end{frame}
+
+% 8 -----------------------------------------------------------------------
+\begin{frame}{México: cada factura pasa por el SAT}
+  \centering
+  \begin{tikzpicture}[x=1cm,y=1cm]
+    \node[caja,text width=2.3cm] (v) at (0,0) {Vendedor\\emite el CFDI};
+    \node[cajafisco,text width=4.0cm] (s) at (4.6,0) {SAT o proveedor\\autorizado: valida\\y asigna folio};
+    \node[caja,text width=2.3cm] (c) at (9.2,0) {Comprador\\lo usa para deducir};
+    \draw[flecha] (v) -- (s);
+    \draw[flecha] (s) -- (c);
+    \onslide<2->{
+      \node[cajafisco,text width=6.6cm] (x) at (4.6,-1.45) {El SAT cruza las dos puntas: lo que uno declara vender, el otro lo declara comprar};
+      \draw[flecha,cRecauda] (v.south) |- (x.west);
+      \draw[flecha,cRecauda] (c.south) |- (x.east);}
+  \end{tikzpicture}
+  \par\medskip\raggedright
+  \begin{itemize}
+    \item Desde el 1 de enero de 2014, todo comprobante fiscal es una factura electrónica: el CFDI.
+    \item Antes de expedirla, se manda al SAT o a un proveedor que él autoriza. El comprador está obligado a pedirla.
+    \onslide<3->{\item Lectura con el cobro fraccionado: cada factura deja huella (sesión del IVA, diap.~5).}
+  \end{itemize}
+  \fuente{CFF, art.~29 (texto vigente); decreto de reformas al CFF, DOF 9-12-2013, transitorio primero. Respaldo conceptual: Jacobs, p.~32.}
+\end{frame}
+
+% 9 -----------------------------------------------------------------------
+\begin{frame}{Brasil: el impuesto se cobra al momento de pagar}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \centering
+      \begin{tikzpicture}[x=1cm,y=1cm]
+        \node[caja,text width=1.7cm] (comp) at (0,0) {Comprador\\paga 126.5};
+        \node[caja,text width=1.6cm] (ent) at (2.9,0) {Entidad\\de pago};
+        \node[cajafisco,text width=1.6cm] (fis) at (2.9,-2.2) {Fisco};
+        \node[caja,text width=1.6cm] (prov) at (5.6,0) {Proveedor};
+        \draw[flecha] (comp) -- (ent);
+        \draw[flecha,cRecauda,{Stealth[length=2mm]}-{Stealth[length=2mm]}] ([xshift=-4mm]ent.south) -- node[left,align=right] {¿tiene\\créditos?} ([xshift=-4mm]fis.north);
+        \onslide<2->{
+          \draw[flecha,cRecauda] ([xshift=4mm]ent.south) -- node[right,align=left] {si no:\\26.5} ([xshift=4mm]fis.north);
+          \draw[flecha] (ent) -- node[above] {100} (prov);}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \begin{itemize}
+        \item La factura dice cuánto se debe; el pago fraccionado lo cobra en el momento.
+        \onslide<2->{\item Si el proveedor no tiene créditos, la entidad de pago separa los 26.5 y le pasa 100. Si los tiene, le pasa todo.}
+        \onslide<3->{\item El cumplimiento se vuelve casi automático. Brasil ya tenía factura electrónica y pagos instantáneos (Pix).}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \par\medskip
+  {\small El 26.5\,\% es una tasa estimada, no fijada en ley. Ya lo vimos en la sesión del IVA, diap.~20.}
+  \fuente{Barreix, Rocha y Tostes Neto (2025), nota larga, gráfico~3 (redibujado); LC 214/2025, arts.~31--35. Respaldo conceptual: Jacobs, p.~32.}
+\end{frame}
+
+% 10 ----------------------------------------------------------------------
+\begin{frame}{El presupuesto de cada persona delata lo que no declara}
+  \[
+    \underbrace{\Delta a}_{\text{ahorro}} + \underbrace{b^*}_{\text{herencias recibidas}} = \underbrace{r^*a}_{\text{capital}} + \underbrace{w^*l}_{\text{trabajo}} - \underbrace{p^*c}_{\text{consumo}} - \underbrace{g}_{\text{regalos hechos}}
+  \]
+  {\small\color{cGris}El asterisco marca valores después de impuestos. Jacobs usa aquí $g$ para los regalos; en la diap.~12, para una transferencia.}
+  \begin{itemize}
+    \item Si el gobierno ve el consumo y la riqueza, puede revisar si el ingreso declarado alcanza.
+    \item A lo largo de la vida, $C + B = Y$: si el consumo se aleja del ingreso, hay herencias o regalos sin declarar.
+  \end{itemize}
+  \pause
+  \begin{block}{México: la discrepancia fiscal}
+    Si una persona gasta, compra o deposita en un año más de lo que declaró, el SAT presume que la diferencia es ingreso omitido. Aplica también a quien no está inscrito en el RFC.
+  \end{block}
+  \fuente{Jacobs, pp.~28--30; LISR, art.~91 (texto vigente).}
+\end{frame}
+
+% 11 ----------------------------------------------------------------------
+\begin{frame}{El capital ya no se esconde tan fácil en el extranjero}
+  \begin{itemize}
+    \item Con el intercambio automático de información, cada fisco recibe de los otros países los saldos y los intereses que sus residentes tienen en bancos de allá.
+    \item México se comprometió a intercambiar desde 2017. En 2024 mandó datos a 79 jurisdicciones.
+  \end{itemize}
+  \pause
+  \begin{itemize}
+    \item Con registros que se cruzan, el capital se grava donde vive su dueño. El ISR de las empresas podría quedar como una retención sobre dividendos.
+    \item Jacobs propone un solo impuesto a todo el ingreso del capital, con una tasa y una exención: se acaba el arbitraje entre activos.
+  \end{itemize}
+  \pause
+  \begin{block}{Límite}
+    Beneficiarios finales ocultos y títulos al portador.
+  \end{block}
+  \fuente{Jacobs, pp.~31--32 y 39--43; OCDE (2024), \emph{Peer Review of the Automatic Exchange of Financial Account Information 2024 Update}, cuadro~1.1.}
+\end{frame}
+
+% =========================================================================
+% III. CANAL 2: DISEÑAR MEJOR · 17 min
+% =========================================================================
+\section{Diseñar mejor}
+
+% 12 ----------------------------------------------------------------------
+\begin{frame}{Un IVA progresivo sin impuesto al ingreso}
+  El gobierno no ve el ingreso, solo grava el consumo con una tasa única $\tau$.
+  \begin{align*}
+    \onslide<1->{\text{Sin transferencia:}\quad & wl = (1+\tau)\,c \quad\Rightarrow\quad \text{paga } \tau c\text{, proporcional}\\}
+    \onslide<2->{\text{Con transferencia uniforme } g\text{:}\quad & wl + g = (1+\tau)\,c\\}
+    \onslide<3->{\text{Pago neto:}\quad & \tau c - g\\}
+    \onslide<4->{\text{Tasa media neta:}\quad & \resultado{\tau - \frac{g}{c}} \quad \text{sube con el consumo}}
+  \end{align*}
+  \onslide<5->{
+  \begin{block}{Resultado}
+    Con identificación biométrica y pagos electrónicos, una transferencia igual para todos vuelve progresivo un impuesto proporcional al consumo. Y le quita la razón de ser a la tasa cero en alimentos (sesión del IVA, diap.~16).
+  \end{block}
+  {\small Es la cuenta del impuesto plano de Kaplow, diap.~5. Notación: $w$, $l$, $c$ y $g$ como en Kaplow; aquí $\tau$ es una tasa única al consumo, no el vector $\tau_i$.}}
+  \fuente{Jacobs, pp.~34--35, notas~10 y~11.}
+\end{frame}
+
+% 13 ----------------------------------------------------------------------
+\begin{frame}{El IVA personalizado: devolver solo a quien lo necesita}
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \begin{itemize}
+        \item La $g$ de Jacobs es igual para todos. Barreix la focaliza: devuelve a los hogares de menor ingreso el IVA de una canasta típica (sesión del IVA, diap.~19).
+        \item Brasil: cashback para familias con ingreso per cápita de hasta medio salario mínimo. Antes, el Devolve ICMS de Rio Grande do Sul: desde 2021, más de 600 mil familias.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \begin{block}{Lo que dice el FMI}
+        Recuadro 1: un impuesto progresivo al consumo necesita saber quién compra, y el IVA es anónimo.\\[3pt]
+        Nota 28: el IVA personalizado de Barreix y el IVA progresivo de de la Feria y Swistak, que devuelve en el momento de la compra.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \pause
+  \par\smallskip
+  Es una respuesta a la pregunta de Kaplow, diap.~17.
+  \pause
+  \begin{alertblock}{Pregunta}
+    ¿A quién le devolverían, si buena parte de los hogares vive de la informalidad?
+  \end{alertblock}
+  \fuente{de Mooij, Hebous y Keen (2025), IMF WP/25/165, recuadro~1 y nota~28; Barreix, Rocha y Tostes Neto (2025), nota larga; LC 214/2025, arts.~113 y 118. Jacobs, pp.~34 y 51.}
+  \note{Cashback brasileño: 100\,\% de la CBS y 20\,\% del IBS en gas, luz, agua, drenaje y telecomunicaciones; 20\,\% en lo demás (sesión del IVA, diap.~20). El Devolve ICMS paga devoluciones trimestrales.}
+\end{frame}
+
+% 14 ----------------------------------------------------------------------
+\begin{frame}{Donde no hay reventa, el precio puede depender de cuánto se consume}
+  \begin{columns}[T]
+    \begin{column}{0.42\textwidth}
+      \centering
+      \begin{tikzpicture}[x=1cm,y=1cm]
+        \fill[cOferta!55] (0.05,0) rectangle (1.5,0.855);
+        \fill[cOferta!70] (1.6,0) rectangle (3.05,1.034);
+        \fill[cImpuesto!60] (3.15,0) rectangle (4.6,3.026);
+        \node[above] at (0.78,0.855) {0.86};
+        \node[above] at (2.33,1.034) {1.03};
+        \node[above] at (3.88,3.026) {3.03};
+        \node[below] at (0.78,0) {básico};
+        \node[below] at (2.33,0) {intermedio};
+        \node[below] at (3.88,0) {excedente};
+        \node at (2.33,-0.75) {más kWh al mes $\to$};
+        \draw[eje] (0,0) -- (5.0,0);
+        \draw[eje] (0,0) -- (0,3.7) node[above right] {pesos por kWh};
+      \end{tikzpicture}
+      \par{\small Tarifa doméstica 1, enero de 2021}
+    \end{column}
+    \begin{column}{0.56\textwidth}
+      \begin{itemize}
+        \item Un impuesto que cambia según cuánto compra cada quien solo funciona si no hay reventa: el que paga menos le revendería al que paga más.
+        \item Agua, luz y gas no se transportan ni se guardan. Se pueden cobrar por bloques.
+        \pause
+        \item En México, el kWh excedente de la tarifa 1 costaba 3.5 veces el básico.
+      \end{itemize}
+      \pause
+      \begin{block}{Lectura}
+        Si el gobierno ve el consumo de cada hogar, puede gravar estos bienes de forma no lineal y redistribuir con menos costo.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \fuente{Jacobs, «Digitalization and Commodity Taxation», pp.~37--38 y nota~15; SHCP, oficio 349-B-1-I-244 (15-12-2020), anexo, tarifa~1.}
+\end{frame}
+
+% 15 ----------------------------------------------------------------------
+\begin{frame}{Etiquetado: gravar lo que se ve y anda junto con la capacidad}
+  \begin{itemize}
+    \item El \textbf{etiquetado} (\emph{tagging}, Akerlof, 1978): condicionar el impuesto en rasgos que se verifican, cambian poco y van con la capacidad o la necesidad: edad, sexo, discapacidad, hijos.
+    \item Casi todos los países ya lo hacen, con créditos, deducciones y apoyos a ciertos grupos.
+    \item Jacobs va más lejos: tarifas de ISR distintas por edad y por sexo. Los estudios que cita encuentran ganancias grandes.
+  \end{itemize}
+  \pause
+  \begin{block}{Los límites}
+    Equidad horizontal: dos personas con el mismo ingreso pagarían distinto (Kaplow, diap.~18). Y la privacidad. Por eso casi nadie lo ha hecho.
+  \end{block}
+  \pause
+  \begin{alertblock}{Pregunta}
+    ¿Qué etiqueta les parecería legítima y cuál no?
+  \end{alertblock}
+  \fuente{Jacobs, «Tagging in Nonlinear Tax Schedules», pp.~49--50, y pp.~51--52; Akerlof (1978), citado por Jacobs.}
+\end{frame}
+
+% 16 ----------------------------------------------------------------------
+\begin{frame}{Mirar la historia, el patrimonio y la pareja}
+  \begin{block}{La regla de Jacobs}
+    Un sistema óptimo tiene tantas interdependencias como dimensiones en que difieren las personas.
+  \end{block}
+  \pause
+  \begin{columns}[T]
+    \begin{column}{0.32\textwidth}
+      \textbf{La historia}\\[2pt]
+      Gravar el promedio acumulado del ingreso (Vickrey). Quien tiene años buenos y malos deja de pagar de más. Bastan dos declaraciones seguidas.
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \pause
+      \textbf{El patrimonio}\\[2pt]
+      Condicionar los apoyos en los activos. Así no conviene ahorrar hoy para cobrar mañana una pensión de invalidez falsa.
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \pause
+      \textbf{La pareja}\\[2pt]
+      La tasa de cada uno depende del ingreso del otro. En una simulación: 25\,\% con pareja sin ingreso, 65\,\% si los dos ganan mucho.
+    \end{column}
+  \end{columns}
+  \fuente{Jacobs, «Jointness in Tax Systems» y siguientes, pp.~43--49 (nota~24); Vickrey (1939, 1947), Golosov y Tsyvinski (2006) y Renes y Zoutman (2016), citados por Jacobs.}
+  \note{La intuición: si las personas difieren en más de una cosa, pueden responder al impuesto en más de un margen a la vez (trabajar menos y ahorrar más). Amarrar los esquemas entre sí encarece esas jugadas dobles.}
+\end{frame}
+
+% =========================================================================
+% IV. LÍMITES Y CIERRE · 6 min
+% =========================================================================
+\section{Cierre}
+
+% 17 ----------------------------------------------------------------------
+\begin{frame}{Los riesgos}
+  \begin{itemize}
+    \item Privacidad, equidad horizontal y abuso del poder del Estado.
+    \item Con malas instituciones, más información le sirve a un mal gobierno para lograr mejor sus malos fines.
+    \item Un sistema más complejo cuesta más de fiscalizar y se entiende menos.
+  \end{itemize}
+  \pause
+  \begin{block}{México: facturas sin operación detrás}
+    Si el SAT detecta que alguien factura sin activos, personal ni capacidad para hacerlo, presume que las operaciones no existen y publica la lista en el DOF y en su página. La factura electrónica no impide la factura falsa: la deja registrada.
+  \end{block}
+  \pause
+  \begin{alertblock}{Pregunta}
+    ¿Qué información no le darían al SAT?
+  \end{alertblock}
+  \fuente{Jacobs, pp.~27, 50 y 51--52; CFF, art.~69-B (texto vigente).}
+\end{frame}
+
+% 18 ----------------------------------------------------------------------
+\begin{frame}{Lo que la digitalización no resuelve}
+  \begin{itemize}
+    \item El esfuerzo sigue siendo información privada, aun en un mundo totalmente digital y sin evasión.
+    \item La disyuntiva entre equidad y eficiencia se reduce, pero no desaparece.
+    \item Donde hay informalidad, pasarse a ella es otra forma de responder al impuesto: la base se vuelve más elástica.
+  \end{itemize}
+  \pause
+  \begin{block}{Lectura}
+    La frontera de segundo mejor se mueve hacia afuera. La de primer mejor sigue fuera de alcance (diap.~4).
+  \end{block}
+  \fuente{Jacobs, pp.~26 y 33--34; nota~7 (p.~32).}
+\end{frame}
+
+% 19 ----------------------------------------------------------------------
+\begin{frame}{Tres ideas para llevarse}
+  \begin{enumerate}
+    \item La disyuntiva entre equidad y eficiencia es, en el fondo, un problema de información.
+    \pause
+    \item La digitalización mueve la frontera de segundo mejor por dos canales: fiscalizar mejor y diseñar mejor. No llega al primer mejor.
+    \pause
+    \item Los instrumentos nuevos valen lo que valgan las instituciones que los usan.
+  \end{enumerate}
+  \fuente{Jacobs, conclusión, pp.~50--52.}
+\end{frame}
+
+% 20 ----------------------------------------------------------------------
+\begin{frame}{Puente: el 3 de noviembre}
+  \begin{block}{Cuentas nacionales de transferencia y envejecimiento}
+    Jacobs ya pide mirar la edad (impuestos por edad) y la vida completa (el promedio de Vickrey). Las cuentas nacionales de transferencia miden cómo cambian el ingreso y el consumo con la edad, y quién sostiene a quién a lo largo de la vida.
+  \end{block}
+  \fuente{Jacobs, pp.~45--46 y 49--50. Elaboración propia.}
+\end{frame}
+
+\end{document}
