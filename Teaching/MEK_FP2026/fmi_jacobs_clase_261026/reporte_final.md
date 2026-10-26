@@ -7,8 +7,8 @@
 Los tres compilan con `latexmk -pdf`, sin errores y sin cajas desbordadas:
 
 - `jacobs_digitalizacion.tex`: fuente única.
-- `jacobs_digitalizacion.pdf`: 20 diapositivas, 56 páginas con overlays.
-- `jacobs_digitalizacion_handout.pdf`: 20 páginas. Se genera desde `jacobs_digitalizacion_handout.tex`, que pasa la opción `handout` y carga la misma fuente.
+- `jacobs_digitalizacion.pdf`: 21 diapositivas, 58 páginas con overlays.
+- `jacobs_digitalizacion_handout.pdf`: 21 páginas. Se genera desde `jacobs_digitalizacion_handout.tex`, que pasa la opción `handout` y carga la misma fuente.
 
 Revisión visual: convertí todas las páginas a imágenes y corregí etiquetas encimadas (diaps. 4 y 14), texto partido en cajas (8), un diagrama demasiado ancho (9) y una derivación demasiado ancha (12). No queda ningún [VERIFICAR] en pantalla.
 
@@ -36,8 +36,9 @@ Fuente bibliográfica, verificada en el PDF: Jacobs, B. (2017), «Digitalization
 | 16 | Mirar la historia, el patrimonio y la pareja | pp. 43–49, nota 24 |
 | 17 | Los riesgos | pp. 27, 50, 51–52 + CFF art. 69-B |
 | 18 | Lo que la digitalización no resuelve | pp. 26, 33–34; nota 7 |
-| 19 | Tres ideas para llevarse | conclusión, pp. 50–52 |
-| 20 | Puente: el 3 de noviembre | pp. 45–46, 49–50; amarre propio |
+| 19 | Kaplow y Jacobs: la misma teoría, otro énfasis (agregada después de aprobar) | Jacobs, pp. 27, 34–38, 51–52; Kaplow, caps. 1–2, notas 2 y 24, sec. 6.C |
+| 20 | Tres ideas para llevarse | conclusión, pp. 50–52 |
+| 21 | Puente: el 3 de noviembre | pp. 45–46, 49–50; amarre propio |
 
 ## Cifras y hechos verificados
 
@@ -73,3 +74,4 @@ Fuente bibliográfica, verificada en el PDF: Jacobs, B. (2017), «Digitalization
 2. Diap. 14: la gráfica muestra precios de enero de 2021, no los vigentes, y no lleva umbrales en kWh.
 3. Diap. 11: el impuesto único al capital y el ISR corporativo como retención se quedaron en la misma diapositiva, como en el esquema; el límite de los beneficiarios finales va en un bloque.
 4. Diap. 10: agregué una línea de notación, porque Jacobs usa $g$ para los regalos en la p. 28 y para una transferencia en la nota 10.
+5. Diap. 19 (nueva, pedida después de la entrega): contrasta a Kaplow y Jacobs en una tabla de cinco renglones, con una pregunta como último overlay. Las diapositivas de cierre pasan a ser la 20 y la 21; ninguna referencia interna cambia. Queda fuera el contraste sobre el impuesto al capital, porque no leí completo el cap. 9 de Kaplow.
