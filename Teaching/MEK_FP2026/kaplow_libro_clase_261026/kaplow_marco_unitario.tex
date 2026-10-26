@@ -1,0 +1,677 @@
+% En busca de un marco unitario: Kaplow, capítulos 1 a 3
+% Finanzas Públicas, Maestría en Economía Aplicada, Tec de Monterrey
+% Esquema aprobado: esquema_kaplow.md (2026-10-26). Compilar con: latexmk -pdf kaplow_marco_unitario.tex
+% Versión para repartir: kaplow_marco_unitario_handout.tex (misma fuente, opción handout).
+% Las notas del presentador van en \note{}; para verlas, compilar con \setbeameroption{show notes}.
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\unaccentedoperators % operadores sin acento (la opción es-noaccentedoperators no existe en esta versión de babel)
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{babel,arrows.meta,calc,positioning,decorations.pathreplacing,patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% ---------------------------------------------------------------------------
+% Tema sobrio (igual al de las sesiones del 26 de septiembre y del IVA)
+% ---------------------------------------------------------------------------
+\definecolor{cTitulo}{RGB}{0,55,100}
+\definecolor{cOferta}{RGB}{31,87,153}
+\definecolor{cDemanda}{RGB}{200,100,0}
+\definecolor{cImpuesto}{RGB}{175,30,30}
+\definecolor{cRecauda}{RGB}{40,130,80}
+\definecolor{cGris}{RGB}{110,110,110}
+
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{frametitle}{fg=cTitulo}
+\setbeamercolor{title}{fg=cTitulo}
+\setbeamercolor{structure}{fg=cTitulo}
+\setbeamercolor{block title}{bg=cTitulo!12,fg=cTitulo}
+\setbeamercolor{block body}{bg=cTitulo!4}
+\setbeamercolor{block title alerted}{bg=cImpuesto!12,fg=cImpuesto}
+\setbeamercolor{block body alerted}{bg=cImpuesto!4}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{blocks}[rounded]
+\setbeamertemplate{footline}{%
+  \hfill{\small\color{cGris}Marco unitario · Kaplow, caps.~1--3\quad\insertframenumber/\inserttotalframenumber}\hspace*{1em}\vspace*{0.6em}}
+
+% Fuente al pie de cada diapositiva
+\newcommand{\fuente}[1]{\par\vfill{\small\color{cGris}#1\par}}
+% Resultado final de una derivación, resaltado
+\newcommand{\resultado}[1]{\colorbox{cTitulo!12}{$\displaystyle #1$}}
+
+% ---------------------------------------------------------------------------
+% Estilo común de gráficas
+% ---------------------------------------------------------------------------
+\tikzset{
+  every node/.append style={font=\small},
+  eje/.style={-{Stealth[length=2mm]},thick,black!75},
+  flecha/.style={-{Stealth[length=2mm]},thick,cTitulo},
+  guia/.style={thin,dashed,black!45},
+  punto/.style={circle,fill=black,inner sep=1.2pt},
+  caja/.style={draw=cTitulo,rounded corners,fill=cTitulo!5,align=center,inner sep=4pt},
+  cajafisco/.style={draw=cRecauda,rounded corners,fill=cRecauda!10,align=center,inner sep=3pt},
+}
+
+\title{En busca de un marco unitario: Kaplow, capítulos 1 a 3}
+\subtitle{Buscando un marco unitario para el sistema fiscal · Primera sección}
+\author{Héctor Juan Villarreal}
+\institute{Finanzas Públicas · Maestría en Economía Aplicada\\Escuela de Gobierno y Transformación Pública · Tec de Monterrey}
+\date{Octubre de 2026}
+
+\begin{document}
+
+% =========================================================================
+% I. MOTIVACIÓN · 7 min
+% =========================================================================
+\section{Motivación}
+
+% 1 -----------------------------------------------------------------------
+\begin{frame}[plain]
+  \titlepage
+  \note{Lectura: Kaplow (2008), \emph{The Theory of Taxation and Public Economics}, caps. 1--3. Es la lectura más abstracta del curso; hoy la vamos a amarrar con lo que ya vimos.}
+\end{frame}
+
+% 2 -----------------------------------------------------------------------
+\begin{frame}{Una disciplina hecha pedazos}
+  \begin{columns}[T]
+    \begin{column}{0.42\textwidth}
+      \centering
+      \begin{tikzpicture}[node distance=2.2mm]
+        \node[caja,text width=5.3cm] (a) {Impuesto al ingreso · \textbf{Mirrlees}};
+        \node[caja,text width=5.3cm,below=of a] (b) {Impuestos a bienes · \textbf{Ramsey}};
+        \node[caja,text width=5.3cm,below=of b] (c) {Bienes públicos · \textbf{Samuelson}};
+        \node[caja,text width=5.3cm,below=of c] (d) {Externalidades · \textbf{Pigou}};
+        \node[caja,text width=5.3cm,below=of d] (e) {Transferencias · \textbf{reglas propias}};
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.55\textwidth}
+      \begin{itemize}
+        \item Mirrlees (1971) planteó el dilema: redistribuir distorsiona.
+        \item El dilema aparece en casi todo, pero cada literatura lo trata por su lado y pocas lo amarran al impuesto al ingreso.
+      \end{itemize}
+      \pause
+      \begin{block}{Ejemplo}
+        Ramsey supone que no hay impuesto al ingreso. Con uno óptimo y separabilidad débil, Atkinson y Stiglitz llegan a otra cosa: una sola tasa.
+      \end{block}
+      \pause
+      \begin{alertblock}{La pregunta de Kaplow}
+        ¿Qué pasa si se analizan todos juntos?
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \fuente{Kaplow, cap.~1, pp.~1--3.}
+  \note{Kaplow insiste en que muchos estudios miran solo la distribución o solo la distorsión. Como una se cambia por la otra, eso es peligroso (p.~3).}
+\end{frame}
+
+% 3 -----------------------------------------------------------------------
+\begin{frame}{Lo que ya vimos, con otra luz}
+  \centering
+  \begin{tikzpicture}[x=1cm,y=1cm]
+    \node[caja,text width=5.8cm,minimum height=1.5cm] at (-3.3,1.0) {Atkinson-Stiglitz: con buen ISR, basta una tasa\\{\color{cGris}sesión del IVA, diap.~15}};
+    \node[caja,text width=5.8cm,minimum height=1.5cm] at (3.3,1.0) {Cada peso recaudado cuesta $1+\dfrac{\eta}{1-\eta}$\\{\color{cGris}26 de septiembre, diap.~34}};
+    \node[caja,text width=5.8cm,minimum height=1.5cm] at (-3.3,-0.85) {Costo marginal de los fondos públicos\\{\color{cGris}sesión del IVA, diap.~18}};
+    \node[caja,text width=5.8cm,minimum height=1.5cm] at (3.3,-0.85) {Dos paradigmas: recauda con eficiencia\\y redistribuye con el gasto\\{\color{cGris}sesión del IVA, diap.~2}};
+  \end{tikzpicture}
+  \par\bigskip
+  \pause
+  Hoy estas piezas caben en un solo marco. Una de ellas va a chocar con él.
+  \pause
+  \begin{alertblock}{Pregunta para hoy}
+    ¿A cada peso de gasto público hay que cargarle el costo de los fondos?
+  \end{alertblock}
+  \fuente{Elaboración propia.}
+\end{frame}
+
+% =========================================================================
+% II. EL MARCO INTEGRADO · 48 min
+% =========================================================================
+\section{El marco integrado}
+
+% 4 -----------------------------------------------------------------------
+\begin{frame}{Ninguna política está completa sin su financiamiento}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \begin{tikzpicture}[x=0.95cm,y=0.032cm]
+        \foreach \v in {-60,-40,-20,20,40} {\draw[guia] (0,\v) -- (5.8,\v); \node[left] at (0,\v) {\v};}
+        \node[left] at (0,0) {0};
+        \fill[cImpuesto!60] (0.25,0) rectangle (0.8,-20);
+        \fill[cRecauda!60]  (1.0,0) rectangle (1.55,30);
+        \fill[cImpuesto!60] (3.25,0) rectangle (3.8,-60);
+        \fill[cRecauda!60]  (4.0,0) rectangle (4.55,50);
+        \onslide<2->{
+          \fill[cTitulo]    (1.75,0) rectangle (2.3,10);
+          \fill[cTitulo]    (4.75,0) rectangle (5.3,-10);
+          \node[above,color=cTitulo] at (2.025,10) {$+10$};
+          \node[below,color=cTitulo] at (5.025,-10) {$-10$};}
+        \draw[eje] (0,0) -- (6.0,0);
+        \draw[eje] (0,-68) -- (0,62);
+        \node[anchor=south west] at (0,62) {dólares por persona};
+        \node at (1.275,-80) {Ingreso 20 mil};
+        \node at (4.275,-80) {Ingreso 100 mil};
+        \fill[cImpuesto!60] (0.2,-100) rectangle +(0.3,8); \node[right] at (0.5,-96) {gasolina};
+        \fill[cRecauda!60]  (2.2,-100) rectangle +(0.3,8); \node[right] at (2.5,-96) {parques};
+        \onslide<2->{\fill[cTitulo] (4.0,-100) rectangle +(0.3,8); \node[right] at (4.3,-96) {neto};}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Más impuesto a la gasolina: 0.1\,\% del ingreso de unos y 0.06\,\% del de otros. Parece regresivo.
+        \item Mejores parques: valen 30 y 50 dólares. También parece regresivo.
+        \onslide<2->{\item Juntos, el de menos ingreso gana 10 y el de más ingreso pierde 10.}
+      \end{itemize}
+      \onslide<3->{
+      \begin{block}{¿Por qué?}
+        Juzgamos el impuesto contra la proporcionalidad y el gasto contra un beneficio igual en dinero. Son dos varas distintas.
+      \end{block}}
+    \end{column}
+  \end{columns}
+  \fuente{Kaplow, sec.~2.A, pp.~15--17 (fig.~2.1, redibujada con sus números).}
+  \note{Lección de Kaplow: decir que un cambio de impuesto o de gasto «redistribuye» no tiene sentido hasta saber cómo se cierra el presupuesto. Si sube un impuesto, ¿en qué se gasta? Si baja, ¿qué se recorta?}
+\end{frame}
+
+% 5 -----------------------------------------------------------------------
+\begin{frame}{Un impuesto plano puede redistribuir todo o nada}
+  \begin{columns}[T]
+    \begin{column}{0.44\textwidth}
+      \centering
+      \begin{tikzpicture}[scale=1.75]
+        \draw[eje] (0,0) -- (2.3,0) node[below left] {ingreso $y$};
+        \draw[eje] (0,0) -- (0,2.3) node[above right] {ingreso disponible};
+        \draw[guia] (1,0) node[below] {$\bar y$} -- (1,1);
+        \draw[guia] (0,1) node[left] {$\bar y$} -- (1,1);
+        \draw[very thick,cOferta] (0,0) -- (2.1,2.1) node[right] {$t=0$};
+        \onslide<2->{\draw[very thick,cDemanda] (0,0.5) -- (2.1,1.55) node[right] {$t=0.5$};
+        \draw[very thick,cImpuesto] (0,1) -- (2.1,1) node[right] {$t=1$};}
+        \node[punto] at (1,1) {};
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \item Impuesto lineal: todos pagan la tasa $t$ y reciben la misma transferencia $g$. Sin efectos sobre el trabajo, $g = t\,\bar y$.
+        \onslide<2->{\item Con $t=0$ nadie redistribuye. Con $t=1$ todos quedan con el promedio. Las dos son tasas parejas.}
+        \onslide<3->{\item Si lo recaudado paga bienes que valen más a los ricos, el mismo $t$ aumenta la desigualdad.}
+      \end{itemize}
+      \onslide<4->{
+      \begin{alertblock}{Pregunta}
+        Entonces, ¿un IVA a tasa única es regresivo?
+      \end{alertblock}}
+    \end{column}
+  \end{columns}
+  \fuente{Kaplow, sec.~2.A, pp.~17--19 y nota~9. Gráfica propia.}
+  \note{Cuánto redistribuye un impuesto plano depende de cuánto se cobra y en qué se gasta, no de que la tasa sea pareja. Kaplow cita el Informe Económico del Presidente de 1996 como ejemplo de la confusión.}
+\end{frame}
+
+% 6 -----------------------------------------------------------------------
+\begin{frame}{La distorsión que importa es la del trabajo}
+  \begin{itemize}
+    \item Si todos fuéramos iguales, bastaría un impuesto de suma fija: cada quien paga lo mismo y nadie cambia lo que hace.
+    \item Cobramos impuestos que distorsionan porque las personas difieren y queremos que pague más quien gana más. Eso desalienta el trabajo.
+  \end{itemize}
+  \pause
+  \begin{block}{Un ejemplo}
+    Un impuesto al lujo hace que cada peso ganado compre 2\,\% menos. Para quien decide si hace horas extra, es como una tasa marginal más alta. Y además cambia qué compra: deja el yate y se va de viaje.
+  \end{block}
+  \pause
+  \begin{block}{Lectura}
+    Redistribuir con impuestos a bienes cuesta en trabajo lo mismo que hacerlo con el ISR, y encima distorsiona el consumo.
+  \end{block}
+  \fuente{Kaplow, cap.~1, p.~2; sec.~2.B, nota~12 (p.~21). El ejemplo del 2\,\% es de la sec.~6 (p.~123).}
+\end{frame}
+
+% 7 -----------------------------------------------------------------------
+\begin{frame}{Para redistribuir: impuesto al ingreso y transferencias}
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \begin{itemize}
+        \item Para clavar, un martillo. Exentar alimentos del IVA para ayudar a los pobres, sin compararlo con vales, transferencias o ajustes al ISR, es clavar con desarmador.
+        \item Impuesto y transferencias son un solo esquema: el EITC no se evalúa sin los programas sociales.
+        \item No hace falta el ISR como tal: basta un sistema que cobre según la situación de cada quien. Un impuesto personal al consumo serviría.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \pause
+      \begin{block}{Dos paradigmas, otra vez}
+        El viejo decía «recauda con eficiencia y redistribuye con el gasto» (sesión del IVA, diap.~2).\\[3pt]
+        Kaplow da la versión rigurosa, con una corrección: se redistribuye con el impuesto al ingreso y las transferencias. \textbf{No} con el gasto en bienes y servicios.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \fuente{Kaplow, sec.~2.B, pp.~14 y 19--21; notas~2 (p.~15) y~16 (p.~26).}
+  \note{Nota 2: lo que necesita el marco es un sistema personalizado; en los países ricos ese papel lo cumple el impuesto al ingreso con transferencias. Volveremos a esto con México.}
+\end{frame}
+
+% 8 -----------------------------------------------------------------------
+\begin{frame}{Comparar manzanas con manzanas}
+  \begin{itemize}
+    \item Propuesta: un impuesto al lujo; lo recaudado se devuelve bajando el ISR.
+    \item ¿Cómo se baja? Igual monto para todos, igual porcentaje del impuesto, igual baja en la tasa marginal. Cada opción redistribuye distinto.
+  \end{itemize}
+  \pause
+  \begin{itemize}
+    \item Dos analistas con los mismos datos sobre el lujo llegan a conclusiones opuestas. La diferencia está en el ajuste del ISR, que casi nadie revisa.
+  \end{itemize}
+  \pause
+  \begin{block}{La analogía de Kaplow}
+    Nadie compara una camioneta blanca de lujo con un subcompacto rojo y se queda con la camioneta porque odia el rojo. Se comparan coches que difieren en una sola cosa.
+  \end{block}
+  \fuente{Kaplow, sec.~2.C.1, pp.~22--25; p.~14.}
+  \note{Cuando el paquete redistribuye, una política que en sí reduce la distorsión puede aparecer como si la aumentara, y al revés (p.~24).}
+\end{frame}
+
+% 9 -----------------------------------------------------------------------
+\begin{frame}{La reforma distributivamente neutral: la idea}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \centering
+      \begin{tikzpicture}[x=0.56cm,y=0.6cm]
+        \foreach \v in {-3,3} {\draw[guia] (0,\v) -- (9.6,\v);}
+        \node[left] at (0,3) {$+3$\,\%};
+        \node[left] at (0,-3) {$-3$\,\%};
+        \node[left] at (0,0) {$0$};
+        \draw[very thick,cImpuesto] (0,0) -- (3,0) -- plot[domain=3:9,samples=40] (\x,{-3*((\x-3)/6)^2.585});
+        \node[cImpuesto,anchor=north east,align=right] at (8.6,-3.1) {impuesto al lujo};
+        \onslide<2->{
+          \draw[very thick,cOferta,dashed] (0,0) -- (3,0) -- plot[domain=3:9,samples=40] (\x,{3*((\x-3)/6)^2.585});
+          \node[cOferta,anchor=south east,align=right] at (8.6,3.1) {baja del ISR};
+          \node[punto] at (6,-0.5) {}; \node[punto] at (9,-3) {};
+          \node[punto] at (6,0.5) {}; \node[punto] at (9,3) {};}
+        \onslide<3->{\draw[ultra thick,cRecauda] (0,0) -- (9.4,0);
+          \node[cRecauda,anchor=south west] at (0.2,0.15) {neto: cero};}
+        \draw[eje] (0,0) -- (10,0);
+        \node[below] at (1.6,0) {ingreso $\to$};
+        \draw[eje] (0,-3.8) -- (0,3.8) node[above right] {\% del ingreso};
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      Impuesto al lujo de 10\,\%:
+      \par\smallskip
+      \begin{tabular}{@{}lr@{}}
+        \toprule
+        Lujos en el ingreso & Baja del ISR \\
+        \midrule
+        0\,\% & 0 \\
+        5\,\% & 0.5\,\% del ingreso \\
+        30\,\% & 3\,\% del ingreso \\
+        \bottomrule
+      \end{tabular}
+      \par\medskip
+      \onslide<3->{Cada nivel de ingreso queda como antes.}
+      \onslide<4->{
+      \begin{block}{Ojo}
+        El ajuste solo no es neutral: es compensatorio. Neutral es el paquete completo.
+      \end{block}}
+    \end{column}
+  \end{columns}
+  \fuente{Kaplow, sec.~2.C.2, pp.~25--27. Gráfica propia con sus números.}
+  \note{El ajuste depende de la incidencia de cada política: es a la medida. Por eso deja igual, en todas las políticas, lo que más estorba al análisis: la distribución.}
+\end{frame}
+
+% 10 ----------------------------------------------------------------------
+\begin{frame}{El modelo}
+  \begin{itemize}
+    \item Las personas difieren en capacidad $w$, con densidad $f(w)$. Eligen trabajo $l$ y ganan $wl$.
+    \item El gobierno ve $wl$, no $w$ ni $l$. Cobra $T(wl)$ (negativo si transfiere) y $\tau_i$ por cada bien $i$.
+    \item Presupuesto: \quad $\textstyle\sum_i (p_i+\tau_i)\,x_i = wl - T(wl)$
+    \item Utilidad: \quad $u\big(v(x_1,\dots,x_n),\,l\big)$. \ Separabilidad débil: cómo se reparte el gasto entre bienes no depende de cuánto se trabajó.
+    \item $V(\tau,T,wl)$: lo más que se obtiene de $v$ con ingreso $wl$. Es igual para todos los tipos.
+  \end{itemize}
+  \pause
+  \begin{block}{Empate de notación}
+    Salanié escribe $U(wL-T(wL),\,L)$ y $W=\int \Psi(\mathcal U(w))\,dF(w)$: su $L$ es nuestra $l$. Nuestro $\tau_i$ es el $t_i$ de la sesión del IVA.
+  \end{block}
+  \fuente{Kaplow, secs.~4.A (p.~53) y 6.A--6.B (pp.~125--129), fuera de los caps.~1--3; Salanié, sec.~4.2 (p.~83).}
+\end{frame}
+
+% 11 ----------------------------------------------------------------------
+\begin{frame}{La reforma neutral: el resultado}
+  \begin{align*}
+    \onslide<1->{\text{Reforma:}\quad & \tau \;\to\; \tau^* = 0 \qquad \text{(quitar las tasas diferenciadas)}\\}
+    \onslide<2->{\text{Ajuste neutral:}\quad & T^{\circ} \text{ tal que } V(\tau,T,wl) = V(\tau^*,T^{\circ},wl) \text{ para todo } wl\\}
+    \onslide<3->{\text{Para cualquier } l\text{:}\quad & u\big(V(\tau,T,wl),\,l\big) = u\big(V(\tau^*,T^{\circ},wl),\,l\big)\\}
+    \onslide<4->{\text{Entonces:}\quad & \text{cada tipo } w \text{ elige el mismo } l \text{ que antes}}
+  \end{align*}
+  \onslide<5->{
+  \begin{block}{Resultado}
+    La distribución y el trabajo no cambian. Al reacomodar su consumo, la gente gana, y $T^{\circ}$ recauda de más. Si el sobrante se devuelve a todos, hay \textbf{mejora de Pareto}, aunque el ISR de partida no sea óptimo.
+  \end{block}}
+  \fuente{Kaplow, secs.~6.B.1--6.B.2, pp.~127--133, fuera de los caps.~1--3. El cap.~1 (p.~2) enuncia el resultado.}
+  \note{Por qué sobra dinero (p.~132): primero, el ajuste devuelve justo lo que la gente pagaba de impuesto a bienes; eso es neutral en recaudación. Segundo, con precios relativos sin distorsión, la gente reacomoda su consumo y gana; el ajuste que lo compensa recauda más. Tercero, como $\tau^*=0$, el reacomodo no cambia lo recaudado por impuestos a bienes.}
+\end{frame}
+
+% 12 ----------------------------------------------------------------------
+\begin{frame}{Separar no es ignorar la distribución}
+  \centering
+  \begin{tikzpicture}[node distance=4mm and 12mm]
+    \node[caja,text width=2.6cm] (r) {Reforma real};
+    \node[caja,text width=7.4cm,right=of r,yshift=6mm] (p1) {\textbf{Paso 1.} Política con ajuste neutral: solo eficiencia};
+    \node[caja,text width=7.4cm,right=of r,yshift=-6mm] (p2) {\textbf{Paso 2.} Ajuste puramente redistributivo: el mismo análisis para cualquier política};
+    \draw[flecha] (r.east) -- (p1.west);
+    \draw[flecha] (r.east) -- (p2.west);
+  \end{tikzpicture}
+  \par\medskip
+  \raggedright
+  \pause
+  \begin{itemize}
+    \item Cada paso se aprueba o se rechaza por su cuenta. Si el paso~1 conviene, todos los niveles de ingreso tienden a ganar.
+    \item «Cuánto redistribuir» es una pregunta; «cómo hacerlo al menor costo», otra. Si se contesta bien la segunda, se redistribuye más con el mismo costo.
+  \end{itemize}
+  \pause
+  \begin{block}{Lectura}
+    El ajuste neutral crea un mundo hipotético en el que el trabajo está fijo. Ahí valen las reglas de primer óptimo.
+  \end{block}
+  \fuente{Kaplow, sec.~2.C.3, pp.~29--31 y 34; sec.~6.B, p.~135.}
+\end{frame}
+
+% 13 ----------------------------------------------------------------------
+\begin{frame}{Primera consecuencia: impuestos a bienes}
+  \begin{itemize}
+    \item Atkinson-Stiglitz (sesión del IVA, diap.~15) es un caso de reforma neutral. Kaplow lo amplía: el ISR de partida no tiene que ser óptimo.
+    \item Gravar el lujo o exentar alimentos no redistribuye mejor que el ISR. Solo agrega distorsión.
+  \end{itemize}
+  \pause
+  \begin{block}{Sin separabilidad}
+    Conviene gravar relativamente más lo que acompaña al ocio y menos lo que acompaña al trabajo: Corlett-Hague (sesión del IVA, diap.~14). Con la distribución fija, el argumento se ve más claro.
+  \end{block}
+  \pause
+  \begin{block}{Con gustos distintos}
+    A igual ingreso, quien prefiere champaña paga más impuesto al lujo que quien prefiere cerveza. Es otra pregunta de equidad: entre personas con el mismo ingreso.
+  \end{block}
+  \fuente{Kaplow, cap.~1, pp.~2 y 5; sec.~2.C.2, pp.~28--29 y nota~18. Detalle en la sec.~6.C.}
+\end{frame}
+
+% 14 ----------------------------------------------------------------------
+\begin{frame}{Segunda consecuencia: bienes públicos}
+  \begin{itemize}
+    \item Piensen en un parque cuyo beneficio en pesos crece con el ingreso. Se financia con un ajuste del ISR igual al beneficio en cada nivel de ingreso.
+    \item Nadie gana ni pierde por distribución, y nadie cambia cuánto trabaja. Basta la regla de Samuelson: suma de beneficios marginales igual al costo marginal.
+  \end{itemize}
+  \pause
+  \begin{itemize}
+    \item La literatura solía financiar el bien público con un ISR proporcional. Esa redistribución escondida, no el bien público, explicaba buena parte del efecto sobre el trabajo.
+  \end{itemize}
+  \pause
+  \begin{alertblock}{Pregunta}
+    Entonces, ¿el $\eta/(1-\eta)$ de la sesión del 26 de septiembre está mal?
+  \end{alertblock}
+  \fuente{Kaplow, cap.~1, pp.~3 y 6; sec.~2.C.1, p.~25; prueba en las secs.~8.A--8.C, pp.~182--188. Kaplow, L. (1996), «The Optimal Supply of Public Goods and the Distortionary Cost of Taxation», \emph{National Tax Journal} 49: 513--533.}
+  \note{Respuesta: no está mal. $\eta/(1-\eta)$ mide cuánto cuesta recaudar un peso más con un impuesto dado, y ese costo existe porque queremos redistribuir; sin diferencias entre personas usaríamos suma fija (nota 12, p.~21). Lo que Kaplow dice es otra cosa: no hay que cargárselo al bien público si se financia con un ajuste neutral. Con financiamiento proporcional, el bien público viene con redistribución, y lo que mide el costo es esa redistribución. Depende de cómo se financie el gasto.}
+\end{frame}
+
+% 15 ----------------------------------------------------------------------
+\begin{frame}{Tercera consecuencia: regulación y externalidades}
+  \begin{itemize}
+    \item Para las externalidades, la economía tiene varias herramientas: el impuesto de Pigou, la negociación de Coase, los permisos de Dales. Escoge la que conviene a cada caso.
+    \item Kaplow pide lo mismo para redistribuir.
+  \end{itemize}
+  \pause
+  \begin{itemize}
+    \item Con ajuste neutral, el impuesto pigouviano se fija en el daño marginal. No se ajusta aunque la gasolina pese más en el presupuesto de los pobres.
+  \end{itemize}
+  \pause
+  \begin{block}{Doble dividendo (sesión de impuestos verdes, diap.~7)}
+    Muchos estudios encontraron que el impuesto verde agrava la distorsión del trabajo. Kaplow responde que buena parte de ese efecto sale de cómo se devuelve lo recaudado, no del impuesto verde.
+  \end{block}
+  \fuente{Kaplow, cap.~1, p.~3; sec.~2.B, p.~20; sec.~2.C.2, pp.~28--29; sec.~3.A.2, pp.~39--40. La gasolina y el doble dividendo, en la sec.~8.G (pp.~211--214).}
+  \note{Fuera de los caps.~1--3: redistribuir con reglas legales distorsiona dos veces, el trabajo (como el ISR) y la actividad regulada. Kaplow, L. y S. Shavell (1994), «Why the Legal System Is Less Efficient than the Income Tax in Redistributing Income», \emph{Journal of Legal Studies} 23: 667--681; el libro lo cita en la sec.~8.G, nota 41 (p.~213).}
+\end{frame}
+
+% 16 ----------------------------------------------------------------------
+\begin{frame}{Los supuestos que sostienen el marco}
+  \renewcommand{\arraystretch}{1.25}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.6\textwidth}@{}}
+    \toprule
+    \textbf{Supuesto} & \textbf{Si no se cumple} \\
+    \midrule
+    Separabilidad débil entre trabajo y bienes & Es una pregunta empírica. Si falla, conviene diferenciar algo (Corlett-Hague). \\
+    Mismos gustos a igual ingreso & Aparece la equidad entre personas con el mismo ingreso. \\
+    El ajuste compensatorio sí se hace & Kaplow ve un equilibrio político de redistribución (EE.\,UU., 1986). Él mismo lo llama «crudo». \\
+    Capacidad administrativa & La administración y la política obligan a desviarse del ideal. \\
+    \bottomrule
+  \end{tabular}
+  \par\medskip
+  \pause
+  Kaplow deja fuera, a propósito, la macroeconomía y la política.
+  \fuente{Kaplow, cap.~1, pp.~2 y 4; sec.~2.B, p.~21; sec.~2.C.2, p.~28; sec.~2.C.3, pp.~31--33. Discusión completa en la sec.~6.C.}
+\end{frame}
+
+% 17 ----------------------------------------------------------------------
+\begin{frame}{¿Y en México?}
+  El marco supone un ISR con transferencias que llega a todos. Aquí la informalidad es alta, el ISR de personas físicas recauda poco y los padrones están incompletos.
+  \pause
+  \begin{block}{Kaplow lo reconoce}
+    Donde no hay un esquema de impuesto al ingreso y transferencias, como en muchos países en desarrollo, el análisis se complica. Si el gobierno solo puede gravar unos cuantos bienes, gravar más el lujo sí puede redistribuir.
+  \end{block}
+  \pause
+  \begin{block}{Lo que ya vimos}
+    FMI: con instrumentos débiles para redistribuir, el caso para diferenciar tasas es más fuerte. Barreix: un IVA personalizado (sesión del IVA, diaps.~15, 19 y~21).
+  \end{block}
+  \pause
+  \begin{alertblock}{Pregunta}
+    Si el instrumento redistributivo es débil, ¿qué queda del marco de Kaplow?
+  \end{alertblock}
+  \fuente{Kaplow, sec.~2.C.3, nota~24 (p.~31); nota~2 (p.~15).}
+\end{frame}
+
+% =========================================================================
+% III. EL OBJETIVO SOCIAL · 27 min
+% =========================================================================
+\section{El objetivo social}
+
+% 18 ----------------------------------------------------------------------
+\begin{frame}{Las listas de criterios no deciden nada}
+  \begin{itemize}
+    \item Los manuales enumeran objetivos: eficiencia, equidad horizontal y vertical, suficiencia, sencillez, facilidad de administración.
+    \item No traen un denominador común ni una regla para sumarlos.
+  \end{itemize}
+  \pause
+  \begin{block}{Ejemplo}
+    Un impuesto plano que recauda lo mismo que el ISR, con exención más alta: ganan los casi pobres y los ricos, pierde la clase media. ¿Mejora o empeora? La lista no lo dice.
+  \end{block}
+  \pause
+  \begin{itemize}
+    \item «Capacidad de pago» no dice cuánto. El principio del beneficio y las teorías del sacrificio pierden sentido si además hay impuestos que redistribuyen.
+    \item Para Kaplow, estos criterios aproximan el bienestar; no son el objetivo.
+  \end{itemize}
+  \fuente{Kaplow, sec.~3.A, pp.~36--39.}
+\end{frame}
+
+% 19 ----------------------------------------------------------------------
+\begin{frame}{Bienestarismo: solo cuenta el bienestar de las personas}
+  Dos pasos: medir cómo afecta la política el bienestar de cada persona, y sumar.
+  \[
+    SW(x) = \int W\big(u_i(x)\big)\, f(i)\, di
+  \]
+  \begin{itemize}
+    \item $x$: el estado social completo. $u_i$: el bienestar de una persona de tipo $i$. $f(i)$: cuántas hay. $W$: cuánto pesa cada nivel de bienestar.
+    \item Con $n$ personas: $SW(x) = \sum_i W\big(u_i(x)\big)$.
+  \end{itemize}
+  \pause
+  \begin{itemize}
+    \item La equidad cuenta solo si habla de cómo se reparte el bienestar, o si sirve para aproximarlo.
+  \end{itemize}
+  \pause
+  \begin{block}{Lectura}
+    Mirrlees juntó el análisis positivo y el normativo en el impuesto al ingreso. Kaplow quiere hacer lo mismo en todos los temas.
+  \end{block}
+  \fuente{Kaplow, sec.~3.B.1, pp.~41--42 (ec.~3.1 y nota~5); sec.~3.A.2, p.~40.}
+\end{frame}
+
+% 20 ----------------------------------------------------------------------
+\begin{frame}{Dos razones distintas para redistribuir}
+  \begin{columns}[T]
+    \begin{column}{0.38\textwidth}
+      \centering
+      \begin{tikzpicture}[scale=0.78]
+        \draw[eje] (0,0) -- (5,0) node[below left] {$u_1$};
+        \draw[eje] (0,0) -- (0,5) node[above right] {$u_2$};
+        \draw[very thick,cOferta] (0.3,3.7) -- (3.7,0.3);
+        \node[cOferta,right] at (3.7,0.5) {$e=0$};
+        \onslide<2->{
+          \draw[very thick,cDemanda] plot[domain=1.28:4.6,samples=50] (\x,{\x/(\x-1)});
+          \node[cDemanda,right] at (4.6,1.25) {$e=2$};
+          \draw[very thick,cImpuesto] (2,4.6) -- (2,2) -- (4.6,2);
+          \node[cImpuesto,right] at (4.6,2.1) {$e\to\infty$};}
+        \node[punto] at (2,2) {};
+        \draw[guia] (0,0) -- (4.5,4.5);
+      \end{tikzpicture}
+      \par{\small Curvas de nivel de $SW$}
+    \end{column}
+    \begin{column}{0.6\textwidth}
+      \begin{itemize}
+        \item $\rho$: qué tan rápido cae la utilidad marginal del consumo, en $u(c)=c^{1-\rho}/(1-\rho)$. Es un hecho sobre las personas.
+        \onslide<2->{\item $e$: cuánto le disgusta a la sociedad la desigualdad en utilidades, en $SW=\int u_i^{1-e}/(1-e)\,f(i)\,di$. Es un juicio normativo: $e=0$ es utilitarismo; $e\to\infty$, Rawls.}
+        \onslide<3->{\item En la práctica se usa un solo $\gamma$ que mezcla los dos.}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{Kaplow, sec.~3.B.1, pp.~42--44 (ecs.~3.2--3.4 y nota~10). Gráfica propia.}
+  \note{Con $\gamma$: $SW=\int c_i^{1-\gamma}/(1-\gamma)\,f(i)\,di$ (ec.~3.4). Nota 10: cuanto más rápido cae la utilidad marginal, menos importa $e$, porque las utilidades se parecen aunque los consumos difieran mucho. Por eso la forma de $W$ pesa más en la parte baja de la distribución.}
+\end{frame}
+
+% 21 ----------------------------------------------------------------------
+\begin{frame}{De Rawls al utilitarismo, y el principio de Pareto}
+  \centering
+  \begin{tikzpicture}[x=1cm,y=1cm]
+    \draw[thick,black!60] (0,0) -- (12,0);
+    \foreach \x/\l/\d in {0.5/E/Igualdad total,3.5/R/Rawls,6.5/U/Utilitarismo,9/L/Libertarismo,11.5/X/Concentración} {
+      \node[punto] at (\x,0) {};
+      \node[above] at (\x,0.1) {\textbf{\l}};
+      \node[below,text width=2.2cm,align=center] at (\x,-0.1) {\d};}
+    \draw[decorate,decoration={brace,amplitude=5pt,mirror},thick,cTitulo] (3.5,-0.75) -- (6.5,-0.75)
+      node[midway,below=6pt,color=cTitulo] {$SW$ con $e\ge 0$};
+  \end{tikzpicture}
+  \par\smallskip\raggedright
+  \begin{itemize}
+    \item \textbf{Principio de Pareto}: si un cambio mejora a todos, la sociedad lo prefiere.
+    \item A la izquierda de Rawls, la igualdad pide empeorar a todos: Pareto la descarta. Aun Rawls es extremo: hundiría a todos para mejorar un poco al más pobre.
+    \pause
+    \item Kaplow y Shavell: todo criterio que no es de bienestar viola el principio de Pareto en algún caso.
+  \end{itemize}
+  \pause
+  \begin{alertblock}{Pregunta}
+    ¿Qué criterio defenderían aunque costara bienestar a todos?
+  \end{alertblock}
+  \fuente{Kaplow, sec.~3.B.2, p.~45; cap.~1, p.~9; prueba en la sec.~13.A.2 (pp.~350--351). Kaplow, L. y S. Shavell (2001), «Any Non-welfarist Method of Policy Assessment Violates the Pareto Principle», \emph{Journal of Political Economy} 109: 281--286.}
+  \note{El argumento (sec.~13.A.2): si un criterio no es de bienestar, hay dos estados $x$ y $x'$ con el mismo bienestar para todos que el criterio ordena distinto, digamos $x$ mejor que $x'$. Se le da a todos un poquito más de un bien en $x'$: todos están mejor que en $x$, pero por continuidad el criterio sigue prefiriendo $x$. Viola Pareto.}
+\end{frame}
+
+% 22 ----------------------------------------------------------------------
+\begin{frame}{El utilitarismo tolera mucha pérdida al redistribuir}
+  \begin{columns}[T]
+    \begin{column}{0.44\textwidth}
+      \centering
+      Utilidad marginal de un peso,\\relativa a la de un millonario
+      \par\medskip
+      \begin{tabular}{@{}rrr@{}}
+        \toprule
+        Consumo & $\rho=1$ & $\rho=2$ \\
+        \midrule
+        10 mil & 100 & 10\,000 \\
+        100 mil & 10 & 100 \\
+        1 millón & 1 & 1 \\
+        \bottomrule
+      \end{tabular}
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \item Con $u=\ln c$, un peso vale $1/c$.
+        \item Si de cada 10 pesos que se le quitan al de 100 mil solo le llegaran 1.01 al de 10 mil, la suma de utilidades sube.
+        \pause
+        \item Kaplow cita estimaciones de que la subida de tasas de 1993 en EE.\,UU. costó a los contribuyentes de altos ingresos 2 dólares por dólar recaudado. Para un utilitarista eso no basta para rechazarla.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \pause
+  \begin{block}{Amarre con la carga excesiva}
+    Con $\eta=0.2$, cada peso cuesta 1.25 (26 de septiembre, diap.~34). Saber cuánto cuesta no basta: hay que saber cuánto vale el peso para quien lo recibe.
+  \end{block}
+  \fuente{Kaplow, sec.~3.B.2, pp.~46--48 y nota~15 (Feldstein y Feenberg, 1996, citados por Kaplow).}
+\end{frame}
+
+% 23 ----------------------------------------------------------------------
+\begin{frame}{¿Importa qué función se elija?}
+  \begin{block}{Casi nunca en lo cualitativo}
+    Con reformas neutrales no importa en absoluto. Es como el análisis costo-efectividad: dice cómo salvar más vidas con un presupuesto sin ponerle precio a la vida.
+  \end{block}
+  \pause
+  \begin{block}{A veces en la magnitud}
+    Más aversión a la desigualdad, más redistribución.
+  \end{block}
+  \pause
+  \begin{block}{Rara vez en la dirección}
+    Cuando quien tiene más bienestar también tiene más utilidad marginal. Los padres con hijos sanos: tienen más bienestar porque quisieron tenerlos, y más utilidad marginal porque reparten entre más. Con $W$ lineal se les transfiere; con $W$ muy cóncava, se les quita.
+  \end{block}
+  \fuente{Kaplow, sec.~3.B.3, pp.~48--50.}
+\end{frame}
+
+% 24 ----------------------------------------------------------------------
+\begin{frame}{Lo que cambia en la práctica}
+  \begin{itemize}
+    \item \textbf{Tablas distributivas de una reforma.} Si no dicen cómo se financia, no dicen nada. Recuerden la gasolina y los parques.
+    \pause
+    \item \textbf{Estimaciones de carga excesiva.} Engañan cuando las políticas comparadas redistribuyen distinto. Dos políticas ambientales limpian igual el aire: la que usa más ISR distorsiona más, pero también redistribuye más, y eso no se cuenta.
+    \pause
+    \item \textbf{Ponderadores distributivos en costo-beneficio.} Con financiamiento neutral sobran: la distribución se decide en el ISR y las transferencias.
+    \pause
+    \item \textbf{El costo de los fondos.} Depende de cómo se financie el gasto.
+  \end{itemize}
+  \fuente{Kaplow, sec.~2.A, pp.~16--17; sec.~2.C.1, p.~25; sec.~3.A.2, pp.~39--40. Los ponderadores, en el cap.~8 (p.~180).}
+\end{frame}
+
+% =========================================================================
+% IV. CIERRE · 8 min
+% =========================================================================
+\section{Cierre}
+
+% 25 ----------------------------------------------------------------------
+\begin{frame}{Tres ideas para llevarse}
+  \begin{enumerate}
+    \item Una política no se juzga sin su financiamiento.
+    \pause
+    \item La reforma neutral separa eficiencia y distribución sin borrar la distribución. La distribución se decide en el impuesto al ingreso y las transferencias.
+    \pause
+    \item El objetivo social es el bienestar de las personas. Los demás criterios lo aproximan.
+  \end{enumerate}
+  \fuente{Kaplow, caps.~1--3.}
+\end{frame}
+
+% 26 ----------------------------------------------------------------------
+\begin{frame}{Las críticas, en su versión más fuerte}
+  \begin{itemize}
+    \item \textbf{Economía política.} El ajuste compensatorio rara vez ocurre: el paquete neutral lo arma el analista, y el Congreso aprueba otra cosa. Kaplow admite que su diagnóstico político es «demasiado optimista».
+    \pause
+    \item \textbf{Separabilidad.} Es una pregunta empírica. Si falla, las reglas dejan de ser tan limpias.
+    \pause
+    \item \textbf{Países de ingreso medio.} Sin ISR ni transferencias que lleguen a todos, falta el instrumento central.
+    \pause
+    \item \textbf{Más allá del bienestar.} Capacidades, derechos, contrato social (Shafik, lectura del 22 de septiembre). Kaplow responde que violan Pareto; sus críticos, que el bienestar no lo es todo.
+  \end{itemize}
+  \pause
+  \begin{alertblock}{Pregunta}
+    ¿Cuál de estas críticas pesa más en México?
+  \end{alertblock}
+  \fuente{Kaplow, sec.~2.C.3, pp.~31--33 y nota~24 (p.~31). Su respuesta a Sen y a Rawls, en la sec.~13.B.4.}
+\end{frame}
+
+% 27 ----------------------------------------------------------------------
+\begin{frame}{Puente}
+  \begin{block}{A la segunda sección de hoy: digitalización}
+    En Mirrlees la restricción es de información: el gobierno ve el ingreso, no la capacidad. La factura electrónica, el cobro fraccionado del IVA y las devoluciones focalizadas amplían los instrumentos personalizados que Kaplow da por hechos.
+  \end{block}
+  \pause
+  \begin{block}{Al 3 de noviembre: cuentas nacionales de transferencia}
+    Kaplow es estático. Las cuentas nacionales de transferencia agregan la edad y el ciclo de vida: quién sostiene a quién a lo largo de la vida.
+  \end{block}
+  \fuente{Elaboración propia; Kaplow, nota~2 (p.~15).}
+\end{frame}
+
+\end{document}
