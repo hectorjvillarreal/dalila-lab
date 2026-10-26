@@ -57,4 +57,5 @@ Does the Hicksian critique of factor income propagate to the equilibrium structu
 - → Fiscal dominance Paper 2 plan
 - → IM-6 architecture notes (Cath, Anne)
 - → **TO ACQUIRE:** Fagereng et al. (2024) "Asset-Price Redistribution"
+- ← Related downstream note (Aurora, 2026-10-25): `GrandPlan/Aurora/capital/20261025_AURORA_SFTM-MEX-inference_v1.md`, §3.1. A host country ends up holding the long-lived, low-return slice of the machine stock (power plants, ~20 yr, public balance sheet), while the short-lived slice (compute, ~6 yr) is foreign-owned. That is a concrete case of capital vintages with their own depreciation.
 - → Build instruction: `_crossrefs/_build_instructions/2026-04-28_inequality_corpus_initial.md`

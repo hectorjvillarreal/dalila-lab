@@ -55,6 +55,7 @@ replicate series (Q2 baseline, Q3) is endorsed by Anne and Cath.
 - → Governing skill: `_crossrefs/_skills/dfd-demographics-monitor/SKILL.md`
 - → Initial scaffold build instruction: `_crossrefs/_build_instructions/2026-05-16_demographics_corpus_initial.md`
 - → Parallel cross-cutting corpus: `_crossrefs/corpus/inequality/README.md`
+- ← Downstream use (Aurora, 2026-10-25): `GrandPlan/Aurora/capital/20261025_AURORA_SFTM-MEX-inference_v1.md` draws on *Terra Incognita* and the EIC 2025 release; listed in `GrandPlan/Aurora/docs/corpus/_cross_references.md`
 
 ## Cross-project register
 

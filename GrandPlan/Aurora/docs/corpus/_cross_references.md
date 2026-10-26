@@ -18,3 +18,10 @@ demographics corpus).
 
 No standing cross-references at scaffold creation. Add as Four Pillars
 analysis surfaces inequality-channel connections.
+
+## Aurora notes that draw on shared corpora
+
+Reverse pointers, added by the SFTM-MEX hygiene closeout (Debb, 2026-10-25): Aurora notes that use
+entries in the shared corpora, so the link runs both ways.
+
+- 2026-10-25 — [Saving for the Machines — México inference note (SFTM-MEX-inference-v1)](../../capital/20261025_AURORA_SFTM-MEX-inference_v1.md) — uses the demographics corpus (Fernández-Villaverde & Norrick, *Terra Incognita*: the 1.62% labour-productivity target; EIC 2025 TFR 1.23) and relates to the inequality watch item `automated_life_for_capital` (capital vintages); endorsement partial (Elle §2, §3.1)

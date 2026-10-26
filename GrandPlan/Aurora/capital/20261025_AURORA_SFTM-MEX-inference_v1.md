@@ -10,16 +10,16 @@ venue: "Working paper, University of Pennsylvania; first draft dated 2026-10-20 
 doi: "none yet; PDF held locally at GrandPlan/Aurora/capital/Saving_Machines.pdf"
 date_added: 2026-10-25
 added_by: Claude          # drafted in the Elle / Cath / Nina / Anne lenses of the build instruction
-endorsed_by: Elle         # partial, per section; see endorsement_record
+endorsed_by: []           # roll-up: only agents who have cleared ALL their owned sections (Elle holds §1); per-section truth in endorsement_record
 endorsement_record:
-  - {section: "§2 What the paper says", by: Elle, date: 2026-10-25, status: endorsed, note: "internal checks hold (ρ, γ, g → r* = 5.1%; wage-premium reciprocity; yield ordering); §8.3-derived figures ride on Cath's §3.2 check"}
-  - {section: "§3.1 Participant/bystander, energy capital", by: Elle, date: 2026-10-25, status: endorsed}
-  - {section: "§1 Synthesis", by: Elle, date: 2026-10-25, status: held, note: "option (b): endorse once Cath, Nina and Anne return and the comment-3 flags clear; keep '2097 likely late, size unknown' aligned with Anne's §3.4 ruling"}
+  - {section: "§2 What the paper says", by: Elle, date: 2026-10-25, status: endorsed, record: "GrandPlan/Aurora/capital/20261025_AURORA_SFTM-MEX_elle-review-record_v1.md", note: "internal checks hold (ρ, γ, g → r* = 5.1%; wage-premium reciprocity; yield ordering); §8.3-derived figures ride on Cath's §3.2 check"}
+  - {section: "§3.1 Participant/bystander, energy capital", by: Elle, date: 2026-10-25, status: endorsed, record: "GrandPlan/Aurora/capital/20261025_AURORA_SFTM-MEX_elle-review-record_v1.md"}
+  - {section: "§1 Synthesis", by: Elle, date: 2026-10-25, status: held, record: "GrandPlan/Aurora/capital/20261025_AURORA_SFTM-MEX_elle-review-record_v1.md", note: "option (b): endorse once Cath, Nina and Anne return and the comment-3 flags clear; keep '2097 likely late, size unknown' aligned with Anne's §3.4 ruling"}
   - {section: "§3.2 Fiscal structure", by: Cath, status: pending}
   - {section: "§3.3 Macro-financial transmission", by: Nina, status: pending}
   - {section: "§3.4 Demographic realism", by: Anne, status: pending}
 # Elle accepted the BKY correction (2097 = BKY's 2024 vintage, not 2017) on 2026-10-25.
-# Source: Elle's doc comment of 2026-10-25 (Claude Doc XxVSKpppC35Z8N8A6sFkiU).
+# Source: Elle's doc comments of 2026-10-25, archived verbatim in the review record above.
 build_instruction: "20261025_BUILD-AURORA_saving-for-the-machines_mexico_v1.1.md"
 ---
 
@@ -575,6 +575,9 @@ Other works cited in the inferences, with full references in the cited corpus en
 - → Source PDF: `GrandPlan/Aurora/capital/Saving_Machines.pdf` (kept untracked: unpublished draft)
 - → Claude Doc rendering of this note (private until shared): https://claude.ai/artifact/XxVSKpppC35Z8N8A6sFkiU
 - → Ingestion record: `GrandPlan/Aurora/capital/_ingestion/`
+- → Elle's review record (verbatim comments and endorsement ruling): `GrandPlan/Aurora/capital/20261025_AURORA_SFTM-MEX_elle-review-record_v1.md`
+- → `_crossrefs/corpus/inequality/watch_items/automated_life_for_capital.md`: capital cohorts with vintages and depreciation. §3.1's split (compute ~6 yr, foreign-owned; power plants ~20 yr, public) is a concrete case of capital having its own life cycle.
+- ← Back-pointers: `GrandPlan/Aurora/docs/corpus/_cross_references.md`, `_crossrefs/corpus/demographics/README.md`, and the inequality watch item above.
 - → `GrandPlan/DFD/docs/corpus/auclert_et_al_2025_rag.md`: asset race, reverse crowding-out,
   México structural gaps.
 - → `GrandPlan/DFD/aging_macro_nber_2609/2026-09-17_global-transition-demographics-ai.md`:
