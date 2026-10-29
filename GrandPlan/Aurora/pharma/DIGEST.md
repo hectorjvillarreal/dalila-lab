@@ -1,24 +1,24 @@
-PHARMA INSTANCE — state as of 2026-10-15 12:18
+PHARMA INSTANCE — state as of 2026-10-28 21:34
 
-items awaiting promote flag .......... 17
-oldest unflagged item ................ 6 days
-cycles since last promote flag ....... 1
+items awaiting promote flag .......... 28
+oldest unflagged item ................ 19 days
+cycles since last promote flag ....... 2
 feed calibration ..................... active
 provisional queries pending .......... 3
 roster size .......................... 20
-panel last refreshed ................. 12 days ago
+panel last refreshed ................. 25 days ago
 
 ---
 
-## Feed — latest cycle report (verbatim: feed/_reports/20261015_1218_cycle.md)
+## Feed — latest cycle report (verbatim: feed/_reports/20261028_2134_cycle.md)
 
-# Feed cycle report — cycle 11
+# Feed cycle report — cycle 12
 
-Machine-authored by harness.py, 2026-10-15 12:18. No judgment in this file; all figures are counts.
+Machine-authored by harness.py, 2026-10-28 21:34. No judgment in this file; all figures are counts.
 
-- items retrieved this cycle: 6 (exploration: 1, main: 4, provisional: 1)
+- items retrieved this cycle: 11 (exploration: 1, main: 10)
 - duplicates discarded: 0
-- items awaiting promote flag (total): 17
+- items awaiting promote flag (total): 28
 - promotes recorded since last cycle: 0
 - queries retired: none
 - provisional queries added: none
@@ -26,15 +26,26 @@ Machine-authored by harness.py, 2026-10-15 12:18. No judgment in this file; all 
 - source weight changes: none
 - entity counts moved: none
 - cadence: 36h (unchanged)
-- next cycle due: 2026-10-17 00:18
+- next cycle due: 2026-10-30 09:34
 - calibration: active
 
 ## Noticed, not handled
 
 - rules.md (human-owned) does not exist; harness ran on seeds.md alone
 
-### Unflagged items (17 awaiting promote flag)
+### Unflagged items (28 awaiting promote flag)
 
+- "Mbah Inaugurates Multi-Billion-Naira Pharmaceutical Firm, Pledges Support For Investors In Enugu" — private NAFDAC-cleared plant commissioned (ceremony Thursday, likely 10-22) with a state offtake signal to central medical stores — single source, no capacity or product figures — 2026-10-28 — https://www.arise.tv/mbah-inaugurates-multi-billion-naira-pharmaceutical-firm-pledges-support-for-investors-in-enugu/ — [exploration] — 20261028-0011
+- "ESTEVE CDMO strengthens its global manufacturing footprint with a major investment and new site in China" — more than $80M Shaoxing site (250 m³ reaction volume, 150+ m³ reserved) — same CDMO that added US capacity 10-05 (cycle 10) now expands in China; dual-footprint hedge — 2026-10-28 — https://www.morningstar.com/news/pr-newswire/20261021ln70738/esteve-cdmo-strengthens-its-global-manufacturing-footprint-with-a-major-investment-and-new-site-in-china — [main] — 20261028-0010
+- "Pfizer, sindacati: confermati 330 esuberi e chiusura reparto penicilline a Catania" — 330 of 550 Catania jobs cut and the penicillin unit closed despite the ministry's request for a 12-month extension — European beta-lactam capacity leaving; next MIMIT table 11-10 — 2026-10-28 — https://www.borsaitaliana.it/borsa/notizie/teleborsa/economia/pfizer-sindacati-confermati-330-esuberi-e-chiusura-reparto-penicilline-a-catania-143_2026-10-07_TLB.html — [main] — 20261028-0009
+- "Geron Corporation Provides Update on Phase 3 IMpactMF Clinical Trial of Imetelstat in Relapsed/Refractory Myelofibrosis" — DMC stopped the trial as unlikely to meet OS — the second indication for Geron's only marketed drug (Rytelo, LR-MDS) is gone — 2026-10-28 — https://www.sec.gov/Archives/edgar/data/886744/000119312526436272/d43013dex991.htm — [main] — 20261028-0008
+- "ArriVent Announces Program Update from the Phase 3 FURVENT Trial of Firmonertinib in First-Line EGFR Exon 20 Insertion Mutant NSCLC" — missed BICR PFS (240 mg HR 0.75, p=0.0654) — a China-originated asset in-licensed for ex-China fails its registrational trial — 2026-10-28 — https://www.sec.gov/Archives/edgar/data/1868279/000110465926113898/tm2627092d1_ex99-1.htm — [main] — 20261028-0007
+- "China Proposes Biotech Export Restrictions: Implications for Licensees and Acquirers" — MOFCOM/MOST Announcement No. 48 (10-16) would bar outbound transfer of CGT and siRNA platform ownership while exempting ownership-retaining product licences; comments to 11-15 — 2026-10-28 — https://www.morganlewis.com/pubs/2026/10/china-proposes-biotech-export-restrictions-implications-for-licensees-and-acquirers — [main] — 20261028-0006
+- "Roche Partners With China's Hansoh in Deal That Could Top $15 Billion" — second Roche–Hansoh ADC pact in a year — $400M upfront + $110M at year one, ex-China rights to platform-built ADCs (product licence, not platform transfer) — 2026-10-28 — https://www.morningstar.com/news/dow-jones/202610192875/roche-partners-with-chinas-hansoh-in-deal-that-could-top-15-billion — [main] — 20261028-0005
+- "Germany's Merck buys Silence Therapeutics in $1.3 billion RNA drug deal" — $20/ADS (130% premium), UK scheme of arrangement closing Q1 2027 — buys an siRNA platform three days after China proposed barring siRNA-platform exports — 2026-10-28 — https://www.ksl.com/article/51638103/germanys-merck-buys-silence-therapeutics-for-13-billion — [main] — 20261028-0004
+- "Viatris Acquires Pacira BioSciences for $1.65 Billion" — $36.50/share tender, close by year-end — a generics-heavy firm buying branded non-opioid pain revenue — 2026-10-28 — https://www.pharmexec.com/view/viatris-acquires-pacira-biosciences-1-65-billion — [main] — 20261028-0003
+- "Shionogi pays $2B to acquire a rare disease startup" — all-cash $2B for a commercial-stage single-asset company (Aqneursa, NPC; A-T label added 09-18) — Japanese mid-cap buying US rare-disease revenue — 2026-10-28 — https://www.biopharmadive.com/news/shionogi-pays-2b-to-acquire-a-rare-disease-startup/832103/ — [main] — 20261028-0002
+- "Zydus and Formycon: FYB206 Becomes First Publicly Announced Keytruda® Biosimilar Accepted for Review by USFDA" — first Keytruda biosimilar BLA acceptance, five weeks after the 09-04 exclusivity expiry — filed without a comparative phase 3; BsUFA decision ~Q3 2027 — 2026-10-28 — https://nsearchives.nseindia.com/corporate/Cadilahc_13102026094541_PressRelease13102026.pdf — [main] — 20261028-0001
 - "Postapproval Manufacturing Changes to Biosimilar and Interchangeable Biosimilar Products: Questions and Answers" — final guidance on manufacturing changes after biosimilar licensure — the regulatory lane closest to licence/site transfer for biologics — 2026-10-15 — https://www.fda.gov/regulatory-information/search-fda-guidance-documents/postapproval-manufacturing-changes-biosimilar-and-interchangeable-biosimilar-products-questions-and — [exploration] — 20261015-0006
 - "FDA approves lirafugratinib for previously treated, unresectable, locally advanced or metastatic cholangiocarcinoma" — second FGFR2 cholangiocarcinoma approval in weeks (after China's tinengotinib) — missed by cycle 10's q023 sweep — 2026-10-15 — https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-lirafugratinib-previously-treated-unresectable-locally-advanced-or-metastatic — [provisional] — 20261015-0005
 - "Bayer to invest 2.2 billion U.S. dollars in a new manufacturing site in the United States" — New Albany OH campus, ~600 jobs, drug substance 2031 / drug product 2034 — announced three days after the Section 232 100% tariff reached all firms (09-29) — 2026-10-15 — https://www.bayer.com/media/en-us/bayer-to-invest-2-billion-us-dollars-in-a-new-manufacturing-site-in-the-united-states/ — [main] — 20261015-0004

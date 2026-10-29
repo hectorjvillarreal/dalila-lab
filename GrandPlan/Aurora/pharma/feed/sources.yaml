@@ -99,7 +99,7 @@ ashp.org:
   rejected: 2
   weight: 0.76
 pharmexec.com:
-  surfaced: 5
+  surfaced: 6
   promoted: 1
   rejected: 4
   weight: 0.86
@@ -139,7 +139,7 @@ investor.elanco.com:
   rejected: 1
   weight: 1.0
 sec.gov:
-  surfaced: 5
+  surfaced: 7
   promoted: 0
   rejected: 5
   weight: 0.43
@@ -189,7 +189,7 @@ theinsurer.com:
   rejected: 1
   weight: 1.0
 biopharmadive.com:
-  surfaced: 2
+  surfaced: 3
   promoted: 0
   rejected: 2
   weight: 0.76
@@ -394,6 +394,36 @@ stockhouse.com:
   rejected: 0
   weight: 1.0
 bayer.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+nseindia.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+ksl.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+morningstar.com:
+  surfaced: 2
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+morganlewis.com:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+borsaitaliana.it:
+  surfaced: 1
+  promoted: 0
+  rejected: 0
+  weight: 1.0
+arise.tv:
   surfaced: 1
   promoted: 0
   rejected: 0
