@@ -1,0 +1,239 @@
+{
+ "doc_id": "08",
+ "episode": 1,
+ "label": "Gradual increase in employer contribution rates (2021-2023)",
+ "summary": "EPISODE: Gradual increase in employer contribution rates (2021-2023)\nfield name | value | \"verbatim quote\" | where in the text\n--- | --- | --- | ---\n1. Country Name | Mexico | \"Estados Unidos Mexicanos\" | Top of text\n2. Year of the article | 2020 | \"DOF: 16/12/2020\" | Top of text\n3. Status of Pension Reform | Legislated, Implemented | \"DECRETO... SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES\" | Top of text\n4. legislation_date | 12-2020 | \"DOF: 16/12/2020\" | Top of text\n5. Planned_date | 01-2021 | \"El presente Decreto entrará en vigor el 1 de enero de 2021\" | Transitorios Primero\n6. announcement_date | 12-2020 | \"Ciudad de México, a 9 de diciembre de 2020\" | End of text\n7. implementation_date | 01-2021 | \"El presente Decreto entrará en vigor el 1 de enero de 2021\" | Transitorios Primero\n8. reversal_date | | |\n9. Pension Reform Types | funding mechanisms | \"La cuota patronal prevista en el artículo 168, fracción II, inciso a), de la Ley del Seguro Social será aplicable de manera gradual\" | Transitorios Segundo\n10. indexation_change | | |\n11. coverage_change | | |\n12. benefit_change | | |\n13. Social_insurance_change | Yes | \"Artículo 168... Los patrones cubrirán la cuota que corresponda sobre el salario base de cotización\" | Artículo 168\n14. Reform_category | Parametric reform | \"SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES\" | Top of text\n15. reform_coverage | Broad-based reform | \"Los patrones cubrirán la cuota que corresponda sobre el salario base de cotización\" | Artículo 168\n16. reason_reform | Fiscal reasons | \"El Gobierno Federal... aportará mensualmente una cantidad por concepto de la cuota social\" | Artículo 168\n17. relevancetopr_score | 9.0 | \"La cuota patronal prevista en el artículo 168, fracción II, inciso a), de la Ley del Seguro Social será aplicable de manera gradual\" | Transitorios Segundo\n18. retirement_age_change | | |\n19. Retirement_age_change_details | | |\n20. Retirement_age_pre_reform_female | | |\n21. Retirement_age_after_reform_female | | |\n22. Retirement_age_pre_reform_male | | |\n23. Retirement_age_after_reform_male | | |\n24. Contribution_rate_change | contribution rate increased | \"Los patrones seguirán cubriendo, para los ramos de cesantía en edad avanzada y vejez, una cuota del tres punto ciento cincuenta por ciento... Del 1 de enero de 2021 al 31 de diciembre de 2022\" | Transitorios Segundo\n25. Old Employer Contribution Rate | 3.15% | \"Los patrones seguirán cubriendo... una cuota del tres punto ciento cincuenta por ciento\" | Transitorios Segundo\n26. New Employer Contribution Rate | 4.202% | \"1.01 SM a 1.50 UMA... 4.202%\" | Artículo 168\n27. Old Employee Contribution Rate | 1.125% | \"Los trabajadores cubrirán una cuota del uno punto ciento veinticinco por ciento\" | Artículo 168\n28. New Employee Contribution Rate | 1.125% | \"Los trabajadores cubrirán una cuota del uno punto ciento veinticinco por ciento\" | Artículo 168\n29. Old Contribution Rate (Employee and Employer Combined) | 4.275% | \"3.15% + 1.125%\" | Inferred from rates\n30. New Contribution Rate (Employee and Employer Combined) | 5.327% | \"4.202% + 1.125%\" | Inferred from rates\n31. Is the legislated pension reform minor or major | Minor | \"La cuota patronal prevista en el artículo 168, fracción II, inciso a), de la Ley del Seguro Social será aplicable de manera gradual\" | Transitorios Segundo\n32. instrument_type | decree | \"DECRETO\" | Top of text\n33. issuing_body | Ejecutivo Federal | \"ANDRÉS MANUEL LÓPEZ OBRADOR, Presidente... expido el presente Decreto\" | Top of text\n34. dof_publication_date | 16-12-2020 | \"DOF: 16/12/2020\" | Top of text\n35. entry_into_force_date | 01-01-2021 | \"El presente Decreto entrará en vigor el 1 de enero de 2021\" | Transitorios Primero\n36. legal_references | 168, 302, 37 | \"Artículo 168... Artículo 302... Artículo 37\" | Throughout text\n37. regime_affected | all | \"Los patrones cubrirán la cuota que corresponda sobre el salario base de cotización\" | Artículo 168\n38. insurance_branch | IV, RCV | \"ramos de cesantía en edad avanzada y vejez\" | Artículo 168\n39. financing_indexation_change | other | \"El Gobierno Federal... aportará mensualmente una cantidad por concepto de la cuota social\" | Artículo 168\n40. fiscal_magnitude_stated | | |\n41. implicit_liability_direction | decreases | \"El Gobierno Federal... aportará mensualmente una cantidad por concepto de la cuota social\" | Artículo 168",
+ "attempts": 1,
+ "valid": true,
+ "errors": [],
+ "record": {
+  "Country Name": "Mexico",
+  "Year of the article": "2020",
+  "Status of Pension Reform": [
+   "Legislated",
+   "Implemented"
+  ],
+  "legislation_date": "12-2020",
+  "Planned_date": "01-2021",
+  "announcement_date": "12-2020",
+  "implementation_date": "01-2021",
+  "reversal_date": "Not explicitly mentioned",
+  "Pension Reform Types": [
+   "funding mechanisms"
+  ],
+  "indexation_change": "Not explicitly mentioned",
+  "coverage_change": "Not explicitly mentioned",
+  "benefit_change": "Not explicitly mentioned",
+  "Social_insurance_change": "Yes",
+  "Reform_category": "Parametric reform",
+  "reform_coverage": "Broad-based reform",
+  "reason_reform": [
+   "Fiscal reasons"
+  ],
+  "relevancetopr_score": 9.0,
+  "retirement_age_change": "Not explicitly mentioned",
+  "Retirement_age_change_details": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+  "Retirement_age_after_reform_female": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+  "Retirement_age_after_reform_male": "Not explicitly mentioned",
+  "Contribution_rate_change": "contribution rate increased",
+  "Old Employer Contribution Rate": "3.15%",
+  "New Employer Contribution Rate": "4.202%",
+  "Old Employee Contribution Rate": "1.125%",
+  "New Employee Contribution Rate": "1.125%",
+  "Old Contribution Rate (Employee and Employer Combined)": "4.275%",
+  "New Contribution Rate (Employee and Employer Combined)": "5.327%",
+  "Is the legislated pension reform minor or major?": "Minor",
+  "instrument_type": "decree",
+  "issuing_body": "Ejecutivo Federal",
+  "dof_publication_date": "16-12-2020",
+  "entry_into_force_date": "01-01-2021",
+  "legal_references": [
+   "Artículo 168",
+   "Artículo 302",
+   "Artículo 37"
+  ],
+  "regime_affected": [
+   "all"
+  ],
+  "insurance_branch": [
+   "IV",
+   "RCV"
+  ],
+  "financing_indexation_change": "other",
+  "fiscal_magnitude_stated": "Not explicitly mentioned",
+  "implicit_liability_direction": "decreases",
+  "fields_inferred": [
+   "Old Contribution Rate (Employee and Employer Combined)",
+   "New Contribution Rate (Employee and Employer Combined)"
+  ],
+  "evidence": [
+   {
+    "field": "Country Name",
+    "quote": "Estados Unidos Mexicanos",
+    "location": "Top of text"
+   },
+   {
+    "field": "Year of the article",
+    "quote": "DOF: 16/12/2020",
+    "location": "Top of text"
+   },
+   {
+    "field": "Status of Pension Reform",
+    "quote": "DECRETO... SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES",
+    "location": "Top of text"
+   },
+   {
+    "field": "legislation_date",
+    "quote": "DOF: 16/12/2020",
+    "location": "Top of text"
+   },
+   {
+    "field": "Planned_date",
+    "quote": "El presente Decreto entrará en vigor el 1 de enero de 2021",
+    "location": "Transitorios Primero"
+   },
+   {
+    "field": "announcement_date",
+    "quote": "Ciudad de México, a 9 de diciembre de 2020",
+    "location": "End of text"
+   },
+   {
+    "field": "implementation_date",
+    "quote": "El presente Decreto entrará en vigor el 1 de enero de 2021",
+    "location": "Transitorios Primero"
+   },
+   {
+    "field": "Pension Reform Types",
+    "quote": "La cuota patronal prevista en el artículo 168, fracción II, inciso a), de la Ley del Seguro Social será aplicable de manera gradual",
+    "location": "Transitorios Segundo"
+   },
+   {
+    "field": "Social_insurance_change",
+    "quote": "Artículo 168... Los patrones cubrirán la cuota que corresponda sobre el salario base de cotización",
+    "location": "Artículo 168"
+   },
+   {
+    "field": "Reform_category",
+    "quote": "SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES",
+    "location": "Top of text"
+   },
+   {
+    "field": "reform_coverage",
+    "quote": "Los patrones cubrirán la cuota que corresponda sobre el salario base de cotización",
+    "location": "Artículo 168"
+   },
+   {
+    "field": "reason_reform",
+    "quote": "El Gobierno Federal... aportará mensualmente una cantidad por concepto de la cuota social",
+    "location": "Artículo 168"
+   },
+   {
+    "field": "relevancetopr_score",
+    "quote": "La cuota patronal prevista en el artículo 168, fracción II, inciso a), de la Ley del Seguro Social será aplicable de manera gradual",
+    "location": "Transitorios Segundo"
+   },
+   {
+    "field": "Contribution_rate_change",
+    "quote": "Los patrones seguirán cubriendo, para los ramos de cesantía en edad avanzada y vejez, una cuota del tres punto ciento cincuenta por ciento... Del 1 de enero de 2021 al 31 de diciembre de 2022",
+    "location": "Transitorios Segundo"
+   },
+   {
+    "field": "Old Employer Contribution Rate",
+    "quote": "Los patrones seguirán cubriendo... una cuota del tres punto ciento cincuenta por ciento",
+    "location": "Transitorios Segundo"
+   },
+   {
+    "field": "New Employer Contribution Rate",
+    "quote": "1.01 SM a 1.50 UMA... 4.202%",
+    "location": "Artículo 168"
+   },
+   {
+    "field": "Old Employee Contribution Rate",
+    "quote": "Los trabajadores cubrirán una cuota del uno punto ciento veinticinco por ciento",
+    "location": "Artículo 168"
+   },
+   {
+    "field": "New Employee Contribution Rate",
+    "quote": "Los trabajadores cubrirán una cuota del uno punto ciento veinticinco por ciento",
+    "location": "Artículo 168"
+   },
+   {
+    "field": "Old Contribution Rate (Employee and Employer Combined)",
+    "quote": "3.15% + 1.125%",
+    "location": "Inferred from rates"
+   },
+   {
+    "field": "New Contribution Rate (Employee and Employer Combined)",
+    "quote": "4.202% + 1.125%",
+    "location": "Inferred from rates"
+   },
+   {
+    "field": "Is the legislated pension reform minor or major?",
+    "quote": "La cuota patronal prevista en el artículo 168, fracción II, inciso a), de la Ley del Seguro Social será aplicable de manera gradual",
+    "location": "Transitorios Segundo"
+   },
+   {
+    "field": "instrument_type",
+    "quote": "DECRETO",
+    "location": "Top of text"
+   },
+   {
+    "field": "issuing_body",
+    "quote": "ANDRÉS MANUEL LÓPEZ OBRADOR, Presidente... expido el presente Decreto",
+    "location": "Top of text"
+   },
+   {
+    "field": "dof_publication_date",
+    "quote": "DOF: 16/12/2020",
+    "location": "Top of text"
+   },
+   {
+    "field": "entry_into_force_date",
+    "quote": "El presente Decreto entrará en vigor el 1 de enero de 2021",
+    "location": "Transitorios Primero"
+   },
+   {
+    "field": "legal_references",
+    "quote": "Artículo 168... Artículo 302... Artículo 37",
+    "location": "Throughout text"
+   },
+   {
+    "field": "regime_affected",
+    "quote": "Los patrones cubrirán la cuota que corresponda sobre el salario base de cotización",
+    "location": "Artículo 168"
+   },
+   {
+    "field": "insurance_branch",
+    "quote": "ramos de cesantía en edad avanzada y vejez",
+    "location": "Artículo 168"
+   },
+   {
+    "field": "financing_indexation_change",
+    "quote": "El Gobierno Federal... aportará mensualmente una cantidad por concepto de la cuota social",
+    "location": "Artículo 168"
+   },
+   {
+    "field": "implicit_liability_direction",
+    "quote": "El Gobierno Federal... aportará mensualmente una cantidad por concepto de la cuota social",
+    "location": "Artículo 168"
+   }
+  ],
+  "source_file": "08_dof_20201216_lss_lsar.html",
+  "chunk_ids": [
+   "08_full"
+  ]
+ },
+ "raw_failed": null,
+ "metrics": [
+  {
+   "wall_s": 49.7,
+   "prompt_tokens": 2935,
+   "gen_tokens": 2297,
+   "gen_s": 48.4,
+   "prompt_s": 0.8,
+   "done_reason": "stop"
+  }
+ ]
+}

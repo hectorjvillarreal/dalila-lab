@@ -1,0 +1,249 @@
+{
+ "doc_id": "03",
+ "status": "silver",
+ "episodes": [
+  {
+   "label": "Plazas nuevas solo con fondeo total del RJP",
+   "core": true,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "2004",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "08-2004",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "08-2004",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "funding mechanisms",
+     "sustainability and solvency measures"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "Not explicitly mentioned",
+    "Social_insurance_change": "No",
+    "Reform_category": "Parametric reform",
+    "reform_coverage": "Targeted reform",
+    "reason_reform": [
+     "Fiscal reasons"
+    ],
+    "relevancetopr_score": 9.0,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "Not explicitly mentioned",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "Major",
+    "instrument_type": "law_reform",
+    "issuing_body": "Congreso de la Unión",
+    "dof_publication_date": "11-08-2004",
+    "entry_into_force_date": "12-08-2004",
+    "legal_references": [
+     "Ley del Seguro Social, artículo 277 D",
+     "Transitorio Segundo",
+     "Transitorio Tercero"
+    ],
+    "regime_affected": [
+     "imss_staff_rjp"
+    ],
+    "insurance_branch": [
+     "other"
+    ],
+    "financing_indexation_change": "Not explicitly mentioned",
+    "fiscal_magnitude_stated": "Not explicitly mentioned",
+    "implicit_liability_direction": "decreases",
+    "fields_inferred": [
+     "Reform_category",
+     "Social_insurance_change",
+     "implicit_liability_direction",
+     "insurance_branch",
+     "legislation_date",
+     "reform_coverage"
+    ],
+    "evidence": [
+     {
+      "field": "issuing_body",
+      "quote": "Que el Honorable Congreso de la Unión, se ha servido dirigirme el siguiente",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "instrument_type",
+      "quote": "DECRETO por el que se reforman y adicionan los artículos 277 D y 286 K de la Ley del Seguro Social.",
+      "location": "Título"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "El presente Decreto entrará en vigor al día siguiente de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "El presente Decreto entrará en vigor al día siguiente de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "El presente Decreto entrará en vigor al día siguiente de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "los recursos necesarios para cubrir los costos futuros derivados del Régimen de Jubilaciones y Pensiones",
+      "location": "Artículo 277 D"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "para crear, sustituir o contratar plazas, se deberán depositar en el Fondo a que se refiere el artículo 286 K de esta Ley, los recursos necesarios para cubrir los costos futuros",
+      "location": "Artículo 277 D"
+     },
+     {
+      "field": "reason_reform",
+      "quote": "a fin de que en todo momento, se encuentre plenamente financiado",
+      "location": "Artículo 277 D"
+     },
+     {
+      "field": "legal_references",
+      "quote": "seguirán gozando de los beneficios otorgados por el Régimen de Jubilaciones y Pensiones",
+      "location": "Transitorio Segundo"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 11/08/2004",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "03_dof_20040811_lss_277d_286k.html",
+    "chunk_ids": []
+   }
+  },
+  {
+   "label": "Prohibición de financiar el RJP con cuotas, aportaciones federales o reservas",
+   "core": true,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "2004",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "08-2004",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "08-2004",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "funding mechanisms",
+     "administration and governance"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "Not explicitly mentioned",
+    "Social_insurance_change": "No",
+    "Reform_category": "Parametric reform",
+    "reform_coverage": "Targeted reform",
+    "reason_reform": [
+     "Not explicitly mentioned"
+    ],
+    "relevancetopr_score": 9.0,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "Not explicitly mentioned",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "Major",
+    "instrument_type": "law_reform",
+    "issuing_body": "Congreso de la Unión",
+    "dof_publication_date": "11-08-2004",
+    "entry_into_force_date": "12-08-2004",
+    "legal_references": [
+     "Ley del Seguro Social, artículo 286 K"
+    ],
+    "regime_affected": [
+     "imss_staff_rjp"
+    ],
+    "insurance_branch": [
+     "other"
+    ],
+    "financing_indexation_change": "Not explicitly mentioned",
+    "fiscal_magnitude_stated": "Not explicitly mentioned",
+    "implicit_liability_direction": "ambiguous",
+    "fields_inferred": [
+     "Reform_category",
+     "Social_insurance_change",
+     "implicit_liability_direction",
+     "insurance_branch",
+     "legislation_date",
+     "reform_coverage"
+    ],
+    "evidence": [
+     {
+      "field": "issuing_body",
+      "quote": "Que el Honorable Congreso de la Unión, se ha servido dirigirme el siguiente",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "instrument_type",
+      "quote": "DECRETO por el que se reforman y adicionan los artículos 277 D y 286 K de la Ley del Seguro Social.",
+      "location": "Título"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "El presente Decreto entrará en vigor al día siguiente de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "El presente Decreto entrará en vigor al día siguiente de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "El presente Decreto entrará en vigor al día siguiente de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "los recursos necesarios para cubrir los costos futuros derivados del Régimen de Jubilaciones y Pensiones",
+      "location": "Artículo 277 D"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "no podrá destinar a este Fondo, para el financiamiento de la cuenta especial del Régimen de Jubilaciones y Pensiones, recursos provenientes de las cuotas a cargo de los patrones y trabajadores",
+      "location": "Artículo 286 K"
+     },
+     {
+      "field": "legal_references",
+      "quote": "Dicho Fondo deberá registrarse en forma separada en la contabilidad del Instituto estableciendo dentro de él una cuenta especial para el Régimen de Jubilaciones y Pensiones",
+      "location": "Artículo 286 K"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 11/08/2004",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "03_dof_20040811_lss_277d_286k.html",
+    "chunk_ids": []
+   }
+  }
+ ]
+}

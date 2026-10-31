@@ -1,0 +1,469 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mx_ssrd.schema.json",
+  "title": "MX-SSRD episode record (GPRD 31 core fields plus Mexican extensions)",
+  "type": "object",
+  "properties": {
+    "Country Name": {
+      "type": "string"
+    },
+    "Year of the article": {
+      "type": "string",
+      "pattern": "^([0-9]{4}|Not explicitly mentioned)$"
+    },
+    "Status of Pension Reform": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Legislated",
+          "Planned",
+          "Announced",
+          "Implemented",
+          "Reversed",
+          "Other"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "legislation_date": {
+      "type": "string",
+      "pattern": "^((0[1-9]|1[0-2])-[0-9]{4}|Not explicitly mentioned)$"
+    },
+    "Planned_date": {
+      "type": "string",
+      "pattern": "^((0[1-9]|1[0-2])-[0-9]{4}|Not explicitly mentioned)$"
+    },
+    "announcement_date": {
+      "type": "string",
+      "pattern": "^((0[1-9]|1[0-2])-[0-9]{4}|Not explicitly mentioned)$"
+    },
+    "implementation_date": {
+      "type": "string",
+      "pattern": "^((0[1-9]|1[0-2])-[0-9]{4}|Not explicitly mentioned)$"
+    },
+    "reversal_date": {
+      "type": "string",
+      "pattern": "^((0[1-9]|1[0-2])-[0-9]{4}|Not explicitly mentioned)$"
+    },
+    "Pension Reform Types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "indexation",
+          "coverage",
+          "benefit rule changes",
+          "systematic (structural) pension reforms",
+          "funding mechanisms",
+          "retirement age",
+          "pension portability",
+          "investment strategies",
+          "administration and governance",
+          "sustainability and solvency measures",
+          "pension plan types",
+          "eligibility and access",
+          "others",
+          "Not explicitly mentioned"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "indexation_change": {
+      "type": "string",
+      "enum": [
+        "more generous indexation",
+        "less generous indexation",
+        "Not explicitly mentioned"
+      ]
+    },
+    "coverage_change": {
+      "type": "string",
+      "enum": [
+        "extended coverage",
+        "reduced coverage",
+        "Not explicitly mentioned"
+      ]
+    },
+    "benefit_change": {
+      "type": "string",
+      "enum": [
+        "more generous benefits",
+        "less generous benefits",
+        "Not explicitly mentioned"
+      ]
+    },
+    "Social_insurance_change": {
+      "type": "string",
+      "enum": [
+        "Yes",
+        "No",
+        "Not explicitly mentioned"
+      ]
+    },
+    "Reform_category": {
+      "type": "string",
+      "enum": [
+        "Parametric reform",
+        "Structural reform",
+        "Not explicitly mentioned"
+      ]
+    },
+    "reform_coverage": {
+      "type": "string",
+      "enum": [
+        "Targeted reform",
+        "Broad-based reform",
+        "Mixed",
+        "Not explicitly mentioned"
+      ]
+    },
+    "reason_reform": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Economic growth",
+          "Fiscal reasons",
+          "Benefit adequacy",
+          "Distributional impact",
+          "Economic impact",
+          "Inflation",
+          "Demographic changes",
+          "Inequality and fairness",
+          "Labor market changes",
+          "Other",
+          "Not explicitly mentioned"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "relevancetopr_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "retirement_age_change": {
+      "type": "string",
+      "enum": [
+        "retirement age increased",
+        "retirement age decreased",
+        "Not explicitly mentioned"
+      ]
+    },
+    "Retirement_age_change_details": {
+      "type": "string"
+    },
+    "Retirement_age_pre_reform_female": {
+      "type": "string"
+    },
+    "Retirement_age_after_reform_female": {
+      "type": "string"
+    },
+    "Retirement_age_pre_reform_male": {
+      "type": "string"
+    },
+    "Retirement_age_after_reform_male": {
+      "type": "string"
+    },
+    "Contribution_rate_change": {
+      "type": "string",
+      "enum": [
+        "contribution rate increased",
+        "contribution rate decreased",
+        "Not explicitly mentioned"
+      ]
+    },
+    "Old Employer Contribution Rate": {
+      "type": "string"
+    },
+    "New Employer Contribution Rate": {
+      "type": "string"
+    },
+    "Old Employee Contribution Rate": {
+      "type": "string"
+    },
+    "New Employee Contribution Rate": {
+      "type": "string"
+    },
+    "Old Contribution Rate (Employee and Employer Combined)": {
+      "type": "string"
+    },
+    "New Contribution Rate (Employee and Employer Combined)": {
+      "type": "string"
+    },
+    "Is the legislated pension reform minor or major?": {
+      "type": "string",
+      "enum": [
+        "Minor",
+        "Major",
+        "N/A"
+      ]
+    },
+    "instrument_type": {
+      "type": "string",
+      "enum": [
+        "constitutional_reform",
+        "new_law",
+        "law_reform",
+        "decree",
+        "regulation",
+        "technical_council_agreement",
+        "administrative_rule",
+        "other"
+      ]
+    },
+    "issuing_body": {
+      "type": "string"
+    },
+    "dof_publication_date": {
+      "type": "string",
+      "pattern": "^((0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-[0-9]{4}|Not explicitly mentioned)$"
+    },
+    "entry_into_force_date": {
+      "type": "string",
+      "pattern": "^((0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-[0-9]{4}|Not explicitly mentioned)$"
+    },
+    "legal_references": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "regime_affected": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ley73",
+          "ley97",
+          "issste_decimo_transitorio",
+          "issste_2007_accounts",
+          "non_contributory",
+          "imss_staff_rjp",
+          "all",
+          "other"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "insurance_branch": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "IV",
+          "RCV",
+          "SEM",
+          "SEM_pensioners_GMP",
+          "RT",
+          "GPS",
+          "infonavit",
+          "non_contributory_pension",
+          "other"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "financing_indexation_change": {
+      "type": "string",
+      "enum": [
+        "changed_to_uma",
+        "changed_to_wage",
+        "changed_to_inflation",
+        "other",
+        "Not explicitly mentioned"
+      ]
+    },
+    "fiscal_magnitude_stated": {
+      "type": "string"
+    },
+    "implicit_liability_direction": {
+      "type": "string",
+      "enum": [
+        "increases",
+        "decreases",
+        "ambiguous",
+        "Not explicitly mentioned"
+      ]
+    },
+    "fields_inferred": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Country Name",
+          "Year of the article",
+          "Status of Pension Reform",
+          "legislation_date",
+          "Planned_date",
+          "announcement_date",
+          "implementation_date",
+          "reversal_date",
+          "Pension Reform Types",
+          "indexation_change",
+          "coverage_change",
+          "benefit_change",
+          "Social_insurance_change",
+          "Reform_category",
+          "reform_coverage",
+          "reason_reform",
+          "relevancetopr_score",
+          "retirement_age_change",
+          "Retirement_age_change_details",
+          "Retirement_age_pre_reform_female",
+          "Retirement_age_after_reform_female",
+          "Retirement_age_pre_reform_male",
+          "Retirement_age_after_reform_male",
+          "Contribution_rate_change",
+          "Old Employer Contribution Rate",
+          "New Employer Contribution Rate",
+          "Old Employee Contribution Rate",
+          "New Employee Contribution Rate",
+          "Old Contribution Rate (Employee and Employer Combined)",
+          "New Contribution Rate (Employee and Employer Combined)",
+          "Is the legislated pension reform minor or major?",
+          "instrument_type",
+          "issuing_body",
+          "dof_publication_date",
+          "entry_into_force_date",
+          "legal_references",
+          "regime_affected",
+          "insurance_branch",
+          "financing_indexation_change",
+          "fiscal_magnitude_stated",
+          "implicit_liability_direction"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "enum": [
+              "Country Name",
+              "Year of the article",
+              "Status of Pension Reform",
+              "legislation_date",
+              "Planned_date",
+              "announcement_date",
+              "implementation_date",
+              "reversal_date",
+              "Pension Reform Types",
+              "indexation_change",
+              "coverage_change",
+              "benefit_change",
+              "Social_insurance_change",
+              "Reform_category",
+              "reform_coverage",
+              "reason_reform",
+              "relevancetopr_score",
+              "retirement_age_change",
+              "Retirement_age_change_details",
+              "Retirement_age_pre_reform_female",
+              "Retirement_age_after_reform_female",
+              "Retirement_age_pre_reform_male",
+              "Retirement_age_after_reform_male",
+              "Contribution_rate_change",
+              "Old Employer Contribution Rate",
+              "New Employer Contribution Rate",
+              "Old Employee Contribution Rate",
+              "New Employee Contribution Rate",
+              "Old Contribution Rate (Employee and Employer Combined)",
+              "New Contribution Rate (Employee and Employer Combined)",
+              "Is the legislated pension reform minor or major?",
+              "instrument_type",
+              "issuing_body",
+              "dof_publication_date",
+              "entry_into_force_date",
+              "legal_references",
+              "regime_affected",
+              "insurance_branch",
+              "financing_indexation_change",
+              "fiscal_magnitude_stated",
+              "implicit_liability_direction"
+            ]
+          },
+          "quote": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "field",
+          "quote",
+          "location"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "chunk_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "Country Name",
+    "Year of the article",
+    "Status of Pension Reform",
+    "legislation_date",
+    "Planned_date",
+    "announcement_date",
+    "implementation_date",
+    "reversal_date",
+    "Pension Reform Types",
+    "indexation_change",
+    "coverage_change",
+    "benefit_change",
+    "Social_insurance_change",
+    "Reform_category",
+    "reform_coverage",
+    "reason_reform",
+    "relevancetopr_score",
+    "retirement_age_change",
+    "Retirement_age_change_details",
+    "Retirement_age_pre_reform_female",
+    "Retirement_age_after_reform_female",
+    "Retirement_age_pre_reform_male",
+    "Retirement_age_after_reform_male",
+    "Contribution_rate_change",
+    "Old Employer Contribution Rate",
+    "New Employer Contribution Rate",
+    "Old Employee Contribution Rate",
+    "New Employee Contribution Rate",
+    "Old Contribution Rate (Employee and Employer Combined)",
+    "New Contribution Rate (Employee and Employer Combined)",
+    "Is the legislated pension reform minor or major?",
+    "instrument_type",
+    "issuing_body",
+    "dof_publication_date",
+    "entry_into_force_date",
+    "legal_references",
+    "regime_affected",
+    "insurance_branch",
+    "financing_indexation_change",
+    "fiscal_magnitude_stated",
+    "implicit_liability_direction",
+    "fields_inferred",
+    "evidence",
+    "source_file",
+    "chunk_ids"
+  ],
+  "additionalProperties": false
+}

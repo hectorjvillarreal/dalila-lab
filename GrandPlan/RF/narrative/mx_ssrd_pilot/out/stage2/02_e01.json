@@ -1,0 +1,204 @@
+{
+ "doc_id": "02",
+ "episode": 1,
+ "label": "Establishment of Individual Accounts System (AFORE)",
+ "summary": "EPISODE: Establishment of Individual Accounts System (AFORE)\n1. Country Name | Mexico | \"Estados Unidos Mexicanos\" | Line 4\n2. Year of the article | 1996 | \"DOF: 23/05/1996\" | Line 1\n3. Status of Pension Reform | Legislated, Implemented | \"DECRETO... LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO\" | Line 6\n4. legislation_date | 05-1996 | \"DOF: 23/05/1996\" | Line 1\n5. Planned_date | INFERRED | N/A | N/A\n6. announcement_date | INFERRED | N/A | N/A\n7. implementation_date | INFERRED | N/A | N/A\n8. reversal_date | INFERRED | N/A | N/A\n9. Pension Reform Types | systematic (structural) pension reforms; pension plan types (DC); administration and governance | \"regular el funcionamiento de los sistemas de ahorro para el retiro... cuentas individuales propiedad de los trabajadores\" | Lines 10-11, 14\n10. indexation_change | INFERRED | N/A | N/A\n11. coverage_change | extended coverage | \"regular el funcionamiento de los sistemas de ahorro para el retiro... previstos en esta Ley y en las leyes del Seguro Social\" | Lines 10-11\n12. benefit_change | INFERRED | N/A | N/A\n13. Social_insurance_change | Yes | \"leyes del Seguro Social... cuentas individuales propiedad de los trabajadores\" | Lines 10-11\n14. Reform_category | Structural reform | \"regular el funcionamiento de los sistemas de ahorro para el retiro... cuentas individuales\" | Lines 10-11\n15. reform_coverage | Broad-based reform | \"todos los trabajadores... cuentas individuales propiedad de los trabajadores\" | Lines 10-11\n16. reason_reform | Economic growth; Fiscal reasons | \"acumular saldos, mismos que se aplicarán para fines de previsión social o para la obtención de pensiones\" | Lines 14-15\n17. relevancetopr_score | 10.0 | \"LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO\" | Line 6\n18. retirement_age_change | INFERRED | N/A | N/A\n19. Retirement_age_change_details | INFERRED | N/A | N/A\n20. Retirement_age_pre_reform_female | INFERRED | N/A | N/A\n21. Retirement_age_after_reform_female | INFERRED | N/A | N/A\n22. Retirement_age_pre_reform_male | INFERRED | N/A | N/A\n23. Retirement_age_after_reform_male | INFERRED | N/A | N/A\n24. Contribution_rate_change | INFERRED | N/A | N/A\n25. Old Employer Contribution Rate | INFERRED | N/A | N/A\n26. New Employer Contribution Rate | INFERRED | N/A | N/A\n27. Old Employee Contribution Rate | INFERRED | N/A | N/A\n28. New Employee Contribution Rate | INFERRED | N/A | N/A\n29. Old Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A\n30. New Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A\n31. Is the legislated pension reform minor or major | Major | \"LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO... cuentas individuales propiedad de los trabajadores\" | Lines 6, 14\n32. instrument_type | law_reform | \"DECRETO... LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO\" | Line 6\n33. issuing_body | Congreso de la Unión | \"EL CONGRESO DE LOS ESTADOS UNIDOS MEXICANOS, D E C R E T A\" | Line 7\n34. dof_publication_date | 23-05-1996 | \"DOF: 23/05/1996\" | Line 1\n35. entry_into_force_date | INFERRED | N/A | N/A\n36. legal_references | N/A | N/A | N/A\n37. regime_affected | all | \"leyes del Seguro Social, del Instituto del Fondo Nacional de la Vivienda para los Trabajadores y del Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado\" | Lines 10-11\n38. insurance_branch | other | \"sistemas de ahorro para el retiro\" | Line 10\n39. financing_indexation_change | INFERRED | N/A | N/A\n40. fiscal_magnitude_stated | INFERRED | N/A | N/A\n41. implicit_liability_direction | ambiguous | \"acumular saldos, mismos que se aplicarán para fines de previsión social o para la obtención de pensiones\" | Lines 14-15",
+ "attempts": 1,
+ "valid": true,
+ "errors": [],
+ "record": {
+  "Country Name": "Mexico",
+  "Year of the article": "1996",
+  "Status of Pension Reform": [
+   "Legislated",
+   "Implemented"
+  ],
+  "legislation_date": "05-1996",
+  "Planned_date": "Not explicitly mentioned",
+  "announcement_date": "Not explicitly mentioned",
+  "implementation_date": "Not explicitly mentioned",
+  "reversal_date": "Not explicitly mentioned",
+  "Pension Reform Types": [
+   "systematic (structural) pension reforms",
+   "pension plan types",
+   "administration and governance"
+  ],
+  "indexation_change": "Not explicitly mentioned",
+  "coverage_change": "extended coverage",
+  "benefit_change": "Not explicitly mentioned",
+  "Social_insurance_change": "Yes",
+  "Reform_category": "Structural reform",
+  "reform_coverage": "Broad-based reform",
+  "reason_reform": [
+   "Economic growth",
+   "Fiscal reasons"
+  ],
+  "relevancetopr_score": 10.0,
+  "retirement_age_change": "Not explicitly mentioned",
+  "Retirement_age_change_details": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+  "Retirement_age_after_reform_female": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+  "Retirement_age_after_reform_male": "Not explicitly mentioned",
+  "Contribution_rate_change": "Not explicitly mentioned",
+  "Old Employer Contribution Rate": "Not explicitly mentioned",
+  "New Employer Contribution Rate": "Not explicitly mentioned",
+  "Old Employee Contribution Rate": "Not explicitly mentioned",
+  "New Employee Contribution Rate": "Not explicitly mentioned",
+  "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "Is the legislated pension reform minor or major?": "Major",
+  "instrument_type": "law_reform",
+  "issuing_body": "Congreso de la Unión",
+  "dof_publication_date": "23-05-1996",
+  "entry_into_force_date": "Not explicitly mentioned",
+  "legal_references": [],
+  "regime_affected": [
+   "all"
+  ],
+  "insurance_branch": [
+   "other"
+  ],
+  "financing_indexation_change": "Not explicitly mentioned",
+  "fiscal_magnitude_stated": "Not explicitly mentioned",
+  "implicit_liability_direction": "ambiguous",
+  "fields_inferred": [
+   "Planned_date",
+   "announcement_date",
+   "implementation_date",
+   "reversal_date",
+   "indexation_change",
+   "benefit_change",
+   "retirement_age_change",
+   "Retirement_age_change_details",
+   "Retirement_age_pre_reform_female",
+   "Retirement_age_after_reform_female",
+   "Retirement_age_pre_reform_male",
+   "Retirement_age_after_reform_male",
+   "Contribution_rate_change",
+   "Old Employer Contribution Rate",
+   "New Employer Contribution Rate",
+   "Old Employee Contribution Rate",
+   "New Employee Contribution Rate",
+   "Old Contribution Rate (Employee and Employer Combined)",
+   "New Contribution Rate (Employee and Employer Combined)",
+   "entry_into_force_date",
+   "legal_references",
+   "financing_indexation_change",
+   "fiscal_magnitude_stated"
+  ],
+  "evidence": [
+   {
+    "field": "Country Name",
+    "quote": "Estados Unidos Mexicanos",
+    "location": "Line 4"
+   },
+   {
+    "field": "Year of the article",
+    "quote": "DOF: 23/05/1996",
+    "location": "Line 1"
+   },
+   {
+    "field": "Status of Pension Reform",
+    "quote": "DECRETO... LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO",
+    "location": "Line 6"
+   },
+   {
+    "field": "legislation_date",
+    "quote": "DOF: 23/05/1996",
+    "location": "Line 1"
+   },
+   {
+    "field": "Pension Reform Types",
+    "quote": "regular el funcionamiento de los sistemas de ahorro para el retiro... cuentas individuales propiedad de los trabajadores",
+    "location": "Lines 10-11, 14"
+   },
+   {
+    "field": "coverage_change",
+    "quote": "regular el funcionamiento de los sistemas de ahorro para el retiro... previstos en esta Ley y en las leyes del Seguro Social",
+    "location": "Lines 10-11"
+   },
+   {
+    "field": "Social_insurance_change",
+    "quote": "leyes del Seguro Social... cuentas individuales propiedad de los trabajadores",
+    "location": "Lines 10-11"
+   },
+   {
+    "field": "Reform_category",
+    "quote": "regular el funcionamiento de los sistemas de ahorro para el retiro... cuentas individuales",
+    "location": "Lines 10-11"
+   },
+   {
+    "field": "reform_coverage",
+    "quote": "todos los trabajadores... cuentas individuales propiedad de los trabajadores",
+    "location": "Lines 10-11"
+   },
+   {
+    "field": "reason_reform",
+    "quote": "acumular saldos, mismos que se aplicarán para fines de previsión social o para la obtención de pensiones",
+    "location": "Lines 14-15"
+   },
+   {
+    "field": "relevancetopr_score",
+    "quote": "LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO",
+    "location": "Line 6"
+   },
+   {
+    "field": "Is the legislated pension reform minor or major?",
+    "quote": "LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO... cuentas individuales propiedad de los trabajadores",
+    "location": "Lines 6, 14"
+   },
+   {
+    "field": "instrument_type",
+    "quote": "DECRETO... LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO",
+    "location": "Line 6"
+   },
+   {
+    "field": "issuing_body",
+    "quote": "EL CONGRESO DE LOS ESTADOS UNIDOS MEXICANOS, D E C R E T A",
+    "location": "Line 7"
+   },
+   {
+    "field": "dof_publication_date",
+    "quote": "DOF: 23/05/1996",
+    "location": "Line 1"
+   },
+   {
+    "field": "regime_affected",
+    "quote": "leyes del Seguro Social, del Instituto del Fondo Nacional de la Vivienda para los Trabajadores y del Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado",
+    "location": "Lines 10-11"
+   },
+   {
+    "field": "insurance_branch",
+    "quote": "sistemas de ahorro para el retiro",
+    "location": "Line 10"
+   },
+   {
+    "field": "implicit_liability_direction",
+    "quote": "acumular saldos, mismos que se aplicarán para fines de previsión social o para la obtención de pensiones",
+    "location": "Lines 14-15"
+   }
+  ],
+  "source_file": "02_dip_19960523_lsar_orig.pdf",
+  "chunk_ids": [
+   "02_c01",
+   "02_c02",
+   "02_c03",
+   "02_c04",
+   "02_c05",
+   "02_c06",
+   "02_c07"
+  ]
+ },
+ "raw_failed": null,
+ "metrics": [
+  {
+   "wall_s": 40.8,
+   "prompt_tokens": 2734,
+   "gen_tokens": 1826,
+   "gen_s": 38.7,
+   "prompt_s": 1.5,
+   "done_reason": "stop"
+  }
+ ]
+}

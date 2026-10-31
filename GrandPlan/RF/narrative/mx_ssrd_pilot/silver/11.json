@@ -1,0 +1,372 @@
+{
+ "doc_id": "11",
+ "status": "silver",
+ "episodes": [
+  {
+   "label": "Tope temporal a la base de cotización de la Continuación Voluntaria",
+   "core": true,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "2026",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "10-2026",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "10-2026",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "benefit rule changes",
+     "eligibility and access"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "less generous benefits",
+    "Social_insurance_change": "Yes",
+    "Reform_category": "Parametric reform",
+    "reform_coverage": "Targeted reform",
+    "reason_reform": [
+     "Not explicitly mentioned"
+    ],
+    "relevancetopr_score": 9.5,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "Not explicitly mentioned",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "Minor",
+    "instrument_type": "technical_council_agreement",
+    "issuing_body": "H. Consejo Técnico del Instituto Mexicano del Seguro Social",
+    "dof_publication_date": "21-10-2026",
+    "entry_into_force_date": "22-10-2026",
+    "legal_references": [
+     "Acuerdo, punto Cuarto",
+     "Acuerdo, punto Séptimo",
+     "Ley del Seguro Social, artículo 13, fracción I"
+    ],
+    "regime_affected": [
+     "all"
+    ],
+    "insurance_branch": [
+     "IV",
+     "RCV"
+    ],
+    "financing_indexation_change": "Not explicitly mentioned",
+    "fiscal_magnitude_stated": "Not explicitly mentioned",
+    "implicit_liability_direction": "decreases",
+    "fields_inferred": [
+     "Reform_category",
+     "Social_insurance_change",
+     "implicit_liability_direction",
+     "insurance_branch",
+     "legislation_date"
+    ],
+    "evidence": [
+     {
+      "field": "instrument_type",
+      "quote": "dictado por el Honorable Consejo Técnico del Instituto Mexicano del Seguro Social",
+      "location": "Título"
+     },
+     {
+      "field": "issuing_body",
+      "quote": "El H. Consejo Técnico, en la sesión extraordinaria celebrada el día 10 de octubre del presente año",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "El presente Acuerdo entrará en vigor el día hábil siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Punto Séptimo"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "El presente Acuerdo entrará en vigor el día hábil siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Punto Séptimo"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "El presente Acuerdo entrará en vigor el día hábil siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Punto Séptimo"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "así como aquellas que deseen conservar sus derechos en materia de seguridad social para efectos pensionarios",
+      "location": "Punto Cuarto"
+     },
+     {
+      "field": "benefit_change",
+      "quote": "a razón del último salario base de cotización registrado al momento de causar baja en el régimen obligatorio o hasta el importe de éste, más una Unidad de Medida y Actualización",
+      "location": "Punto Cuarto"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "Los nuevos aseguramientos a la Continuación Voluntaria se realizarán exclusivamente a partir de la fecha de la solicitud.",
+      "location": "Punto Cuarto"
+     },
+     {
+      "field": "reform_coverage",
+      "quote": "las personas que, a la fecha de entrada en vigor del presente Acuerdo, se encuentren inscritas en la Continuación Voluntaria en el Régimen Obligatorio, permanecerán en dicha modalidad, en las condiciones actuales",
+      "location": "Punto Cuarto"
+     },
+     {
+      "field": "legal_references",
+      "quote": "Como medida temporal, y hasta que se cuente con el análisis a que se refiere el punto segundo del presente Acuerdo",
+      "location": "Punto Cuarto"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 21/10/2026",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "11_dof_20261021_acdo_modalidad40.html",
+    "chunk_ids": []
+   }
+  },
+  {
+   "label": "Análisis financiero a 6 meses y propuesta normativa posterior",
+   "core": true,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "2026",
+    "Status of Pension Reform": [
+     "Planned"
+    ],
+    "legislation_date": "Not explicitly mentioned",
+    "Planned_date": "10-2026",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "Not explicitly mentioned",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "sustainability and solvency measures"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "Not explicitly mentioned",
+    "Social_insurance_change": "Not explicitly mentioned",
+    "Reform_category": "Not explicitly mentioned",
+    "reform_coverage": "Targeted reform",
+    "reason_reform": [
+     "Fiscal reasons"
+    ],
+    "relevancetopr_score": 7.0,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "Not explicitly mentioned",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "N/A",
+    "instrument_type": "technical_council_agreement",
+    "issuing_body": "H. Consejo Técnico del Instituto Mexicano del Seguro Social",
+    "dof_publication_date": "21-10-2026",
+    "entry_into_force_date": "22-10-2026",
+    "legal_references": [
+     "Acuerdo, punto Segundo",
+     "Acuerdo, punto Tercero"
+    ],
+    "regime_affected": [
+     "all"
+    ],
+    "insurance_branch": [
+     "IV",
+     "RCV"
+    ],
+    "financing_indexation_change": "Not explicitly mentioned",
+    "fiscal_magnitude_stated": "Not explicitly mentioned",
+    "implicit_liability_direction": "Not explicitly mentioned",
+    "fields_inferred": [
+     "insurance_branch",
+     "legal_references",
+     "reform_coverage"
+    ],
+    "evidence": [
+     {
+      "field": "instrument_type",
+      "quote": "dictado por el Honorable Consejo Técnico del Instituto Mexicano del Seguro Social",
+      "location": "Título"
+     },
+     {
+      "field": "issuing_body",
+      "quote": "El H. Consejo Técnico, en la sesión extraordinaria celebrada el día 10 de octubre del presente año",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "El presente Acuerdo entrará en vigor el día hábil siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Punto Séptimo"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "El presente Acuerdo entrará en vigor el día hábil siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Punto Séptimo"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "El presente Acuerdo entrará en vigor el día hábil siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Punto Séptimo"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "así como aquellas que deseen conservar sus derechos en materia de seguridad social para efectos pensionarios",
+      "location": "Punto Cuarto"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "realice un análisis del efecto de la Continuación Voluntaria en la situación financiera del Instituto Mexicano del Seguro Social, a más tardar en el plazo de 6 meses",
+      "location": "Punto Segundo"
+     },
+     {
+      "field": "Planned_date",
+      "quote": "coordine la elaboración de una propuesta de modificación a las disposiciones normativas correspondientes",
+      "location": "Punto Tercero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "coordine la elaboración de una propuesta de modificación a las disposiciones normativas correspondientes",
+      "location": "Punto Tercero"
+     },
+     {
+      "field": "reason_reform",
+      "quote": "constituya una modalidad viable en el mediano y largo plazos",
+      "location": "Punto Tercero"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 21/10/2026",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "11_dof_20261021_acdo_modalidad40.html",
+    "chunk_ids": []
+   }
+  },
+  {
+   "label": "Inscripción únicamente por mecanismos digitales",
+   "core": false,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "2026",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "10-2026",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "10-2026",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "administration and governance"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "Not explicitly mentioned",
+    "Social_insurance_change": "Not explicitly mentioned",
+    "Reform_category": "Not explicitly mentioned",
+    "reform_coverage": "Targeted reform",
+    "reason_reform": [
+     "Not explicitly mentioned"
+    ],
+    "relevancetopr_score": 5.0,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "Not explicitly mentioned",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "Minor",
+    "instrument_type": "technical_council_agreement",
+    "issuing_body": "H. Consejo Técnico del Instituto Mexicano del Seguro Social",
+    "dof_publication_date": "21-10-2026",
+    "entry_into_force_date": "22-10-2026",
+    "legal_references": [
+     "Acuerdo, punto Quinto"
+    ],
+    "regime_affected": [
+     "all"
+    ],
+    "insurance_branch": [
+     "IV",
+     "RCV"
+    ],
+    "financing_indexation_change": "Not explicitly mentioned",
+    "fiscal_magnitude_stated": "Not explicitly mentioned",
+    "implicit_liability_direction": "Not explicitly mentioned",
+    "fields_inferred": [
+     "insurance_branch",
+     "legal_references",
+     "legislation_date",
+     "reform_coverage"
+    ],
+    "evidence": [
+     {
+      "field": "instrument_type",
+      "quote": "dictado por el Honorable Consejo Técnico del Instituto Mexicano del Seguro Social",
+      "location": "Título"
+     },
+     {
+      "field": "issuing_body",
+      "quote": "El H. Consejo Técnico, en la sesión extraordinaria celebrada el día 10 de octubre del presente año",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "El presente Acuerdo entrará en vigor el día hábil siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Punto Séptimo"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "El presente Acuerdo entrará en vigor el día hábil siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Punto Séptimo"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "El presente Acuerdo entrará en vigor el día hábil siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Punto Séptimo"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "así como aquellas que deseen conservar sus derechos en materia de seguridad social para efectos pensionarios",
+      "location": "Punto Cuarto"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "se realice únicamente mediante mecanismos digitales que garanticen la trazabilidad y consistencia de los registros afiliatorios",
+      "location": "Punto Quinto"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 21/10/2026",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "11_dof_20261021_acdo_modalidad40.html",
+    "chunk_ids": []
+   }
+  }
+ ]
+}

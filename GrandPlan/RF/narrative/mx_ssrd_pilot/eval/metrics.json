@@ -1,0 +1,756 @@
+{
+ "documents_evaluated": [
+  "01",
+  "02",
+  "03",
+  "05",
+  "06",
+  "07",
+  "08",
+  "09",
+  "10",
+  "11"
+ ],
+ "episodes": {
+  "silver": 39,
+  "silver_core": 29,
+  "model": 11,
+  "matched_pairs": 11,
+  "precision": 1.0,
+  "recall_all": 0.282,
+  "recall_core": 0.379
+ },
+ "field_mean_all": 0.647,
+ "field_mean_informative": 0.604,
+ "fields": {
+  "indexation_change": {
+   "n": 11,
+   "score": 0.909,
+   "n_informative": 0,
+   "score_informative": null
+  },
+  "coverage_change": {
+   "n": 11,
+   "score": 0.636,
+   "n_informative": 1,
+   "score_informative": 0.0
+  },
+  "benefit_change": {
+   "n": 11,
+   "score": 0.727,
+   "n_informative": 4,
+   "score_informative": 0.25
+  },
+  "Social_insurance_change": {
+   "n": 11,
+   "score": 0.727,
+   "n_informative": 9,
+   "score_informative": 0.889
+  },
+  "Reform_category": {
+   "n": 11,
+   "score": 0.545,
+   "n_informative": 10,
+   "score_informative": 0.6
+  },
+  "reform_coverage": {
+   "n": 11,
+   "score": 0.636,
+   "n_informative": 11,
+   "score_informative": 0.636
+  },
+  "retirement_age_change": {
+   "n": 11,
+   "score": 1.0,
+   "n_informative": 0,
+   "score_informative": null
+  },
+  "Contribution_rate_change": {
+   "n": 11,
+   "score": 0.909,
+   "n_informative": 1,
+   "score_informative": 1.0
+  },
+  "Is the legislated pension reform minor or major?": {
+   "n": 11,
+   "score": 0.273,
+   "n_informative": 11,
+   "score_informative": 0.273
+  },
+  "instrument_type": {
+   "n": 11,
+   "score": 0.364,
+   "n_informative": 11,
+   "score_informative": 0.364
+  },
+  "financing_indexation_change": {
+   "n": 11,
+   "score": 0.455,
+   "n_informative": 1,
+   "score_informative": 1.0
+  },
+  "implicit_liability_direction": {
+   "n": 11,
+   "score": 0.091,
+   "n_informative": 8,
+   "score_informative": 0.125
+  },
+  "legislation_date": {
+   "n": 11,
+   "score": 0.909,
+   "n_informative": 11,
+   "score_informative": 0.909
+  },
+  "Planned_date": {
+   "n": 11,
+   "score": 0.636,
+   "n_informative": 0,
+   "score_informative": null
+  },
+  "announcement_date": {
+   "n": 11,
+   "score": 0.727,
+   "n_informative": 0,
+   "score_informative": null
+  },
+  "implementation_date": {
+   "n": 11,
+   "score": 0.455,
+   "n_informative": 11,
+   "score_informative": 0.455
+  },
+  "reversal_date": {
+   "n": 11,
+   "score": 1.0,
+   "n_informative": 0,
+   "score_informative": null
+  },
+  "dof_publication_date": {
+   "n": 11,
+   "score": 1.0,
+   "n_informative": 11,
+   "score_informative": 1.0
+  },
+  "entry_into_force_date": {
+   "n": 11,
+   "score": 0.909,
+   "n_informative": 11,
+   "score_informative": 0.909
+  },
+  "Status of Pension Reform": {
+   "n": 11,
+   "score": 0.955,
+   "n_informative": 11,
+   "score_informative": 0.955
+  },
+  "Pension Reform Types": {
+   "n": 11,
+   "score": 0.5,
+   "n_informative": 11,
+   "score_informative": 0.5
+  },
+  "reason_reform": {
+   "n": 11,
+   "score": 0.273,
+   "n_informative": 2,
+   "score_informative": 0.5
+  },
+  "regime_affected": {
+   "n": 11,
+   "score": 0.394,
+   "n_informative": 11,
+   "score_informative": 0.394
+  },
+  "insurance_branch": {
+   "n": 11,
+   "score": 0.5,
+   "n_informative": 11,
+   "score_informative": 0.5
+  }
+ },
+ "schema": {
+  "outputs": 16,
+  "valid_first_try": 16,
+  "valid_after_retries": 0,
+  "failed": 0,
+  "share_failed": 0.0
+ },
+ "quotes": {
+  "total": 270,
+  "failing": 95,
+  "share_failing": 0.352,
+  "failures": [
+   {
+    "doc": "01",
+    "episode": 1,
+    "field": "Reform_category",
+    "quote": "A partir de la entrada en vigor de esta Ley el límite del salario base de cotización en veces salario mínimo para el seguro de invalidez y vida..."
+   },
+   {
+    "doc": "01",
+    "episode": 1,
+    "field": "relevancetopr_score",
+    "quote": "A partir de la entrada en vigor de esta Ley el límite del salario base de cotización en veces salario mínimo para el seguro de invalidez y vida..."
+   },
+   {
+    "doc": "01",
+    "episode": 1,
+    "field": "Is the legislated pension reform minor or major?",
+    "quote": "A partir de la entrada en vigor de esta Ley el límite del salario base de cotización en veces salario mínimo..."
+   },
+   {
+    "doc": "01",
+    "episode": 1,
+    "field": "legal_references",
+    "quote": "A partir de la entrada en vigor de esta Ley el límite del salario base de cotización..."
+   },
+   {
+    "doc": "01",
+    "episode": 1,
+    "field": "implicit_liability_direction",
+    "quote": "A partir de la entrada en vigor de esta Ley el límite del salario base de cotización..."
+   },
+   {
+    "doc": "02",
+    "episode": 1,
+    "field": "Status of Pension Reform",
+    "quote": "DECRETO... LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO"
+   },
+   {
+    "doc": "02",
+    "episode": 1,
+    "field": "Pension Reform Types",
+    "quote": "regular el funcionamiento de los sistemas de ahorro para el retiro... cuentas individuales propiedad de los trabajadores"
+   },
+   {
+    "doc": "02",
+    "episode": 1,
+    "field": "coverage_change",
+    "quote": "regular el funcionamiento de los sistemas de ahorro para el retiro... previstos en esta Ley y en las leyes del Seguro Social"
+   },
+   {
+    "doc": "02",
+    "episode": 1,
+    "field": "Social_insurance_change",
+    "quote": "leyes del Seguro Social... cuentas individuales propiedad de los trabajadores"
+   },
+   {
+    "doc": "02",
+    "episode": 1,
+    "field": "Reform_category",
+    "quote": "regular el funcionamiento de los sistemas de ahorro para el retiro... cuentas individuales"
+   },
+   {
+    "doc": "02",
+    "episode": 1,
+    "field": "reform_coverage",
+    "quote": "todos los trabajadores... cuentas individuales propiedad de los trabajadores"
+   },
+   {
+    "doc": "02",
+    "episode": 1,
+    "field": "Is the legislated pension reform minor or major?",
+    "quote": "LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO... cuentas individuales propiedad de los trabajadores"
+   },
+   {
+    "doc": "02",
+    "episode": 1,
+    "field": "instrument_type",
+    "quote": "DECRETO... LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO"
+   },
+   {
+    "doc": "03",
+    "episode": 1,
+    "field": "Status of Pension Reform",
+    "quote": "DECRETO... SE REFORMAN Y ADICIONAN"
+   },
+   {
+    "doc": "03",
+    "episode": 1,
+    "field": "Pension Reform Types",
+    "quote": "El Instituto administrará y manejará... un fondo que se denominará Fondo para el Cumplimiento de Obligaciones Laborales"
+   },
+   {
+    "doc": "03",
+    "episode": 1,
+    "field": "reason_reform",
+    "quote": "siempre y cuando cuente con los recursos aprobados... y aquellos indispensables para cubrir el costo anual"
+   },
+   {
+    "doc": "04",
+    "episode": 1,
+    "field": "entry_into_force_date",
+    "quote": "Día siguiente"
+   },
+   {
+    "doc": "04",
+    "episode": 1,
+    "field": "legal_references",
+    "quote": "Artículo 1... Artículo 39"
+   },
+   {
+    "doc": "04",
+    "episode": 1,
+    "field": "insurance_branch",
+    "quote": "Artículo 3. Se establecen con carácter obligatorio los siguientes seguros: I. De salud... II. De riesgos del trabajo; III. De retiro, cesantía en edad avanzada y vejez, y IV. De invalidez y vida."
+   },
+   {
+    "doc": "04",
+    "episode": 1,
+    "field": "financing_indexation_change",
+    "quote": "Pensión Garantizada... cuyo monto mensual será la cantidad de tres mil treinta y cuatro pesos con veinte centavos, moneda nacional, misma que se actualizará anualmente, en el mes de febrero, conforme al cambio anualizado del Índice Nacional de Precios al Consumidor"
+   },
+   {
+    "doc": "04",
+    "episode": 1,
+    "field": "Social_insurance_change",
+    "quote": "Artículo 5. La administración de los seguros... estarán a cargo del organismo descentralizado... denominado Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado"
+   },
+   {
+    "doc": "04",
+    "episode": 2,
+    "field": "legislation_date",
+    "quote": "03-2007"
+   },
+   {
+    "doc": "04",
+    "episode": 2,
+    "field": "reason_reform",
+    "quote": "El Gobierno Federal cubrirá mensualmente una Cuota Social diaria..."
+   },
+   {
+    "doc": "04",
+    "episode": 2,
+    "field": "Social_insurance_change",
+    "quote": "El seguro de salud se financiará en la forma siguiente..."
+   },
+   {
+    "doc": "04",
+    "episode": 3,
+    "field": "legislation_date",
+    "quote": "03-2007"
+   },
+   {
+    "doc": "04",
+    "episode": 4,
+    "field": "legislation_date",
+    "quote": "03-2007"
+   },
+   {
+    "doc": "04",
+    "episode": 4,
+    "field": "Pension Reform Types",
+    "quote": "DC"
+   },
+   {
+    "doc": "04",
+    "episode": 4,
+    "field": "relevancetopr_score",
+    "quote": "9.0"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "implementation_date",
+    "quote": "Día siguiente"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "Pension Reform Types",
+    "quote": "Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... Cuota Social... cinco punto cinco por ciento"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "Pension Reform Types",
+    "quote": "Artículo 97... Cuenta Individual... PENSIONISSSTE o... Administradora"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "Pension Reform Types",
+    "quote": "Artículo 80... seguro de retiro antes de cumplir las edades... Renta vitalicia... Retiros Programados"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "Pension Reform Types",
+    "quote": "Artículo 92... Pensión Garantizada... actualizará anualmente... Índice Nacional de Precios al Consumidor"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "indexation_change",
+    "quote": "Artículo 92... misma que se actualizará anualmente, en el mes de febrero, conforme al cambio anualizado del Índice Nacional de Precios al Consumidor"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "coverage_change",
+    "quote": "Artículo 80... Los Trabajadores tendrán derecho a un seguro de retiro antes de cumplir las edades y tiempo de cotización establecidas"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "benefit_change",
+    "quote": "Artículo 92... Pensión Garantizada es aquélla que el Estado asegura... monto mensual será la cantidad de tres mil treinta y cuatro pesos con veinte centavos"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "Social_insurance_change",
+    "quote": "Artículo 84... cesantía en edad avanzada... Artículo 88... seguro de vejez"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "reason_reform",
+    "quote": "Artículo 109... principal objetivo otorgar la mayor seguridad y rentabilidad... incrementar el ahorro interno"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "retirement_age_change",
+    "quote": "Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "Retirement_age_change_details",
+    "quote": "Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "Retirement_age_pre_reform_male",
+    "quote": "Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "Retirement_age_after_reform_male",
+    "quote": "Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "Contribution_rate_change",
+    "quote": "Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... cesantía... tres punto ciento setenta y cinco por ciento"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "New Employer Contribution Rate",
+    "quote": "Artículo 102... Aportación de retiro de dos por ciento, y por cesantía en edad avanzada y vejez, de tres punto ciento setenta y cinco por ciento"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "New Employee Contribution Rate",
+    "quote": "Artículo 102... Cuota de seis punto ciento veinticinco por ciento del Sueldo Básico"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "New Contribution Rate (Employee and Employer Combined)",
+    "quote": "Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... cesantía... tres punto ciento setenta y cinco por ciento"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "Is the legislated pension reform minor or major?",
+    "quote": "Artículo 103... Se crea el Fondo Nacional de Pensiones... PENSIONISSSTE"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "instrument_type",
+    "quote": "DOF: 31/03/2007... Artículo 77... Artículo 103"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "issuing_body",
+    "quote": "PODER EJECUTIVO... INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO"
+   },
+   {
+    "doc": "04",
+    "episode": 5,
+    "field": "entry_into_force_date",
+    "quote": "Día siguiente"
+   },
+   {
+    "doc": "05",
+    "episode": 1,
+    "field": "reform_coverage",
+    "quote": "todas las menciones al salario mínimo como unidad de cuenta... se entenderán referidas a la Unidad de Medida y Actualización"
+   },
+   {
+    "doc": "05",
+    "episode": 1,
+    "field": "reason_reform",
+    "quote": "El financiamiento público para el sostenimiento de sus actividades ordinarias permanentes se fijará anualmente..."
+   },
+   {
+    "doc": "05",
+    "episode": 1,
+    "field": "financing_indexation_change",
+    "quote": "El valor inicial diario de la Unidad de Medida y Actualización... será equivalente al que tenga el salario mínimo general vigente diario"
+   },
+   {
+    "doc": "05",
+    "episode": 1,
+    "field": "implicit_liability_direction",
+    "quote": "El salario mínimo no podrá ser utilizado como índice... para fines ajenos a su naturaleza"
+   },
+   {
+    "doc": "07",
+    "episode": 1,
+    "field": "legislation_date",
+    "quote": "05-2020"
+   },
+   {
+    "doc": "07",
+    "episode": 1,
+    "field": "issuing_body",
+    "quote": "ANDRÉS MANUEL LÓPEZ OBRADOR, Presidente... expido el presente Decreto"
+   },
+   {
+    "doc": "07",
+    "episode": 1,
+    "field": "reason_reform",
+    "quote": "El Estado garantizará la entrega de un apoyo económico a las personas que tengan discapacidad permanente... Para recibir esta prestación tendrán prioridad las y los menores de dieciocho años, las y los indígenas y las y los afromexicanos... y las personas que se encuentren en condición de pobreza."
+   },
+   {
+    "doc": "07",
+    "episode": 1,
+    "field": "issuing_body",
+    "quote": "ANDRÉS MANUEL LÓPEZ OBRADOR, Presidente... expido el presente Decreto"
+   },
+   {
+    "doc": "07",
+    "episode": 1,
+    "field": "legal_references",
+    "quote": "Se reforma y adiciona el artículo 4o."
+   },
+   {
+    "doc": "08",
+    "episode": 1,
+    "field": "Status of Pension Reform",
+    "quote": "DECRETO... SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES"
+   },
+   {
+    "doc": "08",
+    "episode": 1,
+    "field": "Social_insurance_change",
+    "quote": "Artículo 168... Los patrones cubrirán la cuota que corresponda sobre el salario base de cotización"
+   },
+   {
+    "doc": "08",
+    "episode": 1,
+    "field": "reason_reform",
+    "quote": "El Gobierno Federal... aportará mensualmente una cantidad por concepto de la cuota social"
+   },
+   {
+    "doc": "08",
+    "episode": 1,
+    "field": "Contribution_rate_change",
+    "quote": "Los patrones seguirán cubriendo, para los ramos de cesantía en edad avanzada y vejez, una cuota del tres punto ciento cincuenta por ciento... Del 1 de enero de 2021 al 31 de diciembre de 2022"
+   },
+   {
+    "doc": "08",
+    "episode": 1,
+    "field": "Old Employer Contribution Rate",
+    "quote": "Los patrones seguirán cubriendo... una cuota del tres punto ciento cincuenta por ciento"
+   },
+   {
+    "doc": "08",
+    "episode": 1,
+    "field": "New Employer Contribution Rate",
+    "quote": "1.01 SM a 1.50 UMA... 4.202%"
+   },
+   {
+    "doc": "08",
+    "episode": 1,
+    "field": "Old Contribution Rate (Employee and Employer Combined)",
+    "quote": "3.15% + 1.125%"
+   },
+   {
+    "doc": "08",
+    "episode": 1,
+    "field": "New Contribution Rate (Employee and Employer Combined)",
+    "quote": "4.202% + 1.125%"
+   },
+   {
+    "doc": "08",
+    "episode": 1,
+    "field": "issuing_body",
+    "quote": "ANDRÉS MANUEL LÓPEZ OBRADOR, Presidente... expido el presente Decreto"
+   },
+   {
+    "doc": "08",
+    "episode": 1,
+    "field": "legal_references",
+    "quote": "Artículo 168... Artículo 302... Artículo 37"
+   },
+   {
+    "doc": "08",
+    "episode": 1,
+    "field": "financing_indexation_change",
+    "quote": "El Gobierno Federal... aportará mensualmente una cantidad por concepto de la cuota social"
+   },
+   {
+    "doc": "08",
+    "episode": 1,
+    "field": "implicit_liability_direction",
+    "quote": "El Gobierno Federal... aportará mensualmente una cantidad por concepto de la cuota social"
+   },
+   {
+    "doc": "08",
+    "episode": 2,
+    "field": "Status of Pension Reform",
+    "quote": "DECRETO... SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES"
+   },
+   {
+    "doc": "08",
+    "episode": 2,
+    "field": "Pension Reform Types",
+    "quote": "En la fecha en que entre en vigor el presente Decreto las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley... serán setecientas cincuenta"
+   },
+   {
+    "doc": "08",
+    "episode": 2,
+    "field": "benefit_change",
+    "quote": "las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley... serán setecientas cincuenta"
+   },
+   {
+    "doc": "08",
+    "episode": 2,
+    "field": "Social_insurance_change",
+    "quote": "Artículo 154... Para gozar de las prestaciones de este ramo se requiere que el asegurado tenga reconocidas ante el Instituto un mínimo de mil cotizaciones semanales"
+   },
+   {
+    "doc": "08",
+    "episode": 2,
+    "field": "issuing_body",
+    "quote": "ANDRÉS MANUEL LÓPEZ OBRADOR, Presidente... expido el presente Decreto"
+   },
+   {
+    "doc": "08",
+    "episode": 2,
+    "field": "legal_references",
+    "quote": "artículos 154 y 162 de la Ley... artículo 170"
+   },
+   {
+    "doc": "08",
+    "episode": 3,
+    "field": "Status of Pension Reform",
+    "quote": "DECRETO... SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES"
+   },
+   {
+    "doc": "08",
+    "episode": 3,
+    "field": "Pension Reform Types",
+    "quote": "El Gobierno Federal seguirá cubriendo en los ramos de cesantía en edad avanzada y vejez, la cuota social... Del 1 de enero de 2021 al 31 de diciembre de 2022"
+   },
+   {
+    "doc": "08",
+    "episode": 3,
+    "field": "Social_insurance_change",
+    "quote": "El Gobierno Federal... aportará mensualmente una cantidad por concepto de la cuota social"
+   },
+   {
+    "doc": "08",
+    "episode": 3,
+    "field": "Old Employer Contribution Rate",
+    "quote": "Los patrones seguirán cubriendo... una cuota del tres punto ciento cincuenta por ciento"
+   },
+   {
+    "doc": "08",
+    "episode": 3,
+    "field": "New Employer Contribution Rate",
+    "quote": "1.01 SM a 1.50 UMA... 4.202%"
+   },
+   {
+    "doc": "10",
+    "episode": 1,
+    "field": "Pension Reform Types",
+    "quote": "recibir, administrar, invertir y entregar los recursos... para procurar que las personas trabajadoras... reciban... un complemento económico"
+   },
+   {
+    "doc": "10",
+    "episode": 1,
+    "field": "benefit_change",
+    "quote": "reciban... un complemento económico... para que sea igual a su último salario percibido"
+   },
+   {
+    "doc": "10",
+    "episode": 1,
+    "field": "reason_reform",
+    "quote": "reducir la pobreza en la vejez, generar un estado de igualdad entre las personas adultas mayores"
+   },
+   {
+    "doc": "10",
+    "episode": 1,
+    "field": "relevancetopr_score",
+    "quote": "N/A"
+   },
+   {
+    "doc": "10",
+    "episode": 1,
+    "field": "issuing_body",
+    "quote": "ANDRÉS MANUEL LÓPEZ OBRADOR, presidente... expedir el siguiente DECRETO"
+   },
+   {
+    "doc": "10",
+    "episode": 1,
+    "field": "legal_references",
+    "quote": "302 de la Ley del Seguro Social; 37 de la Ley del INFONAVIT; 192, 251 y Cuadragésimo Octavo Transitorio de la Ley del ISSSTE; 18 y 81 Bis de la Ley de los Sistemas de Ahorro para el Retiro"
+   },
+   {
+    "doc": "10",
+    "episode": 1,
+    "field": "implicit_liability_direction",
+    "quote": "complemento económico... para que sea igual a su último salario percibido"
+   },
+   {
+    "doc": "10",
+    "episode": 2,
+    "field": "legal_references",
+    "quote": "aportación a que se refiere el artículo 4, párrafo segundo, fracción II... conforme a lo dispuesto en el artículo 11 del presente decreto."
+   },
+   {
+    "doc": "10",
+    "episode": 2,
+    "field": "regime_affected",
+    "quote": "Se instruye a la Secretaría de Hacienda y Crédito Público, al Instituto Mexicano del Seguro Social, al Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado, y al Instituto del Fondo Nacional de la Vivienda para los Trabajadores..."
+   },
+   {
+    "doc": "10",
+    "episode": 2,
+    "field": "implicit_liability_direction",
+    "quote": "Se instruye... realizar los actos asociados a la implementación y operación del Fondo de Pensiones para el Bienestar"
+   },
+   {
+    "doc": "10",
+    "episode": 2,
+    "field": "Social_insurance_change",
+    "quote": "Se instruye a la Secretaría de Hacienda y Crédito Público, al Instituto Mexicano del Seguro Social... realizar los actos asociados a la implementación y operación del Fondo de Pensiones para el Bienestar"
+   },
+   {
+    "doc": "11",
+    "episode": 1,
+    "field": "reform_coverage",
+    "quote": "personas que... se encuentren inscritas en la Continuación Voluntaria... así como aquellas que deseen conservar sus derechos"
+   },
+   {
+    "doc": "11",
+    "episode": 1,
+    "field": "legal_references",
+    "quote": "artículos 251... 263... 264... 31..."
+   }
+  ]
+ },
+ "records_with_uncovered_fields": 12
+}

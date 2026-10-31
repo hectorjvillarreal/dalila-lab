@@ -1,0 +1,43 @@
+### EPISODE 1: Ley del Seguro Social (1995)
+field name | value | "verbatim quote" | where in the text
+1. Country Name | Mexico | "Estados Unidos Mexicanos" | Line 4
+2. Year of the article | 1995 | "DOF: 21/12/1995" | Line 1
+3. Status of Pension Reform | Legislated | "DOF: 21/12/1995" | Line 1
+4. legislation_date | 12-1995 | "DOF: 21/12/1995" | Line 1
+5. Planned_date | INFERRED | N/A | N/A
+6. announcement_date | INFERRED | N/A | N/A
+7. implementation_date | INFERRED | N/A | N/A
+8. reversal_date | INFERRED | N/A | N/A
+9. Pension Reform Types | funding mechanisms; coverage; benefit rule changes; administration and governance | "Artículo 6. El Seguro Social comprende: I. El régimen obligatorio, y II. El régimen voluntario." | Line 13
+10. indexation_change | INFERRED | N/A | N/A
+11. coverage_change | extended coverage | "Artículo 6. El Seguro Social comprende: I. El régimen obligatorio, y II. El régimen voluntario." | Line 13
+12. benefit_change | INFERRED | N/A | N/A
+13. Social_insurance_change | Yes | "Artículo 4. El Seguro Social es el instrumento básico de la seguridad social..." | Line 10
+14. Reform_category | Parametric reform | "Artículo 154. Para los efectos de esta Ley existe cesantía en edad avanzada cuando el asegurado quede privado de trabajos remunerados después de los sesenta años de edad." | Line 108
+15. reform_coverage | Broad-based reform | "Artículo 1. La presente Ley es de observancia general en toda la República..." | Line 5
+16. reason_reform | INFERRED | N/A | N/A
+17. relevancetopr_score | 10.0 | "LEY del Seguro Social" | Line 2
+18. retirement_age_change | retirement age increased | "Artículo 154. Para los efectos de esta Ley existe cesantía en edad avanzada cuando el asegurado quede privado de trabajos remunerados después de los sesenta años de edad." | Line 108
+19. Retirement_age_change_details | 60 years | "Artículo 154. ...después de los sesenta años de edad." | Line 108
+20. Retirement_age_pre_reform_female | INFERRED | N/A | N/A
+21. Retirement_age_after_reform_female | 60 | "Artículo 154. ...después de los sesenta años de edad." | Line 108
+22. Retirement_age_pre_reform_male | INFERRED | N/A | N/A
+23. Retirement_age_after_reform_male | 60 | "Artículo 154. ...después de los sesenta años de edad." | Line 108
+24. Contribution_rate_change | INFERRED | N/A | N/A
+25. Old Employer Contribution Rate | INFERRED | N/A | N/A
+26. New Employer Contribution Rate | INFERRED | N/A | N/A
+27. Old Employee Contribution Rate | INFERRED | N/A | N/A
+28. New Employee Contribution Rate | INFERRED | N/A | N/A
+29. Old Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A
+30. New Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A
+31. Is the legislated pension reform minor or major | Major | "LEY del Seguro Social" | Line 2
+32. instrument_type | new_law | "LEY del Seguro Social" | Line 2
+33. issuing_body | Congreso de la Unión | "EL CONGRESO DE LOS ESTADOS UNIDOS MEXICANOS, DECRETA:" | Line 5
+34. dof_publication_date | 21-12-1995 | "DOF: 21/12/1995" | Line 1
+35. entry_into_force_date | INFERRED | N/A | N/A
+36. legal_references | Artículo 1; Artículo 2; Artículo 6; Artículo 154 | "Artículo 1. La presente Ley es de observancia general..." | Line 5
+37. regime_affected | all | "Artículo 6. El Seguro Social comprende: I. El régimen obligatorio, y II. El régimen voluntario." | Line 13
+38. insurance_branch | IV; RCV; SEM; RT; GPS | "Artículo 112. Los riesgos protegidos en este capítulo son la invalidez y la muerte..." | Line 85
+39. financing_indexation_change | changed_to_inflation | "Artículo 108. ...actualizada trimestralmente de acuerdo a la variación del Indice Nacional de Precios al Consumidor." | Line 48
+40. fiscal_magnitude_stated | INFERRED | N/A | N/A
+41. implicit_liability_direction | ambiguous | "Artículo 148. ...será igual al siete punto ciento cuarenta y tres por ciento del total de las cuotas patronales..." | Line 102

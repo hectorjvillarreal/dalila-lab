@@ -1,0 +1,29 @@
+### EPISODE 1: Establishment of Individual Accounts System
+legislation_date | 05-1996 | "LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO Y DE REFORMAS Y ADICIONES A LAS LEYES GENERAL DE INSTITUCIONES Y SOCIEDADES MUTUALISTAS DE SEGUROS..." | DOF: 23/05/1996
+status_of_pension_reform | Legislated, Implemented | "La presente Ley es de orden público e interés social y tiene por objeto regular el funcionamiento de los sistemas de ahorro para el retiro..." | DOF: 23/05/1996
+pension_reform_types | systematic (structural) pension reforms; pension plan types (DC); administration and governance; investment strategies | "Sistemas de Ahorro para el Retiro, aquéllos regulados por las leyes de seguridad social que prevén que las aportaciones de los trabajadores, patrones y del Estado sean manejadas a través de cuentas individuales propiedad de los trabajadores..." | DOF: 23/05/1996
+instrument_type | new_law | "EL CONGRESO DE LOS ESTADOS UNIDOS MEXICANOS, D E C R E T A : LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO..." | DOF: 23/05/1996
+issuing_body | Congreso de la Unión | "EL CONGRESO DE LOS ESTADOS UNIDOS MEXICANOS, D E C R E T A :" | DOF: 23/05/1996
+dof_publication_date | 23-05-1996 | "DOF: 23/05/1996" | DOF: 23/05/1996
+entry_into_force_date | 24-05-1996 | "Día siguiente" (next calendar day) per standard Mexican law interpretation for decrees unless specified otherwise | DOF: 23/05/1996
+regime_affected | all | "La presente Ley es de orden público e interés social y tiene por objeto regular el funcionamiento de los sistemas de ahorro para el retiro..." | DOF: 23/05/1996
+insurance_branch | other | "sistemas de ahorro para el retiro y sus participantes previstos en esta Ley y en las leyes del Seguro Social..." | DOF: 23/05/1996
+financing_indexation_change | other | "cuentas individuales propiedad de los trabajadores, con el fin de acumular saldos..." | DOF: 23/05/1996
+social_insurance_change | Yes | "regular el funcionamiento de los sistemas de ahorro para el retiro y sus participantes previstos en esta Ley y en las leyes del Seguro Social..." | DOF: 23/05/1996
+reform_category | Structural reform | "regular el funcionamiento de los sistemas de ahorro para el retiro y sus participantes previstos en esta Ley..." | DOF: 23/05/1996
+reason_reform | Economic growth | "El régimen de inversión deberá otorgar la mayor seguridad y la obtención de una adecuada rentabilidad de los recursos de los trabajadores." | DOF: 23/05/1996
+relevancetopr_score | 10.0 | "La presente Ley es de orden público e interés social y tiene por objeto regular el funcionamiento de los sistemas de ahorro para el retiro..." | DOF: 23/05/1996
+retirement_age_change | N/A | INFERRED | DOF: 23/05/1996
+retirement_age_change_details | INFERRED | INFERRED | DOF: 23/05/1996
+retirement_age_pre_reform_female | INFERRED | INFERRED | DOF: 23/05/1996
+retirement_age_after_reform_female | INFERRED | INFERRED | DOF: 23/05/1996
+retirement_age_pre_reform_male | INFERRED | INFERRED | DOF: 23/05/1996
+retirement_age_after_reform_male | INFERRED | INFERRED | DOF: 23/05/1996
+contribution_rate_change | N/A | INFERRED | DOF: 23/05/1996
+old_employer_contribution_rate | INFERRED | INFERRED | DOF: 23/05/1996
+new_employer_contribution_rate | INFERRED | INFERRED | DOF: 23/05/1996
+old_employee_contribution_rate | INFERRED | INFERRED | DOF: 23/05/1996
+new_employee_contribution_rate | INFERRED | INFERRED | DOF: 23/05/1996
+old_contribution_rate_combined | INFERRED | INFERRED | DOF: 23/05/1996
+new_contribution_rate_combined | INFERRED | INFERRED | DOF: 23/05/1996
+is_legislated_pension_reform_minor_or_major | Major | "La presente Ley es de orden público e interés social y tiene por objeto regular el funcionamiento de los sistemas de ahorro para el retiro..." | DOF: 23/05/1996

@@ -1,0 +1,200 @@
+{
+ "doc_id": "08",
+ "episode": 2,
+ "label": "Increase in required weeks of contribution for guaranteed pension",
+ "summary": "EPISODE: Increase in required weeks of contribution for guaranteed pension\nfield name | value | \"verbatim quote\" | where in the text\n--- | --- | --- | ---\n1. Country Name | Mexico | \"Estados Unidos Mexicanos\" | Top of text\n2. Year of the article | 2020 | \"DOF: 16/12/2020\" | Top of text\n3. Status of Pension Reform | Legislated, Implemented | \"DECRETO... SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES\" | Top of text\n4. legislation_date | 12-2020 | \"DOF: 16/12/2020\" | Top of text\n5. Planned_date | 01-2021 | \"El presente Decreto entrará en vigor el 1 de enero de 2021\" | Transitorios Primero\n6. announcement_date | 12-2020 | \"Ciudad de México, a 9 de diciembre de 2020\" | End of text\n7. implementation_date | 01-2021 | \"El presente Decreto entrará en vigor el 1 de enero de 2021\" | Transitorios Primero\n8. reversal_date | | |\n9. Pension Reform Types | eligibility and access | \"En la fecha en que entre en vigor el presente Decreto las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley... serán setecientas cincuenta\" | Transitorios Cuarto\n10. indexation_change | | |\n11. coverage_change | | |\n12. benefit_change | less generous benefits | \"las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley... serán setecientas cincuenta\" | Transitorios Cuarto\n13. Social_insurance_change | Yes | \"Artículo 154... Para gozar de las prestaciones de este ramo se requiere que el asegurado tenga reconocidas ante el Instituto un mínimo de mil cotizaciones semanales\" | Artículo 154\n14. Reform_category | Parametric reform | \"SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES\" | Top of text\n15. reform_coverage | Broad-based reform | \"las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley\" | Transitorios Cuarto\n16. reason_reform | Economic impact | \"las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley\" | Transitorios Cuarto\n17. relevancetopr_score | 8.0 | \"las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley\" | Transitorios Cuarto\n18. retirement_age_change | | |\n19. Retirement_age_change_details | | |\n20. Retirement_age_pre_reform_female | | |\n21. Retirement_age_after_reform_female | | |\n22. Retirement_age_pre_reform_male | | |\n23. Retirement_age_after_reform_male | | |\n24. Contribution_rate_change | | |\n25. Old Employer Contribution Rate | | |\n26. New Employer Contribution Rate | | |\n27. Old Employee Contribution Rate | | |\n28. New Employee Contribution Rate | | |\n29. Old Contribution Rate (Employee and Employer Combined) | | |\n30. New Contribution Rate (Employee and Employer Combined) | | |\n31. Is the legislated pension reform minor or major | Minor | \"las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley\" | Transitorios Cuarto\n32. instrument_type | decree | \"DECRETO\" | Top of text\n33. issuing_body | Ejecutivo Federal | \"ANDRÉS MANUEL LÓPEZ OBRADOR, Presidente... expido el presente Decreto\" | Top of text\n34. dof_publication_date | 16-12-2020 | \"DOF: 16/12/2020\" | Top of text\n35. entry_into_force_date | 01-01-2021 | \"El presente Decreto entrará en vigor el 1 de enero de 2021\" | Transitorios Primero\n36. legal_references | 154, 162, 170 | \"artículos 154 y 162 de la Ley... artículo 170\" | Transitorios Cuarto\n37. regime_affected | all | \"las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley\" | Transitorios Cuarto\n38. insurance_branch | IV, RCV | \"ramos de cesantía en edad avanzada y vejez\" | Artículo 168\n39. financing_indexation_change | other | |\n40. fiscal_magnitude_stated | | |\n41. implicit_liability_direction | ambiguous | \"las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley\" | Transitorios Cuarto",
+ "attempts": 1,
+ "valid": true,
+ "errors": [],
+ "record": {
+  "Country Name": "Mexico",
+  "Year of the article": "2020",
+  "Status of Pension Reform": [
+   "Legislated",
+   "Implemented"
+  ],
+  "legislation_date": "12-2020",
+  "Planned_date": "01-2021",
+  "announcement_date": "12-2020",
+  "implementation_date": "01-2021",
+  "reversal_date": "Not explicitly mentioned",
+  "Pension Reform Types": [
+   "eligibility and access"
+  ],
+  "indexation_change": "Not explicitly mentioned",
+  "coverage_change": "Not explicitly mentioned",
+  "benefit_change": "less generous benefits",
+  "Social_insurance_change": "Yes",
+  "Reform_category": "Parametric reform",
+  "reform_coverage": "Broad-based reform",
+  "reason_reform": [
+   "Economic impact"
+  ],
+  "relevancetopr_score": 8.0,
+  "retirement_age_change": "Not explicitly mentioned",
+  "Retirement_age_change_details": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+  "Retirement_age_after_reform_female": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+  "Retirement_age_after_reform_male": "Not explicitly mentioned",
+  "Contribution_rate_change": "Not explicitly mentioned",
+  "Old Employer Contribution Rate": "Not explicitly mentioned",
+  "New Employer Contribution Rate": "Not explicitly mentioned",
+  "Old Employee Contribution Rate": "Not explicitly mentioned",
+  "New Employee Contribution Rate": "Not explicitly mentioned",
+  "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "Is the legislated pension reform minor or major?": "Minor",
+  "instrument_type": "decree",
+  "issuing_body": "Ejecutivo Federal",
+  "dof_publication_date": "16-12-2020",
+  "entry_into_force_date": "01-01-2021",
+  "legal_references": [
+   "artículos 154 y 162 de la Ley",
+   "artículo 170"
+  ],
+  "regime_affected": [
+   "all"
+  ],
+  "insurance_branch": [
+   "IV",
+   "RCV"
+  ],
+  "financing_indexation_change": "other",
+  "fiscal_magnitude_stated": "Not explicitly mentioned",
+  "implicit_liability_direction": "ambiguous",
+  "fields_inferred": [],
+  "evidence": [
+   {
+    "field": "Country Name",
+    "quote": "Estados Unidos Mexicanos",
+    "location": "Top of text"
+   },
+   {
+    "field": "Year of the article",
+    "quote": "DOF: 16/12/2020",
+    "location": "Top of text"
+   },
+   {
+    "field": "Status of Pension Reform",
+    "quote": "DECRETO... SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES",
+    "location": "Top of text"
+   },
+   {
+    "field": "legislation_date",
+    "quote": "DOF: 16/12/2020",
+    "location": "Top of text"
+   },
+   {
+    "field": "Planned_date",
+    "quote": "El presente Decreto entrará en vigor el 1 de enero de 2021",
+    "location": "Transitorios Primero"
+   },
+   {
+    "field": "announcement_date",
+    "quote": "Ciudad de México, a 9 de diciembre de 2020",
+    "location": "End of text"
+   },
+   {
+    "field": "implementation_date",
+    "quote": "El presente Decreto entrará en vigor el 1 de enero de 2021",
+    "location": "Transitorios Primero"
+   },
+   {
+    "field": "Pension Reform Types",
+    "quote": "En la fecha en que entre en vigor el presente Decreto las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley... serán setecientas cincuenta",
+    "location": "Transitorios Cuarto"
+   },
+   {
+    "field": "benefit_change",
+    "quote": "las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley... serán setecientas cincuenta",
+    "location": "Transitorios Cuarto"
+   },
+   {
+    "field": "Social_insurance_change",
+    "quote": "Artículo 154... Para gozar de las prestaciones de este ramo se requiere que el asegurado tenga reconocidas ante el Instituto un mínimo de mil cotizaciones semanales",
+    "location": "Artículo 154"
+   },
+   {
+    "field": "Reform_category",
+    "quote": "SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES",
+    "location": "Top of text"
+   },
+   {
+    "field": "reform_coverage",
+    "quote": "las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley",
+    "location": "Transitorios Cuarto"
+   },
+   {
+    "field": "reason_reform",
+    "quote": "las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley",
+    "location": "Transitorios Cuarto"
+   },
+   {
+    "field": "relevancetopr_score",
+    "quote": "las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley",
+    "location": "Transitorios Cuarto"
+   },
+   {
+    "field": "Is the legislated pension reform minor or major?",
+    "quote": "las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley",
+    "location": "Transitorios Cuarto"
+   },
+   {
+    "field": "instrument_type",
+    "quote": "DECRETO",
+    "location": "Top of text"
+   },
+   {
+    "field": "issuing_body",
+    "quote": "ANDRÉS MANUEL LÓPEZ OBRADOR, Presidente... expido el presente Decreto",
+    "location": "Top of text"
+   },
+   {
+    "field": "dof_publication_date",
+    "quote": "DOF: 16/12/2020",
+    "location": "Top of text"
+   },
+   {
+    "field": "entry_into_force_date",
+    "quote": "El presente Decreto entrará en vigor el 1 de enero de 2021",
+    "location": "Transitorios Primero"
+   },
+   {
+    "field": "legal_references",
+    "quote": "artículos 154 y 162 de la Ley... artículo 170",
+    "location": "Transitorios Cuarto"
+   },
+   {
+    "field": "regime_affected",
+    "quote": "las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley",
+    "location": "Transitorios Cuarto"
+   },
+   {
+    "field": "insurance_branch",
+    "quote": "ramos de cesantía en edad avanzada y vejez",
+    "location": "Artículo 168"
+   },
+   {
+    "field": "implicit_liability_direction",
+    "quote": "las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley",
+    "location": "Transitorios Cuarto"
+   }
+  ],
+  "source_file": "08_dof_20201216_lss_lsar.html",
+  "chunk_ids": [
+   "08_full"
+  ]
+ },
+ "raw_failed": null,
+ "metrics": [
+  {
+   "wall_s": 41.6,
+   "prompt_tokens": 2775,
+   "gen_tokens": 1924,
+   "gen_s": 40.6,
+   "prompt_s": 0.7,
+   "done_reason": "stop"
+  }
+ ]
+}

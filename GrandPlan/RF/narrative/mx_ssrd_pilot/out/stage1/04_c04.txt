@@ -1,0 +1,83 @@
+### EPISODE 1: Transferencia de derechos entre IMSS e ISSSTE
+field name | value | "verbatim quote" | where in the text
+1. Country Name | Mexico | "DOF: 31/03/2007" | Top of text
+2. Year of the article | 2007 | "DOF: 31/03/2007" | Top of text
+3. Status of Pension Reform | Legislated | "DOF: 31/03/2007" | Top of text
+4. legislation_date | 03-2007 | "DOF: 31/03/2007" | Top of text
+5. Planned_date | INFERRED | N/A | N/A
+6. announcement_date | INFERRED | N/A | N/A
+7. implementation_date | INFERRED | N/A | N/A
+8. reversal_date | INFERRED | N/A | N/A
+9. Pension Reform Types | pension portability | "Artículo 141. Los Trabajadores que hubieren cotizado al Instituto y que por virtud de una nueva relación laboral se inscriban al IMSS, podrán transferir a este último los derechos de los años de cotización al Instituto." | Section I, Article 141
+10. indexation_change | INFERRED | N/A | N/A
+11. coverage_change | INFERRED | N/A | N/A
+12. benefit_change | INFERRED | N/A | N/A
+13. Social_insurance_change | Yes | "Artículo 141. Los Trabajadores que hubieren cotizado al Instituto y que por virtud de una nueva relación laboral se inscriban al IMSS, podrán transferir a este último los derechos de los años de cotización al Instituto." | Section I, Article 141
+14. Reform_category | Structural reform | "Artículo 141. Los Trabajadores que hubieren cotizado al Instituto y que por virtud de una nueva relación laboral se inscriban al IMSS, podrán transferir a este último los derechos de los años de cotización al Instituto." | Section I, Article 141
+15. reform_coverage | Broad-based reform | "Artículo 141. Los Trabajadores que hubieren cotizado al Instituto y que por virtud de una nueva relación laboral se inscriban al IMSS, podrán transferir a este último los derechos de los años de cotización al Instituto." | Section I, Article 141
+16. reason_reform | Labor market changes | "Artículo 141. Los Trabajadores que hubieren cotizado al Instituto y que por virtud de una nueva relación laboral se inscriban al IMSS, podrán transferir a este último los derechos de los años de cotización al Instituto." | Section I, Article 141
+17. relevancetopr_score | 8.0 | "Artículo 141. Los Trabajadores que hubieren cotizado al Instituto y que por virtud de una nueva relación laboral se inscriban al IMSS, podrán transferir a este último los derechos de los años de cotización al Instituto." | Section I, Article 141
+18. retirement_age_change | INFERRED | N/A | N/A
+19. Retirement_age_change_details | INFERRED | N/A | N/A
+20. Retirement_age_pre_reform_female | INFERRED | N/A | N/A
+21. Retirement_age_after_reform_female | INFERRED | N/A | N/A
+22. Retirement_age_pre_reform_male | INFERRED | N/A | N/A
+23. Retirement_age_after_reform_male | INFERRED | N/A | N/A
+24. Contribution_rate_change | INFERRED | N/A | N/A
+25. Old Employer Contribution Rate | INFERRED | N/A | N/A
+26. New Employer Contribution Rate | INFERRED | N/A | N/A
+27. Old Employee Contribution Rate | INFERRED | N/A | N/A
+28. New Employee Contribution Rate | INFERRED | N/A | N/A
+29. Old Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A
+30. New Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A
+31. Is the legislated pension reform minor or major | Minor | "Artículo 141. Los Trabajadores que hubieren cotizado al Instituto y que por virtud de una nueva relación laboral se inscriban al IMSS, podrán transferir a este último los derechos de los años de cotización al Instituto." | Section I, Article 141
+32. instrument_type | law_reform | "DOF: 31/03/2007" | Top of text
+33. issuing_body | Ejecutivo Federal | "PODER EJECUTIVO" | Top of text
+34. dof_publication_date | 31-03-2007 | "DOF: 31/03/2007" | Top of text
+35. entry_into_force_date | 01-04-2007 | "DOF: 31/03/2007" | Top of text
+36. legal_references | Artículo 141 | "Artículo 141. Los Trabajadores que hubieren cotizado al Instituto y que por virtud de una nueva relación laboral se inscriban al IMSS, podrán transferir a este último los derechos de los años de cotización al Instituto." | Section I, Article 141
+37. regime_affected | all | "Artículo 141. Los Trabajadores que hubieren cotizado al Instituto y que por virtud de una nueva relación laboral se inscriban al IMSS, podrán transferir a este último los derechos de los años de cotización al Instituto." | Section I, Article 141
+38. insurance_branch | IV | "Artículo 141. Los Trabajadores que hubieren cotizado al Instituto y que por virtud de una nueva relación laboral se inscriban al IMSS, podrán transferir a este último los derechos de los años de cotización al Instituto." | Section I, Article 141
+39. financing_indexation_change | INFERRED | N/A | N/A
+40. fiscal_magnitude_stated | INFERRED | N/A | N/A
+41. implicit_liability_direction | INFERRED | N/A | N/A
+
+### EPISODE 2: Transferencia de derechos al Instituto provenientes de otros Institutos de Seguridad Social
+field name | value | "verbatim quote" | where in the text
+1. Country Name | Mexico | "DOF: 31/03/2007" | Top of text
+2. Year of the article | 2007 | "DOF: 31/03/2007" | Top of text
+3. Status of Pension Reform | Legislated | "DOF: 31/03/2007" | Top of text
+4. legislation_date | 03-2007 | "DOF: 31/03/2007" | Top of text
+5. Planned_date | INFERRED | N/A | N/A
+6. announcement_date | INFERRED | N/A | N/A
+7. implementation_date | INFERRED | N/A | N/A
+8. reversal_date | INFERRED | N/A | N/A
+9. Pension Reform Types | pension portability | "Artículo 149. El Instituto, previa aprobación de su Junta Directiva y opinión favorable de la Secretaría de Hacienda y Crédito Público, podrá celebrar convenios de portabilidad con otros institutos de seguridad social o con Entidades que operen otros sistemas de seguridad social compatibles con el previsto en la presente ley, mediante los cuales se establezcan: I. Reglas de carácter general y equivalencias en las condiciones y requisitos para obtener una Pensión de retiro, cesantía en edad avanzada y vejez, e invalidez y vida, y II. Mecanismos de traspaso de recursos de las Subcuentas que integran la Cuenta Individual." | Section II, Article 149
+10. indexation_change | INFERRED | N/A | N/A
+11. coverage_change | INFERRED | N/A | N/A
+12. benefit_change | INFERRED | N/A | N/A
+13. Social_insurance_change | Yes | "Artículo 149. El Instituto, previa aprobación de su Junta Directiva y opinión favorable de la Secretaría de Hacienda y Crédito Público, podrá celebrar convenios de portabilidad con otros institutos de seguridad social o con Entidades que operen otros sistemas de seguridad social compatibles con el previsto en la presente ley, mediante los cuales se establezcan: I. Reglas de carácter general y equivalencias en las condiciones y requisitos para obtener una Pensión de retiro, cesantía en edad avanzada y vejez, e invalidez y vida, y II. Mecanismos de traspaso de recursos de las Subcuentas que integran la Cuenta Individual." | Section II, Article 149
+14. Reform_category | Structural reform | "Artículo 149. El Instituto, previa aprobación de su Junta Directiva y opinión favorable de la Secretaría de Hacienda y Crédito Público, podrá celebrar convenios de portabilidad con otros institutos de seguridad social o con Entidades que operen otros sistemas de seguridad social compatibles con el previsto en la presente ley, mediante los cuales se establezcan: I. Reglas de carácter general y equivalencias en las condiciones y requisitos para obtener una Pensión de retiro, cesantía en edad avanzada y vejez, e invalidez y vida, y II. Mecanismos de traspaso de recursos de las Subcuentas que integran la Cuenta Individual." | Section II, Article 149
+15. reform_coverage | Broad-based reform | "Artículo 149. El Instituto, previa aprobación de su Junta Directiva y opinión favorable de la Secretaría de Hacienda y Crédito Público, podrá celebrar convenios de portabilidad con otros institutos de seguridad social o con Entidades que operen otros sistemas de seguridad social compatibles con el previsto en la presente ley, mediante los cuales se establezcan: I. Reglas de carácter general y equivalencias en las condiciones y requisitos para obtener una Pensión de retiro, cesantía en edad avanzada y vejez, e invalidez y vida, y II. Mecanismos de traspaso de recursos de las Subcuentas que integran la Cuenta Individual." | Section II, Article 149
+16. reason_reform | Labor market changes | "Artículo 149. El Instituto, previa aprobación de su Junta Directiva y opinión favorable de la Secretaría de Hacienda y Crédito Público, podrá celebrar convenios de portabilidad con otros institutos de seguridad social o con Entidades que operen otros sistemas de seguridad social compatibles con el previsto en la presente ley, mediante los cuales se establezcan: I. Reglas de carácter general y equivalencias en las condiciones y requisitos para obtener una Pensión de retiro, cesantía en edad avanzada y vejez, e invalidez y vida, y II. Mecanismos de traspaso de recursos de las Subcuentas que integran la Cuenta Individual." | Section II, Article 149
+17. relevancetopr_score | 8.0 | "Artículo 149. El Instituto, previa aprobación de su Junta Directiva y opinión favorable de la Secretaría de Hacienda y Crédito Público, podrá celebrar convenios de portabilidad con otros institutos de seguridad social o con Entidades que operen otros sistemas de seguridad social compatibles con el previsto en la presente ley, mediante los cuales se establezcan: I. Reglas de carácter general y equivalencias en las condiciones y requisitos para obtener una Pensión de retiro, cesantía en edad avanzada y vejez, e invalidez y vida, y II. Mecanismos de traspaso de recursos de las Subcuentas que integran la Cuenta Individual." | Section II, Article 149
+18. retirement_age_change | INFERRED | N/A | N/A
+19. Retirement_age_change_details | INFERRED | N/A | N/A
+20. Retirement_age_pre_reform_female | INFERRED | N/A | N/A
+21. Retirement_age_after_reform_female | INFERRED | N/A | N/A
+22. Retirement_age_pre_reform_male | INFERRED | N/A | N/A
+23. Retirement_age_after_reform_male | INFERRED | N/A | N/A
+24. Contribution_rate_change | INFERRED | N/A | N/A
+25. Old Employer Contribution Rate | INFERRED | N/A | N/A
+26. New Employer Contribution Rate | INFERRED | N/A | N/A
+27. Old Employee Contribution Rate | INFERRED | N/A | N/A
+28. New Employee Contribution Rate | INFERRED | N/A | N/A
+29. Old Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A
+30. New Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A
+31. Is the legislated pension reform minor or major | Minor | "Artículo 149. El Instituto, previa aprobación de su Junta Directiva y opinión favorable de la Secretaría de Hacienda y Crédito Público, podrá celebrar convenios de portabilidad con otros institutos de seguridad social o con Entidades que operen otros sistemas de seguridad social compatibles con el previsto en la presente ley, mediante los cuales se establezcan: I. Reglas de carácter general y equivalencias en las condiciones y requisitos para obtener una Pensión de retiro, cesantía en edad avanzada y vejez, e invalidez y vida, y II. Mecanismos de traspaso de recursos de las Subcuentas que integran la Cuenta Individual." | Section II, Article 149
+32. instrument_type | law_reform | "DOF: 31/03/2007" | Top of text
+33. issuing_body | Ejecutivo Federal | "PODER EJECUTIVO" | Top of text
+34. dof_publication_date | 31-03-2007 | "DOF: 31/03/2007" | Top of text
+35. entry_into_force_date | 01-04-2007 | "DOF: 31/03/2007" | Top of text
+36. legal_references | Artículo 149 | "Artículo 149. El Instituto, previa aprobación de su Junta Directiva y opinión favorable de la Secretaría de Hacienda y Crédito Público, podrá celebrar convenios de portabilidad con otros institutos de seguridad social o con Entidades que operen otros sistemas de seguridad social compatibles con el previsto en la presente ley, mediante los cuales se establezcan: I. Reglas de carácter general y equivalencias en las condiciones y requisitos para obtener una Pensión de retiro, cesantía en edad avanzada y vejez, e invalidez y vida, y II. Mecanismos de traspaso de recursos de las Subcuentas que integran la Cuenta Individual." | Section II, Article 149
+37. regime_affected | all | "Artículo 149. El Instituto, previa aprobación de su Junta Directiva y opinión favorable de la Secretaría de Hacienda y Crédito Público, podrá celebrar convenios de portabilidad con otros institutos de seguridad social o con Entidades que operen otros sistemas de seguridad social compatibles con el previsto en la presente ley, mediante los cuales se establezcan: I. Reglas de carácter general y equivalencias en las condiciones y requisitos para obtener una Pensión de retiro, cesantía en edad avanzada y vejez, e invalidez y vida, y II. Mecanismos de tr

@@ -1,0 +1,42 @@
+### EPISODE 1: Continuación Voluntaria en Régimen Obligatorio
+field name | value | "verbatim quote" | where in the text
+1. Country Name | Mexico | "Estados Unidos Mexicanos.- Gobierno de México.- Instituto Mexicano del Seguro Social." | Top of text
+2. Year of the article | 2026 | "10 de octubre de 2026" | Header and signature block
+3. Status of Pension Reform | Legislated | "publicación del presente Acuerdo en el Diario Oficial de la Federación" | Point Six
+4. legislation_date | 10-2026 | "10 de octubre de 2026" | Header and signature block
+5. Planned_date | INFERRED | N/A | N/A
+6. announcement_date | INFERRED | N/A | N/A
+7. implementation_date | 11-2026 | "entrará en vigor el día hábil siguiente al de su publicación" | Point Seven
+8. reversal_date | INFERRED | N/A | N/A
+9. Pension Reform Types | funding mechanisms; administration and governance | "análisis del efecto de la Continuación Voluntaria en la situación financiera"; "ajustes necesarios en el ámbito de sus competencias a los procesos y sistemas institucionales" | Point Two and Point Five
+10. indexation_change | INFERRED | N/A | N/A
+11. coverage_change | extended coverage | "podrán optar por incorporarse a la Continuación Voluntaria" | Point Four
+12. benefit_change | INFERRED | N/A | N/A
+13. Social_insurance_change | Yes | "Continuación Voluntaria en el Régimen Obligatorio del Seguro Social" | Title and Point Four
+14. reform_coverage | Mixed | "personas que... se encuentren inscritas en la Continuación Voluntaria... así como aquellas que deseen conservar sus derechos" | Point Four
+15. reason_reform | Fiscal reasons; Economic impact | "análisis del efecto de la Continuación Voluntaria en la situación financiera"; "modalidad viable en el mediano y largo plazos" | Point Two and Point Three
+16. relevancetopr_score | 8.0 | N/A | N/A
+17. retirement_age_change | INFERRED | N/A | N/A
+18. Retirement_age_change_details | INFERRED | N/A | N/A
+19. Retirement_age_pre_reform_female | INFERRED | N/A | N/A
+20. Retirement_age_after_reform_female | INFERRED | N/A | N/A
+21. Retirement_age_pre_reform_male | INFERRED | N/A | N/A
+22. Retirement_age_after_reform_male | INFERRED | N/A | N/A
+23. Contribution_rate_change | INFERRED | N/A | N/A
+24. Old Employer Contribution Rate | INFERRED | N/A | N/A
+25. New Employer Contribution Rate | INFERRED | N/A | N/A
+26. Old Employee Contribution Rate | INFERRED | N/A | N/A
+27. New Employee Contribution Rate | INFERRED | N/A | N/A
+28. Old Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A
+29. New Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A
+30. Is the legislated pension reform minor or major | Minor | "medida temporal"; "análisis del efecto" | Point Two and Title
+31. instrument_type | technical_council_agreement | "ACUERDO ACDO.AS2.HCT.101026/302.P.DG, dictado por el Honorable Consejo Técnico" | Title
+32. issuing_body | H. Consejo Técnico del IMSS | "Honorable Consejo Técnico del Instituto Mexicano del Seguro Social" | Title
+33. dof_publication_date | 21-10-2026 | "DOF: 21/10/2026" | Header
+34. entry_into_force_date | 22-10-2026 | "día hábil siguiente al de su publicación" (assuming 21st is publication) | Point Seven
+35. legal_references | 251, fracciones IV, VIII, XIII y XXXVIII; 263, 264, fracciones II, III, XIV y XVII; 31, fracciones II, IV y XX | "artículos 251... 263... 264... 31..." | Opening paragraph
+36. regime_affected | all | "Régimen Obligatorio del Seguro Social" | Title and Point Four
+37. insurance_branch | IV | "Seguro de Enfermedades y Maternidad" | Point Four
+38. financing_indexation_change | INFERRED | N/A | N/A
+39. fiscal_magnitude_stated | INFERRED | N/A | N/A
+40. implicit_liability_direction | ambiguous | "análisis del efecto de la Continuación Voluntaria en la situación financiera" | Point Two

@@ -1,0 +1,202 @@
+{
+ "doc_id": "03",
+ "episode": 1,
+ "label": "Reform to IMSS Staff Pension Fund Structure and Financing",
+ "summary": "EPISODE: Reform to IMSS Staff Pension Fund Structure and Financing\nfield name | value | \"verbatim quote\" | where in the text\n1. Country Name | Mexico | \"Estados Unidos Mexicanos\" | Header\n2. Year of the article | 2004 | \"11/08/2004\" | DOF line\n3. Status of Pension Reform | Legislated, Implemented | \"DECRETO... SE REFORMAN Y ADICIONAN\" | Title\n4. legislation_date | 08-2004 | \"DIARIO OFICIAL Miércoles 11 de agosto de 2004\" | DOF line\n5. Planned_date | INFERRED | N/A | N/A\n6. announcement_date | INFERRED | N/A | N/A\n7. implementation_date | 08-2004 | \"El presente Decreto entrará en vigor al día siguiente de su publicación\" | Transitorio Primero\n8. reversal_date | INFERRED | N/A | N/A\n9. Pension Reform Types | funding mechanisms; administration and governance | \"El Instituto administrará y manejará... un fondo que se denominará Fondo para el Cumplimiento de Obligaciones Laborales\" | Artículo 286 K\n10. indexation_change | INFERRED | N/A | N/A\n11. coverage_change | INFERRED | N/A | N/A\n12. benefit_change | INFERRED | N/A | N/A\n13. Social_insurance_change | Yes | \"Ley del Seguro Social\" | Title\n14. reform_category | Structural reform | \"Fondo para el Cumplimiento de Obligaciones Laborales... cuenta especial para el Régimen de Jubilaciones y Pensiones\" | Artículo 286 K\n15. reform_coverage | Mixed | \"trabajadores del Instituto\" | Artículo 286 K\n16. reason_reform | Fiscal reasons; Economic impact | \"siempre y cuando cuente con los recursos aprobados... y aquellos indispensables para cubrir el costo anual\" | Artículo 277 D\n17. relevancetopr_score | 8.0 | N/A | N/A\n18. retirement_age_change | INFERRED | N/A | N/A\n19. Retirement_age_change_details | INFERRED | N/A | N/A\n20. Retirement_age_pre_reform_female | INFERRED | N/A | N/A\n21. Retirement_age_after_reform_female | INFERRED | N/A | N/A\n22. Retirement_age_pre_reform_male | INFERRED | N/A | N/A\n23. Retirement_age_after_reform_male | INFERRED | N/A | N/A\n24. Contribution_rate_change | INFERRED | N/A | N/A\n25. Old Employer Contribution Rate | INFERRED | N/A | N/A\n26. New Employer Contribution Rate | INFERRED | N/A | N/A\n27. Old Employee Contribution Rate | INFERRED | N/A | N/A\n28. New Employee Contribution Rate | INFERRED | N/A | N/A\n29. Old Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A\n30. New Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A\n31. Is the legislated pension reform minor or major | Minor | \"Se reforman el cuarto párrafo del artículo 277 D, y los párrafos primero y segundo del artículo 286 K\" | Artículo Único\n32. instrument_type | decree | \"DECRETO\" | Title\n33. issuing_body | Congreso de la Unión | \"EL CONGRESO DE LOS ESTADOS UNIDOS MEXICANOS, DECRETA\" | Body\n34. dof_publication_date | 11-08-2004 | \"DIARIO OFICIAL Miércoles 11 de agosto de 2004\" | DOF line\n35. entry_into_force_date | 12-08-2004 | \"El presente Decreto entrará en vigor al día siguiente de su publicación\" | Transitorio Primero\n36. legal_references | 277 D; 286 K | \"SE REFORMAN Y ADICIONAN LOS ARTÍCULOS 277 D Y 286 K\" | Title\n37. regime_affected | imss_staff_rjp | \"Régimen de Jubilaciones y Pensiones de los trabajadores del Instituto\" | Artículo 286 K\n38. insurance_branch | IV | \"Ley del Seguro Social\" | Title\n39. financing_indexation_change | other | \"recursos necesarios para cubrir los costos futuros derivados del Régimen de Jubilaciones y Pensiones\" | Artículo 277 D\n40. fiscal_magnitude_stated | INFERRED | N/A | N/A\n41. implicit_liability_direction | ambiguous | \"recursos necesarios para cubrir los costos futuros\" | Artículo 277 D",
+ "attempts": 1,
+ "valid": true,
+ "errors": [],
+ "record": {
+  "Country Name": "Mexico",
+  "Year of the article": "2004",
+  "Status of Pension Reform": [
+   "Legislated",
+   "Implemented"
+  ],
+  "legislation_date": "08-2004",
+  "Planned_date": "Not explicitly mentioned",
+  "announcement_date": "Not explicitly mentioned",
+  "implementation_date": "08-2004",
+  "reversal_date": "Not explicitly mentioned",
+  "Pension Reform Types": [
+   "funding mechanisms",
+   "administration and governance"
+  ],
+  "indexation_change": "Not explicitly mentioned",
+  "coverage_change": "Not explicitly mentioned",
+  "benefit_change": "Not explicitly mentioned",
+  "Social_insurance_change": "Yes",
+  "Reform_category": "Structural reform",
+  "reform_coverage": "Mixed",
+  "reason_reform": [
+   "Fiscal reasons",
+   "Economic impact"
+  ],
+  "relevancetopr_score": 8.0,
+  "retirement_age_change": "Not explicitly mentioned",
+  "Retirement_age_change_details": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+  "Retirement_age_after_reform_female": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+  "Retirement_age_after_reform_male": "Not explicitly mentioned",
+  "Contribution_rate_change": "Not explicitly mentioned",
+  "Old Employer Contribution Rate": "Not explicitly mentioned",
+  "New Employer Contribution Rate": "Not explicitly mentioned",
+  "Old Employee Contribution Rate": "Not explicitly mentioned",
+  "New Employee Contribution Rate": "Not explicitly mentioned",
+  "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "Is the legislated pension reform minor or major?": "Minor",
+  "instrument_type": "decree",
+  "issuing_body": "Congreso de la Unión",
+  "dof_publication_date": "11-08-2004",
+  "entry_into_force_date": "12-08-2004",
+  "legal_references": [
+   "277 D",
+   "286 K"
+  ],
+  "regime_affected": [
+   "imss_staff_rjp"
+  ],
+  "insurance_branch": [
+   "IV"
+  ],
+  "financing_indexation_change": "other",
+  "fiscal_magnitude_stated": "Not explicitly mentioned",
+  "implicit_liability_direction": "ambiguous",
+  "fields_inferred": [
+   "Planned_date",
+   "announcement_date",
+   "reversal_date",
+   "indexation_change",
+   "coverage_change",
+   "benefit_change",
+   "retirement_age_change",
+   "Retirement_age_change_details",
+   "Retirement_age_pre_reform_female",
+   "Retirement_age_after_reform_female",
+   "Retirement_age_pre_reform_male",
+   "Retirement_age_after_reform_male",
+   "Contribution_rate_change",
+   "Old Employer Contribution Rate",
+   "New Employer Contribution Rate",
+   "Old Employee Contribution Rate",
+   "New Employee Contribution Rate",
+   "Old Contribution Rate (Employee and Employer Combined)",
+   "New Contribution Rate (Employee and Employer Combined)",
+   "fiscal_magnitude_stated"
+  ],
+  "evidence": [
+   {
+    "field": "Country Name",
+    "quote": "Estados Unidos Mexicanos",
+    "location": "Header"
+   },
+   {
+    "field": "Year of the article",
+    "quote": "11/08/2004",
+    "location": "DOF line"
+   },
+   {
+    "field": "Status of Pension Reform",
+    "quote": "DECRETO... SE REFORMAN Y ADICIONAN",
+    "location": "Title"
+   },
+   {
+    "field": "legislation_date",
+    "quote": "DIARIO OFICIAL Miércoles 11 de agosto de 2004",
+    "location": "DOF line"
+   },
+   {
+    "field": "implementation_date",
+    "quote": "El presente Decreto entrará en vigor al día siguiente de su publicación",
+    "location": "Transitorio Primero"
+   },
+   {
+    "field": "Pension Reform Types",
+    "quote": "El Instituto administrará y manejará... un fondo que se denominará Fondo para el Cumplimiento de Obligaciones Laborales",
+    "location": "Artículo 286 K"
+   },
+   {
+    "field": "Social_insurance_change",
+    "quote": "Ley del Seguro Social",
+    "location": "Title"
+   },
+   {
+    "field": "reform_coverage",
+    "quote": "trabajadores del Instituto",
+    "location": "Artículo 286 K"
+   },
+   {
+    "field": "reason_reform",
+    "quote": "siempre y cuando cuente con los recursos aprobados... y aquellos indispensables para cubrir el costo anual",
+    "location": "Artículo 277 D"
+   },
+   {
+    "field": "Is the legislated pension reform minor or major?",
+    "quote": "Se reforman el cuarto párrafo del artículo 277 D, y los párrafos primero y segundo del artículo 286 K",
+    "location": "Artículo Único"
+   },
+   {
+    "field": "instrument_type",
+    "quote": "DECRETO",
+    "location": "Title"
+   },
+   {
+    "field": "issuing_body",
+    "quote": "EL CONGRESO DE LOS ESTADOS UNIDOS MEXICANOS, DECRETA",
+    "location": "Body"
+   },
+   {
+    "field": "dof_publication_date",
+    "quote": "DIARIO OFICIAL Miércoles 11 de agosto de 2004",
+    "location": "DOF line"
+   },
+   {
+    "field": "entry_into_force_date",
+    "quote": "El presente Decreto entrará en vigor al día siguiente de su publicación",
+    "location": "Transitorio Primero"
+   },
+   {
+    "field": "legal_references",
+    "quote": "SE REFORMAN Y ADICIONAN LOS ARTÍCULOS 277 D Y 286 K",
+    "location": "Title"
+   },
+   {
+    "field": "regime_affected",
+    "quote": "Régimen de Jubilaciones y Pensiones de los trabajadores del Instituto",
+    "location": "Artículo 286 K"
+   },
+   {
+    "field": "insurance_branch",
+    "quote": "Ley del Seguro Social",
+    "location": "Title"
+   },
+   {
+    "field": "financing_indexation_change",
+    "quote": "recursos necesarios para cubrir los costos futuros derivados del Régimen de Jubilaciones y Pensiones",
+    "location": "Artículo 277 D"
+   },
+   {
+    "field": "implicit_liability_direction",
+    "quote": "recursos necesarios para cubrir los costos futuros",
+    "location": "Artículo 277 D"
+   }
+  ],
+  "source_file": "03_dof_20040811_lss_277d_286k.html",
+  "chunk_ids": [
+   "03_full"
+  ]
+ },
+ "raw_failed": null,
+ "metrics": [
+  {
+   "wall_s": 38.4,
+   "prompt_tokens": 2674,
+   "gen_tokens": 1731,
+   "gen_s": 36.6,
+   "prompt_s": 1.5,
+   "done_reason": "stop"
+  }
+ ]
+}

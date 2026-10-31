@@ -1,0 +1,55 @@
+### EPISODE 1: Fondo de Pensiones para el Bienestar
+field name | value | "verbatim quote" | where in the text
+32. instrument_type | decree | "DECRETO del Fondo de Pensiones para el Bienestar." | Top of text
+33. issuing_body | Ejecutivo Federal | "Dado en la residencia del Poder Ejecutivo Federal, en Ciudad de México a 1 de mayo de 2024.- Andrés Manuel López Obrador." | Bottom of text
+34. dof_publication_date | 01-05-2024 | "DOF: 01/05/2024" | Top of text
+35. entry_into_force_date | 02-05-2024 | "Primero. El presente decreto entra en vigor el día siguiente de su publicación en el Diario Oficial de la Federación." | Transitorio Primero
+36. legal_references | Article 4, Article 11 | "aportación a que se refiere el artículo 4, párrafo segundo, fracción II... conforme a lo dispuesto en el artículo 11 del presente decreto." | Transitorio Cuarto
+37. regime_affected | all | "Se instruye a la Secretaría de Hacienda y Crédito Público, al Instituto Mexicano del Seguro Social, al Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado, y al Instituto del Fondo Nacional de la Vivienda para los Trabajadores..." | Transitorio Segundo
+38. insurance_branch | other | "Fondo de Pensiones para el Bienestar" | Title
+39. financing_indexation_change | other | "realizar los actos asociados a la implementación y operación del Fondo de Pensiones para el Bienestar" | Transitorio Segundo
+41. implicit_liability_direction | increases | "Se instruye... realizar los actos asociados a la implementación y operación del Fondo de Pensiones para el Bienestar" | Transitorio Segundo
+13. Social_insurance_change | Yes | "Se instruye a la Secretaría de Hacienda y Crédito Público, al Instituto Mexicano del Seguro Social... realizar los actos asociados a la implementación y operación del Fondo de Pensiones para el Bienestar" | Transitorio Segundo
+17. relevancetopr_score | 10.0 | "Fondo de Pensiones para el Bienestar" | Title
+18. retirement_age_change | N/A | INFERRED | N/A
+19. Retirement_age_change_details | N/A | INFERRED | N/A
+20. Retirement_age_pre_reform_female | N/A | INFERRED | N/A
+21. Retirement_age_after_reform_female | N/A | INFERRED | N/A
+22. Retirement_age_pre_reform_male | N/A | INFERRED | N/A
+23. Retirement_age_after_reform_male | N/A | INFERRED | N/A
+24. Contribution_rate_change | N/A | INFERRED | N/A
+25. Old Employer Contribution Rate | N/A | INFERRED | N/A
+26. New Employer Contribution Rate | N/A | INFERRED | N/A
+27. Old Employee Contribution Rate | N/A | INFERRED | N/A
+28. New Employee Contribution Rate | N/A | INFERRED | N/A
+29. Old Contribution Rate (Employee and Employer Combined) | N/A | INFERRED | N/A
+30. New Contribution Rate (Employee and Employer Combined) | N/A | INFERRED | N/A
+31. Is the legislated pension reform minor or major | Major | "Fondo de Pensiones para el Bienestar" | Title
+1. Country Name | Mexico | "Diario Oficial de la Federación" | Top of text
+2. Year of the article | 2024 | "DOF: 01/05/2024" | Top of text
+3. Status of Pension Reform | Legislated | "DOF: 01/05/2024" | Top of text
+4. legislation_date | 05-2024 | "DOF: 01/05/2024" | Top of text
+5. Planned_date | N/A | INFERRED | N/A
+6. announcement_date | N/A | INFERRED | N/A
+7. implementation_date | 05-2024 | "Primero. El presente decreto entra en vigor el día siguiente de su publicación" | Transitorio Primero
+8. reversal_date | N/A | INFERRED | N/A
+9. Pension Reform Types | systematic | "Fondo de Pensiones para el Bienestar" | Title
+10. indexation_change | N/A | INFERRED | N/A
+11. coverage_change | extended | "Fondo de Pensiones para el Bienestar" | Title
+12. benefit_change | N/A | INFERRED | N/A
+14. Reform_category | Structural reform | "Fondo de Pensiones para el Bienestar" | Title
+15. reform_coverage | Broad-based reform | "Fondo de Pensiones para el Bienestar" | Title
+16. reason_reform | Economic growth | INFERRED | N/A
+19. Retirement_age_change_details | N/A | INFERRED | N/A
+20. Retirement_age_pre_reform_female | N/A | INFERRED | N/A
+21. Retirement_age_after_reform_female | N/A | INFERRED | N/A
+22. Retirement_age_pre_reform_male | N/A | INFERRED | N/A
+23. Retirement_age_after_reform_male | N/A | INFERRED | N/A
+24. Contribution_rate_change | N/A | INFERRED | N/A
+25. Old Employer Contribution Rate | N/A | INFERRED | N/A
+26. New Employer Contribution Rate | N/A | INFERRED | N/A
+27. Old Employee Contribution Rate | N/A | INFERRED | N/A
+28. New Employee Contribution Rate | N/A | INFERRED | N/A
+29. Old Contribution Rate (Employee and Employer Combined) | N/A | INFERRED | N/A
+30. New Contribution Rate (Employee and Employer Combined) | N/A | INFERRED | N/A
+31. Is the legislated pension reform minor or major | Major | "Fondo de Pensiones para el Bienestar" | Title

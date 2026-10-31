@@ -1,0 +1,133 @@
+{
+ "doc_id": "05",
+ "status": "silver",
+ "episodes": [
+  {
+   "label": "Desindexación del salario mínimo y creación de la UMA",
+   "core": true,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "2016",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "01-2016",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "01-2016",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "indexation"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "Not explicitly mentioned",
+    "Social_insurance_change": "Not explicitly mentioned",
+    "Reform_category": "Parametric reform",
+    "reform_coverage": "Broad-based reform",
+    "reason_reform": [
+     "Not explicitly mentioned"
+    ],
+    "relevancetopr_score": 5.0,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "Not explicitly mentioned",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "N/A",
+    "instrument_type": "constitutional_reform",
+    "issuing_body": "Comisión Permanente del H. Congreso de la Unión",
+    "dof_publication_date": "27-01-2016",
+    "entry_into_force_date": "28-01-2016",
+    "legal_references": [
+     "Constitución, artículo 26, Apartado B",
+     "Constitución, artículo 41, base II, inciso a)",
+     "Constitución, artículo 123, Apartado A, fracción VI",
+     "Transitorio Tercero"
+    ],
+    "regime_affected": [
+     "all"
+    ],
+    "insurance_branch": [
+     "other"
+    ],
+    "financing_indexation_change": "changed_to_uma",
+    "fiscal_magnitude_stated": "Not explicitly mentioned",
+    "implicit_liability_direction": "Not explicitly mentioned",
+    "fields_inferred": [
+     "Reform_category",
+     "insurance_branch",
+     "legislation_date"
+    ],
+    "evidence": [
+     {
+      "field": "issuing_body",
+      "quote": "Que la Comisión Permanente del Honorable Congreso de la Unión, se ha servido dirigirme el siguiente",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "instrument_type",
+      "quote": "DECRETO por el que se declara reformadas y adicionadas diversas disposiciones de la Constitución Política de los Estados Unidos Mexicanos, en materia de desindexación del salario mínimo.",
+      "location": "Título"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "El presente Decreto entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "El presente Decreto entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "El presente Decreto entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "financing_indexation_change",
+      "quote": "se entenderán referidas a la Unidad de Medida y Actualización.",
+      "location": "Transitorio Tercero"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "El salario mínimo no podrá ser utilizado como índice, unidad, base, medida o referencia para fines ajenos a su naturaleza.",
+      "location": "Artículo 123, Apartado A, fracción VI"
+     },
+     {
+      "field": "reform_coverage",
+      "quote": "todas las menciones al salario mínimo como unidad de cuenta, índice, base, medida o referencia para determinar la cuantía de las obligaciones",
+      "location": "Transitorio Tercero"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "previstos en las leyes federales, de las entidades federativas y del Distrito Federal",
+      "location": "Artículo 26, Apartado B"
+     },
+     {
+      "field": "legal_references",
+      "quote": "Se reforman el inciso a) de la base II del artículo 41, y el párrafo primero de la fracción VI del Apartado A del artículo 123",
+      "location": "Artículo Único"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 27/01/2016",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "05_dof_20160127_desindexacion_sm.html",
+    "chunk_ids": []
+   }
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+{"instrument_type":"law_reform","issuing_body":"Congreso de la Unión","entry_into_force_date":"12-08-2004","legislation_date":"08-2004","implementation_date":"08-2004","regime_affected":["imss_staff_rjp"],"insurance_branch":["other"],"Social_insurance_change":"No","reform_coverage":"Targeted reform","Reform_category":"Parametric reform",
+"evidence":[{"field":"issuing_body","quote":"Que el Honorable Congreso de la Unión, se ha servido dirigirme el siguiente","location":"Preámbulo"},
+{"field":"instrument_type","quote":"DECRETO por el que se reforman y adicionan los artículos 277 D y 286 K de la Ley del Seguro Social.","location":"Título"},
+{"field":"entry_into_force_date","quote":"El presente Decreto entrará en vigor al día siguiente de su publicación en el Diario Oficial de la Federación.","location":"Transitorio Primero"},
+{"field":"implementation_date","quote":"El presente Decreto entrará en vigor al día siguiente de su publicación en el Diario Oficial de la Federación.","location":"Transitorio Primero"},
+{"field":"Status of Pension Reform","quote":"El presente Decreto entrará en vigor al día siguiente de su publicación en el Diario Oficial de la Federación.","location":"Transitorio Primero"},
+{"field":"regime_affected","quote":"los recursos necesarios para cubrir los costos futuros derivados del Régimen de Jubilaciones y Pensiones","location":"Artículo 277 D"}],
+"episodes":[
+{"label":"Plazas nuevas solo con fondeo total del RJP","core":true,"Pension Reform Types":["funding mechanisms","sustainability and solvency measures"],"reason_reform":["Fiscal reasons"],"relevancetopr_score":9.0,"Is the legislated pension reform minor or major?":"Major","legal_references":["Ley del Seguro Social, artículo 277 D","Transitorio Segundo","Transitorio Tercero"],"implicit_liability_direction":"decreases",
+"evidence":[{"field":"Pension Reform Types","quote":"para crear, sustituir o contratar plazas, se deberán depositar en el Fondo a que se refiere el artículo 286 K de esta Ley, los recursos necesarios para cubrir los costos futuros","location":"Artículo 277 D"},
+{"field":"reason_reform","quote":"a fin de que en todo momento, se encuentre plenamente financiado","location":"Artículo 277 D"},
+{"field":"legal_references","quote":"seguirán gozando de los beneficios otorgados por el Régimen de Jubilaciones y Pensiones","location":"Transitorio Segundo"}]},
+{"label":"Prohibición de financiar el RJP con cuotas, aportaciones federales o reservas","core":true,"Pension Reform Types":["funding mechanisms","administration and governance"],"relevancetopr_score":9.0,"Is the legislated pension reform minor or major?":"Major","legal_references":["Ley del Seguro Social, artículo 286 K"],"implicit_liability_direction":"ambiguous",
+"evidence":[{"field":"Pension Reform Types","quote":"no podrá destinar a este Fondo, para el financiamiento de la cuenta especial del Régimen de Jubilaciones y Pensiones, recursos provenientes de las cuotas a cargo de los patrones y trabajadores","location":"Artículo 286 K"},
+{"field":"legal_references","quote":"Dicho Fondo deberá registrarse en forma separada en la contabilidad del Instituto estableciendo dentro de él una cuenta especial para el Régimen de Jubilaciones y Pensiones","location":"Artículo 286 K"}]}
+]}

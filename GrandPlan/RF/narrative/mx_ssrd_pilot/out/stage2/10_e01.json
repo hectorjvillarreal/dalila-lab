@@ -1,0 +1,227 @@
+{
+ "doc_id": "10",
+ "episode": 1,
+ "label": "Fondo de Pensiones para el Bienestar (Complemento a pensión)",
+ "summary": "EPISODE: Fondo de Pensiones para el Bienestar (Complemento a pensión)\nfield name | value | \"verbatim quote\" | where in the text\n--- | --- | --- | ---\n1. Country Name | Mexico | \"Estados Unidos Mexicanos\" | Top of text\n2. Year of the article | 2024 | \"DOF: 01/05/2024\" | Top of text\n3. Status of Pension Reform | Legislated, Implemented | \"expedir el siguiente DECRETO\" | End of text\n4. legislation_date | 05-2024 | \"DOF: 01/05/2024\" | Top of text\n5. Planned_date | INFERRED | N/A | N/A\n6. announcement_date | INFERRED | N/A | N/A\n7. implementation_date | 01-2025 | \"actualizado por la inflación estimada para el año 2024\" | Article 2\n8. reversal_date | INFERRED | N/A | N/A\n9. Pension Reform Types | funding mechanisms; benefit rule changes; administration and governance | \"recibir, administrar, invertir y entregar los recursos... para procurar que las personas trabajadoras... reciban... un complemento económico\" | Article 2\n10. indexation_change | INFERRED | N/A | N/A\n11. coverage_change | extended coverage | \"complementar el esquema pensionario aplicable para las personas trabajadoras que coticen en el IMSS y en el ISSSTE\" | Considerando 13\n12. benefit_change | more generous benefits | \"reciban... un complemento económico... para que sea igual a su último salario percibido\" | Article 2\n13. Social_insurance_change | Yes | \"complementar el esquema pensionario aplicable para las personas trabajadoras que coticen en el IMSS y en el ISSSTE\" | Considerando 13\n14. Reform_category | Structural reform | \"modificó el modelo pensionario contemplado en la Ley del Seguro Social y la Ley de los Sistemas de Ahorro para el Retiro\" | Considerando 10\n15. reform_coverage | Targeted reform | \"determinadas personas trabajadoras\" | Considerando 13\n16. reason_reform | Benefit adequacy; Distributional impact | \"reducir la pobreza en la vejez, generar un estado de igualdad entre las personas adultas mayores\" | Considerando 11\n17. relevancetopr_score | 9.0 | N/A | N/A\n18. retirement_age_change | INFERRED | N/A | N/A\n19. Retirement_age_change_details | INFERRED | N/A | N/A\n20. Retirement_age_pre_reform_female | INFERRED | N/A | N/A\n21. Retirement_age_after_reform_female | INFERRED | N/A | N/A\n22. Retirement_age_pre_reform_male | INFERRED | N/A | N/A\n23. Retirement_age_after_reform_male | INFERRED | N/A | N/A\n24. Contribution_rate_change | INFERRED | N/A | N/A\n25. Old Employer Contribution Rate | INFERRED | N/A | N/A\n26. New Employer Contribution Rate | INFERRED | N/A | N/A\n27. Old Employee Contribution Rate | INFERRED | N/A | N/A\n28. New Employee Contribution Rate | INFERRED | N/A | N/A\n29. Old Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A\n30. New Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A\n31. Is the legislated pension reform minor or major | Minor | \"complementar el esquema pensionario\" | Considerando 13\n32. instrument_type | decree | \"DECRETO del Fondo de Pensiones para el Bienestar\" | Top of text\n33. issuing_body | Ejecutivo Federal | \"ANDRÉS MANUEL LÓPEZ OBRADOR, presidente... expedir el siguiente DECRETO\" | Top of text\n34. dof_publication_date | 01-05-2024 | \"DOF: 01/05/2024\" | Top of text\n35. entry_into_force_date | 01-05-2024 | \"DOF: 01/05/2024\" | Top of text\n36. legal_references | 302 de la Ley del Seguro Social; 37 de la Ley del INFONAVIT; 192, 251 y Cuadragésimo Octavo Transitorio de la Ley del ISSSTE; 18 y 81 Bis de la Ley de los Sistemas de Ahorro para el Retiro | Top of text\n37. regime_affected | imss_staff_rjp; issste_2007_accounts | \"coticen en el IMSS y en el ISSSTE bajo los modelos de 1997 y 2007, respectivamente\" | Considerando 13\n38. insurance_branch | IV; RCV; SEM | \"IMSS y al ISSSTE\" | Article 2\n39. financing_indexation_change | other | \"actualizarse el 1° de enero de cada año, de acuerdo con la inflación estimada\" | Article 2\n40. fiscal_magnitude_stated | INFERRED | N/A | N/A\n41. implicit_liability_direction | decreases | \"complemento económico... para que sea igual a su último salario percibido\" | Article 2",
+ "attempts": 1,
+ "valid": true,
+ "errors": [],
+ "record": {
+  "Country Name": "Mexico",
+  "Year of the article": "2024",
+  "Status of Pension Reform": [
+   "Legislated",
+   "Implemented"
+  ],
+  "legislation_date": "05-2024",
+  "Planned_date": "Not explicitly mentioned",
+  "announcement_date": "Not explicitly mentioned",
+  "implementation_date": "01-2025",
+  "reversal_date": "Not explicitly mentioned",
+  "Pension Reform Types": [
+   "funding mechanisms",
+   "benefit rule changes",
+   "administration and governance"
+  ],
+  "indexation_change": "Not explicitly mentioned",
+  "coverage_change": "extended coverage",
+  "benefit_change": "more generous benefits",
+  "Social_insurance_change": "Yes",
+  "Reform_category": "Structural reform",
+  "reform_coverage": "Targeted reform",
+  "reason_reform": [
+   "Benefit adequacy",
+   "Distributional impact"
+  ],
+  "relevancetopr_score": 9.0,
+  "retirement_age_change": "Not explicitly mentioned",
+  "Retirement_age_change_details": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+  "Retirement_age_after_reform_female": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+  "Retirement_age_after_reform_male": "Not explicitly mentioned",
+  "Contribution_rate_change": "Not explicitly mentioned",
+  "Old Employer Contribution Rate": "Not explicitly mentioned",
+  "New Employer Contribution Rate": "Not explicitly mentioned",
+  "Old Employee Contribution Rate": "Not explicitly mentioned",
+  "New Employee Contribution Rate": "Not explicitly mentioned",
+  "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "Is the legislated pension reform minor or major?": "Minor",
+  "instrument_type": "decree",
+  "issuing_body": "Ejecutivo Federal",
+  "dof_publication_date": "01-05-2024",
+  "entry_into_force_date": "01-05-2024",
+  "legal_references": [
+   "302 de la Ley del Seguro Social",
+   "37 de la Ley del INFONAVIT",
+   "192, 251 y Cuadragésimo Octavo Transitorio de la Ley del ISSSTE",
+   "18 y 81 Bis de la Ley de los Sistemas de Ahorro para el Retiro"
+  ],
+  "regime_affected": [
+   "imss_staff_rjp",
+   "issste_2007_accounts"
+  ],
+  "insurance_branch": [
+   "IV",
+   "RCV",
+   "SEM"
+  ],
+  "financing_indexation_change": "other",
+  "fiscal_magnitude_stated": "Not explicitly mentioned",
+  "implicit_liability_direction": "decreases",
+  "fields_inferred": [
+   "Planned_date",
+   "announcement_date",
+   "reversal_date",
+   "indexation_change",
+   "retirement_age_change",
+   "Retirement_age_change_details",
+   "Retirement_age_pre_reform_female",
+   "Retirement_age_after_reform_female",
+   "Retirement_age_pre_reform_male",
+   "Retirement_age_after_reform_male",
+   "Contribution_rate_change",
+   "Old Employer Contribution Rate",
+   "New Employer Contribution Rate",
+   "Old Employee Contribution Rate",
+   "New Employee Contribution Rate",
+   "Old Contribution Rate (Employee and Employer Combined)",
+   "New Contribution Rate (Employee and Employer Combined)",
+   "fiscal_magnitude_stated"
+  ],
+  "evidence": [
+   {
+    "field": "Country Name",
+    "quote": "Estados Unidos Mexicanos",
+    "location": "Top of text"
+   },
+   {
+    "field": "Year of the article",
+    "quote": "DOF: 01/05/2024",
+    "location": "Top of text"
+   },
+   {
+    "field": "Status of Pension Reform",
+    "quote": "expedir el siguiente DECRETO",
+    "location": "End of text"
+   },
+   {
+    "field": "legislation_date",
+    "quote": "DOF: 01/05/2024",
+    "location": "Top of text"
+   },
+   {
+    "field": "implementation_date",
+    "quote": "actualizado por la inflación estimada para el año 2024",
+    "location": "Article 2"
+   },
+   {
+    "field": "Pension Reform Types",
+    "quote": "recibir, administrar, invertir y entregar los recursos... para procurar que las personas trabajadoras... reciban... un complemento económico",
+    "location": "Article 2"
+   },
+   {
+    "field": "coverage_change",
+    "quote": "complementar el esquema pensionario aplicable para las personas trabajadoras que coticen en el IMSS y en el ISSSTE",
+    "location": "Considerando 13"
+   },
+   {
+    "field": "benefit_change",
+    "quote": "reciban... un complemento económico... para que sea igual a su último salario percibido",
+    "location": "Article 2"
+   },
+   {
+    "field": "Social_insurance_change",
+    "quote": "complementar el esquema pensionario aplicable para las personas trabajadoras que coticen en el IMSS y en el ISSSTE",
+    "location": "Considerando 13"
+   },
+   {
+    "field": "Reform_category",
+    "quote": "modificó el modelo pensionario contemplado en la Ley del Seguro Social y la Ley de los Sistemas de Ahorro para el Retiro",
+    "location": "Considerando 10"
+   },
+   {
+    "field": "reform_coverage",
+    "quote": "determinadas personas trabajadoras",
+    "location": "Considerando 13"
+   },
+   {
+    "field": "reason_reform",
+    "quote": "reducir la pobreza en la vejez, generar un estado de igualdad entre las personas adultas mayores",
+    "location": "Considerando 11"
+   },
+   {
+    "field": "relevancetopr_score",
+    "quote": "N/A",
+    "location": "N/A"
+   },
+   {
+    "field": "Is the legislated pension reform minor or major?",
+    "quote": "complementar el esquema pensionario",
+    "location": "Considerando 13"
+   },
+   {
+    "field": "instrument_type",
+    "quote": "DECRETO del Fondo de Pensiones para el Bienestar",
+    "location": "Top of text"
+   },
+   {
+    "field": "issuing_body",
+    "quote": "ANDRÉS MANUEL LÓPEZ OBRADOR, presidente... expedir el siguiente DECRETO",
+    "location": "Top of text"
+   },
+   {
+    "field": "dof_publication_date",
+    "quote": "DOF: 01/05/2024",
+    "location": "Top of text"
+   },
+   {
+    "field": "entry_into_force_date",
+    "quote": "DOF: 01/05/2024",
+    "location": "Top of text"
+   },
+   {
+    "field": "legal_references",
+    "quote": "302 de la Ley del Seguro Social; 37 de la Ley del INFONAVIT; 192, 251 y Cuadragésimo Octavo Transitorio de la Ley del ISSSTE; 18 y 81 Bis de la Ley de los Sistemas de Ahorro para el Retiro",
+    "location": "Top of text"
+   },
+   {
+    "field": "regime_affected",
+    "quote": "coticen en el IMSS y en el ISSSTE bajo los modelos de 1997 y 2007, respectivamente",
+    "location": "Considerando 13"
+   },
+   {
+    "field": "insurance_branch",
+    "quote": "IMSS y al ISSSTE",
+    "location": "Article 2"
+   },
+   {
+    "field": "financing_indexation_change",
+    "quote": "actualizarse el 1° de enero de cada año, de acuerdo con la inflación estimada",
+    "location": "Article 2"
+   },
+   {
+    "field": "implicit_liability_direction",
+    "quote": "complemento económico... para que sea igual a su último salario percibido",
+    "location": "Article 2"
+   }
+  ],
+  "source_file": "10_dof_20240501_fondo_pensiones_bienestar.html",
+  "chunk_ids": [
+   "10_c01",
+   "10_c02"
+  ]
+ },
+ "raw_failed": null,
+ "metrics": [
+  {
+   "wall_s": 46.2,
+   "prompt_tokens": 2830,
+   "gen_tokens": 2106,
+   "gen_s": 44.4,
+   "prompt_s": 1.5,
+   "done_reason": "stop"
+  }
+ ]
+}

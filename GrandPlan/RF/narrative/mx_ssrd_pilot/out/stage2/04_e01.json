@@ -1,0 +1,160 @@
+{
+ "doc_id": "04",
+ "episode": 1,
+ "label": "ISSSTE Law 2007 - System Creation",
+ "summary": "EPISODE: ISSSTE Law 2007 - System Creation\nfield name | value | \"verbatim quote\" | where in the text\n32. instrument_type | new_law | \"SE EXPIDE LA LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO.\" | Article Único\n33. issuing_body | Congreso de la Unión | \"EL CONGRESO GENERAL DE LOS ESTADOS UNIDOS MEXICANOS, DECRETA:\" | Article Único\n34. dof_publication_date | 31-03-2007 | \"DOF: 31/03/2007\" | Header\n35. entry_into_force_date | 01-04-2007 | \"Día siguiente\" (implied by standard Mexican law entry into force rules for decrees published in DOF) | Inferred\n36. legal_references | Articles 1-39 | \"Artículo 1... Artículo 39\" | Throughout text\n37. regime_affected | issste_decimo_transitorio | \"LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO\" | Title\n38. insurance_branch | IV, RCV, SEM, SEM_pensioners_GMP, RT, GPS | \"Artículo 3. Se establecen con carácter obligatorio los siguientes seguros: I. De salud... II. De riesgos del trabajo; III. De retiro, cesantía en edad avanzada y vejez, y IV. De invalidez y vida.\" | Article 3\n39. financing_indexation_change | other | \"Pensión Garantizada... cuyo monto mensual será la cantidad de tres mil treinta y cuatro pesos con veinte centavos, moneda nacional, misma que se actualizará anualmente, en el mes de febrero, conforme al cambio anualizado del Índice Nacional de Precios al Consumidor\" | Article 6, XIX\n41. implicit_liability_direction | ambiguous | \"Reserva, el registro contable en el pasivo del Instituto que refleja la cuantificación completa y actualizada de sus obligaciones contingentes y ciertas\" | Article 6, XXII\n13. Social_insurance_change | Yes | \"Artículo 5. La administración de los seguros... estarán a cargo del organismo descentralizado... denominado Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado\" | Article 5\n14. reform_category | Structural reform | \"SE EXPIDE LA LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO\" | Article Único\n17. relevancetopr_score | 10.0 | \"SE EXPIDE LA LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO\" | Article Único",
+ "attempts": 1,
+ "valid": true,
+ "errors": [],
+ "record": {
+  "Country Name": "Mexico",
+  "Year of the article": "2007",
+  "Status of Pension Reform": [
+   "Legislated",
+   "Implemented"
+  ],
+  "legislation_date": "03-2007",
+  "Planned_date": "Not explicitly mentioned",
+  "announcement_date": "Not explicitly mentioned",
+  "implementation_date": "Not explicitly mentioned",
+  "reversal_date": "Not explicitly mentioned",
+  "Pension Reform Types": [
+   "systematic (structural) pension reforms",
+   "pension plan types",
+   "funding mechanisms",
+   "eligibility and access"
+  ],
+  "indexation_change": "Not explicitly mentioned",
+  "coverage_change": "Not explicitly mentioned",
+  "benefit_change": "Not explicitly mentioned",
+  "Social_insurance_change": "Yes",
+  "Reform_category": "Structural reform",
+  "reform_coverage": "Broad-based reform",
+  "reason_reform": [
+   "Not explicitly mentioned"
+  ],
+  "relevancetopr_score": 10.0,
+  "retirement_age_change": "Not explicitly mentioned",
+  "Retirement_age_change_details": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+  "Retirement_age_after_reform_female": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+  "Retirement_age_after_reform_male": "Not explicitly mentioned",
+  "Contribution_rate_change": "Not explicitly mentioned",
+  "Old Employer Contribution Rate": "Not explicitly mentioned",
+  "New Employer Contribution Rate": "Not explicitly mentioned",
+  "Old Employee Contribution Rate": "Not explicitly mentioned",
+  "New Employee Contribution Rate": "Not explicitly mentioned",
+  "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "Is the legislated pension reform minor or major?": "Major",
+  "instrument_type": "new_law",
+  "issuing_body": "Congreso de la Unión",
+  "dof_publication_date": "31-03-2007",
+  "entry_into_force_date": "01-04-2007",
+  "legal_references": [
+   "Artículo 1... Artículo 39"
+  ],
+  "regime_affected": [
+   "issste_decimo_transitorio"
+  ],
+  "insurance_branch": [
+   "IV",
+   "RCV",
+   "SEM",
+   "SEM_pensioners_GMP",
+   "RT",
+   "GPS"
+  ],
+  "financing_indexation_change": "other",
+  "fiscal_magnitude_stated": "Not explicitly mentioned",
+  "implicit_liability_direction": "ambiguous",
+  "fields_inferred": [
+   "entry_into_force_date"
+  ],
+  "evidence": [
+   {
+    "field": "instrument_type",
+    "quote": "SE EXPIDE LA LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO.",
+    "location": "Article Único"
+   },
+   {
+    "field": "issuing_body",
+    "quote": "EL CONGRESO GENERAL DE LOS ESTADOS UNIDOS MEXICANOS, DECRETA:",
+    "location": "Article Único"
+   },
+   {
+    "field": "dof_publication_date",
+    "quote": "DOF: 31/03/2007",
+    "location": "Header"
+   },
+   {
+    "field": "entry_into_force_date",
+    "quote": "Día siguiente",
+    "location": "Inferred"
+   },
+   {
+    "field": "legal_references",
+    "quote": "Artículo 1... Artículo 39",
+    "location": "Throughout text"
+   },
+   {
+    "field": "regime_affected",
+    "quote": "LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO",
+    "location": "Title"
+   },
+   {
+    "field": "insurance_branch",
+    "quote": "Artículo 3. Se establecen con carácter obligatorio los siguientes seguros: I. De salud... II. De riesgos del trabajo; III. De retiro, cesantía en edad avanzada y vejez, y IV. De invalidez y vida.",
+    "location": "Article 3"
+   },
+   {
+    "field": "financing_indexation_change",
+    "quote": "Pensión Garantizada... cuyo monto mensual será la cantidad de tres mil treinta y cuatro pesos con veinte centavos, moneda nacional, misma que se actualizará anualmente, en el mes de febrero, conforme al cambio anualizado del Índice Nacional de Precios al Consumidor",
+    "location": "Article 6, XIX"
+   },
+   {
+    "field": "implicit_liability_direction",
+    "quote": "Reserva, el registro contable en el pasivo del Instituto que refleja la cuantificación completa y actualizada de sus obligaciones contingentes y ciertas",
+    "location": "Article 6, XXII"
+   },
+   {
+    "field": "Social_insurance_change",
+    "quote": "Artículo 5. La administración de los seguros... estarán a cargo del organismo descentralizado... denominado Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado",
+    "location": "Article 5"
+   },
+   {
+    "field": "reform_coverage",
+    "quote": "SE EXPIDE LA LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO",
+    "location": "Article Único"
+   },
+   {
+    "field": "relevancetopr_score",
+    "quote": "SE EXPIDE LA LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO",
+    "location": "Article Único"
+   }
+  ],
+  "source_file": "04_dof_20070331_ley_issste.html",
+  "chunk_ids": [
+   "04_c01",
+   "04_c02",
+   "04_c03",
+   "04_c04",
+   "04_c05",
+   "04_c06",
+   "04_c07",
+   "04_c08"
+  ]
+ },
+ "raw_failed": null,
+ "metrics": [
+  {
+   "wall_s": 32.6,
+   "prompt_tokens": 2230,
+   "gen_tokens": 1459,
+   "gen_s": 30.7,
+   "prompt_s": 1.2,
+   "done_reason": "stop"
+  }
+ ]
+}

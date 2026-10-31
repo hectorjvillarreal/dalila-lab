@@ -1,0 +1,43 @@
+### EPISODE 1: Desindexación del Salario Mínimo a la UMA
+field name | value | "verbatim quote" | where in the text
+1. Country Name | Mexico | "Estados Unidos Mexicanos" | Header
+2. Year of the article | 2016 | "DOF: 27/01/2016" | Header
+3. Status of Pension Reform | Legislated, Implemented | "DECLARA REFORMADAS Y ADICIONADAS DIVERSAS DISPOSICIONES DE LA CONSTITUCIÓN" | Body
+4. legislation_date | 01-2016 | "DOF: 27/01/2016" | Header
+5. Planned_date | INFERRED | N/A
+6. announcement_date | INFERRED | N/A
+7. implementation_date | 01-2016 | "El presente Decreto entrará en vigor el día siguiente al de su publicación" | Transitorios Primero
+8. reversal_date | INFERRED | N/A
+9. Pension Reform Types | funding mechanisms, indexation, others | "El financiamiento público para el sostenimiento de sus actividades ordinarias permanentes se fijará anualmente, multiplicando el número total de ciudadanos inscritos en el padrón electoral por el sesenta y cinco por ciento del valor diario de la Unidad de Medida y Actualización" | Artículo 26
+10. indexation_change | less generous indexation | "El salario mínimo no podrá ser utilizado como índice, unidad, base, medida o referencia para fines ajenos a su naturaleza" | Artículo 123
+11. coverage_change | INFERRED | N/A
+12. benefit_change | INFERRED | N/A
+13. Social_insurance_change | No | N/A
+14. reform_category | Parametric reform | "desindexación del salario mínimo" | Title
+15. reform_coverage | Broad-based reform | "todas las menciones al salario mínimo como unidad de cuenta... se entenderán referidas a la Unidad de Medida y Actualización" | Transitorio Tercero
+16. reason_reform | Fiscal reasons, Economic impact | "El financiamiento público para el sostenimiento de sus actividades ordinarias permanentes se fijará anualmente..." | Artículo 26
+17. relevancetopr_score | 8.0 | N/A
+18. retirement_age_change | INFERRED | N/A
+19. Retirement_age_change_details | INFERRED | N/A
+20. Retirement_age_pre_reform_female | INFERRED | N/A
+21. Retirement_age_after_reform_female | INFERRED | N/A
+22. Retirement_age_pre_reform_male | INFERRED | N/A
+23. Retirement_age_after_reform_male | INFERRED | N/A
+24. Contribution_rate_change | INFERRED | N/A
+25. Old Employer Contribution Rate | INFERRED | N/A
+26. New Employer Contribution Rate | INFERRED | N/A
+27. Old Employee Contribution Rate | INFERRED | N/A
+28. New Employee Contribution Rate | INFERRED | N/A
+29. Old Contribution Rate (Employee and Employer Combined) | INFERRED | N/A
+30. New Contribution Rate (Employee and Employer Combined) | INFERRED | N/A
+31. Is the legislated pension reform minor or major | Minor | "desindexación del salario mínimo" | Title
+32. instrument_type | constitutional_reform | "DECLARA REFORMADAS Y ADICIONADAS DIVERSAS DISPOSICIONES DE LA CONSTITUCIÓN" | Body
+33. issuing_body | Congreso de la Unión | "LA COMISIÓN PERMANENTE DEL HONORABLE CONGRESO DE LA UNIÓN" | Body
+34. dof_publication_date | 27-01-2016 | "DOF: 27/01/2016" | Header
+35. entry_into_force_date | 28-01-2016 | "El presente Decreto entrará en vigor el día siguiente al de su publicación" | Transitorios Primero
+36. legal_references | Artículo 41, Apartado A del artículo 123, Apartado B del artículo 26 | "Se reforman el inciso a) de la base II del artículo 41, y el párrafo primero de la fracción VI del Apartado A del artículo 123; y se adicionan los párrafos sexto y séptimo al Apartado B del artículo 26" | Artículo Único
+37. regime_affected | all | N/A
+38. insurance_branch | other | N/A
+39. financing_indexation_change | changed_to_uma | "El valor inicial diario de la Unidad de Medida y Actualización... será equivalente al que tenga el salario mínimo general vigente diario" | Transitorios Segundo
+40. fiscal_magnitude_stated | INFERRED | N/A
+41. implicit_liability_direction | decreases | "El salario mínimo no podrá ser utilizado como índice... para fines ajenos a su naturaleza" | Artículo 123

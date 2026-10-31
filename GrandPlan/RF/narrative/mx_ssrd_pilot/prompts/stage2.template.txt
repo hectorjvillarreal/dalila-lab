@@ -1,0 +1,17 @@
+Now convert the episode summary below into one JSON object following the fixed schema. The summary comes from a Mexican legal instrument published in the DOF. The object corresponds to one reform episode.
+
+Rules:
+- All fields must be present. Use "Not explicitly mentioned" for any field the summary does not support. For retirement-age and contribution-rate fields the same placeholder applies.
+- Dates: mm-yyyy for legislation_date, Planned_date, announcement_date, implementation_date, reversal_date. dd-mm-yyyy for dof_publication_date and entry_into_force_date.
+- Allowed categorical values must be used exactly.
+- Status of Pension Reform, Pension Reform Types, reason_reform, regime_affected and insurance_branch are arrays of allowed values.
+- evidence: one entry per quoted field in the summary, {"field", "quote", "location"}. Copy each quote exactly as it appears in the summary. Never add a quote that is not in the summary.
+- fields_inferred: every filled field whose summary line says INFERRED, and implicit_liability_direction when filled.
+- Copy source_file and chunk_ids from the header below.
+- Re-check allowed values, date formats and consistency before answering.
+
+Format anchor, a single complete record from another law. It fixes format only, not content:
+
+{{ANCHOR}}
+
+Output strictly valid JSON with no text before or after.

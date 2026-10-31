@@ -1,0 +1,132 @@
+{
+ "doc_id": "04",
+ "episode": 3,
+ "label": "Risk of work insurance financing",
+ "summary": "EPISODE: Risk of work insurance financing\nlegislation_date | 03-2007 | \"Artículo 75. Las Dependencias y Entidades cubrirán una Aportación de cero punto setenta y cinco por ciento del Sueldo Básico por el seguro de riesgos del trabajo.\" | Article 75\nfunding_mechanisms | Yes | \"Artículo 75. Las Dependencias y Entidades cubrirán una Aportación de cero punto setenta y cinco por ciento del Sueldo Básico por el seguro de riesgos del trabajo.\" | Article 75\nsocial_insurance_change | Yes | \"Artículo 75. Las Dependencias y Entidades cubrirán una Aportación de cero punto setenta y cinco por ciento del Sueldo Básico por el seguro de riesgos del trabajo.\" | Article 75\nreform_category | Parametric reform | \"Artículo 75. Las Dependencias y Entidades cubrirán una Aportación de cero punto setenta y cinco por ciento del Sueldo Básico por el seguro de riesgos del trabajo.\" | Article 75\nreason_reform | Fiscal reasons | \"Artículo 75. Las Dependencias y Entidades cubrirán una Aportación de cero punto setenta y cinco por ciento del Sueldo Básico por el seguro de riesgos del trabajo.\" | Article 75\nrelevancetopr_score | 7.0 | \"Artículo 75. Las Dependencias y Entidades cubrirán una Aportación de cero punto setenta y cinco por ciento del Sueldo Básico por el seguro de riesgos del trabajo.\" | Article 75",
+ "attempts": 1,
+ "valid": true,
+ "errors": [],
+ "record": {
+  "Country Name": "Mexico",
+  "Year of the article": "2007",
+  "Status of Pension Reform": [
+   "Legislated",
+   "Implemented"
+  ],
+  "legislation_date": "03-2007",
+  "Planned_date": "Not explicitly mentioned",
+  "announcement_date": "Not explicitly mentioned",
+  "implementation_date": "Not explicitly mentioned",
+  "reversal_date": "Not explicitly mentioned",
+  "Pension Reform Types": [
+   "funding mechanisms"
+  ],
+  "indexation_change": "Not explicitly mentioned",
+  "coverage_change": "Not explicitly mentioned",
+  "benefit_change": "Not explicitly mentioned",
+  "Social_insurance_change": "Yes",
+  "Reform_category": "Parametric reform",
+  "reform_coverage": "Not explicitly mentioned",
+  "reason_reform": [
+   "Fiscal reasons"
+  ],
+  "relevancetopr_score": 7.0,
+  "retirement_age_change": "Not explicitly mentioned",
+  "Retirement_age_change_details": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+  "Retirement_age_after_reform_female": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+  "Retirement_age_after_reform_male": "Not explicitly mentioned",
+  "Contribution_rate_change": "contribution rate increased",
+  "Old Employer Contribution Rate": "Not explicitly mentioned",
+  "New Employer Contribution Rate": "Not explicitly mentioned",
+  "Old Employee Contribution Rate": "Not explicitly mentioned",
+  "New Employee Contribution Rate": "Not explicitly mentioned",
+  "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "Is the legislated pension reform minor or major?": "Minor",
+  "instrument_type": "new_law",
+  "issuing_body": "Congreso de la Unión",
+  "dof_publication_date": "31-03-2007",
+  "entry_into_force_date": "Not explicitly mentioned",
+  "legal_references": [
+   "Artículo 75"
+  ],
+  "regime_affected": [
+   "issste_2007_accounts"
+  ],
+  "insurance_branch": [
+   "RCV"
+  ],
+  "financing_indexation_change": "Not explicitly mentioned",
+  "fiscal_magnitude_stated": "Not explicitly mentioned",
+  "implicit_liability_direction": "decreases",
+  "fields_inferred": [
+   "implicit_liability_direction"
+  ],
+  "evidence": [
+   {
+    "field": "legislation_date",
+    "quote": "03-2007",
+    "location": "EPISODE SUMMARY"
+   },
+   {
+    "field": "New Employer Contribution Rate",
+    "quote": "Artículo 75. Las Dependencias y Entidades cubrirán una Aportación de cero punto setenta y cinco por ciento del Sueldo Básico por el seguro de riesgos del trabajo.",
+    "location": "Article 75"
+   },
+   {
+    "field": "Social_insurance_change",
+    "quote": "Artículo 75. Las Dependencias y Entidades cubrirán una Aportación de cero punto setenta y cinco por ciento del Sueldo Básico por el seguro de riesgos del trabajo.",
+    "location": "Article 75"
+   },
+   {
+    "field": "reason_reform",
+    "quote": "Artículo 75. Las Dependencias y Entidades cubrirán una Aportación de cero punto setenta y cinco por ciento del Sueldo Básico por el seguro de riesgos del trabajo.",
+    "location": "Article 75"
+   },
+   {
+    "field": "instrument_type",
+    "quote": "DECRETO por el que se expide la Ley del Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado.",
+    "location": "Título"
+   },
+   {
+    "field": "issuing_body",
+    "quote": "Que el Honorable Congreso de la Unión, se ha servido dirigirme el siguiente",
+    "location": "Preámbulo"
+   },
+   {
+    "field": "entry_into_force_date",
+    "quote": "La presente Ley entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación, con excepción de los artículos 42, 75, 101, 140, 193 y 199",
+    "location": "Transitorio Primero"
+   },
+   {
+    "field": "Status of Pension Reform",
+    "quote": "La presente Ley entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación",
+    "location": "Transitorio Primero"
+   }
+  ],
+  "source_file": "04_dof_20070331_ley_issste.html",
+  "chunk_ids": [
+   "04_c01",
+   "04_c02",
+   "04_c03",
+   "04_c04",
+   "04_c05",
+   "04_c06",
+   "04_c07",
+   "04_c08"
+  ]
+ },
+ "raw_failed": null,
+ "metrics": [
+  {
+   "wall_s": 26.0,
+   "prompt_tokens": 1967,
+   "gen_tokens": 1196,
+   "gen_s": 24.6,
+   "prompt_s": 1.1,
+   "done_reason": "stop"
+  }
+ ]
+}

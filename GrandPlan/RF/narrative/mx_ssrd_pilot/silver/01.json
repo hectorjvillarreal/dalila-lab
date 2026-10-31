@@ -1,0 +1,1320 @@
+{
+ "doc_id": "01",
+ "status": "silver",
+ "episodes": [
+  {
+   "label": "Cuentas individuales para retiro, cesantía y vejez administradas por las Afores",
+   "core": true,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "1995",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "12-1995",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "01-1997",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "systematic (structural) pension reforms",
+     "pension plan types"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "Not explicitly mentioned",
+    "Social_insurance_change": "Yes",
+    "Reform_category": "Structural reform",
+    "reform_coverage": "Broad-based reform",
+    "reason_reform": [
+     "Not explicitly mentioned"
+    ],
+    "relevancetopr_score": 10.0,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "Not explicitly mentioned",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "Major",
+    "instrument_type": "new_law",
+    "issuing_body": "Congreso de la Unión",
+    "dof_publication_date": "21-12-1995",
+    "entry_into_force_date": "01-01-1997",
+    "legal_references": [
+     "Ley del Seguro Social, artículo 157",
+     "Ley del Seguro Social, artículo 159",
+     "Ley del Seguro Social, artículo 164",
+     "Ley del Seguro Social, artículo 167",
+     "Ley del Seguro Social, artículo 169",
+     "Ley del Seguro Social, artículo 174",
+     "Ley del Seguro Social, artículo 175",
+     "Ley del Seguro Social, artículo 283",
+     "Transitorio Décimo Sexto",
+     "Transitorio Décimo Séptimo"
+    ],
+    "regime_affected": [
+     "ley97"
+    ],
+    "insurance_branch": [
+     "RCV"
+    ],
+    "financing_indexation_change": "Not explicitly mentioned",
+    "fiscal_magnitude_stated": "Not explicitly mentioned",
+    "implicit_liability_direction": "decreases",
+    "fields_inferred": [
+     "implicit_liability_direction"
+    ],
+    "evidence": [
+     {
+      "field": "issuing_body",
+      "quote": "Que el H. Congreso de la Unión, se ha servido dirigirme el siguiente",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "instrument_type",
+      "quote": "se derogan la Ley del Seguro Social publicada en el Diario Oficial de la Federación el día doce de marzo de 1973",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "legislation_date",
+      "quote": "México, D.F., a 12 de diciembre de 1995",
+      "location": "Cierre del Decreto"
+     },
+     {
+      "field": "Social_insurance_change",
+      "quote": "El régimen obligatorio comprende los seguros de:",
+      "location": "Artículo 11"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "Cuenta individual, aquella que se abrirá para cada asegurado en las Administradoras de Fondos para el Retiro, para que se depositen en la misma las cuotas obrero-patronales y estatal",
+      "location": "Artículo 159, fracción I"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "Pensión, la renta vitalicia o el retiro programado.",
+      "location": "Artículo 159, fracción III"
+     },
+     {
+      "field": "Reform_category",
+      "quote": "Lo dispuesto en este artículo no será aplicable al seguro de retiro, cesantía en edad avanzada y vejez, cuyas aportaciones se depositarán en las cuentas individuales de los trabajadores.",
+      "location": "Artículo 283"
+     },
+     {
+      "field": "Reform_category",
+      "quote": "Los recursos depositados en la cuenta individual de cada trabajador son propiedad de éste con las modalidades que se establecen en esta Ley",
+      "location": "Artículo 169"
+     },
+     {
+      "field": "reform_coverage",
+      "quote": "es derecho de todo trabajador asegurado contar con una cuenta individual",
+      "location": "Artículo 174"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "Los trabajadores sujetos al régimen previsto en esta Ley no deberán tener más de una cuenta individual",
+      "location": "Artículo 177"
+     },
+     {
+      "field": "insurance_branch",
+      "quote": "Para los efectos de este seguro, es derecho de todo trabajador asegurado contar con una cuenta individual",
+      "location": "Artículo 174"
+     },
+     {
+      "field": "legal_references",
+      "quote": "La individualización y administración de los recursos de las cuentas individuales para el retiro estará a cargo de las Administradoras de Fondos para el Retiro.",
+      "location": "Artículo 175"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 21/12/1995",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "01_dip_19951221_lss_orig.pdf",
+    "chunk_ids": []
+   }
+  },
+  {
+   "label": "Seguros separados de IV y RCV: cuotas tripartitas y tope del salario base de 15 a 25 salarios mínimos",
+   "core": true,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "1995",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "12-1995",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "01-1997",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "funding mechanisms"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "Not explicitly mentioned",
+    "Social_insurance_change": "Yes",
+    "Reform_category": "Structural reform",
+    "reform_coverage": "Broad-based reform",
+    "reason_reform": [
+     "Not explicitly mentioned"
+    ],
+    "relevancetopr_score": 9.5,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "IV 1.75%; retiro 2%; cesantía y vejez 3.150% del salario base de cotización",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "IV 0.625%; cesantía y vejez 1.125% del salario base de cotización",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "Major",
+    "instrument_type": "new_law",
+    "issuing_body": "Congreso de la Unión",
+    "dof_publication_date": "21-12-1995",
+    "entry_into_force_date": "01-01-1997",
+    "legal_references": [
+     "Ley del Seguro Social, artículo 11",
+     "Ley del Seguro Social, artículo 28",
+     "Ley del Seguro Social, artículo 147",
+     "Ley del Seguro Social, artículo 148",
+     "Ley del Seguro Social, artículo 168, fracciones I a III",
+     "Transitorio Vigésimo Quinto"
+    ],
+    "regime_affected": [
+     "ley97"
+    ],
+    "insurance_branch": [
+     "IV",
+     "RCV"
+    ],
+    "financing_indexation_change": "Not explicitly mentioned",
+    "fiscal_magnitude_stated": "Contribución del Estado igual a 7.143% del total de las cuotas patronales, en IV y en cesantía y vejez",
+    "implicit_liability_direction": "Not explicitly mentioned",
+    "fields_inferred": [
+     "Reform_category"
+    ],
+    "evidence": [
+     {
+      "field": "issuing_body",
+      "quote": "Que el H. Congreso de la Unión, se ha servido dirigirme el siguiente",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "instrument_type",
+      "quote": "se derogan la Ley del Seguro Social publicada en el Diario Oficial de la Federación el día doce de marzo de 1973",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "legislation_date",
+      "quote": "México, D.F., a 12 de diciembre de 1995",
+      "location": "Cierre del Decreto"
+     },
+     {
+      "field": "Social_insurance_change",
+      "quote": "El régimen obligatorio comprende los seguros de:",
+      "location": "Artículo 11"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "A los patrones y a los trabajadores les corresponde cubrir, para el seguro de invalidez y vida el uno punto setenta y cinco por ciento y el cero punto seiscientos veinticinco por ciento sobre el salario base de cotización, respectivamente.",
+      "location": "Artículo 147"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "será de quince veces salario mínimo general vigente en el Distrito Federal, el que se aumentará un salario mínimo por cada año subsecuente hasta llegar a veinticinco en el año 2007.",
+      "location": "Transitorio Vigésimo Quinto"
+     },
+     {
+      "field": "New Employer Contribution Rate",
+      "quote": "A los patrones y a los trabajadores les corresponde cubrir, para el seguro de invalidez y vida el uno punto setenta y cinco por ciento y el cero punto seiscientos veinticinco por ciento sobre el salario base de cotización, respectivamente.",
+      "location": "Artículo 147"
+     },
+     {
+      "field": "New Employer Contribution Rate",
+      "quote": "En el ramo de retiro, a los patrones les corresponde cubrir el importe equivalente al dos por ciento del salario base de cotización del trabajador.",
+      "location": "Artículo 168, fracción I"
+     },
+     {
+      "field": "New Employer Contribution Rate",
+      "quote": "a los patrones y a los trabajadores les corresponde cubrir las cuotas del tres punto ciento cincuenta por ciento y uno punto ciento veinticinco por ciento sobre el salario base de cotización, respectivamente.",
+      "location": "Artículo 168, fracción II"
+     },
+     {
+      "field": "New Employee Contribution Rate",
+      "quote": "A los patrones y a los trabajadores les corresponde cubrir, para el seguro de invalidez y vida el uno punto setenta y cinco por ciento y el cero punto seiscientos veinticinco por ciento sobre el salario base de cotización, respectivamente.",
+      "location": "Artículo 147"
+     },
+     {
+      "field": "New Employee Contribution Rate",
+      "quote": "a los patrones y a los trabajadores les corresponde cubrir las cuotas del tres punto ciento cincuenta por ciento y uno punto ciento veinticinco por ciento sobre el salario base de cotización, respectivamente.",
+      "location": "Artículo 168, fracción II"
+     },
+     {
+      "field": "fiscal_magnitude_stated",
+      "quote": "En los ramos de cesantía en edad avanzada y vejez la contribución del Estado será igual al siete punto ciento cuarenta y tres por ciento del total de las cuotas patronales de estos ramos",
+      "location": "Artículo 168, fracción III"
+     },
+     {
+      "field": "fiscal_magnitude_stated",
+      "quote": "la cuantía de la contribución del Estado para los seguros de invalidez y vida, será igual al siete punto ciento cuarenta y tres por ciento del total de las cuotas patronales",
+      "location": "Artículo 148"
+     },
+     {
+      "field": "reform_coverage",
+      "quote": "a los patrones y a los trabajadores les corresponde cubrir las cuotas",
+      "location": "Artículo 168, fracción II"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "Dichas cuotas se recibirán y se depositarán en las respectivas subcuentas de la cuenta individual de cada trabajador",
+      "location": "Artículo 167"
+     },
+     {
+      "field": "insurance_branch",
+      "quote": "III. Invalidez y vida;",
+      "location": "Artículo 11, fracción III"
+     },
+     {
+      "field": "insurance_branch",
+      "quote": "IV. Retiro, cesantía en edad avanzada y vejez, y",
+      "location": "Artículo 11, fracción IV"
+     },
+     {
+      "field": "legal_references",
+      "quote": "estableciéndose como límite superior el equivalente a veinticinco veces el salario mínimo general que rija en el Distrito Federal",
+      "location": "Artículo 28"
+     },
+     {
+      "field": "legal_references",
+      "quote": "El artículo 28 de esta Ley entrará en vigor el 1 de enero del año 2007, en lo relativo al seguro de invalidez y vida, así como en los ramos en cesantía y edad avanzada y vejez.",
+      "location": "Transitorio Vigésimo Quinto"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 21/12/1995",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "01_dip_19951221_lss_orig.pdf",
+    "chunk_ids": []
+   }
+  },
+  {
+   "label": "Financiamiento del SEM: cuota fija de 13.9%, excedente, cuota estatal indexada al INPC y cuota de 1.5% para pensionados",
+   "core": true,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "1995",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "12-1995",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "01-1997",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "funding mechanisms"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "Not explicitly mentioned",
+    "Social_insurance_change": "Yes",
+    "Reform_category": "Parametric reform",
+    "reform_coverage": "Broad-based reform",
+    "reason_reform": [
+     "Not explicitly mentioned"
+    ],
+    "relevancetopr_score": 8.5,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "13.9% de un salario mínimo general diario del D.F. por asegurado (sube 0.65 puntos cada 1 de julio, 1998-2007); 6% del excedente sobre 3 salarios mínimos (baja 0.49 puntos anuales, 1998-2007); 70% de la cuota de 1% del salario base (prestaciones en dinero); 1.05% del salario base (pensionados)",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "2% del excedente sobre 3 salarios mínimos (baja 0.16 puntos anuales, 1998-2007); 25% de la cuota de 1% del salario base (prestaciones en dinero); 0.375% del salario base (pensionados)",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "Major",
+    "instrument_type": "new_law",
+    "issuing_body": "Congreso de la Unión",
+    "dof_publication_date": "21-12-1995",
+    "entry_into_force_date": "01-01-1997",
+    "legal_references": [
+     "Ley del Seguro Social, artículo 25",
+     "Ley del Seguro Social, artículo 105",
+     "Ley del Seguro Social, artículo 106",
+     "Ley del Seguro Social, artículo 107",
+     "Ley del Seguro Social, artículo 108",
+     "Transitorio Décimo Noveno"
+    ],
+    "regime_affected": [
+     "all"
+    ],
+    "insurance_branch": [
+     "SEM",
+     "SEM_pensioners_GMP"
+    ],
+    "financing_indexation_change": "changed_to_inflation",
+    "fiscal_magnitude_stated": "Cuota diaria federal por asegurado de 13.9% de un salario mínimo general del D.F. a la entrada en vigor, actualizada con el INPC; 5% de la cuota de 1% del salario base; 0.075% del salario base (pensionados)",
+    "implicit_liability_direction": "Not explicitly mentioned",
+    "fields_inferred": [
+     "Reform_category",
+     "financing_indexation_change"
+    ],
+    "evidence": [
+     {
+      "field": "issuing_body",
+      "quote": "Que el H. Congreso de la Unión, se ha servido dirigirme el siguiente",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "instrument_type",
+      "quote": "se derogan la Ley del Seguro Social publicada en el Diario Oficial de la Federación el día doce de marzo de 1973",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "legislation_date",
+      "quote": "México, D.F., a 12 de diciembre de 1995",
+      "location": "Cierre del Decreto"
+     },
+     {
+      "field": "Social_insurance_change",
+      "quote": "El régimen obligatorio comprende los seguros de:",
+      "location": "Artículo 11"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "se obtendrán de las cuotas que están obligados a cubrir los patrones y los trabajadores o demás sujetos y de la contribución que corresponda al Estado.",
+      "location": "Artículo 105"
+     },
+     {
+      "field": "New Employer Contribution Rate",
+      "quote": "Por cada asegurado se pagará mensualmente una cuota diaria patronal equivalente al trece punto nueve por ciento de un salario mínimo general diario para el Distrito Federal",
+      "location": "Artículo 106, fracción I"
+     },
+     {
+      "field": "New Employer Contribution Rate",
+      "quote": "una cuota adicional patronal equivalente al seis por ciento y otra adicional obrera del dos por ciento, de la cantidad que resulte de la diferencia entre el salario base de cotización y tres veces el salario mínimo citado",
+      "location": "Artículo 106, fracción II"
+     },
+     {
+      "field": "New Employer Contribution Rate",
+      "quote": "se incrementará el primero de julio de cada año en sesenta y cinco centésimas de punto porcentual. Estas modificaciones comenzarán en el año de 1998 y terminarán en el año 2007.",
+      "location": "Transitorio Décimo Noveno"
+     },
+     {
+      "field": "New Employer Contribution Rate",
+      "quote": "se reducirán el primero de julio de cada año en cuarenta y nueve centésimas de punto porcentual la que corresponde a los patrones y en dieciséis centésimas de punto porcentual la que corresponde pagar a los trabajadores.",
+      "location": "Transitorio Décimo Noveno"
+     },
+     {
+      "field": "New Employer Contribution Rate",
+      "quote": "A los patrones les corresponderá pagar el setenta por ciento de dicha cuota;",
+      "location": "Artículo 107, fracción I"
+     },
+     {
+      "field": "New Employer Contribution Rate",
+      "quote": "De dicha cuota corresponderá al patrón pagar el uno punto cero cinco por ciento, a los trabajadores el cero punto trescientos setenta y cinco por ciento y al Estado el cero punto cero setenta y cinco por ciento.",
+      "location": "Artículo 25"
+     },
+     {
+      "field": "New Employee Contribution Rate",
+      "quote": "una cuota adicional patronal equivalente al seis por ciento y otra adicional obrera del dos por ciento, de la cantidad que resulte de la diferencia entre el salario base de cotización y tres veces el salario mínimo citado",
+      "location": "Artículo 106, fracción II"
+     },
+     {
+      "field": "New Employee Contribution Rate",
+      "quote": "se reducirán el primero de julio de cada año en cuarenta y nueve centésimas de punto porcentual la que corresponde a los patrones y en dieciséis centésimas de punto porcentual la que corresponde pagar a los trabajadores.",
+      "location": "Transitorio Décimo Noveno"
+     },
+     {
+      "field": "New Employee Contribution Rate",
+      "quote": "A los trabajadores les corresponderá pagar el veinticinco por ciento de la misma",
+      "location": "Artículo 107, fracción II"
+     },
+     {
+      "field": "New Employee Contribution Rate",
+      "quote": "De dicha cuota corresponderá al patrón pagar el uno punto cero cinco por ciento, a los trabajadores el cero punto trescientos setenta y cinco por ciento y al Estado el cero punto cero setenta y cinco por ciento.",
+      "location": "Artículo 25"
+     },
+     {
+      "field": "financing_indexation_change",
+      "quote": "la cantidad inicial que resulte se actualizará trimestralmente de acuerdo a la variación del Indice Nacional de Precios al Consumidor.",
+      "location": "Artículo 106, fracción III"
+     },
+     {
+      "field": "fiscal_magnitude_stated",
+      "quote": "El Gobierno Federal cubrirá mensualmente una cuota diaria por cada asegurado, equivalente a trece punto nueve por ciento de un salario mínimo general para el Distrito Federal, a la fecha de entrada en vigor de esta Ley",
+      "location": "Artículo 106, fracción III"
+     },
+     {
+      "field": "fiscal_magnitude_stated",
+      "quote": "Al Gobierno Federal le corresponderá pagar el cinco por ciento restante.",
+      "location": "Artículo 107, fracción III"
+     },
+     {
+      "field": "reform_coverage",
+      "quote": "Por cada asegurado se pagará mensualmente una cuota diaria patronal",
+      "location": "Artículo 106, fracción I"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "Por cada asegurado se pagará mensualmente una cuota diaria patronal",
+      "location": "Artículo 106, fracción I"
+     },
+     {
+      "field": "insurance_branch",
+      "quote": "Las prestaciones en especie del seguro de enfermedades y maternidad, se financiarán en la forma siguiente:",
+      "location": "Artículo 106"
+     },
+     {
+      "field": "insurance_branch",
+      "quote": "Para cubrir las prestaciones en especie del seguro de enfermedades y maternidad de los pensionados y sus beneficiarios",
+      "location": "Artículo 25"
+     },
+     {
+      "field": "legal_references",
+      "quote": "La tasa sobre el salario mínimo general diario del Distrito Federal a que se refiere la fracción I del artículo 106",
+      "location": "Transitorio Décimo Noveno"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 21/12/1995",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "01_dip_19951221_lss_orig.pdf",
+    "chunk_ids": []
+   }
+  },
+  {
+   "label": "Cuota social del Gobierno Federal de 5.5% del salario mínimo por día cotizado",
+   "core": true,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "1995",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "12-1995",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "01-1997",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "funding mechanisms"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "Not explicitly mentioned",
+    "Social_insurance_change": "Yes",
+    "Reform_category": "Structural reform",
+    "reform_coverage": "Broad-based reform",
+    "reason_reform": [
+     "Not explicitly mentioned"
+    ],
+    "relevancetopr_score": 9.0,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "Not explicitly mentioned",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "Major",
+    "instrument_type": "new_law",
+    "issuing_body": "Congreso de la Unión",
+    "dof_publication_date": "21-12-1995",
+    "entry_into_force_date": "01-01-1997",
+    "legal_references": [
+     "Ley del Seguro Social, artículo 168, fracción IV",
+     "Ley del Seguro Social, artículo 165"
+    ],
+    "regime_affected": [
+     "ley97"
+    ],
+    "insurance_branch": [
+     "RCV"
+    ],
+    "financing_indexation_change": "changed_to_inflation",
+    "fiscal_magnitude_stated": "Cantidad inicial de 5.5% del salario mínimo general del D.F. por cada día de salario cotizado, actualizada trimestralmente con el INPC",
+    "implicit_liability_direction": "ambiguous",
+    "fields_inferred": [
+     "Reform_category",
+     "financing_indexation_change",
+     "implicit_liability_direction"
+    ],
+    "evidence": [
+     {
+      "field": "issuing_body",
+      "quote": "Que el H. Congreso de la Unión, se ha servido dirigirme el siguiente",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "instrument_type",
+      "quote": "se derogan la Ley del Seguro Social publicada en el Diario Oficial de la Federación el día doce de marzo de 1973",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "legislation_date",
+      "quote": "México, D.F., a 12 de diciembre de 1995",
+      "location": "Cierre del Decreto"
+     },
+     {
+      "field": "Social_insurance_change",
+      "quote": "El régimen obligatorio comprende los seguros de:",
+      "location": "Artículo 11"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "el Gobierno Federal aportará mensualmente, por concepto de cuota social, una cantidad inicial equivalente al cinco punto cinco por ciento del salario mínimo general para el Distrito Federal, por cada día de salario cotizado",
+      "location": "Artículo 168, fracción IV"
+     },
+     {
+      "field": "fiscal_magnitude_stated",
+      "quote": "el Gobierno Federal aportará mensualmente, por concepto de cuota social, una cantidad inicial equivalente al cinco punto cinco por ciento del salario mínimo general para el Distrito Federal, por cada día de salario cotizado",
+      "location": "Artículo 168, fracción IV"
+     },
+     {
+      "field": "financing_indexation_change",
+      "quote": "El valor del mencionado importe inicial de la cuota social, se actualizará trimestralmente de conformidad con el Indice Nacional de Precios al Consumidor",
+      "location": "Artículo 168, fracción IV"
+     },
+     {
+      "field": "reform_coverage",
+      "quote": "la que se depositará en la cuenta individual de cada trabajador asegurado.",
+      "location": "Artículo 168, fracción IV"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "la que se depositará en la cuenta individual de cada trabajador asegurado.",
+      "location": "Artículo 168, fracción IV"
+     },
+     {
+      "field": "insurance_branch",
+      "quote": "las cuotas obrero patronales y la aportación estatal del seguro de retiro, cesantía en edad avanzada y vejez.",
+      "location": "Artículo 167"
+     },
+     {
+      "field": "legal_references",
+      "quote": "proveniente de la cuota social aportada por el Gobierno Federal en su cuenta individual",
+      "location": "Artículo 165"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 21/12/1995",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "01_dip_19951221_lss_orig.pdf",
+    "chunk_ids": []
+   }
+  },
+  {
+   "label": "Pensión garantizada de un salario mínimo con complemento del Gobierno Federal",
+   "core": true,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "1995",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "12-1995",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "01-1997",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "benefit rule changes"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "Not explicitly mentioned",
+    "Social_insurance_change": "Yes",
+    "Reform_category": "Structural reform",
+    "reform_coverage": "Targeted reform",
+    "reason_reform": [
+     "Not explicitly mentioned"
+    ],
+    "relevancetopr_score": 9.5,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "Not explicitly mentioned",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "Major",
+    "instrument_type": "new_law",
+    "issuing_body": "Congreso de la Unión",
+    "dof_publication_date": "21-12-1995",
+    "entry_into_force_date": "01-01-1997",
+    "legal_references": [
+     "Ley del Seguro Social, artículo 170",
+     "Ley del Seguro Social, artículo 171",
+     "Ley del Seguro Social, artículo 172",
+     "Ley del Seguro Social, artículo 141"
+    ],
+    "regime_affected": [
+     "ley97"
+    ],
+    "insurance_branch": [
+     "RCV",
+     "IV"
+    ],
+    "financing_indexation_change": "Not explicitly mentioned",
+    "fiscal_magnitude_stated": "Monto mensual equivalente a un salario mínimo general del D.F. a la entrada en vigor de la Ley, actualizado cada febrero con el INPC",
+    "implicit_liability_direction": "increases",
+    "fields_inferred": [
+     "Reform_category",
+     "implicit_liability_direction"
+    ],
+    "evidence": [
+     {
+      "field": "issuing_body",
+      "quote": "Que el H. Congreso de la Unión, se ha servido dirigirme el siguiente",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "instrument_type",
+      "quote": "se derogan la Ley del Seguro Social publicada en el Diario Oficial de la Federación el día doce de marzo de 1973",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "legislation_date",
+      "quote": "México, D.F., a 12 de diciembre de 1995",
+      "location": "Cierre del Decreto"
+     },
+     {
+      "field": "Social_insurance_change",
+      "quote": "El régimen obligatorio comprende los seguros de:",
+      "location": "Artículo 11"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "Pensión garantizada es aquélla que el Estado asegura a quienes reúnan los requisitos señalados en los artículos 154 y 162 de esta Ley",
+      "location": "Artículo 170"
+     },
+     {
+      "field": "fiscal_magnitude_stated",
+      "quote": "su monto mensual será el equivalente a un salario mínimo general para el Distrito Federal, en el momento en que entre en vigor esta Ley, cantidad que se actualizará anualmente, en el mes de febrero",
+      "location": "Artículo 170"
+     },
+     {
+      "field": "reform_coverage",
+      "quote": "El asegurado, cuyos recursos acumulados en su cuenta individual resulten insuficientes para contratar una renta vitalicia o un retiro programado que le asegure el disfrute de una pensión garantizada",
+      "location": "Artículo 171"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "recibirá del Gobierno Federal la aportación complementaria suficiente para ello.",
+      "location": "Artículo 171"
+     },
+     {
+      "field": "insurance_branch",
+      "quote": "El Gobierno Federal con recursos propios complementarios a los de la cuenta individual correspondiente, cubrirá la pensión garantizada, por conducto del Instituto.",
+      "location": "Artículo 172"
+     },
+     {
+      "field": "insurance_branch",
+      "quote": "En el caso de que la cuantía de la pensión sea inferior a la pensión garantizada, el Estado aportará la diferencia",
+      "location": "Artículo 141"
+     },
+     {
+      "field": "legal_references",
+      "quote": "Una vez agotados los recursos la pensión será cubierta directamente por el Instituto, con los recursos que para tal efecto le debe proporcionar el Gobierno Federal.",
+      "location": "Artículo 172"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 21/12/1995",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "01_dip_19951221_lss_orig.pdf",
+    "chunk_ids": []
+   }
+  },
+  {
+   "label": "Derecho de opción de los asegurados de la Ley de 1973, con sus pensiones a cargo del Gobierno Federal",
+   "core": true,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "1995",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "12-1995",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "01-1997",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "eligibility and access",
+     "funding mechanisms"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "Not explicitly mentioned",
+    "Social_insurance_change": "Yes",
+    "Reform_category": "Structural reform",
+    "reform_coverage": "Targeted reform",
+    "reason_reform": [
+     "Not explicitly mentioned"
+    ],
+    "relevancetopr_score": 10.0,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "Not explicitly mentioned",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "Major",
+    "instrument_type": "new_law",
+    "issuing_body": "Congreso de la Unión",
+    "dof_publication_date": "21-12-1995",
+    "entry_into_force_date": "01-01-1997",
+    "legal_references": [
+     "Transitorio Tercero",
+     "Transitorio Cuarto",
+     "Transitorio Quinto",
+     "Transitorio Undécimo",
+     "Transitorio Duodécimo",
+     "Transitorio Décimo Tercero",
+     "Transitorio Décimo Octavo"
+    ],
+    "regime_affected": [
+     "ley73"
+    ],
+    "insurance_branch": [
+     "RCV",
+     "IV",
+     "RT"
+    ],
+    "financing_indexation_change": "Not explicitly mentioned",
+    "fiscal_magnitude_stated": "Not explicitly mentioned",
+    "implicit_liability_direction": "increases",
+    "fields_inferred": [
+     "Reform_category",
+     "implicit_liability_direction"
+    ],
+    "evidence": [
+     {
+      "field": "issuing_body",
+      "quote": "Que el H. Congreso de la Unión, se ha servido dirigirme el siguiente",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "instrument_type",
+      "quote": "se derogan la Ley del Seguro Social publicada en el Diario Oficial de la Federación el día doce de marzo de 1973",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "legislation_date",
+      "quote": "México, D.F., a 12 de diciembre de 1995",
+      "location": "Cierre del Decreto"
+     },
+     {
+      "field": "Social_insurance_change",
+      "quote": "El régimen obligatorio comprende los seguros de:",
+      "location": "Artículo 11"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "podrán optar por acogerse al beneficio de dicha Ley o al esquema de pensiones establecido en el presente ordenamiento.",
+      "location": "Transitorio Tercero"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "Estarán a cargo del Gobierno Federal las pensiones que se encuentren en curso de pago, así como las prestaciones o pensiones de aquellos sujetos que se encuentren en período de conservación de derechos",
+      "location": "Transitorio Duodécimo"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "y las pensiones que se otorguen a los asegurados que opten por el esquema establecido por la Ley que se deroga.",
+      "location": "Transitorio Duodécimo"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "Los acumulados en los ramos de cesantía en edad avanzada y vejez serán entregados por las Administradoras de Fondos para el Retiro al Gobierno Federal.",
+      "location": "Transitorio Décimo Tercero, inciso b)"
+     },
+     {
+      "field": "reform_coverage",
+      "quote": "Los asegurados inscritos con anterioridad a la fecha de entrada en vigor de esta Ley, así como sus beneficiarios",
+      "location": "Transitorio Tercero"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "Los asegurados inscritos con anterioridad a la fecha de entrada en vigor de esta Ley, así como sus beneficiarios",
+      "location": "Transitorio Tercero"
+     },
+     {
+      "field": "insurance_branch",
+      "quote": "para el disfrute de las pensiones de vejez, cesantía en edad avanzada o riesgos de trabajo, se encontraban previstos por la Ley del Seguro Social que se deroga",
+      "location": "Transitorio Undécimo"
+     },
+     {
+      "field": "insurance_branch",
+      "quote": "les será aplicable el tiempo de espera de ciento cincuenta semanas cotizadas, para efectos del seguro de invalidez y vida.",
+      "location": "Transitorio Quinto"
+     },
+     {
+      "field": "legal_references",
+      "quote": "A los asegurados que al momento de entrar en vigor esta Ley opten por acogerse al nuevo sistema de pensiones, les serán reconocidas las semanas cotizadas bajo el régimen anterior",
+      "location": "Transitorio Décimo Octavo"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 21/12/1995",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "01_dip_19951221_lss_orig.pdf",
+    "chunk_ids": []
+   }
+  },
+  {
+   "label": "Edades de 60 (cesantía) y 65 (vejez) con 1,250 semanas de cotización",
+   "core": true,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "1995",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "12-1995",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "01-1997",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "retirement age",
+     "eligibility and access"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "Not explicitly mentioned",
+    "Social_insurance_change": "Yes",
+    "Reform_category": "Parametric reform",
+    "reform_coverage": "Broad-based reform",
+    "reason_reform": [
+     "Not explicitly mentioned"
+    ],
+    "relevancetopr_score": 9.5,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Cesantía en edad avanzada después de los 60 años y vejez a los 65, con mínimo de 1,250 cotizaciones semanales en ambos ramos; pensión antes de esas edades solo si la renta vitalicia supera en más de 30% la pensión garantizada. La Ley no distingue por sexo y no indica las edades previas.",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "60 (cesantía en edad avanzada); 65 (vejez)",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "60 (cesantía en edad avanzada); 65 (vejez)",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "Not explicitly mentioned",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "Major",
+    "instrument_type": "new_law",
+    "issuing_body": "Congreso de la Unión",
+    "dof_publication_date": "21-12-1995",
+    "entry_into_force_date": "01-01-1997",
+    "legal_references": [
+     "Ley del Seguro Social, artículo 154",
+     "Ley del Seguro Social, artículo 158",
+     "Ley del Seguro Social, artículo 162"
+    ],
+    "regime_affected": [
+     "ley97"
+    ],
+    "insurance_branch": [
+     "RCV"
+    ],
+    "financing_indexation_change": "Not explicitly mentioned",
+    "fiscal_magnitude_stated": "Not explicitly mentioned",
+    "implicit_liability_direction": "Not explicitly mentioned",
+    "fields_inferred": [
+     "Reform_category"
+    ],
+    "evidence": [
+     {
+      "field": "issuing_body",
+      "quote": "Que el H. Congreso de la Unión, se ha servido dirigirme el siguiente",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "instrument_type",
+      "quote": "se derogan la Ley del Seguro Social publicada en el Diario Oficial de la Federación el día doce de marzo de 1973",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "legislation_date",
+      "quote": "México, D.F., a 12 de diciembre de 1995",
+      "location": "Cierre del Decreto"
+     },
+     {
+      "field": "Social_insurance_change",
+      "quote": "El régimen obligatorio comprende los seguros de:",
+      "location": "Artículo 11"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "se requiere que el asegurado haya cumplido sesenta y cinco años de edad y tenga reconocidas por el Instituto un mínimo de mil doscientas cincuenta cotizaciones semanales.",
+      "location": "Artículo 162"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "Para gozar de las prestaciones de este ramo se requiere que el asegurado tenga reconocidas ante el Instituto un mínimo de mil doscientas cincuenta cotizaciones semanales.",
+      "location": "Artículo 154"
+     },
+     {
+      "field": "Retirement_age_change_details",
+      "quote": "existe cesantía en edad avanzada cuando el asegurado quede privado de trabajos remunerados después de los sesenta años de edad.",
+      "location": "Artículo 154"
+     },
+     {
+      "field": "Retirement_age_change_details",
+      "quote": "El asegurado podrá pensionarse antes de cumplir las edades establecidas, siempre y cuando la pensión que se le calcule en el sistema de renta vitalicia sea superior en más del treinta por ciento de la pensión garantizada",
+      "location": "Artículo 158"
+     },
+     {
+      "field": "Retirement_age_after_reform_male",
+      "quote": "existe cesantía en edad avanzada cuando el asegurado quede privado de trabajos remunerados después de los sesenta años de edad.",
+      "location": "Artículo 154"
+     },
+     {
+      "field": "Retirement_age_after_reform_male",
+      "quote": "se requiere que el asegurado haya cumplido sesenta y cinco años de edad",
+      "location": "Artículo 162"
+     },
+     {
+      "field": "Retirement_age_after_reform_female",
+      "quote": "existe cesantía en edad avanzada cuando el asegurado quede privado de trabajos remunerados después de los sesenta años de edad.",
+      "location": "Artículo 154"
+     },
+     {
+      "field": "Retirement_age_after_reform_female",
+      "quote": "se requiere que el asegurado haya cumplido sesenta y cinco años de edad",
+      "location": "Artículo 162"
+     },
+     {
+      "field": "reform_coverage",
+      "quote": "Los asegurados que reúnan los requisitos establecidos en esta sección podrán disponer de su cuenta individual con el objeto de disfrutar de una pensión de vejez.",
+      "location": "Artículo 164"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "Los asegurados que reúnan los requisitos establecidos en esta sección podrán disponer de su cuenta individual con el objeto de disfrutar de una pensión de vejez.",
+      "location": "Artículo 164"
+     },
+     {
+      "field": "insurance_branch",
+      "quote": "Los riesgos protegidos por este capítulo son el retiro, la cesantía en edad avanzada y la vejez del asegurado",
+      "location": "Artículo 152"
+     },
+     {
+      "field": "legal_references",
+      "quote": "Para tener derecho al goce de las prestaciones del seguro de vejez",
+      "location": "Artículo 162"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 21/12/1995",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "01_dip_19951221_lss_orig.pdf",
+    "chunk_ids": []
+   }
+  },
+  {
+   "label": "Prima patronal de 1% para guarderías y prestaciones sociales",
+   "core": false,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "1995",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "12-1995",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "01-1997",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "funding mechanisms"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "Not explicitly mentioned",
+    "Social_insurance_change": "Yes",
+    "Reform_category": "Not explicitly mentioned",
+    "reform_coverage": "Broad-based reform",
+    "reason_reform": [
+     "Not explicitly mentioned"
+    ],
+    "relevancetopr_score": 4.0,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "1% del salario base de cotización",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "Minor",
+    "instrument_type": "new_law",
+    "issuing_body": "Congreso de la Unión",
+    "dof_publication_date": "21-12-1995",
+    "entry_into_force_date": "01-01-1997",
+    "legal_references": [
+     "Ley del Seguro Social, artículo 211",
+     "Ley del Seguro Social, artículo 212"
+    ],
+    "regime_affected": [
+     "all"
+    ],
+    "insurance_branch": [
+     "GPS"
+    ],
+    "financing_indexation_change": "Not explicitly mentioned",
+    "fiscal_magnitude_stated": "Not explicitly mentioned",
+    "implicit_liability_direction": "Not explicitly mentioned",
+    "fields_inferred": [],
+    "evidence": [
+     {
+      "field": "issuing_body",
+      "quote": "Que el H. Congreso de la Unión, se ha servido dirigirme el siguiente",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "instrument_type",
+      "quote": "se derogan la Ley del Seguro Social publicada en el Diario Oficial de la Federación el día doce de marzo de 1973",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "legislation_date",
+      "quote": "México, D.F., a 12 de diciembre de 1995",
+      "location": "Cierre del Decreto"
+     },
+     {
+      "field": "Social_insurance_change",
+      "quote": "El régimen obligatorio comprende los seguros de:",
+      "location": "Artículo 11"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "El monto de la prima para este seguro será del uno por ciento sobre el salario base de cotización. Para prestaciones sociales solamente se podrá destinar hasta el veinte por ciento de dicho monto.",
+      "location": "Artículo 211"
+     },
+     {
+      "field": "New Employer Contribution Rate",
+      "quote": "Los patrones cubrirán íntegramente la prima para el financiamiento de las prestaciones de este capítulo",
+      "location": "Artículo 212"
+     },
+     {
+      "field": "reform_coverage",
+      "quote": "esto independientemente que tengan o no trabajadores de los señalados en el artículo 201 a su servicio.",
+      "location": "Artículo 212"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "esto independientemente que tengan o no trabajadores de los señalados en el artículo 201 a su servicio.",
+      "location": "Artículo 212"
+     },
+     {
+      "field": "insurance_branch",
+      "quote": "V. Guarderías y prestaciones sociales.",
+      "location": "Artículo 11, fracción V"
+     },
+     {
+      "field": "legal_references",
+      "quote": "Los patrones cubrirán íntegramente la prima para el financiamiento de las prestaciones de este capítulo",
+      "location": "Artículo 212"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 21/12/1995",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "01_dip_19951221_lss_orig.pdf",
+    "chunk_ids": []
+   }
+  }
+ ]
+}

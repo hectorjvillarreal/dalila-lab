@@ -1,0 +1,185 @@
+{
+ "doc_id": "05",
+ "episode": 1,
+ "label": "Desindexación del Salario Mínimo a la UMA",
+ "summary": "EPISODE: Desindexación del Salario Mínimo a la UMA\nfield name | value | \"verbatim quote\" | where in the text\n1. Country Name | Mexico | \"Estados Unidos Mexicanos\" | Header\n2. Year of the article | 2016 | \"DOF: 27/01/2016\" | Header\n3. Status of Pension Reform | Legislated, Implemented | \"DECLARA REFORMADAS Y ADICIONADAS DIVERSAS DISPOSICIONES DE LA CONSTITUCIÓN\" | Body\n4. legislation_date | 01-2016 | \"DOF: 27/01/2016\" | Header\n5. Planned_date | INFERRED | N/A\n6. announcement_date | INFERRED | N/A\n7. implementation_date | 01-2016 | \"El presente Decreto entrará en vigor el día siguiente al de su publicación\" | Transitorios Primero\n8. reversal_date | INFERRED | N/A\n9. Pension Reform Types | funding mechanisms, indexation, others | \"El financiamiento público para el sostenimiento de sus actividades ordinarias permanentes se fijará anualmente, multiplicando el número total de ciudadanos inscritos en el padrón electoral por el sesenta y cinco por ciento del valor diario de la Unidad de Medida y Actualización\" | Artículo 26\n10. indexation_change | less generous indexation | \"El salario mínimo no podrá ser utilizado como índice, unidad, base, medida o referencia para fines ajenos a su naturaleza\" | Artículo 123\n11. coverage_change | INFERRED | N/A\n12. benefit_change | INFERRED | N/A\n13. Social_insurance_change | No | N/A\n14. reform_category | Parametric reform | \"desindexación del salario mínimo\" | Title\n15. reform_coverage | Broad-based reform | \"todas las menciones al salario mínimo como unidad de cuenta... se entenderán referidas a la Unidad de Medida y Actualización\" | Transitorio Tercero\n16. reason_reform | Fiscal reasons, Economic impact | \"El financiamiento público para el sostenimiento de sus actividades ordinarias permanentes se fijará anualmente...\" | Artículo 26\n17. relevancetopr_score | 8.0 | N/A\n18. retirement_age_change | INFERRED | N/A\n19. Retirement_age_change_details | INFERRED | N/A\n20. Retirement_age_pre_reform_female | INFERRED | N/A\n21. Retirement_age_after_reform_female | INFERRED | N/A\n22. Retirement_age_pre_reform_male | INFERRED | N/A\n23. Retirement_age_after_reform_male | INFERRED | N/A\n24. Contribution_rate_change | INFERRED | N/A\n25. Old Employer Contribution Rate | INFERRED | N/A\n26. New Employer Contribution Rate | INFERRED | N/A\n27. Old Employee Contribution Rate | INFERRED | N/A\n28. New Employee Contribution Rate | INFERRED | N/A\n29. Old Contribution Rate (Employee and Employer Combined) | INFERRED | N/A\n30. New Contribution Rate (Employee and Employer Combined) | INFERRED | N/A\n31. Is the legislated pension reform minor or major | Minor | \"desindexación del salario mínimo\" | Title\n32. instrument_type | constitutional_reform | \"DECLARA REFORMADAS Y ADICIONADAS DIVERSAS DISPOSICIONES DE LA CONSTITUCIÓN\" | Body\n33. issuing_body | Congreso de la Unión | \"LA COMISIÓN PERMANENTE DEL HONORABLE CONGRESO DE LA UNIÓN\" | Body\n34. dof_publication_date | 27-01-2016 | \"DOF: 27/01/2016\" | Header\n35. entry_into_force_date | 28-01-2016 | \"El presente Decreto entrará en vigor el día siguiente al de su publicación\" | Transitorios Primero\n36. legal_references | Artículo 41, Apartado A del artículo 123, Apartado B del artículo 26 | \"Se reforman el inciso a) de la base II del artículo 41, y el párrafo primero de la fracción VI del Apartado A del artículo 123; y se adicionan los párrafos sexto y séptimo al Apartado B del artículo 26\" | Artículo Único\n37. regime_affected | all | N/A\n38. insurance_branch | other | N/A\n39. financing_indexation_change | changed_to_uma | \"El valor inicial diario de la Unidad de Medida y Actualización... será equivalente al que tenga el salario mínimo general vigente diario\" | Transitorios Segundo\n40. fiscal_magnitude_stated | INFERRED | N/A\n41. implicit_liability_direction | decreases | \"El salario mínimo no podrá ser utilizado como índice... para fines ajenos a su naturaleza\" | Artículo 123",
+ "attempts": 1,
+ "valid": true,
+ "errors": [],
+ "record": {
+  "Country Name": "Mexico",
+  "Year of the article": "2016",
+  "Status of Pension Reform": [
+   "Legislated",
+   "Implemented"
+  ],
+  "legislation_date": "01-2016",
+  "Planned_date": "Not explicitly mentioned",
+  "announcement_date": "Not explicitly mentioned",
+  "implementation_date": "01-2016",
+  "reversal_date": "Not explicitly mentioned",
+  "Pension Reform Types": [
+   "funding mechanisms",
+   "indexation",
+   "others"
+  ],
+  "indexation_change": "less generous indexation",
+  "coverage_change": "Not explicitly mentioned",
+  "benefit_change": "Not explicitly mentioned",
+  "Social_insurance_change": "No",
+  "Reform_category": "Parametric reform",
+  "reform_coverage": "Broad-based reform",
+  "reason_reform": [
+   "Fiscal reasons",
+   "Economic impact"
+  ],
+  "relevancetopr_score": 8.0,
+  "retirement_age_change": "Not explicitly mentioned",
+  "Retirement_age_change_details": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+  "Retirement_age_after_reform_female": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+  "Retirement_age_after_reform_male": "Not explicitly mentioned",
+  "Contribution_rate_change": "Not explicitly mentioned",
+  "Old Employer Contribution Rate": "Not explicitly mentioned",
+  "New Employer Contribution Rate": "Not explicitly mentioned",
+  "Old Employee Contribution Rate": "Not explicitly mentioned",
+  "New Employee Contribution Rate": "Not explicitly mentioned",
+  "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "Is the legislated pension reform minor or major?": "Minor",
+  "instrument_type": "constitutional_reform",
+  "issuing_body": "Congreso de la Unión",
+  "dof_publication_date": "27-01-2016",
+  "entry_into_force_date": "28-01-2016",
+  "legal_references": [
+   "Artículo 41, Apartado A del artículo 123, Apartado B del artículo 26"
+  ],
+  "regime_affected": [
+   "all"
+  ],
+  "insurance_branch": [
+   "other"
+  ],
+  "financing_indexation_change": "changed_to_uma",
+  "fiscal_magnitude_stated": "Not explicitly mentioned",
+  "implicit_liability_direction": "decreases",
+  "fields_inferred": [
+   "Planned_date",
+   "announcement_date",
+   "reversal_date",
+   "coverage_change",
+   "benefit_change",
+   "Retirement_age_change_details",
+   "Retirement_age_pre_reform_female",
+   "Retirement_age_after_reform_female",
+   "Retirement_age_pre_reform_male",
+   "Retirement_age_after_reform_male",
+   "Contribution_rate_change",
+   "Old Employer Contribution Rate",
+   "New Employer Contribution Rate",
+   "Old Employee Contribution Rate",
+   "New Employee Contribution Rate",
+   "Old Contribution Rate (Employee and Employer Combined)",
+   "New Contribution Rate (Employee and Employer Combined)",
+   "fiscal_magnitude_stated"
+  ],
+  "evidence": [
+   {
+    "field": "Country Name",
+    "quote": "Estados Unidos Mexicanos",
+    "location": "Header"
+   },
+   {
+    "field": "Year of the article",
+    "quote": "DOF: 27/01/2016",
+    "location": "Header"
+   },
+   {
+    "field": "Status of Pension Reform",
+    "quote": "DECLARA REFORMADAS Y ADICIONADAS DIVERSAS DISPOSICIONES DE LA CONSTITUCIÓN",
+    "location": "Body"
+   },
+   {
+    "field": "legislation_date",
+    "quote": "DOF: 27/01/2016",
+    "location": "Header"
+   },
+   {
+    "field": "implementation_date",
+    "quote": "El presente Decreto entrará en vigor el día siguiente al de su publicación",
+    "location": "Transitorios Primero"
+   },
+   {
+    "field": "Pension Reform Types",
+    "quote": "El financiamiento público para el sostenimiento de sus actividades ordinarias permanentes se fijará anualmente, multiplicando el número total de ciudadanos inscritos en el padrón electoral por el sesenta y cinco por ciento del valor diario de la Unidad de Medida y Actualización",
+    "location": "Artículo 26"
+   },
+   {
+    "field": "indexation_change",
+    "quote": "El salario mínimo no podrá ser utilizado como índice, unidad, base, medida o referencia para fines ajenos a su naturaleza",
+    "location": "Artículo 123"
+   },
+   {
+    "field": "reform_coverage",
+    "quote": "todas las menciones al salario mínimo como unidad de cuenta... se entenderán referidas a la Unidad de Medida y Actualización",
+    "location": "Transitorio Tercero"
+   },
+   {
+    "field": "reason_reform",
+    "quote": "El financiamiento público para el sostenimiento de sus actividades ordinarias permanentes se fijará anualmente...",
+    "location": "Artículo 26"
+   },
+   {
+    "field": "instrument_type",
+    "quote": "DECLARA REFORMADAS Y ADICIONADAS DIVERSAS DISPOSICIONES DE LA CONSTITUCIÓN",
+    "location": "Body"
+   },
+   {
+    "field": "issuing_body",
+    "quote": "LA COMISIÓN PERMANENTE DEL HONORABLE CONGRESO DE LA UNIÓN",
+    "location": "Body"
+   },
+   {
+    "field": "dof_publication_date",
+    "quote": "DOF: 27/01/2016",
+    "location": "Header"
+   },
+   {
+    "field": "entry_into_force_date",
+    "quote": "El presente Decreto entrará en vigor el día siguiente al de su publicación",
+    "location": "Transitorios Primero"
+   },
+   {
+    "field": "legal_references",
+    "quote": "Se reforman el inciso a) de la base II del artículo 41, y el párrafo primero de la fracción VI del Apartado A del artículo 123; y se adicionan los párrafos sexto y séptimo al Apartado B del artículo 26",
+    "location": "Artículo Único"
+   },
+   {
+    "field": "financing_indexation_change",
+    "quote": "El valor inicial diario de la Unidad de Medida y Actualización... será equivalente al que tenga el salario mínimo general vigente diario",
+    "location": "Transitorios Segundo"
+   },
+   {
+    "field": "implicit_liability_direction",
+    "quote": "El salario mínimo no podrá ser utilizado como índice... para fines ajenos a su naturaleza",
+    "location": "Artículo 123"
+   }
+  ],
+  "source_file": "05_dof_20160127_desindexacion_sm.html",
+  "chunk_ids": [
+   "05_full"
+  ]
+ },
+ "raw_failed": null,
+ "metrics": [
+  {
+   "wall_s": 37.8,
+   "prompt_tokens": 2690,
+   "gen_tokens": 1717,
+   "gen_s": 35.9,
+   "prompt_s": 1.5,
+   "done_reason": "stop"
+  }
+ ]
+}

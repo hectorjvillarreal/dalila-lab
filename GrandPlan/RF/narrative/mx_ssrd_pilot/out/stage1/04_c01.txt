@@ -1,0 +1,28 @@
+### EPISODE 1: ISSSTE Law 2007 - System Creation
+field name | value | "verbatim quote" | where in the text
+32. instrument_type | new_law | "SE EXPIDE LA LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO." | Article Único
+33. issuing_body | Congreso de la Unión | "EL CONGRESO GENERAL DE LOS ESTADOS UNIDOS MEXICANOS, DECRETA:" | Article Único
+34. dof_publication_date | 31-03-2007 | "DOF: 31/03/2007" | Header
+35. entry_into_force_date | 01-04-2007 | "Día siguiente" (implied by standard Mexican law entry into force rules for decrees published in DOF) | Inferred
+36. legal_references | Articles 1-39 | "Artículo 1... Artículo 39" | Throughout text
+37. regime_affected | issste_decimo_transitorio | "LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO" | Title
+38. insurance_branch | IV, RCV, SEM, SEM_pensioners_GMP, RT, GPS | "Artículo 3. Se establecen con carácter obligatorio los siguientes seguros: I. De salud... II. De riesgos del trabajo; III. De retiro, cesantía en edad avanzada y vejez, y IV. De invalidez y vida." | Article 3
+39. financing_indexation_change | other | "Pensión Garantizada... cuyo monto mensual será la cantidad de tres mil treinta y cuatro pesos con veinte centavos, moneda nacional, misma que se actualizará anualmente, en el mes de febrero, conforme al cambio anualizado del Índice Nacional de Precios al Consumidor" | Article 6, XIX
+41. implicit_liability_direction | ambiguous | "Reserva, el registro contable en el pasivo del Instituto que refleja la cuantificación completa y actualizada de sus obligaciones contingentes y ciertas" | Article 6, XXII
+13. Social_insurance_change | Yes | "Artículo 5. La administración de los seguros... estarán a cargo del organismo descentralizado... denominado Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado" | Article 5
+14. reform_category | Structural reform | "SE EXPIDE LA LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO" | Article Único
+17. relevancetopr_score | 10.0 | "SE EXPIDE LA LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO" | Article Único
+18. retirement_age_change | N/A | "N/A" | N/A
+19. Retirement_age_change_details | N/A | "N/A" | N/A
+20. Retirement_age_pre_reform_female | N/A | "N/A" | N/A
+21. Retirement_age_after_reform_female | N/A | "N/A" | N/A
+22. Retirement_age_pre_reform_male | N/A | "N/A" | N/A
+23. Retirement_age_after_reform_male | N/A | "N/A" | N/A
+24. Contribution_rate_change | N/A | "N/A" | N/A
+25. Old Employer Contribution Rate | N/A | "N/A" | N/A
+26. New Employer Contribution Rate | N/A | "N/A" | N/A
+27. Old Employee Contribution Rate | N/A | "N/A" | N/A
+28. New Employee Contribution Rate | N/A | "N/A" | N/A
+29. Old Contribution Rate (Employee and Employer Combined) | N/A | "N/A" | N/A
+30. New Contribution Rate (Employee and Employer Combined) | N/A | "N/A" | N/A
+31. Is the legislated pension reform minor or major | Major | "SE EXPIDE LA LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO" | Article Único

@@ -1,0 +1,40 @@
+doc_id,silver_idx,silver_label,core,model_episode,note
+01,1,"Cuentas individuales para retiro, cesantía y vejez administradas por las Afores",True,,
+01,2,Seguros separados de IV y RCV: cuotas tripartitas y tope del salario base de 15 a 25 salarios mínimos,True,1,Modelo cita art. Vigésimo Quinto: tope del salario base
+01,3,"Financiamiento del SEM: cuota fija de 13.9%, excedente, cuota estatal indexada al INPC y cuota de 1.5% para pensionados",True,,
+01,4,Cuota social del Gobierno Federal de 5.5% del salario mínimo por día cotizado,True,,
+01,5,Pensión garantizada de un salario mínimo con complemento del Gobierno Federal,True,,
+01,6,"Derecho de opción de los asegurados de la Ley de 1973, con sus pensiones a cargo del Gobierno Federal",True,,
+01,7,"Edades de 60 (cesantía) y 65 (vejez) con 1,250 semanas de cotización",True,,
+01,8,Prima patronal de 1% para guarderías y prestaciones sociales,False,,
+02,1,"Marco de coordinación, regulación y supervisión a cargo de la CONSAR (abroga la Ley de Coordinación de 1994)",True,,
+02,2,"Afores: entidades financieras exclusivas para administrar cuentas individuales, con límite de concentración de mercado",True,,
+02,3,Siefores y régimen de inversión de los recursos de las cuentas individuales,True,,
+02,4,"Cuenta individual: apertura en la Afore elegida, traspaso anual y aportaciones voluntarias",True,1,Cuentas individuales
+02,5,Régimen de comisiones de las Afores,True,,
+02,6,"Transición: saldos SAR 1992, trabajadores sin Afore y cuenta concentradora",True,,
+02,7,Aseguradoras de pensiones especializadas (reforma a la Ley General de Instituciones y Sociedades Mutualistas de Seguros),False,,
+03,1,Plazas nuevas solo con fondeo total del RJP,True,1,Etiqueta agrupa 277 D y 286 K
+03,2,"Prohibición de financiar el RJP con cuotas, aportaciones federales o reservas",True,,
+05,1,Desindexación del salario mínimo y creación de la UMA,True,1,
+06,1,Método de cálculo de la UMA con el INPC,True,,
+07,1,Derecho constitucional a la pensión no contributiva de adultos mayores,True,1,
+07,2,Apoyo económico por discapacidad permanente,False,,
+08,1,Aumento gradual de la cuota patronal de cesantía y vejez,True,1,
+08,2,Cuota social concentrada hasta 4 UMA y derogación de la aportación estatal,True,3,Etiqueta dice aumento de cuota social
+08,3,Reducción de semanas de cotización a 1000 con transición desde 750,True,2,Etiqueta dice incremento de semanas; el texto las reduce
+08,4,"Nueva pensión garantizada por tabla de edad, semanas y salario",True,,
+08,5,Tope a las comisiones de las Afores,True,,
+08,6,Recursos prescritos de la subcuenta RCV: reserva y disposición por el IMSS,False,,
+08,7,Designación de beneficiarios de la cuenta individual,False,,
+08,8,Revisión por SHCP de los procedimientos del RJP del IMSS,False,,
+09,1,Obligación de inscribir a personas trabajadoras de plataformas en IMSS e Infonavit,True,,
+09,2,Responsabilidad por riesgo de trabajo sin importar el umbral de ingreso,False,,
+09,3,Exclusión de propinas del salario base de cotización,False,,
+09,4,Prueba piloto obligatoria y futuras iniciativas,True,,
+10,1,"Complemento a la pensión hasta el último salario con tope de $16,777.68",True,1,
+10,2,Fuentes de financiamiento del Fondo de Pensiones para el Bienestar,True,2,
+10,3,"Fideicomiso, Comité Técnico y Ventanilla Única",False,,
+11,1,Tope temporal a la base de cotización de la Continuación Voluntaria,True,1,Episodio genérico; es el emparejamiento más favorable
+11,2,Análisis financiero a 6 meses y propuesta normativa posterior,True,,
+11,3,Inscripción únicamente por mecanismos digitales,False,,

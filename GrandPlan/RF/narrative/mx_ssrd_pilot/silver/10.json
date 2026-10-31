@@ -1,0 +1,385 @@
+{
+ "doc_id": "10",
+ "status": "silver",
+ "episodes": [
+  {
+   "label": "Complemento a la pensión hasta el último salario con tope de $16,777.68",
+   "core": true,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "2024",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "05-2024",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "07-2024",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "benefit rule changes"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "more generous benefits",
+    "Social_insurance_change": "Yes",
+    "Reform_category": "Parametric reform",
+    "reform_coverage": "Targeted reform",
+    "reason_reform": [
+     "Benefit adequacy"
+    ],
+    "relevancetopr_score": 10.0,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Complemento para quienes alcancen los 65 años",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "Not explicitly mentioned",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "Major",
+    "instrument_type": "decree",
+    "issuing_body": "Ejecutivo Federal",
+    "dof_publication_date": "01-05-2024",
+    "entry_into_force_date": "02-05-2024",
+    "legal_references": [
+     "Decreto, artículo 2",
+     "Transitorio Sexto"
+    ],
+    "regime_affected": [
+     "ley97",
+     "issste_2007_accounts"
+    ],
+    "insurance_branch": [
+     "RCV"
+    ],
+    "financing_indexation_change": "Not explicitly mentioned",
+    "fiscal_magnitude_stated": "Not explicitly mentioned",
+    "implicit_liability_direction": "increases",
+    "fields_inferred": [
+     "Reform_category",
+     "Social_insurance_change",
+     "implicit_liability_direction",
+     "insurance_branch",
+     "legislation_date"
+    ],
+    "evidence": [
+     {
+      "field": "issuing_body",
+      "quote": "presidente de los Estados Unidos Mexicanos, en ejercicio de la facultad que me confiere el artículo 89, fracción I, de la Constitución Política de los Estados Unidos Mexicanos",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "instrument_type",
+      "quote": "DECRETO del Fondo de Pensiones para el Bienestar.",
+      "location": "Título"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "El presente decreto entra en vigor el día siguiente de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "El presente decreto entra en vigor el día siguiente de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "siempre y cuando hayan iniciado la cotización en términos de la Ley del Seguro Social vigente a partir del día 1 de julio de 1997",
+      "location": "Artículo 2"
+     },
+     {
+      "field": "benefit_change",
+      "quote": "reciban mediante dichos institutos federales un complemento a las obligaciones del Gobierno federal en relación con la pensión que se obtenga conforme a las disposiciones aplicables, para que sea igual a su último salario",
+      "location": "Artículo 2"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "para procurar que las personas trabajadoras que alcancen los 65 años de edad y cuya pensión sea igual o menor a $16,777.68",
+      "location": "Artículo 2"
+     },
+     {
+      "field": "Retirement_age_change_details",
+      "quote": "para procurar que las personas trabajadoras que alcancen los 65 años de edad",
+      "location": "Artículo 2"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "será exigible por las personas trabajadoras a partir del 1 de julio de 2024",
+      "location": "Transitorio Sexto"
+     },
+     {
+      "field": "reason_reform",
+      "quote": "una baja acumulación de recursos para asegurar una pensión digna",
+      "location": "Considerandos"
+     },
+     {
+      "field": "reform_coverage",
+      "quote": "cuya pensión sea igual o menor a $16,777.68",
+      "location": "Artículo 2"
+     },
+     {
+      "field": "legal_references",
+      "quote": "El complemento económico a que se refiere el artículo 2 del presente decreto es intransferible",
+      "location": "Transitorio Sexto"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 01/05/2024",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "10_dof_20240501_fondo_pensiones_bienestar.html",
+    "chunk_ids": []
+   }
+  },
+  {
+   "label": "Fuentes de financiamiento del Fondo de Pensiones para el Bienestar",
+   "core": true,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "2024",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "05-2024",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "05-2024",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "funding mechanisms"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "Not explicitly mentioned",
+    "Social_insurance_change": "Not explicitly mentioned",
+    "Reform_category": "Not explicitly mentioned",
+    "reform_coverage": "Targeted reform",
+    "reason_reform": [
+     "Not explicitly mentioned"
+    ],
+    "relevancetopr_score": 9.0,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "Not explicitly mentioned",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "Major",
+    "instrument_type": "decree",
+    "issuing_body": "Ejecutivo Federal",
+    "dof_publication_date": "01-05-2024",
+    "entry_into_force_date": "02-05-2024",
+    "legal_references": [
+     "Decreto, artículo 4",
+     "Ley del Seguro Social, artículo 302"
+    ],
+    "regime_affected": [
+     "ley97",
+     "issste_2007_accounts"
+    ],
+    "insurance_branch": [
+     "RCV"
+    ],
+    "financing_indexation_change": "Not explicitly mentioned",
+    "fiscal_magnitude_stated": "75 por ciento de los remanentes netos del INDEP; 25 por ciento del remanente de utilidades netas de paraestatales sectorizadas a Defensa y Marina",
+    "implicit_liability_direction": "ambiguous",
+    "fields_inferred": [
+     "implementation_date",
+     "implicit_liability_direction",
+     "insurance_branch",
+     "legislation_date"
+    ],
+    "evidence": [
+     {
+      "field": "issuing_body",
+      "quote": "presidente de los Estados Unidos Mexicanos, en ejercicio de la facultad que me confiere el artículo 89, fracción I, de la Constitución Política de los Estados Unidos Mexicanos",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "instrument_type",
+      "quote": "DECRETO del Fondo de Pensiones para el Bienestar.",
+      "location": "Título"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "El presente decreto entra en vigor el día siguiente de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "El presente decreto entra en vigor el día siguiente de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "siempre y cuando hayan iniciado la cotización en términos de la Ley del Seguro Social vigente a partir del día 1 de julio de 1997",
+      "location": "Artículo 2"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "El origen de las aportaciones del Fondo, independientemente de quien las realice, será el siguiente:",
+      "location": "Artículo 4"
+     },
+     {
+      "field": "fiscal_magnitude_stated",
+      "quote": "Los recursos correspondientes al 75 por ciento de los remanentes netos que obtenga el Instituto para Devolver al Pueblo lo Robado",
+      "location": "Artículo 4, fracción I"
+     },
+     {
+      "field": "reform_coverage",
+      "quote": "cuya pensión sea igual o menor a $16,777.68",
+      "location": "Artículo 2"
+     },
+     {
+      "field": "legal_references",
+      "quote": "Los recursos o derechos correspondientes a la aplicación de los artículos 302 de la Ley del Seguro Social",
+      "location": "Artículo 4, fracción IV"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 01/05/2024",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "10_dof_20240501_fondo_pensiones_bienestar.html",
+    "chunk_ids": []
+   }
+  },
+  {
+   "label": "Fideicomiso, Comité Técnico y Ventanilla Única",
+   "core": false,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "2024",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "05-2024",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "05-2024",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "administration and governance",
+     "investment strategies"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "Not explicitly mentioned",
+    "benefit_change": "Not explicitly mentioned",
+    "Social_insurance_change": "Not explicitly mentioned",
+    "Reform_category": "Not explicitly mentioned",
+    "reform_coverage": "Targeted reform",
+    "reason_reform": [
+     "Not explicitly mentioned"
+    ],
+    "relevancetopr_score": 6.5,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "Not explicitly mentioned",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "N/A",
+    "instrument_type": "decree",
+    "issuing_body": "Ejecutivo Federal",
+    "dof_publication_date": "01-05-2024",
+    "entry_into_force_date": "02-05-2024",
+    "legal_references": [
+     "Decreto, artículo 1",
+     "Decreto, artículo 6",
+     "Decreto, artículo 7",
+     "Decreto, artículo 11"
+    ],
+    "regime_affected": [
+     "ley97",
+     "issste_2007_accounts"
+    ],
+    "insurance_branch": [
+     "RCV"
+    ],
+    "financing_indexation_change": "Not explicitly mentioned",
+    "fiscal_magnitude_stated": "Not explicitly mentioned",
+    "implicit_liability_direction": "Not explicitly mentioned",
+    "fields_inferred": [
+     "implementation_date",
+     "insurance_branch",
+     "legislation_date"
+    ],
+    "evidence": [
+     {
+      "field": "issuing_body",
+      "quote": "presidente de los Estados Unidos Mexicanos, en ejercicio de la facultad que me confiere el artículo 89, fracción I, de la Constitución Política de los Estados Unidos Mexicanos",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "instrument_type",
+      "quote": "DECRETO del Fondo de Pensiones para el Bienestar.",
+      "location": "Título"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "El presente decreto entra en vigor el día siguiente de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "El presente decreto entra en vigor el día siguiente de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "regime_affected",
+      "quote": "siempre y cuando hayan iniciado la cotización en términos de la Ley del Seguro Social vigente a partir del día 1 de julio de 1997",
+      "location": "Artículo 2"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "se deberá constituir como un fideicomiso público no considerado entidad paraestatal por la Secretaría de Hacienda y Crédito Público",
+      "location": "Artículo 1"
+     },
+     {
+      "field": "reform_coverage",
+      "quote": "cuya pensión sea igual o menor a $16,777.68",
+      "location": "Artículo 2"
+     },
+     {
+      "field": "legal_references",
+      "quote": "establecerán una Ventanilla Única para dar cumplimiento exclusivamente al presente decreto",
+      "location": "Artículo 11"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 01/05/2024",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "10_dof_20240501_fondo_pensiones_bienestar.html",
+    "chunk_ids": []
+   }
+  }
+ ]
+}

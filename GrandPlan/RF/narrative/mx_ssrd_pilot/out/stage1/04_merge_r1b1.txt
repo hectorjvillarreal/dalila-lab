@@ -1,0 +1,75 @@
+### EPISODE 1: ISSSTE Law 2007 - System Creation
+field name | value | "verbatim quote" | where in the text
+32. instrument_type | new_law | "SE EXPIDE LA LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO." | Article Único
+33. issuing_body | Congreso de la Unión | "EL CONGRESO GENERAL DE LOS ESTADOS UNIDOS MEXICANOS, DECRETA:" | Article Único
+34. dof_publication_date | 31-03-2007 | "DOF: 31/03/2007" | Header
+35. entry_into_force_date | 01-04-2007 | "Día siguiente" (implied by standard Mexican law entry into force rules for decrees published in DOF) | Inferred
+36. legal_references | Articles 1-39 | "Artículo 1... Artículo 39" | Throughout text
+37. regime_affected | issste_decimo_transitorio | "LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO" | Title
+38. insurance_branch | IV, RCV, SEM, SEM_pensioners_GMP, RT, GPS | "Artículo 3. Se establecen con carácter obligatorio los siguientes seguros: I. De salud... II. De riesgos del trabajo; III. De retiro, cesantía en edad avanzada y vejez, y IV. De invalidez y vida." | Article 3
+39. financing_indexation_change | other | "Pensión Garantizada... cuyo monto mensual será la cantidad de tres mil treinta y cuatro pesos con veinte centavos, moneda nacional, misma que se actualizará anualmente, en el mes de febrero, conforme al cambio anualizado del Índice Nacional de Precios al Consumidor" | Article 6, XIX
+41. implicit_liability_direction | ambiguous | "Reserva, el registro contable en el pasivo del Instituto que refleja la cuantificación completa y actualizada de sus obligaciones contingentes y ciertas" | Article 6, XXII
+13. Social_insurance_change | Yes | "Artículo 5. La administración de los seguros... estarán a cargo del organismo descentralizado... denominado Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado" | Article 5
+14. reform_category | Structural reform | "SE EXPIDE LA LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO" | Article Único
+17. relevancetopr_score | 10.0 | "SE EXPIDE LA LEY DEL INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO" | Article Único
+
+### EPISODE 2: Health insurance financing rules for ISSSTE
+legislation_date | 03-2007 | "Artículo 42. El seguro de salud se financiará en la forma siguiente: I. A los Trabajadores les corresponden las siguientes Cuotas: a) Una Cuota de dos punto setenta y cinco por ciento del Sueldo Básico para financiar al seguro de salud de los Trabajadores en activo y Familiares Derechohabientes, y b) Una Cuota de cero punto seiscientos veinticinco por ciento del Sueldo Básico para financiar al seguro de salud de los Pensionados y Familiares Derechohabientes; II. A las Dependencias y Entidades les corresponden las siguientes Aportaciones: a) El equivalente al siete punto trescientos setenta y cinco por ciento del Sueldo Básico financiará al seguro de salud de los Trabajadores en activo y sus Familiares Derechohabientes, y b) El equivalente al cero punto setenta y dos por ciento del Sueldo Básico para financiar el seguro de salud de los Pensionados y sus Familiares Derechohabientes; III. El Gobierno Federal cubrirá mensualmente una Cuota Social diaria por cada Trabajador, equivalente al trece punto nueve por ciento del salario mínimo general para el Distrito Federal vigente al día primero de julio de mil novecientos noventa y siete actualizado trimestralmente conforme al Índice Nacional de Precios al Consumidor al día de la entrada en vigor de esta Ley." | Article 42, Section III of the text
+funding_mechanisms | Yes | "Artículo 42. El seguro de salud se financiará en la forma siguiente..." | Article 42
+financing_indexation_change | changed_to_inflation | "actualizado trimestralmente conforme al Índice Nacional de Precios al Consumidor" | Article 42, Section III
+social_insurance_change | Yes | "El seguro de salud se financiará en la forma siguiente..." | Article 42
+reform_category | Parametric reform | "Artículo 42. El seguro de salud se financiará en la forma siguiente..." | Article 42
+reason_reform | Fiscal reasons | "El Gobierno Federal cubrirá mensualmente una Cuota Social diaria..." | Article 42
+relevancetopr_score | 8.0 | "Artículo 42. El seguro de salud se financiará en la forma siguiente..." | Article 42
+
+### EPISODE 3: Risk of work insurance financing
+legislation_date | 03-2007 | "Artículo 75. Las Dependencias y Entidades cubrirán una Aportación de cero punto setenta y cinco por ciento del Sueldo Básico por el seguro de riesgos del trabajo." | Article 75
+funding_mechanisms | Yes | "Artículo 75. Las Dependencias y Entidades cubrirán una Aportación de cero punto setenta y cinco por ciento del Sueldo Básico por el seguro de riesgos del trabajo." | Article 75
+social_insurance_change | Yes | "Artículo 75. Las Dependencias y Entidades cubrirán una Aportación de cero punto setenta y cinco por ciento del Sueldo Básico por el seguro de riesgos del trabajo." | Article 75
+reform_category | Parametric reform | "Artículo 75. Las Dependencias y Entidades cubrirán una Aportación de cero punto setenta y cinco por ciento del Sueldo Básico por el seguro de riesgos del trabajo." | Article 75
+reason_reform | Fiscal reasons | "Artículo 75. Las Dependencias y Entidades cubrirán una Aportación de cero punto setenta y cinco por ciento del Sueldo Básico por el seguro de riesgos del trabajo." | Article 75
+relevancetopr_score | 7.0 | "Artículo 75. Las Dependencias y Entidades cubrirán una Aportación de cero punto setenta y cinco por ciento del Sueldo Básico por el seguro de riesgos del trabajo." | Article 75
+
+### EPISODE 4: Early retirement withdrawal rules
+legislation_date | 03-2007 | "Artículo 54. El Trabajador o sus Familiares Derechohabientes que adquieran el derecho a disfrutar de una Pensión proveniente de algún plan establecido por su Dependencia o Entidad, que haya sido autorizado y registrado por la Comisión Nacional del Sistema de Ahorro para el Retiro, debiendo cumplir los requisitos establecidos por ésta, tendrá derecho a que el PENSIONISSSTE o la Administradora que opere su Cuenta Individual, le entregue los recursos que la integran antes de cumplir las edades y tiempo de cotización establecidas en el Capítulo VI de esta Ley, situándolos en la entidad financiera que el Trabajador designe, a fin de adquirir una Renta vitalicia o bien entregándoselos en una sola exhibición, cuando la Pensión de que disfrute sea mayor al menos en un treinta por ciento a la Garantizada." | Article 54
+benefit_rule_changes | Yes | "Artículo 54. El Trabajador o sus Familiares Derechohabientes que adquieran el derecho a disfrutar de una Pensión... tendrá derecho a que el PENSIONISSSTE o la Administradora que opere su Cuenta Individual, le entregue los recursos que la integran antes de cumplir las edades y tiempo de cotización..." | Article 54
+pension_plan_types | DC | "Artículo 54. El Trabajador o sus Familiares Derechohabientes que adquieran el derecho a disfrutar de una Pensión proveniente de algún plan establecido por su Dependencia o Entidad..." | Article 54
+relevancetopr_score | 9.0 | "Artículo 54. El Trabajador o sus Familiares Derechohabientes que adquieran el derecho a disfrutar de una Pensión..." | Article 54
+
+### EPISODE 5: ISSSTE Pension System Reform (2007)
+field name | value | "verbatim quote" | where in the text
+--- | --- | --- | ---
+1. Country Name | Mexico | "DOF: 31/03/2007" | Top of text
+2. Year of the article | 2007 | "DOF: 31/03/2007" | Top of text
+3. Status of Pension Reform | Legislated, Implemented | "DOF: 31/03/2007" | Top of text
+4. legislation_date | 03-2007 | "DOF: 31/03/2007" | Top of text
+5. Planned_date | INFERRED | INFERRED | N/A
+6. announcement_date | INFERRED | INFERRED | N/A
+7. implementation_date | 04-2007 | "Día siguiente" (next calendar day) | Article 97, 98, 103
+8. reversal_date | INFERRED | INFERRED | N/A
+9. Pension Reform Types | funding mechanisms; administration and governance; pension plan types (DC); eligibility and access; indexation; benefit rule changes | "Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... Cuota Social... cinco punto cinco por ciento"; "Artículo 97... Cuenta Individual... PENSIONISSSTE o... Administradora"; "Artículo 80... seguro de retiro antes de cumplir las edades... Renta vitalicia... Retiros Programados"; "Artículo 92... Pensión Garantizada... actualizará anualmente... Índice Nacional de Precios al Consumidor" | Articles 80, 84, 89, 92, 97, 102, 103, 109
+10. indexation_change | more generous indexation | "Artículo 92... misma que se actualizará anualmente, en el mes de febrero, conforme al cambio anualizado del Índice Nacional de Precios al Consumidor" | Article 92
+11. coverage_change | extended coverage | "Artículo 80... Los Trabajadores tendrán derecho a un seguro de retiro antes de cumplir las edades y tiempo de cotización establecidas" | Article 80
+12. benefit_change | more generous benefits | "Artículo 92... Pensión Garantizada es aquélla que el Estado asegura... monto mensual será la cantidad de tres mil treinta y cuatro pesos con veinte centavos" | Article 92
+13. Social_insurance_change | Yes | "Artículo 84... cesantía en edad avanzada... Artículo 88... seguro de vejez" | Articles 84, 88
+14. Reform_category | Parametric reform | "Artículo 102... Cuotas y Aportaciones... Artículo 92... Pensión Garantizada" | Articles 92, 102
+15. reform_coverage | Broad-based reform | "Artículo 97... A cada Trabajador se le abrirá una Cuenta Individual" | Article 97
+16. reason_reform | Economic growth; Fiscal reasons; Benefit adequacy | "Artículo 109... principal objetivo otorgar la mayor seguridad y rentabilidad... incrementar el ahorro interno" | Article 109
+17. relevancetopr_score | 10.0 | "DOF: 31/03/2007... Artículo 77... Artículo 102" | N/A
+18. retirement_age_change | retirement age decreased | "Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad" | Articles 84, 89
+19. Retirement_age_change_details | Male: 60 (cessantía), 65 (vejez); Female: Not explicitly mentioned in this chunk | "Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad" | Articles 84, 89
+20. Retirement_age_pre_reform_female | INFERRED | INFERRED | N/A
+21. Retirement_age_after_reform_female | INFERRED | INFERRED | N/A
+22. Retirement_age_pre_reform_male | 60 (cessantía), 65 (vejez) | "Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad" | Articles 84, 89
+23. Retirement_age_after_reform_male | 60 (cessantía), 65 (vejez) | "Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad" | Articles 84, 89
+24. Contribution_rate_change | contribution rate increased | "Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... cesantía... tres punto ciento setenta y cinco por ciento" | Article 102
+25. Old Employer Contribution Rate | INFERRED | INFERRED | N/A
+26. New Employer Contribution Rate | 2.0% (retirement) + 3.175% (cessantía/vejez) | "Artículo 102... Aportación de retiro de dos por ciento, y por cesantía en edad avanzada y vejez, de tres punto ciento setenta y cinco por ciento" | Article 102
+27. Old Employee Contribution Rate | INFERRED | INFERRED | N/A
+28. New Employee Contribution Rate | 6.125% | "Artículo 102... Cuota de seis punto ciento veinticinco por ciento del Sueldo Básico" | Article 102
+29. Old Contribution Rate (Employee and Employer Combined) | INFERRED | INFERRED | N/A
+30. New Contribution Rate (Employee and Employer Combined) | 8.125% (retirement) + 5.175% (cessantía/vejez) | "Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... cesantía... tres punto ciento setenta y cinco por ciento" | Article 102
+31. Is the legislated pension reform minor or major | Major | "Artículo 103... Se crea el Fondo Nacional de Pensiones... PENSIONISSSTE" | Article 103
+32. instrument_type | law_reform | "DOF: 31/03/2007... Artículo 77... Artículo 103" | N/A
+33. issuing_body | Ejecutivo Federal | "PODER EJECUTIVO... INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO" | Top of text
+34. dof_publication_date | 31-0

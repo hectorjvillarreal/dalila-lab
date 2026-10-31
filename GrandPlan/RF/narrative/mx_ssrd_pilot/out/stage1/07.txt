@@ -1,0 +1,34 @@
+### EPISODE 1: Non-contributory pension establishment
+legislation_date | 05-2020 | "Las personas mayores de sesenta y ocho años tienen derecho a recibir por parte del Estado una pensión no contributiva en los términos que fije la Ley." | Artículo Único, párrafo sobre pensiones no contributivas
+implementation_date | 05-2020 | "El presente Decreto entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación." | Transitorios, Primero
+entry_into_force_date | 08-2020 | "DOF: 08/05/2020" | Header del documento
+status_of_pension_reform | Legislated, Implemented | "El presente Decreto entrará en vigor el día siguiente al de su publicación" | Transitorios, Primero
+instrument_type | decree | "DECRETO por el que se reforma y adiciona el artículo 4o." | Título del documento
+issuing_body | Ejecutivo Federal | "ANDRÉS MANUEL LÓPEZ OBRADOR, Presidente... expido el presente Decreto" | Firma del Presidente
+dof_publication_date | 08-05-2020 | "DOF: 08/05/2020" | Header del documento
+regime_affected | non_contributory | "Las personas mayores de sesenta y ocho años tienen derecho a recibir por parte del Estado una pensión no contributiva" | Artículo Único
+insurance_branch | non_contributory_pension | "pensión no contributiva" | Artículo Único
+financing_indexation_change | other | "en los términos que fije la Ley" | Artículo Único
+reason_reform | Benefit adequacy, Distributional impact | "El Estado garantizará la entrega de un apoyo económico a las personas que tengan discapacidad permanente... Para recibir esta prestación tendrán prioridad las y los menores de dieciocho años, las y los indígenas y las y los afromexicanos... y las personas que se encuentren en condición de pobreza." | Artículo Único
+relevancetopr_score | 8.0 | "Las personas mayores de sesenta y ocho años tienen derecho a recibir por parte del Estado una pensión no contributiva" | Artículo Único
+reform_coverage | Broad-based reform | "Las personas mayores de sesenta y ocho años tienen derecho a recibir por parte del Estado una pensión no contributiva" | Artículo Único
+Social_insurance_change | No | "pensión no contributiva" | Artículo Único
+retirement_age_change | N/A | "mayores de sesenta y ocho años" | Artículo Único
+retirement_age_change_details | N/A | N/A | N/A
+retirement_age_pre_reform_female | INFERRED | N/A | N/A
+retirement_age_after_reform_female | INFERRED | N/A | N/A
+retirement_age_pre_reform_male | INFERRED | N/A | N/A
+retirement_age_after_reform_male | INFERRED | N/A | N/A
+contribution_rate_change | N/A | N/A | N/A
+old_employer_contribution_rate | INFERRED | N/A | N/A
+new_employer_contribution_rate | INFERRED | N/A | N/A
+old_employee_contribution_rate | INFERRED | N/A | N/A
+new_employee_contribution_rate | INFERRED | N/A | N/A
+old_contribution_rate_combined | INFERRED | N/A | N/A
+new_contribution_rate_combined | INFERRED | N/A | N/A
+is_legislated_pension_reform_minor_or_major | Minor | "Se reforma el párrafo cuarto y se adicionan los párrafos décimo cuarto, décimo quinto y décimo sexto" | Artículo Único
+legal_references | Artículo 4o. | "Se reforma y adiciona el artículo 4o." | Título del decreto
+legal_references | fracción XVI del artículo 73 | "conforme a lo que dispone la fracción XVI del artículo 73 de esta Constitución" | Artículo Único
+entry_into_force_date | 08-05-2020 | "DOF: 08/05/2020" | Header del documento
+legal_references | Artículo 4o. | "Se reforma y adiciona el artículo 4o." | Título del decreto
+legal_references | fracción XVI del artículo 73 | "conforme a lo que dispone la fracción XVI del artículo 73 de esta Constitución" | Artículo Único

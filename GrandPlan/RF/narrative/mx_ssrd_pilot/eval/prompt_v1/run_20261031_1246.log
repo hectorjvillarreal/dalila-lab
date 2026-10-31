@@ -1,0 +1,13 @@
+2026-10-31T12:46:04 model=qwen3.5:9b digest=56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90 options={'temperature': 0, 'seed': 20261031, 'top_p': 1, 'num_ctx': 16384, 'presence_penalty': 0} think_stage1=False predict=(3000,6000)
+2026-10-31T12:46:04 sha256 prompts/stage1.txt 5af7c157f52d2dfe745d177d7f3f7df6e6ad78ac754253963eb6842bc38997e6
+2026-10-31T12:46:04 sha256 prompts/stage2.txt f08203430007fb42e7261862621cf4e88e735f06619f95b17ba4b7e804c29cba
+2026-10-31T12:46:04 sha256 schema/mx_ssrd.schema.json 344ef3c35bf58160b97c06782759e3eebe8cf36ca9967331d79c8054114e76f4
+2026-10-31T12:46:04 sha256 manifest.yaml deaf805e541b0e7d7e0dddc4c961d287ad6576d792042762e423de5583b895c5
+2026-10-31T12:46:04 loaded: size=6021573508 size_vram=6021573508 gpu_share=1.000 ctx=16384
+2026-10-31T12:46:04 chunk limit chars=38852 transitorios_split=['04']
+2026-10-31T12:46:10 stage1 01_c01 {'wall_s': 5.8, 'prompt_tokens': 10208, 'gen_tokens': 5, 'gen_s': 0.1, 'prompt_s': 5.6, 'done_reason': 'stop'}
+2026-10-31T12:46:17 stage1 01_c02 {'wall_s': 7.1, 'prompt_tokens': 11736, 'gen_tokens': 5, 'gen_s': 0.1, 'prompt_s': 6.5, 'done_reason': 'stop'}
+2026-10-31T12:47:31 stage1 01_c03 {'wall_s': 74.0, 'prompt_tokens': 11823, 'gen_tokens': 3000, 'gen_s': 66.9, 'prompt_s': 6.5, 'done_reason': 'length'}
+2026-10-31T12:48:06 stage1 01_c04 {'wall_s': 34.8, 'prompt_tokens': 11564, 'gen_tokens': 1248, 'gen_s': 27.7, 'prompt_s': 6.5, 'done_reason': 'stop'}
+2026-10-31T12:48:13 stage1 01_c05 {'wall_s': 7.1, 'prompt_tokens': 11423, 'gen_tokens': 5, 'gen_s': 0.1, 'prompt_s': 6.4, 'done_reason': 'stop'}
+2026-10-31T12:48:18 stage1 01_c06 {'wall_s': 4.6, 'prompt_tokens': 7198, 'gen_tokens': 5, 'gen_s': 0.1, 'prompt_s': 3.9, 'done_reason': 'stop'}

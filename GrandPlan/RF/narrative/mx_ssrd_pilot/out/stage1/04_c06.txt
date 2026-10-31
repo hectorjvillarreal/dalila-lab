@@ -1,0 +1,157 @@
+### EPISODE 1: Governance and Investment Committee Establishment
+field name | value | "verbatim quote" | where in the text
+1. Country Name | Mexico | "DOF: 31/03/2007" | Top of text
+2. Year of the article | 2007 | "DOF: 31/03/2007" | Top of text
+3. Status of Pension Reform | Legislated | "DOF: 31/03/2007" | Top of text
+4. legislation_date | 03-2007 | "DOF: 31/03/2007" | Top of text
+5. Planned_date | INFERRED | N/A
+6. announcement_date | INFERRED | N/A
+7. implementation_date | INFERRED | N/A
+8. reversal_date | INFERRED | N/A
+9. Pension Reform Types | administration and governance; investment strategies | "Artículo 226. El Instituto deberá constituir un Comité de Inversiones que se compondrá por cinco miembros... Artículo 244. El Instituto deberá contar con una unidad administrativa que de manera especializada, se encargará de la inversión de los recursos del Instituto..." | Articles 226, 244
+10. indexation_change | INFERRED | N/A
+11. coverage_change | INFERRED | N/A
+12. benefit_change | INFERRED | N/A
+13. Social_insurance_change | No | "Artículo 213... Artículo 214... Artículo 220..." | Throughout text
+14. Reform_category | Structural reform | "Artículo 226. El Instituto deberá constituir un Comité de Inversiones..." | Article 226
+15. reform_coverage | Broad-based reform | "Artículo 226... Artículo 244..." | Articles 226, 244
+16. reason_reform | Economic growth | "Artículo 244... procurando una revelación plena de información." | Article 244
+17. relevancetopr_score | 8.0 | "Artículo 226... Artículo 244..." | Articles 226, 244
+18. retirement_age_change | INFERRED | N/A
+19. Retirement_age_change_details | INFERRED | N/A
+20. Retirement_age_pre_reform_female | INFERRED | N/A
+21. Retirement_age_after_reform_female | INFERRED | N/A
+22. Retirement_age_pre_reform_male | INFERRED | N/A
+23. Retirement_age_after_reform_male | INFERRED | N/A
+24. Contribution_rate_change | INFERRED | N/A
+25. Old Employer Contribution Rate | INFERRED | N/A
+26. New Employer Contribution Rate | INFERRED | N/A
+27. Old Employee Contribution Rate | INFERRED | N/A
+28. New Employee Contribution Rate | INFERRED | N/A
+29. Old Contribution Rate (Employee and Employer Combined) | INFERRED | N/A
+30. New Contribution Rate (Employee and Employer Combined) | INFERRED | N/A
+31. Is the legislated pension reform minor or major | Minor | "Artículo 226... Artículo 244..." | Articles 226, 244
+32. instrument_type | law_reform | "DOF: 31/03/2007" | Top of text
+33. issuing_body | Ejecutivo Federal | "PODER EJECUTIVO" | Top of text
+34. dof_publication_date | 31-03-2007 | "DOF: 31/03/2007" | Top of text
+35. entry_into_force_date | 01-04-2007 | "Día siguiente" | Inferred from DOF date
+36. legal_references | Articles 226, 244 | "Artículo 226... Artículo 244..." | Articles 226, 244
+37. regime_affected | all | "Artículo 226... Artículo 244..." | Articles 226, 244
+38. insurance_branch | other | "Artículo 226... Artículo 244..." | Articles 226, 244
+39. financing_indexation_change | INFERRED | N/A
+40. fiscal_magnitude_stated | INFERRED | N/A
+41. implicit_liability_direction | INFERRED | N/A
+
+### EPISODE 2: Investment Committee Composition and Rules
+field name | value | "verbatim quote" | where in the text
+1. Country Name | Mexico | "DOF: 31/03/2007" | Top of text
+2. Year of the article | 2007 | "DOF: 31/03/2007" | Top of text
+3. Status of Pension Reform | Legislated | "DOF: 31/03/2007" | Top of text
+4. legislation_date | 03-2007 | "DOF: 31/03/2007" | Top of text
+5. Planned_date | INFERRED | N/A
+6. announcement_date | INFERRED | N/A
+7. implementation_date | INFERRED | N/A
+8. reversal_date | INFERRED | N/A
+9. Pension Reform Types | administration and governance; investment strategies | "Artículo 226. El Instituto deberá constituir un Comité de Inversiones que se compondrá por cinco miembros, de los cuales cuando menos dos serán personas independientes con experiencia mínima de cinco años en la materia." | Article 226
+10. indexation_change | INFERRED | N/A
+11. coverage_change | INFERRED | N/A
+12. benefit_change | INFERRED | N/A
+13. Social_insurance_change | No | "Artículo 226..." | Article 226
+14. Reform_category | Structural reform | "Artículo 226..." | Article 226
+15. reform_coverage | Broad-based reform | "Artículo 226..." | Article 226
+16. reason_reform | Economic growth | "Artículo 226..." | Article 226
+17. relevancetopr_score | 9.0 | "Artículo 226..." | Article 226
+18. retirement_age_change | INFERRED | N/A
+19. Retirement_age_change_details | INFERRED | N/A
+20. Retirement_age_pre_reform_female | INFERRED | N/A
+21. Retirement_age_after_reform_female | INFERRED | N/A
+22. Retirement_age_pre_reform_male | INFERRED | N/A
+23. Retirement_age_after_reform_male | INFERRED | N/A
+24. Contribution_rate_change | INFERRED | N/A
+25. Old Employer Contribution Rate | INFERRED | N/A
+26. New Employer Contribution Rate | INFERRED | N/A
+27. Old Employee Contribution Rate | INFERRED | N/A
+28. New Employee Contribution Rate | INFERRED | N/A
+29. Old Contribution Rate (Employee and Employer Combined) | INFERRED | N/A
+30. New Contribution Rate (Employee and Employer Combined) | INFERRED | N/A
+31. Is the legislated pension reform minor or major | Minor | "Artículo 226..." | Article 226
+32. instrument_type | law_reform | "DOF: 31/03/2007" | Top of text
+33. issuing_body | Ejecutivo Federal | "PODER EJECUTIVO" | Top of text
+34. dof_publication_date | 31-03-2007 | "DOF: 31/03/2007" | Top of text
+35. entry_into_force_date | 01-04-2007 | "Día siguiente" | Inferred from DOF date
+36. legal_references | Article 226 | "Artículo 226" | Article 226
+37. regime_affected | all | "Artículo 226..." | Article 226
+38. insurance_branch | other | "Artículo 226..." | Article 226
+39. financing_indexation_change | INFERRED | N/A
+40. fiscal_magnitude_stated | INFERRED | N/A
+41. implicit_liability_direction | INFERRED | N/A
+
+### EPISODE 3: Investment Criteria and Transparency
+field name | value | "verbatim quote" | where in the text
+1. Country Name | Mexico | "DOF: 31/03/2007" | Top of text
+2. Year of the article | 2007 | "DOF: 31/03/2007" | Top of text
+3. Status of Pension Reform | Legislated | "DOF: 31/03/2007" | Top of text
+4. legislation_date | 03-2007 | "DOF: 31/03/2007" | Top of text
+5. Planned_date | INFERRED | N/A
+6. announcement_date | INFERRED | N/A
+7. implementation_date | INFERRED | N/A
+8. reversal_date | INFERRED | N/A
+9. Pension Reform Types | investment strategies; administration and governance | "Artículo 244. El Instituto deberá contar con una unidad administrativa que de manera especializada, se encargará de la inversión de los recursos del Instituto... bajo criterios de prudencia, seguridad, rendimiento, liquidez, diversificación de riesgo, transparencia y respeto a las sanas prácticas y usos del medio financiero nacional..." | Article 244
+10. indexation_change | INFERRED | N/A
+11. coverage_change | INFERRED | N/A
+12. benefit_change | INFERRED | N/A
+13. Social_insurance_change | No | "Artículo 244..." | Article 244
+14. Reform_category | Structural reform | "Artículo 244..." | Article 244
+15. reform_coverage | Broad-based reform | "Artículo 244..." | Article 244
+16. reason_reform | Economic growth | "Artículo 244..." | Article 244
+17. relevancetopr_score | 9.0 | "Artículo 244..." | Article 244
+18. retirement_age_change | INFERRED | N/A
+19. Retirement_age_change_details | INFERRED | N/A
+20. Retirement_age_pre_reform_female | INFERRED | N/A
+21. Retirement_age_after_reform_female | INFERRED | N/A
+22. Retirement_age_pre_reform_male | INFERRED | N/A
+23. Retirement_age_after_reform_male | INFERRED | N/A
+24. Contribution_rate_change | INFERRED | N/A
+25. Old Employer Contribution Rate | INFERRED | N/A
+26. New Employer Contribution Rate | INFERRED | N/A
+27. Old Employee Contribution Rate | INFERRED | N/A
+28. New Employee Contribution Rate | INFERRED | N/A
+29. Old Contribution Rate (Employee and Employer Combined) | INFERRED | N/A
+30. New Contribution Rate (Employee and Employer Combined) | INFERRED | N/A
+31. Is the legislated pension reform minor or major | Minor | "Artículo 244..." | Article 244
+32. instrument_type | law_reform | "DOF: 31/03/2007" | Top of text
+33. issuing_body | Ejecutivo Federal | "PODER EJECUTIVO" | Top of text
+34. dof_publication_date | 31-03-2007 | "DOF: 31/03/2007" | Top of text
+35. entry_into_force_date | 01-04-2007 | "Día siguiente" | Inferred from DOF date
+36. legal_references | Article 244 | "Artículo 244" | Article 244
+37. regime_affected | all | "Artículo 244..." | Article 244
+38. insurance_branch | other | "Artículo 244..." | Article 244
+39. financing_indexation_change | INFERRED | N/A
+40. fiscal_magnitude_stated | INFERRED | N/A
+41. implicit_liability_direction | INFERRED | N/A
+
+### EPISODE 4: Reserve Management and Financial Sustainability
+field name | value | "verbatim quote" | where in the text
+1. Country Name | Mexico | "DOF: 31/03/2007" | Top of text
+2. Year of the article | 2007 | "DOF: 31/03/2007" | Top of text
+3. Status of Pension Reform | Legislated | "DOF: 31/03/2007" | Top of text
+4. legislation_date | 03-2007 | "DOF: 31/03/2007" | Top of text
+5. Planned_date | INFERRED | N/A
+6. announcement_date | INFERRED | N/A
+7. implementation_date | INFERRED | N/A
+8. reversal_date | INFERRED | N/A
+9. Pension Reform Types | funding mechanisms; sustainability and solvency measures | "Artículo 232. El Instituto... deberá constituir y contabilizar por cada seguro y para el rubro de servicios, la provisión y el respaldo financiero de las Reservas... Artículo 237. Las Reservas financieras y actuariales se constituirán por cada uno de los seguros... Artículo 238. La Reserva general financiera y actuarial deberá constituirse, incrementarse o reconstituirse..." | Articles 232, 237, 238
+10. indexation_change | INFERRED | N/A
+11. coverage_change | INFERRED | N/A
+12. benefit_change | INFERRED | N/A
+13. Social_insurance_change | No | "Artículo 232..." | Article 232
+14. Reform_category | Structural reform | "Artículo 232..." | Article 232
+15. reform_coverage | Broad-based reform | "Artículo 232..." | Article 232
+16. reason_reform | Economic growth | "Artículo 232..." | Article 232
+17. relevancetopr_score | 9.0 | "Artículo 232..." | Article 232
+18. retirement_age_change | INFERRED | N/A
+19. Retirement_age_change_details | INFERRED | N/A
+20. Retirement_age_pre_reform_female | INFERRED | N/A
+21. Retirement_age_after_reform_female | INFERRED | N/A
+22. Retirement_age_pre_reform_male | INFERRED | N/A
+23. Retirement_age_after_reform_male | INFER

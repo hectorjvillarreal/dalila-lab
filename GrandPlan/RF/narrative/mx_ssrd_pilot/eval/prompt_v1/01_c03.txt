@@ -1,0 +1,114 @@
+### EPISODE 1: Ley del Seguro Social (1995) - Financing and Benefit Rules
+field name | value | "verbatim quote" | where in the text
+--- | --- | --- | ---
+1. Country Name | Mexico | "Estados Unidos Mexicanos" | Top of text
+2. Year of the article | 1995 | "DOF: 21/12/1995" | Top of text
+3. Status of Pension Reform | Implemented | "LEY DEL SEGURO SOCIAL" | Title
+4. legislation_date | 12-1995 | "DOF: 21/12/1995" | Top of text
+5. Planned_date | Not explicitly mentioned | N/A | N/A
+6. announcement_date | Not explicitly mentioned | N/A | N/A
+7. implementation_date | Not explicitly mentioned | N/A | N/A
+8. reversal_date | Not explicitly mentioned | N/A | N/A
+9. Pension Reform Types | funding mechanisms; benefit rule changes; indexation; coverage | "Artículo 105... se obtendrán de las cuotas... y de la contribución que corresponda al Estado." "Artículo 106... cuota diaria patronal equivalente al trece punto nueve por ciento..." "Artículo 145... incrementadas anualmente... conforme al Indice Nacional de Precios al Consumidor." | Articles 105, 106, 145
+10. indexation_change | more generous indexation | "Artículo 145. Las pensiones por invalidez y vida otorgadas serán incrementadas anualmente en el mes de febrero conforme al Indice Nacional de Precios al Consumidor." | Article 145
+11. coverage_change | extended coverage | "Artículo 2... garantizar el derecho a la salud... y los servicios sociales necesarios..." "Artículo 6... comprende: I. El régimen obligatorio, y II. El régimen voluntario." | Articles 2, 6
+12. benefit_change | more generous benefits | "Artículo 141... En ningún caso la pensión de invalidez... podrá ser inferior a la pensión garantizada..." | Article 141
+13. Social_insurance_change | Yes | "Artículo 4. El Seguro Social es el instrumento básico de la seguridad social..." | Article 4
+14. Reform_category | Parametric reform | N/A | N/A
+15. reform_coverage | Broad-based reform | "Artículo 1. La presente Ley es de observancia general en toda la República..." | Article 1
+16. reason_reform | Economic growth; Fiscal reasons | N/A | N/A
+17. relevancetopr_score | 10.0 | N/A | N/A
+18. retirement_age_change | Not explicitly mentioned | N/A | N/A
+19. Retirement_age_change_details | Not explicitly mentioned | N/A | N/A
+20. Retirement_age_pre_reform_female | Not explicitly mentioned | N/A | N/A
+21. Retirement_age_after_reform_female | Not explicitly mentioned | N/A | N/A
+22. Retirement_age_pre_reform_male | Not explicitly mentioned | N/A | N/A
+23. Retirement_age_after_reform_male | Not explicitly mentioned | N/A | N/A
+24. Contribution_rate_change | Not explicitly mentioned | N/A | N/A
+25. Old Employer Contribution Rate | Not explicitly mentioned | N/A | N/A
+26. New Employer Contribution Rate | Not explicitly mentioned | N/A | N/A
+27. Old Employee Contribution Rate | Not explicitly mentioned | N/A | N/A
+28. New Employee Contribution Rate | Not explicitly mentioned | N/A | N/A
+29. Old Contribution Rate (Employee and Employer Combined) | Not explicitly mentioned | N/A | N/A
+30. New Contribution Rate (Employee and Employer Combined) | Not explicitly mentioned | N/A | N/A
+31. Is the legislated pension reform minor or major | Minor | N/A | N/A
+32. instrument_type | law_reform | "LEY DEL SEGURO SOCIAL" | Title
+33. issuing_body | Congreso de la Unión | "EL CONGRESO DE LOS ESTADOS UNIDOS MEXICANOS, DECRETA:" | Decree header
+34. dof_publication_date | 21-12-1995 | "DOF: 21/12/1995" | Top of text
+35. entry_into_force_date | Not explicitly mentioned | N/A | N/A
+36. legal_references | Articles 105, 106, 107, 108, 141, 145, 147, 148, 159 | "Artículo 105... Artículo 106... Artículo 145..." | Throughout text
+37. regime_affected | all | "Artículo 6... comprende: I. El régimen obligatorio, y II. El régimen voluntario." | Article 6
+38. insurance_branch | IV; RCV; SEM; SEM_pensioners_GMP; RT; GPS | "Artículo 112... seguro de invalidez y vida." "Artículo 152... seguro de retiro, cesantía en edad avanzada y vejez." | Articles 112, 152
+39. financing_indexation_change | changed_to_inflation | "Artículo 106... III. El Gobierno Federal cubrirá mensualmente una cuota diaria... actualizada trimestralmente de acuerdo a la variación del Indice Nacional de Precios al Consumidor." | Article 106
+40. fiscal_magnitude_stated | Not explicitly mentioned | N/A | N/A
+41. implicit_liability_direction | ambiguous | N/A | N/A
+
+### EPISODE 2: Ley del Seguro Social (1995) - Invalidity and Life Insurance Financing
+field name | value | "verbatim quote" | where in the text
+--- | --- | --- | ---
+1. Country Name | Mexico | "Estados Unidos Mexicanos" | Top of text
+2. Year of the article | 1995 | "DOF: 21/12/1995" | Top of text
+3. Status of Pension Reform | Implemented | "LEY DEL SEGURO SOCIAL" | Title
+4. legislation_date | 12-1995 | "DOF: 21/12/1995" | Top of text
+5. Planned_date | Not explicitly mentioned | N/A | N/A
+6. announcement_date | Not explicitly mentioned | N/A | N/A
+7. implementation_date | Not explicitly mentioned | N/A | N/A
+8. reversal_date | Not explicitly mentioned | N/A | N/A
+9. Pension Reform Types | funding mechanisms; benefit rule changes | "Artículo 146... se obtendrán de las cuotas... y de la contribución que corresponda al Estado." "Artículo 147... el uno punto setenta y cinco por ciento... y el cero punto seiscientos veinticinco por ciento..." | Articles 146, 147
+10. indexation_change | more generous indexation | "Artículo 145... incrementadas anualmente... conforme al Indice Nacional de Precios al Consumidor." | Article 145
+11. coverage_change | Not explicitly mentioned | N/A | N/A
+12. benefit_change | Not explicitly mentioned | N/A | N/A
+13. Social_insurance_change | Yes | "Artículo 4. El Seguro Social es el instrumento básico..." | Article 4
+14. Reform_category | Parametric reform | N/A | N/A
+15. reform_coverage | Broad-based reform | "Artículo 1. La presente Ley es de observancia general..." | Article 1
+16. reason_reform | Not explicitly mentioned | N/A | N/A
+17. relevancetopr_score | 8.0 | N/A | N/A
+18. retirement_age_change | Not explicitly mentioned | N/A | N/A
+19. Retirement_age_change_details | Not explicitly mentioned | N/A | N/A
+20. Retirement_age_pre_reform_female | Not explicitly mentioned | N/A | N/A
+21. Retirement_age_after_reform_female | Not explicitly mentioned | N/A | N/A
+22. Retirement_age_pre_reform_male | Not explicitly mentioned | N/A | N/A
+23. Retirement_age_after_reform_male | Not explicitly mentioned | N/A | N/A
+24. Contribution_rate_change | Not explicitly mentioned | N/A | N/A
+25. Old Employer Contribution Rate | Not explicitly mentioned | N/A | N/A
+26. New Employer Contribution Rate | Not explicitly mentioned | N/A | N/A
+27. Old Employee Contribution Rate | Not explicitly mentioned | N/A | N/A
+28. New Employee Contribution Rate | Not explicitly mentioned | N/A | N/A
+29. Old Contribution Rate (Employee and Employer Combined) | Not explicitly mentioned | N/A | N/A
+30. New Contribution Rate (Employee and Employer Combined) | Not explicitly mentioned | N/A | N/A
+31. Is the legislated pension reform minor or major | Minor | N/A | N/A
+32. instrument_type | law_reform | "LEY DEL SEGURO SOCIAL" | Title
+33. issuing_body | Congreso de la Unión | "EL CONGRESO DE LOS ESTADOS UNIDOS MEXICANOS, DECRETA:" | Decree header
+34. dof_publication_date | 21-12-1995 | "DOF: 21/12/1995" | Top of text
+35. entry_into_force_date | Not explicitly mentioned | N/A | N/A
+36. legal_references | Articles 146, 147, 148 | "Artículo 146... Artículo 147... Artículo 148..." | Articles 146-148
+37. regime_affected | all | "Artículo 6... comprende: I. El régimen obligatorio..." | Article 6
+38. insurance_branch | IV; RCV; SEM; SEM_pensioners_GMP; RT; GPS | "Artículo 112... seguro de invalidez y vida." | Article 112
+39. financing_indexation_change | changed_to_inflation | "Artículo 145... incrementadas anualmente... conforme al Indice Nacional de Precios al Consumidor." | Article 145
+40. fiscal_magnitude_stated | Not explicitly mentioned | N/A | N/A
+41. implicit_liability_direction | ambiguous | N/A | N/A
+
+### EPISODE 3: Ley del Seguro Social (1995) - Retirement and Savings System (DC)
+field name | value | "verbatim quote" | where in the text
+--- | --- | --- | ---
+1. Country Name | Mexico | "Estados Unidos Mexicanos" | Top of text
+2. Year of the article | 1995 | "DOF: 21/12/1995" | Top of text
+3. Status of Pension Reform | Implemented | "LEY DEL SEGURO SOCIAL" | Title
+4. legislation_date | 12-1995 | "DOF: 21/12/1995" | Top of text
+5. Planned_date | Not explicitly mentioned | N/A | N/A
+6. announcement_date | Not explicitly mentioned | N/A | N/A
+7. implementation_date | Not explicitly mentioned | N/A | N/A
+8. reversal_date | Not explicitly mentioned | N/A | N/A
+9. Pension Reform Types | pension plan types (DB, DC, hybrid); funding mechanisms; administration and governance | "Artículo 159... I. Cuenta individual... II. Individualizar... III. Pensión... IV. Renta vitalicia... V. Retiros programados... VI. Seguro de sobreviviencia..." "Artículo 157... II. Mantener el saldo de su cuenta individual en una Administradora de Fondos para el Retiro..." | Article 159
+10. indexation_change | more generous indexation | "Artículo 157... I. Contratar... una renta vitalicia, que se actualizará anualmente... conforme al Indice Nacional de Precios al Consumidor." | Article 157
+11. coverage_change | extended coverage | "Artículo 159... Cuenta individual... para cada asegurado..." | Article 159
+12. benefit_change | more generous benefits | "Artículo 158... El asegurado podrá pensionarse antes de cumplir las edades establecidas..." | Article 158
+13. Social_insurance_change | Yes | "Artículo 4. El Seguro Social es el instrumento básico..." | Article 4
+14. Reform_category | Structural reform | "Artículo 159... Cuenta individual... Administradoras de Fondos para el Retiro..." | Article 159
+15. reform_coverage | Broad-based reform | "Artículo 1. La presente Ley es de observancia general..." | Article 1
+16. reason_reform | Economic growth; Fiscal reasons | N/A | N/A
+17. relevancetopr_score | 9.0 | N/A | N/A
+18. retirement_age_change | Not explicitly mentioned | N/A | N/A
+19. Retirement_age_change_details | Not explicitly mentioned | N/A | N/A
+20. Retirement_age_pre_reform_female | Not explicitly mentioned | N/A | N/A
+21. Retirement_age_after_reform

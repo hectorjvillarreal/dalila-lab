@@ -1,0 +1,144 @@
+num_ctx: 16384
+documents:
+- doc_id: '01'
+  file: 01_dip_19951221_lss_orig.pdf
+  short_title: Ley del Seguro Social (nueva ley)
+  dof_date: 21-12-1995
+  source_url: https://www.diputados.gob.mx/LeyesBiblio/ref/lss/LSS_orig_21dic95.pdf
+  obtained_by: downloaded_diputados
+  pdf_mode: reading
+  note: DOF nota_detalle codigo=4886585 did not answer; this is the Cámara de Diputados
+    PDF of the original DOF publication
+  sha256: 8fd3febe01151225d2ea1b3c5b9ad5bfccd7757e073e146594b4846925a5db1e
+  size_bytes: 298951
+  mtime: '2026-10-31T12:30:28'
+  text_chars: 207810
+  text_sha256: fc3dc5e1c01235af6a23cd2ccc69b1381a6e53c7f75c0aeb19e6105cbfbe84bf
+  image_tables: 0
+- doc_id: '02'
+  file: 02_dip_19960523_lsar_orig.pdf
+  short_title: Ley de los Sistemas de Ahorro para el Retiro (decreto)
+  dof_date: 23-05-1996
+  source_url: https://www.diputados.gob.mx/LeyesBiblio/ref/lsar/LSAR_orig_23may96.pdf
+  obtained_by: downloaded_diputados
+  pdf_mode: reading
+  note: DOF nota_detalle codigo=4885464 did not answer; this is the Cámara de Diputados
+    PDF of the original DOF publication
+  sha256: 1b1b0479abd19169651b42f46c6f7400bcfceed125a20ff2d58785fa587e8edf
+  size_bytes: 173955
+  mtime: '2026-10-31T12:30:29'
+  text_chars: 181080
+  text_sha256: 8824932041dd92b83cf9f4dcc7ff57ea7fe339db438a76a27736e3c2e48fb973
+  image_tables: 0
+- doc_id: '03'
+  file: 03_dof_20040811_lss_277d_286k.html
+  short_title: Reforma LSS arts. 277 D y 286 K (RJP)
+  dof_date: 11-08-2004
+  source_url: https://dof.gob.mx/nota_detalle.php?codigo=666374&fecha=11/08/2004
+  obtained_by: downloaded_dof
+  sha256: 0c0a1ea1ddfd33adf05442ed0438595c006618d14f8036501022ef5281a4179e
+  size_bytes: 56297
+  mtime: '2026-10-31T12:30:09'
+  text_chars: 5190
+  text_sha256: aa9dbd547780d4abfc2bbd560efbabef79dd50a33bbd6dde30402a86c47bb11f
+  image_tables: 0
+- doc_id: '04'
+  file: 04_dof_20070331_ley_issste.html
+  short_title: Ley del ISSSTE (nueva ley)
+  dof_date: 31-03-2007
+  source_url: https://dof.gob.mx/nota_detalle.php?codigo=4967057&fecha=31/03/2007
+  obtained_by: downloaded_dof
+  excluded_from_metrics: true
+  sha256: 91fe5f9681f96f5437a93c06e9a3e0772c3e6ad5671bf0ab2b74e097fb61f00f
+  size_bytes: 434168
+  mtime: '2026-10-31T12:30:10'
+  text_chars: 257438
+  text_sha256: 296f66312beeb24630dbe294e1221105ab4a53eb45269e4ad03f53fd26d35c9d
+  image_tables: 0
+- doc_id: '05'
+  file: 05_dof_20160127_desindexacion_sm.html
+  short_title: Reforma constitucional de desindexación del salario mínimo
+  dof_date: 27-01-2016
+  source_url: https://dof.gob.mx/nota_detalle.php?codigo=5423663&fecha=27/01/2016
+  obtained_by: downloaded_dof
+  sha256: 9dab7ee3949107e9043d03748ac78cb812d53462fe2fa7acf781bb190f75de15
+  size_bytes: 88277
+  mtime: '2026-10-31T12:30:11'
+  text_chars: 10342
+  text_sha256: 4750ad98e195ef14899a235c0f951dc163a2a9c6dee3845f9e35985bf3f1af27
+  image_tables: 0
+- doc_id: '06'
+  file: 06_dof_20161230_ley_uma.html
+  short_title: Ley para Determinar el Valor de la UMA
+  dof_date: 30-12-2016
+  source_url: https://dof.gob.mx/nota_detalle.php?codigo=5468187&fecha=30/12/2016
+  obtained_by: downloaded_dof
+  sha256: f43f2d45704237d54e62f317207e8470d0374ae61e8f315e98c5f71562c7b25d
+  size_bytes: 70420
+  mtime: '2026-10-31T12:30:13'
+  text_chars: 4123
+  text_sha256: 2a4341e377b985ead9db65687f1d6a46df2de3c0c1239c0ac4b039ab3c2dd042
+  image_tables: 0
+- doc_id: '07'
+  file: 07_dof_20200508_art4_pension.html
+  short_title: Reforma constitucional art. 4 (pensión no contributiva)
+  dof_date: 08-05-2020
+  source_url: https://dof.gob.mx/nota_detalle.php?codigo=5593045&fecha=08/05/2020
+  obtained_by: downloaded_dof
+  sha256: facb9219fee187a96bea4e622403b159135ca5e556e48195fe6e9f9f99fc3432
+  size_bytes: 62352
+  mtime: '2026-10-31T12:30:14'
+  text_chars: 4506
+  text_sha256: c3d0e7ecbdb9a5727422dd41ba14c93c539c1629da335ffb0a8cbb8896ad98c2
+  image_tables: 0
+- doc_id: 08
+  file: 08_dof_20201216_lss_lsar.html
+  short_title: Reforma LSS y LSAR (cuotas, semanas, pensión garantizada)
+  dof_date: 16-12-2020
+  source_url: https://dof.gob.mx/nota_detalle.php?codigo=5607729&fecha=16/12/2020
+  obtained_by: downloaded_dof
+  sha256: 1e709de51d6f9bd0cf2f0aec519f40aee49261e156186bcd0818d243760bf666
+  size_bytes: 131722
+  mtime: '2026-10-31T12:30:15'
+  text_chars: 25125
+  text_sha256: 69d7d7bdd31b03930ff7d88e1663af824e432c0a9fed3d1ffbb9ae71fc67b4a4
+  image_tables: 5
+- doc_id: 09
+  file: 09_dof_20241224_lft_plataformas.html
+  short_title: Reforma LFT en materia de plataformas digitales
+  dof_date: 24-12-2024
+  source_url: https://dof.gob.mx/nota_detalle.php?codigo=5746132&fecha=24/12/2024
+  obtained_by: downloaded_dof
+  sha256: f2e9dae53871d2a42a4e08441ae1c090241cabb79866ad15ef8abe669650219f
+  size_bytes: 128276
+  mtime: '2026-10-31T12:30:17'
+  text_chars: 26408
+  text_sha256: bc37ff79321a9e91f3ddb57602ab7822318539d92b984a14e61b582412cef96b
+  image_tables: 0
+- doc_id: '10'
+  file: 10_dof_20240501_fondo_pensiones_bienestar.html
+  short_title: Decreto del Fondo de Pensiones para el Bienestar
+  dof_date: 01-05-2024
+  source_url: https://dof.gob.mx/nota_detalle.php?codigo=5725285&fecha=01/05/2024
+  obtained_by: downloaded_dof
+  sha256: 02f110bf24058b037f0c0540a9f2e93076c823c043f5366d7d70b3d8b9dcddbe
+  size_bytes: 152341
+  mtime: '2026-10-31T12:30:18'
+  text_chars: 38571
+  text_sha256: 2da6d1efce38a702cabda5850ffe38d4173e451776be8a77452cf55f1def5d06
+  image_tables: 0
+- doc_id: '11'
+  file: 11_dof_20261021_acdo_modalidad40.html
+  short_title: Acuerdo ACDO.AS2.HCT.101026/302.P.DG (Continuación Voluntaria, Modalidad
+    40)
+  dof_date: 21-10-2026
+  source_url: https://dof.gob.mx/nota_detalle.php?codigo=5801708&fecha=21/10/2026
+  obtained_by: downloaded_dof
+  note: Héctor's copy (DOF - pensiones.pdf) not found on Dalila; Modalidad40.pdf in
+    Downloads and RF/foros_talleres is his note about the agreement, not the agreement
+  sha256: ed3427b563796a784d5e2c6db9204c7cd7b2e8185f617d90a99830911c5a25e5
+  size_bytes: 64722
+  mtime: '2026-10-31T12:23:31'
+  text_chars: 6107
+  text_sha256: 31d653253a1ead59a621bc3926b1eac3c01f3810e2df2967d239487c2332c6d9
+  image_tables: 0

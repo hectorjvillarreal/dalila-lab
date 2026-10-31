@@ -1,0 +1,96 @@
+doc_id,episode,field,kind,quote
+01,1,Reform_category,"elided with ellipsis, all fragments real",A partir de la entrada en vigor de esta Ley el límite del salario base de cotización en veces salario mínimo para el seguro de invalidez y vida...
+01,1,relevancetopr_score,"elided with ellipsis, all fragments real",A partir de la entrada en vigor de esta Ley el límite del salario base de cotización en veces salario mínimo para el seguro de invalidez y vida...
+01,1,Is the legislated pension reform minor or major?,"elided with ellipsis, all fragments real",A partir de la entrada en vigor de esta Ley el límite del salario base de cotización en veces salario mínimo...
+01,1,legal_references,"elided with ellipsis, all fragments real",A partir de la entrada en vigor de esta Ley el límite del salario base de cotización...
+01,1,implicit_liability_direction,"elided with ellipsis, all fragments real",A partir de la entrada en vigor de esta Ley el límite del salario base de cotización...
+02,1,Status of Pension Reform,"elided with ellipsis, all fragments real",DECRETO... LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO
+02,1,Pension Reform Types,"elided with ellipsis, all fragments real",regular el funcionamiento de los sistemas de ahorro para el retiro... cuentas individuales propiedad de los trabajadores
+02,1,coverage_change,"elided with ellipsis, all fragments real",regular el funcionamiento de los sistemas de ahorro para el retiro... previstos en esta Ley y en las leyes del Seguro Social
+02,1,Social_insurance_change,"elided with ellipsis, all fragments real",leyes del Seguro Social... cuentas individuales propiedad de los trabajadores
+02,1,Reform_category,"elided with ellipsis, all fragments real",regular el funcionamiento de los sistemas de ahorro para el retiro... cuentas individuales
+02,1,reform_coverage,"elided with ellipsis, all fragments real",todos los trabajadores... cuentas individuales propiedad de los trabajadores
+02,1,Is the legislated pension reform minor or major?,"elided with ellipsis, all fragments real",LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO... cuentas individuales propiedad de los trabajadores
+02,1,instrument_type,"elided with ellipsis, all fragments real",DECRETO... LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO
+03,1,Status of Pension Reform,"elided with ellipsis, all fragments real",DECRETO... SE REFORMAN Y ADICIONAN
+03,1,Pension Reform Types,"elided with ellipsis, all fragments real",El Instituto administrará y manejará... un fondo que se denominará Fondo para el Cumplimiento de Obligaciones Laborales
+03,1,reason_reform,"elided with ellipsis, all fragments real",siempre y cuando cuente con los recursos aprobados... y aquellos indispensables para cubrir el costo anual
+04,1,entry_into_force_date,"real text, case differs",Día siguiente
+04,1,legal_references,"elided with ellipsis, all fragments real",Artículo 1... Artículo 39
+04,1,insurance_branch,"elided with ellipsis, all fragments real","Artículo 3. Se establecen con carácter obligatorio los siguientes seguros: I. De salud... II. De riesgos del trabajo; III. De retiro, cesantía en edad avanzada y vejez, y IV. De invalidez y vida."
+04,1,financing_indexation_change,"elided with ellipsis, all fragments real","Pensión Garantizada... cuyo monto mensual será la cantidad de tres mil treinta y cuatro pesos con veinte centavos, moneda nacional, misma que se actualizará anualmente, en el mes de febrero, conforme al cambio anualizado del Índice Nacional de Precios al Consumidor"
+04,1,Social_insurance_change,"elided with ellipsis, all fragments real",Artículo 5. La administración de los seguros... estarán a cargo del organismo descentralizado... denominado Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado
+04,2,legislation_date,"real text, punctuation differs",03-2007
+04,2,reason_reform,"elided with ellipsis, all fragments real",El Gobierno Federal cubrirá mensualmente una Cuota Social diaria...
+04,2,Social_insurance_change,"elided with ellipsis, all fragments real",El seguro de salud se financiará en la forma siguiente...
+04,3,legislation_date,"real text, punctuation differs",03-2007
+04,4,legislation_date,"real text, punctuation differs",03-2007
+04,4,Pension Reform Types,"not in the source, from Stage 1",DC
+04,4,relevancetopr_score,"not in the source, from Stage 1",9.0
+04,5,implementation_date,"real text, case differs",Día siguiente
+04,5,Pension Reform Types,"elided with ellipsis, all fragments real",Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... Cuota Social... cinco punto cinco por ciento
+04,5,Pension Reform Types,"elided with ellipsis, all fragments real",Artículo 97... Cuenta Individual... PENSIONISSSTE o... Administradora
+04,5,Pension Reform Types,"elided with ellipsis, all fragments real",Artículo 80... seguro de retiro antes de cumplir las edades... Renta vitalicia... Retiros Programados
+04,5,Pension Reform Types,"elided with ellipsis, all fragments real",Artículo 92... Pensión Garantizada... actualizará anualmente... Índice Nacional de Precios al Consumidor
+04,5,indexation_change,"elided with ellipsis, all fragments real","Artículo 92... misma que se actualizará anualmente, en el mes de febrero, conforme al cambio anualizado del Índice Nacional de Precios al Consumidor"
+04,5,coverage_change,"elided with ellipsis, all fragments real",Artículo 80... Los Trabajadores tendrán derecho a un seguro de retiro antes de cumplir las edades y tiempo de cotización establecidas
+04,5,benefit_change,"elided with ellipsis, all fragments real",Artículo 92... Pensión Garantizada es aquélla que el Estado asegura... monto mensual será la cantidad de tres mil treinta y cuatro pesos con veinte centavos
+04,5,Social_insurance_change,"elided with ellipsis, all fragments real",Artículo 84... cesantía en edad avanzada... Artículo 88... seguro de vejez
+04,5,reason_reform,"elided with ellipsis, all fragments real",Artículo 109... principal objetivo otorgar la mayor seguridad y rentabilidad... incrementar el ahorro interno
+04,5,retirement_age_change,"elided with ellipsis, all fragments real",Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad
+04,5,Retirement_age_change_details,"elided with ellipsis, all fragments real",Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad
+04,5,Retirement_age_pre_reform_male,"elided with ellipsis, all fragments real",Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad
+04,5,Retirement_age_after_reform_male,"elided with ellipsis, all fragments real",Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad
+04,5,Contribution_rate_change,"elided with ellipsis, all fragments real",Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... cesantía... tres punto ciento setenta y cinco por ciento
+04,5,New Employer Contribution Rate,"elided with ellipsis, all fragments real","Artículo 102... Aportación de retiro de dos por ciento, y por cesantía en edad avanzada y vejez, de tres punto ciento setenta y cinco por ciento"
+04,5,New Employee Contribution Rate,"elided with ellipsis, all fragments real",Artículo 102... Cuota de seis punto ciento veinticinco por ciento del Sueldo Básico
+04,5,New Contribution Rate (Employee and Employer Combined),"elided with ellipsis, all fragments real",Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... cesantía... tres punto ciento setenta y cinco por ciento
+04,5,Is the legislated pension reform minor or major?,"elided with ellipsis, all fragments real",Artículo 103... Se crea el Fondo Nacional de Pensiones... PENSIONISSSTE
+04,5,instrument_type,"elided with ellipsis, all fragments real",DOF: 31/03/2007... Artículo 77... Artículo 103
+04,5,issuing_body,"elided with ellipsis, all fragments real",PODER EJECUTIVO... INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO
+04,5,entry_into_force_date,"real text, case differs",Día siguiente
+05,1,reform_coverage,"elided with ellipsis, all fragments real",todas las menciones al salario mínimo como unidad de cuenta... se entenderán referidas a la Unidad de Medida y Actualización
+05,1,reason_reform,"elided with ellipsis, all fragments real",El financiamiento público para el sostenimiento de sus actividades ordinarias permanentes se fijará anualmente...
+05,1,financing_indexation_change,"elided with ellipsis, all fragments real",El valor inicial diario de la Unidad de Medida y Actualización... será equivalente al que tenga el salario mínimo general vigente diario
+05,1,implicit_liability_direction,"elided with ellipsis, all fragments real",El salario mínimo no podrá ser utilizado como índice... para fines ajenos a su naturaleza
+07,1,legislation_date,"real text, punctuation differs",05-2020
+07,1,issuing_body,"elided with ellipsis, all fragments real","ANDRÉS MANUEL LÓPEZ OBRADOR, Presidente... expido el presente Decreto"
+07,1,reason_reform,"elided with ellipsis, all fragments real","El Estado garantizará la entrega de un apoyo económico a las personas que tengan discapacidad permanente... Para recibir esta prestación tendrán prioridad las y los menores de dieciocho años, las y los indígenas y las y los afromexicanos... y las personas que se encuentren en condición de pobreza."
+07,1,issuing_body,"elided with ellipsis, all fragments real","ANDRÉS MANUEL LÓPEZ OBRADOR, Presidente... expido el presente Decreto"
+07,1,legal_references,"real text, case differs",Se reforma y adiciona el artículo 4o.
+08,1,Status of Pension Reform,"elided with ellipsis, all fragments real","DECRETO... SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES"
+08,1,Social_insurance_change,"elided with ellipsis, all fragments real",Artículo 168... Los patrones cubrirán la cuota que corresponda sobre el salario base de cotización
+08,1,reason_reform,"elided with ellipsis, all fragments real",El Gobierno Federal... aportará mensualmente una cantidad por concepto de la cuota social
+08,1,Contribution_rate_change,"elided with ellipsis, all fragments real","Los patrones seguirán cubriendo, para los ramos de cesantía en edad avanzada y vejez, una cuota del tres punto ciento cincuenta por ciento... Del 1 de enero de 2021 al 31 de diciembre de 2022"
+08,1,Old Employer Contribution Rate,"elided with ellipsis, all fragments real",Los patrones seguirán cubriendo... una cuota del tres punto ciento cincuenta por ciento
+08,1,New Employer Contribution Rate,"elided with ellipsis, all fragments real",1.01 SM a 1.50 UMA... 4.202%
+08,1,Old Contribution Rate (Employee and Employer Combined),"not in the source, from Stage 1",3.15% + 1.125%
+08,1,New Contribution Rate (Employee and Employer Combined),"not in the source, from Stage 1",4.202% + 1.125%
+08,1,issuing_body,"elided with ellipsis, all fragments real","ANDRÉS MANUEL LÓPEZ OBRADOR, Presidente... expido el presente Decreto"
+08,1,legal_references,"elided with ellipsis, all fragments real",Artículo 168... Artículo 302... Artículo 37
+08,1,financing_indexation_change,"elided with ellipsis, all fragments real",El Gobierno Federal... aportará mensualmente una cantidad por concepto de la cuota social
+08,1,implicit_liability_direction,"elided with ellipsis, all fragments real",El Gobierno Federal... aportará mensualmente una cantidad por concepto de la cuota social
+08,2,Status of Pension Reform,"elided with ellipsis, all fragments real","DECRETO... SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES"
+08,2,Pension Reform Types,"elided with ellipsis, all fragments real",En la fecha en que entre en vigor el presente Decreto las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley... serán setecientas cincuenta
+08,2,benefit_change,"elided with ellipsis, all fragments real",las semanas de cotización que se requieren para obtener los beneficios señalados en los artículos 154 y 162 de la Ley... serán setecientas cincuenta
+08,2,Social_insurance_change,"elided with ellipsis, all fragments real",Artículo 154... Para gozar de las prestaciones de este ramo se requiere que el asegurado tenga reconocidas ante el Instituto un mínimo de mil cotizaciones semanales
+08,2,issuing_body,"elided with ellipsis, all fragments real","ANDRÉS MANUEL LÓPEZ OBRADOR, Presidente... expido el presente Decreto"
+08,2,legal_references,"elided with ellipsis, all fragments real",artículos 154 y 162 de la Ley... artículo 170
+08,3,Status of Pension Reform,"elided with ellipsis, all fragments real","DECRETO... SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES"
+08,3,Pension Reform Types,"elided with ellipsis, all fragments real","El Gobierno Federal seguirá cubriendo en los ramos de cesantía en edad avanzada y vejez, la cuota social... Del 1 de enero de 2021 al 31 de diciembre de 2022"
+08,3,Social_insurance_change,"elided with ellipsis, all fragments real",El Gobierno Federal... aportará mensualmente una cantidad por concepto de la cuota social
+08,3,Old Employer Contribution Rate,"elided with ellipsis, all fragments real",Los patrones seguirán cubriendo... una cuota del tres punto ciento cincuenta por ciento
+08,3,New Employer Contribution Rate,"elided with ellipsis, all fragments real",1.01 SM a 1.50 UMA... 4.202%
+10,1,Pension Reform Types,"elided with ellipsis, all fragments real","recibir, administrar, invertir y entregar los recursos... para procurar que las personas trabajadoras... reciban... un complemento económico"
+10,1,benefit_change,"elided with ellipsis, all fragments real",reciban... un complemento económico... para que sea igual a su último salario percibido
+10,1,reason_reform,"not in the source, from Stage 1","reducir la pobreza en la vejez, generar un estado de igualdad entre las personas adultas mayores"
+10,1,relevancetopr_score,"placeholder (INFERRED, N/A)",N/A
+10,1,issuing_body,"elided with ellipsis, all fragments real","ANDRÉS MANUEL LÓPEZ OBRADOR, presidente... expedir el siguiente DECRETO"
+10,1,legal_references,"not in the source, from Stage 1","302 de la Ley del Seguro Social; 37 de la Ley del INFONAVIT; 192, 251 y Cuadragésimo Octavo Transitorio de la Ley del ISSSTE; 18 y 81 Bis de la Ley de los Sistemas de Ahorro para el Retiro"
+10,1,implicit_liability_direction,"elided with ellipsis, all fragments real",complemento económico... para que sea igual a su último salario percibido
+10,2,legal_references,"elided with ellipsis, all fragments real","aportación a que se refiere el artículo 4, párrafo segundo, fracción II... conforme a lo dispuesto en el artículo 11 del presente decreto."
+10,2,regime_affected,"elided with ellipsis, all fragments real","Se instruye a la Secretaría de Hacienda y Crédito Público, al Instituto Mexicano del Seguro Social, al Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado, y al Instituto del Fondo Nacional de la Vivienda para los Trabajadores..."
+10,2,implicit_liability_direction,"elided with ellipsis, all fragments real",Se instruye... realizar los actos asociados a la implementación y operación del Fondo de Pensiones para el Bienestar
+10,2,Social_insurance_change,"elided with ellipsis, all fragments real","Se instruye a la Secretaría de Hacienda y Crédito Público, al Instituto Mexicano del Seguro Social... realizar los actos asociados a la implementación y operación del Fondo de Pensiones para el Bienestar"
+11,1,reform_coverage,"elided with ellipsis, all fragments real",personas que... se encuentren inscritas en la Continuación Voluntaria... así como aquellas que deseen conservar sus derechos
+11,1,legal_references,"elided with ellipsis, all fragments real",artículos 251... 263... 264... 31...

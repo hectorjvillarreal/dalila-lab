@@ -1,0 +1,52 @@
+### EPISODE 1: Ley de los Sistemas de Ahorro para el Retiro (AFORE)
+field name | value | "verbatim quote" | where in the text
+1. Country Name | Mexico | "Estados Unidos Mexicanos" | Top of text
+2. Year of the article | 1996 | "DOF: 23/05/1996" | Top of text
+3. Status of Pension Reform | Legislated, Implemented | "DECRETO ... LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO" | Title
+4. legislation_date | 05-1996 | "DOF: 23/05/1996" | Top of text
+5. Planned_date | INFERRED | N/A | N/A
+6. announcement_date | INFERRED | N/A | N/A
+7. implementation_date | 06-1996 | "Día siguiente" (implied by decree nature) | N/A
+8. reversal_date | INFERRED | N/A | N/A
+9. Pension Reform Types | pension plan types (DC), administration and governance, investment strategies | "cuentas individuales propiedad de los trabajadores" | Article 3, fracción X
+10. indexation_change | INFERRED | N/A | N/A
+11. coverage_change | extended coverage | "regular el funcionamiento de los sistemas de ahorro para el retiro y sus participantes" | Article 1
+12. benefit_change | INFERRED | N/A | N/A
+13. Social_insurance_change | Yes | "previstos en esta Ley y en las leyes del Seguro Social" | Article 1
+14. reform_coverage | Broad-based reform | "todos los trabajadores" (implied by general system creation) | N/A
+15. reason_reform | Economic growth, Fiscal reasons | "acumular saldos, mismos que se aplicarán para fines de previsión social" | Article 3, fracción X
+16. relevancetopr_score | 10.0 | N/A | N/A
+17. retirement_age_change | INFERRED | N/A | N/A
+18. Retirement_age_change_details | INFERRED | N/A | N/A
+19. Retirement_age_pre_reform_female | INFERRED | N/A | N/A
+20. Retirement_age_after_reform_female | INFERRED | N/A | N/A
+21. Retirement_age_pre_reform_male | INFERRED | N/A | N/A
+22. Retirement_age_after_reform_male | INFERRED | N/A | N/A
+23. Contribution_rate_change | INFERRED | N/A | N/A
+24. Old Employer Contribution Rate | INFERRED | N/A | N/A
+25. New Employer Contribution Rate | INFERRED | N/A | N/A
+26. Old Employee Contribution Rate | INFERRED | N/A | N/A
+27. New Employee Contribution Rate | INFERRED | N/A | N/A
+28. Old Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A
+29. New Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A
+30. Is the legislated pension reform minor or major | Major | "LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO" | Title
+31. instrument_type | new_law | "LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO" | Title
+32. issuing_body | Congreso de la Unión | "EL CONGRESO DE LOS ESTADOS UNIDOS MEXICANOS, D E C R E T A" | Decree header
+33. dof_publication_date | 23-05-1996 | "DOF: 23/05/1996" | Top of text
+34. entry_into_force_date | 24-05-1996 | "Día siguiente" (standard for decrees) | N/A
+35. legal_references | Ley del Seguro Social, Ley del IMSS, Ley del INFONAVIT, Ley del ISSSTE | "leyes del Seguro Social, del Instituto del Fondo Nacional de la Vivienda para los Trabajadores y del Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado" | Article 1
+36. regime_affected | all | "sistemas de ahorro para el retiro y sus participantes" | Article 1
+37. insurance_branch | other | "sistemas de ahorro para el retiro" | Article 1
+38. financing_indexation_change | INFERRED | N/A | N/A
+39. fiscal_magnitude_stated | INFERRED | N/A | N/A
+40. implicit_liability_direction | decreases | "cuentas individuales propiedad de los trabajadores" | Article 3, fracción X
+41. instrument_type | new_law | "LEY DE LOS SISTEMAS DE AHORRO PARA EL RETIRO" | Title
+42. issuing_body | Congreso de la Unión | "EL CONGRESO DE LOS ESTADOS UNIDOS MEXICANOS, D E C R E T A" | Decree header
+43. dof_publication_date | 23-05-1996 | "DOF: 23/05/1996" | Top of text
+44. entry_into_force_date | 24-05-1996 | "Día siguiente" (standard for decrees) | N/A
+45. legal_references | Ley del Mercado de Valores, Ley Federal de Protección al Consumidor | "Ley del Mercado de Valores", "Ley Federal de Protección al Consumidor" | Articles 5, 6
+46. regime_affected | other | "Ley del Mercado de Valores", "Ley Federal de Protección al Consumidor" | Articles 5, 6
+47. insurance_branch | other | "Mercado de Valores", "Protección al Consumidor" | Articles 5, 6
+48. financing_indexation_change | INFERRED | N/A | N/A
+49. fiscal_magnitude_stated | INFERRED | N/A | N/A
+50. implicit_liability_direction | ambiguous | N/A | N/A

@@ -1,0 +1,44 @@
+### EPISODE 1: ISSSTE Pension System Reform (2007)
+field name | value | "verbatim quote" | where in the text
+--- | --- | --- | ---
+1. Country Name | Mexico | "DOF: 31/03/2007" | Top of text
+2. Year of the article | 2007 | "DOF: 31/03/2007" | Top of text
+3. Status of Pension Reform | Legislated, Implemented | "DOF: 31/03/2007" | Top of text
+4. legislation_date | 03-2007 | "DOF: 31/03/2007" | Top of text
+5. Planned_date | INFERRED | INFERRED | N/A
+6. announcement_date | INFERRED | INFERRED | N/A
+7. implementation_date | 04-2007 | "Día siguiente" (next calendar day) | Article 97, 98, 103
+8. reversal_date | INFERRED | INFERRED | N/A
+9. Pension Reform Types | funding mechanisms; administration and governance; pension plan types (DC); eligibility and access; indexation; benefit rule changes | "Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... Cuota Social... cinco punto cinco por ciento"; "Artículo 97... Cuenta Individual... PENSIONISSSTE o... Administradora"; "Artículo 80... seguro de retiro antes de cumplir las edades... Renta vitalicia... Retiros Programados"; "Artículo 92... Pensión Garantizada... actualizará anualmente... Índice Nacional de Precios al Consumidor" | Articles 80, 84, 89, 92, 97, 102, 103, 109
+10. indexation_change | more generous indexation | "Artículo 92... misma que se actualizará anualmente, en el mes de febrero, conforme al cambio anualizado del Índice Nacional de Precios al Consumidor" | Article 92
+11. coverage_change | extended coverage | "Artículo 80... Los Trabajadores tendrán derecho a un seguro de retiro antes de cumplir las edades y tiempo de cotización establecidas" | Article 80
+12. benefit_change | more generous benefits | "Artículo 92... Pensión Garantizada es aquélla que el Estado asegura... monto mensual será la cantidad de tres mil treinta y cuatro pesos con veinte centavos" | Article 92
+13. Social_insurance_change | Yes | "Artículo 84... cesantía en edad avanzada... Artículo 88... seguro de vejez" | Articles 84, 88
+14. Reform_category | Parametric reform | "Artículo 102... Cuotas y Aportaciones... Artículo 92... Pensión Garantizada" | Articles 92, 102
+15. reform_coverage | Broad-based reform | "Artículo 97... A cada Trabajador se le abrirá una Cuenta Individual" | Article 97
+16. reason_reform | Economic growth; Fiscal reasons; Benefit adequacy | "Artículo 109... principal objetivo otorgar la mayor seguridad y rentabilidad... incrementar el ahorro interno" | Article 109
+17. relevancetopr_score | 10.0 | "DOF: 31/03/2007... Artículo 77... Artículo 102" | N/A
+18. retirement_age_change | retirement age decreased | "Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad" | Articles 84, 89
+19. Retirement_age_change_details | Male: 60 (cessantía), 65 (vejez); Female: Not explicitly mentioned in this chunk | "Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad" | Articles 84, 89
+20. Retirement_age_pre_reform_female | INFERRED | INFERRED | N/A
+21. Retirement_age_after_reform_female | INFERRED | INFERRED | N/A
+22. Retirement_age_pre_reform_male | 60 (cessantía), 65 (vejez) | "Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad" | Articles 84, 89
+23. Retirement_age_after_reform_male | 60 (cessantía), 65 (vejez) | "Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad" | Articles 84, 89
+24. Contribution_rate_change | contribution rate increased | "Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... cesantía... tres punto ciento setenta y cinco por ciento" | Article 102
+25. Old Employer Contribution Rate | INFERRED | INFERRED | N/A
+26. New Employer Contribution Rate | 2.0% (retirement) + 3.175% (cessantía/vejez) | "Artículo 102... Aportación de retiro de dos por ciento, y por cesantía en edad avanzada y vejez, de tres punto ciento setenta y cinco por ciento" | Article 102
+27. Old Employee Contribution Rate | INFERRED | INFERRED | N/A
+28. New Employee Contribution Rate | 6.125% | "Artículo 102... Cuota de seis punto ciento veinticinco por ciento del Sueldo Básico" | Article 102
+29. Old Contribution Rate (Employee and Employer Combined) | INFERRED | INFERRED | N/A
+30. New Contribution Rate (Employee and Employer Combined) | 8.125% (retirement) + 5.175% (cessantía/vejez) | "Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... cesantía... tres punto ciento setenta y cinco por ciento" | Article 102
+31. Is the legislated pension reform minor or major | Major | "Artículo 103... Se crea el Fondo Nacional de Pensiones... PENSIONISSSTE" | Article 103
+32. instrument_type | law_reform | "DOF: 31/03/2007... Artículo 77... Artículo 103" | N/A
+33. issuing_body | Ejecutivo Federal | "PODER EJECUTIVO... INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO" | Top of text
+34. dof_publication_date | 31-03-2007 | "DOF: 31/03/2007" | Top of text
+35. entry_into_force_date | 01-04-2007 | "Día siguiente" (next calendar day) | Article 97, 98, 103
+36. legal_references | Articles 77-126 | "Artículo 77... Artículo 126" | N/A
+37. regime_affected | issste_decimo_transitorio | "Artículo 77... Artículo 103... PENSIONISSSTE" | Articles 77, 103
+38. insurance_branch | IV, RCV, SEM | "Artículo 84... cesantía en edad avanzada... Artículo 88... seguro de vejez... Artículo 114... invalidez y la muerte" | Articles 84, 88, 114
+39. financing_indexation_change | changed_to_inflation | "Artículo 92... actualizará anualmente... conforme al cambio anualizado del Índice Nacional de Precios al Consumidor" | Article 92
+40. fiscal_magnitude_stated | 3,034.20 MXN (Guaranteed Pension) | "Artículo 92... monto mensual será la cantidad de tres mil treinta y cuatro pesos con veinte centavos" | Article 92
+41. implicit_liability_direction | ambiguous | "Artículo 93... Gobierno Federal una Aportación complementaria... Artículo 94... Gobierno Federal... cubrirá la Pensión Garantizada" | Articles 93, 94

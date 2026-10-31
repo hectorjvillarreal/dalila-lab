@@ -1,0 +1,18 @@
+{"instrument_type":"constitutional_reform","issuing_body":"Comisión Permanente del H. Congreso de la Unión","entry_into_force_date":"09-05-2020","legislation_date":"05-2020","implementation_date":"05-2020","regime_affected":["non_contributory"],"Social_insurance_change":"No",
+"evidence":[{"field":"issuing_body","quote":"Que la Comisión Permanente del Honorable Congreso de la Unión, se ha servido dirigirme el siguiente","location":"Preámbulo"},
+{"field":"instrument_type","quote":"DECRETO por el que se reforma y adiciona el artículo 4o. de la Constitución Política de los Estados Unidos Mexicanos.","location":"Título"},
+{"field":"entry_into_force_date","quote":"El presente Decreto entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación.","location":"Transitorio Primero"},
+{"field":"implementation_date","quote":"El presente Decreto entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación.","location":"Transitorio Primero"},
+{"field":"Status of Pension Reform","quote":"El presente Decreto entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación.","location":"Transitorio Primero"}],
+"episodes":[
+{"label":"Derecho constitucional a la pensión no contributiva de adultos mayores","core":true,"insurance_branch":["non_contributory_pension"],"Pension Reform Types":["eligibility and access","funding mechanisms"],"coverage_change":"extended coverage","benefit_change":"more generous benefits","Reform_category":"Structural reform","reform_coverage":"Broad-based reform","relevancetopr_score":9.5,"Is the legislated pension reform minor or major?":"Major","legal_references":["Constitución, artículo 4o., párrafo décimo quinto","Transitorio Tercero"],"implicit_liability_direction":"increases",
+"evidence":[{"field":"Pension Reform Types","quote":"Las personas mayores de sesenta y ocho años tienen derecho a recibir por parte del Estado una pensión no contributiva en los términos que fije la Ley.","location":"Artículo 4o."},
+{"field":"regime_affected","quote":"una pensión no contributiva en los términos que fije la Ley","location":"Artículo 4o."},
+{"field":"insurance_branch","quote":"una pensión no contributiva en los términos que fije la Ley","location":"Artículo 4o."},
+{"field":"coverage_change","quote":"En el caso de las y los indígenas y las y los afromexicanos esta prestación se otorgará a partir de los sesenta y cinco años de edad.","location":"Artículo 4o."},
+{"field":"legal_references","quote":"no podrá ser disminuido, en términos reales, respecto del que se haya asignado en el ejercicio fiscal inmediato anterior","location":"Transitorio Tercero"}]},
+{"label":"Apoyo económico por discapacidad permanente","core":false,"insurance_branch":["other"],"Pension Reform Types":["eligibility and access"],"coverage_change":"extended coverage","reform_coverage":"Targeted reform","relevancetopr_score":5.0,"legal_references":["Constitución, artículo 4o., párrafo décimo cuarto"],"implicit_liability_direction":"increases",
+"evidence":[{"field":"Pension Reform Types","quote":"El Estado garantizará la entrega de un apoyo económico a las personas que tengan discapacidad permanente en los términos que fije la Ley.","location":"Artículo 4o."},
+{"field":"coverage_change","quote":"El Estado garantizará la entrega de un apoyo económico a las personas que tengan discapacidad permanente","location":"Artículo 4o."},
+{"field":"regime_affected","quote":"El Estado garantizará la entrega de un apoyo económico","location":"Artículo 4o."}]}
+]}

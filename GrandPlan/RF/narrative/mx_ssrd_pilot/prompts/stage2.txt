@@ -1,0 +1,115 @@
+Now convert the episode summary below into one JSON object following the fixed schema. The summary comes from a Mexican legal instrument published in the DOF. The object corresponds to one reform episode.
+
+Rules:
+- All fields must be present. Use "Not explicitly mentioned" for any field the summary does not support. For retirement-age and contribution-rate fields the same placeholder applies.
+- Dates: mm-yyyy for legislation_date, Planned_date, announcement_date, implementation_date, reversal_date. dd-mm-yyyy for dof_publication_date and entry_into_force_date.
+- Allowed categorical values must be used exactly.
+- Status of Pension Reform, Pension Reform Types, reason_reform, regime_affected and insurance_branch are arrays of allowed values.
+- evidence: one entry per quoted field in the summary, {"field", "quote", "location"}. Copy each quote exactly as it appears in the summary. Never add a quote that is not in the summary.
+- fields_inferred: every filled field whose summary line says INFERRED, and implicit_liability_direction when filled.
+- Copy source_file and chunk_ids from the header below.
+- Re-check allowed values, date formats and consistency before answering.
+
+Format anchor, a single complete record from another law. It fixes format only, not content:
+
+{
+ "Country Name": "Mexico",
+ "Year of the article": "2007",
+ "Status of Pension Reform": [
+  "Legislated",
+  "Implemented"
+ ],
+ "legislation_date": "03-2007",
+ "Planned_date": "Not explicitly mentioned",
+ "announcement_date": "Not explicitly mentioned",
+ "implementation_date": "01-2008",
+ "reversal_date": "Not explicitly mentioned",
+ "Pension Reform Types": [
+  "systematic (structural) pension reforms",
+  "pension plan types",
+  "funding mechanisms",
+  "eligibility and access"
+ ],
+ "indexation_change": "Not explicitly mentioned",
+ "coverage_change": "Not explicitly mentioned",
+ "benefit_change": "Not explicitly mentioned",
+ "Social_insurance_change": "Yes",
+ "Reform_category": "Structural reform",
+ "reform_coverage": "Broad-based reform",
+ "reason_reform": [
+  "Not explicitly mentioned"
+ ],
+ "relevancetopr_score": 10.0,
+ "retirement_age_change": "Not explicitly mentioned",
+ "Retirement_age_change_details": "Cesantía en edad avanzada a partir de los 60 años y vejez a los 65, con un mínimo de 25 años de cotización reconocidos; retiro anticipado si la Renta vitalicia supera en más de 30% la Pensión Garantizada",
+ "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+ "Retirement_age_after_reform_female": "60 (cesantía en edad avanzada); 65 (vejez)",
+ "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+ "Retirement_age_after_reform_male": "60 (cesantía en edad avanzada); 65 (vejez)",
+ "Contribution_rate_change": "contribution rate increased",
+ "Old Employer Contribution Rate": "Not explicitly mentioned",
+ "New Employer Contribution Rate": "2% de retiro + 3.175% de cesantía en edad avanzada y vejez (5.175% del Sueldo Básico)",
+ "Old Employee Contribution Rate": "3.5% (a la entrada en vigor de esta Ley)",
+ "New Employee Contribution Rate": "6.125% del Sueldo Básico",
+ "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+ "New Contribution Rate (Employee and Employer Combined)": "11.3% del Sueldo Básico (6.125% + 5.175%), más la Cuota Social del Gobierno Federal",
+ "Is the legislated pension reform minor or major?": "Major",
+ "instrument_type": "new_law",
+ "issuing_body": "Congreso de la Unión",
+ "dof_publication_date": "31-03-2007",
+ "entry_into_force_date": "01-04-2007",
+ "legal_references": [
+  "Ley del ISSSTE, artículos 6 (fracción IV), 76, 80, 84, 89, 97, 101 y 102",
+  "Transitorio Segundo",
+  "Transitorio Trigésimo Primero"
+ ],
+ "regime_affected": [
+  "issste_2007_accounts"
+ ],
+ "insurance_branch": [
+  "RCV"
+ ],
+ "financing_indexation_change": "changed_to_inflation",
+ "fiscal_magnitude_stated": "Not explicitly mentioned",
+ "implicit_liability_direction": "decreases",
+ "fields_inferred": [
+  "New Contribution Rate (Employee and Employer Combined)",
+  "implicit_liability_direction"
+ ],
+ "evidence": [
+  {
+   "field": "instrument_type",
+   "quote": "DECRETO por el que se expide la Ley del Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado.",
+   "location": "Título"
+  },
+  {
+   "field": "issuing_body",
+   "quote": "Que el Honorable Congreso de la Unión, se ha servido dirigirme el siguiente",
+   "location": "Preámbulo"
+  },
+  {
+   "field": "legislation_date",
+   "quote": "México, D.F., 28 de marzo de 2007",
+   "location": "Cierre del Decreto"
+  },
+  {
+   "field": "entry_into_force_date",
+   "quote": "La presente Ley entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación, con excepción de los artículos 42, 75, 101, 140, 193 y 199",
+   "location": "Transitorio Primero"
+  },
+  {
+   "field": "Status of Pension Reform",
+   "quote": "La presente Ley entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación",
+   "location": "Transitorio Primero"
+  },
+  {
+   "field": "Social_insurance_change",
+   "quote": "Se establecen con carácter obligatorio los siguientes seguros:",
+   "location": "Artículo 3"
+  }
+ ],
+ "source_file": "04_dof_20070331_ley_issste.html",
+ "chunk_ids": []
+}
+
+Output strictly valid JSON with no text before or after.

@@ -1,0 +1,48 @@
+doc_id,silver_idx,silver_label,core,model_episode,model_label,score
+01,1,"Cuentas individuales para retiro, cesantía y vejez administradas por las Afores",True,1,Sin etiqueta,0.0
+01,2,Seguros separados de IV y RCV: cuotas tripartitas y tope del salario base de 15 a 25 salarios mínimos,True,1,Sin etiqueta,0.12
+01,3,"Financiamiento del SEM: cuota fija de 13.9%, excedente, cuota estatal indexada al INPC y cuota de 1.5% para pensionados",True,1,Sin etiqueta,0.0
+01,4,Cuota social del Gobierno Federal de 5.5% del salario mínimo por día cotizado,True,1,Sin etiqueta,0.0
+01,5,Pensión garantizada de un salario mínimo con complemento del Gobierno Federal,True,1,Sin etiqueta,0.0
+01,6,"Derecho de opción de los asegurados de la Ley de 1973, con sus pensiones a cargo del Gobierno Federal",True,1,Sin etiqueta,0.06
+01,7,"Edades de 60 (cesantía) y 65 (vejez) con 1,250 semanas de cotización",True,1,Sin etiqueta,0.0
+01,8,Prima patronal de 1% para guarderías y prestaciones sociales,False,1,Sin etiqueta,0.0
+02,1,"Marco de coordinación, regulación y supervisión a cargo de la CONSAR (abroga la Ley de Coordinación de 1994)",True,1,Establishment of Individual Accounts System (AFORE),0.0
+02,2,"Afores: entidades financieras exclusivas para administrar cuentas individuales, con límite de concentración de mercado",True,1,Establishment of Individual Accounts System (AFORE),0.0
+02,3,Siefores y régimen de inversión de los recursos de las cuentas individuales,True,1,Establishment of Individual Accounts System (AFORE),0.0
+02,4,"Cuenta individual: apertura en la Afore elegida, traspaso anual y aportaciones voluntarias",True,1,Establishment of Individual Accounts System (AFORE),0.11
+02,5,Régimen de comisiones de las Afores,True,1,Establishment of Individual Accounts System (AFORE),0.0
+02,6,"Transición: saldos SAR 1992, trabajadores sin Afore y cuenta concentradora",True,1,Establishment of Individual Accounts System (AFORE),0.05
+02,7,Aseguradoras de pensiones especializadas (reforma a la Ley General de Instituciones y Sociedades Mutualistas de Seguros),False,1,Establishment of Individual Accounts System (AFORE),0.0
+03,1,Plazas nuevas solo con fondeo total del RJP,True,1,Reform to IMSS Staff Pension Fund Structure and Financing,0.0
+03,2,"Prohibición de financiar el RJP con cuotas, aportaciones federales o reservas",True,1,Reform to IMSS Staff Pension Fund Structure and Financing,0.0
+04,1,"Cuentas individuales de contribución definida en el seguro de retiro, cesantía en edad avanzada y vejez",True,1,ISSSTE Law 2007 - System Creation,0.05
+04,2,Bono de Pensión del ISSSTE y derecho de opción de los trabajadores en activo,True,5,ISSSTE Pension System Reform (2007),0.1
+04,3,Régimen del artículo décimo transitorio con edades mínimas crecientes,True,4,Early retirement withdrawal rules,0.07
+04,4,"Aumento gradual de la cuota del trabajador al seguro de retiro, cesantía en edad avanzada y vejez",True,1,ISSSTE Law 2007 - System Creation,0.11
+04,5,Creación del PENSIONISSSTE como administrador público de cuentas individuales,True,1,ISSSTE Law 2007 - System Creation,0.06
+04,6,"Financiamiento del seguro de salud: cuotas, aportaciones y Cuota Social gradual del Gobierno Federal",True,1,ISSSTE Law 2007 - System Creation,0.11
+04,7,Pensión Garantizada a cargo del Gobierno Federal para titulares de cuenta individual,True,5,ISSSTE Pension System Reform (2007),0.19
+04,8,"Portabilidad de derechos entre el ISSSTE, el IMSS y otros regímenes de seguridad social",False,1,ISSSTE Law 2007 - System Creation,0.14
+05,1,Desindexación del salario mínimo y creación de la UMA,True,1,Desindexación del Salario Mínimo a la UMA,0.42
+06,1,Método de cálculo de la UMA con el INPC,True,,,0
+07,1,Derecho constitucional a la pensión no contributiva de adultos mayores,True,1,Non-contributory pension establishment,0.12
+07,2,Apoyo económico por discapacidad permanente,False,1,Non-contributory pension establishment,0.08
+08,1,Aumento gradual de la cuota patronal de cesantía y vejez,True,3,Gradual increase in state social contribution (2021-2023),0.21
+08,2,Cuota social concentrada hasta 4 UMA y derogación de la aportación estatal,True,3,Gradual increase in state social contribution (2021-2023),0.1
+08,3,Reducción de semanas de cotización a 1000 con transición desde 750,True,3,Gradual increase in state social contribution (2021-2023),0.1
+08,4,"Nueva pensión garantizada por tabla de edad, semanas y salario",True,2,Increase in required weeks of contribution for guaranteed pension,0.11
+08,5,Tope a las comisiones de las Afores,True,2,Increase in required weeks of contribution for guaranteed pension,0.06
+08,6,Recursos prescritos de la subcuenta RCV: reserva y disposición por el IMSS,False,3,Gradual increase in state social contribution (2021-2023),0.1
+08,7,Designación de beneficiarios de la cuenta individual,False,3,Gradual increase in state social contribution (2021-2023),0.11
+08,8,Revisión por SHCP de los procedimientos del RJP del IMSS,False,3,Gradual increase in state social contribution (2021-2023),0.0
+09,1,Obligación de inscribir a personas trabajadoras de plataformas en IMSS e Infonavit,True,,,0
+09,2,Responsabilidad por riesgo de trabajo sin importar el umbral de ingreso,False,,,0
+09,3,Exclusión de propinas del salario base de cotización,False,,,0
+09,4,Prueba piloto obligatoria y futuras iniciativas,True,,,0
+10,1,"Complemento a la pensión hasta el último salario con tope de $16,777.68",True,1,Fondo de Pensiones para el Bienestar (Complemento a pensión),0.13
+10,2,Fuentes de financiamiento del Fondo de Pensiones para el Bienestar,True,2,Fondo de Pensiones para el Bienestar (Implementation details),0.42
+10,3,"Fideicomiso, Comité Técnico y Ventanilla Única",False,2,Fondo de Pensiones para el Bienestar (Implementation details),0.08
+11,1,Tope temporal a la base de cotización de la Continuación Voluntaria,True,1,Continuación Voluntaria en Régimen Obligatorio,0.09
+11,2,Análisis financiero a 6 meses y propuesta normativa posterior,True,1,Continuación Voluntaria en Régimen Obligatorio,0.0
+11,3,Inscripción únicamente por mecanismos digitales,False,1,Continuación Voluntaria en Régimen Obligatorio,0.0

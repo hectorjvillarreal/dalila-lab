@@ -1,0 +1,12 @@
+{"instrument_type":"new_law","issuing_body":"Congreso de la Unión","entry_into_force_date":"31-12-2016","legislation_date":"12-2016","implementation_date":"12-2016","regime_affected":["all"],"insurance_branch":["other"],
+"evidence":[{"field":"issuing_body","quote":"Que el Honorable Congreso de la Unión, se ha servido dirigirme el siguiente","location":"Preámbulo"},
+{"field":"instrument_type","quote":"DECRETO por el que se expide la Ley para Determinar el Valor de la Unidad de Medida y Actualización.","location":"Título"},
+{"field":"entry_into_force_date","quote":"La presente Ley entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación.","location":"Transitorio Primero"},
+{"field":"implementation_date","quote":"La presente Ley entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación.","location":"Transitorio Primero"},
+{"field":"Status of Pension Reform","quote":"La presente Ley entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación.","location":"Transitorio Primero"}],
+"episodes":[{"label":"Método de cálculo de la UMA con el INPC","core":true,"Pension Reform Types":["indexation"],"financing_indexation_change":"changed_to_inflation","Reform_category":"Parametric reform","reform_coverage":"Broad-based reform","relevancetopr_score":4.0,"legal_references":["Ley UMA, artículo 4","Ley UMA, artículo 5"],
+"evidence":[{"field":"financing_indexation_change","quote":"por el resultado de la suma de uno más la variación interanual del índice Nacional de Precios al Consumidor del mes de diciembre del año inmediato anterior","location":"Artículo 4, fracción I"},
+{"field":"Pension Reform Types","quote":"El valor actualizado de la UMA se calculará y determinará anualmente por el INEGI","location":"Artículo 4"},
+{"field":"reform_coverage","quote":"previstos en las leyes federales, de las entidades federativas y de la Ciudad de México","location":"Artículo 2, fracción III"},
+{"field":"regime_affected","quote":"previstos en las leyes federales, de las entidades federativas y de la Ciudad de México","location":"Artículo 2, fracción III"},
+{"field":"legal_references","quote":"entrarán en vigor dichos valores el 1o. de febrero de dicho año","location":"Artículo 5"}]}]}

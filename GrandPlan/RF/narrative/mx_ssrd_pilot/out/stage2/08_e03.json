@@ -1,0 +1,157 @@
+{
+ "doc_id": "08",
+ "episode": 3,
+ "label": "Gradual increase in state social contribution (2021-2023)",
+ "summary": "EPISODE: Gradual increase in state social contribution (2021-2023)\nfield name | value | \"verbatim quote\" | where in the text\n--- | --- | --- | ---\n1. Country Name | Mexico | \"Estados Unidos Mexicanos\" | Top of text\n2. Year of the article | 2020 | \"DOF: 16/12/2020\" | Top of text\n3. Status of Pension Reform | Legislated, Implemented | \"DECRETO... SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES\" | Top of text\n4. legislation_date | 12-2020 | \"DOF: 16/12/2020\" | Top of text\n5. Planned_date | 01-2021 | \"El presente Decreto entrará en vigor el 1 de enero de 2021\" | Transitorios Primero\n6. announcement_date | 12-2020 | \"Ciudad de México, a 9 de diciembre de 2020\" | End of text\n7. implementation_date | 01-2021 | \"El presente Decreto entrará en vigor el 1 de enero de 2021\" | Transitorios Primero\n8. reversal_date | | |\n9. Pension Reform Types | funding mechanisms | \"El Gobierno Federal seguirá cubriendo en los ramos de cesantía en edad avanzada y vejez, la cuota social... Del 1 de enero de 2021 al 31 de diciembre de 2022\" | Transitorios Segundo\n10. indexation_change | | |\n11. coverage_change | | |\n12. benefit_change | | |\n13. Social_insurance_change | Yes | \"El Gobierno Federal... aportará mensualmente una cantidad por concepto de la cuota social\" | Artículo 168\n14. Reform_category | Parametric reform | \"SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES\" | Top of text\n15. reform_coverage | Broad-based reform | \"El Gobierno Federal seguirá cubriendo en los ramos de cesantía en edad avanzada y vejez, la cuota social\" | Transitorios Segundo\n16. reason_reform | Fiscal reasons | \"El Gobierno Federal seguirá cubriendo en los ramos de cesantía en edad avanzada y vejez, la cuota social\" | Transitorios Segundo\n17. relevancetopr_score | 8.0 | \"El Gobierno Federal seguirá cubriendo en los ramos de cesantía en edad avanzada y vejez, la cuota social\" | Transitorios Segundo\n18. retirement_age_change | | |\n19. Retirement_age_change_details | | |\n20. Retirement_age_pre_reform_female | | |\n21. Retirement_age_after_reform_female | | |\n22. Retirement_age_pre_reform_male | | |\n23. Retirement_age_after_reform_male | | |\n24. Contribution_rate_change | contribution rate increased | \"El Gobierno Federal seguirá cubriendo en los ramos de cesantía en edad avanzada y vejez, la cuota social\" | Transitorios Segundo\n25. Old Employer Contribution Rate | 3.15% | \"Los patrones seguirán cubriendo... una cuota del tres punto ciento cincuenta por ciento\" | Transitorios Segundo\n26. New Employer Contribution Rate | 4.202% | \"1.01 SM a 1.50 UMA... 4.202%\" | Artículo 168\n27. Old Employee Contribution Rate | 1.125% | \"Los trabajadores cubrirán una cuota del uno punto ciento veinticinco por ciento\" | Artículo 168\n28. New Employee Contribution Rate | 1.125% | \"Los trabajadores cubrirán una cuota del uno punto ciento veinticinco por ciento\" | Artículo 168\n29. Old Contribution Rate (Employee and Employer Combined) | 4.275% | \"3.15% + 1.125%\" | Inferred from rates\n30. New Contribution Rate",
+ "attempts": 1,
+ "valid": true,
+ "errors": [],
+ "record": {
+  "Country Name": "Mexico",
+  "Year of the article": "2020",
+  "Status of Pension Reform": [
+   "Legislated",
+   "Implemented"
+  ],
+  "legislation_date": "12-2020",
+  "Planned_date": "01-2021",
+  "announcement_date": "12-2020",
+  "implementation_date": "01-2021",
+  "reversal_date": "Not explicitly mentioned",
+  "Pension Reform Types": [
+   "funding mechanisms"
+  ],
+  "indexation_change": "Not explicitly mentioned",
+  "coverage_change": "Not explicitly mentioned",
+  "benefit_change": "Not explicitly mentioned",
+  "Social_insurance_change": "Yes",
+  "Reform_category": "Parametric reform",
+  "reform_coverage": "Broad-based reform",
+  "reason_reform": [
+   "Fiscal reasons"
+  ],
+  "relevancetopr_score": 8.0,
+  "retirement_age_change": "Not explicitly mentioned",
+  "Retirement_age_change_details": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+  "Retirement_age_after_reform_female": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+  "Retirement_age_after_reform_male": "Not explicitly mentioned",
+  "Contribution_rate_change": "contribution rate increased",
+  "Old Employer Contribution Rate": "3.15%",
+  "New Employer Contribution Rate": "4.202%",
+  "Old Employee Contribution Rate": "1.125%",
+  "New Employee Contribution Rate": "1.125%",
+  "Old Contribution Rate (Employee and Employer Combined)": "4.275%",
+  "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "Is the legislated pension reform minor or major?": "Minor",
+  "instrument_type": "new_law",
+  "issuing_body": "Not explicitly mentioned",
+  "dof_publication_date": "16-12-2020",
+  "entry_into_force_date": "01-01-2021",
+  "legal_references": [
+   "Artículo 168",
+   "Transitorios Primero",
+   "Transitorios Segundo"
+  ],
+  "regime_affected": [
+   "issste_2007_accounts"
+  ],
+  "insurance_branch": [
+   "RCV"
+  ],
+  "financing_indexation_change": "Not explicitly mentioned",
+  "fiscal_magnitude_stated": "Not explicitly mentioned",
+  "implicit_liability_direction": "decreases",
+  "fields_inferred": [
+   "Old Contribution Rate (Employee and Employer Combined)"
+  ],
+  "evidence": [
+   {
+    "field": "Country Name",
+    "quote": "Estados Unidos Mexicanos",
+    "location": "Top of text"
+   },
+   {
+    "field": "Year of the article",
+    "quote": "DOF: 16/12/2020",
+    "location": "Top of text"
+   },
+   {
+    "field": "Status of Pension Reform",
+    "quote": "DECRETO... SE REFORMAN, ADICIONAN Y DEROGAN DIVERSAS DISPOSICIONES",
+    "location": "Top of text"
+   },
+   {
+    "field": "legislation_date",
+    "quote": "DOF: 16/12/2020",
+    "location": "Top of text"
+   },
+   {
+    "field": "Planned_date",
+    "quote": "El presente Decreto entrará en vigor el 1 de enero de 2021",
+    "location": "Transitorios Primero"
+   },
+   {
+    "field": "announcement_date",
+    "quote": "Ciudad de México, a 9 de diciembre de 2020",
+    "location": "End of text"
+   },
+   {
+    "field": "implementation_date",
+    "quote": "El presente Decreto entrará en vigor el 1 de enero de 2021",
+    "location": "Transitorios Primero"
+   },
+   {
+    "field": "Pension Reform Types",
+    "quote": "El Gobierno Federal seguirá cubriendo en los ramos de cesantía en edad avanzada y vejez, la cuota social... Del 1 de enero de 2021 al 31 de diciembre de 2022",
+    "location": "Transitorios Segundo"
+   },
+   {
+    "field": "Social_insurance_change",
+    "quote": "El Gobierno Federal... aportará mensualmente una cantidad por concepto de la cuota social",
+    "location": "Artículo 168"
+   },
+   {
+    "field": "Contribution_rate_change",
+    "quote": "El Gobierno Federal seguirá cubriendo en los ramos de cesantía en edad avanzada y vejez, la cuota social",
+    "location": "Transitorios Segundo"
+   },
+   {
+    "field": "Old Employer Contribution Rate",
+    "quote": "Los patrones seguirán cubriendo... una cuota del tres punto ciento cincuenta por ciento",
+    "location": "Transitorios Segundo"
+   },
+   {
+    "field": "New Employer Contribution Rate",
+    "quote": "1.01 SM a 1.50 UMA... 4.202%",
+    "location": "Artículo 168"
+   },
+   {
+    "field": "Old Employee Contribution Rate",
+    "quote": "Los trabajadores cubrirán una cuota del uno punto ciento veinticinco por ciento",
+    "location": "Artículo 168"
+   },
+   {
+    "field": "New Employee Contribution Rate",
+    "quote": "Los trabajadores cubrirán una cuota del uno punto ciento veinticinco por ciento",
+    "location": "Artículo 168"
+   }
+  ],
+  "source_file": "08_dof_20201216_lss_lsar.html",
+  "chunk_ids": [
+   "08_full"
+  ]
+ },
+ "raw_failed": null,
+ "metrics": [
+  {
+   "wall_s": 30.5,
+   "prompt_tokens": 2492,
+   "gen_tokens": 1412,
+   "gen_s": 29.7,
+   "prompt_s": 0.5,
+   "done_reason": "stop"
+  }
+ ]
+}

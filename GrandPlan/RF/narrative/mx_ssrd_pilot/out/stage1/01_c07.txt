@@ -1,0 +1,119 @@
+### EPISODE 1: Ley del Seguro Social 1995 (Reforma estructural a cuentas individuales)
+field name | value | "verbatim quote" | where in the text
+--- | --- | --- | ---
+1. Country Name | Mexico | "Estados Unidos Mexicanos" | Top of text
+2. Year of the article | 1995 | "DOF: 21/12/1995" | Top of text
+3. Status of Pension Reform | Legislated, Implemented | "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete" | Transitorio Primero
+4. legislation_date | 12-1995 | "DOF: 21/12/1995" | Top of text
+5. Planned_date | 01-1997 | "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete" | Transitorio Primero
+6. announcement_date | N/A | INFERRED | N/A
+7. implementation_date | 01-1997 | "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete" | Transitorio Primero
+8. reversal_date | N/A | INFERRED | N/A
+9. Pension Reform Types | systematic (structural) pension reforms; pension plan types (DC); investment strategies; administration and governance; funding mechanisms | "Los fondos de las subcuentas del seguro de retiro, se transferirán a las Administradoras de Fondos para el Retiro, las que los mantendrán invertidos en estas subcuentas separadas de las subcuentas a que se refiere el artículo 159 fracción I." | Decimo Séptimo
+10. indexation_change | INFERRED | INFERRED | N/A
+11. coverage_change | extended coverage | "La incorporación al régimen obligatorio de los trabajadores de entidades paraestatales descentralizadas cuyos contratos colectivos de trabajo consignen prestaciones superiores a las de la presente Ley, se efectuará a partir de la fecha de la aprobación del estudio correspondiente." | Vigésimo
+12. benefit_change | INFERRED | INFERRED | N/A
+13. Social_insurance_change | Yes | "El Seguro Social es el instrumento básico de la seguridad social, establecido como un servicio público de carácter nacional en los términos de esta Ley" | Artículo 4
+14. Reform_category | Structural reform | "Los fondos de las subcuentas del seguro de retiro, se transferirán a las Administradoras de Fondos para el Retiro" | Decimo Séptimo
+15. reform_coverage | Broad-based reform | "La presente Ley es de observancia general en toda la República" | Artículo 1
+16. reason_reform | Economic growth; Fiscal reasons | INFERRED | N/A
+17. relevancetopr_score | 10.0 | "Los fondos de las subcuentas del seguro de retiro, se transferirán a las Administradoras de Fondos para el Retiro" | Decimo Séptimo
+18. retirement_age_change | N/A | INFERRED | N/A
+19. Retirement_age_change_details | N/A | INFERRED | N/A
+20. Retirement_age_pre_reform_female | N/A | INFERRED | N/A
+21. Retirement_age_after_reform_female | N/A | INFERRED | N/A
+22. Retirement_age_pre_reform_male | N/A | INFERRED | N/A
+23. Retirement_age_after_reform_male | N/A | INFERRED | N/A
+24. Contribution_rate_change | INFERRED | INFERRED | N/A
+25. Old Employer Contribution Rate | N/A | INFERRED | N/A
+26. New Employer Contribution Rate | N/A | INFERRED | N/A
+27. Old Employee Contribution Rate | N/A | INFERRED | N/A
+28. New Employee Contribution Rate | N/A | INFERRED | N/A
+29. Old Contribution Rate (Employee and Employer Combined) | N/A | INFERRED | N/A
+30. New Contribution Rate (Employee and Employer Combined) | N/A | INFERRED | N/A
+31. Is the legislated pension reform minor or major | Major | "Los fondos de las subcuentas del seguro de retiro, se transferirán a las Administradoras de Fondos para el Retiro" | Decimo Séptimo
+32. instrument_type | law_reform | "LEY DEL SEGURO SOCIAL" | Title
+33. issuing_body | Congreso de la Unión | "EL CONGRESO DE LOS ESTADOS UNIDOS MEXICANOS, DECRETA:" | Decree header
+34. dof_publication_date | 21-12-1995 | "DOF: 21/12/1995" | Top of text
+35. entry_into_force_date | 01-01-1997 | "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete" | Transitorio Primero
+36. legal_references | Artículo 1; Artículo 2; Artículo 4; Artículo 5; Artículo 6; Artículo 7; Artículo 8; Artículo 106; Artículo 284 | "Artículo 1. La presente Ley es de observancia general..." | Throughout text
+37. regime_affected | all | "El Seguro Social comprende: I. El régimen obligatorio, y II. El régimen voluntario." | Artículo 6
+38. insurance_branch | IV; RCV; SEM | "pensiones de vejez, cesantía en edad avanzada o riesgos de trabajo" | Decimo Primero
+39. financing_indexation_change | other | "La tasa sobre el salario mínimo general diario del Distrito Federal... se incrementará... en sesenta y cinco centésimas de punto porcentual" | Decimo Noveno
+40. fiscal_magnitude_stated | N/A | INFERRED | N/A
+41. implicit_liability_direction | decreases | "Los acumulados en los ramos de cesantía en edad avanzada y vejez serán entregados por las Administradoras de Fondos para el Retiro al Gobierno Federal." | Decimo Tercero
+
+### EPISODE 2: Ley del Seguro Social 1995 (Ajuste de tasas de cotización)
+field name | value | "verbatim quote" | where in the text
+--- | --- | --- | ---
+1. Country Name | Mexico | "Estados Unidos Mexicanos" | Top of text
+2. Year of the article | 1995 | "DOF: 21/12/1995" | Top of text
+3. Status of Pension Reform | Legislated, Implemented | "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete" | Transitorio Primero
+4. legislation_date | 12-1995 | "DOF: 21/12/1995" | Top of text
+5. Planned_date | 01-1997 | "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete" | Transitorio Primero
+6. announcement_date | N/A | INFERRED | N/A
+7. implementation_date | 01-1997 | "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete" | Transitorio Primero
+8. reversal_date | N/A | INFERRED | N/A
+9. Pension Reform Types | funding mechanisms | "La tasa sobre el salario mínimo general diario del Distrito Federal a que se refiere la fracción I del artículo 106, se incrementará el primero de julio de cada año en sesenta y cinco centésimas de punto porcentual." | Decimo Noveno
+10. indexation_change | INFERRED | INFERRED | N/A
+11. coverage_change | N/A | INFERRED | N/A
+12. benefit_change | N/A | INFERRED | N/A
+13. Social_insurance_change | Yes | "El Seguro Social es el instrumento básico de la seguridad social" | Artículo 4
+14. Reform_category | Parametric reform | "La tasa sobre el salario mínimo general diario del Distrito Federal a que se refiere la fracción I del artículo 106, se incrementará..." | Decimo Noveno
+15. reform_coverage | Broad-based reform | "La presente Ley es de observancia general en toda la República" | Artículo 1
+16. reason_reform | Economic growth | INFERRED | N/A
+17. relevancetopr_score | 8.0 | "La tasa sobre el salario mínimo general diario del Distrito Federal a que se refiere la fracción I del artículo 106, se incrementará..." | Decimo Noveno
+18. retirement_age_change | N/A | INFERRED | N/A
+19. Retirement_age_change_details | N/A | INFERRED | N/A
+20. Retirement_age_pre_reform_female | N/A | INFERRED | N/A
+21. Retirement_age_after_reform_female | N/A | INFERRED | N/A
+22. Retirement_age_pre_reform_male | N/A | INFERRED | N/A
+23. Retirement_age_after_reform_male | N/A | INFERRED | N/A
+24. Contribution_rate_change | contribution rate decreased | "Las tasas a que se refiere la fracción II del artículo 106, se reducirán el primero de julio de cada año en cuarenta y nueve centésimas de punto porcentual la que corresponde a los patrones y en dieciséis centésimas de punto porcentual la que corresponde pagar a los trabajadores." | Decimo Noveno
+25. Old Employer Contribution Rate | N/A | INFERRED | N/A
+26. New Employer Contribution Rate | N/A | INFERRED | N/A
+27. Old Employee Contribution Rate | N/A | INFERRED | N/A
+28. New Employee Contribution Rate | N/A | INFERRED | N/A
+29. Old Contribution Rate (Employee and Employer Combined) | N/A | INFERRED | N/A
+30. New Contribution Rate (Employee and Employer Combined) | N/A | INFERRED | N/A
+31. Is the legislated pension reform minor or major | Minor | "La tasa sobre el salario mínimo general diario del Distrito Federal a que se refiere la fracción I del artículo 106, se incrementará..." | Decimo Noveno
+32. instrument_type | law_reform | "LEY DEL SEGURO SOCIAL" | Title
+33. issuing_body | Congreso de la Unión | "EL CONGRESO DE LOS ESTADOS UNIDOS MEXICANOS, DECRETA:" | Decree header
+34. dof_publication_date | 21-12-1995 | "DOF: 21/12/1995" | Top of text
+35. entry_into_force_date | 01-01-1997 | "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete" | Transitorio Primero
+36. legal_references | Artículo 106 | "La tasa sobre el salario mínimo general diario del Distrito Federal a que se refiere la fracción I del artículo 106" | Decimo Noveno
+37. regime_affected | all | "La presente Ley es de observancia general en toda la República" | Artículo 1
+38. insurance_branch | IV; RCV; SEM | "pensiones de vejez, cesantía en edad avanzada o riesgos de trabajo" | Decimo Primero
+39. financing_indexation_change | other | "La tasa sobre el salario mínimo general diario del Distrito Federal a que se refiere la fracción I del artículo 106, se incrementará..." | Decimo Noveno
+40. fiscal_magnitude_stated | N/A | INFERRED | N/A
+41. implicit_liability_direction | ambiguous | "La tasa sobre el salario mínimo general diario del Distrito Federal a que se refiere la fracción I del artículo 106, se incrementará..." | Decimo Noveno
+
+### EPISODE 3: Ley del Seguro Social 1995 (Límites de salario base de cotización)
+field name | value | "verbatim quote" | where in the text
+--- | --- | --- | ---
+1. Country Name | Mexico | "Estados Unidos Mexicanos" | Top of text
+2. Year of the article | 1995 | "DOF: 21/12/1995" | Top of text
+3. Status of Pension Reform | Legislated, Implemented | "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete" | Transitorio Primero
+4. legislation_date | 12-1995 | "DOF: 21/12/1995" | Top of text
+5. Planned_date | 01-1997 | "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete" | Transitorio Primero
+6. announcement_date | N/A | INFERRED | N/A
+7. implementation_date | 01-1997 | "Esta Ley entrará en vigor en toda la República el día primero de enero de mil novecientos noventa y siete" | Transitorio Primero
+8. reversal_date | N/A | INFERRED | N/A
+9. Pension Reform Types | funding mechanisms | "A partir de la entrada en vigor de esta Ley el límite del salario base de cotización en veces salario mínimo para el seguro de invalidez y vida, así como para los ramos de cesantía en edad avanzada y vejez, será de quince veces salario mínimo general vigente en el Distrito Federal" | Vigésimo Quinto
+10. indexation_change | INFERRED | INFERRED | N/A
+11. coverage_change | N/A | INFERRED | N/A
+12. benefit_change | N/A | INFERRED | N/A
+13. Social_insurance_change | Yes | "El Seguro Social es el instrumento básico de la seguridad social" | Artículo 4
+14. Reform_category | Parametric reform | "A partir de la entrada en vigor de esta Ley el límite del salario base de cotización en veces salario mínimo para el seguro de invalidez y vida..." | Vigésimo Quinto
+15. reform_coverage | Broad-based reform | "La presente Ley es de observancia general en toda la República" | Artículo 1
+16. reason_reform | Economic growth | INFERRED | N/A
+17. relevancetopr_score | 7.0 | "A partir de la entrada en vigor de esta Ley el límite del salario base de cotización en veces salario mínimo para el seguro de invalidez y vida..." | Vigésimo Quinto
+18. retirement_age_change | N/A | INFERRED | N/A
+19. Retirement_age_change_details | N/A | INFERRED | N/A
+20. Retirement_age_pre_reform_female | N/A | INFERRED | N/A
+21. Retirement_age_after_reform_female | N/A | INFERRED | N/A
+22. Retirement_age_pre_reform_male | N/A | INFERRED | N/A
+23. Retirement_age_after_reform_male | N/A | INFERRED | N/A
+24. Contribution_rate_change | N/A | INFERRED | N/A
+25. Old Employer Contribution Rate | N/A | INFERRED | N/A
+2

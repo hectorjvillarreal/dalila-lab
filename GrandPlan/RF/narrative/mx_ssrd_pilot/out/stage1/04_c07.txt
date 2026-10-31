@@ -1,0 +1,44 @@
+### EPISODE 1: ISSSTE Pension Reform (2007)
+field name | value | "verbatim quote" | where in the text
+--- | --- | --- | ---
+1. Country Name | Mexico | |
+2. Year of the article | 2007 | DOF: 31/03/2007 | Top of text
+3. Status of Pension Reform | Legislated, Implemented | |
+4. legislation_date | 03-2007 | DOF: 31/03/2007 | Top of text
+5. Planned_date | | |
+6. announcement_date | | |
+7. implementation_date | 04-2007 | "La presente Ley entrará en vigor el día siguiente al de su publicación" | Transitorio Primero
+8. reversal_date | | |
+9. Pension Reform Types | funding mechanisms; eligibility and access; benefit rule changes; administration and governance | |
+10. indexation_change | | |
+11. coverage_change | | |
+12. benefit_change | less generous benefits | "Los Trabajadores que hubieren cotizado treinta años o más... tendrán derecho a Pensión por Jubilación equivalente al cien por ciento del promedio del Sueldo Básico de su último año de servicio" (reduced from previous rules) | Décimo
+13. Social_insurance_change | Yes | |
+14. Reform_category | Parametric reform | |
+15. reform_coverage | Broad-based reform | |
+16. reason_reform | Fiscal reasons; Economic impact | |
+17. relevancetopr_score | 10.0 | |
+18. retirement_age_change | retirement age increased | "A partir del primero de enero de dos mil diez... Edad Mínima de Jubilación Trabajadores... 2010 y 2011 | 51" | Décimo
+19. Retirement_age_change_details | Male: 51 (2010), Female: 49 (2010) | "2010 y 2011 | 51 | 49" | Décimo
+20. Retirement_age_pre_reform_female | 45 | INFERRED | Not explicitly stated in this chunk
+21. Retirement_age_after_reform_female | 49 | "2010 y 2011 | 51 | 49" | Décimo
+22. Retirement_age_pre_reform_male | 50 | INFERRED | Not explicitly stated in this chunk
+23. Retirement_age_after_reform_male | 51 | "2010 y 2011 | 51 | 49" | Décimo
+24. Contribution_rate_change | contribution rate increased | "La Cuota por el seguro de retiro, cesantía en edad avanzada y vejez correspondiente a los Trabajadores se deberá ajustar a lo dispuesto en la tabla siguiente: A la entrada en vigor de esta Ley | 3.5%... 2012 en adelante | 6.125%" | Trigésimo Primero
+25. Old Employer Contribution Rate | | INFERRED | Not explicitly stated in this chunk
+26. New Employer Contribution Rate | | INFERRED | Not explicitly stated in this chunk
+27. Old Employee Contribution Rate | 3.5% | "A la entrada en vigor de esta Ley | 3.5%" | Trigésimo Primero
+28. New Employee Contribution Rate | 6.125% | "2012 en adelante | 6.125%" | Trigésimo Primero
+29. Old Contribution Rate (Employee and Employer Combined) | | INFERRED | Not explicitly stated in this chunk
+30. New Contribution Rate (Employee and Employer Combined) | | INFERRED | Not explicitly stated in this chunk
+31. Is the legislated pension reform minor or major | Major | |
+32. instrument_type | law_reform | |
+33. issuing_body | Ejecutivo Federal | "PODER EJECUTIVO" | Top of text
+34. dof_publication_date | 31-03-2007 | DOF: 31/03/2007 | Top of text
+35. entry_into_force_date | 01-04-2007 | "La presente Ley entrará en vigor el día siguiente al de su publicación" | Transitorio Primero
+36. legal_references | Articles 42, 75, 101, 140, 193, 199 | "con excepción de los artículos 42, 75, 101, 140, 193 y 199" | Transitorio Primero
+37. regime_affected | issste_decimo_transitorio | |
+38. insurance_branch | IV, RCV, SEM | |
+39. financing_indexation_change | changed_to_uma | "El valor nominal de emisión expresado en unidades de inversión de los Bonos de Pensión del ISSSTE" | Noveno
+40. fiscal_magnitude_stated | 2000 million pesos (Fondo de préstamos), 8000 million pesos (Seguro de salud) | "El Gobierno Federal... suministrará adicionalmente, por una sola vez, la cantidad de dos mil millones de pesos" | Vigésimo Octavo
+41. implicit_liability_direction | increases | "El Gobierno Federal deberá apoyar al Instituto, proveyendo los recursos necesarios" | Vigésimo Tercero

@@ -1,0 +1,110 @@
+{
+ "doc_id": "04",
+ "episode": 4,
+ "label": "Early retirement withdrawal rules",
+ "summary": "EPISODE: Early retirement withdrawal rules\nlegislation_date | 03-2007 | \"Artículo 54. El Trabajador o sus Familiares Derechohabientes que adquieran el derecho a disfrutar de una Pensión proveniente de algún plan establecido por su Dependencia o Entidad, que haya sido autorizado y registrado por la Comisión Nacional del Sistema de Ahorro para el Retiro, debiendo cumplir los requisitos establecidos por ésta, tendrá derecho a que el PENSIONISSSTE o la Administradora que opere su Cuenta Individual, le entregue los recursos que la integran antes de cumplir las edades y tiempo de cotización establecidas en el Capítulo VI de esta Ley, situándolos en la entidad financiera que el Trabajador designe, a fin de adquirir una Renta vitalicia o bien entregándoselos en una sola exhibición, cuando la Pensión de que disfrute sea mayor al menos en un treinta por ciento a la Garantizada.\" | Article 54\nbenefit_rule_changes | Yes | \"Artículo 54. El Trabajador o sus Familiares Derechohabientes que adquieran el derecho a disfrutar de una Pensión... tendrá derecho a que el PENSIONISSSTE o la Administradora que opere su Cuenta Individual, le entregue los recursos que la integran antes de cumplir las edades y tiempo de cotización...\" | Article 54\npension_plan_types | DC | \"Artículo 54. El Trabajador o sus Familiares Derechohabientes que adquieran el derecho a disfrutar de una Pensión proveniente de algún plan establecido por su Dependencia o Entidad...\" | Article 54\nrelevancetopr_score | 9.0 | \"Artículo 54. El Trabajador o sus Familiares Derechohabientes que adquieran el derecho a disfrutar de una Pensión...\" | Article 54",
+ "attempts": 1,
+ "valid": true,
+ "errors": [],
+ "record": {
+  "Country Name": "Mexico",
+  "Year of the article": "2007",
+  "Status of Pension Reform": [
+   "Legislated",
+   "Implemented"
+  ],
+  "legislation_date": "03-2007",
+  "Planned_date": "Not explicitly mentioned",
+  "announcement_date": "Not explicitly mentioned",
+  "implementation_date": "Not explicitly mentioned",
+  "reversal_date": "Not explicitly mentioned",
+  "Pension Reform Types": [
+   "eligibility and access"
+  ],
+  "indexation_change": "Not explicitly mentioned",
+  "coverage_change": "Not explicitly mentioned",
+  "benefit_change": "Not explicitly mentioned",
+  "Social_insurance_change": "Yes",
+  "Reform_category": "Structural reform",
+  "reform_coverage": "Broad-based reform",
+  "reason_reform": [
+   "Not explicitly mentioned"
+  ],
+  "relevancetopr_score": 9.0,
+  "retirement_age_change": "Not explicitly mentioned",
+  "Retirement_age_change_details": "El Trabajador o sus Familiares Derechohabientes... tendrá derecho a que el PENSIONISSSTE o la Administradora que opere su Cuenta Individual, le entregue los recursos que la integran antes de cumplir las edades y tiempo de cotización establecidas en el Capítulo VI de esta Ley, situándolos en la entidad financiera que el Trabajador designe, a fin de adquirir una Renta vitalicia o bien entregándoselos en una sola exhibición, cuando la Pensión de que disfrute sea mayor al menos en un treinta por ciento a la Garantizada.",
+  "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+  "Retirement_age_after_reform_female": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+  "Retirement_age_after_reform_male": "Not explicitly mentioned",
+  "Contribution_rate_change": "Not explicitly mentioned",
+  "Old Employer Contribution Rate": "Not explicitly mentioned",
+  "New Employer Contribution Rate": "Not explicitly mentioned",
+  "Old Employee Contribution Rate": "Not explicitly mentioned",
+  "New Employee Contribution Rate": "Not explicitly mentioned",
+  "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "Is the legislated pension reform minor or major?": "Major",
+  "instrument_type": "new_law",
+  "issuing_body": "Congreso de la Unión",
+  "dof_publication_date": "31-03-2007",
+  "entry_into_force_date": "Not explicitly mentioned",
+  "legal_references": [
+   "Artículo 54"
+  ],
+  "regime_affected": [
+   "issste_2007_accounts"
+  ],
+  "insurance_branch": [
+   "RCV"
+  ],
+  "financing_indexation_change": "Not explicitly mentioned",
+  "fiscal_magnitude_stated": "Not explicitly mentioned",
+  "implicit_liability_direction": "Not explicitly mentioned",
+  "fields_inferred": [],
+  "evidence": [
+   {
+    "field": "legislation_date",
+    "quote": "03-2007",
+    "location": "EPISODE SUMMARY"
+   },
+   {
+    "field": "benefit_change",
+    "quote": "Artículo 54. El Trabajador o sus Familiares Derechohabientes que adquieran el derecho a disfrutar de una Pensión proveniente de algún plan establecido por su Dependencia o Entidad, que haya sido autorizado y registrado por la Comisión Nacional del Sistema de Ahorro para el Retiro, debiendo cumplir los requisitos establecidos por ésta, tendrá derecho a que el PENSIONISSSTE o la Administradora que opere su Cuenta Individual, le entregue los recursos que la integran antes de cumplir las edades y tiempo de cotización establecidas en el Capítulo VI de esta Ley, situándolos en la entidad financiera que el Trabajador designe, a fin de adquirir una Renta vitalicia o bien entregándoselos en una sola exhibición, cuando la Pensión de que disfrute sea mayor al menos en un treinta por ciento a la Garantizada.",
+    "location": "Article 54"
+   },
+   {
+    "field": "Pension Reform Types",
+    "quote": "DC",
+    "location": "pension_plan_types"
+   },
+   {
+    "field": "relevancetopr_score",
+    "quote": "9.0",
+    "location": "EPISODE SUMMARY"
+   }
+  ],
+  "source_file": "04_dof_20070331_ley_issste.html",
+  "chunk_ids": [
+   "04_c01",
+   "04_c02",
+   "04_c03",
+   "04_c04",
+   "04_c05",
+   "04_c06",
+   "04_c07",
+   "04_c08"
+  ]
+ },
+ "raw_failed": null,
+ "metrics": [
+  {
+   "wall_s": 23.2,
+   "prompt_tokens": 2007,
+   "gen_tokens": 1108,
+   "gen_s": 22.8,
+   "prompt_s": 0.4,
+   "done_reason": "stop"
+  }
+ ]
+}

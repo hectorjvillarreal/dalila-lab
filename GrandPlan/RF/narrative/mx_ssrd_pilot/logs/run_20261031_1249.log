@@ -1,0 +1,45 @@
+2026-10-31T12:49:13 model=qwen3.5:9b digest=56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90 options={'temperature': 0, 'seed': 20261031, 'top_p': 1, 'num_ctx': 16384, 'presence_penalty': 0} think_stage1=False predict=(3500,6000)
+2026-10-31T12:49:13 sha256 prompts/stage1.txt f441406f06501eba204718d15db3e39befc969d19f98f4184037cda557b0f140
+2026-10-31T12:49:13 sha256 prompts/stage2.txt f08203430007fb42e7261862621cf4e88e735f06619f95b17ba4b7e804c29cba
+2026-10-31T12:49:13 sha256 schema/mx_ssrd.schema.json 344ef3c35bf58160b97c06782759e3eebe8cf36ca9967331d79c8054114e76f4
+2026-10-31T12:49:13 sha256 manifest.yaml deaf805e541b0e7d7e0dddc4c961d287ad6576d792042762e423de5583b895c5
+2026-10-31T12:49:14 loaded: size=6021573508 size_vram=6021573508 gpu_share=1.000 ctx=16384
+2026-10-31T12:49:14 chunk limit chars=38268 transitorios_split=['04']
+2026-10-31T12:49:47 stage1 01_c01 {'wall_s': 32.9, 'prompt_tokens': 10351, 'gen_tokens': 1231, 'gen_s': 27.0, 'prompt_s': 5.7, 'done_reason': 'stop'}
+2026-10-31T12:50:19 stage1 01_c02 {'wall_s': 32.8, 'prompt_tokens': 11632, 'gen_tokens': 1161, 'gen_s': 25.7, 'prompt_s': 6.5, 'done_reason': 'stop'}
+2026-10-31T12:50:54 stage1 01_c03 {'wall_s': 34.6, 'prompt_tokens': 11546, 'gen_tokens': 1240, 'gen_s': 27.5, 'prompt_s': 6.5, 'done_reason': 'stop'}
+2026-10-31T12:51:32 stage1 01_c04 {'wall_s': 37.6, 'prompt_tokens': 11415, 'gen_tokens': 1372, 'gen_s': 30.5, 'prompt_s': 6.4, 'done_reason': 'stop'}
+2026-10-31T12:52:03 stage1 01_c05 {'wall_s': 31.9, 'prompt_tokens': 11311, 'gen_tokens': 1130, 'gen_s': 25.1, 'prompt_s': 6.3, 'done_reason': 'stop'}
+2026-10-31T12:52:37 stage1 01_c06 {'wall_s': 33.1, 'prompt_tokens': 7580, 'gen_tokens': 1315, 'gen_s': 28.5, 'prompt_s': 4.2, 'done_reason': 'stop'}
+2026-10-31T12:53:57 stage1 01_c07 {'wall_s': 80.3, 'prompt_tokens': 6634, 'gen_tokens': 3500, 'gen_s': 76.2, 'prompt_s': 3.6, 'done_reason': 'length'}
+2026-10-31T12:54:32 stage1 01_merge_r1b1 {'wall_s': 34.7, 'prompt_tokens': 12742, 'gen_tokens': 1199, 'gen_s': 26.9, 'prompt_s': 7.2, 'done_reason': 'stop'}
+2026-10-31T12:54:32 doc 01: 0 episodes after stage 1 (318s)
+2026-10-31T12:54:32 doc 01 done in 318s, peak VRAM so far 6779 MiB
+2026-10-31T12:55:03 stage1 02_c01 {'wall_s': 31.0, 'prompt_tokens': 9434, 'gen_tokens': 1139, 'gen_s': 25.0, 'prompt_s': 5.2, 'done_reason': 'stop'}
+2026-10-31T12:55:36 stage1 02_c02 {'wall_s': 33.6, 'prompt_tokens': 10270, 'gen_tokens': 1234, 'gen_s': 27.3, 'prompt_s': 5.7, 'done_reason': 'stop'}
+2026-10-31T12:56:09 stage1 02_c03 {'wall_s': 33.0, 'prompt_tokens': 10325, 'gen_tokens': 1197, 'gen_s': 26.4, 'prompt_s': 5.8, 'done_reason': 'stop'}
+2026-10-31T12:56:41 stage1 02_c04 {'wall_s': 31.8, 'prompt_tokens': 10211, 'gen_tokens': 1153, 'gen_s': 25.5, 'prompt_s': 5.7, 'done_reason': 'stop'}
+2026-10-31T12:58:04 stage1 02_c05 {'wall_s': 82.7, 'prompt_tokens': 8932, 'gen_tokens': 3500, 'gen_s': 77.1, 'prompt_s': 4.9, 'done_reason': 'length'}
+2026-10-31T12:58:35 stage1 02_c06 {'wall_s': 31.4, 'prompt_tokens': 3485, 'gen_tokens': 1376, 'gen_s': 29.2, 'prompt_s': 1.9, 'done_reason': 'stop'}
+2026-10-31T12:59:02 stage1 02_c07 {'wall_s': 27.3, 'prompt_tokens': 6084, 'gen_tokens': 1110, 'gen_s': 23.9, 'prompt_s': 3.4, 'done_reason': 'stop'}
+2026-10-31T12:59:35 stage1 02_merge_r1b1 {'wall_s': 32.6, 'prompt_tokens': 12511, 'gen_tokens': 1124, 'gen_s': 25.2, 'prompt_s': 7.1, 'done_reason': 'stop'}
+2026-10-31T12:59:35 doc 02: 1 episodes after stage 1 (303s)
+2026-10-31T13:00:16 stage2 02_e01 try 0 errors=0 {'wall_s': 40.8, 'prompt_tokens': 2734, 'gen_tokens': 1826, 'gen_s': 38.7, 'prompt_s': 1.5, 'done_reason': 'stop'}
+2026-10-31T13:00:16 doc 02 done in 344s, peak VRAM so far 6779 MiB
+2026-10-31T13:00:41 stage1 03_full {'wall_s': 25.2, 'prompt_tokens': 3014, 'gen_tokens': 1099, 'gen_s': 23.3, 'prompt_s': 1.6, 'done_reason': 'stop'}
+2026-10-31T13:00:41 doc 03: 1 episodes after stage 1 (25s)
+2026-10-31T13:01:19 stage2 03_e01 try 0 errors=0 {'wall_s': 38.4, 'prompt_tokens': 2674, 'gen_tokens': 1731, 'gen_s': 36.6, 'prompt_s': 1.5, 'done_reason': 'stop'}
+2026-10-31T13:01:19 doc 03 done in 64s, peak VRAM so far 6779 MiB
+2026-10-31T13:01:46 stage1 04_c01 {'wall_s': 26.5, 'prompt_tokens': 10229, 'gen_tokens': 921, 'gen_s': 20.3, 'prompt_s': 5.7, 'done_reason': 'stop'}
+2026-10-31T13:02:20 stage1 04_c02 {'wall_s': 33.9, 'prompt_tokens': 10225, 'gen_tokens': 1250, 'gen_s': 27.6, 'prompt_s': 5.7, 'done_reason': 'stop'}
+2026-10-31T13:03:10 stage1 04_c03 {'wall_s': 49.9, 'prompt_tokens': 10406, 'gen_tokens': 1959, 'gen_s': 43.4, 'prompt_s': 5.8, 'done_reason': 'stop'}
+2026-10-31T13:04:34 stage1 04_c04 {'wall_s': 84.3, 'prompt_tokens': 10340, 'gen_tokens': 3500, 'gen_s': 77.9, 'prompt_s': 5.8, 'done_reason': 'length'}
+2026-10-31T13:04:40 stage1 04_c05 {'wall_s': 5.8, 'prompt_tokens': 9392, 'gen_tokens': 5, 'gen_s': 0.1, 'prompt_s': 5.2, 'done_reason': 'stop'}
+2026-10-31T13:06:03 stage1 04_c06 {'wall_s': 82.9, 'prompt_tokens': 9084, 'gen_tokens': 3500, 'gen_s': 77.3, 'prompt_s': 5.0, 'done_reason': 'length'}
+2026-10-31T13:06:36 stage1 04_c07 {'wall_s': 33.4, 'prompt_tokens': 10392, 'gen_tokens': 1215, 'gen_s': 26.9, 'prompt_s': 5.8, 'done_reason': 'stop'}
+2026-10-31T13:07:53 stage1 04_c08 {'wall_s': 77.1, 'prompt_tokens': 3350, 'gen_tokens': 3500, 'gen_s': 74.7, 'prompt_s': 1.8, 'done_reason': 'length'}
+2026-10-31T13:09:19 stage1 04_merge_r1b1 {'wall_s': 85.9, 'prompt_tokens': 12933, 'gen_tokens': 3451, 'gen_s': 78.2, 'prompt_s': 7.4, 'done_reason': 'length'}
+2026-10-31T13:10:40 stage1 04_merge_r1b2 {'wall_s': 80.5, 'prompt_tokens': 6517, 'gen_tokens': 3500, 'gen_s': 76.2, 'prompt_s': 3.6, 'done_reason': 'length'}
+2026-10-31T13:12:02 stage1 04_merge_r2b1 {'wall_s': 82.6, 'prompt_tokens': 8754, 'gen_tokens': 3500, 'gen_s': 77.2, 'prompt_s': 4.9, 'done_reason': 'length'}
+2026-10-31T13:12:02 doc 04: 5 episodes after stage 1 (643s)
+2026-10-31T13:12:35 stage2 04_e01 try 0 errors=0 {'wall_s': 32.6, 'prompt_tokens': 2230, 'gen_tokens': 1459, 'gen_s': 30.7, 'prompt_s': 1.2, 'done_reason': 'stop'}

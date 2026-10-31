@@ -1,0 +1,243 @@
+{
+ "doc_id": "04",
+ "episode": 5,
+ "label": "ISSSTE Pension System Reform (2007)",
+ "summary": "EPISODE: ISSSTE Pension System Reform (2007)\nfield name | value | \"verbatim quote\" | where in the text\n--- | --- | --- | ---\n1. Country Name | Mexico | \"DOF: 31/03/2007\" | Top of text\n2. Year of the article | 2007 | \"DOF: 31/03/2007\" | Top of text\n3. Status of Pension Reform | Legislated, Implemented | \"DOF: 31/03/2007\" | Top of text\n4. legislation_date | 03-2007 | \"DOF: 31/03/2007\" | Top of text\n5. Planned_date | INFERRED | INFERRED | N/A\n6. announcement_date | INFERRED | INFERRED | N/A\n7. implementation_date | 04-2007 | \"Día siguiente\" (next calendar day) | Article 97, 98, 103\n8. reversal_date | INFERRED | INFERRED | N/A\n9. Pension Reform Types | funding mechanisms; administration and governance; pension plan types (DC); eligibility and access; indexation; benefit rule changes | \"Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... Cuota Social... cinco punto cinco por ciento\"; \"Artículo 97... Cuenta Individual... PENSIONISSSTE o... Administradora\"; \"Artículo 80... seguro de retiro antes de cumplir las edades... Renta vitalicia... Retiros Programados\"; \"Artículo 92... Pensión Garantizada... actualizará anualmente... Índice Nacional de Precios al Consumidor\" | Articles 80, 84, 89, 92, 97, 102, 103, 109\n10. indexation_change | more generous indexation | \"Artículo 92... misma que se actualizará anualmente, en el mes de febrero, conforme al cambio anualizado del Índice Nacional de Precios al Consumidor\" | Article 92\n11. coverage_change | extended coverage | \"Artículo 80... Los Trabajadores tendrán derecho a un seguro de retiro antes de cumplir las edades y tiempo de cotización establecidas\" | Article 80\n12. benefit_change | more generous benefits | \"Artículo 92... Pensión Garantizada es aquélla que el Estado asegura... monto mensual será la cantidad de tres mil treinta y cuatro pesos con veinte centavos\" | Article 92\n13. Social_insurance_change | Yes | \"Artículo 84... cesantía en edad avanzada... Artículo 88... seguro de vejez\" | Articles 84, 88\n14. Reform_category | Parametric reform | \"Artículo 102... Cuotas y Aportaciones... Artículo 92... Pensión Garantizada\" | Articles 92, 102\n15. reform_coverage | Broad-based reform | \"Artículo 97... A cada Trabajador se le abrirá una Cuenta Individual\" | Article 97\n16. reason_reform | Economic growth; Fiscal reasons; Benefit adequacy | \"Artículo 109... principal objetivo otorgar la mayor seguridad y rentabilidad... incrementar el ahorro interno\" | Article 109\n17. relevancetopr_score | 10.0 | \"DOF: 31/03/2007... Artículo 77... Artículo 102\" | N/A\n18. retirement_age_change | retirement age decreased | \"Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad\" | Articles 84, 89\n19. Retirement_age_change_details | Male: 60 (cessantía), 65 (vejez); Female: Not explicitly mentioned in this chunk | \"Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad\" | Articles 84, 89\n20. Retirement_age_pre_reform_female | INFERRED | INFERRED | N/A\n21. Retirement_age_after_reform_female | INFERRED | INFERRED | N/A\n22. Retirement_age_pre_reform_male | 60 (cessantía), 65 (vejez) | \"Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad\" | Articles 84, 89\n23. Retirement_age_after_reform_male | 60 (cessantía), 65 (vejez) | \"Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad\" | Articles 84, 89\n24. Contribution_rate_change | contribution rate increased | \"Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... cesantía... tres punto ciento setenta y cinco por ciento\" | Article 102\n25. Old Employer Contribution Rate | INFERRED | INFERRED | N/A\n26. New Employer Contribution Rate | 2.0% (retirement) + 3.175% (cessantía/vejez) | \"Artículo 102... Aportación de retiro de dos por ciento, y por cesantía en edad avanzada y vejez, de tres punto ciento setenta y cinco por ciento\" | Article 102\n27. Old Employee Contribution Rate | INFERRED | INFERRED | N/A\n28. New Employee Contribution Rate | 6.125% | \"Artículo 102... Cuota de seis punto ciento veinticinco por ciento del Sueldo Básico\" | Article 102\n29. Old Contribution Rate (Employee and Employer Combined) | INFERRED | INFERRED | N/A\n30. New Contribution Rate (Employee and Employer Combined) | 8.125% (retirement) + 5.175% (cessantía/vejez) | \"Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... cesantía... tres punto ciento setenta y cinco por ciento\" | Article 102\n31. Is the legislated pension reform minor or major | Major | \"Artículo 103... Se crea el Fondo Nacional de Pensiones... PENSIONISSSTE\" | Article 103\n32. instrument_type | law_reform | \"DOF: 31/03/2007... Artículo 77... Artículo 103\" | N/A\n33. issuing_body | Ejecutivo Federal | \"PODER EJECUTIVO... INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO\" | Top of text\n34. dof_publication_date | 31-03-2007 | \"DOF: 31/03/2007\" | Top of text\n35. entry_into_force_date | 01-04-2007 | \"",
+ "attempts": 1,
+ "valid": true,
+ "errors": [],
+ "record": {
+  "Country Name": "Mexico",
+  "Year of the article": "2007",
+  "Status of Pension Reform": [
+   "Legislated",
+   "Implemented"
+  ],
+  "legislation_date": "03-2007",
+  "Planned_date": "Not explicitly mentioned",
+  "announcement_date": "Not explicitly mentioned",
+  "implementation_date": "04-2007",
+  "reversal_date": "Not explicitly mentioned",
+  "Pension Reform Types": [
+   "funding mechanisms",
+   "administration and governance",
+   "pension plan types",
+   "eligibility and access",
+   "indexation",
+   "benefit rule changes"
+  ],
+  "indexation_change": "more generous indexation",
+  "coverage_change": "extended coverage",
+  "benefit_change": "more generous benefits",
+  "Social_insurance_change": "Yes",
+  "Reform_category": "Parametric reform",
+  "reform_coverage": "Broad-based reform",
+  "reason_reform": [
+   "Economic growth",
+   "Fiscal reasons",
+   "Benefit adequacy"
+  ],
+  "relevancetopr_score": 10.0,
+  "retirement_age_change": "retirement age decreased",
+  "Retirement_age_change_details": "Male: 60 (cessantía), 65 (vejez); Female: Not explicitly mentioned in this chunk",
+  "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+  "Retirement_age_after_reform_female": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_male": "60 (cessantía), 65 (vejez)",
+  "Retirement_age_after_reform_male": "60 (cessantía), 65 (vejez)",
+  "Contribution_rate_change": "contribution rate increased",
+  "Old Employer Contribution Rate": "Not explicitly mentioned",
+  "New Employer Contribution Rate": "2.0% (retirement) + 3.175% (cessantía/vejez)",
+  "Old Employee Contribution Rate": "Not explicitly mentioned",
+  "New Employee Contribution Rate": "6.125%",
+  "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "New Contribution Rate (Employee and Employer Combined)": "8.125% (retirement) + 5.175% (cessantía/vejez)",
+  "Is the legislated pension reform minor or major?": "Major",
+  "instrument_type": "law_reform",
+  "issuing_body": "Ejecutivo Federal",
+  "dof_publication_date": "31-03-2007",
+  "entry_into_force_date": "01-04-2007",
+  "legal_references": [
+   "Artículo 77",
+   "Artículo 103"
+  ],
+  "regime_affected": [
+   "issste_2007_accounts"
+  ],
+  "insurance_branch": [
+   "RCV"
+  ],
+  "financing_indexation_change": "changed_to_inflation",
+  "fiscal_magnitude_stated": "Not explicitly mentioned",
+  "implicit_liability_direction": "decreases",
+  "fields_inferred": [
+   "Planned_date",
+   "announcement_date",
+   "reversal_date",
+   "Retirement_age_pre_reform_female",
+   "Retirement_age_after_reform_female",
+   "Old Employer Contribution Rate",
+   "Old Employee Contribution Rate",
+   "Old Contribution Rate (Employee and Employer Combined)",
+   "implicit_liability_direction"
+  ],
+  "evidence": [
+   {
+    "field": "Country Name",
+    "quote": "DOF: 31/03/2007",
+    "location": "Top of text"
+   },
+   {
+    "field": "Year of the article",
+    "quote": "DOF: 31/03/2007",
+    "location": "Top of text"
+   },
+   {
+    "field": "Status of Pension Reform",
+    "quote": "DOF: 31/03/2007",
+    "location": "Top of text"
+   },
+   {
+    "field": "legislation_date",
+    "quote": "DOF: 31/03/2007",
+    "location": "Top of text"
+   },
+   {
+    "field": "implementation_date",
+    "quote": "Día siguiente",
+    "location": "Article 97, 98, 103"
+   },
+   {
+    "field": "Pension Reform Types",
+    "quote": "Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... Cuota Social... cinco punto cinco por ciento",
+    "location": "Articles 80, 84, 89, 92, 97, 102, 103, 109"
+   },
+   {
+    "field": "Pension Reform Types",
+    "quote": "Artículo 97... Cuenta Individual... PENSIONISSSTE o... Administradora",
+    "location": "Articles 80, 84, 89, 92, 97, 102, 103, 109"
+   },
+   {
+    "field": "Pension Reform Types",
+    "quote": "Artículo 80... seguro de retiro antes de cumplir las edades... Renta vitalicia... Retiros Programados",
+    "location": "Articles 80, 84, 89, 92, 97, 102, 103, 109"
+   },
+   {
+    "field": "Pension Reform Types",
+    "quote": "Artículo 92... Pensión Garantizada... actualizará anualmente... Índice Nacional de Precios al Consumidor",
+    "location": "Articles 80, 84, 89, 92, 97, 102, 103, 109"
+   },
+   {
+    "field": "indexation_change",
+    "quote": "Artículo 92... misma que se actualizará anualmente, en el mes de febrero, conforme al cambio anualizado del Índice Nacional de Precios al Consumidor",
+    "location": "Article 92"
+   },
+   {
+    "field": "coverage_change",
+    "quote": "Artículo 80... Los Trabajadores tendrán derecho a un seguro de retiro antes de cumplir las edades y tiempo de cotización establecidas",
+    "location": "Article 80"
+   },
+   {
+    "field": "benefit_change",
+    "quote": "Artículo 92... Pensión Garantizada es aquélla que el Estado asegura... monto mensual será la cantidad de tres mil treinta y cuatro pesos con veinte centavos",
+    "location": "Article 92"
+   },
+   {
+    "field": "Social_insurance_change",
+    "quote": "Artículo 84... cesantía en edad avanzada... Artículo 88... seguro de vejez",
+    "location": "Articles 84, 88"
+   },
+   {
+    "field": "reason_reform",
+    "quote": "Artículo 109... principal objetivo otorgar la mayor seguridad y rentabilidad... incrementar el ahorro interno",
+    "location": "Article 109"
+   },
+   {
+    "field": "retirement_age_change",
+    "quote": "Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad",
+    "location": "Articles 84, 89"
+   },
+   {
+    "field": "Retirement_age_change_details",
+    "quote": "Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad",
+    "location": "Articles 84, 89"
+   },
+   {
+    "field": "Retirement_age_pre_reform_male",
+    "quote": "Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad",
+    "location": "Articles 84, 89"
+   },
+   {
+    "field": "Retirement_age_after_reform_male",
+    "quote": "Artículo 84... sesenta años de edad... Artículo 89... sesenta y cinco años de edad",
+    "location": "Articles 84, 89"
+   },
+   {
+    "field": "Contribution_rate_change",
+    "quote": "Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... cesantía... tres punto ciento setenta y cinco por ciento",
+    "location": "Article 102"
+   },
+   {
+    "field": "New Employer Contribution Rate",
+    "quote": "Artículo 102... Aportación de retiro de dos por ciento, y por cesantía en edad avanzada y vejez, de tres punto ciento setenta y cinco por ciento",
+    "location": "Article 102"
+   },
+   {
+    "field": "New Employee Contribution Rate",
+    "quote": "Artículo 102... Cuota de seis punto ciento veinticinco por ciento del Sueldo Básico",
+    "location": "Article 102"
+   },
+   {
+    "field": "New Contribution Rate (Employee and Employer Combined)",
+    "quote": "Artículo 102... Cuota de seis punto ciento veinticinco por ciento... Aportación de retiro de dos por ciento... cesantía... tres punto ciento setenta y cinco por ciento",
+    "location": "Article 102"
+   },
+   {
+    "field": "Is the legislated pension reform minor or major?",
+    "quote": "Artículo 103... Se crea el Fondo Nacional de Pensiones... PENSIONISSSTE",
+    "location": "Article 103"
+   },
+   {
+    "field": "instrument_type",
+    "quote": "DOF: 31/03/2007... Artículo 77... Artículo 103",
+    "location": "N/A"
+   },
+   {
+    "field": "issuing_body",
+    "quote": "PODER EJECUTIVO... INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO",
+    "location": "Top of text"
+   },
+   {
+    "field": "dof_publication_date",
+    "quote": "DOF: 31/03/2007",
+    "location": "Top of text"
+   },
+   {
+    "field": "entry_into_force_date",
+    "quote": "Día siguiente",
+    "location": "Article 97, 98, 103"
+   }
+  ],
+  "source_file": "04_dof_20070331_ley_issste.html",
+  "chunk_ids": [
+   "04_c01",
+   "04_c02",
+   "04_c03",
+   "04_c04",
+   "04_c05",
+   "04_c06",
+   "04_c07",
+   "04_c08"
+  ]
+ },
+ "raw_failed": null,
+ "metrics": [
+  {
+   "wall_s": 56.9,
+   "prompt_tokens": 3259,
+   "gen_tokens": 2674,
+   "gen_s": 55.9,
+   "prompt_s": 1.0,
+   "done_reason": "stop"
+  }
+ ]
+}

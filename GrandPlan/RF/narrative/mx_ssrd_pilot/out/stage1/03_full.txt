@@ -1,0 +1,43 @@
+### EPISODE 1: Reform to IMSS Staff Pension Fund Structure and Financing
+field name | value | "verbatim quote" | where in the text
+1. Country Name | Mexico | "Estados Unidos Mexicanos" | Header
+2. Year of the article | 2004 | "11/08/2004" | DOF line
+3. Status of Pension Reform | Legislated, Implemented | "DECRETO... SE REFORMAN Y ADICIONAN" | Title
+4. legislation_date | 08-2004 | "DIARIO OFICIAL Miércoles 11 de agosto de 2004" | DOF line
+5. Planned_date | INFERRED | N/A | N/A
+6. announcement_date | INFERRED | N/A | N/A
+7. implementation_date | 08-2004 | "El presente Decreto entrará en vigor al día siguiente de su publicación" | Transitorio Primero
+8. reversal_date | INFERRED | N/A | N/A
+9. Pension Reform Types | funding mechanisms; administration and governance | "El Instituto administrará y manejará... un fondo que se denominará Fondo para el Cumplimiento de Obligaciones Laborales" | Artículo 286 K
+10. indexation_change | INFERRED | N/A | N/A
+11. coverage_change | INFERRED | N/A | N/A
+12. benefit_change | INFERRED | N/A | N/A
+13. Social_insurance_change | Yes | "Ley del Seguro Social" | Title
+14. reform_category | Structural reform | "Fondo para el Cumplimiento de Obligaciones Laborales... cuenta especial para el Régimen de Jubilaciones y Pensiones" | Artículo 286 K
+15. reform_coverage | Mixed | "trabajadores del Instituto" | Artículo 286 K
+16. reason_reform | Fiscal reasons; Economic impact | "siempre y cuando cuente con los recursos aprobados... y aquellos indispensables para cubrir el costo anual" | Artículo 277 D
+17. relevancetopr_score | 8.0 | N/A | N/A
+18. retirement_age_change | INFERRED | N/A | N/A
+19. Retirement_age_change_details | INFERRED | N/A | N/A
+20. Retirement_age_pre_reform_female | INFERRED | N/A | N/A
+21. Retirement_age_after_reform_female | INFERRED | N/A | N/A
+22. Retirement_age_pre_reform_male | INFERRED | N/A | N/A
+23. Retirement_age_after_reform_male | INFERRED | N/A | N/A
+24. Contribution_rate_change | INFERRED | N/A | N/A
+25. Old Employer Contribution Rate | INFERRED | N/A | N/A
+26. New Employer Contribution Rate | INFERRED | N/A | N/A
+27. Old Employee Contribution Rate | INFERRED | N/A | N/A
+28. New Employee Contribution Rate | INFERRED | N/A | N/A
+29. Old Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A
+30. New Contribution Rate (Employee and Employer Combined) | INFERRED | N/A | N/A
+31. Is the legislated pension reform minor or major | Minor | "Se reforman el cuarto párrafo del artículo 277 D, y los párrafos primero y segundo del artículo 286 K" | Artículo Único
+32. instrument_type | decree | "DECRETO" | Title
+33. issuing_body | Congreso de la Unión | "EL CONGRESO DE LOS ESTADOS UNIDOS MEXICANOS, DECRETA" | Body
+34. dof_publication_date | 11-08-2004 | "DIARIO OFICIAL Miércoles 11 de agosto de 2004" | DOF line
+35. entry_into_force_date | 12-08-2004 | "El presente Decreto entrará en vigor al día siguiente de su publicación" | Transitorio Primero
+36. legal_references | 277 D; 286 K | "SE REFORMAN Y ADICIONAN LOS ARTÍCULOS 277 D Y 286 K" | Title
+37. regime_affected | imss_staff_rjp | "Régimen de Jubilaciones y Pensiones de los trabajadores del Instituto" | Artículo 286 K
+38. insurance_branch | IV | "Ley del Seguro Social" | Title
+39. financing_indexation_change | other | "recursos necesarios para cubrir los costos futuros derivados del Régimen de Jubilaciones y Pensiones" | Artículo 277 D
+40. fiscal_magnitude_stated | INFERRED | N/A | N/A
+41. implicit_liability_direction | ambiguous | "recursos necesarios para cubrir los costos futuros" | Artículo 277 D

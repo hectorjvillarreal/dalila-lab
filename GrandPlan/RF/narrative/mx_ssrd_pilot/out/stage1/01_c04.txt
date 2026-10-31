@@ -1,0 +1,43 @@
+### EPISODE 1: Ley del Seguro Social (1995) - Sistema de Cuentas Individuales y Reformas Estructurales
+field name | value | "verbatim quote" | where in the text
+1. Country Name | Mexico | "Estados Unidos Mexicanos" | Top of text
+2. Year of the article | 1995 | "DOF: 21/12/1995" | Top of text
+3. Status of Pension Reform | Legislated, Implemented | "DOF: 21/12/1995" | Top of text
+4. legislation_date | 12-1995 | "DOF: 21/12/1995" | Top of text
+5. Planned_date | INFERRED | N/A
+6. announcement_date | INFERRED | N/A
+7. implementation_date | 12-1995 | "DOF: 21/12/1995" | Top of text
+8. reversal_date | INFERRED | N/A
+9. Pension Reform Types | systematic (structural) pension reforms; pension plan types (DC); administration and governance; funding mechanisms; investment strategies; pension portability; eligibility and access | "La individualización y administración de los recursos de las cuentas individuales para el retiro estará a cargo de las Administradoras de Fondos para el Retiro." | Article 175
+10. indexation_change | INFERRED | N/A
+11. coverage_change | extended coverage | "El asegurado con un mínimo de cincuenta y dos cotizaciones semanales acreditadas en el régimen obligatorio, al ser dado de baja, tiene el derecho a continuar voluntariamente en el mismo" | Article 218
+12. benefit_change | INFERRED | N/A
+13. Social_insurance_change | Yes | "El Seguro Social es el instrumento básico de la seguridad social" | Article 4
+14. Reform_category | Structural reform | "La individualización y administración de los recursos de las cuentas individuales para el retiro estará a cargo de las Administradoras de Fondos para el Retiro." | Article 175
+15. reform_coverage | Broad-based reform | "La presente Ley es de observancia general en toda la República" | Article 1
+16. reason_reform | Economic growth; Fiscal reasons | INFERRED | N/A
+17. relevancetopr_score | 10.0 | "LEY del Seguro Social" | Title
+18. retirement_age_change | INFERRED | N/A
+19. Retirement_age_change_details | INFERRED | N/A
+20. Retirement_age_pre_reform_female | INFERRED | N/A
+21. Retirement_age_after_reform_female | INFERRED | N/A
+22. Retirement_age_pre_reform_male | INFERRED | N/A
+23. Retirement_age_after_reform_male | INFERRED | N/A
+24. Contribution_rate_change | INFERRED | N/A
+25. Old Employer Contribution Rate | INFERRED | N/A
+26. New Employer Contribution Rate | INFERRED | N/A
+27. Old Employee Contribution Rate | INFERRED | N/A
+28. New Employee Contribution Rate | INFERRED | N/A
+29. Old Contribution Rate (Employee and Employer Combined) | INFERRED | N/A
+30. New Contribution Rate (Employee and Employer Combined) | INFERRED | N/A
+31. Is the legislated pension reform minor or major | Major | "La individualización y administración de los recursos de las cuentas individuales para el retiro estará a cargo de las Administradoras de Fondos para el Retiro." | Article 175
+32. instrument_type | law_reform | "LEY del Seguro Social" | Title
+33. issuing_body | Congreso de la Unión | "EL CONGRESO DE LOS ESTADOS UNIDOS MEXICANOS, DECRETA:" | Top of text
+34. dof_publication_date | 21-12-1995 | "DOF: 21/12/1995" | Top of text
+35. entry_into_force_date | 21-12-1995 | "DOF: 21/12/1995" | Top of text
+36. legal_references | Articles 158, 159, 161, 162, 164, 167, 168, 170, 171, 172, 174, 175, 176, 177, 178, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 218, 219, 220, 221 | "Artículo 158... Artículo 159... Artículo 161..." | Throughout text
+37. regime_affected | all | "El Seguro Social comprende: I. El régimen obligatorio, y II. El régimen voluntario." | Article 6
+38. insurance_branch | IV, RCV, SEM, SEM_pensioners_GMP, RT, GPS | "El ramo de retiro, cesantía en edad avanzada y vejez" | Article 168
+39. financing_indexation_change | changed_to_uma | "El valor del mencionado importe inicial de la cuota social, se actualizará trimestralmente de conformidad con el Indice Nacional de Precios al Consumidor" | Article 168
+40. fiscal_magnitude_stated | INFERRED | N/A
+41. implicit_liability_direction | ambiguous | "El Gobierno Federal con recursos propios complementarios a los de la cuenta individual correspondiente, cubrirá la pensión garantizada" | Article 172

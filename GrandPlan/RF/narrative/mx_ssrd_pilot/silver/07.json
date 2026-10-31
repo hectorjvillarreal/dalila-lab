@@ -1,0 +1,252 @@
+{
+ "doc_id": "07",
+ "status": "silver",
+ "episodes": [
+  {
+   "label": "Derecho constitucional a la pensión no contributiva de adultos mayores",
+   "core": true,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "2020",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "05-2020",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "05-2020",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "eligibility and access",
+     "funding mechanisms"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "extended coverage",
+    "benefit_change": "more generous benefits",
+    "Social_insurance_change": "No",
+    "Reform_category": "Structural reform",
+    "reform_coverage": "Broad-based reform",
+    "reason_reform": [
+     "Not explicitly mentioned"
+    ],
+    "relevancetopr_score": 9.5,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "Not explicitly mentioned",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "Major",
+    "instrument_type": "constitutional_reform",
+    "issuing_body": "Comisión Permanente del H. Congreso de la Unión",
+    "dof_publication_date": "08-05-2020",
+    "entry_into_force_date": "09-05-2020",
+    "legal_references": [
+     "Constitución, artículo 4o., párrafo décimo quinto",
+     "Transitorio Tercero"
+    ],
+    "regime_affected": [
+     "non_contributory"
+    ],
+    "insurance_branch": [
+     "non_contributory_pension"
+    ],
+    "financing_indexation_change": "Not explicitly mentioned",
+    "fiscal_magnitude_stated": "Not explicitly mentioned",
+    "implicit_liability_direction": "increases",
+    "fields_inferred": [
+     "Reform_category",
+     "Social_insurance_change",
+     "benefit_change",
+     "implicit_liability_direction",
+     "legislation_date",
+     "reform_coverage"
+    ],
+    "evidence": [
+     {
+      "field": "issuing_body",
+      "quote": "Que la Comisión Permanente del Honorable Congreso de la Unión, se ha servido dirigirme el siguiente",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "instrument_type",
+      "quote": "DECRETO por el que se reforma y adiciona el artículo 4o. de la Constitución Política de los Estados Unidos Mexicanos.",
+      "location": "Título"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "El presente Decreto entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "El presente Decreto entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "El presente Decreto entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "Las personas mayores de sesenta y ocho años tienen derecho a recibir por parte del Estado una pensión no contributiva en los términos que fije la Ley.",
+      "location": "Artículo 4o."
+     },
+     {
+      "field": "regime_affected",
+      "quote": "una pensión no contributiva en los términos que fije la Ley",
+      "location": "Artículo 4o."
+     },
+     {
+      "field": "insurance_branch",
+      "quote": "una pensión no contributiva en los términos que fije la Ley",
+      "location": "Artículo 4o."
+     },
+     {
+      "field": "coverage_change",
+      "quote": "En el caso de las y los indígenas y las y los afromexicanos esta prestación se otorgará a partir de los sesenta y cinco años de edad.",
+      "location": "Artículo 4o."
+     },
+     {
+      "field": "legal_references",
+      "quote": "no podrá ser disminuido, en términos reales, respecto del que se haya asignado en el ejercicio fiscal inmediato anterior",
+      "location": "Transitorio Tercero"
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 08/05/2020",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "07_dof_20200508_art4_pension.html",
+    "chunk_ids": []
+   }
+  },
+  {
+   "label": "Apoyo económico por discapacidad permanente",
+   "core": false,
+   "record": {
+    "Country Name": "Mexico",
+    "Year of the article": "2020",
+    "Status of Pension Reform": [
+     "Legislated",
+     "Implemented"
+    ],
+    "legislation_date": "05-2020",
+    "Planned_date": "Not explicitly mentioned",
+    "announcement_date": "Not explicitly mentioned",
+    "implementation_date": "05-2020",
+    "reversal_date": "Not explicitly mentioned",
+    "Pension Reform Types": [
+     "eligibility and access"
+    ],
+    "indexation_change": "Not explicitly mentioned",
+    "coverage_change": "extended coverage",
+    "benefit_change": "Not explicitly mentioned",
+    "Social_insurance_change": "No",
+    "Reform_category": "Not explicitly mentioned",
+    "reform_coverage": "Targeted reform",
+    "reason_reform": [
+     "Not explicitly mentioned"
+    ],
+    "relevancetopr_score": 5.0,
+    "retirement_age_change": "Not explicitly mentioned",
+    "Retirement_age_change_details": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+    "Retirement_age_after_reform_female": "Not explicitly mentioned",
+    "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+    "Retirement_age_after_reform_male": "Not explicitly mentioned",
+    "Contribution_rate_change": "Not explicitly mentioned",
+    "Old Employer Contribution Rate": "Not explicitly mentioned",
+    "New Employer Contribution Rate": "Not explicitly mentioned",
+    "Old Employee Contribution Rate": "Not explicitly mentioned",
+    "New Employee Contribution Rate": "Not explicitly mentioned",
+    "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+    "Is the legislated pension reform minor or major?": "N/A",
+    "instrument_type": "constitutional_reform",
+    "issuing_body": "Comisión Permanente del H. Congreso de la Unión",
+    "dof_publication_date": "08-05-2020",
+    "entry_into_force_date": "09-05-2020",
+    "legal_references": [
+     "Constitución, artículo 4o., párrafo décimo cuarto"
+    ],
+    "regime_affected": [
+     "non_contributory"
+    ],
+    "insurance_branch": [
+     "other"
+    ],
+    "financing_indexation_change": "Not explicitly mentioned",
+    "fiscal_magnitude_stated": "Not explicitly mentioned",
+    "implicit_liability_direction": "increases",
+    "fields_inferred": [
+     "Social_insurance_change",
+     "implicit_liability_direction",
+     "insurance_branch",
+     "legal_references",
+     "legislation_date",
+     "reform_coverage"
+    ],
+    "evidence": [
+     {
+      "field": "issuing_body",
+      "quote": "Que la Comisión Permanente del Honorable Congreso de la Unión, se ha servido dirigirme el siguiente",
+      "location": "Preámbulo"
+     },
+     {
+      "field": "instrument_type",
+      "quote": "DECRETO por el que se reforma y adiciona el artículo 4o. de la Constitución Política de los Estados Unidos Mexicanos.",
+      "location": "Título"
+     },
+     {
+      "field": "entry_into_force_date",
+      "quote": "El presente Decreto entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "implementation_date",
+      "quote": "El presente Decreto entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Status of Pension Reform",
+      "quote": "El presente Decreto entrará en vigor el día siguiente al de su publicación en el Diario Oficial de la Federación.",
+      "location": "Transitorio Primero"
+     },
+     {
+      "field": "Pension Reform Types",
+      "quote": "El Estado garantizará la entrega de un apoyo económico a las personas que tengan discapacidad permanente en los términos que fije la Ley.",
+      "location": "Artículo 4o."
+     },
+     {
+      "field": "coverage_change",
+      "quote": "El Estado garantizará la entrega de un apoyo económico a las personas que tengan discapacidad permanente",
+      "location": "Artículo 4o."
+     },
+     {
+      "field": "regime_affected",
+      "quote": "El Estado garantizará la entrega de un apoyo económico",
+      "location": "Artículo 4o."
+     },
+     {
+      "field": "dof_publication_date",
+      "quote": "DOF: 08/05/2020",
+      "location": "encabezado DOF"
+     }
+    ],
+    "source_file": "07_dof_20200508_art4_pension.html",
+    "chunk_ids": []
+   }
+  }
+ ]
+}

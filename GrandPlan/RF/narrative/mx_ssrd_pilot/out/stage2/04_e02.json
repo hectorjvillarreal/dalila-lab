@@ -1,0 +1,119 @@
+{
+ "doc_id": "04",
+ "episode": 2,
+ "label": "Health insurance financing rules for ISSSTE",
+ "summary": "EPISODE: Health insurance financing rules for ISSSTE\nlegislation_date | 03-2007 | \"Artículo 42. El seguro de salud se financiará en la forma siguiente: I. A los Trabajadores les corresponden las siguientes Cuotas: a) Una Cuota de dos punto setenta y cinco por ciento del Sueldo Básico para financiar al seguro de salud de los Trabajadores en activo y Familiares Derechohabientes, y b) Una Cuota de cero punto seiscientos veinticinco por ciento del Sueldo Básico para financiar al seguro de salud de los Pensionados y Familiares Derechohabientes; II. A las Dependencias y Entidades les corresponden las siguientes Aportaciones: a) El equivalente al siete punto trescientos setenta y cinco por ciento del Sueldo Básico financiará al seguro de salud de los Trabajadores en activo y sus Familiares Derechohabientes, y b) El equivalente al cero punto setenta y dos por ciento del Sueldo Básico para financiar el seguro de salud de los Pensionados y sus Familiares Derechohabientes; III. El Gobierno Federal cubrirá mensualmente una Cuota Social diaria por cada Trabajador, equivalente al trece punto nueve por ciento del salario mínimo general para el Distrito Federal vigente al día primero de julio de mil novecientos noventa y siete actualizado trimestralmente conforme al Índice Nacional de Precios al Consumidor al día de la entrada en vigor de esta Ley.\" | Article 42, Section III of the text\nfunding_mechanisms | Yes | \"Artículo 42. El seguro de salud se financiará en la forma siguiente...\" | Article 42\nfinancing_indexation_change | changed_to_inflation | \"actualizado trimestralmente conforme al Índice Nacional de Precios al Consumidor\" | Article 42, Section III\nsocial_insurance_change | Yes | \"El seguro de salud se financiará en la forma siguiente...\" | Article 42\nreform_category | Parametric reform | \"Artículo 42. El seguro de salud se financiará en la forma siguiente...\" | Article 42\nreason_reform | Fiscal reasons | \"El Gobierno Federal cubrirá mensualmente una Cuota Social diaria...\" | Article 42\nrelevancetopr_score | 8.0 | \"Artículo 42. El seguro de salud se financiará en la forma siguiente...\" | Article 42",
+ "attempts": 1,
+ "valid": true,
+ "errors": [],
+ "record": {
+  "Country Name": "Mexico",
+  "Year of the article": "2007",
+  "Status of Pension Reform": [
+   "Implemented"
+  ],
+  "legislation_date": "03-2007",
+  "Planned_date": "Not explicitly mentioned",
+  "announcement_date": "Not explicitly mentioned",
+  "implementation_date": "Not explicitly mentioned",
+  "reversal_date": "Not explicitly mentioned",
+  "Pension Reform Types": [
+   "funding mechanisms"
+  ],
+  "indexation_change": "Not explicitly mentioned",
+  "coverage_change": "Not explicitly mentioned",
+  "benefit_change": "Not explicitly mentioned",
+  "Social_insurance_change": "Yes",
+  "Reform_category": "Parametric reform",
+  "reform_coverage": "Not explicitly mentioned",
+  "reason_reform": [
+   "Fiscal reasons"
+  ],
+  "relevancetopr_score": 8.0,
+  "retirement_age_change": "Not explicitly mentioned",
+  "Retirement_age_change_details": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_female": "Not explicitly mentioned",
+  "Retirement_age_after_reform_female": "Not explicitly mentioned",
+  "Retirement_age_pre_reform_male": "Not explicitly mentioned",
+  "Retirement_age_after_reform_male": "Not explicitly mentioned",
+  "Contribution_rate_change": "Not explicitly mentioned",
+  "Old Employer Contribution Rate": "Not explicitly mentioned",
+  "New Employer Contribution Rate": "Not explicitly mentioned",
+  "Old Employee Contribution Rate": "Not explicitly mentioned",
+  "New Employee Contribution Rate": "Not explicitly mentioned",
+  "Old Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "New Contribution Rate (Employee and Employer Combined)": "Not explicitly mentioned",
+  "Is the legislated pension reform minor or major?": "Minor",
+  "instrument_type": "new_law",
+  "issuing_body": "Congreso de la Unión",
+  "dof_publication_date": "31-03-2007",
+  "entry_into_force_date": "Not explicitly mentioned",
+  "legal_references": [
+   "Artículo 42"
+  ],
+  "regime_affected": [
+   "issste_2007_accounts"
+  ],
+  "insurance_branch": [
+   "RCV"
+  ],
+  "financing_indexation_change": "changed_to_inflation",
+  "fiscal_magnitude_stated": "Not explicitly mentioned",
+  "implicit_liability_direction": "Not explicitly mentioned",
+  "fields_inferred": [],
+  "evidence": [
+   {
+    "field": "legislation_date",
+    "quote": "03-2007",
+    "location": "EPISODE SUMMARY"
+   },
+   {
+    "field": "fiscal_magnitude_stated",
+    "quote": "El Gobierno Federal cubrirá mensualmente una Cuota Social diaria por cada Trabajador, equivalente al trece punto nueve por ciento del salario mínimo general para el Distrito Federal vigente al día primero de julio de mil novecientos noventa y siete actualizado trimestralmente conforme al Índice Nacional de Precios al Consumidor al día de la entrada en vigor de esta Ley.",
+    "location": "Article 42, Section III of the text"
+   },
+   {
+    "field": "financing_indexation_change",
+    "quote": "actualizado trimestralmente conforme al Índice Nacional de Precios al Consumidor",
+    "location": "Article 42, Section III"
+   },
+   {
+    "field": "reason_reform",
+    "quote": "El Gobierno Federal cubrirá mensualmente una Cuota Social diaria...",
+    "location": "Article 42"
+   },
+   {
+    "field": "Social_insurance_change",
+    "quote": "El seguro de salud se financiará en la forma siguiente...",
+    "location": "Article 42"
+   },
+   {
+    "field": "reform_coverage",
+    "quote": "El seguro de salud se financiará en la forma siguiente: I. A los Trabajadores les corresponden las siguientes Cuotas: a) Una Cuota de dos punto setenta y cinco por ciento del Sueldo Básico para financiar al seguro de salud de los Trabajadores en activo y Familiares Derechohabientes, y b) Una Cuota de cero punto seiscientos veinticinco por ciento del Sueldo Básico para financiar al seguro de salud de los Pensionados y Familiares Derechohabientes; II. A las Dependencias y Entidades les corresponden las siguientes Aportaciones: a) El equivalente al siete punto trescientos setenta y cinco por ciento del Sueldo Básico financiará al seguro de salud de los Trabajadores en activo y sus Familiares Derechohabientes, y b) El equivalente al cero punto setenta y dos por ciento del Sueldo Básico para financiar el seguro de salud de los Pensionados y sus Familiares Derechohabientes; III. El Gobierno Federal cubrirá mensualmente una Cuota Social diaria por cada Trabajador, equivalente al trece punto nueve por ciento del salario mínimo general para el Distrito Federal vigente al día primero de julio de mil novecientos noventa y siete actualizado trimestralmente conforme al Índice Nacional de Precios al Consumidor al día de la entrada en vigor de esta Ley.",
+    "location": "Article 42"
+   }
+  ],
+  "source_file": "04_dof_20070331_ley_issste.html",
+  "chunk_ids": [
+   "04_c01",
+   "04_c02",
+   "04_c03",
+   "04_c04",
+   "04_c05",
+   "04_c06",
+   "04_c07",
+   "04_c08"
+  ]
+ },
+ "raw_failed": null,
+ "metrics": [
+  {
+   "wall_s": 27.7,
+   "prompt_tokens": 2133,
+   "gen_tokens": 1279,
+   "gen_s": 26.3,
+   "prompt_s": 1.2,
+   "done_reason": "stop"
+  }
+ ]
+}
