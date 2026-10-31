@@ -79,6 +79,15 @@ weeks. Every manual pass now runs ALL of these, not just tape + EDGAR:
    is refreshed from each 10-Q/10-K (XBRL companyfacts). Facts only: dollar
    debt and CDS are press-only for regime purposes until a signed 8-K
    (ruling 2026-10-08).
+6. **Rotation gauge** — `narrative_vs_cashflow_rotation`: bitcoin (Coinbase UTC
+   close, IBIT) vs. a cash-flow basket (SCHD, XLU, VTV, RSP; Nasdaq historical
+   API, price returns) from the 10-06 Nasdaq closing high and over two sessions.
+   The brief names only bitcoin; the basket was chosen 2026-10-30. Pair it with
+   `broad_risk_on_off`: SPY/QQQ vs. RSP/VTV, HYG/LQD, FRED HY and BBB OAS
+   (BAMLH0A0HYM2, BAMLC0A4CBBB; posted with a lag), VIX. Context only: neither
+   field escalates a mechanism, and `fetch-macro` does not refresh them.
+7. **Blind spots** — re-read `known_blind_spots` on each LIVE panel and date any
+   change. These fields say what a state reading cannot see.
 
 ## Automation (daily systemd timer on Dalila)
 

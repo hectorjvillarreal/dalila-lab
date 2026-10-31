@@ -46,6 +46,7 @@ MECHANISMS = [
             "turnover_ratio",                # daily volume / free float
             "holder_concentration",          # retail / institutional / crossover-belief mix
             "etf_passive_inclusion_status",
+            "known_blind_spots",             # what this panel cannot see; added 2026-10-30
         ],
         "thresholds": {
             "GREEN": "High lockup share, low turnover, stable holder base.",
@@ -77,6 +78,8 @@ MECHANISMS = [
             "counterparties_holding_spcx_as_asset",
             "convertible_or_stock_settled_instruments",
             "nearest_stock_price_trigger",   # price level at which an obligation/margin strains
+            "issuer_debt_outstanding",       # 10-Q/10-K facts; in state since 10-08, rendered from 10-30
+            "known_blind_spots",             # what this panel cannot see; added 2026-10-30
         ],
         "thresholds": {
             "GREEN": "Obligations well-covered at current price; ample headroom "
@@ -109,6 +112,7 @@ MECHANISMS = [
                                              # which depends on the same sentiment cycle (reflexive)
             "ipo_pipeline_status",           # a failed OpenAI/Anthropic listing reprices the narrative
             "vendor_customer_concentration",
+            "known_blind_spots",             # what this panel cannot see; added 2026-10-30
         ],
         "thresholds": {
             "GREEN": "Counterparty web stable; no node under stress.",
@@ -167,7 +171,7 @@ MACRO_BACKDROP = {
         "vix_level",                 # FRED VIXCLS
         "fed_funds_target_upper",    # FRED DFEDTARU — policy-rate step (added 10-08 after the 09-17 hike went unrecorded)
         "vix_trend",
-        "narrative_vs_cashflow_rotation",  # bitcoin vs. cash-flow assets — the canary
+        "narrative_vs_cashflow_rotation",  # bitcoin vs. cash-flow assets — the canary (basket in README)
         "broad_risk_on_off",
     ],
     "note": (
