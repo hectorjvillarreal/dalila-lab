@@ -24,6 +24,8 @@ Current contents:
 | Beth | `20260809_BID2_briefing_beth_research_agenda.md` — post-paper research agenda after a novelty check: 2020 episode demoted (Serván-Mori 2023 has the participation result), zeros-through-unmet-need promoted, fragmentation questions added, deflator vulnerability flagged | BID2/motivation |
 | Debb | `20260808_BID2_briefing_debb_agenda_split.md` — two-track split: paper motivation (Sept 2) vs the emergent research agenda to park and resurface | BID2/motivation |
 | Fina | `20260808_BID2_briefing_fina_coordination.md` — coordination view: open loops, dependencies, cadence | BID2/motivation |
+| Beth | `20260923_BID2_briefing_beth_attribution-fix.md` — Draft-June WPP 2024 population attribution corrected; provenance audit running; hold external circulation | BID2/draft_june |
+| Fina | `20260923_BID2_briefing_fina_attribution-fix.md` — same notice, coordination view | BID2/draft_june |
 | Cath | `20261025_AURORA_briefing_cath_sftm-mexico-review.md` — review request for the fiscal lens (§3.2) of the Saving for the Machines México inference note; IM-6 closure question; doc https://claude.ai/artifact/XxVSKpppC35Z8N8A6sFkiU | Aurora/capital |
 | Anne | `20261025_AURORA_briefing_anne_sftm-transcription-check.md` — Elle's comment 3: confirm the EIC 2025 figures in the SFTM México note against Nota EIC 2025 v1.0 (14.6 and −0.48 are not in the PDF) | Aurora/capital |
 | Cath | `20261025_AURORA_briefing_cath_sftm-transcription-check.md` — Elle's comment 3: confirm the interest-cost 3.4% / 4.0% and tax-pressure 17 → 25% figures and their sources | Aurora/capital |
@@ -34,4 +36,6 @@ Current contents:
 | Debb | `20261025_AURORA_briefing_debb_sftm-mexico-review.md` — review of the SFTM México note for PROTO-RAG-001 conformance, filing, knowledge-base hygiene and editing; rulings asked on endorsement_record, ingestion_record, filenames, location | Aurora/capital |
 | Debb | `20261025_AURORA_briefing_debb_arch-point-release-conflict.md` — PROTO-RAG-001 point release returned unexecuted: `endorsement_record` already has two other meanings (artifact type; pointer field on the Anne-endorsed Terra Incognita cornerstone); reconciliation options and execution problems | Aurora/capital |
 | Cath | `20261030_RF_briefing_cath_cm-mensual.md` — CM actualizada a enero-septiembre 2026 (Bolsa 4.0, exacta 3.95); monitor de la instrucción v2 borrado por Héctor; v2 por cerrar, v1 no localizada | RF/CM_mensual |
+| Beth | `20261101_BDH_briefing_beth_evaluacion-N13.md` — su instrucción de evaluación del N13 ejecutada: nivel 2 en los dos informes, decisiones [REVISAR] por confirmar, N-C10 ¿bloqueante?; doc https://claude.ai/artifact/GhP24wLk8SNFrbSMqKUpkJ | IMSS_Surgical/evaluacion_informes_N13 |
+| Cath | `20261101_BDH_briefing_cath_evaluacion-N13.md` — revisión de cifras y lectura fiscal: base de la sección 6 (545,271/54.7 M vs 494,275/79.2 M), déficit de GMP vs Cuadro V.24, Δ(t), lenguaje de incidencia, Rec. 4 | IMSS_Surgical/evaluacion_informes_N13 |
 | Judy | `20260808_BID2_briefing_judy_frailty.md` — frailty index reconstruction and confirmation questions | BID2/motivation |
