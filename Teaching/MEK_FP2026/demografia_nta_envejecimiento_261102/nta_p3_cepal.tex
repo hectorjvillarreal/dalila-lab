@@ -3,7 +3,8 @@
 % Esquema aprobado: esquema_nta.md (2026-11-01). Compilar con: latexmk -pdf nta_p3_cepal.tex
 % Versión para repartir: nta_p3_cepal_handout.tex (misma fuente, opción handout).
 % Las notas del presentador van en \note{}; para verlas, compilar con \setbeameroption{show notes}.
-% Datos de las gráficas: datos/prep_p3.py.
+% Datos de las gráficas: datos/prep_p3.py y datos/prep_p3_dalila.py.
+% Versión 2 (2 de noviembre de 2026): lenguaje reescrito y material de Dalila sobre envejecimiento.
 \documentclass[aspectratio=169,11pt]{beamer}
 
 \usepackage[T1]{fontenc}
@@ -75,84 +76,150 @@
 \begin{document}
 
 % =========================================================================
-% I. LO QUE DICE EL INFORME · 18 min
+% I. EL PANORAMA · 18 min
 % =========================================================================
-\section{Lo que dice el informe}
+\section{El panorama}
 
 % 1 -----------------------------------------------------------------------
 \begin{frame}[plain]
   \titlepage
-  \note{1 min. Lectura: Cecchini, Comelatto, Holz, Kang y Paes (2025), \emph{Impactos económicos del envejecimiento en América Latina y el Caribe: desafíos y oportunidades}, Serie Población y Desarrollo 140 (LC/TS.2025/50), CEPAL. Es un documento firmado por sus autores.}
+  \note{1 min. Lectura: Cecchini, Comelatto, Holz, Kang y Paes (2025), \emph{Impactos económicos del envejecimiento en América Latina y el Caribe: desafíos y oportunidades}, Serie Población y Desarrollo 140 (LC/TS.2025/50), CEPAL.}
 \end{frame}
 
 % 2 -----------------------------------------------------------------------
-\begin{frame}{El informe en una diapositiva}
-  \begin{block}{El diagnóstico}
-    La región no aprovechó del todo el primer bono, y se le acaba con menos margen fiscal.
-  \end{block}
+\begin{frame}{La región enfrenta una transición demográfica agresiva con poco espacio fiscal}
+  \textbf{Lo que dice CEPAL}
+  \begin{itemize}
+    \item La región no aprovechó del todo el primer bono demográfico, y ese bono se termina hacia 2028.
+    \item Van a crecer al mismo tiempo las pensiones, la salud y los cuidados, con poco margen fiscal para pagarlos.
+    \item Las personas mayores también compran y trabajan, pero ese beneficio no llega solo: hay que planear con la demografía.
+  \end{itemize}
   \pause
-  \begin{block}{La presión}
-    Crecerá la demanda de pensiones, salud y cuidados. En los países más envejecidos, el crecimiento también se frena.
-  \end{block}
-  \pause
-  \begin{block}{La otra cara}
-    Una población mayor también es un mercado y una fuerza de trabajo: salud, cuidados, finanzas, turismo, vivienda.
-  \end{block}
-  \pause
-  \begin{alertblock}{La conclusión}
-    Nada de esto ocurre solo: hay que planear con la demografía e invertir en salud, protección y cuidados.
-  \end{alertblock}
+  \medskip
+  \textbf{Lo que queda por contestar}
+  \begin{itemize}
+    \item El diagnóstico de CEPAL es útil. Sin embargo, quedan dos preguntas sin resolver: cuánto va a costar y quién lo va a pagar.
+    \item Para contestarlas leemos el informe junto con nuestro trabajo: proyecciones con datos nacionales, gasto en salud por edad, costo fiscal en seis países y un modelo de quién paga.
+  \end{itemize}
   \fuente{Cecchini et al. (2025), CEPAL, Serie Población y Desarrollo 140, pp.~7 y 67--68.}
-  \note{2 min. De aquí en adelante, «el informe» es este documento. Cuando algo no venga de él lo vamos a decir en pantalla.}
+  \note{2 min. Cuando un dato sea nuestro y no de CEPAL, lo decimos al pie.}
 \end{frame}
 
 % 3 -----------------------------------------------------------------------
-\begin{frame}{En 28 años, la región duplica su proporción de mayores}
+\begin{frame}{En 25 años, México casi alcanza a Estados Unidos en población mayor}
   \begin{columns}[T]
     \begin{column}{0.54\textwidth}
-      \centering
       \begin{tikzpicture}
-        \begin{axis}[estilo,width=7.2cm,height=5.2cm,xmin=1950,xmax=2100,ymin=0,ymax=35,
-            xtick={1950,2000,2050,2100},xticklabel style={/pgf/number format/1000 sep={}},
+        \begin{axis}[estilo,width=5.4cm,height=5.2cm,xmin=2025,xmax=2050,ymin=8,ymax=26,clip=false,
+            xtick={2025,2030,2040,2050},xticklabel style={/pgf/number format/1000 sep={}},
             ylabel={\% de 65 años y más}]
-          \fill[black!7] (axis cs:2024,0) rectangle (axis cs:2100,35);
-          \addplot[cImpuesto,very thick] table[col sep=comma,x=Time,y=lac]{datos/p3_65mas_regiones.csv};
-          \addplot[cDemanda] table[col sep=comma,x=Time,y=eur]{datos/p3_65mas_regiones.csv};
-          \addplot[cRecauda] table[col sep=comma,x=Time,y=asi]{datos/p3_65mas_regiones.csv};
-          \addplot[cGris] table[col sep=comma,x=Time,y=afr]{datos/p3_65mas_regiones.csv};
-          \node[cDemanda,font=\small\bfseries] at (axis cs:1985,17.5) {Europa};
-          \node[cImpuesto,font=\small\bfseries,anchor=west] at (axis cs:1990,4) {América Latina};
-          \node[cRecauda,font=\small\bfseries] at (axis cs:2082,21.5) {Asia};
-          \node[cGris,font=\small\bfseries] at (axis cs:2082,9) {África};
-          \node[cGris] at (axis cs:2045,33) {proyección};
+          \addplot[cGris] table[col sep=comma,x=year,y=usa]{datos/p3_65mas_nal.csv};
+          \addplot[cDemanda] table[col sep=comma,x=year,y=bra]{datos/p3_65mas_nal.csv};
+          \addplot[cImpuesto,very thick] table[col sep=comma,x=year,y=mex]{datos/p3_65mas_nal.csv};
+          \node[anchor=west,cGris,font=\small\bfseries] at (axis cs:2050.5,25.3) {EE.\,UU. 23.8};
+          \node[anchor=west,cDemanda,font=\small\bfseries] at (axis cs:2050.5,23.4) {Brasil 23.1};
+          \node[anchor=west,cImpuesto,font=\small\bfseries] at (axis cs:2050.5,21.4) {México 22.6};
+          \node[anchor=south west,cGris] at (axis cs:2025,19.3) {18.9};
+          \node[anchor=north west,cImpuesto] at (axis cs:2025.3,9.9) {10.1};
         \end{axis}
       \end{tikzpicture}
     \end{column}
-    \begin{column}{0.43\textwidth}
+    \begin{column}{0.44\textwidth}
       \begin{itemize}
-        \item 65 y más: 9.9\,\% en 2024, 18.9\,\% en 2050.
-        \item 80 y más: de 1.9\,\% a 5.1\,\%. Es el grupo que más crece.
+        \item Hoy, uno de cada diez mexicanos tiene 65 años o más. En 2050, más de uno de cada cinco.
+        \item La distancia con Estados Unidos baja de casi 9 puntos a poco más de uno.
       \end{itemize}
       \pause
-      \textbf{Cuatro desventajas frente a Europa}
-      \begin{enumerate}
-        \item Menos desarrollo económico.
-        \item Más velocidad.
-        \item Sin Estado de bienestar consolidado.
-        \item Más desigualdad.
-      \end{enumerate}
+      \begin{itemize}
+        \item CEPAL proyecta para la región de 9.9\,\% en 2024 a 18.9\,\% en 2050.
+        \item La región envejece antes de alcanzar el ingreso de los países con Estados de bienestar maduros.
+      \end{itemize}
     \end{column}
   \end{columns}
-  \fuente{Cecchini et al. (2025), pp.~9--11, gráficos~1--2. Gráfica: ONU, WPP 2024, variante media.}
-  \note{3 min. Breve, porque ya se vio en la Parte 1. El gráfico 2 del informe usa la misma fuente; lo redibujé con datos/p3\_65mas\_regiones.csv. La revisión 2024 supone cierta recuperación de la fecundidad: recordar la diapositiva 11 de la Parte 1.}
+  \fuente{Escenario propio con datos nacionales y la fecundidad reciente sin cambio. Cecchini et al. (2025), pp.~9--11.}
+  \note{3 min. Gráfica: GrandPlan/DFD/outputs/public/2026-10\_population\_mex\_bra\_usa, figures/share65\_2025\_2050.png, redibujada con results/projections\_national.csv (datos/p3\_65mas\_nal.csv). No usa ONU ni CONAPO. Rango en 2050 con fecundidad $\pm$0.2: México 22.0 a 23.3. Brasil reproduce a IBGE (23.2). Mortalidad de México: patrón de IBGE reescalado a defunciones INEGI 2024; es un parche documentado en el README. La TGF de 1.23 es estimación directa de encuesta; con registros sale cerca de 1.5. CEPAL trabaja con la revisión 2024 de la ONU, que supone más fecundidad. Fuentes del motor: INEGI, IBGE, Census Bureau y CDC. CEPAL agrega dos desventajas más frente a Europa: más velocidad y más desigualdad. Producto de comunicación: no es escenario DFD y no entra al corpus. Velocidad frente a Europa: Parte 1.}
 \end{frame}
 
 % 4 -----------------------------------------------------------------------
-\begin{frame}{El bono se acaba en 2028, con diferencias enormes}
+\begin{frame}{De seis personas en edad de trabajar por cada mayor, a menos de tres}
   \begin{columns}[T]
-    \begin{column}{0.50\textwidth}
-      \textbf{Duración del bono, años}\par\smallskip
-      \begin{tikzpicture}[x=0.042cm,y=0.40cm]
+    \begin{column}{0.54\textwidth}
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=5.4cm,height=5.2cm,xmin=2025,xmax=2050,ymin=10,ymax=46,clip=false,
+            xtick={2025,2030,2040,2050},xticklabel style={/pgf/number format/1000 sep={}},
+            ylabel={Personas de 65+ por cada 100 de 20--64}]
+          \addplot[cGris] table[col sep=comma,x=year,y=usa]{datos/p3_oadr_nal.csv};
+          \addplot[cDemanda] table[col sep=comma,x=year,y=bra]{datos/p3_oadr_nal.csv};
+          \addplot[cImpuesto,very thick] table[col sep=comma,x=year,y=mex]{datos/p3_oadr_nal.csv};
+          \node[anchor=west,cGris,font=\small\bfseries] at (axis cs:2050.5,43.5) {EE.\,UU. 42.3};
+          \node[anchor=west,cDemanda,font=\small\bfseries] at (axis cs:2050.5,39.8) {Brasil 39.8};
+          \node[anchor=west,cImpuesto,font=\small\bfseries] at (axis cs:2050.5,36.2) {México 37.8};
+          \node[anchor=south west,cGris] at (axis cs:2025,33.3) {32.9};
+          \node[anchor=north west,cImpuesto] at (axis cs:2025.3,16) {16.8};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \begin{itemize}
+        \item En México, en 2025 hay casi seis personas de 20 a 64 años por cada persona mayor. En 2050 habrá menos de tres.
+      \end{itemize}
+      \pause
+      \begin{itemize}
+        \item Esto ya casi no depende de la fecundidad: quien nazca después de 2030 tendrá menos de 20 años en 2050.
+      \end{itemize}
+      \pause
+      \begin{itemize}
+        \item En un sistema de reparto, con la misma pensión, la cuota tendría que más que duplicarse.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{Escenario propio con datos nacionales y la fecundidad reciente sin cambio.}
+  \note{2 min. Gráfica: figures/oadr\_2025\_2050.png, redibujada (datos/p3\_oadr\_nal.csv). 100/16.8 = 5.9; 100/37.8 = 2.6. El denominador empieza en 20 años, decisión del 25 de octubre. Con 15--64: 14.8 a 35.0 en México, y 14.8 coincide con INEGI, EIC 2025. Con fecundidad $\pm$0.2 México va de 37.7 a 37.9. Identidad de reparto: cuota = tasa de reemplazo por razón de dependencia.}
+\end{frame}
+
+% 5 -----------------------------------------------------------------------
+\begin{frame}{¿Y si en la región cada mujer tuviera un solo hijo?}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=7cm,height=5.3cm,xmin=2025,xmax=2100,ymin=300,ymax=760,clip=false,
+            xtick={2025,2050,2075,2100},xticklabel style={/pgf/number format/1000 sep={}},
+            ylabel={Millones de habitantes}]
+          \addplot[cGris,dashed] table[col sep=comma,x=anio,y=onu]{datos/p3_unhijo.csv};
+          \addplot[cImpuesto,very thick] table[col sep=comma,x=anio,y=esc]{datos/p3_unhijo.csv};
+          \node[cGris] at (axis cs:2068,745) {Referencia: ONU};
+          \node[anchor=west,cGris,font=\small\bfseries] at (axis cs:2100.5,613) {613};
+          \node[anchor=west,cImpuesto,font=\small\bfseries] at (axis cs:2100.5,329) {329};
+          \node[cImpuesto,font=\small\bfseries,align=left] at (axis cs:2053,480) {Un hijo por mujer\\desde 2030};
+          \node[anchor=north west] at (axis cs:2026,650) {667 hoy};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.41\textwidth}
+      \begin{itemize}
+        \item Seríamos 329 millones en 2100: la mitad de hoy.
+        \item Los menores de 15 bajarían de 144 a 69 millones en 2050.
+        \item Desde 2040 habría más mayores que niños.
+      \end{itemize}
+      \pause
+      Hoy son 1.5 hijos por mujer, pero en 2025 Chile registró 0.99 y Colombia, 1.01.
+      \pause
+      \begin{alertblock}{Pregunta}
+        ¿Qué parte del presupuesto se achica y cuál crece?
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \fuente{Escenario teórico propio, no pronóstico: solo cambia la fecundidad; mortalidad y migración de la ONU. Fecundidad actual: registros civiles e INEGI.}
+  \note{3 min. GrandPlan/DFD/outputs/public/2026-09\_latam\_un\_hijo. Redibujada con results/lac\_tfr1\_aggregate.csv. Valida a 0.40 M por país y año contra la ONU. La gráfica no es escenario DFD ni IM-6. Sin instrucción de construcción archivada. Chile y Colombia: registros de 2025, como en la gráfica México 2050; en la Parte 1 mostramos los de 2024 (1.03 y 1.1).}
+\end{frame}
+
+% 6 -----------------------------------------------------------------------
+\begin{frame}{El bono demográfico termina hacia 2028, y Asia lo aprovechó mucho mejor}
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \textbf{Años que dura el bono}\par\smallskip
+      \begin{tikzpicture}[x=0.030cm,y=0.38cm]
         \foreach \n/\d/\c/\i in {Cuba/35/cOferta/0,Argentina/47/cOferta/1,Brasil/54/cOferta/2,Chile/57/cOferta/3,México/59/cImpuesto/4,Colombia/59/cOferta/5,Región/64/cGris/6,Honduras/78/cOferta/7,Paraguay/88/cOferta/8,Bolivia/93/cOferta/9} {
           \fill[\c!75] (0,-\i-0.36) rectangle (\d,-\i+0.36);
           \node[anchor=east] at (-1,-\i) {\n};
@@ -160,57 +227,29 @@
         }
       \end{tikzpicture}
     \end{column}
-    \begin{column}{0.47\textwidth}
-      \begin{itemize}
-        \item Para el promedio regional, el bono termina en 2028.
-        \item Varios países ya lo cerraron. Otros, como Bolivia y Paraguay, lo tendrán décadas más.
-      \end{itemize}
+    \begin{column}{0.50\textwidth}
+      \textbf{Año en que la razón de sostenimiento deja de subir}\par\smallskip
+      \setlength{\tabcolsep}{4pt}
+      \begin{tabular}{@{}llll@{}}
+        Chile & 2023 & Perú & 2036 \\
+        Brasil & 2025 & Argentina & 2038 \\
+        Costa Rica & 2026 & \textbf{México} & \textbf{hacia 2040} \\
+        & & Paraguay & 2055 \\
+      \end{tabular}
       \pause
-      \begin{block}{No se aprovechó igual}
-        1965--1990, PIB por persona:\\
-        Asia oriental, 6.1\,\% al año.\\
-        América Latina, 0.9\,\%.
-      \end{block}
-      Hoy, el PIB por persona de Corea es casi cuatro veces el de la región.
+      \par\medskip
+      Desde ese año hay menos productores por cada consumidor.
+      \pause
+      \par\medskip
+      De 1965 a 1990, el PIB por persona creció 6.1\,\% al año en Asia oriental y 0.9\,\% en América Latina.
     \end{column}
   \end{columns}
-  \fuente{Cecchini et al. (2025), pp.~32--34, gráfico~18.}
-  \note{3 min. La cifra de Asia y América Latina es de Williamson (2003), citada en el informe. Corea: Saad (2023). El informe dice que el mínimo es Martinica, 29 años; su gráfico dice Guadalupe 29 y Martinica 33. No lo uso.}
+  \fuente{Cecchini et al. (2025), pp.~32--36. México: cálculo propio con ntaccounts.org y datos nacionales; orden de magnitud.}
+  \note{3 min. CEPAL no incluye a México entre sus seis países con NTA. Cálculo: 2040 y 2042 con el motor nacional, perfiles de 2010 y 2014. El mismo método, en cinco países del informe, queda a dos a cuatro años de sus fechas (datos/prep\_p3.py). La cifra de Asia y América Latina es de Williamson (2003), citada en el informe. El informe dice que el mínimo es Martinica, 29 años; su gráfico dice Guadalupe 29 y Martinica 33: no lo uso.}
 \end{frame}
 
-% 5 -----------------------------------------------------------------------
-\begin{frame}{La razón de sostenimiento ya tocó techo en varios países}
-  \centering
-  \begin{tikzpicture}[x=0.34cm,y=1cm]
-    \draw[eje] (0,0) -- (37,0);
-    \foreach \a/\n/\h/\e in {3/Chile/1.1/2023,5/Brasil/0.55/2025,6/Costa Rica/1.65/2026,16/Perú/0.55/2036,18/Argentina/1.1/2038,35/Paraguay/0.55/2055} {
-      \draw[cOferta,thick] (\a,0) -- (\a,\h);
-      \fill[cOferta] (\a,0) circle (2.5pt);
-      \node[above,font=\small\bfseries] at (\a,\h) {\n};
-    }
-    \node[below] at (2.7,-0.05) {2023};
-    \node[below] at (6.3,-0.05) {2025--26};
-    \node[below] at (15.6,-0.05) {2036};
-    \node[below] at (18.6,-0.05) {2038};
-    \node[below] at (35,-0.05) {2055};
-  \end{tikzpicture}
-  \par\medskip\raggedright
-  \begin{itemize}
-    \item Recuerden la Parte 2: productores efectivos entre consumidores efectivos.
-    \item Cuando empieza a bajar, se acaba el primer bono y empieza la presión sobre los mecanismos que pagan el consumo.
-    \pause
-    \item Chile llega primero por la rapidez de su transición. Argentina empezó antes, pero va más lento.
-  \end{itemize}
-  \pause
-  \begin{alertblock}{Falta alguien}
-    México no está entre los seis países del informe. Regresamos a eso en la diapositiva 19.
-  \end{alertblock}
-  \fuente{Cecchini et al. (2025), pp.~35--36, gráfico~19. Año de máximo de la relación entre productores y consumidores.}
-  \note{3 min. Término: «razón de sostenimiento», como en el informe. Los seis países tienen estudios de NTA en torno a 2014.}
-\end{frame}
-
-% 6 -----------------------------------------------------------------------
-\begin{frame}{El déficit se muda a la vejez}
+% 7 -----------------------------------------------------------------------
+\begin{frame}{Hoy pesa más la niñez, pero los recursos van camino a los mayores}
   \begin{columns}[T]
     \begin{column}{0.50\textwidth}
       \textbf{Déficit, \% del ingreso laboral, c.\ 2014}\par\smallskip
@@ -228,7 +267,7 @@
         \bottomrule
       \end{tabular}
       \par\medskip
-      {\small Todavía pesa más la niñez, y la edad de trabajar deja poco superávit.}
+      El superávit de la edad de trabajar paga solo una parte de lo que consumen niños y mayores.
     \end{column}
     \begin{column}{0.47\textwidth}
       \pause
@@ -246,15 +285,16 @@
         \bottomrule
       \end{tabular}
       \par\medskip
-      Signo negativo: los recursos corren hacia los jóvenes. Positivo: hacia los mayores.
+      Negativo: los recursos van hacia los jóvenes. Positivo: van hacia los mayores.
     \end{column}
   \end{columns}
-  \fuente{Cecchini et al. (2025), pp.~39--45, cuadro~1 y gráfico~25; 2050 y 2100 son proyecciones con perfiles fijos.}
-  \note{4 min. Cuadro 1 tal cual. La columna derecha resta los valores del gráfico 25; da 11.9 para Chile, el informe redondea 11.8. El texto de la p.~40 dice 15 puntos entre etapas para Chile; su cuadro da 17: uso el cuadro. El mensaje de la p.~44: el reto no es producir más, sino adaptar los mecanismos de transferencia.}
+  \fuente{Cecchini et al. (2025), pp.~39--45. 2050 y 2100 son proyecciones con perfiles fijos.}
+  \note{2 min. Cuadro 1 tal cual. La columna derecha resta los valores del gráfico 25; da 11.9 para Chile, el informe redondea 11.8. El texto de la p.~40 dice 15 puntos entre etapas para Chile; su cuadro da 17: uso el cuadro. La frase de la p.~44: el reto no es producir más, sino adaptar los mecanismos de transferencia.}
 \end{frame}
 
-% 7 -----------------------------------------------------------------------
-\begin{frame}{Crecimiento: pierden los que van adelante}
+% 8 -----------------------------------------------------------------------
+\begin{frame}{La demografía frena el crecimiento de los países más envejecidos}
+  \opcional
   \begin{columns}[T]
     \begin{column}{0.56\textwidth}
       \centering
@@ -277,65 +317,58 @@
       \]
       Producto por ocupado, tasa de empleo y peso de la edad de trabajar.
       \pause
-      \begin{alertblock}{Ojo: es aritmética}
-        Fija la productividad y las tasas de empleo por edad y sexo. Solo mueve la demografía.
-      \end{alertblock}
+      \par\medskip
+      CEPAL solo mueve el último término y deja fijo lo demás. A México todavía le queda un poco de bono.
       \pause
-      La salida que propone el informe: productividad y más mujeres en el trabajo.
+      \par\medskip
+      Su propuesta es subir la productividad y que más mujeres trabajen.
     \end{column}
   \end{columns}
-  \fuente{Cecchini et al. (2025), pp.~46--47, gráfico~26 (10 de 16 países). $PET$: población de 15 a 64 años.}
-  \note{2 min. México: $+$0.24: todavía le queda algo de bono. Redibujado con las etiquetas del gráfico. El informe no hace ejercicio equivalente sobre finanzas públicas: es lo que falta. Con la OCDE: mejor salud y más empleo de mayores bajarían la pérdida de 8\,\% a 3\,\% del PIB en 30 años (André et al., 2024).}
+  \fuente{Cecchini et al. (2025), pp.~46--47 (10 de 16 países). $PET$: población de 15 a 64 años.}
+  \note{2 min, opcional. Redibujado con las etiquetas del gráfico. CEPAL no hace un ejercicio equivalente para las finanzas públicas: lo hacemos más adelante. Con la OCDE, mejor salud y más empleo de mayores bajarían la pérdida de 8\,\% a 3\,\% del PIB en 30 años (André et al., 2024).}
 \end{frame}
 
 % =========================================================================
-% II. PENSIONES, SALUD Y CUIDADOS · 25 min
+% II. PENSIONES, SALUD Y CUIDADOS · 29 min
 % =========================================================================
 \section{Pensiones, salud y cuidados}
 
-% 8 -----------------------------------------------------------------------
-\begin{frame}{Tres presiones que crecen al mismo tiempo}
-  \begin{columns}[T]
-    \begin{column}{0.55\textwidth}
-      \textbf{Gasto público por persona fijo, con la población que viene}\par
-      {\small \% del ingreso laboral total}\par\smallskip
-      \begin{tabular}{@{}lrrrr@{}}
-        \toprule
-        & \multicolumn{2}{c}{Pensiones} & \multicolumn{2}{c}{Salud} \\
-        & 2024 & 2050 & 2024 & 2050 \\
-        \midrule
-        Brasil (2008) & 31.7 & 56.3 & 7.1 & 8.1 \\
-        Costa Rica (2013) & 14.7 & 27.7 & 11.0 & 14.4 \\
-        Uruguay (2013) & 20.5 & 28.4 & 10.2 & 11.1 \\
-        México (2004) & 4.0 & 6.5 & 5.1 & 6.1 \\
-        \bottomrule
-      \end{tabular}
-      \par\smallskip
-      {\small Entre paréntesis, año del perfil. México: 2025 y 2050, con escenario propio; su perfil es anterior a la pensión universal, y se queda corto.}
-    \end{column}
-    \begin{column}{0.39\textwidth}
-      \begin{itemize}
-        \item Es lo de la Parte 2: perfil por población.
-        \item Las pensiones casi se duplican en Brasil y Costa Rica.
-      \end{itemize}
-      \pause
-      \begin{block}{La tercera presión no sale aquí}
-        Los cuidados casi no pasan por el presupuesto: los pagan las familias con tiempo.
-      \end{block}
-      \pause
-      \textbf{Es aritmética, no pronóstico:} nada se ajusta.
-    \end{column}
-  \end{columns}
-  \fuente{Cálculo propio, fuera del informe: perfiles de ntaccounts.org por población de ONU, WPP 2024. Informe, pp.~10 y 67.}
-  \note{3 min. El informe no tiene gasto por edad: este cálculo es nuestro (datos/prep\_p3.py). Perfiles por persona de cada año base, sin ajuste; población WPP repartida dentro de cada grupo quinquenal; México con el motor nacional. Bajo educación: en México de 6.6 a 3.7. No son escenarios fiscales: es el efecto de la pirámide con todo lo demás quieto.}
+% 9 -----------------------------------------------------------------------
+\begin{frame}{Con el mismo gasto por edad, las pensiones suben y la educación baja}
+  \centering
+  \textbf{Gasto público como \% del ingreso laboral total, con perfiles fijos}\par\smallskip
+  \begin{tikzpicture}
+    \begin{axis}[estilo,name=a,width=6.6cm,height=3.9cm,ybar=1pt,bar width=15pt,ymin=0,ymax=9,ytick=\empty,axis y line=none,
+        symbolic x coords={Pensiones,Salud,Educación},xtick=data,enlarge x limits=0.28,
+        title={México, perfil de 2004},title style={font=\small\bfseries},
+        nodes near coords,every node near coord/.append style={font=\small,/pgf/number format/.cd,fixed,fixed zerofill,precision=1}]
+      \addplot[fill=cOferta!55,draw=none] coordinates {(Pensiones,4.0)(Salud,5.1)(Educación,6.6)};
+      \addplot[fill=cImpuesto!65,draw=none] coordinates {(Pensiones,6.5)(Salud,6.1)(Educación,3.7)};
+    \end{axis}
+    \begin{axis}[estilo,at={(a.east)},anchor=west,xshift=4mm,width=6.6cm,height=3.9cm,ybar=1pt,bar width=15pt,ymin=0,ymax=75,ytick=\empty,axis y line=none,
+        symbolic x coords={Pensiones,Salud,Educación},xtick=data,enlarge x limits=0.28,
+        title={Brasil, perfil de 2008},title style={font=\small\bfseries},
+        nodes near coords,every node near coord/.append style={font=\small,/pgf/number format/.cd,fixed,fixed zerofill,precision=1}]
+      \addplot[fill=cOferta!55,draw=none] coordinates {(Pensiones,32.5)(Salud,7.1)(Educación,6.4)};
+      \addplot[fill=cImpuesto!65,draw=none] coordinates {(Pensiones,56.6)(Salud,8.0)(Educación,4.8)};
+    \end{axis}
+    \node[anchor=north,font=\small] at ($(a.south east)+(4mm,-5mm)$) {\textcolor{cOferta}{\rule{7pt}{7pt}}~2025\qquad\textcolor{cImpuesto}{\rule{7pt}{7pt}}~2050};
+  \end{tikzpicture}
+  \par\smallskip\raggedright
+  Es la cuenta de la Parte 2: multiplicamos el gasto por persona de cada edad por la población que viene. Nada más se mueve, así que no es un pronóstico.
+  \pause
+  \par\smallskip
+  El perfil de México es anterior a la pensión universal y se queda corto. Brasil ya gasta mucho más porque su sistema de reparto es maduro.
+  \fuente{Cálculo propio: perfiles de ntaccounts.org y proyección con datos nacionales. No viene en el informe de CEPAL.}
+  \note{3 min. CEPAL no tiene gasto por edad. datos/p3\_perfiles\_nal.csv, datos/prep\_p3\_dalila.py. Cambio contra la versión anterior: Brasil ya usa el motor nacional, no WPP (antes 31.7 a 56.3 en 2024--2050). Costa Rica y Uruguay salen porque solo había WPP. El cuidado no aparece aquí porque casi no pasa por el presupuesto: lo pagan las familias con tiempo.}
 \end{frame}
 
-% 9 -----------------------------------------------------------------------
-\begin{frame}{Pensiones: muchos cobran, pero no les alcanza}
+% 10 ----------------------------------------------------------------------
+\begin{frame}{Tres de cada cuatro mayores cobran algo, pero a muchos no les alcanza}
   \begin{columns}[T]
     \begin{column}{0.54\textwidth}
       \centering
-      \textbf{Sin pensión o menor a la línea de pobreza (\%)}\par\smallskip
+      \textbf{Sin pensión o por debajo de la línea de pobreza (\%)}\par\smallskip
       \begin{tikzpicture}
         \begin{axis}[estilo,width=7.3cm,height=4.3cm,ymin=0,ymax=100,xmin=0.5,xmax=6.5,xtick={1,2,3,4,5,6},
             xticklabels={Todos,Q1,Q2,Q3,Q4,Q5},legend style={at={(0.98,0.98)},anchor=north east},legend cell align=left]
@@ -343,25 +376,25 @@
           \addplot[only marks,mark=square*,mark size=2.3pt,cOferta] coordinates {(1,39.7)(2,82.3)(3,54.6)(4,34.5)(5,33.7)(6,25.8)}; \addlegendentry{Hombres}
         \end{axis}
       \end{tikzpicture}
-      \par{\small\color{cGris}18 países, 65 y más, por quintil de ingreso.}
+      \par{\small\color{cGris}18 países, 65 años y más, por quintil de ingreso (Q1, el más pobre).}
     \end{column}
     \begin{column}{0.43\textwidth}
       \begin{itemize}
-        \item Cobertura: 75.5\,\% en 2022.
-        \item Pero cerca de 43\,\% no llega a lo mínimo. En el quintil más pobre, más de 83\,\%.
-        \item Donde la pensión alcanza menos, más mayores siguen trabajando.
+        \item En 2022, 75.5\,\% de las personas mayores tenía pensión.
+        \item Pero cerca de 43\,\% no tiene pensión o la que tiene no llega a la línea de pobreza. En el quintil más pobre son más de 83\,\%.
+        \item Una de cada cuatro sigue trabajando, muchas por necesidad.
       \end{itemize}
       \pause
-      \begin{block}{Fuera del informe}
-        Chile y México dan una pensión casi universal por edad. Costa Rica y Panamá la focalizan.
+      \begin{block}{La pensión no contributiva}
+        Redistribuye bien y amplía la cobertura, pero necesita fuentes claras de financiamiento.
       \end{block}
     \end{column}
   \end{columns}
-  \fuente{Cecchini et al. (2025), pp.~17--19, gráficos~4 y 6. Recuadro: documento propio para CAF (2026).}
-  \note{3 min. El informe no habla del peso de las no contributivas. Fuente de ese recuadro: Missions/Funded/CAF\_DEM/caf-dem-entregable-final/main.tex. La cobertura viene de Arenas de Mesa y Robles (2024). Un cuarto de los de 65+ trabaja, y para muchos es necesidad (p.~18).}
+  \fuente{Cecchini et al. (2025), pp.~17--19, gráficos~4 y 6. Recuadro: Villarreal (2022), CEPAL.}
+  \note{3 min. El informe no habla del peso de las no contributivas. La cobertura viene de Arenas de Mesa y Robles (2024).}
 \end{frame}
 
-% 10 ----------------------------------------------------------------------
+% 11 ----------------------------------------------------------------------
 \begin{frame}{Los niños son más pobres que los abuelos}
   \opcional
   \begin{columns}[T]
@@ -377,79 +410,141 @@
       \end{tikzpicture}
     \end{column}
     \begin{column}{0.43\textwidth}
-      \textbf{Por qué, según el informe}
+      \textbf{Por qué, según CEPAL}
       \begin{itemize}
-        \item Más protección social y patrimonio.
-        \item Menos dependientes, apoyo familiar.
+        \item Los mayores tienen más protección social y patrimonio.
+        \item Tienen menos dependientes y reciben apoyo de la familia.
         \item Llegan a viejos quienes vivieron mejor.
       \end{itemize}
       \pause
-      \begin{block}{Para el presupuesto}
-        La pobreza está en la niñez, y cada peso a la vejez compite con eso.
-      \end{block}
+      \medskip
+      Las pensiones y el gasto en niños compiten por el mismo presupuesto. Si las pensiones siguen creciendo, queda menos para los niños, que es donde está la pobreza.
     \end{column}
   \end{columns}
   \fuente{Cecchini et al. (2025), p.~16, gráfico~3. Población total: 27.3\,\%.}
   \note{3 min, opcional. Enlace con el segundo mensaje del informe: invertir en niños. Es un promedio ponderado; no significa que los mayores estén bien.}
 \end{frame}
 
-% 11 ----------------------------------------------------------------------
-\begin{frame}{Pensiones en México: tres piezas nuevas}
+% 12 ----------------------------------------------------------------------
+\begin{frame}{En México cambiaron tres piezas de las pensiones}
   \centering
   \begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.7cm}>{\raggedright\arraybackslash}p{5.3cm}>{\raggedright\arraybackslash}p{4.9cm}@{}}
     \toprule
-    & \textbf{Qué cambió} & \textbf{Qué implica} \\
+    & \textbf{Qué cambió} & \textbf{Qué significa} \\
     \midrule
-    \textbf{Reforma de 2020} & La cuota patronal sube de 3.150\,\% a una tabla por salario, de 2023 a 2030 & Más ahorro en la cuenta individual. ¿Quién la paga? \\[0.2em]
-    \textbf{Pensión no contributiva} & En la Constitución desde 2020, a los 68 años; desde diciembre de 2024, a los 65 & Casi universal por edad, sin importar lo cotizado \\[0.2em]
-    \textbf{Fondo para el Bienestar} & Decreto de mayo de 2024: completa la pensión hasta el último salario, con tope & Garantía del Estado sobre cuentas individuales \\
+    \textbf{Reforma de 2020} & Sube la cuota patronal, de 2023 a 2030, según el salario & Más ahorro en la cuenta individual. ¿Quién lo paga? \\[0.2em]
+    \textbf{Pensión no contributiva} & En la Constitución desde 2020, a los 68 años; desde diciembre de 2024, a los 65 & Casi todos la reciben por edad, hayan cotizado o no \\[0.2em]
+    \textbf{Fondo para el Bienestar} & Decreto de mayo de 2024: completa la pensión hasta el último salario, con tope & El Estado cubre parte de lo que no alcanza la cuenta \\
     \bottomrule
   \end{tabular}
   \par\medskip\raggedright
   \pause
-  Proyecto de 2027: pensiones y jubilaciones, 1.84 billones de pesos, 4.7\,\% del PIB.
+  El Proyecto de 2027 trae 1.84 billones de pesos en pensiones, 4.7\,\% del PIB. Y el gasto seguirá subiendo: queda una generación larga con derechos del sistema anterior.
   \pause
   \par\smallskip
-  \textbf{Amarre con la Parte 1:} si la pensión llega sin cotizar y cotizar cuesta más, ¿qué le pasa al incentivo a formalizarse?
-  \fuente{Fuera del informe. LSS, art.~168; CPEUM, art.~4; DOF, 16-12-2020, 8-05-2020, 2-12-2024 y 1-05-2024; CGPE 2027.}
-  \note{3 min. Cuota: clase del 26 de septiembre; la tabla llega hasta 7.513\,\% en 2030 para los salarios más altos (CAF\_DEM). El entregable CAF dice 30 de abril de 2024 para el Fondo: ese día salió la reforma de leyes y el decreto del Fondo salió el 1 de mayo. 4.7\,\%: FISCUS/económicos\_paquetes/documento\_2027/capitulos/07\_pensiones.tex. Las reformas constitucionales las verifiqué con notas legislativas y de prensa; no abrí el DOF porque su certificado falló.}
+  Recuerden la trampa de la Parte 1: si la pensión llega sin cotizar y cotizar cuesta más, ¿a quién le conviene formalizarse?
+  \fuente{LSS, art.~168; CPEUM, art.~4; DOF; CGPE 2027; Villarreal (2025), \emph{Nexos}.}
+  \note{2 min. Generación de transición: columna de Nexos, junio de 2025; ahí mismo, CIEP: las pensiones, con las no contributivas, pasan de 40\,\% de los ingresos tributarios en el paquete 2025 (no lo volví a verificar en CIEP). DOF: 16-12-2020, 8-05-2020, 2-12-2024 y 1-05-2024. Cuota: de 3.150\,\% a la tabla; clase del 26 de septiembre; la tabla llega hasta 7.513\,\% en 2030 para los salarios más altos (CAF\_DEM). El entregable CAF dice 30 de abril de 2024 para el Fondo: ese día salió la reforma de leyes y el decreto del Fondo salió el 1 de mayo. 4.7\,\%: FISCUS/económicos\_paquetes/documento\_2027/capitulos/07\_pensiones.tex. Las reformas constitucionales las verifiqué con notas legislativas y de prensa; no abrí el DOF porque su certificado falló.}
 \end{frame}
 
-% 12 ----------------------------------------------------------------------
-\begin{frame}{Salud: el gasto sube con la edad}
+% 13 ----------------------------------------------------------------------
+\begin{frame}<handout:0>{Nuestro modelo: el recién nacido casi no pierde; paga quien ya tiene años}
+  \begin{columns}[T]
+    \begin{column}{0.51\textwidth}
+      \textbf{Pérdida frente a 2020, \% del consumo que le queda de vida}\par\smallskip
+      \begin{tikzpicture}[x=0.17cm,y=0.72cm]
+        \foreach \n/\a/\b/\t/\i in {Al nacer/0/0.3/casi nada/0,25--29 años/1/2/1 a 2/1,40--44 años/6/8/6 a 8/2,65--69 años/12/21/12 a 21/3} {
+          \fill[cImpuesto!15] (0,-\i-0.3) rectangle (\a,-\i+0.3);
+          \fill[cImpuesto!70] (\a,-\i-0.3) rectangle (\b,-\i+0.3);
+          \node[anchor=east] at (-0.4,-\i) {\n};
+          \node[anchor=west] at (\b,-\i) {\t};
+        }
+        \draw[black!60] (0,0.5) -- (0,-3.5);
+      \end{tikzpicture}
+      \par\smallskip
+      {\small Rango por sexo y educación.}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \begin{itemize}
+        \item Con la demografía de 2050 y la misma política, la cuota de reparto pasa de 5.66\,\% a 12.26\,\%.
+        \item El trabajo escasea: el salario sube 12\,\% y el rendimiento del capital baja de 8.6\,\% a 6.8\,\%.
+      \end{itemize}
+      \pause
+      Quien nace no tiene activos y gana con el salario. Quien ya ahorró pierde con el rendimiento.
+      \pause
+      \begin{alertblock}{Pregunta}
+        Sin subir la cuota, la pensión baja 54\,\%. ¿Qué generación votaría por eso?
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \fuente{Ascarza-Mendoza, Cortés, Méndez y Villarreal, borrador. Compara dos economías estacionarias: no es lo que perdería quien vive el cambio.}
+  \note{4 min. Solo en el PDF de exposición, no en el de repartir: el borrador dice que no se cite ni circule sin permiso, y hay tres coautores. Decisión tuya. Fuente: Missions/Funded/BID2/draft\_october/Draft-October.tex (sesión página a página en curso, sin rastrear en git); tablas de contrafactuales y sección «The Cost of Inaction». El cálculo de 2050 usa la razón de CONAPO (0.3065), que en otros productos ya no usamos. No hay transición: precios de destinos, no de viajes. Sin movilidad de capital; con ella el efecto de profundización se atenúa. A los 65--69 los niveles están inflados por el valor de seguir vivo. Trabajar hasta los 70 deja la cuota en 8.78\,\%. Contra no hacer nada, el recorte vale 8.3\,\% del consumo de toda la vida para un recién nacido, y trabajar hasta los 70, 3.1\,\%. Este resultado no es el motor DFD: es otro modelo.}
+\end{frame}
+
+% 14 ----------------------------------------------------------------------
+\begin{frame}{El gasto de bolsillo en salud se multiplica con la edad}
   \begin{columns}[T]
     \begin{column}{0.54\textwidth}
       \centering
       \begin{tikzpicture}
-        \begin{axis}[estilo,width=7.3cm,height=4.8cm,xmin=0,xmax=90,ymin=0,ymax=0.25,stack plots=y,area style,xtick={0,20,40,60,80},
-            xlabel={Edad},title={Salud por persona, México, 2014},title style={font=\small\bfseries},
-            yticklabel style={/pgf/number format/fixed},
-            legend style={at={(0.02,0.98)},anchor=north west},legend cell align=left]
-          \addplot[fill=cOferta!60,draw=none] table[col sep=comma,x=edad,y=pub]{datos/p3_salud_mex2014.csv} \closedcycle; \addlegendentry{Público}
-          \addplot[fill=cDemanda!60,draw=none] table[col sep=comma,x=edad,y=pri]{datos/p3_salud_mex2014.csv} \closedcycle; \addlegendentry{Privado}
+        \begin{axis}[estilo,width=7.3cm,height=5cm,xmin=-0.3,xmax=6.3,ymin=0,ymax=6.5,
+            xtick={0,1,2,3,4,5,6},xticklabels={15--29,30--44,45--59,60--64,65--74,75--84,85+},
+            xticklabel style={font=\small,rotate=30,anchor=north east,inner sep=1pt},
+            ylabel={15 a 29 años = 1},title={México, 2024},title style={font=\small\bfseries},
+            legend style={at={(0.03,0.97)},anchor=north west},legend cell align=left]
+          \addplot[cDemanda,mark=*,mark size=1.8pt] table[col sep=comma,x=pos,y=mujeres]{datos/p3_bolsillo_edad.csv}; \addlegendentry{Mujeres}
+          \addplot[cOferta,mark=square*,mark size=1.6pt] table[col sep=comma,x=pos,y=hombres]{datos/p3_bolsillo_edad.csv}; \addlegendentry{Hombres}
         \end{axis}
       \end{tikzpicture}
     \end{column}
     \begin{column}{0.43\textwidth}
-      \textbf{Lo que dice el informe}
       \begin{itemize}
-        \item Más diabetes, hipertensión, Alzheimer y cáncer.
-        \item En los hogares de solo mayores, salud es 8.9\,\% del gasto: su tercer rubro.
+        \item A los 85 años, una persona gasta de su bolsillo más de cinco veces lo que gasta alguien de 15 a 29.
+        \item Una transición demográfica trae de la mano una epidemiológica: menos enfermedades contagiosas y más crónicas, de tratamiento largo y caro.
       \end{itemize}
       \pause
-      \textbf{Lo que muestra México}
       \begin{itemize}
-        \item A los 75 se gasta el doble que a los 40.
-        \item Casi la mitad es gasto privado, incluso a esa edad.
+        \item Las NTA de 2014 muestran lo mismo: a los 75 años se gasta el doble que a los 40.
       \end{itemize}
     \end{column}
   \end{columns}
-  \fuente{Cecchini et al. (2025), pp.~27 y 49. Gráfica, fuera del informe: ntaccounts.org; ingreso laboral de 30--49 años = 1.}
-  \note{2 min. A los 40: 0.038 público y 0.058 privado; a los 75: 0.102 y 0.089. Lo privado es 47\,\% del total a los 75. «Privado» incluye más que el gasto de bolsillo; la cifra de bolsillo va en la siguiente. Datos: datos/p3\_salud\_mex2014.csv. El informe no trae perfil de gasto en salud.}
+  \fuente{Cálculo propio con ENIGH y ENSANUT 2024: estimación que sirve para la forma, no para los niveles. Villarreal (2022), CEPAL; ntaccounts.org.}
+  \note{2 min. CEPAL menciona diabetes, hipertensión, Alzheimer y cáncer (p.~27 y 49). A los 75, casi la mitad del gasto es privado (NTA 2014). Entre 30 y 59 años las mujeres gastan más que los hombres. Missions/Funded/BID2/motivation: fig01, tablas/fig1\_age\_sex\_profile\_2024.csv, método NTA de utilización. Ojo con los niveles: ENIGH capta 22 a 34\,\% del gasto de bolsillo de GHED, por eso va como índice. El otro método (regresión de hogar) da una pendiente mayor; los dos correlacionan 0.959. El grupo de 5 a 14 años es frágil y no lo muestro. NTA 2014: a los 40, 0.038 público y 0.058 privado; a los 75, 0.102 y 0.089. Datos: datos/p3\_bolsillo\_edad.csv y datos/p3\_salud\_mex2014.csv.}
 \end{frame}
 
-% 13 ----------------------------------------------------------------------
-\begin{frame}{Financiamiento de la salud: poco, partido y del bolsillo}
+% 15 ----------------------------------------------------------------------
+\begin{frame}{En 2020, el gasto de bolsillo en salud saltó en todos los deciles}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=7.6cm,height=5cm,ybar,bar width=3.6pt,xmin=0.4,xmax=10.6,ymin=-15,ymax=85,
+            xtick={1,...,10},ylabel={Cambio real 2018--2020 (\%)},xlabel={Decil de ingreso (1 = el más pobre)},
+            axis x line=bottom,x axis line style={draw=none},extra y ticks={0},extra y tick style={grid=major,tick label style={opacity=0}},
+            legend style={at={(0.98,0.98)},anchor=north east},legend cell align=left]
+          \addplot[fill=cOferta!75,draw=none] table[col sep=comma,x=decil,y=salud]{datos/p3_pandemia.csv}; \addlegendentry{Salud}
+          \addplot[fill=cGris!60,draw=none] table[col sep=comma,x=decil,y=alimentos]{datos/p3_pandemia.csv}; \addlegendentry{Alimentos}
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.41\textwidth}
+      \begin{itemize}
+        \item Subió 76\,\% en el decil más pobre y 29\,\% en el más rico. En alimentos casi no cambió.
+        \item En el decil más pobre, los hogares sin gasto en salud bajaron de 55\,\% a 42\,\%.
+      \end{itemize}
+      \pause
+      Muchos de esos hogares no gastaban porque tenían servicio gratuito o porque no se atendían.
+      \pause
+      \par\medskip
+      Coincide con la pandemia y con el fin del Seguro Popular. Con dos encuestas no podemos separar las causas.
+    \end{column}
+  \end{columns}
+  \fuente{Cálculo propio con ENIGH 2018 y 2020, pesos constantes.}
+  \note{3 min. Missions/Funded/BID2/motivation: fig12, tablas/pandemic\_jump\_by\_decile.csv. El gasto no regresó en 2022 ni en 2024. El cambio se dio sobre todo porque más hogares empezaron a gastar. La participación en 2020 ya está publicada (Serván-Mori, 2023). El deflactor es el INPC general, un punto vulnerable. Lenguaje causal suave: dos levantamientos, un placebo. Datos: datos/p3\_pandemia.csv.}
+\end{frame}
+
+% 16 ----------------------------------------------------------------------
+\begin{frame}{México gasta poco en salud pública, y el resto sale del bolsillo}
   \begin{columns}[T]
     \begin{column}{0.49\textwidth}
       \textbf{Gasto en salud, 2023}\par\smallskip
@@ -462,156 +557,190 @@
         \bottomrule
       \end{tabular}
       \par\medskip
+      \textbf{Quién lo resiente, México, 2024}
       \begin{itemize}
-        \item Depende de la nómina: pocos cotizan, y quien no cotiza va a otro sistema.
-        \item México cambió tres veces de arquitectura entre 2019 y 2023.
+        \item Gasto catastrófico: 3.9\,\% de los hogares del decil más pobre y menos de 2\,\% del decil 4 en adelante.
+        \item Necesitaron atención y no la recibieron: 19\,\% en el tercil más pobre y 9\,\% en el más rico.
       \end{itemize}
     \end{column}
     \begin{column}{0.48\textwidth}
       \pause
-      \begin{block}{El gasto de bolsillo no se planea}
-        Llega cuando llega la enfermedad, y pega más a quien tiene menos.
-      \end{block}
+      \textbf{Por qué el financiamiento es frágil}
+      \begin{itemize}
+        \item Depende de la nómina, y pocos cotizan.
+        \item Quien no cotiza va a otro sistema.
+        \item México cambió tres veces de arquitectura entre 2019 y 2023.
+      \end{itemize}
       \pause
-      \begin{block}{El eje de salud de la Parte 1}
-        Quien puede, cotiza. Quien no, paga una prima según su ingreso. El gobierno cubre a los más vulnerables. Todos en el mismo seguro.
+      \begin{block}{Nuestra propuesta para CEPAL}
+        Un solo seguro para todos. Quien puede, cotiza. Quien no, paga una prima según su ingreso. El gobierno cubre a los más vulnerables.
       \end{block}
     \end{column}
   \end{columns}
-  \fuente{Fuera del informe. OMS, \emph{Global Health Expenditure Database}, 2023; Villarreal (2026), CEPAL.}
-  \note{3 min. Fuente: boston\_20260828\_v2.tex, gráfica de gasto, ya verificada para ese deck; 2.7 es gasto del gobierno general con fuentes domésticas. La presentación de mayo decía 2.6: uso la cifra más reciente. El promedio regional es el agregado de América Latina y el Caribe del Banco Mundial.}
+  \fuente{OMS, \emph{Global Health Expenditure Database}, 2023; cálculo propio con ENIGH y ENSANUT 2024; Villarreal (2026), CEPAL. No viene en el informe de CEPAL.}
+  \note{3 min. GHED: boston\_20260828\_v2.tex; 2.7 es gasto del gobierno general con fuentes domésticas. La presentación de mayo decía 2.6: uso la cifra más reciente. Región: agregado del Banco Mundial. Catastrófico: umbral OMS, 40\,\% de la capacidad de pago, tablas/fig8\_catastrophic\_by\_decile.csv: 3.90 en decil 1 y 1.37 a 1.88 en deciles 4 a 10 (el README de BID2 exagera ese rango; cito la tabla). Necesidad no atendida: tablas/fig6\_forgone\_care.csv, terciles de bienestar: 19.2, 13.5 y 8.8. Por costo: 3.5, 1.5 y 0.1.}
 \end{frame}
 
-% 14 ----------------------------------------------------------------------
-\begin{frame}{Cuidados: la demanda que nadie presupuesta}
+% 17 ----------------------------------------------------------------------
+\begin{frame}{Cada vez habrá menos posibles cuidadoras por cada persona muy mayor}
   \begin{columns}[T]
-    \begin{column}{0.50\textwidth}
-      \begin{itemize}
-        \item El envejecimiento también envejece: en la región, 80 y más pasa de 12 a 37 millones entre 2024 y 2050.
-        \item Ahí se concentra la dependencia.
-        \item El cuidado cae sobre todo en mujeres, y eso les baja la participación laboral.
-      \end{itemize}
-      \pause
-      \begin{alertblock}{Lo que apenas aparece}
-        El informe les dedica unos párrafos. No hay costo ni financiamiento.
-      \end{alertblock}
-    \end{column}
     \begin{column}{0.47\textwidth}
-      \pause
-      \textbf{Mujeres de 45--64 por persona de 80 y más}\par\smallskip
-      \begin{tikzpicture}[x=0.95cm,y=0.42cm]
-        \foreach \x/\v/\t/\c in {0/6.0/2024/cOferta,1.1/2.6/2050/cOferta,3.0/5.7/2025/cImpuesto,4.1/2.1/2050/cImpuesto} {
+      \textbf{Mujeres de 45 a 64 años por cada persona de 80 y más}\par\medskip
+      \centering
+      \begin{tikzpicture}[x=0.95cm,y=0.5cm]
+        \foreach \x/\v/\t/\c in {0/5.7/2025/cOferta,1.1/2.2/2050/cOferta,3.0/5.4/2025/cImpuesto,4.1/2.2/2050/cImpuesto} {
           \fill[\c!70] (\x,0) rectangle (\x+0.85,\v);
           \node[above] at (\x+0.425,\v) {\v};
           \node[below] at (\x+0.425,0) {\t};
         }
         \draw[black!60] (-0.1,0) -- (5.1,0);
-        \node at (1.0,-1.5) {Región};
-        \node at (4.0,-1.5) {México};
+        \node at (1.0,-1.5) {México};
+        \node at (4.0,-1.5) {Brasil};
       \end{tikzpicture}
-      \par\smallskip
-      Hoy hay casi seis posibles cuidadoras por persona de 80 y más. En 2050, menos de la mitad.
+    \end{column}
+    \begin{column}{0.50\textwidth}
+      \begin{itemize}
+        \item Las personas de 80 años y más pasan de 2.7 a 9.1 millones en México, y de 5.0 a 14.2 millones en Brasil.
+        \item A esas edades se concentra la dependencia.
+        \item El cuidado cae sobre todo en las mujeres, y eso reduce su trabajo pagado.
+      \end{itemize}
+      \pause
+      \begin{alertblock}{¿Cómo los financiamos?}
+        CEPAL les dedica unos párrafos, sin costo ni financiamiento.
+      \end{alertblock}
     \end{column}
   \end{columns}
-  \fuente{Cecchini et al. (2025), pp.~10, 49 y 68. Razones: cálculo propio con ONU, WPP 2024 (región) y escenario propio (México).}
-  \note{3 min. Las razones son nuestras, no del informe (datos/prep\_p3.py). No todas las mujeres de esa edad cuidan: es una medida de cuántas podrían hacerlo. El informe habla de la Ley de Seguro de Cuidados de Corea (pp.~54--55): va en la diapositiva 18.}
+  \fuente{Cálculo propio con la proyección de datos nacionales, 2025--2050. No todas esas mujeres cuidan: es una medida de cuántas podrían hacerlo. Cecchini et al. (2025), pp.~49 y 68.}
+  \note{2 min. La razón es nuestra, no del informe (datos/prep\_p3\_dalila.py). Cambio: Brasil ya usa el motor nacional; antes la barra regional usaba WPP (6.0 a 2.6; 80+ de 12 a 37 millones en la región, informe p.~10). Valores: México 5.74 y 2.15; Brasil 5.44 y 2.18.}
 \end{frame}
 
-% 15 ----------------------------------------------------------------------
+% 18 ----------------------------------------------------------------------
 \begin{frame}{El tiempo también se transfiere}
   \begin{columns}[T]
     \begin{column}{0.49\textwidth}
-      \begin{block}{Lo que faltaba en la Parte 2}
-        Las NTA no miden el trabajo en casa. Las cuentas de transferencias de tiempo (NTTA) sí: valoran el cuidado no remunerado por edad y sexo.
-      \end{block}
+      Las NTA no miden el trabajo en casa. Las cuentas de transferencias de tiempo (NTTA) sí: le ponen valor al cuidado no remunerado, por edad y sexo.
       \pause
-      \textbf{Lo que cambian}
-      \begin{itemize}
-        \item Las personas mayores también cuidan: el retiro del trabajo pagado no es el retiro del cuidado.
-      \end{itemize}
+      \par\medskip
+      Con ellas se ve que las personas mayores también cuidan. Se retiran del trabajo pagado, pero no de cuidar a nietos, parejas y padres.
     \end{column}
     \begin{column}{0.48\textwidth}
       \pause
       \begin{tikzpicture}
-        \node[caja,text width=5.3cm,minimum height=1.45cm] (a) at (0,2.0) {{\Large\bfseries 23.9\,\%}\\del PIB: valor del trabajo no remunerado en los hogares de México, 2024};
+        \node[caja,text width=5.3cm,minimum height=1.45cm] (a) at (0,2.0) {{\Large\bfseries 23.9\,\%}\\del PIB vale el trabajo no remunerado de los hogares en México, 2024};
         \node[caja,text width=5.3cm,minimum height=1.45cm] (b) at (0,0) {{\Large\bfseries 72.6\,\%}\\de ese valor lo aportan las mujeres};
       \end{tikzpicture}
       \par\smallskip
-      Esa es la fuente de financiamiento que el presupuesto no ve.
+      Ese valor no pasa por el presupuesto, pero sostiene buena parte de los cuidados.
     \end{column}
   \end{columns}
-  \fuente{Fuera del informe. Naciones Unidas (2024), Manual NTTA; INEGI, Cuenta Satélite del Trabajo No Remunerado 2024, preliminar.}
-  \note{2 min. fuentes/UN\_2024\_NTTA\_Manual.pdf; el manual muestra un perfil de tiempo de México 2014 (fig. 1.2) y lista a México entre los países con datos de Counting Women's Work. fuentes/INEGI\_CSTNRHM2024\_RR.pdf, reporte 48/25: 23.9\,\% y 72.6\,\%; las mujeres aportan 2.7 veces más valor que los hombres. El informe de CEPAL no trae NTTA.}
+  \fuente{Naciones Unidas (2024), Manual NTTA; INEGI, Cuenta Satélite del Trabajo No Remunerado 2024, preliminar. No viene en el informe de CEPAL.}
+  \note{1 min. fuentes/UN\_2024\_NTTA\_Manual.pdf; el manual muestra un perfil de tiempo de México 2014 (fig. 1.2) y lista a México entre los países con datos de Counting Women's Work. fuentes/INEGI\_CSTNRHM2024\_RR.pdf, reporte 48/25: 23.9\,\% y 72.6\,\%.}
 \end{frame}
 
-% 16 ----------------------------------------------------------------------
-\begin{frame}{Cómo se paga todo junto}
+% 19 ----------------------------------------------------------------------
+\begin{frame}{Solo por la edad, México necesitaría de 3 a 10 puntos del PIB más hacia 2050}
   \begin{columns}[T]
-    \begin{column}{0.49\textwidth}
-      \begin{alertblock}{Lo primero: el informe no lo dice}
-        No tiene escenarios fiscales. Junta los tres temas, pero no los suma.
-      \end{alertblock}
-      \pause
-      \textbf{Tres piezas que sí tenemos}
-      \begin{enumerate}
-        \item El déficit se muda a la vejez (diapositiva 6).
-        \item Con perfiles fijos, pensiones y salud le ganan al ingreso laboral (diapositiva 8).
-        \item Brasil: la edad sola exige ajustar 30\,\% (Parte 2).
-      \end{enumerate}
+    \begin{column}{0.56\textwidth}
+      \textbf{Aumento del gasto a 2050, puntos del PIB}\par\medskip
+      \begin{tikzpicture}[x=0.40cm,y=1.3cm]
+        \foreach \n/\p/\s/\t/\i in {Con perfiles por edad/2.9/0.5/3.4/0,Regla de estrés/6.4/3.7/10.1/1} {
+          \fill[cImpuesto!75] (0,-\i-0.3) rectangle (\p,-\i+0.3);
+          \fill[cDemanda!75] (\p,-\i-0.3) rectangle ({\p+\s},-\i+0.3);
+          \node[anchor=south west] at (0,-\i+0.27) {\n};
+          \node[anchor=west] at ({\p+\s},-\i) {\t};
+        }
+        \draw[black!60] (0,0.6) -- (0,-1.4);
+      \end{tikzpicture}
+      \par\smallskip
+      {\small\textcolor{cImpuesto!75}{\rule{7pt}{7pt}}~pensiones\quad\textcolor{cDemanda!75}{\rule{7pt}{7pt}}~salud pública}
+      \par\medskip
+      {\small Partimos de 4.7\,\% en pensiones y 2.7\,\% en salud. La regla de estrés hace crecer ambos con la razón de dependencia.}
     \end{column}
-    \begin{column}{0.48\textwidth}
+    \begin{column}{0.41\textwidth}
+      CEPAL no hace esta cuenta. Nosotros dejamos fijo el gasto por edad y cambiamos solo la pirámide.
       \pause
       \begin{block}{Dos pruebas para toda propuesta}
         \begin{enumerate}
-          \item ¿Se puede pagar en toda la transición, sin deuda explosiva?
-          \item ¿Fortalece el incentivo a cotizar?
+          \item ¿Se puede pagar sin que la deuda se dispare?
+          \item ¿Hace que convenga cotizar?
         \end{enumerate}
       \end{block}
-      El 10 de noviembre vemos la deuda.
       \pause
       \begin{alertblock}{Pregunta}
-        Si solo pudieran reformar uno de los tres, ¿cuál y por qué?
+        Si solo pudieran reformar pensiones, salud o cuidados, ¿cuál escogerían?
       \end{alertblock}
     \end{column}
   \end{columns}
-  \fuente{Cecchini et al. (2025), pp.~42--45; Manual NTA, pp.~18--19; Villarreal (2026), CEPAL.}
-  \note{3 min. Esta diapositiva se reescribió porque el informe no tiene escenarios. La arquitectura de la Parte 1 tiene dos ejes: salud e impuesto negativo. La condición: sin contener pensiones no hay espacio para salud.}
+  \fuente{Cuenta propia e ilustrativa con CGPE 2027, OMS (2023), ntaccounts.org y proyección con datos nacionales.}
+  \note{4 min. Sustituye a una gráfica basada en un documento para CAF, de circulación restringida: esta cuenta usa solo datos públicos (datos/prep\_p3\_dalila.py). Con perfiles: pensiones 4.7 por 6.5/4.0, salud 2.7 por 6.1/5.1, los perfiles NTA de México con el motor nacional: suben 2.9 y 0.5. Estrés: elasticidad 1 con la razón 65+/15--64, de 14.8 a 35.0, factor 2.36: suben 6.4 y 3.7. La regla de estrés exagera, porque las cuentas individuales y el fin de la generación de transición van bajando el reparto. Los perfiles se quedan cortos, porque son de 2004. La verdad está en medio, y por eso doy un rango. El 10 de noviembre vemos la deuda. La arquitectura de la Parte 1 tiene dos ejes, salud e impuesto negativo; sin contener pensiones no hay espacio para salud.}
 \end{frame}
 
 % =========================================================================
-% III. RECOMENDACIONES, MÉXICO Y CIERRE · 17 min
+% III. RECOMENDACIONES Y CIERRE · 13 min
 % =========================================================================
 \section{Recomendaciones y cierre}
 
-% 17 ----------------------------------------------------------------------
-\begin{frame}{Lo que recomienda el informe}
+% 20 ----------------------------------------------------------------------
+\begin{frame}{Esperamos una competencia mayúscula por el espacio fiscal}
+  \begin{columns}[T]
+    \begin{column}{0.59\textwidth}
+      \begin{itemize}
+        \item \textbf{Pensiones.} El beneficio definido es muy injusto con los jóvenes, y lo no contributivo no tiene fuentes claras.
+        \item \textbf{Educación.} Con retiros más tardíos hará falta educación para adultos, y casi no existe.
+        \item \textbf{Salud.} Las enfermedades crónicas son una bomba de tiempo para los sistemas fiscales.
+        \item \textbf{Cuidados.} Pueden ser la revolución de la política social de los próximos veinte años.
+        \item \textbf{Infraestructura.} Los adultos mayores se resisten a financiarla, y eso compromete el crecimiento.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.38\textwidth}
+      \pause
+      \textbf{Partimos de muy abajo}\par\smallskip
+      \setlength{\tabcolsep}{3pt}
+      \begin{tabular}{@{}lrr@{}}
+        \toprule
+        \% del PIB & OCDE & Región \\
+        \midrule
+        Presión fiscal & 34 & 21.7 \\
+        Seg.\ social & 9 & 4 \\
+        \bottomrule
+      \end{tabular}
+      \par\medskip
+      Y en México, de cada peso, casi todo ya tiene dueño: en 2026, lo que queda para decidir es 4.0\,\% del PIB.
+    \end{column}
+  \end{columns}
+  \fuente{Villarreal (2022, 2025), CEPAL, con datos de OCDE y CEPAL; Villarreal (2026), SobreMéxico, con datos de SHCP.}
+  \note{3 min. La Bolsa: 4.0\,\% del PIB, actualización 2026, lámina 3 de SobreMéxico, 22 de octubre; con pensiones de 6.3 en esa cuenta, otro perímetro que el 4.7 del Proyecto 2027. La seguridad social es la brecha mayor: por eso hay que repensarla como pieza de la modernización fiscal. Es mi lámina de junio de 2022, «Las finanzas públicas ante una transición demográfica agresiva», y la Tesis 2 de «Cuatro tesis para reordenamiento fiscal en América Latina», mayo de 2025. Ambas son públicas en cepal.org. 34/21.7 = 1.57; 9/4 = 2.25. Las cifras no se volvieron a verificar en OCDE. Declaración mía a Expansión (13 de septiembre de 2021) sobre reformar pensiones: «si no lo haces con cuidado, te tumba gobiernos»; y sobre las cuentas: «las cuentas se nos van a poner bien feas».}
+\end{frame}
+
+% 21 ----------------------------------------------------------------------
+\begin{frame}{CEPAL recomienda trabajo, salud, protección e invertir en los niños}
   \begin{columns}[T]
     \begin{column}{0.49\textwidth}
       \begin{block}{Trabajo}
-        Empleos formales y decentes para mayores que quieran trabajar, horarios flexibles, capacitación y leyes contra el edadismo.
+        Empleos formales para las personas mayores que quieran trabajar, horarios flexibles, capacitación y leyes contra la discriminación por edad.
       \end{block}
       \begin{block}{Salud}
-        Envejecimiento saludable y prevención: más años sanos bajan costos y alargan la vida productiva.
+        Prevención y envejecimiento saludable, para bajar costos y alargar la vida productiva.
       \end{block}
     \end{column}
     \begin{column}{0.48\textwidth}
       \begin{block}{Protección y cuidados}
-        Sistemas sostenibles, y atención a las mujeres que cargan con el cuidado.
+        Sistemas sostenibles y apoyo a las mujeres que cargan con el cuidado.
       \end{block}
       \begin{block}{Todo el ciclo de vida}
-        Invertir también en niños y jóvenes. Planear las políticas con la demografía.
+        Invertir también en niños y jóvenes, y planear las políticas con la demografía.
       \end{block}
     \end{column}
   \end{columns}
   \pause
   \par\medskip
-  Son orientaciones generales: no dicen cuánto cuestan ni quién paga.
+  Son orientaciones generales: no dicen cuánto cuestan ni quién las paga.
   \fuente{Cecchini et al. (2025), pp.~67--68.}
-  \note{3 min. Presentado como del informe. Se apoya en el Plan de Madrid y en el Consenso de Montevideo.}
+  \note{2 min. Presentado como del informe. Se apoya en el Plan de Madrid y en el Consenso de Montevideo.}
 \end{frame}
 
-% 18 ----------------------------------------------------------------------
-\begin{frame}{Corea: leyes, seguro y un tropiezo}
+% 21 ----------------------------------------------------------------------
+\begin{frame}{Corea hizo leyes y un seguro de cuidados, pero una ley no basta}
   \opcional
   \begin{columns}[T]
     \begin{column}{0.49\textwidth}
@@ -620,60 +749,31 @@
         \item 2005: Ley Marco sobre baja natalidad y envejecimiento, con planes cada cinco años.
         \item 2006: Ley de industrias para personas mayores.
         \item 2007: seguro de cuidados de largo plazo.
-        \item 2023: ley de empleo y actividades de mayores.
+        \item 2023: ley de empleo y actividades de personas mayores.
       \end{itemize}
     \end{column}
     \begin{column}{0.48\textwidth}
       \pause
-      \begin{alertblock}{Lo que salió mal}
-        Planes tratados como secundarios y esfuerzos dispersos. En 2024 se recortó por completo el presupuesto de promoción del Ministerio de Salud, y solo una persona seguía la ley.
-      \end{alertblock}
-      \pause
-      El país de TGF 0.73 aprendió que una ley no basta. El seguro de cuidados es lo que más le interesa a este curso.
-    \end{column}
-  \end{columns}
-  \fuente{Cecchini et al. (2025), pp.~53--58, cuadro~3. TGF de 2024.}
-  \note{4 min, opcional. El mercado de esas industrias se estima en 3.3 a 3.5\,\% del PIB (p.~57), con métodos poco fiables, dice el propio informe. Es el capítulo más largo del informe, y por eso lo traigo aunque no estaba en el esquema original.}
-\end{frame}
-
-% 19 ----------------------------------------------------------------------
-\begin{frame}{México en el informe: casi no está}
-  \begin{columns}[T]
-    \begin{column}{0.49\textwidth}
-      \textbf{Lo que trae}
+      \textbf{Lo que salió mal}
       \begin{itemize}
-        \item 59 años de bono.
-        \item $+$0.24\,\% anual de efecto en el PIB por persona, 2025--2050.
-        \item Un punto en la gráfica de pensiones y trabajo.
+        \item Los planes quedaron en segundo lugar y los esfuerzos se dispersaron.
+        \item En 2024, el Ministerio de Salud se quedó sin presupuesto de promoción, y solo una persona seguía la ley.
       \end{itemize}
       \pause
-      \textbf{Lo que no trae}
-      \begin{itemize}
-        \item No está entre los seis países con NTA.
-        \item Usa la revisión con TGF de 1.89, no la de 1.23.
-      \end{itemize}
-    \end{column}
-    \begin{column}{0.48\textwidth}
-      \pause
-      \begin{block}{Lo que podemos agregar}
-        \begin{itemize}
-          \item Con perfiles públicos de 2010 y 2014, la razón de sostenimiento de México toca techo hacia 2040.
-          \item Nuestra cuenta 2016--2024: la vejez se paga en 54.5\,\% con transferencias públicas.
-        \end{itemize}
-      \end{block}
-      {\small El mismo método, en cinco países del informe, cae a 2 a 4 años de sus fechas: tómenlo como orden de magnitud.}
+      \medskip
+      Corea tiene 0.73 hijos por mujer. Para este curso, lo que más interesa es su seguro de cuidados.
     \end{column}
   \end{columns}
-  \fuente{Cecchini et al. (2025), pp.~19, 34, 47. Cálculo propio con ntaccounts.org; López Reynosa y Villarreal (2026), trabajo en curso.}
-  \note{2 min. Replicación: Chile 2026 contra 2023; Brasil 2023 contra 2025; Costa Rica 2030 contra 2026; Perú 2034 contra 2036; Argentina 2040 contra 2038. México: 2039 con perfil 2010 y 2042 con perfil 2014 usando WPP; 2040 y 2042 con el motor nacional. Datos: datos/prep\_p3.py. No hay revisión de terceros.}
+  \fuente{Cecchini et al. (2025), pp.~53--58, cuadro~3. Hijos por mujer en 2024.}
+  \note{3 min, opcional. El mercado de esas industrias se estima en 3.3 a 3.5\,\% del PIB (p.~57), con métodos poco fiables, dice el propio informe. Es el capítulo más largo del informe.}
 \end{frame}
 
-% 20 ----------------------------------------------------------------------
-\begin{frame}{La economía plateada: una oportunidad con asterisco}
+% 22 ----------------------------------------------------------------------
+\begin{frame}{La economía plateada existe si las personas mayores tienen ingreso}
   \opcional
   \begin{columns}[T]
     \begin{column}{0.49\textwidth}
-      \textbf{Sectores que señala el informe}
+      \textbf{Sectores que señala CEPAL}
       \begin{itemize}
         \item Salud y cuidados.
         \item Finanzas y seguros.
@@ -693,57 +793,58 @@
     \end{column}
     \begin{column}{0.48\textwidth}
       \pause
-      \begin{alertblock}{El asterisco}
-        Informalidad alta, pensiones bajas y acceso desigual a la salud. Hay que dimensionarlo distinto que en Europa.
-      \end{alertblock}
+      CEPAL advierte que aquí hay mucha informalidad, pensiones bajas y acceso desigual a la salud. Este mercado no se puede medir igual que en Europa.
       \pause
-      Un mercado existe si hay ingreso. Con 43\,\% de mayores sin una pensión suficiente, ¿quién compra?
+      \par\medskip
+      Con 43\,\% de los mayores sin una pensión suficiente, ¿quién va a comprar esos servicios?
     \end{column}
   \end{columns}
   \fuente{Cecchini et al. (2025), pp.~11--13 y 48--51. Estimación de AARP y The Economist Intelligence Unit (2023).}
   \note{3 min, opcional. El recuadro 4 dice «6 países» y lista siete. Es un promedio simple de esos países. Economía plateada: 50 y más, concepto europeo. Economía de la longevidad: vidas más largas a todas las edades (Scott).}
 \end{frame}
 
-% 21 ----------------------------------------------------------------------
-\begin{frame}{Lectura crítica: qué deja abierto el informe}
+% 23 ----------------------------------------------------------------------
+\begin{frame}{Lo que el informe deja abierto, y México casi no aparece}
   \begin{columns}[T]
-    \begin{column}{0.49\textwidth}
+    \begin{column}{0.50\textwidth}
       \begin{itemize}
-        \item \textbf{La cuenta fiscal.} Habla de márgenes, pero no calcula cuánto cuesta.
-        \item \textbf{La fecundidad.} Sus proyecciones vienen de la revisión que los datos ya rebasaron.
-        \item \textbf{México.} Falta en las NTA de la región.
-        \item \textbf{La informalidad.} La menciona, pero no la mete en los números.
+        \item \textbf{El costo.} No calcula cuánto cuesta envejecer.
+        \item \textbf{La fecundidad.} Usa la revisión de la ONU: 1.89 hijos por mujer en México, contra 1.23 del INEGI.
+        \item \textbf{La informalidad.} La menciona, pero no entra en sus números.
+        \item \textbf{La inversión pública y la migración.} Casi no aparecen, y con votantes de más edad la economía política juega contra la inversión.
+        \item \textbf{México.} No está entre los seis países con NTA.
       \end{itemize}
     \end{column}
-    \begin{column}{0.48\textwidth}
+    \begin{column}{0.47\textwidth}
       \pause
       \begin{block}{Nuestra agenda}
         Escenarios de fecundidad, el laboratorio DFD, las cuentas de México y una nueva arquitectura de seguridad social.
       \end{block}
       \pause
       \begin{alertblock}{Pregunta}
-        ¿El informe es optimista o realista cuando dice que el envejecimiento es también una oportunidad? ¿Para quién?
+        CEPAL dice que el envejecimiento también es una oportunidad. ¿Para quién?
       \end{alertblock}
     \end{column}
   \end{columns}
-  \fuente{Lectura propia del informe; Parte 1.}
-  \note{3 min. Es nuestra lectura: se distingue de lo que dice el informe. Aceptemos que también dice cosas útiles: el reencuadre de la p.~44, adaptar los mecanismos de transferencia, es la frase que más me gusta.}
+  \fuente{Lectura propia de Cecchini et al. (2025); INEGI, EIC 2025; Villarreal (2025), \emph{Nexos}.}
+  \note{2 min. Es nuestra lectura. El informe también dice cosas útiles: la frase de la p.~44, adaptar los mecanismos de transferencia, es la que más me gusta. Nuestra cuenta de México 2016--2024: la vejez se paga en 54.5\,\% con transferencias públicas (López Reynosa y Villarreal, trabajo en curso; Parte 1).}
 \end{frame}
 
-% 22 ----------------------------------------------------------------------
+% 24 ----------------------------------------------------------------------
 \begin{frame}{Para llevarse de las tres partes}
   \begin{enumerate}
-    \item \textbf{La transición.} La pirámide cambia más rápido que las instituciones, y más rápido de lo que se proyecta.
+    \item \textbf{La transición.} La pirámide cambia más rápido que las instituciones, y más rápido de lo que proyectan.
     \pause
-    \item \textbf{Las cuentas.} Cada edad tiene un déficit o un superávit, y alguien lo cubre: el Estado, la familia o los activos.
+    \item \textbf{Las cuentas.} Cada edad consume distinto de lo que produce, y alguien cubre la diferencia: el Estado, la familia o los activos.
     \pause
-    \item \textbf{La región.} El déficit se muda a la vejez, y pensiones, salud y cuidados se pelean el mismo presupuesto.
+    \item \textbf{La región.} Pensiones, salud y cuidados van a pelear por el mismo presupuesto, y hoy buena parte la pagan los hogares con su bolsillo y su tiempo.
   \end{enumerate}
   \pause
+  Planear cuesta hoy y rinde después, y por eso se pospone. Hace falta un nuevo contrato social.
   \begin{block}{El 10 de noviembre}
-    Deuda y sostenibilidad. ¿Qué pasa con la tasa de interés frente al crecimiento cuando la población envejece?
+    Vemos deuda y sostenibilidad: qué pasa con la tasa de interés frente al crecimiento cuando la población envejece.
   \end{block}
-  \fuente{Partes 1, 2 y 3.}
+  \fuente{Partes 1, 2 y 3; Villarreal (2022), CEPAL; Villarreal (2025), \emph{Nexos}.}
   \note{2 min. Cierre de la sesión de 150 minutos.}
 \end{frame}
 

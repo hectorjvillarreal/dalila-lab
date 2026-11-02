@@ -248,3 +248,47 @@ La Parte 3 no usa entradas de corpus.
 4. **Diapositiva 19.** Agregué el máximo de la razón de sostenimiento de México, hacia 2040. Replicado en cinco países del informe, el método cae a 2–4 años de sus fechas: es orden de magnitud. Sin revisión de terceros.
 5. **Diapositiva 7.** Muestra 10 de los 16 países, por espacio.
 6. **Diapositiva 11.** El entregable CAF fecha el Fondo el 30 de abril de 2024. Ese día salió la reforma de leyes; el decreto del Fondo es del 1 de mayo. Conviene corregir CAF_DEM si se reutiliza.
+
+## Versión 2 · 2 de noviembre de 2026
+
+Héctor pidió que las tres presentaciones reflejen su voz, sus ideas y sus años de trabajo. La tabla de la Parte 3 de arriba queda superada: ahora son 25 diapositivas.
+
+### Criterio de lenguaje
+
+En los textos que son seguro suyos (columna de *Nexos*, «Contabilidad de la Muerte») escribe oraciones completas, explicativas y moderadas. Lo telegráfico de la versión 1 venía de seguir «frases cortas» de este encargo. La versión 2 prefiere la oración completa, la cifra con punto de comparación y el desacuerdo que concede antes de objetar.
+
+### Cambios
+
+| Parte | Cambio | Fuente |
+|---|---|---|
+| 1 | Thompson (1929), quinta fase y tesis del reacomodo por edades | Nexos (2025) |
+| 1 | Nueva, diapositiva 11: «Llevamos más de diez años haciéndonos esta pregunta» | Cantú, Ramones y Villarreal (2016); Villarreal y Macías (2020); CEPAL 2022, 2025 y 2026 |
+| 1 | Nueva, diapositiva 13: «¿Una sexta fase?» | Borrador «Cohort Replacement, Not Cascade»; Fernández-Villaverde y Norrick (2026) |
+| 1 | Pilares con su juicio de 2022 | CEPAL (2022) |
+| 2 | Cierre: gobierno mediador entre generaciones; propuesta de cuentas generacionales y NTA en las cuentas nacionales | Resumen ejecutivo NTA; CEPAL 2022 y 2025 |
+| 2 | Mujeres de 60 y más: 24.0 % menos en transferencias públicas netas | `paper_final.tex` |
+| 3 | Reescrita; gráficas de 65+, razón de dependencia, un hijo por mujer, bolsillo por edad y salto de 2020 | Motor nacional; escenario LAC; BID2/motivation |
+| 3 | Nueva, diapositiva 13: quién paga, solo en el PDF de exposición | BID2, Draft-October |
+| 3 | Nueva, diapositiva 20: «competencia mayúscula» y Bolsa de 4.0 % del PIB | CEPAL 2022 y 2025; SobreMéxico 2026 |
+| 3 | Diapositiva 19: cuenta ilustrativa de México, +3.4 a +10.1 puntos del PIB | CGPE 2027, OMS, ntaccounts.org, motor nacional |
+
+**Opcionales de la Parte 3:** 8 (2 min), 11 (3), 22 (3) y 23 (3). Suman 11 minutos. El total da unos 62 minutos.
+**Opcionales de la Parte 1:** 6, 15 y 20, sin cambio. Las Partes 1 y 3 quedan algo arriba de 60 minutos.
+
+### Restricciones de uso
+
+- **CAF:** el reporte es de circulación restringida y la misión dice «No divulgar». Se retiró de pantalla y de los PDF el recuadro de la versión 1 y la gráfica de presión. La versión 1, ya subida en 6c6fb3a, sí citaba ese documento en un recuadro.
+- **BID2, Draft-October:** dice «do not cite or circulate» y tiene tres coautores más. Va en el PDF de exposición, no en el de repartir (`<handout:0>`).
+- **«Cohort Replacement, Not Cascade»:** dice «not for circulation». Va en ambos PDF porque Héctor, autor único, lo autorizó el 2 de noviembre.
+- **IMSS N13:** no se usó: es preliminar y con insumos del IMSS.
+- **Sexta fase:** es hipótesis de Héctor y va como pregunta. El borrador habla de compresión de la segunda transición.
+
+### No verificado o abierto
+
+- 34 y 21.7, 9 y 4 % del PIB: tomados de la lámina de 2025; no se volvió a la OCDE.
+- CIEP, pensiones arriba de 40 % de los ingresos tributarios: solo en nota, tomado de la columna.
+- Villarreal y Macías (2020): título y resumen por búsqueda web; cepal.org devolvió 403.
+- La versión en español de *Nexos* está tras muro de pago; se leyó la inglesa.
+- Reforma del borrador: trata a México como comparador lento (1.60); hay que revisarlo con la EIC 2025.
+- Tres fuentes de la Parte 1 siguen sin respaldo formal; la Nota EIC sigue pendiente de firma.
+- Errata en la columna: la nota 1 dice «Warren, T.»; es Thompson, W. S. (1929).
