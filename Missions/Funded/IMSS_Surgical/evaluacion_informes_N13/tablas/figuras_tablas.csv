@@ -1,0 +1,64 @@
+documento,tipo,numero,titulo,pagina,citada_en_texto,citada_antes_de_aparecer,fuente_al_pie,unidades,legibilidad,coincide_con_cifras_del_texto,duplicado,observacion
+Informe de Resultados,Figura,1,"SEM del IMSS: ingresos, gastos y balance proyectado",6,"sí (3.2, «Ver Figura 1»)",sí,no (solo texto dentro de la imagen),en eje: mdp 2020; pie sin unidades,sí,no verificable (gráfica externa 2020-2050),no,Pie debajo; sin línea Fuente; horizonte distinto del informe
+Informe de Resultados,Figura,2,Participación de enfermedades crónicas en el gasto del IMSS,7,citada como «Gráfica 2»,sí,«Fuente;» (errata),"% implícito, eje sin rótulo",sí,"parcial (cáncer de mama y cérvico-uterino en leyenda, invisibles)",no,Título antes de la imagen
+Informe de Resultados,Figura,3,"De los ingresos del IMSS al gasto en quirófano, 2024-2026",7,sí,sí,sí,MMDP de 2026,NO (3 paneles en 900 px),sí (63.6/64.1/4.2/2.9 %),parcial (M.4 es la cascada 2025/2030),Nota de edición en el título
+Informe de Resultados,Figura,4,"Tasa de utilización por GRD, edad y sexo, 2025",16,sí,sí,sí,casos por 100 mil (título),"parcial (GIF, leyenda 6 pt)",parcial («Incidencia» en título interno),sí: repite J.1,Leyenda sin acentos; 110-119 vacío
+Informe de Resultados,Figura,5,"Casos por escenario y casos por 100 mil, 2025-2055",17,sí,sí,sí,miles; por 100 mil,"parcial (GIF, leyenda ilegible)",NO: leyenda E0-E6 «Expansión» ≠ Tabla 3 E0-E9,no,Regenerar
+Informe de Resultados,Figura,6,"Gasto real proyectado por GRD, escenario base",18,sí,sí,sí,MDP de 2026,sí (leyenda pequeña),sí,no,Leyenda incluye «Otros GRD»
+Informe de Resultados,Figura,7,Motores del gasto en el escenario base (4 paneles),19,sí,sí,sí,MDP de 2026 (panel 4),parcial (GIF),sí (pie aclara «incidencia»),no,Título huérfano en p. 18
+Informe de Resultados,Figura,8,Crecimiento acumulado costo trazadores vs ingresos SEM,20,sí,sí,sí,índice 2025 = 1,sí,sí (cruce ~2038; ver N-R4),no,Pie debajo (única de la sección 5)
+Informe de Resultados,Figura,9,"Ingresos SEM, gasto corriente y balance, escenario base",21,sí,sí,sí,MMDP de 2026,parcial (etiquetas ilegibles),sí (Tabla 5),no,Título interno termina en «gasto: pct»
+Informe de Resultados,Figura,10,"Gasto trazadores como % del gasto en quirófano del SEM, por escenario",22,NO,—,sí,%,"parcial (GIF, leyenda ilegible)",NO: leyenda E0-E6 ≠ Tabla 6 E0-E9,no,Título duplicado (antes y después)
+Informe de Resultados,Figura,11,Costo trazadores y peso en quirófano con cada denominador,23,sí,sí,sí,MDP de 2026; %,parcial,"sí (3,183 vs 3,974)",sí: repite L.1,Imagen sola en p. 23 sin título
+Informe de Resultados,Figura,6.1,"Pago anual del hogar como % del ingreso laboral, 2026",27,sí,sí,sí,%,sí,sí (3.5 % / 8.6 %),no,Pie debajo
+Informe de Resultados,Figura,6.2,Flujos financieros anuales de la afiliación subsidiada,28,sí,sí,sí,MDP de 2026,sí,sí (288 / 433),no,Eje x desde 2025 con datos 2026-2054
+Informe de Resultados,Figura,6.3,Stock y flujos de la reserva del seguro solidario,31,sí,sí,sí,MDP de 2026,sí (leyenda ~5 pt),sí,no,
+Informe de Resultados,Figura,6.4,Recursos para cuidados por persona con IMSS,31,sí,sí,sí (en p. 32),pesos de 2026 por persona,sí,"sí (2,503/1,709/768)",no,Fuente huérfana en p. 32
+Informe de Resultados,Figura,6.5,Tarifa SSFAM cobrada vs costo esperado por edad,33,sí,sí,sí,pesos,sí,"sí (73 %, 56-58 %)",no,
+Informe de Resultados,Figura,6.6,Personas sin IMSS cuya tarifa supera 10 % y 25 % del ingreso,34,sí,sí,sí,%,sí,sí (77-82 %),no,
+Informe de Resultados,Figura,F.1,Costo por caso por centro de costo (pesos de 2025),48,sí,sí,sí,eje y sin unidad,sí,parcial,no,Leyenda tapa una barra; «intenvención»
+Informe de Resultados,Figura,F.2,Costo total fractura de cadera por factor de producción,49,sí,sí,sí,«1e9»; eje x «escenario_y»,sí,parcial,no,Figura de cuaderno sin pulir
+Informe de Resultados,Figura,H.1,Flujos anuales de la población cotizante del SEM,51,sí,sí,sí,millones,sí,sí,no,
+Informe de Resultados,Figura,H.2,Pirámide de la población cotizante del SEM,51,sí,sí,sí,millones,sí,sí,no,
+Informe de Resultados,Figura,I.1,"Tasa de derechohabiencia por edad y sexo, ENIGH 2024",52,sí,sí,sí,%,sí,parcial (incluye 110-119; Tabla I.1 llega a 100-109),no,
+Informe de Resultados,Figura,I.2,Cotizantes como % de derechohabientes por edad,55,sí,sí,sí,%,sí,sí (142.5/170.4/134.9/103.4),no,
+Informe de Resultados,Figura,J.1,"Tasa de utilización por GRD, edad y sexo (PNG)",56,sí,sí,sí,por 100 mil,sí,parcial («Incidencia»),sí: = Figura 4,Nítida; la del cuerpo es la borrosa
+Informe de Resultados,Figura,K.1,Flujos anuales de derechohabientes por escenario,60,sí,sí,sí,millones,sí (leyenda pequeña),sí,no,Nombres coinciden con D.1
+Informe de Resultados,Figura,K.2,Pirámide de derechohabientes 2055: base vs E7,61,sí,sí,sí,millones,sí,sí,no,
+Informe de Resultados,Figura,L.1,Costo de los GRD con cada método,62,sí,sí,sí,MDP; %,sí,sí (5.9 %),sí: = Figura 11,
+Informe de Resultados,Figura,M.1,"Ingresos tripartitos por seguro, 2024-2055",63,sí,sí,sí,pie «millones» vs eje «MMDP»,sí,NO en unidades,no,Texto fantasma «proyección →»; siglas SRT/SIV/SGPS
+Informe de Resultados,Figura,M.2,"Gasto en quirófano nominal y real, 2020-2026",64,sí,sí,sí,pie «millones» vs eje «MMDP»,sí,NO en unidades,no,
+Informe de Resultados,Figura,M.3,Crecimiento real anual del costo por GRD vs ingresos,65,sí,sí,sí,%,"parcial (11 series, leyenda ilegible)",sí,no,
+Informe de Resultados,Figura,M.4,"Cascada ingresos → costo de los GRD, 2025 y 2030",65,sí,sí,sí,MMDP de 2026,parcial,sí (0.22 % / 7.6 %),no,
+Informe de Resultados,Figura,M.5,Balance financiero del SEM observado 2024-2026,66,sí,sí,sí,MMDP de 2026,sí,sí (24.8 / −3.6 / −4.3),no,
+Informe de Resultados,Figura,N.1,Cómo funciona la afiliación subsidiada (esquema),67,sí (6a.2),sí,sí,n/a,sí,sí,no,
+Informe de Resultados,Figura,N.2,"Ingreso y costo por nuevo cotizante de salario mínimo, 2030",67,sí (6a.4),sí,sí,pesos de 2026,sí,"sí (31,190 / 8,065 / 3,681 / 5,863)",no,
+Informe de Resultados,Figura,N.3,Del 5 % actual al nuevo seguro (esquema),68,sí (6b.2),sí,sí,n/a,sí,sí,no,El informe termina en esta figura
+Informe de Resultados,Tabla,1,Procedimientos trazadores: volumen y costo del año base,14,NO,—,sí,pesos de 2026; MDP,sí,"sí (suma 1,877.0; productos verificados)",no,Estilo sans
+Informe de Resultados,Tabla,2,"Tasa de utilización por procedimiento y edad, 2025",15,sí,sí,sí,casos por 100 mil,sí (serif 8 pt),sí (filas suman; 89.8),parcial (J.1 la amplía),Estilo distinto de Tabla 1
+Informe de Resultados,Tabla,3,Demanda proyectada por escenario,17,sí,sí,«FFuente»,millones; miles,sí,sí (K.1 coincide),no,
+Informe de Resultados,Tabla,4,"Gasto total por trazadores, base y rango",18,sí,sí,sí,MDP de 2026,sí,"sí (K.2 coincide: 3,974.1/3,813.2/4,208.2)",no,
+Informe de Resultados,Tabla,5,"Brecha estructural del SEM, escenario base",20-21,sí,sí,sí,MMDP de 2026; %,sí,sí (Δ y % recalculados; cuaderno 16.6),no,Partida sin repetir cabecera; signos como cuadro vacío en el render
+Informe de Resultados,Tabla,6,"Gasto trazadores como % del quirófano del SEM, por escenario",22,sí,sí,sí,%,sí,sí (rangos de 5.5 coinciden),no,Título huérfano en p. 21
+Informe de Resultados,Tabla,6.1,Supuestos de la afiliación subsidiada,26,sí,sí,sí,mixtas,sí,sí (35.9 → 72.5 %; 47.2/32.1/26.6),no,
+Informe de Resultados,Tabla,6.2,Supuestos del seguro solidario,30,NO,—,sí,mixtas,sí,sí,no,«Con gastos de administración y provisiones sería mayor» (R5)
+Informe de Resultados,Tabla,6.3,Último año en que el seguro paga el déficit de GMP,32,sí (después),no,sí,años,sí,sí,no,
+Informe de Resultados,Tabla,6.4,Saldo de la afiliación a cuota fija,34,sí,sí,sí,% de ingresos del SEM; millones,sí,sí (−3.3 % ≈ 20 mil millones),no,Columna 2055 (ver R13/N-R7)
+Informe de Resultados,Tabla,A.1,Operacionalización de variables,41-42,sí,sí,sí,n/a,sí,sí,no,Cabecera repetida
+Informe de Resultados,Tabla,C.1,Procedimientos trazadores seleccionados,43,sí,sí,sí,casos,sí,"sí (36,249 = 36,091+83+75; 1,515)",parcial (E.2),"Total 49,069 vs 49,068/49,067 explicado en notas"
+Informe de Resultados,Tabla,D.1,Parámetros por escenario,44,sí,sí,sí,%; pp,sí,sí,no,Signos como cuadro vacío en el render
+Informe de Resultados,Tabla,E.1,Filtros de la base de demanda,45,sí,sí,sí,registros,sí,"sí (4,398,161 − 1,188,965 − 6,653 = 3,202,543)",no,
+Informe de Resultados,Tabla,E.2,Escenarios clínicos de la tabla puente,46,sí,sí,sí,casos,sí,sí,parcial (C.1),
+Informe de Resultados,Tabla,E.3,Reasignación de GRD por complicación,46,sí,sí,sí,n/a,sí,sí,no,
+Informe de Resultados,Tabla,F.1,Costo por caso de los GRD proyectados,47,sí,sí,sí,pesos de 2026,sí,sí (= Tabla 1),sí (columna de Tabla 1),
+Informe de Resultados,Tabla,G.1,Procedimientos principales por escenario,50,sí,sí,sí,casos,sí,"sí (36,058+33 = 36,091)",no,
+Informe de Resultados,Tabla,I.1,Tasa de derechohabiencia y subordinados sin IMSS,52,sí,sí,sí,%; pp,sí,sí,no,
+Informe de Resultados,Tabla,I.2,Población de referencia,53,sí,sí,sí,millones,sí,sí (12.5 %),no,
+Informe de Resultados,Tabla,I.3,Efecto del conteo de derechohabientes,54,sí,sí,sí,millones; %; pesos; MMDP,sí (cabecera de 7 líneas),"sí (9,977 = 545,271/54.65)",no,Mejor pieza de transparencia
+Informe de Resultados,Tabla,J.1,"Tasa de utilización observada, todos los rangos",57,sí,sí,sí,por 100 mil,sí,sí,sí (amplía Tabla 2),
+Informe de Resultados,Tabla,J.2,"Casos, tasa y peso en el costo por GRD",57-58,sí,sí,sí,casos; por 100 mil; %,sí,sí (% suman 99.9),no,Cabecera repetida
+Informe de Resultados,Tabla,K.1,Derechohabientes y envejecimiento por escenario,59,sí,sí,sí,millones; %,sí,sí (= Tabla 3; 14.3 → 29.1),parcial (Tabla 3),
+Informe de Resultados,Tabla,K.2,Costo por GRD en 2055 por escenario,60-61,sí,sí,sí,MDP de 2026,sí (11 columnas),sí (totales = Tabla 4; −4.0/+5.9 %),no,Cabecera repetida
+Informe de Resultados,Tabla,M.1,Tasa media de crecimiento real de ingresos,63,sí,sí,sí,%,sí,parcial (2.9 % 2027-55 vs 2.7 % 2025-55 en 5.5; periodos distintos),no,
+Informe de Resultados,Tabla,M.2,Cascada de ingresos a gasto en quirófano,64,sí,sí,sí,% de ingresos; MDP,sí,sí (= 3.2 y 5.6),no,
+Informe de Recomendaciones,—,—,(sin figuras ni tablas),,,,,,,,,
