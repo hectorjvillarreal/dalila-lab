@@ -1,0 +1,660 @@
+% Cuentas Nacionales de Transferencia y envejecimiento · Parte 1: la transición demográfica
+% Finanzas Públicas, Maestría en Economía Aplicada, Tec de Monterrey
+% Esquema aprobado: esquema_nta.md (2026-11-01). Compilar con: latexmk -pdf nta_p1_demografia.tex
+% Versión para repartir: nta_p1_demografia_handout.tex (misma fuente, opción handout).
+% Las notas del presentador van en \note{}; para verlas, compilar con \setbeameroption{show notes}.
+% Datos de las gráficas: datos/prep_p1.py.
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\unaccentedoperators % la opción es-noaccentedoperators no existe en esta versión de babel
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{babel,arrows.meta,calc,positioning,decorations.pathreplacing,patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+
+% ---------------------------------------------------------------------------
+% Tema sobrio (igual al de las sesiones anteriores)
+% ---------------------------------------------------------------------------
+\definecolor{cTitulo}{RGB}{0,55,100}
+\definecolor{cOferta}{RGB}{31,87,153}
+\definecolor{cDemanda}{RGB}{200,100,0}
+\definecolor{cImpuesto}{RGB}{175,30,30}
+\definecolor{cRecauda}{RGB}{40,130,80}
+\definecolor{cGris}{RGB}{110,110,110}
+
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{frametitle}{fg=cTitulo}
+\setbeamercolor{title}{fg=cTitulo}
+\setbeamercolor{structure}{fg=cTitulo}
+\setbeamercolor{block title}{bg=cTitulo!12,fg=cTitulo}
+\setbeamercolor{block body}{bg=cTitulo!4}
+\setbeamercolor{block title alerted}{bg=cImpuesto!12,fg=cImpuesto}
+\setbeamercolor{block body alerted}{bg=cImpuesto!4}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{blocks}[rounded]
+\setbeamertemplate{footline}{%
+  \hfill{\small\color{cGris}NTA y envejecimiento · Parte 1\quad\insertframenumber/\inserttotalframenumber}\hspace*{1em}\vspace{1.5mm}}
+
+% Fuente al pie de cada diapositiva
+\newcommand{\fuente}[1]{\par\vfill{\small\color{cGris}#1\par}}
+% Distintivo de diapositiva opcional
+\newcommand{\opcional}{\tikz[remember picture,overlay]\node[anchor=north east,font=\small,text=cGris] at ([xshift=-5mm,yshift=-3mm]current page.north east) {opcional};}
+
+% ---------------------------------------------------------------------------
+% Estilo común de gráficas
+% ---------------------------------------------------------------------------
+\tikzset{
+  every node/.append style={font=\small},
+  eje/.style={-{Stealth[length=2mm]},thick,black!75},
+  flecha/.style={-{Stealth[length=2mm]},thick,cTitulo},
+  guia/.style={thin,dashed,black!45},
+  sincorte/.style={execute at begin node={\hyphenpenalty=10000\exhyphenpenalty=10000\relax}},
+  caja/.style={sincorte,draw=cTitulo,rounded corners,fill=cTitulo!5,align=center,inner sep=4pt},
+  cajafisco/.style={sincorte,draw=cRecauda,rounded corners,fill=cRecauda!10,align=center,inner sep=3pt},
+}
+\pgfplotsset{
+  estilo/.style={axis lines=left,tick label style={font=\small},label style={font=\small},
+    legend style={font=\small,draw=none,fill=none},every axis plot/.append style={thick}},
+}
+
+\title{Cuentas Nacionales de Transferencia y envejecimiento}
+\subtitle{Parte 1: la transición demográfica}
+\author{Héctor Juan Villarreal}
+\institute{Finanzas Públicas · Maestría en Economía Aplicada\\Escuela de Gobierno y Transformación Pública · Tec de Monterrey}
+\date{Noviembre de 2026}
+
+\begin{document}
+
+% =========================================================================
+% I. EL MODELO DE TRANSICIÓN DEMOGRÁFICA · 25 min
+% =========================================================================
+\section{La transición demográfica}
+
+% 1 -----------------------------------------------------------------------
+\begin{frame}[plain]
+  \titlepage
+  \note{1 min. Esta es la sesión del curso que más me importa: es mi campo. Tres partes: hoy la demografía y lo que hemos investigado; luego el Manual NTA; al final, América Latina con el documento de CEPAL.}
+\end{frame}
+
+% 2 -----------------------------------------------------------------------
+\begin{frame}{Las finanzas públicas cobran a unas edades y gastan en otras}
+  \begin{columns}[T]
+    \begin{column}{0.50\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=7.4cm,height=5.0cm,xmin=0,xmax=90,ymin=0,ymax=1.45,xlabel={Edad},ytick=\empty,
+            xtick={0,20,40,60,80},legend pos=north west,legend cell align=left]
+          \addplot[cImpuesto,smooth,domain=0:90,samples=60] {0.85*exp(-((x-45)/17)^2)+0.06};
+          \addlegendentry{Lo que paga}
+          \addplot[cOferta,smooth,domain=0:90,samples=60] {0.45*exp(-((x-10)/9)^2)+0.14+0.86*(x/90)^6};
+          \addlegendentry{Lo que recibe}
+        \end{axis}
+      \end{tikzpicture}
+      {\small\color{cGris}Gráfica esquemática, sin datos.}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \begin{itemize}
+        \item A los 10 años, la escuela pública.
+        \item A los 40, el ISR, las cuotas y el IVA.
+        \item A los 70, la pensión y la consulta médica.
+      \end{itemize}
+      \pause
+      \begin{block}{La idea de hoy}
+        Si cambia cuánta gente hay en cada edad, cambia todo el presupuesto, aunque nadie toque una ley.
+      \end{block}
+      \pause
+      El modelo de Kaplow de la semana pasada no tiene edad. Hoy se la ponemos.
+    \end{column}
+  \end{columns}
+  \fuente{Naciones Unidas (2013), \emph{Manual NTA}, pp.~1--2.}
+  \note{2 min. El Manual lo dice así: los gobiernos cobran sobre todo a quienes están en edad de trabajar y dan más apoyo a niños y mayores (p.~1).}
+\end{frame}
+
+% 3 -----------------------------------------------------------------------
+\begin{frame}{La transición demográfica: cuatro fases, dos curvas}
+  \begin{columns}[T]
+    \begin{column}{0.58\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=8.6cm,height=5.4cm,xmin=0,xmax=100,ymin=0,ymax=50,xtick=\empty,ytick=\empty,
+            xlabel={Tiempo},ylabel={Tasa por mil habitantes},clip=false]
+          \addplot[name path=nat,cOferta,smooth] coordinates {(0,40)(22,40)(50,38)(64,27)(78,15)(100,12)};
+          \addplot[name path=mor,cImpuesto,smooth] coordinates {(0,37)(22,35)(36,20)(50,13)(78,10)(100,11)};
+          \addplot[cRecauda!25] fill between[of=nat and mor];
+          \draw[guia] (axis cs:22,0) -- (axis cs:22,47);
+          \draw[guia] (axis cs:50,0) -- (axis cs:50,47);
+          \draw[guia] (axis cs:78,0) -- (axis cs:78,47);
+          \node at (axis cs:11,46) {Fase 1};
+          \node at (axis cs:36,46) {Fase 2};
+          \node at (axis cs:64,46) {Fase 3};
+          \node at (axis cs:89,46) {Fase 4};
+          \node[cOferta,font=\small\bfseries,anchor=west] at (axis cs:68,27) {natalidad};
+          \node[cImpuesto,font=\small\bfseries] at (axis cs:66,7) {mortalidad};
+          \node[cRecauda!70!black,align=center] at (axis cs:44,27) {crecimiento\\natural};
+        \end{axis}
+      \end{tikzpicture}
+      {\small\color{cGris}Gráfica esquemática, sin datos.}
+    \end{column}
+    \begin{column}{0.40\textwidth}
+      \begin{itemize}
+        \item \textbf{Fase 1.} Las dos altas. La población casi no crece.
+        \item \textbf{Fase 2.} Cae la mortalidad. La población se dispara.
+        \item \textbf{Fase 3.} Cae la fecundidad. El crecimiento se frena.
+        \item \textbf{Fase 4.} Las dos quedan bajas.
+      \end{itemize}
+      \pause
+      Muchos países siguieron bajando, debajo del reemplazo. Es la llamada segunda transición.
+    \end{column}
+  \end{columns}
+  \fuente{Lee (2003), \emph{JEP} 17(4); van de Kaa (1987); Lesthaeghe (2010), \emph{PDR} 36(2).}
+  \note{4 min. Lee: la transición empieza en Europa hacia 1800 con la caída de la mortalidad y se proyecta terminar hacia 2100. La segunda transición es de Lesthaeghe y van de Kaa (1986); habla de cambios en valores y en la formación de parejas, no solo de números.}
+\end{frame}
+
+% 4 -----------------------------------------------------------------------
+\begin{frame}{La mortalidad cae primero}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=7.9cm,height=5.2cm,xmin=1950,xmax=2023,ymin=0,ymax=55,
+            xtick={1950,1970,1990,2010},xticklabel style={/pgf/number format/1000 sep={}},
+            ylabel={Por mil habitantes},xlabel={México}]
+          \addplot[name path=nat,cOferta] table[col sep=comma,x=Time,y=CBR]{datos/p1_tasas_mex.csv};
+          \addplot[name path=mor,cImpuesto] table[col sep=comma,x=Time,y=CDR]{datos/p1_tasas_mex.csv};
+          \addplot[cRecauda!25] fill between[of=nat and mor];
+          \node[cOferta,font=\small\bfseries] at (axis cs:1998,33) {natalidad};
+          \node[cImpuesto,font=\small\bfseries] at (axis cs:1990,2.5) {mortalidad};
+          \node[cRecauda!70!black] at (axis cs:1967,28) {crecimiento natural};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \begin{itemize}
+        \item Vacunas, agua limpia, antibióticos y mejor comida salvan sobre todo a los niños.
+        \item México, 1950 a 1970: las muertes bajan de 21.6 a 10.0 por mil. Los nacimientos apenas de 49.2 a 44.5.
+      \end{itemize}
+      \pause
+      \begin{block}{Lo que le pasa a la pirámide}
+        Sobreviven más niños y la base se ensancha. En 1970, casi la mitad de los mexicanos (47.7\,\%) tenía menos de 15 años.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \fuente{ONU, \emph{World Population Prospects 2024}, estimaciones 1950--2023.}
+  \note{3 min. Datos: GrandPlan/DFD/outputs/public/2026-09\_mexico\_2050/data/WPP2024\_Demographic\_Indicators\_Medium.csv.gz; datos/p1\_tasas\_mex.csv. El 47.7 sale de WPP 2024 por grupos de edad.}
+\end{frame}
+
+% 5 -----------------------------------------------------------------------
+\begin{frame}{La fecundidad cae después, y en México cayó de golpe}
+  \begin{columns}[T]
+    \begin{column}{0.54\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=7.6cm,height=5.0cm,xmin=1950,xmax=2026,ymin=0,ymax=7.5,
+            xtick={1950,1970,1990,2010},xticklabel style={/pgf/number format/1000 sep={}},
+            ylabel={Hijos por mujer (TGF)},xlabel={México}]
+          \addplot[cOferta] table[col sep=comma,x=Time,y=TFR]{datos/p1_tasas_mex.csv};
+          \addplot[only marks,mark=*,mark size=2.2pt,cImpuesto] coordinates {(2019,1.9)(2024,1.23)};
+          \draw[guia] (axis cs:1950,2.1) -- (axis cs:2026,2.1);
+          \node[anchor=south east,cGris] at (axis cs:2000,2.1) {reemplazo: 2.1};
+          \node[anchor=east,cImpuesto,font=\small\bfseries] at (axis cs:2023,0.8) {INEGI: 1.23};
+          \node[anchor=west,cOferta] at (axis cs:1972,6.0) {ONU: 6.53 en 1970};
+          \node[anchor=west,cOferta] at (axis cs:1996,3.5) {2.71 en 2000};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \textbf{Por qué bajó}
+      \begin{itemize}
+        \item La gente se fue a las ciudades.
+        \item Las mujeres estudian más y criar les cuesta más.
+        \item Cada hijo sale más caro: menos hijos, más colegiatura.
+      \end{itemize}
+      \pause
+      De 6.5 a 2.7 hijos en 30 años: poco tiempo para adaptar las instituciones.
+      \pause
+      \begin{alertblock}{Pregunta}
+        ¿Cuántos hijos tuvo su abuela? ¿Y su mamá? ¿Qué cambió?
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \fuente{ONU, WPP 2024. INEGI: Censo 2020 (1.9, dato de 2019) y Encuesta Intercensal 2025 (1.23, dato de 2024). Manual NTA, p.~8.}
+  \note{4 min. El mecanismo de cantidad y calidad es de Becker; el Manual lo resume en la p.~8. Fuente INEGI: \_crossrefs/corpus/demographics/releases/2026-09-22\_inegi-eic2025\_tgf-trigger-fired.md (endorsed\_by: Anne). La ONU da 1.89 para 2024: la diferencia se discute en la diapositiva 11.}
+\end{frame}
+
+% 6 -----------------------------------------------------------------------
+\begin{frame}{Debajo del reemplazo}
+  \opcional
+  \begin{itemize}
+    \item Con 2.1 hijos por mujer, cada generación reemplaza a la anterior. Con menos, cada generación es más chica que la de sus padres.
+    \item América Latina y el Caribe: 1.80 hijos por mujer en 2024. Según la ONU, México cruzó 2.1 en 2016.
+  \end{itemize}
+  \pause
+  \begin{block}{La población sigue creciendo un rato: inercia}
+    Las mujeres en edad de tener hijos nacieron cuando nacían muchos. Aun con pocos hijos por mujer, hay muchas madres. En nuestro escenario central, México llega a su máximo en 2038, con 132.5 millones.
+  \end{block}
+  \pause
+  \begin{block}{Lo que sigue es envejecimiento}
+    Nacen menos y los que están viven más. Cada grupo de edad grande se va recorriendo hacia arriba en la pirámide.
+  \end{block}
+  \fuente{ONU, WPP 2024. Escenario: proyección propia con datos de INEGI y TGF de 1.23; no es un dato observado.}
+  \note{3 min, opcional. Escenario: GrandPlan/DFD/outputs/public/2026-10\_population\_mex\_bra\_usa/results/projections\_national.csv. Es un producto de comunicación, sin endorsed\_by.}
+\end{frame}
+
+% 7 -----------------------------------------------------------------------
+\begin{frame}{Las pirámides cuentan la historia}
+  \centering
+  \begin{tikzpicture}
+    \foreach \y/\x/\t/\a/\c in {1970/0/1970/47.7/2.7,2020/4.4/2020/25.3/8.2,2050/8.8/2050 (escenario)/12.7/22.6} {
+      \begin{scope}[xshift=\x cm]
+        \input{datos/p1_piramide_\y.tex}
+        \node[font=\small\bfseries,text=cTitulo] at (0,4.45) {\t};
+        \draw[black!40] (-1.45,-0.05) -- (1.45,-0.05);
+        \node[font=\small,text=cGris] at (-0.72,4.08) {Hombres};
+        \node[font=\small,text=cGris] at (0.72,4.08) {Mujeres};
+        \node[font=\small,text=cRecauda!80!black] at (0,-0.35) {Menores de 15: \a\,\%};
+        \node[font=\small\bfseries,text=cImpuesto] at (0,-0.8) {65 y más: \c\,\%};
+      \end{scope}
+    }
+    \node[font=\small,text=cGris,anchor=east] at (-1.55,0.1) {0--4};
+    \node[font=\small,text=cGris,anchor=east] at (-1.55,3.75) {85+};
+  \end{tikzpicture}
+  \fuente{México. 1970: ONU, WPP 2024. 2020: INEGI, Censo. 2050: escenario propio, TGF de 1.23 y 129.4 millones (ONU: 148.9).}
+  \note{3 min. De un triángulo a una columna, y en 2050 a una forma más ancha arriba que abajo. Las tres gráficas usan la misma escala. Datos: datos/p1\_piramides.csv y datos/prep\_p1.py; censo: GrandPlan/DFD/outputs/public/2026-10\_population\_mex\_bra\_usa/data/inegi\_cpv2020\_single\_age\_prorated.csv. Se usa el motor nacional porque la ONU supone recuperación de la fecundidad. El motor no tiene endorsed\_by.}
+\end{frame}
+
+% 8 -----------------------------------------------------------------------
+\begin{frame}{América Latina envejece más rápido que Europa}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \centering
+      \begin{tikzpicture}[x=0.035cm,y=0.40cm]
+        \foreach \n/\d/\c/\i/\l in {Corea/17/cGris/0/17,Japón/21/cGris/1/21,Costa Rica/21/cOferta/2/21,Brasil/24/cOferta/3/24,Colombia/24/cOferta/4/24,Chile/26/cOferta/5/26,México/28/cImpuesto/6/28,Latinoamérica y Caribe/28/cImpuesto/7/28,España/49/cDemanda/8/49,Europa/55/cDemanda/9/55,Francia/68/cDemanda/10/68 o más,Suecia/70/cDemanda/11/70 o más} {
+          \fill[\c!75] (0,-\i-0.36) rectangle (\d,-\i+0.36);
+          \node[anchor=east] at (-1,-\i) {\n};
+          \node[anchor=west] at (\d,-\i) {\l};
+        }
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \textbf{Años para pasar de 10\,\% a 20\,\% de personas de 65 y más}\par\smallskip
+      \medskip
+      Europa tardó 55 años; nosotros, 28. Asia oriental va todavía más rápido.
+      \pause
+      \begin{block}{México, con datos nacionales}
+        Ya tenía 10\,\% en 2025. En nuestro escenario llega a 20\,\% hacia 2045: unos 20 años, no 28.
+      \end{block}
+      \pause
+      \textbf{Envejecer antes de enriquecerse:} con menos ingreso y sin Estado de bienestar consolidado.
+    \end{column}
+  \end{columns}
+  \fuente{Cálculo propio con ONU, WPP 2024: después de 2024 es escenario. Francia y Suecia ya pasaban de 10\,\% en 1950, inicio de la serie. INEGI, EIC 2025. Cecchini et al. (2025), p.~11.}
+  \note{3 min. No decir que somos los más rápidos: Corea y Japón lo son. Datos: datos/p1\_velocidad.csv; datos/prep\_p1.py. CEPAL: la región duplica su proporción de 65+ en 28 años (p.~10). Mismo cálculo con WPP para México: 2030 a 2058. WPP da 8.2\,\% para 2024, contra cerca de 10\,\% de la EIC.}
+\end{frame}
+
+% 9 -----------------------------------------------------------------------
+\begin{frame}{El bono demográfico se abre y se cierra}
+  \begin{columns}[T]
+    \begin{column}{0.54\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=7.2cm,height=5.1cm,xmin=1950,xmax=2050,ymin=30,ymax=100,
+            xtick={1950,1975,2000,2025,2050},xticklabel style={/pgf/number format/1000 sep={}},
+            ylabel={Dependientes por cada 100},xlabel={América Latina y el Caribe}]
+          \fill[black!7] (axis cs:2024,30) rectangle (axis cs:2050,100);
+          \addplot[cOferta] table[col sep=comma,x=Time,y=LAC]{datos/p1_dependencia.csv};
+          \node[cGris] at (axis cs:2037,93) {proyección};
+          \node[anchor=south,cOferta] at (axis cs:1975,88) {88 en 1965};
+          \node[anchor=north,cOferta] at (axis cs:2022,46.5) {48};
+          \draw[{Stealth[length=2mm]}-{Stealth[length=2mm]},cRecauda,thick] (axis cs:1966,37) -- node[above]{bono} (axis cs:2027,37);
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \begin{itemize}
+        \item \textbf{Primer bono.} Más gente en edad de trabajar por cada niño o persona mayor.
+        \item \textbf{Segundo bono.} La gente guarda para una vejez larga, y eso puede volverse inversión.
+      \end{itemize}
+      \pause
+      El primero termina hacia 2028. Y no está garantizado: de 1965 a 1990, el PIB por persona creció 6.1\,\% al año en Asia oriental y 0.9\,\% aquí.
+      \pause
+      \par\smallskip
+      Contar personas no basta: hay que medir quién produce y quién consume.
+    \end{column}
+  \end{columns}
+  \fuente{Cecchini et al. (2025), pp.~32--33 y 44; Mason y Lee (2006). Gráfica: ONU, WPP 2024; 0--14 y 65+ por 100 de 15--64.}
+  \note{2 min. Término: usamos «bono», como CEPAL; el Manual en español dice «dividendo». Con WPP el mínimo cae en 2029; CEPAL da 2028 con los datos de CELADE. Williamson (2003) es la fuente del 6.1 y el 0.9. Datos: datos/p1\_dependencia.csv.}
+\end{frame}
+
+% =========================================================================
+% II. LO QUE HEMOS INVESTIGADO · 30 min
+% =========================================================================
+\section{Lo que hemos investigado}
+
+% 10 ----------------------------------------------------------------------
+\begin{frame}{Nuestra pregunta}
+  \begin{alertblock}{La agenda de ITED}
+    ¿Cómo reordena la transición demográfica las finanzas públicas de un país de ingreso medio donde mucha gente trabaja en la informalidad?
+  \end{alertblock}
+  \pause
+  \medskip
+  La desarmamos en tres preguntas:
+  \begin{enumerate}
+    \item Si la fecundidad cae más rápido de lo proyectado, ¿qué pasa con la sostenibilidad fiscal?
+    \item Si los sistemas contributivos cubren a menos de la mitad de quienes trabajan, ¿quién paga las pensiones y la salud?
+    \item ¿Qué combinación de impuestos, cuotas y reformas aguanta la transición?
+  \end{enumerate}
+  \pause
+  \medskip
+  Empezamos por México. Lo que sigue es una agenda en marcha: hay resultados en unos frentes y preguntas abiertas en otros. Les vamos a decir cuál es cuál.
+  \fuente{Iniciativa para la Transición Económica y Demográfica (ITED), Tec de Monterrey.}
+  \note{2 min. Redacción nueva: no hay un documento con estas tres preguntas. Parte de GrandPlan/DFD/DFD\_rag.md, sección 2, CLAUDE.md raíz, sección 5, y la presentación para la CEPAL (lámina 2). Revisar que suenen como tú.}
+\end{frame}
+
+% 11 ----------------------------------------------------------------------
+\begin{frame}{Lo que proyectan y lo que medimos no coincide}
+  \begin{columns}[T]
+    \begin{column}{0.50\textwidth}
+      \textbf{Hijos por mujer, 2024}\par\smallskip
+      \begin{tabular}{@{}lcc@{}}
+        \toprule
+        & ONU & Medido por el país \\
+        \midrule
+        México & 1.89 & \textbf{1.23} \\
+        Colombia & 1.63 & 1.1 (preliminar) \\
+        Costa Rica & 1.32 & 1.12 \\
+        Chile & 1.14 & 1.03 (provisional) \\
+        \bottomrule
+      \end{tabular}
+      \par\medskip
+      ONU y CELADE usan la misma revisión.
+      \pause
+      \par\smallskip
+      Hemos encontrado que, en Costa Rica y Colombia, el reemplazo de cohortes basta para reproducir la caída, sin efecto cascada.
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \textbf{México 2050, escenarios (millones)}\par\smallskip
+      \begin{tikzpicture}[x=0.030cm,y=0.44cm]
+        \foreach \n/\v/\c/\i in {ONU/148.9/cGris/0,Optimista/144.2/cOferta/1,Central/135.5/cOferta/2,INEGI directo/128.7/cImpuesto/3,Estrés/121.2/cOferta/4} {
+          \fill[\c!70] (0,-\i-0.33) rectangle (\v,-\i+0.33);
+          \node[anchor=west,text=white,font=\small\bfseries] at (2,-\i) {\n};
+          \node[anchor=west] at (\v,-\i) {\v};
+        }
+      \end{tikzpicture}
+      \par\smallskip
+      {\small Hijos por mujer: Central 1.50; INEGI directo 1.23; Estrés baja a 0.90; Optimista sigue a la ONU.}
+      \pause
+      \begin{alertblock}{Pregunta}
+        ¿A cuál le creen? ¿Con cuál harían el presupuesto?
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \fuente{ONU, WPP 2024; INEGI, EIC 2025; DANE; INEC; INE Chile. Los escenarios son proyección propia, no datos observados.}
+  \note{4 min. Valores nacionales: \_crossrefs/corpus/demographics/scenario\_anchors.md y releases/2026-09-22\_inegi-eic2025 (endorsed\_by: Anne). Escenarios: GrandPlan/DFD/outputs/briefs/2026-09\_EIC2025\_nota/nota\_EIC2025\_v1.0.pdf, revisada por Anne y Cath, pendiente de tu firma. OJO: da 128.7 en INEGI directo; la pirámide de la diapositiva 7 da 129.4 con otro motor. No cotejé el Observatorio Demográfico 2025 directamente; WPP 2024 es la misma revisión. Agentes: GrandPlan/DFD/research/fertility\_collapse\_abm/STAGE3a\_Nina\_signoff.md (endorsed\_by: Nina); el modelo no reproduce un residuo de forma en Colombia.}
+\end{frame}
+
+% 12 ----------------------------------------------------------------------
+\begin{frame}{El laboratorio DFD: lo que estamos construyendo}
+  \centering
+  \begin{tikzpicture}[x=1cm,y=1cm]
+    \node[caja,text width=3.6cm,minimum height=1.0cm] (dem) at (-4.9,1.3) {\textbf{Demografía}\\fecundidad, mortalidad, migración};
+    \node[caja,text width=3.6cm,minimum height=1.0cm] (sal) at (-4.9,-0.1) {\textbf{Salud}\\financiamiento y gasto por edad};
+    \node[caja,text width=3.6cm,minimum height=1.0cm] (pen) at (-4.9,-1.5) {\textbf{Seguridad social}\\pensiones, cotizantes};
+    \node[caja,text width=3.5cm,minimum height=2.0cm,fill=cTitulo!12] (olg) at (0,-0.1) {\textbf{Núcleo OLG/DSGE}\\generaciones traslapadas, hogares, empresas, gobierno};
+    \node[cajafisco,text width=3.5cm,minimum height=2.0cm] (abm) at (4.9,-0.1) {\textbf{Capa de agentes}\\crisis y cambios de régimen};
+    \draw[flecha] (dem.east) -- (olg.west |- 0,0.25);
+    \draw[flecha] (sal.east) -- (olg.west);
+    \draw[flecha] (pen.east) -- (olg.west |- 0,-0.45);
+    \draw[flecha,{Stealth[length=2mm]}-{Stealth[length=2mm]}] (olg.east) -- (abm.west);
+    \node[caja,text width=11.5cm,fill=white,draw=cGris] (llm) at (0,2.35) {Interfaz: modelo de lenguaje local para preguntarle al motor en español};
+    \draw[flecha,cGris] (llm.south) -- (olg.north);
+  \end{tikzpicture}
+  \par\bigskip
+  \pause
+  \begin{alertblock}{En construcción}
+    Cuatro módulos y una capa de agentes. Esto es un programa de investigación, no un resultado. La regla: primero el motor funcionando, luego lo demás.
+  \end{alertblock}
+  \fuente{Elaboración propia.}
+  \note{3 min. Cuatro módulos: demográfico, financiamiento de la salud, seguridad social y pensiones, núcleo OLG/DSGE. La capa de agentes complementa al núcleo. Fuente: \_ops/20260407\_CROSS\_CF\_cross-tar-001-prep\_v1.md, entradas «DFD Simulation Laboratory» y «ABM Layer» (preparatorio, sin endorsed\_by). Corrige al encargo, que juntaba salud y seguridad social y contaba a los agentes como módulo.}
+\end{frame}
+
+% 13 ----------------------------------------------------------------------
+\begin{frame}{El núcleo: generaciones que se traslapan}
+  \opcional
+  \centering
+  \begin{tikzpicture}[x=0.106cm,y=0.42cm]
+    \foreach \i/\s in {0/0,1/5,2/10,3/15} {
+      \fill[cOferta!55] (20+\s,-\i-0.33) rectangle (65+\s,-\i+0.33);
+      \fill[cDemanda!55] (65+\s,-\i-0.33) rectangle (100+\s,-\i+0.33);
+    }
+    \node[anchor=east] at (19,0) {Una generación};
+    \node[anchor=east] at (19,-1) {La siguiente};
+    \node[anchor=east] at (19,-2) {Otra más};
+    \node[anchor=east] at (19,-3) {Y otra};
+    \draw[guia] (70,0.8) -- (70,-3.8);
+    \node[anchor=south,cTitulo] at (70,0.7) {un mismo año};
+    \fill[cOferta!55] (42,-5.1) rectangle +(3,0.6); \node[anchor=west] at (45.5,-4.8) {trabaja};
+    \fill[cDemanda!55] (66,-5.1) rectangle +(3,0.6); \node[anchor=west] at (69.5,-4.8) {retirada};
+  \end{tikzpicture}
+  \par\medskip
+  \raggedright
+  \begin{itemize}
+    \item Los hogares entran a los 20 años, se retiran a una edad fijada desde fuera y pueden vivir hasta los 100. Cada periodo dura cinco años.
+    \item Hay trabajadores de dos tipos de habilidad. Nadie puede pedir prestado.
+    \item Quien trabaja paga la pensión de quien ya se retiró. Si hay más retirados por trabajador, algo tiene que ajustarse.
+  \end{itemize}
+  \pause
+  Ya revisamos la estructura. Falta calibrarla a América Latina, empezando por México.
+  \fuente{Elaboración propia.}
+  \note{4 min, opcional. Sin álgebra. Fuente: \_ops/20260407\_CROSS\_CF\_cross-tar-001-prep\_v1.md, entrada «OLG Model»; GrandPlan/DFD/DFD\_rag.md, «Model class»; Missions/Funded/BID2/Integrated\_6.tex. Corrección: es edad máxima de 100, no horizonte de 100 años. Quité «historia contributiva»: en IM-6 la pensión es una tasa de reemplazo por el ingreso laboral medio (ec. de pension\_benefit), y no encontré esa variable en las fuentes.}
+\end{frame}
+
+% 14 ----------------------------------------------------------------------
+\begin{frame}{Automatización: ¿el rescate también llega aquí?}
+  \begin{columns}[T]
+    \begin{column}{0.49\textwidth}
+      \textbf{Lo que encuentran Acemoglu y coautores}
+      \begin{itemize}
+        \item Los países con menos nacimientos crecen más en PIB por adulto en edad de trabajar.
+        \item El mecanismo: si faltan jóvenes, conviene inventar tecnología que ahorre trabajo.
+      \end{itemize}
+      \pause
+      \textbf{Lo que el trabajo no dice}
+      \begin{itemize}
+        \item No mide resultados fiscales.
+        \item Su ventana es casi toda de bono, no de envejecimiento.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \pause
+      \begin{alertblock}{Nuestra pregunta}
+        ¿Hay un umbral de ingreso e innovación debajo del cual la escasez de jóvenes no provoca esa respuesta?
+      \end{alertblock}
+      \medskip
+      México adopta tecnología más de lo que la inventa. Y las empresas formales automatizan; las informales no.
+      \par\medskip
+      Puede pasar que suba el PIB por trabajador y que al mismo tiempo se encoja la base que cotiza. Es una hipótesis: todavía no la probamos.
+    \end{column}
+  \end{columns}
+  \fuente{Acemoglu, Autor, Beirne y Scott (2026), «Baby Busts and Growth Booms», NBER WP 35401. Documento de trabajo.}
+  \note{4 min. Nota: \_crossrefs/corpus/demographics/2026-07-11\_baby-busts-growth-booms.md, con endorsed\_by VACÍO (revisión pendiente de Cath y Elle). La fecha en disputa de la nota se resuelve: el PDF de NBER dice julio de 2026; el borrador del MIT es del 24 de junio. El contrapunto es Fernández-Villaverde: mismos hechos demográficos, consecuencias opuestas.}
+\end{frame}
+
+% 15 ----------------------------------------------------------------------
+\begin{frame}{Una seguridad social para una población que envejece}
+  \begin{columns}[T]
+    \begin{column}{0.49\textwidth}
+      \begin{block}{Eje 1: instrumentos nuevos para financiar salud}
+        \begin{itemize}
+          \item Cuotas para salud, con vínculo claro con el beneficio.
+          \item Primas según el ingreso para quien no cotiza; el gobierno paga solo la de los más vulnerables.
+          \item Seguros de ciclo de vida para la salud en la vejez.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \pause
+      \begin{block}{Eje 2: un impuesto negativo al ingreso}
+        Juntar las transferencias en un solo instrumento. El beneficio baja poco a poco con el ingreso. Sin saltos, formalizarse siempre conviene.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \pause
+  \begin{alertblock}{La condición: sin contener pensiones no hay espacio para salud}
+    Pensiones, salud y cuidados compiten por el mismo presupuesto. Dos pruebas: ¿se puede pagar en toda la transición? ¿Fortalece el incentivo a cotizar?
+  \end{alertblock}
+  \fuente{Villarreal (2026), XXXVIII Seminario Regional de Política Fiscal, CEPAL, mayo.}
+  \note{4 min. Presentación para la CEPAL, Santiago, mayo de 2026: CEPAL\_NuevaSegSocial\_Villarreal\_Héctor-2.pdf, láminas 5--10; copia en Comunidad\_conocimiento\_financiamientosalud\_LATAM/Roche/boston\_20260828/inputs/. La lámina dice «impuesto negativo sobre la renta». El eje de salud regresa en la Parte 3.}
+\end{frame}
+
+% 16 ----------------------------------------------------------------------
+\begin{frame}{Pensiones: la trampa de la formalización}
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=6.6cm,height=3.8cm,xmin=0,xmax=10,ymin=0,ymax=6,xtick=\empty,ytick=\empty,
+            xlabel={Ingreso formal},ylabel={Ingreso neto},clip=false]
+          \addplot[cOferta,dashed] coordinates {(0,2)(10,5.6)};
+          \addplot[cImpuesto] coordinates {(0,2.6)(4.5,4.0)};
+          \addplot[cImpuesto] coordinates {(4.5,2.9)(10,4.9)};
+          \draw[cImpuesto,thick,densely dotted] (axis cs:4.5,4.0) -- (axis cs:4.5,2.9);
+          \node[cImpuesto,anchor=west] at (axis cs:4.7,2.1) {el escalón};
+          \node[cOferta,anchor=south east] at (axis cs:9.8,5.6) {sin saltos};
+        \end{axis}
+      \end{tikzpicture}
+      {\small\color{cGris}Gráfica esquemática, sin datos.}
+      \par\smallskip\raggedright
+      La cuota es un costo cierto; perder programas sociales, un riesgo. Si el trabajador no valora lo que recibe, la cuota se vive como impuesto.
+    \end{column}
+    \begin{column}{0.51\textwidth}
+      \pause
+      \textbf{Una arquitectura por pisos}\par\smallskip
+      \begin{tabular}{@{}lp{5.2cm}@{}}
+        \toprule
+        Pilar 0 & No contributivo, con presupuesto \\
+        Pilar 1 & Público, de reparto \\
+        Pilar 2 & Obligatorio, cuentas individuales \\
+        Pilar 3 & Ahorro voluntario \\
+        \bottomrule
+      \end{tabular}
+      \pause
+      \begin{block}{«El cero se habla con el uno, el dos con el tres»}
+        La pensión no contributiva se amarra con el reparto, y la cuenta individual con el ahorro voluntario. Si no, aparece el escalón.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \fuente{Fietz et al. (2025) y Holzmann y Hinz (2005), Banco Mundial.}
+  \note{4 min. No encontré la presentación para la CISS: esta diapositiva se arma con CEPAL\_NuevaSegSocial (láminas 3--4), Comunidad\_conocimiento\_financiamientosalud\_LATAM/Roche/boston\_20260828/boston\_20260828\_v2.tex (láminas 13--14) y Missions/Funded/CAF\_DEM/caf-dem-entregable-final/main.tex (lectura por pilares; agrega un Pilar 1-B de garantía estatal). La frase es tuya: la interpretación del recuadro es mía, revísala. En Boston: para un asalariado, el costo neto de ser formal va de 20\,\% a 40\,\% del ingreso del hogar, y la mayor parte son contribuciones.}
+\end{frame}
+
+% 17 ----------------------------------------------------------------------
+\begin{frame}{Hicimos las cuentas de México: quién paga cada edad}
+  \begin{columns}[T]
+    \begin{column}{0.33\textwidth}
+      \begin{tikzpicture}
+        \node[caja,text width=4.0cm,minimum height=1.45cm] (a) at (0,3.6) {{\Large\bfseries 88.6\,\%}\\del déficit de los niños: recursos privados};
+        \node[caja,text width=4.0cm,minimum height=1.45cm] (b) at (0,1.8) {{\Large\bfseries 54.5\,\%}\\del déficit de los mayores: transferencias públicas};
+        \node[caja,text width=4.0cm,minimum height=1.45cm] (c) at (0,0) {{\Large\bfseries 76.3\,\%}\\del déficit total es de mujeres};
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.63\textwidth}
+      \textbf{Qué medimos.} Cuánto consume y gana cada edad, y quién paga la diferencia. Cinco ENIGH, 2016--2024, ajustadas a Cuentas Nacionales.
+      \par\smallskip
+      \pause
+      \textbf{Qué hemos encontrado}
+      \begin{itemize}
+        \item Más mayores pesan directo en el presupuesto; más niños se absorben en los hogares.
+        \item El déficit no crece: envejece. Por persona de 60+ subió 71.7\,\% real, 2016--2024.
+        \item Las mujeres no llegan a superávit en ninguna edad. Ojo: estas cuentas no miden el trabajo no remunerado.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{López Reynosa y Villarreal (2026), trabajo en curso. Niños: menores de 15. Mayores: 60 y más.}
+  \note{2 min. Missions/Funded/NTA\_Inequality/paper\_final.tex y resumen\_ejecutivo.tex. La misión no está en Missions/\_index.md. El dato de 76.3\,\% es del marco monetario: mide la posición en el ciclo de vida monetario, no la contribución económica de las mujeres. Hay que decirlo en voz alta. En la carpeta no están la base ni las figuras, por eso no hay perfil dibujado.}
+\end{frame}
+
+% 18 ----------------------------------------------------------------------
+\begin{frame}{Cómo trabajamos}
+  \opcional
+  \begin{columns}[T]
+    \begin{column}{0.49\textwidth}
+      \begin{block}{Un corpus con procedencia}
+        Cada documento dice de dónde salió, quién lo agregó y quién lo respaldó. Una entrada sin respaldo se usa como pendiente, no como dato firme.
+      \end{block}
+      \begin{block}{Un equipo de agentes}
+        Asistentes de IA con un dominio cada uno: población, seguridad social y salud, finanzas públicas, prospectiva, datos y código.
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \pause
+      \textbf{Ejemplo de hoy}
+      \begin{itemize}
+        \item La TGF de 1.23 tiene ficha: fuente, fecha, cómo se calculó y quién la respaldó.
+        \item La nota sobre Acemoglu sigue pendiente de respaldo, y por eso la presentamos como pregunta.
+      \end{itemize}
+      \pause
+      \begin{block}{Para su persona de investigación}
+        Pídanle lo mismo: de dónde sale cada cifra y quién la revisó. Sin procedencia, no entra.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \fuente{Elaboración propia.}
+  \note{3 min, opcional. \_crossrefs/protocols/PROTO-RAG-001.md; \_crossrefs/corpus/demographics/README.md. Conviene aclarar que el respaldo lo revisa y lo responde una persona: el equipo no sustituye el criterio.}
+\end{frame}
+
+% =========================================================================
+% III. CIERRE · 5 min
+% =========================================================================
+\section{Cierre}
+
+% 19 ----------------------------------------------------------------------
+\begin{frame}{Tres ideas para llevarse}
+  \begin{enumerate}
+    \item \textbf{La edad mueve el presupuesto.} El Estado cobra a unas edades y gasta en otras. Si cambia la pirámide, cambian las cuentas sin que nadie vote nada.
+    \pause
+    \item \textbf{La transición va más rápido de lo que se proyecta.} La región tarda la mitad que Europa, con menos ingreso. En México, lo medido ya va abajo de lo proyectado.
+    \pause
+    \item \textbf{Lo que está en juego es el diseño.} La informalidad deja fuera a mucha gente. Pensiones, salud y cuidados se pelean el mismo peso. Por eso hay que medir antes de reformar.
+  \end{enumerate}
+  \fuente{Diapositivas 2, 8, 11, 15 y 17.}
+  \note{3 min.}
+\end{frame}
+
+% 20 ----------------------------------------------------------------------
+\begin{frame}{Para la Parte 2}
+  \begin{columns}[T]
+    \begin{column}{0.54\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=8.0cm,height=5.0cm,xmin=0,xmax=90,ymin=0,ymax=1.6,xlabel={Edad},ytick=\empty,
+            xtick={0,20,40,60,80},legend pos=north west,legend cell align=left]
+          \addplot[cDemanda,smooth,domain=0:90,samples=50] {0.45+0.33*x/90};
+          \addlegendentry{Consumo}
+          \addplot[cOferta,smooth,domain=0:90,samples=50] {1.02*exp(-((x-44)/17)^2)};
+          \addlegendentry{Ingreso laboral}
+        \end{axis}
+      \end{tikzpicture}
+      {\small\color{cGris}Gráfica esquemática, sin datos.}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      De niños y de viejos consumimos más de lo que producimos. A mitad de la vida, al revés.
+      \pause
+      \begin{alertblock}{Pregunta}
+        Si cada edad consume distinto de lo que produce, ¿quién paga la diferencia?
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \fuente{Elaboración propia. Sigue la Parte 2: Manual NTA, caps.~1 y 2.}
+  \note{2 min. Sin contestar todavía. Que anoten su respuesta: papás, Estado o ahorro.}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,775 @@
+% Cuentas Nacionales de Transferencia y envejecimiento · Parte 2: la economía generacional
+% Finanzas Públicas, Maestría en Economía Aplicada, Tec de Monterrey
+% Esquema aprobado: esquema_nta.md (2026-11-01). Compilar con: latexmk -pdf nta_p2_manual.tex
+% Versión para repartir: nta_p2_manual_handout.tex (misma fuente, opción handout).
+% Las notas del presentador van en \note{}; para verlas, compilar con \setbeameroption{show notes}.
+% Datos de las gráficas: datos/prep_p2.py.
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\unaccentedoperators % la opción es-noaccentedoperators no existe en esta versión de babel
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{babel,arrows.meta,calc,positioning,decorations.pathreplacing,patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+
+% ---------------------------------------------------------------------------
+% Tema sobrio (igual al de las sesiones anteriores)
+% ---------------------------------------------------------------------------
+\definecolor{cTitulo}{RGB}{0,55,100}
+\definecolor{cOferta}{RGB}{31,87,153}
+\definecolor{cDemanda}{RGB}{200,100,0}
+\definecolor{cImpuesto}{RGB}{175,30,30}
+\definecolor{cRecauda}{RGB}{40,130,80}
+\definecolor{cGris}{RGB}{110,110,110}
+
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{frametitle}{fg=cTitulo}
+\setbeamercolor{title}{fg=cTitulo}
+\setbeamercolor{structure}{fg=cTitulo}
+\setbeamercolor{block title}{bg=cTitulo!12,fg=cTitulo}
+\setbeamercolor{block body}{bg=cTitulo!4}
+\setbeamercolor{block title alerted}{bg=cImpuesto!12,fg=cImpuesto}
+\setbeamercolor{block body alerted}{bg=cImpuesto!4}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{blocks}[rounded]
+\setbeamertemplate{footline}{%
+  \hfill{\small\color{cGris}NTA y envejecimiento · Parte 2\quad\insertframenumber/\inserttotalframenumber}\hspace*{1em}\vspace{1.5mm}}
+
+% Fuente al pie de cada diapositiva
+\newcommand{\fuente}[1]{\par\vfill{\small\color{cGris}#1\par}}
+% Distintivo de diapositiva opcional
+\newcommand{\opcional}{\tikz[remember picture,overlay]\node[anchor=north east,font=\small,text=cGris] at ([xshift=-5mm,yshift=-3mm]current page.north east) {opcional};}
+
+% ---------------------------------------------------------------------------
+% Estilo común de gráficas
+% ---------------------------------------------------------------------------
+\tikzset{
+  every node/.append style={font=\small},
+  eje/.style={-{Stealth[length=2mm]},thick,black!75},
+  flecha/.style={-{Stealth[length=2mm]},thick,cTitulo},
+  guia/.style={thin,dashed,black!45},
+  sincorte/.style={execute at begin node={\hyphenpenalty=10000\exhyphenpenalty=10000\relax}},
+  caja/.style={sincorte,draw=cTitulo,rounded corners,fill=cTitulo!5,align=center,inner sep=4pt},
+  cajafisco/.style={sincorte,draw=cRecauda,rounded corners,fill=cRecauda!10,align=center,inner sep=3pt},
+}
+\pgfplotsset{
+  estilo/.style={axis lines=left,tick label style={font=\small},label style={font=\small},
+    legend style={font=\small,draw=none,fill=none},every axis plot/.append style={thick}},
+}
+
+\title{Cuentas Nacionales de Transferencia y envejecimiento}
+\subtitle{Parte 2: la economía generacional}
+\author{Héctor Juan Villarreal}
+\institute{Finanzas Públicas · Maestría en Economía Aplicada\\Escuela de Gobierno y Transformación Pública · Tec de Monterrey}
+\date{Noviembre de 2026}
+
+\begin{document}
+
+% =========================================================================
+% I. LA ECONOMÍA GENERACIONAL · 22 min · cap. 1
+% =========================================================================
+\section{La economía generacional}
+
+% 1 -----------------------------------------------------------------------
+\begin{frame}[plain]
+  \titlepage
+  \note{1 min. Lectura: Naciones Unidas (2013), \emph{National Transfer Accounts Manual}, caps. 1 y 2. Existe edición en español: Naciones Unidas (2022), CEPAL.}
+\end{frame}
+
+% 2 -----------------------------------------------------------------------
+\begin{frame}{Consumimos toda la vida y producimos solo una parte}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[estilo,name=a,width=6.8cm,height=4.0cm,xmin=0,xmax=90,ymin=0,ymax=1.8,xtick={0,20,40,60,80},
+        title={Filipinas, 1999},title style={font=\small\bfseries},xlabel={Edad},
+        legend style={at={(0.99,0.99)},anchor=north east},legend cell align=left]
+      \addplot[cDemanda] table[col sep=comma,x=edad,y=C]{datos/p2_fil1999.csv};
+      \addlegendentry{Consumo}
+      \addplot[cOferta] table[col sep=comma,x=edad,y=YL]{datos/p2_fil1999.csv};
+      \addlegendentry{Ingreso laboral}
+    \end{axis}
+    \begin{axis}[estilo,at={(a.east)},anchor=west,xshift=0.7cm,width=6.8cm,height=4.0cm,xmin=0,xmax=90,ymin=0,ymax=1.8,xtick={0,20,40,60,80},
+        title={Alemania, 2003},title style={font=\small\bfseries},xlabel={Edad}]
+      \addplot[cDemanda] table[col sep=comma,x=edad,y=C]{datos/p2_ale2003.csv};
+      \addplot[cOferta] table[col sep=comma,x=edad,y=YL]{datos/p2_ale2003.csv};
+    \end{axis}
+  \end{tikzpicture}
+  \par\smallskip\raggedright
+  \begin{itemize}
+    \item De niños y de viejos consumimos más de lo que ganamos con nuestro trabajo. En medio, al revés.
+    \pause
+    \item Filipinas: déficit antes de los 27 y desde los 60. Alemania: antes de los 27 y desde los 58.
+  \end{itemize}
+  \fuente{Perfiles por persona de ntaccounts.org; ingreso laboral medio de 30--49 años = 1. Manual NTA, pp.~3--4, fig.~1.1.}
+  \note{2 min. Redibujada con los datos de la base: datos/p2\_fil1999.csv, datos/p2\_ale2003.csv. La fig. 1.1 del Manual usa los mismos países y años. Los cruces de edad salen iguales con estos datos.}
+\end{frame}
+
+% 3 -----------------------------------------------------------------------
+\begin{frame}{La economía generacional: quién produce, quién consume y quién comparte}
+  \begin{columns}[T]
+    \begin{column}{0.45\textwidth}
+      \begin{block}{Qué es}
+        Las instituciones y los mecanismos con los que cada edad produce, consume, comparte y ahorra, y los flujos que resultan entre edades.
+      \end{block}
+      \pause
+      \begin{alertblock}{Lo que no ven las cuentas nacionales}
+        Dicen cuánto consume el país. No dicen a qué edad.
+      \end{alertblock}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \pause
+      \textbf{Cinco razones para medirlo}
+      \begin{enumerate}
+        \item Niños y muchos mayores dependen de otros para no caer en pobreza.
+        \item La edad ya no significa lo mismo: se estudia más y a los 65 se está más sano.
+        \item El crecimiento depende de la escuela y la salud de los niños.
+        \item Los sistemas de apoyo se presionan si la estructura por edad cambia.
+        \item Surge la pregunta de equidad: ¿les estamos cargando de más a los jóvenes?
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+  \fuente{Manual NTA, pp.~1--3.}
+  \note{2 min. La definición es de Mason y Lee (2011), citada en la p.~3.}
+\end{frame}
+
+% 4 -----------------------------------------------------------------------
+\begin{frame}{Tres formas de cubrir el déficit}
+  \centering
+  \begin{tabular}{@{}l>{\raggedright\arraybackslash}p{5.2cm}>{\raggedright\arraybackslash}p{5.2cm}@{}}
+    \toprule
+    & \textbf{Transferencias} & \textbf{Activos} \\
+    & {\small sin contraprestación} & {\small hoy se guarda, mañana se usa} \\
+    \midrule
+    \textbf{Público} & La escuela, el hospital, la pensión de reparto & Deuda pública, fondos soberanos \\[0.3em]
+    \textbf{Privado} & Lo que los padres gastan en sus hijos, el dinero que mandan los hijos, las remesas & La casa propia, los ahorros para el retiro, el crédito \\
+    \bottomrule
+  \end{tabular}
+  \par\medskip\raggedright
+  \pause
+  \begin{itemize}
+    \item La familia mueve recursos por costumbre y cariño. El Estado, por ley.
+    \item Con activos no se le pide nada a nadie: se compra oro de joven y se vende de viejo. O se pide prestado de joven y se paga después.
+  \end{itemize}
+  \pause
+  \begin{block}{Entonces}
+    Tres vías: transferencias públicas, transferencias privadas y activos.
+  \end{block}
+  \fuente{Manual NTA, pp.~3--5, cuadro~1.1.}
+  \note{3 min. El Manual cuenta cuatro casillas con dos mecanismos y dos sectores; en la práctica se reportan tres vías (fig. 1.6). El capital público aparece como casi nulo porque las cuentas nacionales valúan su producto al costo (p.~5).}
+\end{frame}
+
+% 5 -----------------------------------------------------------------------
+\begin{frame}{Cada país paga la vejez de otra manera}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \textbf{Déficit de los de 65 y más: quién lo cubre (\%)}\par\smallskip
+      \begin{tabular}{@{}lrrr@{}}
+        \toprule
+        & Estado & Familia & Activos \\
+        \midrule
+        México, 2004 & 37 & $-$25 & \textbf{89} \\
+        Japón, 2004 & 57 & 1 & 42 \\
+        Alemania, 2003 & 72 & $-$7 & 36 \\
+        Costa Rica, 2013 & 74 & $-$10 & 36 \\
+        Suecia, 2005 & \textbf{115} & $-$14 & $-$1 \\
+        \bottomrule
+      \end{tabular}
+      \par\medskip
+      {\small Un número negativo es recurso que sale: en México, los mayores daban a su familia más de lo que recibían.}
+    \end{column}
+    \begin{column}{0.41\textwidth}
+      \begin{itemize}
+        \item México: la casa y lo ahorrado.
+        \item Suecia: el Estado, todo y algo más.
+        \item La familia casi nunca sostiene en neto; Taiwán, Tailandia y Corea son la excepción.
+      \end{itemize}
+      \pause
+      \begin{alertblock}{Pregunta}
+        Nuestra cuenta 2016--2024 da 54.5\,\% de Estado para los de 60+. ¿Qué cambió: México o la medición?
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \fuente{Cálculo propio con ntaccounts.org y ONU, WPP 2024. Manual NTA, pp.~15--16.}
+  \note{3 min. No se pueden redibujar los puntos del triángulo de la fig. 1.6 porque el Manual no da valores. Calculé con la base: públicas, privadas y reasignaciones por activos entre déficit, 65+, con pesos WPP (datos/prep\_p2.py). Coincide con el Manual: México con dos tercios o más en activos y familia negativa. Respuesta posible: las dos. Cambió el programa no contributivo y cambió el método; además aquí son 60+, no 65+.}
+\end{frame}
+
+% 6 -----------------------------------------------------------------------
+\begin{frame}{La razón de sostenimiento: cuántos producen por cada uno que consume}
+  \begin{columns}[T]
+    \begin{column}{0.53\textwidth}
+      \[
+        \frac{L}{N}=\frac{\sum_a y_a\,P_a}{\sum_a c_a\,P_a}
+        \quad
+        \begin{array}{l}
+          \text{productores efectivos}\\
+          \text{consumidores efectivos}
+        \end{array}
+      \]
+      $P_a$: personas de edad $a$. $y_a$ y $c_a$: ingreso laboral y consumo de esa edad, con 30--49 años $=1$.
+      \par\medskip
+      \pause
+      \begin{block}{Ejemplo: China, 2025}
+        1.40 mil millones de consumidores efectivos y 0.73 de productores efectivos: $L/N=0.52$. Un productor por cada dos consumidores.
+      \end{block}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \pause
+      \textbf{Por qué no contar personas de 15 a 64}
+      \begin{itemize}
+        \item Un joven de 16 que estudia no produce como uno de 45.
+        \item Una persona de 80 no consume como un niño.
+        \item Sirve para evaluar políticas: si la gente se retira más tarde, sube $L$ y sube la razón.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{Manual NTA, pp.~10--11; cap.~5, cuadro~5.6. En inglés, \emph{support ratio}; el Manual en español dice «razón de sustento económico». Usamos el término de CEPAL.}
+  \note{3 min. La p.~11 del Manual dice que el retiro tardío «reduce» la razón: es errata, la aumenta. Los pesos se fijan en un año base. El ejemplo de China está en el cap. 5, fuera de la lectura; lo uso porque el cap. 1 solo da la idea en palabras.}
+\end{frame}
+
+% 7 -----------------------------------------------------------------------
+\begin{frame}{Los dos bonos, en una identidad}
+  \begin{columns}[T]
+    \begin{column}{0.54\textwidth}
+      Consumo por consumidor:
+      \[
+        \frac{C}{N}=\frac{(1-s)\,Y}{L}\cdot\frac{L}{N}
+      \]
+      \pause
+      En tasas de crecimiento:
+      \[
+        gr\!\left[\frac{C}{N}\right]=
+        \underbrace{gr\!\left[\frac{(1-s)Y}{L}\right]}_{\text{segundo bono}}+
+        \underbrace{gr\!\left[\frac{L}{N}\right]}_{\text{primer bono}}
+      \]
+      \pause
+      {\small Si $L/N$ sube 1 punto, el consumo por consumidor sube 1 punto, dado lo demás.}
+    \end{column}
+    \begin{column}{0.43\textwidth}
+      \pause
+      \textbf{Primer bono.} China, 1972--2014: la razón de sostenimiento sumó 0.7\,\% al año. De 2014 a 2050 restará 0.5\,\% al año.
+      \par\medskip
+      \pause
+      \textbf{Segundo bono.} Depende de qué se haga con el primero:
+      \begin{itemize}
+        \item \emph{Capital humano:} menos hijos, más gasto por hijo.
+        \item \emph{Capital:} más ahorro para una vejez larga.
+      \end{itemize}
+      \par\smallskip
+      No tiene fecha ni es automático.
+    \end{column}
+  \end{columns}
+  \fuente{Manual NTA, pp.~10--14, ecs.~1.1--1.2.}
+  \note{3 min. Es lo que en la Parte 1 vimos en intuición. El gasto en capital humano por hijo va de 100--200\,\% del ingreso laboral de 30--49 años en países de alta fecundidad a más de 500\,\% en algunos de baja (pp.~12--13, fig. 1.4). Elasticidad un poco menor que 1.}
+\end{frame}
+
+% 8 -----------------------------------------------------------------------
+\begin{frame}{Las flechas de Lee: hacia dónde va cada peso público}
+  \opcional
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \centering
+      \begin{tikzpicture}[x=0.105cm,y=0.00125cm]
+        \draw[eje] (10,0) -- (72,0);
+        \foreach \v in {10,20,30,40,50,60,70} {\draw (\v,0) -- (\v,-50) node[below] {\v};}
+        \node at (41,-500) {Edad};
+        \foreach \yb/\h/\a/\b/\c in {0/1138/38.1/29.1/cGris,1138/762/38.0/62.5/cImpuesto,1900/288/38.9/33.2/cRecauda,2188/294/37.6/16.0/cOferta} {
+          \pgfmathsetmacro\s{ifthenelse(\b>\a,1,-1)}
+          \pgfmathsetmacro\tp{\b-\s*2.4}
+          \pgfmathsetmacro\ym{\yb+\h/2}
+          \pgfmathsetmacro\yt{\yb+\h-25}
+          \fill[\c!70] (\a,\yb) -- (\tp,\yb) -- (\b,\ym) -- (\tp,\yt) -- (\a,\yt) -- cycle;
+        }
+        \node[anchor=west,font=\small] at (39,2335) {Educación};
+        \node[anchor=west,font=\small] at (39.5,2045) {Salud};
+        \node[anchor=west,font=\small,text=white] at (39,1519) {Pensiones};
+        \node[anchor=west,font=\small] at (39,569) {Otros};
+      \end{tikzpicture}
+      \par\smallskip
+      {\small\color{cGris}Altura: flujo anual por persona. La flecha va de la edad media de quien paga a la de quien recibe.}
+    \end{column}
+    \begin{column}{0.41\textwidth}
+      \textbf{Brasil, 2002}\par\smallskip
+      \begin{tabular}{@{}lrr@{}}
+        \toprule
+        & De & A \\
+        \midrule
+        Educación & 37.6 & 16.0 \\
+        Salud & 38.9 & 33.2 \\
+        Pensiones & 38.0 & 62.5 \\
+        Otros & 38.1 & 29.1 \\
+        \bottomrule
+      \end{tabular}
+      \pause
+      \begin{block}{El área importa}
+        Altura por distancia es riqueza de transferencias: 18,642 reales por persona en pensiones. Alguien que todavía no nace la está debiendo.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \fuente{Manual NTA, pp.~17--18, fig.~1.8, redibujada con sus valores.}
+  \note{4 min, opcional. Valores: educación 294, salud 288, pensiones 762, otros 1,138 reales al año. Riqueza: $-$6,361; $-$1,638; $+$18,642; $-$10,277; total 365 reales, unos 4\,\% del ingreso de un adulto de 30--49 (p.~18). Las flechas hacia abajo dan riqueza negativa: casi todos ya recibieron la escuela y ahora la pagan. Es pariente de las Cuentas Generacionales de Auerbach y Kotlikoff.}
+\end{frame}
+
+% 9 -----------------------------------------------------------------------
+\begin{frame}{La razón de sostenimiento fiscal: la cuenta que le espera a Hacienda}
+  \begin{columns}[T]
+    \begin{column}{0.50\textwidth}
+      \[
+        \frac{\text{contribuyentes efectivos}}{\text{beneficiarios efectivos}}
+      \]
+      Cada edad se pondera con lo que paga y con lo que recibe, comparada con los de 30--49.
+      \par\medskip
+      \centering
+      \begin{tikzpicture}[x=1cm,y=1.55cm]
+        \fill[cOferta!70] (0,0) rectangle (1.2,1);
+        \fill[cImpuesto!70] (2,0) rectangle (3.2,0.7);
+        \draw[eje] (-0.2,0) -- (3.7,0);
+        \node[above] at (0.6,1) {1.0};
+        \node[above] at (2.6,0.7) {cerca de 0.7};
+        \node[below] at (0.6,0) {2010};
+        \node[below] at (2.6,0) {2050};
+      \end{tikzpicture}
+      \par{\small\color{cGris}Brasil, con 2010 = 1.}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \begin{itemize}
+        \item Brasil, 2010 a 2050: solo por la estructura por edad, hay que bajar beneficios 30\,\% o subir impuestos otro tanto.
+      \end{itemize}
+      \pause
+      \begin{block}{¿Y si lo pagamos con deuda?}
+        No resuelve nada: agrega intereses, y esos también se pagan con impuestos.
+      \end{block}
+      \pause
+      \begin{alertblock}{Pregunta}
+        Si les toca en Hacienda: ¿menos pensión, menos salud o más impuestos?
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \fuente{Manual NTA, pp.~18--19, fig.~1.9.}
+  \note{2 min. El Manual da el 30\,\%, no el valor exacto de la serie; por eso la barra dice «cerca de 0.7». Brasil tuvo la mayor caída de 20 economías (Miller, 2011). Tailandia no cae porque casi no tiene programas públicos para mayores: la razón depende del diseño.}
+\end{frame}
+
+% =========================================================================
+% II. EL PANORAMA DE LAS CUENTAS · 33 min · cap. 2
+% =========================================================================
+\section{El panorama de las cuentas}
+
+% 10 ----------------------------------------------------------------------
+\begin{frame}{Qué miden las NTA, y qué no}
+  \begin{columns}[T]
+    \begin{column}{0.49\textwidth}
+      \textbf{Qué son}
+      \begin{itemize}
+        \item Todos los flujos económicos del año, repartidos por edad.
+        \item La unidad es la persona. Empresas y gobierno son intermediarios.
+        \item Los totales cuadran con las cuentas nacionales.
+      \end{itemize}
+      \pause
+      \begin{alertblock}{Lo que no son}
+        Son contabilidad de un año, de corte transversal. No dicen qué causa qué, ni siguen a una generación en el tiempo.
+      \end{alertblock}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \pause
+      \textbf{Cuatro diferencias con el SCN}
+      \begin{enumerate}
+        \item Manda la edad; las instituciones son secundarias.
+        \item El ingreso mixto se reparte: dos tercios al trabajo, un tercio al capital.
+        \item Todo se mide antes de impuestos a los productos.
+        \item Se estiman los flujos dentro del hogar.
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+  \fuente{Manual NTA, pp.~6, 25--29, 34--35.}
+  \note{3 min. Por eso «ingreso laboral» no existe tal cual en el SCN: ni el ingreso mixto ni los impuestos a los productos se tratan igual. Se usa el SCN como control de los totales (recuadro 2.2).}
+\end{frame}
+
+% 11 ----------------------------------------------------------------------
+\begin{frame}{La identidad de flujos: lo que entra es igual a lo que sale}
+  Para el grupo de edad $x$, en el año:
+  \[
+    \underbrace{Y^l(x)+\tau^+(x)+Y^k(x)+Y^{p+}(x)}_{\text{entradas}}
+    =
+    \underbrace{C(x)+\tau^-(x)+Y^{p-}(x)+S(x)}_{\text{salidas}}
+  \]
+  \pause
+  Pasamos consumo e ingreso laboral de un lado, y lo demás del otro:
+  \[
+    \underbrace{C(x)-Y^l(x)}_{\text{déficit del ciclo de vida}}
+    =
+    \underbrace{\tau^+(x)-\tau^-(x)}_{\text{transferencias netas}}
+    +
+    \underbrace{Y^A(x)-S(x)}_{\text{reasignaciones por activos}}
+  \]
+  \pause
+  con $Y^A=Y^k+Y^{p+}-Y^{p-}$: capital más ingreso neto de propiedad.
+  \pause
+  \begin{block}{Cómo se lee}
+    Lo que falta (o sobra) a esa edad se cubre con transferencias y activos. Es una identidad, no una teoría: no dice que una cosa cause la otra.
+  \end{block}
+  \fuente{Manual NTA, p.~29, ecs.~2.1--2.2. El ahorro $S$ es la partida que cierra.}
+  \note{4 min. Vale por persona, en agregado y por edad. Transferencias y rentas de la propiedad tienen contraparte: suman cero con el resto del mundo (pp.~30--31).}
+\end{frame}
+
+% 12 ----------------------------------------------------------------------
+\begin{frame}{El ciclo de vida económico, en dólares}
+  \begin{columns}[T]
+    \begin{column}{0.60\textwidth}
+      \textbf{Estados Unidos, 2003, dólares por persona}\par\smallskip
+      \begin{tabular}{@{}lrrr@{}}
+        \toprule
+        & 0--24 & 25--64 & 65+ \\
+        \midrule
+        \textbf{Consumo} & \textbf{23,951} & \textbf{34,069} & \textbf{43,734} \\
+        \quad Público & 9,451 & 5,771 & 14,310 \\
+        \quad\quad Educación & 4,842 & 194 & 0 \\
+        \quad\quad Salud & 699 & 1,666 & 10,400 \\
+        \quad Privado & 14,500 & 28,298 & 29,424 \\
+        \quad\quad Educación & 913 & 344 & 76 \\
+        \quad\quad Salud & 1,322 & 3,524 & 5,417 \\
+        \textbf{Ingreso laboral} & \textbf{3,425} & \textbf{43,233} & \textbf{5,689} \\
+        \quad Salarios & 3,265 & 37,390 & 4,287 \\
+        \quad Autoempleo & 160 & 5,842 & 1,402 \\
+        \bottomrule
+      \end{tabular}
+    \end{column}
+    \begin{column}{0.37\textwidth}
+      \begin{itemize}
+        \item Los niños consumen escuela.
+        \item Los mayores, salud: 15,817 dólares, más de un tercio de su consumo.
+      \end{itemize}
+      \pause
+      \begin{block}{El consumo público cuenta}
+        La escuela gratuita y la consulta del IMSS son consumo de quien las usa. Las paga otro: de eso sale la transferencia.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \fuente{Manual NTA, pp.~35 y 39, cuadro~2.4.}
+  \note{3 min. 10,400 + 5,417 = 15,817; entre 43,734 da 36\,\%. El consumo público se reparte por edad; la parte «otros» del consumo público es igual para todas las edades (3,910).}
+\end{frame}
+
+% 13 ----------------------------------------------------------------------
+\begin{frame}{El déficit del ciclo de vida, y una sorpresa mexicana}
+  \begin{columns}[T]
+    \begin{column}{0.50\textwidth}
+      \textbf{Estados Unidos, 2003, dólares}\par\smallskip
+      \begin{tabular}{@{}lrrr@{}}
+        \toprule
+        & 0--24 & 25--64 & 65+ \\
+        \midrule
+        Por persona & 20,526 & $-$9,164 & 38,045 \\
+        Billones & 2.10 & $-$1.65 & 1.30 \\
+        \bottomrule
+      \end{tabular}
+      \par\medskip
+      \begin{itemize}
+        \item Por persona pesan más los mayores. En total, los jóvenes: son el triple.
+        \item Suma positiva: el ingreso laboral no alcanza. El resto sale de los activos.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \pause
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=6.3cm,height=3.7cm,xmin=0,xmax=90,ymin=0,ymax=1.4,xtick={0,20,40,60,80},
+            xlabel={Edad},title={México, 2014},title style={font=\small\bfseries},
+            legend style={at={(0.5,1.02)},anchor=north,legend columns=2},legend cell align=left]
+          \addplot[cDemanda] table[col sep=comma,x=edad,y=C]{datos/p2_mex2014.csv};
+          \addlegendentry{Consumo}
+          \addplot[cOferta] table[col sep=comma,x=edad,y=YL]{datos/p2_mex2014.csv};
+          \addlegendentry{Ingreso laboral}
+        \end{axis}
+      \end{tikzpicture}
+      \par\raggedright
+      El promedio mexicano solo tiene superávit a los 45 y 46 años (en 2004, de los 33 a los 48). Nuestra cuenta da déficit en todas las edades: al trabajo le toca poco del PIB.
+    \end{column}
+  \end{columns}
+  \fuente{Manual NTA, pp.~33, 38; cuadros~2.2--2.3. México: ntaccounts.org; López Reynosa y Villarreal (2026), trabajo en curso.}
+  \note{4 min. El superávit en México es un hallazgo de esta preparación: datos/p2\_mex2014.csv y datos/p2\_mex2004.csv (ingreso medio 30--49 = 1). 2010: 37 a 50 años. Es la serie de Mejía Guevara en ntaccounts.org, independiente de nuestra base. En nuestra cuenta: el consumo incluye el del gobierno y el ingreso laboral es 39\,\% a 44\,\% del PIB; el perfil masculino sí tiene superávit, de 33 a 62 años (resumen\_ejecutivo.tex). No es que los mexicanos consuman de más.}
+\end{frame}
+
+% 14 ----------------------------------------------------------------------
+\begin{frame}{Reasignaciones públicas: la pensión y la consulta del abuelo}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[estilo,name=a,width=6.8cm,height=3.5cm,xmin=0,xmax=90,ymin=0,ymax=1.3,stack plots=y,area style,xtick={0,20,40,60,80},
+        title={Brasil, 2008},title style={font=\small\bfseries}]
+      \addplot[fill=cOferta!60,draw=none] table[col sep=comma,x=edad,y=edu]{datos/p2_publicas_bra2008.csv} \closedcycle;
+      \addplot[fill=cRecauda!60,draw=none] table[col sep=comma,x=edad,y=sal]{datos/p2_publicas_bra2008.csv} \closedcycle;
+      \addplot[fill=cImpuesto!60,draw=none] table[col sep=comma,x=edad,y=pen]{datos/p2_publicas_bra2008.csv} \closedcycle;
+      \addplot[fill=cGris!40,draw=none] table[col sep=comma,x=edad,y=otros]{datos/p2_publicas_bra2008.csv} \closedcycle;
+    \end{axis}
+    \begin{axis}[estilo,at={(a.east)},anchor=west,xshift=0.7cm,width=6.8cm,height=3.5cm,xmin=0,xmax=90,ymin=0,ymax=1.3,stack plots=y,area style,xtick={0,20,40,60,80},
+        title={México, 2004},title style={font=\small\bfseries}]
+      \addplot[fill=cOferta!60,draw=none] table[col sep=comma,x=edad,y=edu]{datos/p2_publicas_mex2004.csv} \closedcycle;
+      \addplot[fill=cRecauda!60,draw=none] table[col sep=comma,x=edad,y=sal]{datos/p2_publicas_mex2004.csv} \closedcycle;
+      \addplot[fill=cImpuesto!60,draw=none] table[col sep=comma,x=edad,y=pen]{datos/p2_publicas_mex2004.csv} \closedcycle;
+      \addplot[fill=cGris!40,draw=none] table[col sep=comma,x=edad,y=otros]{datos/p2_publicas_mex2004.csv} \closedcycle;
+    \end{axis}
+  \end{tikzpicture}
+  \par\vspace{-1mm}
+  {\small
+  \tikz\fill[cOferta!60] (0,0) rectangle (0.3,0.2); Educación\quad
+  \tikz\fill[cRecauda!60] (0,0) rectangle (0.3,0.2); Salud\quad
+  \tikz\fill[cImpuesto!60] (0,0) rectangle (0.3,0.2); Pensiones\quad
+  \tikz\fill[cGris!40] (0,0) rectangle (0.3,0.2); Otros\quad
+  {\color{cGris}(eje horizontal: edad)}}
+  \par\smallskip\raggedright
+  Estados Unidos, 2003: un mayor recibe 25,273 dólares al año, 80\,\% en salud y pensiones. Y paga 9,830.
+  \pause
+  \begin{alertblock}{Pregunta}
+    El abuelo paga IVA en el restaurante y predial por su casa. ¿Qué parte de su pensión se paga él mismo?
+  \end{alertblock}
+  \fuente{Lo que recibe cada persona; ingreso laboral de 30--49 = 1. ntaccounts.org; Manual NTA, pp.~16--17, 40.}
+  \note{4 min. Base del bloque central de la Parte 3. A los 75 años, en Brasil salud y pensiones son 0.99 de 1.12; en México 2004, 0.17 de 0.35 (la serie mexicana trae 0.10 más en otras transferencias en efectivo). Esto es 2004: todavía no existía la pensión universal actual. Datos: datos/p2\_publicas\_bra2008.csv y p2\_publicas\_mex2004.csv. 10,400 + 9,835 = 20,235; entre 25,273 da 80.1\,\%. Cambié el ejemplo del esquema: las medicinas tienen tasa cero de IVA.}
+\end{frame}
+
+% 15 ----------------------------------------------------------------------
+\begin{frame}{Reasignaciones privadas: lo que pasa dentro de la casa}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \textbf{Transferencias netas, EUA, 2003, dólares}\par\smallskip
+      \begin{tabular}{@{}lrrr@{}}
+        \toprule
+        & 0--24 & 25--64 & 65+ \\
+        \midrule
+        Dentro del hogar & 11,088 & $-$6,479 & $-$2,324 \\
+        Entre hogares & 127 & $-$254 & $-$909 \\
+        \midrule
+        \textbf{Total privado} & \textbf{11,215} & \textbf{$-$6,733} & \textbf{$-$3,233} \\
+        \bottomrule
+      \end{tabular}
+      \par\medskip
+      \begin{itemize}
+        \item Los padres sostienen a los hijos. Casi todo ocurre dentro de la casa, y ninguna encuesta lo pregunta.
+        \item Los mayores también dan: el flujo neto sale de ellos.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.41\textwidth}
+      \pause
+      \begin{block}{Cómo se estima lo que nadie reporta}
+        \begin{itemize}
+          \item Se reparte el consumo del hogar con una regla: los adultos consumen igual; los niños, menos.
+          \item El jefe del hogar recibe todo el ingreso de activos y el ahorro.
+        \end{itemize}
+      \end{block}
+      \pause
+      Son supuestos fuertes: el jefe importa, y suele ser hombre.
+    \end{column}
+  \end{columns}
+  \fuente{Manual NTA, pp.~27--28, 41 (cuadro~2.8) y 53.}
+  \note{3 min. Salud y educación se tratan aparte en la regla de reparto (p.~27). En países con mucha corresidencia, el supuesto del jefe pesa más (p.~28).}
+\end{frame}
+
+% 16 ----------------------------------------------------------------------
+\begin{frame}{Reasignaciones basadas en activos: ingreso de activos menos ahorro}
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \[
+        \text{reasignación por activos}=Y^A-S
+      \]
+      \textbf{Privadas, Estados Unidos, 2003, 65+}\par\smallskip
+      \begin{tabular}{@{}lr@{}}
+        \toprule
+        Ingreso de activos & 23,749 \\
+        Ahorro (se resta) & $-$1,396 \\
+        \midrule
+        \textbf{Reasignación} & \textbf{25,146} \\
+        \bottomrule
+      \end{tabular}
+      \par\smallskip
+      {\small El ahorro es negativo: los mayores se comen lo guardado.}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \pause
+      \begin{block}{Cierra con el déficit de 38,045}
+        \begin{tabular}{@{}lr@{}}
+          Transf.\ públicas & 15,443 \\
+          Transf.\ privadas & $-$3,233 \\
+          Activos públicos & 690 \\
+          Activos privados & 25,146 \\
+          \midrule
+          \textbf{Suma} & \textbf{38,046} \\
+        \end{tabular}
+      \end{block}
+      \pause
+      Un detalle fiscal: los intereses de la deuda pública los registra el Manual como transferencia que sale de los contribuyentes.
+    \end{column}
+  \end{columns}
+  \fuente{Manual NTA, pp.~5, 31, 38, 41; cuadros~2.2, 2.6 y 2.8. Dólares por persona; la diferencia de 1 es redondeo.}
+  \note{3 min. Los flujos públicos por activos son el préstamo del gobierno: en el cuadro estilizado 2.1, el ahorro público es negativo. Los jóvenes de 25--34 ahorran más de lo que reciben de sus activos; en Corea la reasignación se vuelve positiva a fines de los 30 (fig. 1.2).}
+\end{frame}
+
+% 17 ----------------------------------------------------------------------
+\begin{frame}{Población por perfiles: de cada persona a la presión agregada}
+  \begin{columns}[T]
+    \begin{column}{0.50\textwidth}
+      \[
+        \text{agregado}(x)=\text{perfil}(x)\times\text{población}(x)
+      \]
+      \begin{itemize}
+        \item En Filipinas, el déficit de los niños es casi 15 veces el de los mayores.
+        \item En Alemania, el de los mayores es 1.5 veces el de los niños.
+      \end{itemize}
+      \pause
+      Gran parte de esa diferencia es la pirámide, no el comportamiento.
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \pause
+      \begin{block}{Las transferencias tienen que cuadrar}
+        Lo que uno recibe, otro lo paga. Si cambia la estructura por edad, algún perfil se mueve.
+      \end{block}
+      \begin{itemize}
+        \item Con menos niños por adulto: más por niño o menos carga para el adulto.
+        \item Con más mayores por adulto: más carga, menos por mayor o ambas.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{Manual NTA, pp.~3, 30 y 50--51.}
+  \note{3 min. Por eso una proyección que multiplica perfiles fijos por la población futura es una primera aproximación: la restricción obliga a que algo se ajuste (pp.~50--51). Esa es la pregunta de la Parte 3.}
+\end{frame}
+
+% 18 ----------------------------------------------------------------------
+\begin{frame}{Comparaciones: México se sale del patrón}
+  \opcional
+  \begin{columns}[T]
+    \begin{column}{0.58\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=7.2cm,height=5.0cm,xmin=0,xmax=90,ymin=-0.6,ymax=1.1,xtick={0,20,40,60,80},
+            xlabel={Edad},ylabel={Consumo menos ingreso laboral},
+            legend style={at={(0.5,1.02)},anchor=south,legend columns=4},legend cell align=left]
+          \draw[guia] (axis cs:0,0) -- (axis cs:90,0);
+          \addplot[cImpuesto,very thick] table[col sep=comma,x=edad,y=mex]{datos/p2_deficit_paises.csv}; \addlegendentry{México}
+          \addplot[cOferta] table[col sep=comma,x=edad,y=bra]{datos/p2_deficit_paises.csv}; \addlegendentry{Brasil}
+          \addplot[cRecauda] table[col sep=comma,x=edad,y=chl]{datos/p2_deficit_paises.csv}; \addlegendentry{Chile}
+          \addplot[cDemanda] table[col sep=comma,x=edad,y=ale]{datos/p2_deficit_paises.csv}; \addlegendentry{Alemania}
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.39\textwidth}
+      \textbf{Superávit máximo}\par\smallskip
+      \begin{tabular}{@{}lr@{}}
+        \toprule
+        Alemania, 2008 & 0.48 \\
+        Chile, 2018 & 0.39 \\
+        Brasil, 2008 & 0.23 \\
+        México, 2014 & 0.01 \\
+        \bottomrule
+      \end{tabular}
+      \par\medskip
+      \pause
+      Normalizar es lo que permite comparar: pesos, reales y euros se vuelven «veces el ingreso de un adulto de 30--49».
+    \end{column}
+  \end{columns}
+  \fuente{Déficit por persona; ingreso laboral de 30--49 años = 1. ntaccounts.org, consultado el 1 de noviembre de 2026; Lee y Mason (2011).}
+  \note{3 min, opcional. El cap. 2 no trae comparaciones normalizadas: por eso uso la base. Datos: datos/p2\_deficit\_paises.csv. Años distintos: lo honesto es decirlo. Otros superávits máximos: Costa Rica 2013, 0.31; Colombia 2014, 0.19; Perú 2014, 0.18; Argentina 2016, 0.33; Uruguay 2013, 0.25.}
+\end{frame}
+
+% 19 ----------------------------------------------------------------------
+\begin{frame}{Lo que las NTA no ven}
+  \begin{columns}[T]
+    \begin{column}{0.49\textwidth}
+      \begin{block}{El trabajo en casa}
+        La cuenta básica no mide la producción del hogar. Cuidar a un niño o a un padre no aparece, y lo hacen sobre todo mujeres.
+      \end{block}
+      \begin{block}{El sexo}
+        El método básico no separa hombres y mujeres, y sin el trabajo en casa una cuenta por sexo subestima a las mujeres.
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{La desigualdad dentro de cada edad}
+        Da promedios. El «mayor promedio» no existe: la riqueza se concentra y la media queda arriba de la mediana.
+      \end{block}
+      \pause
+      \begin{alertblock}{Por eso}
+        Nuestro 76.3\,\% del déficit en mujeres mide el ciclo monetario, no lo que aportan. La medición del tiempo regresa en la Parte 3.
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \fuente{Manual NTA, pp.~52--53; López Reynosa y Villarreal (2026), trabajo en curso.}
+  \note{3 min. El Manual remite a Donehower (2011) para las cuentas con tiempo; hoy existe el manual de las Naciones Unidas de 2024.}
+\end{frame}
+
+% 20 ----------------------------------------------------------------------
+\begin{frame}{Qué datos se necesitan}
+  \opcional
+  \begin{columns}[T]
+    \begin{column}{0.49\textwidth}
+      \textbf{Tres tipos de datos}
+      \begin{enumerate}
+        \item Población por edad.
+        \item Cuentas nacionales: los totales.
+        \item Encuestas y registros: la forma por edad.
+      \end{enumerate}
+      \pause
+      \begin{block}{Controles macro}
+        Si la encuesta da 100 y las cuentas nacionales 110, se multiplica cada edad por 1.1.
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \pause
+      \textbf{En México}
+      \begin{itemize}
+        \item ENIGH: forma por edad.
+        \item Cuentas Nacionales de INEGI: nivel.
+      \end{itemize}
+      \par\smallskip
+      La encuesta capta entre 10\,\% y 53\,\% del agregado, según la variable. Los factores de ajuste van de 1.9 a 9.9.
+      \par\medskip
+      Por eso decimos: la encuesta da la forma; las cuentas nacionales, el nivel.
+    \end{column}
+  \end{columns}
+  \fuente{Manual NTA, p.~28 (recuadro~2.2) y p.~56; López Reynosa y Villarreal (2026), trabajo en curso.}
+  \note{3 min, opcional. La p.~56 está en el cap. 3, fuera de la lectura. El esquema mencionaba la Cuenta Pública: nuestro trabajo no la usa como control, así que no aparece. Fuente: Missions/Funded/NTA\_Inequality/paper\_final.tex.}
+\end{frame}
+
+% =========================================================================
+% III. CIERRE · 5 min
+% =========================================================================
+\section{Cierre}
+
+% 21 ----------------------------------------------------------------------
+\begin{frame}{El presupuesto es un sistema de reasignaciones por edad}
+  \begin{itemize}
+    \item \textbf{Cada impuesto y cada gasto mueve recursos entre edades.} Una reforma de pensiones no es solo de pensiones.
+    \pause
+    \item \textbf{Con Kaplow} evaluamos cada política junto con su financiamiento. Aquí le agregamos la pregunta de a qué edad paga cada quien, y qué generación carga con la factura.
+    \pause
+    \item \textbf{El 10 de noviembre} vemos la parte macro. La deuda también mueve recursos entre generaciones, y por eso va de la mano de estas cuentas.
+  \end{itemize}
+  \fuente{Elaboración propia, con Manual NTA, pp.~16--22.}
+  \note{3 min. Amarre con la sesión de Kaplow del 26 y 27 de octubre y con la de deuda del 10 de noviembre.}
+\end{frame}
+
+% 22 ----------------------------------------------------------------------
+\begin{frame}{Para la Parte 3}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      Ya tenemos las piezas:
+      \begin{enumerate}
+        \item Un déficit en la niñez y otro en la vejez.
+        \item Tres vías para cubrirlos.
+        \item Un Estado que paga, sobre todo, pensiones y salud a los mayores.
+      \end{enumerate}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \pause
+      \begin{alertblock}{Pregunta}
+        ¿Qué le pasa a ese sistema cuando la población envejece rápido?
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \fuente{Sigue la Parte 3: Cecchini et al. (2025), CEPAL.}
+  \note{2 min.}
+\end{frame}
+
+\end{document}
