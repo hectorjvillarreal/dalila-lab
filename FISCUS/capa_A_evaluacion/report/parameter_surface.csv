@@ -1,0 +1,141 @@
+name,where_defined,mechanism,default_value,units,plausible_range_if_stated,stages_using_it,user_facing_web,notes
+aniovp,SIM.do:28; Web.Stata.do:30; profile.do:214,scalar,2027,year,not stated,all (price base of every real figure),no,"Present-value / constant-price year. profile.do:212-214 first derives it from the system date and then overwrites it with 2027."
+anioPE,SIM.do:29; Web.Stata.do:32,scalar,2027,year,not stated,all (policy year; anchors LIF/PEF of that year),no,"Year of the Paquete Económico. Hard-coded; FiscalGap end = anioPE+5 (SIM.do:528)."
+anioenigh,SIM.do:30; Web.Stata.do:32,scalar,2024,year,"2014,2016,2018,2020,2022,2024 (Expenditure.do:22-75)",Expenditure/Households/NTA/GastoPC/IVA_Mod,no,"ENIGH vintage. GastoPC.ado:66-74 and PerfilesSim.do:14-38 re-derive it from anioPE."
+id,SIM.do:32 (c(username)); Web.Stata.do:34 ({{idSession}}),global,username / session id,string,alphanumeric 1-32 (config.php:328),all output paths users/$id/,hidden (session),"Namespace of all outputs."
+idbase,SIM.do:33; Web.Stata.do:41,global,"$id (batch) / ""ricardo"" (web)",string,,FiscalGap §4.2/§5.2 (reads <idbase>/bootstraps/<B>/*RECprom), GastoPC cache, _precache_usa,no,"Web always reads Ricardo's base scenario artefacts."
+bootstrap,SIM.do:34; Web.Stata.do:40,global,250,replicas,>=1,PerfilesSim §8 (RECprom), FiscalGap (path), Simulador in Expenditure/Households/PerfilesSim,no,"Web/SIM §7 call Simulador with bootstrap(1) explicitly (SIM.do:510)."
+seed,SIM.do:35-36; Simulador.ado:50,global,1111,integer,,Simulador bootstrap (Mata rseed),no,"Only matters when bootstrap>1."
+algebra,SIM.do:48; Web.Stata.do:42,global,"""algebra"" (on)",flag,"""algebra""|""""",FiscalGap §3 (closed-form HH totals); GastoPC _GPCsuma/_GPCcierra,no,"Closed form replaces micro tabstat; author reports only floating-point-order differences (FiscalGap.ado:63-70)."
+nographs / textbook / rawwip / hasta / export / update / output,SIM.do:43-47,61,70; Web.Stata.do:38-39,global,"nographs+output on in web; all off in SIM.do except algebra",flags,,run control,no,"hasta = early stop after section N."
+entidad,SIM.do:51-58,global,"""""",state name,32 names in SIMentidad.ado,PIBDeflactor/Poblacion if-filter; SankeySF/CicloEntidad/TasasEfectivasEntidad,no,"State branch; off by default."
+lambda,PIBDeflactor.ado:351-354,global (optional override),computed λ (OutputPerWorker geometric growth),% per year,,PIBDeflactor §5 projection; Simulador ProyGraph; FiscalGap (Poblacion×lambda),no,"If $lambda exists it overrides the historical productivity growth."
+pensiones_en_yl,SIM.do:82; Households.do:140-166,global,off,"off|on",,Households §2.2/§3,no,"CUAD-0 signed flags (10). Any non-default value is a declared FLAG and breaks baseline comparability."
+ing_mixto_depurado,SIM.do:83; Households.do:142,global,transf_negocios,"transf_negocios|off",,Households §4.2,no,
+rentas_celda,SIM.do:84,global,b3n,"b3n|b2n",,Households §4.2/§9,no,
+alq_en_capital,SIM.do:85,global,off,off,,Households,no,single admitted value
+d4_relativo,SIM.do:86,global,proxy_propiedad,"proxy_propiedad|enigh",,Households §4.4/§9 (Distribucion of D.4),no,
+yk_ancla,SIM.do:87,global,b2n_b3n_d4,"b2n_b3n_d4|actual",,Households §9,no,
+cap4,SIM.do:88,global,fuera,"fuera|dentro",,Households §4.2,no,
+suborrow,SIM.do:89,global,off,"off|on",,Households §9/§12,no,
+cuotas_d614,SIM.do:90,global,neto,"neto|actual",,Households §1/§9; NTA,no,
+oye_en_hub,SIM.do:91,global,off,"off|on",,Households §8,no,
+nta_anclaS,NTA.do:105-109,global,auto,"auto|off|aditivo|multiplicativo",,NTA §4.11,no,"NTA module parameters (9); affect only the NTA pages, not the fiscal projection."
+nta_YA,NTA.do:112,global,S14,"S14|motor",,NTA §4.3b,no,
+nta_cuotas,NTA.do:117,global,S14,"S14|LIF",,NTA §4.6,no,
+nta_d8,NTA.do:118,global,yl_cotizantes,"yl_cotizantes|per_capita_adultos",,NTA §4.6b,no,
+nta_anclaTau,NTA.do:119,global,on,"on|off",,NTA §4.7,no,
+nta_alqu,NTA.do:124,global,jefe,"jefe|motor",,NTA §4.3,no,
+nta_tauCash,NTA.do:125,global,PEF,"PEF|ENIGH",,NTA §4.7,no,
+nta_otorgado,NTA.do:126,global,efectivo,"efectivo|todo",,NTA §4.8,no,
+nta_mixto,NTA.do:127,global,crudo,"crudo|escalado|reancla",,NTA §4.1,no,
+paqueteEconomico,SIM.do:104; Web.Stata.do:35,global,"""CGPE 2027""",label,,titles/captions only,no,
+pib2026..pib2032 (7),SIM.do:107-113; Web.Stata.do:59-65 ({{CRECPIB2026..2032}}); profile.do:296-302 (2025-2031!),global,"1.4127, 1.9983, 2.0, 2.0, 2.0, 2.0, 2.0",% real GDP growth,"form min=0 (index.php:2125)",PIBDeflactor §4.1 → pibY/pibYR for all modules,yes,"profile.do carries a different, older vector (pib2025..2031) — stale duplicate. Positional contract with the web form (output.do:3-13)."
+def2026..def2032 (7),SIM.do:116-122; Web.Stata.do:67-73 ({{CRECDEF*}}),global,"3.8, 4.0 ×6",% GDP-deflator growth,form min=0,PIBDeflactor §3.1 → deflator,yes,
+inf2026..inf2032 (7),SIM.do:125-131; Web.Stata.do:75-81,global,"3.8, 3.2, 3.0 ×5",% INPC inflation,,PIBDeflactor §3.1 → inpc/deflatorpp (purchasing-power deflator),no (hard-coded in template),
+ISRASPIB,SIM.do:176 (escalar pctpib); Web.Stata.do:107 ({{INGRESOS0}}),scalar,3.855,% of GDP,"form 0-100 step .001 (index.php:1118)",TasasEfectivas §3 & §7 (Distribucion), FiscalGap §4.2 anchor, output.do,yes,"Revenue scenario: 15 items. Default values typed from CGPE 2027 / LIF. If absent, TasasEfectivas takes LIF observed (TasasEfectivas.ado:32-45)."
+ISRPFPIB,SIM.do:177; Web.Stata.do:108 ({{INGRESOS1}}),scalar,0.244,% of GDP,0-100,idem,yes,
+CUOTASPIB,SIM.do:178; Web.Stata.do:109 ({{INGRESOS2}}),scalar,1.782,% of GDP,0-100,idem,yes,
+ISRPMPIB,SIM.do:180; Web.Stata.do:111 ({{INGRESOS4}}),scalar,4.244,% of GDP,0-100,idem,yes,
+OTROSKPIB,SIM.do:181; Web.Stata.do:112 ({{INGRESOS5}}),scalar,1.650,% of GDP,0-100,idem,yes,
+FMPPIB,SIM.do:182; Web.Stata.do:114 ({{INGRESOS15}}),scalar,0.535,% of GDP,0-100,idem,yes,
+PEMEXPIB,SIM.do:184; Web.Stata.do:115 ({{INGRESOS16}}),scalar,1.963,% of GDP,0-100,idem,yes,
+CFEPIB,SIM.do:185; Web.Stata.do:116 ({{INGRESOS17}}),scalar,1.293,% of GDP,0-100,idem,yes,
+IMSSPIB,SIM.do:186; Web.Stata.do:117 ({{INGRESOS13}}),scalar,0.256,% of GDP,0-100,idem,yes,
+ISSSTEPIB,SIM.do:187; Web.Stata.do:118 ({{INGRESOS14}}),scalar,0.186,% of GDP,0-100,idem,yes,
+IVAPIB,SIM.do:189; Web.Stata.do:120 ({{INGRESOS7}}),scalar,4.485,% of GDP,0-100,idem,yes,
+ISANPIB,SIM.do:190; Web.Stata.do:121 ({{INGRESOS8}}),scalar,0.044,% of GDP,0-100,idem,yes,
+IEPSNPPIB,SIM.do:191; Web.Stata.do:122 ({{INGRESOS9}}),scalar,0.735,% of GDP,0-100,idem,yes,
+IEPSPPIB,SIM.do:192; Web.Stata.do:123 ({{INGRESOS10}}),scalar,1.366,% of GDP,0-100,idem,yes,
+IMPORTPIB,SIM.do:193; Web.Stata.do:124 ({{INGRESOS11}}),scalar,0.590,% of GDP,0-100,idem,yes,
+ISR[1..11,4] marginal rates (11),SIM.do:203-213; Web.Stata.do:132-142 ({{ISRTASA0..10}}),matrix cell,"1.92, 6.40, 10.88, 16.00, 17.92, 21.36, 23.52, 30.00, 32.00, 34.00, 35.00",%,,ISR_Mod.do (web, only if moduloCambio=1); Households.do uses its own year-specific tables (342-421),yes (ISR module),"Annual LISR art. 152 tariff (RMF 2025 Anexo 8)."
+ISR[1..11,1-3] brackets and fixed quotas,SIM.do:203-213; Web.Stata.do:132-142; ISR_Mod.do:14-20,matrix cell (hard-coded; CF recomputed in ISR_Mod),"0.01..4,511,707.37; CF 0..1,414,947.85",MXN per year,,ISR_Mod,no (recomputed from rates),"ISR_Mod.do:14-20 rebuilds lower limits and fixed quotas from the rates typed by the user."
+SE[1..11,3] employment subsidy (11),SIM.do:216-226; Web.Stata.do:145-155 ({{SE0..10}}),matrix cell,"407.02*12 … 0",MXN per year,,ISR_Mod,yes (ISR module),"Note: web page defines SE0..SE11 (12 ids, index.php) but the template consumes SE0..SE10."
+DED[1,1..4],SIM.do:230; Web.Stata.do:159 ({{DED0..3}}),matrix cell,"5, 15, 76.84, 21.06","UMA multiples; %; %; %",,ISR_Mod.do:143-144 (deduction cap), 181 (wage informality), 189 (PF informality),yes (ISR module),"DED[1,3] and DED[1,4] are informality rates applied as ranking cut-offs."
+PM[1,1..2],SIM.do:235; Web.Stata.do:163 ({{ISRMORA0..1}}),matrix cell,"30, 66.53","% rate; % informality",,ISR_Mod.do:198-206,yes (ISR module),
+CSS_IMSS[1..7,1..3] (21),SIM.do:241-249; Web.Stata.do:169-177 ({{CSSIMSS0..20}}); Households.do:1572-1580 (own copy),matrix cell,"5.42/0.44/3.21; 1.05/0.37/0.08; 1.75/0.63/0.13; 1.83/0/0; 1.00/0/0; 5.15/1.12/1.49; 0/0/6.55",% of SBC (employer/worker/federal),,ISR_Mod.do:59-88 (web); Households.do:1614-1640 (batch, separate copy),yes (ISR module),"Two copies: SIM.do/Web.Stata.do and Households.do:1572-1580 (identical values today)."
+CSS_ISSSTE[1..8,1..3] (24),SIM.do:251-260; Web.Stata.do:180-189 ({{CSSISSSTE0..23}}); Households.do:1583-1592 (own copy),matrix cell,"7.375/2.75/391.0; 0.72/0.625/0; 0.75/0/0; 0.625/0/0; 0.5/0.5/0; 6.125/2+3.175/5.5; 0/5/0; 0/0/13.9",% of SBC; federal cells in pesos/UMA units,,ISR_Mod.do:91-121; Households.do:1647-1677,yes (ISR module),"The two copies DIFFER: SIM.do row 1 col 3 = 391.0 and row 8 = cuota social 13.9; Households.do row 1-2 col 3 = 13.90 and rows 6-7 split retiro/cesantía. Not reconciled in source."
+IVAT[1,1] general rate,SIM.do:276; Web.Stata.do:192 ({{IVAT0}}); Expenditure.do:1164,matrix cell,16,%,0-100,IVA_Mod.do (web); Expenditure.do §5 (batch baseline),yes (IVA module),
+IVAT[2..12,1] regime by category (11),SIM.do:277-287; Web.Stata.do:193-203 ({{IVAT1..11}}),matrix cell,"1,2,1,2,3,3,1,1,3,2,3","1=zero-rated, 2=exempt, 3=taxed",,IVA_Mod.do:291-301; Expenditure.do:1199-1209,yes (IVA module, radio buttons),"Categories: Alimentos, Alquiler, Canasta básica, Educación, Fuera del hogar, Mascotas, Medicinas, Toallas, Otros, Transporte local, Transporte foráneo."
+IVAT[13,1] IVA evasion/informality,SIM.do:288; Web.Stata.do:204 ({{IVAT12}}); Expenditure.do:1176 (7.77),matrix cell,"23.1 (SIM/web); 7.77 (Expenditure baseline)",%,0-100,IVA_Mod.do:305 (uniform haircut),yes (IVA module),"Two different defaults in source. SIM.do comment: recalibrated 2026-10-06."
+IEPST[1..17,1..2],SIM.do:294-310; Web.Stata.do:209-225; Expenditure.do:1248-1257 (10-row variant),matrix cell,"26.5/0; 30/0; 53/0; 160/0.6166; 30/0; 3/0; 25/0; 0/1.5737; 8/0; 0/10.7037; 0/21.1956; 0/19.8607; 0/43.4269; 0/21.1956; 0/6.1752; 0/5.2146; 0/6.7865","% ad valorem; MXN specific quota",,Expenditure.do §6 (batch); defined but not consumed in Web.Stata.do (no IEPS submodule),no,"Three copies with different row sets; only Expenditure.do's 10-row table is actually used in a computation (Expenditure.do:1280-1297)."
+tasaEfectiva,Web.Stata.do:375 ({{DEUDA0}}); SIM.do:452 (commented),scalar,"10.8 (form default, index.php:2276); batch: mean of last 5 years",% effective interest on SHRFSP,0-100,FiscalGap.ado:786-790 (overrides historical mean),yes,"Batch run has no scalar → FiscalGap uses the 5-year mean (764-769)."
+iniciaA,SIM.do:339; Web.Stata.do:264 ({{iniciaA}}),scalar (escalar pctpib),0.000,% of GDP,>=0,GastoPC §3.1,yes,"Spending scenario: 34 items (education 10, health 7, pensions 5, energy 5, other 4, transfers 3). GastoPC falls back to PEF of anioPE when the scalar is undefined (e.g. GastoPC.ado:341-358)."
+basica,SIM.do:340; Web.Stata.do:265,scalar,2.080,% of GDP,>=0,GastoPC §3.2,yes,
+medsup,SIM.do:341; Web.Stata.do:266,scalar,0.405,% of GDP,>=0,GastoPC §3.3,yes,
+superi,SIM.do:342; Web.Stata.do:267,scalar,0.450,% of GDP,>=0,GastoPC §3.4,yes,
+posgra,SIM.do:343; Web.Stata.do:268,scalar,0.029,% of GDP,>=0,GastoPC §3.5,yes,
+eduadu,SIM.do:344; Web.Stata.do:269,scalar,0.015,% of GDP,>=0,GastoPC §3.6,yes,
+otrose,SIM.do:345; Web.Stata.do:270,scalar,0.243,% of GDP,>=0,GastoPC §3.8,yes,
+invere,SIM.do:346; Web.Stata.do:271,scalar,0.081,% of GDP,>=0,GastoPC §3.7,yes,
+cultur,SIM.do:347; Web.Stata.do:272,scalar,0.059,% of GDP,>=0,GastoPC §3.8,yes,
+invest,SIM.do:348; Web.Stata.do:273,scalar,0.159,% of GDP,>=0,GastoPC §3.8,yes,
+ssa,SIM.do:350; Web.Stata.do:276,scalar,0.179,% of GDP,>=0,GastoPC §4.2,yes,
+imssbien,SIM.do:351; Web.Stata.do:277,scalar,0.715,% of GDP,>=0,GastoPC §4.1,yes,
+imss,SIM.do:352; Web.Stata.do:278,scalar,1.500,% of GDP,>=0,GastoPC §4.3,yes,
+issste,SIM.do:353; Web.Stata.do:279,scalar,0.223,% of GDP,>=0,GastoPC §4.4,yes,
+pemex,SIM.do:354; Web.Stata.do:280,scalar,0.045,% of GDP,>=0,GastoPC §4.5,yes,
+issfam,SIM.do:355; Web.Stata.do:281,scalar,0.037,% of GDP,>=0,GastoPC §4.6,yes,
+invers,SIM.do:356; Web.Stata.do:282,scalar,0.186,% of GDP,>=0,GastoPC §4.7,yes,
+pam,SIM.do:358; Web.Stata.do:285 ({{bienestar}}),scalar,1.474,% of GDP,>=0,GastoPC §5.1 (Pensión_AM),yes,
+penimss,SIM.do:359; Web.Stata.do:286 ({{penims}}),scalar,2.882,% of GDP,>=0,GastoPC §5.2,yes,
+penisss,SIM.do:360; Web.Stata.do:287 ({{peniss}}),scalar,1.040,% of GDP,>=0,GastoPC §5.3,yes,
+penpeme,SIM.do:361; Web.Stata.do:288,scalar,0.240,% of GDP,>=0,GastoPC §5.4,yes,
+penotro,SIM.do:362; Web.Stata.do:289 ({{penotr}}),scalar,0.508,% of GDP,>=0,GastoPC §5.5,yes,
+gascfe,SIM.do:364; Web.Stata.do:292,scalar,1.006,% of GDP,>=0,GastoPC §6.1,yes,
+gaspemex,SIM.do:365; Web.Stata.do:293,scalar,0.404,% of GDP,>=0,GastoPC §6.2,yes,
+gassener,SIM.do:366; Web.Stata.do:294,scalar,0.253,% of GDP,>=0,GastoPC §6.3,yes,
+gasinverf,SIM.do:367; Web.Stata.do:295,scalar,1.042,% of GDP,>=0,GastoPC §6.4,yes,
+gascosdeue,SIM.do:368; Web.Stata.do:296,scalar,0.515,% of GDP,>=0,GastoPC §6.5,yes,
+gasinfra,SIM.do:370; Web.Stata.do:299,scalar,1.568,% of GDP,>=0,GastoPC §7.3,yes,
+gasotros,SIM.do:371; Web.Stata.do:300,scalar,1.714,% of GDP,>=0,GastoPC §7.6,yes,
+gasfeder,SIM.do:372; Web.Stata.do:301,scalar,4.190,% of GDP,>=0,GastoPC §7.1,yes,
+gascosto,SIM.do:373; Web.Stata.do:302,scalar,3.687,% of GDP,>=0,GastoPC §7.2; FiscalGap.ado:772-783 (debt cost anchor of anioPE),yes,
+ingbasico18,SIM.do:375; Web.Stata.do:306,scalar,1,"0/1",,GastoPC §8 (IngBasico eligibility <18),yes (checkbox),
+ingbasico65,SIM.do:376; Web.Stata.do:307,scalar,1,"0/1",,GastoPC §8 (eligibility >=65),yes (checkbox),
+IngBas,SIM.do:377; Web.Stata.do:305,scalar,0,% of GDP,>=0,GastoPC §8 (universal basic income),yes,
+gasmadres,SIM.do:378; Web.Stata.do:308,scalar,0.009,% of GDP,>=0,GastoPC §8.2,yes,
+gascuidados,SIM.do:379; Web.Stata.do:309,scalar,0.047,% of GDP,>=0,GastoPC §8.1,yes,
+shrfsp[1,1..7] / shrfspInterno / shrfspExterno (21),SIM.do:403-405; Web.Stata.do:326-328,matrix → globals shrfsp2026..2032 (SIM.do:430-448),"54.0..56.5 / 42.5..45.9 / 11.4..10.6",% of GDP (CGPE 2027),,SHRFSP.ado:107-118 (override observed series for 2026-2032); FiscalGap §5 (anchor 2027 only; later years overwritten by the engine),no,"CGPE exogenous debt path. Hard-coded in both entry points; horizon 2026-2032 is a positional contract."
+rfsp[1..7,1..8] (56),SIM.do:407-413; Web.Stata.do:330-336,matrix → globals rfsp*2026..2032,"RFSP total, PIDIREGAS, IPAB, FONADIN, Deudores, Banca, Adecuaciones, Balance",% of GDP,,SHRFSP §4; FiscalGap §5.8-5.9 (non-balance components frozen at last observed % GDP),no,
+tipoDeCambio[1,1..7],SIM.do:416; Web.Stata.do:339,matrix → globals,"17.6, 17.9, 18.1, 18.2, 18.3, 18.6, 18.6",MXN/USD,,SHRFSP §4; FiscalGap §5.7 (FX effect on external debt),no,
+balprimario[1,1..7],SIM.do:419; Web.Stata.do:342,matrix → globals,"-0.1, -0.5, -0.5, -0.5, -0.7, -0.9, -1.0",% of GDP,,SHRFSP §4 (display/decomposition only),no,"Not used by FiscalGap's projection (balance is recomputed)."
+costodeuda[1,1..7],SIM.do:422; Web.Stata.do:345,matrix → globals,"3.7, 4.04, 3.7, 3.6, 3.7, 3.7, 3.7",% of GDP,,SHRFSP §4 (costofinanciero override) → tasaEfectiva history,no,
+ingresos[1,1..7] / egresos[1,1..7],SIM.do:425-428; Web.Stata.do:348-351,matrix → globals,"23.0..22.8 / 26.6..25.4",% of GDP,,SHRFSP §4 (display),no,
+FiscalGap end(),SIM.do:528; Web.Stata.do:420,option,anioPE+5 = 2032 (program default 2100),year,,FiscalGap horizon,no,"Effective horizon = min(PIB, SHRFSP, bootstraps) (FiscalGap.ado:736-739)."
+FiscalGap discount(),SIM.do:528; Web.Stata.do:420,option,8 (program default 5),% per year,,FiscalGap §6 (poblacionVP, perpetuity) only; PV balance retired,no,
+FiscalGap desde() / aniomin(),SIM.do:528,option,2016 / 2016,year,,growth-rate window for LIF/PEF; graphs,no,
+FiscalGap trend cap,FiscalGap.ado:172-177 and 479-484,hard-coded literal,±5,% per year,,revenue and spending per-capita trend,no,"Caps the non-demographic trend component."
+FiscalGap demographic/effective-rate windows,FiscalGap.ado:164,471,765,802,hard-coded literal,5 years (anio-5..anio),years,,mean growth of contribuyentes; mean tasaEfectiva; mean depreciation,no,
+FiscalGap actualizacion base year,FiscalGap.ado:811,815,827,hard-coded literal,2009,year,,geometric revaluation factor of debt stocks,no,
+output.do history start,FiscalGap.ado:369,383,673,1086,1240; output keys,hard-coded literal,2013,year,,PROY* series start,no,
+LIF/PEF desde() min() rows(),SIM.do:171-173,336; Web.Stata.do:92-94,options,"2016; 0.75/0; 2",year; % GDP; rows,,averages and legend,no,
+Poblacion aniofinal(),SIM.do:97,option,2070,year,,demographic horizon (CONAPO pry23 ends 2070),no,
+PIBDeflactor aniomax()/geopib()/geodef()/discount(),SIM.do:134; PIBDeflactor.ado:72-74; FiscalGap.ado:36,options,"2032 (SIM), aniovp+5 default; geo = desde; discount 5",year; %,,PIB projection horizon; geometric windows; pibYVP,no,
+WorkingAge definition,PIBDeflactor.ado:1209,hard-coded literal,ages 15-65,years,,λ (output per working-age person) and GDP projection beyond exogenous years,no,
+SHRFSP ultanio(),SIM.do:453,option,2002 (program default 2001),year,,graph range,no,
+Simulador bandwidth()/cluster()/age cap,Simulador.ado:45,348,1391,options/literals,"5; upm; 109",years; -; years,,kernel graphs only; bootstrap resampling unit; profile age cap,no,
+Simulador normalisation,Simulador.ado:1453-1457,hard-coded literal,per-capita of 40-year-old men (fallback: mean),,,PERF profile scale (cancels in REC projection),no,
+smdf (UMA / minimum wage),Households.do:72,84,94,104,114,124,134; ISR_Mod.do:27,local,"248.93 (2024), 96.22 (2022), 86.88 (2020), 80.60 (2018), 73.04 (2016)",MXN per day,,exemptions, SBC caps, deduction caps,no,"Typed per ENIGH vintage. 2022 value (96.22) looks like a UMA 2022 (96.22) while 2024 (248.93) is the 2024 minimum wage, not the UMA (108.57): not determinable from source which concept is intended."
+udis,Households.do:71,83,93,103,113,123,133,local,"8.15 (2024) …",MXN per UDI,,home-sale exemption (700,000 UDIs),no,
+SubsidioEmpleo,Households.do:70,82,92,...,local,"32,841,000,000 (2024) …",MXN,,display/comparison only,no,
+betamin,Households.do:68,80,...,local,1,Pareto β,>1 activates tail,Households §7/§8.1 (Pareto right-tail imputation),no,"Inactive at 1; comments mention 2.436/2.25/2.38."
+altimir,Households.do:69,81,...,local,yes,"yes/no",,Households §9 scaling to S.14 cells,no,
+Tinfonavit,Households.do:1595,local,5,% of SBC,,employer housing contribution,no,
+SBC caps,Households.do:1599-1611,hard-coded literal,"IMSS 1-25 UMA; ISSSTE 1-10 UMA; floor(sbc)",UMA multiples,,contribution base,no,
+LISR exemption multiples,Households.do:723-724,762,779-788,829,856,966,983,1094; 954 (700,000 UDIs),hard-coded literals,"40/423 SM agrí; 5 SM horas; 30/15/15/30 SM; 90 SM×años; 9 SM pensions; 3 SM; 20 SM; 700k UDIs",SM/UMA multiples,,exemptions (law parameters),no,"Legal constants from LISR art. 74/93; should be a table by year."
+honorarios cost share,Households.do:883-885,hard-coded literal,0.634768962,share,,exempt share of fees (Censo Económico 2019),no,
+rent deductions,Households.do:907,hard-coded literal,35 % + 2 % predial,share,,exen_rent,no,
+personal deduction caps,Households.do:1457-1464; 2328-2329,hard-coded literal,"funeral ≤ 1 UMA×360; colegiaturas 14,200/12,900/19,900/17,100/24,500; total ≤ min(5 UMA, 15 % income)",MXN per year,,deduc_isr,no,
+mixed income labour/capital split,Households.do:1189-1198,hard-coded literal,2/3 labour, 1/3 capital,share,,Yl/Yk; NTA,no,
+annualisation factors,Households.do:456 (×4.3333); Expenditure.do:149 (×4); 482-486 (365/52/12/4),hard-coded literal,"4.3333 (monthly→annual), 4 (quarterly→annual)",,,all ENIGH flows,no,
+Pemex/ISSFAM affiliation anchor,GastoPC.ado:181,864,hard-coded literal,602513/1169476,ratio,,health beneficiaries split,no,"TODO(Ricardo): source undocumented."
+Pemex pensioner anchor,GastoPC.ado:243,hard-coded literal,110000/181290,ratio,,pensioners split,no,"TODO(Ricardo): source undocumented."
+FAM_cuidados,GastoPC.ado:1425-1430,1516-1521,local,".65 (≤2023), .81 (≥2024)",share,,care spending (fallback branch only),no,
+GastoPC age thresholds,GastoPC.ado:128-151,236,272-280,hard-coded literal,"edad<=15 básica; <3 primera infancia; <4/<6 madres; >=65 PAM; >=65 dependencia",years,,beneficiary counts,no,
+ISR_Mod calibration ratios,ISR_Mod.do:176,184,193,208,213,hard-coded literal,"SE×.1492/.098; ISRAS×3.793/3.255; ISRPF×0.241/0.553; ISRPM×4.176/2.781; CUOTAS×1.675/1.525",ratios,,web ISR module results,no,"Undocumented ad-hoc calibration factors applied to the user's simulated ISR; not present in the batch path."
+IVA_Mod IVA in IEPS base,Expenditure.do:1288,1295,hard-coded literal,0.16,share,,IEPS computation strips a fixed 16 % IVA,no,
+NTA adult age / tolerance,NTA.do:130-131,local,"18; 1e-9",years; relative,,NTA gates,no,
+Households gate tolerance,Households.do:2776,2890,hard-coded literal,1e-9,relative,,anchor gates,no,
+rate limits (web),config.php:407-412,PHP constants,"100 runs/IP per 600 s; 3 concurrent Stata; retry 30 s; slot TTL 600 s",,,calculaStata.php admission,no,operational not model
+CIEP_TIEMPOS (web countdown),js/config-tiempos.js,JS constants,"25/40/40/50 s",seconds,,UI only,no,cosmetic

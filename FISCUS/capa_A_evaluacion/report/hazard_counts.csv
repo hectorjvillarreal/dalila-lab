@@ -1,0 +1,139 @@
+construct,occurrences,n_files,examples
+gen/generate/g (new var),814,40,01_modulos/Expenditure.do:166; 01_modulos/Expenditure.do:167; 01_modulos/Expenditure.do:168
+replace,1111,34,01_modulos/Expenditure.do:149; 01_modulos/Expenditure.do:160; 01_modulos/Expenditure.do:161
+egen (any),213,24,01_modulos/Expenditure.do:148; 01_modulos/Expenditure.do:265; 01_modulos/Expenditure.do:582
+egen rowtotal/rsum,112,13,01_modulos/Expenditure.do:148; 01_modulos/Expenditure.do:894; 01_modulos/Households.do:457
+egen total/sum,63,17,01_modulos/Households.do:828; 01_modulos/Households.do:1987; 01_modulos/Households.do:2110
+egen mean/max/min/count,36,14,01_modulos/Expenditure.do:238; 01_modulos/Expenditure.do:582; 01_modulos/Households.do:1543
+egen group/tag/cut/rank,5,3,01_modulos/Expenditure.do:583; 01_modulos/NTA.do:321; Simulador.ado:336
+collapse,93,27,01_modulos/Expenditure.do:216; 01_modulos/Expenditure.do:501; 01_modulos/Expenditure.do:503
+collapse (sum),81,22,01_modulos/Expenditure.do:216; 01_modulos/Expenditure.do:501; 01_modulos/Expenditure.do:503
+reshape,53,16,01_modulos/Expenditure.do:541; 01_modulos/Expenditure.do:568; 01_modulos/Expenditure.do:1186
+merge 1:1,122,18,01_modulos/Expenditure.do:590; 01_modulos/Expenditure.do:591; 01_modulos/Households.do:2060
+merge m:1,30,11,01_modulos/Expenditure.do:153; 01_modulos/Expenditure.do:155; 01_modulos/Expenditure.do:201
+merge 1:m,1,1,01_modulos/Expenditure.do:578
+merge m:m,0,0,
+merge with update/replace,13,4,FiscalGap.ado:99; FiscalGap.ado:207; FiscalGap.ado:213
+merge with assert(,0,0,
+merge with keep(,31,14,01_modulos/Expenditure.do:252; 01_modulos/Expenditure.do:590; 01_modulos/Expenditure.do:1180
+merge nogen (no _merge check),134,19,01_modulos/Expenditure.do:252; 01_modulos/Expenditure.do:590; 01_modulos/Expenditure.do:889
+append using,30,7,01_modulos/Expenditure.do:143; 01_modulos/Expenditure.do:144; 01_modulos/Expenditure.do:145
+joinby,1,1,LIF.ado:673
+expand,2,2,PIBDeflactor.ado:1074; perfilpc.ado:255
+fillin,0,0,
+xtile / pctile / _pctile,12,6,01_modulos/Households.do:2799; 01_modulos/Households.do:2801; 01_modulos/Households.do:2802
+tabstat ... save (r(StatTotal)),239,32,01_modulos/Expenditure.do:125; 01_modulos/Expenditure.do:538; 01_modulos/Expenditure.do:565
+r(StatTotal)/r(Stat#),332,32,01_modulos/Expenditure.do:126; 01_modulos/Expenditure.do:540; 01_modulos/Expenditure.do:567
+summarize/sum ... r(mean/sum),108,18,01_modulos/Expenditure.do:224; 01_modulos/Expenditure.do:267; 01_modulos/Households.do:1999
+preserve,78,25,01_modulos/Expenditure.do:236; 01_modulos/Expenditure.do:832; 01_modulos/Households.do:1958
+restore,79,25,01_modulos/Expenditure.do:242; 01_modulos/Expenditure.do:861; 01_modulos/Households.do:2042
+tempfile,162,28,01_modulos/Expenditure.do:234; 01_modulos/Expenditure.do:549; 01_modulos/Households.do:2039
+tempvar,109,29,01_modulos/Households.do:460; 01_modulos/Households.do:1467; 01_modulos/Households.do:1508
+tempname,239,43,01_modulos/Expenditure.do:539; 01_modulos/Expenditure.do:566; 01_modulos/Households.do:1701
+sort / gsort / sort stable,67,25,01_modulos/Expenditure.do:495; 01_modulos/Expenditure.do:873; 01_modulos/Households.do:664
+"sort, stable",2,1,01_modulos/visualizations/SankeySF.do:109; 01_modulos/visualizations/SankeySF.do:161
+bys/bysort/by ...:,13,10,01_modulos/Expenditure.do:238; 01_modulos/Households.do:461; 01_modulos/Households.do:1469
+"_n / _N subscripts [_n-1], [`k']",1466,30,01_modulos/Households.do:191; 01_modulos/Households.do:192; 01_modulos/Households.do:2038
+_N bare,251,35,01_modulos/Households.do:190; 01_modulos/Households.do:461; 01_modulos/Households.do:1978
+L. / F. / D. time-series operators,234,9,01_modulos/Households.do:236; 01_modulos/Households.do:237; 01_modulos/Households.do:1212
+tsset,17,6,DatosAbiertos.ado:48; DatosAbiertos.ado:73; DatosAbiertos.ado:253
+running sum sum() in gen,11,2,01_modulos/Households.do:1469; 01_modulos/Households.do:1967; 01_modulos/Households.do:1971
+in 1 / in -1 / in `k' (position),174,20,01_modulos/Expenditure.do:249; 01_modulos/NTA.do:1020; 01_modulos/NTA.do:1021
+"continue, break",15,11,01_modulos/visualizations/CicloEntidad.do:74; 05_scripts/compuertas-entidad.do:35; 05_scripts/contrato-32.do:143
+comparison > or >= with var (missing hazard),175,21,01_modulos/Expenditure.do:221; 01_modulos/Expenditure.do:488; 01_modulos/Expenditure.do:866
+explicit missing test (== . / != . / < .),339,28,01_modulos/Expenditure.do:160; 01_modulos/Expenditure.do:161; 01_modulos/Expenditure.do:162
+editmissing / cond( / missing(,25,5,01_modulos/Expenditure.do:220; 01_modulos/Expenditure.do:221; 01_modulos/Expenditure.do:253
+replace x = 0 if x == .,112,17,01_modulos/Expenditure.do:160; 01_modulos/Expenditure.do:161; 01_modulos/Expenditure.do:162
+gen double,243,27,01_modulos/Expenditure.do:218; 01_modulos/Expenditure.do:248; 01_modulos/Expenditure.do:839
+gen without type (float default),517,26,01_modulos/Expenditure.do:166; 01_modulos/Expenditure.do:167; 01_modulos/Expenditure.do:168
+set type double,1,1,profile.do:27
+round(,73,26,01_modulos/Expenditure.do:1353; 01_modulos/Households.do:829; 01_modulos/Households.do:2032
+floor( / int( / ceil(,20,9,01_modulos/Households.do:1609; 01_modulos/NTA.do:667; 01_modulos/visualizations/CicloEntidad.do:108
+float(,3,2,AccesoBIE.ado:392; AccesoBIE.ado:625; AccesoINPCEntidad.ado:99
+string( conversions of numbers,307,26,01_modulos/Households.do:2979; 01_modulos/Households.do:2980; 01_modulos/Households.do:2981
+real( conversions,14,10,01_modulos/TarjetaRFSP.do:25; 01_modulos/TasasEfectivasEntidad.do:62; 01_modulos/visualizations/CicloEntidad.do:91
+compress,27,11,01_modulos/Expenditure.do:204; 01_modulos/Expenditure.do:494; 01_modulos/Expenditure.do:872
+saveold version(13),4,3,01_modulos/Expenditure.do:1149; Poblacion.ado:774; Poblacion.ado:783
+[fw=] frequency weights,114,17,01_modulos/Expenditure.do:748; 01_modulos/Expenditure.do:764; 01_modulos/Expenditure.do:786
+[pw=] probability weights,10,4,01_modulos/Households.do:2386; 01_modulos/Households.do:2403; 01_modulos/Households.do:2419
+[aw=] analytic weights,28,5,01_modulos/Expenditure.do:267; 01_modulos/Expenditure.do:913; 01_modulos/Expenditure.do:1047
+[iw=] importance weights,0,0,
+[`weight'=`exp'] generic weights,30,6,CICLO.ado:43; INCI.ado:33; PC.ado:38
+svyset / svy:,0,0,
+round(factor,4,2,01_modulos/Households.do:2032; 01_modulos/Households.do:2119; 01_modulos/PerfilesSim.do:178
+foreach,258,46,01_modulos/Expenditure.do:249; 01_modulos/Expenditure.do:518; 01_modulos/Expenditure.do:542
+forvalues,162,39,01_modulos/Expenditure.do:235; 01_modulos/Expenditure.do:247; 01_modulos/Expenditure.do:840
+while,25,16,01_modulos/Expenditure.do:1307; 01_modulos/NTA.do:295; 01_modulos/NTA.do:1097
+levelsof,37,15,01_modulos/Expenditure.do:531; 01_modulos/Expenditure.do:562; 01_modulos/Expenditure.do:1199
+extended macro fn (: word/list/variable label/di),139,43,01_modulos/Expenditure.do:834; 01_modulos/Households.do:150; 01_modulos/Households.do:2276
+nested macro (``x''),52,11,01_modulos/Expenditure.do:909; 01_modulos/Expenditure.do:911; 01_modulos/Expenditure.do:914
+var name built from macro (`k'PIB etc.),1575,50,01_modulos/Expenditure.do:241; 01_modulos/Expenditure.do:248; 01_modulos/Expenditure.do:250
+global $ read,1331,56,01_modulos/Expenditure.do:6; 01_modulos/Expenditure.do:7; 01_modulos/Expenditure.do:8
+global define,189,13,01_modulos/Households.do:162; 01_modulos/Households.do:1184; 01_modulos/NTA.do:110
+`=expr' inline evaluation,1208,51,01_modulos/Expenditure.do:806; 01_modulos/Expenditure.do:835; 01_modulos/Expenditure.do:840
+ds / unab,0,0,
+macro drop / clear all,11,8,01_modulos/Households.do:65; 01_modulos/PerfilesSim.do:8; 01_modulos/Web.Stata.do:7
+gettoken / tokenize,38,15,01_modulos/Expenditure.do:904; 01_modulos/Households.do:147; 01_modulos/Households.do:148
+strtoname / subinstr accents,64,7,01_modulos/Expenditure.do:528; 01_modulos/Expenditure.do:559; FiscalGap.ado:104
+program define,106,42,01_modulos/Households.do:2647; 01_modulos/Households.do:2648; 01_modulos/Households.do:2652
+syntax,50,32,01_modulos/visualizations/SankeySF.do:91; AccesoBIE.ado:13; AccesoINPCEntidad.ado:38
+args,29,17,01_modulos/Households.do:2649; 01_modulos/Households.do:2654; 01_modulos/NTA.do:1245
+return scalar/local/matrix,106,20,01_modulos/NTA.do:1521; 01_modulos/nodos/indicadores.do:154; 01_modulos/nodos/indicadores.do:162
+r() read (r(xxx)),960,54,01_modulos/Expenditure.do:108; 01_modulos/Expenditure.do:109; 01_modulos/Expenditure.do:110
+e() read,3,1,01_modulos/Households.do:2388; 01_modulos/Households.do:2405; 01_modulos/Households.do:2421
+capture (error swallowing),649,51,01_modulos/Expenditure.do:6; 01_modulos/Expenditure.do:7; 01_modulos/Expenditure.do:8
+capture confirm,234,41,01_modulos/Expenditure.do:14; 01_modulos/Expenditure.do:25; 01_modulos/Expenditure.do:34
+_rc test,381,45,01_modulos/Expenditure.do:15; 01_modulos/Expenditure.do:26; 01_modulos/Expenditure.do:35
+exit <code>,75,27,01_modulos/Households.do:153; 01_modulos/Households.do:160; 01_modulos/Households.do:233
+regress/reg,0,0,
+logit/probit,3,1,01_modulos/Households.do:2384; 01_modulos/Households.do:2400; 01_modulos/Households.do:2417
+estimates save/use,3,1,01_modulos/Households.do:2387; 01_modulos/Households.do:2404; 01_modulos/Households.do:2420
+predict,3,1,01_modulos/Households.do:2388; 01_modulos/Households.do:2405; 01_modulos/Households.do:2421
+ipolate,0,0,
+nl / ml / optimize,2,1,profile.do:112; profile.do:173
+lpoly (kernel smoothing),0,0,
+ci means,14,2,CuentasGeneracionales.ado:68; CuentasGeneracionales.ado:71; Perfiles.ado:210
+mata: (inline),51,11,CuentasGeneracionales.ado:40; CuentasGeneracionales.ado:42; CuentasGeneracionales.ado:44
+mata block (mata:/end),5,5,Simulador.ado:1303; _precache_bytes.ado:10; _precache_manifest.ado:39
+mata function def,11,5,Simulador.ado:1312; Simulador.ado:1337; Simulador.ado:1349
+st_data/st_matrix/st_local/st_store,73,10,CuentasGeneracionales.ado:40; CuentasGeneracionales.ado:42; CuentasGeneracionales.ado:58
+matrix (Stata matrices),89,10,01_modulos/Expenditure.do:1164; 01_modulos/Expenditure.do:1248; 01_modulos/Expenditure.do:1310
+mkmat / svmat,14,5,CuentasGeneracionales.ado:39; CuentasGeneracionales.ado:41; CuentasGeneracionales.ado:55
+panelsum/panelsetup,25,2,Simulador.ado:1344; Simulador.ado:1345; Simulador.ado:1395
+set seed,4,4,05_scripts/vintage-aportaciones.do:61; Perfiles.ado:147; SIM.do:36
+rseed(,1,1,Simulador.ado:1424
+runiform / rnormal,1,1,Simulador.ado:1440
+bsample,2,2,Perfiles.ado:153; Simulador.ado:199
+putexcel,43,2,GastoPC.ado:629; GastoPC.ado:630; GastoPC.ado:631
+import excel,25,4,DatosAbiertos.ado:725; LIF.ado:609; PEF.ado:726
+export excel,0,0,
+import delimited,9,4,AccesoBIE.ado:84; AccesoBIE.ado:100; AccesoBIE.ado:138
+export delimited,1,1,05_scripts/compuertas-entidad.do:84
+cellrange(,21,1,SCN.ado:2177; SCN.ado:2208; SCN.ado:2240
+label define,107,16,01_modulos/Expenditure.do:367; 01_modulos/Expenditure.do:387; 01_modulos/Expenditure.do:422
+label values,70,15,01_modulos/Expenditure.do:406; 01_modulos/Expenditure.do:433; 01_modulos/Expenditure.do:474
+decode / encode,30,10,01_modulos/Expenditure.do:203; 01_modulos/Expenditure.do:527; 01_modulos/Expenditure.do:558
+: label  (value label read in logic),40,12,01_modulos/NTA.do:846; 01_modulos/NTA.do:863; 01_modulos/NTA.do:928
+"string == ""1"" style flags",250,6,01_modulos/Expenditure.do:182; 01_modulos/Expenditure.do:183; 01_modulos/Expenditure.do:184
+destring / tostring,56,11,01_modulos/Expenditure.do:233; 01_modulos/Expenditure.do:250; 01_modulos/Expenditure.do:276
+unicode / charset,1,1,profile.do:28
+Spanish accents in identifiers/labels,1205,46,01_modulos/Expenditure.do:86; 01_modulos/Expenditure.do:271; 01_modulos/Expenditure.do:368
+{c o'} SMCL accent escapes,195,25,01_modulos/Expenditure.do:851; 01_modulos/Expenditure.do:856; 01_modulos/Expenditure.do:857
+save (file write),263,32,01_modulos/Expenditure.do:205; 01_modulos/Expenditure.do:225; 01_modulos/Expenditure.do:241
+use (file read),187,44,01_modulos/Expenditure.do:142; 01_modulos/Expenditure.do:213; 01_modulos/Expenditure.do:232
+file open/write/read,386,15,01_modulos/Households.do:2753; 01_modulos/Households.do:2754; 01_modulos/Households.do:2755
+log using/on/off,47,14,01_modulos/Expenditure.do:80; 01_modulos/Expenditure.do:82; 01_modulos/Expenditure.do:1354
+filefilter,15,3,01_modulos/output.do:385; 01_modulos/output.do:388; 01_modulos/output.do:390
+graph export / graph save,65,15,01_modulos/Expenditure.do:860; 01_modulos/Households.do:2944; 01_modulos/Households.do:2947
+twoway/graph bar/hbar/combine,54,15,01_modulos/Expenditure.do:852; 01_modulos/Households.do:2940; 01_modulos/Households.do:2959
+python: blocks,14,6,AccesoBIE.ado:78; AccesoBIE.ado:92; AccesoBIE.ado:134
+shell / ! escapes,1,1,SIM.do:63
+display di (output formatting),1129,57,01_modulos/Expenditure.do:86; 01_modulos/Expenditure.do:271; 01_modulos/Expenditure.do:598
+noisily di ... output.txt keys (NAME: [),56,4,01_modulos/output.do:14; 01_modulos/output.do:24; 01_modulos/output.do:34
+timer,80,27,01_modulos/Expenditure.do:20; 01_modulos/Expenditure.do:1351; 01_modulos/Expenditure.do:1352
+net install / ssc install,3,3,FiscalGap.ado:346; LIF.ado:631; PEF.ado:809
+escalar (custom registry),882,18,01_modulos/Expenditure.do:899; 01_modulos/Expenditure.do:915; 01_modulos/Expenditure.do:916
+Distribucion (custom macro-micro imputation),98,7,01_modulos/Households.do:2214; 01_modulos/Households.do:2215; 01_modulos/Households.do:2216
+scalar define,162,21,01_modulos/Expenditure.do:901; 01_modulos/Expenditure.do:923; 01_modulos/Expenditure.do:927
+scalar( read,932,37,01_modulos/Expenditure.do:100; 01_modulos/Expenditure.do:101; 01_modulos/Expenditure.do:111
+hard-coded 4-digit year literal (20xx) in code,361,33,01_modulos/Expenditure.do:11; 01_modulos/Expenditure.do:12; 01_modulos/Expenditure.do:13

@@ -1,0 +1,1312 @@
+### VERSION statements
+./05_scripts/vintage-aportaciones.do:28:version 17
+./AccesoBIE.ado:11:	version 17.0
+./CICLO.ado:3:	version 13.1
+./CuentasGeneracionales.ado:4:	version 13.1
+./ensure_asset.ado:26:    version 16
+./escalar.ado:35:	version 14
+./INCI.ado:3:	version 13.1
+./PC.ado:3:	version 13.1
+./PEF.ado:1729:	version 17
+./PERF.ado:3:	version 13.1
+./Perfiles.ado:636:	version 13.1
+./Perfiles.ado:731:	version 13.1
+./perfilpc.ado:141:	version 17.0
+./Precache.ado:41:	version 17
+./Precache.ado:147:	version 17
+./_precache_bytes.ado:4:	version 17
+./_precache_manifest.ado:22:	version 17
+./_precache_usa.ado:29:	version 17
+./REC.ado:3:	version 13.1
+./scalarjson.ado:54:	version 14
+./sim_changelog.ado:12:	version 16
+./SIMentidad.ado:30:	version 14
+./Simulador.ado:832:	version 13.1
+./Simulador.ado:927:	version 13.1
+./TasasEfectivasMicro.ado:56:	version 14
+
+### INPUTS: use / import / insheet / infile / merge using / append using / fileread / copy
+./01_modulos/Expenditure.do:17:		unzipfile "${SIMROOT}/raw/ENIGH/2024.zip", replace
+./01_modulos/Expenditure.do:28:			unzipfile "${SIMROOT}/raw/ENIGH/2024.zip", replace
+./01_modulos/Expenditure.do:37:			unzipfile "${SIMROOT}/raw/ENIGH/2022.zip", replace
+./01_modulos/Expenditure.do:46:			unzipfile "${SIMROOT}/raw/ENIGH/2020.zip", replace
+./01_modulos/Expenditure.do:55:			unzipfile "${SIMROOT}/raw/ENIGH/2018.zip", replace
+./01_modulos/Expenditure.do:64:			unzipfile "${SIMROOT}/raw/ENIGH/2016.zip", replace
+./01_modulos/Expenditure.do:73:			unzipfile "${SIMROOT}/raw/ENIGH/2014.zip", replace
+./01_modulos/Expenditure.do:142:		use "${SIMROOT}/raw/ENIGH/`anioenigh'/gastospersona.dta", clear
+./01_modulos/Expenditure.do:143:		append using "${SIMROOT}/raw/ENIGH/`anioenigh'/gastohogar.dta"
+./01_modulos/Expenditure.do:144:		append using "${SIMROOT}/raw/ENIGH/`anioenigh'/gastotarjetas.dta"
+./01_modulos/Expenditure.do:145:		append using "${SIMROOT}/raw/ENIGH/`anioenigh'/erogaciones.dta"
+./01_modulos/Expenditure.do:153:		merge m:1 (folioviv foliohog) using "${SIMROOT}/raw/ENIGH/`anioenigh'/concentrado.dta", ///
+./01_modulos/Expenditure.do:155:		merge m:1 (folioviv) using "${SIMROOT}/raw/ENIGH/`anioenigh'/vivienda.dta", ///
+./01_modulos/Expenditure.do:201:		merge m:1 (clave) using "${SIMROOT}/raw/ENIGH/`anioenigh'/clave_iva.dta", ///
+./01_modulos/Expenditure.do:213:		use "${SIMROOT}/raw/ENIGH/`anioenigh'/censo_eco_municipios.dta", clear
+./01_modulos/Expenditure.do:232:		use "${SIMROOT}/raw/temp/`anioenigh'/va_por_clase_actividad.dta", clear
+./01_modulos/Expenditure.do:245:		use "${SIMROOT}/raw/temp/`anioenigh'/pre_iva.dta", clear
+./01_modulos/Expenditure.do:252:				merge m:1 code using `LU`n'', keep(master match) nogen
+./01_modulos/Expenditure.do:261:	use "${SIMROOT}/raw/temp/`anioenigh'/pre_iva_final.dta", clear
+./01_modulos/Expenditure.do:523:		use "${SIMROOT}/raw/temp/`anioenigh'/preconsumption.dta", clear
+./01_modulos/Expenditure.do:554:		use "${SIMROOT}/raw/temp/`anioenigh'/preconsumption.dta", clear
+./01_modulos/Expenditure.do:578:		merge 1:m (folioviv foliohog) using "${SIMROOT}/raw/ENIGH/`anioenigh'/poblacion.dta", ///
+./01_modulos/Expenditure.do:580:		merge m:1 (folioviv foliohog) using "${SIMROOT}/raw/ENIGH/`anioenigh'/concentrado.dta", ///
+./01_modulos/Expenditure.do:590:		merge 1:1 (folioviv foliohog numren) using `gastoindividuos', nogen keepus(*_ind* prop*) keep(master match)
+./01_modulos/Expenditure.do:591:		capture merge 1:1 (folioviv foliohog numren) using "${SIMROOT}/master/`anioenigh'/households.dta", ///
+./01_modulos/Expenditure.do:888:use "${SIMROOT}/master/`anioenigh'/consumption_categ_pc.dta", replace
+./01_modulos/Expenditure.do:889:merge m:1 (folioviv foliohog) using "${SIMROOT}/raw/ENIGH/`anioenigh'/concentrado.dta", nogen keepus(factor)
+./01_modulos/Expenditure.do:1179:use "${SIMROOT}/master/`anioenigh'/consumption_categ_iva_pc.dta", clear
+./01_modulos/Expenditure.do:1180:merge m:1 (folioviv foliohog) using "${SIMROOT}/raw/ENIGH/`anioenigh'/concentrado.dta", nogen keepus(factor) keep(master match)
+./01_modulos/Expenditure.do:1260:use "${SIMROOT}/master/`anioenigh'/consumption_categ_ieps_pc.dta", clear
+./01_modulos/Households.do:447:use "`dir_enigh'/ingresos.dta", clear
+./01_modulos/Households.do:448:merge m:1 (folioviv foliohog numren) using "`dir_enigh'/poblacion.dta", nogen keep(matched)
+./01_modulos/Households.do:449:merge m:1 (folioviv foliohog) using "`dir_enigh'/concentrado.dta", nogen keepusing(estim_alqu factor)
+./01_modulos/Households.do:1436:merge m:1 (folioviv foliohog numren id_trabajo) using "`dir_enigh'/trabajos.dta", ///
+./01_modulos/Households.do:1443:merge m:1 (folioviv foliohog numren) using "`dir_enigh'/poblacion.dta", ///
+./01_modulos/Households.do:1445:merge m:1 (folioviv foliohog) using "`dir_enigh'/concentrado.dta", ///
+./01_modulos/Households.do:1447:merge m:1 (folioviv) using "`dir_enigh'/vivienda.dta", ///
+./01_modulos/Households.do:1449:merge m:1 (folioviv foliohog numren) using "${SIMROOT}/master/`anioenigh'/deducciones.dta", ///
+./01_modulos/Households.do:2060:merge 1:1 (folioviv foliohog numren) using "`dir_enigh'/poblacion.dta", nogen ///
+./01_modulos/Households.do:2096:	merge m:1 (`sort') using `isr_cola', nogen keepus(factor_cola ing_cola)
+./01_modulos/Households.do:2788:merge 1:1 (folioviv foliohog numren) using "${SIMROOT}/master/`anioenigh'/expenditures.dta", nogen keepus(gas_pc_*)
+./01_modulos/Households.do:2789:merge 1:1 (folioviv foliohog numren) using "${SIMROOT}/master/`anioenigh'/consumption_categ_iva.dta", nogen keepus(IVA)
+./01_modulos/Households.do:2790:merge 1:1 (folioviv foliohog numren) using "${SIMROOT}/master/`anioenigh'/consumption_categ_ieps.dta", nogen keepus(IEPS)
+./01_modulos/ISR_Mod.do:42:capture use "${SIMROOT}/master/perfiles`=anioPE'.dta", clear
+./01_modulos/IVA_Mod.do:27:use "${SIMROOT}/master/`=anioenigh'/categ_iva.dta", clear
+./01_modulos/nodos/indicadores.do:102:quietly use `"`site'/master/SHRFSP.dta"', clear
+./01_modulos/nodos/indicadores.do:274:	capture copy `"`site'/01_modulos/nodos/indicadores-decorador.js"' ///
+./01_modulos/nodos/nodo-deuda.do:80:quietly use `"`site'/master/SHRFSP.dta"', clear
+./01_modulos/nodos/nodo-deuda.do:295:	capture copy `"`site'/01_modulos/nodos/nodo-deuda.html"' ///
+./01_modulos/nodos/portada.do:76:quietly use anio ejercido aprobado proyecto using `"`site'/master/PEF.dta"', clear
+./01_modulos/nodos/portada.do:92:quietly use anio mes using `"`site'/master/LIF.dta"', clear
+./01_modulos/nodos/portada.do:466:	capture copy `"`site'/01_modulos/nodos/portada.html"' ///
+./01_modulos/NTA.do:267:	use folioviv foliohog numren clave ing_tri using "`dir_enigh'/ingresos.dta", clear
+./01_modulos/NTA.do:275:	use folioviv foliohog clave tipo_gasto gasto_tri using "`dir_enigh'/gastohogar.dta", clear
+./01_modulos/NTA.do:285:	use folioviv foliohog numren parentesco using "`dir_enigh'/poblacion.dta", clear
+./01_modulos/NTA.do:290:use "${SIMROOT}/master/`anio'/households.dta", clear
+./01_modulos/NTA.do:305:	merge 1:1 folioviv foliohog numren using `prog', nogen keep(master match)
+./01_modulos/NTA.do:306:	merge m:1 folioviv foliohog using `otor', nogen keep(master match)
+./01_modulos/NTA.do:307:	merge 1:1 folioviv foliohog numren using `paren', nogen keep(master match)
+./01_modulos/NTA.do:780:	use `per', clear
+./01_modulos/NTA.do:783:	append using `ge'
+./01_modulos/NTA.do:793:	use `per', clear
+./01_modulos/NTA.do:803:	use `per', clear
+./01_modulos/NTA.do:813:	use `per', clear
+./01_modulos/NTA.do:822:	use `per', clear
+./01_modulos/NTA.do:954:use `qs', clear
+./01_modulos/NTA.do:1121:	use `per2', clear
+./01_modulos/NTA.do:1155:	append using `c2'
+./01_modulos/NTA.do:1184:		use `e', clear
+./01_modulos/NTA.do:1188:	use `per2', clear
+./01_modulos/NTA.do:1197:quietly use `per2', clear
+./01_modulos/NTA.do:1272:	use `per2', clear
+./01_modulos/NTA.do:1392:	use `fin', clear
+./01_modulos/NTA.do:1399:	use `fin', clear
+./01_modulos/NTA.do:1404:	append using `f4a'
+./01_modulos/NTA.do:1406:	use `catg', clear
+./01_modulos/NTA.do:1413:	append using `f4a'
+./01_modulos/NTA.do:1442:	use `catg', clear
+./01_modulos/NTA.do:1456:		use ``e'', clear
+./01_modulos/NTA.do:1474:	use `per2', clear
+./01_modulos/NTA.do:1493:quietly use `per2', clear
+./01_modulos/NTA.do:1533:	append using `pan'
+./01_modulos/NTA.do:1675:quietly use `per2', clear
+./01_modulos/PerfilesSim.do:137:use if anio == `1' using `"${SIMROOT}/master/Poblaciontot.dta"', clear
+./01_modulos/PerfilesSim.do:168:capture use "${SIMROOT}/master/`anioenigh'/households.dta", clear
+./01_modulos/PerfilesSim.do:613:	use `"`dirboot'/`f'"', clear
+./01_modulos/TarjetaRFSP.do:41:use if clave_de_concepto == "RF000000SPFCS" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:49:use if clave_de_concepto == "RF000001SPFCS" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:57:use if clave_de_concepto == "RF000006SPFCS" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:65:use if clave_de_concepto == "RF000002SPFCS" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:73:use if clave_de_concepto == "RF000003SPFCS" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:81:use if clave_de_concepto == "RF000004SPFCS" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:89:use if clave_de_concepto == "RF000005SPFCS" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:97:use if clave_de_concepto == "RF000007SPFCS" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:109:use `rfsp', clear
+./01_modulos/TarjetaRFSP.do:110:merge 1:1 (anio mes) using `balance', nogen
+./01_modulos/TarjetaRFSP.do:111:merge 1:1 (anio mes) using `banca', nogen
+./01_modulos/TarjetaRFSP.do:112:merge 1:1 (anio mes) using `pidiregas', nogen
+./01_modulos/TarjetaRFSP.do:113:merge 1:1 (anio mes) using `ipab', nogen
+./01_modulos/TarjetaRFSP.do:114:merge 1:1 (anio mes) using `fonadin', nogen
+./01_modulos/TarjetaRFSP.do:115:merge 1:1 (anio mes) using `deudores', nogen
+./01_modulos/TarjetaRFSP.do:116:merge 1:1 (anio mes) using `adecuaciones', nogen
+./01_modulos/TarjetaRFSP.do:128:merge 1:1 (anio mes) using `"${SIMROOT}/master/Deflactor.dta"', nogen keep(matched)
+./01_modulos/TarjetaRFSP.do:316:use if clave_de_concepto == "XAC21" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:323:use if clave_de_concepto == "XBC21" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:330:use if clave_de_concepto == "XOA0160" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:337:use if clave_de_concepto == "XOA0162" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:348:use `costoTotal', clear
+./01_modulos/TarjetaRFSP.do:349:merge 1:1 (anio mes) using `costoGobFed', nogen
+./01_modulos/TarjetaRFSP.do:350:merge 1:1 (anio mes) using `costoPemex', nogen
+./01_modulos/TarjetaRFSP.do:351:merge 1:1 (anio mes) using `costoCFE', nogen
+./01_modulos/TarjetaRFSP.do:356:merge 1:1 (anio mes) using `"${SIMROOT}/master/Deflactor.dta"', nogen keep(matched)
+./01_modulos/TarjetaRFSP.do:500:use if clave_de_concepto == "SHRF5000" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:507:use if clave_de_concepto == "XED80" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:514:use if clave_de_concepto == "XEB4010" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:521:use if clave_de_concepto == "XED110" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:528:use if clave_de_concepto == "XEB4020" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:535:use if clave_de_concepto == "XED140" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:542:use if clave_de_concepto == "XEB4030" using `"${SIMROOT}/master/DatosAbiertos.dta"', clear
+./01_modulos/TarjetaRFSP.do:553:use `shrfspTotal', clear
+./01_modulos/TarjetaRFSP.do:554:merge 1:1 (anio mes) using `shrfspGFInt', nogen
+./01_modulos/TarjetaRFSP.do:555:merge 1:1 (anio mes) using `shrfspGFExt', nogen
+./01_modulos/TarjetaRFSP.do:556:merge 1:1 (anio mes) using `shrfspOyEInt', nogen
+./01_modulos/TarjetaRFSP.do:557:merge 1:1 (anio mes) using `shrfspOyEExt', nogen
+./01_modulos/TarjetaRFSP.do:558:merge 1:1 (anio mes) using `shrfspBancaInt', nogen
+./01_modulos/TarjetaRFSP.do:559:merge 1:1 (anio mes) using `shrfspBancaExt', nogen
+./01_modulos/TarjetaRFSP.do:569:merge 1:1 (anio mes) using `"${SIMROOT}/master/Deflactor.dta"', nogen keep(matched)
+./01_modulos/TasasEfectivasEntidad.do:66:	use folioviv factor `montos' using "${SIMROOT}/master/perfiles`anio'.dta", clear
+./01_modulos/visualizations/CicloEntidad.do:85:	use folioviv foliohog factor sexo edad decil ingbrutotot ///
+./01_modulos/visualizations/CicloEntidad.do:196:	merge 1:1 sexon q grp using `celdas', nogen keep(master match)
+./01_modulos/visualizations/Graphs_PC.do:59:use "${SIMROOT}/raw/temp/GastoPC.dta", clear
+./01_modulos/visualizations/Graphs_TE.do:48:use "${SIMROOT}/raw/temp/TE.dta", clear
+./01_modulos/visualizations/SankeyCFE.do:77:	use "raw/temp/XKD0106.dta", clear
+./01_modulos/visualizations/SankeyCFE.do:78:	append using "raw/temp/XKD0179.dta"
+./01_modulos/visualizations/SankeyCFE.do:79:	append using "raw/temp/XKD0122.dta"
+./01_modulos/visualizations/SankeyCFE.do:112:	use "raw/temp/XKD0113.dta", clear
+./01_modulos/visualizations/SankeyCFE.do:113:	append using "raw/temp/XKD0131.dta"
+./01_modulos/visualizations/SankeyCFE.do:114:	append using "raw/temp/XKD0157.dta"
+./01_modulos/visualizations/SankeyCFE.do:115:	append using "raw/temp/XKD0139.dta"
+./01_modulos/visualizations/SankeyCFE.do:116:	append using "raw/temp/XKD0145.dta"
+./01_modulos/visualizations/SankeyCFE.do:164:	use `eje`anio'2', clear
+./01_modulos/visualizations/SankeyCFE.do:181:	use `eje`anio'3', clear
+./01_modulos/visualizations/SankeyCFE.do:203:	use `eje`anio'4', clear
+./01_modulos/visualizations/Sankey.do:45:use `"${SIMROOT}/master/`2'/households.dta"', clear
+./01_modulos/visualizations/Sankey.do:128:use `"${SIMROOT}/master/`2'/households.dta"', clear
+./01_modulos/visualizations/Sankey.do:201:use `eje1', clear
+./01_modulos/visualizations/Sankey.do:216:use `eje4', clear
+./01_modulos/visualizations/SankeyPemex.do:129:	use "raw/temp/XKC0106.dta", clear
+./01_modulos/visualizations/SankeyPemex.do:130:	append using "raw/temp/XKC0179.dta"
+./01_modulos/visualizations/SankeyPemex.do:160:	use "raw/temp/XKC0113.dta", clear
+./01_modulos/visualizations/SankeyPemex.do:161:	append using "raw/temp/XKC0131.dta"
+./01_modulos/visualizations/SankeyPemex.do:162:	append using "raw/temp/XKC0157.dta"
+./01_modulos/visualizations/SankeyPemex.do:163:	append using "raw/temp/XKC0139.dta"
+./01_modulos/visualizations/SankeyPemex.do:164:	append using "raw/temp/XKC0145.dta"
+./01_modulos/visualizations/SankeyPemex.do:212:	use `eje`anio'2', clear
+./01_modulos/visualizations/SankeyPemex.do:240:	use `eje`anio'3', clear
+./01_modulos/visualizations/SankeyPemex.do:292:	use `eje`anio'4', clear
+./01_modulos/visualizations/SankeySF.do:52:		use factor `fams1' `fams4' using `"${SIMROOT}/users/$id/aportaciones.dta"', clear
+./01_modulos/visualizations/SankeySF.do:143:				capture use `uvars' using `"`base'"', clear
+./01_modulos/visualizations/SankeySF.do:147:					capture use `uvars2' using `"`base'"', clear
+./01_modulos/visualizations/SankeySF.do:173:			use `S', clear
+./01_modulos/visualizations/SankeySF.do:175:				merge 1:1 `corte' fam using `V`t'', nogen keep(master match)
+./01_modulos/visualizations/SankeySF.do:205:use `"${SIMROOT}/users/$id/aportaciones.dta"', clear
+./01_modulos/visualizations/SankeySF.do:229:	use `sellos1', clear
+./01_modulos/visualizations/SankeySF.do:233:	merge 1:1 `1' `to' using `sellos1', nogen keep(master match)
+./01_modulos/visualizations/SankeySF.do:290:use `"${SIMROOT}/users/$id/aportaciones.dta"', clear
+./01_modulos/visualizations/SankeySF.do:335:	use `sellos4', clear
+./01_modulos/visualizations/SankeySF.do:339:	merge 1:1 `1' `from' using `sellos4', nogen keep(master match)
+./01_modulos/visualizations/SankeySF.do:408:	use `eje1', clear
+./01_modulos/visualizations/SankeySF.do:430:	use `eje4', clear
+./01_modulos/visualizations/SankeySF.do:456:use `eje1', clear
+./01_modulos/visualizations/SankeySF.do:473:use `eje4', clear
+./01_modulos/Web.Stata.do:383:use `"${SIMROOT}/users/$id/ingresos.dta"', clear
+./01_modulos/Web.Stata.do:384:merge 1:1 (folioviv foliohog numren) using "${SIMROOT}/users/$id/gastos.dta", nogen
+./01_modulos/Web.Stata.do:385:capture merge 1:1 (folioviv foliohog numren) using "${SIMROOT}/users/$id/isr_mod.dta", ///
+./01_modulos/Web.Stata.do:387:capture merge 1:1 (folioviv foliohog numren) using "${SIMROOT}/users/$id/iva_mod.dta", ///
+./05_scripts/compuertas-entidad.do:47:	use folioviv foliohog factor edad ingbrutotot AlTrabajo AlConsumo AlCapital ImpuestosAportaciones ///
+./05_scripts/sellar-pibe-32.do:20:	use "${SIMROOT}/master/PIBDeflactor`abrev'.dta", clear
+./05_scripts/test-nta-identidad.do:22:use in 1 using `"`dta'"', clear
+./05_scripts/test-nta-identidad.do:43:use `"`dta'"', clear
+./05_scripts/vintage-aportaciones.do:128:use `"${SIMROOT}/users/$id/ingresos.dta"', clear
+./05_scripts/vintage-aportaciones.do:129:merge 1:1 (folioviv foliohog numren) using "${SIMROOT}/users/$id/gastos.dta", nogen
+./AccesoBIE.ado:84:				import delimited "${SIMROOT}/raw/temp/AccesoBIE/`serie'_`area'.csv", clear varnames(1) encoding(utf-8) stringcols(1)
+./AccesoBIE.ado:100:				import delimited "`csvareas'", clear varnames(1) encoding(utf-8) stringcols(1 2 4)
+./AccesoBIE.ado:116:					copy "${SIMROOT}/raw/SCN/bie/`serie'.csv" "${SIMROOT}/raw/temp/AccesoBIE/`serie'.csv", replace
+./AccesoBIE.ado:138:				import delimited "${SIMROOT}/raw/temp/AccesoBIE/`serie'.csv", clear varnames(1) encoding(utf-8)
+./AccesoBIE.ado:214:			use `serie1', clear
+./AccesoBIE.ado:216:				merge 1:1 periodo using `serie`k'', nogen
+./AccesoBIE.ado:220:			use `serie1', clear
+./AccesoINPCEntidad.ado:52:	import delimited "`csv'", clear varnames(1) encoding(utf-8)
+./CuentasGeneracionales.ado:27:	use `"${SIMROOT}/master/Poblacion.dta"', clear
+./CuentasGeneracionales.ado:51:	use `"${SIMROOT}/users/$pais/$id/bootstraps/`bootstrap'/`varlist'PERF"', clear
+./CuentasGeneracionales.ado:66:	use `"${SIMROOT}/users/$pais/$id/bootstraps/`bootstrap'/`varlist'PC"', clear
+./DatosAbiertos.ado:6:	capture use "${SIMROOT}/master/DatosAbiertos.dta", clear
+./DatosAbiertos.ado:10:	capture use "${SIMROOT}/master/Deflactor.dta", clear
+./DatosAbiertos.ado:41:	use if clave_de_concepto == "`anything'" using "${SIMROOT}/master/DatosAbiertos.dta", clear
+./DatosAbiertos.ado:43:	merge 1:1 (anio mes) using "${SIMROOT}/master/Deflactor.dta", nogen keep(matched)
+./DatosAbiertos.ado:44:	merge m:1 (anio) using "${SIMROOT}/master/Poblaciontot.dta", nogen keep(matched)
+./DatosAbiertos.ado:45:	merge m:1 (anio trimestre) using "${SIMROOT}/master/PIBDeflactor.dta", nogen
+./DatosAbiertos.ado:63:		use "${SIMROOT}/master/DatosAbiertos.dta", clear
+./DatosAbiertos.ado:453:	capture use "${SIMROOT}/master/DatosAbiertos.dta", clear
+./DatosAbiertos.ado:629:	use `ing', clear
+./DatosAbiertos.ado:725:	import excel "${SIMROOT}/raw/ISRInformesTrimestrales.xlsx", ///
+./DatosAbiertos.ado:738:	use if clave_de_concepto == "XNA0120" using "`datosabiertos'", clear
+./DatosAbiertos.ado:740:	merge m:1 (anio trimestre) using "`isrinftrim'", nogen
+./DatosAbiertos.ado:783:	use if clave_de_concepto == "XOA0825" using `datosabiertos', clear
+./DatosAbiertos.ado:788:	use if clave == "XNA0120_m" using `isr', clear
+./DatosAbiertos.ado:789:	merge 1:1 (anio mes) using `isrpet', nogen
+./DatosAbiertos.ado:804:	use if clave_de_concepto == "XOA0806" | clave_de_concepto == "XAB2123" using `datosabiertos', clear
+./DatosAbiertos.ado:817:	use if clave_de_concepto == "XAA1210" | clave_de_concepto == "XOA0101" using `datosabiertos', clear
+./DatosAbiertos.ado:831:	use if clave_de_concepto == "XKE0000" | clave_de_concepto == "XOA0105" ///
+./DatosAbiertos.ado:846:	use if clave_de_concepto == "XOA0108" using `datosabiertos', clear
+./DatosAbiertos.ado:869:	use if clave_de_concepto == "XBB24" | clave_de_concepto == "XNA0151" ///
+./DatosAbiertos.ado:886:	use "`datosabiertos'", clear
+./DatosAbiertos.ado:887:	append using "`isr'"
+./DatosAbiertos.ado:888:	append using "`fmp'"
+./DatosAbiertos.ado:889:	append using "`isrpmnopet'"
+./DatosAbiertos.ado:890:	append using "`deficit_epe'"
+./DatosAbiertos.ado:891:	append using "`deficit_oye'"
+./DatosAbiertos.ado:892:	append using "`diferencias'"
+./DatosAbiertos.ado:893:	append using "`otrosingresos'"
+./DatosAbiertos.ado:984:				capture copy "`url'/`nombre'.zip" "`dir'/`nombre'.zip", replace
+./DatosAbiertos.ado:987:					capture unzipfile "`dir'/`nombre'.zip", replace
+./DatosAbiertos.ado:992:					capture import delimited "`dir'/`nombre'.csv", clear `enc'
+./DatosAbiertos.ado:1014:		capture copy "`url'/`nombre'.csv" "`dir'/`nombre'.csv.tmp", replace
+./DatosAbiertos.ado:1017:			copy "`dir'/`nombre'.csv.tmp" "`dir'/`nombre'.csv", replace
+./DatosAbiertos.ado:1018:			capture import delimited "`dir'/`nombre'.csv", clear `enc'
+./DatosAbiertos.ado:1032:		import delimited "`dir'/`nombre'.csv", clear `enc'
+./DatosAbiertos.ado:1043:		import delimited "`dir'/`nombre'.csv", clear `enc' varnames(1)
+./DatosAbiertos.ado:1209:	capture append using "`using'"
+./DatosAbiertos.ado:1228:	use "`using'", clear
+./DatosAbiertos.ado:1284:		use "`fixed'", clear
+./DatosAbiertos.ado:1293:	capture append using "`fixed'"
+./FiscalGap.ado:98:	use "${SIMROOT}/users/$id/ingresos.dta", clear
+./FiscalGap.ado:99:	merge 1:1 (folioviv foliohog numren) using "${SIMROOT}/users/$id/gastos.dta", nogen update
+./FiscalGap.ado:207:		merge 1:1 (anio divSIM) using ``k'', nogen update replace
+./FiscalGap.ado:213:	merge m:1 (anio) using `PIB', nogen keepus(indiceY pibY* deflator lambda Poblacion*) update replace keep(matched)
+./FiscalGap.ado:504:			merge 1:1 (anio divCIEP) using ``k'', nogen update replace
+./FiscalGap.ado:512:	merge m:1 (anio) using `PIB', nogen keepus(indiceY pibY* deflator lambda currency Poblacion*) keep(matched) update
+./FiscalGap.ado:735:	merge 1:1 (anio) using `shrfsp', nogen keep(matched) keepus(shrfsp* rfsp* /*nopresupuestario*/ tipoDeCambio tasaEfectiva costodeuda*)
+./FiscalGap.ado:740:	merge 1:1 (anio) using `baseingresos', nogen keep(master match)
+./FiscalGap.ado:1330:	use `"`r(fn)'"', clear
+./FiscalGap.ado:1343:	use `"`dirprom'/`var'RECprom.dta"', clear
+./GastoPC.ado:80:		use `"`r(fn)'"', clear
+./GastoPC.ado:82:		use `"`fn_mat'"', clear
+./GastoPC.ado:110:	capture use "${SIMROOT}/master/perfiles`aniope'.dta", clear	
+./GastoPC.ado:116:	merge 1:1 (folioviv foliohog numren) using "${SIMROOT}/master/`anioenigh'/households.dta", ///
+./LIF.ado:30:	use in 1 using "${SIMROOT}/master/LIF.dta", clear
+./LIF.ado:61:		use `if' using "${SIMROOT}/master/LIF.dta", clear
+./LIF.ado:113:	use "${SIMROOT}/master/LIF.dta", clear
+./LIF.ado:116:	merge m:1 (anio) using `PIB', nogen keepus(pibY indiceY deflatorpp lambda var_pibY Poblacion) update replace keep(matched)
+./LIF.ado:609:	import excel "${SIMROOT}/raw/LIFs/LIFs.xlsx", clear firstrow
+./LIF.ado:673:			joinby (anio serie) using ``k'', unmatched(both) update
+./PEF.ado:34:	use in 1 using "${SIMROOT}/master/PEF.dta", clear
+./PEF.ado:70:		use `if' using "${SIMROOT}/master/PEF.dta", clear
+./PEF.ado:134:		use `"`r(fn)'"', clear
+./PEF.ado:137:	use "${SIMROOT}/master/PEF.dta", clear
+./PEF.ado:164:	merge m:1 (anio) using "`PIB'", nogen keepus(pibY indiceY deflator lambda Poblacion) keep(matched) sorted
+./PEF.ado:726:			import excel "${SIMROOT}/raw/PEFs/`k'", describe
+./PEF.ado:747:			import excel "${SIMROOT}/raw/PEFs/`k'", clear firstrow case(lower) allstring sheet("`hoja'")
+./PEF.ado:781:				use ``=strtoname("`k'")'', clear
+./PEF.ado:785:				capture append using ``=strtoname("`k'")''
+./PEF.ado:1048:			use ``k'', clear
+./PEF.ado:1052:			append using ``k''
+./PEF.ado:1075:	use "${SIMROOT}/raw/temp/prePEF.dta", clear
+./PEF.ado:1602:	use "`using'", clear
+./Perfiles.ado:205:	use `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'PC2"', clear
+./Perfiles.ado:301:	use `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'PERF"', clear
+./Perfiles.ado:414:	use `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'INCI"', clear
+./Perfiles.ado:531:	use `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'CICLO"', clear
+./Perfiles.ado:581:	use `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'REC"', clear
+./Perfiles.ado:622:	use `inicial', clear
+./Perfiles.ado:912:	use `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'REC.dta"', clear
+./Perfiles.ado:913:	merge m:1 (anio) using `PIB', nogen keep(matched)
+./PIBDeflactor.ado:92:	use `if' using "`base'", clear
+./PIBDeflactor.ado:1080:		merge 1:1 anio trimestre using `pibe', nogen
+./PIBDeflactor.ado:1103:			merge 1:1 anio trimestre using `pibe', nogen
+./PIBDeflactor.ado:1107:			use `pibe', clear
+./PIBDeflactor.ado:1197:	capture use `"${SIMROOT}/master/$pais/Poblacion.dta"', clear
+./PIBDeflactor.ado:1200:		use `"${SIMROOT}/master/$pais/Poblacion.dta"', clear
+./PIBDeflactor.ado:1208:	use `"${SIMROOT}/master/$pais/Poblacion.dta"', clear
+./PIBDeflactor.ado:1215:	use `"${SIMROOT}/master/$pais/Poblacion.dta"', clear
+./PIBDeflactor.ado:1228:	use `PIB', clear
+./PIBDeflactor.ado:1231:	merge m:1 (anio) using "`Poblacion'", nogen //keep(matched)
+./PIBDeflactor.ado:1232:	merge m:1 (anio) using "`WorkingAge'", nogen //keep(matched)
+./PIBDeflactor.ado:1233:	merge m:1 (anio) using "`Poblacion0'", nogen //keep(matched)
+./PIBDeflactor.ado:1235:	merge 1:1 (anio trimestre) using "`inpc'", nogen //keep(matched)
+./Poblacion.ado:21:	capture use `"${SIMROOT}/master/Poblacion.dta"', clear
+./Poblacion.ado:55:	use `if' using `"${SIMROOT}/master/Poblacion.dta"', clear
+./Poblacion.ado:676:	unzipfile "${SIMROOT}/raw/CONAPO/Poblacion_Estimada_Mitad_Anio.zip", replace
+./Poblacion.ado:678:	import delimited "${SIMROOT}/raw/temp/CONAPO/Poblacion_Estimada_Mitad_Anio.csv", ///
+./Poblacion.ado:736:	append using "`nacional'"
+./Precache.ado:121:		quietly use `"`dirprom'/`f'"', clear
+./Precache.ado:136:	quietly copy `"`sellotmp'"' `"`dir'/sello.txt"'
+./REC.ado:22:	use if entidad == "Nacional" using `"${SIMROOT}/master/$pais/Poblacion.dta"', clear
+./SankeySumLoop.ado:29:		use `base', clear
+./SankeySumSim.ado:36:		use `base', clear
+./scalarjson.ado:191:			quietly use `"`metadatos'"', clear
+./scalarjson.ado:286:			quietly use `"`tabla'"', clear
+./scalarjson.ado:311:			quietly use `"`capas'"', clear
+./scalarjson.ado:412:	quietly use `"`serie'"', clear
+./SCN.ado:25:	capture use in 1 using "${SIMROOT}/master/SCN.dta", clear
+./SCN.ado:67:	use in 1 using "${SIMROOT}/master/SCN.dta", clear
+./SCN.ado:76:			use "${SIMROOT}/master/SCN.dta", clear
+./SCN.ado:77:			merge 1:1 anio using "${SIMROOT}/raw/temp/HogaresS14.dta", nogen keep(master match) update replace
+./SCN.ado:88:	use "${SIMROOT}/master/SCN.dta", clear
+./SCN.ado:89:	merge 1:1 (anio) using `"`basepib'"', nogen keep(matched)
+./SCN.ado:2174:		unzipfile "https://www.inegi.org.mx/contenidos/programas/si/2018/tabulados/ori/tabulados_CSI.zip", replace
+./SCN.ado:2177:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_103.xlsx", cellrange(B60:AS60) clear
+./SCN.ado:2208:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_103.xlsx", cellrange(B41:AS41) clear
+./SCN.ado:2240:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_103.xlsx", cellrange(B54:AS54) clear
+./SCN.ado:2272:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_103.xlsx", cellrange(B58:AS58) clear
+./SCN.ado:2304:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_103.xlsx", cellrange(B62:AS62) clear
+./SCN.ado:2336:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_106.xlsx", cellrange(B59:AS59) clear
+./SCN.ado:2368:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_109.xlsx", cellrange(B59:AS59) clear
+./SCN.ado:2400:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_118.xlsx", cellrange(B59:AS59) clear
+./SCN.ado:2432:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_115.xlsx", cellrange(B59:AS59) clear
+./SCN.ado:2464:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_112.xlsx", cellrange(B59:AS59) clear
+./SCN.ado:2496:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_106.xlsx", cellrange(B63:AS63) clear
+./SCN.ado:2528:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_109.xlsx", cellrange(B63:AS63) clear
+./SCN.ado:2560:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_118.xlsx", cellrange(B63:AS63) clear
+./SCN.ado:2592:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_115.xlsx", cellrange(B63:AS63) clear
+./SCN.ado:2624:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_112.xlsx", cellrange(B63:AS63) clear
+./SCN.ado:2656:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_103.xlsx", cellrange(B170:AS170) clear
+./SCN.ado:2688:	import excel using "${SIMROOT}/raw/temp/SCN/CSI_103.xlsx", cellrange(B152:AS152) clear
+./SCN.ado:2727:	use "${SIMROOT}/raw/temp/GenIng.dta", clear
+./SCN.ado:2728:	merge 1:1 anio using "${SIMROOT}/raw/temp/ProdBru.dta", nogen
+./SCN.ado:2729:	merge 1:1 anio using "${SIMROOT}/raw/temp/IngNacDis.dta", nogen
+./SCN.ado:2730:	merge 1:1 anio using "${SIMROOT}/raw/temp/ConHog.dta", nogen
+./SCN.ado:2731:	merge 1:1 anio using "${SIMROOT}/raw/temp/GastPriv.dta", nogen
+./SCN.ado:2732:	merge 1:1 anio using "${SIMROOT}/raw/temp/GovCons.dta", nogen
+./SCN.ado:2733:	merge 1:1 anio using "${SIMROOT}/raw/temp/PIBAE1.dta", nogen
+./SCN.ado:2734:	merge 1:1 anio using "${SIMROOT}/raw/temp/PIBAE2.dta", nogen
+./SCN.ado:2735:	merge 1:1 anio using "${SIMROOT}/raw/temp/PIBAE3.dta", nogen
+./SCN.ado:2736:	merge 1:1 anio using "${SIMROOT}/raw/temp/PIBAE4.dta", nogen
+./SCN.ado:2737:	merge 1:1 anio using "${SIMROOT}/raw/temp/PIBAE5.dta", nogen
+./SCN.ado:2738:	merge 1:1 anio using "${SIMROOT}/raw/temp/SecExt.dta", nogen
+./SCN.ado:2739:	merge 1:1 anio using "${SIMROOT}/raw/temp/IngMixto.dta", nogen
+./SCN.ado:2740:	merge 1:1 anio using "${SIMROOT}/raw/temp/SSImputada.dta", nogen
+./SCN.ado:2741:	merge 1:1 anio using "${SIMROOT}/raw/temp/SubProductos.dta", nogen
+./SCN.ado:2742:	merge 1:1 anio using "${SIMROOT}/raw/temp/SubProduccion.dta", nogen
+./SCN.ado:2743:	merge 1:1 anio using "${SIMROOT}/raw/temp/DepMix.dta", nogen
+./SCN.ado:2744:	merge 1:1 anio using "${SIMROOT}/raw/temp/ExBOpNoFin.dta", nogen
+./SCN.ado:2745:	merge 1:1 anio using "${SIMROOT}/raw/temp/ExBOpFin.dta", nogen
+./SCN.ado:2746:	merge 1:1 anio using "${SIMROOT}/raw/temp/ExBOpISFLSH.dta", nogen
+./SCN.ado:2747:	merge 1:1 anio using "${SIMROOT}/raw/temp/ExBOpHog.dta", nogen
+./SCN.ado:2748:	merge 1:1 anio using "${SIMROOT}/raw/temp/ExBOpGob.dta", nogen
+./SCN.ado:2749:	merge 1:1 anio using "${SIMROOT}/raw/temp/ExNOpNoFin.dta", nogen
+./SCN.ado:2750:	merge 1:1 anio using "${SIMROOT}/raw/temp/ExNOpFin.dta", nogen
+./SCN.ado:2751:	merge 1:1 anio using "${SIMROOT}/raw/temp/ExNOpISFLSH.dta", nogen
+./SCN.ado:2752:	merge 1:1 anio using "${SIMROOT}/raw/temp/ExNOpHog.dta", nogen
+./SCN.ado:2753:	merge 1:1 anio using "${SIMROOT}/raw/temp/ExNOpGob.dta", nogen
+./SCN.ado:2754:	merge 1:1 anio using "${SIMROOT}/raw/temp/AhorroB.dta", nogen
+./SCN.ado:2755:	merge 1:1 anio using "${SIMROOT}/raw/temp/IngDisp.dta", nogen
+./SCN.ado:2757:		merge 1:1 anio using "${SIMROOT}/raw/temp/HogaresS14.dta", nogen
+./SCN.ado:2770:	merge 1:1 (anio) using "${SIMROOT}/master/Poblaciontot.dta", nogen //keep(matched)
+./SCN.ado:2818:		import excel using "`f'", cellrange(A5:AS5) clear
+./SCN.ado:2827:		import excel using "`f'", cellrange(A7:B7) clear
+./SCN.ado:2842:		import excel using "`dir'/`cuadro'.xlsx", cellrange(A`fila':AS`fila') clear
+./SCN.ado:2876:			merge 1:1 anio using `acc', nogen
+./SCN.ado:2883:	import excel using "`dir'/CSI_115.xlsx", cellrange(A157:AS157) clear
+./SCN.ado:2891:	use `acc', clear
+./SCN.ado:2976:			capture noisily unzipfile "scn-congelado-2024.zip", replace
+./SHRFSP.ado:38:	use in 1 using `"${SIMROOT}/master/SHRFSP.dta"', clear
+./SHRFSP.ado:64:	use `if' using `"${SIMROOT}/master/SHRFSP.dta"', clear
+./SHRFSP.ado:78:	merge m:1 (anio) using `PIB', nogen keepus(pibY pibYR var_* Poblacion* deflator lambda currency) update replace
+./SHRFSP.ado:1113:	use `shrfsp', clear
+./SHRFSP.ado:1114:	merge 1:1 (anio) using "`shrfspinterno'", nogen
+./SHRFSP.ado:1115:	merge 1:1 (anio) using "`shrfspexterno'", nogen
+./SHRFSP.ado:1116:	merge 1:1 (anio) using "`shrfspOyEInterno'", nogen
+./SHRFSP.ado:1117:	merge 1:1 (anio) using "`shrfspOyEExterno'", nogen
+./SHRFSP.ado:1118:	merge 1:1 (anio) using "`shrfspGobFedInterno'", nogen
+./SHRFSP.ado:1119:	merge 1:1 (anio) using "`shrfspGobFedExterno'", nogen
+./SHRFSP.ado:1120:	merge 1:1 (anio) using "`shrfspBancaInterno'", nogen
+./SHRFSP.ado:1121:	merge 1:1 (anio) using "`shrfspBancaExterno'", nogen
+./SHRFSP.ado:1122:	merge 1:1 (anio) using "`shrfspLargoPlazoInterno'", nogen
+./SHRFSP.ado:1123:	merge 1:1 (anio) using "`shrfspCortoPlazoInterno'", nogen
+./SHRFSP.ado:1124:	merge 1:1 (anio) using "`shrfspLargoPlazoExterno'", nogen
+./SHRFSP.ado:1125:	merge 1:1 (anio) using "`shrfspCortoPlazoExterno'", nogen
+./SHRFSP.ado:1128:	merge 1:1 (anio) using "`rfsp'", nogen
+./SHRFSP.ado:1129:	merge 1:1 (anio) using "`Balance'", nogen
+./SHRFSP.ado:1130:	merge 1:1 (anio) using "`PIDIREGAS'", nogen
+./SHRFSP.ado:1131:	merge 1:1 (anio) using "`IPAB'", nogen
+./SHRFSP.ado:1132:	merge 1:1 (anio) using "`FONADIN'", nogen
+./SHRFSP.ado:1133:	merge 1:1 (anio) using "`Deudores'", nogen
+./SHRFSP.ado:1134:	merge 1:1 (anio) using "`Banca'", nogen
+./SHRFSP.ado:1135:	merge 1:1 (anio) using "`Adecuaciones'", nogen
+./SHRFSP.ado:1138:	merge 1:1 (anio) using "`balancepublico'", nogen
+./SHRFSP.ado:1139:	merge 1:1 (anio) using "`ingresos'", nogen
+./SHRFSP.ado:1140:	merge 1:1 (anio) using "`egresos'", nogen
+./SHRFSP.ado:1141:	merge 1:1 (anio) using "`presupuestario'", nogen
+./SHRFSP.ado:1142:	merge 1:1 (anio) using "`nopresupuestario'", nogen
+./SHRFSP.ado:1143:	merge 1:1 (anio) using "`activosInt'", nogen
+./SHRFSP.ado:1144:	merge 1:1 (anio) using "`activosExt'", nogen
+./SHRFSP.ado:1145:	merge 1:1 (anio) using "`diferimientos'", nogen
+./SHRFSP.ado:1146:	merge 1:1 (anio) using "`amortizacion'", nogen
+./SHRFSP.ado:1149:	merge 1:1 (anio) using "`MXN'", nogen
+./SHRFSP.ado:1150:	merge 1:1 (anio) using "`USD'", nogen
+./SHRFSP.ado:1153:	merge 1:1 (anio) using "`costodeudaII'", nogen update
+./SHRFSP.ado:1154:	merge 1:1 (anio) using "`costodeudaEE'", nogen update
+./SHRFSP.ado:1155:	merge 1:1 (anio) using "`costopemex'", nogen update
+./SHRFSP.ado:1156:	merge 1:1 (anio) using "`costocfe'", nogen update
+./SHRFSP.ado:1157:	merge 1:1 (anio) using "`costofinanciero'", nogen update
+./SIM.do:462:use `"${SIMROOT}/users/$id/ingresos.dta"', clear
+./SIM.do:463:merge 1:1 (folioviv foliohog numren) using "${SIMROOT}/users/$id/gastos.dta", nogen
+./SIM.do:465:	capture merge 1:1 (folioviv foliohog numren) using "${SIMROOT}/users/$id/isr_mod.dta", ///
+./SIM.do:469:	capture merge 1:1 (folioviv foliohog numren) using "${SIMROOT}/users/$id/iva_mod.dta", ///
+./Simulador.ado:354:						merge m:1 (folioviv foliohog) using `"${SIMROOT}/raw/ENIGH/`=anioenigh'/concentrado.dta"', ///
+./Simulador.ado:404:			use if entidad == "Nacional" using `"${SIMROOT}/master/$pais/Poblacion.dta"', clear
+./Simulador.ado:457:			use `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'PT.dta"', clear
+./Simulador.ado:478:	use `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'PC"', clear
+./Simulador.ado:533:	use `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'PERF"', clear
+./Simulador.ado:646:	use `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'INCI"', clear
+./Simulador.ado:728:	use `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'CICLO"', clear
+./Simulador.ado:750:	use `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'REC"', clear
+./Simulador.ado:756:		use `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'PC"', clear
+./Simulador.ado:765:		use `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'PC"', clear
+./Simulador.ado:772:		merge m:1 bootstrap using `pcb', nogen keep(master match)
+./Simulador.ado:817:	use `original', clear
+./Simulador.ado:1182:	use `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'REC.dta"', clear
+./Simulador.ado:1187:	merge 1:1 (anio) using `PIB', nogen
+./TasasEfectivas.ado:315:		capture use (folioviv foliohog numren factor edad decil grupoedad sexo rural escol ingbrutotot ///
+./TasasEfectivas.ado:320:			use (folioviv foliohog numren factor edad decil grupoedad sexo rural escol ingbrutotot ///
+./TasasEfectivasMicro.ado:111:	use "${SIMROOT}/master/perfiles`anio'.dta", clear
+./TasasEfectivasMicro.ado:112:	merge 1:1 folioviv foliohog numren using "${SIMROOT}/master/`anioenigh'/households.dta", ///
+./TasasEfectivasMicro.ado:115:	merge 1:1 folioviv foliohog numren using "${SIMROOT}/master/`anioenigh'/consumption_categ_ieps_pc.dta", ///
+
+### OUTPUTS: save / export / putexcel / outsheet / graph export / file open-write / log using
+./01_modulos/Expenditure.do:82:log using "${SIMROOT}/raw/temp/`anioenigh'/expenditures.smcl", replace name(expenditures)
+./01_modulos/Expenditure.do:205:		save "${SIMROOT}/raw/temp/`anioenigh'/pre_iva.dta", replace
+./01_modulos/Expenditure.do:225:		save "${SIMROOT}/raw/temp/`anioenigh'/va_por_clase_actividad.dta", replace
+./01_modulos/Expenditure.do:241:			save `LU`n'', replace
+./01_modulos/Expenditure.do:258:		save "${SIMROOT}/raw/temp/`anioenigh'/pre_iva_final.dta", replace
+./01_modulos/Expenditure.do:497:	save "${SIMROOT}/raw/temp/`anioenigh'/preconsumption.dta", replace
+./01_modulos/Expenditure.do:506:	save "${SIMROOT}/master/`anioenigh'/deducciones.dta", replace
+./01_modulos/Expenditure.do:550:		save `gastoindividuos'
+./01_modulos/Expenditure.do:860:			qui graph export "${SIMROOT}/users/$id/graphs/conv_`categ'_`anioenigh'.png", replace name(conv_`categ'_`anioenigh')
+./01_modulos/Expenditure.do:875:		save "${SIMROOT}/master/`anioenigh'/consumption_`categ'_pc.dta", replace
+./01_modulos/Expenditure.do:1149:	saveold "${SIMROOT}/master/`anioenigh'/expenditures.dta", replace version(13)
+./01_modulos/Expenditure.do:1152:	save "${SIMROOT}/master/`anioenigh'/expenditures.dta", replace
+./01_modulos/Expenditure.do:1234:save "${SIMROOT}/master/`anioenigh'/categ_iva.dta", replace
+./01_modulos/Expenditure.do:1236:save "${SIMROOT}/master/`anioenigh'/consumption_categ_iva.dta", replace
+./01_modulos/Expenditure.do:1347:save "${SIMROOT}/master/`anioenigh'/consumption_categ_ieps.dta", replace
+./01_modulos/Households.do:174:log using "${SIMROOT}/raw/temp/`anioenigh'/households.smcl", replace name(households)
+./01_modulos/Households.do:2040:	save `isr_cola'
+./01_modulos/Households.do:2753:file open `fcuad' using "${SIMROOT}/master/`anioenigh'/cuadratura.do", write text replace
+./01_modulos/Households.do:2754:file write `fcuad' "* cuadratura.do — identidad de sectores del PIB BIE (Households.do §9.1, CUAD-0 firma 13). Producto de master/`anioenigh'/," _n
+./01_modulos/Households.do:2755:file write `fcuad' "* invariante al usuario: lo escribe Households.do en cada corrida batch y lo carga Web.Stata.do §7.3 antes de output.do (CUADRATURA)." _n
+./01_modulos/Households.do:2756:file write `fcuad' "* Valores en hexadecimal (%21x): el double exacto del motor. No editar a mano; se regenera con SIM.do." _n
+./01_modulos/Households.do:2757:file write `fcuad' "* ENIGH `anioenigh'; cuad_params = $cuad_params; generado `c(current_date)'." _n
+./01_modulos/Households.do:2759:	file write `fcuad' "scalar Cuad`k' = " %21x (scalar(Cuad`k')) "   // " %18.3fc (scalar(Cuad`k')) " mxn" _n
+./01_modulos/Households.do:2760:	file write `fcuad' "scalar Cuad`k'PIB = " %21x (scalar(Cuad`k'PIB)) "   // " %10.6f (scalar(Cuad`k'PIB)) " % del PIB" _n
+./01_modulos/Households.do:2762:file write `fcuad' "scalar CuadPIBSCN = " %21x (`PIBSCN') "   // PIB BIE `anioenigh', mxn" _n
+./01_modulos/Households.do:2944:		graph export `"$export/Recursos.png"', replace name(Recursos)
+./01_modulos/Households.do:2947:		graph export `"${SIMROOT}/users/$id/graphs/Recursos.png"', replace name(Recursos)
+./01_modulos/Households.do:2963:		graph export `"$export/Usos.png"', replace name(Usos)
+./01_modulos/Households.do:2966:		graph export `"${SIMROOT}/users/$id/graphs/Usos.png"', replace name(Usos)
+./01_modulos/Households.do:2983:save "${SIMROOT}/master/`anioenigh'/households.dta", replace
+./01_modulos/ISR_Mod.do:253:save "${SIMROOT}/users/$id/isr_mod.dta", replace
+./01_modulos/IVA_Mod.do:80:save `"${SIMROOT}/users/$pais/$id/iva_mod.dta"', replace
+./01_modulos/nodos/indicadores.do:122:	file open `mh' using `"`manifest'"', read text
+./01_modulos/nodos/indicadores.do:183:file open `fh' using `"`saving'"', write replace text
+./01_modulos/nodos/indicadores.do:185:file write `fh' "{" _n
+./01_modulos/nodos/indicadores.do:186:file write `fh' `"  `q'esquema`q': `q'ciep.nodo.indicadores/v1`q',"' _n
+./01_modulos/nodos/indicadores.do:187:file write `fh' `"  `q'nodo`q': `q'indicadores`q',"' _n
+./01_modulos/nodos/indicadores.do:188:file write `fh' `"  `q'titulo`q': `q'Indicadores del sistema fiscal (hashtags de ciep.mx)`q',"' _n
+./01_modulos/nodos/indicadores.do:189:file write `fh' `"  `q'anio_referencia`q': `anioref',"' _n
+./01_modulos/nodos/indicadores.do:190:file write `fh' `"  `q'presentacion`q': {"' _n
+./01_modulos/nodos/indicadores.do:191:file write `fh' `"    `q'unidad_pib`q': `q'% del PIB`q',"' _n
+./01_modulos/nodos/indicadores.do:192:file write `fh' `"    `q'formato_pib`q': `q'%7.1f`q',"' _n
+./01_modulos/nodos/indicadores.do:193:file write `fh' `"    `q'nota_general`q': `q'% del PIB · datos abiertos SHCP al cierre de `corteflujo'`q',"' _n
+./01_modulos/nodos/indicadores.do:194:file write `fh' `"    `q'tipo_dato_leyenda`q': {`q'proyectado_observado`q': `q'proyección anual del motor con el observado acumulado al corte (DatosAbiertos, opción proyeccion)`q', `q'observado_mensual`q': `q'saldo observado al cierre del mes`q'}"' _n
+./01_modulos/nodos/indicadores.do:195:file write `fh' "  }," _n
+./01_modulos/nodos/indicadores.do:196:file write `fh' `"  `q'indicadores`q': ["' _n
+./01_modulos/nodos/indicadores.do:204:	file write `fh' `"    {`q'slug`q': `q'`slug'`q', `q'etiqueta`q': `q'`etq'`q', `q'disponible`q': true, `q'pib`q': `v', `q'corte`q': `q'`corte'`q', `q'tipo_dato`q': `q'`tipo'`q', `q'fuente`q': `q'`fuente'`q'}`coma'"' _n
+./01_modulos/nodos/indicadores.do:210:	file write `fh' `"    {`q'slug`q': `q'`slug'`q', `q'etiqueta`q': `q'`etq'`q', `q'disponible`q': false, `q'razon`q': `q'`razon'`q'}`coma'"' _n
+./01_modulos/nodos/indicadores.do:239:file write `fh' "  ]," _n
+./01_modulos/nodos/indicadores.do:242:file write `fh' `"  `q'procedencia`q': {"' _n
+./01_modulos/nodos/indicadores.do:244:file write `fh' `"    `q'version_simulador`q': `q'`r(s)'`q',"' _n
+./01_modulos/nodos/indicadores.do:246:file write `fh' `"    `q'corte_datos`q': `q'`r(s)'`q',"' _n
+./01_modulos/nodos/indicadores.do:248:file write `fh' `"    `q'log`q': `q'`r(s)'`q',"' _n
+./01_modulos/nodos/indicadores.do:249:file write `fh' `"    `q'origen`q': `q'DatosAbiertos.ado (SHCP Estadísticas Oportunas) + master/SHRFSP.dta via 01_modulos/nodos/indicadores.do`q',"' _n
+./01_modulos/nodos/indicadores.do:250:file write `fh' `"    `q'generado_en`q': `q'`c(current_date)'T`c(current_time)'`q'"' _n
+./01_modulos/nodos/indicadores.do:251:file write `fh' "  }," _n
+./01_modulos/nodos/indicadores.do:261:file write `fh' `"  `q'faltantes`q': [`flist']"' _n
+./01_modulos/nodos/indicadores.do:262:file write `fh' "}" _n
+./01_modulos/nodos/nodo-deuda.do:113:quietly save `"`serie'"'
+./01_modulos/nodos/nodo-deuda.do:175:quietly save `"`meta'"'
+./01_modulos/nodos/nodo-deuda.do:199:quietly save `"`capas'"'
+./01_modulos/nodos/nodo-deuda.do:233:quietly save `"`tabla'"'
+./01_modulos/nodos/nodo-deuda.do:264:	capture file open `fh' using `"`dest'/.nodo-deuda-test"', write replace
+./01_modulos/nodos/portada.do:230:	file open `mh' using `"`manifest'"', read text
+./01_modulos/nodos/portada.do:319:file open `fh' using `"`saving'"', write replace text
+./01_modulos/nodos/portada.do:321:file write `fh' "{" _n
+./01_modulos/nodos/portada.do:322:file write `fh' `"  `q'esquema`q': `q'ciep.nodo.portada/v1`q',"' _n
+./01_modulos/nodos/portada.do:323:file write `fh' `"  `q'nodo`q': `q'portada`q',"' _n
+./01_modulos/nodos/portada.do:324:file write `fh' `"  `q'titulo`q': `q'Paquete Económico`q',"' _n
+./01_modulos/nodos/portada.do:325:file write `fh' `"  `q'anio_default`q': `anioref',"' _n
+./01_modulos/nodos/portada.do:330:file write `fh' `"  `q'anios`q': [`anioslist'],"' _n
+./01_modulos/nodos/portada.do:333:file write `fh' `"  `q'presentacion`q': {"' _n
+./01_modulos/nodos/portada.do:334:file write `fh' `"    `q'regla`q': `q'gasto = ingresos + financiamiento`q',"' _n
+./01_modulos/nodos/portada.do:335:file write `fh' `"    `q'unidad_pib`q': `q'% del PIB del año propio`q',"' _n
+./01_modulos/nodos/portada.do:336:file write `fh' `"    `q'unidad_monto`q': `q'millones de MXN corrientes del año propio (redondeados a enteros)`q',"' _n
+./01_modulos/nodos/portada.do:337:file write `fh' `"    `q'formato_pib`q': `q'%7.1f`q',"' _n
+./01_modulos/nodos/portada.do:338:file write `fh' `"    `q'formato_pib_detalle`q': `q'%7.3f`q',"' _n
+./01_modulos/nodos/portada.do:339:file write `fh' `"    `q'formato_monto`q': `q'%12.0fc`q',"' _n
+./01_modulos/nodos/portada.do:340:file write `fh' `"    `q'fuente_gasto`q': `q'PEF.ado — gasto neto: suma de las divisiones del display B (Resumido); verificada contra r(Gasto_netoPIB)`q',"' _n
+./01_modulos/nodos/portada.do:341:file write `fh' `"    `q'fuente_ingresos`q': `q'LIF.ado — suma de las familias del display B (divResumido, sin la familia Deuda)`q',"' _n
+./01_modulos/nodos/portada.do:342:file write `fh' `"    `q'fuente_financiamiento`q': `q'cierre por construcción: gasto - ingresos (derivado en 01_modulos/nodos/portada.do)`q',"' _n
+./01_modulos/nodos/portada.do:343:file write `fh' `"    `q'nota_referencia_lif`q': `q'La familia Deuda de la LIF es otra medida del mismo término; la brecha contra el cierre viaja declarada.`q',"' _n
+./01_modulos/nodos/portada.do:344:file write `fh' `"    `q'tipo_dato_leyenda`q': {`q'ejercido`q': `q'Cuenta Pública (gasto ejercido)`q', `q'aprobado`q': `q'PEF aprobado`q', `q'proyecto`q': `q'PPEF proyecto`q', `q'observado`q': `q'recaudación observada al cierre`q', `q'ley`q': `q'Ley de Ingresos (ILIF)`q'}"' _n
+./01_modulos/nodos/portada.do:345:file write `fh' "  }," _n
+./01_modulos/nodos/portada.do:348:file write `fh' `"  `q'ecuaciones`q': ["' _n
+./01_modulos/nodos/portada.do:350:	file write `fh' "    {" _n
+./01_modulos/nodos/portada.do:351:	file write `fh' `"      `q'anio`q': `y',"' _n
+./01_modulos/nodos/portada.do:352:	file write `fh' `"      `q'tipo_dato`q': {`q'gasto`q': `q'`tg_`y''`q', `q'ingresos`q': `q'`ti_`y''`q'},"' _n
+./01_modulos/nodos/portada.do:369:	file write `fh' `"      `q'terminos`q': {"' _n
+./01_modulos/nodos/portada.do:370:	file write `fh' `"        `q'gasto`q': {`q'etiqueta`q': `q'Gasto`q', `q'pib`q': `vg', `q'monto`q': `mg'},"' _n
+./01_modulos/nodos/portada.do:371:	file write `fh' `"        `q'ingresos`q': {`q'etiqueta`q': `q'Ingresos`q', `q'pib`q': `vi', `q'monto`q': `mi'},"' _n
+./01_modulos/nodos/portada.do:372:	file write `fh' `"        `q'financiamiento`q': {`q'etiqueta`q': `q'Financiamiento`q', `q'pib`q': `vf', `q'monto`q': `mf', `q'referencia_lif`q': {`q'escalar`q': `q'DeudaPIB`q', `q'pib`q': `vd', `q'brecha_pib`q': `vb'}}"' _n
+./01_modulos/nodos/portada.do:373:	file write `fh' "      }," _n
+./01_modulos/nodos/portada.do:374:	file write `fh' `"      `q'desagregaciones`q': {"' _n
+./01_modulos/nodos/portada.do:375:	file write `fh' `"        `q'ingresos`q': ["' _n
+./01_modulos/nodos/portada.do:384:		file write `fh' `"          {`q'etiqueta`q': `q'`e'`q', `q'escalar`q': `q'`ing_esc_`i''PIB`q', `q'pib`q': `v', `q'monto`q': `m'}`coma'"' _n
+./01_modulos/nodos/portada.do:386:	file write `fh' "        ]," _n
+./01_modulos/nodos/portada.do:387:	file write `fh' `"        `q'gasto`q': ["' _n
+./01_modulos/nodos/portada.do:396:		file write `fh' `"          {`q'etiqueta`q': `q'`e'`q', `q'retorno`q': `q'r(`gas_ret_`i''PIB)`q', `q'pib`q': `v', `q'monto`q': `m'}`coma'"' _n
+./01_modulos/nodos/portada.do:398:	file write `fh' "        ]" _n
+./01_modulos/nodos/portada.do:399:	file write `fh' "      }" _n
+./01_modulos/nodos/portada.do:400:	file write `fh' `"    }`=cond(`y' < `anioref', ",", "")'"' _n
+./01_modulos/nodos/portada.do:402:file write `fh' "  ]," _n
+./01_modulos/nodos/portada.do:414:file write `fh' `"  `q'capas_declaradas`q': ["' _n
+./01_modulos/nodos/portada.do:415:file write `fh' `"    {`q'id`q': `q'escenario_cgpe`q', `q'anio`q': `anioref', `q'etiqueta`q': `q'Escenario `pee': RFSP, la medida amplia oficial`q', `q'disponible`q': `cgpe_disp', `q'unidad`q': `q'% del PIB`q', `q'valores`q': {`q'rfsp`q': `cr', `q'ingresos`q': `ci', `q'gasto`q': `cg'}, `q'procedencia`q': {`q'origen`q': `q'`=cond("`cgpe_disp'"=="true","global_politica_fiscal","no_disponible")'`q', `q'definida_en`q': `q'SIM.do:361-405 (matrix rfsp/ingresos/egresos) -> global rfsp`anioref' ingresos`anioref' egresos`anioref'`q', `q'tipo_dato`q': `q'exogeno_politica_fiscal`q'}}"' _n
+./01_modulos/nodos/portada.do:416:file write `fh' "  ]," _n
+./01_modulos/nodos/portada.do:419:file write `fh' `"  `q'nodo_deuda`q': {`q'href`q': `q'nodo-deuda.html`q', `q'contrato`q': `q'statajson_deuda-publica.json`q'},"' _n
+./01_modulos/nodos/portada.do:422:file write `fh' `"  `q'procedencia`q': {"' _n
+./01_modulos/nodos/portada.do:424:file write `fh' `"    `q'version_simulador`q': `q'`r(s)'`q',"' _n
+./01_modulos/nodos/portada.do:426:file write `fh' `"    `q'corte_datos`q': `q'`r(s)'`q',"' _n
+./01_modulos/nodos/portada.do:428:file write `fh' `"    `q'log`q': `q'`r(s)'`q',"' _n
+./01_modulos/nodos/portada.do:429:file write `fh' `"    `q'origen`q': `q'LIF.ado + PEF.ado via 01_modulos/nodos/portada.do`q',"' _n
+./01_modulos/nodos/portada.do:430:file write `fh' `"    `q'generado_en`q': `q'`c(current_date)'T`c(current_time)'`q'"' _n
+./01_modulos/nodos/portada.do:431:file write `fh' "  }," _n
+./01_modulos/nodos/portada.do:441:file write `fh' `"  `q'faltantes`q': [`flist']"' _n
+./01_modulos/nodos/portada.do:442:file write `fh' "}" _n
+./01_modulos/NTA.do:272:	save `prog'
+./01_modulos/NTA.do:282:	save `otor'
+./01_modulos/NTA.do:286:	save `paren'
+./01_modulos/NTA.do:775:	save `per'
+./01_modulos/NTA.do:779:	save `ge'
+./01_modulos/NTA.do:828:	save `qs'
+./01_modulos/NTA.do:842:file open `fh' using `"`dirnta'/nta-identidad.txt"', write replace text
+./01_modulos/NTA.do:843:file write `fh' "NTA `anio' — Σ S micro (residual de los hogares, SIN ajuste) por grupo de edad vs B.8n S.14 (miles de millones de MXN corrientes; [fw=factor])" _n
+./01_modulos/NTA.do:844:file write `fh' %-12s ("Grupo") %9s ("Pob(M)") %10s ("S sin aj") %10s ("S final") %10s ("ajuste") _n
+./01_modulos/NTA.do:847:	file write `fh' %-12s ("`lab'") %9.1f (scalar(NTAPob`g')/1e6) `f1' (scalar(NTAS_sinancla`g')/1e9) `f1' (scalar(NTAS`g')/1e9) `f1' ((scalar(NTAS`g') - scalar(NTAS_sinancla`g'))/1e9) _n
+./01_modulos/NTA.do:849:file write `fh' %-12s ("Total") %9.1f (scalar(NTAPob0)/1e6) `f1' (scalar(NTAS_sinancla0)/1e9) `f1' (scalar(NTAS0)/1e9) `f1' ((scalar(NTAS0) - scalar(NTAS_sinancla0))/1e9) _n
+./01_modulos/NTA.do:850:file write `fh' "B.8n (AhorroHog) " `f1' (`AhorroHog'/1e9) "; factor implícito B.8n / Σ S sin ajuste " %8.4f (`fS') "; brecha (Σ S − B.8n)/B.8n " %7.1f (scalar(NTABrechaSPct)) " %; ajuste aditivo que exigiría el ancla " `f1' (`D'/1e9) "; nta_anclaS=$nta_anclaS (param $nta_anclaS_param; auto = multiplicativo si |brecha| <= `brecha_max' %)" _n
+./01_modulos/NTA.do:851:file write `fh' "YA: motor " `f1' (`YA_motor_tot'/1e9) " vs YAHogS14 (B.2n " `f1' (`ExNOpHogS14'/1e9) " + 1/3 B.3n " `f1' (`MixNHogS14'/3e9) " + D.4 neto " `f1' (`RentaPropHogNeta'/1e9) ") = " `f1' (`YAHogS14'/1e9) " − D.442 " `f1' ((`YAHogS14' - `YAHogS14n')/1e9) " = ancla " `f1' (`YAHogS14n'/1e9) "; factor " %8.6f (`fYA') " (v8.15b: debe ser 1); nta_YA=$nta_YA; Σ YA_base " `f1' (scalar(NTAYABaseNac)/1e9) _n
+./01_modulos/NTA.do:852:file write `fh' "Parámetros de Households (CUAD-0 firma 2026-10-31, FLAGs declarados):$cuad_params" _n
+./01_modulos/NTA.do:853:file write `fh' "YA del motor vs re-anclado por decil (bn): "
+./01_modulos/NTA.do:855:	file write `fh' "D`d' " %7.1f (scalar(NTAYAMotorD`d')/1e9) "->" %7.1f (scalar(NTAYABaseD`d')/1e9) " "
+./01_modulos/NTA.do:857:file write `fh' _n _n
+./01_modulos/NTA.do:858:file write `fh' "Identidad por grupo de edad SIN ancla: C − YL − ImpProd − (τ⁺ − τ⁻) − (YA − YA_ajuste − S sin ancla) − intra = R; con el ancla multiplicativa la diferencia S − S sin ancla queda declarada (columna ajuste de arriba), no en la identidad.   (ImpProd = impuestos netos a los productos como ingreso ∝ Cpriv)" _n
+./01_modulos/NTA.do:859:file write `fh' "τ⁺ = público efectivo + público especie (individual D.63) + público colectivo (ConGob − D.63) + inter recibido + remesas; τ⁻ = público (ISR PF+asalariados, cuotas $nta_cuotas, indirectos LIF) + inter otorgado. Fuera de τ⁻ (informativo): ISR_PM + OTROSK." _n
+./01_modulos/NTA.do:860:file write `fh' "Parámetros: nta_anclaS=$nta_anclaS nta_YA=$nta_YA nta_cuotas=$nta_cuotas nta_d8=$nta_d8 nta_anclaTau=$nta_anclaTau nta_alqu=$nta_alqu nta_tauCash=$nta_tauCash nta_otorgado=$nta_otorgado nta_mixto=$nta_mixto" _n _n
+./01_modulos/NTA.do:861:file write `fh' %-12s ("Grupo") %9s ("Pob(M)") %10s ("Cpriv") %10s ("Cpub") %10s ("C") %10s ("YL") %10s ("ImpProd") %10s ("YA") %10s ("  YA d8") %10s ("S") %10s ("tau-pub") %10s ("  cuotas") %10s ("  indir") %10s ("fuera") %10s ("tau+efec") %10s ("tau+esp") %10s ("tau+col") %10s ("interRec") %10s ("remesas") %10s ("interOtor") %10s ("intra") %10s ("R") _n
+./01_modulos/NTA.do:864:	file write `fh' %-12s ("`lab'") %9.1f (scalar(NTAPob`g')/1e6) `f1' (scalar(NTACpriv`g')/1e9) `f1' (scalar(NTACpub`g')/1e9) `f1' (scalar(NTAC`g')/1e9) ///
+./01_modulos/NTA.do:869:file write `fh' %-12s ("Total") %9.1f (scalar(NTAPob0)/1e6) `f1' (scalar(NTACpriv0)/1e9) `f1' (scalar(NTACpub0)/1e9) `f1' (scalar(NTAC0)/1e9) ///
+./01_modulos/NTA.do:873:file write `fh' "S y intra-hogar por sexo (bn): hombres S " `f1' (scalar(NTASH)/1e9) " intra " `f1' (scalar(NTAIntraH)/1e9) "; mujeres S " `f1' (scalar(NTASM)/1e9) " intra " `f1' (scalar(NTAIntraM)/1e9) _n
+./01_modulos/NTA.do:874:file write `fh' "Impuestos a productos: ImpNetosProd (D.21−D.31) " `f1' (`ImpNetosProd'/1e9) "; ImpNet BIE " `f1' (`ImpNetBIE'/1e9) "; embebido por Altimir (sacado) " `f1' (scalar(NTAImpProdMotor)/1e9) " = de YA " `f1' (scalar(NTAImpProdMotorYA)/1e9) " + de YL (⅔ de mixK, v8.14) " `f1' (scalar(NTAImpProdMotorYL)/1e9) "; Σ indirectos micro τ⁻ " `f1' (scalar(NTATmenInd0)/1e9) " (factor " %7.4f (scalar(NTAFactorIndirectos)/100) ")" _n
+./01_modulos/NTA.do:875:file write `fh' "τ⁺ efectivo PEF/ENIGH " `f1' (`TpubEf_pre'/1e9) " vs D.62 + D.759 S.14 " `f1' (`TauPubS14'/1e9) " (D.62 " `f1' (`PrestSocHog'/1e9) ", D.759 " `f1' (`OtrasTransfHog'/1e9) "); factor " %7.4f (`fTau') "; nta_anclaTau=$nta_anclaTau; Σ τ⁺ efectivo final " `f1' (scalar(NTATpubEf0)/1e9) _n
+./01_modulos/NTA.do:876:file write `fh' "D.8 AjustePension " `f1' (`AjustePension'/1e9) " → YA_d8 ($nta_d8) Σ " `f1' (scalar(NTAD8Nac)/1e9) _n
+./01_modulos/NTA.do:877:file write `fh' "ConGob partido: individual (D.63) Σ " `f1' (scalar(NTACpubIndNac)/1e9) " vs TransfEspecie " `f1' (`TransfEspecie'/1e9) " (educación " `f1' (scalar(NTACpubEduc0)/1e9) ", salud " `f1' (scalar(NTACpubSalud0)/1e9) ", resto individual per cápita " `f1' (scalar(NTACpubRestoInd0)/1e9) "); colectivo (ConGob − D.63, per cápita) Σ " `f1' (scalar(NTACpubColNac)/1e9) "; ConGob " `f1' (`ConGob'/1e9) _n
+./01_modulos/NTA.do:878:file write `fh' "Σ Cpriv " `f1' (scalar(NTACprivNac)/1e9) " vs P.3 S.14 " `f1' (`ConHogS14'/1e9) "; ConHog (BIE) " `f1' (`ConHog'/1e9) "; ComprasN " `f1' (`ComprasN'/1e9) _n
+./01_modulos/NTA.do:879:file write `fh' "Gates: residual máx por persona " %9.2e (`maxres') " MXN; Σ intra nacional " %12.2f (`Intra_nac') " MXN; Σ S − AhorroHog " %12.2f (`S_nac' - `AhorroHog') " MXN -> `okstr'" _n
+./01_modulos/NTA.do:893:file write `fh' _n "De dónde sale la brecha (Σ S sin ancla − B.8n = " `f1' ((`S_micro' - `AhorroHog')/1e9) " bn): partida NTA vs S.14 (bn) y efecto en S" _n
+./01_modulos/NTA.do:894:file write `fh' %-58s ("YL + YA_base vs D.1 + B.3n + B.2n + D.4 neto (− D.442)") `f1' ((`BR'[1,1] + `BR'[1,2])/1e9) `f1' ((`YAHogS14n' + `D1HogS14' + `MixNHogS14'*2/3)/1e9) `f1' (`b_prim'/1e9) _n
+./01_modulos/NTA.do:895:file write `fh' %-58s ("D.8: YA_d8 vs AjustePension") `f1' (`BR'[1,3]/1e9) `f1' (`AjustePension'/1e9) `f1' (`b_d8'/1e9) _n
+./01_modulos/NTA.do:896:file write `fh' %-58s ("ImpProd (ingreso) vs τ⁻ indirectos LIF") `f1' (`BR'[1,4]/1e9) `f1' (`BR'[1,5]/1e9) `f1' (`b_impprod'/1e9) _n
+./01_modulos/NTA.do:897:file write `fh' %-58s ("D.5: ISR LIF (asalariados + PF) vs D.5 S.14") `f1' ((`BR'[1,6] + `BR'[1,7])/1e9) `f1' (`ImpIngHog'/1e9) `f1' (`b_d5'/1e9) _n
+./01_modulos/NTA.do:898:file write `fh' %-58s ("D.61: cuotas vs D.61 − D.614 S.14") `f1' (`BR'[1,8]/1e9) `f1' (`CuotasHogS14'/1e9) `f1' (`b_d61'/1e9) _n
+./01_modulos/NTA.do:899:file write `fh' %-58s ("τ netas: efectivo + inter + remesas − otorgado vs D.62 + D.7 netas") `f1' ((`BR'[1,9] + `BR'[1,10] + `BR'[1,11] - `BR'[1,12])/1e9) `f1' ((`TauPubS14' + `OtrasTransfHogR' - `OtrasTransfHog' - `OtrasTransfHogU')/1e9) `f1' (`b_tau'/1e9) _n
+./01_modulos/NTA.do:900:file write `fh' %-58s ("Consumo: Cpriv vs P.3 S.14") `f1' (`BR'[1,13]/1e9) `f1' (`ConHogS14'/1e9) `f1' (`b_cpriv'/1e9) _n
+./01_modulos/NTA.do:901:file write `fh' %-58s ("Consumo público: τ⁺ especie + colectivo vs Cpub (neutro)") `f1' ((`BR'[1,16] + `BR'[1,17])/1e9) `f1' ((`BR'[1,14] + `BR'[1,15])/1e9) `f1' (`b_cpub'/1e9) _n
+./01_modulos/NTA.do:902:file write `fh' %-58s ("Total (debe igualar la brecha)") %10s ("") %10s ("") `f1' (`b_tot'/1e9) "  (brecha " `f1' ((`S_micro' - `AhorroHog')/1e9) "; esperada CUAD-0 +" %4.1f (`brecha_esp') " %, observada " %6.1f (`brecha') " %)" _n
+./01_modulos/NTA.do:909:file open `fh' using `"`dirnta'/nta-grupoedad.json"', write replace text
+./01_modulos/NTA.do:910:file write `fh' `"{"esquema":"nta/v1","anio":`anio',"unidad":"MXN corrientes de `anio', sumas [fw=factor]","corte":"grupoedad","' _n
+./01_modulos/NTA.do:911:file write `fh' `""identidad":"C - YL - ImpProd - (tau_mas - tau_menos) - (YA - YA_ajuste - S_sinancla) - intra = 0 (sin ancla); con ancla multiplicativa el residual declarado es S_ajuste = S - S_sinancla; ImpProd = impuestos netos a los productos como ingreso (∝ Cpriv); tau_mas = tau_pub_efectivo + tau_pub_especie (individual D.63) + tau_pub_colectivo (ConGob - D.63) + inter_recibido + remesas; tau_menos = tau_pub + inter_otorgado","' _n
+./01_modulos/NTA.do:912:file write `fh' `""parametros":{"nta_anclaS":"$nta_anclaS","nta_anclaS_param":"$nta_anclaS_param","nta_YA":"$nta_YA","nta_cuotas":"$nta_cuotas","nta_d8":"$nta_d8","nta_anclaTau":"$nta_anclaTau","nta_alqu":"$nta_alqu","nta_tauCash":"$nta_tauCash","nta_otorgado":"$nta_otorgado","nta_mixto":"$nta_mixto","households":"`=trim("$cuad_params")'","adulto":`adulto',"tolerancia":1e-9},"' _n
+./01_modulos/NTA.do:913:file write `fh' `""anclas":{"AhorroHog_B8n":`=trim(string(`AhorroHog', "`fm'"))',"AhorroHogB_B8b":`=trim(string(`AhorroHogB', "`fm'"))',"TransfEspecie_D63":`=trim(string(`TransfEspecie', "`fm'"))',"ConHogS14_P3":`=trim(string(`ConHogS14', "`fm'"))',"ConHog":`=trim(string(`ConHog', "`fm'"))',"ConGob":`=trim(string(`ConGob', "`fm'"))',"SerEGob":`=trim(string(`SerEGob', "`fm'"))',"SaluGob":`=trim(string(`SaluGob', "`fm'"))',"ComprasN":`=trim(string(`ComprasN', "`fm'"))',"ROWTrans":`=trim(string(`ROWTrans', "`fm'"))',"ROWRem":`=trim(string(`ROWRem', "`fm'"))',"ROWProp":`=trim(string(`ROWProp', "`fm'"))',"CapFij":`=trim(string(`CapFij', "`fm'"))',"IngDisp":`=trim(string(`IngDisp', "`fm'"))',"AhorroN":`=trim(string(`AhorroN', "`fm'"))',"OyE":`=trim(string(`OyE', "`fm'"))',"PEF_Pensiones":`=trim(string(`Pensiones', "`fm'"))',"PEF_PensionAM":`=trim(string(`PenBienestar', "`fm'"))',"TaltimirSelf":`=trim(string(`TSelf', "%12.8f"))',"TaltimirSal":`=trim(string(`TSal', "%12.8f"))'},"' _n
+./01_modulos/NTA.do:914:file write `fh' `""S_vs_B8n":{"S_sin_ajuste":`=trim(string(`S_micro', "`fm'"))',"AhorroHog":`=trim(string(`AhorroHog', "`fm'"))',"factor_implicito":`=trim(string(`fS', "%12.8f"))',"brecha_pct":`=trim(string(scalar(NTABrechaSPct), "%12.6f"))',"ajuste_aditivo_que_exigiria":`=trim(string(`D', "`fm'"))',"S_final":`=trim(string(`S_nac', "`fm'"))',"S_ajuste":`=trim(string(scalar(NTASAjusteNac), "`fm'"))',"modo":"$nta_anclaS","modo_param":"$nta_anclaS_param","brecha_max_pct":`brecha_max',"mixto_motor":`=trim(string(scalar(NTAMixtoMotor), "`fm'"))',"mixto_transf_fin_escalado":`=trim(string(scalar(NTAMixtoTransfFin), "`fm'"))',"pensiones_en_Yl":`=trim(string(scalar(NTAPensEnYl), "`fm'"))',"regla":"off: S residual sin tapón; aditivo: suma ∝ (YL+YA) de adultos con contrapartida en YA_ajuste; multiplicativo: S × factor, sin contrapartida (cae a intra)"},"' _n
+./01_modulos/NTA.do:915:file write `fh' `""ya_s14":{"YA_motor":`=trim(string(`YA_motor_tot', "`fm'"))',"YAHogS14":`=trim(string(`YAHogS14', "`fm'"))',"D442":`=trim(string(`YAHogS14' - `YAHogS14n', "`fm'"))',"YAHogS14_ancla":`=trim(string(`YAHogS14n', "`fm'"))',"B2n":`=trim(string(`ExNOpHogS14', "`fm'"))',"tercio_B3n":`=trim(string(`MixNHogS14'/3, "`fm'"))',"D4_neto":`=trim(string(`RentaPropHogNeta', "`fm'"))',"factor":`=trim(string(`fYA', "%12.8f"))',"nta_YA":"$nta_YA","YA_base_micro":`=trim(string(scalar(NTAYABaseNac), "`fm'"))',"por_decil":["'
+./01_modulos/NTA.do:917:	file write `fh' `"`=cond(`d' > 1, ",", "")'{"decil":`d',"pob":`=trim(string(scalar(NTAPobD`d'), "%20.0f"))',"YA_motor":`=trim(string(scalar(NTAYAMotorD`d'), "`fm'"))',"YA_base":`=trim(string(scalar(NTAYABaseD`d'), "`fm'"))'}"'
+./01_modulos/NTA.do:919:file write `fh' `"],"regla":"el total de YA del motor (neto de depreciación, sin ImpNet embebido, sin D.8) se re-ancla a B.2n + 1/3 B.3n + D.4 neto de S.14 ∝ YA del motor; el alquiler imputado se escala igual"},"' _n
+./01_modulos/NTA.do:920:file write `fh' `""impuestos_productos":{"ImpNetosProd_D21_D31":`=trim(string(`ImpNetosProd', "`fm'"))',"ImpNet_BIE":`=trim(string(`ImpNetBIE', "`fm'"))',"ImpProd_micro":`=trim(string(scalar(NTAImpProdNac), "`fm'"))',"embebido_Altimir_sacado":`=trim(string(scalar(NTAImpProdMotor), "`fm'"))',"embebido_Altimir_sacado_de_YA":`=trim(string(scalar(NTAImpProdMotorYA), "`fm'"))',"embebido_Altimir_sacado_de_YL":`=trim(string(scalar(NTAImpProdMotorYL), "`fm'"))',"indirectos_micro_tau_menos":`=trim(string(scalar(NTATmenInd0), "`fm'"))',"factor_indirectos_sobre_ImpNetosProd":`=trim(string(scalar(NTAFactorIndirectos)/100, "%12.8f"))',"regla":"ImpProd ∝ Cpriv; el ImpNet que Altimir embebe en Yk y Yl (∝ ing_mixtoK, ing_capital, ing_estim_alqu) se saca de YA (_soc, _hog y 1/3 de _mixK) y de YL (2/3 de _mixK; v8.14, CONC-1 §6.1)"},"' _n
+./01_modulos/NTA.do:921:file write `fh' `""tau_mas_efectivo":{"PEF_ENIGH_pre":`=trim(string(`TpubEf_pre', "`fm'"))',"D62":`=trim(string(`PrestSocHog', "`fm'"))',"D759":`=trim(string(`OtrasTransfHog', "`fm'"))',"TauPubS14":`=trim(string(`TauPubS14', "`fm'"))',"factor":`=trim(string(`fTau', "%12.8f"))',"nta_anclaTau":"$nta_anclaTau","final":`=trim(string(scalar(NTATpubEf0), "`fm'"))',"regla":"un solo factor global multiplicativo sobre pensiones, Pensión Bienestar y becas/programas"},"' _n
+./01_modulos/NTA.do:922:file write `fh' `""d8":{"AjustePension_D8":`=trim(string(`AjustePension', "`fm'"))',"YA_d8_micro":`=trim(string(scalar(NTAD8Nac), "`fm'"))',"nta_d8":"$nta_d8","personas_con_cuotas":`Ncotiz'},"' _n
+./01_modulos/NTA.do:923:file write `fh' `""tau_menos":{"directos":`=trim(string(scalar(NTATmenDir0), "`fm'"))',"cuotas":`=trim(string(scalar(NTACuotasNac), "`fm'"))',"cuotas_ancla":"$nta_cuotas","CuotasHogS14_D61_menos_D614":`=trim(string(`CuotasHogS14', "`fm'"))',"LIF_CUOTAS":`=trim(string(`CUOTAS', "`fm'"))',"indirectos":`=trim(string(scalar(NTATmenInd0), "`fm'"))',"fuera_ISRPM_OTROSK":`=trim(string(scalar(NTATmenFueraNac), "`fm'"))',"LIF_ISRPM":`=trim(string(`ISRPM', "`fm'"))',"LIF_OTROSK":`=trim(string(`OTROSK', "`fm'"))'},"' _n
+./01_modulos/NTA.do:924:file write `fh' `""congob":{"ConGob":`=trim(string(`ConGob', "`fm'"))',"individual_D63":`=trim(string(scalar(NTACpubIndNac), "`fm'"))',"TransfEspecie":`=trim(string(`TransfEspecie', "`fm'"))',"educacion":`=trim(string(scalar(NTACpubEduc0), "`fm'"))',"salud":`=trim(string(scalar(NTACpubSalud0), "`fm'"))',"resto_individual_per_capita":`=trim(string(scalar(NTACpubRestoInd0), "`fm'"))',"colectivo_per_capita":`=trim(string(scalar(NTACpubColNac), "`fm'"))',"factor_educ_salud":`=trim(string(`fEsp', "%12.8f"))',"regla":"individual = D.63 con perfil de edad (educación matrícula, salud ∝ gasto privado, resto per cápita) = τ⁺ en especie; colectivo = ConGob − D.63 per cápita = τ⁺ colectivo; ambos en C público"},"' _n
+./01_modulos/NTA.do:925:file write `fh' `""grupos":["' _n
+./01_modulos/NTA.do:929:	file write `fh' `"`=cond(`g' > 0, ",", "")'{"g":`g',"grupo":"`lab'","pob":`=trim(string(scalar(NTAPob`g'), "%20.0f"))'"'
+./01_modulos/NTA.do:931:		file write `fh' `","`v'":`=trim(string(scalar(NTA`v'`g'), "`fm'"))'"'
+./01_modulos/NTA.do:934:		file write `fh' `","IntraPos":`=trim(string(scalar(NTAIntraPos`g'), "`fm'"))',"IntraNeg":`=trim(string(scalar(NTAIntraNeg`g'), "`fm'"))'"'
+./01_modulos/NTA.do:936:	file write `fh' "}" _n
+./01_modulos/NTA.do:938:file write `fh' `"],"' _n
+./01_modulos/NTA.do:939:file write `fh' `""sexo":[{"sexo":"Hombres","pob":`=trim(string(scalar(NTAPobH), "%20.0f"))',"S":`=trim(string(scalar(NTASH), "`fm'"))',"Intra":`=trim(string(scalar(NTAIntraH), "`fm'"))',"YL":`=trim(string(scalar(NTAYLH), "`fm'"))',"YA":`=trim(string(scalar(NTAYAH), "`fm'"))',"C":`=trim(string(scalar(NTACH), "`fm'"))',"Tmen":`=trim(string(scalar(NTATmenH), "`fm'"))',"Tpub":`=trim(string(scalar(NTATpubH), "`fm'"))'},"' _n
+./01_modulos/NTA.do:940:file write `fh' `"{"sexo":"Mujeres","pob":`=trim(string(scalar(NTAPobM), "%20.0f"))',"S":`=trim(string(scalar(NTASM), "`fm'"))',"Intra":`=trim(string(scalar(NTAIntraM), "`fm'"))',"YL":`=trim(string(scalar(NTAYLM), "`fm'"))',"YA":`=trim(string(scalar(NTAYAM), "`fm'"))',"C":`=trim(string(scalar(NTACM), "`fm'"))',"Tmen":`=trim(string(scalar(NTATmenM), "`fm'"))',"Tpub":`=trim(string(scalar(NTATpubM), "`fm'"))'}],"' _n
+./01_modulos/NTA.do:941:file write `fh' `""gates":{"residual_max_persona":`=trim(string(`maxres', "%12.4e"))',"residual_max_quinq_sexo":`=trim(string(`maxres_qs', "%12.4e"))',"intra_nacional":`=trim(string(`Intra_nac', "%16.4f"))',"intra_hogar_max":`=trim(string(`maxintra_hog', "%12.4e"))',"S_menos_AhorroHog":`=trim(string(`S_nac' - `AhorroHog', "%16.4f"))',"ok":`ok'},"' _n
+./01_modulos/NTA.do:942:file write `fh' `""flags":["'
+./01_modulos/NTA.do:946:	file write `fh' `"`=cond(`nf' > 1, ",", "")'"`f'""'
+./01_modulos/NTA.do:948:file write `fh' `"],"' _n
+./01_modulos/NTA.do:949:file write `fh' `""procedencia":{"modulo":"01_modulos/NTA.do v1.3 (NTA-3)","base":"master/`anio'/households.dta + raw/ENIGH/`anio'/{poblacion,ingresos,gastohogar}.dta","anclas":"SCN/LIF/PEF `anio' (escalar); S.14 de CSI_115.xlsx y S.1 de CSI_103.xlsx via SCN.ado","generado_el":"`fecha' $S_TIME","stata":"`c(stata_version)' `c(edition_real)'"}}"' _n
+./01_modulos/NTA.do:955:file open `fh' using `"`dirnta'/nta-quinquenio-sexo.json"', write replace text
+./01_modulos/NTA.do:956:file write `fh' `"{"esquema":"nta/v1","anio":`anio',"unidad":"MXN corrientes de `anio', sumas [fw=factor]","corte":"quinquenio x sexo","' _n
+./01_modulos/NTA.do:957:file write `fh' `""identidad":"C - YL - ImpProd - (tau_mas - tau_menos) - (YA - YA_ajuste - S_sinancla) - intra = residual (sin ancla)","residual_max":`=trim(string(`maxres_qs', "%12.4e"))',"' _n
+./01_modulos/NTA.do:958:file write `fh' `""celdas":["' _n
+./01_modulos/NTA.do:962:	file write `fh' `"`=cond(`i' > 1, ",", "")'{"q":`=quinq[`i']',"quinquenio":"`ql'","s":`=sexo[`i']',"sexo":"`sl'","pob":`=trim(string(pobw[`i'], "%20.0f"))'"'
+./01_modulos/NTA.do:964:		file write `fh' `","`v'":`=trim(string(`v'[`i'], "`fm'"))'"'
+./01_modulos/NTA.do:966:	file write `fh' "}" _n
+./01_modulos/NTA.do:968:file write `fh' `"],"procedencia":{"modulo":"01_modulos/NTA.do v1.3 (NTA-3)","generado_el":"`fecha' $S_TIME"}}"' _n
+./01_modulos/NTA.do:971:file open `fh' using `"`dirnta'/nta-identidad.txt"', write append text
+./01_modulos/NTA.do:972:file write `fh' _n "S e intra-hogar por quinquenio × sexo (bn; S sin ajuste salvo nta_anclaS ≠ off). |R|/C máx " %9.2e (`maxres_qs'/`Ctot') _n
+./01_modulos/NTA.do:973:file write `fh' %-8s ("Edad") %-9s ("Sexo") %8s ("Pob(M)") %10s ("C") %10s ("YL") %10s ("YA") %10s ("tau-pub") %10s ("tau+pub") %10s ("S") %10s ("intra") %10s ("R") _n
+./01_modulos/NTA.do:977:	file write `fh' %-8s ("`ql'") %-9s ("`sl'") %8.1f (pobw[`i']/1e6) `f1' (C[`i']/1e9) `f1' (YL[`i']/1e9) `f1' (YA[`i']/1e9) `f1' (Tmen[`i']/1e9) `f1' (Tpub[`i']/1e9) `f1' (S[`i']/1e9) `f1' (Intra[`i']/1e9) %10.6f (resid_chk[`i']/1e9) _n
+./01_modulos/NTA.do:1008:	save `per2'
+./01_modulos/NTA.do:1029:	save `e1'
+./01_modulos/NTA.do:1037:	save `e2'
+./01_modulos/NTA.do:1076:	save `e3'
+./01_modulos/NTA.do:1117:	save `e4'
+./01_modulos/NTA.do:1151:	save `c2'
+./01_modulos/NTA.do:1180:	save `e5'
+./01_modulos/NTA.do:1304:	save `catg'
+./01_modulos/NTA.do:1329:	save `fin'
+./01_modulos/NTA.do:1387:	save `f3'
+./01_modulos/NTA.do:1398:	save `f4a'
+./01_modulos/NTA.do:1405:	save `f4a', replace
+./01_modulos/NTA.do:1439:	save `f4'
+./01_modulos/NTA.do:1450:	save `f5'
+./01_modulos/NTA.do:1531:	save `pan'
+./01_modulos/NTA.do:1576:file open `fh' using `"`dirnta'/nta-panel-grupoedad-sexo.json"', write replace text
+./01_modulos/NTA.do:1577:file write `fh' `"{"esquema":"nta-panel/v2","anio":`anio',"unidad":"MXN corrientes de `anio', sumas [fw=factor]","corte":"grupoedad x sexo","' _n
+./01_modulos/NTA.do:1579:file write `fh' `""pib":{"anio":`anio',"valor":`r(n)',"unidad":"MXN corrientes de `anio'","escalar":"PIB (SCN.ado, BIE; registrado como NTAPIBY en NTA.do)","regla":"pctpib = valor / pib.valor x 100, calculado en Stata; la pagina transcribe"},"' _n
+./01_modulos/NTA.do:1580:file write `fh' `""identidad":"Σ entradas = Σ salidas en cada celda: YL + (YA + ImpProd) + tau_pub_efectivo + tau_pub_especie + tau_pub_colectivo + (inter_recibido + remesas) + intra_recibido + desahorro + ancla_complemento = Cpriv + Cpub_especie + Cpub_colectivo + tau_menos + inter_otorgado + intra_otorgado + S + ancla_recorte; es la identidad del gate (C - YL - ImpProd - (tau_mas - tau_menos) - (YA - S_sinancla) - intra = 0) con S anclado (S = S_sinancla + S_ajuste) y el ajuste declarado como ancla","' _n
+./01_modulos/NTA.do:1581:file write `fh' `""regla":"intra_recibido / intra_otorgado = sumas por persona de max(intra, 0) / max(-intra, 0); desahorro / S = -S / S de la celda segun su signo; ancla_complemento / ancla_recorte = S_ajuste / -S_ajuste de la celda segun su signo; S es el anclado (nta_anclaS=$nta_anclaS)","' _n
+./01_modulos/NTA.do:1582:file write `fh' `""parametros":{"nta_anclaS":"$nta_anclaS","nta_YA":"$nta_YA","nta_cuotas":"$nta_cuotas","nta_d8":"$nta_d8","nta_anclaTau":"$nta_anclaTau","nta_alqu":"$nta_alqu","nta_tauCash":"$nta_tauCash","nta_otorgado":"$nta_otorgado","nta_mixto":"$nta_mixto","tolerancia":1e-9},"' _n
+./01_modulos/NTA.do:1583:file write `fh' `""sexos":[{"s":"T","sexo":"Total"},{"s":"H","sexo":"Hombres"},{"s":"M","sexo":"Mujeres"}],"' _n
+./01_modulos/NTA.do:1584:file write `fh' `""grupos":["'
+./01_modulos/NTA.do:1587:	file write `fh' `"`=cond(`g' > 1, ",", "")'{"g":`g',"grupo":"`lab'"}"'
+./01_modulos/NTA.do:1589:file write `fh' `"],"' _n
+./01_modulos/NTA.do:1590:file write `fh' `""entradas":[{"id":"YL","etiqueta":"Ing laboral","variables":"YL"},{"id":"YA","etiqueta":"Ing activos + imp productos","variables":"YA + ImpProd (YA incluye YA_d8)"},{"id":"TpubEf","etiqueta":"τ⁺ efectivo","variables":"TpubEf"},{"id":"TpubEsp","etiqueta":"τ⁺ especie","variables":"TpubEsp"},{"id":"TpubCol","etiqueta":"τ⁺ colectivo","variables":"TpubCol"},{"id":"InterRec","etiqueta":"Inter hogar recibido","variables":"InterRec + Remesas"},{"id":"IntraRec","etiqueta":"Intra hogar recibido","variables":"sum max(Intra, 0)"},{"id":"Desahorro","etiqueta":"Desahorro","variables":"max(-S, 0)"},{"id":"AnclaComplemento","etiqueta":"Ancla S14 complemento","variables":"max(S_ajuste, 0)"}],"' _n
+./01_modulos/NTA.do:1591:file write `fh' `""salidas":[{"id":"Cpriv","etiqueta":"C privado","variables":"Cpriv"},{"id":"CpubEsp","etiqueta":"C público especie","variables":"CpubInd"},{"id":"CpubCol","etiqueta":"C colectivo","variables":"CpubCol"},{"id":"Tmen","etiqueta":"τ⁻","variables":"Tmen"},{"id":"InterOtor","etiqueta":"Inter hogar otorgado","variables":"InterOtor"},{"id":"IntraOtor","etiqueta":"Intra hogar otorgado","variables":"sum max(-Intra, 0)"},{"id":"S","etiqueta":"S","variables":"max(S, 0)"},{"id":"AnclaRecorte","etiqueta":"Ancla S14 recorte","variables":"max(-S_ajuste, 0)"}],"' _n
+./01_modulos/NTA.do:1592:file write `fh' `""celdas":["' _n
+./01_modulos/NTA.do:1599:	file write `fh' `"`=cond(`i' > 1, ",", "")'{"g":`g',"s":"`sc'","grupo":"`lab'","sexo":"`sl'","pob":`=trim(string(pobw[`i'], "%20.0f"))'"'
+./01_modulos/NTA.do:1602:		file write `fh' `","`v'":`r(n)'"'
+./01_modulos/NTA.do:1604:	file write `fh' `","entradas_flujos":{"'
+./01_modulos/NTA.do:1609:		file write `fh' `"`=cond(`k' > 1, ",", "")'"`v'":`r(n)'"'
+./01_modulos/NTA.do:1611:	file write `fh' `"},"salidas_flujos":{"'
+./01_modulos/NTA.do:1616:		file write `fh' `"`=cond(`k' > 1, ",", "")'"`v'":`r(n)'"'
+./01_modulos/NTA.do:1618:	file write `fh' `"},"pctpib":{"'
+./01_modulos/NTA.do:1623:		file write `fh' `"`=cond(`k' > 1, ",", "")'"`v'":`r(n)'"'
+./01_modulos/NTA.do:1625:	file write `fh' `","entradas_flujos":{"'
+./01_modulos/NTA.do:1630:		file write `fh' `"`=cond(`k' > 1, ",", "")'"`v'":`r(n)'"'
+./01_modulos/NTA.do:1632:	file write `fh' `"},"salidas_flujos":{"'
+./01_modulos/NTA.do:1637:		file write `fh' `"`=cond(`k' > 1, ",", "")'"`v'":`r(n)'"'
+./01_modulos/NTA.do:1640:	file write `fh' `"}},"balance":`r(n)'}"' _n
+./01_modulos/NTA.do:1642:file write `fh' `"],"' _n
+./01_modulos/NTA.do:1644:file write `fh' `""nacional_pctpib":{"'
+./01_modulos/NTA.do:1657:	file write `fh' `"`=cond(`k' > 1, ",", "")'"`nm'":`r(n)'"'
+./01_modulos/NTA.do:1659:file write `fh' `"},"' _n
+./01_modulos/NTA.do:1661:file write `fh' `""v3_mxn":{"'
+./01_modulos/NTA.do:1668:	file write `fh' `"`=cond(`k' > 1, ",", "")'"`nm'":`r(n)'"'
+./01_modulos/NTA.do:1670:file write `fh' `"},"' _n
+./01_modulos/NTA.do:1671:file write `fh' `""gates":{"celdas":`ncel',"balance_max_rel":`=trim(string(`balmax', "%12.4e"))',"tolerancia":1e-9,"ok":`okpan'},"' _n
+./01_modulos/NTA.do:1672:file write `fh' `""procedencia":{"modulo":"01_modulos/NTA.do v1.4 (NTA-4)","base":"la misma cuenta por persona que users/$id/NTA/nta-persona.dta, agregada por grupoedad x sexo [fw=factor]; pctpib con el escalar PIB de SCN.ado","anclas":"SCN/LIF/PEF `anio' (escalar); S.14 de CSI_115.xlsx y S.1 de CSI_103.xlsx via SCN.ado","stata":"`c(stata_version)' `c(edition_real)'","generado_el":"`fecha' $S_TIME"}}"' _n
+./01_modulos/NTA.do:1701:	save `"`dirnta'/nta-persona.dta"', replace
+./01_modulos/PerfilesSim.do:588:save "${SIMROOT}/master/perfiles`1'.dta", replace
+./01_modulos/PerfilesSim.do:618:	save `"`dirboot'/`=subinstr("`f'", "REC.dta", "RECprom.dta", 1)'"', replace
+./01_modulos/TarjetaRFSP.do:46:save `rfsp'
+./01_modulos/TarjetaRFSP.do:54:save `balance'
+./01_modulos/TarjetaRFSP.do:62:save `banca'
+./01_modulos/TarjetaRFSP.do:70:save `pidiregas'
+./01_modulos/TarjetaRFSP.do:78:save `ipab'
+./01_modulos/TarjetaRFSP.do:86:save `fonadin'
+./01_modulos/TarjetaRFSP.do:94:save `deudores'
+./01_modulos/TarjetaRFSP.do:102:save `adecuaciones'
+./01_modulos/TarjetaRFSP.do:320:save `costoTotal'
+./01_modulos/TarjetaRFSP.do:327:save `costoGobFed'
+./01_modulos/TarjetaRFSP.do:334:save `costoPemex'
+./01_modulos/TarjetaRFSP.do:341:save `costoCFE'
+./01_modulos/TarjetaRFSP.do:504:save `shrfspTotal'
+./01_modulos/TarjetaRFSP.do:511:save `shrfspGFInt'
+./01_modulos/TarjetaRFSP.do:518:save `shrfspGFExt'
+./01_modulos/TarjetaRFSP.do:525:save `shrfspOyEInt'
+./01_modulos/TarjetaRFSP.do:532:save `shrfspOyEExt'
+./01_modulos/TarjetaRFSP.do:539:save `shrfspBancaInt'
+./01_modulos/TarjetaRFSP.do:546:save `shrfspBancaExt'
+./01_modulos/TasasEfectivasEntidad.do:90:file open `fh' using `"`json'"', write replace text
+./01_modulos/TasasEfectivasEntidad.do:91:file write `fh' `"{"esquema":"tasas-efectivas/v1","entidad":{"nombre":"`enombrej'","clave":"`eclave'","abrev":"`eabrev'","sufijo":"`suf'"},"' _n
+./01_modulos/TasasEfectivasEntidad.do:92:file write `fh' `""anio_politica":`anio',"anio_vp":`=aniovp',"paquete":"$paqueteEconomico","' _n
+./01_modulos/TasasEfectivasEntidad.do:93:file write `fh' `""definicion":{"metodo":"TasasEfectivasMicro.ado v1.1.0: TE micro/micro, numerador = suma [aw=factor] de la variable de impuesto de master/perfiles<anio>.dta, denominador = suma de la base micro ajustada a Cuentas Nacionales (Distribucion, factores nacionales); la muestra se corta POR RESIDENCIA (substr(folioviv,1,2) == clave) DESPUES del ajuste nacional; aqui no se recalibra nada","' _n
+./01_modulos/TasasEfectivasEntidad.do:94:file write `fh' `""aditividad":"los MONTOS (rec, base, pob) suman al nacional entidad por entidad (misma base, misma ponderacion); las TASAS no son aditivas: tasa nacional = promedio de las 32 ponderado por su base (propuesta de gate de consistencia, FLAG v8.13a)","' _n
+./01_modulos/TasasEfectivasEntidad.do:95:file write `fh' `""unidades":{"rec":"pesos corrientes de anio_politica","base":"pesos corrientes","te":"porcentaje = rec/base*100","dif_vs_oficial":"porcentaje: (te_micro/te_oficial - 1)*100, vs TasasEfectivas.ado macro/macro","rel_vs_nac":"puntos porcentuales: te_entidad - te_nacional_micro"}},"' _n
+./01_modulos/TasasEfectivasEntidad.do:96:file write `fh' `""parametros":{"sello_n":`sello_n',"sello_top1":`sello_top1',"regla_sello":"n = personas de la muestra de la entidad en perfiles<anio> (sin ponderar) < sello_n, o una sola persona pone mas de sello_top1 % del numerador del impuesto (regla P5 de SankeySF.do)"},"' _n
+./01_modulos/TasasEfectivasEntidad.do:97:file write `fh' `""muestra":{"n":`n',"pob":`=trim(string(scalar(Pob`suf'), "`f2'"))',"pob_nacional":`=trim(string(scalar(Pobnac), "`f2'"))',"share_pob":`=trim(string(scalar(Pob`suf')/scalar(Pobnac), "`f6'"))',"ingbruto":`=trim(string(scalar(IngBruto`suf'), "`f2'"))',"impuestos_con_sello":`nsellos'},"' _n
+./01_modulos/TasasEfectivasEntidad.do:98:file write `fh' `""bases":{"' 
+./01_modulos/TasasEfectivasEntidad.do:101:	file write `fh' `"`=cond(`first', "", ",")'"`b'":{"entidad":`=trim(string(scalar(Base`b'`suf'), "`f2'"))',"nacional":`=trim(string(scalar(Base`b'nac), "`f2'"))'}"'
+./01_modulos/TasasEfectivasEntidad.do:104:file write `fh' `"},"' _n
+./01_modulos/TasasEfectivasEntidad.do:105:file write `fh' `""impuestos":["' _n
+./01_modulos/TasasEfectivasEntidad.do:114:	file write `fh' `"`=cond(`first', "", ",")'{"impuesto":"`k'","rec":`=trim(string(scalar(Rec`k'`suf'), "`f2'"))',"rec_nacional":`=trim(string(scalar(Rec`k'nac), "`f2'"))',"te":`=trim(string(scalar(`k'TE`suf'), "`f6'"))',"te_nacional_micro":`=trim(string(scalar(`k'TEnac), "`f6'"))',"dif_vs_oficial":`dif',"rel_vs_nac":`rel',"top1":`=trim(string(`top1_`k'', "`f6'"))',"sello":`sello_`k''}"' _n
+./01_modulos/TasasEfectivasEntidad.do:117:file write `fh' `"],"' _n
+./01_modulos/TasasEfectivasEntidad.do:118:file write `fh' `""agregados":{"YlImpTE":`=trim(string(scalar(YlImpTE`suf'), "`f6'"))',"ingconsumoTE":`=trim(string(scalar(ingconsumoTE`suf'), "`f6'"))',"RecTotal":`=trim(string(scalar(RecTotal`suf'), "`f2'"))',"RecTotal_nacional":`=trim(string(scalar(RecTotalnac), "`f2'"))'},"' _n
+./01_modulos/TasasEfectivasEntidad.do:119:file write `fh' `""procedencia":{"modulo":"01_modulos/TasasEfectivasEntidad.do v1.0 -> TasasEfectivasMicro.ado v1.1.0","base":"master/perfiles`anio'.dta + master/<anioenigh>/households.dta + consumption_categ_ieps_pc.dta (las mismas del nacional)","generado_el":"`fecha' `hora'","stata":"`c(stata_version)' `c(edition_real)'","escalares":"Rec<IMP>`suf', Base<BASE>`suf', <IMP>TE`suf', Dif<IMP>TE`suf', Rel<IMP>TE`suf', Pob`suf', IngBruto`suf' (registro escalar, vivos en la sesion)"}}"' _n
+./01_modulos/visualizations/CicloEntidad.do:189:	save `celdas'
+./01_modulos/visualizations/CicloEntidad.do:237:	file open `fh' using `"`json'"', write replace text
+./01_modulos/visualizations/CicloEntidad.do:238:	file write `fh' `"{"esquema":"ciclo-vida/v1","entidad":{"nombre":"`enombrej'","clave":"`eclave'","abrev":"`eabrev'"},"' _n
+./01_modulos/visualizations/CicloEntidad.do:239:	file write `fh' `""anio_politica":`anio',"anio_vp":`=aniovp',"paquete":"$paqueteEconomico","anio_enigh":`=anioenigh',"' _n
+./01_modulos/visualizations/CicloEntidad.do:240:	file write `fh' `""definicion":{"grafica":"La carga fiscal por edades (Simulador.ado graphpiramide; output.txt APORTHIV, APORTHVIIX, APORTHX, APORTMIV, APORTMVIIX, APORTMX)","' _n
+./01_modulos/visualizations/CicloEntidad.do:241:	file write `fh' `""neto":"AportacionesNetas = ImpuestosAportaciones - Transferencias, por persona, ponderado por factor (SIM.do 7.3)","' _n
+./01_modulos/visualizations/CicloEntidad.do:242:	file write `fh' `""aporta":"ImpuestosAportaciones = ISRPM_Sim + ISRAS_Sim + ISRPF_Sim + CUOTAS_Sim + IVA_Sim + IEPSNP_Sim + IEPSP_Sim + ISAN_Sim + IMPORT_Sim (SIM.do 7.1; sin FMP ni OTROSK)","' _n
+./01_modulos/visualizations/CicloEntidad.do:243:	file write `fh' `""recibe":"Transferencias = Pensiones (con Pension_AM) + IngBasico + Educacion + Salud + OtrasInversiones (SIM.do 7.2; sin OtrosGastos ni Energia)","' _n
+./01_modulos/visualizations/CicloEntidad.do:244:	file write `fh' `""celda":"quinquenio de edad (grupo_edad 1..23: 0-4 ... 105-109, 110+) x sexo x grupo","' _n
+./01_modulos/visualizations/CicloEntidad.do:245:	file write `fh' `""unidad_nacional":"pct_nac = % del total nacional de aportaciones netas; la suma de las 32 entidades celda a celda reproduce APORT* del output.txt (alli con %8.3f, del quinquenio mas alto al mas bajo)","' _n
+./01_modulos/visualizations/CicloEntidad.do:246:	file write `fh' `""unidad_entidad":"pct = % del total de aportaciones netas de la entidad (suma de celdas = 100); pesos = pesos de anio_vp","' _n
+./01_modulos/visualizations/CicloEntidad.do:247:	file write `fh' `""orden_nacional":"descendente (105-109 ... 0-4); aqui ascendente","' _n
+./01_modulos/visualizations/CicloEntidad.do:248:	file write `fh' `""deflactor":`=trim(string(`deflator', "`fd'"))',"nota_deflactor":"AportacionesNetas ya viene dividida por este deflactor en aportaciones.dta (Simulador.ado); aporta y recibe se dividen aqui"},"' _n
+./01_modulos/visualizations/CicloEntidad.do:249:	file write `fh' `""parametros":{"entidad_ciclo_grupos":"`grupos'","sello_n":`sello_n',"sello_top1":`sello_top1',"regla_sello":"por celda quinquenio x sexo: n (personas de la muestra de la entidad) < sello_n, o una sola persona aporta mas de sello_top1 % del aporta o del recibe de la celda (regla P5 de SankeySF.do)"},"' _n
+./01_modulos/visualizations/CicloEntidad.do:250:	file write `fh' `""grupos":{"titulo":"`grptit'","etiquetas":["'
+./01_modulos/visualizations/CicloEntidad.do:253:		file write `fh' `"`=cond(`g' > 1, ",", "")'"`gl'""'
+./01_modulos/visualizations/CicloEntidad.do:255:	file write `fh' `"]},"' _n
+./01_modulos/visualizations/CicloEntidad.do:256:	file write `fh' `""quinquenios":["'
+./01_modulos/visualizations/CicloEntidad.do:259:		file write `fh' `"`=cond(`k' > 1, ",", "")'"`ql'""'
+./01_modulos/visualizations/CicloEntidad.do:261:	file write `fh' `"],"' _n
+./01_modulos/visualizations/CicloEntidad.do:262:	file write `fh' `""totales":{"entidad":{"n":`nent',"n_neto_cero":`nceros',"pob":`=trim(string(`pobent', "`f0'"))',"aporta":`=trim(string(`apent', "`f2'"))',"recibe":`=trim(string(`reent', "`f2'"))',"neto":`=trim(string(`netoent', "`f2'"))',"celdas_con_sello":`nsellos',"celdas_vacias":`nvacias'},"' _n
+./01_modulos/visualizations/CicloEntidad.do:263:	file write `fh' `""nacional":{"n":`nnac',"pob":`=trim(string(`pobnac', "`f0'"))',"neto":`=trim(string(`netonac', "`f2'"))',"pibY":`=trim(string(`pibY', "`f2'"))',"share_pob":`=trim(string(`pobent'/`pobnac', "`fd'"))',"share_neto":`=trim(string(cond(`netonac' != 0, `netoent'/`netonac', .), "`fd'"))'}},"' _n
+./01_modulos/visualizations/CicloEntidad.do:264:	file write `fh' `""celdas":["' _n
+./01_modulos/visualizations/CicloEntidad.do:288:			file write `fh' `"`=cond(`first', "", ",")'{"sexo":"`sl'","s":`s',"g":`k',"quinquenio":"`ql'","n":`=trim(string(`nc', "`f0'"))',"pob":`=trim(string(`pc', "`f0'"))',"aporta":`=trim(string(`ac', "`f2'"))',"recibe":`=trim(string(`rc', "`f2'"))',"neto":`=trim(string(`xc', "`f2'"))',"pct":`=trim(string(`pctc', "`f6'"))',"pct_nac":`=trim(string(`pctn', "`f6'"))',"top1_aporta":`=trim(string(`t1a', "`f6'"))',"top1_recibe":`=trim(string(`t1r', "`f6'"))',"sello":`=trim(string(`sc', "%1.0f"))',"grupos":["'
+./01_modulos/visualizations/CicloEntidad.do:293:				file write `fh' `"`=cond(`g' > 1, ",", "")'{"grupo":"`gl'","n":`=trim(string(n[`i'], "`f0'"))',"pob":`=trim(string(pob[`i'], "`f0'"))',"aporta":`=trim(string(ap[`i'], "`f2'"))',"recibe":`=trim(string(re[`i'], "`f2'"))',"neto":`=trim(string(neto[`i'], "`f2'"))',"pct":`=trim(string(pct[`i'], "`f6'"))',"pct_nac":`=trim(string(pct_nac[`i'], "`f6'"))'}"'
+./01_modulos/visualizations/CicloEntidad.do:295:			file write `fh' `"]}"' _n
+./01_modulos/visualizations/CicloEntidad.do:298:	file write `fh' `"],"' _n
+./01_modulos/visualizations/CicloEntidad.do:299:	file write `fh' `""procedencia":{"modulo":"01_modulos/visualizations/CicloEntidad.do v1.0","base":"users/$id/aportaciones.dta (la misma del nacional)","generado_el":"`fecha' `hora'","stata":"`c(stata_version)' `c(edition_real)'","definicion_de":"Simulador.ado graphpiramide (nacional); filtro substr(folioviv,1,2) == clave INEGI, como SankeySF.do (PR #20)"}}"' _n
+./01_modulos/visualizations/Graphs_PC.do:81:graph export "${SIMROOT}/users/$id/graphs/GastoPC_Educacion.png", replace
+./01_modulos/visualizations/Graphs_PC.do:100:graph export "${SIMROOT}/users/$id/graphs/GastoPC_Salud.png", replace
+./01_modulos/visualizations/Graphs_PC.do:117:graph export "${SIMROOT}/users/$id/graphs/GastoPC_Pensiones.png", replace
+./01_modulos/visualizations/Graphs_PC.do:133:graph export "${SIMROOT}/users/$id/graphs/GastoPC_Energia.png", replace
+./01_modulos/visualizations/Graphs_PC.do:148:graph export "${SIMROOT}/users/$id/graphs/GastoPC_Otros.png", replace
+./01_modulos/visualizations/Graphs_PC.do:162:graph export "${SIMROOT}/users/$id/graphs/GastoPC_Transferencias.png", replace
+./01_modulos/visualizations/Graphs_TE.do:66:graph export "${SIMROOT}/users/$id/graphs/TE.png", replace
+./01_modulos/visualizations/Graphs_TE.do:93:graph export "${SIMROOT}/users/$id/graphs/TE_Trabajo.png", replace
+./01_modulos/visualizations/Graphs_TE.do:118:graph export "${SIMROOT}/users/$id/graphs/TE_Capital.png", replace
+./01_modulos/visualizations/Graphs_TE.do:139:graph export "${SIMROOT}/users/$id/graphs/TE_Consumo.png", replace
+./01_modulos/visualizations/Graphs_TE.do:171:graph export "${SIMROOT}/users/$id/graphs/TE_Organismos.png", replace
+./01_modulos/visualizations/SankeyCFE.do:23:	save "raw/temp/XKD0106.dta", replace
+./01_modulos/visualizations/SankeyCFE.do:29:	save "raw/temp/XKD0179.dta", replace
+./01_modulos/visualizations/SankeyCFE.do:35:	save "raw/temp/XKD0122.dta", replace
+./01_modulos/visualizations/SankeyCFE.do:41:	save "raw/temp/XKD0113.dta", replace
+./01_modulos/visualizations/SankeyCFE.do:47:	save "raw/temp/XKD0131.dta", replace
+./01_modulos/visualizations/SankeyCFE.do:53:	save "raw/temp/XKD0139.dta", replace
+./01_modulos/visualizations/SankeyCFE.do:59:	save "raw/temp/XKD0145.dta", replace
+./01_modulos/visualizations/SankeyCFE.do:65:	save "raw/temp/XKD0157.dta", replace
+./01_modulos/visualizations/SankeyCFE.do:104:	save `eje`anio'1'
+./01_modulos/visualizations/SankeyCFE.do:156:	save `eje`anio'2'
+./01_modulos/visualizations/SankeyCFE.do:176:	save `eje`anio'3'
+./01_modulos/visualizations/SankeyCFE.do:198:	save `eje`anio'4'
+./01_modulos/visualizations/SankeyCFE.do:215:	save `eje`anio'5'
+./01_modulos/visualizations/Sankey.do:122:save `eje1'
+./01_modulos/visualizations/Sankey.do:195:save `eje4'
+./01_modulos/visualizations/Sankey.do:210:save `eje2'
+./01_modulos/visualizations/Sankey.do:225:save `eje3'
+./01_modulos/visualizations/SankeyPemex.do:23:	save "raw/temp/XKC0106.dta", replace
+./01_modulos/visualizations/SankeyPemex.do:29:	save "raw/temp/XKC0179.dta", replace
+./01_modulos/visualizations/SankeyPemex.do:35:	save "raw/temp/XKC0113.dta", replace
+./01_modulos/visualizations/SankeyPemex.do:41:	save "raw/temp/XKC0131.dta", replace
+./01_modulos/visualizations/SankeyPemex.do:47:	save "raw/temp/XKC0139.dta", replace
+./01_modulos/visualizations/SankeyPemex.do:53:	save "raw/temp/XKC0145.dta", replace
+./01_modulos/visualizations/SankeyPemex.do:59:	save "raw/temp/XKC0157.dta", replace
+./01_modulos/visualizations/SankeyPemex.do:152:	save `eje`anio'1'
+./01_modulos/visualizations/SankeyPemex.do:204:	save `eje`anio'2'
+./01_modulos/visualizations/SankeyPemex.do:235:	save `eje`anio'3'
+./01_modulos/visualizations/SankeyPemex.do:287:	save `eje`anio'4'
+./01_modulos/visualizations/SankeyPemex.do:304:	save `eje`anio'5'
+./01_modulos/visualizations/SankeySF.do:128:			save `S'
+./01_modulos/visualizations/SankeySF.do:170:				save `V`t''
+./01_modulos/visualizations/SankeySF.do:182:			save `"`out'"', replace
+./01_modulos/visualizations/SankeySF.do:231:	save `sellos1', replace
+./01_modulos/visualizations/SankeySF.do:283:save `eje1'
+./01_modulos/visualizations/SankeySF.do:337:	save `sellos4', replace
+./01_modulos/visualizations/SankeySF.do:400:save `eje4'
+./01_modulos/visualizations/SankeySF.do:427:	save `eje1', replace
+./01_modulos/visualizations/SankeySF.do:448:	save `eje4', replace
+./01_modulos/visualizations/SankeySF.do:466:save `eje2'
+./01_modulos/visualizations/SankeySF.do:483:save `eje3'
+./01_modulos/Web.Stata.do:46:	quietly log using `"${SIMROOT}/users/$id/output.txt"', replace text name(output)
+./01_modulos/Web.Stata.do:98:save `"${SIMROOT}/users/$id/LIF.dta"', replace	
+./01_modulos/Web.Stata.do:389:save `"${SIMROOT}/users/$id/aportaciones.dta"', replace
+./01_modulos/Web.Stata.do:411:save `"${SIMROOT}/users/$id/aportaciones.dta"', replace
+./05_scripts/compuertas-entidad.do:84:	export delimited using `"`evidencia'/nl-dis-nle-recalc.csv"', replace
+./05_scripts/compuertas-entidad.do:94:		file open `fc' using `"`evidencia'/commit.txt"', read text
+./05_scripts/compuertas-entidad.do:101:	file open `fj' using `"`evidencia'/statajson_entidad-nl.json"', write replace text
+./05_scripts/compuertas-entidad.do:102:	file write `fj' `"{"esquema":"ciep.testigo.entidad-nl/v1","nodo":"entidad-nl","titulo":"Testigo NL: participacion (%) de cada decil estatal en 9 familias de impuestos de residentes de Nuevo Leon (dis<fam>nle<dec>)","' _n
+./05_scripts/compuertas-entidad.do:103:	file write `fj' `""definicion":"decil estatal = xtile de ingbrutotot per capita del hogar con pw = factor/tot_integ sobre users/<id>/aportaciones.dta filtrado a folioviv 19 (Households.do §12); share = sum(var*factor del decil)/sum(var*factor de NL)*100; familias: AlTrabajo AlConsumo AlCapital ImpAport (ImpuestosAportaciones) IVA IEPSNP IEPSP ISAN IMPORT (*_Sim)","' _n
+./05_scripts/compuertas-entidad.do:104:	file write `fj' `""procedencia":{"origen":"05_scripts/compuertas-entidad.do §2 (sesion de SIM.do)","anioPE":`=anioPE',"anioenigh":`=anioenigh',"commit":"`commit'","quintil_distinto_de_ceil_decil_entre_2":`nq',"generado_en":"`c(current_date)' `c(current_time)'"},"' _n
+./05_scripts/compuertas-entidad.do:105:	file write `fj' `""escalares":{"' _n
+./05_scripts/compuertas-entidad.do:111:		file write `fj' `"`=cond(`i' > 1, ",", "")'"`=nombre[`i']'":{"valor":`v',"tipo":"pct"}"' _n
+./05_scripts/compuertas-entidad.do:113:	file write `fj' "}}" _n
+./05_scripts/contrato-32.do:69:	quietly save `serie'
+./05_scripts/contrato-32.do:87:	quietly save `meta'
+./05_scripts/contrato-32.do:103:	quietly save `serie'
+./05_scripts/contrato-32.do:114:	quietly save `meta'
+./05_scripts/contrato-32.do:138:file open `tsv' using `"`evidencia'/contrato-32.tsv"', write replace text
+./05_scripts/contrato-32.do:139:file write `tsv' "pos" _tab "abrev" _tab "clave" _tab "nombre" _tab "poblacion_rc" _tab "pib_rc" _tab "pib_nota" _tab "sankeys_ok" _tab "sankeys_rc" _tab "ciclo_rc" _tab "te_rc" _tab "segundos" _tab "banda" _tab "pibe_pesos" _tab "neto_rc" _n
+./05_scripts/contrato-32.do:150:	quietly log using `"`evidencia'/entidades/`abrev'.log"', replace text name(ent32)
+./05_scripts/contrato-32.do:203:	file write `tsv' "`j'" _tab "`abrev'" _tab "`clave'" _tab `"`ent'"' _tab "`rc_pob'" _tab "`rc_pib'" _tab `"`nota_pib'"' _tab "`ok_sk'" _tab "`=trim("`rc_sk'")'" _tab "`rc_ciclo'" _tab "`rc_te'" _tab "`seg'" _tab "`=cond("`vint'" == "", "si", "no")'" _tab "`pibe_pesos'" _tab "`rc_neto'" _n
+./05_scripts/pibe-32.do:39:	file open `tsv' using `"`evidencia'/pibe-32.tsv"', write replace text
+./05_scripts/pibe-32.do:40:	file write `tsv' "pos" _tab "abrev" _tab "clave" _tab "nombre" _tab "update" _tab "rc" _tab "base_existe" _tab "segundos" _tab "inicio" _n
+./05_scripts/pibe-32.do:62:	quietly log using `"`evidencia'/entidades/`abrev'.log"', append text name(ent32)
+./05_scripts/pibe-32.do:74:	file open `tsv' using `"`evidencia'/pibe-32.tsv"', write append text
+./05_scripts/pibe-32.do:75:	file write `tsv' "`pos'" _tab "`abrev'" _tab "`clave'" _tab `"`ent'"' _tab "`upd'" _tab "`rc'" _tab "`existe'" _tab "`seg'" _tab "`inicio'" _n
+./05_scripts/sellar-pibe-32.do:22:	file open `fh' using "${SIMROOT}/master/PIBDeflactor`abrev'.meta", read text
+./05_scripts/sellar-pibe-32.do:35:	save "${SIMROOT}/master/PIBDeflactor`abrev'.dta", replace
+./05_scripts/test-nta-identidad.do:141:	file open `jh' using `"`json'"', read text
+./05_scripts/vintage-aportaciones.do:154:save `"${SIMROOT}/users/$id/aportaciones.dta"', replace
+./AccesoBIE.ado:208:			save `serie`j''
+./DatosAbiertos.ado:228:			graph export "$export/M`anything'.png", replace name(M`anything')
+./DatosAbiertos.ado:246:			graph export "$export/`mesname'`anything'.png", replace name(`mesname'`anything')
+./DatosAbiertos.ado:382:			graph export "$export/`anything'PC.png", replace name(`anything'PC)
+./DatosAbiertos.ado:414:			graph export "$export/`anything'PIB.png", replace name(`anything'PIB)
+./DatosAbiertos.ado:471:	save "`ing'"
+./DatosAbiertos.ado:475:	save "`ingH'"
+./DatosAbiertos.ado:481:	save "`deuda'"
+./DatosAbiertos.ado:485:	save "`deudaH'"
+./DatosAbiertos.ado:491:	save "`shrf'"
+./DatosAbiertos.ado:495:	save "`shrfH'"
+./DatosAbiertos.ado:501:	save "`rf'"
+./DatosAbiertos.ado:505:	save "`rfH'"
+./DatosAbiertos.ado:517:	save "`gf'"
+./DatosAbiertos.ado:522:	save "`gfH'"
+./DatosAbiertos.ado:528:	save "`asignacion2025'"
+./DatosAbiertos.ado:533:	save "`asignacion2024'"
+./DatosAbiertos.ado:537:	save "`asignacion2023'"
+./DatosAbiertos.ado:541:	save "`asignacion2022'"
+./DatosAbiertos.ado:545:	save "`asignacion2021'"
+./DatosAbiertos.ado:549:	save "`asignacion2020'"
+./DatosAbiertos.ado:553:	save "`asignacion2019'"
+./DatosAbiertos.ado:557:	save "`asignacion2018'"
+./DatosAbiertos.ado:561:	save "`asignacion2017'"
+./DatosAbiertos.ado:565:	save "`asignacion2016'"
+./DatosAbiertos.ado:569:	save "`asignacion2015'"
+./DatosAbiertos.ado:573:	save "`asignacion2014'"
+./DatosAbiertos.ado:577:	save "`asignacion2013'"
+./DatosAbiertos.ado:581:	save "`asignacion2012'"
+./DatosAbiertos.ado:585:	save "`asignacion2011'"
+./DatosAbiertos.ado:589:	save "`asignacion2010'"
+./DatosAbiertos.ado:593:	save "`asignacion2009'"
+./DatosAbiertos.ado:597:	save "`asignacion2008'"
+./DatosAbiertos.ado:601:	save "`asignacion2007'"
+./DatosAbiertos.ado:605:	save "`asignacion2006'"
+./DatosAbiertos.ado:609:	save "`asignacion2005'"
+./DatosAbiertos.ado:613:	save "`asignacion2004'"
+./DatosAbiertos.ado:617:	save "`asignacion2003'"
+./DatosAbiertos.ado:714:	save "`datosabiertos'"
+./DatosAbiertos.ado:736:	save "`isrinftrim'"
+./DatosAbiertos.ado:777:	save "`isr'"
+./DatosAbiertos.ado:786:	save "`isrpet'"
+./DatosAbiertos.ado:799:	save "`isrpmnopet'"
+./DatosAbiertos.ado:812:	save "`fmp'"
+./DatosAbiertos.ado:826:	save "`deficit_epe'"
+./DatosAbiertos.ado:841:	save "`deficit_oye'"
+./DatosAbiertos.ado:853:	save "`diferencias'"
+./DatosAbiertos.ado:879:	save "`otrosingresos'"
+./DatosAbiertos.ado:914:	save "${SIMROOT}/master/DatosAbiertos.dta", replace
+./DatosAbiertos.ado:943:	save "${SIMROOT}/master/Deflactor.dta", replace
+./DatosAbiertos.ado:1049:		save "`dir'/`nombre'.dta", replace
+./DatosAbiertos.ado:1263:	quietly save "`fixed'"
+./DatosAbiertos.ado:1288:		quietly save "`fixed'", replace
+./FiscalGap.ado:43:	save `PIB'
+./FiscalGap.ado:54:	save `shrfsp'
+./FiscalGap.ado:201:		save ``k''
+./FiscalGap.ado:358:			graph export `"$export/Proy_ingresos.png"', replace name(Proy_ingresos)
+./FiscalGap.ado:421:	save `baseingresos'
+./FiscalGap.ado:501:			save ``k''
+./FiscalGap.ado:660:			graph export `"$export/Proy_gastos.png"', replace name(Proy_gastos)
+./FiscalGap.ado:1033:			graph export `"$export/Proy_rfsp.png"', replace name(Proy_rfsp)
+./FiscalGap.ado:1077:			graph export `"$export/Proy_combinado.png"', replace name(Proy_combinado)
+./FiscalGap.ado:1107:	save `basegastos'
+./GastoPC.ado:300:		quietly save `"`precachear'/GastoPC_base_`aniope'.dta"', replace
+./GastoPC.ado:321:		quietly save `"`precachear'/GastoPC_base_`aniope'_mat.dta"', replace
+./GastoPC.ado:629:				putexcel set "$export/Deciles.xlsx", modify sheet("Educación")
+./GastoPC.ado:630:				putexcel `col'17 = `=scalar(iniciaA)', nformat(number_sep)
+./GastoPC.ado:631:				putexcel `col'18 = `=scalar(basica)', nformat(number_sep)
+./GastoPC.ado:632:				putexcel `col'19 = `=scalar(medsup)', nformat(number_sep)
+./GastoPC.ado:633:				putexcel `col'20 = `=scalar(superi)', nformat(number_sep)
+./GastoPC.ado:634:				putexcel `col'21 = `=scalar(posgra)', nformat(number_sep)
+./GastoPC.ado:635:				putexcel `col'22 = `=scalar(eduadu)', nformat(number_sep)
+./GastoPC.ado:636:				putexcel `col'23 = `=scalar(otrose)', nformat(number_sep)
+./GastoPC.ado:637:				putexcel `col'24 = `=scalar(invere)', nformat(number_sep)
+./GastoPC.ado:638:				putexcel `col'25 = `=scalar(cultur)', nformat(number_sep)
+./GastoPC.ado:639:				putexcel `col'26 = `=scalar(invest)', nformat(number_sep)
+./GastoPC.ado:640:				putexcel `col'27 = `=scalar(Educacion)', nformat(number_sep)
+./GastoPC.ado:1011:				putexcel set "$export/Deciles.xlsx", modify sheet("Salud")
+./GastoPC.ado:1012:				putexcel `col'17 = `=scalar(ssa)+scalar(imssbien)', nformat(number_sep)
+./GastoPC.ado:1013:				putexcel `col'18 = `=scalar(imss)', nformat(number_sep)
+./GastoPC.ado:1014:				putexcel `col'19 = `=scalar(issste)', nformat(number_sep)
+./GastoPC.ado:1015:				putexcel `col'20 = `=scalar(pemex)', nformat(number_sep)
+./GastoPC.ado:1016:				putexcel `col'21 = `=scalar(issfam)', nformat(number_sep)
+./GastoPC.ado:1017:				putexcel `col'22 = `=scalar(invers)', nformat(number_sep)
+./GastoPC.ado:1018:				putexcel `col'23 = `=scalar(salud)', nformat(number_sep)
+./GastoPC.ado:1197:				putexcel set "$export/Deciles.xlsx", modify sheet("Pensiones")
+./GastoPC.ado:1198:				putexcel `col'17 = `=scalar(pamPC)', nformat(number_sep)
+./GastoPC.ado:1199:				putexcel `col'18 = `=scalar(penimssPC)', nformat(number_sep)
+./GastoPC.ado:1200:				putexcel `col'19 = `=scalar(penisssPC)', nformat(number_sep)
+./GastoPC.ado:1201:				putexcel `col'20 = `=scalar(penpemePC)', nformat(number_sep)
+./GastoPC.ado:1202:				putexcel `col'21 = `=scalar(penotroPC)', nformat(number_sep)
+./GastoPC.ado:1203:				putexcel `col'22 = `=scalar(pensionPC)', nformat(number_sep)
+./GastoPC.ado:1674:	save `"${SIMROOT}/users/$id/gastos.dta"', replace	
+./LIF.ado:88:	save `PIB'
+./LIF.ado:575:			graph export "$export/ingresos`by'PIB.png", as(png) name("ingresos`by'PIB") replace
+./LIF.ado:663:			quietly save ``k''
+./LIF.ado:722:	save "${SIMROOT}/master/LIF.dta", replace
+./PEF.ado:118:	save `PIB'
+./PEF.ado:156:		save `"`precachear'/`cachekey'.dta"', replace
+./PEF.ado:644:			graph export "$export/gastos`by'PIB.png", as(png) name("gastos`by'PIB") replace
+./PEF.ado:772:			save ``=strtoname("`k'")''
+./PEF.ado:1029:		save "${SIMROOT}/raw/temp/prePEF.dta", replace
+./PEF.ado:1041:		quietly save ``k''
+./PEF.ado:1063:		saveold "${SIMROOT}/master/GastoEstOpor.dta", replace version(13)
+./PEF.ado:1067:		save "${SIMROOT}/master/GastoEstOpor.dta", replace
+./PEF.ado:1309:	save "${SIMROOT}/master/PEF.dta", replace
+./Perfiles.ado:87:	save `inicial', replace
+./Perfiles.ado:249:		putexcel set "${SIMROOT}/users/$id/Deciles.xlsx", modify sheet("`varlist'")
+./Perfiles.ado:250:		putexcel A`j' = "Hombres"
+./Perfiles.ado:251:		putexcel `col'`j' = `=r(mean)', nformat(number_sep)
+./Perfiles.ado:255:		putexcel A`j' = "Mujeres"
+./Perfiles.ado:256:		putexcel `col'`j' = `=r(mean)', nformat(number_sep)
+./Perfiles.ado:260:		putexcel A`j' = "0-18"
+./Perfiles.ado:261:		putexcel `col'`j' = `=r(mean)', nformat(number_sep)
+./Perfiles.ado:265:		putexcel A`j' = "19-64"
+./Perfiles.ado:266:		putexcel `col'`j' = `=r(mean)', nformat(number_sep)
+./Perfiles.ado:270:		putexcel A`j' = "65+"
+./Perfiles.ado:271:		putexcel `col'`j' = `=r(mean)', nformat(number_sep)
+./Perfiles.ado:463:			putexcel set "${SIMROOT}/users/$id/Deciles.xlsx", modify sheet("`varlist'")
+./Perfiles.ado:464:			putexcel A1 = "Decil"
+./Perfiles.ado:468:			putexcel A`j' = "`decil2'"
+./Perfiles.ado:469:			putexcel `col'1 = "`aniope'"
+./Perfiles.ado:470:			putexcel `col'`j' = `=scalar(`varlist'`decil2')', nformat(number_sep)
+./Perfiles.ado:590:	save `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'REC"', replace
+./Perfiles.ado:612:		graph export `"${SIMROOT}/users/$id/graphs/`varlist'_`aniope'.png"', replace name(`=substr("`varlist'",1,10)'_`aniope')
+./Perfiles.ado:907:	save `PIB'
+./perfilpc.ado:265:	qui graph export `"`dir'/`name'_pc.png"', replace name(`name'_pc)
+./perfilpc.ado:270:	qui graph export `"`dir'/`name'_tot.png"', replace name(`name'_tot)
+./perfilpc.ado:324:	qui graph export `"`dir'/`name'_conv.png"', replace name(`name'_conv)
+./PIBDeflactor.ado:542:			graph export "$export/Productividad`aniofinal'`ent'.png", replace name(Productividad`aniofinal'`ent')
+./PIBDeflactor.ado:545:			graph export "${SIMROOT}/users/$id/graphs/Productividad`aniofinal'`ent'.png", replace name(Productividad`aniofinal'`ent')
+./PIBDeflactor.ado:637:			graph export "$export/deflactor`ent'.png", replace name(deflactor`ent')
+./PIBDeflactor.ado:640:			graph export "${SIMROOT}/users/$id/graphs/deflactor`ent'.png", replace name(deflactor`ent')
+./PIBDeflactor.ado:738:			graph export "$export/pib`ent'.png", replace name(pib`ent')
+./PIBDeflactor.ado:741:			graph export "${SIMROOT}/users/$id/graphs/pib`ent'.png", replace name(pib`ent')
+./PIBDeflactor.ado:854:			graph export "$export/pib_pc`ent'.png", replace name(pib_pc`ent')
+./PIBDeflactor.ado:857:			graph export "${SIMROOT}/users/$id/graphs/pib_pc`ent'.png", replace name(pib_pc`ent')
+./PIBDeflactor.ado:967:			graph export "$export/inflacion`ent'.png", replace name(inflacion`ent')
+./PIBDeflactor.ado:970:			graph export "${SIMROOT}/users/$id/graphs/inflacion`ent'.png", replace name(inflacion`ent')
+./PIBDeflactor.ado:1077:		save `pibe'
+./PIBDeflactor.ado:1082:		save `pibe', replace
+./PIBDeflactor.ado:1135:	save `PIB'
+./PIBDeflactor.ado:1185:	save `inpc'
+./PIBDeflactor.ado:1205:	save "`Poblacion'"
+./PIBDeflactor.ado:1212:	save "`WorkingAge'"
+./PIBDeflactor.ado:1219:	save "`Poblacion0'"
+./PIBDeflactor.ado:1280:	save "${SIMROOT}/master/PIBDeflactor`abrev'.dta", replace
+./Poblacion.ado:418:			graph export "$export/PP_`anioinicial'_`aniofinal'_`entidadGName'.png", replace name(PP_`anioinicial'_`aniofinal'_`entidadGName')
+./Poblacion.ado:421:			graph export "${SIMROOT}/users/$id/graphs/PP_`anioinicial'_`aniofinal'_`entidadGName'.png", replace name(PP_`anioinicial'_`aniofinal'_`entidadGName')
+./Poblacion.ado:425:			graph export "$export/PA_`anioinicial'_`aniofinal'_`entidadGName'.png", replace name(P_`anioinicial'_`aniofinal'_`entidadGName'A)
+./Poblacion.ado:428:			graph export "${SIMROOT}/users/$id/graphs/PA_`anioinicial'_`aniofinal'_`entidadGName'.png", replace name(P_`anioinicial'_`aniofinal'_`entidadGName'A)
+./Poblacion.ado:432:			graph export "$export/PB_`anioinicial'_`aniofinal'_`entidadGName'.png", replace name(P_`anioinicial'_`aniofinal'_`entidadGName'B)
+./Poblacion.ado:435:			graph export "${SIMROOT}/users/$id/graphs/PB_`anioinicial'_`aniofinal'_`entidadGName'.png", replace name(P_`anioinicial'_`aniofinal'_`entidadGName'B)
+./Poblacion.ado:598:			graph export "$export/ET_`anioinicial'_`aniofinal'_`entidadGName'.png", replace name(ET_`anioinicial'_`aniofinal'_`entidadGName')
+./Poblacion.ado:601:			graph export "${SIMROOT}/users/$id/graphs/ET_`anioinicial'_`aniofinal'_`entidadGName'.png", replace name(ET_`anioinicial'_`aniofinal'_`entidadGName')
+./Poblacion.ado:604:			graph export "$export/T_`anioinicial'_`aniofinal'_`entidadGName'.png", replace name(T_`anioinicial'_`aniofinal'_`entidadGName')
+./Poblacion.ado:607:			graph export "${SIMROOT}/users/$id/graphs/T_`anioinicial'_`aniofinal'_`entidadGName'.png", replace name(T_`anioinicial'_`aniofinal'_`entidadGName')
+./Poblacion.ado:610:			graph export "$export/E_`anioinicial'_`aniofinal'_`entidadGName'.png", replace name(E_`anioinicial'_`aniofinal'_`entidadGName')
+./Poblacion.ado:613:			graph export "${SIMROOT}/users/$id/graphs/E_`anioinicial'_`aniofinal'_`entidadGName'.png", replace name(E_`anioinicial'_`aniofinal'_`entidadGName')
+./Poblacion.ado:734:		save "`nacional'"
+./Poblacion.ado:774:		saveold "${SIMROOT}/master/Poblacion.dta", replace version(13)
+./Poblacion.ado:777:		save "${SIMROOT}/master/Poblacion.dta", replace
+./Poblacion.ado:783:		saveold `"${SIMROOT}/master/Poblaciontot.dta"', replace version(13)
+./Poblacion.ado:786:		save `"${SIMROOT}/master/Poblaciontot.dta"', replace
+./Precache.ado:68:	file open `sello' using `"`sellotmp'"', write text
+./Precache.ado:79:		capture file open `gh' using "`gitout'", read text
+./Precache.ado:86:	file write `sello' "sello" _tab "version" _tab "`version'" _n
+./Precache.ado:87:	file write `sello' "sello" _tab "data_updated" _tab "`data_updated'" _n
+./Precache.ado:88:	file write `sello' "sello" _tab "baseline" _tab "`baseline'" _n
+./Precache.ado:89:	file write `sello' "sello" _tab "commit" _tab "`commit'" _n
+./Precache.ado:90:	file write `sello' "sello" _tab "generado" _tab "`c(current_date)' `c(current_time)'" _n
+./Precache.ado:91:	file write `sello' "sello" _tab "id" _tab "$id" _n
+./Precache.ado:92:	file write `sello' "sello" _tab "bootstrap" _tab "$bootstrap" _n
+./Precache.ado:93:	file write `sello' "sello" _tab "aniope" _tab "`aniope'" _n
+./Precache.ado:123:		quietly save `"`dir'/REC_`var'.dta"', replace
+./Precache.ado:149:	file write `fh' "item" _tab "`item'" _tab "`archivo'" _n
+./Precache.ado:154:		file write `fh' "insumo" _tab "`item'" _tab "`ins'" _tab "`bytes'" _tab "-" _n   // 5a columna reservada (mtime): no se exige, rsync/cp pueden no conservarlo
+./SankeySumLoop.ado:19:	quietly log using `sankey', replace text name(sankey)
+./SankeySumSim.ado:26:	quietly log using `sankey', replace text name(sankey)
+./scalarjson.ado:86:		file open `mh' using `"`manifest'"', read text
+./scalarjson.ado:115:	quietly log using `"`scalarstata'"', name(scalarjsonlist) replace text
+./scalarjson.ado:121:	file open `sh' using `"`scalarstata'"', read text
+./scalarjson.ado:156:	file open `fh' using `"`saving'"', write replace text
+./scalarjson.ado:158:	file write `fh' "{" _n
+./scalarjson.ado:159:	file write `fh' `"  `q'esquema`q': `q'ciep.nodo.serie/v1`q',"' _n
+./scalarjson.ado:163:	file write `fh' `"  `q'anio_referencia`q': `anioref',"' _n
+./scalarjson.ado:164:	file write `fh' `"  `q'piso_serie`q': `piso',"' _n
+./scalarjson.ado:167:	file write `fh' `"  `q'procedencia`q': {"' _n
+./scalarjson.ado:170:	file write `fh' `"    `q'corte_serie`q': {"' _n
+./scalarjson.ado:171:	file write `fh' `"      `q'anio`q': `corteanio',"' _n
+./scalarjson.ado:172:	file write `fh' `"      `q'mes`q': `cortemes',"' _n
+./scalarjson.ado:174:	file write `fh' "    }," _n
+./scalarjson.ado:180:	file write `fh' "  }," _n
+./scalarjson.ado:197:	file write `fh' `"  `q'unidades`q': {"' _n
+./scalarjson.ado:219:		file write `fh' `"    `q'`v'`q': {`q'unidad`q': `q'`ue'`q', "'
+./scalarjson.ado:220:		file write `fh' `"`q'formato_sugerido`q': `q'`fme'`q', "'
+./scalarjson.ado:221:		file write `fh' `"`q'divisor_sugerido`q': `dv'}`coma'"' _n
+./scalarjson.ado:223:	file write `fh' "  }," _n
+./scalarjson.ado:225:	file write `fh' `"  `q'criterios`q': {"' _n
+./scalarjson.ado:238:	file write `fh' "  }," _n
+./scalarjson.ado:240:	file write `fh' `"  `q'fuentes`q': {"' _n
+./scalarjson.ado:253:	file write `fh' "  }," _n
+./scalarjson.ado:259:	file write `fh' `"  `q'presentacion`q': {"' _n
+./scalarjson.ado:275:	file write `fh' "  }," _n
+./scalarjson.ado:281:	file write `fh' `"  `q'tabla`q': ["' _n
+./scalarjson.ado:299:		file write `fh' `"    {`q'bloque`q': `tb', `q'etiqueta`q': `q'`tete'`q', "'
+./scalarjson.ado:300:		file write `fh' `"`q'prefijo`q': `q'`tpx'`q', `q'familia`q': `q'`tfa'`q', "'
+./scalarjson.ado:301:		file write `fh' `"`q'enfasis`q': `ten'}`=cond(`r' < `nfilas', ",", "")'"' _n
+./scalarjson.ado:303:	file write `fh' "  ]," _n
+./scalarjson.ado:306:	file write `fh' `"  `q'capas_declaradas`q': ["' _n
+./scalarjson.ado:355:		file write `fh' "    {" _n
+./scalarjson.ado:358:		file write `fh' `"      `q'incluida_en_titular`q': `cinc',"' _n
+./scalarjson.ado:359:		file write `fh' `"      `q'disponible`q': `cdisp',"' _n
+./scalarjson.ado:360:		file write `fh' `"      `q'valor`q': `cval',"' _n
+./scalarjson.ado:363:		file write `fh' `"      `q'procedencia`q': {`q'origen`q': `q'`corigen'`q', "'
+./scalarjson.ado:364:		file write `fh' `"`q'escalar`q': `q'`cesc'`q', "'
+./scalarjson.ado:365:		file write `fh' `"`q'definida_en`q': `q'`cdef'`q', "'
+./scalarjson.ado:366:		file write `fh' `"`q'tipo_dato`q': `q'`ctipo'`q'}"' _n
+./scalarjson.ado:367:		file write `fh' "    }`coma'" _n
+./scalarjson.ado:369:	file write `fh' "  ]," _n
+./scalarjson.ado:372:	file write `fh' `"  `q'escalares`q': {"' _n
+./scalarjson.ado:403:		file write `fh' `"    `q'`nm'`q': {`q'valor`q': `val', "'
+./scalarjson.ado:404:		file write `fh' `"`q'tipo`q': `q'`tipo'`q', "'
+./scalarjson.ado:405:		file write `fh' `"`q'formato_sugerido`q': `q'`xfmt'`q', "'
+./scalarjson.ado:406:		file write `fh' `"`q'divisor_sugerido`q': `xdiv'}`coma'"' _n
+./scalarjson.ado:409:	file write `fh' "  }," _n
+./scalarjson.ado:435:	file write `fh' `"  `q'titular`q': {"' _n
+./scalarjson.ado:436:	file write `fh' `"    `q'anio`q': `anioref',"' _n
+./scalarjson.ado:437:	file write `fh' `"    `q'procedencia`q': {`q'origen`q': `q'serie_observada`q', "'
+./scalarjson.ado:438:	file write `fh' `"`q'dataset`q': `q'`origenserie'`q', `q'tipo_dato`q': `q'observado`q'},"' _n
+./scalarjson.ado:449:		file write `fh' `"    `q'`v'`q': `val'`coma'"' _n
+./scalarjson.ado:451:	file write `fh' "  }," _n
+./scalarjson.ado:464:	file write `fh' `"  `q'cobertura`q': {`q'anio_min`q': `amin', `q'anio_max`q': `amax', "'
+./scalarjson.ado:465:	file write `fh' `"`q'n_anios`q': `=_N', `q'n_esperados`q': `esperados', "'
+./scalarjson.ado:466:	file write `fh' `"`q'anios_faltantes`q': ["'
+./scalarjson.ado:471:		file write `fh' "`a'`coma'"
+./scalarjson.ado:473:	file write `fh' "]}," _n
+./scalarjson.ado:475:	file write `fh' `"  `q'series`q': ["' _n
+./scalarjson.ado:478:		file write `fh' `"    {`q'anio`q': `=anio[`j']'"'
+./scalarjson.ado:485:			file write `fh' `", `q'`v'`q': `val'"'
+./scalarjson.ado:488:		file write `fh' "}`coma'" _n
+./scalarjson.ado:490:	file write `fh' "  ]," _n
+./scalarjson.ado:495:	file write `fh' `"  `q'faltantes`q': ["' _n
+./scalarjson.ado:500:		file write `fh' `"    `q'`f'`q'`coma'"' _n
+./scalarjson.ado:502:	file write `fh' "  ]" _n
+./scalarjson.ado:503:	file write `fh' "}" _n
+./scalarjson.ado:571:	file write `fh' `"`pad'`q'`clave'`q': `q'`v'`q'`c'"' _n
+./scalarlatex.ado:33:		quietly log using `scalarstata', name(scalarlist) replace text
+./scalarlatex.ado:38:		file open `myfile' using `scalarstata', read text
+./scalarlatex.ado:66:		file open `fh' using "$export/statalatex_`logname'.tex", write replace text
+./scalarlatex.ado:116:			file write `fh' "\def\d`texname'`altname'#1{\gdef\\`texname'`altname'{#1}}" _n
+./scalarlatex.ado:117:			file write `fh' `"\d`texname'`altname'{`value'}"' _n
+./scalarlatex.ado:134:				file open `bh' using "`basefile'", read text
+./SCN.ado:52:	save `"`basepib'"', replace
+./SCN.ado:79:			save "${SIMROOT}/master/SCN.dta", replace
+./SCN.ado:501:			graph export "$export/gdp_generacion.png", replace name(gdp_generacion)
+./SCN.ado:504:			graph export "${SIMROOT}/users/$id/graphs/gdp_generacion.png", replace name(gdp_generacion)
+./SCN.ado:726:		graph export "${SIMROOT}/users/$id/graphs/gdp_utilizacion.png", replace name(gdp_utilizacion)
+./SCN.ado:1301:	save "${SIMROOT}/raw/temp/GenIng.dta", replace
+./SCN.ado:1341:	save "${SIMROOT}/raw/temp/ProdBru.dta", replace
+./SCN.ado:1371:	save "${SIMROOT}/raw/temp/IngNacDis.dta", replace
+./SCN.ado:1447:	save "${SIMROOT}/raw/temp/ConHog.dta", replace
+./SCN.ado:1472:	save "${SIMROOT}/raw/temp/GastPriv.dta", replace
+./SCN.ado:1513:	save "${SIMROOT}/raw/temp/GovCons.dta", replace
+./SCN.ado:1628:	save "${SIMROOT}/raw/temp/PIBAE1.dta", replace
+./SCN.ado:1747:	save "${SIMROOT}/raw/temp/PIBAE2.dta", replace
+./SCN.ado:1850:	save "${SIMROOT}/raw/temp/PIBAE3.dta", replace
+./SCN.ado:1993:	save "${SIMROOT}/raw/temp/PIBAE4.dta", replace
+./SCN.ado:2124:	save "${SIMROOT}/raw/temp/PIBAE5.dta", replace
+./SCN.ado:2165:	save "${SIMROOT}/raw/temp/SecExt.dta", replace
+./SCN.ado:2202:	save "${SIMROOT}/raw/temp/IngMixto.dta", replace
+./SCN.ado:2234:	save "${SIMROOT}/raw/temp/SSImputada.dta", replace
+./SCN.ado:2266:	save "${SIMROOT}/raw/temp/SubProductos.dta", replace
+./SCN.ado:2298:	save "${SIMROOT}/raw/temp/SubProduccion.dta", replace
+./SCN.ado:2330:	save "${SIMROOT}/raw/temp/DepMix.dta", replace
+./SCN.ado:2362:	save "${SIMROOT}/raw/temp/ExBOpNoFin.dta", replace
+./SCN.ado:2394:	save "${SIMROOT}/raw/temp/ExBOpFin.dta", replace
+./SCN.ado:2426:	save "${SIMROOT}/raw/temp/ExBOpISFLSH.dta", replace
+./SCN.ado:2458:	save "${SIMROOT}/raw/temp/ExBOpHog.dta", replace
+./SCN.ado:2490:	save "${SIMROOT}/raw/temp/ExBOpGob.dta", replace
+./SCN.ado:2522:	save "${SIMROOT}/raw/temp/ExNOpNoFin.dta", replace
+./SCN.ado:2554:	save "${SIMROOT}/raw/temp/ExNOpFin.dta", replace
+./SCN.ado:2586:	save "${SIMROOT}/raw/temp/ExNOpISFLSH.dta", replace
+./SCN.ado:2618:	save "${SIMROOT}/raw/temp/ExNOpHog.dta", replace
+./SCN.ado:2650:	save "${SIMROOT}/raw/temp/ExNOpGob.dta", replace
+./SCN.ado:2682:	save "${SIMROOT}/raw/temp/AhorroB.dta", replace
+./SCN.ado:2714:	save "${SIMROOT}/raw/temp/IngDisp.dta", replace
+./SCN.ado:2777:	save "${SIMROOT}/master/SCN.dta", replace
+./SCN.ado:2878:		save `acc', replace
+./SCN.ado:2954:	save "${SIMROOT}/raw/temp/HogaresS14.dta", replace
+./SHRFSP.ado:56:	save `PIB'
+./SHRFSP.ado:496:			graph export "$export/shrfsp.png", replace name(shrfsp)
+./SHRFSP.ado:552:			graph export "$export/shrfsppc.png", replace name(shrfsppc)
+./SHRFSP.ado:660:			graph export "$export/tasasdeinteres.png", replace name(tasasdeinteres)
+./SHRFSP.ado:753:			graph export "$export/efectoDeuda.png", replace name(efectoDeuda)
+./SHRFSP.ado:807:	save "`shrfsp'"
+./SHRFSP.ado:813:	save "`shrfspinterno'"
+./SHRFSP.ado:819:	save "`shrfspexterno'"
+./SHRFSP.ado:827:	save "`shrfspOyEInterno'"
+./SHRFSP.ado:833:	save "`shrfspOyEExterno'"
+./SHRFSP.ado:839:	save "`shrfspGobFedInterno'"
+./SHRFSP.ado:845:	save "`shrfspGobFedExterno'"
+./SHRFSP.ado:851:	save "`shrfspBancaInterno'"
+./SHRFSP.ado:857:	save "`shrfspBancaExterno'"
+./SHRFSP.ado:863:	save "`shrfspLargoPlazoInterno'"
+./SHRFSP.ado:869:	save "`shrfspCortoPlazoInterno'"
+./SHRFSP.ado:875:	save "`shrfspLargoPlazoExterno'"
+./SHRFSP.ado:881:	save "`shrfspCortoPlazoExterno'"
+./SHRFSP.ado:893:	save "`rfsp'"
+./SHRFSP.ado:899:	save "`Balance'"
+./SHRFSP.ado:905:	save "`PIDIREGAS'"
+./SHRFSP.ado:911:	save "`IPAB'"
+./SHRFSP.ado:917:	save "`FONADIN'"
+./SHRFSP.ado:923:	save "`Deudores'"
+./SHRFSP.ado:929:	save "`Banca'"
+./SHRFSP.ado:935:	save "`Adecuaciones'"
+./SHRFSP.ado:949:	save "`activosInt'"
+./SHRFSP.ado:955:	save "`activosExt'"
+./SHRFSP.ado:961:	save "`diferimientos'"
+./SHRFSP.ado:967:	save "`amortizacion'"
+./SHRFSP.ado:982:	save "`balancepublico'"
+./SHRFSP.ado:987:	save "`ingresos'"
+./SHRFSP.ado:992:	save "`egresos'"
+./SHRFSP.ado:999:	save "`presupuestario'"
+./SHRFSP.ado:1005:	save "`nopresupuestario'"
+./SHRFSP.ado:1015:	save "`gobiernofederal'"
+./SHRFSP.ado:1021:	save "`pemex'"
+./SHRFSP.ado:1027:	save "`cfe'"
+./SHRFSP.ado:1033:	save "`imss'"
+./SHRFSP.ado:1039:	save "`issste'"
+./SHRFSP.ado:1052:	save "`costofinanciero'"
+./SHRFSP.ado:1058:	save "`costogobiernofederal'"
+./SHRFSP.ado:1064:	save "`costopemex'"
+./SHRFSP.ado:1070:	save "`costocfe'"
+./SHRFSP.ado:1076:	save "`costodeudaII'"
+./SHRFSP.ado:1082:	save "`costodeudaEE'"
+./SHRFSP.ado:1096:	save "`MXN'"
+./SHRFSP.ado:1102:	save "`USD'"
+./SHRFSP.ado:1176:		saveold `"${SIMROOT}/master/SHRFSP.dta"', replace version(13)
+./SHRFSP.ado:1179:		save `"${SIMROOT}/master/SHRFSP.dta"', replace
+./SIM.do:74:		log using `"${SIMROOT}/users/$id/output.txt"', replace text name(output)
+./SIM.do:512:save `"${SIMROOT}/users/$id/aportaciones.dta"', replace
+./Simulador.ado:74:	save `PIBBASE'
+./Simulador.ado:126:	save `original', replace
+./Simulador.ado:427:			save `"`dirboot'/`varlist'PC"', replace
+./Simulador.ado:430:			save `"`dirboot'/`varlist'PERF"', replace
+./Simulador.ado:433:			save `"`dirboot'/`varlist'INCI"', replace
+./Simulador.ado:437:			save `"`dirboot'/`varlist'CICLO"', replace
+./Simulador.ado:441:			save `"`dirboot'/`varlist'REC"', replace
+./Simulador.ado:444:			save `"`dirboot'/`varlist'PT"', replace
+./Simulador.ado:770:		save `pcb'
+./Simulador.ado:787:	save `"${SIMROOT}/users/$id/bootstraps/`bootstrap'/`varlist'REC"', replace
+./Simulador.ado:807:		graph export `"${SIMROOT}/users/$id/graphs/`varlist'_`aniope'S.png"', replace name(`=substr("`varlist'",1,10)'_`aniope'S)
+./Simulador.ado:1081:		capture graph export `"$export/`varlist'_`titleover'.png"', ///
+./Simulador.ado:1177:	save `PIB'
+./Simulador.ado:1247:				graph export "$export/`varlist'Proj.png", replace name(`varlist'Proj)
+./TasasEfectivas.ado:340:		save `"${SIMROOT}/users/$id/ingresos.dta"', replace
+
+### PATHS: cd / absolute paths / SIMROOT definitions
+./01_modulos/Expenditure.do:9:cd "${SIMROOT}/raw/ENIGH/"
+./01_modulos/visualizations/SankeyCFE.do:8:	sysdir set SITE "/Users/ricardo/CIEP Dropbox/Ricardo Cantú/CIEP_Simuladores/SimuladorCIEP"
+./01_modulos/visualizations/SankeyCFE.do:9:cd "${SIMROOT}"
+./01_modulos/visualizations/SankeyPemex.do:8:	sysdir set SITE "/Users/ricardo/CIEP Dropbox/Ricardo Cantú/CIEP_Simuladores/SimuladorCIEP"
+./01_modulos/visualizations/SankeyPemex.do:9:cd "${SIMROOT}"
+./01_modulos/Web.Stata.do:20:	sysdir set SITE "/Users/ricardo/Library/CloudStorage/Dropbox-CIEP/Ricardo Cantú/CIEP_Simuladores/SimuladorCIEP/"
+./01_modulos/Web.Stata.do:23:	sysdir set SITE "/SIM/OUT/current/"
+./01_modulos/Web.Stata.do:25:global SIMROOT = substr("`c(sysdir_site)'", 1, length("`c(sysdir_site)'") - 1)	// RAIZ DEL PROYECTO (sin diagonal final); SITE se conserva para el adopath
+./01_modulos/Web.Stata.do:26:cd "${SIMROOT}/users/$id"
+./05_scripts/vintage-aportaciones.do:39:if substr("`c(sysdir_site)'", 1, 1) != "/" | !inlist(substr("`c(sysdir_site)'", 1, 5), "/User", "/SIM/", "/home", "/Volu", "/opt/", "/srv/", "/var/") {
+./05_scripts/vintage-aportaciones.do:46:global SIMROOT = substr("`c(sysdir_site)'", 1, length("`c(sysdir_site)'") - 1)	// sin diagonal final
+./05_scripts/vintage-aportaciones.do:48:adopath ++ "${SIMROOT}"				// Expenditure.do hace cd a raw/ENIGH/: sin esto "." deja de ver los .ado del motor (ensure_asset)
+./ensure_asset.ado:125:        "         Dropbox-CIEP/SimuladorCIEP: ahi git lo opera solo Ricardo).\n"
+./profile.do:16:global SIMROOT `"`sim_root_dir'"'
+./profile.do:17:adopath ++ `"${SIMROOT}"'
+./profile.do:190:cd `"${SIMROOT}"'
+./SCN.ado:2173:		cd "${SIMROOT}/raw/temp/SCN/"
+./SCN.ado:2975:			cd "${SIMROOT}/raw/SCN"
+./SCN.ado:2978:			cd "`cwd0'"
+./SIM.do:15:global SIMROOT "/Users/ricardo/Library/CloudStorage/Dropbox-CIEP/Ricardo Cantú/CIEP_Simuladores/SimuladorCIEP"				// CARPETA DEL REPOSITORIO
+./SIM.do:16:adopath ++ "${SIMROOT}"
+./SIM.do:47://global export "/Users/ricardo/Library/CloudStorage/Dropbox-CIEP/UniversoCIEP/3. Recursos/3.1. Paquetes Económicos/Paquete Económico 2027/4. Documento CIEP/images"
+./sysprofile-template.do:15:*   que Dropbox sincroniza. Si tu carpeta tiene otro nombre o ruta, ajusta
+./sysprofile-template.do:27:	sysdir set SITE "/Users/`c(username)'/CIEP Dropbox/SimuladorCIEP/"
+./sysprofile-template.do:30:	sysdir set SITE "/home/`c(username)'/CIEP Dropbox/SimuladorCIEP/"
+./sysprofile-template.do:33:	sysdir set SITE "C:\Users\\`c(username)'\CIEP Dropbox\SimuladorCIEP\"
+./sysprofile-template.do:40:* LOCALES a tu máquina: nunca los pongas dentro de la carpeta Dropbox-CIEP
+./sysprofile-template.do:49:* 	sysdir set SITE "/Users/`c(username)'/CIEP Dropbox/SimuladorCIEP/"
+./sysprofile-template.do:52:* 	sysdir set SITE "/Users/`c(username)'/experimental/SimuladorCIEP/"
+./sysprofile-template.do:65:adopath ++SITE
+./sysprofile-template.do:66:cd "`c(sysdir_site)'"
+
+### SHELL escapes
+./AccesoBIE.ado:78:				python: inegi_bise_area("`serie'", "`area'", "`token'")
+./AccesoBIE.ado:92:				python: inegi_area("`serie'")
+./AccesoBIE.ado:134:					python: inegi_api("`serie'", "`token'")
+./AccesoBIE.ado:298:python:
+./AccesoINPCEntidad.ado:46:	python: inegi_inpc_entidad("`clave'", "`serie'", r"""`csv'""")
+./AccesoINPCEntidad.ado:58:python:
+./CuentasGeneracionales.ado:40:	mata: HOM = st_matrix("HOM")
+./CuentasGeneracionales.ado:42:	mata: MUJ = st_matrix("MUJ")
+./CuentasGeneracionales.ado:44:	mata: lambda = `=scalar(llambda)'
+./CuentasGeneracionales.ado:58:	mata: PERFIL = st_matrix("PERFIL")
+./CuentasGeneracionales.ado:59:	mata: CONTBEN = st_matrix("CONT")
+./CuentasGeneracionales.ado:81:	mata: PC = `pc'
+./CuentasGeneracionales.ado:119:	mata: st_matrix("GA",GA)
+./ensure_asset.ado:46:        python: ensure_asset_dir("`dir'", "`PINNED_VERSION'", "$rawwip")
+./ensure_asset.ado:49:        python: ensure_asset_main("`asset_name'", "`PINNED_VERSION'", "$rawwip")
+./ensure_asset.ado:54:python:
+./PC.ado:252:	mata: PC = `pc'
+./PEF.ado:1738:	mata: st_local("c", ustrregexra(st_local("c"), "[^A-Za-z0-9_]", "_"))
+./PERF.ado:116:	mata: PERFIL = st_matrix("PERFIL")
+./PERF.ado:117:	mata: CONTBEN = st_matrix("CONT")
+./perfilpc.ado:166:	mata: perfilpc_fixedpoint("`pc'", "`hogar'", "`integrantes'", "`factor'", ///
+./perfilpc.ado:405:mata:
+./_precache_bytes.ado:6:	mata: _precache_fsize(st_local("f"))
+./_precache_bytes.ado:10:mata:
+./_precache_manifest.ado:33:	mata: _precache_lee_manifest(st_local("m"), tokens(st_local("claves")))
+./_precache_manifest.ado:39:mata:
+./_precache_usa.ado:52:	mata: _precache_lee_sello(st_local("sello"), st_local("item"), st_local("dir"))
+./_precache_usa.ado:100:mata:
+./profile.do:13:	mata: st_local("sim_root_dir", pathgetparent(st_local("sim_pf")))
+./profile.do:54:	python:
+./REC.ado:30:	mata: HOM = st_matrix("HOM")
+./REC.ado:32:	mata: MUJ = st_matrix("MUJ")
+./REC.ado:42:	mata: `=upper("`varlist'")' = PC * ((PERFIL[.,1]' :* CONTBEN[.,1]'/100) * HOM + (PERFIL[.,2]' :* CONTBEN[.,2]'/100) * MUJ)
+./REC.ado:48:	mata: CONT = ((CONTBEN[.,1]'/100) * HOM + (CONTBEN[.,2]'/100) * MUJ) // Nominal
+./REC.ado:53:	mata: CONT_Hom = (CONTBEN[.,1]'/100) * HOM // Nominal
+./REC.ado:56:	mata: CONT_Muj = (CONTBEN[.,2]'/100) * MUJ // Nominal
+./REC.ado:61:	mata: CONT_0_24 = ///
+./REC.ado:64:	mata: CONT_25_49 = ///
+./REC.ado:67:	mata: CONT_50_74 = ///
+./REC.ado:70:	mata: CONT_75_mas = ///
+./REC.ado:76:	mata: POB = colsum(HOM) + colsum(MUJ)
+./REC.ado:82:	mata: st_matrix(`"``=upper("`varlist'")''"',`=upper("`varlist'")'')
+./REC.ado:86:	mata: st_matrix(`"`PC'"',PC)
+./REC.ado:90:	mata: st_matrix(`"`CONT'"',CONT')
+./REC.ado:94:	mata: st_matrix(`"`CONT_Hom'"',CONT_Hom')
+./REC.ado:95:	mata: st_matrix(`"`CONT_Muj'"',CONT_Muj')
+./REC.ado:100:	mata: st_matrix(`"`CONT_0_24'"',CONT_0_24')
+./REC.ado:101:	mata: st_matrix(`"`CONT_25_49'"',CONT_25_49')
+./REC.ado:102:	mata: st_matrix(`"`CONT_50_74'"',CONT_50_74')
+./REC.ado:103:	mata: st_matrix(`"`CONT_75_mas'"',CONT_75_mas')
+./REC.ado:107:	mata: st_matrix(`"`POB'"',POB')	
+./SCN.ado:2981:	python: scn_congelado("`copiar'", "$rawwip")
+./SCN.ado:2991:python:
+./sim_changelog.ado:15:	python: _sim_changelog_main("`version'")
+./sim_changelog.ado:19:python:
+./SIM.do:63:	! rm -r "${SIMROOT}/raw/temp/"
+./Simulador.ado:278:				mata: PC = `pc'
+./Simulador.ado:415:			mata: simboot_run("`varlist'", "`exp'", "edad", "`sexon'", "`cond'", "`hhid'", "`cluid'", "`estid'", ///
+./Simulador.ado:426:			mata: simboot_write("PC")
+./Simulador.ado:429:			mata: simboot_write("PERF")
+./Simulador.ado:432:			mata: simboot_write("INCI")
+./Simulador.ado:435:			mata: simboot_write("CICLO")
+./Simulador.ado:439:			mata: simboot_write("REC")
+./Simulador.ado:443:			mata: simboot_write("PT")
+./Simulador.ado:446:			mata: simboot_clear()
+./Simulador.ado:1303:mata:
+
+### NET / SSC
+./ensure_asset.ado:14:*! net install) descarga el manifest de GitHub usando el pin de version que
+./FiscalGap.ado:346:			net install "http://fmwww.bc.edu/RePEc/bocode/g/grc1leg2.pkg"
+./LIF.ado:631:				net install http://fmwww.bc.edu/RePEc/bocode/l/labutil.pkg
+./PEF.ado:809:			net install labutil.pkg

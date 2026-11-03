@@ -1,0 +1,53 @@
+literal,where,what_it_encodes,classification,breaks_when,recommendation
+2027 (aniovp, anioPE),SIM.do:28-29; Web.Stata.do:30-32; profile.do:214,218,base/policy year,parameter (should be run input),every new Paquete Económico,single config
+2024 (anioenigh),SIM.do:30; Web.Stata.do:32; PerfilesSim.do:9-11; Households.do:66,ENIGH vintage,parameter,new ENIGH (2026 due 2027),config + vintage table
+2026-2032 horizon,SIM.do:107-131, 403-448; Web.Stata.do:59-81, 326-371; output.do:14-32; index.php CRECPIB2026..2032,CGPE projection window; positional web contract,parameter (vector with years as keys),moving the base year (must change SIM.do, Web.Stata.do, output.do and the DOM together: output.do:3-5),"dict year→value; derive from anioPE"
+2070,SIM.do:97; Simulador.ado:1175,1215,demographic horizon,data-driven constant (CONAPO pry23 ends 2070),new CONAPO projection,"read max(anio) from Poblacion.dta"
+2032 (aniomax),SIM.do:134,PIB projection horizon,parameter,base-year move,derive from anioPE+5
+2016 (desde),SIM.do:171,336,528,start of averaging window,parameter,—,config
+2013,FiscalGap.ado:369,383,673,693,1086,1089,1240; PerfilesSim (n/a),first year of the PROY* history arrays,constant tied to web charts,chart redesign,config
+2009,FiscalGap.ado:811,815,827; SHRFSP UpdateSHRFSP desde(2009),start of RFSP flows (SHCP series),data constant,—,document
+±5 cap,FiscalGap.ado:172-177, 479-484,cap on non-demographic trend,parameter (undocumented),—,expose and document
+5-year windows,FiscalGap.ado:164,471,765,802,averaging windows,parameter,—,expose
+40 (age) male,Simulador.ado:1453-1457, 219-222,profile normalisation,convention,—,document (cancels in projection)
+109 / 110 cells,Simulador.ado:1391-1393,1426; PERF.ado:14,age cap of profiles,constant,CONAPO ages >109,keep
+15-65,PIBDeflactor.ado:1209,working-age definition for λ and GDP projection,parameter (methodological),—,expose
+3.855 … 0.590 (15 revenue % GDP),SIM.do:176-193,CGPE 2027 revenue levels,data values (should come from LIF input file),new LIF/CGPE,"derive defaults from LIF of anioPE (TasasEfectivas already does when scalars are absent)"
+0.000 … 4.190 (34 spending % GDP),SIM.do:339-379,PPEF 2027 spending levels,data values (should come from PEF input),new PEF,"derive from PEF of anioPE (GastoPC already does when scalars are absent)"
+ISR tariff 2025 (11 brackets),SIM.do:203-213; Web.Stata.do:132-142; Households.do:342-421 (2017/2018-20/2022+ tables),LISR art. 152 / RMF Anexo 8,legal parameters,annual inflation update of brackets,year-indexed table file
+SE table,SIM.do:216-226; Households.do:355-366,383-393,410-420,employment subsidy,legal parameters,law change (2024 reform),table file
+DED (5,15,76.84,21.06),SIM.do:230,deduction caps and informality rates,parameters (two legal, two calibrated),—,split legal vs calibrated
+PM (30, 66.53),SIM.do:235,corporate rate and PM informality,parameters,—,split
+CSS_IMSS / CSS_ISSSTE,SIM.do:241-260; Households.do:1572-1592 (different values),contribution rates (IMSS 2021-22 report; ISSSTE 2021),legal parameters; two inconsistent copies,law change (IMSS cesantía rising 2023-2030 is NOT modelled as a path),single table by year; reconcile copies
+IEPST (3 copies),SIM.do:294-310; Web.Stata.do:209-225; Expenditure.do:1248-1257,IEPS rates/quotas (Ley IEPS art. 2),legal parameters; copies differ in rows,annual quota update,single table by year
+IVAT[13] 23.1 vs 7.77,SIM.do:288 vs Expenditure.do:1176,IVA evasion/informality,calibrated parameter with two defaults,—,single source with provenance
+0.16,Expenditure.do:1288,1295,IVA rate inside IEPS computation,duplicate of IVAT[1,1],IVA rate change,reference IVAT[1,1]
+7.77,Expenditure.do:1176,baseline informality for batch IVA,calibrated,—,as above
+248.93 / 96.22 / 86.88 / 80.60 / 73.04 (smdf),Households.do:72-134; ISR_Mod.do:27,UMA or minimum wage by year,legal data (table),every January,year table; clarify UMA vs SM (2024 value equals the general minimum wage not the UMA)
+8.15 / 7.380711 / 6.496487 / 6.054085 / 5.449087 (udis),Households.do:71-133,annual average UDI value,data,every year,table
+32,841,000,000 etc. (SubsidioEmpleo),Households.do:70-132,tax-expenditure budget,data (display only),yearly,table
+700000 UDIs,Households.do:954,home-sale exemption,legal,law change,table
+40/423/5/30/15/90/9/3/20 SM multiples,Households.do:723-1094,LISR exemption multiples,legal,law change,table
+0.634768962,Households.do:883-885,cost share of professional services (Censo Económico 2019),calibrated data,new census,input file
+.35 + .02,Households.do:907,rent blind deduction + predial,legal + assumption,—,document
+14200/12900/19900/17100/24500,Households.do:1459-1463,colegiatura deduction caps (decree 2011),legal,law change,table
+5 UMA / 15 %,Households.do:2328-2329; ISR_Mod.do:143-144 (DED),personal deduction cap,legal,law change,table
+25 / 10 UMA SBC caps; floor(sbc),Households.do:1599-1611,contribution base caps,legal,law change (IMSS cap 25 UMA),table
+5 (Tinfonavit),Households.do:1595,employer housing contribution,legal,—,table
+24.30, 52, 360,Households.do:1649-1677; ISR_Mod.do:59-121,ISSSTE federal quota per day? ×52 weeks; 360-day year,constants of unclear provenance (24.30 is undocumented),—,ask author
+2/3 and 1/3,Households.do:1189-1198,labour/capital split of mixed income,methodological parameter (NTA convention),—,expose
+4.3333 and 4,Households.do:456; Expenditure.do:149,month→year and quarter→year,constants,—,keep
+365/52/12/4 frequency codes,Expenditure.do:482-489,ENIGH frequency catalogue,data constants,ENIGH catalogue change,table
+111 (in -111/-1),Households.do:2114-2132,size of the Pareto tail block,magic number (inactive since betamin=1),—,remove or parametrise
+602513/1169476; 110000/181290,GastoPC.ado:181,243,864,Pemex vs ISSFAM affiliation and pensioner splits,calibrated data (source undocumented; TODO in code),—,input file with provenance
+.65 / .81 (FAM_cuidados),GastoPC.ado:1425-1430,1516-1521,share of FAM asistencia social not counted as care,calibrated,—,document
+15 (age), 3, 4, 6, 65,GastoPC.ado:128-151,236,272-280,eligibility ages,parameters,policy change,table
+3.793/3.255, 0.241/0.553, 4.176/2.781, 1.675/1.525, .1492/.098,ISR_Mod.do:176,184,193,208,213,calibration ratios of simulated ISR/CSS to observed (year unknown),calibrated constants (undocumented; stale),every new base year,"replace by explicit anchoring (as TasasEfectivas does) or document"
+4.249/4.495 (removed),IVA_Mod.do:311-315 (comment),former IVA calibration,history,—,—
+1e-9,Households.do:2776,2890; NTA.do:131; gate-numeros.sh,gate tolerance,constant,—,keep
+1111 (seed), 250 (bootstrap),SIM.do:34-35,RNG seed and replicas,run parameters,—,config
+17.3 / 20 s; 25/40/40/50 s,perf; js/config-tiempos.js,timings,operational,—,—
+100 / 600 / 3 / 30,config.php:407-412,rate limits,operational,—,—
+/Users/ricardo/… ; /SIM/OUT/current/,SIM.do:15,47; Web.Stata.do:20,23; SankeyCFE.do:8; SankeyPemex.do:8; sysprofile-template.do:27-33; config.php:303-314,absolute paths,environment,any other machine,env var (already partly: $SIMROOT)
+ricardo (idbase),Web.Stata.do:41; test-web-batch.sh; publicar-vps.sh,base-scenario user,environment,—,config
+"Nacional" / state names with accents,Poblacion.ado:691-731; SIMentidad.ado; Households.do:287-310 (r(Ciudad_de_México)),string keys,data keys,encoding change,codes instead of names
