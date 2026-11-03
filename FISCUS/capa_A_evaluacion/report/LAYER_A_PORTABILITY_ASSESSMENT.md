@@ -16,6 +16,7 @@ tags: "[observed] = seen in a file at the cited lines; [inferred] = my reading, 
 Companion files in this folder: `manifest.csv` (2,542 files with SHA-256), `inventory.csv`, `loc.csv`,
 `call_graph.md`, `callgraph_edges.csv`, `parameter_surface.csv`, `data_inputs.csv`, `outputs.csv`,
 `hazard_counts.csv`, `hardcoding_audit.csv`, `io_grep.txt`; scripts in `../scripts/`.
+Section 10 (integration with the FISCUS NTA and OLG/DSGE layers) was added after the first delivery.
 
 ---
 
@@ -810,6 +811,93 @@ Important but not blocking:
     specifications of phase 2?
 12. Licensing of the data assets (ENIGH repackaging, CSI spreadsheets) for redistribution inside a
     machine delivered to a ministry.
+
+---
+
+## 10. Integration with the NTA and OLG/DSGE layers (added 2026-11-03 at Héctor's request)
+
+The brief asked for Layer A in isolation. FISCUS will connect it to an NTA layer (R) and to the DFD
+OLG/DSGE engine (Julia). That changes the priorities of §8, not its verdict. This section states what
+Layer A can hand to those layers, what it cannot, and the data contract I would fix before any coding.
+Everything below is [inferred] from the code read in §3 unless a line is cited.
+
+### 10.1 What the other layers need from Layer A, and where it lives
+
+| Consumer | Needs | Where Layer A has it | Gap |
+|---|---|---|---|
+| NTA (R) | Age profiles of public inflows (taxes by type) and outflows (cash transfers, in-kind education/health) for one base year, anchored to the national accounts, single age, by sex | `users/<id>/bootstraps/<B>/<var>PERF.dta` written by `Simulador.ado:423-445` (per-cell `estimacion1/2`, `contribuyentes1/2`, `poblacion1/2`, ages 0–109, both sexes) for each of the ~41 variables of `PerfilesSim.do`; macro anchors in `PerfilesSim.do:47-156` | No smoothing; normalisation to the 40-year-old male instead of the 30–49 mean (`Simulador.ado:1453-1457`); intra-household consumption split by `perfilpc` instead of the NTA equivalence scale (`Expenditure.do:865-867`, unused); ISR PM allocated to households with business income (`Households.do:2305-2308`) |
+| NTA (R) | Private consumption, labour income, asset income, private transfers by age | `NTA.do` builds exactly this per person, closed on S.14 at 1e-9 (`NTA.do:17-20, 376-620`), with JSON outputs by age group and quinquennium×sex (`users/<id>/NTA/*.json`) | Output granularity is age groups and 5-year bands, not single ages; the per-person file `nta-persona.dta` has single ages but is not in the release sidecar |
+| OLG/DSGE (Julia) | Effective tax rates by base (labour, capital, consumption), transfer schedules by age (pensions, PAM, education, health per beneficiary), eligibility counts by age | `TasasEfectivas.ado:50-307` (macro/macro effective rates: e.g. `ISRASTE = ISRASPIB/RemSalSSPIB`, `IVATE = IVAPIB/ConHogPIB`); per-beneficiary amounts `*PC` and counts `*Pob` in `GastoPC.ado` (e.g. `basicaPC`, `penimssPC`, `pamPC`, `GastoPC.ado:361-363, 1045-1047, 1066-1068`); age profiles of contributors and beneficiaries from the `PERF` files | Rates are average, not marginal; no behavioural elasticities (Q4); eligibility is observed take-up in the ENIGH, not rules |
+| OLG/DSGE (Julia) | Initial fiscal state: debt stock by currency, cost of debt, deferrals, extra-budgetary RFSP | `SHRFSP.ado` → `master/SHRFSP.dta`; anchor year values in `FiscalGap.ado:734-794` | Fine as is |
+| Both | Population by single age, sex and year | `master/Poblacion.dta` (CONAPO pry23 via DGIS, `Poblacion.ado:647-788`) | Conflicts with Dalila's rule of national observed-data projections; must be replaceable by DFD's engine |
+
+### 10.2 What Layer A does that the integrated architecture should not keep
+
+- **Its own long-run projection** (`FiscalGap.ado` §4–5: profile × CONAPO population × historical
+  per-capita trend capped at ±5 %) duplicates what the OLG will do in general equilibrium, with no
+  closure (Q1) and no macro feedback (Q5). In the integrated FISCUS it is a benchmark to compare
+  against, not a component to port faithfully.
+- **Its own macro block** (`PIBDeflactor.ado` §3–5: GDP from working-age population × λ, deflator by
+  geometric mean, effective interest as 5-year mean, FX by mean depreciation). The OLG/DSGE supplies
+  wages, interest, output and prices; Layer A must accept them as inputs.
+- **Its own demographic input** (CONAPO pry23 hard-wired through `master/Poblacion.dta` and the
+  `HOM`/`MUJ` matrices in `Simulador.ado:401-411`). Must be injectable.
+
+### 10.3 Consequence for the phasing of §8.3
+
+Reordered phase 1 (same effort band, 7–12 person-weeks, different content):
+
+1. **Profile generator as the core deliverable**: Python reproduction of `Simulador.ado`'s PERF/PC
+   outputs (weighted sums by sex×age over `master/perfiles2027.dta`), of `TasasEfectivas` §3–§7, and
+   of `GastoPC` §2–§8 (beneficiary counts, per-beneficiary amounts, per-person allocation). Verified
+   against the `*PERF.dta`, `*PC.dta`, `ingresos.dta`, `gastos.dta` of one CIEP release (needs the
+   artefacts of §9 Q1).
+2. **Exogenous series as arguments**: `run(parameters, population[age,sex,year], gdp[year],
+   deflator[year], interest[year], fx[year])`. Layer A's own values become defaults for regression
+   testing only.
+3. **`FiscalGap` arithmetic as an optional module** (`projection="ciep"`), kept to reproduce
+   `output.txt` and to quantify, scenario by scenario, how far the OLG closure moves the debt path
+   from CIEP's accounting projection. Cheap (≈1 week) and useful for the dialogue with CIEP.
+4. **NTA adapter**: smoothing, 30–49 normalisation, optional equivalence-scale re-split of household
+   consumption, and export by single age — as a separate function so that the "CIEP convention" and
+   the "NTA convention" coexist and the difference is measurable.
+
+Phase 2 (micro pipeline from specification) is unchanged, but its specification should be written in
+NTA vocabulary (YL, YA, C, τ⁺, τ⁻, S) from the start, which `NTA.do` and CUAD-0 already use.
+
+### 10.4 Proposed data contract between the layers
+
+File-based, versioned, no in-process calls (Python ↔ R ↔ Julia). Suggested formats: parquet for
+tables, JSON for scalars and provenance, one `manifest.json` per run with the SHA-256 of every input
+and output (the same discipline as CIEP's `manifest.json` and `cache/sello.txt`).
+
+| Artefact | Grain | Columns | Producer → consumer |
+|---|---|---|---|
+| `profiles_<year>.parquet` | item × sex × single age 0–109 | `item`, `sex`, `age`, `mean_pc` (pesos of `aniovp` per person of that cell), `participation` (share of the cell with the item), `total` (pesos, Σ w·y), `n_obs`, `convention` (`ciep`/`nta`) | Layer A → NTA, OLG |
+| `effective_rates_<year>.json` | item | `rate`, `numerator` (revenue), `denominator` (SCN base), `base_definition`, `source_lines` | Layer A → OLG |
+| `benefit_schedules_<year>.parquet` | programme × age × sex | `per_beneficiary` (pesos), `beneficiaries`, `eligibility_rule` (text), `coverage` (beneficiaries ÷ population of the cell) | Layer A → OLG |
+| `fiscal_state_<year>.json` | scalars | SHRFSP internal/external, cost of debt, effective rate, deferrals ratio, extra-budgetary RFSP, GDP, deflator | Layer A → OLG |
+| `population.parquet` | sex × age × year | `population` | DFD demographic engine → Layer A, NTA, OLG |
+| `macro_paths.parquet` | year | `gdp_nominal`, `gdp_real`, `deflator`, `inpc`, `interest_rate`, `fx` | OLG/DSGE (or CGPE defaults) → Layer A |
+| `scenario.json` | — | the ≈150 parameters of `parameter_surface.csv` grouped as in §6 (legal table by year, scenario levels, calibration with provenance, run metadata) | FISCUS LLM harness → Layer A |
+| `results.json` | — | the 47 keys of `output.txt` as typed arrays plus the Sankey links | Layer A → harness, regression tests |
+
+Units and conventions to fix once: pesos of `aniovp` (constant prices) for all per-capita figures, % of
+GDP for levels, single ages with 109+ as the open interval, sex coded 1/2 as in the ENIGH, `item`
+names from the CIEP catalogue (`ISRAS`, `ISRPF`, `CUOTAS`, `ISRPM`, `OTROSK`, `IVA`, `ISAN`, `IEPSNP`,
+`IEPSP`, `IMPORT`, `FMP`, `PEMEX`, `CFE`, `IMSS`, `ISSSTE`; `Educacion`, `Salud`, `Pensiones`,
+`Pension_AM`, `IngBasico`, `OtrasInversiones`, `Federalizado`, `Energia`, `Otros_gastos`).
+
+### 10.5 Three questions this raises for the FISCUS side (not for Ricardo)
+
+1. Which layer owns the base year and the constant-price convention: Layer A (`aniovp` = 2027, prices
+   of 2027 on ENIGH 2024 data) or the OLG (steady-state calibration year)? They should coincide.
+2. Does the OLG consume average effective rates or does it need marginal schedules (the ISR tariff is
+   available: `SIM.do:203-213`)? This decides whether `ISR_Mod.do` belongs in phase 1.
+3. Will the NTA layer accept the `perfilpc` intra-household split as the FISCUS convention, or require
+   the NTA equivalence scale? The two differ materially for children (the author measured 0–4-year-olds
+   at 11 % of an adult's food spending under the fixed point versus 40 % under the NTA scale,
+   `perfilpc.ado:66-85`).
 
 ---
 
