@@ -877,7 +877,7 @@ and output (the same discipline as CIEP's `manifest.json` and `cache/sello.txt`)
 | `effective_rates_<year>.json` | item | `rate`, `numerator` (revenue), `denominator` (SCN base), `base_definition`, `source_lines` | Layer A → OLG |
 | `benefit_schedules_<year>.parquet` | programme × age × sex | `per_beneficiary` (pesos), `beneficiaries`, `eligibility_rule` (text), `coverage` (beneficiaries ÷ population of the cell) | Layer A → OLG |
 | `fiscal_state_<year>.json` | scalars | SHRFSP internal/external, cost of debt, effective rate, deferrals ratio, extra-budgetary RFSP, GDP, deflator | Layer A → OLG |
-| `population.parquet` | sex × age × year | `population` | DFD demographic engine → Layer A, NTA, OLG |
+| `population.parquet` | scenario × sex × single age × year | `population`, plus derived `n_p` and survival by band for the OLG | DFD national engine `projection_national.py` under the `dfd-demographics-monitor` governance (§10.8) → Layer A, NTA, OLG |
 | `macro_paths.parquet` | year | `gdp_nominal`, `gdp_real`, `deflator`, `inpc`, `interest_rate`, `fx` | OLG/DSGE (or CGPE defaults) → Layer A |
 | `scenario.json` | — | the ≈150 parameters of `parameter_surface.csv` grouped as in §6 (legal table by year, scenario levels, calibration with provenance, run metadata) | FISCUS LLM harness → Layer A |
 | `results.json` | — | the 47 keys of `output.txt` as typed arrays plus the Sankey links | Layer A → harness, regression tests |
@@ -1005,7 +1005,7 @@ lines in the mission with calibration and experiments) [observed]. What matters 
 | `e_age` (age-efficiency by sex) | first-step CSV, stub symmetric | profile of `ing_subor` by single age and sex from `Simulador` PERF output, aggregated to the 17 bands | Layer A grosses up net wages and includes employer contributions in `Yl`; choose the concept |
 | `π_birth` (skill shares) | 0.25 each | `escol` shares at age 20–24 from `households.dta` (`Households.do:2189-2198`) | — |
 | out-of-pocket medical by age (moments 4–6) | ENASEM/ENIGH via Judy and Milo | `gas_pc_SaluT` by age and sex, scaled to SCN (`Expenditure.do:1042-1045`) | BID2 `motivation/` already built ENIGH tier-3 OOP profiles (`04_enigh_tier3.R`); two producers again |
-| `n_p`, `ψ_base` | WPP 2024 + Brass | CONAPO pry23 in Layer A | neither should be the FISCUS source; DFD's national-only engine should feed both |
+| `n_p`, `ψ_base` | WPP 2024 + Brass | CONAPO pry23 in Layer A | neither should be the FISCUS source; DFD's national engine feeds both (§10.8) |
 
 **Mapping OLG → Layer A**: the steady-state `r` (4.8–5.1 % annual), `w`, `τ^p`, `B/Y` and the
 aggregates by age band. Because the OLG is stationary, it **cannot** supply the year-by-year
@@ -1025,6 +1025,54 @@ statutory rates; one PAYG system versus IMSS/ISSSTE/PAM; `B/Y` 28 % versus 55 %.
 defaults for 2026–2032 and OLG steady states as long-run anchors. The reconciliation of §10.6
 (two NTA-style producers) and this one (two OOP-profile producers) are the same job and should be
 one FISCUS task, not two.
+
+### 10.8 Demographics come from Dalila's own engine, under the demographics skill (added 2026-11-03)
+
+Decision recorded from Héctor: population by age, sex and year for all three layers comes from
+Dalila, ideally through the `dfd-demographics-monitor` skill and its corpus
+(`_crossrefs/corpus/demographics/`, scenario anchors endorsed by Anne), not from CONAPO (Layer A) nor
+from WPP + Brass (OLG `demographics_2050.jl`).
+
+**What exists today** [observed]: `GrandPlan/DFD/outputs/public/2026-10_population_mex_bra_usa/projection_national.py`.
+Cohort-component projection by single year of age (0–89, 90+ open) and sex, annual steps mid-2025
+to mid-2050; Mexico inputs are INEGI only (EIC 2025 base split to single ages by following CPV 2020
+cohorts, ENR 2025 fertility schedule, TFR 1.23 held, EDR 2024 death anchors on an IBGE age pattern,
+EIC net-migration rule); scenarios `central`, `low`, `high` (fertility ±0.2); inputs pinned by SHA-256
+(`results/inputs_sha256.txt`); validated against IBGE for Brazil within 0.04 %. Its README declares it
+"a communication product: not a DFD scenario, not IM-6, and nothing here feeds the corpus", and its
+published output is aggregate only (`results/projections_national.csv`: `pop_millions`,
+`share_65plus_pct`, `oadr` by country, scenario, year).
+
+**What has to change for it to be the FISCUS producer** [inferred]:
+
+1. **Export the matrix, not the aggregates.** Write `population.parquet` with `scenario`, `sex`,
+   `age` (single), `year`, `population` from the engine's internal state (the engine already holds it;
+   only the writer is missing). Layer A's `Simulador` consumes exactly this shape (`HOM`/`MUJ` matrices
+   age × year, `Simulador.ado:401-411`); the NTA layer consumes it for per-capita profiles; the OLG
+   derives from it `n_p` (growth of the entering cohort at 20) and sex-specific survival by five-year
+   band (`ψ_base`, 17 bands), replacing the Brass shift.
+2. **Open age group.** 90+ in the engine versus 0–109 in Layer A and the NTA. Either extend the engine
+   to 100+ (the OLG's last band is 100+) or collapse the fiscal profiles at 90+. Collapsing is cheaper
+   and loses little for fiscal flows; the OLG needs at least 100+ or a documented redistribution of
+   the open group.
+3. **Horizon.** 2050 covers the OLG's comparison year and Layer A's 2032; Layer A's `Poblacion
+   aniofinal(2070)` and `ProyGraph` to 2070 (`SIM.do:97`, `Simulador.ado:1175`) would need either an
+   extension to 2070 or an explicit truncation. For FISCUS experiments a 2050 horizon with the OLG's
+   steady state as the long-run anchor is sufficient; say so in the contract.
+4. **Governance.** Promote the engine from communication product to an endorsed scenario set through
+   the skill's `_pending/` → endorsement workflow (Anne), pin its scenario definitions to
+   `scenario_anchors.md`, and give each run a build instruction, as the corpus README requires. Until
+   then, FISCUS runs should cite the engine commit and `inputs_sha256.txt`.
+5. **Consistency checks to add once**: Layer A's `PerfilesSim.do:178-179` rescales ENIGH weights to the
+   population total of `anioPE`; the NTA paper keeps the survey weights untouched (eq. cierre). With one
+   population source, decide which convention FISCUS uses and record the ratio ENIGH total ÷ engine total
+   per year as a published diagnostic. Also check the engine's 2024–2025 totals against the ENIGH 2024
+   expanded population (130.3 M in the paper, 130.9 M in the engine for 2025).
+
+**Effect on the risk list**: this removes the CONAPO dependency from Layer A (§6 "2070" and
+"CONAPO pry23" rows) and the WPP dependency from the OLG, and makes the demographic scenario a
+FISCUS parameter shared by all layers, which is what an LLM-driven experiment needs: one `scenario`
+key moving population everywhere at once.
 
 ---
 
