@@ -963,6 +963,69 @@ agree a common item catalogue so that `Y_L`, `Y_K`, `C`, `τ⁺`, `τ⁻`, `S` c
 in both producers (the 2/3–1/3 split and the imputed-rent treatment already coincide; the saving and
 the employer-contribution treatments do not).
 
+### 10.7 The OLG lives in BID2: what Layer A can and cannot feed it (added 2026-11-03)
+
+The OLG is `Missions/Funded/BID2/GE-now with Gender/ge_model_gender.jl` (1,230 lines, Julia; 10.5k
+lines in the mission with calibration and experiments) [observed]. What matters for the interface:
+
+- **Stationary general equilibrium, not a transition path.** Two steady states are compared (2020 vs
+  2050 demographics) under three fiscal closures (`demographic_experiment/README.md`: "Is not: a
+  transition path"). The outer loop iterates `K`, `L` to a fixed point; endogenous `r, w, τ^p, pen, B`;
+  externally fixed `τc, τw, τk, τm, g_y, κ, α, δ, A, n_p` and the household primitives
+  (`ge_model_gender.jl:17-19, 686-709`).
+- **Ages 20–100 in 17 five-year bands** (`J = 17`, `ge_model_gender.jl:46-47`); four types sex × skill;
+  health state and an AR(1) productivity shock; GHH preferences. Children do not exist in the model;
+  their consumption and education are inside `g_y`.
+- **Fiscal block**: `τc = 0.16`, `τw = 0.20`, `τk = 0.20`, `τm = 0.00`, `g_y = 0.19`, `κ = 0.50`
+  (`ge_model_gender.jl:56-61`); PAYG `τ^p = κ N^R/N^W` (l.695-701); debt residual
+  `B = primary/(r_n − n_p)` (l.705-709); closures C1 (τ^p adjusts), C2 (benefit scaling; "debt absorbs"
+  admits no finite steady state at 2050, `C2_interp1_no_finite_SS.md`), C3 (debt pinned, τ^ω clears;
+  toggle `RUN_C3`).
+- **Demographics**: `n_p` (entry-cohort growth) and `ψ_base` by sex, 2050 values from WPP 2024 with a
+  Brass logit shift (`demographics_2050.jl` header). This is the layer where Dalila's own national
+  projections should enter, consistent with the standing rule against WPP/CONAPO as sources.
+- **Calibration**: SMM on six moments (prime-age male hours, VSL, income elasticity of medical
+  spending, mean medical spending 25–35, its log-slope by age, within-age elasticity;
+  `Calibration/src/moments.jl`) with first-step inputs `e_age`, `psi_base`, `delta_h`, `pi_birth`,
+  `skill_params`, `ar1_params` as CSVs (`load_inputs.jl:50-109`). Runtime: ≈12 min per GE solve
+  threaded on Dalila, 2.5 h single-thread (`demographic_experiment/README.md`).
+
+**Mapping Layer A → OLG inputs** [inferred; Layer A locations observed]:
+
+| OLG input | Current value / source | What Layer A offers | Caveat |
+|---|---|---|---|
+| `τc` | 0.16 statutory | effective consumption-tax rate `ingconsumoTE` = (IVA+IEPS+ISAN+import) ÷ household consumption (`TasasEfectivas.ado:297-307`); by item `IVATE`, `IEPSNPTE`, … | effective ≈ 0.23×(share) ≠ statutory 0.16; the model's `τc` multiplies all C, so the effective rate is the right concept |
+| `τw` | 0.20 "introduced" | `YlImpTE` = (ISRAS+ISRPF+CUOTAS) ÷ Yl (`TasasEfectivas.ado:94-104`), or ISR-only `ISRASTE`+`ISRPFTE` | the OLG has a separate PAYG `τ^p`: Layer A's `CUOTAS` must be split into pension (CSS rows 6–7: 5.15+1.12+1.49 and cuota social, `SIM.do:248-249`) and non-pension (health, invalidez, guarderías) parts before mapping |
+| `τk` | 0.20 "introduced" | `IngKPrivadoTotTE` = (ISRPM+OTROSK+FMP) ÷ private capital income (`TasasEfectivas.ado:156-167`) | CIEP's ISR PM incidence is flagged as wrong by its author (Q3); use the macro/macro rate, not the micro allocation |
+| `τm` (medical subsidy) | 0.00 (experiment −0.20) | public health spending per affiliated person by institution (`GastoPC.ado` §4, `*PC` and `*Pob` scalars) and the ENIGH out-of-pocket profile `gas_pc_SaluT` by age (`Expenditure.do` §3) | the model's `τm` is an ad-valorem subsidy on private `m`; Layer A gives levels by age, so the mapping is a calibration target (public share of total health spending by age), not a parameter |
+| `g_y` | 0.19 | PEF total net of the transfers the model represents explicitly (pensions, health), as % GDP, from the spending scalars (`SIM.do:339-379`) and `PEF` | includes education and child-related spending that the model has no agents for |
+| `κ` | 0.50 | pensions per pensioner by institution (`penimssPC`, `penisssPC`, `pamPC`) over mean labour income of workers (`ing_subor` profile) | Layer A pensions are contributory IMSS/ISSSTE plus PAM (non-contributory); the model has one PAYG system |
+| `τ^p` (check) | endogenous ≈ 0.139–0.145 | observed IMSS pension contribution 5.15+1.12+1.49 % of SBC plus cuota social (`SIM.do:241-249`) | useful as a validation target for the C1 closure |
+| initial `B/Y` | 28–31 % in steady state | SHRFSP 54–56 % of GDP 2026–2032 (`SIM.do:403`) | the gap is a calibration question for the OLG, not for Layer A |
+| `e_age` (age-efficiency by sex) | first-step CSV, stub symmetric | profile of `ing_subor` by single age and sex from `Simulador` PERF output, aggregated to the 17 bands | Layer A grosses up net wages and includes employer contributions in `Yl`; choose the concept |
+| `π_birth` (skill shares) | 0.25 each | `escol` shares at age 20–24 from `households.dta` (`Households.do:2189-2198`) | — |
+| out-of-pocket medical by age (moments 4–6) | ENASEM/ENIGH via Judy and Milo | `gas_pc_SaluT` by age and sex, scaled to SCN (`Expenditure.do:1042-1045`) | BID2 `motivation/` already built ENIGH tier-3 OOP profiles (`04_enigh_tier3.R`); two producers again |
+| `n_p`, `ψ_base` | WPP 2024 + Brass | CONAPO pry23 in Layer A | neither should be the FISCUS source; DFD's national-only engine should feed both |
+
+**Mapping OLG → Layer A**: the steady-state `r` (4.8–5.1 % annual), `w`, `τ^p`, `B/Y` and the
+aggregates by age band. Because the OLG is stationary, it **cannot** supply the year-by-year
+`macro_paths.parquet` of §10.4 for 2026–2032; it supplies two anchor points (2020-like and
+2050-like steady states) and comparative statics. Layer A's annual arithmetic (`FiscalGap`) and the
+OLG answer different questions and should be reported side by side, with the CGPE path as the
+near-term bridge, until a transition version of the OLG exists.
+
+**Grain and unit mismatches to settle once** [observed]: single age 0–109 (Layer A, NTA) versus
+five-year bands 20–100 (OLG); pesos of `aniovp` versus model units scaled to USD (`usd_scale.csv`);
+annual flows versus five-year periods (`β = 0.998^5`, `n_p = 1.01^5 − 1`); effective versus
+statutory rates; one PAYG system versus IMSS/ISSSTE/PAM; `B/Y` 28 % versus 55 %.
+
+**Consequence for §10.4**: add `effective_rates_<year>.json` fields `base_concept` and
+`pension_split`, add a `bands` aggregation option (single age → 17 five-year bands, 20+ only) to
+`profiles_<year>.parquet`, and record that `macro_paths.parquet` has two producers: CGPE/Layer A
+defaults for 2026–2032 and OLG steady states as long-run anchors. The reconciliation of §10.6
+(two NTA-style producers) and this one (two OOP-profile producers) are the same job and should be
+one FISCUS task, not two.
+
 ---
 
 ### Appendix A. Method of this assessment
