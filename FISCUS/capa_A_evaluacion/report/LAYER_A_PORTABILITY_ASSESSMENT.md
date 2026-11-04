@@ -1076,6 +1076,104 @@ key moving population everywhere at once.
 
 ---
 
+## 11. Complete models or simplified versions? (added 2026-11-03 at Héctor's request)
+
+Héctor's central question: will FISCUS be able to deal with the complete models, or does it need
+simplified versions? Answer: **FISCUS can work with the complete models, but it cannot run all of
+them at every step.** "Complete versus simplified" is the wrong binary; the operative distinction is
+which layer is evaluated how often and at what cost. There are three regimes.
+
+### 11.1 Cost per evaluation, by layer [observed unless noted]
+
+| Layer | Operation | Cost today | Where measured |
+|---|---|---|---|
+| Layer A (Stata) | full batch: data → micro harmonisation → profiles → projection | ≈ 32–35 min, one core, StataNow 19.5 | `runbook-deploys-ciep.md:852`; perf report l.39 |
+| Layer A (Stata) | one scenario on frozen artefacts (web «Calcular») | 17–20 s; 3 concurrent max on one MP licence | `perf/README.md`; `config.php:410` |
+| Layer A (Python port, phase 1) | one scenario on frozen artefacts | sub-second to a few seconds [inferred: weighted sums over 308,598 rows and ~20 annual rows] | — |
+| NTA (R, Dalila) | one base-year account per ENIGH vintage | minutes [inferred from the paper's person-year base]; run once per vintage | paper §3 |
+| OLG (Julia, BID2) | one stationary GE solve | ≈ 12 min threaded on Dalila's 16 cores; ≈ 2.5 h single-thread | `demographic_experiment/README.md` |
+| OLG | one ageing experiment (two steady states + control) | 45–60 min threaded | idem |
+| OLG | SMM calibration | hours [inferred: PE solves inside an optimiser] | `Calibration/` |
+| Demographic engine (Python) | one scenario 2025–2050 by single age and sex | seconds [inferred] | `projection_national.py` |
+
+So: one layer is expensive per evaluation (the OLG), one is expensive only when rebuilt (Layer A's
+micro pipeline, the NTA), and two are cheap (Layer A's scenario tail once ported, the demographic
+engine).
+
+### 11.2 Three regimes
+
+**Regime 1 — base-year calibration: complete models, run rarely, outside the LLM loop.** The CIEP
+micro pipeline, Dalila's NTA and the OLG's SMM calibration produce artefacts (profiles by age and sex,
+effective rates, anchors, structural parameters). FISCUS does not execute them; it consumes their
+frozen, versioned outputs with provenance (§10.4 contract). Nothing is simplified here; it is frozen.
+Rebuild triggers are discrete and known: a new ENIGH vintage, a new Paquete Económico, a new
+national-accounts revision, a recalibration decision.
+
+**Regime 2 — scenario evaluation, once per LLM action: cheap at full fidelity everywhere except the
+OLG.** Layer A's tail in Python evaluates the whole 142-input action space in seconds; exploration is
+unconstrained. The OLG is the bottleneck: ten designed scenarios fit in one night (≈ 10 × 30 min);
+one hundred do not fit in a week. An exploratory LLM loop cannot sit on top of the complete OLG. The
+way out is not a smaller OLG with different economics; it is a **cheaper evaluation of the same
+model**:
+
+- a **precomputed library** over the policy grid the LLM will move — `κ` (0.30–0.60), `τm` (−0.30–0),
+  `τw`, `τc`, `τk` (±5 pp around calibration), closure (C1/C2/C3), demographic scenario
+  (central/low/high from §10.8), ageing year — produced in Zellij batches with warm starts
+  (`run_aging_ssvs.jl` already warm-starts from RUN 1 and overrides primitives at runtime);
+- an **emulator** fitted on that library (Gaussian process or low-order polynomial on the reported
+  scalars: `K, Y, r, w, τ^p, pen, B/Y, C/Y, M/Y, W₁(g,θ)`) for interactive exploration, with
+  predictive uncertainty reported alongside each value;
+- the **complete OLG as arbiter**: every scenario the LLM selects for a conclusion is re-solved exactly
+  and the emulator error is logged. The library grows with each confirmed point.
+
+A coarser OLG (fewer grid points, `J = 16`, fewer types) is acceptable only as a warm-start generator,
+never as the reported model: its steady state differs from the deliverable one (`README.md` of the GE
+folder documents the J=16 "collapse check" as a verification device, not a result).
+
+**Regime 3 — reading results: the LLM deals with an interface, not with the models.** A 9-billion
+parameter local model can fill a JSON parameter schema and read small typed tables; it cannot reason
+about the internal consistency of 23k lines of Stata or interpret a Julia log. Dalila's own evidence
+(RF MX-SSRD pilot, 2026-10-31: recall 0.28, a third of quotations failing extraction with
+Qwen3.5-9B) says the interface must be structured. Hence: every layer behind
+`run(parameters) → results`, parameters validated against a schema before any run (the CIEP site
+already does this for numbers, `config.php:347-359`), results as typed arrays with units, and each
+model's internal gates (CIEP's 1e-9 identities and byte-identical `output.txt`, the OLG's
+`diagnostic_gates`, the NTA identity gap, the demographic engine's validation) surfaced as pass/fail
+fields the LLM can quote, never as free text it has to parse. Interpretation of magnitudes stays with
+the larger model or with the researcher.
+
+### 11.3 Where a reduced version is genuinely needed, and where it should not be built
+
+- **Transition dynamics.** The OLG has no transition path (§10.7). Do not build a simplified
+  transition model for FISCUS. Use Layer A's annual arithmetic to 2032 (CGPE bridge) and the OLG's
+  steady states as long-run anchors, labelled as such. A transition OLG, if ever built, is a BID2/DFD
+  decision, not a FISCUS shortcut.
+- **Real-time policy exploration on the OLG.** The right reduced form is the emulator of §11.2, because
+  it inherits the calibration and is auditable point by point against the complete model.
+- **Layer A's micro pipeline.** Never simplified; either CIEP's artefacts are consumed as-is (phase 1)
+  or the pipeline is re-implemented from specification (phase 2). A "simplified harmonisation" would
+  silently change incidence.
+- **Demographics.** The engine is already cheap at full resolution; the only reduction is the
+  scenario set (three fertility variants plus migration sensitivity), which is a design choice, not a
+  simplification.
+
+### 11.4 What this implies for the FISCUS build order
+
+1. Phase 1 of §8.3/§10.3 (Layer A tail in Python, exogenous series injectable) — gives the cheap
+   full-fidelity evaluator for the fiscal action space.
+2. The demographic exporter of §10.8 and the data contract of §10.4 — one `scenario` key across layers.
+3. The OLG library: a designed grid (a few hundred solves, several nights in Zellij), the emulator, and
+   the confirmation protocol.
+4. Only then the LLM harness, with schema validation and gate surfacing; local Qwen for parameter
+   setting and table reading, the larger model for interpretation.
+5. Phase 2 (micro pipeline from specification, extended from Dalila's NTA) when CIEP's artefact
+   dependence becomes a constraint, not before.
+
+In one sentence: complete models as arbiters, cheap evaluations of those same models as the LLM's
+playground, and a typed interface between the two.
+
+---
+
 ### Appendix A. Method of this assessment
 
 Read-only extraction (`chmod -R a-w source/`); no code executed from the zip; no network; Python 3
