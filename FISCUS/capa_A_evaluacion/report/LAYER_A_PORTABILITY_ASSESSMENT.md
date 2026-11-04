@@ -899,6 +899,70 @@ names from the CIEP catalogue (`ISRAS`, `ISRPF`, `CUOTAS`, `ISRPM`, `OTROSK`, `I
    at 11 % of an adult's food spending under the fixed point versus 40 % under the NTA scale,
    `perfilpc.ado:66-85`).
 
+### 10.6 Dalila already has an NTA model: what that changes (added 2026-11-03)
+
+Dalila's NTA is the paper *Cuentas Nacionales de Transferencia para México, 2016–2024* (López Reynosa
+and Villarreal, `Missions/Funded/NTA_Inequality/paper_final.tex`, finalised 2026-08-21). Only the
+`.tex` is in the repository; the code (R, per the FISCUS brief) and the annex tables
+(`tables/tab_scale_map`, `tab_supuestos`, `tab_lambda`, `tab_limitaciones`) are not, so the
+comparison below is paper versus code [observed in each source; the alignment is inferred].
+
+**The two are near-twins in method.** Same micro base (ENIGH 2016–2024, person-year, `factor`
+untouched, quarterly ×4), same macro anchors (INEGI SCN by institutional sector, 2024 prices), same
+proportional closure (one λ per variable and year; Dalila's 35 factors in `tab_lambda`, CIEP's
+`Taltimir*` in `Households.do:2240-2286` and `TT*` in `Expenditure.do:1042-1045`), same 2/3–1/3 split of
+mixed income, same fixed-point intra-household allocation of consumption that builds its own age scale
+(paper eq. alloc1–allocconv; `perfilpc.ado:21-30`), same gross-up of net wages through the ISR tariff
+(paper eq. isr1–isrconv by fixed point; `Households.do:1830-1874` by bracket inversion), same social
+contributions on a capped SBC with a one-UMA floor (paper §4.3; `Households.do:1599-1611`), corporate
+ISR at 30 % (paper eq. isrpm; `Households.do:2482`), imputed rent split per capita (paper §4.6 citing
+"el criterio del simulador fiscal del CIEP"; `Households.do:461-463`), remittances with the largest
+factor of the exercise (paper 9.88 in 2020; CIEP `TaltimirROWTrans` 8.38 in 2024, CUAD-0 Table 1).
+The paper even cites CIEP's simulator twice as the reference convention.
+
+**Where they differ, and which one FISCUS should keep for what:**
+
+| Dimension | Dalila NTA (paper) | CIEP Layer A | Suggested owner in FISCUS |
+|---|---|---|---|
+| Public in-kind consumption (education, health) | flat per capita, deliberately (paper §4.2: no utilisation source) | education by enrolment level, health by affiliation × household health-spending share (`GastoPC.ado:127-232`; `PerfilesSim.do:366-443`) | CIEP for the fiscal profiles; DFD's ENSANUT utilisation weights (`mission-project-map.md:72`) are the missing piece both lack |
+| Cash transfers received | one anchor: prestaciones sociales + transferencias en especie | programme by programme from PEF (pensions by institution, PAM, becas) with `Distribucion` anchors (`PerfilesSim.do:444-476`; `NTA.do:556-590`) | CIEP (policy detail) |
+| Taxes paid | SS employer + government only (worker's share already net); ISR wage + PM on observed capital | worker + employer + federal (`cuotasTPF`), ISR by three taxpayer types with probit-ranked formality, plus IVA/IEPS/ISAN/import by item | CIEP (policy detail); Dalila's choice is the cleaner NTA accounting |
+| Asset reallocation | anchored to Y_K − S net of saving; no separate saving by age | Y_K anchored to S.14 cells (D.4 proxy, B.2n, ⅓ B.3n) and S as household residual to adults ∝ YL+YA with a declared multiplicative anchor (`NTA.do:613-660`) | Dalila for the NTA account; the two closures are different and must not be mixed in one table |
+| Intra-household private transfers | explicit payment matrix with uncovered deficits (paper eq. restr–defnc) | residual per person with Σ=0 per household (`NTA.do:660-665`) | Dalila |
+| Closure of the identity | two LCD methods computed and the gap **reported** (277 bn in 2024 = inter-household transfers) | identity forced at 1e-9 with the S anchor declared as explicit nodes (`NTA.do:17-20`, `nta_anclaS`) | Dalila's practice; CIEP's gate is a useful regression test |
+| Years | five vintages 2016–2024 | one vintage per release (2024 now; vintage bands only for state Sankeys) | Dalila for time series |
+| Sex | profiles by sex throughout | by sex in `Simulador` (`perfil1/perfil2`), by age group × sex in NTA JSON | both |
+| Age grain | single age (paper eq. alloc2) | single age 0–109 | both |
+| Behaviour | none (paper conclusions, "no modela respuestas de comportamiento") | none (Q4) | OLG |
+
+**Consequences for §8 and §10.3** [inferred]:
+
+1. **Phase 2 shrinks.** Dalila already owns a person-level ENIGH→SCN harmonisation with the same
+   skeleton as `Households.do`/`Expenditure.do`. Re-implementing CIEP's micro pipeline in Python is
+   justified only for what Dalila's NTA does not do: programme-level transfers from PEF, the tax
+   detail (three ISR bases, formality ranking, IVA regimes by category, IEPS), enrolment/affiliation
+   allocation of in-kind spending, and the 32-state branch. That is roughly half of the 10k lines and
+   it can be specified as **extensions of Dalila's NTA base** rather than as a second base.
+2. **Two profile generators = cross-validation, not duplication.** For the FISCUS base year, run both
+   on ENIGH 2024 and publish the differences by item and age as a calibration table (λ by variable,
+   LCD by age, financing shares). Where they disagree (asset income, remittances, in-kind public
+   consumption) the disagreement is methodological and should be a declared FISCUS parameter, not a
+   silent choice.
+3. **The data contract of §10.4 gets a second producer.** `profiles_<year>.parquet` must carry a
+   `producer` field (`ciep` | `dalila_nta`) and a `convention` field; the NTA adapter of §10.3(4)
+   becomes a reconciliation step between the two rather than a transformation of CIEP output.
+4. **Priority for the NTA → OLG link is Dalila's account** (five vintages, both LCD methods, saving
+   already netted), with CIEP supplying the fiscal-instrument detail the OLG needs for policy
+   experiments (rates by base, schedules by programme). This also sidesteps the governance risk of §8.5
+   (1): the NTA layer never depends on CIEP's release cadence.
+
+**Open items on the Dalila side** (not for Ricardo): locate and version the R code and the annex
+tables of the NTA paper inside Dalila (today only the `.tex` is tracked); decide whether the
+ENSANUT utilisation schedule replaces the flat per-capita public consumption in the FISCUS version;
+agree a common item catalogue so that `Y_L`, `Y_K`, `C`, `τ⁺`, `τ⁻`, `S` carry the same definitions
+in both producers (the 2/3–1/3 split and the imputed-rent treatment already coincide; the saving and
+the employer-contribution treatments do not).
+
 ---
 
 ### Appendix A. Method of this assessment
