@@ -109,3 +109,27 @@ Output: `Draft-November.pdf` (60 pp.) copied from `build_nov/`.
 | Location | Before | After |
 |---|---|---|
 | `\date{}` (67) | `\textit{Preliminary draft -- August 2026}\\` | Line removed. "Prepared for the Inter-American Development Bank, Fiscal Division" and "Please do not cite or circulate without permission" kept. |
+
+## Pre-delivery review (`IDB_November_Final_PreDelivery_Review.md`), 2026-11-07 — items applied and declined
+
+Applied (Héctor: "consider yourself if the minor changes should be done"):
+
+| Item | Location | Before | After |
+|---|---|---|---|
+| A1 | Appendix B, `\paragraph{Optimizer and state space.}` | "The two grids differ in the levels of some moments, so reported levels carry the caveat while cross-economy comparisons, which the paper's results rest on, do not. A polish on the finer grid awaits the health-block specification decision of Section~\ref{sec:conclusion}." | "The two grids produce different levels for some model moments. All reported estimates and counterfactuals use the same estimation grid; finer-grid convergence of the welfare comparisons has not been established." (reviewer's text; removes an obsolete cross-reference and an unsupported inference) |
+| B1 | §4.3 (757), §4.8 (992) | "low-skilled men" / "high-skilled men" ×2 each | "low-education men" / "high-education men". No "skilled" left outside the Section 3 type definition. |
+| B2 | §4.1 Data, paras 2–3 | Repeated full survey names | "ENIGH, conducted by INEGI, …" and "ENASEM, harmonized as MHAS, is a panel survey …" |
+| B3 | Appendix D, first paragraph | — | Added: "The 2024 wave is used for this descriptive analysis only and does not enter the baseline calibration, which uses the pooled 2016 and 2018 waves." (consistent with §4.3 and `tab:targeted_moments`) |
+| B4 | §3.5 pension stylization (411) | "the object this paper prices" | "the mechanism analyzed in this paper" |
+| B5 | Appendix C | `\paragraph{Two arms not run.}` | `\paragraph{Demographic dimensions held fixed.}` |
+| B6 | Appendix D figure | Long caption with method note | Short caption "Composition of out-of-pocket medical spending by household income decile, ENIGH 2018 and 2024"; method note moved to `\fignote{0.95}{…}` after the label, matching the other figures. Text unchanged. |
+
+Declined or deferred:
+- **A2** (hedge the curative-spending explanation in abstract and conclusion): not applied. Both passages are Héctor's verbatim text and already say "a result we relate to" / "which we relate to", the wording the build instruction licenses; the reviewer's "may partly reflect" adds no information.
+- **A3** (no-citation notice; cover date): Héctor's call, depends on whether this copy is confidential or the public WP.
+- **A4** (production package): already in this folder; compiled PDF ships alongside the source.
+- **B7** (0.145% in §5.3 prose vs 0.14 in table/intro/conclusion): not applied; changing numbers in Section 5 is outside the build instruction, and the table note already states the bracket [0.1448, 0.1450].
+- **B8**: no action requested.
+- **C** (government budget with population growth): untouched, blocked pending Diego per the build instruction. Same issue as Héctor's note to Diego of 2026-11-01 (`../draft_october/nota_Diego_gov_budget.html`), which goes further: the code form is $(r-n_p)B = \text{surplus}$ with $\tau^k r(K+B)$ on the revenue side, and that form fits all four columns of `tab:cf_aggregates` within 0.0001 while the printed form does not.
+
+Compile after these edits: 60 pages, no errors, no undefined citations or references, 4 overfull boxes (unchanged).
