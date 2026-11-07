@@ -104,3 +104,8 @@ Output: `Draft-November.pdf` (60 pp.) copied from `build_nov/`.
 - §4.2 asks the health-capital subsection to end with the Section/Appendix reference; the Cortés et al. sentence and the contribution sentence were placed just before it so the paragraph still ends on the reference.
 - Section 4.8 (now line ~1,000) still says "high-skilled men / low-skilled men"; outside M6 scope, left for Héctor.
 - Title page still prints "Preliminary draft -- August 2026" and "Prepared for the Inter-American Development Bank, Fiscal Division"; front matter beyond the title is out of scope.
+
+## Post-pass edit (2026-11-07, Héctor's instruction)
+| Location | Before | After |
+|---|---|---|
+| `\date{}` (67) | `\textit{Preliminary draft -- August 2026}\\` | Line removed. "Prepared for the Inter-American Development Bank, Fiscal Division" and "Please do not cite or circulate without permission" kept. |
