@@ -1,0 +1,132 @@
+% ======================================================================
+% paper_style_preamble.tex — drop-in style fragment (Carrasco 2026 look)
+% ======================================================================
+% Anchor: carrasco2026.pdf (repo root). Colors below were extracted from
+% that PDF's content streams, not eyeballed:
+%   citations / URLs   RGB(162, 99, 49)  = #A26331 (sienna)
+%   internal links     RGB( 48, 73, 89)  = #304959 (dark slate)
+%   figure series      #3C5B6F (slate navy) / #BA8F6B (muted copper),
+%                      darker accents #1A476F / #B36633; gridlines 50% grey
+% The matplotlib mirror of the figure palette is paper_plot_style.py.
+%
+% HOW TO USE WITH Draft_august.tex
+%   1. DELETE (or comment out) \usepackage{lmodern} in the main preamble.
+%      Palatino (newpx) and Latin Modern fight over the text font; the
+%      last one loaded wins and the metrics disagree. This fragment loads
+%      newpxtext/newpxmath (fallback: mathpazo).
+%   2. \input{style/paper_style_preamble} AFTER the
+%      existing package block. It is compatible with the rest of
+%      Draft_august's preamble (amsmath/amssymb/mathtools, geometry,
+%      setspace, graphicx, booktabs, caption, subcaption, float,
+%      appendix, natbib, xcolor): everything here either loads a package
+%      not already present or only calls \hypersetup / \captionsetup.
+%   3. DELETE the existing \hypersetup{colorlinks=true, linkcolor=blue,
+%      citecolor=blue, urlcolor=blue} line — this fragment replaces it.
+%      (If hyperref is not yet loaded, this fragment loads it.)
+% ======================================================================
+
+% ---- Typography: Palatino text + matching math (Carrasco uses the
+%      Palatino family; newpx is the maintained implementation) ---------
+\IfFileExists{newpxtext.sty}{%
+  \usepackage{newpxtext}%
+  \usepackage{newpxmath}%
+}{%
+  \usepackage{mathpazo}% fallback: Palatino text + math
+}
+\linespread{1.18} % Palatino needs more leading; approximates the anchor's
+                  % openness without double-spacing (setspace, if loaded,
+                  % may override this — call \onehalfspacing after if desired)
+\setlength{\emergencystretch}{1.5em} % Palatino sets wider than CM/LM;
+                  % this absorbs the overfull lines the font swap creates
+
+% ---- Colors (extracted from carrasco2026.pdf) ------------------------
+\usepackage{xcolor} % no-op if already loaded
+\definecolor{citesienna}{RGB}{162, 99, 49}   % citations, URLs
+\definecolor{linkslate}{RGB}{48, 73, 89}     % internal refs (sections, eqs, tables)
+\definecolor{sernavy}{RGB}{26, 71, 111}      % figure series 1 (dark navy)
+\definecolor{sercopper}{RGB}{179, 102, 51}   % figure series 2 (burnt sienna)
+\definecolor{sernavyline}{RGB}{60, 91, 111}  % muted line variant of series 1
+\definecolor{sercopperline}{RGB}{186, 143, 107} % muted line variant of series 2
+
+% ---- Hyperref: colored author-year citations, slate internal links ---
+\makeatletter
+\@ifpackageloaded{hyperref}{}{\usepackage{hyperref}}
+\makeatother
+\hypersetup{
+  colorlinks = true,
+  citecolor  = citesienna,
+  urlcolor   = citesienna,
+  linkcolor  = linkslate,
+  filecolor  = linkslate,
+}
+
+% ---- Captions: "Table 1: Baseline calibration" above tables/figures,
+%      slightly smaller than body, plain weight (anchor style) ---------
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\makeatother
+\captionsetup{labelsep=colon, font=small, labelfont=bf, skip=6pt}
+% Anchor convention: captions sit ABOVE tables and ABOVE figures.
+% (Position is set where the float is written, not here.)
+
+% ---- Tables: booktabs + the Carrasco Table-1 idiom -------------------
+\makeatletter
+\@ifpackageloaded{booktabs}{}{\usepackage{booktabs}}
+\makeatother
+
+% Small-caps column heads: \thead{Description} -> DESCRIPTION in
+% spaced small caps, the anchor's header style.
+\newcommand{\thead}[1]{\multicolumn{1}{c}{\footnotesize\textsc{#1}}}
+\newcommand{\theadl}[1]{\multicolumn{1}{l}{\footnotesize\textsc{#1}}}
+\newcommand{\theadr}[1]{\multicolumn{1}{r}{\footnotesize\textsc{#1}}}
+
+% Bold full-width group-separator row: \tgroup{4}{Demographics and Healthcare}
+% (first argument = number of columns in the tabular).
+\newcommand{\tgroup}[2]{\multicolumn{#1}{l}{\textbf{#2}}\\}
+
+% Under-table notes minipage: \tabnote{0.92}{...} — bold run-in "Notes."
+% then footnotesize flowing text, width as a fraction of \textwidth.
+\newcommand{\tabnote}[2]{%
+  \vspace{0.5em}\par
+  \begin{minipage}{#1\textwidth}
+  \footnotesize\emph{Notes.} #2
+  \end{minipage}}
+
+% Under-figure note, anchor style ("Note." then series names in their
+% colors): \fignote{0.9}{Expenditure ... \serone{Top 10 percent} and
+% \sertwo{Bottom 90 percent}.}
+\newcommand{\fignote}[2]{%
+  \vspace{0.4em}\par
+  \begin{minipage}{#1\textwidth}
+  \footnotesize\textbf{Note.} #2
+  \end{minipage}}
+\newcommand{\serone}[1]{\textcolor{sernavy}{#1}}
+\newcommand{\sertwo}[1]{\textcolor{sercopper}{#1}}
+
+% ----------------------------------------------------------------------
+% TEMPLATE — the Carrasco Table-1 skeleton (baseline-calibration table).
+% Copy, uncomment, fill. Structure: caption ABOVE; four columns
+% (symbol | description | value | target/source); small-caps heads;
+% bold group rows separating parameter families; sources as \citep{}
+% (they render sienna); notes minipage below.
+% ----------------------------------------------------------------------
+% \begin{table}[H]
+% \centering
+% \caption{Baseline calibration}
+% \label{tab:baseline_calibration}
+% \begin{tabular}{@{}llcl@{}}
+% \toprule
+%  & \theadl{Description} & \thead{Value} & \theadr{Target/Source} \\
+% \midrule
+% \tgroup{4}{Demographics and Healthcare}
+% $n$              & Fertility rate            & $0.03$      & Population growth $=1\%$ \\
+% $\bar\psi$       & Survival rate parameters  & See text    & WPP, HRS, MEPS \\
+% \tgroup{4}{Preferences}
+% $\beta$          & Subjective discount rate  & Internally calibrated & Interest rate $4\%$ (p.a.) \\
+% $\sigma$         & Risk aversion             & $2.0$       & \citep{SomeSource2019} \\
+% \bottomrule
+% \end{tabular}
+% \tabnote{0.92}{Rates are annual. Internally calibrated parameters are
+% estimated in Section~X; see Table~Y.}
+% \end{table}
+% ----------------------------------------------------------------------
