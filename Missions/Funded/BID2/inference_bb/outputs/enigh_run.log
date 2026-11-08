@@ -1,0 +1,19 @@
+point: {'share_25_34': np.float64(0.0182), 'share_50_64': np.float64(0.0231), 'share_65_79': np.float64(0.0332), 'logslope': np.float64(0.0685), 'elas_pooled': np.float64(0.5774), 'elas_within': np.float64(0.5832), 'skill_prem': np.float64(0.6908)} [4s]
+  200/2000 replicates [16s]
+  400/2000 replicates [28s]
+  600/2000 replicates [40s]
+  800/2000 replicates [51s]
+  1000/2000 replicates [63s]
+  1200/2000 replicates [75s]
+  1400/2000 replicates [87s]
+  1600/2000 replicates [99s]
+  1800/2000 replicates [111s]
+  2000/2000 replicates [123s]
+elas_pooled  point 0.5774 (draft 0.575)  ci95 [0.5181, 0.6368]  sd 0.0297 vs se 0.029  pp 0.033  model 0.724 in CI: False  tail 0.0
+elas_within  point 0.5832 (draft 0.573)  ci95 [0.5229, 0.6393]  sd 0.0293 vs se 0.029  pp 0.031  model 0.831 in CI: False  tail 0.0
+share_25_34  point 0.0182 (draft 0.0182)  ci95 [0.0174, 0.0191]  sd 0.0004 vs se 0.0004  pp 0.042  model 0.0211 in CI: False  tail 0.0
+share_50_64  point 0.0231 (draft 0.0231)  ci95 [0.0223, 0.0239]  sd 0.0004 vs se 0.0004  pp 0.058  model 0.0225 in CI: True  tail 0.203
+share_65_79  point 0.0332 (draft 0.0332)  ci95 [0.0316, 0.035]  sd 0.0009 vs se 0.0009  pp 0.054  model 0.0203 in CI: False  tail 0.0
+logslope     point 0.0685 (draft 0.0675)  ci95 [0.0526, 0.084]  sd 0.0078 vs se 0.0082  pp 0.054  model 0.0885 in CI: False  tail 0.015
+skill_prem   point 0.6908 (draft 0.659)  ci95 [0.6588, 0.723]  sd 0.0163 vs se 0.013  pp 0.118  model 0.717 in CI: True  tail 0.118
+joint: {'d2_model': 820.902, 'd2_q95_replicates': 14.631, 'tail_prob': 0.0, 'k': 7, 'note': 'model moment vector (tab:moment_match_md) against the joint replicate cloud of the seven ENIGH moments'}

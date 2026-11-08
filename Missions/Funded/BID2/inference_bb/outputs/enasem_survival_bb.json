@@ -1,0 +1,114 @@
+{
+ "seed": 20261108,
+ "replicates": 4000,
+ "high_definition": "edu_gru4",
+ "wave_pair": "2018 -> 2021 (3 years, converted to 5)",
+ "n": {
+  "low": 6009,
+  "high": 2224
+ },
+ "deaths": {
+  "low": 237,
+  "high": 50
+ },
+ "clusters": 2243,
+ "moments": {
+  "surv5_low": {
+   "point": 0.9404,
+   "mean": 0.9402,
+   "sd": 0.007,
+   "ci95": [
+    0.9255,
+    0.9529
+   ],
+   "ci80": [
+    0.9312,
+    0.9486
+   ],
+   "split_half": {
+    "first": [
+     0.9251,
+     0.953
+    ],
+    "second": [
+     0.9259,
+     0.9527
+    ]
+   },
+   "n_draws": 4000,
+   "normal": {
+    "se": 0.004,
+    "ci95": [
+     0.9326,
+     0.9483
+    ],
+    "pp_distance": 0.257,
+    "sd_ratio_bb_over_normal": 1.74
+   },
+   "draft_target": 0.951,
+   "draft_model": 0.995,
+   "model_in_ci95": false
+  },
+  "surv5_high": {
+   "point": 0.9591,
+   "mean": 0.9583,
+   "sd": 0.0108,
+   "ci95": [
+    0.9332,
+    0.976
+   ],
+   "ci80": [
+    0.9444,
+    0.9711
+   ],
+   "split_half": {
+    "first": [
+     0.9334,
+     0.9758
+    ],
+    "second": [
+     0.9329,
+     0.9764
+    ]
+   },
+   "n_draws": 4000,
+   "normal": {
+    "se": 0.006,
+    "ci95": [
+     0.9473,
+     0.9709
+    ],
+    "pp_distance": 0.269,
+    "sd_ratio_bb_over_normal": 1.81
+   },
+   "draft_target": 0.972,
+   "draft_model": 0.998,
+   "model_in_ci95": false
+  },
+  "surv5_gap_high_minus_low": {
+   "point": 0.0187,
+   "mean": 0.0182,
+   "sd": 0.0122,
+   "ci95": [
+    -0.0089,
+    0.04
+   ],
+   "ci80": [
+    0.0022,
+    0.0328
+   ],
+   "split_half": {
+    "first": [
+     -0.0095,
+     0.0402
+    ],
+    "second": [
+     -0.0085,
+     0.0394
+    ]
+   },
+   "n_draws": 4000,
+   "draft_gap": 0.021
+  }
+ }
+}
