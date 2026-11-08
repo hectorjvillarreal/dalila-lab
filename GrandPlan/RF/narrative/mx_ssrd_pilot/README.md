@@ -10,6 +10,7 @@ PY=~/miniforge3/envs/dalila/bin/python
 $PY -I src/extract.py --all          # Stage 1 and Stage 2, reuses finished steps; --force redoes them
 $PY -I src/flatten.py                # out/records.csv
 $PY -I src/evaluate.py               # eval/metrics.json, needs eval/episode_match.csv
+$PY -I src/bootstrap_eval.py         # eval/intervals.json, intervals_<date>.md, figures/bb_metrics.png
 ```
 
 The full run takes about an hour: run it inside Zellij. `extract.py` calls only `localhost:11434` and stops if the model is not fully on the GPU.
@@ -26,5 +27,5 @@ Rebuilding from the raw files: `src/to_text.py`, `src/chunk.py`, `src/make_schem
 | `schema/`, `prompts/` | JSON Schema and prompts; `stage2.txt` is generated from its template |
 | `out/` | Stage 1 summaries, Stage 2 records, `records.csv` |
 | `silver/` | Reference coding, never fed to Qwen except the anchor |
-| `eval/` | Match table, metrics, report; `prompt_v1/` keeps the first aborted run |
+| `eval/` | Match table, metrics, report; Bayesian-bootstrap intervals (`intervals.json`, `intervals_<date>.md`, `figures/`); `prompt_v1/` keeps the first aborted run |
 | `logs/` | Model digest, parameters, prompt hashes, timings |

@@ -1,0 +1,759 @@
+{
+ "date": "2026-11-08",
+ "replicates": 4000,
+ "seed": 20261108,
+ "documents": 10,
+ "documents_evaluated": [
+  "01",
+  "02",
+  "03",
+  "05",
+  "06",
+  "07",
+  "08",
+  "09",
+  "10",
+  "11"
+ ],
+ "documents_quote_check": [
+  "01",
+  "02",
+  "03",
+  "04",
+  "05",
+  "07",
+  "08",
+  "10",
+  "11"
+ ],
+ "metrics": {
+  "recall_all": {
+   "point": 0.282,
+   "mean": 0.288,
+   "sd": 0.065,
+   "ci95": [
+    0.174,
+    0.423
+   ],
+   "ci80": [
+    0.206,
+    0.375
+   ],
+   "split_half": {
+    "first": [
+     0.175,
+     0.421
+    ],
+    "second": [
+     0.174,
+     0.426
+    ]
+   },
+   "degenerate": false,
+   "normal_approx": {
+    "se": 0.072,
+    "ci95": [
+     0.141,
+     0.423
+    ],
+    "pp_distance": 0.055
+   }
+  },
+  "recall_core": {
+   "point": 0.379,
+   "mean": 0.391,
+   "sd": 0.098,
+   "ci95": [
+    0.225,
+    0.598
+   ],
+   "ci80": [
+    0.267,
+    0.523
+   ],
+   "split_half": {
+    "first": [
+     0.225,
+     0.598
+    ],
+    "second": [
+     0.223,
+     0.597
+    ]
+   },
+   "degenerate": false,
+   "normal_approx": {
+    "se": 0.09,
+    "ci95": [
+     0.203,
+     0.556
+    ],
+    "pp_distance": 0.065
+   }
+  },
+  "precision": {
+   "point": 1.0,
+   "mean": 1.0,
+   "sd": 0.0,
+   "ci95": [
+    1.0,
+    1.0
+   ],
+   "ci80": [
+    1.0,
+    1.0
+   ],
+   "split_half": {
+    "first": [
+     1.0,
+     1.0
+    ],
+    "second": [
+     1.0,
+     1.0
+    ]
+   },
+   "degenerate": true
+  },
+  "field_mean_all": {
+   "point": 0.647,
+   "mean": 0.649,
+   "sd": 0.018,
+   "ci95": [
+    0.621,
+    0.691
+   ],
+   "ci80": [
+    0.627,
+    0.674
+   ],
+   "split_half": {
+    "first": [
+     0.621,
+     0.691
+    ],
+    "second": [
+     0.621,
+     0.692
+    ]
+   },
+   "degenerate": false
+  },
+  "field_mean_informative": {
+   "point": 0.604,
+   "mean": 0.604,
+   "sd": 0.032,
+   "ci95": [
+    0.547,
+    0.673
+   ],
+   "ci80": [
+    0.564,
+    0.644
+   ],
+   "split_half": {
+    "first": [
+     0.546,
+     0.67
+    ],
+    "second": [
+     0.548,
+     0.676
+    ]
+   },
+   "degenerate": false
+  },
+  "quote_share_failing": {
+   "point": 0.352,
+   "mean": 0.346,
+   "sd": 0.054,
+   "ci95": [
+    0.249,
+    0.461
+   ],
+   "ci80": [
+    0.282,
+    0.418
+   ],
+   "split_half": {
+    "first": [
+     0.249,
+     0.459
+    ],
+    "second": [
+     0.251,
+     0.464
+    ]
+   },
+   "degenerate": false,
+   "normal_approx": {
+    "se": 0.029,
+    "ci95": [
+     0.295,
+     0.409
+    ],
+    "pp_distance": 0.317
+   }
+  },
+  "share_uncovered": {
+   "point": 0.75,
+   "mean": 0.737,
+   "sd": 0.109,
+   "ci95": [
+    0.505,
+    0.921
+   ],
+   "ci80": [
+    0.591,
+    0.871
+   ],
+   "split_half": {
+    "first": [
+     0.506,
+     0.919
+    ],
+    "second": [
+     0.505,
+     0.921
+    ]
+   },
+   "degenerate": false,
+   "normal_approx": {
+    "se": 0.108,
+    "ci95": [
+     0.538,
+     0.962
+    ],
+    "pp_distance": 0.041
+   }
+  }
+ },
+ "fields_informative": {
+  "indexation_change": {
+   "n": 0,
+   "point": null
+  },
+  "coverage_change": {
+   "point": 0.0,
+   "mean": 0.0,
+   "sd": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "ci80": [
+    0.0,
+    0.0
+   ],
+   "split_half": {
+    "first": [
+     0.0,
+     0.0
+    ],
+    "second": [
+     0.0,
+     0.0
+    ]
+   },
+   "degenerate": true,
+   "n": 1
+  },
+  "benefit_change": {
+   "point": 0.25,
+   "mean": 0.246,
+   "sd": 0.191,
+   "ci95": [
+    0.008,
+    0.693
+   ],
+   "ci80": [
+    0.035,
+    0.534
+   ],
+   "split_half": {
+    "first": [
+     0.01,
+     0.698
+    ],
+    "second": [
+     0.007,
+     0.688
+    ]
+   },
+   "degenerate": false,
+   "n": 4
+  },
+  "Social_insurance_change": {
+   "point": 0.889,
+   "mean": 0.881,
+   "sd": 0.109,
+   "ci95": [
+    0.597,
+    0.996
+   ],
+   "ci80": [
+    0.729,
+    0.987
+   ],
+   "split_half": {
+    "first": [
+     0.564,
+     0.996
+    ],
+    "second": [
+     0.627,
+     0.997
+    ]
+   },
+   "degenerate": false,
+   "n": 9
+  },
+  "Reform_category": {
+   "point": 0.6,
+   "mean": 0.581,
+   "sd": 0.17,
+   "ci95": [
+    0.236,
+    0.872
+   ],
+   "ci80": [
+    0.345,
+    0.799
+   ],
+   "split_half": {
+    "first": [
+     0.229,
+     0.87
+    ],
+    "second": [
+     0.244,
+     0.877
+    ]
+   },
+   "degenerate": false,
+   "n": 10
+  },
+  "reform_coverage": {
+   "point": 0.636,
+   "mean": 0.635,
+   "sd": 0.112,
+   "ci95": [
+    0.39,
+    0.838
+   ],
+   "ci80": [
+    0.485,
+    0.771
+   ],
+   "split_half": {
+    "first": [
+     0.389,
+     0.838
+    ],
+    "second": [
+     0.392,
+     0.836
+    ]
+   },
+   "degenerate": false,
+   "n": 11
+  },
+  "retirement_age_change": {
+   "n": 0,
+   "point": null
+  },
+  "Contribution_rate_change": {
+   "point": 1.0,
+   "mean": 1.0,
+   "sd": 0.0,
+   "ci95": [
+    1.0,
+    1.0
+   ],
+   "ci80": [
+    1.0,
+    1.0
+   ],
+   "split_half": {
+    "first": [
+     1.0,
+     1.0
+    ],
+    "second": [
+     1.0,
+     1.0
+    ]
+   },
+   "degenerate": true,
+   "n": 1
+  },
+  "Is the legislated pension reform minor or major?": {
+   "point": 0.273,
+   "mean": 0.281,
+   "sd": 0.13,
+   "ci95": [
+    0.07,
+    0.561
+   ],
+   "ci80": [
+    0.117,
+    0.45
+   ],
+   "split_half": {
+    "first": [
+     0.074,
+     0.544
+    ],
+    "second": [
+     0.068,
+     0.591
+    ]
+   },
+   "degenerate": false,
+   "n": 11
+  },
+  "instrument_type": {
+   "point": 0.364,
+   "mean": 0.366,
+   "sd": 0.167,
+   "ci95": [
+    0.09,
+    0.718
+   ],
+   "ci80": [
+    0.155,
+    0.595
+   ],
+   "split_half": {
+    "first": [
+     0.096,
+     0.718
+    ],
+    "second": [
+     0.088,
+     0.718
+    ]
+   },
+   "degenerate": false,
+   "n": 11
+  },
+  "financing_indexation_change": {
+   "point": 1.0,
+   "mean": 1.0,
+   "sd": 0.0,
+   "ci95": [
+    1.0,
+    1.0
+   ],
+   "ci80": [
+    1.0,
+    1.0
+   ],
+   "split_half": {
+    "first": [
+     1.0,
+     1.0
+    ],
+    "second": [
+     1.0,
+     1.0
+    ]
+   },
+   "degenerate": true,
+   "n": 1
+  },
+  "implicit_liability_direction": {
+   "point": 0.125,
+   "mean": 0.114,
+   "sd": 0.074,
+   "ci95": [
+    0.005,
+    0.263
+   ],
+   "ci80": [
+    0.02,
+    0.221
+   ],
+   "split_half": {
+    "first": [
+     0.005,
+     0.26
+    ],
+    "second": [
+     0.005,
+     0.265
+    ]
+   },
+   "degenerate": false,
+   "n": 8
+  },
+  "legislation_date": {
+   "point": 0.909,
+   "mean": 0.913,
+   "sd": 0.071,
+   "ci95": [
+    0.735,
+    0.997
+   ],
+   "ci80": [
+    0.813,
+    0.989
+   ],
+   "split_half": {
+    "first": [
+     0.732,
+     0.997
+    ],
+    "second": [
+     0.736,
+     0.997
+    ]
+   },
+   "degenerate": false,
+   "n": 11
+  },
+  "Planned_date": {
+   "n": 0,
+   "point": null
+  },
+  "announcement_date": {
+   "n": 0,
+   "point": null
+  },
+  "implementation_date": {
+   "point": 0.455,
+   "mean": 0.466,
+   "sd": 0.142,
+   "ci95": [
+    0.214,
+    0.77
+   ],
+   "ci80": [
+    0.29,
+    0.657
+   ],
+   "split_half": {
+    "first": [
+     0.215,
+     0.771
+    ],
+    "second": [
+     0.211,
+     0.769
+    ]
+   },
+   "degenerate": false,
+   "n": 11
+  },
+  "reversal_date": {
+   "n": 0,
+   "point": null
+  },
+  "dof_publication_date": {
+   "point": 1.0,
+   "mean": 1.0,
+   "sd": 0.0,
+   "ci95": [
+    1.0,
+    1.0
+   ],
+   "ci80": [
+    1.0,
+    1.0
+   ],
+   "split_half": {
+    "first": [
+     1.0,
+     1.0
+    ],
+    "second": [
+     1.0,
+     1.0
+    ]
+   },
+   "degenerate": true,
+   "n": 11
+  },
+  "entry_into_force_date": {
+   "point": 0.909,
+   "mean": 0.903,
+   "sd": 0.092,
+   "ci95": [
+    0.672,
+    0.997
+   ],
+   "ci80": [
+    0.775,
+    0.99
+   ],
+   "split_half": {
+    "first": [
+     0.678,
+     0.997
+    ],
+    "second": [
+     0.663,
+     0.997
+    ]
+   },
+   "degenerate": false,
+   "n": 11
+  },
+  "Status of Pension Reform": {
+   "point": 0.955,
+   "mean": 0.952,
+   "sd": 0.047,
+   "ci95": [
+    0.827,
+    0.999
+   ],
+   "ci80": [
+    0.888,
+    0.995
+   ],
+   "split_half": {
+    "first": [
+     0.827,
+     0.999
+    ],
+    "second": [
+     0.824,
+     0.999
+    ]
+   },
+   "degenerate": false,
+   "n": 11
+  },
+  "Pension Reform Types": {
+   "point": 0.5,
+   "mean": 0.49,
+   "sd": 0.11,
+   "ci95": [
+    0.291,
+    0.704
+   ],
+   "ci80": [
+    0.354,
+    0.64
+   ],
+   "split_half": {
+    "first": [
+     0.296,
+     0.699
+    ],
+    "second": [
+     0.283,
+     0.704
+    ]
+   },
+   "degenerate": false,
+   "n": 11
+  },
+  "reason_reform": {
+   "point": 0.5,
+   "mean": 0.5,
+   "sd": 0.0,
+   "ci95": [
+    0.5,
+    0.5
+   ],
+   "ci80": [
+    0.5,
+    0.5
+   ],
+   "split_half": {
+    "first": [
+     0.5,
+     0.5
+    ],
+    "second": [
+     0.5,
+     0.5
+    ]
+   },
+   "degenerate": true,
+   "n": 2
+  },
+  "regime_affected": {
+   "point": 0.394,
+   "mean": 0.413,
+   "sd": 0.158,
+   "ci95": [
+    0.146,
+    0.741
+   ],
+   "ci80": [
+    0.218,
+    0.63
+   ],
+   "split_half": {
+    "first": [
+     0.15,
+     0.741
+    ],
+    "second": [
+     0.146,
+     0.741
+    ]
+   },
+   "degenerate": false,
+   "n": 11
+  },
+  "insurance_branch": {
+   "point": 0.5,
+   "mean": 0.497,
+   "sd": 0.114,
+   "ci95": [
+    0.269,
+    0.704
+   ],
+   "ci80": [
+    0.343,
+    0.639
+   ],
+   "split_half": {
+    "first": [
+     0.267,
+     0.699
+    ],
+    "second": [
+     0.27,
+     0.706
+    ]
+   },
+   "degenerate": false,
+   "n": 11
+  }
+ },
+ "phase1_sizing": {
+  "recall_all": {
+   "halfwidth_now": 0.124,
+   "docs_needed": {
+    "0.1": 16,
+    "0.05": 63
+   }
+  },
+  "recall_core": {
+   "halfwidth_now": 0.186,
+   "docs_needed": {
+    "0.1": 35,
+    "0.05": 140
+   }
+  },
+  "field_mean_informative": {
+   "halfwidth_now": 0.063,
+   "docs_needed": {
+    "0.1": 4,
+    "0.05": 16
+   }
+  }
+ },
+ "reading": [
+  "- **La exhaustividad no está medida, está acotada.** Con diez documentos el IC 95 % de la exhaustividad va de 0.17 a 0.42 (núcleo: 0.23 a 0.60). El intervalo normal que trata los 39 episodios como independientes casi coincide (distancia p-p 0.06); la diferencia es la forma: la posterior es asimétrica a la derecha y su piso es más alto. Aquí el conglomerado por documento no ensancha, pero tampoco había razón para esperar que lo hiciera: la variación entre documentos (de 0 de 4 en el 09 a 1 de 1 en el 05) ya es la que domina.",
+  "- **Donde la normal sí engaña: las citas.** La proporción de citas que fallan la verificación literal es 0.35 con IC bayesiano [0.25, 0.46]; la normal sobre 270 citas independientes da [0.29, 0.41] y la distancia p-p es 0.32. Las citas fallan por documento, no por cita: las elisiones se concentran en unos pocos registros largos. Es el caso del ejemplo A del artículo, en el que el intervalo que se debe reportar es el del bootstrap.",
+  "- **Lo que sí sobrevive al intervalo.** Ni el límite superior de la exhaustividad (0.42) ni el de la exactitud por campo con contenido (0.67) alcanzan un nivel útil para construir la base; la cota inferior de citas que fallan (0.25) sigue por encima del límite de paro de 0.10. La recomendación «ajustar» se sostiene con incertidumbre explícita; «parar» no se puede descartar ni afirmar con esta muestra.",
+  "- **Precisión 1.00 es degenerada, no precisa.** Cada episodio del modelo emparejó con alguno de *silver* en todos los documentos, así que el bootstrap no puede moverla. Es el aviso del artículo: el bootstrap cuantifica el muestreo, no el diseño del emparejamiento, que ya el reporte llamó generoso.",
+  "- **Los campos de juicio no tienen muestra.** Dirección del pasivo, cobertura y beneficios tienen entre 1 y 8 casos con contenido; sus intervalos cubren casi todo el rango o son degenerados. Las cifras 0.13, 0.00 y 0.25 del reporte son ilustrativas, no estimaciones.",
+  "- **Tamaño de la Fase 1.** Para que la exhaustividad tenga una semianchura de ±0.10 hacen falta del orden de 16 documentos; para ±0.05, 63. Eso dimensiona el *silver* fuera de muestra que piden Beth y Héctor en el punto 4 de «Qué ajustar»."
+ ]
+}

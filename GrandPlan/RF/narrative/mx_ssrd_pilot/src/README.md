@@ -13,6 +13,7 @@ All Python runs with `-I`. That flag drops the script directory from `sys.path`,
 | `validate.py` | Schema check, quote check, evidence coverage. Library and script. | | |
 | `flatten.py` | JSON to CSV. | `out/stage2/` | `out/records.csv` |
 | `evaluate.py` | Metrics against silver, excluding document 04. `--suggest` drafts the match table. | `out/`, `silver/`, `eval/episode_match.csv` | `eval/metrics.json` |
+| `bootstrap_eval.py` | Bayesian bootstrap (Rubin 1981; Andrews, Moon and Shapiro 2026) of the same metrics with the document as the cluster: 95 % credible intervals, p-p distance to the naive normal, split-half check, Phase 1 sizing. Imports `evaluate.py`. | same as `evaluate.py` | `eval/intervals.json`, `eval/intervals_<date>.md`, `eval/figures/bb_metrics.png` |
 
 ## Decisions that differ from the build instruction
 
