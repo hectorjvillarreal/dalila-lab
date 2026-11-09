@@ -1,0 +1,533 @@
+% Fiscal r-star: cuando la deuda y el banco central tiran en sentidos opuestos · Bolhuis, Koosakul y Shenai · Segunda parte
+% Finanzas Públicas, Maestría en Economía Aplicada, Tec de Monterrey
+% Esquema aprobado: esquema_politica_fiscal_p2.md (2026-11-09). Compilar con: latexmk -pdf politica_fiscal_p2.tex
+% Versión para repartir: politica_fiscal_p2_handout.tex (misma fuente, opción handout).
+% Las notas del presentador van en \note{}; para verlas, compilar con \setbeameroption{show notes}.
+% Versión del artículo: la presentada en la conferencia del Reserve Bank of Australia (marzo de 2025, 48 pp.), en fuentes/. Las páginas se refieren a esa versión.
+% Cifras de México: SHCP, CGPE 2027; Banxico, Informe Trimestral abril-junio 2024, Recuadro 7. Cálculos en esquema_politica_fiscal_p2.md.
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\unaccentedoperators % la opción es-noaccentedoperators no existe en esta versión de babel
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{babel,arrows.meta,calc,positioning,decorations.pathreplacing,patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+
+% ---------------------------------------------------------------------------
+% Tema sobrio (igual al de las sesiones anteriores)
+% ---------------------------------------------------------------------------
+\definecolor{cTitulo}{RGB}{0,55,100}
+\definecolor{cOferta}{RGB}{31,87,153}
+\definecolor{cDemanda}{RGB}{200,100,0}
+\definecolor{cImpuesto}{RGB}{175,30,30}
+\definecolor{cRecauda}{RGB}{40,130,80}
+\definecolor{cGris}{RGB}{110,110,110}
+
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{frametitle}{fg=cTitulo}
+\setbeamercolor{title}{fg=cTitulo}
+\setbeamercolor{structure}{fg=cTitulo}
+\setbeamercolor{block title}{bg=cTitulo!12,fg=cTitulo}
+\setbeamercolor{block body}{bg=cTitulo!4}
+\setbeamercolor{block title alerted}{bg=cImpuesto!12,fg=cImpuesto}
+\setbeamercolor{block body alerted}{bg=cImpuesto!4}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{blocks}[rounded]
+\setbeamersize{text margin left=0.7cm,text margin right=0.7cm}
+\setbeamertemplate{footline}{%
+  \hfill{\small\color{cGris}Política fiscal · Parte 2\quad\insertframenumber/\inserttotalframenumber}\hspace*{1em}\vspace{1.5mm}}
+
+% Fuente al pie de cada diapositiva
+\newcommand{\fuente}[1]{\par\vfill{\small\color{cGris}#1\par}}
+% Distintivo de diapositiva opcional
+\newcommand{\opcional}{\tikz[remember picture,overlay]\node[anchor=north east,font=\small,text=cGris] at ([xshift=-5mm,yshift=-3mm]current page.north east) {opcional};}
+% Abreviatura de la fuente principal
+\newcommand{\BKS}{Bolhuis, Koosakul y Shenai (2025)}
+
+% ---------------------------------------------------------------------------
+% Estilo común de gráficas
+% ---------------------------------------------------------------------------
+\tikzset{
+  every node/.append style={font=\small},
+  eje/.style={-{Stealth[length=2mm]},thick,black!75},
+  flecha/.style={-{Stealth[length=2mm]},thick,cTitulo},
+  guia/.style={thin,dashed,black!45},
+  sincorte/.style={execute at begin node={\hyphenpenalty=10000\exhyphenpenalty=10000\relax}},
+  caja/.style={sincorte,draw=cTitulo,rounded corners,fill=cTitulo!5,align=center,inner sep=4pt},
+}
+\pgfplotsset{
+  estilo/.style={axis lines=left,tick label style={font=\small},label style={font=\small},
+    legend style={font=\small,draw=none,fill=none},every axis plot/.append style={thick}},
+}
+
+\title{Fiscal r-star: cuando la deuda y el banco central tiran en sentidos opuestos}
+\subtitle{Bolhuis, Koosakul y Shenai (2024) · Segunda parte}
+\author{Héctor Juan Villarreal}
+\institute{Finanzas Públicas · Maestría en Economía Aplicada\\Escuela de Gobierno y Transformación Pública · Tec de Monterrey}
+\date{Noviembre de 2026}
+
+\begin{document}
+
+% =========================================================================
+% I. PUENTE · 5 min
+% =========================================================================
+\section{Puente}
+
+% 1 -----------------------------------------------------------------------
+\begin{frame}[plain]
+  \titlepage
+  \vspace{-4mm}
+  {\small\color{cGris}\centering Versión del artículo presentada en la conferencia anual del Reserve Bank of Australia (marzo de 2025), con el comentario de Rachael McCririck.\par}
+  \note{1 min. Bolhuis, M. A., Koosakul, J. y Shenai, N. (2024), «Fiscal R-Star: Fiscal-Monetary Tensions and Implications for Policy», IMF Working Paper 24/174. Usamos la versión posterior (marzo de 2025, 48 pp.), presentada en Sídney el 4--5 de septiembre de 2025; las páginas que cito son de esa versión. El WP original no se pudo descargar hoy.}
+\end{frame}
+
+% 2 -----------------------------------------------------------------------
+\begin{frame}{La misma ecuación, otra pregunta}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Primera parte: dada la tasa, ¿qué balance primario?}
+        \[ pb^{DS} = \frac{r^* - \bar g}{1+\bar\pi+\bar g}\; d \]
+        El balance primario que estabiliza la deuda si la tasa real es la neutral, el producto crece a su potencial y la inflación está en la meta.
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \onslide<2->{
+      \begin{block}{Segunda parte: dado el balance primario, ¿qué tasa?}
+        \[ r_f^* = \;? \]
+        Si la política fiscal no responde a la deuda, el balance primario es el dato y la tasa es la incógnita.
+      \end{block}}
+    \end{column}
+  \end{columns}
+  \medskip
+  \onslide<3->{
+  \begin{itemize}
+    \item En la primera parte escribimos $\Delta b = \frac{r-g}{1+g}\,b - s$. El artículo escribe la misma ley de movimiento con la deuda nominal sobre el PIB nominal: $\Delta d_t = \frac{r_t - g_t}{1+\pi_t+g_t}\,d_{t-1} - pb_t$, con $pb = s$.
+    \item El cambio importa porque los autores documentan que, desde 2008, el balance primario de las economías avanzadas dejó de responder a la deuda.
+  \end{itemize}}
+  \fuente{\BKS, sección 1, pp.~3--4; ec.~(1), p.~8; ec.~(4), p.~10.}
+  \note{4 min. La ec.~(4) es el «debt-stabilizing primary balance» que usan el FMI y la Comisión. La diferencia de denominador ($1+\pi+g$ contra $1+g$) viene de que el artículo deflacta la deuda nominal con el PIB nominal; nota 25.}
+\end{frame}
+
+% =========================================================================
+% II. EL CONCEPTO · 18 min
+% =========================================================================
+\section{El concepto}
+
+% 3 -----------------------------------------------------------------------
+\begin{frame}{Recordatorio: la r-star monetaria es la tasa real que equilibra la economía}
+  \begin{itemize}
+    \item<1-> La tasa neutral, o r-star monetaria, es la tasa real de corto plazo con la que el producto está en su potencial y la inflación en su meta. Viene de Wicksell y hoy se estima con el método de Laubach y Williams (2003).
+    \item<2-> Depende de factores lentos: productividad, demografía, ahorro e inversión, aversión al riesgo global. Por eso se mueve poco y con incertidumbre: no se observa, se estima.
+    \item<3-> Para México, Banco de México la estima en 2.7\,\% real, con intervalo de 1.8 a 3.6; con la meta de 3\,\%, la tasa neutral nominal es 5.7 (4.8 a 6.6). Es la estimación vigente: no hay actualización posterior en los informes trimestrales.
+  \end{itemize}
+  \onslide<4->{
+  \begin{block}{Para la postura monetaria}
+    Si la tasa real de corto plazo está por arriba de la neutral, la política es restrictiva; si está por debajo, es acomodaticia. En 2025 la tasa real ex ante de México llevaba tres años por encima del límite superior del intervalo.
+  \end{block}}
+  \fuente{\BKS, p.~3 y ec.~(10), p.~13. Banco de México, \emph{Informe Trimestral} abril--junio 2024, Recuadro 7, Cuadro 1; \emph{Informe Trimestral} julio--septiembre 2025.}
+  \note{3 min. El Recuadro 7 (28 de agosto de 2024) promedia seis métodos: regla de Taylor, RBC, curva de rendimientos afín, Laubach-Williams, Holston-Laubach-Williams y generaciones traslapadas. La estimación de 2019 era 2.6 (1.8 a 3.4). Revisé el índice de recuadros de Banxico hasta abril--junio 2026: no hay otro recuadro de tasa neutral.}
+\end{frame}
+
+% 4 -----------------------------------------------------------------------
+\begin{frame}{Fiscal r-star: la tasa real que estabiliza la deuda con el balance primario que hay}
+  \begin{align*}
+    \onslide<1->{\text{Ley de movimiento:}\quad & \Delta d_t = \frac{r_t - g_t}{1+\pi_t+g_t}\,d_{t-1} - pb_t\\}
+    \onslide<2->{\text{Imponemos } \Delta d = 0,\; g=\bar g,\; \pi=\bar\pi,\; pb=\overline{pb},\; d=\bar d\text{:}\quad & 0 = \frac{r_f^* - \bar g}{1+\bar\pi+\bar g}\,\bar d - \overline{pb}\\}
+    \onslide<3->{\text{Despejando:}\quad & r_f^* = \bar g + (1+\bar\pi+\bar g)\,\frac{\overline{pb}}{\bar d}}
+  \end{align*}
+  \onslide<4->{
+  \begin{block}{Definición}
+    La tasa real de la deuda que mantiene constante la razón deuda a PIB con el balance primario dado ($\overline{pb}$), el producto en su potencial ($\bar g$) y la inflación en la meta ($\bar\pi$). Sube con los tres; baja con la deuda ($\bar d$).
+  \end{block}}
+  \fuente{\BKS, sección 3, ecs.~(1) y (6), pp.~8 y 12; Anexo A.1, ecs.~(A.5)--(A.8), pp.~43--44.}
+  \note{4 min. El artículo la llama «no observada» porque depende de tres variables estimadas. En términos reales (deuda real sobre PIB real) sería $r_f^* = \bar g + \overline{pb}/\bar d$ (nota 25). Con dinero en la restricción, $\bar d$ se sustituye por $\bar d + \bar m$ (nota 26). Para la teoría fiscal del nivel de precios es la tasa de descuento a la que el sector privado absorbe la deuda (ec.~9).}
+\end{frame}
+
+% 5 -----------------------------------------------------------------------
+\begin{frame}{Cómo se lee: por encima de la tasa que paga la deuda hay espacio; por debajo, no}
+  \begin{block}{La deuda en términos de la fiscal r-star (ec.~7)}
+    \[ \frac{\Delta d_t}{\bar d} = \frac{r_t - r_f^*}{1+\bar\pi+\bar g} - \frac{pb_t - \overline{pb}}{\bar d} \]
+  \end{block}
+  \begin{itemize}
+    \item<2-> Mientras la fiscal r-star esté por encima de la tasa real que efectivamente paga la deuda, hay margen para más déficit sin que suba la deuda. Si está por debajo, la deuda crece salvo que el gobierno consolide.
+    \item<3-> En el vocabulario del artículo, una fiscal r-star más alta es más sostenibilidad. Es la misma información que el balance primario estabilizador, leída desde la otra incógnita.
+    \item<4-> La ventaja: vive en el espacio de las tasas reales, el mismo que la tasa neutral, así que las dos se pueden restar.
+  \end{itemize}
+  \fuente{\BKS, sección 3, ec.~(7), p.~12; p.~3.}
+  \note{3 min. El artículo sostiene que, con política fiscal activa, la tasa estabilizadora es mejor indicador de sostenibilidad que el balance primario estabilizador, porque el balance primario no se ajusta (p.~3 y p.~6).}
+\end{frame}
+
+% 6 -----------------------------------------------------------------------
+\begin{frame}{La brecha fiscal-monetaria: la tasa que pide el banco central menos la que aguanta la deuda}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{tikzpicture}[scale=0.7]
+        \draw[eje] (0,0) -- (6.4,0) node[below left] {Balance primario $pb$};
+        \draw[eje] (0,0) -- (0,4.8) node[right] {Tasa real $r$};
+        \draw[very thick,cTitulo] (0.3,0.6) -- (6.0,4.4) node[right,font=\footnotesize] {$r_f^*$};
+        \draw[very thick,cDemanda] (0,2.6) -- (6.2,2.6) node[right,font=\footnotesize] {$r_m^*$};
+        \coordinate (X) at (3.3,2.6);
+        \fill (X) circle (1.8pt);
+        \draw[guia] (X) -- (3.3,0) node[below,font=\footnotesize] {$pb^{DS}$};
+        \draw[guia] (1.5,0) node[below,font=\footnotesize] {$\overline{pb}$} -- (1.5,1.4);
+        \fill (1.5,1.4) circle (1.4pt);
+        \draw[{Stealth}-{Stealth},thick,cImpuesto] (1.5,1.4) -- (1.5,2.6) node[midway,right,font=\footnotesize,cImpuesto] {brecha};
+        \node[font=\footnotesize,cGris] at (0.9,3.9) {I};
+        \node[font=\footnotesize,cGris] at (2.5,2.15) {II};
+        \node[font=\footnotesize,cGris] at (5.0,1.2) {III};
+        \node[font=\footnotesize,cGris] at (4.6,3.8) {IV};
+        \node[font=\footnotesize,cGris,anchor=north west,align=left] at (0,-0.7) {I: $\pi\downarrow$, $d\uparrow$ \quad II: $\pi\uparrow$, $d\uparrow$\\ III: $\pi\uparrow$, $d\downarrow$ \quad IV: $\pi\downarrow$, $d\downarrow$};
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \small
+      \begin{itemize}
+        \item La curva fiscal es creciente: más balance primario aguanta más tasa. La monetaria es plana: la fijan el ahorro y la inversión, no el fisco.
+        \pause
+        \item Se cruzan en el balance primario estabilizador. A la derecha, el banco central puede fijar la tasa donde quiera y la deuda baja.
+        \pause
+        \item A la izquierda se abre la brecha $r_m^* - r_f^*$ (\emph{fiscal-monetary gap}). Con la tasa en la neutral la deuda crece (I); por debajo de la fiscal r-star la deuda baja pero la inflación sube (III); en medio, suben las dos (II).
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\BKS, sección 3, fig.~3 redibujada y pp.~15--16. Se supone $\tau^*=0$: la tasa de la deuda es la de política.}
+  \note{4 min. Con brecha positiva no hay región cómoda a la izquierda de $pb^{DS}$: el banco central escoge entre I, II y III. La tensión crece conforme el balance primario baja, porque la región II se ensancha. Los autores admiten que la curva monetaria podría tener pendiente negativa si los déficit grandes suben la neutral (nota 32).}
+\end{frame}
+
+% 7 -----------------------------------------------------------------------
+\begin{frame}{Activa y pasiva: desde 2008 el balance primario ya no responde a la deuda}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=6.0cm,height=4.4cm,ybar,bar width=16pt,ymin=-0.055,ymax=0.05,
+            symbolic x coords={pre,gfc,cov},xtick={pre,gfc,cov},
+            xticklabels={{1880--2008},{2009--2019},{2020--2022}},
+            xticklabel style={font=\footnotesize},
+            ylabel={$\rho_1$},scaled y ticks=false,
+            yticklabel style={/pgf/number format/fixed,/pgf/number format/precision=2},
+            nodes near coords,nodes near coords align={vertical},nodes near coords style={font=\footnotesize,/pgf/number format/fixed,/pgf/number format/precision=3}]
+          \addplot[fill=cTitulo!70,draw=cTitulo] coordinates {(pre,0.031) (gfc,-0.015) (cov,-0.035)};
+          \draw[guia] (axis cs:pre,0) -- (axis cs:cov,0);
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \small
+      \begin{itemize}
+        \item Leeper (1991): la política fiscal es pasiva si el balance primario sube cuando sube la deuda, y activa si no responde. Los modelos usuales la suponen pasiva.
+        \pause
+        \item Prueba de Bohn: $pb_t = \rho_1 d_{t-1} + \alpha_1(Q_t - Q_t^*)$; con $\rho_1>0$ la deuda es estacionaria. Antes de 2008, un punto más de deuda traía 0.03 más de balance primario; desde 2009 la respuesta es negativa.
+        \pause
+        \item Los autores lo atribuyen a presiones de gasto y menor cohesión política. Hay que conceder que en 2020 la respuesta activa era la deseable.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\BKS, sección 2, ecs.~(3)--(5) y fig.~2, pp.~8--11; Annex Table 1, p.~46 (16 economías avanzadas). Leeper (1991), \emph{JME} 27; Bohn (1998), \emph{QJE} 113(3).}
+  \note{3 min. Annex Table 1: $\rho_1$ = 0.031, -0.015, -0.035 (los tres significativos al 1\,\%); $\rho_2$ (respuesta al balance primario estabilizador) = 1.37, 0.49 y 0.67: antes de 2008 el balance primario se movía más que uno a uno con el estabilizador, después menos. McCririck (p.~4): las expansiones sin respaldo de la Segunda Guerra y de la pandemia fueron eficaces justo por eso.}
+\end{frame}
+
+% =========================================================================
+% III. CUANDO LA BRECHA ES POSITIVA · 12 min
+% =========================================================================
+\section{Cuando la brecha es positiva}
+
+% 8 -----------------------------------------------------------------------
+\begin{frame}{Con brecha positiva pasa una de cuatro cosas, o una combinación de ellas}
+  \begin{enumerate}
+    \item<1-> \textbf{La deuda crece.} Si nadie cambia de postura, la deuda sube para el balance primario dado.
+    \item<2-> \textbf{El banco central cede.} Mantiene la tasa por debajo de la neutral para aliviar la deuda, y la inflación sube sobre la meta.
+    \item<3-> \textbf{El fisco consolida.} Sube el balance primario y pasa a una política pasiva. Con tasas altas y crecimiento débil, esa consolidación puede ser procíclica.
+    \item<4-> \textbf{Se baja el costo de la deuda sin bajar la tasa de política.} Acortando plazos, o con represión financiera que mantenga artificialmente bajos los rendimientos de largo plazo.
+  \end{enumerate}
+  \onslide<5->{
+  \begin{alertblock}{Pregunta}
+    ¿Cuál de las cuatro les parece más probable en México, y cuál más costosa?
+  \end{alertblock}}
+  \fuente{\BKS, sección 1, p.~4; sección 3, p.~14.}
+  \note{3 min. Es la lista de la introducción (p.~4); la ec.~(11) de la siguiente diapositiva es la misma lista en forma de identidad. Respuestas probables: la primera (deuda al alza, que es lo que proyecta la SHCP) y la tercera (consolidación gradual); la segunda es la más costosa con una meta de inflación creíble.}
+\end{frame}
+
+% 9 -----------------------------------------------------------------------
+\begin{frame}{La descomposición formal: cada término de la brecha es uno de los cuatro desenlaces}
+  \begin{block}{Ecuación (11)}
+    \[ r_m^* - r_f^* = \underbrace{\frac{\Delta d_t}{\bar d}(1+\bar\pi+\bar g)}_{\text{la deuda crece}} + \underbrace{\frac{1}{\phi}(\Delta\pi_t - \Phi_t)}_{\text{la inflación sube}} + \underbrace{\frac{pb_t - \overline{pb}}{\bar d}(1+\bar\pi+\bar g)}_{\text{el fisco consolida}} - \underbrace{\tau_t^*}_{\text{baja el costo}} \]
+  \end{block}
+  \begin{itemize}
+    \item<2-> Sale de combinar la ley de movimiento con una curva IS y una de Phillips: $\Delta\pi_t = \Phi_t - \phi\,(r^P_t - r_m^*)$, donde $\phi$ es la sensibilidad de la inflación a la tasa real de política y $\Phi_t$ recoge las expectativas.
+    \item<3-> $\tau_t^* = r_t - r^P_t$ es el diferencial entre la tasa efectiva de la deuda y la tasa de política. En una economía emergente incluye la prima soberana, la prima de plazo y la prima cambiaria.
+    \item<4-> La ecuación no dice cuál término se mueve, eso lo deciden las instituciones; dice que la suma está dada.
+  \end{itemize}
+  \fuente{\BKS, sección 3, ecs.~(10)--(11), pp.~13--14, y nota 31; Anexo A.1, p.~44.}
+  \note{3 min. Si las expectativas están ancladas, $\Phi_t$ empuja la inflación de regreso a la meta y el segundo término se amortigua (nota 30). En economía abierta, con paridad de tasas, el efecto de una tasa de política baja sobre la inflación se amplifica por el tipo de cambio: $\phi$ se vuelve $\phi+\eta$ (Anexo A.3).}
+\end{frame}
+
+% 10 ----------------------------------------------------------------------
+\begin{frame}{Dominancia fiscal y represión financiera: la salida silenciosa de la historia}
+  \begin{itemize}
+    \item<1-> Cuando el banco central cede hablamos de dominancia fiscal. En las dieciséis economías, las tasas de política estuvieron por debajo de la regla de Taylor entre 1930 y 1950, cuando la brecha era máxima; el acuerdo Tesoro-Fed de 1951 cerró ese periodo.
+    \item<2-> La represión financiera liquida deuda con tasas reales negativas: reservas obligatorias, topes a las tasas, controles de capital, compradores cautivos. Así se pagó buena parte de la deuda de posguerra.
+    \item<3-> Hoy es más difícil: el capital se mueve y los tenedores se organizan. Pero si la tensión dura y no hay consenso para consolidar, el artículo prevé que vuelva.
+  \end{itemize}
+  \onslide<4->{
+  \begin{block}{Una medida propuesta}
+    $(r_m^* - r^P)/(r_m^* - r_f^*)$: la fracción de la brecha que absorbe el banco central con la tasa por debajo de la neutral. Cerca de uno prioriza la deuda; cerca de cero, la inflación.
+  \end{block}}
+  \fuente{\BKS, sección 7, pp.~33--35, figs.~13--14; nota 44. Reinhart y Sbrancia (2015), IMF WP 15/7; Romero (2013).}
+  \note{3 min. La fig.~13 muestra que la brecha y la polarización política (V-Dem) se mueven juntas y hoy están en máximos desde los años cuarenta y cincuenta. McCririck (p.~4): con capital libre, la represión puede no ser posible porque el ahorro se va. El artículo también advierte que en una economía abierta la tentación pasa a intervención cambiaria y controles de flujos (p.~35).}
+\end{frame}
+
+% 10b (opcional) --------------------------------------------------------
+\begin{frame}{Estáticas comparativas: qué mueve las dos curvas}
+  \opcional
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{tikzpicture}[scale=0.55]
+        \foreach \dx/\dy/\titulo in {0/0/{(A) sube $r_m^*$}, 5.4/0/{(B) sube $\bar g$}, 0/-4.2/{(C) sube $\bar\pi$}, 5.4/-4.2/{(D) sube $\tau^*$}} {
+          \begin{scope}[shift={(\dx,\dy)}]
+            \draw[eje] (0,0) -- (4.4,0);
+            \draw[eje] (0,0) -- (0,3.4);
+            \draw[thick,cTitulo] (0.2,0.4) -- (4.0,2.6);
+            \draw[thick,cDemanda] (0,1.7) -- (4.2,1.7);
+            \node[font=\footnotesize,anchor=south west] at (0,3.3) {\titulo};
+          \end{scope}
+        }
+        % A: monetary up
+        \draw[thick,cDemanda,dashed] (0,2.4) -- (4.2,2.4);
+        \draw[flecha] (3.2,1.8) -- (3.2,2.3);
+        % B: growth up: intercept up, steeper
+        \begin{scope}[shift={(5.4,0)}]
+          \draw[thick,cTitulo,dashed] (0.2,1.0) -- (3.4,3.2);
+          \draw[flecha] (2.6,1.75) -- (2.3,2.4);
+        \end{scope}
+        % C: inflation target up: steeper
+        \begin{scope}[shift={(0,-4.2)}]
+          \draw[thick,cTitulo,dashed] (0.2,0.4) -- (3.4,3.1);
+          \draw[flecha] (3.2,2.1) -- (2.9,2.6);
+        \end{scope}
+        % D: spread up: fiscal curve down
+        \begin{scope}[shift={(5.4,-4.2)}]
+          \draw[thick,cTitulo,dashed] (0.6,0.0) -- (4.2,2.1);
+          \draw[flecha] (3.0,1.95) -- (3.0,1.35);
+        \end{scope}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \small
+      \begin{itemize}
+        \item (A) Sube la neutral: la brecha crece para todo balance primario.
+        \item (B) Más crecimiento potencial sube y empina la curva fiscal.
+        \item (C) Una meta de inflación más alta empina la curva fiscal: la inflación paga parte de la deuda si el balance primario es positivo.
+        \item (D) Sube el diferencial entre la tasa de la deuda y la de política: la curva fiscal baja y nadie gana.
+      \end{itemize}
+      La brecha se cierra con balance primario, gestión de deuda, crecimiento o, lo más tentador, represión.
+    \end{column}
+  \end{columns}
+  \fuente{\BKS, sección 3, fig.~4 redibujada y pp.~16--18.}
+  \note{7 min, opcional. Nota 33: el espacio para cobrar impuesto inflacionario es limitado porque el sector privado reduce sus saldos reales y sube la neutral. Nota 36: el crecimiento también sube la neutral (Laubach y Williams), así que (B) no es un almuerzo gratis; McCririck insiste en eso.}
+\end{frame}
+
+% =========================================================================
+% IV. LA EVIDENCIA · 7 min
+% =========================================================================
+\section{La evidencia}
+
+% 11 ----------------------------------------------------------------------
+\begin{frame}{140 años de tensiones: la brecha de 2020 es la mayor desde fines de los cincuenta}
+  \small
+  \begin{columns}[T]
+    \begin{column}{0.46\textwidth}
+      \textbf{Dieciséis economías avanzadas, 1878--2020}
+      \begin{itemize}
+        \item Fuentes: base Jordà-Schularick-Taylor, finanzas públicas del FMI y la neutral de Platzer et al. (2023).
+        \item La brecha fue máxima en la Segunda Guerra, mínima a mediados de los setenta, baja y estable de los ochenta a los 2000, y sube desde mediados de los 2000.
+        \item La fiscal r-star es más volátil que la monetaria porque depende de una decisión.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \onslide<2->{
+      \textbf{Lo que sigue a una brecha mayor (proyecciones locales)}
+      \begin{center}
+      \begin{tabular}{lr}
+        \toprule
+        \multicolumn{2}{l}{Un punto más de brecha, a diez años} \\
+        \midrule
+        Deuda/PIB & $+1.5$ pp \\
+        Nivel de precios & $+1.5$ pp \\
+        Depreciación frente al dólar & $+2$\,\% \\
+        Liquidación de deuda & $+0.6$ pp \\
+        Probabilidad de crisis & $+0.7$ a $1.8$ pp \\
+        \bottomrule
+      \end{tabular}
+      \end{center}}
+      \onslide<3->{Con el WEO 2014--2023: la fiscal r-star de las avanzadas cayó de cerca de 4\,\% a cerca de 1\,\%; en las emergentes la caída fue gradual y la brecha, más estable.}
+    \end{column}
+  \end{columns}
+  \fuente{\BKS, secciones 4--6, pp.~19--31, figs.~5, 7--10. Las cifras de la tabla son asociaciones, no efectos causales (p.~24).}
+  \note{3 min. No redibujo la fig.~5 porque el artículo no publica la serie; las cifras de la tabla están en el texto (pp.~25--26). Tabla 1 (p.~22): un punto más de balance primario sube la fiscal r-star más de dos puntos; un punto más de crecimiento, 1.2 a 1.4. Sección 6: en 2023 la brecha de las avanzadas ronda -1 (ellos la escriben con el signo cambiado en el texto, p.~30), y la caída de la fiscal r-star viene sobre todo del balance primario de la pandemia.}
+\end{frame}
+
+% 12 ----------------------------------------------------------------------
+\begin{frame}{Límites: dos tasas inobservables y un balance primario tratado como dato}
+  \begin{itemize}
+    \item<1-> Las dos r-star se estiman, no se observan. La comentarista, que estimó la neutral de Australia, dice que su escepticismo se duplica con dos neutrales.
+    \item<2-> La neutral se toma como exógena, aunque la deuda pública la mueve: más oferta de activos seguros sube la neutral. Los autores lo reconocen y lo dejan para después.
+    \item<3-> El balance primario de largo plazo se filtra con Hodrick-Prescott y la deuda objetivo es una media móvil; con pronósticos del WEO el nivel cambia. Las proyecciones locales miden asociaciones.
+    \item<4-> Dos matices de McCririck: las reformas de crecimiento suben las dos r-star y no cierran la brecha por sí solas; y las expansiones «sin respaldo» de la Segunda Guerra y de la pandemia fueron útiles por serlo.
+  \end{itemize}
+  \onslide<5->{
+  \begin{block}{Juicio sobrio}
+    El valor del concepto es ordenar la discusión entre dos autoridades con un número común, no el segundo decimal de ese número.
+  \end{block}}
+  \fuente{\BKS, p.~19, p.~31, notas 29 y 40. McCririck, R. (2025), comentario en la conferencia del RBA, pp.~2 y 4.}
+  \note{3 min. McCririck trae el gráfico de Ferreira, Lott y Richards (2025, FEDS Notes) donde la oferta de activos seguros explica buena parte de la neutral de Australia. El artículo mismo pide, como agenda, un DSGE con política fiscal activa que endogenice la neutral (p.~35).}
+\end{frame}
+
+% =========================================================================
+% V. EJERCICIO: MÉXICO · 13 min
+% =========================================================================
+\section{Ejercicio: México}
+
+% 13 ----------------------------------------------------------------------
+\begin{frame}{La fiscal r-star de México: ejercicio ilustrativo con los datos del Paquete 2027}
+  \small
+  \begin{columns}[T]
+    \begin{column}{0.44\textwidth}
+      \textbf{Insumos (todos públicos)}
+      \begin{itemize}
+        \item $\bar d = 0.54$: SHRFSP estimado para 2026.
+        \item $\bar\pi = 0.03$: meta de Banco de México.
+        \item $\bar g$: 1.5, 2.0 y 2.5, el rango 2027--2032 de la SHCP.
+        \item $\overline{pb}$: 0.1 (2026), 0.5 (2027--2029) y 1.0 (2032), los propios escenarios de la SHCP.
+      \end{itemize}
+      \textbf{Supuestos}: política fiscal activa, deuda estable en el nivel actual, sin deuda en moneda extranjera.
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \onslide<2->{
+      \begin{center}
+      $r_f^* = \bar g + (1+\bar\pi+\bar g)\,\overline{pb}/\bar d$, en por ciento
+      \medskip
+      \begin{tabular}{lccc}
+        \toprule
+        & \multicolumn{3}{c}{Crecimiento potencial $\bar g$} \\
+        \cmidrule(lr){2-4}
+        Balance primario $\overline{pb}$ & 1.5 & 2.0 & 2.5 \\
+        \midrule
+        0.1 (2026) & 1.7 & 2.2 & 2.7 \\
+        0.5 (2027--2029) & 2.5 & 3.0 & 3.5 \\
+        1.0 (2032) & 3.4 & 3.9 & 4.5 \\
+        \bottomrule
+      \end{tabular}
+      \end{center}}
+      \onslide<3->{\medskip Cada décima de balance primario vale unos 0.2 puntos de fiscal r-star; cada medio punto de crecimiento, medio punto.}
+    \end{column}
+  \end{columns}
+  \fuente{\BKS, ec.~(6), p.~12. SHCP, \emph{CGPE 2027}, pp.~6, 47 y 68. Cálculo propio: ejercicio ilustrativo, no una estimación.}
+  \note{4 min. Con $\bar d = 0.55$ (2027) los números bajan una centésima. Los estudiantes pueden replicarlo en una celda: 2.0 + 1.05·0.5/54·100 = 2.97. El supuesto de deuda constante en 54 contradice la propia trayectoria de la SHCP, que sube a 56.5: por eso es ilustrativo.}
+\end{frame}
+
+% 14 ----------------------------------------------------------------------
+\begin{frame}{La comparación: el signo de la brecha depende de medio punto de crecimiento o de balance}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=6.4cm,height=5.0cm,xmin=0.5,xmax=3.5,ymin=1.0,ymax=5.0,
+            xtick={1,2,3},xticklabels={$\overline{pb}=0.1$,$\overline{pb}=0.5$,$\overline{pb}=1.0$},
+            xticklabel style={font=\footnotesize},
+            ylabel={Tasa real, \%},clip=false]
+          \addplot[name path=hi,draw=none] coordinates {(0.5,3.6) (3.5,3.6)};
+          \addplot[name path=lo,draw=none] coordinates {(0.5,1.8) (3.5,1.8)};
+          \addplot[cDemanda!25] fill between[of=hi and lo];
+          \addplot[cDemanda,thick] coordinates {(0.5,2.7) (3.5,2.7)};
+          \node[anchor=north west,cDemanda,font=\footnotesize] at (axis cs:0.55,1.78) {neutral Banxico 2.7 (banda 1.8 a 3.6)};
+          \addplot[cImpuesto,thick,dashed] coordinates {(0.5,3.4) (3.5,3.4)};
+          \node[anchor=north east,cImpuesto,font=\footnotesize] at (axis cs:3.45,3.36) {tasa real de la deuda 3.4};
+          \addplot[only marks,mark=*,mark size=2pt,cTitulo] coordinates {(1,2.2) (2,3.0) (3,3.9)};
+          \addplot[only marks,mark=-,mark size=4pt,cTitulo,thick] coordinates {(1,1.7) (1,2.7) (2,2.5) (2,3.5) (3,3.4) (3,4.5)};
+          \node[anchor=west,cTitulo,font=\footnotesize] at (axis cs:3.08,3.9) {$r_f^*$};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \small
+      \begin{itemize}
+        \item Con el balance primario de 0.5 y crecimiento de 2.0, la fiscal r-star (3.0) queda por arriba de la neutral (2.7): brecha de $-0.3$, dentro de la incertidumbre de la neutral.
+        \pause
+        \item Con el balance primario de 2026 (0.1) la brecha es $+0.5$; con crecimiento de 1.5, $+0.2$. El signo cambia con medio punto.
+        \pause
+        \item La tasa real que hoy paga la deuda (3.4) está por arriba de la fiscal r-star central: por eso la propia SHCP proyecta deuda al alza hasta 2031. La neutral no es el problema; lo es el costo efectivo.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\BKS, ecs.~(6)--(7). Banco de México (2024), Recuadro 7. SHCP, \emph{CGPE 2027}, pp.~47, 55 y 68; la tasa implícita es cálculo propio (4.0 de costo financiero sobre 54 de deuda, menos deflactor 4.0).}
+  \note{4 min. Puntos: $r_f^*$ con $\bar g=2.0$; las marcas, con 1.5 y 2.5. La SHCP proyecta Cetes reales de 2.9 a fin de 2027 y 2.4 de 2028 en adelante: con esa tasa la deuda sí se estabilizaría con 0.5 de balance primario. La diferencia entre 3.4 y 2.4 es el diferencial $\tau^*$: prima de plazo, deuda externa y bonos viejos a tasa alta.}
+\end{frame}
+
+% 15 ----------------------------------------------------------------------
+\begin{frame}{Lo que cambia en una economía emergente}
+  \small
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \textbf{Lo que añade presión}
+      \begin{itemize}
+        \item<1-> Con deuda en moneda extranjera (21\,\% del SHRFSP), la fiscal r-star baja con la tasa externa: $r_f^* = \zeta\bar g + \zeta(1+\bar g)\overline{pb}/\bar d - \zeta\alpha r^f$, con $\alpha$ la proporción externa y $\zeta = 1/(1-\alpha)$.
+        \item<2-> La prima soberana y la prima cambiaria entran en $\tau^*$, y $r-g$ es volátil.
+        \item<3-> Pemex y el envejecimiento presionan el balance primario por décadas: pensiones ya son 4.8\,\% del PIB.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \onslide<4->{
+      \textbf{Lo que protege}
+      \begin{itemize}
+        \item Deuda en pesos y a tasa fija: 84\,\% de la deuda neta del Gobierno Federal es interna.
+        \item Banco central autónomo con meta de inflación: el «dividendo fiscal» del artículo, porque las expectativas ancladas bajan la prima por inflación.
+      \end{itemize}}
+      \onslide<5->{
+      \begin{alertblock}{Pregunta}
+        Con brecha positiva y persistente, ¿qué tendría que moverse primero: el balance primario, la tasa, el plazo de la deuda o la meta?
+      \end{alertblock}}
+    \end{column}
+  \end{columns}
+  \fuente{\BKS, sección 7, pp.~33--35; Anexo A.3, p.~47; nota 31. SHCP, \emph{CGPE 2027}, pp.~41, 47 y 55.}
+  \note{3 min. Anexo A.3: con $\alpha=0$ la fórmula regresa a la ec.~(6). Con $\alpha = 0.21$, $\zeta = 1.27$: el término $-\zeta\alpha r^f$ con una tasa real externa de 2 resta medio punto. En economía abierta, el artículo advierte que la represión es menos eficaz si los no residentes tienen la deuda, y que la tentación pasa a intervención cambiaria y controles de flujos.}
+\end{frame}
+
+% =========================================================================
+% VI. CIERRE · 5 min
+% =========================================================================
+\section{Cierre}
+
+% 16 ----------------------------------------------------------------------
+\begin{frame}{Tres ideas que juntan las dos partes}
+  \begin{enumerate}
+    \item<1-> \textbf{Una ecuación, dos lecturas.} Dada la tasa, el balance primario que estabiliza; dado el balance primario, la tasa que estabiliza. Cuál es la incógnita depende de si la política fiscal responde a la deuda, y desde 2008 responde menos.
+    \item<2-> \textbf{La brecha resume la tensión y sus salidas.} Deuda que crece, inflación, consolidación o costo de la deuda por debajo de la tasa de política. La historia muestra que la salida silenciosa fue la represión financiera, y que hoy es más difícil.
+    \item<3-> \textbf{Para México el cálculo no da una alarma, da una sensibilidad.} Medio punto de crecimiento o de balance primario cambia el signo de la brecha. Lo que hoy separa a la deuda de la estabilidad no es la neutral, sino la tasa que efectivamente paga.
+  \end{enumerate}
+  \fuente{Síntesis de \BKS\ y de la primera parte.}
+  \note{3 min. Si queda tiempo: la matriz del Anexo A.4 (p.~48): fiscal r-star baja o alta contra neutral baja o alta por mucho tiempo; el cuadrante difícil es fiscal baja con neutral alta, que pide ajuste fuerte y anticipado, y es donde aparece la tentación de la represión.}
+\end{frame}
+
+% 17 ----------------------------------------------------------------------
+\begin{frame}{Puente a la próxima sesión: déficits estructurales y sostenibilidad, ¿hay salida?}
+  \begin{itemize}
+    \item El 17 de noviembre tomamos el balance primario como variable de decisión, no como dato: qué parte del déficit es estructural, cuánto hay que ajustar y con qué instrumentos.
+    \item Quedan en la mesa, del capítulo 4, las reglas fiscales y los consejos fiscales (sección 4.3.1), y del artículo, la matriz de ajuste: qué hacer si la neutral se queda alta por mucho tiempo y la fiscal r-star no sube.
+  \end{itemize}
+  \pause
+  \begin{block}{Tarea para pensar}
+    Con la tabla de la diapositiva 13 y los datos del Paquete 2027, ¿qué combinación de crecimiento y balance primario necesita México para que la fiscal r-star iguale a la tasa real que paga su deuda?
+  \end{block}
+  \fuente{\BKS, Anexo A.4, p.~48. Bénassy-Quéré et al. (2019), cap.~4, pp.~206--215.}
+  \note{2 min. Respuesta: con $\bar g = 2.0$ hace falta $\overline{pb} \approx 0.7$; con $\bar g = 1.5$, cerca de 1.0, que es el balance primario que la SHCP proyecta para 2032. El Anexo A.4 también nota que la tentación de la represión aparece en el cuadrante II.}
+\end{frame}
+
+\end{document}

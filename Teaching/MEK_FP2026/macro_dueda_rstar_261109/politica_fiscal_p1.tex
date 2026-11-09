@@ -1,0 +1,730 @@
+% Política fiscal: multiplicadores, deuda y efectividad · Bénassy-Quéré et al., cap. 4 · Primera parte
+% Finanzas Públicas, Maestría en Economía Aplicada, Tec de Monterrey
+% Esquema aprobado: esquema_politica_fiscal_p1.md (2026-11-09). Compilar con: latexmk -pdf politica_fiscal_p1.tex
+% Versión para repartir: politica_fiscal_p1_handout.tex (misma fuente, opción handout).
+% Las notas del presentador van en \note{}; para verlas, compilar con \setbeameroption{show notes}.
+% Cifras de México: SHCP, Criterios Generales de Política Económica 2027 (8 de septiembre de 2026); cálculos propios en esquema_politica_fiscal_p1.md.
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\unaccentedoperators % la opción es-noaccentedoperators no existe en esta versión de babel
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{babel,arrows.meta,calc,positioning,decorations.pathreplacing,patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+
+% ---------------------------------------------------------------------------
+% Tema sobrio (igual al de las sesiones anteriores)
+% ---------------------------------------------------------------------------
+\definecolor{cTitulo}{RGB}{0,55,100}
+\definecolor{cOferta}{RGB}{31,87,153}
+\definecolor{cDemanda}{RGB}{200,100,0}
+\definecolor{cImpuesto}{RGB}{175,30,30}
+\definecolor{cRecauda}{RGB}{40,130,80}
+\definecolor{cGris}{RGB}{110,110,110}
+
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{frametitle}{fg=cTitulo}
+\setbeamercolor{title}{fg=cTitulo}
+\setbeamercolor{structure}{fg=cTitulo}
+\setbeamercolor{block title}{bg=cTitulo!12,fg=cTitulo}
+\setbeamercolor{block body}{bg=cTitulo!4}
+\setbeamercolor{block title alerted}{bg=cImpuesto!12,fg=cImpuesto}
+\setbeamercolor{block body alerted}{bg=cImpuesto!4}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{blocks}[rounded]
+\setbeamersize{text margin left=0.7cm,text margin right=0.7cm}
+\setbeamertemplate{footline}{%
+  \hfill{\small\color{cGris}Política fiscal · Parte 1\quad\insertframenumber/\inserttotalframenumber}\hspace*{1em}\vspace{1.5mm}}
+
+% Fuente al pie de cada diapositiva
+\newcommand{\fuente}[1]{\par\vfill{\small\color{cGris}#1\par}}
+% Distintivo de diapositiva opcional
+\newcommand{\opcional}{\tikz[remember picture,overlay]\node[anchor=north east,font=\small,text=cGris] at ([xshift=-5mm,yshift=-3mm]current page.north east) {opcional};}
+% Abreviatura de la fuente principal
+\newcommand{\BQ}{Bénassy-Quéré et al. (2019), cap.~4}
+
+% ---------------------------------------------------------------------------
+% Estilo común de gráficas
+% ---------------------------------------------------------------------------
+\tikzset{
+  every node/.append style={font=\small},
+  eje/.style={-{Stealth[length=2mm]},thick,black!75},
+  flecha/.style={-{Stealth[length=2mm]},thick,cTitulo},
+  guia/.style={thin,dashed,black!45},
+  sincorte/.style={execute at begin node={\hyphenpenalty=10000\exhyphenpenalty=10000\relax}},
+  caja/.style={sincorte,draw=cTitulo,rounded corners,fill=cTitulo!5,align=center,inner sep=4pt},
+}
+\pgfplotsset{
+  estilo/.style={axis lines=left,tick label style={font=\small},label style={font=\small},
+    legend style={font=\small,draw=none,fill=none},every axis plot/.append style={thick}},
+}
+
+\title{Política fiscal: multiplicadores, deuda y efectividad}
+\subtitle{Bénassy-Quéré et al., cap.~4 · Primera parte}
+\author{Héctor Juan Villarreal}
+\institute{Finanzas Públicas · Maestría en Economía Aplicada\\Escuela de Gobierno y Transformación Pública · Tec de Monterrey}
+\date{Noviembre de 2026}
+
+\begin{document}
+
+% =========================================================================
+% I. MOTIVACIÓN · 5 min
+% =========================================================================
+\section{Motivación}
+
+% 1 -----------------------------------------------------------------------
+\begin{frame}[plain]
+  \titlepage
+  \note{1 min. Lectura: Bénassy-Quéré, A., Cœuré, B., Jacquet, P. y Pisani-Ferry, J. (2019), \emph{Economic Policy: Theory and Practice}, 2.ª ed., Oxford University Press, cap.~4, pp.~148--236. Hoy: 4.1.1, 4.1.2 (pp.~174--179), 4.2.1 y 4.2.2. Fuera: economía abierta, reglas, crisis soberanas y zona euro.}
+\end{frame}
+
+% 2 -----------------------------------------------------------------------
+\begin{frame}{La política fiscal volvió al centro porque el Estado creció, y la deuda también}
+  \begin{itemize}
+    \item Hace un siglo el gobierno era un actor menor en la demanda. En Estados Unidos el gasto público pasó de 2\,\% del PIB antes de la Primera Guerra a más de 40\,\% tras la Gran Recesión; en Europa ronda entre 45 y 55\,\%.
+    \item Hacia 2000 el consenso decía que, fuera de los estabilizadores automáticos, la política fiscal discrecional servía de poco. La crisis de 2008 y la pandemia obligaron a revisarlo.
+  \end{itemize}
+  \pause
+  \textbf{México, con el Paquete Económico 2027}
+  \begin{itemize}
+    \item La deuda pública (SHRFSP) cerró 2025 en 52.6\,\% del PIB; la SHCP estima 54.0 en 2026 y 55.0 en 2027. El costo financiero de 2026, 3.7\,\% del PIB, casi duplica lo que recauda el IEPS (2.0).
+  \end{itemize}
+  \pause
+  \begin{block}{Las cinco preguntas de hoy}
+    ¿Cuánto mueve al producto un peso de gasto? ¿Qué hace crecer la deuda? ¿Quién la compra y a qué precio? ¿Los hogares deshacen lo que hace el gobierno? ¿Cuándo funciona la política fiscal?
+  \end{block}
+  \fuente{\BQ, pp.~148--149 y 228. SHCP, \emph{CGPE 2027}, pp.~6 y 55.}
+  \note{4 min. El 2\,\% y el 40\,\% son de la p.~149 (nota 1: base Public Finances in Modern History, FMI). El SHRFSP de 2025 (52.6) está en la base revisada del PIB; el 52.3 aprobado para 2026 equivale a 54.5 con la base nueva (CGPE 2027, p.~25). Las cinco preguntas son los cinco bloques.}
+\end{frame}
+
+% =========================================================================
+% II. MULTIPLICADORES · 20 min
+% =========================================================================
+\section{Multiplicadores fiscales}
+
+% 3 -----------------------------------------------------------------------
+\begin{frame}{Un multiplicador mide cuánto cambia el producto por cada peso de impulso}
+  \begin{itemize}
+    \item Es la razón entre la variación del producto y la variación exógena de demanda que la provocó. Si el gobierno gasta un peso más y el PIB sube un peso, el multiplicador es uno.
+    \item Siempre hay que decir de qué multiplicador se habla, porque las distinciones cambian la respuesta.
+  \end{itemize}
+  \pause
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \textbf{Las que trae el capítulo}
+      \begin{itemize}
+        \item De gasto y de impuestos: en el VAR de Blanchard y Perotti (2002) ambos están cerca de uno.
+        \item De corto y de largo plazo: un gasto permanente con deuda tiene efectos de corto plazo menores y de largo plazo negativos.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \textbf{La nuestra}
+      \begin{itemize}
+        \item De impacto: el efecto del primer periodo.
+        \item Acumulado: la suma de efectos sobre el producto entre la suma de impulsos; así reporta hoy la literatura el largo plazo.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\BQ, p.~179; recuadro 4.12, p.~189; p.~191 (hallazgo 5). La pareja impacto/acumulado es nuestra.}
+  \note{3 min. Blanchard y Perotti (2002), \emph{QJE} 117(4), 1329--1368: datos trimestrales 1960--1997, identificación por rezagos institucionales. El acumulado es el que usan Ramey y Zubairy (2018) y los trabajos de proyecciones locales.}
+\end{frame}
+
+% 4 -----------------------------------------------------------------------
+\begin{frame}{El multiplicador keynesiano es grande en el pizarrón y se encoge con cada fuga}
+  \begin{align*}
+    \onslide<1->{\text{Consumo:}\quad & C = aY + b, \qquad 0<a<1\\}
+    \onslide<2->{\text{Equilibrio:}\quad & Y = C + \bar I + \bar G\\}
+    \onslide<3->{\text{Resolviendo:}\quad & \Delta Y = \frac{\Delta \bar G}{1-a} \qquad\text{con } a = 0.8 \text{ el multiplicador es } 5\\}
+    \onslide<4->{\text{Con impuestos } t \text{ e importaciones } m\text{:}\quad & \Delta Y = \frac{\Delta \bar G}{1-a(1-t)+m}}
+  \end{align*}
+  \onslide<5->{
+  \begin{block}{Lectura}
+    El libro mismo llama «excesivamente grande» al 5. Cada peso que se va en impuestos o en importaciones deja de dar vueltas en la economía. En una economía tan abierta como la mexicana, una parte del estímulo termina pagando bienes de fuera.
+  \end{block}}
+  \fuente{\BQ, recuadro 4.10, pp.~180--181 (B4.10.1--B4.10.3).}
+  \note{4 min. Primero solo impuestos: $1/[1-a(1-t)]$. Con $a=0.8$, $t=0.25$ y $m=0.3$ el multiplicador baja de 5 a $1/(1-0.6+0.3)=1.43$. Se supone oferta perfectamente elástica y precios fijos; esa es la tercera fuga del recuadro, que viene en la siguiente.}
+\end{frame}
+
+% 5 -----------------------------------------------------------------------
+\begin{frame}{Si el banco central responde, una parte del estímulo se pierde}
+  \begin{columns}[T]
+    \begin{column}{0.44\textwidth}
+      \begin{tikzpicture}[scale=0.82]
+        \draw[eje] (0,0) -- (5.6,0) node[below left] {Producto};
+        \draw[eje] (0,0) -- (0,4.6) node[below right] {Tasa de interés};
+        \draw[thick,cOferta] (0.6,0.5) -- (5.0,3.9) node[right] {LM};
+        \draw[thick,cDemanda] (0.6,3.6) -- (4.2,0.6) node[right] {IS};
+        \draw[thick,cDemanda,dashed] (1.6,4.0) -- (5.2,1.0) node[right] {IS$'$};
+        \coordinate (E) at (2.4,1.9);
+        \coordinate (E2) at (3.33,2.6);
+        \fill (E) circle (1.6pt) node[above left] {$E$};
+        \fill (E2) circle (1.6pt) node[above left] {$E'$};
+        \draw[guia] (E) -- (E |- 0,0) node[below] {$Y$};
+        \draw[guia] (E2) -- (E2 |- 0,0) node[below] {$Y'$};
+        \draw[guia] (E) -- (0,0 |- E) node[left] {$i$};
+        \draw[guia] (E2) -- (0,0 |- E2) node[left] {$i'$};
+        \draw[flecha] (3.0,1.9) -- (3.8,2.5);
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.56\textwidth}
+      \small
+      \begin{itemize}
+        \item La expansión fiscal desplaza la IS. Si el banco central no acomoda, la tasa sube y parte de la inversión privada se retira: es el efecto desplazamiento (\emph{crowding out}).
+        \pause
+        \item El multiplicador es máximo cuando la política monetaria acomoda del todo. Por eso los gobiernos pueden presionar al banco central, y ahí aparece la palabra dominancia fiscal.
+        \pause
+        \item En el límite inferior de la tasa, el banco central no responde sin estar sometido: la expansión fiscal baja la tasa real y el multiplicador crece.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\BQ, recuadro 4.10 (p.~181) y pp.~181--183, fig.~4.13 redibujada. La dominancia fiscal se desarrolla en la segunda parte.}
+  \note{4 min. Los cuatro frenos del recuadro (p.~181): impuestos, importaciones, precios y la respuesta del banco central. La LM ya no se interpreta como oferta de dinero fija sino como regla de tasa (p.~183, Romer 2000). Mundell-Fleming queda fuera por tiempo (recuadro 4.15, p.~204): con tipo de cambio flexible y movilidad de capital, la expansión fiscal aprecia la moneda y el multiplicador baja aún más; con tipo fijo, sube. Lo decimos en palabras si alguien pregunta.}
+\end{frame}
+
+% 6 -----------------------------------------------------------------------
+\begin{frame}{La evidencia dice uno, más o menos, y depende del instrumento}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=6.6cm,height=5.0cm,xmin=0,xmax=1.4,ymin=0.4,ymax=7.6,
+            xlabel={Multiplicador de impacto},
+            ytick={1,...,7},
+            yticklabels={Recorte ISR empresas,Recorte IVA,Recorte contribuciones,Transferencias generales,Transferencias focalizadas,Consumo público,Inversión pública},
+            yticklabel style={font=\footnotesize},
+            xtick={0,0.5,1.0},clip=false]
+          \addplot[only marks,mark=none] coordinates {(0,1)};
+          \foreach \y/\a/\b in {7/0.8/1.2, 6/0.8/1.0, 5/0.4/1.1, 4/0.2/0.6, 3/0.3/0.6, 2/0.4/0.6, 1/0.1/0.3} {
+            \edef\temp{\noexpand\draw[very thick,cTitulo,line cap=round] (axis cs:\a,\y) -- (axis cs:\b,\y);}\temp
+          }
+          \draw[guia] (axis cs:1,0.4) -- (axis cs:1,7.6);
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \small
+      \begin{itemize}
+        \item Simulaciones, VAR y episodios narrativos convergen: el multiplicador promedio de gasto está cerca de uno en economías grandes y moderadamente abiertas.
+        \pause
+        \item En siete modelos de bancos centrales, la inversión pública temporal en Estados Unidos da entre 0.9 y 1.3 con respuesta monetaria endógena.
+        \pause
+        \item Con política monetaria acomodaticia, o en el límite inferior, sube a 1.5 o 1.7.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\BQ, pp.~188--191, hallazgos 1 y 3; rangos leídos de la fig.~4.14 (p.~192, Coenen et al., 2012; dos años, sin acomodo monetario); notas 22--23.}
+  \note{3 min. Los rangos de la gráfica son lecturas aproximadas de la fig.~4.14, no cifras de tabla; lo digo. El 0.9--1.3 está en el texto (p.~190). Narrativo: Romer y Romer (2010); FMI (2010); Guajardo, Leigh y Pescatori (2014). Nota 22: Chodorow-Reich (2017) implica un multiplicador nacional de 1.7 en el límite inferior; Ramey y Zubairy (2017), hasta 1.5. Nota 18: Christiano, Eichenbaum y Rebelo (2011): menor que uno en tiempos normales, bastante mayor que uno en el límite inferior.}
+\end{frame}
+
+% 7 -----------------------------------------------------------------------
+\begin{frame}{El multiplicador no es una constante: depende de la economía y del momento}
+  \begin{enumerate}
+    \item<1-> \textbf{Apertura, régimen cambiario y deuda.} Baja con la apertura comercial, con la flexibilidad del tipo de cambio y con el nivel de deuda; sube con la rigidez laboral y el tamaño de la economía.
+    \item<2-> \textbf{Posición en el ciclo.} En Estados Unidos va de cero en auge a 1.5 en recesión. Consolidar en malos tiempos cuesta más producto.
+    \item<3-> \textbf{Composición del ajuste.} Las consolidaciones por el gasto dañan menos al PIB que las que suben impuestos.
+    \item<4-> \textbf{Espacio fiscal.} Con deuda alta el multiplicador tiende a ser menor, porque los hogares ahorran por precaución. El punto se discute: con la economía débil, el estímulo funciona aun con deuda alta.
+  \end{enumerate}
+  \onslide<5->{
+  \begin{block}{Enlace con la segunda parte}
+    La interacción con la política monetaria no es un detalle del multiplicador: es uno de sus determinantes.
+  \end{block}}
+  \fuente{\BQ, pp.~190--191, hallazgos 2, 4, 6 y 7: Batini et al. (2014), Mineshima et al. (2014), Auerbach y Gorodnichenko (2012; 2017), Alesina et al. (2017).}
+  \note{3 min. Hallazgo 2 (p.~190): apertura (-), tamaño (+), rigidez laboral (+), deuda (-), flexibilidad cambiaria (-), con Batini et al. (2014, FMI) y Mineshima et al. (2014). Ilzetzki, Mendoza y Végh (2013, \emph{JME}) encuentran lo mismo con 44 países, pero el capítulo no los cita: referencia nuestra si alguien pregunta. Auerbach y Gorodnichenko (2012), \emph{AEJ: Policy} 4(2): 0 en auge, 1.5 en recesión. Alesina et al. (2017), NBER WP 23385. La disputa del hallazgo 7: Auerbach y Gorodnichenko (2017), NBER WP 23789.}
+\end{frame}
+
+% 8 -----------------------------------------------------------------------
+\begin{frame}{¿Y en México?}
+  \begin{itemize}
+    \item México es una economía muy abierta: una parte grande de cada peso adicional de demanda se gasta en bienes importados o en insumos importados de lo que se produce aquí.
+    \item El tipo de cambio es flexible y el banco central es autónomo con meta de inflación: si el estímulo presiona los precios, la tasa responde.
+    \item La deuda está en un nivel medio para una economía emergente, pero sube, y el mercado lo mira.
+  \end{itemize}
+  \pause
+  \begin{itemize}
+    \item Las tres condiciones del hallazgo 2 apuntan en la misma dirección. No sabemos el número, pero sí de qué lado de uno conviene buscarlo.
+  \end{itemize}
+  \pause
+  \begin{alertblock}{Pregunta}
+    Con tipo de cambio flexible y una economía muy abierta, ¿qué tamaño de multiplicador esperarían, y para qué instrumento sería mayor?
+  \end{alertblock}
+  \fuente{Lectura propia a partir de \BQ, pp.~180--181 y 190--191.}
+  \note{3 min. Respuesta que busco: por debajo de uno, y más alto para inversión pública con alto contenido nacional que para transferencias generales o recortes al ISR de empresas (fig.~4.14). Si alguien trae Ilzetzki, Mendoza y Végh: para economías en desarrollo y con tipo de cambio flexible encuentran multiplicadores de largo plazo cercanos a cero; no está en el capítulo.}
+\end{frame}
+
+% =========================================================================
+% III. DINÁMICA DE LA DEUDA · 22 min
+% =========================================================================
+\section{Dinámica de la deuda}
+
+% 9 -----------------------------------------------------------------------
+\begin{frame}{La deuda es el acervo que dejan los déficits, y hay que decir cuál deuda}
+  \begin{itemize}
+    \item Ingresos, gastos y balances son flujos; la deuda es un acervo que se hereda: $B_t = B_{t-1} + D_t$.
+    \item Separando intereses, $B_t = (1+i)\,B_{t-1} - P_t$, con $P_t$ el balance primario. La deuda sube cuando los intereses superan al balance primario, y por eso ese balance es la variable que los gobiernos endeudados vigilan.
+  \end{itemize}
+  \pause
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{Bruta o neta}
+      \begin{itemize}
+        \item Japón en 2015: 234\,\% del PIB bruta, 126\,\% neta. Se usa la bruta porque los activos públicos suelen ser ilíquidos.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{Perímetro}
+      \begin{itemize}
+        \item Canadá en 2010: de 39 a 67\,\% del PIB según la definición. En México: Gobierno Federal, Sector Público Federal o SHRFSP, que incluye Pidiregas, IPAB y banca de desarrollo.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\BQ, pp.~157--160, ecs.~(4.1)--(4.2). SHCP, \emph{CGPE 2027}, Anexo I, p.~52.}
+  \note{3 min. SHRFSP = Saldo Histórico de los Requerimientos Financieros del Sector Público: la medida más amplia, la que usa el libro cuando dice «deuda del sector público». Los RFSP 2026 incluyen 0.5 del PIB fuera del presupuesto (Pidiregas CFE, IPAB, Fonadin, banca de desarrollo).}
+\end{frame}
+
+% 10 ----------------------------------------------------------------------
+\begin{frame}{La dinámica de la deuda: tasa contra crecimiento, más el balance primario}
+  {\small Notación del capítulo: $\Delta$ déficit primario, $i$ tasa nominal, $n = g + \pi$ crecimiento nominal, $r = i - \pi$ tasa real; minúsculas, razones al PIB.}
+  \begin{align*}
+    \onslide<1->{\text{Acumulación:}\quad & B = (1+i)\,B_{-1} + \Delta\\}
+    \onslide<2->{\text{Entre el PIB nominal:}\quad & b = \frac{1+i}{1+n}\,b_{-1} + \delta \cong (1 + r - g)\,b_{-1} + \delta\\}
+    \onslide<3->{\text{Variación:}\quad & b - b_{-1} \cong (i - n)\,b_{-1} + \delta}
+  \end{align*}
+  \onslide<4->{
+  \begin{block}{Resultado}
+    La deuda sube si la tasa supera al crecimiento nominal y no hay superávit primario que lo compense. Lo que importa es la carrera entre $i$ y $n$, o entre $r$ y $g$.
+  \end{block}
+  {\small Con $s = -\delta$ y sin aproximar: $\Delta b = \frac{r-g}{1+g}\,b_{-1} - s$. De ahí parte la segunda parte.}}
+  \fuente{\BQ, recuadro 4.5, p.~164 (B4.5.1--B4.5.5). La forma exacta con $(1+g)$ es nuestra.}
+  \note{4 min. El libro supone deuda a valor facial, un solo bono y sin ventas de activos. Advierte en el mismo recuadro que en emergentes parte de la deuda está en dólares y el tipo de cambio también mueve $b$: eso es la diap.~13.}
+\end{frame}
+
+% 11 ----------------------------------------------------------------------
+\begin{frame}{El balance primario que estabiliza la deuda, con números cercanos a México}
+  \begin{columns}[T]
+    \begin{column}{0.42\textwidth}
+      \begin{block}{Condición de estabilidad}
+        $\tilde\delta = (n - i)\,b$, o en términos reales $s^* = \dfrac{r-g}{1+g}\,b$.
+      \end{block}
+      \small Maastricht según el libro: con 5\,\% de crecimiento nominal y deuda de 60\,\%, el déficit total que la estabiliza es $5\% \times 60\% = 3\%$.
+    \end{column}
+    \begin{column}{0.56\textwidth}
+      \small
+      \textbf{Ejercicio ilustrativo}
+      \begin{center}
+      \begin{tabular}{lccc}
+        \toprule
+        & \multicolumn{3}{c}{Crecimiento real $g$} \\
+        \cmidrule(lr){2-4}
+        & 1.5 & 2.0 & 2.5 \\
+        \midrule
+        $s^*$ con $b = 0.54$, $r = 3.4$ & 1.0 & 0.75 & 0.5 \\
+        Proyección SHCP 2027 & \multicolumn{3}{c}{0.5} \\
+        \bottomrule
+      \end{tabular}
+      \end{center}
+      \pause
+      Con el crecimiento central de la SHCP, el superávit primario que congela la deuda es un cuarto de punto mayor que el proyectado. Con medio punto más de crecimiento, alcanza. Cada uno cambie un supuesto.
+    \end{column}
+  \end{columns}
+  \fuente{\BQ, recuadro 4.5 (B4.5.6), p.~164; p.~163. SHCP, \emph{CGPE 2027}, pp.~6, 47 y 68; $r$ = tasa real implícita de la deuda, cálculo propio (4.0 de costo financiero sobre 54 de deuda, menos deflactor 4.0).}
+  \note{4 min. $r$ implícita: 4.0/54 = 7.4\,\% nominal; menos deflactor 4.0 da 3.4 real. Es una aproximación gruesa: mezcla deuda interna y externa y la tasa de los Cetes está cayendo. El rango de crecimiento 2027--2032 de la SHCP es [1.5, 2.5]. Pedirles que cambien $r$ a 2.4 (la real de Cetes de 2028 en el CGPE): $s^*$ baja a 0.2.}
+\end{frame}
+
+% 12 ----------------------------------------------------------------------
+\begin{frame}{Cuando $r<g$ la deuda se licúa sola, pero el signo de $r-g$ no está garantizado}
+  \begin{itemize}
+    \item El libro lo dice dos veces: si el crecimiento nominal supera a la tasa, cabe un déficit primario sin que suba la deuda; y con $r<g$ el gobierno refinancia sin dejar de ser solvente, como en los años setenta.
+    \pause
+    \item Hay que conceder que en las economías avanzadas eso volvió a ser cierto en la década de 2010.
+    \pause
+    \item Pero $r-g$ cambia de signo en pocos años. En los ochenta, desinflación, menor crecimiento y tasas reales altas volvieron la deuda un problema tras dos décadas en que nadie la miraba. En una economía emergente, además, $r$ lleva una prima de riesgo que se mueve con el apetito global.
+    \pause
+    \item En México hoy $r>g$: la tasa real implícita de la deuda ronda 3.4\,\% y el crecimiento esperado, 2\,\%. El almuerzo no es gratis aquí.
+  \end{itemize}
+  \fuente{\BQ, recuadro 4.5, p.~164; recuadro 4.13, pp.~194--195; p.~165. México: cálculo propio con \emph{CGPE 2027}, pp.~47 y 68.}
+  \note{3 min. El debate reciente es Blanchard (2019), \emph{AER} 109(4), «Public Debt and Low Interest Rates»: con $r<g$ la deuda tiene costo fiscal nulo y costo de bienestar bajo. No está en el capítulo, que es de 2019; sí lo cita el artículo de la segunda parte (Bolhuis et al.). La respuesta para emergentes: $r-g$ es volátil y la prima soberana es procíclica.}
+\end{frame}
+
+% 13 ----------------------------------------------------------------------
+\begin{frame}{Lo que la ecuación no ve: la deuda de México en 2027 según la SHCP}
+  \begin{columns}[T]
+    \begin{column}{0.46\textwidth}
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=6.0cm,height=4.9cm,ybar,bar width=13pt,ymin=-0.8,ymax=1.3,
+            symbolic x coords={A,B,C,D},xtick={A,B,C,D},
+            xticklabels={{$(i-n)\,b$},{Balance primario},{Residuo},{Cambio SHCP}},
+            xticklabel style={font=\footnotesize,align=center,text width=1.5cm},
+            ylabel={Puntos del PIB},nodes near coords,
+            nodes near coords style={font=\small,/pgf/number format/fixed,/pgf/number format/precision=2},
+            every node near coord/.append style={anchor=south}]
+          \addplot[fill=cTitulo!70,draw=cTitulo] coordinates {(A,0.72) (D,1.0)};
+          \addplot[fill=cRecauda!70,draw=cRecauda] coordinates {(B,-0.5)};
+          \addplot[fill=cDemanda!70,draw=cDemanda] coordinates {(C,0.78)};
+          \draw[guia] (axis cs:A,0) -- (axis cs:D,0);
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \small
+      \begin{itemize}
+        \item Insumos: deuda 54.0\,\% del PIB; crecimiento nominal 6.1\,\%; tasa nominal implícita 7.4\,\%; superávit primario 0.5. La ecuación da $\Delta b \approx 1.3 \times 0.54 - 0.5 \approx 0.2$ puntos; la SHCP proyecta $+1.0$.
+        \pause
+        \item El residuo son los ajustes stock-flujo: requerimientos fuera del presupuesto (0.5 del PIB), valuación de la deuda externa, indexación de Udibonos, Pemex.
+        \pause
+        \item El 21\,\% del SHRFSP está en moneda extranjera: cuando el peso se deprecia, la deuda sube sin que nadie gaste un peso más.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\BQ, recuadro 4.5, p.~164, y p.~165. Cálculo propio con SHCP, \emph{CGPE 2027}, pp.~25, 47, 52, 55 y 68; depende de la tasa implícita que se use.}
+  \note{4 min. Cálculo: $n$ = 39\,419.4/37\,160.7 - 1 = 6.08\,\%; $i$ = 4.0/54 = 7.41\,\%; $(i-n)b$ = 0.0133 por 54 = 0.72; menos 0.5 da 0.22; residuo 0.78. El propio CGPE (p.~25) dice que en 2026 la apreciación del peso redujo la valuación de la deuda en moneda extranjera. El RFSP incluye 0.5 fuera del presupuesto en 2027 (p.~47). Con deuda en moneda extranjera la ecuación se amplía con la depreciación real: ec.~(A.3) del Anexo A.3 de Bolhuis et al. (2025), la vemos en la segunda parte. Externo: 11.4 de 54.0 en 2026 = 21\,\%.}
+\end{frame}
+
+% 14 ----------------------------------------------------------------------
+\begin{frame}{Las deudas que no están en la deuda, y la trayectoria del SHRFSP}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=6.2cm,height=4.9cm,xmin=2019.5,xmax=2032.5,ymin=44,ymax=58,
+            xtick={2020,2023,2026,2029,2032},xticklabel style={/pgf/number format/1000 sep={}},
+            ylabel={SHRFSP, \% del PIB},clip=false]
+          \addplot[cTitulo,very thick,mark=*,mark size=1.4pt] coordinates {(2020,50.2) (2021,49.1) (2022,47.6) (2023,46.6) (2024,51.9) (2025,52.6)};
+          \addplot[cTitulo,very thick,dashed,mark=o,mark size=1.4pt] coordinates {(2025,52.6) (2026,54.0) (2027,55.0) (2028,55.6) (2029,56.1) (2030,56.4) (2031,56.5) (2032,56.5)};
+          \node[anchor=south,cTitulo,font=\small] at (axis cs:2023,46.9) {46.6};
+          \node[anchor=south,cTitulo,font=\small] at (axis cs:2025,52.9) {52.6};
+          \node[anchor=south,cTitulo,font=\small] at (axis cs:2032,56.8) {56.5};
+          \node[anchor=north,cGris,font=\footnotesize] at (axis cs:2028.5,45.6) {observado \quad - - estimado SHCP};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \small
+      \begin{itemize}
+        \item El gobierno debe pagos que no están en la deuda financiera: pensiones de servidores públicos, garantías, rescates. Contractuales o implícitos, ciertos o contingentes.
+        \pause
+        \item El envejecimiento es un pasivo implícito y casi cierto: pensiones y jubilaciones pasaron de 4.0\,\% del PIB en 2020 a 4.8 en 2026.
+        \pause
+        \item La SHCP proyecta deuda al alza hasta 56.5\,\% en 2031, con superávit primario de hasta 1.0 del PIB.
+      \end{itemize}
+      \pause
+      \begin{alertblock}{Pregunta}
+        ¿Qué pasivo implícito les preocupa más? ¿Por qué no está en el 54\,\%?
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \fuente{\BQ, p.~165 y tabla 4.1. SHCP, \emph{CGPE 2027}, pp.~47, 52 y 55.}
+  \note{4 min. Serie 2020--2025 del Anexo I (p.~52, base revisada); 2026--2032 del cuadro de mediano plazo (p.~47). El salto de 2024 (46.6 a 51.9) es el déficit de 5.8 del PIB en RFSP. Pensiones: p.~55. Respuestas esperadas: pensiones no contributivas y de la generación de transición, Pemex, pasivos de salud, desastres.}
+\end{frame}
+
+% 15 ----------------------------------------------------------------------
+\begin{frame}{La deuda puede ser alta para siempre, pero no crecer más rápido que $r-g$}
+  \opcional
+  \begin{itemize}
+    \item El Estado no tiene vida finita, así que su deuda no necesita llegar a cero. Lo que no puede hacer es «empujarla hacia adelante» como en un esquema Ponzi: el libro lo ilustra con el sastre de Lewis Carroll al que le prometen el doble cada año.
+    \pause
+    \item En tiempo continuo, $\dot b = (r-g)\,b + \delta$. La transversalidad exige que el valor presente de la deuda tienda a cero: la deuda inicial debe igualar el valor presente de los superávits primarios futuros.
+    \pause
+    \item De ahí sale la tasa de impuestos sostenible de Blanchard (1993), $\tau^*$, y la brecha $\tau^* - \tau$: si es positiva, habrá que subir impuestos o bajar gasto.
+  \end{itemize}
+  \begin{block}{Lectura}
+    Si $r>g$, la deuda debe crecer más despacio que $r-g$. Si $r<g$, la condición se cumple sola: por eso el signo de $r-g$ decide tanto.
+  \end{block}
+  \fuente{\BQ, recuadro 4.13, pp.~194--195; p.~193.}
+  \note{4 min, opcional. La versión de Stein: «si algo no puede seguir para siempre, se detiene» (nota a del recuadro). Los indicadores S1 y S2 de la Comisión Europea (p.~196) son la implementación.}
+\end{frame}
+
+% =========================================================================
+% IV. EL MERCADO DE LA DEUDA PÚBLICA · 15 min
+% =========================================================================
+\section{El mercado de la deuda pública}
+
+% 16 ----------------------------------------------------------------------
+\begin{frame}{Quién compra deuda pública y por qué la compra}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \small
+      \textbf{Lo que dice el capítulo}
+      \begin{itemize}
+        \item Letras de corto plazo y bonos de hasta 50 años; vencimiento promedio de 5 a 10 años en las avanzadas.
+        \item Compran administradoras de activos, fondos de pensiones, aseguradoras, bancos centrales y fondos soberanos.
+        \item En 61 países: 68\,\% bonos, 22.5\,\% préstamos y 8.4\,\% cuentas por pagar. La deuda escondida en atrasos también cuenta.
+        \item La tasa soberana sirve de tasa libre de riesgo, pero la calidad crediticia fija una prima.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \small
+      \textbf{México}
+      \begin{itemize}
+        \item El SHRFSP es 79\,\% interno y 21\,\% externo en 2026; en 2020 el externo era 25\,\%.
+        \item La deuda interna en valores está 80\,\% a tasa fija de largo plazo, con plazo promedio de 7.9 años.
+        \item Las Afores son el comprador cautivo del mercado en pesos: el ahorro para el retiro financia al gobierno.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\BQ, recuadro 4.4, p.~161; p.~160 (Dippelsman, Dziobek y Gutiérrez Mangas, 2012). SHCP, \emph{CGPE 2027}, pp.~41, 47 y 52. La frase sobre las Afores es nuestra.}
+  \note{3 min. Quité la tenencia de no residentes en valores gubernamentales (cerca de 39\,\% en 2015, cerca de 11\,\% hoy) porque no la verifiqué en el SIE de Banxico; si la quieres, se consulta en vivo. La composición interna/externa sí está verificada en el CGPE.}
+\end{frame}
+
+% 17 ----------------------------------------------------------------------
+\begin{frame}{Hay cinco maneras de salir de una deuda alta, y la historia las usó todas}
+  \begin{columns}[T]
+    \begin{column}{0.46\textwidth}
+      \small
+      \begin{enumerate}
+        \item<1-> \textbf{Ajustar}: superávit primarios sostenidos.
+        \item<1-> \textbf{Inflar}: devaluar la deuda nominal.
+        \item<1-> \textbf{Crecer}: salir de la deuda con crecimiento real.
+        \item<1-> \textbf{Reprimir}: tasas de largo plazo artificialmente bajas para los tenedores.
+        \item<1-> \textbf{No pagar}.
+      \end{enumerate}
+      \onslide<2->{\medskip Estados Unidos y el Reino Unido tras la Segunda Guerra combinaron las tres de en medio.}
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \small
+      \onslide<3->{
+      \textbf{Tres palabras que no son la misma}
+      \begin{itemize}
+        \item \emph{Solvencia}: hay recursos para pagar, aunque sea subiendo impuestos. El límite es político.
+        \item \emph{Liquidez}: los recursos existen pero no se movilizan a tiempo. Se puede ser solvente y tener una crisis de liquidez.
+        \item \emph{Sostenibilidad}: con la política actual y los pronósticos disponibles, la deuda no lleva a la insolvencia.
+      \end{itemize}}
+    \end{column}
+  \end{columns}
+  \fuente{\BQ, pp.~174--175, fig.~4.10 (Reinhart y Rogoff, 2014). Anticipo de la segunda parte: la represión financiera vuelve.}
+  \note{3 min. La fig.~4.10: porcentaje de países en mora con su deuda externa 1800--2006, con picos en los 1830, 1870, 1930 y 1980. La frase de Boorman (p.~175): la deuda casi siempre se puede servir en abstracto, pero hay un umbral político, social y moral. México 1982 es la nota 33 del capítulo.}
+\end{frame}
+
+% 18 ----------------------------------------------------------------------
+\begin{frame}{La prima de riesgo sube con la probabilidad de impago, y puede cumplirse sola}
+  {\small Un bono de 100 a un año; tasa libre de riesgo $i$; probabilidad de impago total $\theta$ (el libro escribe $\pi$).}
+  \begin{align*}
+    \onslide<1->{\text{Pago esperado:}\quad & E(P) = (1-\theta)\times 100 + \theta\times 0\\}
+    \onslide<2->{\text{El acreedor exige } \rho \text{ tal que:}\quad & (1-\theta)(1+i)(1+\rho) = 1+i\\}
+    \onslide<3->{\text{Despejando:}\quad & \rho = \frac{\theta}{1-\theta}}
+  \end{align*}
+  \onslide<4->{
+  \begin{block}{Resultado}
+    Con 5\,\% de probabilidad de impago la prima es 5.3 puntos; con 20\,\%, 25. Como esa probabilidad depende de un juicio sobre la disposición a pagar, es volátil: si el mercado la revisa al alza, sube la tasa, sube el superávit requerido y baja la disposición a pagarlo. Así se llegó a diferenciales de 8 puntos en Irlanda y 5 en España en 2010--2012.
+  \end{block}}
+  \fuente{\BQ, recuadro 4.9, p.~177 (B4.9.1--B4.9.3); p.~178 y fig.~4.11.}
+  \note{3 min. El libro supone recuperación cero en caso de impago; con recuperación parcial la fórmula se ajusta. Calvo (1988), \emph{AER} 78(4), «Servicing the Public Debt: The Role of Expectations», formaliza los equilibrios múltiples; no está citado en el capítulo, lo menciono de palabra.}
+\end{frame}
+
+% 19 ----------------------------------------------------------------------
+\begin{frame}{Dos equilibrios para la deuda; el espacio fiscal es la distancia entre ellos}
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \begin{tikzpicture}[scale=0.8]
+        \draw[eje] (0,0) -- (6.2,0) node[below left] {Deuda/PIB $d$};
+        \draw[eje] (0,0) -- (0,4.4) node[right] {Balance primario $s$};
+        \draw[guia,thick,black!60] (0,0) -- (5.6,3.4) node[right,font=\footnotesize,align=left] {$(r-g)\,d$};
+        \draw[very thick,cTitulo] plot[smooth] coordinates {(0.2,-0.2) (1.2,0.1) (2.0,0.6) (2.6,1.4) (3.2,2.4) (3.9,3.1) (4.6,3.35) (5.4,3.4)};
+        \node[cTitulo,anchor=south east,font=\footnotesize] at (4.2,3.5) {respuesta del balance primario};
+        \fill (2.25,1.37) circle (1.8pt);
+        \fill (5.42,3.3) circle (1.8pt);
+        \draw[guia] (2.25,1.37) -- (2.25,0) node[below,font=\footnotesize] {$d^*$ estable};
+        \draw[guia] (5.42,3.3) -- (5.42,0) node[below,font=\footnotesize] {$d^{**}$ límite};
+        \draw[{Stealth}-{Stealth},cDemanda,thick] (3.6,-0.75) -- (5.42,-0.75) node[midway,below,font=\footnotesize,cDemanda] {espacio fiscal};
+        \draw[guia] (3.6,0) -- (3.6,-0.75);
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.53\textwidth}
+      \small
+      \begin{itemize}
+        \item Ghosh et al. (2011): el balance primario responde a la deuda con forma de S. No reacciona con deuda baja, reacciona cuando preocupa y se agota cuando el superávit ya es grande: la fatiga fiscal.
+        \pause
+        \item La recta es el superávit que estabiliza la deuda, con pendiente $r-g$. Donde la S está debajo, la deuda sube. Hay dos cruces: $d^*$ estable y $d^{**}$ límite; el espacio fiscal es $d^{**}-d$.
+        \pause
+        \item En 50 años, solo 11 de 87 países sostuvieron superávit primario mayor a 5\,\% del PIB durante cinco años. El FMI pide escrutinio arriba de 3.5\,\% ajustado por ciclo.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\BQ, pp.~196--197, fig.~4.15 redibujada (Ghosh et al., 2011); Zheng (2014); FMI (2013). Nota 28: el umbral real es menor.}
+  \note{3 min. La gráfica es esquemática, no está a escala de ningún país. En 2015 el FMI adoptó esta metodología para estimar espacio fiscal (p.~197). Enlace con la segunda parte: el artículo de fiscal r-star estima justamente esa función de reacción para 16 avanzadas y encuentra que se volvió plana después de 2008. Calvo (1988): de palabra.}
+\end{frame}
+
+% 20 ----------------------------------------------------------------------
+\begin{frame}{El «pecado original» y la transición de México hacia la deuda en pesos}
+  \begin{itemize}
+    \item Los emergentes con mercados poco profundos se endeudaban en dólares, y eso añade dos riesgos: la deuda sube cuando la moneda se deprecia, y el banco central no puede ser prestamista de última instancia en una moneda que no emite.
+    \pause
+    \item A eso la literatura lo llamó «pecado original», y por él los límites de deuda tolerables para un emergente son más bajos.
+    \pause
+    \item México hizo la transición: 84\,\% de la deuda neta del Gobierno Federal es interna en 2025 y 80\,\% de los valores internos está a tasa fija de largo plazo. Queda 21\,\% del SHRFSP en moneda extranjera, y el residuo de la diapositiva 13 nos recordó que eso se siente.
+  \end{itemize}
+  \pause
+  \begin{block}{Cierre del bloque}
+    Cuando el banco central acomoda la expansión fiscal porque la deuda lo condiciona, el capítulo habla de dominancia fiscal. Esa es la pregunta de la segunda parte.
+  \end{block}
+  \fuente{\BQ, recuadro 4.4, p.~161; p.~165 (nota 8: Eichengreen, Hausmann y Panizza, 2005); p.~183. SHCP, \emph{CGPE 2027}, pp.~41 y 47.}
+  \note{3 min. Deuda externa neta del Gobierno Federal 15.7\,\% del total en 2025; deuda externa de mercado toda a tasa fija y con plazo promedio de 16.5 años (p.~41). Fusiona las diapositivas 18 y 19 del esquema provisional.}
+\end{frame}
+
+% =========================================================================
+% V. EQUIVALENCIA RICARDIANA · 15 min
+% =========================================================================
+\section{Equivalencia ricardiana}
+
+% 21 ----------------------------------------------------------------------
+\begin{frame}{Si la deuda son impuestos diferidos, bajar impuestos hoy no cambia el consumo}
+  {\small Dos periodos, simplificado. Ingreso $Y_1, Y_2$, impuestos $T_1, T_2$, crédito a la tasa $r$.}
+  \begin{align*}
+    \onslide<1->{\text{Riqueza intertemporal:}\quad & W = (Y_1 - T_1) + \frac{Y_2 - T_2}{1+r}\\}
+    \onslide<2->{\text{Baja de impuestos con deuda:}\quad & T_1' = T_1 - B, \qquad T_2' = T_2 + (1+r)\,B\\}
+    \onslide<3->{\text{La riqueza no cambia:}\quad & W' = (Y_1 - T_1 + B) + \frac{Y_2 - T_2 - (1+r)B}{1+r} = W}
+  \end{align*}
+  \onslide<4->{
+  \begin{block}{Resultado}
+    El hogar consume según su riqueza intertemporal, así que no cambia su consumo: ahorra el recorte y compra con él la deuda que el gobierno emite. «La deuda es impuestos diferidos.» Lo que importa es cuánto gasta el gobierno, no cómo lo financia.
+  \end{block}}
+  \fuente{\BQ, recuadro 4.11, pp.~184--185 (horizonte infinito; aquí en dos periodos). Barro (1974), «Are Government Bonds Net Wealth?», \emph{JPE} 81(6), 1095--1117.}
+  \note{4 min. En el libro: restricción $\sum Y_{t+i}/(1+r)^i = \sum C_{t+i}/(1+r)^i$, utilidad separable, condición de primer orden $u'(C_{t+i})/u'(C_{t+i-1}) = (1+\rho)/(1+r)$; la reducción de impuestos en $B$ financiada con deuda a $M$ años deja el consumo igual en cada periodo y mueve solo el ahorro. La intuición es de Ricardo (1820) y antes de Mirabeau (1787).}
+\end{frame}
+
+% 22 ----------------------------------------------------------------------
+\begin{frame}{La equivalencia se sostiene en cuatro supuestos que el libro llama cuestionables}
+  \begin{enumerate}
+    \item<1-> \textbf{Expectativas racionales.} Los hogares entienden que la deuda de hoy son impuestos de mañana. Pocos dominan esa aritmética.
+    \item<2-> \textbf{Horizonte infinito o altruismo pleno.} Quien no estará vivo cuando suban los impuestos, o no le importa quién los pague, gasta el recorte.
+    \item<3-> \textbf{Gasto público improductivo.} Si el gasto en investigación o educación sube el ingreso futuro, la equivalencia se rompe en el otro sentido.
+    \item<4-> \textbf{Crédito perfecto e impuestos de suma fija.} Una parte de los hogares no puede pedir prestado contra su ingreso futuro, y los impuestos reales distorsionan.
+  \end{enumerate}
+  \onslide<5->{
+  \begin{block}{Juicio del capítulo}
+    La validez conjunta de los supuestos está contradicha por la evidencia; lo que sobrevive es un efecto ricardiano parcial.
+  \end{block}}
+  \fuente{\BQ, p.~186 (Mankiw, 2000).}
+  \note{3 min. El cuarto supuesto conecta con las tres sesiones de microeconomía: si los impuestos tienen carga excesiva, posponerlos no es neutral aunque todo lo demás se cumpla.}
+\end{frame}
+
+% 23 ----------------------------------------------------------------------
+\begin{frame}{Por qué falla, y por qué importa para lo que vimos con las NTA}
+  \begin{itemize}
+    \item<1-> \textbf{Restricciones de liquidez.} Los modelos modernos combinan optimizadores con hogares que consumen lo que ganan, «de mano a boca». Su peso decide cuánto de un recorte de impuestos se gasta.
+    \item<2-> \textbf{Horizontes finitos.} Con generaciones traslapadas que no se preocupan por la siguiente, posponer impuestos traslada la carga a otra cohorte y la política fiscal recupera efectividad (Blanchard, 1985). Las NTA dijeron quién paga por edad; la deuda cambia la respuesta.
+    \item<3-> \textbf{El crédito se relaja con el desarrollo financiero.} En Estados Unidos, el retiro de capital hipotecario financió 3\,\% del consumo entre 2001 y 2005.
+  \end{itemize}
+  \onslide<4->{
+  \begin{block}{Una precisión}
+    Aun con equivalencia conviene tener déficit en recesión: el suavizamiento de impuestos (\emph{tax smoothing}) recomienda no subirlos en la crisis. La diferencia con Keynes es el estímulo discrecional adicional: útil en un mundo keynesiano, inútil en uno ricardiano.
+  \end{block}}
+  \fuente{\BQ, pp.~186--187. Blanchard (1985), «Debts, Deficits, and Finite Horizons», \emph{JPE} 93(2), 223--247; Campbell y Mankiw (1989); Galí et al. (2007).}
+  \note{4 min. El puente con NTA: el déficit del ciclo de vida se financia con transferencias públicas que son, por construcción, intergeneracionales; la deuda es la transferencia pública diferida. En un OLG sin altruismo la deuda es riqueza neta para quien la tiene y carga para quien viene.}
+\end{frame}
+
+% 24 ----------------------------------------------------------------------
+\begin{frame}{La evidencia: el ahorro privado compensa en parte, no en todo}
+  \opcional
+  \begin{itemize}
+    \item La mayoría de las pruebas rechaza la equivalencia plena y confirma efectos ricardianos parciales, que reducen pero no anulan la efectividad de la política fiscal.
+    \pause
+    \item En 21 países de la OCDE, una caída de un punto en el ahorro público sube el ahorro privado entre un tercio y medio punto (de Mello et al., 2004).
+    \pause
+    \item Lectura: de cada peso de recorte de impuestos se gastan entre 50 y 67 centavos. Menos que el peso completo keynesiano y más que el cero ricardiano.
+  \end{itemize}
+  \pause
+  \begin{alertblock}{Pregunta}
+    ¿Qué hogares mexicanos se comportarían de forma ricardiana, y qué fracción de los hogares son?
+  \end{alertblock}
+  \fuente{\BQ, p.~186 y nota 19 (p.~229).}
+  \note{4 min, opcional. Respuesta que busco: los hogares con acceso al crédito, patrimonio y expectativa de pagar impuestos directos; en México son una minoría, con informalidad alta y crédito caro. La mayoría es de mano a boca y gasta la transferencia, lo que hace la política fiscal más potente por el consumo y más cara por la deuda.}
+\end{frame}
+
+% =========================================================================
+% VI. EFECTIVIDAD · 10 min
+% =========================================================================
+\section{Efectividad de la política fiscal}
+
+% 25 ----------------------------------------------------------------------
+\begin{frame}{Cuándo funciona: no hay un instrumento fiscal confiable fuera de su contexto}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \small
+      \textbf{Funciona más cuando}
+      \begin{itemize}
+        \item hay holgura: recesión, no auge;
+        \item la política monetaria acomoda o está en su límite inferior;
+        \item el instrumento es gasto en bienes e inversión, no transferencias generales ni recortes al ISR de empresas;
+        \item hay espacio fiscal y credibilidad, y los hogares no ahorran por miedo al ajuste.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \small
+      \textbf{Las tres objeciones clásicas}
+      \begin{itemize}
+        \item Desplazamiento financiero: menos ahorro público, tasa larga más alta.
+        \item Rigidez de oferta: si la oferta es empinada, el estímulo se va a precios.
+        \item Efectos de oferta: el gasto permanente se paga con impuestos que bajan el producto potencial.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \pause
+  \begin{block}{Y un límite más}
+    Sutherland (1997): con deuda muy alta el multiplicador puede volverse negativo, porque los hogares anticipan el ajuste y ahorran.
+  \end{block}
+  \fuente{\BQ, pp.~187 y 192 («no such thing as a reliable fiscal instrument»); recuadro 4.14, p.~199.}
+  \note{3 min. La primera objeción contradice a la ricardiana: una dice que falta ahorro, la otra que sobra. El libro: las dos aplican cuando la deuda se considera insostenible. La segunda es cuestión de horizonte: en meses los precios son rígidos, en años se ajustan.}
+\end{frame}
+
+% 26 ----------------------------------------------------------------------
+\begin{frame}{Los estabilizadores automáticos actúan solos; la discreción llega tarde y mide mal}
+  \begin{itemize}
+    \item<1-> Cuando la economía cae, la recaudación cae y las prestaciones suben sin que nadie decida nada. Por eso los países con gobiernos más grandes tienen ciclos más suaves.
+    \item<2-> La discreción necesita medir el balance estructural: producto potencial y elasticidad del balance al ciclo. En la Unión Europea la elasticidad promedio es 0.5 (0.43 en España, 0.65 en Dinamarca), y cambia con el tiempo.
+    \item<3-> Irlanda en 2007: evaluada primero con superávit estructural, las revisiones sucesivas lo volvieron déficit. Decidir con un dato que se revisa así es decidir a ciegas.
+    \item<4-> México: con ingresos tributarios de 15\,\% del PIB, los estabilizadores son débiles y el ajuste recae en decisiones discrecionales, con sus rezagos.
+  \end{itemize}
+  \onslide<5->{
+  \begin{block}{Juicio sobrio}
+    Dejar actuar a los estabilizadores y reservar la discreción para las caídas grandes, cuando el multiplicador es alto y el error de medición importa menos.
+  \end{block}}
+  \fuente{\BQ, pp.~154--158, recuadros 4.2 y 4.3 (Mourre et al., 2013), figs.~4.3--4.4; nota 3. SHCP, \emph{CGPE 2027}, p.~55. La frase sobre México es nuestra.}
+  \note{3 min. Nota 3: el resultado sobre gobiernos grandes y menor volatilidad se sostiene controlando el sesgo de Rodrik (1998). Tributarios 2026: 15.4 del PIB. La prociclicidad de la política fiscal en América Latina no está en el capítulo; si lo mencionas, la referencia habitual es Gavin y Perotti (1997) y Frankel, Végh y Vuletin (2013), que no verifiqué hoy.}
+\end{frame}
+
+% 27 ----------------------------------------------------------------------
+\begin{frame}{La microeconomía de las tres sesiones anteriores está dentro de la macro de hoy}
+  \begin{itemize}
+    \item<1-> Cada peso de estímulo se financia, hoy o mañana, con impuestos que tienen carga excesiva (sesión del 26 de septiembre, diap.~34). El multiplicador mide el beneficio; $\eta/(1-\eta)$ mide una parte del costo.
+    \item<2-> Si los impuestos distorsionan, se rompe el supuesto de suma fija de la equivalencia ricardiana: posponer impuestos no es neutral aunque los hogares fueran perfectamente previsores.
+    \item<3-> El tercer argumento contra el estímulo permanente es el de Kaplow: el gasto permanente se paga con impuestos permanentes que bajan la oferta de trabajo y el producto potencial.
+  \end{itemize}
+  \onslide<4->{
+  \begin{block}{Para llevar al examen}
+    Un multiplicador de uno no significa que el estímulo sea gratis: el producto sube un peso por cada peso que algún contribuyente pagará después, con su carga excesiva incluida.
+  \end{block}}
+  \fuente{\BQ, pp.~186--187. Enlace propio con las sesiones del 26 de septiembre y del 26--27 de octubre.}
+  \note{3 min. Absorbe la diapositiva 26 del esquema provisional.}
+\end{frame}
+
+% =========================================================================
+% VII. CIERRE · 3 min
+% =========================================================================
+\section{Cierre}
+
+% 28 ----------------------------------------------------------------------
+\begin{frame}{Cinco ideas para llevarse y la pregunta que sigue}
+  \small
+  \begin{enumerate}
+    \item<1-> \textbf{Multiplicadores.} Cerca de uno en promedio; más bajos en una economía abierta con tipo de cambio flexible; más altos en recesión y con acomodo monetario.
+    \item<1-> \textbf{Dinámica de la deuda.} Decide la carrera entre $r$ y $g$, el balance primario que la compensa, y los ajustes stock-flujo que la ecuación no ve.
+    \item<1-> \textbf{Mercado de deuda.} La prima depende de una probabilidad que el mercado revisa; por eso hay dos equilibrios y un límite de deuda.
+    \item<1-> \textbf{Equivalencia ricardiana.} Los hogares compensan en parte, no en todo; con generaciones traslapadas la deuda reparte la carga por edad.
+    \item<1-> \textbf{Efectividad.} No hay instrumento confiable fuera de contexto; los estabilizadores automáticos son el piso.
+  \end{enumerate}
+  \onslide<2->{
+  \begin{block}{Puente a la segunda parte}
+    Hasta ahora preguntamos qué balance primario estabiliza la deuda con una tasa dada. Ahora, con el balance primario que hay, ¿qué tasa real estabiliza la deuda, y es compatible con la que necesita el banco central?
+  \end{block}}
+  \fuente{\BQ, p.~228; recuadro 4.5.}
+  \note{3 min. El «nuevo consenso» del libro (p.~228): con tasas reales bajas o negativas y fluctuaciones sincronizadas, la política fiscal recupera su papel; si eso dura, cambian las instituciones. La segunda parte empieza con la ec.~(1) de Bolhuis et al., que es la B4.5.5 de hoy.}
+\end{frame}
+
+\end{document}
