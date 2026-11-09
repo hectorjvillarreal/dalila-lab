@@ -87,3 +87,19 @@
 |---|---|
 | PROTO-RAG-001 | Corpus entry and build instruction protocol; governs all corpus subdomains and project-scoped corpora |
 | _build_instructions/ archive | Provenance layer for the team's intellectual infrastructure; retained indefinitely |
+
+## Fiscal Policy Corpus (cross-cutting)
+
+**Location:** `_crossrefs/corpus/fiscal_policy/`
+**Owner:** Cath (domain authority, endorsement pending); drafted by Claude Code; executed by Debb
+**Date registered:** 2026-11-09
+**Build instruction:** `_crossrefs/_build_instructions/2026-11-09_fiscal_policy_corpus_initial.md`
+
+| Project | Connection |
+|---|---|
+| RF | Fiscal-event vocabulary for the 2000–2025 Mexican narrative: discretionary vs automatic, rules vs discretion, consolidation and restructuring episodes |
+| DFD | Debt-dynamics block (Box 4.5) as the reference form of the government budget constraint; multipliers and policy mix for stabilisation experiments |
+| FISCUS | Conceptual layer for the natural-language interface: balance definitions, debt perimeter, fiscal rules and institutions, monetary-union coordination |
+| Teaching (MEK_FP2026) | Core reading for the fiscal policy sessions; photographed PDF in the class folder |
+
+**Status:** Scaffold (2026-11-09). First entry: Bénassy-Quéré, Cœuré, Jacquet & Pisani-Ferry (2019), *Economic Policy*, 2nd ed., ch. 4, pp. 148–236. PDF complete; Markdown transcription complete (local VLM qwen3.5:9b, equations verified), complete incl. p. 236; endorsement pending. Personal study copy — not for redistribution.

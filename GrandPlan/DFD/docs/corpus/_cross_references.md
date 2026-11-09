@@ -25,3 +25,7 @@ project-level connection notes (Cath: government budget constraint
 calibration; Anne: demographic-fiscal interaction with top-share evolution).
 Itemized back-references to specific inequality entries can be added in a
 subsequent retrofit.
+
+## Fiscal Policy corpus (shared, 2026-11-09)
+
+- `_crossrefs/corpus/fiscal_policy/foundational/benassy-quere_2019_ch4_fiscal_policy.md` — Bénassy-Quéré et al. (2019) ch. 4. Reference form of the debt-dynamics block (Box 4.5: `b_t − b_{t−1} = (r − g)·b_{t−1} − pb_t`, debt-stabilising primary balance) for the OLG/DSGE government budget constraint; fiscal multipliers and policy-mix discussion (Boxes 4.14–4.15) for stabilisation experiments. Transcription complete; equations verified; PDF complete.

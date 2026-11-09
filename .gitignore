@@ -20,3 +20,6 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+# Personal study copy of a copyrighted chapter (large PDF; keep local)
+Teaching/MEK_FP2026/benassy_quere_cap4_fiscal_261109/*.pdf
