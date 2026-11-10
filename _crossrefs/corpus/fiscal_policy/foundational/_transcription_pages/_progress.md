@@ -93,3 +93,4 @@
 - p194: ok, 400 words, 18s
 - p195: ok, 447 words, 18s
 - 2026-11-09: all 89 pages transcribed; pp. 192–195 re-split and re-transcribed; p. 236 re-shot (64691.jpg) and transcribed; merged into ../benassy-quere_2019_ch4_fiscal_policy.md
+- 2026-11-09 evening: Cath's review applied to the merged entry (A1–A4, B1–B5); page files untouched; do not re-merge.

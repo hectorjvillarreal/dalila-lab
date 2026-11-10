@@ -12,7 +12,7 @@ added_by: Claude Code (drafted for Debb)
 endorsed_by:
 build_instruction: "2026-11-09_fiscal_policy_corpus_initial.md"
 source_copy: "Héctor's purchased hardcover; photographed 2026-11-09; PDF at Teaching/MEK_FP2026/benassy_quere_cap4_fiscal_261109/benassy_quere_cap4_fiscal_policy.pdf"
-transcription_status: transcribed_2026-11-09 — local VLM (qwen3.5:9b); equations in all boxes verified against page images by Claude Code; prose spot-checked on 12 pages; p. 236 re-photographed and read directly (verified)
+transcription_status: transcribed_2026-11-09 — local VLM (qwen3.5:9b); all box equations and ~30 pages of prose checked against page images by Claude Code; Cath review 2026-11-09 items A1–A4 and B1–B5 applied; awaiting Cath's re-check of A1 and endorsement
 confidentiality: personal study copy — do not redistribute
 ---
 
@@ -24,11 +24,13 @@ Photographed PDF complete, pp. 148–236 (44 spreads + final page). Markdown tra
 
 **Verification done:** every display equation in Boxes 4.2, 4.5, 4.9, 4.10, 4.11, 4.12, 4.13, 4.14 and equations (4.1)–(4.2), plus Boxes 4.15 and 4.20 and Table 4.2, compared symbol by symbol with the page images: all exact. Prose compared on pp. 149, 152, 163, 165, 177, 180–181, 184–185, 189, 192, 194–195, 199–203, 212–213, 219, 224–225: near-verbatim; a handful of skipped or duplicated lines were corrected.
 
+**Cath's review (2026-11-09) applied:** (B4.13.6) misprint confirmed on the page image and annotated; (B4.5.4)–(B4.5.5) now carry the printed $\cong$; Box 4.14 first paragraph restored from the image; duplicated half-line in Box 4.5 removed; all placeholder footnotes deleted and box footnotes re-lettered (`[^b4-Na]`); `<!-- end Box 4.x -->` markers added for all 20 boxes; equation tags normalised to the printed form; box anchors `box-4-17/18/19` added with an extended misprint note; chart descriptions carry an inline marker; p. 200 clipped paragraphs marked paraphrase-only; Team notes 1–2 (Cath) inserted under Boxes 4.5 and 4.13. Verified on the images: (B4.14.1)–(B4.14.2) are printed with $D_t$ and no $dt$, as transcribed.
+
 **Known limitations:**
-- p. 200, last paragraph: the right margin is clipped in the photo; the final words of each line were inferred by the model and read as plausible.
-- Chart descriptions under each **Figure** caption are model-generated readings of the plot, not book text. Treat them as aids, verify against the PDF before citing numbers.
-- Box boundaries: box titles are headings (`#### Box 4.x`); the end of a box is not marked. The PDF shows the frames.
-- Chapter end-notes (pp. 228–230) are transcribed as a list; in-text note markers appear as `[^n]` or superscripts as the model rendered them.
+- p. 200, two lower paragraphs: the right margin is clipped in the photo; the last words of each line were inferred by the model. Marked inline as paraphrase-only.
+- Chart descriptions under **Figure** captions are model-generated readings of the plot, not book text; each carries an inline marker. Verify against the PDF before citing numbers.
+- Chapter end-notes (pp. 228–230) are transcribed under `## Notes`. In-text note numbers are as the model read them and have not been individually re-checked against the images, except that 35 of the 37 end-notes are referenced exactly once; notes 13 and 25 have no in-text marker (dropped by the model). Box footnotes are lettered `[^b4-Na]`.
+- Box ends are marked `<!-- end Box 4.x -->`; the book interrupts one sentence on p. 152 with Box 4.1 (the sentence resumes after the box on p. 153).
 - Pages before 148 (none in this chapter) and the book's index are out of scope.
 
 Page markers `<!-- p. NNN -->` precede each page's text for citation.
@@ -99,7 +101,6 @@ Stabilization, however, does not only result from decisions. The macroeconomic r
 
 The consensus on stabilization policy has never been complete. In post-World War II Germany especially, it has almost always been regarded with suspicion. Even in countries where it was more widely accepted, such as the United States or the United Kingdom, empirical and theoretical doubts surfaced in the late twentieth century about the effectiveness of active fiscal policy. The 1970s first witnessed its ineffectiveness in response to an oil shock. Then, the 1980s saw the emergence of theoretical challenges (or the reemergence of old ones). And in the 1990s, experiences with failed fiscal expansions and a few cases of painless consolidations prompted a reassessment of the growth effects of a fiscal stimulus. By 2000, faith in fiscal activism had been shattered: the consensus among policymakers was that, beyond the automatic stabilization
 
-[^1]: Footnote marker indicating a reference to additional information not visible in the image.
 
 <!-- p. 150 -->
 
@@ -129,7 +130,7 @@ Although there has been a general trend away from centralization, the degree of 
 
 *Fiscal decentralization across selected countries in 2016.*
 
-The chart displays the share of subnational (state/local) government spending as a percentage of total government spending for various countries. The United Kingdom shows very low decentralization (~9%), while Germany exhibits moderate levels (~72%). Other countries like Canada, Australia, and Brazil show intermediate values between 30% and 60%. Data source: OECD National Accounts database.
+*[Chart description generated from the image by the local model — not book text; verify against the PDF before citing any number.]* The chart displays the share of subnational (state/local) government spending as a percentage of total government spending for various countries. The United Kingdom shows very low decentralization (~9%), while Germany exhibits moderate levels (~72%). Other countries like Canada, Australia, and Brazil show intermediate values between 30% and 60%. Data source: OECD National Accounts database.
 
 <!-- p. 151 -->
 
@@ -143,7 +144,6 @@ Government accounting rules differ across countries, but the European Union has 
 
 The preparation of the draft budget, its discussion, and its adoption by parliament are important stages of economic policy decision-making. Organization, procedures, and the time frame vary substantially from country
 
-[^2]: Footnote marker retained as per instructions.
 
 <!-- p. 152 -->
 
@@ -159,11 +159,12 @@ For the next phase, a distinction is made between mandatory and discretionary sp
 
 Meanwhile, mandatory spending is reviewed by authorizing committees that are also in charge of determining whether additional revenues are needed to finance it. The budget committee consolidates the authorizing plans into an omnibus package that is sent to the floor for vote and then to the President for signature.
 
-The parliamentary process therefore takes eight months and often more if it is not concluded by October 1.
+The parliamentary process therefore takes eight months and often more if it is not concluded by October 1.[^b4-1a]
 
-[^1] See www.cbpp.org/research/policy-basics-introduction-to-the-federal-budget-process, and http://budget.house.gov/budgetprocess/budgettimetable.htm
+[^b4-1a]: See www.cbpp.org/research/policy-basics-introduction-to-the-federal-budget-process, and http://budget.house.gov/budgetprocess/budgettimetable.htm
 
-[^1]: Footnote marker for the reference to external resources about the US federal budget process.
+<!-- end Box 4.1 -->
+
 
 <!-- p. 153 -->
 
@@ -179,7 +180,7 @@ Fiscal balances tend to rise when economic activity is buoyant and to decline wh
 
 <!-- p. 154 -->
 
-economic activity (for instance, value-added tax [VAT] revenues depend on household consumption and corporate income tax receipts on corporate profits), whereas public spending does not vary accordingly or, for specific items such as unemployment benefits or transfers, rises in economic downturns. This spontaneous variation of the fiscal balance has a stabilizing effect on aggregate demand and the private sectors' net income (hence the notion of automatic stabilizers). For this reason, countries with larger governments tend to exhibit more aggregate macroeconomic stability.^3
+economic activity (for instance, value-added tax [VAT] revenues depend on household consumption and corporate income tax receipts on corporate profits), whereas public spending does not vary accordingly or, for specific items such as unemployment benefits or transfers, rises in economic downturns. This spontaneous variation of the fiscal balance has a stabilizing effect on aggregate demand and the private sectors' net income (hence the notion of automatic stabilizers). For this reason, countries with larger governments tend to exhibit more aggregate macroeconomic stability.[^3]
 
 In order to capture changes in fiscal policy, it is useful to calculate a cyclically adjusted balance that measures what the financial balance should be, would output be at its potential level (cf. box 4.2). The change in the cyclically adjusted balance from one period to next is traditionally regarded as providing a measure of the fiscal impulse or fiscal stance because, in contrast to
 
@@ -205,6 +206,8 @@ Another issue is whether the change in the CAPB correctly measures the fiscal st
 
 The bottom-up measurement of the fiscal effort is, however, not without flaws. It requires relying on an accurate costing of fiscal measures: for example, an evaluation of the budgetary impact of tax reforms. Estimates provided on the occasion of new legislations may be inaccurate, either by mistake or because the government has an incentive to underestimate the budgetary cost of new legislations.
 
+<!-- end Box 4.2 -->
+
 changes resulting from the automatic stabilizers, it is supposed to result from *discretionary fiscal policy decisions*.
 
 The evolution of the financial balance can thus be decomposed into a cyclical component and a discretionary component, equal to the variation of the cyclically adjusted balance:
@@ -229,7 +232,7 @@ As a consequence, estimates of the structural balance vary across institutions a
 
 **Figure 4.3** Decomposition of the aggregate budget balance of the euro area, 1991–2016 (in percent of potential gross domestic product [GDP]). Authors’ calculations based on OECD Economic Outlook data.
 
-The chart displays the decomposition of the aggregate budget balance of the euro area from 1991 to 2016. The vertical axis represents the percentage of potential gross domestic product (GDP), ranging from -4% to +4%. The horizontal axis shows years from 1991 to 2016. Three series are plotted:
+*[Chart description generated from the image by the local model — not book text; verify against the PDF before citing any number.]* The chart displays the decomposition of the aggregate budget balance of the euro area from 1991 to 2016. The vertical axis represents the percentage of potential gross domestic product (GDP), ranging from -4% to +4%. The horizontal axis shows years from 1991 to 2016. Three series are plotted:
 
 - **Cyclical primary balance (including exceptional transactions)**: represented by hatched bars.
 - **Structural primary balance (excluding exceptional transactions)**: represented by solid black bars.
@@ -249,7 +252,7 @@ Receipts, expenditures, and balances are economic flows. They are generated in e
 
 **Figure 4.4** Successive evaluations of Ireland’s primary structural balance for the year 2007 (in percent of potential gross domestic product [GDP]). Authors’ calculations based on the European Commission’s economic forecasts.
 
-The bar chart displays successive evaluations of Ireland's primary structural balance for the year 2007, expressed as a percentage of potential GDP. The vertical axis ranges from -1 to 3, while the horizontal axis marks time periods from Spring 2007 through Spring 2011. Positive bars indicate surplus estimates, and negative bars show deficit projections. Values start high in Spring 2007 (around 3%), decline over subsequent years, and turn negative by Fall 2009 onward.
+*[Chart description generated from the image by the local model — not book text; verify against the PDF before citing any number.]* The bar chart displays successive evaluations of Ireland's primary structural balance for the year 2007, expressed as a percentage of potential GDP. The vertical axis ranges from -1 to 3, while the horizontal axis marks time periods from Spring 2007 through Spring 2011. Positive bars indicate surplus estimates, and negative bars show deficit projections. Values start high in Spring 2007 (around 3%), decline over subsequent years, and turn negative by Fall 2009 onward.
 
 <!-- p. 158 -->
 
@@ -267,11 +270,13 @@ The structural balance is the main indicator used for setting country-specific m
 
 Changes in the cyclically-adjusted primary balance (CAPB) or the structural deficit provide imprecise measures of the fiscal effort. Building on the action-based approach, the Commission has developed a new bottom-up indicator called the *discretionary fiscal effort*. On the revenue side, the discretionary fiscal effort aggregates the budgetary impact of individual tax decisions. On the expenditure side, the effort is based on the difference between potential output growth and the growth of public spending. Whereas the change in the structural deficit is meant to measure an outcome, the discretionary fiscal effort provides an indicator of the adequacy of the measures implemented to reduce the structural deficit (Carnot and de Castro, 2015). The discretionary fiscal effort is used in the “corrective arm” of the EU economic governance instituted to monitor national policies.
 
+<!-- end Box 4.3 -->
+
 transmitted from period to period: their value at the beginning of each year equals that at the end of the previous year, as for private assets and liabilities or a capital stock (see Chapter 1). For example, the *public*, or *government debt*—the total financial liabilities of the government—on January 1 equals that on December 31 of the previous year. From one year-end to the next, a deficit increases the debt, while a surplus can be used to pay it down or to buy financial assets.
 
 <!-- p. 159 -->
 
-Public debt accumulation arises because deficits must be financed through borrowing on the bond market or through loans from international organizations.^4 In a simplified setting where the government finances itself by issuing a single type of bond, the relationship between the public deficit and the public debt is:
+Public debt accumulation arises because deficits must be financed through borrowing on the bond market or through loans from international organizations.[^4] In a simplified setting where the government finances itself by issuing a single type of bond, the relationship between the public deficit and the public debt is:
 
 Debt at end of period $(t) = \text{Debt at end of period } (t-1)$
 
@@ -283,7 +288,7 @@ $$
 B_t = B_{t-1} + D_t \tag{4.1}
 $$
 
-Debt therefore increases as long as there are deficits. In this typical stock-flow relationship, debt is measured in nominal terms (disregarding changes in its market valuation) and it is assumed that the government does not sell assets to finance its deficit nor borrow to invest in financial assets. From an accounting standpoint, however, these dimensions should be taken into account. In particular, *gross debt* should be distinguished from the debt net of government assets, which is called *net debt*: for example, the 234% of GDP gross debt government figure for Japan in 2015 is misleading because it neglects the fact that a large part of this debt is held by government agencies; debt net of financial assets is a still high but less frightening 126% of GDP.^5 However, the concept of gross debt is generally used because government assets can be illiquid (see Section 4.1.1.d).
+Debt therefore increases as long as there are deficits. In this typical stock-flow relationship, debt is measured in nominal terms (disregarding changes in its market valuation) and it is assumed that the government does not sell assets to finance its deficit nor borrow to invest in financial assets. From an accounting standpoint, however, these dimensions should be taken into account. In particular, *gross debt* should be distinguished from the debt net of government assets, which is called *net debt*: for example, the 234% of GDP gross debt government figure for Japan in 2015 is misleading because it neglects the fact that a large part of this debt is held by government agencies; debt net of financial assets is a still high but less frightening 126% of GDP.[^5] However, the concept of gross debt is generally used because government assets can be illiquid (see Section 4.1.1.d).
 
 The previous equation can be rewritten, distinguishing the primary deficit and the interest on debt outstanding:
 
@@ -315,8 +320,6 @@ In practice, there are several ways to finance a deficit and therefore several t
 
 An alternative to open indebtedness is for the government to finance itself through the national central bank (which amounts to creating money). The counterpart to this *monetization of the deficit* is an increase in the money supply. This practice originates in the capacity (called *seignorage*, see Chapter 5) of kings to finance expenses by printing money, and it used to be common, particularly to finance wars. Deficit monetization amounts to letting the requirements of the public Treasury, rather than the economy's needs, determine the pace of money creation; when sustained, it has proved
 
-[^1]
-
 <!-- p. 161 -->
 
 #### Box 4.4 The Market for Government Debt
@@ -327,17 +330,19 @@ In advanced countries, the average maturity of public borrowing typically lies b
 
 Government bonds are traded by investment banks and eventually purchased by institutional investors such as asset managers and pension funds (which manage household savings), insurance companies, central banks, and sovereign wealth funds.
 
-Governments are usually considered more solvent than any private agent, and the interest rate that they pay on their debt is thus considered as the *risk-free interest rate*, on the basis of which all financial securities are valued. However, not all governments are equal, and their borrowing costs depend on their *credit quality*; that is, the likelihood assigned by investors that they will remain able to repay their debt in full. Investors often rely on the assessments provided by rating agencies, independent institutions which evaluate the creditworthiness of borrowers[^a]. A government’s borrowing rate includes a *risk premium* that depends on its rating and compensates the bond holder for the risk incurred.
+Governments are usually considered more solvent than any private agent, and the interest rate that they pay on their debt is thus considered as the *risk-free interest rate*, on the basis of which all financial securities are valued. However, not all governments are equal, and their borrowing costs depend on their *credit quality*; that is, the likelihood assigned by investors that they will remain able to repay their debt in full. Investors often rely on the assessments provided by rating agencies, independent institutions which evaluate the creditworthiness of borrowers[^b4-4a]. A government’s borrowing rate includes a *risk premium* that depends on its rating and compensates the bond holder for the risk incurred.
 
 Central banks typically hold treasury bonds as one of the counterparts of money; they buy (or accept as collateral in repurchase agreements; see Chapter 5) government securities from banks in exchange for providing them with liquidity. This mechanism differs from an outright monetization of the deficit to the extent that the government does not mandate the central bank to buy these securities. Amounts bought by independent central banks derive from monetary rather than fiscal policy considerations.
 
-[^a]: The market for ratings is dominated by three agencies: Standard and Poor’s, Moody’s, and Fitch Ratings.
+[^b4-4a]: The market for ratings is dominated by three agencies: Standard and Poor’s, Moody’s, and Fitch Ratings.
+
+<!-- end Box 4.4 -->
 
 <!-- p. 162 -->
 
 #### c) Public debt dynamics
 
-Most governments post significant public debt. Few record positive net financial wealth: this mainly applies to countries that hold foreign exchange reserves as an insurance against sudden capital outflows (see Chapter 7) or to countries that produce oil or raw material and intend to spread the benefits from extraction over several generations.^6
+Most governments post significant public debt. Few record positive net financial wealth: this mainly applies to countries that hold foreign exchange reserves as an insurance against sudden capital outflows (see Chapter 7) or to countries that produce oil or raw material and intend to spread the benefits from extraction over several generations.[^6]
 
 There can be good as well as bad reasons for a government to go into debt. Debt may fluctuate as a consequence of automatic or discretionary stabilization (but this is not a motive for sustained increase as the effects of booms normally offset those of recessions). For a country that must fight a war, ward off catastrophes, or undertake massive public investments, public borrowing is a way to spread the corresponding burden over several generations. In the case of war, it would be morally disputable to require the same generation that pays the price of blood to defend the nation against an aggressor to shoulder the corresponding financial effort. In the same way, a case could be made for partially financing action against climate change through debt: it would be a way to make the future generations pay for the milder climate they will benefit from. But public borrowing that repeatedly finances current expenditures is highly disputable. It is essentially a way to make the future generations pay for the consumption of the current one, and there are no plausible equity arguments to justify such behavior.
 
@@ -345,15 +350,13 @@ Debt, however, does not need to be repaid entirely because, unlike households, t
 
 An identical rate of debt accumulation does not have the same consequences in a country whose nominal GDP grows at a fast pace and in a country where it stagnates. Nominal GDP growth resulting from real growth and inflation diminishes the burden of past debt and therefore makes deficits more sustainable. This can be illustrated by a comparison between the United States and three European countries: France, Italy, and Greece over 2007–2014 (figure 4.5). While the increase in nominal debt was higher in the United States than in the three European countries (Greece included!), it was in significant part offset by nominal GDP growth. In contrast, Italy did not record any nominal GDP growth effect, and, in Greece, the decline in nominal GDP was so large that its adverse impact on the debt ratio was almost twice as large as the opposite impact of the 2012 debt restructuring.
 
-**Figure 4.5**
-
-Comparison of public debt dynamics between the United States and three European countries (France, Italy, and Greece) over the period 2007–2014. The chart illustrates how nominal GDP growth affects the sustainability of public debt in different economic contexts.
+**Figure 4.5** *(figure appears on p. 162; caption and description on p. 163)*
 
 <!-- p. 163 -->
 
 **Figure 4.5** Contributions to the change in the public debt ratio, 2007–2014 (in percent of initial gross domestic product [GDP]).
 
-The graph gives a decomposition of the variation of the debt-to-GDP ratio into three effects: (a) the numerator effect resulting from the increase in nominal debt as a consequence of accumulated deficits, (b) the denominator effect resulting from nominal GDP growth, and (c) in the case of Greece, the impact of the 2012 debt restructuring on the 2014 debt stock.
+*[Chart description generated from the image by the local model — not book text; verify against the PDF before citing any number.]* The graph gives a decomposition of the variation of the debt-to-GDP ratio into three effects: (a) the numerator effect resulting from the increase in nominal debt as a consequence of accumulated deficits, (b) the denominator effect resulting from nominal GDP growth, and (c) in the case of Greece, the impact of the 2012 debt restructuring on the 2014 debt stock.
 
 Authors’ calculations based on IMF World Economic Outlook data.
 
@@ -365,7 +368,7 @@ The financial deficit ratio is, however, not the best variable to assess debt su
 
 #### Box 4.5 Public Debt Dynamics
 
-Let $\Delta$ be the primary public deficit, $B$ the public debt at year-end, both in euro, and $i$ the nominal interest rate. We neglect cash revenues and disbursements (such as asset sales and purchases) that may affect public debt for a given public deficit. We also suppose that debt is measured at debt for a given public deficit. We also suppose that debt is measured at face value and not at current market value, thus ignoring valuation effects. Such assumptions are common but not innocuous: in emerging countries, part of the public debt is US dollar-denominated, and exchange rate movements also influence debt dynamics (see Chapter 7).
+Let $\Delta$ be the primary public deficit, $B$ the public debt at year-end, both in euro, and $i$ the nominal interest rate. We neglect cash revenues and disbursements (such as asset sales and purchases) that may affect public debt for a given public deficit. We also suppose that debt is measured at face value and not at current market value, thus ignoring valuation effects. Such assumptions are common but not innocuous: in emerging countries, part of the public debt is US dollar-denominated, and exchange rate movements also influence debt dynamics (see Chapter 7).
 
 The debt dynamics can be written as (with the $-1$ subscript denoting the end of the previous year):
 
@@ -381,17 +384,32 @@ $$i = r + \pi \tag{B4.5.3}$$
 
 Debt dynamics can thus be expressed as:
 
-$$b = \frac{1+i}{1+n}b_{-1} + \delta \equiv (1+i-n)b_{-1} + \delta = (1+r-g)b_{-1} + \delta \tag{B4.5.4}$$
+$$b = \frac{1+i}{1+n}b_{-1} + \delta \cong (1+i-n)b_{-1} + \delta = (1+r-g)b_{-1} + \delta \tag{B4.5.4}$$
 
 or, equivalently:
 
-$$b - b_{-1} \equiv (i-n)b_{-1} + \delta \tag{B4.5.5}$$
+$$b - b_{-1} \cong (i-n)b_{-1} + \delta \tag{B4.5.5}$$
 
 The debt ratio increases if the interest rate is higher than the nominal GDP growth rate and there is not a sufficient offsetting primary surplus. Equation (B4.5.5) also gives the primary deficit that stabilizes the debt ratio:
 
 $$\tilde{\delta} = (n-i)b \tag{B4.5.6}$$
 
 A country whose nominal growth rate exceeds its nominal interest rate can run a primary deficit without seeing its debt-to-GDP ratio increase.
+
+<!-- end Box 4.5 -->
+
+> **Team note 1 — under Box 4.5 (Cath, 2026-11-09)**
+>
+> *Book notation → RF/DFD notation.* Let $pb_t \equiv -\delta_t$ be the primary surplus ratio and $d_t \equiv b_t$ the end-of-year debt ratio. The **exact** accumulation identity is
+> $$d_t = \frac{1+i_t}{1+n_t}\,d_{t-1} - pb_t + sfa_t ,$$
+> and the exact debt-stabilising primary surplus is
+> $$pb^* = \frac{i-n}{1+n}\,d = \frac{r-g}{1+g}\,d \quad (\text{with } 1+i=(1+r)(1+\pi),\ 1+n=(1+g)(1+\pi)).$$
+> The book's (B4.5.4)–(B4.5.6) use the first-order approximation $pb^* \approx (i-n)d$ (the book prints $\cong$). At Mexican nominal growth of 8–10% the approximation overstates $pb^*$ by a factor of about $1+n$, roughly 8–10%. RF uses the exact form.
+>
+> *Mexico.* The book sets aside valuation effects (its first paragraph). In Mexico they are first order. With share $\alpha$ of debt in foreign currency, peso depreciation $\varepsilon_t$ and foreign rate $i^f_t$:
+> $$d_t = \frac{(1-\alpha)(1+i_t) + \alpha(1+i^f_t)(1+\varepsilon_t)}{1+n_t}\,d_{t-1} - pb_t + other_t .$$
+> The debt aggregate is **SHRFSP**, and $pb$ is the RFSP primary balance. The gap between $\Delta$SHRFSP and RFSP is $sfa$ (valuation plus other) and must be reported, not absorbed. The timing convention (end-of-period stock) matches the DFD budget constraint. Nina to confirm the index alignment in the Julia code.
+
 
 Other things being equal, primary deficits and interest payments on the outstanding stock of public debt increase the debt ratio, whereas primary surpluses and positive nominal GDP growth reduce it. When the nominal GDP growth rate is higher than the interest rate (or, equivalently, when the real GDP growth rate is higher than the real interest rate), a stable debt ratio is compatible with a permanent primary deficit. Conversely, when the interest rate is higher than the <!-- p. 165 --> growth rate, there must be a primary surplus to stabilize the ratio of debt to GDP, and the larger the (positive) difference between the interest rate and the growth rate, the larger the necessary primary surplus[^7].
 
@@ -447,7 +465,6 @@ Most of the increase in public spending has resulted from the rise of social spe
 
 A conclusion from these observations is that the conservative revolution launched in the early 1980s by Margaret Thatcher, the British Prime Minister, and US President Ronald Reagan did not succeed in reducing the size of the state, but contributed to redefining its scope: in the advanced and a large
 
-[^9]: Footnote marker retained as per instructions.
 
 <!-- p. 168 -->
 
@@ -461,11 +478,11 @@ This notion is important for the Global South and the European Union.
 
 **Figure 4.7** General government spending, 1900–2011 (in percent of gross domestic product [GDP]). Authors' calculations based on IMF Public Finances in Modern History Dataset, see Mauro et al. (2013).
 
-The chart displays the general government spending as a percentage of GDP for Germany, Spain, and Sweden from 1900 to 2011. The x-axis represents the years from 1900 to 2010, while the y-axis shows the percentage of GDP ranging from 0 to 80. Each country is represented by a different line style: Germany with a solid line, Spain with a dashed line, and Sweden with another solid line. The graph illustrates trends in government spending over time for these three countries.
+*[Chart description generated from the image by the local model — not book text; verify against the PDF before citing any number.]* The chart displays the general government spending as a percentage of GDP for Germany, Spain, and Sweden from 1900 to 2011. The x-axis represents the years from 1900 to 2010, while the y-axis shows the percentage of GDP ranging from 0 to 80. Each country is represented by a different line style: Germany with a solid line, Spain with a dashed line, and Sweden with another solid line. The graph illustrates trends in government spending over time for these three countries.
 
 **Selected emerging countries (Chile, India, South Korea)**
 
-The chart also includes data for Chile, India, and South Korea from 1900 to 2011. Similar to the previous chart, the x-axis represents the years from 1900 to 2010, and the y-axis shows the percentage of GDP ranging from 0 to 80. Each country is represented by a different line style: Chile with a dashed line, India with a solid line, and South Korea with another solid line. The graph illustrates trends in government spending over time for these three emerging countries.
+*[Chart description generated from the image by the local model — not book text; verify against the PDF before citing any number.]* The chart also includes data for Chile, India, and South Korea from 1900 to 2011. Similar to the previous chart, the x-axis represents the years from 1900 to 2010, and the y-axis shows the percentage of GDP ranging from 0 to 80. Each country is represented by a different line style: Chile with a dashed line, India with a solid line, and South Korea with another solid line. The graph illustrates trends in government spending over time for these three emerging countries.
 
 part of the emerging and developing countries, governments nowadays are enforcers of the economic rules of the game, providers of universal services, and social insurers, but they are much less manufacturers, bankers, and venture capitalists than they once were. However, this assessment does not apply <!-- p. 169 --> to China, Russia, or the Gulf countries where state-owned companies are powerful economic players. State capitalism remains a strong force in a world where economic power is shifting.
 
@@ -487,9 +504,9 @@ During the 1990s, the Japanese government repeatedly tried to raise the level of
 
 Although it had some positive short-term macroeconomic effects, the fiscal stimulus policy of the 1990s failed to bring back previous growth rates of the Japanese economy (Bayoumi, 2001). Part of the failure can be attributed to factors beyond the immediate control of the authorities (the Asian financial crisis and population aging). But the "lost decade" was also related to the failure of the government to swiftly clean up the banking sector. The resulting "zombie banks" failed to provide credit to stimulate private investment.
 
-[^10]: Group of Twenty
+<!-- end Box 4.6 -->
 
-[^11]: IMF proposals for a coordinated stimulus
+
 
 <!-- p. 171 -->
 
@@ -506,7 +523,6 @@ Wars, however, are not the only reason why governments incur debt. Peacetime deb
 - Protracted public deficits over and above the level corresponding to the stability of the debt ratio (see box 4.5). This has, for example, been the case of Italy (see figure 4.2), Belgium and France in the last decades of the twentieth century;
 - Major recessions leading to a collapse of government revenues. In Spain, for example, government revenues dropped suddenly from 40.9% of GDP in 2007 to 34.8% in 2009[^12]. This quickly resulted in a significant increase in the debt ratio;
 
-[^12]: Footnote marker indicating additional information or citation related to the text.
 
 <!-- p. 172 -->
 
@@ -514,7 +530,7 @@ Wars, however, are not the only reason why governments incur debt. Peacetime deb
 
 The materialization of contingent liabilities. As indicated in table 4.1, the government guarantees depositors (explicitly) and some other creditors of the banks (explicitly or implicitly). Losses in the banking sector translate into public debt if these guarantees are called. This comes on top that of the deep recessions generally triggered by banking crises. Ireland in the 2010s provides a clear case of the potential threat a large banking sector can represent for public finances: in 2007, its debt ratio was 24% of GDP; by 2012 it had reached 122% of GDP, a 98 percentage point increase in five years.
 
-Figure 4.9 may suggest that public debt can reach multiples of GDP without much damage: although its sovereign debt ratio twice exceeded 250% of GDP, the United Kingdom always met its financial commitments, as did the United States, with debt peaking at 121% of GDP in 1946.^{14} Comprehensive research by Carmen Reinhart and Kenneth Rogoff (Reinhart and Rogoff, 2014) has shown, however, that these two cases are more the exception than the rule: *debt default*—that is, inability to meet one’s debt obligations on time, see box 4.7—has in fact been very common in history. Since 1800, there have been several waves of sovereign default associated with wars and economic crises. In the second half of the twentieth century advanced countries met their obligations, but emerging and developing countries experienced debt crises that ended in *debt restructuring* or at least *rescheduling* (see box 4.7). Overall, the proportion of countries in default each year has often been above one-third (figure 4.10).
+Figure 4.9 may suggest that public debt can reach multiples of GDP without much damage: although its sovereign debt ratio twice exceeded 250% of GDP, the United Kingdom always met its financial commitments, as did the United States, with debt peaking at 121% of GDP in 1946.[^14] Comprehensive research by Carmen Reinhart and Kenneth Rogoff (Reinhart and Rogoff, 2014) has shown, however, that these two cases are more the exception than the rule: *debt default*—that is, inability to meet one’s debt obligations on time, see box 4.7—has in fact been very common in history. Since 1800, there have been several waves of sovereign default associated with wars and economic crises. In the second half of the twentieth century advanced countries met their obligations, but emerging and developing countries experienced debt crises that ended in *debt restructuring* or at least *rescheduling* (see box 4.7). Overall, the proportion of countries in default each year has often been above one-third (figure 4.10).
 
 <!-- p. 173 -->
 
@@ -527,6 +543,8 @@ These provisions apply to relationships to private creditors. Arrears in repayme
 Rather than to default, a sovereign borrower can renegotiate its debt with its creditors to obtain a rescheduling of the repayments, a reduction in the interest rate, or an outright reduction of the principal. Negotiations with official creditors take place within the *Paris club* (or, at euro area level, within the Eurogroup of finance ministers). As far as bank loans are concerned, they take place under the auspices of the Institute for International Finance (IIF), the major international banks’ association. Negotiations with bondholders are more difficult to organize because they are more dispersed. It is normally incumbent on the borrower to convene a negotiation with its creditors and to ensure that it involves a sufficient proportion of them. An agreement reached with a majority of the bondholders can, however, be challenged in courts by a minority of *holdout creditors* (see Section 4.3.2). For this reason, bond contracts increasingly include *collective action clauses* (CACs) specifying that agreements approved by a qualified majority of the bondholders apply to all.
 
 From an economic viewpoint, an important criterion is whether the renegotiation results in a reduction of the net present value of future payments (of the principal and the interest). There can be such *debt relief* without a reduction of the principal if the interest rate is reduced or if the borrower is granted a grace period (Greece in the 2010s has benefitted from such a relief on official loans extended by the ESM, see box 4.8). A renegotiation resulting in a postponement of repayments without a change in the present value of future obligations is usually called a *debt rescheduling*. There is *debt restructuring* if the present value is reduced.
+
+<!-- end Box 4.7 -->
 
 <!-- p. 174 -->
 
@@ -548,9 +566,8 @@ e. And finally, default on its commitments.
 
 The United States and the United Kingdom after World War II essentially relied on a combination of (b), (c), and (d). In a rather high nominal growth context, maintaining low bond rates through central bank policy helped keep the debt burden low.
 
-Answering the second question is more demanding. It is relatively easy to determine when a household or a private firm is insolvent, but the same does not hold for a government. Unlike households, governments are assumed to have an infinite lifetime, so their debt never requires to be redeemed.^15 To be more precise, expiring debt will be paid off through new borrowing because it
+Answering the second question is more demanding. It is relatively easy to determine when a household or a private firm is insolvent, but the same does not hold for a government. Unlike households, governments are assumed to have an infinite lifetime, so their debt never requires to be redeemed.[^15] To be more precise, expiring debt will be paid off through new borrowing because it
 
-[^15]: Footnote marker retained as per instructions.
 
 <!-- p. 175 -->
 
@@ -572,13 +589,14 @@ Public finance sustainability is especially important in a monetary union where 
 
 In the 2000s, Greece recorded very large and in part hidden deficits, reaching a 15.5% of GDP deficit and a 127% of GDP debt ratio in 2009. In spite of an exceptionally large fiscal adjustment, estimated by the IMF at 19% of potential GDP between 2009 and 2013 (IMF, 2017); a significant debt reduction negotiated with private creditors in 2012; and favorable borrowing conditions granted by the euro area partners, remaining deficits and the nominal GDP contraction resulted in the public debt reaching 177% of GDP at end-2014. The IMF subsequently assessed that Greek debt was not sustainable unless a primary surplus in excess of 3.5% could be sustained, which was considered politically unrealistic. However, the euro area creditors (partners countries through the European Stability Mechanism (ESM), the financing vehicle set up in 2012 to provide conditional financial assistance to countries in crisis) were willing to provide favorable financing conditions but unwilling to write off nominal debt. Germany, especially, insisted that debt forgiveness was illegal because Article 125 of the European Treaty (known as the *no bail-out clause*) states that “The Community shall not be liable for or assume the commitments of central governments … of any Member State.” In net present value terms, Greece has benefited from a substantial reduction of its official debt burden, but—at the time of writing at least—in nominal terms there has been no debt relief.
 
+<!-- end Box 4.8 -->
+
 as a lender of last resort for sovereigns. This issue has been a matter of lengthy and controversial discussion in the euro area. We return to it in Section 4.3.
 
 Another major difference between a state and a private entity has to do with the consequences of insolvency. When a company goes bankrupt, a competitor buys it up or it is liquidated, in which case its assets are seized by the creditors. A household may similarly lose its assets (e.g., its house). But there is no collateral for sovereign debt. If a state defaults on its commitments, neither domestic nor foreign creditors can seize its assets (unless the latter invade the country).[^16] An indebted state’s attitude toward its creditors therefore depends on its willingness to pay as well as on its ability to pay. Default can be the outcome of a rational decision not to repay the creditors (in which case it is called strategic default),
 
 This brings us to the third question: What are the benefits and costs of a strategic default? The benefits result from writing off the debt and the corresponding interest burden, while the costs are mainly reputational: the state may be cut off from financial markets or at least pay a higher risk premium on future borrowings because markets will price the risk of another default (see box 4.9). An overindebted country faces a choice: either to strive to meet its obligation and gradually reduce its debt ratio through fiscal adjustment, or to negotiate a debt relief with its creditors. In the first case it preserves its reputation, but, before it succeeds in putting its debt ratio on a convincingly
 
-[^16]: Footnote marker retained as per instructions.
 
 <!-- p. 177 -->
 
@@ -588,7 +606,7 @@ There are two main reasons why the market valuation of sovereign debt varies ove
 
 First, the value of a fixed-rate government bond on the secondary market depends on the relative level of its interest rate and the current interest rate for assets of the same maturity and risk. Since interest rates vary continuously, bonds carrying different interest rates coexist. Arbitrage by market participants leads the expected return on these bonds to equalize through variation in their value. Assume for example that the government issues a bond carrying a 1% interest rate. Nobody would buy if another bond from the same government carrying 2% can be bought unless the value of the second increases up to the point where both provide the same return. This mechanism is continuously at work on bond markets.
 
-Second, bonds of the same maturity are not equally risky. For riskier ones to be bought, they must carry a higher interest rate. Suppose, for example, that a government issues a $100 one-year bill and that the *risk-free* interest rate is $i$. If the probability that the government will entirely fail to honor its obligation is $\pi$, the expected value of the reimbursement of the principal of nominal value 100, E(P), is[^a]:
+Second, bonds of the same maturity are not equally risky. For riskier ones to be bought, they must carry a higher interest rate. Suppose, for example, that a government issues a $100 one-year bill and that the *risk-free* interest rate is $i$. If the probability that the government will entirely fail to honor its obligation is $\pi$, the expected value of the reimbursement of the principal of nominal value 100, E(P), is[^b4-9a]:
 
 $$E(P) = (1 - \pi) \times 100 + \pi \times 0 \quad \text{(B.4.9.1)}$$
 
@@ -602,7 +620,9 @@ $$\rho = \frac{\pi}{1 - \pi} \quad \text{(B.4.9.3)}$$
 
 It is an increasing function of the probability of default $\pi$. As a judgment on debt sustainability fundamentally relies on one’s assessment of the willingness of domestic taxpayers to meet their sovereign’s obligations, the probability of default envisaged by financial markets is quite volatile. This may generate self-fulfilling crises: if markets suddenly revise the probability of default upward, this increases the risk premium, hence the interest rate on new borrowing, making the debt unsustainable.
 
-[^a]: For simplicity, we have assumed that, in case of default, the lender does not recover anything. The computation can easily take into account the probability of partial reimbursement.
+[^b4-9a]: For simplicity, we have assumed that, in case of default, the lender does not recover anything. The computation can easily take into account the probability of partial reimbursement.
+
+<!-- end Box 4.9 -->
 
 declining path, it is likely to be facing high borrowing costs; in the second case, its solvency will be improved, but it may suffer lasting reputational damages.
 
@@ -612,7 +632,7 @@ Since governments suspected of not being able or willing to repay their debt car
 
 **Figure 4.11** Sovereign spreads vis-à-vis Germany, selected euro area countries, 1997–2017 (differences in 10-year sovereign interest rates in percentage points). OECD.
 
-The chart displays the evolution of sovereign bond spreads for France, Ireland, Italy, and Spain relative to Germany from 1997 to 2017. The vertical axis represents the spread in percentage points, ranging from -1 to 9. The horizontal axis shows dates from January 1999 to February 2017. Four lines represent different countries: France (dashed), Ireland (solid thin), Italy (solid thick), and Spain (dash-dot). Spreads remain low until around 2008, then rise sharply for all countries during the European debt crisis, peaking between 2011 and 2012 before declining again.
+*[Chart description generated from the image by the local model — not book text; verify against the PDF before citing any number.]* The chart displays the evolution of sovereign bond spreads for France, Ireland, Italy, and Spain relative to Germany from 1997 to 2017. The vertical axis represents the spread in percentage points, ranging from -1 to 9. The horizontal axis shows dates from January 1999 to February 2017. Four lines represent different countries: France (dashed), Ireland (solid thin), Italy (solid thick), and Spain (dash-dot). Spreads remain low until around 2008, then rise sharply for all countries during the European debt crisis, peaking between 2011 and 2012 before declining again.
 
 <!-- p. 179 -->
 
@@ -674,9 +694,11 @@ Second, in an open economy, an additional euro of disposable income leads househ
 
 All these factors weaken the impact of fiscal expansion on aggregate demand and income.
 
+<!-- end Box 4.10 -->
+
 **Figure 4.12** Effect of a Keynesian fiscal expansion in an AS-AD framework.
 
-The chart shows an Aggregate Supply (AS) curve sloping upward and an Aggregate Demand (AD) curve intersecting it at two points, $E_1$ and $E_2$. The horizontal axis represents Production and the vertical axis Price. A rightward shift of the AD curve from its initial position to a new position results in movement from equilibrium point $E_1$ to $E_2$, indicating increased output under a Keynesian fiscal expansion scenario.
+*[Chart description generated from the image by the local model — not book text; verify against the PDF before citing any number.]* The chart shows an upward-sloping aggregate supply (AS) curve and two downward-sloping aggregate demand curves, AD and AD′. Price is on the vertical axis and production on the horizontal axis. AD meets AS at $E_1$; the rightward shift to AD′ gives a new intersection $E_2$, with higher output and a somewhat higher price level.
 
 central bank. A fiscal expansion (either a rise in public spending or an exogenous cut in taxes) results in the demand curve moving to the right: production increases. If the slope of the supply curve is low, the adjustment takes place through a variation in the level of output (movement of $E_1$ to $E_2$ in figure 4.12).
 
@@ -705,9 +727,7 @@ The preceding presentation was based on an ad hoc assumption as regards househol
 
 Suppose instead that households have unlimited access to credit. They can maximize their intertemporal utility, which depends both on their present and their future consumption, subject to their intertemporal budget constraint. In this polar case, current consumption does not depend on current income but on the present value of future earnings. If the discount rate equals the interest rate, a temporary income shock does not affect household behavior at all. There is no need for stabilization policy.
 
-[^17]: Footnote marker retained as per instructions.
 
-[^18]: Footnote marker retained as per instructions.
 
 <!-- p. 184 -->
 
@@ -745,6 +765,8 @@ Let us now suppose that the government, while preserving its spending program, d
 
 This result is the Ricardian equivalence theorem. It expresses the idea that debt is deferred taxation. It also suggests that the central government's concern should be to determine the level and nature of public expenditures more so than its financing method (through debt or through taxation).
 
+<!-- end Box 4.11 -->
+
 <!-- p. 186 -->
 
 The assumptions behind the Ricardian equivalence theorem may seem unrealistic: rational expectations, infinitely lived consumers (or, equivalently, full solidarity across generations), the unproductive character of public expenditure (or their lack of impact on consumers’ utility or on business productivity), and the absence of credit constraints (households enjoy unlimited access to credit regardless of their debt ratios).
@@ -757,7 +779,6 @@ These observations have led to the development of micro-founded models that comb
 
 Even when the Ricardian equivalence applies, there is a rationale for the government to allow the budget to be in deficit in a recession or as a consequence of outside events such as wars or natural disasters. The reason is that balancing the budget in any circumstance would entail fluctuation in the tax rate that would adversely affect the supply side of the economy. This theory of tax smoothing results in a policy recommendation that does not differ markedly from the Keynesian prescription. In both settings, th
 
-[^19]: Footnote marker retained as per instruction.
 
 <!-- p. 187 -->
 
@@ -785,7 +806,6 @@ Simulations have the advantage of taking into account, within the same model, of
 
 Empirical estimates based on reduced forms have the advantage of relying on few *a priori* assumptions and the drawback of being comparatively rough. Blanchard and Perotti (2002) first used structural VAR models to assess fiscal policy in the United States (box 4.12). Similar approaches have been replicated for other countries. The limitation of this method is that it necessarily relies on a limited set of variables (three for Blanchard and Perotti: taxes, public spending, and GDP).
 
-[^20]: Footnote marker retained as per instructions.
 
 <!-- p. 189 -->
 
@@ -817,22 +837,23 @@ Once estimated with quarterly data over the period 1960–1997, the model is use
 
 Blanchard and Perotti find that, in the short term, both public spending and tax multipliers are close to unity: an additional dollar of public spending raises GDP by about a dollar; an additional dollar of taxes reduces it by about a dollar.
 
+<!-- end Box 4.12 -->
+
 <!-- p. 190 -->
 
 The third approach is based on the analysis of significant and lasting fiscal episodes. Building on the case study of large-scale fiscal consolidation episodes (such as those of Denmark and Ireland in the 1980s), Alesina and Ardagna (2010) run a cross-country study in which they retain all years during which the structural primary balance varied by a minimum of $\pm 1.5$ percentage point of GDP. The underlying idea is that, unlike what linear models implicitly assume, the multiplier is not constant across fiscal policy initiatives because a major program of debt deleveraging or a sustained expenditure contraction effort will change the expectations and behaviors of private agents.
 
 The narrative approach initiated by Romer and Romer (2010) provides the basis for another attempt to disentangle the analysis of fiscal policy from the hypotheses built into structural models without falling into the extreme simplifications of the VAR approach. As explained in box 4.2, action-based fiscal data have the advantage of being independent from unreliable estimates of the structural balance. They can furthermore be used in model-free assessments of the impact of fiscal policy. In the 2010s, the narrative approach has increasingly been used (IMF, 2010; Guajardo, Leigh, and Pescatori, 2014; Alesina et al., 2017).
 
-A variant of the same approach relies on episodes of war, which have the (econometric) advantage of being exogenous and unrelated to prevailing macroeconomic conditions. Analysis of such true fiscal shocks can yield unbiased estimates of the multiplier (though monetary policy may well respond to war-induced changes in government spending).[^1] In the same vein, Nakamura and Steinsson (2014) use the differentiated regional impacts of military buildups to evaluate state-level multipliers.
+A variant of the same approach relies on episodes of war, which have the (econometric) advantage of being exogenous and unrelated to prevailing macroeconomic conditions. Analysis of such true fiscal shocks can yield unbiased estimates of the multiplier (though monetary policy may well respond to war-induced changes in government spending).[^21] In the same vein, Nakamura and Steinsson (2014) use the differentiated regional impacts of military buildups to evaluate state-level multipliers.
 
 #### e) The multiplier in practice
 
 Batini et al. (2014) and Mineshima et al. (2014) provide a survey of recent results. The main lessons from research are the following:
 
-1.  **The average expenditure multiplier is close to one in large, moderately open economies.** As far as structural models are concerned, Coenen et al. (2012) find that, with similar initial conditions and in response to identical shocks, multipliers are remarkably close: for the United States, they range between 0.9 and 1.3, for example, in the case of a temporary public investment increase with endogenous monetary policy response; they are also around 1 in the case of a coordinated stimulus in Europe, under the same conditions. The VAR approach of Blanchard and Perotti (2002) and the narrative approach of the IMF (2010) yield similar results. This is also the conclusion from the survey of several narrative analyses by Batini et al. (2014).
-2.  **The characteristics of the economy affect the fiscal multiplier.** It depends on trade openness (negatively) and therefore on the size of the economy (positively), labor market rigidity (positively),
+1. **The average expenditure multiplier is close to one in large, moderately open economies.** As far as structural models are concerned, Coenen et al. (2012) find that, with similar initial conditions and in response to identical shocks, multipliers are remarkably close: for the United States, they range between 0.9 and 1.3, for example, in the case of a temporary public investment increase with endogenous monetary policy response; they are also around 1 in the case of a coordinated stimulus in Europe, under the same conditions. The VAR approach of Blanchard and Perotti (2002) and the narrative approach of the IMF (2010) yield similar results. This is also the conclusion from the survey of several narrative analyses by Batini et al. (2014).
+2. **The characteristics of the economy affect the fiscal multiplier.** It depends on trade openness (negatively) and therefore on the size of the economy (positively), labor market rigidity (positively),
 
-[^1]: Footnote marker retained as per instructions.
 
 <!-- p. 191 -->
 
@@ -848,9 +869,7 @@ Batini et al. (2014) and Mineshima et al. (2014) provide a survey of recent resu
 
 Summing up, recent research provides empirical support for using fiscal policy for stabilization purposes, but it also highlights its limitations and the potential for misguided action. The main conclusions is, perhaps, that there is
 
-[^22]: Footnote marker retained as per instruction.
 
-[^23]: Footnote marker retained as per instruction.
 
 <!-- p. 192 -->
 
@@ -886,33 +905,31 @@ The key to defining sustainability is to allow for a government to remain perman
 
 The rigorous definition of debt sustainability builds on the intuition that public finances are sustainable if the state meets its intertemporal budget constraint; that is, if spending is actually financed—be it today, tomorrow, or the day after tomorrow—because expected future tax receipts cover expected future primary spending and the interest charges on outstanding debt. This can be shown to be equivalent to saying that the present value (at time 0) of the expected debt ratio at time $t$ tends toward zero as $t$ tends toward infinity, a condition known as the transversality condition (box 4.13). Intuitively, this means that the future debt can be high but cannot grow faster than the difference between the real interest rate and the real growth rate of the economy. This is also equivalent to saying that the sum of the current debt and the present value of future primary expenditures equals the present value of future receipts.
 
-[^24]: Footnote marker retained as per instructions.
 
 <!-- p. 194 -->
 
 #### Box 4.13 Sustainability and the Government’s Intertemporal Budget Constraint
 
-Since states do not have a predefined, finite lifetime, there is no need for the net public debt to fall to zero at any given date in the future. Rather, debt sustainability implies that the present value (at time 0) of debt at time $t$ tends toward zero as $t$ tends toward the infinite. This condition, called the *transversality condition*, is equivalent to the equality between the present value over time of the government’s future income and expenditure streams.[^a]
+Since states do not have a predefined, finite lifetime, there is no need for the net public debt to fall to zero at any given date in the future. Rather, debt sustainability implies that the present value (at time 0) of debt at time $t$ tends toward zero as $t$ tends toward the infinite. This condition, called the *transversality condition*, is equivalent to the equality between the present value over time of the government’s future income and expenditure streams.[^b4-13a]
 
 We start with the continuous-time equivalent to the debt accumulation equation (B4.5.4) of box 4.5:
 
-$$ \frac{db_t}{dt} = (i-n)b_t + \delta_t = (r-g)b_t + \delta_t \tag{B.4.13.1} $$
+$$ \frac{db_t}{dt} = (i-n)b_t + \delta_t = (r-g)b_t + \delta_t \tag{B4.13.1} $$
 
 The variation of the debt ratio $b_t$ over time $t$ is a function of the interest rate ($i$ in nominal terms, $r$ in real terms), of the growth rate ($n$ in nominal terms, $g$ in real terms), and of the primary deficit ratio $\delta_t$. For the sake of simplicity, we assume that the real interest rate and the growth rate are constant. Denoting by $b_0$ the initial debt ratio, the debt ratio at time $t$ can be obtained by integrating Equation (B4.13.1) over time:
 
-$$ b_t = b_0 e^{(r-g)t} + \int_0^t \delta_s e^{(r-g)(t-s)} ds \tag{B.4.13.2} $$
+$$ b_t = b_0 e^{(r-g)t} + \int_0^t \delta_s e^{(r-g)(t-s)} ds \tag{B4.13.2} $$
 
 The present value of $b_t$ at $t=0$ is obtained by multiplying both sides of this equation by $e^{-(r-g)t}$. The discount rate $(r-g)$ allows taking into account the dampening effect of growth on the debt ratio:
 
-$$ b_t e^{-(r-g)t} = b_0 + \int_0^t \delta_s e^{-(r-g)s} ds \tag{B.4.13.3} $$
+$$ b_t e^{-(r-g)t} = b_0 + \int_0^t \delta_s e^{-(r-g)s} ds \tag{B4.13.3} $$
 
 When $t$ tends to infinity, the present value of the debt ratio must tend toward zero, which implies that the right-hand side of the equation also tends toward zero:
 
-$$ \lim_{t\to\infty} b_t e^{-(r-g)t} = 0 \text{ implies } b_0 = -\int_0^\infty \delta_s e^{-(r-g)s} ds \tag{B.4.13.4} $$
+$$ \lim_{t\to\infty} b_t e^{-(r-g)t} = 0 \text{ implies } b_0 = -\int_0^\infty \delta_s e^{-(r-g)s} ds \tag{B4.13.4} $$
 
-The first condition is called the *transversality condition*. If $r > g$, it is necessary and sufficient to fulfil it that the debt ratio increases at a lesser pace than the discount rate $r-g$. If $r < g$, the government can finance the debt service through new borrowing while remaining solvent. This was the situation of the 1970s, a period when public debt problems were benign[^a].
+The first condition is called the *transversality condition*. If $r > g$, it is necessary and sufficient to fulfil it that the debt ratio increases at a lesser pace than the discount rate $r-g$. If $r < g$, the government can finance the debt service through new borrowing while remaining solvent. This was the situation of the 1970s, a period when public debt problems were benign[^b4-13a].
 
-[^a]: Footnote marker retained as per source text; content not visible in image.
 
 <!-- p. 195 -->
 
@@ -932,17 +949,30 @@ $$
 \tau^* = (r-g) \left[ b_0 + \int_{0}^{\infty} (x_s - h_s) e^{-(r-g)s} ds \right] \tag{B4.13.6}
 $$
 
+*[Editorial note: the book prints $(x_s - h_s)$ in (B4.13.6) (verified on the page image, p. 195). This is inconsistent with the box's own definition $\delta = x + h - \tau$ and with (B4.13.5); the correct form is $(x_s + h_s)$. Kept as printed; see Team note 2 below.]*
+
 Taxing income at rate $\tau$ is sufficient to service (at rate $r-g$) the sum of the initial debt and of the present value of the future stream of primary expenditures.
 
 The gap between the sustainable tax rate $\tau^*$ and the observed tax rate $\tau$, called the *tax gap*, provides an indicator of sustainability. If $\tau < \tau^*$, the long-term sustainability of public debt requires either a rise in taxes or a cut in expenditures.
 
 As a simple finite-horizon benchmark for assessing sustainability, Blanchard also proposes to calculate the constant tax rate necessary to restore the initial level of the ratio of public debt after a given number $N$ of years. However, finite-horizon benchmarks are necessarily more arbitrary.
 
-[^1] The layman’s version of the transversality condition is a famous remark by Herbert Stein, the former chairman of the Council of Economic Advisers under president Nixon, according to whom “if something cannot go on forever, it will stop.”
-
 Consistently, the sustainability of public finance can be assessed by comparing the current tax rate with the *sustainable tax rate* that would ensure debt sustainability if kept constant in the future (box 4.13). The difference between the two is called the *tax gap*. A positive tax gap signals that fiscal policy is unsustainable and that either the level of taxation or the expenditure level will need to be adjusted in the future.
 
-[^1]: The layman’s version of the transversality condition is a famous remark by Herbert Stein, the former chairman of the Council of Economic Advisers under president Nixon, according to whom “if something cannot go on forever, it will stop.”
+[^b4-13a]: The layman’s version of the transversality condition is a famous remark by Herbert Stein, the former chairman of the Council of Economic Advisers under president Nixon, according to whom “if something cannot go on forever, it will stop.”
+
+<!-- end Box 4.13 -->
+
+> **Team note 2 — under Box 4.13 (Cath, 2026-11-09)**
+>
+> *Correct form of (B4.13.6)* (the book prints a minus; see the editorial note above): with $\delta = x + h - \tau$,
+> $$\tau^* = (r-g)\Big[b_0 + \int_0^\infty (x_s + h_s)\,e^{-(r-g)s}\,ds\Big], \qquad r > g .$$
+> *Discrete-time counterpart used in DFD:* $d_0 = \sum_{t\ge1} pb_t \prod_{s=1}^{t}\frac{1+g_s}{1+r_s}$, given $\lim_{T\to\infty} d_T \prod_{s=1}^{T}\frac{1+g_s}{1+r_s} = 0$.
+>
+> *Regime caveat.* For $r \le g$, both $\tau^*$ and the present-value form lose their meaning: the discount factor no longer discounts. The book notes the case but does not develop it. This is the open watch item (`../watch_items/debt-stabilising-primary-balance-under-r-lt-g.md`).
+>
+> *Why this box matters for RF.* Blanchard's sustainable tax rate and the **tax gap** $\tau^* - \tau$ formalise RF's target. RF can **derive** a sustainability-consistent revenue path instead of asserting 25% by 2036. Feed the spending path $x + h$, including Beth's pension and health profiles, and Anne's demography, into either the infinite-horizon form or Blanchard's finite $N$-year benchmark (end of the box). This is the same logic as the EU's S2 indicator (p. 196). Mexico caveat: $\tau$ here means *all* non-debt revenue. Oil revenue therefore belongs in $\tau$ for sustainability, but not in the OECD tax-pressure headline. This is the same separation the Contabilidad de la Muerte makes.
+
 
 <!-- p. 196 -->
 
@@ -951,15 +981,13 @@ This approach is used in the EU to monitor the fiscal position of member countri
 * S1, the *medium-term fiscal sustainability indicator*, gives the improvement in the government structural primary balance that must be carried out over a five-year period to reach, by 2030, a 60% public debt-to-GDP ratio (the EU Treaty reference value), taking into account the financing for any future additional expenditure arising from an aging population. It is a finite-horizon indicator that relies on an *a priori* target for the debt ratio;
 * S2, the *long-term fiscal sustainability indicator*, gives the upfront adjustment to the current structural primary balance (assuming it will thereafter be kept at the adjusted value) required to stabilize the debt-to-GDP ratio over the infinite horizon, taking into account the effect of aging on future public spending. Like the tax gap presented in box 4.13, of which it provides an empirical implementation, S2 does not incorporate any specific target for the debt ratio.
 
-This approach, of course, is fragile. First, it relies on long-term projections of growth, interest rates, and public expenditures. Second, it assumes that, provided future revenues match future expenditures, *any* level of public debt can be sustained and financed on the bond market. Third, it provides a global assessment of sustainability but does not specify what the adjustment path should be. Fourth, the sustainable tax rate can vary abruptly (“jump”) in response to a change of economic policy scenario—for example, a rise in interest rates or a pension reform that reduces future government spending. Fifth, the long-term sustainability indicator ignores possible short-term financing constraints.^26
+This approach, of course, is fragile. First, it relies on long-term projections of growth, interest rates, and public expenditures. Second, it assumes that, provided future revenues match future expenditures, *any* level of public debt can be sustained and financed on the bond market. Third, it provides a global assessment of sustainability but does not specify what the adjustment path should be. Fourth, the sustainable tax rate can vary abruptly (“jump”) in response to a change of economic policy scenario—for example, a rise in interest rates or a pension reform that reduces future government spending. Fifth, the long-term sustainability indicator ignores possible short-term financing constraints.[^26]
 
 #### b) Fiscal space
 
 According to the intertemporal budget constraint approach, any level of debt can be sustained provided the adequate primary surplus can be maintained permanently. However, large and sustained primary surpluses amount to making the living generation pay for the fiscal excesses of the previous ones, and they are not sustainable politically. Zheng (2014) finds that, over a 50-year period, only 11 out of 87 countries recorded primary surpluses in excess of 5% of GDP for five years or more. For the assessment of Greek solvency in the 2010s, similar benchmarks were used for determining if there was a high probability that the country would service its debt. When carrying out debt sustainability analyses, the IMF (2013) considers that “closer scrutiny” is called for when a country is projected to maintain a cyclically adjusted primary surplus in excess of 3.5% of GDP over a three-year period.
 
-[^25]: Footnote marker retained as per instructions.
 
-[^26]: Footnote marker retained as per instructions.
 
 <!-- p. 197 -->
 
@@ -975,7 +1003,7 @@ The S-curve can be estimated in a panel regression with country fixed effects, r
 
 From Ghosh et al. (2011).
 
-The chart illustrates the relationship between the primary balance ($s$) and the debt-to-GDP ratio ($d$). The vertical axis represents the primary balance, while the horizontal axis shows the debt/GDP ratio. Two curves are plotted: a solid S-shaped curve labeled "Primary balance $s$" and a dashed straight line labeled "Interest burden $(r-g)d$". The intersection points of these lines indicate stable and unstable equilibria for the debt ratio.
+*[Chart description generated from the image by the local model — not book text; verify against the PDF before citing any number.]* The chart illustrates the relationship between the primary balance ($s$) and the debt-to-GDP ratio ($d$). The vertical axis represents the primary balance, while the horizontal axis shows the debt/GDP ratio. Two curves are plotted: a solid S-shaped curve labeled "Primary balance $s$" and a dashed straight line labeled "Interest burden $(r-g)d$". The intersection points of these lines indicate stable and unstable equilibria for the debt ratio.
 
 <!-- p. 198 -->
 
@@ -989,7 +1017,6 @@ Whether or not fiscal policy is regarded as sustainable is bound to affect its e
 
 Sutherland (1997) formalized this intuition in a model that captures the possibility of debt-induced changes in the value of the Keynesian multiplier. The reason is uncertainty regarding the distribution of future taxes across generations. In his overlapping-generations model, presented in box 4.14, consumers have a finite horizon; agents behave in a Keynesian way as long as the public debt remains low enough for the burden of fiscal adjustment to be safely transmitted to future generations; they become increasingly anti-Keynesian (contracting their spending in reaction to a fiscal stimulus) as the likelihood increases that they themselves will have to bear that burden. The same fiscal action can therefore lead to opposite results depending on the level of public debt. Such models rest on somewhat ad hoc assumptions, but they help to describe situations of fiscal crisis during which expectations take a prominent role.
 
-An overlapping-generations model with Keynesian features
 
 <!-- p. 199 -->
 
@@ -997,7 +1024,7 @@ An overlapping-generations model with Keynesian features
 
 Sutherland (1997) proposes a simple model where fiscal expansion has the traditional Keynesian effect at moderate public debt levels, but where the multiplier turns negative when debt reaches very high levels.
 
-The representation of households' behavior is based on an overlapping-the "old" generation model. At any date, two generations coexist, the "young" and Fiscal policy is represented by a primary deficit $D$ (per capita) that takes the form of a (non-distortionary) lump-sum transfer to/from the consumers. Denoting $r$ the constant interest rate, the dynamics of the per capita public debt $B$ at time $t$ is given by:
+The representation of households' behavior is based on an overlapping-generation model. At any date, two generations coexist, the "young" and the "old." Fiscal policy is represented by a primary deficit $D$ (per capita) that takes the form of a (non-distortionary) lump-sum transfer to/from the consumers. Denoting $r$ the constant interest rate, the dynamics of the per capita public debt $B$ at time $t$ is given by:
 
 $$dB_t = rB_t dt + D_t \quad \text{(B4.14.1)}$$
 
@@ -1027,13 +1054,15 @@ $$S_{t}=E_{t} \int_{t}^{\infty} \delta_{\tau} T e^{-(r+\theta)(\tau-t)} d \tau \
 
 Sutherland shows that $S$ is an increasing function of $B$ and that $\partial S / \partial B$ is close to zero when $B$ is low (in absolute value), but larger than unity when $B$ (in absolute value) approaches the thresholds $L$ or $U$. When $B$ is low, a fiscal expansion (a rise in $D$ in Equation (B4.14.2)) increases consumption in accordance with the traditional Keynesian effect. But when $B$ approaches $U$, a deficit $D$ triggers expectations of an impending adjustment and causes a reduction of consumption in preparation for the upcoming tax increase: the fiscal expansion exhibits an anti-Keynesian effect and leads to a contraction of output.
 
-Empirical investigations confirm that debt sustainability, or the lack thereof, significantly affects the fiscal multiplier. Corsetti et al. (2013) investigate the effectiveness of fiscal policy in a model where the interest rate on public debt depends on the level of government indebtedness. A higher probability of sovereign debt restructuring increases the risk premium demanded by lenders. As long as the central bank does not lose control of the interest rate, it can lower the policy rate to offset the rise on this risk premium. However, when it is constrained by the zero lower bound, it cannot use the same lever anymore, which means that countries at risk of default see that risk magnified by interest rate inertia. The fact that the central bank has hit the zero lower bound therefore both increases the fiscal multiplier (for countries in good shape) and reduces it (for countries in trouble).
+<!-- end Box 4.14 -->
+
+*[Paraphrase only — never quote: the right margin of p. 200 is clipped in the photo and the last words of each line in this and the next paragraph were inferred by the model.]* Empirical investigations confirm that debt sustainability, or the lack thereof, significantly affects the fiscal multiplier. Corsetti et al. (2013) investigate the effectiveness of fiscal policy in a model where the interest rate on public debt depends on the level of government indebtedness. A higher probability of sovereign debt restructuring increases the risk premium demanded by lenders. As long as the central bank does not lose control of the interest rate, it can lower the policy rate to offset the rise on this risk premium. However, when it is constrained by the zero lower bound, it cannot use the same lever anymore, which means that countries at risk of default see that risk magnified by interest rate inertia. The fact that the central bank has hit the zero lower bound therefore both increases the fiscal multiplier (for countries in good shape) and reduces it (for countries in trouble).
 
 ### 4.2.3 Open-economy dimensions
 
 #### a) The Mundell-Fleming model
 
-The Keynesian approach can easily be extended to the open economy, in particular with the *Mundell-Fleming* model, developed independently by Robert Mundell and Marcus Fleming in the early 1960s.^29 This open-economy extension of the IS-LM model introduces the exchange rate regime as a determinant of the Keynesian multiplier. In a flexible exchange rate regime, the fiscal multiplier is lowered—even nullified if capital is perfectly mobile across relatively small countries—by the appreciation of the exchange rate.
+The Keynesian approach can easily be extended to the open economy, in particular with the *Mundell-Fleming* model, developed independently by Robert Mundell and Marcus Fleming in the early 1960s.[^29] This open-economy extension of the IS-LM model introduces the exchange rate regime as a determinant of the Keynesian multiplier. In a flexible exchange rate regime, the fiscal multiplier is lowered—even nullified if capital is perfectly mobile across relatively small countries—by the appreciation of the exchange rate.
 
 <!-- p. 201 -->
 
@@ -1057,17 +1086,19 @@ Alternatively, suppose that the exchange rate is *fixed*, meaning that the centr
 
 **Figure B4.15.2** Fiscal expansion in a fixed exchange rate context.
 
-The chart shows an IS-LM model under a fixed exchange rate regime. The vertical axis represents the national interest rate, and the horizontal axis represents output. Initially, the economy is at equilibrium point E where the IS curve (goods market equilibrium) intersects the LM curve (money market equilibrium). An exogenous fiscal expansion shifts the IS curve to the right, leading to a new intersection with the original LM curve at point E'. However, due to capital inflows and central bank intervention, the LM curve also shifts to the right, resulting in a final equilibrium at point E''. The diagram illustrates how fiscal policy can be effective under fixed exchange rates, as both fiscal and monetary policies contribute to increasing output.
+*[Chart description generated from the image by the local model — not book text; verify against the PDF before citing any number.]* The chart shows an IS-LM model under a fixed exchange rate regime. The vertical axis represents the national interest rate, and the horizontal axis represents output. Initially, the economy is at equilibrium point E where the IS curve (goods market equilibrium) intersects the LM curve (money market equilibrium). An exogenous fiscal expansion shifts the IS curve to the right, leading to a new intersection with the original LM curve at point E'. However, due to capital inflows and central bank intervention, the LM curve also shifts to the right, resulting in a final equilibrium at point E''. The diagram illustrates how fiscal policy can be effective under fixed exchange rates, as both fiscal and monetary policies contribute to increasing output.
 
 **Figure B4.15.1** Fiscal expansion in a floating exchange rate context.
 
-The chart depicts an IS-LM model under a floating exchange rate regime. The vertical axis represents the national interest rate, and the horizontal axis represents output. Initially, the economy is at equilibrium point E where the IS curve (goods market equilibrium) intersects the LM curve (money market equilibrium). An exogenous fiscal expansion shifts the IS curve to the right, leading to a new intersection with the original LM curve at point E'. However, due to capital outflows and central bank non-intervention, the LM curve remains unchanged, resulting in a final equilibrium at point E''. The diagram illustrates how fiscal policy can be less effective under floating exchange rates, as monetary policy adjusts automatically to maintain equilibrium.
+*[Chart description generated from the image by the local model — not book text; verify against the PDF before citing any number.]* The chart depicts an IS-LM model under a floating exchange rate regime. The vertical axis represents the national interest rate, and the horizontal axis represents output. Initially, the economy is at equilibrium point E where the IS curve (goods market equilibrium) intersects the LM curve (money market equilibrium). An exogenous fiscal expansion shifts the IS curve to the right, leading to a new intersection with the original LM curve at point E'. However, due to capital outflows and central bank non-intervention, the LM curve remains unchanged, resulting in a final equilibrium at point E''. The diagram illustrates how fiscal policy can be less effective under floating exchange rates, as monetary policy adjusts automatically to maintain equilibrium.
 
 <!-- p. 203 -->
 
 **The Case of No Capital Mobility**
 
 When capital is *not mobile*, results are partially reversed: Under a *floating* exchange regime, the deterioration of the current account balance induced by fiscal expansion (because of the increase in import demand) leads to an exchange rate depreciation and to an improvement of export competitiveness, strengthening the initial demand impact of the fiscal expansion. Under *fixed* exchange rates, the current account deterioration results in a reserve loss and in a monetary contraction that counters the initial expansion. Ultimately, the current account must balance—which means that output is determined by what is compatible with the external constraint. Differences in capital mobility and exchange rate regimes thus explain why similar fiscal policies can have contrasting effects on output.
+
+<!-- end Box 4.15 -->
 
 **Table 4.2**
 
@@ -1116,7 +1147,6 @@ Fiscal rules are legal provisions that impose constraints on fiscal policy throu
 
 Rules generally aim at correcting distorted incentives that arise from the political economy process and result in overspending and departures from fiscal responsibility. Four main explanations have been put forward to justify them. The first arises from the political business cycle: because voters are ill-informed or perhaps irrational, governments are prone to deficit spending and tend to overstimulate the economy ahead of election years (Nordhaus, 1975); rules help correct the resulting tendency to excessive debt accumulation. The second relies on the consequences of electoral competition: partisanship and disagreements over the allocation of public spending result in a tendency for each camp to overspend on its preferred policies while in power (Tabellini and Alesina, 1990); unlike the previous one, this explanation does not rest on the voters’ failure to grasp the consequences of budget deficits but on the division and the strategic use by each camp of the budget deficit. In this setting, a balanced budget rule is socially optimal. The third explanation—developed in Section 4.3.3—is that, in a currency union, national governments do not fully internalize the cost of budget deficits because part of it falls on partner countries; budget rules help correct this coordination failure. But not least, public debt accumulation affects intergenerational equity.
 
-[^30]: Footnote marker indicating a reference to additional information about the United States having fiscal rules in the late 1980s.
 
 <!-- p. 207 -->
 
@@ -1146,8 +1176,6 @@ Rules that apply to state and local governments play an important role in decent
 In practice, fiscal rules can be specified in various forms (table 4.3): public debt ceilings, fiscal (financial or primary, headline or structural, overall or on current expenditures) budget balance commitments, rules governing spending targets, and assignment rules for fiscal surpluses. Each has merits and drawbacks.
 
 The balanced budget principle is sometimes expressed as a requirement that current expenditures be financed by current receipts: this is the so-called golden rule of public finance. This rule, which was enshrined at the end of the 1960s in the German constitution until it was reformed in 2009, authorizes the use of debt to finance capital expenditures only, unless there is a “disturbance of the macroeconomic equilibrium.” The rationale is that debt allows spreading out of the financing of an investment over its lifetime and that, if outstanding government liabilities are matched by (presumably profitable) government assets, this preserves government net wealth. Golden rules have supporters among economists, but they do not prevent debt from becoming unsustainable (if the counterpart of debt accumulation consists in assets of limited marketability and/or low value). Another problem is that the definition of public investment is open to criticism. A narrow definition tends to introduce a disputable bias in favor of brick-and-mortar spending at the expense of investment in human capital, but a broad definition may render the rule ineffective.
-
-[^1]
 
 <!-- p. 209 -->
 
@@ -1188,6 +1216,8 @@ The Norwegian rule, also adopted in 2001, goes further. All revenues from oil ex
 
 **Experience with the Norwegian rule is regarded as positive:** the fiscal rule has given an anchor to policy, it has helped avoid pro-cyclicality, and it has preserved intergenerational fairness. Its application has not been without problems, however: because of the size of the fund and financial market volatility, year-on-year fluctuations of the real return are significant; furthermore, fluctuations in oil prices affect the expected real return path. While the Fund provides a major buffer, it does not fully insulate fiscal policy from the consequences of fluctuations on commodities markets (Norwegian Expert Commission, 2015).
 
+<!-- end Box 4.16 -->
+
 Several countries have adopted expenditure rules, either as a substitute or as a complement to deficit and debt rules. Such rules that limit discretion in the evolution of nominal or real public expenditures have desirable stabilization properties: they prevent governments from increasing spending in response to a temporary surge in revenues and from cutting it in a recession. Whereas expenditure rules do not by themselves take care of ensuring sustainability, they can be coupled with “debt brakes”, so that the expenditure target is set at a level that fosters convergence to a certain debt level in the medium term (see Bénassy-Quéré et al., 2018, for an application to the euro area).
 
 #### b) Fiscal institutions
@@ -1204,13 +1234,14 @@ According to Calmfors and Wren-Lewis (2011), fiscal councils are complements rat
 
 Overall, empirical evidence suggests that fiscal frameworks—whether based on rules, or institutions, or a combination of both—are useful: the adoption of balanced budget rules tends to reduce the deficit, the coexistence of several rules (that target different variables) tends to reduce both the deficit and public spending, and the combination of rules and fiscal councils also has an effect (Fall et al., 2015). However, such estimates do not control for the endogeneity of the fiscal frameworks: it may well be that countries with a preference for fiscal discipline adopt such frameworks more often.[^31]
 
-[^31]: Footnote marker retained as per instruction.
 
 <!-- p. 213 -->
 
+<a id="box-4-17"></a>
+
 #### Box 4.18 Fiscal Rules and Institutions in the United Kingdom
 
-*[Editorial note: printed as "Box 4.18" on p. 213 although the text on p. 212 refers to it as box 4.17; the euro-area box on p. 219 is also printed as 4.18. Kept as printed.]*
+*[Editorial note (anchor `box-4-17`): the book's box numbering slips here. This box is printed "4.18" (p. 213) but the text on p. 212 calls it box 4.17; the euro-area box (p. 219, anchor `box-4-18`) is also printed 4.18 and the p. 219 text calls it 4.18; the p. 207 text sends the reader to "box 4.19" for the European framework, while the box printed 4.19 (p. 222, anchor `box-4-19`) covers the US states, as the p. 221 text correctly says. Printed labels are kept; use the anchors for cross-references.]*
 
 Fiscal rules were first introduced in the United Kingdom in 1997 by Gordon Brown, then chancellor of the Exchequer in Prime Minister Tony Blair’s first government. The government committed itself to abiding by the *golden rule* of public finances, which required the public sector to borrow only for public investment, and the *sustainable investment rule*, which required the government to ensure that public debt at the end of the economic cycle would not exceed 40% of GDP. The golden rule was met until the global financial crisis, but the sustainable investment rule was arguably only met because the government’s own assessments relied on excessively favorable medium-term economic forecasts. It was suspended in the wake of the crisis.
 
@@ -1218,13 +1249,14 @@ The fiscal framework was reformed in 2010 under PM David Cameron and Chancellor 
 
 The OBR has no role in setting the rules, which belong to the remit of the government. But it is in charge of (1) producing the economic and budgetary forecasts that accompany the government’s budget statements, (2) assessing whether the government has a greater than 50% chance of meeting its targets, (3) assessing the long-term sustainability of public finances, (4) evaluating fiscal risks, and (5) scrutinizing the government’s costing of individual tax and welfare spending measures. To perform these tasks, the OBR has access to government departments and agencies, from whom it may commission specific forecasts. The OBR’s work involves significant interaction with the government, both at technical and political levels, but it retains the ultimate responsibility for its published assessments. Its methodologies are made public.
 
+<!-- end Box 4.17 -->
+
 ### 4.3.2 Sovereign debt crises resolution
 
 #### a) Context
 
 As discussed in the first part of this chapter, sovereign states regularly experience insolvency crises and have to undergo a restructuring of their public debt. For several decades after World War II, such *sovereign debt crises* were deemed a sad privilege of developing countries. In 2011, Lorenzo Bini Smaghi, then a member of the board of the ECB, famously declared that a debt restructuring in Greece would be “like the death penalty which we have abolished.”[^32] A little more than year later, however, Greece reached agreement with its creditors
 
-[^32]: Footnote marker retained as per instruction.
 
 <!-- p. 214 -->
 
@@ -1234,7 +1266,7 @@ In most countries, a company that is unable to meet a financial obligation enter
 
 In the United States, these procedures are governed by what is called “Chapter 11” of the Bankruptcy Code. It permits the debtor to remain in control of its business as a “debtor in possession” under the control of the courts until a settlement is reached. In the meantime, the procedure ensures a standstill on litigations: it prevents “any act to collect, assess, or recover” a claim against the debtor that arose before its commencement. At the end of the procedure, the company may be liquidated, be taken over, or resume normal business operation after reorganization and financial settlement. For example, American Airlines operated under Chapter 11 between end-2011 and end-2013.
 
-The idea of applying bankruptcy principles to sovereign states goes back at least to Adam Smith. But it is since the Mexican crisis of 1982 that a “Chapter 11 for sovereign states” has been a matter for policy discussions.^{33} It was first proposed by then-Harvard economist Jeffrey Sachs (1995) and taken up a few years later in a proposal by the IMF (Krueger, 2002). The idea suffered considerable pushback, however, from the financial industry and it failed to be adopted. Agreement was only reached on the inclusion in foreign currency–denominated sovereign bonds of collective action clauses (CACs) that make it possible for bond holders to decide on a settlement with the debtor by qualified majority.
+The idea of applying bankruptcy principles to sovereign states goes back at least to Adam Smith. But it is since the Mexican crisis of 1982 that a “Chapter 11 for sovereign states” has been a matter for policy discussions.[^33] It was first proposed by then-Harvard economist Jeffrey Sachs (1995) and taken up a few years later in a proposal by the IMF (Krueger, 2002). The idea suffered considerable pushback, however, from the financial industry and it failed to be adopted. Agreement was only reached on the inclusion in foreign currency–denominated sovereign bonds of collective action clauses (CACs) that make it possible for bond holders to decide on a settlement with the debtor by qualified majority.
 
 The issue reemerged in the context of the European debt crisis after Chancellor Merkel of Germany and President Sarkozy of France agreed in October 2010 in a meeting in Deauville that financial assistance to euro area members would only be provided to solvent countries. Those deemed insolvent would first need to agree on a restructuring with their creditors. To this end, collective action clauses would be introduced in all new euro-denominated bond contracts from 2013 onward.
 
@@ -1260,7 +1292,7 @@ Initiatives for mitigating the holdout problem have rather been based on provisi
 
 The issue of sovereign debt crisis resolution within the euro area arose when Greece proved insolvent. It involves three peculiar features.
 
-First, the bulk of public debt is issued under national law instead of foreign law, as it is the case for emerging countries. This makes it possible for a state to set by itself the terms of the restructuring, as Greece did in 2012: parliament <!-- p. 217 --> passed a law stating that if holders of two-thirds of the Greek law-governed bonds approved a restructuring, the result would apply to all bondholders (Zettelmeyer et al., 2013). It is to be noted that Greece did not use its legal powers to change unilaterally the value of its sovereign bonds, but rather to make the outcome of the negotiation with a supermajority of the creditors binding on all of them.^36
+First, the bulk of public debt is issued under national law instead of foreign law, as it is the case for emerging countries. This makes it possible for a state to set by itself the terms of the restructuring, as Greece did in 2012: parliament <!-- p. 217 --> passed a law stating that if holders of two-thirds of the Greek law-governed bonds approved a restructuring, the result would apply to all bondholders (Zettelmeyer et al., 2013). It is to be noted that Greece did not use its legal powers to change unilaterally the value of its sovereign bonds, but rather to make the outcome of the negotiation with a supermajority of the creditors binding on all of them.[^36]
 
 Second, public debt is partially held by public entities—the central bank as a consequence of its bond purchase program or the ESM and the IMF as a consequence of their lending. In the case of Greece, by mid-2017, more than two-thirds of government debt was owed to official creditors. For this reason, but also because of the precedent it would set for other countries, restructuring is subject to quasi-statutory procedures. Between 2015 and 2018, the issue of a second Greek restructuring (called for by the deteriorating economic situation and the consequences of domestic deflation on the debt ratio) was the matter for permanent discussions within the Eurogroup of finance ministers. Furthermore, two major official creditors insisted that they should not take part in any restructuring: the IMF because of its preferred status and the ECB because it claimed that this would violate the prohibition of monetary financing.
 
@@ -1290,6 +1322,8 @@ where bond holders can get an insurance against a possible default. This correla
 
 There are basically two ways to address this problem. One, adopted in the EU, is to monitor and enforce fiscal discipline so that no state finds itself in a situation where its solvency can be put in question. This is the purpose of the “avoidance of excessive deficits” and the possibility of levying fines on states in breach of fiscal rules enshrined in the Maastricht Treaty of 1992, as well as of the secondary legislation built on its basis. Over the years, the EU has put in place an elaborate apparatus of fiscal rules and procedures whose aim is to enforce fiscal discipline while at the same time leaving some room for stabilization action at the national level (see box 4.18).
 
+<a id="box-4-18"></a>
+
 #### Box 4.18 Fiscal Rules and Procedures in the Euro Area
 
 During the negotiation of the European Economic and Monetary Union in the early 1990s, it was agreed that Member States must avoid “excessive deficits” (Article 126 of the Treaty on the Functioning of the EU) and should face sanctions if this discipline went unobserved. Reference thresholds of 3% of GDP for the deficit of the general government and 60% of GDP for gross public debt were defined and laid down in the protocol on the excessive deficit procedure annexed to the Treaty. However, the Treaty did not specify the procedure for implementing sanctions.
@@ -1305,11 +1339,10 @@ After extensive criticism of the SGP, the failure of several member states to co
 
 In 2010–2011, the euro area crisis prompted a reexamination of the system of fiscal rules. Neither for Greece (because it had cheated) nor for Ireland or Spain (where the problem came from banks) could the crisis be attributed to a breach of the rules, but the focus was nevertheless on strengthening the fiscal framework. Changes included:
 
-- A new set of legislative provisions (the six-pack) that redefined decision procedures, made earlier sanctions possible, introduced a debt reduction criterion alongside the deficit criterion, and mandated the creation of national fiscal councils.[^b]
+- A new set of legislative provisions (the six-pack) that redefined decision procedures, made earlier sanctions possible, introduced a debt reduction criterion alongside the deficit criterion, and mandated the creation of national fiscal councils.[^b4-18b]
 - Another set of legislative provisions (the two-pack) that aimed at strengthening the *ex ante* monitoring of budgetary decision. It makes it possible for the Eurogroup to request that a country reconsiders a draft budget deemed in infringement of the rules.
 - A new Treaty (the Treaty on Stability, Coordination, and Governance—TSCG) that gives stronger legal status to the main provisions of the six-pack and mandates the adoption in each member country of a binding, preferably constitutional balanced budget rule limiting the structural deficit to 0.5% of GDP (unless public debt is below 60% of GDP, in which case the threshold is set at 1% of GDP). The fiscal provisions of the TSCG (or *fiscal compact*) also commit all euro area members to supporting Commission recommendations as regards a
 
-[^b]: Footnote marker retained from original text.
 
 <!-- p. 221 -->
 
@@ -1318,10 +1351,6 @@ country in breach of the deficit criterion, unless there is a qualified majority
 It was meant to introduce a dose of automaticity into the sanction procedure.
 
 In 2015, the European Commission issued a recommendation emphasizing that the existing rules leave room for flexibility in implementation, especially for countries willing to undertake investments or structural reforms (European Commission, 2015).
-
-[^a] See the Presidency Conclusions of the March 22–23, 2005, European Council, Annex II.
-
-[^b] The Six-Pack also introduced a procedure for the prevention and reduction of current account imbalances (it is called the *macroeconomic imbalances procedure*).
 
 The alternative approach is to rely instead on market discipline. In this model, states do not behave prudently because they are instructed to behave, but because they know that no one will come to their rescue if they lose market access, hence the interest rate on their debt reflects their fiscal position. Such market discipline requires that the threat of letting a state default be credible, which in turn necessitates that the financial system be protected from the fallout of a state bankruptcy. This is basically the solution adopted in the United States, where, for nearly two centuries, the federal government has consistently refused to bail out insolvent states (box 4.19).
 
@@ -1332,9 +1361,11 @@ The euro area has gone as far as it could go in the direction of monitoring and 
 * The benchmarks of the reformed Stability and Growth Pact are based on unobservable variables, such as the structural deficit, whose measurement is open to controversy;
 * The adequacy of the fiscal recommendations that result from the implementation of the rules is questionable from a macroeconomic standpoint;
 
-[^a]: See the Presidency Conclusions of the March 22–23, 2005, European Council, Annex II.
+[^b4-18a]: See the Presidency Conclusions of the March 22–23, 2005, European Council, Annex II.
 
-[^b]: The Six-Pack also introduced a procedure for the prevention and reduction of current account imbalances (it is called the *macroeconomic imbalances procedure*).
+[^b4-18b]: The Six-Pack also introduced a procedure for the prevention and reduction of current account imbalances (it is called the *macroeconomic imbalances procedure*).
+
+<!-- end Box 4.18 -->
 
 <!-- p. 222 -->
 
@@ -1342,9 +1373,11 @@ The framework does not provide sufficient incentives to investment and growth-en
 
 The alternative of relying on market discipline, as in the United States, would, however, raise a host of new issues, if only because the debt of US states, even the largest ones, is an order of magnitude lower than that of the major euro area countries. First, it would require establishing procedures to restructure sovereign debts. Second, it would require national banking systems be
 
+<a id="box-4-19"></a>
+
 #### Box 4.19 The States' Fiscal Regime in the United States
 
-The US federal system went through an early test of the fiscal rules of the game in the immediate aftermath of the War for Independence.^{1} The war effort had left individual states heavily indebted, and some were effectively bankrupt. A fierce debate on the treatment of the public debt followed, with on one side the Secretary of the Treasury, Alexander Hamilton, who argued that because debt had been incurred for a common purpose it had to be assumed by the newly established federal government, and on the other side Thomas Jefferson, the Secretary of State, who opposed debt mutualization. In the end Hamilton prevailed: the debt was transferred to the federal government and swiftly restructured; states were charged on a per capita basis so that the burden of the revolutionary war would be distributed evenly.
+The US federal system went through an early test of the fiscal rules of the game in the immediate aftermath of the War for Independence.[^b4-19a] The war effort had left individual states heavily indebted, and some were effectively bankrupt. A fierce debate on the treatment of the public debt followed, with on one side the Secretary of the Treasury, Alexander Hamilton, who argued that because debt had been incurred for a common purpose it had to be assumed by the newly established federal government, and on the other side Thomas Jefferson, the Secretary of State, who opposed debt mutualization. In the end Hamilton prevailed: the debt was transferred to the federal government and swiftly restructured; states were charged on a per capita basis so that the burden of the revolutionary war would be distributed evenly.
 
 A consequence of this early episode was that a precedent was set, whereby the federal government would bail-out insolvent states. Moral hazard was therefore substantially present, until eight states that had over-borrowed to finance infrastructure defaulted in 1840. British and Dutch creditors, who held the bulk of the debt, argued that the federal government's guarantee, while not explicit, had been implied. In the event of a default, another war with Britain was regarded a possibility. However, Congress rejected the assumption of state debt, thereby establishing a new 'no bail-out' norm.
 
@@ -1352,7 +1385,9 @@ The norm was upheld in the aftermath of the Civil War, through a wave of local d
 
 A consequence of the establishment of a no bail-out norm has been the adoption by individual states of balanced-budget rules: the first wave took place precisely in the 1840s after Congress rejected debt assumption.
 
-[^1]: This box is based on Henning and Kessler (2012).
+[^b4-19a]: This box is based on Henning and Kessler (2012).
+
+<!-- end Box 4.19 -->
 
 <!-- p. 223 -->
 
@@ -1392,7 +1427,9 @@ Depending on the pair of countries involved, either the interest rate channel or
 
 **Figure B4.20.1 Impact of a fiscal expansion in a monetary union.**
 
-The figure displays three panels showing the impact of a fiscal expansion in a monetary union. The left panel shows Country A with an IS curve shifting right due to fiscal expansion, moving from point E to E'. The middle panel shows Country B where the IS curve also shifts right but less than Country A, reflecting increased exports and higher interest rates, moving from point E to E'. The right panel shows the Union U with the aggregate IS curve shifting right, resulting in a higher common interest rate and output increase at point E'.
+*[Chart description generated from the image by the local model — not book text; verify against the PDF before citing any number.]* The figure displays three panels showing the impact of a fiscal expansion in a monetary union. The left panel shows Country A with an IS curve shifting right due to fiscal expansion, moving from point E to E'. The middle panel shows Country B where the IS curve also shifts right but less than Country A, reflecting increased exports and higher interest rates, moving from point E to E'. The right panel shows the Union U with the aggregate IS curve shifting right, resulting in a higher common interest rate and output increase at point E'.
+
+<!-- end Box 4.20 -->
 
 <!-- p. 226 -->
 
@@ -1437,69 +1474,69 @@ rates were positive in real terms. The “new” view represents the consensus o
 
 ## Notes
 
-1. Data mentioned in this paragraph are from the International Monetary Fund’s *Public Finances in Modern History Database*. See Mauro et al. (2013).
-2. In Europe, collective schemes that provide unemployment, health, and old-age insurance are generally grouped under the heading *social security*, whereas in the United States, social security designates old-age insurance only.
-3. This finding holds after controlling for the biases in the estimation arising from the fact that, as argued by Rodrik (1998), countries facing more aggregate fluctuation risks (because of their geographic or sectoral specialization) may have developed an endogenous preference for larger governments. See Galí (1994), Fatas and Mihov (2001), and Debrun, Pisani-Ferry, and Sapir (2010).
-4. There are other ways to finance deficits. For example, poor developing countries also finance their deficits through receiving grants. Another possibility, the consequences of which are discussed later and in Chapter 5, is for the government to receive loans from the central bank.
-5. Source OECD, *Government at a Glance* data, 2017.
-6. Sovereign wealth funds have been established to this end. Examples include Singapore (Government of Singapore Investment Corporation, or GIC) and Norway (where oil income is invested in the Government Pension Fund of Norway). See Box 4.16.
-7. As discussed in the following sections, the interest rate cannot be regarded as independent from the debt level. For example, the large primary deficit of Greece in 2009 (8% of GDP) triggered a rise in the risk premium that worsened the outlook of its public finances.
-8. The concept of “original sin” was introduced by Eichengreen, Hausman, and Panizza (2005).
-9. Source: Privatization Barometer 2013–2014, KPMG and ENI-Enrico Mattei Foundation.
-10. The G20 includes the largest economies globally. It began meeting at heads of state and government levels in 2008, in response to the global crisis. It holds annual meetings.
-11. See the communiqué of the leaders’ meeting on www.g20.utoronto.ca/summits/2009london.html
-12. Source: European Commission, AMECO database.
-13. Source: European Commission, AMECO database.
+[^1]: Data mentioned in this paragraph are from the International Monetary Fund’s *Public Finances in Modern History Database*. See Mauro et al. (2013).
+[^2]: In Europe, collective schemes that provide unemployment, health, and old-age insurance are generally grouped under the heading *social security*, whereas in the United States, social security designates old-age insurance only.
+[^3]: This finding holds after controlling for the biases in the estimation arising from the fact that, as argued by Rodrik (1998), countries facing more aggregate fluctuation risks (because of their geographic or sectoral specialization) may have developed an endogenous preference for larger governments. See Galí (1994), Fatas and Mihov (2001), and Debrun, Pisani-Ferry, and Sapir (2010).
+[^4]: There are other ways to finance deficits. For example, poor developing countries also finance their deficits through receiving grants. Another possibility, the consequences of which are discussed later and in Chapter 5, is for the government to receive loans from the central bank.
+[^5]: Source OECD, *Government at a Glance* data, 2017.
+[^6]: Sovereign wealth funds have been established to this end. Examples include Singapore (Government of Singapore Investment Corporation, or GIC) and Norway (where oil income is invested in the Government Pension Fund of Norway). See Box 4.16.
+[^7]: As discussed in the following sections, the interest rate cannot be regarded as independent from the debt level. For example, the large primary deficit of Greece in 2009 (8% of GDP) triggered a rise in the risk premium that worsened the outlook of its public finances.
+[^8]: The concept of “original sin” was introduced by Eichengreen, Hausman, and Panizza (2005).
+[^9]: Source: Privatization Barometer 2013–2014, KPMG and ENI-Enrico Mattei Foundation.
+[^10]: The G20 includes the largest economies globally. It began meeting at heads of state and government levels in 2008, in response to the global crisis. It holds annual meetings.
+[^11]: See the communiqué of the leaders’ meeting on www.g20.utoronto.ca/summits/2009london.html
+[^12]: Source: European Commission, AMECO database.
+[^13]: Source: European Commission, AMECO database.
 
 <!-- p. 229 -->
 
-[^14] England however defaulted in the fourteenth century, as did individual U.S. states in the nineteenth century.
+[^14]: England however defaulted in the fourteenth century, as did individual U.S. states in the nineteenth century.
 
-[^15] There are examples of states that wind up and close their books, but legacy debt is then carried over to newly established countries. For instance, Czechoslovakian debt was split between the Czech Republic and Slovakia on January 1, 1993. There are also examples of governments that refuse to pay for their predecessors' debt because they deem it politically illegitimate. This famously happened after the Russian and Chinese revolutions. It has been proposed, as a form of sanction, to formally declare debts incurred by illegitimate dictatorship *odious debt*. But since political regime change cannot usually be foreseen, it is difficult to integrate it into *ex ante* sustainability analysis.
+[^15]: There are examples of states that wind up and close their books, but legacy debt is then carried over to newly established countries. For instance, Czechoslovakian debt was split between the Czech Republic and Slovakia on January 1, 1993. There are also examples of governments that refuse to pay for their predecessors' debt because they deem it politically illegitimate. This famously happened after the Russian and Chinese revolutions. It has been proposed, as a form of sanction, to formally declare debts incurred by illegitimate dictatorship *odious debt*. But since political regime change cannot usually be foreseen, it is difficult to integrate it into *ex ante* sustainability analysis.
 
-[^16] To be more precise, they can seize some of its foreign assets but those generally amount to a small fraction of liabilities.
+[^16]: To be more precise, they can seize some of its foreign assets but those generally amount to a small fraction of liabilities.
 
-[^17] On figure 4.14, the IS and LM curves shift simultaneously to the right.
+[^17]: On figure 4.14, the IS and LM curves shift simultaneously to the right.
 
-[^18] For example, Christiano, Eichenbaum and Rebelo (2011) find that in a benchmark, new-Keynesian model, the multiplier is lower than unity in normal conditions but significantly higher than unity at the zero lower bound.
+[^18]: For example, Christiano, Eichenbaum and Rebelo (2011) find that in a benchmark, new-Keynesian model, the multiplier is lower than unity in normal conditions but significantly higher than unity at the zero lower bound.
 
-[^19] On a sample of 21 OECD countries, de Mello et al. (2004) find that a one percentage point drop in public saving results in a one-third to one-half percentage point rise in private saving.
+[^19]: On a sample of 21 OECD countries, de Mello et al. (2004) find that a one percentage point drop in public saving results in a one-third to one-half percentage point rise in private saving.
 
-[^20] The so-called *Haavelmo theorem* (1945) states that in a simple Keynesian setting, a simultaneous reduction of public spending and taxes by a given amount reduces output.
+[^20]: The so-called *Haavelmo theorem* (1945) states that in a simple Keynesian setting, a simultaneous reduction of public spending and taxes by a given amount reduces output.
 
-[^21] The approach was pioneered by Ramey and Shapiro (1998). See also Burnside, Eichenbaum, and Fisher (2004).
+[^21]: The approach was pioneered by Ramey and Shapiro (1998). See also Burnside, Eichenbaum, and Fisher (2004).
 
-[^22] Chodorow-Reich (2017) surveys the evidence on the value of regional multipliers and concludes that they are consistent with a zero lower bound national multiplier of 1.7 for the United States. Ramey and Zubairy (2017) find that it could be as high as 1.5 at the zero lower bound.
+[^22]: Chodorow-Reich (2017) surveys the evidence on the value of regional multipliers and concludes that they are consistent with a zero lower bound national multiplier of 1.7 for the United States. Ramey and Zubairy (2017) find that it could be as high as 1.5 at the zero lower bound.
 
-[^23] The evidence, however, is disputed by Ramey and Zubairy (2017).
+[^23]: The evidence, however, is disputed by Ramey and Zubairy (2017).
 
-[^24] From the name of a famous Boston crook in the 1920s, who used to entice savers with the promise of high returns, but who would pay them only with the amounts collected from new participants. Ponzi games were played on a large scale in Russia and Albania in the 1990s. The Madoff fraud uncovered in 2008 is another example.
+[^24]: From the name of a famous Boston crook in the 1920s, who used to entice savers with the promise of high returns, but who would pay them only with the amounts collected from new participants. Ponzi games were played on a large scale in Russia and Albania in the 1990s. The Madoff fraud uncovered in 2008 is another example.
 
-[^25] The European Commission indicators are published yearly in the Fiscal Sustainability Report prepared by DGECFIN.
+[^25]: The European Commission indicators are published yearly in the Fiscal Sustainability Report prepared by DGECFIN.
 
-[^26] The European Commission has developed a short-term vulnerability indicator called S0 that relies on a series of *ad hoc* subcomponents. As for the IMF, it relies on gross financial needs (i.e., on the sum of the financial deficit and of debt redemptions over the year). Gross financial needs in excess of 15–20% of GDP are considered a threat. This alternative approach stresses that the same debt may be sustainable or not depending on its maturity structure.
+[^26]: The European Commission has developed a short-term vulnerability indicator called S0 that relies on a series of *ad hoc* subcomponents. As for the IMF, it relies on gross financial needs (i.e., on the sum of the financial deficit and of debt redemptions over the year). Gross financial needs in excess of 15–20% of GDP are considered a threat. This alternative approach stresses that the same debt may be sustainable or not depending on its maturity structure.
 
-[^27] Bohn (1998) provides evidences of such behavior in the US case.
+[^27]: Bohn (1998) provides evidences of such behavior in the US case.
 
-[^28] In practice, the threshold of unsustainability is in fact lower and the fiscal space is smaller because as $d$ approaches $d^{**}$, financial markets become aware of the risk of <!-- p. 230 --> a shock pushing the debt ratio above that level into the insolvency zone. For this reason they will start pricing the insolvency risk at lower debt levels already.
+[^28]: In practice, the threshold of unsustainability is in fact lower and the fiscal space is smaller because as $d$ approaches $d^{**}$, financial markets become aware of the risk of <!-- p. 230 --> a shock pushing the debt ratio above that level into the insolvency zone. For this reason they will start pricing the insolvency risk at lower debt levels already.
 
-[^29] See Mundell (1968) and Fleming (1962).
+[^29]: See Mundell (1968) and Fleming (1962).
 
-[^30] In the United States, the Gramm-Rudman-Hollings Balanced Budget Act of 1985 was temporarily operational.
+[^30]: In the United States, the Gramm-Rudman-Hollings Balanced Budget Act of 1985 was temporarily operational.
 
-[^31] Osterba (1994), however, exploits the fact that budget rules in US states typically date back to the nineteenth century. He finds that their relative stringency had affected state responses to shocks in the 1980s.
+[^31]: Osterba (1994), however, exploits the fact that budget rules in US states typically date back to the nineteenth century. He finds that their relative stringency had affected state responses to shocks in the 1980s.
 
-[^32] Interview with the *Financial Times*, May 29, 2011.
+[^32]: Interview with the *Financial Times*, May 29, 2011.
 
-[^33] The Mexican crisis marked the return of sovereign default at the forefront of the international agenda, after three decades with almost no sovereign crises.
+[^33]: The Mexican crisis marked the return of sovereign default at the forefront of the international agenda, after three decades with almost no sovereign crises.
 
-[^34] On the occasion of the Greek case, the IMF introduced a “systemic exemption” so as to be able to lend despite its assessment on the probability that the Greek debt was sustainable. This exemption was removed in January 2016.
+[^34]: On the occasion of the Greek case, the IMF introduced a “systemic exemption” so as to be able to lend despite its assessment on the probability that the Greek debt was sustainable. This exemption was removed in January 2016.
 
-[^35] This was illustrated by the protracted deadlock of the interwar period over German war reparations and later by the Latin American debt crisis of the 1980s, until the Brady plan of 1989 cleared the way for a settlement.
+[^35]: This was illustrated by the protracted deadlock of the interwar period over German war reparations and later by the Latin American debt crisis of the 1980s, until the Brady plan of 1989 cleared the way for a settlement.
 
-[^36] The law was challenged in various courts, including the European Court of Human Rights. It was upheld on the ground that the severe financial crisis facing Greece made the restructuring inevitable and that the procedure chosen to implement the restructuring had followed the CAC template adopted by all euro area sovereign issuers.
+[^36]: The law was challenged in various courts, including the European Court of Human Rights. It was upheld on the ground that the severe financial crisis facing Greece made the restructuring inevitable and that the procedure chosen to implement the restructuring had followed the CAC template adopted by all euro area sovereign issuers.
 
-[^37] Actually, even under the assumptions of the model, the inefficiency of fiscal policy holds only for a small country, which does not describe the euro area as compared to the rest of the world. For an open economy under flexible exchange rates, however, fiscal stimulus results in stimulating the trading partners’ economies.
+[^37]: Actually, even under the assumptions of the model, the inefficiency of fiscal policy holds only for a small country, which does not describe the euro area as compared to the rest of the world. For an open economy under flexible exchange rates, however, fiscal stimulus results in stimulating the trading partners’ economies.
 
 ## References
 

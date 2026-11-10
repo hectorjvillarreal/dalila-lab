@@ -41,6 +41,11 @@ notes: "Scaffold executed 2026-11-09. Transcription route decided the same day a
 
 - p. 236 re-photographed (64691.jpg, 14:36); three references read directly from the sharp image and added; PDF page 46 replaced by the new photo.
 
+- Endorsement requested from Cath: `_crossrefs/corpus/fiscal_policy/20261109_CORPUS_briefing_cath_fiscal-policy-endorsement.md` (copy in `_crossrefs/team/cath/`).
+
+- 2026-11-09 (evening) — Cath review (`…/20261109_CORPUS_briefing_cath_fiscal-policy-endorsement.md`, two replies): endorsement withheld pending A1–A4 (page-image checks) and B1–B5 (clean-up); team notes 1–2 supplied. Claude Code executed A1–A4 and B1–B5 the same evening (script `2026-11-09_fiscal_policy_corpus_scripts/apply_cath_review.py`): B4.13.6 misprint confirmed and annotated, ≅ restored in B4.5.4–5, Box 4.14 ¶1 restored, placeholders removed, box-end markers and anchors added, team notes inserted, two watch items opened. Re-check of A1 by Cath required before `endorsed_by` is set.
+- Note: the merged entry is now the canonical, hand-corrected layer; `merge.py` must not be re-run over it (it would regenerate from the raw page files and drop these fixes).
+
 ## Steps pending
 
-- Cath endorses; `endorsed_by` filled; `transcription_status` set to `verified`.
+- Cath re-checks A1 and endorses; `endorsed_by` filled; `transcription_status` set to `verified`.
