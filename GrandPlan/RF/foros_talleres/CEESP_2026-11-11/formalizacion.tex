@@ -1,0 +1,110 @@
+% ===== 19. La cuota fija pesa más donde menos se gana (N) =====
+\begin{frame}{La cuota fija pesa más donde menos se gana}
+  \vspace{0.5em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.50\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item En el seguro de enfermedades y maternidad, el patrón paga por cada trabajador una cuota fija de \dest{20.40\%} de la UMA, sin importar el salario.
+        \item Para un trabajador de un salario mínimo, esa cuota equivale a \dest{8.3\%} del salario. Para uno de diez salarios mínimos, a \dest{0.8\%}.
+        \item La parte de la cuota que distorsiona es la que no guarda relación con lo que el trabajador recibe, y se concentra en los salarios bajos.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=4.4cm,ybar,bar width=18pt,ymin=0,ymax=10,
+            ytick={0,2,4,6,8},ylabel={\% del salario},xmin=0.4,xmax=4.6,
+            xtick={1,2,3,4},xtick style={draw=none},xticklabels={1,2,5,10},xlabel={salarios mínimos}]
+          \addplot[fill=oxido,draw=oxido,bar shift=0pt] coordinates {(1,8.28)};
+          \addplot[fill=barra,draw=marino,bar shift=0pt] coordinates {(2,4.14)(3,1.66)(4,0.83)};
+          \node[font=\tiny\bfseries,text=oxido,anchor=south] at (axis cs:1,8.28) {8.3};
+          \node[font=\tiny,anchor=south] at (axis cs:2,4.14) {4.1};
+          \node[font=\tiny,anchor=south] at (axis cs:3,1.66) {1.7};
+          \node[font=\tiny,anchor=south] at (axis cs:4,0.83) {0.8};
+        \end{axis}
+      \end{tikzpicture}\par
+      \notagraf{\centering Cuota fija patronal como \% del salario. Valores de 2025: UMA de 113.14 pesos diarios y salario mínimo general de 278.80.}
+    \end{column}
+  \end{columns}
+  \fuente{Ley del Seguro Social, art. 106, fr. I; IMSS, \emph{Informe al Ejecutivo Federal y al Congreso de la Unión 2025--2026}. Cálculos propios.}
+\end{frame}
+
+% ===== 20. Cómo decide un trabajador (N) =====
+\begin{frame}{Cómo decide un trabajador}
+  \vspace{0.1em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.49\textwidth}
+      \caja{Lo que cuesta ser formal}{%
+        Cuotas de seguridad social: en América Latina son el componente mayor.\par\vspace{0.3em}
+        Impuestos sobre el ingreso.\par\vspace{0.3em}
+        Apoyos y servicios no contributivos que se pueden perder.}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \caja{Lo que recibe a cambio}{%
+        Salud, pensión, vivienda, guarderías, incapacidades.\par\vspace{0.3em}
+        Cuenta lo que el trabajador cree que vale, no lo que le cuesta al sistema.\par\vspace{0.3em}
+        Si la cobertura sin cotizar se parece a la contributiva, cotizar vale menos.}
+    \end{column}
+  \end{columns}
+  \vspace{0.5em}
+  {\small
+  \begin{itemize}\setlength{\itemsep}{0.25em}
+    \item El costo neto de formalizarse es lo que se paga menos el valor que el trabajador asigna a lo que recibe. Para un asalariado de la región, va de \dest{20} a \dest{40\%} del ingreso del hogar.
+    \item De ahí salen dos reglas de diseño: lo que se recibe debe depender de lo que se cotiza, y la cuota por el mismo ingreso no debe depender de si el trabajo es formal o informal.
+    \item Todavía no hemos estimado cuánto responde la formalidad en México a estos cambios. Lo que sigue es lógica de diseño, no un resultado.
+  \end{itemize}}
+  \vspace{-0.5em}
+  \fuente{Fietz et al. (2025), \emph{(In)Formalizing Jobs in LAC}, Banco Mundial, cap. 5: mediana en seis países; en México los impuestos pesan más que en el resto.}
+\end{frame}
+
+% ===== 21. El escalón (N) =====
+\begin{frame}{El escalón}
+  \vspace{0.5em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.50\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item Al pasar a un empleo formal, el ingreso neto puede caer: se empiezan a pagar cuotas y se pueden perder apoyos. Ese salto es la \clave{trampa de la formalización}.
+        \item El escalón es más alto en los ingresos medios y bajos, donde la cuota fija pesa más y los apoyos importan más.
+        \item Uruguay reconoció el desincentivo. Desde 2022 suspendió el control del tope de ingreso de sus asignaciones familiares, y entraron \dest{21 mil} hogares adicionales.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}\centering
+      \begin{tikzpicture}[x=0.5cm,y=0.5cm,font=\tiny]
+        \draw[-{Straight Barb[length=2pt]},pie] (0,0) -- (0,6.4);
+        \draw[-{Straight Barb[length=2pt]},pie] (0,0) -- (10.6,0);
+        \node[anchor=south] at (0.6,6.4) {ingreso neto};
+        \node[anchor=north east] at (10.6,-0.1) {ingreso formal};
+        \draw[marino,thick,dashed] (0,2) -- (10,5.6);
+        \draw[oxido,thick] (0,2.6) -- (4.5,4.0);
+        \draw[oxido,thick] (4.5,2.9) -- (10,4.9);
+        \draw[oxido,thick,densely dotted] (4.5,4.0) -- (4.5,2.9);
+        \node[text=oxido,anchor=west] at (4.7,2.3) {el escalón};
+        \node[text=marino,anchor=south east] at (9.8,5.7) {sin saltos};
+      \end{tikzpicture}\par\vspace{0.6em}
+      \notagraf{\centering Esquema conceptual, sin escala.}
+    \end{column}
+  \end{columns}
+  \fuente{Fietz et al. (2025), Banco Mundial; BPS Uruguay, resoluciones 2021--2026; MEF Uruguay, Rendición de Cuentas 2023. Detalle de fuentes al final.}
+\end{frame}
+
+% ===== 22 (antes 23). Infonavit: la propuesta (N) =====
+\begin{frame}{Infonavit: la propuesta}
+  \vspace{0.1em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.49\textwidth}
+      \caja{Qué se propone}{%
+        Eliminar la aportación patronal de \textbf{5\%} del salario base de cotización al Infonavit.\par\vspace{0.3em}
+        Destinar \textbf{2 puntos} a un seguro solidario de salud y cuidados en la vejez: un fondo común, no cuentas individuales. Primero cubre el déficit de los gastos médicos de pensionados; lo que sobra va a cuidados de largo plazo.\par\vspace{0.3em}
+        Los otros \textbf{3 puntos} se dejarían de cobrar: la tasa legal sobre la nómina baja 3 puntos. En una variante, permanecen en el Infonavit.}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \caja{El Instituto y los trabajadores}{%
+        El Infonavit conserva su patrimonio y sus obligaciones como mutualidad.\par\vspace{0.3em}
+        El trabajador deja de acumular 5\% de su salario en la subcuenta de vivienda y recibe a cambio un seguro.\par\vspace{0.3em}
+        Quien no usa crédito tendría menos saldo para su pensión. Ese efecto no lo hemos cuantificado, y tampoco el efecto sobre la formalidad.}
+    \end{column}
+  \end{columns}
+  \vspace{0.5em}
+  {\small El seguro de gastos médicos de pensionados del IMSS ya es deficitario, y el envejecimiento presiona justo ahí.\par}
+  \vspace{-0.4em}
+  \fuente{Ejercicio propio, preliminar; no es una propuesta del IMSS ni del Gobierno Federal. Son tasas legales: no miden quién soporta la cuota. Antecedente: Villarreal (2022), «El Infonavit, ¿qué sigue?», \emph{Arena Pública}.}
+\end{frame}

@@ -1,0 +1,634 @@
+% Presentación ante el CEESP, 11 de noviembre de 2026.
+% Base: presentación del 22 de septiembre de 2026 (reconstruida a partir de su PDF).
+% Clave de origen en cada lámina: B = base (número original), E = EXATEC, N = nueva.
+\documentclass[aspectratio=169,10pt]{beamer}
+\input{preambulo}
+\newcommand{\basepdf}{foro_20260922_salud_hjvp.pdf}
+\newcommand{\pef}{PEF 2027 (dictamen de la Cámara de Diputados)}
+
+\title{¿Cómo financiar la salud universal?}
+
+\begin{document}
+
+% ===== 1. Portada (B1, adaptada) =====
+\begin{frame}[plain]
+  \centering
+  \vspace*{1.2em}
+  {\color{marino}\bfseries\Large ¿Cómo financiar la salud universal?\par}
+  \vspace{0.35em}
+  {\color{marino}\bfseries\normalsize Espacio fiscal, aseguramiento y una agenda regional\par}
+  \vspace{2.2em}
+  {\normalsize Héctor Juan Villarreal Páez\par}
+  \vspace{1.1em}
+  {\scriptsize Escuela de Gobierno y Transformación Pública · Tecnológico de Monterrey\\[0.3em]
+  Comunidad Latinoamericana del Conocimiento sobre Financiamiento de la Salud\par}
+  \vspace{1.6em}
+  {\normalsize Centro de Estudios Económicos del Sector Privado (CEESP) · Sesión virtual\\[0.2em]
+  11 de noviembre de 2026\par}
+\end{frame}
+
+% ===== 2. Tres preguntas (B2, adaptada) =====
+\begin{frame}{Tres preguntas}
+  \vspace{1.2em}
+  \begin{itemize}\setlength{\itemsep}{0.35em}
+    \item Me voy a concentrar en el \clave{gasto en salud} y en cómo se paga.
+    \item Para financiar la salud universal hay que contestar tres preguntas: quién paga, cuánto y por cuánto tiempo.
+    \item La tercera es la que menos se discute, y de ella depende que una reforma dure.
+  \end{itemize}
+  \vspace{0.6em}
+  Voy a tocar cinco temas: lo que ya definió la demografía, el espacio fiscal, la formalización, nuestra propuesta y el financiamiento privado.
+\end{frame}
+
+% ===== 3. Menores de 15 y mayores de 65 (B3, sin cambios) =====
+\begin{frame}{México: menores de 15 y mayores de 65}
+  \vspace{0.6em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.44\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.7em}
+        \item La población de 65 años y más pasará de \dest{10.8 millones} en 2024 a \dest{25.3 millones} en 2050.
+        \item Alrededor de \dest{2051} habrá más personas de 65 y más que menores de 15 años.
+        \item Las personas de 80 y más se triplican: de \dest{2.1} a \dest{6.5 millones}. Es el grupo que más gasta en salud y en cuidados.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.50\textwidth}\centering
+      \includegraphics[page=3,trim=232 62 38 76,clip,width=\linewidth]{\basepdf}
+    \end{column}
+  \end{columns}
+  \fuente{Naciones Unidas, DESA, \emph{World Population Prospects 2024}, variante media. Cálculos propios.}
+\end{frame}
+
+% ===== 4. ¿Y si Naciones Unidas se queda corta? (B4, sin cambios) =====
+\begin{frame}{¿Y si Naciones Unidas se queda corta?}
+  \vspace{0.3em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.53\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.5em}
+        \item Para 2023, Naciones Unidas estima \dest{1.91} hijos por mujer en México, y supone que en ningún año del siglo baja de \dest{1.66}.
+        \item El INEGI midió \dest{1.6} en 2023, y \dest{1.44} en zonas urbanas.
+        \item Fernández-Villaverde ha mostrado que las proyecciones oficiales tienden a sobreestimar la fecundidad.
+      \end{itemize}
+      \vspace{0.5em}
+      Si tiene razón, el envejecimiento llega antes. Aquí usamos las cifras de Naciones Unidas, que son las más favorables.
+    \end{column}
+    \begin{column}{0.43\textwidth}\centering
+      \includegraphics[page=4,trim=262 80 12 66,clip,width=\linewidth]{\basepdf}
+    \end{column}
+  \end{columns}
+  \fuente{ONU, WPP 2024; INEGI, ENADID 2023; Fernández-Villaverde (2023). Detalle de fuentes al final.}
+\end{frame}
+
+% ===== 5. La ventana demográfica se cierra (N) =====
+\begin{frame}{La ventana demográfica se cierra}
+  \vspace{0.5em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.46\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item La población de 15 a 64 años pasó de \dest{49.6\%} del total en 1970 a \dest{67.2\%} en 2024.
+        \item Llega a su máximo, \dest{67.9\%}, alrededor de \dest{2030}. Después baja: 65.6\% en 2050 y 54.9\% en 2100.
+        \item Durante medio siglo, cada año hubo más personas en edad de trabajar por cada dependiente, y eso ayudó a las finanzas públicas. Ese periodo está por terminar.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.50\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=4.6cm,xmin=1970,xmax=2103,ymin=45,ymax=72,
+            xtick={1970,2000,2030,2050,2100},ytick={50,55,60,65,70},
+            ylabel={\% de la población total},clip=false]
+          \draw[dashed,pie] (axis cs:2030,45) -- (axis cs:2030,67.91);
+          \addplot[marino,thick] table[col sep=comma,x=anio,y=pet]{datos/l5_ventana.csv};
+          \node[circle,fill=oxido,inner sep=1.4pt] at (axis cs:2030,67.91) {};
+          \node[font=\tiny\bfseries,text=oxido,anchor=south] at (axis cs:2030,68.5) {máximo: 67.9\% en 2030};
+          \node[font=\tiny,text=marino,anchor=west] at (axis cs:2058,66) {15 a 64 años};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{Naciones Unidas, DESA, \emph{World Population Prospects 2024}, variante media, México. Cálculos propios.}
+\end{frame}
+
+% ===== 6. El ciclo de vida económico (N) =====
+\begin{frame}{El ciclo de vida económico}
+  \vspace{0.5em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.46\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item De niños y de mayores consumimos más de lo que ganamos con nuestro trabajo. Esos años se financian con \clave{transferencias}, de la familia y del gobierno, y con activos.
+        \item En el perfil promedio de México, el ingreso laboral apenas alcanza al consumo alrededor de los \dest{45 años}.
+        \item A los \dest{70 años}, el consumo es casi tres veces el ingreso laboral. Con 25 millones de personas de 65 y más en 2050, la vejez pesará cada vez más en esa cuenta.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.50\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=4.6cm,xmin=0,xmax=92,ymin=0,ymax=1.35,
+            xtick={0,20,40,60,80},ytick={0,0.5,1},xlabel={edad},
+            legend style={at={(0.5,1.02)},anchor=south,legend columns=2}]
+          \addplot[oxido,thick] table[col sep=comma,x=edad,y=C]{datos/l6_ciclo_vida_mex2014.csv};
+          \addlegendentry{Consumo}
+          \addplot[marino,thick] table[col sep=comma,x=edad,y=YL]{datos/l6_ciclo_vida_mex2014.csv};
+          \addlegendentry{Ingreso laboral}
+        \end{axis}
+      \end{tikzpicture}\par
+      \notagraf{\centering México, 2014. Ingreso laboral medio de 30 a 49 años = 1. El consumo incluye el consumo público.}
+    \end{column}
+  \end{columns}
+  \fuente{Perfiles por persona de las Cuentas Nacionales de Transferencia (National Transfer Accounts, ntaccounts.org), México, 2014. Población: ONU, WPP 2024.}
+\end{frame}
+
+% ===== 7. También cambia la forma en que nos enfermamos (B5, sin cambios) =====
+\begin{frame}{También cambia la forma en que nos enfermamos}
+  \vspace{1.2em}
+  \begin{itemize}\setlength{\itemsep}{0.35em}
+    \item Las enfermedades no transmisibles ya explican \dest{60.1\%} de los años de vida perdidos por muerte prematura o discapacidad.
+    \item Diabetes, hipertensión, cáncer: son padecimientos crónicos que se atienden durante años.
+    \item El IMSS calcula que su prima de equilibrio para atención médica tendría que subir \dest{34\%} para cubrir sus gastos.
+  \end{itemize}
+  \vspace{0.6em}
+  Esta presión va a crecer con o sin reforma. Viene de la demografía y del perfil epidemiológico del país.
+  \fuente{CIEP (2026), \emph{Implicaciones del Paquete Económico 2027}, con base en IHME, OMS e IMSS.}
+\end{frame}
+
+% ===== 8. El efecto puro de la demografía sobre el gasto (N) =====
+\begin{frame}{El efecto puro de la demografía sobre el gasto}
+  \vspace{0.5em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.47\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item Multiplicamos el gasto público por persona de cada edad por la población de 2025 y por la de 2050. Nada más se mueve: no es un pronóstico.
+        \item Las pensiones pasan de \dest{4.0} a \dest{6.5\%} del ingreso laboral total, y la salud de \dest{5.1} a \dest{6.1\%}. La educación baja de 6.6 a 3.7\%.
+        \item El perfil es de 2004, anterior a la pensión universal: en pensiones, la cuenta se queda corta.
+      \end{itemize}
+      \vspace{0.4em}
+      Aunque nada cambie en las reglas, el gasto sube.
+    \end{column}
+    \begin{column}{0.49\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=4.5cm,ybar=1.5pt,bar width=14pt,ymin=0,ymax=8,
+            ytick={0,2,4,6,8},ylabel={\% del ingreso laboral total},
+            symbolic x coords={Pensiones,Salud,Educación},xtick=data,enlarge x limits=0.25,
+            xtick style={draw=none},
+            legend style={at={(0.5,1.02)},anchor=south,legend columns=2},area legend]
+          \addplot[fill=barra,draw=marino] coordinates {(Pensiones,4.0)(Salud,5.1)(Educación,6.6)};
+          \addlegendentry{2025}
+          \addplot[fill=oxido,draw=oxido] coordinates {(Pensiones,6.5)(Salud,6.1)(Educación,3.7)};
+          \addlegendentry{2050}
+          \node[font=\tiny,anchor=south,xshift=-8pt] at (axis cs:Pensiones,4.0) {4.0};
+          \node[font=\tiny\bfseries,text=oxido,anchor=south,xshift=8pt] at (axis cs:Pensiones,6.5) {6.5};
+          \node[font=\tiny,anchor=south,xshift=-8pt] at (axis cs:Salud,5.1) {5.1};
+          \node[font=\tiny\bfseries,text=oxido,anchor=south,xshift=8pt] at (axis cs:Salud,6.1) {6.1};
+          \node[font=\tiny,anchor=south,xshift=-8pt] at (axis cs:Educación,6.6) {6.6};
+          \node[font=\tiny\bfseries,text=oxido,anchor=south,xshift=8pt] at (axis cs:Educación,3.7) {3.7};
+        \end{axis}
+      \end{tikzpicture}\par
+      \notagraf{\centering Gasto público por edad fijo (perfil de México, 2004); solo cambia la población.}
+    \end{column}
+  \end{columns}
+  \fuente{Cálculo propio: perfiles por edad de National Transfer Accounts (ntaccounts.org), México, 2004, y proyección de población propia con datos del INEGI.}
+\end{frame}
+
+% ===== 9. Transición (B6) =====
+\begin{frame}[plain]
+  \vfill
+  \noindent\makebox[\textwidth][c]{\begin{beamercolorbox}[wd=0.72\textwidth,sep=14pt,center]{bandacolor}
+    {\color{marino}\bfseries\Large Esto ya no depende de nosotros.\par\vspace{0.5em}Lo que sigue, sí.\par}
+  \end{beamercolorbox}}
+  \vfill
+\end{frame}
+
+% ===== 10. ¿Cuánto queda para decidir? (B7, actualizada a enero-septiembre) =====
+\begin{frame}{¿Cuánto queda para decidir?}
+  \vspace{0.1em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.47\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.45em}
+        \item Los ingresos disponibles son \dest{20.3\%} del PIB. Dejamos fuera el petróleo: lo que entra por el Fondo Mexicano del Petróleo (0.7) sale, en buena parte, como apoyo a Pemex (0.5).
+        \item Les restamos lo que no se decide año con año: gasto no programable, pensiones y la operación propia de IMSS, ISSSTE y CFE.
+        \item Queda \dest{4.0\%} del PIB, más deuda, para salud, educación, infraestructura, seguridad, cuidados y todo lo demás.
+      \end{itemize}
+      \vspace{0.3em}
+      Son sólo sumas y restas, sin supuestos de comportamiento. Y 4.0\% es el máximo.
+    \end{column}
+    \begin{column}{0.50\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=4.1cm,ybar,bar width=17pt,ymin=0,ymax=24,
+            ytick={0,5,10,15,20},ylabel={\% del PIB},xmin=0.4,xmax=4.6,
+            xtick={1,2,3,4},xtick style={draw=none},
+            xticklabels={{Ingresos\\disponibles},{menos\\no programable},{menos\\pensiones},{menos operación\\de organismos}},
+            x tick label style={font=\fontsize{4.6}{5.4}\selectfont,align=center}]
+          \addplot[fill=barra,draw=marino,bar shift=0pt] coordinates {(1,20.3)(2,12.1)(3,6.0)};
+          \addplot[fill=oxido,draw=oxido,bar shift=0pt] coordinates {(4,4.0)};
+          \node[font=\tiny,anchor=south] at (axis cs:1,20.3) {20.3};
+          \node[font=\tiny,anchor=south] at (axis cs:2,12.1) {12.1};
+          \node[font=\tiny,anchor=south] at (axis cs:3,6.0) {6.0};
+          \node[font=\tiny\bfseries,text=oxido,anchor=south] at (axis cs:4,4.0) {4.0};
+        \end{axis}
+      \end{tikzpicture}\par\vspace{0.2em}
+      \notagraf{Restas: no programable 8.2 (costo financiero 3.8, participaciones 4.2, Adefas 0.2); pensiones 6.1; operación propia 2.1. El resultado sin redondear es 3.95; con las cifras redondeadas la resta da 3.9.}
+    \end{column}
+  \end{columns}
+  \fuente{Villarreal, \emph{Contabilidad de la Muerte}, actualización 2026, con SHCP, Informe enero--septiembre 2026.}
+\end{frame}
+
+% ===== 11. La deuda ya cuesta tanto como el margen de decisión (E5) =====
+\begin{frame}{La deuda ya cuesta tanto como el margen de decisión}
+  \centering
+  \vspace{0.6em}
+  \begin{tikzpicture}
+    \node[draw=oxido,line width=1.2pt,fill=banda,minimum width=4.6cm,minimum height=2.7cm,align=center] (b) {
+      {\small Bolsa: margen de decisión}\\[0.35em]
+      {\color{oxido}\bfseries\fontsize{26}{30}\selectfont 4.0\%}\\[0.25em]
+      {\small del PIB}\\[0.4em]
+      {\scriptsize\color{pie} Actualización 2026}};
+    \node[draw=marino,line width=1.2pt,fill=white,minimum width=4.6cm,minimum height=2.7cm,align=center,right=1.6cm of b] (d) {
+      {\small Intereses de la deuda}\\[0.35em]
+      {\color{marino}\bfseries\fontsize{26}{30}\selectfont 4.0\%}\\[0.25em]
+      {\small del PIB}\\[0.4em]
+      {\scriptsize\color{pie} PEF 2027 \;(3.8 en 2026)}};
+    \node[font=\bfseries\fontsize{26}{30}\selectfont,text=marino] at ($(b.east)!0.5!(d.west)$) {=};
+  \end{tikzpicture}\par
+  \vspace{0.9em}
+  {\normalsize Por cada peso que queda para decidir, otro peso se va en intereses.\par}
+  \fuente{Bolsa y costo financiero 2026: \emph{Contabilidad de la Muerte}, actualización 2026, con datos de SHCP (enero--septiembre). Costo financiero 2027: \pef; CIEP con datos de SHCP. Razones con el PIB de SHCP; con un PIB más conservador serían algo mayores.}
+\end{frame}
+
+% ===== 12. La brecha en salud (B8, actualizada) =====
+\begin{frame}{La brecha en salud}
+  \vspace{0.1em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.47\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.45em}
+        \item En 2027 el gasto público en salud sería \dest{2.9\%} del PIB. Para llegar al 6\% que recomienda la OPS faltan \dest{3.1} puntos.
+        \item Una reforma fiscal clásica completa (IVA, ISR y gastos fiscales) daría alrededor de \dest{1.5} puntos.
+        \item La Miscelánea 2027 aporta alrededor de \dest{0.3} puntos.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.50\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=0.92\linewidth,height=3.5cm,xbar,bar width=9pt,xmin=0,xmax=3.7,
+            ymajorgrids=false,xmajorgrids,axis y line*=left,y axis line style={draw=none},
+            ytick={1,2,3},ytick style={draw=none},yticklabels={Miscelánea 2027,Reforma clásica,Brecha a 6\%},
+            ymin=0.4,ymax=3.6,xtick={0,1,2,3},xlabel={puntos del PIB}]
+          \addplot[fill=oxido,draw=oxido,bar shift=0pt] coordinates {(0.3,1)(1.46,2)(3.1,3)};
+          \node[font=\tiny,anchor=west] at (axis cs:0.3,1) {$\approx$\,0.3};
+          \node[font=\tiny,anchor=west] at (axis cs:1.46,2) {1.46};
+          \node[font=\tiny,anchor=west] at (axis cs:3.1,3) {3.1};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \vspace{-0.2em}
+  \banda{Una reforma fiscal ambiciosa, por sí sola, no alcanza para financiar la salud universal.}
+  \vspace{-1.1em}
+  \fuente{CIEP (2026); OPS (2014); estimación propia del paquete de reforma clásica. Miscelánea: estimación previa a las exclusiones aprobadas por el Senado; el rendimiento final es algo menor. Detalle de fuentes al final.}
+\end{frame}
+
+% ===== 13. Las pensiones le quitan espacio a la salud (B9) =====
+\begin{frame}{Las pensiones le quitan espacio a la salud}
+  \vspace{0.3em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.53\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.45em}
+        \item El PEF 2027 asigna \dest{6.3\%} del PIB a pensiones y \dest{2.9\%} a salud: más de dos pesos a pensiones por cada peso a salud.
+        \item Las pensiones contributivas crecen \dest{4.7\%} real, sobre todo por IMSS e ISSSTE. Es gasto comprometido desde hace años.
+        \item Si no aumentan los ingresos, cada punto adicional en pensiones es un punto menos para salud.
+      \end{itemize}
+      \vspace{0.4em}
+      Por eso la reforma de pensiones y el financiamiento de la salud hay que verlos juntos.
+    \end{column}
+    \begin{column}{0.40\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=4.2cm,ybar,bar width=20pt,ymin=0,ymax=7.5,ymajorgrids=false,
+            ytick={0,2,4,6},ylabel={\% del PIB},xmin=0.4,xmax=2.6,xtick={1,2},xtick style={draw=none},
+            xticklabels={Pensiones,Salud}]
+          \addplot[fill=oxido,draw=oxido,bar shift=0pt] coordinates {(1,6.3)};
+          \addplot[fill=barra,draw=marino,bar shift=0pt] coordinates {(2,2.9)};
+          \node[font=\tiny,anchor=south] at (axis cs:1,6.3) {6.3};
+          \node[font=\tiny,anchor=south] at (axis cs:2,2.9) {2.9};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{\pef. CIEP (2026), \emph{Implicaciones del Paquete Económico 2027}, caps. 5 y 10: cifras del proyecto; el dictamen incluye reasignaciones menores.}
+\end{frame}
+
+% ===== 14. ¿Financiar todo con impuestos generales? (B10) =====
+\begin{frame}{¿Financiar todo con impuestos generales?}
+  \vspace{0.7em}
+  \begin{itemize}\setlength{\itemsep}{0.35em}
+    \item Un sistema financiado sólo con impuestos generales requiere una recaudación alta y estable.
+    \item México recauda alrededor de \dest{18\%} del PIB, cerca de la mitad de lo que tenían los países que lograron cobertura universal por esa vía.
+    \item Además, cada peso adicional que se recaude compite con las pensiones y con el costo de la deuda.
+  \end{itemize}
+  \banda{Con la recaudación actual, una salud universal financiada sólo con impuestos no es viable.}
+  \vspace{0.2em}
+  La pregunta es cómo ampliar el aseguramiento, no cómo sustituirlo.
+\end{frame}
+
+% ===== 15. Salud en el presupuesto 2027 (B11) =====
+\begin{frame}{Salud en el presupuesto 2027}
+  \vspace{1.0em}
+  \begin{itemize}\setlength{\itemsep}{0.35em}
+    \item El gasto en salud aumenta \dest{10.6\%} real y llega a \dest{1.14 billones} de pesos. Si se descuenta la inflación de los servicios médicos, el aumento es de \dest{8.6\%}.
+    \item El \dest{75.6\%} del aumento se va a población con seguridad social: IMSS crece \dest{11.6\%}, ISSSTE \dest{18.8\%} e IMSS-Bienestar \dest{9.0\%}.
+    \item De ese total, \dest{760 mil millones} (\dest{67\%}) son para la población con seguridad social y \dest{376 mil millones} (\dest{33\%}) para el resto. Para el resto, el aumento es de \dest{7.6\%} real.
+  \end{itemize}
+  \vspace{0.6em}
+  El aumento recupera parte de los recortes recientes, pero la estructura sigue igual.
+  \fuente{\pef. CIEP (2026), \emph{Implicaciones del Paquete Económico 2027}, cap. 5, con base en SHCP: cifras del proyecto; el dictamen incluye reasignaciones menores.}
+\end{frame}
+
+% ===== 16. Dos sistemas y el gasto de bolsillo (B12) =====
+\begin{frame}{Dos sistemas y el gasto de bolsillo}
+  \vspace{0.5em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.44\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item El gasto público por derechohabiente del IMSS es \dest{2.1} veces el de una persona atendida por IMSS-Bienestar.
+        \item El gasto de bolsillo por persona es \dest{29.3\%} mayor que el gasto público por persona en IMSS-Bienestar.
+        \item Los hogares del primer decil gastan en salud \dest{3.9\%} de su ingreso; los del décimo, \dest{2.1\%}.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.52\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=0.9\linewidth,height=4.3cm,xbar,bar width=10pt,xmin=0,xmax=17500,
+            ymajorgrids=false,axis y line*=left,y axis line style={draw=none},scaled x ticks=false,
+            ytick={1,2,3,4},ytick style={draw=none},yticklabels={IMSS-Bienestar,Bolsillo,IMSS,ISSSTE},
+            ymin=0.4,ymax=4.6,xtick={0,5000,10000,15000},xticklabels={0,5 mil,10 mil,15 mil},
+            xlabel={pesos por persona, 2027}]
+          \addplot[fill=barra,draw=marino,bar shift=0pt] coordinates {(5523,1)(11519,3)(13857,4)};
+          \addplot[fill=oxido,draw=oxido,bar shift=0pt] coordinates {(7140,2)};
+          \node[font=\tiny,anchor=west] at (axis cs:5523,1) {5,523};
+          \node[font=\tiny,anchor=west] at (axis cs:7140,2) {7,140};
+          \node[font=\tiny,anchor=west] at (axis cs:11519,3) {11,519};
+          \node[font=\tiny,anchor=west] at (axis cs:13857,4) {13,857};
+        \end{axis}
+      \end{tikzpicture}\par
+      \notagraf{\centering Bolsillo: 2024, a precios de 2027.}
+    \end{column}
+  \end{columns}
+  \fuente{CIEP (2026), cap. 5, con base en SHCP e INEGI (ENIGH 2024).}
+\end{frame}
+
+% ===== 17. El dilema Gruber (B13) =====
+\begin{frame}{El dilema Gruber}
+  \vspace{0.9em}
+  \begin{itemize}\setlength{\itemsep}{0.35em}
+    \item En un sistema mixto es muy difícil dar el mismo servicio de salud cuando unos contribuyen y otros no.
+    \item Si el servicio es igual para todos, ¿para qué cotizar? Si es distinto, terminamos con dos sistemas.
+    \item Un sistema de salud tiene que lograr dos cosas: que nadie se \clave{empobrezca} por enfermarse, y que \clave{convenga} estar en el sistema contributivo.
+  \end{itemize}
+  \vspace{0.6em}
+  En México, como en el resto de la región, se ha avanzado en una o en otra, pero rara vez en las dos al mismo tiempo.
+  \fuente{El planteamiento es de Jonathan Gruber (MIT).}
+\end{frame}
+
+% ===== 18. El costo de formalizarse (B14) =====
+\begin{frame}{El costo de formalizarse}
+  \vspace{0.5em}
+  \begin{itemize}\setlength{\itemsep}{0.3em}
+    \item Al formalizarse, un trabajador empieza a pagar cuotas e impuestos y, en algunos casos, deja de recibir apoyos.
+    \item El Banco Mundial encuentra que, en América Latina, la mayor parte de ese costo corresponde a las \clave{contribuciones de seguridad social}.
+    \item Quién paga realmente las cuotas, el trabajador o la empresa, depende de cómo se ajustan salarios y empleo. Para México no lo tenemos bien medido.
+    \item Lo que sí sabemos es que no todas las cuotas pesan igual: la \clave{cuota fija} pesa proporcionalmente mucho más en los salarios bajos.
+  \end{itemize}
+  \vspace{0.5em}
+  Si el trabajador no valora lo que recibe a cambio, la cuota se percibe como un impuesto más. El diseño puede cambiar eso.
+  \fuente{Fietz et al. (2025), \emph{(In)Formalizing Jobs in LAC}, Banco Mundial. Detalle de fuentes al final.}
+\end{frame}
+
+\input{formalizacion}
+
+% ===== Bismarck, Beveridge y nuestra propuesta (B15) =====
+\begin{frame}{Bismarck, Beveridge y nuestra propuesta}
+  \vspace{-0.2em}
+  {\scriptsize
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}p{1.6cm}>{\raggedright\arraybackslash}X@{}}
+    \toprule
+    \textbf{Decisión} & \textbf{Bismarck} & \textbf{Beveridge} & \textbf{Nuestra propuesta}\\
+    \midrule
+    ¿Con qué se financia? & Cuotas obrero-patronales & Impuestos generales & Se mantienen las cuotas obrero-patronales; quien no cotiza paga una prima según su ingreso; el gobierno completa\\\addlinespace
+    ¿La prima es de cada persona? & Sí & No & Sí\\\addlinespace
+    ¿Quién la paga? & Trabajador y patrón (en México, también el gobierno) & El gobierno & Asalariados, igual que hoy. Los demás, según su ingreso; el gobierno paga la prima completa sólo a los más pobres\\\addlinespace
+    ¿El derecho depende del pago? & Sí & No, basta con residir & Sí, y todos tienen su prima cubierta\\
+    \bottomrule
+  \end{tabularx}}
+  \vspace{-0.3em}
+  \banda{Nuestra propuesta combina de otra manera las mismas cuatro decisiones.}
+\end{frame}
+
+\input{comofunciona}
+
+% ===== El IMSS como sistema nacional de seguros de salud (B17) =====
+\begin{frame}{El IMSS como sistema nacional de seguros de salud}
+  \vspace{0.9em}
+  \begin{itemize}\setlength{\itemsep}{0.3em}
+    \item Partimos de lo que existe. El IMSS tiene los hospitales, el personal, buena parte de la formación de especialistas y el registro de derechohabientes. Para la población sin seguridad social, en cambio, el modelo cambió tres veces entre \dest{2019} y \dest{2023}.
+    \item Que el IMSS agrupe los servicios de salud ligados al empleo formal: ISSSTE, Pemex e incluso fuerzas armadas.
+    \item Que se dedique sólo a salud. Pensiones y cuidados, en otras instancias.
+    \item Que pueda funcionar como caja de compensación y contratar servicios privados con recursos públicos.
+  \end{itemize}
+  \fuente{Diario Oficial de la Federación, 29-XI-2019, 31-VIII-2022 y 29-V-2023; Villarreal (2024). Detalle de fuentes al final.}
+\end{frame}
+
+% ===== Consolidar transferencias (B18) =====
+\begin{frame}{Consolidar transferencias}
+  \vspace{0.6em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.47\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item Los programas con límites de ingreso generan un escalón: quien rebasa el límite pierde el apoyo completo.
+        \item Con un \clave{impuesto negativo sobre la renta}, el apoyo baja poco a poco conforme aumenta el ingreso, y formalizarse siempre conviene.
+        \item Esto requiere medir bien los ingresos. La factura electrónica, los pagos digitales y el RFC como padrón único lo hacen posible.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.49\textwidth}\centering
+      \begin{tikzpicture}[x=1cm,y=1cm,font=\tiny]
+        \draw[-{Straight Barb[length=2pt]},pie] (0,0) -- (0,2.7);
+        \draw[-{Straight Barb[length=2pt]},pie] (0,0) -- (4.9,0);
+        \node[anchor=south] at (0,2.75) {beneficio};
+        \node[anchor=west] at (4.95,0) {ingreso};
+        \draw[oxido,thick] (0.2,2.15) -- (2.2,2.15);
+        \draw[oxido,thick,dashed] (2.2,2.15) -- (2.2,0.3);
+        \draw[oxido,thick] (2.2,0.3) -- (4.5,0.3);
+        \draw[marino,thick] (0.2,1.85) -- (4.5,0.15);
+        \node[text=oxido,anchor=south west] at (0.55,2.17) {sistema actual};
+        \node[text=marino,anchor=south west] at (2.8,0.95) {impuesto negativo};
+        \node[text=pie,anchor=north] at (2.2,-0.08) {umbral};
+      \end{tikzpicture}\par\vspace{0.6em}
+      \notagraf{\centering Esquema conceptual, sin escala.}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ===== ¿De dónde saldría el 6 % del PIB? (B19) =====
+\begin{frame}{¿De dónde saldría el 6\% del PIB?}
+  \vspace{0.1em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.4em}
+        \item \clave{Cuotas de salud:} de \dest{1.5\%} a \dest{2.5\%} del PIB, con el crecimiento de la masa salarial y la formalización.
+        \item \clave{Gobierno federal}, sin contar cuotas: de \dest{1.4\%} a \dest{2.5\%}, sumando \dest{0.1} puntos cada año. La fuente serían los gastos fiscales.
+        \item \clave{Estados y Ciudad de México:} \dest{1\%} del PIB, con participaciones e ingresos propios, sobre todo predial.
+      \end{itemize}
+      \vspace{0.3em}
+      Nada de esto funciona si no se contiene el gasto en pensiones.
+    \end{column}
+    \begin{column}{0.48\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=0.95\linewidth,height=4.2cm,ybar stacked,bar width=26pt,ymin=0,ymax=7.3,
+            ytick={0,2,4,6},ylabel={\% del PIB},xmin=0.4,xmax=2.6,xtick={1,2},xtick style={draw=none},
+            xticklabels={Hoy,Meta 2036},
+            legend style={at={(0.5,-0.2)},anchor=north,legend columns=3},area legend]
+          \addplot[fill=barra,draw=marino] coordinates {(1,1.5)(2,2.5)};
+          \addlegendentry{Cuotas}
+          \addplot[fill=medio,draw=marino] coordinates {(1,1.4)(2,2.5)};
+          \addlegendentry{Federal}
+          \addplot[fill=oxido,draw=oxido] coordinates {(1,0)(2,1.0)};
+          \addlegendentry{Estados}
+          \node[font=\tiny\bfseries,text=oxido,anchor=south] at (axis cs:1,2.9) {2.9};
+          \node[font=\tiny\bfseries,text=oxido,anchor=south] at (axis cs:2,6.0) {6.0};
+        \end{axis}
+      \end{tikzpicture}\par
+      \notagraf{\centering Hoy: aportación estatal propia no desglosada.}
+    \end{column}
+  \end{columns}
+  \fuente{Villarreal (2024), «¿Se puede reformar la seguridad social? Parte II», \emph{Arena Pública}.}
+\end{frame}
+
+% ===== Modalidad 40 (N; fusión de EXATEC 12 y 13) =====
+\begin{frame}{Seguir cotizando es razonable; comprar una pensión no lo es}
+  \vspace{0.1em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.49\textwidth}
+      \caja{Modalidad 40: lo que cambió}{%
+        \textbf{Hasta el 21 de octubre.} Cualquier salario de cotización de hasta 25 UMA (casi 3 mil pesos diarios), sin relación con el salario previo, y con inscripciones con fecha anterior.\par\vspace{0.35em}
+        \textbf{Desde el 22 de octubre.} El último salario registrado, o ese salario más una UMA (unos 117 pesos diarios), nunca por debajo del mínimo. Sin inscripciones retroactivas; trámite solo digital.\par\vspace{0.35em}
+        Los inscritos conservan sus condiciones hasta terminar su periodo. Es una medida temporal: seis meses para estimar el costo y otros seis para proponer cambios a las normas.}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \caja{Quién paga}{%
+        Para quien cotizó antes de julio de 1997, la pensión usa el salario promedio de los últimos cinco años: la estrategia abría la puerta a pensiones vitalicias de más de 80 mil pesos al mes.\par\vspace{0.35em}
+        Las cuotas no alcanzan; la diferencia la paga el Gobierno Federal, es decir, todos los contribuyentes, incluidos quienes nunca tendrán pensión.\par\vspace{0.35em}
+        Solo está al alcance de quien puede adelantar cientos de miles de pesos.}
+    \end{column}
+  \end{columns}
+  \vspace{0.5em}
+  {\small Nada de la propuesta de salud funciona si no se contiene el gasto en pensiones. Este es un primer paso, y necesita base legal firme.\par}
+  \vspace{-0.4em}
+  \fuente{Acuerdo ACDO.AS2.HCT.101026/302.P.DG, \emph{Diario Oficial de la Federación}, 21 de octubre de 2026; Ley del Seguro Social de 1973.}
+\end{frame}
+
+% ===== Financiamiento privado (I) (B20, primera mitad) =====
+\begin{frame}{Financiamiento privado (I): prepago, no bolsillo}
+  \vspace{0.5em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.52\textwidth}
+      \begin{itemize}\setlength{\itemsep}{0.5em}
+        \item Con una meta de \dest{8\%} del PIB en salud hacia 2036, \dest{6} puntos serían públicos y \dest{2} privados: alrededor de \dest{25\%} del total, contra la mitad o más de hoy.
+        \item Lo importante es que el gasto privado sea \clave{prepago}, y no gasto de bolsillo por urgencias.
+        \item El prepago reparte el riesgo entre muchos y se paga antes de enfermarse. El gasto de bolsillo llega cuando el hogar menos puede.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}\centering
+      \begin{tikzpicture}[x=1cm,y=0.36cm]
+        \fill[barra] (0,0) rectangle (2.6,6); \draw[marino] (0,0) rectangle (2.6,6);
+        \fill[oxido] (0,6) rectangle (2.6,8);
+        \node[font=\small] at (1.3,3) {Público: 6};
+        \node[font=\small,text=white] at (1.3,7) {Privado: 2};
+        \node[font=\small\bfseries,text=oxido,anchor=south] at (1.3,8) {8\% del PIB};
+        \node[font=\scriptsize,anchor=north] at (1.3,-0.1) {Meta 2036};
+        \draw (-0.3,0) -- (2.9,0);
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{Villarreal (2024), «¿Se puede reformar la seguridad social? Parte II», \emph{Arena Pública}.}
+\end{frame}
+
+% ===== Financiamiento privado (II) (N, de la segunda mitad de B20) =====
+\begin{frame}{Financiamiento privado (II): instrumentos y reglas}
+  \vspace{0.6em}
+  \begin{itemize}\setlength{\itemsep}{0.4em}
+    \item \clave{Consultorios adjuntos a farmacias:} regularlos y conectarlos con el resto del sistema.
+    \item \clave{Seguros médicos privados de bajo costo,} con estímulos fiscales o descuentos en la prima del IMSS.
+    \item \clave{Seguros de largo plazo,} que se paguen durante la vida laboral y cubran en la vejez. Sigue siendo una pregunta abierta.
+  \end{itemize}
+  \vspace{0.2em}
+  \banda{¿Qué reglas necesita el sector privado para participar sin fragmentar el sistema?}
+  \vspace{-0.9em}
+  \fuente{Villarreal (2024), «¿Se puede reformar la seguridad social? Parte II», \emph{Arena Pública}.}
+\end{frame}
+
+% ===== Dos preguntas para cualquier propuesta (B21) =====
+\begin{frame}{Dos preguntas para cualquier propuesta}
+  \vspace{1.6em}
+  \begin{enumerate}\setlength{\itemsep}{0.35em}
+    \item ¿Se puede pagar durante toda la transición demográfica sin que la deuda se vuelva insostenible?
+    \item ¿Fortalece o debilita el incentivo a cotizar?
+  \end{enumerate}
+  \vspace{0.6em}
+  Si una propuesta falla en alguna de las dos, tiene un problema de fondo. Esto aplica a lo que propongo y a cualquier alternativa. Para contestar la primera hay que hacer la cuenta completa: salud, pensiones y reforma fiscal juntas.
+\end{frame}
+
+% ===== Sin ancla, cualquier reforma es frágil (E15 v2, adaptada) =====
+\begin{frame}{El techo de deuda no ancla: la LIF autoriza casi un punto más de lo programado}
+  \centering
+  \vspace{0.2em}
+  \begin{tikzpicture}
+    \begin{axis}[base,width=0.74\textwidth,height=3.3cm,xbar,bar width=11pt,xmin=0,xmax=5.8,
+        ymajorgrids=false,axis y line*=left,y axis line style={draw=none},
+        ytick={1,2},ytick style={draw=none},
+        yticklabels={{Endeudamiento programado\\(LIF 2027, art. 1o)},{Techo autorizado\\(LIF 2027, art. 2o)}},
+        y tick label style={font=\scriptsize,align=right},
+        ymin=0.35,ymax=2.65,xtick={0,1,2,3,4,5},xlabel={\% del PIB},clip=false]
+      \addplot[fill=barra,draw=marino,bar shift=0pt] coordinates {(4.0,1)};
+      \addplot[fill=oxido,draw=oxido,bar shift=0pt] coordinates {(4.9,2)};
+      \node[font=\small\bfseries,anchor=west] at (axis cs:4.0,1) {4.0};
+      \node[font=\small\bfseries,text=oxido,anchor=west] at (axis cs:4.9,2) {4.9};
+      \draw[marino,dashed,thick] (axis cs:3.9,0.35) -- (axis cs:3.9,2.75);
+      \node[font=\tiny,text=marino,anchor=south] at (axis cs:3.9,2.75) {Meta de RFSP: 3.9};
+    \end{axis}
+  \end{tikzpicture}\par
+  \vspace{0.1em}
+  {\color{pie}\scriptsize Gobierno Federal. LIF 2027, arts. 1o y 2o; SHCP, CGPE 2027. \% del PIB con el PIB de SHCP.\par}
+  \vspace{0.1em}
+  \banda{\small Responder la primera pregunta exige un ancla fiscal creíble: la reforma de salud y la de ingresos deben ir amarradas a ella.}
+\end{frame}
+
+% ===== La Comunidad (B22 y B23 fusionadas) =====
+\begin{frame}{La Comunidad}
+  \vspace{0.5em}
+  {\small
+  \begin{itemize}\setlength{\itemsep}{0.4em}
+    \item En la región se ha discutido mucho cómo ampliar la \clave{cobertura} en salud, y mucho menos cómo \clave{pagarla} en los próximos veinte o treinta años. De ahí surge la Comunidad.
+    \item La fundan tres instituciones:
+      \begin{itemize}
+        \item Tecnológico de Monterrey --- coordinación, Héctor Villarreal
+        \item Universidad de los Andes, Colombia --- Ramiro Guerrero
+        \item Pontificia Universidad Católica de Chile --- Pablo Celhay
+      \end{itemize}
+    \item La primera reunión de trabajo fue en \clave{San José, Costa Rica, del 5 al 7 de octubre}. {\color{red}\bfseries [TEXTO DE HÉCTOR]}
+    \item Dos de las preguntas abiertas:
+      \begin{itemize}
+        \item ¿Qué parte del gasto de bolsillo podría convertirse en prepago?
+        \item ¿Con qué reglas el financiamiento privado complementa al público en lugar de debilitarlo?
+      \end{itemize}
+  \end{itemize}}
+\end{frame}
+
+% ===== Cierre (B24) =====
+\begin{frame}[plain]
+  \vfill
+  \noindent\makebox[\textwidth][c]{\begin{beamercolorbox}[wd=0.78\textwidth,sep=10pt,center]{bandacolor}
+    {\color{marino}\bfseries\normalsize ¿Podemos diseñar un sistema de salud que la gente valore lo suficiente para querer participar, y que el país pueda pagar durante su transición demográfica?\par}
+  \end{beamercolorbox}}
+  \begin{center}
+  \vspace{1.6em}
+  {\small Héctor Juan Villarreal Páez · hjvp@itesm.mx\\[0.2em]
+  Escuela de Gobierno y Transformación Pública · Tecnológico de Monterrey\par}
+  \end{center}
+  \vfill
+\end{frame}
+
+\input{fuentes}
+
+\input{apendice}
+
+\end{document}
