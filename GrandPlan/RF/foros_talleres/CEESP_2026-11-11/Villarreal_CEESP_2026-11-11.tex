@@ -1,9 +1,67 @@
 % Presentación ante el CEESP, 11 de noviembre de 2026.
 % Base: presentación del 22 de septiembre de 2026 (reconstruida a partir de su PDF).
+% Archivo único: compila directo con pdflatex (dos pasadas); solo necesita la carpeta datos/.
 % Clave de origen en cada lámina: B = base (número original), E = EXATEC, N = nueva.
 \documentclass[aspectratio=169,10pt]{beamer}
-\input{preambulo}
-\newcommand{\basepdf}{foro_20260922_salud_hjvp.pdf}
+% Preámbulo: reconstrucción del estilo de la presentación del 22 de septiembre de 2026.
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[spanish,es-nodecimaldot,es-noshorthands]{babel}
+\usepackage{graphicx,booktabs,array,tabularx,amssymb}
+\usepackage{tikz,pgfplots,pgfplotstable}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{positioning,arrows.meta,calc,patterns}
+
+\definecolor{marino}{HTML}{18365C}
+\definecolor{oxido}{HTML}{B0541C}
+\definecolor{banda}{HTML}{EEF1F6}
+\definecolor{barra}{HTML}{AEB9C6}
+\definecolor{medio}{HTML}{5D728D}
+\definecolor{pie}{HTML}{787878}
+\definecolor{rejilla}{HTML}{E5E5E5}
+
+\usetheme{default}
+\setbeamersize{text margin left=1cm,text margin right=1cm}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{structure}{fg=marino}
+\setbeamercolor{frametitle}{fg=marino}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamertemplate{frametitle}{\vspace*{0.9em}\insertframetitle\par\vspace{0.75em}{\color{black}\hrule height 0.4pt}\vspace{0.2em}}
+\setbeamertemplate{footline}{\hfill{\color{pie}\scriptsize\insertframenumber\,/\,\inserttotalframenumber}\hspace*{0.45cm}\vspace*{0.35cm}}
+\setbeamertemplate{itemize item}{\color{marino}--}
+\setbeamertemplate{itemize subitem}{\color{marino}--}
+\setbeamertemplate{enumerate item}{\color{marino}\insertenumlabel.}
+\setlength{\leftmargini}{1.3em}
+\setlength{\leftmarginii}{1.3em}
+
+\newcommand{\dest}[1]{{\color{oxido}\bfseries #1}}
+\newcommand{\clave}[1]{{\color{marino}\bfseries #1}}
+\newcommand{\fuente}[1]{\par\vspace{0.9em}{\color{pie}\scriptsize\raggedright #1\par}}
+\newcommand{\notagraf}[1]{{\color{pie}\tiny\raggedright #1\par}}
+\setbeamercolor{bandacolor}{bg=banda,fg=black}
+\newcommand{\banda}[1]{%
+  \par\vspace{0.7em}\noindent\makebox[\textwidth][c]{\begin{beamercolorbox}[wd=0.90\textwidth,sep=5pt,center]{bandacolor}\bfseries #1\end{beamercolorbox}}\par\vspace{0.7em}}
+\setbeamercolor{cajacolor}{bg=banda,fg=black}
+\newcommand{\caja}[2]{%
+  \begin{beamercolorbox}[wd=\linewidth,sep=5pt]{cajacolor}
+    {\color{marino}\bfseries #1}\par\vspace{0.25em}\footnotesize #2
+  \end{beamercolorbox}}
+
+\pgfplotsset{
+  base/.style={axis lines=left,axis line style={black},tick style={black},
+    tick label style={font=\tiny},label style={font=\tiny},
+    ymajorgrids,grid style={rejilla},
+    /pgf/number format/.cd,fixed,1000 sep={},/tikz/.cd,
+    legend style={font=\tiny,draw=none,fill=none},legend cell align=left},
+}
+
+% Metadatos directos desde LaTeX: solo título y autor.
+\hypersetup{pdftitle={¿Cómo financiar la salud universal? Espacio fiscal, aseguramiento y una agenda regional},pdfauthor={Héctor Juan Villarreal Páez},pdfcreator={},pdfproducer={},pdfsubject={},pdfkeywords={}}
+\pdfsuppressptexinfo=-1
+\pdfinfoomitdate=1
 \newcommand{\pef}{PEF 2027 (dictamen de la Cámara de Diputados)}
 
 \title{¿Cómo financiar la salud universal?}
@@ -51,7 +109,18 @@
       \end{itemize}
     \end{column}
     \begin{column}{0.50\textwidth}\centering
-      \includegraphics[page=3,trim=232 62 38 76,clip,width=\linewidth]{\basepdf}
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=4.6cm,xmin=1970,xmax=2103,ymin=0,ymax=46,
+            xtick={1970,2000,2024,2051,2100},ytick={0,10,20,30,40},ylabel={millones de personas},
+            legend style={at={(0.04,0.99)},anchor=north west}]
+          \draw[dashed,pie] (axis cs:2024,0) -- (axis cs:2024,46);
+          \draw[dashed,pie] (axis cs:2051,0) -- (axis cs:2051,46);
+          \addplot[marino,thick] table[col sep=comma,x=anio,y=p014]{datos/l5_ventana.csv};
+          \addlegendentry{0 a 14 años}
+          \addplot[oxido,thick] table[col sep=comma,x=anio,y=p65]{datos/l5_ventana.csv};
+          \addlegendentry{65 y más}
+        \end{axis}
+      \end{tikzpicture}
     \end{column}
   \end{columns}
   \fuente{Naciones Unidas, DESA, \emph{World Population Prospects 2024}, variante media. Cálculos propios.}
@@ -71,7 +140,15 @@
       Si tiene razón, el envejecimiento llega antes. Aquí usamos las cifras de Naciones Unidas, que son las más favorables.
     \end{column}
     \begin{column}{0.43\textwidth}\centering
-      \includegraphics[page=4,trim=262 80 12 66,clip,width=\linewidth]{\basepdf}
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=4.3cm,xmin=1990,xmax=2103,ymin=1.3,ymax=3.6,
+            xtick={1990,2023,2050,2100},ytick={1.5,2,2.5,3,3.5},ylabel={hijos por mujer}]
+          \addplot[marino,thick] table[col sep=comma,x=anio,y=tgf]{datos/l4_fecundidad_onu.csv};
+          \node[circle,fill=oxido,inner sep=1.4pt] at (axis cs:2023,1.6) {};
+          \node[font=\tiny,text=oxido,anchor=north] at (axis cs:2023,1.55) {INEGI 2023};
+          \node[font=\tiny,text=marino,anchor=south] at (axis cs:2068,1.75) {Naciones Unidas};
+        \end{axis}
+      \end{tikzpicture}
     \end{column}
   \end{columns}
   \fuente{ONU, WPP 2024; INEGI, ENADID 2023; Fernández-Villaverde (2023). Detalle de fuentes al final.}
@@ -394,7 +471,116 @@
   \fuente{Fietz et al. (2025), \emph{(In)Formalizing Jobs in LAC}, Banco Mundial. Detalle de fuentes al final.}
 \end{frame}
 
-\input{formalizacion}
+% ===== 19. La cuota fija pesa más donde menos se gana (N) =====
+\begin{frame}{La cuota fija pesa más donde menos se gana}
+  \vspace{0.5em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.50\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item En el seguro de enfermedades y maternidad, el patrón paga por cada trabajador una cuota fija de \dest{20.40\%} de la UMA, sin importar el salario.
+        \item Para un trabajador de un salario mínimo, esa cuota equivale a \dest{7.6\%} del salario. Para uno de diez salarios mínimos, a \dest{0.8\%}.
+        \item La parte de la cuota que distorsiona es la que no guarda relación con lo que el trabajador recibe, y se concentra en los salarios bajos.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=4.4cm,ybar,bar width=18pt,ymin=0,ymax=10,
+            ytick={0,2,4,6,8},ylabel={\% del salario},xmin=0.4,xmax=4.6,
+            xtick={1,2,3,4},xtick style={draw=none},xticklabels={1,2,5,10},xlabel={salarios mínimos}]
+          \addplot[fill=oxido,draw=oxido,bar shift=0pt] coordinates {(1,7.60)};
+          \addplot[fill=barra,draw=marino,bar shift=0pt] coordinates {(2,3.80)(3,1.52)(4,0.76)};
+          \node[font=\tiny\bfseries,text=oxido,anchor=south] at (axis cs:1,7.60) {7.6};
+          \node[font=\tiny,anchor=south] at (axis cs:2,3.80) {3.8};
+          \node[font=\tiny,anchor=south] at (axis cs:3,1.52) {1.5};
+          \node[font=\tiny,anchor=south] at (axis cs:4,0.76) {0.8};
+        \end{axis}
+      \end{tikzpicture}\par
+      \notagraf{\centering Cuota fija patronal como \% del salario. Valores de 2026: UMA de 117.31 pesos diarios y salario mínimo general de 315.04.}
+    \end{column}
+  \end{columns}
+  \fuente{Ley del Seguro Social, art. 106, fr. I; IMSS, \emph{Informe al Ejecutivo Federal y al Congreso de la Unión 2025--2026}; INEGI, UMA 2026; CONASAMI, salario mínimo general 2026. Cálculos propios.}
+\end{frame}
+
+% ===== 20. Cómo decide un trabajador (N) =====
+\begin{frame}{Cómo decide un trabajador}
+  \vspace{0.1em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.49\textwidth}
+      \caja{Lo que cuesta ser formal}{%
+        Cuotas de seguridad social: en América Latina son el componente mayor.\par\vspace{0.3em}
+        Impuestos sobre el ingreso.\par\vspace{0.3em}
+        Apoyos y servicios no contributivos que se pueden perder.}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \caja{Lo que recibe a cambio}{%
+        Salud, pensión, vivienda, guarderías, incapacidades.\par\vspace{0.3em}
+        Cuenta lo que el trabajador cree que vale, no lo que le cuesta al sistema.\par\vspace{0.3em}
+        Si la cobertura sin cotizar se parece a la contributiva, cotizar vale menos.}
+    \end{column}
+  \end{columns}
+  \vspace{0.5em}
+  {\small
+  \begin{itemize}\setlength{\itemsep}{0.25em}
+    \item El costo neto de formalizarse es lo que se paga menos el valor que el trabajador asigna a lo que recibe. Para un asalariado de la región, va de \dest{20} a \dest{40\%} del ingreso del hogar.
+    \item De ahí salen dos reglas de diseño: lo que se recibe debe depender de lo que se cotiza, y la cuota por el mismo ingreso no debe depender de si el trabajo es formal o informal.
+    \item Todavía no hemos estimado cuánto responde la formalidad en México a estos cambios. Lo que sigue es lógica de diseño, no un resultado.
+  \end{itemize}}
+  \vspace{-0.5em}
+  \fuente{Fietz et al. (2025), \emph{(In)Formalizing Jobs in LAC}, Banco Mundial, cap. 5: mediana en seis países; en México los impuestos pesan más que en el resto.}
+\end{frame}
+
+% ===== 21. El escalón (N) =====
+\begin{frame}{El escalón}
+  \vspace{0.5em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.50\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item Al pasar a un empleo formal, el ingreso neto puede caer: se empiezan a pagar cuotas y se pueden perder apoyos. Ese salto es la \clave{trampa de la formalización}.
+        \item El escalón es más alto en los ingresos medios y bajos, donde la cuota fija pesa más y los apoyos importan más.
+        \item Uruguay reconoció el desincentivo. Desde 2022 suspendió el control del tope de ingreso de sus asignaciones familiares, y entraron \dest{21 mil} hogares adicionales.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}\centering
+      \begin{tikzpicture}[x=0.5cm,y=0.5cm,font=\tiny]
+        \draw[-{Straight Barb[length=2pt]},pie] (0,0) -- (0,6.4);
+        \draw[-{Straight Barb[length=2pt]},pie] (0,0) -- (10.6,0);
+        \node[anchor=south] at (0.6,6.4) {ingreso neto};
+        \node[anchor=north east] at (10.6,-0.1) {ingreso formal};
+        \draw[marino,thick,dashed] (0,2) -- (10,5.6);
+        \draw[oxido,thick] (0,2.6) -- (4.5,4.0);
+        \draw[oxido,thick] (4.5,2.9) -- (10,4.9);
+        \draw[oxido,thick,densely dotted] (4.5,4.0) -- (4.5,2.9);
+        \node[text=oxido,anchor=west] at (4.7,2.3) {el escalón};
+        \node[text=marino,anchor=south east] at (9.8,5.7) {sin saltos};
+      \end{tikzpicture}\par\vspace{0.6em}
+      \notagraf{\centering Esquema conceptual, sin escala.}
+    \end{column}
+  \end{columns}
+  \fuente{Fietz et al. (2025), Banco Mundial; BPS Uruguay, resoluciones 2021--2026; MEF Uruguay, Rendición de Cuentas 2023. Detalle de fuentes al final.}
+\end{frame}
+
+% ===== 22 (antes 23). Infonavit: la propuesta (N) =====
+\begin{frame}{Infonavit: la propuesta}
+  \vspace{0.1em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.49\textwidth}
+      \caja{Qué se propone}{%
+        Eliminar la aportación patronal de \textbf{5\%} del salario base de cotización al Infonavit.\par\vspace{0.3em}
+        Destinar \textbf{2 puntos} a un seguro solidario de salud y cuidados en la vejez: un fondo común, no cuentas individuales. Primero cubre el déficit de los gastos médicos de pensionados; lo que sobra va a cuidados de largo plazo.\par\vspace{0.3em}
+        Los otros \textbf{3 puntos} se dejarían de cobrar: la tasa legal sobre la nómina baja 3 puntos.}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \caja{El Instituto y los trabajadores}{%
+        El Infonavit conserva su patrimonio y sus obligaciones como mutualidad.\par\vspace{0.3em}
+        El trabajador deja de acumular 5\% de su salario en la subcuenta de vivienda y recibe a cambio un seguro.\par\vspace{0.3em}
+        Quien no usa crédito tendría menos saldo para su pensión. Ese efecto no lo hemos cuantificado, y tampoco el efecto sobre la formalidad.}
+    \end{column}
+  \end{columns}
+  \vspace{0.5em}
+  {\small El seguro de gastos médicos de pensionados del IMSS ya es deficitario, y el envejecimiento presiona justo ahí.\par}
+  \vspace{-0.4em}
+  \fuente{Ejercicio propio, preliminar; no es una propuesta del IMSS ni del Gobierno Federal. Son tasas legales: no miden quién soporta la cuota. Antecedente: Villarreal (2022), «El Infonavit, ¿qué sigue?», \emph{Arena Pública}.}
+\end{frame}
 
 % ===== Bismarck, Beveridge y nuestra propuesta (B15) =====
 \begin{frame}{Bismarck, Beveridge y nuestra propuesta}
@@ -414,7 +600,19 @@
   \banda{Nuestra propuesta combina de otra manera las mismas cuatro decisiones.}
 \end{frame}
 
-\input{comofunciona}
+% ===== Cómo funcionaría (B16, adaptada) =====
+\begin{frame}{Cómo funcionaría}
+  \vspace{0.5em}
+  \begin{itemize}\setlength{\itemsep}{0.35em}
+    \item Quien tiene empleo formal sigue pagando sus \clave{cuotas obrero-patronales}, como hoy. Lo que cambia es que debe ver con claridad qué paga y qué recibe.
+    \item Quien no cotiza se inscribe en los seguros médicos del IMSS y paga una \clave{prima según su ingreso}. El gobierno completa la diferencia.
+    \item Sólo a la población más pobre el gobierno le paga la prima completa, como un impuesto negativo. Si la pagara para todos, se perdería el incentivo a cotizar.
+  \end{itemize}
+  \vspace{-0.2em}
+  \banda{Todos dentro del mismo sistema de aseguramiento, sin esquemas paralelos.}
+  \vspace{-0.9em}
+  \banda{\small La propuesta no sube las cuotas obrero-patronales. Con el cambio en Infonavit, la tasa legal sobre la nómina bajaría 3 puntos.}
+\end{frame}
 
 % ===== El IMSS como sistema nacional de seguros de salud (B17) =====
 \begin{frame}{El IMSS como sistema nacional de seguros de salud}
@@ -627,8 +825,89 @@
   \vfill
 \end{frame}
 
-\input{fuentes}
+% ===== Fuentes (B25-26, actualizadas) =====
+\begin{frame}{Fuentes (1/2)}
+  \vspace{0.2em}
+  {\fontsize{6.6}{8.4}\selectfont\raggedright
+  \textbf{Demografía.} Naciones Unidas, DESA, División de Población, \emph{World Population Prospects 2024}, variante media, México; grupos de edad agregados a partir del archivo oficial por grupos quinquenales (cálculos propios). La revisión 2026 fue pospuesta a 2027. INEGI, Encuesta Nacional de la Dinámica Demográfica 2023. INEGI, Estadística de Nacimientos Registrados 2024. Fernández-Villaverde, J. (2023), \emph{The Demographic Future of Humanity: Facts and Consequences}.\par\vspace{0.6em}
+  \textbf{Ciclo de vida y efecto de la demografía sobre el gasto.} National Transfer Accounts (ntaccounts.org), perfiles por edad de México, 2004 y 2014. Gasto con perfiles fijos: cálculo propio con el perfil de 2004 y una proyección de población propia con datos del INEGI; resultados en \% del ingreso laboral total, no del PIB.\par\vspace{0.6em}
+  \textbf{Presupuesto 2027, salud y pensiones.} PEF 2027: dictamen de la Cámara de Diputados; gasto neto total de 10.64 billones de pesos. CIEP (2026), \emph{Implicaciones del Paquete Económico 2027}, 11 de septiembre de 2026: gasto en salud, gasto per cápita por subsistema, gasto de bolsillo, inflación de salud, carga de enfermedad (IHME, 2021; OMS, 2024), prima de equilibrio del IMSS (IMSS, 2024), pensiones, Miscelánea e ingresos petroleros; sus cifras corresponden al proyecto de presupuesto. Meta de 6\% del PIB: OPS (2014), \emph{Estrategia para el acceso universal a la salud y la cobertura universal de salud}.\par\vspace{0.6em}
+  \textbf{Espacio disponible.} Villarreal, \emph{Contabilidad de la Muerte}, actualización con el Informe de Finanzas Públicas y Deuda Pública enero--septiembre 2026 (SHCP) y los Criterios Generales de Política Económica 2027. PIB nominal de 36,500 mmdp; el supuesto favorece a la cuenta oficial. CIEP (2026) estima un espacio fiscal de 1.6\% del PIB con una definición distinta.\par\vspace{0.6em}
+  \textbf{Deuda y reforma al ISR.} LIF 2027, aprobada por el Senado el 27 de octubre de 2026, arts. 1o, 2o y 4o. SHCP, Criterios Generales de Política Económica 2027. Congreso de la Unión, minuta de reforma a la LISR 2027.\par}
+\end{frame}
 
-\input{apendice}
+\begin{frame}{Fuentes (2/2)}
+  \vspace{0.2em}
+  {\fontsize{6.6}{8.4}\selectfont\raggedright
+  \textbf{Reforma fiscal clásica.} Estimación propia del rendimiento de un paquete de reforma clásica (IVA, ISR y gastos fiscales), alrededor de 1.5 puntos del PIB.\par\vspace{0.6em}
+  \textbf{Trampa de la formalización.} Fietz, Joubert, Ñopo, Ocampo, Packard, Posadas y Rodriguez Chamussy (2025), \emph{(In)Formalizing Jobs in Latin America and the Caribbean: Taxes, Benefits, and Labor Market Incentives}, Banco Mundial, cap. 5. Uruguay: Banco de Previsión Social, resoluciones de directorio 2021--2026; Ministerio de Economía y Finanzas, Rendición de Cuentas 2023.\par\vspace{0.6em}
+  \textbf{Cuota fija.} Ley del Seguro Social, art. 106, fr. I. IMSS, \emph{Informe al Ejecutivo Federal y al Congreso de la Unión sobre la situación financiera y los riesgos del IMSS 2025--2026}: cuota fija patronal de 20.40\% de la UMA. INEGI, UMA 2026: 117.31 pesos diarios. CONASAMI, salario mínimo general 2026: 315.04 pesos diarios.\par\vspace{0.6em}
+  \textbf{Infonavit.} Ejercicio propio, preliminar, sobre tasas legales. No es una propuesta del IMSS ni del Gobierno Federal. Antecedente: Villarreal, H. (2022), «El Infonavit, ¿qué sigue?», \emph{Arena Pública}, 20 de diciembre de 2022.\par\vspace{0.6em}
+  \textbf{Modalidad 40.} Acuerdo ACDO.AS2.HCT.101026/302.P.DG del Consejo Técnico del IMSS, \emph{Diario Oficial de la Federación}, 21 de octubre de 2026. Ley del Seguro Social de 1973.\par\vspace{0.6em}
+  \textbf{Modelo de aseguramiento y metas de financiamiento.} Villarreal, H. (2024), «¿Se puede reformar la seguridad social? Parte II», \emph{Arena Pública}, 10 de septiembre de 2024. Dilema de Gruber: Jonathan Gruber (MIT).\par\vspace{0.6em}
+  \textbf{Arquitectura institucional.} Diario Oficial de la Federación: 29-XI-2019 (Insabi), 31-VIII-2022 (IMSS-Bienestar), 29-V-2023 (reforma a la Ley General de Salud).\par\vspace{0.6em}
+  \textbf{Comunidad.} Documento de presentación de la iniciativa; reunión de trabajo en San José, Costa Rica, 5--7 de octubre de 2026.\par}
+\end{frame}
+
+% ===== A1. El paquete 2027 mueve la base en el margen (E6, actualizada) =====
+\begin{frame}{Apéndice · El paquete 2027 mueve la base en el margen}
+  \vspace{0.2em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.49\textwidth}
+      \caja{Amplía la base (en el margen)}{%
+        Deducciones de ISR topadas en 96.67\% de los ingresos acumulables, para empresas con ingresos mayores a 50 mdp: un impuesto mínimo de alrededor de 1\% de los ingresos.\par\vspace{0.35em}
+        El Senado (27 de octubre) excluyó a las armadoras y ensambladoras de vehículos en depósito fiscal y a los expendedores de gasolina y diésel. La Cámara de Diputados ratificó los cambios el 4 de noviembre.\par\vspace{0.35em}
+        Pérdidas fiscales: amortización hasta 50\% de la utilidad fiscal del ejercicio.}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \caja{Abarata el incumplimiento}{%
+        Programa de regularización con condonación de 100\% de multas, recargos y gastos de ejecución.\par\vspace{0.35em}
+        Ampliado a grandes contribuyentes: se eliminó el tope de 300 mdp de ingresos.}
+    \end{column}
+  \end{columns}
+  \vspace{0.6em}
+  {\small Las exclusiones reducen el rendimiento de la medida. No cambia la restricción de fondo.\par}
+  \vspace{-0.3em}
+  \fuente{Congreso de la Unión, minuta de reforma a la LISR 2027; LIF 2027 (transitorio vigésimo primero), aprobada por el Senado el 27 de octubre de 2026. Pérdidas y regularización: minutas aprobadas por la Cámara de Diputados en octubre de 2026.}
+\end{frame}
+
+% ===== A2. Cuatro frentes de reforma (E9) =====
+\begin{frame}{Apéndice · Cuatro frentes de reforma}
+  \vspace{0.3em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.49\textwidth}
+      \caja{Reforma fiscal clásica (federal)}{Bases gravables, gastos fiscales, IVA, ISR.}\par\vspace{0.5em}
+      \caja{Haciendas locales}{Ingresos propios de estados y municipios (predial, tenencia moderna) y financiamiento de sus funciones.}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \caja{Seguridad social}{Pensiones y salud con financiamiento sostenible e inclusión de trabajadores informales.}\par\vspace{0.5em}
+      \caja{Empresas del Estado}{Pemex y CFE: reglas claras para los apoyos fiscales y registro transparente de los pasivos contingentes que hoy quedan fuera del presupuesto.}
+    \end{column}
+  \end{columns}
+  \vspace{1.0em}
+  {\small Ninguno de los cuatro frentes cierra la cuenta solo.\par}
+\end{frame}
+
+% ===== A3. Detalle del techo de endeudamiento =====
+\begin{frame}{Apéndice · Detalle del techo de endeudamiento, LIF 2027}
+  \vspace{0.4em}
+  {\small
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.1cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+    \toprule
+    & \textbf{Endeudamiento neto interno} & \textbf{Endeudamiento neto externo}\\
+    \midrule
+    Gobierno Federal (techo) & Hasta 1.7 billones de pesos & Hasta 13,500 mdd\\\addlinespace
+    Pemex & Hasta 160,619.5 mdp & Hasta 5,259.4 mdd\\\addlinespace
+    CFE & Hasta 16,742 mdp & Hasta 725 mdd\\
+    \bottomrule
+  \end{tabularx}}
+  \vspace{0.7em}
+  \begin{itemize}\setlength{\itemsep}{0.3em}\small
+    \item Gobierno Federal: los techos interno y externo son compensables entre sí. Suman alrededor de 1.94 billones de pesos, \dest{4.9\%} del PIB.
+    \item El endeudamiento programado es de 1.57 billones de pesos, \dest{4.0\%} del PIB. La meta de RFSP es 3.9\% del PIB.
+    \item El techo de Pemex está condicionado a su meta de balance financiero. Los pasivos contingentes no aparecen en el presupuesto ni en los techos de deuda.
+  \end{itemize}
+  \fuente{LIF 2027, arts. 1o, 2o y 4o; SHCP, CGPE 2027. \% del PIB con el PIB de SHCP.}
+\end{frame}
 
 \end{document}
