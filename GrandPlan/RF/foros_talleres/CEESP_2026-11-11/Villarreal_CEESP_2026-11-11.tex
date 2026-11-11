@@ -104,7 +104,7 @@
     \begin{column}{0.44\textwidth}\small
       \begin{itemize}\setlength{\itemsep}{0.7em}
         \item La población de 65 años y más pasará de \dest{13.2 millones} en 2025 a \dest{29.3 millones} en 2050.
-        \item Alrededor de \dest{2036} habrá más personas de 65 y más que menores de 15 años. Naciones Unidas lo espera hasta 2051.
+        \item Alrededor de \dest{2036} habrá más personas de 65 y más que menores de 15 años.
         \item Las personas de 80 y más se triplican: de \dest{2.7} a \dest{9.1 millones}. Es el grupo que más gasta en salud y en cuidados.
       \end{itemize}
     \end{column}
@@ -114,18 +114,15 @@
             xtick={2025,2030,2036,2040,2050},ytick={0,10,20,30},ylabel={millones de personas},
             legend style={at={(0.5,1.02)},anchor=south,legend columns=2}]
           \draw[dashed,pie] (axis cs:2036,0) -- (axis cs:2036,38);
-          \addplot[barra,semithick,forget plot,restrict x to domain=2025:2050] table[col sep=comma,x=anio,y=p014]{datos/l5_ventana.csv};
-          \addplot[barra,semithick,forget plot,restrict x to domain=2025:2050] table[col sep=comma,x=anio,y=p65]{datos/l5_ventana.csv};
           \addplot[marino,thick] table[col sep=comma,x=anio,y=p014]{datos/l3_nacional.csv};
           \addlegendentry{0 a 14 años}
           \addplot[oxido,thick] table[col sep=comma,x=anio,y=p65]{datos/l3_nacional.csv};
           \addlegendentry{65 y más}
-          \node[font=\tiny,text=pie,anchor=south west] at (axis cs:2038,28.6) {Naciones Unidas};
         \end{axis}
       \end{tikzpicture}
     \end{column}
   \end{columns}
-  \fuente{Proyección propia con datos del INEGI (Encuesta Intercensal 2025, Censo 2020, nacimientos y defunciones registrados). En gris, como referencia: Naciones Unidas, \emph{World Population Prospects 2024}, variante media.}
+  \fuente{Proyección propia con datos del INEGI (Encuesta Intercensal 2025, Censo 2020, nacimientos y defunciones registrados).}
 \end{frame}
 
 % ===== 4. ¿Y si Naciones Unidas se queda corta? (B4, con proyección propia) =====
@@ -143,16 +140,13 @@
     \end{column}
     \begin{column}{0.43\textwidth}\centering
       \begin{tikzpicture}
-        \begin{axis}[base,width=\linewidth,height=4.3cm,xmin=1990,xmax=2053,ymin=1.0,ymax=3.6,
-            xtick={1990,2010,2024,2050},ytick={1,1.5,2,2.5,3,3.5},ylabel={hijos por mujer}]
-          \addplot[barra,thick,restrict x to domain=1990:2050] table[col sep=comma,x=anio,y=tgf]{datos/l4_fecundidad_onu.csv};
+        \begin{axis}[base,width=\linewidth,height=4.5cm,xmin=2000,xmax=2052,ymin=0.8,ymax=3.0,
+            xtick={2000,2010,2024,2040,2050},ytick={1,1.5,2,2.5,3},ylabel={hijos por mujer}]
+          \addplot[marino,thick,restrict x to domain=2000:2050] table[col sep=comma,x=anio,y=tgf]{datos/l4_fecundidad_onu.csv};
           \draw[oxido,thick,dashed] (axis cs:2024,1.23) -- (axis cs:2050,1.23);
-          \node[circle,fill=oxido,inner sep=1.4pt] at (axis cs:2023,1.6) {};
-          \node[circle,fill=oxido,inner sep=1.4pt] at (axis cs:2024,1.23) {};
-          \node[font=\tiny,text=oxido,anchor=east] at (axis cs:2022,1.62) {INEGI 2023: 1.6};
-          \node[font=\tiny,text=oxido,anchor=north east] at (axis cs:2024,1.16) {INEGI 2024: 1.23};
-          \node[font=\tiny,text=oxido,anchor=south] at (axis cs:2040,1.25) {proyección propia};
-          \node[font=\tiny,text=pie,anchor=south] at (axis cs:2040,1.78) {Naciones Unidas};
+          \node[circle,fill=oxido,inner sep=1.5pt] at (axis cs:2024,1.23) {};
+          \node[font=\scriptsize,text=marino,anchor=south west] at (axis cs:2027,1.86) {Naciones Unidas};
+          \node[font=\scriptsize,text=oxido,anchor=south west] at (axis cs:2027,1.26) {INEGI 2024: 1.23};
         \end{axis}
       \end{tikzpicture}
     \end{column}
@@ -173,21 +167,20 @@
     \end{column}
     \begin{column}{0.50\textwidth}\centering
       \begin{tikzpicture}
-        \begin{axis}[base,width=\linewidth,height=4.6cm,xmin=1970,xmax=2053,ymin=45,ymax=75,
-            xtick={1970,1990,2010,2034,2050},ytick={50,55,60,65,70},
+        \begin{axis}[base,width=\linewidth,height=4.6cm,xmin=2025,xmax=2051,ymin=60,ymax=73,
+            xtick={2025,2030,2034,2040,2050},ytick={60,62,64,66,68,70,72},
             ylabel={\% de la población total},clip=false]
-          \draw[dashed,pie] (axis cs:2034,45) -- (axis cs:2034,70.11);
-          \addplot[barra,thick,restrict x to domain=1970:2050] table[col sep=comma,x=anio,y=pet]{datos/l5_ventana.csv};
-          \addplot[marino,very thick] table[col sep=comma,x=anio,y=pet]{datos/l3_nacional.csv};
+          \draw[dashed,pie] (axis cs:2034,60) -- (axis cs:2034,70.11);
+          \addplot[marino,thick] table[col sep=comma,x=anio,y=pet]{datos/l3_nacional.csv};
           \node[circle,fill=oxido,inner sep=1.4pt] at (axis cs:2034,70.11) {};
-          \node[font=\tiny\bfseries,text=oxido,anchor=south] at (axis cs:2030,70.9) {máximo: 70.1\% en 2034};
-          \node[font=\tiny,text=pie,anchor=north west] at (axis cs:1985,55.5) {Naciones Unidas};
-          \node[font=\tiny,text=marino,anchor=north east] at (axis cs:2049,64.3) {proyección propia};
+          \node[font=\tiny\bfseries,text=oxido,anchor=south] at (axis cs:2034,70.4) {máximo: 70.1\% en 2034};
+          \node[font=\tiny,anchor=north west] at (axis cs:2025.2,68.1) {68.4};
+          \node[font=\tiny,anchor=north east] at (axis cs:2050,64.5) {64.7};
         \end{axis}
       \end{tikzpicture}
     \end{column}
   \end{columns}
-  \fuente{Proyección propia con datos del INEGI (Encuesta Intercensal 2025, Censo 2020, nacimientos y defunciones registrados). En gris, como referencia: Naciones Unidas, \emph{World Population Prospects 2024}, variante media.}
+  \fuente{Proyección propia con datos del INEGI (Encuesta Intercensal 2025, Censo 2020, nacimientos y defunciones registrados).}
 \end{frame}
 
 % ===== 6. El ciclo de vida económico (N) =====
