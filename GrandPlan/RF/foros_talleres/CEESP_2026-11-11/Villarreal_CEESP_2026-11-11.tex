@@ -97,89 +97,97 @@
   Voy a tocar cinco temas: lo que ya definió la demografía, el espacio fiscal, la formalización, nuestra propuesta y el financiamiento privado.
 \end{frame}
 
-% ===== 3. Menores de 15 y mayores de 65 (B3, sin cambios) =====
+% ===== 3. Menores de 15 y mayores de 65 (B3, con proyección propia) =====
 \begin{frame}{México: menores de 15 y mayores de 65}
   \vspace{0.6em}
   \begin{columns}[c,onlytextwidth]
     \begin{column}{0.44\textwidth}\small
       \begin{itemize}\setlength{\itemsep}{0.7em}
-        \item La población de 65 años y más pasará de \dest{10.8 millones} en 2024 a \dest{25.3 millones} en 2050.
-        \item Alrededor de \dest{2051} habrá más personas de 65 y más que menores de 15 años.
-        \item Las personas de 80 y más se triplican: de \dest{2.1} a \dest{6.5 millones}. Es el grupo que más gasta en salud y en cuidados.
+        \item La población de 65 años y más pasará de \dest{13.2 millones} en 2025 a \dest{29.3 millones} en 2050.
+        \item Alrededor de \dest{2036} habrá más personas de 65 y más que menores de 15 años. Naciones Unidas lo espera hasta 2051.
+        \item Las personas de 80 y más se triplican: de \dest{2.7} a \dest{9.1 millones}. Es el grupo que más gasta en salud y en cuidados.
       \end{itemize}
     \end{column}
     \begin{column}{0.50\textwidth}\centering
       \begin{tikzpicture}
-        \begin{axis}[base,width=\linewidth,height=4.6cm,xmin=1970,xmax=2103,ymin=0,ymax=46,
-            xtick={1970,2000,2024,2051,2100},ytick={0,10,20,30,40},ylabel={millones de personas},
-            legend style={at={(0.04,0.99)},anchor=north west}]
-          \draw[dashed,pie] (axis cs:2024,0) -- (axis cs:2024,46);
-          \draw[dashed,pie] (axis cs:2051,0) -- (axis cs:2051,46);
-          \addplot[marino,thick] table[col sep=comma,x=anio,y=p014]{datos/l5_ventana.csv};
+        \begin{axis}[base,width=\linewidth,height=4.6cm,xmin=2025,xmax=2051,ymin=0,ymax=38,
+            xtick={2025,2030,2036,2040,2050},ytick={0,10,20,30},ylabel={millones de personas},
+            legend style={at={(0.5,1.02)},anchor=south,legend columns=2}]
+          \draw[dashed,pie] (axis cs:2036,0) -- (axis cs:2036,38);
+          \addplot[barra,semithick,forget plot,restrict x to domain=2025:2050] table[col sep=comma,x=anio,y=p014]{datos/l5_ventana.csv};
+          \addplot[barra,semithick,forget plot,restrict x to domain=2025:2050] table[col sep=comma,x=anio,y=p65]{datos/l5_ventana.csv};
+          \addplot[marino,thick] table[col sep=comma,x=anio,y=p014]{datos/l3_nacional.csv};
           \addlegendentry{0 a 14 años}
-          \addplot[oxido,thick] table[col sep=comma,x=anio,y=p65]{datos/l5_ventana.csv};
+          \addplot[oxido,thick] table[col sep=comma,x=anio,y=p65]{datos/l3_nacional.csv};
           \addlegendentry{65 y más}
+          \node[font=\tiny,text=pie,anchor=south west] at (axis cs:2038,28.6) {Naciones Unidas};
         \end{axis}
       \end{tikzpicture}
     \end{column}
   \end{columns}
-  \fuente{Naciones Unidas, DESA, \emph{World Population Prospects 2024}, variante media. Cálculos propios.}
+  \fuente{Proyección propia con datos del INEGI (Encuesta Intercensal 2025, Censo 2020, nacimientos y defunciones registrados). En gris, como referencia: Naciones Unidas, \emph{World Population Prospects 2024}, variante media.}
 \end{frame}
 
-% ===== 4. ¿Y si Naciones Unidas se queda corta? (B4, sin cambios) =====
+% ===== 4. ¿Y si Naciones Unidas se queda corta? (B4, con proyección propia) =====
 \begin{frame}{¿Y si Naciones Unidas se queda corta?}
   \vspace{0.3em}
   \begin{columns}[c,onlytextwidth]
     \begin{column}{0.53\textwidth}\small
       \begin{itemize}\setlength{\itemsep}{0.5em}
         \item Para 2023, Naciones Unidas estima \dest{1.91} hijos por mujer en México, y supone que en ningún año del siglo baja de \dest{1.66}.
-        \item El INEGI midió \dest{1.6} en 2023, y \dest{1.44} en zonas urbanas.
+        \item El INEGI midió \dest{1.6} en 2023, y \dest{1.23} en 2024.
         \item Fernández-Villaverde ha mostrado que las proyecciones oficiales tienden a sobreestimar la fecundidad.
       \end{itemize}
       \vspace{0.5em}
-      Si tiene razón, el envejecimiento llega antes. Aquí usamos las cifras de Naciones Unidas, que son las más favorables.
+      Por eso aquí usamos una proyección propia, hecha sólo con datos del INEGI. Para 2050 da \dest{129.4 millones} de habitantes; Naciones Unidas espera 148.9.
     \end{column}
     \begin{column}{0.43\textwidth}\centering
       \begin{tikzpicture}
-        \begin{axis}[base,width=\linewidth,height=4.3cm,xmin=1990,xmax=2103,ymin=1.3,ymax=3.6,
-            xtick={1990,2023,2050,2100},ytick={1.5,2,2.5,3,3.5},ylabel={hijos por mujer}]
-          \addplot[marino,thick] table[col sep=comma,x=anio,y=tgf]{datos/l4_fecundidad_onu.csv};
+        \begin{axis}[base,width=\linewidth,height=4.3cm,xmin=1990,xmax=2053,ymin=1.0,ymax=3.6,
+            xtick={1990,2010,2024,2050},ytick={1,1.5,2,2.5,3,3.5},ylabel={hijos por mujer}]
+          \addplot[barra,thick,restrict x to domain=1990:2050] table[col sep=comma,x=anio,y=tgf]{datos/l4_fecundidad_onu.csv};
+          \draw[oxido,thick,dashed] (axis cs:2024,1.23) -- (axis cs:2050,1.23);
           \node[circle,fill=oxido,inner sep=1.4pt] at (axis cs:2023,1.6) {};
-          \node[font=\tiny,text=oxido,anchor=north] at (axis cs:2023,1.55) {INEGI 2023};
-          \node[font=\tiny,text=marino,anchor=south] at (axis cs:2068,1.75) {Naciones Unidas};
+          \node[circle,fill=oxido,inner sep=1.4pt] at (axis cs:2024,1.23) {};
+          \node[font=\tiny,text=oxido,anchor=east] at (axis cs:2022,1.62) {INEGI 2023: 1.6};
+          \node[font=\tiny,text=oxido,anchor=north east] at (axis cs:2024,1.16) {INEGI 2024: 1.23};
+          \node[font=\tiny,text=oxido,anchor=south] at (axis cs:2040,1.25) {proyección propia};
+          \node[font=\tiny,text=pie,anchor=south] at (axis cs:2040,1.78) {Naciones Unidas};
         \end{axis}
       \end{tikzpicture}
     \end{column}
   \end{columns}
-  \fuente{ONU, WPP 2024; INEGI, ENADID 2023; Fernández-Villaverde (2023). Detalle de fuentes al final.}
+  \fuente{ONU, WPP 2024; INEGI, ENADID 2023 y Encuesta Intercensal 2025; Fernández-Villaverde (2023). Detalle de fuentes al final.}
 \end{frame}
 
-% ===== 5. La ventana demográfica se cierra (N) =====
+% ===== 5. La ventana demográfica se cierra (N, con proyección propia) =====
 \begin{frame}{La ventana demográfica se cierra}
   \vspace{0.5em}
   \begin{columns}[c,onlytextwidth]
     \begin{column}{0.46\textwidth}\small
       \begin{itemize}\setlength{\itemsep}{0.6em}
-        \item La población de 15 a 64 años pasó de \dest{49.6\%} del total en 1970 a \dest{67.2\%} en 2024.
-        \item Llega a su máximo, \dest{67.9\%}, alrededor de \dest{2030}. Después baja: 65.6\% en 2050 y 54.9\% en 2100.
-        \item Durante medio siglo, cada año hubo más personas en edad de trabajar por cada dependiente, y eso ayudó a las finanzas públicas. Ese periodo está por terminar.
+        \item La población de 15 a 64 años es hoy \dest{68.4\%} del total y llega a su máximo, \dest{70.1\%}, hacia \dest{2034}.
+        \item Ese aumento viene sobre todo de que hay menos niños: los menores de 15 años pasan de 28.2 a 20.6 millones entre 2025 y 2034.
+        \item Después baja: \dest{64.7\%} en 2050, con 29 millones de personas de 65 y más. La estructura por edades, que ayudó a las finanzas públicas durante medio siglo, deja de hacerlo en la próxima década.
       \end{itemize}
     \end{column}
     \begin{column}{0.50\textwidth}\centering
       \begin{tikzpicture}
-        \begin{axis}[base,width=\linewidth,height=4.6cm,xmin=1970,xmax=2103,ymin=45,ymax=72,
-            xtick={1970,2000,2030,2050,2100},ytick={50,55,60,65,70},
+        \begin{axis}[base,width=\linewidth,height=4.6cm,xmin=1970,xmax=2053,ymin=45,ymax=75,
+            xtick={1970,1990,2010,2034,2050},ytick={50,55,60,65,70},
             ylabel={\% de la población total},clip=false]
-          \draw[dashed,pie] (axis cs:2030,45) -- (axis cs:2030,67.91);
-          \addplot[marino,thick] table[col sep=comma,x=anio,y=pet]{datos/l5_ventana.csv};
-          \node[circle,fill=oxido,inner sep=1.4pt] at (axis cs:2030,67.91) {};
-          \node[font=\tiny\bfseries,text=oxido,anchor=south] at (axis cs:2030,68.5) {máximo: 67.9\% en 2030};
-          \node[font=\tiny,text=marino,anchor=west] at (axis cs:2058,66) {15 a 64 años};
+          \draw[dashed,pie] (axis cs:2034,45) -- (axis cs:2034,70.11);
+          \addplot[barra,thick,restrict x to domain=1970:2050] table[col sep=comma,x=anio,y=pet]{datos/l5_ventana.csv};
+          \addplot[marino,very thick] table[col sep=comma,x=anio,y=pet]{datos/l3_nacional.csv};
+          \node[circle,fill=oxido,inner sep=1.4pt] at (axis cs:2034,70.11) {};
+          \node[font=\tiny\bfseries,text=oxido,anchor=south] at (axis cs:2030,70.9) {máximo: 70.1\% en 2034};
+          \node[font=\tiny,text=pie,anchor=north west] at (axis cs:1985,55.5) {Naciones Unidas};
+          \node[font=\tiny,text=marino,anchor=north east] at (axis cs:2049,64.3) {proyección propia};
         \end{axis}
       \end{tikzpicture}
     \end{column}
   \end{columns}
-  \fuente{Naciones Unidas, DESA, \emph{World Population Prospects 2024}, variante media, México. Cálculos propios.}
+  \fuente{Proyección propia con datos del INEGI (Encuesta Intercensal 2025, Censo 2020, nacimientos y defunciones registrados). En gris, como referencia: Naciones Unidas, \emph{World Population Prospects 2024}, variante media.}
 \end{frame}
 
 % ===== 6. El ciclo de vida económico (N) =====
@@ -190,7 +198,7 @@
       \begin{itemize}\setlength{\itemsep}{0.6em}
         \item De niños y de mayores consumimos más de lo que ganamos con nuestro trabajo. Esos años se financian con \clave{transferencias}, de la familia y del gobierno, y con activos.
         \item En el perfil promedio de México, el ingreso laboral apenas alcanza al consumo alrededor de los \dest{45 años}.
-        \item A los \dest{70 años}, el consumo es casi tres veces el ingreso laboral. Con 25 millones de personas de 65 y más en 2050, la vejez pesará cada vez más en esa cuenta.
+        \item A los \dest{70 años}, el consumo es casi tres veces el ingreso laboral. Con 29 millones de personas de 65 y más en 2050, la vejez pesará cada vez más en esa cuenta.
       \end{itemize}
     \end{column}
     \begin{column}{0.50\textwidth}\centering
@@ -207,7 +215,7 @@
       \notagraf{\centering México, 2014. Ingreso laboral medio de 30 a 49 años = 1. El consumo incluye el consumo público.}
     \end{column}
   \end{columns}
-  \fuente{Perfiles por persona de las Cuentas Nacionales de Transferencia (National Transfer Accounts, ntaccounts.org), México, 2014. Población: ONU, WPP 2024.}
+  \fuente{Perfiles por persona de las Cuentas Nacionales de Transferencia (National Transfer Accounts, ntaccounts.org), México, 2014. Población de 65 y más en 2050: proyección propia con datos del INEGI.}
 \end{frame}
 
 % ===== 7. También cambia la forma en que nos enfermamos (B5, sin cambios) =====
@@ -829,7 +837,7 @@
 \begin{frame}{Fuentes (1/2)}
   \vspace{0.2em}
   {\fontsize{6.6}{8.4}\selectfont\raggedright
-  \textbf{Demografía.} Naciones Unidas, DESA, División de Población, \emph{World Population Prospects 2024}, variante media, México; grupos de edad agregados a partir del archivo oficial por grupos quinquenales (cálculos propios). La revisión 2026 fue pospuesta a 2027. INEGI, Encuesta Nacional de la Dinámica Demográfica 2023. INEGI, Estadística de Nacimientos Registrados 2024. Fernández-Villaverde, J. (2023), \emph{The Demographic Future of Humanity: Facts and Consequences}.\par\vspace{0.6em}
+  \textbf{Demografía.} Proyección propia de la población de México, 2025--2050, por edad simple y sexo, hecha sólo con datos del INEGI: Encuesta Intercensal 2025 (población base, fecundidad de 1.23 hijos por mujer en 2024 y emigración), Censo de Población y Vivienda 2020, nacimientos y defunciones registrados; patrón de mortalidad por edad del IBGE ajustado a las defunciones registradas por el INEGI. La fecundidad se mantiene en 1.23. Referencia: Naciones Unidas, DESA, \emph{World Population Prospects 2024}, variante media. INEGI, Encuesta Nacional de la Dinámica Demográfica 2023. Fernández-Villaverde, J. (2023), \emph{The Demographic Future of Humanity: Facts and Consequences}.\par\vspace{0.6em}
   \textbf{Ciclo de vida y efecto de la demografía sobre el gasto.} National Transfer Accounts (ntaccounts.org), perfiles por edad de México, 2004 y 2014. Gasto con perfiles fijos: cálculo propio con el perfil de 2004 y una proyección de población propia con datos del INEGI; resultados en \% del ingreso laboral total, no del PIB.\par\vspace{0.6em}
   \textbf{Presupuesto 2027, salud y pensiones.} PEF 2027: dictamen de la Cámara de Diputados; gasto neto total de 10.64 billones de pesos. CIEP (2026), \emph{Implicaciones del Paquete Económico 2027}, 11 de septiembre de 2026: gasto en salud, gasto per cápita por subsistema, gasto de bolsillo, inflación de salud, carga de enfermedad (IHME, 2021; OMS, 2024), prima de equilibrio del IMSS (IMSS, 2024), pensiones, Miscelánea e ingresos petroleros; sus cifras corresponden al proyecto de presupuesto. Meta de 6\% del PIB: OPS (2014), \emph{Estrategia para el acceso universal a la salud y la cobertura universal de salud}.\par\vspace{0.6em}
   \textbf{Espacio disponible.} Villarreal, \emph{Contabilidad de la Muerte}, actualización con el Informe de Finanzas Públicas y Deuda Pública enero--septiembre 2026 (SHCP) y los Criterios Generales de Política Económica 2027. PIB nominal de 36,500 mmdp; el supuesto favorece a la cuenta oficial. CIEP (2026) estima un espacio fiscal de 1.6\% del PIB con una definición distinta.\par\vspace{0.6em}
