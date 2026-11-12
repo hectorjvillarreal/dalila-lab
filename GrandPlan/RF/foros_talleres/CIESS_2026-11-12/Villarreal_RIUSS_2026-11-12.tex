@@ -1,0 +1,940 @@
+% Conferencia magistral de apertura, Congreso RIUSS, CIESS, 12 de noviembre de 2026.
+% Base: presentación del 11 de noviembre de 2026 (versión final). Instrucción: BUILD-20261112-RIUSS-BEAMER v1.
+% Archivo único: compila directo con pdflatex (dos pasadas); no necesita archivos externos.
+% Clave de origen en cada lámina: C = base del 11 de noviembre, P = CEPAL (mayo 2026), K = arquitectura multipilar, N = nueva.
+\documentclass[aspectratio=169,10pt]{beamer}
+% Preámbulo: reconstrucción del estilo de la presentación del 22 de septiembre de 2026.
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[spanish,es-nodecimaldot,es-noshorthands]{babel}
+\usepackage{graphicx,booktabs,array,tabularx,amssymb}
+\usepackage{tikz,pgfplots,pgfplotstable}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{positioning,arrows.meta,calc,patterns}
+
+\definecolor{marino}{HTML}{18365C}
+\definecolor{oxido}{HTML}{B0541C}
+\definecolor{banda}{HTML}{EEF1F6}
+\definecolor{barra}{HTML}{AEB9C6}
+\definecolor{medio}{HTML}{5D728D}
+\definecolor{pie}{HTML}{787878}
+\definecolor{rejilla}{HTML}{E5E5E5}
+
+\usetheme{default}
+\setbeamersize{text margin left=1cm,text margin right=1cm}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{structure}{fg=marino}
+\setbeamercolor{frametitle}{fg=marino}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamertemplate{frametitle}{\vspace*{0.9em}\insertframetitle\par\vspace{0.75em}{\color{black}\hrule height 0.4pt}\vspace{0.2em}}
+\setbeamertemplate{footline}{\hfill{\color{pie}\scriptsize\insertframenumber\,/\,\inserttotalframenumber}\hspace*{0.45cm}\vspace*{0.35cm}}
+\setbeamertemplate{itemize item}{\color{marino}--}
+\setbeamertemplate{itemize subitem}{\color{marino}--}
+\setbeamertemplate{enumerate item}{\color{marino}\insertenumlabel.}
+\setlength{\leftmargini}{1.3em}
+\setlength{\leftmarginii}{1.3em}
+
+\newcommand{\dest}[1]{{\color{oxido}\bfseries #1}}
+\newcommand{\clave}[1]{{\color{marino}\bfseries #1}}
+\newcommand{\fuente}[1]{\par\vspace{0.9em}{\color{pie}\scriptsize\raggedright #1\par}}
+\newcommand{\notagraf}[1]{{\color{pie}\tiny\raggedright #1\par}}
+\setbeamercolor{bandacolor}{bg=banda,fg=black}
+\newcommand{\banda}[1]{%
+  \par\vspace{0.7em}\noindent\makebox[\textwidth][c]{\begin{beamercolorbox}[wd=0.90\textwidth,sep=5pt,center]{bandacolor}\bfseries #1\end{beamercolorbox}}\par\vspace{0.7em}}
+\setbeamercolor{cajacolor}{bg=banda,fg=black}
+\newcommand{\caja}[2]{%
+  \begin{beamercolorbox}[wd=\linewidth,sep=5pt]{cajacolor}
+    {\color{marino}\bfseries #1}\par\vspace{0.25em}\footnotesize #2
+  \end{beamercolorbox}}
+
+\pgfplotsset{
+  base/.style={axis lines=left,axis line style={black},tick style={black},
+    tick label style={font=\tiny},label style={font=\tiny},
+    ymajorgrids,grid style={rejilla},
+    /pgf/number format/.cd,fixed,1000 sep={},/tikz/.cd,
+    legend style={font=\tiny,draw=none,fill=none},legend cell align=left},
+}
+
+% Metadatos directos desde LaTeX: solo título y autor.
+\hypersetup{pdftitle={La seguridad social en las Américas en el primer cuarto del siglo XXI},pdfauthor={Héctor Juan Villarreal Páez},pdfcreator={},pdfproducer={},pdfsubject={},pdfkeywords={}}
+\pdfsuppressptexinfo=-1
+\pdfinfoomitdate=1
+\newcommand{\pef}{PEF 2027 (dictamen de la Cámara de Diputados)}
+
+\title{La seguridad social en las Américas en el primer cuarto del siglo XXI}
+\newcommand{\mx}{{\small\mdseries\color{oxido}Un ejemplo: México\enspace·\enspace}}
+\newcommand{\sanjose}{}% Texto de Héctor sobre lo que salió de San José; vacío = marcador en rojo.
+\definecolor{rojo}{HTML}{CC0000}
+
+\begin{document}
+
+% ===== 1. Portada (N) =====
+\begin{frame}[plain]
+  \centering
+  \vspace*{0.9em}
+  {\color{marino}\bfseries\Large La seguridad social en las Américas\\[0.15em] en el primer cuarto del siglo XXI\par}
+  \vspace{0.4em}
+  {\color{marino}\bfseries\normalsize Avances, transformaciones y desafíos persistentes\par}
+  \vspace{1.7em}
+  {\normalsize Héctor Juan Villarreal Páez\par}
+  \vspace{0.9em}
+  {\scriptsize ITED · Escuela de Gobierno y Transformación Pública · Tecnológico de Monterrey\\[0.3em]
+  CONOSAFI · Comunidad Latinoamericana de Conocimiento en Sistemas de Salud y Financiamiento\par}
+  \vspace{1.4em}
+  {\small Conferencia magistral de apertura\\[0.2em]
+  Congreso de la Red Internacional de Investigación en Seguridad Social (RIUSS)\\[0.2em]
+  CIESS, Auditorio Benito Coquet, Ciudad de México · 12 de noviembre de 2026\par}
+\end{frame}
+
+% ===== 2. Tesis y ruta (N) =====
+\begin{frame}{Tesis y ruta}
+  \vspace{0.4em}
+  \banda{En 25 años la región amplió la cobertura como nunca; no resolvió cómo pagarla durante la transición demográfica.}
+  \vspace{0.1em}
+  Voy a recorrer cinco temas:
+  \vspace{0.3em}
+  \begin{enumerate}\setlength{\itemsep}{0.3em}
+    \item La \clave{demografía} de la región, que ya está definida para las próximas décadas.
+    \item Las \clave{pensiones}: lo que avanzó, lo que cambió y lo que sigue pendiente.
+    \item La \clave{salud} y la \clave{formalización}, con México como ejemplo del espacio fiscal.
+    \item Una \clave{propuesta} de aseguramiento.
+    \item \clave{CONOSAFI}, una comunidad regional para estudiar cómo se paga todo esto.
+  \end{enumerate}
+\end{frame}
+
+% ===== 3. América Latina: menores de 15 y mayores de 65 (C3, regionalizada, con proyección propia) =====
+\begin{frame}{América Latina: menores de 15 y mayores de 65}
+  \vspace{0.6em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.44\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.7em}
+        \item En América Latina y el Caribe, la población de 65 años y más pasará de \dest{70 millones} en 2025 a \dest{138 millones} en 2050.
+        \item Hacia \dest{2041} habrá más personas de 65 y más que menores de 15 años.
+        \item Las personas de 80 y más casi se triplican: de \dest{13} a \dest{37 millones}. Es el grupo que más gasta en salud y en cuidados.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.50\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=4.6cm,xmin=2025,xmax=2051,ymin=0,ymax=170,
+            xtick={2025,2030,2041,2050},ytick={0,50,100,150},ylabel={millones de personas},
+            legend style={at={(0.5,1.02)},anchor=south,legend columns=2}]
+          \draw[dashed,pie] (axis cs:2041,0) -- (axis cs:2041,170);
+          \addplot[marino,thick] coordinates {(2025,144.3)(2030,131.5)(2035,120.7)(2040,112.5)(2045,110.0)(2050,106.1)};
+          \addlegendentry{0 a 14 años}
+          \addplot[oxido,thick] coordinates {(2025,69.9)(2030,83.1)(2035,96.2)(2040,109.6)(2045,123.4)(2050,137.8)};
+          \addlegendentry{65 y más}
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{Proyección propia para 49 países y territorios, con la fecundidad de cada país fija en su último valor observado. Población base y mortalidad: ONU, WPP 2024; México: INEGI, Encuesta Intercensal 2025. Detalle al final.}
+\end{frame}
+
+% ===== 4. La fecundidad cae más rápido de lo previsto (C4, regionalizada) =====
+\begin{frame}{La fecundidad cae más rápido de lo previsto}
+  \vspace{0.2em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.52\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.45em}
+        \item En los registros más recientes, Chile tiene \dest{0.99} hijos por mujer, Colombia \dest{1.01}, Costa Rica \dest{1.12}, y Argentina y México \dest{1.23}.
+        \item Ponderada por población, la región está en alrededor de \dest{1.5} hijos por mujer. Para los mismos países, Naciones Unidas estima \dest{1.77} en 2025.
+        \item Fernández-Villaverde ha mostrado que las proyecciones oficiales tienden a sobreestimar la fecundidad.
+      \end{itemize}
+      \vspace{0.4em}
+      Por eso aquí usamos una proyección propia, con la fecundidad observada en cada país. Para 2050 da \dest{699 millones} de habitantes en la región; Naciones Unidas espera 730.
+    \end{column}
+    \begin{column}{0.45\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=5.0cm,xbar=0.5pt,bar width=3.6pt,xmin=0,xmax=2.3,
+            ymajorgrids=false,xmajorgrids,axis y line*=left,y axis line style={draw=none},
+            ytick={1,...,8},ytick style={draw=none},
+            yticklabels={Perú,Brasil,México,Argentina,Uruguay,Costa Rica,Colombia,Chile},
+            ymin=0.4,ymax=8.6,xtick={0,0.5,1,1.5,2},xlabel={hijos por mujer},
+            legend style={at={(0.5,1.02)},anchor=south,legend columns=2},area legend,reverse legend]
+          \addplot[fill=barra,draw=marino] coordinates {(1.94,1)(1.60,2)(1.87,3)(1.50,4)(1.39,5)(1.31,6)(1.62,7)(1.13,8)};
+          \addlegendentry{Naciones Unidas, 2025}
+          \addplot[fill=oxido,draw=oxido] coordinates {(1.67,1)(1.52,2)(1.23,3)(1.23,4)(1.19,5)(1.12,6)(1.01,7)(0.99,8)};
+          \addlegendentry{Observada}
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{Observada: registros nacionales de 2022 a 2025 reunidos por Fernández-Villaverde (2026); México: INEGI, Encuesta Intercensal 2025. Naciones Unidas: WPP 2024, variante media. Fernández-Villaverde (2023).}
+\end{frame}
+
+% ===== 5. Por qué cayó tan rápido y por qué no esperamos un rebote (N; trabajo propio sobre el colapso de la fecundidad) =====
+\begin{frame}{Por qué cayó tan rápido, y por qué no esperamos un rebote}
+  \vspace{-0.5em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.58\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.25em}
+        \item En Costa Rica la fecundidad pasó de \dest{1.83} hijos por mujer en 2010 a \dest{1.12} en 2024. En Colombia, de \dest{1.7} a \dest{1.1} en menos de una década.
+        \item No es un efecto de las cuentas: los nacimientos cayeron entre \dest{18} y \dest{47\%} mientras crecía el número de mujeres en edad fértil.
+        \item Lo que cambió fue la composición de las parejas. En Colombia casi no cambió la proporción de mujeres de 20 a 39 años que vive en pareja, pero las casadas pasaron de \dest{20.7} a \dest{11.9\%}.
+        \item No encontramos un contagio dentro de cada generación, sino \clave{reemplazo de generaciones}: cada una llega con menor propensión a casarse, y la conserva.
+      \end{itemize}
+      \vspace{0.1em}
+      Una caída así es persistente. Por eso mantenemos la fecundidad observada.
+    \end{column}
+    \begin{column}{0.39\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=4.0cm,ybar,bar width=20pt,ymin=0,ymax=26,ymajorgrids=false,
+            ytick={0,5,10,15,20,25},ylabel={\% de las mujeres de 20 a 39 años},xmin=0.4,xmax=2.6,xtick={1,2},xtick style={draw=none},
+            xticklabels={Al inicio de la serie,Al final de la serie}]
+          \addplot[fill=barra,draw=marino,bar shift=0pt] coordinates {(1,20.7)};
+          \addplot[fill=oxido,draw=oxido,bar shift=0pt] coordinates {(2,11.9)};
+          \node[font=\tiny,anchor=south] at (axis cs:1,20.7) {20.7};
+          \node[font=\tiny\bfseries,text=oxido,anchor=south] at (axis cs:2,11.9) {11.9};
+        \end{axis}
+      \end{tikzpicture}\par
+      \notagraf{\centering Colombia: mujeres casadas. Encuesta de hogares, 2008--2024.}
+    \end{column}
+  \end{columns}
+  \vspace{-0.8em}
+  \fuente{Villarreal (2026), «Cohort Replacement, Not Cascade», documento de trabajo, con registros vitales de INEC y DANE y encuestas de hogares del DANE.}
+\end{frame}
+
+% ===== 5. La ventana demográfica se cierra (C5, regionalizada, con proyección propia) =====
+\begin{frame}{La ventana demográfica se cierra}
+  \vspace{0.5em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.46\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item En la región, la población de 15 a 64 años es hoy \dest{67.9\%} del total y llega a su máximo, \dest{68.5\%}, hacia \dest{2035}. Ese último aumento viene de que hay menos niños, no de que haya más trabajadores.
+        \item Después baja: \dest{65.1\%} en 2050.
+        \item Los países no van al mismo paso. Brasil ya va de bajada, Chile llega a su máximo hacia 2030 y Colombia hacia 2040. En 2050, Brasil y Chile estarán en \dest{63\%}.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.50\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=4.7cm,xmin=2025,xmax=2051,ymin=60,ymax=73,
+            xtick={2025,2030,2035,2040,2045,2050},ytick={60,62,64,66,68,70,72},
+            ylabel={\% de la población total},
+            legend style={at={(0.5,1.02)},anchor=south,legend columns=4}]
+          \addplot[oxido,very thick] coordinates {(2025,67.9)(2030,68.4)(2035,68.5)(2040,68.1)(2045,66.6)(2050,65.1)};
+          \addlegendentry{Región}
+          \addplot[marino,thick] coordinates {(2025,69.1)(2030,68.5)(2035,67.9)(2040,66.9)(2045,65.1)(2050,63.0)};
+          \addlegendentry{Brasil}
+          \addplot[marino,thick,dashed] coordinates {(2025,68.9)(2030,69.1)(2035,68.8)(2040,67.4)(2045,65.4)(2050,63.0)};
+          \addlegendentry{Chile}
+          \addplot[medio,thick,densely dotted] coordinates {(2025,69.8)(2030,70.4)(2035,70.9)(2040,71.6)(2045,69.7)(2050,67.4)};
+          \addlegendentry{Colombia}
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{Proyección propia para 49 países y territorios, con la fecundidad de cada país fija en su último valor observado. Población base y mortalidad: ONU, WPP 2024; México: INEGI, Encuesta Intercensal 2025. Detalle al final.}
+\end{frame}
+
+% ===== 6. Envejecer antes de ser ricos (N) =====
+\begin{frame}{Envejecer antes de ser ricos}
+  \vspace{0.5em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.45\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item Europa tardó \dest{55 años} en pasar de 10\% a 20\% de población de 65 años y más. Francia y Suecia tardaron todavía más.
+        \item América Latina y el Caribe hará ese mismo recorrido en alrededor de \dest{27 años}, entre 2024 y 2051.
+        \item La región envejece antes de alcanzar el ingreso con el que otros países construyeron sus estados de bienestar. Tendrá menos tiempo y menos recursos para adaptar sus sistemas de pensiones, salud y cuidados.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.51\textwidth}\centering
+      {\scriptsize\bfseries Años para pasar de 10\% a 20\% de personas de 65 y más\par}\vspace{0.5em}
+      \begin{tikzpicture}[x=0.05cm,y=0.48cm,font=\scriptsize]
+        \foreach \n/\d/\c/\i/\l in {Corea/17/barra/0/17,Japón/21/barra/1/21,América Latina/27/oxido/2/27,España/49/barra/3/49,Europa/55/barra/4/55,Francia/68/barra/5/68 o más,Suecia/70/barra/6/70 o más} {
+          \fill[\c] (0,-\i-0.34) rectangle (\d,-\i+0.34);
+          \node[anchor=east] at (-1,-\i) {\n};
+          \node[anchor=west] at (\d,-\i) {\l};
+        }
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{Cálculo propio con ONU, WPP 2024 (después de 2023 es proyección); América Latina y el Caribe: proyección propia. Francia y Suecia ya pasaban de 10\% en 1950, inicio de la serie.}
+\end{frame}
+
+% ===== 7. También cambia la forma en que nos enfermamos (C7, ejemplo mexicano) =====
+\begin{frame}{\mx También cambia la forma en que nos enfermamos}
+  \vspace{1.2em}
+  \begin{itemize}\setlength{\itemsep}{0.35em}
+    \item En México, las enfermedades no transmisibles ya explican \dest{60.1\%} de los años de vida perdidos por muerte prematura o discapacidad.
+    \item Diabetes, hipertensión, cáncer: son padecimientos crónicos que se atienden durante años.
+    \item El IMSS calcula que su prima de equilibrio para atención médica tendría que subir \dest{34\%} para cubrir sus gastos.
+  \end{itemize}
+  \vspace{0.6em}
+  Esta presión va a crecer con o sin reforma. Viene de la demografía y del perfil epidemiológico, y pasa lo mismo en el resto de la región.
+  \fuente{CIEP (2026), \emph{Implicaciones del Paquete Económico 2027}, con base en IHME, OMS e IMSS.}
+\end{frame}
+
+% ===== 8. Transición (C9) =====
+\begin{frame}[plain]
+  \vfill
+  \noindent\makebox[\textwidth][c]{\begin{beamercolorbox}[wd=0.72\textwidth,sep=14pt,center]{bandacolor}
+    {\color{marino}\bfseries\Large Esto ya no depende de nosotros.\par\vspace{0.5em}Lo que sigue, sí.\par}
+  \end{beamercolorbox}}
+  \vfill
+\end{frame}
+
+% ===== 9. Avances: la expansión no contributiva (P) =====
+\begin{frame}{Avances: la expansión no contributiva}
+  \vspace{0.7em}
+  \begin{itemize}\setlength{\itemsep}{0.4em}
+    \item En este cuarto de siglo, el mayor avance en la protección de la vejez vino de las \clave{pensiones no contributivas}. Ampliaron la cobertura de manera real y llegaron a personas que nunca habrían reunido las cotizaciones de una pensión contributiva.
+    \item Se hizo por dos caminos: como piso focalizado en algunos países y como beneficio universal en otros.
+    \item En los dos casos el costo fiscal crece cada año, con el número de personas mayores. Y si la pensión no contributiva no se integra con la contributiva, puede debilitar el incentivo a cotizar.
+  \end{itemize}
+  \banda{El gran avance del cuarto de siglo fue no contributivo: se amplió la cobertura sin ampliar la base que la paga.}
+  \vspace{-0.9em}
+  \fuente{Villarreal (2026), «América Latina necesita una nueva seguridad social», XXXVIII Seminario Regional de Política Fiscal, CEPAL, Santiago.}
+\end{frame}
+
+% ===== 10. Transformaciones: el péndulo de las reformas (N) =====
+\begin{frame}{Transformaciones: el péndulo de las reformas}
+  \centering
+  \vspace{0.3em}
+  \begin{tikzpicture}[x=1.45cm,y=1cm,font=\scriptsize]
+    \draw[pie,line width=0.8pt,-{Straight Barb[length=3pt]}] (-0.4,0) -- (8.75,0);
+    \foreach \x/\a/\p/\t/\c in {
+      0/1981/Chile/capitalización\\individual/marino,
+      2/2008/Chile/pilar\\solidario/medio,
+      4/2010/Bolivia/gestión\\pública/medio,
+      6/desde 2020/Chile y Perú/retiros\\anticipados/medio,
+      8/2025/Chile/seguro social y\\más cotización/oxido} {
+      \fill[\c] (\x,0) circle (2.6pt);
+      \draw[\c] (\x,0) -- (\x,0.45);
+      \node[anchor=south,align=center,text width=2.3cm] at (\x,0.45) {{\color{\c}\bfseries\small \a}\\[0.1em]\textbf{\p}\\ \t};
+    }
+    \foreach \x/\a/\p/\t/\c in {
+      1/1997/México/cuentas\\individuales/marino,
+      3/2008/Argentina/regreso\\al reparto/medio,
+      5/2020/México/más aportación\\patronal/medio,
+      7/2024/Colombia/sistema\\de pilares/oxido} {
+      \fill[\c] (\x,0) circle (2.6pt);
+      \draw[\c] (\x,0) -- (\x,-0.45);
+      \node[anchor=north,align=center,text width=2.3cm] at (\x,-0.45) {{\color{\c}\bfseries\small \a}\\[0.1em]\textbf{\p}\\ \t};
+    }
+  \end{tikzpicture}\par
+  \vspace{0.1em}
+  \notagraf{\centering Línea de tiempo sin escala.}
+  \vspace{-0.3em}
+  \banda{\small La región pasó de reformar parámetros, o de ir y venir entre modelos, a preguntarse por la arquitectura.}
+  \vspace{-1.0em}
+  \fuente{Leyes de reforma de cada país. Chile, 2025: Ley 21.735. Colombia, 2024: Ley 2381.}
+\end{frame}
+
+% ===== 11. Chile 2025 y Colombia 2024 (N) =====
+\begin{frame}{Chile 2025 y Colombia 2024: dos respuestas al mismo problema}
+  \vspace{0.1em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.49\textwidth}
+      \caja{Chile: Ley 21.735 (marzo de 2025)}{%
+        Nueva cotización del empleador de \textbf{7\%} de la renta imponible. Es gradual: un punto desde agosto de 2025 y completa en 9 años, extensible a 11.\par\vspace{0.3em}
+        Con el 1.5\% del seguro de invalidez y sobrevivencia suma \textbf{8.5\%}: 4.5\% va al ahorro individual y 4\% a un nuevo Seguro Social.\par\vspace{0.3em}
+        La Pensión Garantizada Universal sube a 250 mil pesos, de forma escalonada por edad, entre septiembre de 2025 y septiembre de 2027.}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \caja{Colombia: Ley 2381 de 2024}{%
+        Crea un \textbf{sistema de pilares}.\par\vspace{0.3em}
+        En agosto de 2026 la Corte Constitucional declaró exequible la mayor parte de la reforma y devolvió nueve artículos a la Cámara para subsanar vicios de trámite.\par\vspace{0.3em}
+        La entrada en vigor está prevista para el \textbf{1 de abril de 2027}.}
+    \end{column}
+  \end{columns}
+  \banda{Las dos combinan un componente solidario con el ahorro individual.}
+  \vspace{-1.0em}
+  \fuente{Chile: Ley 21.735; Ministerio de Hacienda de Chile, 2025. Colombia: Ley 2381 de 2024; Corte Constitucional de Colombia, 2026.}
+\end{frame}
+
+% ===== 12. Lo que sigue pendiente en pensiones (P) =====
+\begin{frame}{Lo que sigue pendiente en pensiones}
+  \vspace{0.5em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.47\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item \clave{Suficiencia.} Falta saber qué pensión tendrá la generación que se retira sólo con su cuenta individual.
+        \item \clave{Cobertura contributiva.} En México, Colombia, Ecuador, Paraguay y República Dominicana cotiza o está afiliada menos de la mitad de los ocupados. Costa Rica y Uruguay son la excepción.
+        \item \clave{Informalidad.} Cerca de la mitad del empleo de la región es informal: \dest{46.7\%} en 2025, con diferencias enormes entre países.
+      \end{itemize}
+      \vspace{0.3em}
+      Las promesas de pensión maduraron antes de que se ampliara la base que cotiza.
+    \end{column}
+    \begin{column}{0.49\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=0.92\linewidth,height=4.7cm,xbar,bar width=8pt,xmin=0,xmax=92,
+            ymajorgrids=false,xmajorgrids,axis y line*=left,y axis line style={draw=none},
+            ytick={1,...,7},ytick style={draw=none},
+            yticklabels={Paraguay,México,Ecuador,Colombia,Rep.\ Dominicana,Costa Rica,Uruguay},
+            ymin=0.4,ymax=7.6,xtick={0,25,50,75},xlabel={\% de ocupados que cotizan o están afiliados a pensiones}]
+          \addplot[fill=oxido,draw=oxido,bar shift=0pt] coordinates {(25,1)(34,2)(35,3)(43,4)(43,5)};
+          \addplot[fill=barra,draw=marino,bar shift=0pt] coordinates {(73,6)(77,7)};
+          \node[font=\tiny,anchor=west] at (axis cs:25,1) {25};
+          \node[font=\tiny,anchor=west] at (axis cs:34,2) {34};
+          \node[font=\tiny,anchor=west] at (axis cs:35,3) {35};
+          \node[font=\tiny,anchor=west] at (axis cs:43,4) {43};
+          \node[font=\tiny,anchor=west] at (axis cs:43,5) {43};
+          \node[font=\tiny,anchor=west] at (axis cs:73,6) {73};
+          \node[font=\tiny,anchor=west] at (axis cs:77,7) {77};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{CEPALSTAT, ocupados que aportan o están afiliados a sistemas de pensiones, 2023--2024. OIT, \emph{Panorama Laboral 2025}: informalidad, primer semestre de 2025, promedio de 12 países. Villarreal (2026), CEPAL.}
+\end{frame}
+
+% ===== 13. Una arquitectura multipilar (K, P) =====
+\begin{frame}{Una arquitectura multipilar}
+  \centering
+  \vspace{0.5em}
+  \begin{tikzpicture}[font=\scriptsize,
+      p/.style={draw=marino,line width=0.9pt,fill=banda,minimum width=2.75cm,minimum height=1.75cm,align=center,text width=2.5cm}]
+    \node[p] (p0) at (0,0) {{\color{oxido}\bfseries\normalsize Pilar 0}\\[0.2em] No contributivo:\\ piso contra la pobreza\\ en la vejez};
+    \node[p] (p1) at (3.5,0) {{\color{oxido}\bfseries\normalsize Pilar 1}\\[0.2em] Contributivo\\ obligatorio y solidario};
+    \node[p] (p2) at (7.6,0) {{\color{marino}\bfseries\normalsize Pilar 2}\\[0.2em] Ahorro individual\\ obligatorio};
+    \node[p] (p3) at (11.1,0) {{\color{marino}\bfseries\normalsize Pilar 3}\\[0.2em] Ahorro\\ voluntario};
+    \draw[oxido,line width=1.2pt,{Straight Barb[length=3pt]}-{Straight Barb[length=3pt]}] (p0.east) -- (p1.west);
+    \draw[marino,line width=1.2pt,{Straight Barb[length=3pt]}-{Straight Barb[length=3pt]}] (p2.east) -- (p3.west);
+  \end{tikzpicture}\par
+  \vspace{0.7em}
+  {\color{marino}\bfseries\normalsize «El cero se habla con el uno, el dos con el tres.»\par}
+  \vspace{0.7em}
+  \raggedright
+  \begin{itemize}\setlength{\itemsep}{0.3em}\small
+    \item El piso no contributivo y la pensión contributiva se diseñan juntos, para que cada año cotizado sume a lo que la persona recibe.
+    \item El ahorro obligatorio y el voluntario comparten cuentas, reglas e incentivos.
+    \item Cuando cada pilar se reforma por separado, uno termina por debilitar al otro.
+  \end{itemize}
+\end{frame}
+
+% ===== 14. ¿Cuánto queda para decidir? (C10) =====
+\begin{frame}{\mx ¿Cuánto queda para decidir?}
+  \vspace{0.1em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.47\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.45em}
+        \item En México, los ingresos disponibles del sector público son \dest{20.3\%} del PIB. Dejamos fuera el petróleo: lo que entra por el Fondo Mexicano del Petróleo (0.7) sale, en buena parte, como apoyo a Pemex (0.5).
+        \item Les restamos lo que no se decide año con año: gasto no programable, pensiones y la operación propia de IMSS, ISSSTE y CFE.
+        \item Queda \dest{4.0\%} del PIB, más deuda, para salud, educación, infraestructura, seguridad, cuidados y todo lo demás.
+      \end{itemize}
+      \vspace{0.3em}
+      Son sólo sumas y restas, sin supuestos de comportamiento. Y 4.0\% es el máximo.
+    \end{column}
+    \begin{column}{0.50\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=4.1cm,ybar,bar width=17pt,ymin=0,ymax=24,
+            ytick={0,5,10,15,20},ylabel={\% del PIB},xmin=0.4,xmax=4.6,
+            xtick={1,2,3,4},xtick style={draw=none},
+            xticklabels={{Ingresos\\disponibles},{menos\\no programable},{menos\\pensiones},{menos operación\\de organismos}},
+            x tick label style={font=\fontsize{4.6}{5.4}\selectfont,align=center}]
+          \addplot[fill=barra,draw=marino,bar shift=0pt] coordinates {(1,20.3)(2,12.1)(3,6.0)};
+          \addplot[fill=oxido,draw=oxido,bar shift=0pt] coordinates {(4,4.0)};
+          \node[font=\tiny,anchor=south] at (axis cs:1,20.3) {20.3};
+          \node[font=\tiny,anchor=south] at (axis cs:2,12.1) {12.1};
+          \node[font=\tiny,anchor=south] at (axis cs:3,6.0) {6.0};
+          \node[font=\tiny\bfseries,text=oxido,anchor=south] at (axis cs:4,4.0) {4.0};
+        \end{axis}
+      \end{tikzpicture}\par\vspace{0.2em}
+      \notagraf{Restas: no programable 8.2 (costo financiero 3.8, participaciones 4.2, Adefas 0.2); pensiones 6.1; operación propia 2.1. El resultado sin redondear es 3.95; con las cifras redondeadas la resta da 3.9.}
+    \end{column}
+  \end{columns}
+  \fuente{Villarreal, \emph{Contabilidad de la Muerte}, actualización 2026, con SHCP, Informe enero--septiembre 2026.}
+\end{frame}
+
+% ===== 15. La brecha en salud (C12) =====
+\begin{frame}{\mx La brecha en salud}
+  \vspace{0.1em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.47\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.45em}
+        \item En 2027 el gasto público en salud sería \dest{2.9\%} del PIB. Para llegar al 6\% que recomienda la OPS faltan \dest{3.1} puntos.
+        \item Una reforma fiscal clásica completa (IVA, ISR y gastos fiscales) daría alrededor de \dest{1.5} puntos.
+        \item La Miscelánea 2027 aporta alrededor de \dest{0.3} puntos.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.50\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=0.92\linewidth,height=3.5cm,xbar,bar width=9pt,xmin=0,xmax=3.7,
+            ymajorgrids=false,xmajorgrids,axis y line*=left,y axis line style={draw=none},
+            ytick={1,2,3},ytick style={draw=none},yticklabels={Miscelánea 2027,Reforma clásica,Brecha a 6\%},
+            ymin=0.4,ymax=3.6,xtick={0,1,2,3},xlabel={puntos del PIB}]
+          \addplot[fill=oxido,draw=oxido,bar shift=0pt] coordinates {(0.3,1)(1.46,2)(3.1,3)};
+          \node[font=\tiny,anchor=west] at (axis cs:0.3,1) {$\approx$\,0.3};
+          \node[font=\tiny,anchor=west] at (axis cs:1.46,2) {1.46};
+          \node[font=\tiny,anchor=west] at (axis cs:3.1,3) {3.1};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \vspace{-0.2em}
+  \banda{Una reforma fiscal ambiciosa, por sí sola, no alcanza para financiar la salud universal.}
+  \vspace{-1.1em}
+  \fuente{CIEP (2026); OPS (2014); estimación propia del paquete de reforma clásica. Miscelánea: estimación previa a las exclusiones aprobadas por el Senado; el rendimiento final es algo menor. Detalle de fuentes al final.}
+\end{frame}
+
+% ===== 16. Las pensiones le quitan espacio a la salud (C13) =====
+\begin{frame}{\mx Las pensiones le quitan espacio a la salud}
+  \vspace{0.3em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.53\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.45em}
+        \item El PEF 2027 asigna \dest{6.3\%} del PIB a pensiones y \dest{2.9\%} a salud: más de dos pesos a pensiones por cada peso a salud.
+        \item Las pensiones contributivas crecen \dest{4.7\%} real, sobre todo por IMSS e ISSSTE. Es gasto comprometido desde hace años.
+        \item Si no aumentan los ingresos, cada punto adicional en pensiones es un punto menos para salud.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.40\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=3.7cm,ybar,bar width=20pt,ymin=0,ymax=7.5,ymajorgrids=false,
+            ytick={0,2,4,6},ylabel={\% del PIB},xmin=0.4,xmax=2.6,xtick={1,2},xtick style={draw=none},
+            xticklabels={Pensiones,Salud}]
+          \addplot[fill=oxido,draw=oxido,bar shift=0pt] coordinates {(1,6.3)};
+          \addplot[fill=barra,draw=marino,bar shift=0pt] coordinates {(2,2.9)};
+          \node[font=\tiny,anchor=south] at (axis cs:1,6.3) {6.3};
+          \node[font=\tiny,anchor=south] at (axis cs:2,2.9) {2.9};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \vspace{-0.3em}
+  \banda{\small En toda la región, cada punto adicional en pensiones compite con la salud.}
+  \vspace{-1.1em}
+  \fuente{\pef. CIEP (2026), \emph{Implicaciones del Paquete Económico 2027}, caps. 5 y 10: cifras del proyecto; el dictamen incluye reasignaciones menores.}
+\end{frame}
+
+% ===== 17. ¿Financiar todo con impuestos generales? (C14, ejemplo mexicano) =====
+\begin{frame}{\mx ¿Financiar todo con impuestos generales?}
+  \vspace{0.7em}
+  \begin{itemize}\setlength{\itemsep}{0.35em}
+    \item Un sistema financiado sólo con impuestos generales requiere una recaudación alta y estable.
+    \item México recauda alrededor de \dest{18\%} del PIB, cerca de la mitad de lo que tenían los países que lograron cobertura universal por esa vía.
+    \item Además, cada peso adicional que se recaude compite con las pensiones y con el costo de la deuda.
+  \end{itemize}
+  \banda{Con la recaudación actual, una salud universal financiada sólo con impuestos no es viable.}
+  \vspace{0.2em}
+  La pregunta es cómo ampliar el aseguramiento, no cómo sustituirlo.
+\end{frame}
+
+% ===== 18. El gasto de bolsillo en la región (C16, regionalizada) =====
+\begin{frame}{Dos sistemas y el gasto de bolsillo}
+  \vspace{0.5em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.46\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item En América Latina y el Caribe, \dest{29.7\%} del gasto en salud sale directamente del bolsillo de los hogares. En México es \dest{41.2\%}; en Colombia, \dest{14.6\%}.
+        \item El gasto público en salud de la región es \dest{4.1\%} del PIB. Va de \dest{2.7\%} en México a \dest{6.5\%} en Uruguay.
+        \item Donde conviven un sistema contributivo y otro para quien no cotiza, lo que ninguno de los dos cubre lo paga el hogar, sin planearlo y cuando menos puede.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.50\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=0.92\linewidth,height=5.0cm,xbar,bar width=7pt,xmin=0,xmax=50,
+            ymajorgrids=false,xmajorgrids,axis y line*=left,y axis line style={draw=none},
+            ytick={1,...,9},ytick style={draw=none},
+            yticklabels={Colombia,Uruguay,Costa Rica,Argentina,Rep.\ Dominicana,América Latina y el Caribe,Ecuador,Paraguay,México},
+            ymin=0.4,ymax=9.6,xtick={0,10,20,30,40},xlabel={gasto de bolsillo, \% del gasto corriente en salud, 2023}]
+          \addplot[fill=barra,draw=marino,bar shift=0pt] coordinates {(14.6,1)(17.1,2)(24.1,3)(24.5,4)(25.1,5)(30.9,7)(36.3,8)(41.2,9)};
+          \addplot[fill=oxido,draw=oxido,bar shift=0pt] coordinates {(29.7,6)};
+          \foreach \v/\y in {14.6/1,17.1/2,24.1/3,24.5/4,25.1/5,29.7/6,30.9/7,36.3/8,41.2/9} {
+            \edef\tmp{\noexpand\node[font=\noexpand\tiny,anchor=west] at (axis cs:\v,\y) {\v};}\tmp
+          }
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{OMS, Global Health Expenditure Database, y Banco Mundial, 2023: gasto de bolsillo y gasto en salud del gobierno general.}
+\end{frame}
+
+% ===== 19. El dilema Gruber (C17) =====
+\begin{frame}{El dilema Gruber}
+  \vspace{0.9em}
+  \begin{itemize}\setlength{\itemsep}{0.35em}
+    \item En un sistema mixto es muy difícil dar el mismo servicio de salud cuando unos contribuyen y otros no.
+    \item Si el servicio es igual para todos, ¿para qué cotizar? Si es distinto, terminamos con dos sistemas.
+    \item Un sistema de salud tiene que lograr dos cosas: que nadie se \clave{empobrezca} por enfermarse, y que \clave{convenga} estar en el sistema contributivo.
+  \end{itemize}
+  \vspace{0.6em}
+  En México, como en el resto de la región, se ha avanzado en una o en otra, pero rara vez en las dos al mismo tiempo.
+  \fuente{El planteamiento es de Jonathan Gruber (MIT).}
+\end{frame}
+
+% ===== 20. El costo de formalizarse (C18) =====
+\begin{frame}{El costo de formalizarse}
+  \vspace{0.5em}
+  \begin{itemize}\setlength{\itemsep}{0.3em}
+    \item Al formalizarse, un trabajador empieza a pagar cuotas e impuestos y, en algunos casos, deja de recibir apoyos.
+    \item El Banco Mundial encuentra que, en América Latina, la mayor parte de ese costo corresponde a las \clave{contribuciones de seguridad social}.
+    \item Quién paga realmente las cuotas, el trabajador o la empresa, depende de cómo se ajustan salarios y empleo. Para México no lo tenemos bien medido.
+    \item Lo que sí sabemos es que no todas las cuotas pesan igual: la \clave{cuota fija} pesa proporcionalmente mucho más en los salarios bajos.
+  \end{itemize}
+  \vspace{0.5em}
+  Si el trabajador no valora lo que recibe a cambio, la cuota se percibe como un impuesto más. El diseño puede cambiar eso.
+  \fuente{Fietz et al. (2025), \emph{(In)Formalizing Jobs in LAC}, Banco Mundial. Detalle de fuentes al final.}
+\end{frame}
+
+% ===== 21. El escalón (C21) =====
+\begin{frame}{El escalón}
+  \vspace{0.5em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.50\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item Al pasar a un empleo formal, el ingreso neto puede caer: se empiezan a pagar cuotas y se pueden perder apoyos. Ese salto es la \clave{trampa de la formalización}.
+        \item El escalón es más alto en los ingresos medios y bajos, donde la cuota fija pesa más y los apoyos importan más.
+        \item Uruguay reconoció el desincentivo. Desde 2022 suspendió el control del tope de ingreso de sus asignaciones familiares, y entraron \dest{21 mil} hogares adicionales.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}\centering
+      \begin{tikzpicture}[x=0.5cm,y=0.5cm,font=\tiny]
+        \draw[-{Straight Barb[length=2pt]},pie] (0,0) -- (0,6.4);
+        \draw[-{Straight Barb[length=2pt]},pie] (0,0) -- (10.6,0);
+        \node[anchor=south] at (0.6,6.4) {ingreso neto};
+        \node[anchor=north east] at (10.6,-0.1) {ingreso formal};
+        \draw[marino,thick,dashed] (0,2) -- (10,5.6);
+        \draw[oxido,thick] (0,2.6) -- (4.5,4.0);
+        \draw[oxido,thick] (4.5,2.9) -- (10,4.9);
+        \draw[oxido,thick,densely dotted] (4.5,4.0) -- (4.5,2.9);
+        \node[text=oxido,anchor=west] at (4.7,2.3) {el escalón};
+        \node[text=marino,anchor=south east] at (9.8,5.7) {sin saltos};
+      \end{tikzpicture}\par\vspace{0.6em}
+      \notagraf{\centering Esquema conceptual, sin escala.}
+    \end{column}
+  \end{columns}
+  \fuente{Fietz et al. (2025), Banco Mundial; BPS Uruguay, resoluciones 2021--2026; MEF Uruguay, Rendición de Cuentas 2023. Detalle de fuentes al final.}
+\end{frame}
+
+% ===== 22. Bismarck, Beveridge y nuestra propuesta (C24) =====
+\begin{frame}{Bismarck, Beveridge y nuestra propuesta}
+  \vspace{-0.2em}
+  {\scriptsize
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}p{1.6cm}>{\raggedright\arraybackslash}X@{}}
+    \toprule
+    \textbf{Decisión} & \textbf{Bismarck} & \textbf{Beveridge} & \textbf{Nuestra propuesta}\\
+    \midrule
+    ¿Con qué se financia? & Cuotas obrero-patronales & Impuestos generales & Se mantienen las cuotas obrero-patronales; quien no cotiza paga una prima según su ingreso; el gobierno completa\\\addlinespace
+    ¿La prima es de cada persona? & Sí & No & Sí\\\addlinespace
+    ¿Quién la paga? & Trabajador y patrón (en México, también el gobierno) & El gobierno & Asalariados, igual que hoy. Los demás, según su ingreso; el gobierno paga la prima completa sólo a los más pobres\\\addlinespace
+    ¿El derecho depende del pago? & Sí & No, basta con residir & Sí, y todos tienen su prima cubierta\\
+    \bottomrule
+  \end{tabularx}}
+  \vspace{-0.3em}
+  \banda{Nuestra propuesta combina de otra manera las mismas cuatro decisiones.}
+\end{frame}
+
+% ===== 23. Cómo funcionaría (C25) =====
+\begin{frame}{Cómo funcionaría}
+  \vspace{0.5em}
+  \begin{itemize}\setlength{\itemsep}{0.35em}
+    \item Quien tiene empleo formal sigue pagando sus \clave{cuotas obrero-patronales}, como hoy. Lo que cambia es que debe ver con claridad qué paga y qué recibe.
+    \item Quien no cotiza se inscribe en los seguros médicos del IMSS y paga una \clave{prima según su ingreso}. El gobierno completa la diferencia.
+    \item Sólo a la población más pobre el gobierno le paga la prima completa, como un impuesto negativo. Si la pagara para todos, se perdería el incentivo a cotizar.
+  \end{itemize}
+  \vspace{-0.2em}
+  \banda{Todos dentro del mismo sistema de aseguramiento, sin esquemas paralelos.}
+  \vspace{-0.9em}
+  \banda{\small La propuesta no sube las cuotas obrero-patronales. Con el cambio en Infonavit, la tasa legal sobre la nómina bajaría 3 puntos.}
+\end{frame}
+
+% ===== 24. Cómo decide un trabajador (C20; ocupa el lugar de «Qué mueve la decisión de formalizarse») =====
+\begin{frame}{Qué mueve la decisión de formalizarse}
+  \vspace{0.1em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.49\textwidth}
+      \caja{Lo que cuesta ser formal}{%
+        Cuotas de seguridad social: en América Latina son el componente mayor.\par\vspace{0.3em}
+        Impuestos sobre el ingreso.\par\vspace{0.3em}
+        Apoyos y servicios no contributivos que se pueden perder.}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \caja{Lo que recibe a cambio}{%
+        Salud, pensión, vivienda, guarderías, incapacidades.\par\vspace{0.3em}
+        Cuenta lo que el trabajador cree que vale, no lo que le cuesta al sistema.\par\vspace{0.3em}
+        Si la cobertura sin cotizar se parece a la contributiva, cotizar vale menos.}
+    \end{column}
+  \end{columns}
+  \vspace{0.5em}
+  {\small
+  \begin{itemize}\setlength{\itemsep}{0.25em}
+    \item El costo neto de formalizarse es lo que se paga menos el valor que el trabajador asigna a lo que recibe. Para un asalariado de la región, va de \dest{20} a \dest{40\%} del ingreso del hogar.
+    \item De ahí salen dos reglas de diseño: lo que se recibe debe depender de lo que se cotiza, y la cuota por el mismo ingreso no debe depender de si el trabajo es formal o informal.
+    \item Todavía no hemos estimado cuánto responde la formalidad en México a estos cambios. Lo que sigue es lógica de diseño, no un resultado.
+  \end{itemize}}
+  \vspace{-0.5em}
+  \fuente{Fietz et al. (2025), \emph{(In)Formalizing Jobs in LAC}, Banco Mundial, cap. 5: mediana en seis países; en México los impuestos pesan más que en el resto.}
+\end{frame}
+
+% ===== 25. Consolidar transferencias: un impuesto negativo (C27 y P, segundo eje) =====
+\begin{frame}{Consolidar transferencias: un impuesto negativo}
+  \vspace{0.2em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.47\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item Los programas con límites de ingreso generan un escalón: quien rebasa el límite pierde el apoyo completo.
+        \item Con un \clave{impuesto negativo sobre la renta}, el apoyo baja poco a poco conforme aumenta el ingreso, y formalizarse siempre conviene.
+        \item Esto requiere medir bien los ingresos. La factura electrónica y los pagos digitales ya lo hacen posible en México, Brasil, Uruguay y Colombia.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.49\textwidth}\centering
+      \begin{tikzpicture}[x=1cm,y=1cm,font=\tiny]
+        \draw[-{Straight Barb[length=2pt]},pie] (0,0) -- (0,2.7);
+        \draw[-{Straight Barb[length=2pt]},pie] (0,0) -- (4.9,0);
+        \node[anchor=south] at (0,2.75) {beneficio};
+        \node[anchor=west] at (4.95,0) {ingreso};
+        \draw[oxido,thick] (0.2,2.15) -- (2.2,2.15);
+        \draw[oxido,thick,dashed] (2.2,2.15) -- (2.2,0.3);
+        \draw[oxido,thick] (2.2,0.3) -- (4.5,0.3);
+        \draw[marino,thick] (0.2,1.85) -- (4.5,0.15);
+        \node[text=oxido,anchor=south west] at (0.55,2.17) {sistema actual};
+        \node[text=marino,anchor=south west] at (2.8,0.95) {impuesto negativo};
+        \node[text=pie,anchor=north] at (2.2,-0.08) {umbral};
+      \end{tikzpicture}\par\vspace{0.6em}
+      \notagraf{\centering Esquema conceptual, sin escala.}
+    \end{column}
+  \end{columns}
+  \vspace{-0.2em}
+  \banda{\small El impuesto negativo es un puente hacia la contribución propia, no el destino.}
+  \vspace{-1.1em}
+  \fuente{Villarreal (2026), CEPAL.}
+\end{frame}
+
+% ===== 26. Nuevos instrumentos para financiar la salud (P, primer eje, y C30-31) =====
+\begin{frame}{Nuevos instrumentos para financiar la salud}
+  \vspace{0.1em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.32\textwidth}
+      \caja{1. Cuotas rediseñadas}{%
+        Canalizadas a salud, con un vínculo claro entre lo que se paga y lo que se recibe.\par\vspace{0.3em}
+        Que el trabajador perciba un valor y no un impuesto.}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \caja{2. Primas según el ingreso}{%
+        Para quien no cotiza: paga al menos una parte de su prima, proporcional a su ingreso.\par\vspace{0.3em}
+        El gobierno paga la prima completa sólo a los más vulnerables.}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \caja{3. Seguros de ciclo de vida}{%
+        Se pagan durante la vida laboral y cubren el gasto en salud de la vejez.\par\vspace{0.3em}
+        Descargan al presupuesto público en el largo plazo.}
+    \end{column}
+  \end{columns}
+  \vspace{0.5em}
+  {\small
+  \begin{itemize}\setlength{\itemsep}{0.25em}
+    \item El gasto privado tiene que ser \clave{prepago} y no gasto de bolsillo. El prepago reparte el riesgo entre muchos y se paga antes de enfermarse.
+    \item Caben también los seguros médicos privados de bajo costo y la atención primaria privada, si se regulan y se conectan con el resto del sistema.
+  \end{itemize}}
+  \vspace{-0.3em}
+  \banda{\small ¿Qué reglas necesita el sector privado para participar sin fragmentar el sistema?}
+  \vspace{-1.1em}
+  \fuente{Villarreal (2026), CEPAL; Villarreal (2024), «¿Se puede reformar la seguridad social? Parte II», \emph{Arena Pública}.}
+\end{frame}
+
+% ===== 27. Cuidados: el siguiente instrumento (N) =====
+\begin{frame}{Cuidados: el siguiente instrumento}
+  \vspace{0.7em}
+  \begin{itemize}\setlength{\itemsep}{0.4em}
+    \item Entre 2025 y 2050, las personas de 80 años y más pasarán de \dest{13} a \dest{37 millones} en la región. A esa edad la dependencia deja de ser ocasional y el cuidado puede volverse permanente.
+    \item Pensiones, salud y cuidados compiten por el mismo espacio presupuestario. Conviene analizarlos como un solo sistema.
+    \item Hay instrumentos posibles: un seguro que se pague durante la vida laboral y cubra en la vejez, con un fondo solidario como base y con espacio para que lo público y lo privado se complementen.
+  \end{itemize}
+  \banda{¿Puede un seguro pagado durante la vida laboral financiar los cuidados de la vejez?}
+  \vspace{-0.9em}
+  \fuente{Población de 80 años y más: proyección propia (detalle al final). Villarreal (2026), CEPAL; Villarreal (2024), \emph{Arena Pública}.}
+\end{frame}
+
+% ===== 28. Dos preguntas para cualquier propuesta (C32) =====
+\begin{frame}{Dos preguntas para cualquier propuesta}
+  \vspace{1.6em}
+  \begin{enumerate}\setlength{\itemsep}{0.35em}
+    \item ¿Se puede pagar durante toda la transición demográfica sin que la deuda se vuelva insostenible?
+    \item ¿Fortalece o debilita el incentivo a cotizar?
+  \end{enumerate}
+  \vspace{0.6em}
+  Si una propuesta falla en alguna de las dos, tiene un problema de fondo. Esto aplica a lo que propongo y a cualquier alternativa. Para contestar la primera hay que hacer la cuenta completa: salud, pensiones y reforma fiscal juntas.
+\end{frame}
+
+% ===== 29. El nacimiento de CONOSAFI (C34, ampliada) =====
+\begin{frame}{El nacimiento de CONOSAFI}
+  \vspace{0.3em}
+  {\small
+  \begin{itemize}\setlength{\itemsep}{0.4em}
+    \item \clave{Por qué nace.} En la región se ha discutido mucho cómo ampliar la cobertura, y mucho menos cómo pagarla en los próximos veinte o treinta años.
+    \item \clave{Quién la funda.} Tres instituciones:
+      \begin{itemize}
+        \item Tecnológico de Monterrey --- coordinación, Héctor Villarreal
+        \item Universidad de los Andes, Colombia --- Ramiro Guerrero
+        \item Pontificia Universidad Católica de Chile --- Pablo Celhay
+      \end{itemize}
+    \item \clave{Cuándo.} Se anunció en el Seminario Regional de Política Fiscal de la CEPAL, en mayo de 2026. La primera reunión de trabajo fue en San José, Costa Rica, del 5 al 7 de octubre de 2026.
+    \item \clave{Lo que salió de San José.} \ifx\sanjose\empty{\color{rojo}\bfseries [TEXTO DE HÉCTOR]}\else\sanjose\fi
+    \item \clave{Hacia dónde va.} Tiene un horizonte de al menos cinco años y tres trabajos en curso, uno por cada institución fundadora.
+  \end{itemize}}
+  \vspace{-0.2em}
+  \fuente{CONOSAFI: Comunidad Latinoamericana de Conocimiento en Sistemas de Salud y Financiamiento.}
+\end{frame}
+
+% ===== 30. Una agenda para la RIUSS (C, preguntas abiertas, ampliada) =====
+\begin{frame}{Una agenda para la RIUSS}
+  \vspace{0.6em}
+  Cinco preguntas abiertas:
+  \vspace{0.3em}
+  \begin{enumerate}\setlength{\itemsep}{0.3em}
+    \item ¿Qué parte del gasto de bolsillo podría convertirse en prepago?
+    \item ¿Con qué reglas el financiamiento privado complementa al público en lugar de debilitarlo?
+    \item ¿Cuánto puede ahorrar la detección temprana cuando las enfermedades son crónicas?
+    \item ¿Cuánto espacio dejan las pensiones para financiar la salud en los próximos veinte años?
+    \item ¿Con qué instrumentos se van a financiar los cuidados de largo plazo?
+  \end{enumerate}
+  \banda{Buscamos investigadores y datos comparables en la región.}
+\end{frame}
+
+% ===== 31. Cierre (C35) =====
+\begin{frame}[plain]
+  \vfill
+  \noindent\makebox[\textwidth][c]{\begin{beamercolorbox}[wd=0.78\textwidth,sep=10pt,center]{bandacolor}
+    {\color{marino}\bfseries\normalsize ¿Podemos diseñar sistemas de protección social que la gente valore lo suficiente para querer participar, y que nuestros países puedan pagar durante su transición demográfica?\par}
+  \end{beamercolorbox}}
+  \begin{center}
+  \vspace{1.6em}
+  {\small Héctor Juan Villarreal Páez · hjvp@itesm.mx\\[0.2em]
+  ITED · Escuela de Gobierno y Transformación Pública · Tecnológico de Monterrey\par}
+  \end{center}
+  \vfill
+\end{frame}
+
+% ===== Fuentes =====
+\begin{frame}{Fuentes (1/2)}
+  \vspace{0.1em}
+  {\fontsize{6.1}{7.5}\selectfont\raggedright
+  \textbf{Demografía de la región.} Proyección propia de la población de América Latina y el Caribe (49 países y territorios), 2025--2060, por componentes, en grupos quinquenales de edad. La fecundidad de cada país se mantiene en su último valor observado: registros nacionales de 2022 a 2025 para 18 países, reunidos por Fernández-Villaverde, J. (2026), \emph{A Recent Population History of Latin America and the Caribbean}; México, 1.23 hijos por mujer (INEGI, Encuesta Intercensal 2025); en los demás países, la estimación de Naciones Unidas para 2025. Población base de México: INEGI, Encuesta Intercensal 2025. Población base de los demás países, mortalidad, migración y patrón de fecundidad por edad: Naciones Unidas, DESA, \emph{World Population Prospects 2024}, variante media. Con la fecundidad de Naciones Unidas, el mismo cálculo da 729 millones en 2050 (publicado: 730) y el cruce entre mayores de 65 y menores de 15 hacia 2046. Fernández-Villaverde, J. (2023), \emph{The Demographic Future of Humanity: Facts and Consequences}.\par\vspace{0.5em}
+  \textbf{Caída de la fecundidad.} Villarreal, H. (2026), «Cohort Replacement, Not Cascade: Union Composition and the Rapid Fertility Collapse in Latin America», documento de trabajo, Tecnológico de Monterrey: registros vitales de INEC (Costa Rica) y DANE (Colombia); DANE, Gran Encuesta Integrada de Hogares, 2008--2024.\par\vspace{0.5em}
+  \textbf{Velocidad del envejecimiento.} Cálculo propio con \emph{World Population Prospects 2024}: años entre 10\% y 20\% de población de 65 años y más. Para América Latina y el Caribe, proyección propia.\par\vspace{0.5em}
+  \textbf{Pensiones.} Villarreal, H. (2026), «América Latina necesita una nueva seguridad social», XXXVIII Seminario Regional de Política Fiscal, CEPAL, Santiago, mayo de 2026. Chile: Ley 21.735, publicada el 26 de marzo de 2025; Ministerio de Hacienda de Chile (2025). Colombia: Ley 2381 de 2024; Corte Constitucional de Colombia (2026). CEPALSTAT, ocupados que aportan o están afiliados a sistemas de pensiones, 2023--2024 (Argentina no está disponible en la misma serie). OIT, \emph{Panorama Laboral 2025 de América Latina y el Caribe}.\par\vspace{0.5em}
+  \textbf{Gasto en salud y gasto de bolsillo.} OMS, Global Health Expenditure Database, y Banco Mundial, datos de 2023: gasto en salud del gobierno general como \% del PIB y gasto de bolsillo como \% del gasto corriente en salud.\par\vspace{0.5em}
+  \textbf{México: carga de enfermedad, presupuesto 2027, salud y pensiones.} PEF 2027: dictamen de la Cámara de Diputados. CIEP (2026), \emph{Implicaciones del Paquete Económico 2027}, 11 de septiembre de 2026: gasto en salud, carga de enfermedad (IHME, 2021; OMS, 2024), prima de equilibrio del IMSS (IMSS, 2024), pensiones y Miscelánea; sus cifras corresponden al proyecto de presupuesto. Meta de 6\% del PIB: OPS (2014), \emph{Estrategia para el acceso universal a la salud y la cobertura universal de salud}.\par\vspace{0.5em}
+  \textbf{México: espacio disponible.} Villarreal, \emph{Contabilidad de la Muerte}, actualización con el Informe de Finanzas Públicas y Deuda Pública enero--septiembre 2026 (SHCP) y los Criterios Generales de Política Económica 2027. PIB nominal de 36,500 mmdp; el supuesto favorece a la cuenta oficial.\par}
+\end{frame}
+
+\begin{frame}{Fuentes (2/2)}
+  \vspace{0.2em}
+  {\fontsize{6.6}{8.4}\selectfont\raggedright
+  \textbf{Reforma fiscal clásica en México.} Estimación propia del rendimiento de un paquete de reforma clásica (IVA, ISR y gastos fiscales), alrededor de 1.5 puntos del PIB.\par\vspace{0.6em}
+  \textbf{Trampa de la formalización.} Fietz, Joubert, Ñopo, Ocampo, Packard, Posadas y Rodriguez Chamussy (2025), \emph{(In)Formalizing Jobs in Latin America and the Caribbean: Taxes, Benefits, and Labor Market Incentives}, Banco Mundial, cap. 5. Uruguay: Banco de Previsión Social, resoluciones de directorio 2021--2026; Ministerio de Economía y Finanzas, Rendición de Cuentas 2023.\par\vspace{0.6em}
+  \textbf{Modelo de aseguramiento, instrumentos y metas de financiamiento.} Villarreal, H. (2026), CEPAL. Villarreal, H. (2024), «¿Se puede reformar la seguridad social? Parte II», \emph{Arena Pública}, 10 de septiembre de 2024. Dilema de Gruber: Jonathan Gruber (MIT).\par\vspace{0.6em}
+  \textbf{Cuota fija (apéndice).} Ley del Seguro Social, art. 106, fr. I. IMSS, \emph{Informe al Ejecutivo Federal y al Congreso de la Unión sobre la situación financiera y los riesgos del IMSS 2025--2026}: cuota fija patronal de 20.40\% de la UMA. INEGI, UMA 2026: 117.31 pesos diarios. CONASAMI, salario mínimo general 2026: 315.04 pesos diarios.\par\vspace{0.6em}
+  \textbf{Infonavit (apéndice).} Ejercicio propio, preliminar, sobre tasas legales. No es una propuesta del IMSS ni del Gobierno Federal. Antecedente: Villarreal, H. (2022), «El Infonavit, ¿qué sigue?», \emph{Arena Pública}, 20 de diciembre de 2022.\par\vspace{0.6em}
+  \textbf{Arquitectura institucional en México (apéndice).} Diario Oficial de la Federación: 29-XI-2019 (Insabi), 31-VIII-2022 (IMSS-Bienestar), 29-V-2023 (reforma a la Ley General de Salud).\par\vspace{0.6em}
+  \textbf{CONOSAFI.} Comunidad Latinoamericana de Conocimiento en Sistemas de Salud y Financiamiento: nota de presentación (octubre de 2026) y documento de presentación de la iniciativa; reunión de trabajo en San José, Costa Rica, 5--7 de octubre de 2026.\par}
+\end{frame}
+
+% ===== A1. La cuota fija pesa más donde menos se gana (C19) =====
+\begin{frame}{Apéndice · México: la cuota fija pesa más donde menos se gana}
+  \vspace{0.5em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.50\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item En el seguro de enfermedades y maternidad, el patrón paga por cada trabajador una cuota fija de \dest{20.40\%} de la UMA, sin importar el salario.
+        \item Para un trabajador de un salario mínimo, esa cuota equivale a \dest{7.6\%} del salario. Para uno de diez salarios mínimos, a \dest{0.8\%}.
+        \item La parte de la cuota que distorsiona es la que no guarda relación con lo que el trabajador recibe, y se concentra en los salarios bajos.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=4.4cm,ybar,bar width=18pt,ymin=0,ymax=10,
+            ytick={0,2,4,6,8},ylabel={\% del salario},xmin=0.4,xmax=4.6,
+            xtick={1,2,3,4},xtick style={draw=none},xticklabels={1,2,5,10},xlabel={salarios mínimos}]
+          \addplot[fill=oxido,draw=oxido,bar shift=0pt] coordinates {(1,7.60)};
+          \addplot[fill=barra,draw=marino,bar shift=0pt] coordinates {(2,3.80)(3,1.52)(4,0.76)};
+          \node[font=\tiny\bfseries,text=oxido,anchor=south] at (axis cs:1,7.60) {7.6};
+          \node[font=\tiny,anchor=south] at (axis cs:2,3.80) {3.8};
+          \node[font=\tiny,anchor=south] at (axis cs:3,1.52) {1.5};
+          \node[font=\tiny,anchor=south] at (axis cs:4,0.76) {0.8};
+        \end{axis}
+      \end{tikzpicture}\par
+      \notagraf{\centering Cuota fija patronal como \% del salario. Valores de 2026: UMA de 117.31 pesos diarios y salario mínimo general de 315.04.}
+    \end{column}
+  \end{columns}
+  \fuente{Ley del Seguro Social, art. 106, fr. I; IMSS, \emph{Informe al Ejecutivo Federal y al Congreso de la Unión 2025--2026}; INEGI, UMA 2026; CONASAMI, salario mínimo general 2026. Cálculos propios.}
+\end{frame}
+
+% ===== A2. Infonavit: la propuesta (C23) =====
+\begin{frame}{Apéndice · México, Infonavit: la propuesta}
+  \vspace{0.1em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.49\textwidth}
+      \caja{Qué se propone}{%
+        Eliminar la aportación patronal de \textbf{5\%} del salario base de cotización al Infonavit.\par\vspace{0.3em}
+        Destinar \textbf{2 puntos} a un seguro solidario de salud y cuidados en la vejez: un fondo común, no cuentas individuales. Primero cubre el déficit de los gastos médicos de pensionados; lo que sobra va a cuidados de largo plazo.\par\vspace{0.3em}
+        Los otros \textbf{3 puntos} se dejarían de cobrar: la tasa legal sobre la nómina baja 3 puntos.}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \caja{El Instituto y los trabajadores}{%
+        El Infonavit conserva su patrimonio y sus obligaciones como mutualidad.\par\vspace{0.3em}
+        El trabajador deja de acumular 5\% de su salario en la subcuenta de vivienda y recibe a cambio un seguro.\par\vspace{0.3em}
+        Quien no usa crédito tendría menos saldo para su pensión. Ese efecto no lo hemos cuantificado, y tampoco el efecto sobre la formalidad.}
+    \end{column}
+  \end{columns}
+  \vspace{0.5em}
+  {\small El seguro de gastos médicos de pensionados del IMSS ya es deficitario, y el envejecimiento presiona justo ahí.\par}
+  \vspace{-0.4em}
+  \fuente{Ejercicio propio, preliminar; no es una propuesta del IMSS ni del Gobierno Federal. Son tasas legales: no miden quién soporta la cuota. Antecedente: Villarreal (2022), «El Infonavit, ¿qué sigue?», \emph{Arena Pública}.}
+\end{frame}
+
+% ===== A3. El IMSS como sistema nacional de seguros de salud (C26) =====
+\begin{frame}{Apéndice · México: el IMSS como sistema nacional de seguros de salud}
+  \vspace{0.9em}
+  \begin{itemize}\setlength{\itemsep}{0.3em}
+    \item Partimos de lo que existe. El IMSS tiene los hospitales, el personal, buena parte de la formación de especialistas y el registro de derechohabientes. Para la población sin seguridad social, en cambio, el modelo cambió tres veces entre \dest{2019} y \dest{2023}.
+    \item Que el IMSS agrupe los servicios de salud ligados al empleo formal: ISSSTE, Pemex e incluso fuerzas armadas.
+    \item Que se dedique sólo a salud. Pensiones y cuidados, en otras instancias.
+    \item Que pueda funcionar como caja de compensación y contratar servicios privados con recursos públicos.
+  \end{itemize}
+  \fuente{Diario Oficial de la Federación, 29-XI-2019, 31-VIII-2022 y 29-V-2023; Villarreal (2024). Detalle de fuentes al final.}
+\end{frame}
+
+% ===== A4. ¿De dónde saldría el 6 % del PIB? (C28) =====
+\begin{frame}{Apéndice · México: ¿de dónde saldría el 6\% del PIB?}
+  \vspace{0.1em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.4em}
+        \item \clave{Cuotas de salud:} de \dest{1.5\%} a \dest{2.5\%} del PIB, con el crecimiento de la masa salarial y la formalización.
+        \item \clave{Gobierno federal}, sin contar cuotas: de \dest{1.4\%} a \dest{2.5\%}, sumando \dest{0.1} puntos cada año. La fuente serían los gastos fiscales.
+        \item \clave{Estados y Ciudad de México:} \dest{1\%} del PIB, con participaciones e ingresos propios, sobre todo predial.
+      \end{itemize}
+      \vspace{0.3em}
+      Nada de esto funciona si no se contiene el gasto en pensiones.
+    \end{column}
+    \begin{column}{0.48\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=0.95\linewidth,height=4.2cm,ybar stacked,bar width=26pt,ymin=0,ymax=7.3,
+            ytick={0,2,4,6},ylabel={\% del PIB},xmin=0.4,xmax=2.6,xtick={1,2},xtick style={draw=none},
+            xticklabels={Hoy,Meta 2036},
+            legend style={at={(0.5,-0.2)},anchor=north,legend columns=3},area legend]
+          \addplot[fill=barra,draw=marino] coordinates {(1,1.5)(2,2.5)};
+          \addlegendentry{Cuotas}
+          \addplot[fill=medio,draw=marino] coordinates {(1,1.4)(2,2.5)};
+          \addlegendentry{Federal}
+          \addplot[fill=oxido,draw=oxido] coordinates {(1,0)(2,1.0)};
+          \addlegendentry{Estados}
+          \node[font=\tiny\bfseries,text=oxido,anchor=south] at (axis cs:1,2.9) {2.9};
+          \node[font=\tiny\bfseries,text=oxido,anchor=south] at (axis cs:2,6.0) {6.0};
+        \end{axis}
+      \end{tikzpicture}\par
+      \notagraf{\centering Hoy: aportación estatal propia no desglosada.}
+    \end{column}
+  \end{columns}
+  \fuente{Villarreal (2024), «¿Se puede reformar la seguridad social? Parte II», \emph{Arena Pública}.}
+\end{frame}
+
+% ===== A5. Salud en el presupuesto 2027 (C15) =====
+\begin{frame}{Apéndice · México: salud en el presupuesto 2027}
+  \vspace{1.0em}
+  \begin{itemize}\setlength{\itemsep}{0.35em}
+    \item El gasto en salud aumenta \dest{10.6\%} real y llega a \dest{1.14 billones} de pesos. Si se descuenta la inflación de los servicios médicos, el aumento es de \dest{8.6\%}.
+    \item El \dest{75.6\%} del aumento se va a población con seguridad social: IMSS crece \dest{11.6\%}, ISSSTE \dest{18.8\%} e IMSS-Bienestar \dest{9.0\%}.
+    \item De ese total, \dest{760 mil millones} (\dest{67\%}) son para la población con seguridad social y \dest{376 mil millones} (\dest{33\%}) para el resto. Para el resto, el aumento es de \dest{7.6\%} real.
+  \end{itemize}
+  \vspace{0.6em}
+  El aumento recupera parte de los recortes recientes, pero la estructura sigue igual.
+  \fuente{\pef. CIEP (2026), \emph{Implicaciones del Paquete Económico 2027}, cap. 5, con base en SHCP: cifras del proyecto; el dictamen incluye reasignaciones menores.}
+\end{frame}
+
+\end{document}
