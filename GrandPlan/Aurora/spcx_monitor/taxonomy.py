@@ -79,6 +79,7 @@ MECHANISMS = [
             "convertible_or_stock_settled_instruments",
             "nearest_stock_price_trigger",   # price level at which an obligation/margin strains
             "issuer_debt_outstanding",       # 10-Q/10-K facts; in state since 10-08, rendered from 10-30
+            "issuer_crypto_holdings",        # 10-Q/10-K digital-asset note (XBRL CryptoAsset*); added 2026-11-16
             "known_blind_spots",             # what this panel cannot see; added 2026-10-30
         ],
         "thresholds": {
