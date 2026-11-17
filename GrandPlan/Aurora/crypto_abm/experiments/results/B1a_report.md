@@ -16,7 +16,7 @@
 | 7 | Determinism and conservation | **Met** | bit-identical paths; units and cash conserved to 1e-10 / 1e-9 |
 | 8 | Timing; CPU-only statement or GPU check | **Met for B1a** | CPU only, stated in the README; one 1,040-day path ≈ 0.16 s; the B1b gate is pending |
 | 9 | Firewall test | **Met** | §9 test: no code file names the board |
-| 10 | Limitations, including a linear-impact alternative | **Partly met** | Limitations below. The κ = 0 constant-impact run is done; a second functional form (square-root impact) is **not yet run** |
+| 10 | Limitations, including a clearing-rule alternative | **Met** (2026-11-17) | Limitations below; square-root-impact refit and ablations (section *Clearing-rule alternative*) |
 | 11 | Sign-off by Cath and Fina | **Pending** | |
 
 ## Data targets (post-ETF BTC, 2024-01-12 → 2026-11-16, 1,040 daily returns)
@@ -84,15 +84,48 @@ Mean |error| as a share of each range: λ₀ 0.02, ρ 0.03, L 0.06, φ 0.07, s_D
 
 1. **Equifinality.** One acceptable vector is reported, not the acceptance set. Full SMM and the J-test set belong to B3.
 2. **Box edges.** σ_ε, median L, ρ and s_D sit near the bounds of the §4 box. The box may be binding. Widening it is a design choice to rule on, not a silent change.
-3. **Clearing rule.** Only one functional form has been run, log-linear impact with κ (κ = 0 is its constant-impact special case). The square-root-impact alternative has not been run yet.
+3. **Clearing rule (run 2026-11-17).** Under square-root impact the κ conclusion does not hold (see *Clearing-rule alternative*). Any statement about liquidity withdrawal must name the impact law. Fitted parameter values, including leverage, also depend on it.
 4. **Recovery is local.** Starts were within ±15 % of each range around the truth. A recovery from random starts would test global identification and is not done.
 5. **Perp = spot.** One price for both. Basis and funding dislocations cannot appear.
 6. **Regime dependence.** The fit is to post-ETF data, without ETF agents. It is provisional until B2 adds them and recalibrates.
 7. **The intraday gap** is matched only at the edge of its band (−1.4 vs −3.1 points). Cascades in the model are shallower intraday than in the data.
 
+## Clearing-rule alternative (criterion 10; 2026-11-17)
+
+The same fit was repeated under square-root impact, Δln p = λ·sign(x)·√(\|x\|·q₀), with q₀ = 0.002 of the float per sub-step. At a flow of q₀ it equals linear impact. Settings: same box, same search (2,000 draws + Nelder–Mead from 8 starts), same R = 10, 20 minutes. Files: `fit_sqrt_20261117_1208.txt`, `ablations_bestfit_sqrt.txt`.
+
+**Fit.** J = **11.24** (linear: 13.66), with **10 of 10** moments inside the 95 % bands:
+
+| Moment | Square-root impact | Data |
+|---|---|---|
+| s.d. | 2.39 % (now inside) | 2.46 % |
+| Intraday gap | −3.06 pts | −3.09 pts |
+| Hill index | 3.37 | 3.45 |
+| Volatility clustering, ACF \|r\|₁ | 0.067 (inside, near the band floor of 0.056; linear gave 0.145) | 0.156 |
+| ACF \|r\|₅ | 0.017 (inside; linear gave 0.056) | 0.100 |
+
+Best vector: λ₀ 1.29, σ_ε 0.048, w_m 0.039, β 2.40, w_l 0.254, median L 9.4, **κ 0.011**, φ 0.56, ρ 0.16, median D 0.25, s_D 0.89.
+
+**Ablations at the square-root fit:**
+
+| Moment | Best fit | Cascade loop off | φ = 0 | κ = 0 | No leveraged traders | Data |
+|---|---|---|---|---|---|---|
+| s.d. | 0.0239 | 0.0174 | 0.0614 | 0.0237 | 0.0160 | 0.0246 |
+| ACF r₁ | −0.094 | −0.120 | **0.251** | −0.084 | −0.177 | −0.046 |
+| ACF \|r\|₁ | 0.067 | **0.012** | 0.035 | 0.056 | **0.025** | 0.156 |
+| Hill | 3.37 | **6.08** | 5.26 | 3.49 | **5.93** | 3.45 |
+| 3σ share | 1.69 % | 0.35 % | 1.51 % | 1.80 % | 0.36 % | 1.58 % |
+| 10 % days | 0.40 % | 0 | 11.1 % | 0.31 % | 0 | 0.38 % |
+| Intraday gap (pts) | −3.06 | **−0.39** | −0.41 | −2.69 | −0.50 | −3.09 |
+
+**What survives the change of impact law, and what does not:**
+- **Robust.** The leveraged traders' cascade loop is needed for the fat tails, the 3σ days, the 10 % days and the intraday gap; switching it off makes returns Gaussian under both laws. Leveraged traders are needed. Transient impact is needed (φ = 0 makes returns trend under both).
+- **Not robust.** Under linear impact, liquidity withdrawal (κ) was needed for clustering. Under square-root impact the fit chooses κ ≈ 0, and removing κ changes little. With concave impact, large forced flows already have diminishing impact, which seems to stand in for the withdrawal channel; that reading is untested. The cost is weaker clustering at lags 1 and 5 than in the data.
+- **Parameter values move.** Median leverage is 18× (at the box edge) under linear and 9.4× (interior) under square-root. The leveraged share is 0.19 vs 0.25. No parameter value should be quoted without its impact law.
+- **One finding holds under both laws:** σ_ε sits at the upper edge of its box (0.96 and 0.99 of the range). The noise-scale bound is binding and needs a ruling.
+
 ## Not done in B1a
 
-- The square-root-impact run (criterion 10).
 - Global-start recovery (optional).
 - **B1b:** the batched CPU/GPU timing gate.
 - Cath and Fina sign-off.
