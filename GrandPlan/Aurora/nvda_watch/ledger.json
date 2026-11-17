@@ -1003,51 +1003,52 @@
     "0001197647-26-000011",
     "0002152188-26-000007",
     "0001197647-26-000013",
-    "0001045810-26-000082"
+    "0001045810-26-000082",
+    "0001045810-26-000084"
   ],
   "holdings": {
-    "period": "2026-06-30",
-    "acc": "0001045810-26-000065",
+    "period": "2026-09-30",
+    "acc": "0001045810-26-000084",
     "positions": {
       "19247G107": {
         "issuer": "COHERENT CORP",
         "shares": 7788161,
-        "value_usd": 3072195870
+        "value_usd": 2241510617
       },
       "21873S108": {
         "issuer": "COREWEAVE INC",
         "shares": 47213353,
-        "value_usd": 4699617158
+        "value_usd": 4113227313
       },
       "370920100": {
         "issuer": "GENERATE BIOMEDICINES INC",
         "shares": 833325,
-        "value_usd": 14058193
+        "value_usd": 12516542
       },
       "458140100": {
         "issuer": "INTEL CORP",
-        "shares": 214776632,
-        "value_usd": 29989261126
+        "shares": 161082488,
+        "value_usd": 19366947532
       },
       "N97284108": {
         "issuer": "NEBIUS GROUP N.V.",
         "shares": 1190476,
-        "value_usd": 328773757
+        "value_usd": 280809479
       },
       "654902204": {
         "issuer": "NOKIA CORP",
-        "shares": 166389351,
-        "value_usd": 2209650581
+        "shares": 72859751,
+        "value_usd": 738797875
       },
       "84615Q103": {
         "issuer": "SPACE EXPLORATION TECHN CORP",
-        "shares": 122764805,
-        "value_usd": 20975594582
+        "shares": 130472925,
+        "value_usd": 19683145466
       },
       "871607107": {
         "issuer": "SYNOPSYS INC",
-        "shares": 4821717,
-        "value_usd": 2150823302
+        "shares": 4354077,
+        "value_usd": 1893762250
       }
     }
   },
@@ -1099,5 +1100,5 @@
     "4": 2,
     "4/A": 1
   },
-  "last_poll": "2026-11-15T11:25:26"
+  "last_poll": "2026-11-16T20:12:42"
 }
