@@ -1,0 +1,5 @@
+# null runs and timing — 2026-11-17T13:42:41.674 — fit: fit_linear_20261117_1239.txt — threads 1
+noise only, κ = fitted                 exkurt -0.024  ACF|r|1 0.0743  ACF|r|5 -0.0030  Hill 5.92  3σ 0.0038  sd 0.0118
+noise only, κ = 0 (criterion 3 null)   exkurt -0.027  ACF|r|1 0.0741  ACF|r|5 -0.0030  Hill 5.92  3σ 0.0037  sd 0.0118
+agents, κ = 0                          exkurt 3.506  ACF|r|1 0.0783  ACF|r|5 -0.0291  Hill 3.48  3σ 0.0207  sd 0.0243
+timing, one 1,040-day path (+120 burn-in), K = 24, single thread, best linear fit: median 0.231 s, min 0.211 s, max 0.243 s (20 paths)

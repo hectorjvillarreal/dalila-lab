@@ -1,0 +1,49 @@
+Dalila GPU check — Julia stack
+
+nvidia-smi (driver + hardware)
+==============================
+name, driver_version, memory.total [MiB], memory.free [MiB], compute_cap
+NVIDIA RTX PRO 2000 Blackwell Generation Laptop GPU, 580.178.04, 8151 MiB, 7692 MiB, 12.0
+
+CUDA.jl
+=======
+      CUDA.jl version: 6.5.1
+OK    CUDA functional
+CUDA toolchain: 
+- runtime 13.4.0, artifact installation
+- driver 580.178.4 for CUDA 13.5, forward-compatible
+- compiler 13.5.37, artifact installation
+
+CUDA libraries: 
+- cuBLAS: 13.8.0
+- cuSPARSE: 12.8.6
+- cuSOLVER: 12.3.5
+- cuFFT: 12.4.0
+- cuRAND: 10.4.4
+- CUPTI: 2026.3.1 (API 13.4.1)
+- NVML: 13.0.0+580.178.4
+
+Julia packages: 
+- CUDACore: 6.5.1
+- GPUArrays: 12.2.0
+- GPUCompiler: 2.22.2
+- KernelInterface: 0.4.6
+- CUDA_Driver_jll: 13.5.0+0
+- CUDA_Compiler_jll: 0.6.5+0
+- CUDA_Runtime_jll: 0.25.0+3
+- NVPTX_LLVM_Backend_jll: 23.1.2+2
+- KernelAbstractions: 0.10.7
+
+Toolchain:
+- Julia: 1.11.7
+- LLVM: 16.0.6
+
+1 device:
+  0: NVIDIA RTX PRO 2000 Blackwell Generation Laptop GPU (sm_120, 7.512 GiB / 7.960 GiB available)
+     compiles to sm_120a / PTX 9.4 (LLVM: sm_120a / PTX 9.2)
+      smoke test: 1024x1024 matmul on GPU → scalar 2.6822275e8
+
+Summary
+=======
+  nvidia-smi : OK
+  CUDA.jl    : OK
