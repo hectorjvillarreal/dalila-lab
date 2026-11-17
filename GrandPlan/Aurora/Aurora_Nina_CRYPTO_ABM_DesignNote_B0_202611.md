@@ -1,224 +1,342 @@
-# Design note B0 — Crypto agent-based model (mechanism laboratory)
+# Design note B0 — Crypto agent-based model (mechanism laboratory) · v1.1
 
 *Document type: Design note (phase B0 of Part B) · Aurora Project*
-*Author: Nina (portfolio management & crypto strategy) — drafted by Claude Code in Nina's role at Héctor's request, 2026-11-16*
-*Status: B0 APPROVED 2026-11-16 — decisions D1–D6 ruled (§10; D6 amended: Fina helps Cath). No code is written in B0; B1 waits for Héctor's go and the Cath/Fina review.*
-*Parent spec: `Aurora_Nina_CRYPTO_BR_Spec_ClaudeCode_202611.md`, Part B (§5) and §5.7 (design for reuse)*
-*Precedent: `Aurora_Nina_MonetaryFoundation_202604.md` §10 (design note before code)*
+*Author: Nina (portfolio management & crypto strategy). Drafted by Claude Code in Nina's role at Héctor's request, 2026-11-16.*
+*Status: **v1.1, 2026-11-16.** Decisions D1–D6 ruled by Héctor (§10). v1.1 applies the required changes of both reviews (Cath and Fina, files `Aurora_Cath_Review_ABM_B0_202611.md` and `Aurora_Fina_Review_ABM_B0_202611.md`). **Endorsement of v1.1 by Cath and Fina is pending.** No code is written in B0. B1 waits for Héctor's go, the endorsement, and the branch ruling (§8).*
+*Parent spec: `Aurora_Nina_CRYPTO_BR_Spec_ClaudeCode_202611.md`, Part B (§5) and §5.7 (design for reuse). Precedent: `Aurora_Nina_MonetaryFoundation_202604.md` §10.*
+*Provenance: build instruction **pending the branch ruling** (proposed name `_crossrefs/_build_instructions/2026-11-16_aurora_crypto_board_and_abm_b0.md`).*
+
+### What changed from v1 (2026-11-16)
+
+- **§1** The regime story is corrected. Removing one day (2020-03-12) erases the pre/post-ETF contrast in tail shape. The ETF era differs in the *level* of volatility and the *frequency* of large days, not in tail shape (Fina). Rounding is fixed, the conventions are stated, and the episode table no longer carries attributions from memory.
+- **§2** The engine is re-specified (Cath R1–R5):
+  - units and normalisation;
+  - capped impact, frozen inside the cascade loop;
+  - loop rules and what a binding cap means;
+  - transient impact;
+  - minimal core abstractions so a sovereign adapter is not blocked.
+- **§6** The regime-shift test moves to B2 and changes one factor at a time.
+- **§7** The bridge to the board is reworded so the firewall holds (Fina).
+- **§8** Location, CPU/GPU and the GPU check are made explicit.
+- **§9** Rewritten against what the BID2 OLG actually produces. The interface object is now a crisis-zone boundary, not a rollover-failure frequency (Cath R6).
+- **§3.4 (new)** Phase map reconciled with the spec.
+- **§11 (new)** B1 acceptance criteria.
+- **§12 (new)** Cadence.
 
 ---
 
 ## 0. What this model is for, and the firewall
 
-The model is a **laboratory for mechanisms**. It must reproduce the statistical signature of crypto returns from agent behaviour alone, with only plain Gaussian noise as input. Then it asks **conditional** questions, for example: with this share of leveraged traders at this leverage, how often does a liquidation cascade turn a 3 % day into a 12 % day?
+The model is a **laboratory for mechanisms**. It must reproduce the statistical signature of crypto returns from agent behaviour alone. Then it asks **conditional** questions. For example: with this share of leveraged traders at this leverage, how often does a liquidation cascade turn a −3 % day into a −12 % intraday low? Returns throughout are simple, measured from the prior close.
 
 It never says where bitcoin or ether will trade.
 
 The firewall from the spec (§0) applies without exception:
-- No model output enters the crypto board's state files.
-- A model result reaches the board only as a **question for Héctor's ruling**. For example, "experiment E1 suggests a liquidation-volume RED bar of X; adopt it?"
-- The model is not connected to the DSGE-OLG core. §9 only sketches what an interface could carry, for Cath to design.
+- No model output enters the crypto board's state files, and **no model number appears on the board's dashboard**.
+- A model result reaches the board only as a question for Héctor's ruling, under the rules in §7.
+- `crypto_abm/` never reads from or writes into `crypto_monitor/`. A test enforces this (§11).
+- The model is not connected to the DSGE-OLG core. §9 states what an interface could carry, for Cath to design.
 
-The target is the same kind Nina set for the monetary model: a crisis that **emerges from coordination**, without an exogenous shock large enough to explain it. There it was the September 2019 repo spike; here it is a liquidation cascade or a holder run.
+The target is an emergent coordination failure, the same kind Nina set for the monetary model with the September 2019 repo spike. In the **crypto adapter**, plain Gaussian order-flow noise is the only exogenous input. That is a crypto-instance choice, not a core rule. The core keeps a hook for external stress inputs (Gina's layer) for later instances.
 
 ---
 
 ## 1. What the data says the model must reproduce
 
-I computed these from Coinbase daily UTC closes for BTC-USD and ETH-USD, 2019-01-01 to 2026-11-16: 2,877 closes each and no missing days. Moments use log returns; the worst-day and episode figures (§1.1 last rows, §1.3, §1.4) are simple price changes. The method is in Appendix A so that B1 can recompute every figure. Grade: MARKET data, our computation.
+These figures come from Coinbase daily UTC closes for BTC-USD and ETH-USD, 2019-01-01 to 2026-11-16: 2,877 closes each, with no missing days. They are MARKET data, our computation, and were reproduced independently by Fina (whose own run also gives the Hill indices). Conventions:
+- Moments use log returns, formed *within* each window. The post-ETF window gives 1,040 returns and drops the 2024-01-11 return.
+- Standard deviations use ddof = 1. Skewness and kurtosis are standardised with that s.d.
+- Figures are rounded, not truncated.
+- The "3σ day" counts |r_t| above 3 times the s.d. of the previous 90 daily returns.
+- Worst days and episodes are **simple** price changes.
 
-### 1.1 Two regimes, not one
+The method is in Appendix A.
 
-The launch of US spot bitcoin ETFs (2024-01-11) splits the sample cleanly:
+### 1.1 Two periods, and what actually differs between them
 
-| Moment | BTC 2019–2023 | BTC post-ETF (2024-01-11 → 2026-11-16) | ETH 2019–2023 | ETH post-ETF |
-|---|---|---|---|---|
-| Daily s.d. (annualised) | 3.63 % (69.5 %) | **2.45 % (46.9 %)** | 4.65 % (88.9 %) | **3.50 % (67.0 %)** |
-| Skewness | −1.32 | **+0.11** | −1.23 | **+0.29** |
-| Excess kurtosis | 20.7 | **3.44** | 15.6 | **3.88** |
-| ACF of returns, lag 1 | −0.078 | −0.046 | −0.099 | −0.011 |
-| ACF of \|r\|, lag 1 / 5 / 20 | 0.158 / 0.098 / 0.044 | **0.156 / 0.100 / 0.038** | 0.166 / 0.117 / 0.053 | **0.140 / 0.058 / −0.009** |
-| Share of days with \|log r\| > 0.10 | 2.19 % | 0.28 % | 3.94 % | 2.01 % |
-| Worst day | −38.8 % (2020-03-12) | −14.0 % (2026-02-05) | −43.3 % (2020-03-12) | −14.9 % |
-| BTC–ETH correlation; ETH beta to BTC | 0.84; 1.07 | **0.83; 1.18** | | |
+| Moment | BTC 2019–2023 | BTC 2019–2023 excl. 2020-03-12 | BTC post-ETF (2024-01-11 → 2026-11-16) | ETH 2019–2023 | ETH 2019–2023 excl. 2020-03-12 | ETH post-ETF |
+|---|---|---|---|---|---|---|
+| Daily s.d. (annualised) | 3.64 % (69.5 %) | 3.45 % (65.9 %) | **2.46 % (47.0 %)** | 4.65 % (88.9 %) | 4.46 % (85.2 %) | **3.51 % (67.0 %)** |
+| Skewness | −1.32 | +0.03 | +0.11 | −1.23 | −0.28 | +0.29 |
+| Excess kurtosis | 20.7 | 3.56 | 3.44 | 15.6 | 4.52 | 3.88 |
+| **Hill tail index (top 5 % of \|r\|)** | 3.25 | 3.43 | 3.45 | 2.91 | 3.07 | 3.23 |
+| **Share of 3σ days (90-day trailing s.d.)** | 1.96 % | 1.90 % | 1.92 % | 1.73 % | 1.67 % | 1.73 % |
+| ACF of \|r\|, lag 1 | 0.16 | 0.14 | 0.16 | 0.17 | 0.14 | 0.14 |
+| Share of days with \|log r\| > 0.10 (simple > 10 %) | 2.19 % (2.25 %) | 2.14 % (2.19 %) | **0.29 % (0.38 %)** | 3.95 % (4.05 %) | 3.89 % (4.00 %) | **2.02 % (2.12 %)** |
+| Worst day (simple) | −38.8 % (2020-03-12) | −15.4 % (2022-06-13) | −14.0 % (2026-02-05) | −43.3 % (2020-03-12) | −27.6 % (2021-05-19) | −14.9 % (2026-02-05) |
+
+The BTC–ETH correlation is 0.84 before and 0.83 after. ETH's beta to BTC rises from 1.07 to **1.18**.
 
 Post-ETF maximum drawdowns: BTC −53.1 % ($124,720 on 2025-10-06 to $58,524 on 2026-06-30); ETH −67.6 % ($4,831 on 2025-08-22 to $1,565 on 2026-06-25). On 2026-11-16, BTC is 48.0 % and ETH 62.3 % below their post-ETF closing highs.
 
-**Design consequence.** The model is **calibrated on the post-ETF window**, and the pre-ETF window is a **regime-shift test** (§6). This is a natural experiment the model should pass: lowering the ETF holder share and raising leverage, with no other change, should move the simulated moments toward the pre-ETF column. If the model can do that, the ETF share is doing mechanism work. If it can't, the model is missing something.
+**Reading (corrected in v1.1).** v1 said the ETF launch "splits the sample cleanly", including in tail shape. That was wrong. Without one day, 2020-03-12, the pre-ETF skewness and kurtosis are close to the post-ETF values. Neither robust tail measure moves materially across the periods: the Hill index is 3.43 vs 3.45 for BTC, and the 3σ-day share is about 1.9 % throughout. Volatility clustering (ACF of |r|) is also unchanged.
+
+What does differ:
+- the **level of volatility** (BTC annualised s.d. 65.9 % → 47.0 % excluding the crash day);
+- the **frequency of 10 % days** (BTC about 7× lower, ETH about 2× lower);
+- **ETH's beta** to BTC.
+
+The ETF launch is not the only change between the periods. The pre-ETF window holds the 2021 bubble and the 2022 lender and exchange failures, and the April 2024 halving falls just after the launch. The contrast is evidence about *volatility level and large-day frequency*, with confounders. It is not evidence about tail shape.
+
+**Design consequences.**
+1. The model is calibrated on the post-ETF window (D1).
+2. The robust tail measures are targets because they are stable across periods. A model that matches them has the right *shape* of tails, and the regime question is about *scale and frequency*.
+3. The regime-shift test (§6.1) moves to B2, changes one factor at a time, and targets the s.d. and the 10 %-day frequency, not the tail index.
 
 ### 1.2 Raw kurtosis is too fragile to calibrate on
 
-A single day, 2020-03-12, accounts for almost all of the full-sample kurtosis. Removing it lowers BTC excess kurtosis from 21.1 to 4.1, and ETH's from 14.7 to 4.7. A moment that one observation can move fivefold is a poor calibration target.
-
-**Design consequence.** The model uses **robust tail moments**: a Hill tail index on the top 5 % of |r|, and the frequency of days beyond 3 rolling standard deviations. Raw kurtosis is reported but not targeted (decision D3).
+Removing 2020-03-12 cuts full-sample BTC excess kurtosis about fivefold (21.1 → 4.1) and ETH's about threefold (14.7 → 4.7). The Hill index and the 3σ-day share are targeted; raw kurtosis is reported only (D3).
 
 ### 1.3 Daily closes hide the cascades
 
-On 2025-10-10, BTC's daily close was −7.2 %, while the Coinbase daily candle ran from a $121,714.51 open to a $107,000 low, −12.1 % intraday. ETH closed −12.2 % that day. A model that steps once a day cannot represent a cascade that starts and partly reverses within hours.
+On 2025-10-10, BTC closed −7.2 % (simple, close to close). From the prior close ($121,714.51, equal to that day's open) to the intraday low ($107,000) it fell −12.1 %. ETH closed −12.2 %.
 
-**Design consequence.** Each simulated day has **intraday sub-steps** (decision D4), and the daily close is the last sub-step. B1 adds an intraday target: the gap between the intraday low and the close on the largest down days. It needs hourly candles (Coinbase granularity 3600), to be fetched in B1.
+The intraday target is defined as **prior close to intraday low**, against prior close to close, on the largest down days. B1 fetches hourly candles (granularity 3600) for this and checks that the open equals the prior close on each day used. This target also needs **transient impact** in the engine (§2, R4b). With permanent impact, an intraday low can never recover to a higher close.
 
-### 1.4 Episodes to be sourced in B1
+### 1.4 Selected large down days (simple returns)
 
-These are the largest daily drops in the sample. The usual explanations are listed only to orient B1, which must source each cause before it is used:
+This is **not** a ranking of the largest drops. Rows were chosen to cover the largest drops and the episodes discussed in the spec. Causes are **unsourced** and are not used as targets. B1 sources any cause it relies on, with two independent sources, or leaves it blank.
 
-| Date | BTC | ETH | Usually attributed to |
+| Date | BTC | ETH | Cause |
 |---|---|---|---|
-| 2020-03-12 | −38.8 % | −43.3 % | Pandemic liquidity crash |
-| 2021-05-19 | −14.3 % | −27.6 % | Leverage unwind / mining-ban news |
-| 2022-06-13 | −15.4 % | | Lender freezes (Celsius) |
-| 2022-11-09 | −14.4 % | −17.6 % | FTX collapse |
-| 2025-10-10 | −7.2 % close, −12.1 % intraday | −12.2 % | Large leveraged deleveraging |
-| 2026-02-05 | −14.0 % | | **Not known to us — source in B1** |
-| 2026-11-13/14 | −4.4 %, −6.0 % | −4.4 %, −8.3 % | Press: ETF outflows, hike bets, $1–2B liquidations (totals disagree) |
+| 2019-06-27 | −13.7 % | −12.4 % | unsourced |
+| 2020-03-12 | −38.8 % | −43.3 % | unsourced |
+| 2021-01-21 | −13.1 % | −19.3 % | unsourced |
+| 2021-05-19 | −14.3 % | −27.6 % | unsourced |
+| 2022-06-13 | −15.4 % | −15.7 % | unsourced |
+| 2022-11-09 | −14.3 % | −17.6 % | unsourced |
+| 2025-10-10 | −7.2 % close; −12.1 % to intraday low | −12.2 % close | unsourced |
+| 2026-02-05 | −14.0 % | −14.9 % | unsourced |
+| 2026-11-13 / 11-14 | −4.4 %, −6.0 % | −4.4 %, −8.3 % | press 11-14..16 cites ETF outflows, rate-hike bets and $1–2 B liquidations (totals disagree); see crypto board state 2026-11-16 |
 
 ---
 
-## 2. Architecture: a generic engine and a crypto adapter
+## 2. Architecture: a generic engine and adapters
 
-As the spec requires (§5.7), the **core knows nothing about crypto**. A sovereign bond market should be a second adapter, not a rewrite.
+The **core knows nothing about crypto** (spec §5.7). A grep test enforces this (§11). The core holds the objects below. B1 implements one of each as a stub; the crypto adapter uses the perpetual, single-market case.
 
-**Core objects:**
-- **Agent class.** A population of agents sharing a behavioural rule. Each agent has a balance sheet (cash, units of the asset, debt), a belief state (a signal it reads and a confidence level) and constraints: margin, redemption rules, mandate.
-- **Constraint.** A test that can turn into a *forced* order: margin breach → liquidation; redemption → sale; mandate breach (a rating floor in the sovereign case) → sale.
-- **Market.** One asset per instance in B1. Net order flow clears through a price-impact rule. Market depth shrinks when volatility rises, because the liquidity provider withdraws. That is the liquidity spiral of Brunnermeier and Pedersen, written as one equation.
-- **Cascade loop.** After each price move, all constraints are re-checked, forced orders are added, and the market clears again. This repeats until no new forced order appears, or until a cap on iterations is reached and the event is recorded. **This loop is the fire-sale mechanism made explicit**, and the place where runs and cascades emerge.
+**Core objects (Cath R5):**
+- **(a) Instruments** with a cash-flow schedule. A coin is the perpetual case with no cash flows; a bond has coupons and a maturity. Holdings are an agents × instruments array.
+- **(b) Markets**, possibly several, with linked prices: perp vs. spot (B3), two coins (B3), bonds vs. FX (sovereign).
+- **(c) An event calendar** for maturities, coupons, auctions, rating reviews and financing walls. Nothing is hard-coded to K = 24 sub-steps, √365 annualisation or a 1,040-day sample; these are instance parameters.
+- **(d) An issuer agent** with a gross financing need, and a pluggable **primary-market clearing** rule: an auction with a reservation price, where failure means issuance not covered. B2 needs it for ETF creations and treasury-company issuance, and E3 is a rollover problem.
+- **(e) Constraints** that test any state variable (price, equity, rating, issuer status), with state-dependent parameters. Margin m(σ̂) rises with volatility; that is the margin half of the Brunnermeier-Pedersen spiral.
+- **(f) A liquidity provider** as an agent with inventory and cash. Every trade has a counterparty, so conservation of units and cash becomes a unit test.
+- **(g) A loss-allocation hook** (insurance fund, auto-deleveraging, haircut) and an explicit **fixed-point selection** setting for the cascade solver.
 
-**Clearing rule (initial):**
+**Clearing rule (Cath R1, R2).** The rule is a reduced-form stand-in for the Brunnermeier-Pedersen liquidity spiral:
 
-  p_{s+1} = p_s · exp(λ_s · X_s / D),  with λ_s = λ₀ · exp(κ · σ̂_s)
+  ln p_{s+1} − ln p_s = λ_s · x_s,  with λ_s = min{ λ₀ · exp(κ·(σ̂_s/σ̄ − 1)), λ_max }
 
-Here X_s is net order flow at sub-step s, D is a depth scale and σ̂_s is recent realised volatility.
+- **R1 (units).** x_s is net order flow in **units of the asset as a share of the float**. Depth is normalised to 1, so λ₀ alone carries price impact and the rule does not depend on the price level. Noise flow has a fixed unit scale, which leaves σ_ε and λ₀ identified separately.
+- **R2 (volatility input).** σ̂_s is realised volatility over the trailing 24 sub-steps, in per-sub-step units, and σ̄ is its post-ETF sample mean. λ is capped at λ_max, and σ̂_s is **frozen during the cascade loop**, so impact and volatility cannot feed each other without bound.
+- **R4b (transient impact).** A fraction φ of each sub-step's impact decays at rate ρ per sub-step, implemented as mean reversion in the liquidity provider's inventory. φ = 0 gives permanent impact, the v1 case, and is kept as an ablation. Without decay, the §1.3 intraday target cannot be met.
 
-**What the crypto adapter adds:** the funding rate, computed inside the model from the long/short imbalance of leveraged agents and charged to their equity; ETF creations and redemptions; treasury-company equity issuance; and the data interfaces (Coinbase closes, venue open interest).
+**Cascade loop (Cath R3, R4).** After each sub-step's ordinary clearing:
+- (a) **only forced orders act inside the loop**; momentum and noise orders act once per sub-step;
+- (b) **each constraint fires once per crossing**: a liquidation closes the position, and a conviction sale sets a flag that resets only on re-entry;
+- (c) **each round's forced orders clear as one batch**.
+
+Under (a)–(c), forced flow has one sign and grows as the price falls. The loop ends within N rounds, where N is the number of constrained agents. With λ frozen, log impact is additive, so the end price does not depend on the order of execution. The solver selects the **fixed point nearest p_s**, as in Cifuentes-Shin-Ferrucci (2005). The deeper fixed points are the run equilibria a sovereign instance will need; selecting them is setting (g).
+
+The iteration cap is N + 1. **A binding cap is a bug**: the draw is aborted and logged, never kept as data.
+
+If B1 finds that cascades need *time* within the day to match §1.3, the variant "at most M rounds per sub-step, remaining forced orders carried to the next sub-step" is declared and tested as a named alternative.
+
+**What the crypto adapter adds:**
+- the funding rate, computed from the long/short imbalance of leveraged agents and charged to their equity;
+- ETF creations and redemptions, and treasury-company issuance, through the primary-market rule (B2);
+- the data interfaces (Coinbase closes, venue open interest).
+
+**Single price for perp and spot (Cath rec. 1).** Until B3 adds a second market, perp and spot trade at one price. That assumes instant arbitrage between them, and the assumption is stated wherever results are reported.
 
 ---
 
-## 3. Agents
+## 3. Agents and phases
 
-### 3.1 B1 — the minimal model (three classes plus noise)
+### 3.1 B1 — the minimal model (three classes, noise, liquidity provider)
 
 | Class | Rule | What it carries |
 |---|---|---|
-| **Conviction holders** (share w_c) | Hold. Each agent sells a fraction once the drawdown from its own reference price passes its threshold D_i, and re-enters slowly. **Thresholds differ across agents**, drawn from a distribution. | Runs: Granovetter-style thresholds. When one agent's exit pushes the price past the next agent's threshold, the run becomes self-fulfilling. |
-| **Momentum traders** (w_m) | Demand ∝ tanh(β · trend_h), with trend horizons h that differ across agents. | Amplification and volatility clustering |
-| **Leveraged perp traders** (w_ℓ) | Take a direction from a momentum signal plus noise, with leverage L_i drawn from a distribution and maintenance margin m. They are liquidated at the liquidation price: a long becomes a forced sell, a short a forced buy. They pay or receive the endogenous funding rate. | Fire sales and cascades |
-| **Noise order flow** | Gaussian, independent day to day | **The only exogenous input.** Fat tails and clustering must come from the agents, not from the noise. |
+| **Conviction holders** (share w_c) | Hold. Each agent sells a fraction once the drawdown from its own reference price passes its threshold D_i, and re-enters slowly. **Thresholds differ across agents**, drawn from a distribution. | Runs: Granovetter-style thresholds |
+| **Momentum traders** (w_m) | Demand ∝ tanh(β · trend_h), with horizons h that differ across agents | Amplification, volatility clustering |
+| **Leveraged perp traders** (w_ℓ) | Take a direction from a momentum signal plus noise, with leverage L_i drawn from a distribution and margin m(σ̂). They are liquidated at the liquidation price and pay or receive the endogenous funding rate. | Fire sales and cascades |
+| **Noise order flow** | Gaussian, independent | The crypto adapter's only exogenous input |
+| **Liquidity provider** | Clears net flow against inventory; inventory mean-reverts (φ, ρ) | Price impact; conservation; transient impact |
 
-The liquidity provider is part of the clearing rule, not a fourth class.
+### 3.2 Later classes
 
-### 3.2 Later phases
-
-- **B2:** ETF investors and authorized participants, with flows = a + b · past returns + noise, converted into same-day spot orders. Treasury companies issue equity and buy coin when mNAV > 1 + θ. When debt comes due and mNAV < 1 they sell coin, and mNAV itself moves with coin returns.
-- **B4:** stablecoin holders and issuer, where redemptions on falling peg confidence force T-bill sales (the exit to Nina's Duffie-Reis model). Also miners, who sell production as hashprice falls and switch capacity to AI hosting above a threshold.
+- **B2:** ETF investors and authorized participants, with flows = a + b · past returns + noise, cleared through the primary market. Treasury companies issue equity and buy coin when mNAV > 1 + θ, and sell coin when debt falls due on the event calendar and mNAV < 1.
+- **B4:** stablecoin holders and issuer, where redemptions force T-bill sales (the link to Nina's Duffie-Reis model). Also miners, who sell production on falling hashprice and switch capacity to AI hosting.
 
 ### 3.3 One asset first
 
-B1 models **BTC alone** (decision D5). The BTC–ETH correlation and ETH's higher beta (0.83; 1.18) need agents trading both assets. That becomes a B3 extension of the engine: a second market sharing the momentum and leveraged populations.
+B1 models **BTC alone** (D5). Matching the BTC–ETH correlation (0.83) and ETH's beta (1.18) needs agents trading both assets, which comes in B3.
+
+### 3.4 Phase map, reconciled with spec §5.6 (Fina req. 3)
+
+| Phase | Content | Spec §5.6 |
+|---|---|---|
+| B0 | This note (v1, v1.1) and the reviews | B0 |
+| **B1a** | CPU engine with the R5 core stubs, BTC adapter, targets recomputed from a committed data snapshot, null and ablation tests, **parameter recovery**, a rough fit to post-ETF moments | B1 |
+| **B1b** | Batched-simulation timing gate, CPU threads vs GPU (§8). It may move to B3 if B1a runs long. | B1 (part) |
+| B2 | ETF and treasury-company agents (primary market, event calendar); cascade experiments E1–E3; regime-shift test (§6.1); recalibration now that ETF agents exist | B2 |
+| B3 | **SMM calibration** on the full moment vector; two-asset engine (BTC + ETH) and perp/spot markets | B3, plus the two-asset extension |
+| B4 | Stablecoin and miner agents; Duffie-Reis link | B4 |
+
+The spec carries a dated amendment line pointing to this table.
 
 ---
 
-## 4. Parameters (initial ranges to explore, not estimates)
+## 4. Parameters (initial search ranges, not estimates)
 
 | Parameter | Meaning | Initial range |
 |---|---|---|
-| w_c, w_m, w_ℓ | Class shares (sum to 1 with noise weight) | simplex, w_ℓ ∈ [0.02, 0.30] |
+| w_c, w_m, w_ℓ | Class shares | simplex, w_ℓ ∈ [0.02, 0.30] |
 | D_i ~ LogNormal(μ_D, s_D) | Conviction drawdown thresholds | median 15–50 % |
-| β, h ~ U | Momentum intensity, horizons | h ∈ [3, 60] days |
-| L_i ~ LogNormal(μ_L, s_L), m | Leverage, maintenance margin | median L 3–20×, m 0.5–2 % |
-| λ₀, κ, D | Price impact, liquidity withdrawal, depth | to be scaled in B1 |
-| σ_ε | Noise order-flow scale | free |
-| K | Intraday sub-steps per day | 24 (D4) |
-
-These ranges are design choices for search, labelled as such. None of them is a finding.
+| β, h | Momentum intensity, horizons | h ∈ [3, 60] days |
+| L_i ~ LogNormal(μ_L, s_L), m₀, m₁ | Leverage; margin m(σ̂) = m₀ + m₁·σ̂ | median L 3–20×; m₀ 0.5–2 % |
+| λ₀, κ, λ_max | Impact per unit of float, volatility sensitivity, cap | to be scaled in B1a |
+| φ, ρ | Transient share of impact, decay per sub-step | φ ∈ [0, 0.8], ρ ∈ [0.05, 0.5] |
+| σ_ε | Noise order-flow scale | free (unit scale fixed by R1) |
+| K | Sub-steps per day | 24 (D4), an instance parameter |
 
 ---
 
 ## 5. Calibration
 
-- **Method:** simulated method of moments (SMM).
-- **Moment vector:** s.d.; ACF of r at lag 1; ACF of |r| at lags 1, 5 and 20; Hill tail index (top 5 %); frequency of 3σ days; skewness. In B1, add the gap between intraday low and close on large down days.
-- **Weighting matrix:** from a moving-block bootstrap of the data moments (block about 20 days). The Bayesian bootstrap already mapped in Research (Andrews–Moon–Shapiro 2026) is a later, separate option, under the one-method-at-a-time rule.
-- **Simulation:** each draw runs 1,040 days, matching the post-ETF sample, with common random numbers across draws.
-- **Parameter-recovery test first.** Simulate data from known parameters and check that the procedure recovers them. If it can't, the moments don't identify the model, and real calibration would only produce numbers.
-- **Report a set, not a point.** Because of equifinality, report every parameter vector inside the J-test acceptance region, and say which experiment conclusions hold across that whole set.
+- **Method:** simulated method of moments, with full SMM in **B3**. B1a only checks that some parameter vector reaches the bootstrap bands, and runs the recovery test.
+- **Moment vector:** s.d.; ACF of r at lag 1; ACF of |r| at lags 1, 5 and 20; Hill tail index (top 5 %); share of 3σ days (90-day trailing s.d.); skewness; share of days with simple |r| > 10 %. From B1a, add the gap between the prior-close-to-low and close-to-close returns on the largest down days.
+- **Weighting matrix:** from a moving-block bootstrap of the data moments (block of 20 days). The Bayesian bootstrap (Andrews–Moon–Shapiro 2026, mapped in Research) is a later, separate option.
+- **Simulation:** 1,040 days per path, at least **10 replications per draw**, with common random numbers.
+- **Optimiser:** liquidation thresholds make the moments jump in steps as parameters move. Use a derivative-free optimiser (CMA-ES or Nelder–Mead on the common-random-numbers objective), or smoothed triggers, declared up front. The parameter-recovery test uses the **same optimiser**.
+- **Recovery first:** simulate from known parameters and recover at least w_ℓ, median L, s_D and κ with stated coverage. Name the parameters that are not identified.
+- **Report a set, not a point:** every vector inside the J-test acceptance region, and which conclusions hold across all of it.
+- **Recalibration:** B1a fits post-ETF moments without ETF agents, so the fit is provisional and is redone in B2.
 
 ---
 
 ## 6. Validation
 
-1. **Regime-shift test (§1.1).** Calibrate post-ETF, then lower the ETF share and raise leverage. Do the simulated moments move toward the 2019–2023 column, especially the tail index and the frequency of 10 % days?
-2. **Intraday realism (§1.3).** Does the cascade loop produce intraday-to-close gaps like 2025-10-10 (−12.1 % intraday vs −7.2 % at the close)?
-3. **What it cannot do, stated with each result:**
+1. **Regime-shift test, in B2.** After ETF agents exist, change **one factor at a time** from the post-ETF calibration: first the ETF holder share alone, then leverage alone. Leverage changes are **taken from data**, such as sourced open-interest-to-market-cap ratios for the two periods, not fitted freely. Targets are the s.d. and the share of simple 10 % days, per §1.1. The tail index is not a target here, because it does not move.
+2. **Intraday realism.** Does the model, with transient impact, produce prior-close-to-low vs close-to-close gaps like 2025-10-10 (−12.1 % vs −7.2 %)? With φ = 0 it should fail; that is the ablation.
+3. **Limitations, stated with each result:**
    - Equifinality.
    - Sensitivity to the clearing rule (re-run key experiments with a linear-impact alternative).
-   - Regime dependence: the post-ETF calibration may not survive the next structural change, such as a stablecoin law or a second ETF wave.
+   - The perp = spot assumption.
+   - Regime dependence: a post-ETF calibration may not survive the next structural change.
 
 ---
 
-## 7. Experiments, each stated as a conditional result
+## 7. Experiments, and the bridge to the board
 
 | | Question | Output form |
 |---|---|---|
-| E1 | Leveraged share × leverage distribution → frequency and size of cascade days | Frequency of days below −X % as a surface over (w_ℓ, median L) |
-| E2 | ETF holder share and flow sensitivity b → drawdown amplification | Ratio of drawdown depth with vs. without flow feedback |
-| E3 | Treasury-company financing wall: debt due when mNAV < 1 → forced coin sales | Threshold of mNAV and debt size at which forced sales enter the cascade loop |
+| E1 | Leveraged share × leverage distribution → cascade days | Frequency of days with a prior-close-to-low below −X %, as a surface over (w_ℓ, median L) |
+| E2 | ETF holder share and flow sensitivity b → drawdown amplification (B2) | Ratio of drawdown depth with vs. without flow feedback |
+| E3 | Treasury-company financing wall: debt due when mNAV < 1 (B2) | mNAV and debt-size threshold at which forced sales enter the cascade loop |
 | E4 | Spread of conviction thresholds → run emergence | Critical dispersion s_D at which a moderate shock tips a run |
 
-**Bridge to the board:** E1 and E4 are the natural sources of the numeric bands the crypto board still lacks: the liquidation-volume bar and the drawdown-run leg. Each reaches the board only as a ruling question to Héctor.
+**Bridge to the board (Fina req. 5).** The board's unruled bands are the stablecoin peg band, the liquidation-volume bar and the funding/open-interest "stretched" levels (crypto_monitor README). The board has no drawdown leg, and this note does not propose one. Rules:
+1. Board bands are ruled on **observed data now**. They do not wait for the model.
+2. An experiment may motivate a question to Héctor **only when stated in board-observable units**, such as a funding rate per 8 h, an open-interest share, or a liquidation volume. The question gives the range across the accepted parameter set (§5) and the model run id. The model has no dollar scale until B2/B3 adds one from data (§2, R1); until then, E1 can speak only to funding and open-interest *shares*, not to dollar liquidation volumes.
+3. Any ruling is recorded in the board README and the state text, with the run id. No model number appears on the dashboard.
 
 ---
 
-## 8. Implementation (for B1, after approval)
+## 8. Implementation
 
-- **Folder:** `GrandPlan/Aurora/crypto_abm/` with its own `Project.toml` (Julia 1.11.7), `src/core/` (asset-agnostic), `src/adapters/crypto/`, `targets/` (the Appendix A computation as a script) and `experiments/`. Every module gets a `.md` companion, per the Dalila convention.
-- **Agents.jl or plain Julia arrays (decision D2).** Agents.jl is installed and good for prototyping and visual checks. For the engine core I recommend **plain struct-of-arrays Julia**, one vector per agent class, for three reasons:
-  - SMM needs millions of agent-steps per draw times thousands of draws.
-  - Arrays carry over to the sovereign adapter without Agents.jl's grid and space abstractions.
-  - The GPU path is direct.
-
-  This departs from the Monetary Foundation's "Agents.jl" line, so it is your call.
-- **CPU or GPU: both, for different jobs, decided by profiling (DFD GPU strategy).**
-  - *One simulation → CPU.* A single run is a sequential chain: day → 24 sub-steps → a cascade loop that repeats until no new liquidation. Each step depends on the last, the loop is branchy, and agent arrays are small (thousands, not millions). On a GPU, every sub-step would pay kernel-launch and synchronisation costs larger than the work. Single runs, debugging and the experiments' individual paths stay on the CPU, threaded across replications.
-  - *Calibration → GPU (the default heavy path).* SMM needs thousands of parameter draws × replications, all independent. That is embarrassingly parallel: one simulation per GPU thread (or per block), written as a CUDA.jl kernel over struct-of-arrays state, with the moment computation on the device too. This is where the model's compute actually goes, and where the GPU should pay.
-  - *Gate before committing to the GPU path.* B1 ships a timing table: CPU single-run time, CPU threaded batch, GPU batch at 1k and 10k draws. It verifies the GPU is actually used (nvidia-smi utilisation during the batch, not just a CUDA call that falls back to the CPU). The GPU path is kept only if it wins by a stated margin. If not, the note records why and the batch stays on CPU threads.
-  - *Memory.* Dalila's 8 GB holds about 10k simultaneous BTC simulations if per-simulation state stays in the low hundreds of KB (to be measured in B1). Larger sweeps, and the two-asset and sovereign instances, move to Ester (24 GB) once the infrastructure is ready, about two months out.
-- **Runs:** long calibration jobs inside Zellij; never killed mid-run to tweak.
+- **Location (Fina req. 7):** B1 is **not** developed or run in the sparse `Dalila-spcx` worktree. That worktree covers only the three monitor folders, has no `tests/`, and is `reset --hard main` daily at 18:00. **Branch and checkout: pending Héctor's ruling** (options set out 2026-11-16).
+- **Folder:** `GrandPlan/Aurora/crypto_abm/` with its own `Project.toml` (Julia 1.11.7), `src/core/`, `src/adapters/crypto/`, `targets/` (the Appendix A computation plus a committed data snapshot with a SHA-256 checksum) and `experiments/`. Every module gets a `.md` companion.
+- **Technology (D2):** the engine core is plain Julia struct-of-arrays. Agents.jl is used only for prototyping and visual checks in B1a.
+- **CPU or GPU:**
+  - *One simulation runs on the CPU.* It is a sequential chain of 24 sub-steps and a cascade loop, branchy and with small arrays. Replications are spread across CPU threads.
+  - *Batches of simulations are the GPU candidate.* Thousands of independent draws × replications can run one simulation per thread with CUDA.jl, with moments computed on the device. This is gated in B1b by a timing table: CPU single run, CPU threaded batch, GPU batch at 1k and 10k draws, with `nvidia-smi` showing the GPU working. The GPU path is kept only if it wins by a stated margin; otherwise the batch stays on CPU threads and the note says why.
+  - *GPU check.* When CUDA.jl enters the `Project.toml`, `tests/gpu_check.jl` is run in that environment (CLAUDE.md §9).
+  - *Memory.* Dalila's 8 GB is enough for B1. Larger sweeps go to Ester in B3, once Ester has its NVIDIA driver and the infrastructure is ready.
+- **Runs:** long jobs inside Zellij, never killed mid-run to tweak.
 
 ---
 
-## 9. Sketch for Cath: what an OLG-ABM interface could carry
+## 9. What an OLG-ABM interface could carry (rewritten in v1.1, Cath R6)
 
-This is only a sketch, to show the engine can bear it; the design is Cath's. In a sovereign instance:
-- **The OLG core supplies:** the debt-to-GDP path implied by aging, the primary balance, maturity and currency composition.
-- **The ABM's holder classes:** captive pension funds (AFOREs), domestic banks under a doom loop, foreign carry money, rating-constrained index funds, and the central bank.
-- **The interface object:** a map from (debt path, holder composition) to the *conditional frequency of rollover failure*. That marks where the multiple-equilibrium zone begins along the OLG path.
+This is for Cath to design. It records what the reviews established.
 
-It is a conditional statement, never a forecast of spreads, under the same firewall.
+**What the OLG produces today.** The BID2 OLG (`ge_model_gender.jl`, `run_aging_ssvs.jl`):
+- is a stationary solver with five-year periods;
+- is closed (K = A_dom − B), with one riskless bond;
+- treats debt as a residual (B = primary / (r_n − n_p));
+- yields comparative steady states for 2020 and 2050;
+- under closure C2 with debt absorbing the gap, has no finite steady state.
+
+It has no transition path, maturity structure, currency composition, holder split or spread. No DFD transition solver was found.
+
+**What could flow, once a transition solver exists:**
+- **OLG → ABM**, by scenario and closure, annually: debt/GDP, primary balance, r − n, and **domestic asset demand by age**. That last item is the capacity of captive holders such as the AFOREs, which only the OLG can supply.
+- **Exogenous to both:** maturity, currency and foreign share, from sourced and dated debt-management data. Using them consistently requires an **open-economy closure** first; a closed OLG implies zero foreign financing.
+- **ABM timing:** one-year slices with fundamentals held fixed.
+- **ABM → OLG:** no spread path and no fixed-point coupling. At most, a boundary the closure must respect, or a crisis branch solved as a separate scenario. The OLG's r stays the fundamental rate, and model yields are never fed back.
+
+**The interface object.** The headline is **not** a frequency of rollover failure. Inside the multiple-equilibrium zone, that frequency is set by the coordination shock the modeller assumes, so it would read like a probability it is not. The objects are instead:
+- the **crisis-zone boundary**: the set of states (debt, maturity, holder mix, backstop) where a self-fulfilling run exists;
+- the **minimum coordinated shock z*** that makes an auction fail.
+
+Both are indexed by **state, never by date**. The OLG path is overlaid on them: "under scenario S and closure C, the path enters the zone at debt d". The equilibrium-selection rule (§2, g) is always named.
+
+This does **not** yet meet the Monetary Foundation §10 aim of an interface specification delivered with the design note. It is a sketch of requirements. The sovereign instance itself waits until the crypto instance has passed B3 (spec §5.7).
 
 ---
 
-## 10. Decisions for Héctor (proposed defaults in brackets)
+## 10. Decisions (ruled 2026-11-16 by Héctor)
 
-**RULED 2026-11-16 (Héctor): defaults D1–D5 accepted; D6 accepted with an amendment — Fina helps Cath with the review of §2 and §9.** B1 (code) still waits for Héctor's go.
+- **D1 — Calibration window.** Post-ETF for calibration; 2019–2023 as the regime-shift test. *v1.1 note: per §1.1, the test is about volatility level and large-day frequency, run in B2.*
+- **D2 — Engine technology.** Plain Julia struct-of-arrays for the core; Agents.jl only for B1a prototyping and visual checks.
+- **D3 — Tail moments.** Hill index and 3σ-day share targeted; raw kurtosis reported, not targeted.
+- **D4 — Intraday sub-steps.** K = 24 per day, an instance parameter, with hourly Coinbase candles as intraday target data.
+- **D5 — First asset.** BTC alone in B1; two-asset engine in B3.
+- **D6 — Review.** Cath reviews §2 and §9, **with Fina's help** (amended by Héctor). Both reviews are filed; v1.1 applies their required changes; their endorsement of v1.1 is pending.
 
-- **D1 — Calibration window.** [Post-ETF (2024-01-11 → present) for calibration; 2019–2023 as the regime-shift test.]
-- **D2 — Engine technology.** [Plain Julia struct-of-arrays for the core, with Agents.jl only for B1 prototyping and visual checks.]
-- **D3 — Tail moments.** [Hill index and 3σ-day frequency targeted; raw kurtosis reported, not targeted.]
-- **D4 — Intraday sub-steps.** [K = 24 per day, with hourly Coinbase candles as the intraday target data.]
-- **D5 — First asset.** [BTC alone in B1; two-asset engine in B3.]
-- **D6 — Review.** [Cath reviews §2 and §9 before B1 starts.] → RULED: Cath reviews, **with Fina's help** (cross-project coherence).
+**New decision needed:** the branch and checkout for the build instruction and for B1 (§8).
 
 ---
 
-## Appendix A — How the §1 figures were computed (reproduce in B1)
+## 11. B1 acceptance criteria (Fina, adopted)
 
-- **Data:** Coinbase Exchange public candles, `https://api.exchange.coinbase.com/products/{BTC-USD,ETH-USD}/candles?granularity=86400`, fetched 2026-11-16 in 299-day windows from 2019-01-01. Close = index 4 of `[time, low, high, open, close, volume]`. Only UTC days closed by 2026-11-16 are kept (2,877 per product, consecutive days, no gaps).
-- **Returns:** r_t = ln(C_t / C_{t−1}) for all moments; episode and worst-day figures are reported as simple changes exp(r_t) − 1.
-- **Moments:** s.d. with ddof = 1, annualised × √365. Skewness and excess kurtosis are the 3rd and 4th standardized moments (minus 3). ACF at lag k is Σ(x_t − x̄)(x_{t+k} − x̄) / Σ(x_t − x̄)². Correlation and beta (cov(ETH, BTC) / var(BTC)) are on daily log returns.
+1. **Layout.** The §8 layout under Julia 1.11.7, with a `.md` companion per module. A grep test finds no crypto terms (funding, perp, BTC, Coinbase, UTC) in `src/core/`.
+2. **Reproducible targets.** `targets/` recomputes §1 from the committed snapshot, conventions stated, and matches this note.
+3. **Null test.** With noise only, excess kurtosis and the ACF of |r| are about zero.
+4. **Stylized facts.** At least one parameter vector puts post-ETF BTC moments inside block-bootstrap 95 % bands: ACF of r, ACF of |r| at lags 1/5/20, Hill index, 3σ share. Misses are listed.
+5. **Ablation.** Switching off the cascade loop, and separately setting φ = 0, moves the tail and intraday moments materially.
+6. **Parameter recovery.** On synthetic data, recover at least w_ℓ, median L, s_D and κ with stated coverage, using the §5 optimiser. Parameters that are not identified are named.
+7. **Determinism and conservation.** A fixed seed gives bit-identical runs, and units and cash are conserved across all agents, including the liquidity provider, to machine precision.
+8. **Timing and GPU.** The B1b timing table, plus `gpu_check.jl` if CUDA is used, or an explicit CPU-only statement.
+9. **Firewall.** A test that nothing under `crypto_abm/` reads or writes `crypto_monitor/`; the README restates the firewall.
+10. **Limitations.** Equifinality, a run with the linear-impact alternative, the perp = spot assumption, and regime dependence.
+11. **Sign-off.** The build instruction is filed; Cath and Fina sign off.
+
+---
+
+## 12. Cadence (Fina, adopted as the plan of record)
+
+- **By mid-January 2027:** B1a done, B1b done or moved to B3, B2 under way.
+- **B3** once Ester is ready, which matches the deferral of the CIEP/ITED research group.
+- **B4** not before Q1 2027. It depends on a Duffie-Reis monetary ABM that has no design note yet.
+
+---
+
+## Appendix A — How the §1 figures were computed (reproduce in B1a)
+
+- **Data:** Coinbase Exchange public candles, `https://api.exchange.coinbase.com/products/{BTC-USD,ETH-USD}/candles?granularity=86400`, fetched 2026-11-16 in 299-day windows from 2019-01-01. Close = index 4 of `[time, low, high, open, close, volume]`. Only UTC days closed by 2026-11-16 are kept: 2,877 per product, consecutive days, no gaps. B1a commits this snapshot with a SHA-256 checksum.
+- **Returns:** r_t = ln(C_t / C_{t−1}), formed within each window; the window's first day contributes no return. Episodes and worst days are reported as exp(r_t) − 1.
+- **Moments:**
+  - s.d. with ddof = 1, annualised × √365;
+  - skewness and excess kurtosis = mean(z³) and mean(z⁴) − 3, with z standardised by the ddof = 1 s.d.;
+  - ACF at lag k = Σ(x_t − x̄)(x_{t+k} − x̄) / Σ(x_t − x̄)²;
+  - Hill index = 1 / mean(ln(a_(i) / a_(k+1))) over the k = ⌊0.05·n⌋ largest |r|;
+  - 3σ day: |r_t| > 3 × s.d.(r_{t−90..t−1});
+  - correlation and beta (cov(ETH, BTC) / var(BTC)) on daily log returns.
 - **Drawdown:** on closes, from the running maximum within the window.
-- **Windows:** 2019-01-01..2026-11-16; 2019-01-01..2023-12-31; 2024-01-11..2026-11-16.
-- **Kurtosis sensitivity:** recomputed on the full sample excluding the 2020-03-12 return.
-- **2025-10-10 intraday:** from that day's Coinbase daily candle (open $121,714.51, low $107,000, close $112,980.28).
+- **Windows:** 2019-01-01..2023-12-31 (1,825 returns; 1,824 excluding 2020-03-12) and 2024-01-11..2026-11-16 (1,040 returns).
+- **2025-10-10:** that day's Coinbase daily candle: open $121,714.51 = prior close; low $107,000; close $112,980.28.
 
-*Nina · Aurora · GrandPlan · November 2026 — design note only; no code written in B0.*
+*Nina · Aurora · GrandPlan · November 2026 · design note v1.1; no code written in B0.*

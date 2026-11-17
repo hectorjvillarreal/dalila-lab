@@ -158,6 +158,8 @@ Every result states how it can mislead:
 | B3 | Calibration by simulated moments; report of what does not fit | Yes |
 | B4 | Stablecoin + miner agents; Duffie-Reis link to Nina's monetary ABM | Yes |
 
+*Amendment 2026-11-16 (design note B0 v1.1, §3.4, after the Cath and Fina reviews): B1 splits into B1a (CPU engine, targets, parameter recovery) and B1b (batched CPU/GPU timing gate, may move to B3); the regime-shift test and a recalibration move to B2; B3 is SMM calibration plus the two-asset and perp/spot extension. The design note's phase table supersedes this one where they differ.*
+
 ### 5.7 Design for reuse: sovereign debt as the intended second instance
 
 *(Added 2026-11-16 at Héctor's request.)* Crypto is the proving ground, not the destination. The B0 design note must build the engine around **generic agents**, each with a balance sheet, beliefs and constraints such as margins, mandates and rating floors, and around a **market-clearing rule that does not care what the asset is**. Then a sovereign bond market can be a second instance without a rewrite. Nothing crypto-specific (UTC closes, perpetual-futures funding, on-chain data) may live in the engine core; it belongs in the crypto instance's adapters.
