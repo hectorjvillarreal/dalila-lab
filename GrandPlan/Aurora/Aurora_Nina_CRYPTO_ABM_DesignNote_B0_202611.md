@@ -30,6 +30,15 @@
 
   So no statement about liquidity withdrawal may be made without naming the impact law, and κ is carried to B3 as an open question. **Robust under both laws:** leveraged traders carry the tails, and transient impact is needed (B1a report, branch `aurora-crypto-abm`).
 
+- **(g) GPU path.** In the B1b GPU batch path, moments are computed on CPU threads, not on the device as §8 said.
+
+### B1 complete (2026-11-17, merged at 0fe587f)
+
+- **§11 criteria 1–3 and 5–11 are met.**
+- **Criterion 4 is not met:** at 1,000 independent paths, ACF\|r\| at lag 5 sits below its band under both impact laws. The earlier 10-path figures were biased by selection. **RULED 2026-11-17 (Héctor):** merged as a known miss; the persistence of volatility clustering is the first B3 target, with missing wealth dynamics the leading candidate.
+- **The GPU batch path is kept for B3** at 3.12× (bar 3.0×, thin margin), with the CPU engine as the reference.
+- Reports: `crypto_abm/experiments/results/B1a_report.md` and `B1b_report.md`. Reviews: `crypto_abm/reviews/`. Build instruction 2_of_2: executed.
+
 ### What changed in v1.2 (2026-11-16, endorsement fixes)
 
 - **Cath:**

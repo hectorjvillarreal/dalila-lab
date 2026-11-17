@@ -7,9 +7,11 @@ corpus_affected:
   - GrandPlan/Aurora/crypto_abm/
 triggered_by: "Héctor, 2026-11-16: 'go ahead with B1', after design note B0 v1.2 was endorsed by Cath and Fina (1cd7a84)."
 agents_involved: [Nina, Cath, Fina, Claude Code]
-status: pending_execution
+status: executed
+executed: 2026-11-17
+merged_at: "0fe587f"
 sequence_position: "2_of_2"
-notes: "Executes phase B1 of design note B0 v1.2 (GrandPlan/Aurora/Aurora_Nina_CRYPTO_ABM_DesignNote_B0_202611.md). B1a: CPU engine with the R5 core stubs and the BTC adapter, targets recomputed from a committed data snapshot (daily and hourly Coinbase closes, SHA-256), null and ablation tests, parameter recovery, a rough fit to post-ETF moments. B1b: batched CPU/GPU timing gate (may move to B3). Done when the note's §11 criteria are met and Cath and Fina sign off; then the branch merges into main. Firewall: crypto_abm never reads or writes crypto_monitor; no model output enters the board."
+notes: "Executes phase B1 of design note B0 v1.2 (GrandPlan/Aurora/Aurora_Nina_CRYPTO_ABM_DesignNote_B0_202611.md). B1a: CPU engine with the R5 core stubs and the BTC adapter, targets recomputed from a committed data snapshot (daily and hourly Coinbase closes, SHA-256), null and ablation tests, parameter recovery, a rough fit to post-ETF moments. B1b: batched CPU/GPU timing gate (may move to B3). Done when the note's §11 criteria are met and Cath and Fina sign off; then the branch merges into main. Firewall: crypto_abm never reads or writes crypto_monitor; no model output enters the board. EXECUTED 2026-11-17 (merged at 0fe587f): B1a (CPU engine, targets, null/ablation/recovery, linear and square-root fits) and B1b (GPU batch path kept at 3.12x against a 3.0x bar, a thin margin; validation max |z| 2.74 / 1.71). Criterion 4 NOT met at 1,000 paths (ACF|r| lag 5 below its band under both impact laws); merged as a known miss by Héctor's ruling of 2026-11-17, first B3 target. Cath and Fina sign-offs and reviews in crypto_abm/reviews/. CUDA.jl 6.5.1 pinned in the model's Project.toml."
 ---
 
 # Aurora crypto ABM — phase B1 (build instruction)
