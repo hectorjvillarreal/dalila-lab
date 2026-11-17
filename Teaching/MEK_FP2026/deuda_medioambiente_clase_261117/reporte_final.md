@@ -174,7 +174,7 @@ Resultados: sin choque, 54.2 (2027) → 52.8 (2036). Con el desastre, 55.4 en 20
 No se citó ningún archivo con restricción de circulación.
 
 ## Pendiente
-- Versión 1 empujada el 17-nov (73e81ed en `p4-revision-final`). La versión 2 (abajo) no tiene commit. El repositorio `dalila-lab` es público; antes de empujar, revisar `git log origin/<rama>..HEAD`.
+- Versión 1 empujada el 17-nov (73e81ed en `p4-revision-final`). La versión 2 (abajo) se empujó el mismo día (4e0da80). El repositorio `dalila-lab` es público; antes de empujar, revisar `git log origin/<rama>..HEAD`.
 - Las descargas de verificación (CSV del SIE, PDF de CENAPRED, comunicados, DOF, PEF) están en `fuentes/verificacion/`, con un `LEEME.md` que dice qué verifica cada una.
 
 ---
