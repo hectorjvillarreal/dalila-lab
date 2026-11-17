@@ -168,9 +168,47 @@ Resultados: sin choque, 54.2 (2027) → 52.8 (2036). Con el desastre, 55.4 en 20
 | `Teaching/MEK_FP2026/macro_dueda_rstar_261109/` (decks, esquemas, `reporte_final.md`) | Material propio del curso; numeración de diapositivas e insumos del CGPE ya verificados. Plantilla `politica_fiscal_p2.tex`. |
 | `Teaching/MEK_FP2026/iva_verdes_clase_261012/reporte_final.md` | Material propio; solo las cuotas del IEPS al carbono 2026. |
 | `fuentes/imf_wp25170.pdf` (puesto por Héctor) | IMF Working Paper público, con la leyenda de «research in progress». Citado como documento de trabajo. |
+| `DFD_double_buffer_modeling_brief.md` (puesto por Héctor, v2) | Nota interna de DFD (Cath), `status: draft`, sin endosos; no dice «No divulgar». Se usa solo como hipótesis de trabajo, rotulada «en desarrollo» y «no es un resultado»; no se cita su identificador ni se reproduce texto. **No está en git**: el repo es público y la nota es borrador interno. |
+| `Teaching/MEK_FP2026/demografia_nta_envejecimiento_261102/` (v2) | Material propio del curso. Se citan la segunda parte, diaps. 4 y 9, y la tercera, diap. 19 (cuenta con datos públicos). |
 
 No se citó ningún archivo con restricción de circulación.
 
 ## Pendiente
-- Confirmado en un commit local en `p4-revision-final`, **sin push**. El repositorio `dalila-lab` es público; antes de empujar, revisar `git log origin/<rama>..HEAD`.
+- Versión 1 empujada el 17-nov (73e81ed en `p4-revision-final`). La versión 2 (abajo) no tiene commit. El repositorio `dalila-lab` es público; antes de empujar, revisar `git log origin/<rama>..HEAD`.
 - Las descargas de verificación (CSV del SIE, PDF de CENAPRED, comunicados, DOF, PEF) están en `fuentes/verificacion/`, con un `LEEME.md` que dice qué verifica cada una.
+
+---
+
+## Versión 2 · comentarios de Héctor (17-nov)
+
+Dos comentarios: que la parte intergeneracional quedara más clara, con la hipótesis del doble amortiguador (`DFD_double_buffer_modeling_brief.md`), y que la Parte 2 era repetitiva.
+
+### Parte 1: ahora 24 diapositivas (antes 23)
+| Diap. | Cambio |
+|---|---|
+| 20 | Antes «Déficits estructurales: lo que no se arregla con el ciclo». Ahora «cada presión reparte costos entre generaciones»: tabla de quién paga y quién recibe en envejecimiento, intereses e inversión climática; la deuda como reasignación por activos (NTA, 2–3 nov, Parte 2, diaps. 4 y 9); la regla «deuda para lo que aumenta la capacidad productiva» (diap. 15, GDR p. 14) leída como regla de equidad. Lo del informe pasa a la nota, con la cuenta de 3 a 10 puntos del PIB (NTA, Parte 3, diap. 19). |
+| 21 (nueva) | «Una hipótesis de trabajo: dos amortiguadores que se agotan juntos». Deuda y capital natural absorben la presión demográfica; el segundo aprieta al primero vía crecimiento. Cuenta propia: el déficit total que estabiliza la deuda es g_n·b; con b = 54 % (CGPE 2027, p. 47), medio punto menos de crecimiento nominal lo baja 0.27 puntos del PIB. Recuadro «Lo que no dice»: la parte del crecimiento que vino del capital natural no está medida; es una regla de escenarios, no un resultado (la advertencia de la nota de Cath). La ecuación va en la nota, no en pantalla. |
+| 24 | El puente presenta la Parte 2 como el segundo amortiguador. |
+| 14, 19 | Los recuadros que se llamaban «Juicio sobrio» ahora llevan un título que dice su contenido. |
+| 20 | Corrección: la versión 1 remitía a «diaps. 16–17» para la inversión climática; en la numeración del PDF son 17–18, por la opcional 15b. |
+
+### Parte 2: ahora 20 diapositivas (antes 22)
+| Cambio | Por qué |
+|---|---|
+| Se quitó la diap. 9, «Qué pesa en el corto plazo y qué en el largo» | Repetía en tabla los cinco sectores de las diaps. 4–8. Los horizontes de proyección del FMI pasan a la nueva diap. 14. |
+| Las diaps. 15 (incertidumbre) y 16 (recomendaciones, opcional) se fusionaron en la 14, «Lo que los modelos ven mal, y qué hacer con eso» | Ya no se repite que las estimaciones difieren por nivel o crecimiento (diap. 11) ni el «Juicio sobrio». Los cuatro pasos, la regla de lo adicional y la capacidad institucional pasan a la nota. Se agrega el horizonte de 5, 20 y 30 años frente a un problema de fin de siglo («le toca a otra generación», rotulado en la nota como lectura nuestra). |
+| Diap. 16 (ejercicio): se quitó Otis | Otis estaba en el ejercicio y en la diap. de México; queda solo en la de México. La escala se da frente a la prueba de estrés del FMI. |
+| Diap. 5 (fiscal): se quitó la frase que adelantaba la ecuación | La ecuación llega en la diap. 15. |
+| Diap. 15 (ecuación): γ enlaza con el segundo amortiguador (Parte 1, diap. 21) | Es el término por donde la hipótesis entra a la aritmética. |
+| Diap. 19, «Tres ideas»: reescrita | La versión 1 repetía «los cuatro términos de la ecuación». Ahora: el clima mueve el crecimiento y con él la deuda sostenible; lo no modelado aparece después a cargo de otra generación; adaptar con deuda reparte costos con quien recibe el beneficio, y desgastar capital natural hace lo contrario. La nota aclara que la tercera idea es lectura nuestra. |
+| Diap. 2: el primer punto enlaza con la hipótesis de la Parte 1 | Continuidad. |
+| Diap. 10 (datos) pasa a opcional | Para conservar diapositivas opcionales tras quitar la 9 y la 16. |
+| Diap. 8: «Juicio sobrio» → «Dónde está la supervisión hoy» | Título con contenido. |
+
+### Tiempos (suma de las notas)
+- Parte 1: 86 min, 8 de ellos opcionales: **78 min sin opcionales, 3 más que los 75.** Si hace falta, la diap. 19 (bonos temáticos) puede volverse opcional.
+- Parte 2: 77 min, 6 de ellos opcionales (diaps. 7 y 10): 71 min sin opcionales.
+
+### Compilación
+`deuda_p1.pdf` 93 pp., `deuda_p1_handout.pdf` 24; `clima_p2.pdf` 80 pp., `clima_p2_handout.pdf` 20. Sin errores, cajas desbordadas ni referencias indefinidas. Revisión visual de las páginas modificadas y búsqueda de las palabras prohibidas en el texto nuevo.
+
