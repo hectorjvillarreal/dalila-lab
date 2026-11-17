@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-16",
+  "carried_from": null,
+  "analyst_note": "11-16 BASELINE (board created by Claude Code at H\u00e9ctor's request; spec Part A approved with defaults Q1-Q5 the same day). NO MECHANISM CLASSIFIED: Runs, Fire Sales and Interconnections stay UNSET until the first manual pass sources their observables and H\u00e9ctor (or a delegated analyst) classifies. Spot from Coinbase UTC closes; macro entered by hand from the 11-16 SPCX pass. Numeric threshold bands (peg band, liquidation-volume bar) not yet ruled.",
+  "spot": {
+    "btc_usd": "$64,816.79 (2026-11-16 UTC close, Coinbase BTC-USD)",
+    "eth_usd": "$1,819.02 (2026-11-16 UTC close, Coinbase ETH-USD)",
+    "as_of": "2026-11-16 (Coinbase UTC daily close; MARKET grade)"
+  },
+  "mechanisms": {
+    "runs": {
+      "state": "UNSET",
+      "driving_observable": "",
+      "observables": {
+        "etf_net_flows": null,
+        "stablecoin_supply_change": null,
+        "stablecoin_peg_deviation": null,
+        "stablecoin_reserve_attestations": null,
+        "exchange_reserves": null,
+        "known_blind_spots": null
+      },
+      "next_escalation_trigger": ""
+    },
+    "fire_sales": {
+      "state": "UNSET",
+      "driving_observable": "",
+      "observables": {
+        "perp_open_interest": null,
+        "perp_funding_rates": null,
+        "liquidation_volume": null,
+        "treasury_company_mnav_and_debt": null,
+        "miner_debt_and_hashprice": null,
+        "eth_liquid_staking_discount": null,
+        "known_blind_spots": null
+      },
+      "next_escalation_trigger": ""
+    },
+    "interconnections": {
+      "state": "UNSET",
+      "driving_observable": "",
+      "observables": {
+        "etf_custodian_concentration": null,
+        "stablecoin_issuer_tbill_holdings": null,
+        "miner_ai_hosting_links": null,
+        "corporate_holders": null,
+        "known_blind_spots": null
+      },
+      "next_escalation_trigger": ""
+    },
+    "currency_mismatch": {
+      "state": "INERT",
+      "driving_observable": "",
+      "observables": {},
+      "next_escalation_trigger": ""
+    },
+    "inflation_deflation": {
+      "state": "INERT",
+      "driving_observable": "",
+      "observables": {},
+      "next_escalation_trigger": ""
+    }
+  },
+  "macro_backdrop": {
+    "tips_10y_real_yield": "2.92 (2026-11-16, Treasury real yield curve; FRED DFII10 2.91 on 11-13) \u2014 entered by hand, FRED timed out at setup",
+    "vix_level": "22.91 (2026-11-16, Cboe 16:15 ET; day high 24.52)",
+    "fed_funds_target_upper": "4.00 (2026-11-16, FRED DFEDTARU; last change 2026-09-17 from 3.75)",
+    "vix_trend": "11-16: 19.30 (11-13) -> 22.91 on the Nvidia/BIS AI-chip-rule selloff (Nasdaq -2.49%).",
+    "narrative_vs_cashflow_rotation": "11-16 (same gauge as the SPCX board, README item 6 there): since 10-06, bitcoin -24.2% ($85,540 -> $64,817), IBIT -24.1%, ether -32.6% ($2,697 -> $1,819), ETHA -32.5% vs SCHD +9.2%, XLU +7.2%, VTV +3.7%, RSP +3.1%. Since 11-09: bitcoin -13.9%, ether -14.7%.",
+    "broad_risk_on_off": "11-16: broad AI/semis selling, credit calm \u2014 SPY -1.9%, QQQ -2.7%, HYG -0.3%; HY OAS 3.23 (11-13). Detail on the SPCX board.",
+    "stablecoin_tbill_share": null
+  }
+}

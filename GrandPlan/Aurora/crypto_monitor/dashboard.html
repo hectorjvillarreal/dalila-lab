@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crypto Regime Monitor — 2026-11-16</title>
+<style>
+  :root { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+  body { margin:0; background:#0f1115; color:#e6e6e6; }
+  header { padding:18px 24px; background:#15181f; border-bottom:1px solid #2a2f3a; }
+  h1 { font-size:18px; margin:0 0 2px; }
+  .sub { color:#9aa0a6; font-size:12px; }
+  .topstrip { padding:14px 24px; background:#12141a; border-bottom:1px solid #2a2f3a; }
+  .flag { display:inline-block; padding:6px 12px; border-radius:6px; font-weight:700;
+           color:#fff; background:#1b7f3b; }
+  .flagmsg { color:#c8ccd2; font-size:13px; margin-top:8px; max-width:900px; }
+  .chips { margin-top:10px; }
+  .chip { display:inline-block; color:#fff; font-size:12px; font-weight:600;
+           padding:3px 9px; border-radius:12px; margin:0 6px 6px 0; }
+  .spot { color:#9aa0a6; font-size:12px; margin-top:8px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+           gap:14px; padding:18px 24px; }
+  .panel { background:#171a21; border:1px solid #262b35; border-radius:10px; padding:14px; }
+  .panel.inert { opacity:0.55; }
+  .panel.macro { border-color:#2c3e54; }
+  .panhead { display:flex; align-items:center; gap:8px; border-left:4px solid;
+              padding-left:8px; margin-bottom:8px; }
+  .mnum { color:#6b7280; font-weight:700; font-size:12px; }
+  .mname { font-weight:700; font-size:14px; flex:1; }
+  .badge { color:#fff; font-size:11px; font-weight:700; padding:2px 8px; border-radius:10px; }
+  .def { color:#aab0b8; font-size:12px; margin:6px 0; }
+  .rationale { color:#cfd4da; font-size:12.5px; margin:6px 0; }
+  .ruled { color:#8a909a; font-style:italic; font-size:12px; }
+  table.obs { width:100%; border-collapse:collapse; margin:8px 0; }
+  table.obs td { font-size:12px; padding:3px 4px; border-bottom:1px solid #232833; vertical-align:top; }
+  .obk { color:#9aa0a6; width:55%; font-family:ui-monospace,Menlo,monospace; }
+  .obv { color:#e6e6e6; }
+  .unset { color:#6b7280; font-style:italic; }
+  .thresholds { margin:8px 0; }
+  .thr { font-size:11.5px; color:#bcc2ca; margin:3px 0; }
+  .dot { display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:5px; }
+  .driver, .nextesc { font-size:12px; margin-top:6px; color:#dfe3e8; }
+  .nextesc { background:#1d2230; padding:6px 8px; border-radius:6px; }
+  .warn { margin:14px 24px; background:#2a1d1d; border:1px solid #5a2b2b; color:#f3c0c0;
+           padding:10px 14px; border-radius:8px; font-size:12.5px; }
+  .warn ul { margin:6px 0 6px 18px; }
+  .anote { margin:10px 24px; color:#cfd4da; font-size:13px; }
+  footer { padding:16px 24px; color:#6b7280; font-size:11px; border-top:1px solid #2a2f3a; }
+  .nogo { color:#7d8593; }
+</style></head>
+<body>
+<header>
+  <h1>Crypto (BTC, ETH) — Brunnermeier-Reis Regime Monitor</h1>
+  <div class="sub">Aurora · standalone exercise · regime identification only —
+    no price target, no buy/sell, no expected return (brief §0) ·
+    ABM outputs never enter this board</div>
+</header>
+<div class="topstrip">
+  <span class="flag">NOMINAL</span>
+  <span class="spot">· BTC $64,816.79 (2026-11-16 UTC close, Coinbase BTC-USD) · ETH $1,819.02 (2026-11-16 UTC close, Coinbase ETH-USD) · as of 2026-11-16 (Coinbase UTC daily close; MARKET grade)</span>
+  <div class="flagmsg">All live mechanisms GREEN or unset.</div>
+  <div class="chips"><span class="chip" style="background:#9aa0a6">Runs: UNSET</span><span class="chip" style="background:#9aa0a6">Fire Sales / Leverage: UNSET</span><span class="chip" style="background:#9aa0a6">Interconnections: UNSET</span></div>
+</div>
+
+<p class="anote">11-16 BASELINE (board created by Claude Code at Héctor&#x27;s request; spec Part A approved with defaults Q1-Q5 the same day). NO MECHANISM CLASSIFIED: Runs, Fire Sales and Interconnections stay UNSET until the first manual pass sources their observables and Héctor (or a delegated analyst) classifies. Spot from Coinbase UTC closes; macro entered by hand from the 11-16 SPCX pass. Numeric threshold bands (peg band, liquidation-volume bar) not yet ruled.</p>
+<div class="grid">
+    <div class="panel">
+      <div class="panhead" style="border-color:#9aa0a6">
+        <span class="mnum">1</span>
+        <span class="mname">Runs</span>
+        <span class="badge" style="background:#9aa0a6">UNSET</span>
+      </div>
+      <p class="def">A coordination failure in which holders rush to exit because they expect others to exit, making the exit self-fulfilling. Applies to any claim redeemable or sellable faster than the underlying can absorb.</p>
+      <p class="rationale">Three run objects: spot-ETF holders (IBIT, ETHA and peers) whose redemptions hit spot; stablecoin holders (USDT, USDC) whose redemptions force the issuer to sell reserves; exchange depositors.</p><table class="obs"><tr><td class="obk">etf_net_flows</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">stablecoin_supply_change</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">stablecoin_peg_deviation</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">stablecoin_reserve_attestations</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">exchange_reserves</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">known_blind_spots</td><td class="obv"><span class="unset">— unset / manual</span></td></tr></table><div class="thresholds"><div class="thr"><span class="dot" style="background:#1b7f3b"></span><b>GREEN</b> ETF flows mixed; stablecoin pegs at par.</div><div class="thr"><span class="dot" style="background:#c47f00"></span><b>AMBER</b> Persistent ETF outflows on falling price, or a peg deviation beyond the ruled band (band not yet ruled).</div><div class="thr"><span class="dot" style="background:#b3261e"></span><b>RED</b> Outflows accelerating together with a peg break or a halt on redemptions.</div></div><div class="driver"><b>Driving observable:</b> <span class="unset">— unset / manual</span></div><div class="nextesc"><b>Next escalation trigger:</b> <span class="unset">— unset / manual</span></div>
+    </div>
+    <div class="panel">
+      <div class="panhead" style="border-color:#9aa0a6">
+        <span class="mnum">2</span>
+        <span class="mname">Fire Sales / Leverage</span>
+        <span class="badge" style="background:#9aa0a6">UNSET</span>
+      </div>
+      <p class="def">Asset-price declines force deleveraging by holders who financed positions with debt or hold obligations collateralized by the asset; forced selling depresses prices further, in a reflexive loop.</p>
+      <p class="rationale">Perpetual futures liquidate automatically at known margins; treasury companies hold coins financed with convertibles or preferred stock; miners carry debt against hashprice; ETH liquid-staking tokens can trade at a discount that forces levered unwinds.</p><table class="obs"><tr><td class="obk">perp_open_interest</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">perp_funding_rates</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">liquidation_volume</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">treasury_company_mnav_and_debt</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">miner_debt_and_hashprice</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">eth_liquid_staking_discount</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">known_blind_spots</td><td class="obv"><span class="unset">— unset / manual</span></td></tr></table><div class="thresholds"><div class="thr"><span class="dot" style="background:#1b7f3b"></span><b>GREEN</b> Leverage moderate; no treasury company near a financing wall.</div><div class="thr"><span class="dot" style="background:#c47f00"></span><b>AMBER</b> Elevated open interest with stretched funding, or a treasury company trading below its holdings with debt coming due.</div><div class="thr"><span class="dot" style="background:#b3261e"></span><b>RED</b> A liquidation cascade in progress (volume bar not yet ruled), or a filed forced sale by a treasury company.</div></div><div class="driver"><b>Driving observable:</b> <span class="unset">— unset / manual</span></div><div class="nextesc"><b>Next escalation trigger:</b> <span class="unset">— unset / manual</span></div>
+    </div>
+    <div class="panel">
+      <div class="panhead" style="border-color:#9aa0a6">
+        <span class="mnum">3</span>
+        <span class="mname">Interconnections</span>
+        <span class="badge" style="background:#9aa0a6">UNSET</span>
+      </div>
+      <p class="def">The network of cross-exposures through which distress at one node propagates to others. The vulnerability is the topology of dependencies, not any single balance sheet.</p>
+      <p class="rationale">Exchange-custodians hold the ETFs&#x27; coins; stablecoin issuers hold large T-bill books (the Duffie-Reis money-market link); miners are moving into AI hosting (links to the Nvidia/CoreWeave/SPCX web); corporate holders carry coins on their balance sheets (SpaceX: 18,712 BTC, filed).</p><table class="obs"><tr><td class="obk">etf_custodian_concentration</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">stablecoin_issuer_tbill_holdings</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">miner_ai_hosting_links</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">corporate_holders</td><td class="obv"><span class="unset">— unset / manual</span></td></tr><tr><td class="obk">known_blind_spots</td><td class="obv"><span class="unset">— unset / manual</span></td></tr></table><div class="thresholds"><div class="thr"><span class="dot" style="background:#1b7f3b"></span><b>GREEN</b> No node under stress.</div><div class="thr"><span class="dot" style="background:#c47f00"></span><b>AMBER</b> Stress at one node (custodian incident, attestation delay, miner default).</div><div class="thr"><span class="dot" style="background:#b3261e"></span><b>RED</b> Simultaneous stress at connected nodes.</div></div><div class="driver"><b>Driving observable:</b> <span class="unset">— unset / manual</span></div><div class="nextesc"><b>Next escalation trigger:</b> <span class="unset">— unset / manual</span></div>
+    </div>
+    <div class="panel inert">
+      <div class="panhead" style="border-color:#6b6b6b">
+        <span class="mnum">4</span>
+        <span class="mname">Currency Mismatch</span>
+        <span class="badge" style="background:#6b6b6b">INERT</span>
+      </div>
+      <p class="def">Vulnerability from holding liabilities in one currency and assets/revenue in another; original-sin dynamics, dollar-denominated debt against local-currency revenue.</p>
+      <p class="rationale">BTC and ETH are not issuers and carry no liabilities: no asset-level mismatch. Considered and ruled out. Dormant hook (ruling Q2, 11-16, greyed out): dollar-stablecoin use as a dollarization channel in Latin America (Argentina, Mexico) — USD claims held against peso incomes. Activates only by ruling.</p><p class="ruled">Considered, ruled out — retained for the record.</p>
+    </div>
+    <div class="panel inert">
+      <div class="panhead" style="border-color:#6b6b6b">
+        <span class="mnum">5</span>
+        <span class="mname">Inflation-Deflation Spiral</span>
+        <span class="badge" style="background:#6b6b6b">INERT</span>
+      </div>
+      <p class="def">The fiscal-monetary channel — monetization, the fiscal theory of the price level, the debt-deflation interaction.</p>
+      <p class="rationale">A non-issuer asset does not generate an inflation-deflation spiral — inert at the asset level. The macro hook (real rates, rotation, liquidity, and stablecoin T-bill demand) lives in the context panel, not as a trigger.</p><p class="ruled">Considered, ruled out — retained for the record.</p>
+    </div>
+    <div class="panel macro">
+      <div class="panhead" style="border-color:#3a6ea5">
+        <span class="mname">Macro Backdrop (context — not a crypto trigger)</span>
+        <span class="badge" style="background:#3a6ea5">CONTEXT</span>
+      </div>
+      <table class="obs"><tr><td class="obk">tips_10y_real_yield</td><td class="obv">2.92 (2026-11-16, Treasury real yield curve; FRED DFII10 2.91 on 11-13) — entered by hand, FRED timed out at setup</td></tr><tr><td class="obk">vix_level</td><td class="obv">22.91 (2026-11-16, Cboe 16:15 ET; day high 24.52)</td></tr><tr><td class="obk">fed_funds_target_upper</td><td class="obv">4.00 (2026-11-16, FRED DFEDTARU; last change 2026-09-17 from 3.75)</td></tr><tr><td class="obk">vix_trend</td><td class="obv">11-16: 19.30 (11-13) -&gt; 22.91 on the Nvidia/BIS AI-chip-rule selloff (Nasdaq -2.49%).</td></tr><tr><td class="obk">narrative_vs_cashflow_rotation</td><td class="obv">11-16 (same gauge as the SPCX board, README item 6 there): since 10-06, bitcoin -24.2% ($85,540 -&gt; $64,817), IBIT -24.1%, ether -32.6% ($2,697 -&gt; $1,819), ETHA -32.5% vs SCHD +9.2%, XLU +7.2%, VTV +3.7%, RSP +3.1%. Since 11-09: bitcoin -13.9%, ether -14.7%.</td></tr><tr><td class="obk">broad_risk_on_off</td><td class="obv">11-16: broad AI/semis selling, credit calm — SPY -1.9%, QQQ -2.7%, HYG -0.3%; HY OAS 3.23 (11-13). Detail on the SPCX board.</td></tr><tr><td class="obk">stablecoin_tbill_share</td><td class="obv"><span class="unset">— unset / manual</span></td></tr></table>
+      <p class="ruled">Conditions belief-driven assets but does not by itself escalate any crypto mechanism.</p>
+    </div></div>
+<footer>
+  Reading date 2026-11-16.
+  Source of truth: <code>state/2026-11-16.json</code>. Provenance: <code>run_log.md</code>.
+  <span class="nogo">Outputs are regime states and escalation triggers — by
+  construction this artifact contains no directional or price output.</span>
+</footer>
+</body></html>

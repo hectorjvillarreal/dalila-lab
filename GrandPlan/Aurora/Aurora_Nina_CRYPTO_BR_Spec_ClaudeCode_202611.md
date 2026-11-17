@@ -3,7 +3,7 @@
 *Document type: Build specification / Knowledge File · Aurora Project*
 *Author: drafted by Claude Code at Héctor's request, for Nina (portfolio management & crypto strategy)*
 *Date: 16 November 2026*
-*Status: DRAFT — awaiting Héctor's rulings (§7) and Nina's review. Nothing in this document is built.*
+*Status: Part A APPROVED and built 2026-11-16 (rulings Q1–Q5, §7); Part B not started — B0 design note waits for Héctor's go. Nina's review pending.*
 *Companion to: `Aurora_Nina_SPCX_BR_Spec_ClaudeCode_202606.md` (the SPCX brief) and `Aurora_Nina_MonetaryFoundation_202604.md` §10 (Nina's ABM agenda)*
 
 ---
@@ -194,7 +194,9 @@ Every result states how it can mislead:
 
 ---
 
-## 7. Open questions for Héctor (proposed defaults in brackets)
+## 7. Questions for Héctor (proposed defaults in brackets)
+
+**RULED 2026-11-16 (Héctor): all five proposed defaults accepted.** Part A was built the same day in `crypto_monitor/`, with every mechanism UNSET until the first manual pass. Numeric threshold bands are still open; see `crypto_monitor/README.md`. The ABM design note (B0) follows the board, per Q5.
 
 - **Q1 — Scope.** BTC and ETH only? [Yes; no other tokens.]
 - **Q2 — Currency-mismatch hook.** Activate the LatAm stablecoin-dollarization hook? [Keep it greyed out with the hook written; activate only by ruling.]
