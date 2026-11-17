@@ -80,7 +80,8 @@ weeks. Every manual pass now runs ALL of these, not just tape + EDGAR:
    debt and CDS are press-only for regime purposes until a signed 8-K
    (ruling 2026-10-08).
 6. **Rotation gauge** — `narrative_vs_cashflow_rotation`: bitcoin (Coinbase UTC
-   close, IBIT) vs. a cash-flow basket (SCHD, XLU, VTV, RSP; Nasdaq historical
+   close, IBIT) and ether (Coinbase ETH-USD UTC close, ETHA; added at Héctor's
+   request 2026-11-16) vs. a cash-flow basket (SCHD, XLU, VTV, RSP; Nasdaq historical
    API, price returns) from the 10-06 Nasdaq closing high and over two sessions.
    The brief names only bitcoin; Héctor endorsed the basket 2026-10-30. Pair it with
    `broad_risk_on_off`: SPY/QQQ vs. RSP/VTV, HYG/LQD, FRED HY and BBB OAS
