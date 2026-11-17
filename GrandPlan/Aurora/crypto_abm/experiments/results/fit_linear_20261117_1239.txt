@@ -1,0 +1,34 @@
+# B1a rough fit — impact linear — 2026-11-17T12:39:26.865 — threads 16, N = 2000, R = 10, σ̄ = 0.005021463559980967
+random search: best J = 32.78, median J = 433.36, aborted/non-finite draws = 0
+NM start 1: J 32.78 → 13.44 in 175 iterations
+NM start 2: J 46.85 → 38.63 in 110 iterations
+NM start 3: J 60.23 → 46.81 in 146 iterations
+NM start 4: J 65.72 → 48.94 in 140 iterations
+NM start 5: J 78.63 → 12.65 in 169 iterations
+NM start 6: J 87.00 → 13.49 in 250 iterations
+NM start 7: J 99.51 → 70.02 in 110 iterations
+NM start 8: J 106.20 → 90.40 in 126 iterations
+## best fit (J = 12.65)
+  λ0        = 1.2745
+  σ_ε       = 0.0186
+  w_m       = 0.1011
+  β         = 2.4105
+  w_l       = 0.1577
+  L_median  = 11.3178
+  κ         = 0.0266
+  φ         = 0.6803
+  ρ         = 0.1909
+  D_median  = 0.4034
+  s_D       = 0.6084
+  sd           model    0.0244  data    0.0246  95% band [   0.0220,    0.0270]  inside
+  acf_r1       model   -0.0598  data   -0.0459  95% band [  -0.1179,    0.0308]  inside
+  acf_abs1     model    0.1078  data    0.1559  95% band [   0.0555,    0.2344]  inside
+  acf_abs5     model   -0.0014  data    0.0999  95% band [   0.0014,    0.1479]  OUTSIDE
+  acf_abs20    model    0.0108  data    0.0381  95% band [  -0.0641,    0.0595]  inside
+  hill         model    3.4787  data    3.4460  95% band [   2.7377,    4.4557]  inside
+  three_sigma  model    0.0210  data    0.0158  95% band [   0.0116,    0.0253]  inside
+  skew         model   -0.0852  data    0.1146  95% band [  -0.2110,    0.5208]  inside
+  big10        model    0.0039  data    0.0038  95% band [   0.0000,    0.0087]  inside
+  gap          model   -0.0350  data   -0.0309  95% band [  -0.0458,   -0.0132]  inside
+  moments inside 95% bands: 9 of 10
+u_best = [0.7909148362015787, 0.6922729191871151, 0.31418073719309375, 0.7894523708200716, 0.4917278947747267, 0.69988471659825, 0.017703971089173414, 0.8503539824548393, 0.3130951304212525, 0.7240808259618996, 0.5649220215127451]

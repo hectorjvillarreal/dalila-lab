@@ -1,0 +1,133 @@
+== linear fit Tue Nov 17 12:39:19 PM CST 2026
+# B1a rough fit — impact linear — 2026-11-17T12:39:26.865 — threads 16, N = 2000, R = 10, σ̄ = 0.005021463559980967
+random search: best J = 32.78, median J = 433.36, aborted/non-finite draws = 0
+NM start 1: J 32.78 → 13.44 in 175 iterations
+NM start 2: J 46.85 → 38.63 in 110 iterations
+NM start 3: J 60.23 → 46.81 in 146 iterations
+NM start 4: J 65.72 → 48.94 in 140 iterations
+NM start 5: J 78.63 → 12.65 in 169 iterations
+NM start 6: J 87.00 → 13.49 in 250 iterations
+NM start 7: J 99.51 → 70.02 in 110 iterations
+NM start 8: J 106.20 → 90.40 in 126 iterations
+## best fit (J = 12.65)
+  λ0        = 1.2745
+  σ_ε       = 0.0186
+  w_m       = 0.1011
+  β         = 2.4105
+  w_l       = 0.1577
+  L_median  = 11.3178
+  κ         = 0.0266
+  φ         = 0.6803
+  ρ         = 0.1909
+  D_median  = 0.4034
+  s_D       = 0.6084
+  sd           model    0.0244  data    0.0246  95% band [   0.0220,    0.0270]  inside
+  acf_r1       model   -0.0598  data   -0.0459  95% band [  -0.1179,    0.0308]  inside
+  acf_abs1     model    0.1078  data    0.1559  95% band [   0.0555,    0.2344]  inside
+  acf_abs5     model   -0.0014  data    0.0999  95% band [   0.0014,    0.1479]  OUTSIDE
+  acf_abs20    model    0.0108  data    0.0381  95% band [  -0.0641,    0.0595]  inside
+  hill         model    3.4787  data    3.4460  95% band [   2.7377,    4.4557]  inside
+  three_sigma  model    0.0210  data    0.0158  95% band [   0.0116,    0.0253]  inside
+  skew         model   -0.0852  data    0.1146  95% band [  -0.2110,    0.5208]  inside
+  big10        model    0.0039  data    0.0038  95% band [   0.0000,    0.0087]  inside
+  gap          model   -0.0350  data   -0.0309  95% band [  -0.0458,   -0.0132]  inside
+  moments inside 95% bands: 9 of 10
+u_best = [0.7909148362015787, 0.6922729191871151, 0.31418073719309375, 0.7894523708200716, 0.4917278947747267, 0.69988471659825, 0.017703971089173414, 0.8503539824548393, 0.3130951304212525, 0.7240808259618996, 0.5649220215127451]
+
+== linear ablations Tue Nov 17 01:03:42 PM CST 2026
+moment                           | best fit       | cascade loop o | φ = 0 (permane | κ = 0 (no liqu | no leveraged t | data
+sd                               |         0.0244 |         0.0204 |         0.0686 |         0.0243 |         0.0148 | 0.0246
+acf_r1                           |        -0.0598 |         0.0060 |         0.2500 |        -0.0547 |        -0.0872 | -0.0459
+acf_abs1                         |         0.1078 |         0.0564 |         0.1363 |         0.0783 |         0.0198 | 0.1559
+acf_abs5                         |        -0.0014 |         0.0021 |        -0.0535 |        -0.0291 |         0.0033 | 0.0999
+acf_abs20                        |         0.0108 |        -0.0097 |        -0.0081 |        -0.0091 |         0.0017 | 0.0381
+hill                             |         3.4787 |         3.8618 |         5.4945 |         3.4821 |         6.0348 | 3.4460
+three_sigma                      |         0.0210 |         0.0145 |         0.0130 |         0.0207 |         0.0034 | 0.0158
+skew                             |        -0.0852 |         0.0237 |        -0.1339 |        -0.0717 |        -0.0448 | 0.1146
+big10                            |         0.0039 |         0.0004 |         0.1403 |         0.0041 |         0.0000 | 0.0038
+gap                              |        -0.0350 |        -0.0147 |        -0.0022 |        -0.0363 |        -0.0066 | -0.0309
+
+columns: best fit · cascade loop off · φ = 0 (permanent impact) · κ = 0 (no liquidity withdrawal) · no leveraged traders (w_l = 0)
+== linear recovery Tue Nov 17 01:03:49 PM CST 2026
+# B1a parameter recovery — 2026-11-17T13:03:54.659 — truth = best fit; M = 8 synthetic paths; same NM; R = 10
+  w_l       truth 0.1577  estimates mean 0.1616  sd 0.0224  min 0.1327  max 0.1963
+  L_median  truth 11.3178  estimates mean 11.8399  sd 0.7334  min 11.0660  max 13.0286
+  s_D       truth 0.6084  estimates mean 0.6104  sd 0.0726  min 0.5134  max 0.7058
+  κ         truth 0.0266  estimates mean 0.0088  sd 0.0153  min 0.0000  max 0.0448
+  all parameters, mean |estimate − truth| / range:
+    λ0        0.047
+    σ_ε       0.078
+    w_m       0.098
+    β         0.095
+    w_l       0.069
+    L_median  0.037
+    κ         0.015
+    φ         0.042
+    ρ         0.042
+    D_median  0.118
+    s_D       0.070
+
+== sqrt fit Tue Nov 17 01:18:40 PM CST 2026
+# B1a rough fit — impact sqrt — 2026-11-17T13:18:44.677 — threads 16, N = 2000, R = 10, σ̄ = 0.005021463559980967
+random search: best J = 61.13, median J = 429.29, aborted/non-finite draws = 0
+NM start 1: J 61.13 → 50.56 in 200 iterations
+NM start 2: J 73.92 → 37.08 in 244 iterations
+NM start 3: J 75.91 → 9.70 in 203 iterations
+NM start 4: J 92.21 → 68.38 in 164 iterations
+NM start 5: J 99.76 → 64.85 in 142 iterations
+NM start 6: J 100.72 → 71.46 in 177 iterations
+NM start 7: J 106.22 → 21.52 in 197 iterations
+NM start 8: J 107.68 → 64.70 in 108 iterations
+## best fit (J = 9.7)
+  λ0        = 2.7136
+  σ_ε       = 0.0033
+  w_m       = 0.0601
+  β         = 2.0172
+  w_l       = 0.2763
+  L_median  = 6.9894
+  κ         = 0.3231
+  φ         = 0.7021
+  ρ         = 0.1352
+  D_median  = 0.1627
+  s_D       = 0.5515
+  sd           model    0.0253  data    0.0246  95% band [   0.0220,    0.0270]  inside
+  acf_r1       model   -0.0517  data   -0.0459  95% band [  -0.1179,    0.0308]  inside
+  acf_abs1     model    0.1942  data    0.1559  95% band [   0.0555,    0.2344]  inside
+  acf_abs5     model    0.0111  data    0.0999  95% band [   0.0014,    0.1479]  inside
+  acf_abs20    model    0.0207  data    0.0381  95% band [  -0.0641,    0.0595]  inside
+  hill         model    3.6406  data    3.4460  95% band [   2.7377,    4.4557]  inside
+  three_sigma  model    0.0138  data    0.0158  95% band [   0.0116,    0.0253]  inside
+  skew         model   -0.0482  data    0.1146  95% band [  -0.2110,    0.5208]  inside
+  big10        model    0.0042  data    0.0038  95% band [   0.0000,    0.0087]  inside
+  gap          model   -0.0204  data   -0.0309  95% band [  -0.0458,   -0.0132]  inside
+  moments inside 95% bands: 10 of 10
+u_best = [0.9754906103813219, 0.1597950697774279, 0.17289659652773823, 0.6490003899613206, 0.9153104098395092, 0.44582803398451887, 0.2154256228266998, 0.8776845750185094, 0.18933006153033055, 0.036329270791289614, 0.5016395333789306]
+
+== sqrt ablations Tue Nov 17 01:42:24 PM CST 2026
+moment                           | best fit       | cascade loop o | φ = 0 (permane | κ = 0 (no liqu | no leveraged t | data
+sd                               |         0.0253 |         0.0333 |         0.1995 |         0.0232 |         0.0116 | 0.0246
+acf_r1                           |        -0.0517 |        -0.0968 |         0.0796 |        -0.0322 |         0.2213 | -0.0459
+acf_abs1                         |         0.1942 |         0.2914 |         0.6042 |         0.1814 |         0.1844 | 0.1559
+acf_abs5                         |         0.0111 |        -0.0649 |        -0.0347 |        -0.0208 |        -0.0332 | 0.0999
+acf_abs20                        |         0.0207 |         0.0395 |        -0.0118 |         0.0055 |        -0.0122 | 0.0381
+hill                             |         3.6406 |         2.2820 |         4.3398 |         4.7361 |         4.1800 | 3.4460
+three_sigma                      |         0.0138 |         0.0232 |         0.0348 |         0.0085 |         0.0094 | 0.0158
+skew                             |        -0.0482 |        -0.4263 |         0.8435 |         0.1489 |        -0.0053 | 0.1146
+big10                            |         0.0042 |         0.0224 |         0.2674 |         0.0001 |         0.0000 | 0.0038
+gap                              |        -0.0204 |        -0.0196 |        -0.0104 |        -0.0101 |        -0.0051 | -0.0309
+
+columns: best fit · cascade loop off · φ = 0 (permanent impact) · κ = 0 (no liquidity withdrawal) · no leveraged traders (w_l = 0)
+== null and timing Tue Nov 17 01:42:33 PM CST 2026
+# null runs and timing — 2026-11-17T13:42:41.674 — fit: fit_linear_20261117_1239.txt — threads 1
+noise only, κ = fitted                 exkurt -0.024  ACF|r|1 0.0743  ACF|r|5 -0.0030  Hill 5.92  3σ 0.0038  sd 0.0118
+noise only, κ = 0 (criterion 3 null)   exkurt -0.027  ACF|r|1 0.0741  ACF|r|5 -0.0030  Hill 5.92  3σ 0.0037  sd 0.0118
+agents, κ = 0                          exkurt 3.506  ACF|r|1 0.0783  ACF|r|5 -0.0291  Hill 3.48  3σ 0.0207  sd 0.0243
+timing, one 1,040-day path (+120 burn-in), K = 24, single thread, best linear fit: median 0.231 s, min 0.211 s, max 0.243 s (20 paths)
+== first run (defaults) Tue Nov 17 01:42:50 PM CST 2026
+TARGET post-ETF BTC          sd=0.0246 acf_r1=-0.0459 acf_abs1=0.1559 acf_abs5=0.0999 acf_abs20=0.0381 hill=3.4460 three_sigma=0.0158 skew=0.1146 big10=0.0038 exkurt=3.44 gap=-0.0309
+default                      sd=0.2495(0.0144) acf_r1=0.1094(0.0714) acf_abs1=0.5106(0.0519) acf_abs5=0.0484(0.0332) acf_abs20=-0.0198(0.0483) hill=3.9258(0.4791) three_sigma=0.0189(0.0043) skew=-0.2977(0.3553) big10=0.3876(0.0362) exkurt=5.88 gap=-0.0129 maxrounds=33
+ablation: no cascade loop    sd=0.1914(0.0340) acf_r1=0.3687(0.1158) acf_abs1=0.4816(0.0539) acf_abs5=-0.0026(0.0385) acf_abs20=0.0151(0.0614) hill=1.4658(0.2683) three_sigma=0.0272(0.0026) skew=-1.3994(1.9122) big10=0.1095(0.0221) exkurt=35.67 gap=-0.0169 maxrounds=1
+ablation: φ = 0              sd=0.3505(0.0221) acf_r1=0.2000(0.0585) acf_abs1=0.4693(0.0409) acf_abs5=0.0060(0.0311) acf_abs20=-0.0162(0.0376) hill=3.9964(0.7420) three_sigma=0.0145(0.0028) skew=-0.5707(0.7890) big10=0.5141(0.0295) exkurt=7.03 gap=-0.0003 maxrounds=29
+ablation: κ = 0              sd=0.0578(0.0048) acf_r1=0.4962(0.1139) acf_abs1=0.3225(0.0786) acf_abs5=-0.0949(0.0541) acf_abs20=0.0270(0.0544) hill=3.7499(1.3400) three_sigma=0.0153(0.0046) skew=-1.7180(1.5098) big10=0.0790(0.0217) exkurt=18.43 gap=-0.0105 maxrounds=30
+null: noise only, κ = 0      sd=0.0151(0.0004) acf_r1=-0.0584(0.0299) acf_abs1=0.0036(0.0285) acf_abs5=0.0018(0.0247) acf_abs20=0.0189(0.0421) hill=5.8747(0.7726) three_sigma=0.0035(0.0019) skew=-0.0020(0.0713) big10=0.0000(0.0000) exkurt=-0.03 gap=-0.0025 maxrounds=0
+exit 0 Tue Nov 17 01:43:07 PM CST 2026

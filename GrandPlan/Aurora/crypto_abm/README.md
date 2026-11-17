@@ -7,7 +7,7 @@ Branch `aurora-crypto-abm`, checkout `~/Dalila-abm`. It merges into main when no
 This model is a laboratory for mechanisms, not a forecaster. Nothing here reads or writes the crypto regime board. No model number goes onto the board's dashboard. A model result reaches the board only as a ruling question to Héctor, stated in board-observable units with the run id. A test enforces the code side.
 
 ## Compute
-**B1a is CPU only**, a stated choice (note §8). One 1,040-day path takes about 0.1 s. CUDA.jl enters only in B1b (the timing gate), and `tests/gpu_check.jl` runs then.
+**B1a is CPU only**, a stated choice (note §8). One 1,040-day path (+120 burn-in) takes a median 0.23 s on one thread (`experiments/results/null_and_timing.txt`). CUDA.jl enters only in B1b (the timing gate), and `tests/gpu_check.jl` runs then.
 
 ## Layout
 - `src/core/`: asset-agnostic engine (`ABMCore`) and statistics (`Moments`).

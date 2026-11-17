@@ -1,0 +1,17 @@
+# B1a parameter recovery — 2026-11-17T13:03:54.659 — truth = best fit; M = 8 synthetic paths; same NM; R = 10
+  w_l       truth 0.1577  estimates mean 0.1616  sd 0.0224  min 0.1327  max 0.1963
+  L_median  truth 11.3178  estimates mean 11.8399  sd 0.7334  min 11.0660  max 13.0286
+  s_D       truth 0.6084  estimates mean 0.6104  sd 0.0726  min 0.5134  max 0.7058
+  κ         truth 0.0266  estimates mean 0.0088  sd 0.0153  min 0.0000  max 0.0448
+  all parameters, mean |estimate − truth| / range:
+    λ0        0.047
+    σ_ε       0.078
+    w_m       0.098
+    β         0.095
+    w_l       0.069
+    L_median  0.037
+    κ         0.015
+    φ         0.042
+    ρ         0.042
+    D_median  0.118
+    s_D       0.070
