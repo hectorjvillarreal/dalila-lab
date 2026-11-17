@@ -158,6 +158,31 @@ Every result states how it can mislead:
 | B3 | Calibration by simulated moments; report of what does not fit | Yes |
 | B4 | Stablecoin + miner agents; Duffie-Reis link to Nina's monetary ABM | Yes |
 
+### 5.7 Design for reuse: sovereign debt as the intended second instance
+
+*(Added 2026-11-16 at Héctor's request.)* Crypto is the proving ground, not the destination. The B0 design note must build the engine around **generic agents**, each with a balance sheet, beliefs and constraints such as margins, mandates and rating floors, and around a **market-clearing rule that does not care what the asset is**. Then a sovereign bond market can be a second instance without a rewrite. Nothing crypto-specific (UTC closes, perpetual-futures funding, on-chain data) may live in the engine core; it belongs in the crypto instance's adapters.
+
+**Why sovereign debt.** All five Brunnermeier-Reis mechanisms are live for a Latin American sovereign, where crypto and SPCX grey out two of them:
+- Rollover runs (Calvo 1988; Cole & Kehoe 2000).
+- The bank-sovereign doom loop (Brunnermeier, Garicano, Lane, Pagano, Reis, Santos, Thesmar, Van Nieuwerburgh & Vayanos 2016; Farhi & Tirole 2018).
+- Holder interconnections.
+- Original sin.
+- Fiscal dominance.
+
+**The intended agent map:**
+
+| Crypto agent | Sovereign counterpart |
+|---|---|
+| Conviction holders | Captive long-horizon holders (pension funds; in Mexico, the AFOREs) |
+| Leveraged traders | Foreign carry-trade money |
+| ETF holders | Index and rating-constrained funds forced to sell on exclusion or downgrade |
+| Stablecoin issuers | T-bill buyers |
+| Treasury companies | Quasi-sovereigns borrowing on implicit backing (e.g. Pemex) |
+
+**The link to the Grand Plan.** A sovereign instance is a candidate for the **OLG-ABM interface** that the SPCX brief (§0) and the Monetary Foundation (§10) leave undesigned. The DFD OLG core supplies the debt path that aging implies; the ABM asks whether holders' beliefs finance that path or flip to a run. That is the multiple-equilibrium zone a structural model, by construction, cannot see. The interface design stays Cath's.
+
+**Discipline.** The sovereign instance is a later research programme, **not** a phase of this build. It waits until the crypto instance has passed B3. It needs its own spec, with holdings data by sector (e.g. Banxico holdings of government securities, sourced and dated), Cath on the fiscal side and Gina on external shocks. The firewall of §0 applies to it unchanged: no forecast of spreads or ratings, only conditional mechanism statements.
+
 ---
 
 ## 6. Deliverables back to the team
