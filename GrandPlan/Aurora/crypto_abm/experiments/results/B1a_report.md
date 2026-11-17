@@ -20,7 +20,7 @@ She also asked for the transient decay to enter σ̂. All fixes are in (6e32826)
 | 5 | Ablations move moments materially | **Met** | `ablations_bestfit_linear.txt`, `ablations_bestfit_sqrt.txt` |
 | 6 | Parameter recovery, with non-identified parameters named | **Met, locally** | `recover_20261117_1303.txt`. κ cannot be told apart from zero under linear impact; starts were near the truth |
 | 7 | Determinism and conservation | **Met** | Bit-identical paths. Conservation to 1e-10 / 1e-9 with the cascade loop on and off (test §7, §7b) |
-| 8 | Timing; CPU-only statement or GPU check | **Met for B1a** | CPU only. One 1,040-day path (+120 burn-in) takes a median 0.231 s on one thread (`null_and_timing.txt`). The B1b gate is pending |
+| 8 | Timing; CPU-only statement or GPU check | **Met** (B1b, 2026-11-17) | CPU: 0.231 s per path on one thread (`null_and_timing.txt`). GPU gate: kept at 3.12× (thin margin), `gpu_check.jl` passed in the environment (`B1b_report.md`) |
 | 9 | Firewall test | **Met** | Test §9 |
 | 10 | Limitations and a clearing-rule alternative | **Met** | Square-root impact on cumulative flow, refit with ablations; limitations below |
 | 11 | Sign-off by Cath and Fina | **Given, with minor fixes; no re-check needed** | `reviews/Cath_signoff_B1a_20261117.md`, `reviews/Fina_signoff_B1a_20261117.md`; fixes applied here |
@@ -160,5 +160,5 @@ Reading:
 ## Not done in B1a
 
 - Global-start recovery (optional).
-- **B1b:** the batched CPU/GPU timing gate.
+- ~~**B1b:** the batched CPU/GPU timing gate.~~ Done 2026-11-17 (`B1b_report.md`): GPU path kept.
 - Merge into main, once B1b is done or moved to B3.
