@@ -1,5 +1,5 @@
 # Criterion 5 at the B1a best fit: cascade loop off, φ = 0, κ = 0 (each separately).
-# Run: julia -t auto --project=. experiments/ablations_bestfit.jl experiments/results/fit_20261116_2157.txt
+# Run: julia -t auto --project=. experiments/ablations_bestfit.jl experiments/results/fit_linear_20261116_2157.txt
 fitfile = ARGS[1]; empty!(ARGS); push!(ARGS, "none")
 include(joinpath(@__DIR__, "fit.jl"))
 using Printf
@@ -19,11 +19,11 @@ setp(p; kw...) = Params(; (k => getfield(p, k) for k in fieldnames(Params))..., 
 rows = [("best fit", mm(p0)), ("cascade loop off", mm(p0; cascade = false)),
         ("φ = 0 (permanent impact)", mm(setp(p0; φ = 0.0))), ("κ = 0 (no liquidity withdrawal)", mm(setp(p0; κ = 0.0))),
         ("no leveraged traders (w_l = 0)", mm(setp(p0; w_l = 0.0)))]
-open(joinpath(RES, "ablations_bestfit.txt"), "w") do io
+open(joinpath(RES, "ablations_bestfit_$(IMPACT).txt"), "w") do io
     @printf(io, "%-32s", "moment"); for (l, _) in rows; @printf(io, " | %-14s", first(l, 14)); end; @printf(io, " | data\n")
     for (k, nm) in enumerate(NAMES)
         @printf(io, "%-32s", nm); for (_, m) in rows; @printf(io, " | %14.4f", m[k]); end; @printf(io, " | %.4f\n", MD[k])
     end
     println(io, "\ncolumns: ", join(first.(rows), " · "))
 end
-print(read(joinpath(RES, "ablations_bestfit.txt"), String))
+print(read(joinpath(RES, "ablations_bestfit_$(IMPACT).txt"), String))

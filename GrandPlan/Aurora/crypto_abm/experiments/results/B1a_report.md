@@ -10,8 +10,8 @@
 | 1 | Layout, `.md` companions, no crypto terms in `src/core/` | **Met** | `test/runtests.jl` §1: 376 line checks plus 4 companions |
 | 2 | Targets reproduce §1 from the committed snapshot | **Met** | §2 tests; every §1.1 cell reproduced; SHA-256 verified |
 | 3 | Null test, noise only and κ = 0 | **Met** | excess kurtosis −0.03, ACF\|r\|₁ 0.004 (5 paths) |
-| 4 | Stylized facts inside 95 % block-bootstrap bands | **Met** (9 of 10 moments; all moments the criterion names) | `fit_20261116_2157.txt`; the daily s.d. misses (2.72 % vs band 2.20–2.70 %) |
-| 5 | Ablations move moments materially | **Met** | `ablations_bestfit.txt` (below) |
+| 4 | Stylized facts inside 95 % block-bootstrap bands | **Met** (9 of 10 moments; all moments the criterion names) | `fit_linear_20261116_2157.txt`; the daily s.d. misses (2.72 % vs band 2.20–2.70 %) |
+| 5 | Ablations move moments materially | **Met** | `ablations_bestfit_linear.txt` (below) |
 | 6 | Parameter recovery, with non-identified parameters named | **Met, locally** | `recover_20261116_2221.log`; κ and σ_ε are weakly identified; starts were near the truth (see limitation 4) |
 | 7 | Determinism and conservation | **Met** | bit-identical paths; units and cash conserved to 1e-10 / 1e-9 |
 | 8 | Timing; CPU-only statement or GPU check | **Met for B1a** | CPU only, stated in the README; one 1,040-day path ≈ 0.16 s; the B1b gate is pending |

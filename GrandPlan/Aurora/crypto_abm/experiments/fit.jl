@@ -9,6 +9,7 @@ include(joinpath(@__DIR__, "..", "targets", "Targets.jl")); using .Targets
 const RES = joinpath(@__DIR__, "results"); mkpath(RES)
 const SIGBAR = Targets.sigma_bar_hourly().σbar
 const R = 10                         # replications per draw (note §5), common random numbers
+const IMPACT = Symbol(get(ENV, "ABM_IMPACT", "linear"))   # :sqrt = clearing-rule alternative
 const DAYS = 1040
 
 # ---------------------------------------------------------------- targets and weights
@@ -61,7 +62,7 @@ function params_from(v)
     d = Dict(zip(PNAMES, v))
     wm, wl = d[:w_m], d[:w_l]
     s = wm + wl; s > 0.5 && (wm *= 0.5 / s; wl *= 0.5 / s)        # w_c = 0.5 fixed; shares ≤ 1
-    Params(σbar = SIGBAR, λ0 = d[:λ0], σ_ε = d[:σ_ε], w_m = wm, β = d[:β], w_l = wl,
+    Params(σbar = SIGBAR, impact = IMPACT, λ0 = d[:λ0], σ_ε = d[:σ_ε], w_m = wm, β = d[:β], w_l = wl,
            L_median = d[:L_median], κ = d[:κ], φ = d[:φ], ρ = d[:ρ], D_median = d[:D_median], s_D = d[:s_D])
 end
 
@@ -137,8 +138,8 @@ end
 # ---------------------------------------------------------------- modes
 function search(N)
     stamp = Dates.format(now(), "yyyymmdd_HHMM")
-    io = open(joinpath(RES, "fit_$(stamp).txt"), "w")
-    println(io, "# B1a rough fit — $(now()) — threads $(Threads.nthreads()), N = $N, R = $R, σ̄ = $SIGBAR")
+    io = open(joinpath(RES, "fit_$(IMPACT)_$(stamp).txt"), "w")
+    println(io, "# B1a rough fit — impact $(IMPACT) — $(now()) — threads $(Threads.nthreads()), N = $N, R = $R, σ̄ = $SIGBAR")
     rng = Xoshiro(11)
     U = [rand(rng, length(BOX)) for _ in 1:N]
     J = fill(Inf, N); lk = ReentrantLock()
@@ -163,7 +164,7 @@ function search(N)
     report(io, "best fit (J = $(round(out[best][2]; digits = 2)))", decode(x), m)
     println(io, "u_best = ", x)
     close(io)
-    println(read(joinpath(RES, "fit_$(stamp).txt"), String))
+    println(read(joinpath(RES, "fit_$(IMPACT)_$(stamp).txt"), String))
 end
 
 "Recovery: synthetic data from θ* (one path of DAYS days, seed 1000+j); refit with the same NM."

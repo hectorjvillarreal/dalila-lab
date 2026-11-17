@@ -115,9 +115,12 @@ mutable struct Market
     window::Vector{Float64}   # trailing per-sub-step log returns for σ̂
     widx::Int
     σhat::Float64
+    impact::Symbol            # :linear (λ·x) or :sqrt (λ·sign(x)·√(|x|·q0)), note §6.3 alternative
+    q0::Float64               # reference flow at which the two forms coincide
 end
-function Market(instr::Instrument; λ0, κ, λmax, σbar, φ, ρ, window::Int)
-    Market(instr, 0.0, 0.0, λ0, κ, λmax, σbar, φ, ρ, fill(σbar, window), 1, σbar)
+function Market(instr::Instrument; λ0, κ, λmax, σbar, φ, ρ, window::Int, impact::Symbol = :linear, q0::Float64 = 1.0)
+    impact in (:linear, :sqrt) || error("unknown impact form $impact")
+    Market(instr, 0.0, 0.0, λ0, κ, λmax, σbar, φ, ρ, fill(σbar, window), 1, σbar, impact, q0)
 end
 logprice(m::Market) = m.f + m.u
 price(m::Market) = exp(m.f + m.u)
@@ -151,7 +154,7 @@ Clear net agent flow `x` (share of float; buy > 0) against the liquidity provide
 which takes −x into inventory. All fills of the batch execute at the post-impact price.
 """
 function clear!(m::Market, lp::LiquidityProvider, x::Float64)
-    d = impact_lambda(m) * x
+    d = m.impact === :sqrt ? impact_lambda(m) * sign(x) * sqrt(abs(x) * m.q0) : impact_lambda(m) * x
     m.f += (1.0 - m.φ) * d
     m.u += m.φ * d
     p = price(m)

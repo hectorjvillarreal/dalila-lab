@@ -58,6 +58,8 @@ Base.@kwdef struct Params
     φ::Float64 = 0.3
     ρ::Float64 = 0.2
     σbar::Float64 = 0.005            # replaced by the hourly-snapshot constant (targets/)
+    impact::Symbol = :linear         # :sqrt = square-root impact alternative (note §6.3)
+    q0::Float64 = 0.002              # reference flow for :sqrt (≈ per-sub-step noise scale), share of float
 end
 
 # ----------------------------------------------------------------------------
@@ -324,7 +326,7 @@ cash_held(c::NoiseFlow) = c.cash
 "Build a one-market world from parameters. Classes with zero share are left out."
 function build_world(p::Params, rng::AbstractRNG)
     m = Market(consol(:BTC); λ0 = p.λ0, κ = p.κ, λmax = p.λmax_mult * p.λ0, σbar = p.σbar,
-               φ = p.φ, ρ = p.ρ, window = p.K)
+               φ = p.φ, ρ = p.ρ, window = p.K, impact = p.impact, q0 = p.q0)
     cls = Any[]
     p.w_c > 0 && push!(cls, Conviction(p, rng))
     p.w_m > 0 && push!(cls, Momentum(p, rng))
