@@ -1,0 +1,563 @@
+% El clima entra a la macroeconomía · FMI (2025), WP 25/170 · Segunda parte
+% Finanzas Públicas, Maestría en Economía Aplicada, Tec de Monterrey · sesión del 17 de noviembre de 2026
+% Esquema aprobado: esquema_clima_p2.md (2026-11-17). Compilar con: latexmk -pdf clima_p2.tex
+% Versión para repartir: clima_p2_handout.tex (misma fuente, opción handout).
+% Las notas del presentador van en \note{}; para verlas, compilar con \setbeameroption{show notes}.
+% Fuente principal: Mitra et al. (2025), IMF WP/25/170, en fuentes/. La página impresa coincide con la del PDF.
+% Cifras de México: SHCP (CGPE 2027, Comunicado 73/2023), CENAPRED (2024), DOF (6-nov-2020; PEF 2026). Verificación en reporte_final.md.
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\unaccentedoperators % la opción es-noaccentedoperators no existe en esta versión de babel
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{babel,arrows.meta,calc,positioning,decorations.pathreplacing,patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% ---------------------------------------------------------------------------
+% Tema sobrio (igual al de las sesiones anteriores)
+% ---------------------------------------------------------------------------
+\definecolor{cTitulo}{RGB}{0,55,100}
+\definecolor{cOferta}{RGB}{31,87,153}
+\definecolor{cDemanda}{RGB}{200,100,0}
+\definecolor{cImpuesto}{RGB}{175,30,30}
+\definecolor{cRecauda}{RGB}{40,130,80}
+\definecolor{cGris}{RGB}{110,110,110}
+
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{frametitle}{fg=cTitulo}
+\setbeamercolor{title}{fg=cTitulo}
+\setbeamercolor{structure}{fg=cTitulo}
+\setbeamercolor{block title}{bg=cTitulo!12,fg=cTitulo}
+\setbeamercolor{block body}{bg=cTitulo!4}
+\setbeamercolor{block title alerted}{bg=cImpuesto!12,fg=cImpuesto}
+\setbeamercolor{block body alerted}{bg=cImpuesto!4}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{blocks}[rounded]
+\setbeamersize{text margin left=0.7cm,text margin right=0.7cm}
+\setbeamertemplate{footline}{%
+  \hfill{\small\color{cGris}Déficits y deuda · Parte 2\quad\insertframenumber/\inserttotalframenumber}\hspace*{1em}\vspace{1.5mm}}
+
+% Fuente al pie de cada diapositiva
+\newcommand{\fuente}[1]{\par\vfill{\small\color{cGris}#1\par}}
+% Distintivo de diapositiva opcional
+\newcommand{\opcional}{\tikz[remember picture,overlay]\node[anchor=north east,font=\small,text=cGris] at ([xshift=-5mm,yshift=-3mm]current page.north east) {opcional};}
+% Abreviatura de la fuente principal
+\newcommand{\FMI}{Mitra et al. (2025), FMI WP/25/170}
+\newcommand{\GDR}{OCDE (2025), \emph{Global Debt Report}}
+
+% ---------------------------------------------------------------------------
+% Estilo común de gráficas
+% ---------------------------------------------------------------------------
+\tikzset{
+  every node/.append style={font=\small},
+  eje/.style={-{Stealth[length=2mm]},thick,black!75},
+  flecha/.style={-{Stealth[length=2mm]},thick,cTitulo},
+  guia/.style={thin,dashed,black!45},
+  sincorte/.style={execute at begin node={\hyphenpenalty=10000\exhyphenpenalty=10000\relax}},
+  caja/.style={sincorte,draw=cTitulo,rounded corners,fill=cTitulo!5,align=center,inner sep=4pt},
+}
+\tikzset{invisible/.style={opacity=0,text opacity=0},visible on/.style={alt={#1{}{invisible}}},
+  alt/.code args={<#1>#2#3}{\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}}}
+\pgfplotsset{
+  estilo/.style={axis lines=left,tick label style={font=\small},label style={font=\small},
+    legend style={font=\small,draw=none,fill=none},every axis plot/.append style={thick}},
+  barras/.style={estilo,ybar,ymin=0,axis x line*=bottom,axis y line=none,
+    nodes near coords,nodes near coords style={font=\small},enlarge x limits=0.2,
+    xtick=data,symbolic x coords={#1},x tick label style={font=\small,align=center},
+    every axis plot/.append style={draw=none},area legend},
+}
+
+\title{El clima entra a la macroeconomía}
+\subtitle{FMI (2025), WP 25/170 · Segunda parte}
+\author{Héctor Juan Villarreal}
+\institute{Finanzas Públicas · Maestría en Economía Aplicada\\Escuela de Gobierno y Transformación Pública · Tec de Monterrey}
+\date{Noviembre de 2026}
+
+
+\begin{document}
+
+% =========================================================================
+% I. POR QUÉ EL CLIMA ES UN TEMA MACROECONÓMICO · 8 min
+% =========================================================================
+\section{Por qué el clima es macroeconómico}
+
+% 1 -----------------------------------------------------------------------
+\begin{frame}[plain]
+  \titlepage
+  \vspace{-4mm}
+  {\small\color{cGris}\centering Mitra, P., Raissi, M., Versailles, B. et al. (2025), «Integrating Climate Change into Macroeconomic Analysis: A Review of Impact Channels, Data, Models, and Scenarios», IMF Working Paper WP/25/170, agosto de 2025.\par}
+  \note{1 min. Son 16 autores (portada y p.~2): Mitra, Raissi, Versailles, Centorrino, Ivanyna, Kirabaeva, Massetti, Montes de Oca Leon, Nguyen, Oman, Rebei, Tagklis, Zhang, Ungerer, Uruñuela López y Yu. Es un documento de trabajo: no representa necesariamente la opinión del FMI. La «cita recomendada» de la p.~2 omite a Centorrino y usa otro título; cito con la portada.}
+\end{frame}
+
+% 2 -----------------------------------------------------------------------
+\begin{frame}{El clima no solo pide financiamiento: también mueve la economía que lo paga}
+  \begin{itemize}
+    \item<1-> La primera parte terminó con lo que cuesta reducir emisiones. La OCDE dejó fuera la adaptación y los daños.
+    \item<2-> El documento del FMI pone esa otra mitad: el cambio climático y las políticas contra él afectan los sectores real, fiscal, externo, monetario y financiero, en horizontes distintos.
+    \item<3-> Su recomendación es que, donde el efecto sea macrocrítico, entre en las proyecciones y en el análisis de sostenibilidad de la deuda.
+    \item<4-> Y reconoce que todavía no se hace: las proyecciones por país incorporan el precio al carbono o la reforma de subsidios, y poco más.
+  \end{itemize}
+  \onslide<5->{
+  \begin{block}{La pregunta de esta parte}
+    Si el clima cambia el crecimiento, la recaudación, el gasto y el riesgo, ¿cómo se incorpora al análisis macroeconómico y, en particular, al de sostenibilidad de la deuda?
+  \end{block}}
+  \fuente{\FMI, secc.~1, pp.~5--6. \GDR, cap.~4, p.~143.}
+  \note{4 min. «Macrocrítico» es el término del FMI para lo que afecta la estabilidad macroeconómica presente o futura. El documento dice que los modelos existen pero cuesta operarlos sin expertos, y que traducir sus resultados a proyecciones por país es difícil (p.~6).}
+\end{frame}
+
+% 3 -----------------------------------------------------------------------
+\begin{frame}{Dos tipos de riesgo y dos tipos de respuesta}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \begin{tikzpicture}
+        \node[caja,text width=5.6cm] (f) at (0,0) {\textbf{Riesgos físicos}};
+        \node[caja,text width=2.5cm] (a) at (-1.55,-1.7) {Agudos\\{\small huracanes, inundaciones, sequías, calor}};
+        \node[caja,text width=2.5cm] (c) at (1.55,-1.7) {Crónicos\\{\small temperatura, lluvia, nivel del mar}};
+        \node[caja,draw=cDemanda,fill=cDemanda!6,text width=5.6cm] (t) at (0,-3.6) {\textbf{Riesgos de transición}\\{\small políticas, tecnología, precios relativos, activos varados}};
+        \draw[flecha] (f.south) -- (a.north); \draw[flecha] (f.south) -- (c.north);
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \small
+      \begin{itemize}
+        \item<2-> \textbf{Mitigación}: reducir emisiones para que el clima cambie menos. Es lo que midió la OCDE.
+        \item<3-> \textbf{Adaptación}: proteger a personas y activos del clima que ya cambió o va a cambiar.
+        \item<4-> El clima es el promedio de 30 años del tiempo meteorológico; el cambio climático es un cambio en ese promedio o en su variabilidad que dura décadas.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\FMI, secc.~1, p.~5 y nota 5; recuadro 1, p.~7; secc.~2, pp.~9--10 y 14. Diagrama propio.}
+  \note{3 min. En finanzas, todo el espectro de los cambios lentos a los eventos extremos se llama «riesgos físicos» (nota 5). Los activos varados son, por ejemplo, plantas de carbón que deben cerrarse antes del fin de su vida útil (p.~10).}
+\end{frame}
+
+% =========================================================================
+% II. CANALES DE TRANSMISIÓN · 25 min
+% =========================================================================
+\section{Canales de transmisión}
+
+% 4 -----------------------------------------------------------------------
+\begin{frame}{Sector real: el clima destruye capital y baja la productividad}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{tikzpicture}
+        \draw[eje] (0,0) -- (5.6,0) node[below left] {tiempo};
+        \draw[eje] (0,0) -- (0,4.0) node[above right] {PIB};
+        \draw[guia] (0.3,2.0) -- (5.3,3.4);
+        \node[font=\small,anchor=south east] at (5.3,3.45) {sin choque};
+        \draw[thick,cTitulo] (0.3,2.0) -- (1.8,2.42) -- (2.0,1.5) .. controls (2.6,1.9) and (3.2,2.55) .. (3.6,2.85) -- (5.3,3.33);
+        \draw[thick,cImpuesto] (3.2,2.45) .. controls (3.8,2.6) .. (5.3,2.85);
+        \node[font=\small,text=cImpuesto,anchor=north east] at (5.3,2.75) {cicatriz};
+        \node[font=\small,align=center] at (1.9,0.8) {evento\\extremo};
+        \node[font=\small,text=cTitulo,anchor=west] at (2.6,1.55) {reconstrucción};
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \small
+      \begin{itemize}
+        \item<1-> El calentamiento persistente baja la productividad: cosechas menores, trabajadores con menor desempeño físico y cognitivo, más enfermedad y mortalidad.
+        \item<2-> Frena la acumulación de capital, por daño permanente o depreciación más rápida, y deja activos varados.
+        \item<3-> Un evento extremo destruye capital; la reconstrucción empuja la demanda, pero la recuperación puede ser parcial.
+        \item<4-> En economías en desarrollo, un tercio del efecto de un desastre sobre el PIB viene de la pérdida directa de capital y dos tercios de la menor actividad.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\FMI, secc.~2, pp.~9--11 y fig.~3; secc.~3, p.~22 (Hallegatte y Vogt-Schilb, 2019). Gráfica esquemática propia.}
+  \note{4 min. La migración es otro canal (nota 10): cambia la oferta de trabajo, la asistencia social donde llegan los migrantes y las remesas. El documento advierte que el clima puede traer beneficios limitados, como temporadas de cultivo más largas en algunas regiones, pero que en general los superan los daños (nota 6).}
+\end{frame}
+
+% 5 -----------------------------------------------------------------------
+\begin{frame}{Sector fiscal: el clima entra por los dos lados del presupuesto}
+  \small
+  \begin{tabular}{@{}p{2.9cm}p{5.4cm}p{5.4cm}@{}}
+    \toprule
+    & \textbf{Directo} & \textbf{Indirecto} \\
+    \midrule
+    \textbf{No discrecional} (lo causa el clima) & Reconstrucción de infraestructura; transferencias a afectados; pasivos contingentes explícitos, como seguros con garantía pública. & Menor recaudación por menor PIB; más gasto en salud; pasivos contingentes implícitos, como el rescate de aseguradoras. \\
+    \addlinespace
+    \onslide<2->{\textbf{Discrecional} (lo decide el gobierno)} & \onslide<2->{Inversión y subsidios para mitigar; ingresos del precio al carbono y ahorro por eliminar subsidios a combustibles.} & \onslide<2->{Inversión en adaptación; gasto de emergencia; fondos de reserva.} \\
+    \bottomrule
+  \end{tabular}
+  \medskip
+
+  \onslide<3->{
+  \begin{block}{La lectura del documento}
+    La deuda sigue a los balances, pero los pasivos contingentes pueden empeorarla rápido, y los países vulnerables al clima tienden a pagar más por financiarse. En nuestra ecuación, todo esto pasa por el balance primario $s$ y por los ajustes que no están en ella.
+  \end{block}}
+  \fuente{\FMI, secc.~2, pp.~11--12, tabla 2, y p.~14. Tabla redibujada y simplificada.}
+  \note{5 min. Ejemplo del documento (nota 13): una presa hidroeléctrica en asociación público-privada que genera menos por falta de agua puede obligar al gobierno a comprar electricidad más cara. El documento cita a Klusak et al.~(2023) y Cevik y Jalles (2022) para la prima de los vulnerables (p.~14). A largo plazo, un crecimiento resiliente reduce las necesidades de deuda y la prima.}
+\end{frame}
+
+% 6 -----------------------------------------------------------------------
+\begin{frame}{Sector externo: exportaciones, turismo, remesas y tipo de cambio}
+  \small
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \textbf{Cuenta corriente}
+      \begin{itemize}
+        \item<1-> Menos exportaciones agrícolas y de energía; turismo dañado por eventos extremos.
+        \item<1-> Más importaciones de alimentos, de bienes para la reconstrucción y de tecnologías de adaptación.
+        \item<2-> Remesas: bajan si los emigrados son desplazados por el clima y suben si solo se afecta el país de origen.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{Cuenta de capital y financiera}
+      \begin{itemize}
+        \item<3-> Inversión extranjera directa y de cartera más cautelosa.
+        \item<3-> Más ayuda internacional y más endeudamiento público, que puede subir la prima o llevar a bajas de calificación.
+      \end{itemize}
+      \onslide<4->{El resultado de todo pasa al tipo de cambio y a la competitividad.}
+    \end{column}
+  \end{columns}
+  \medskip
+  \onslide<5->{\textbf{Para México}: el turismo de playa y las remesas están en la tabla del FMI. ¿Cuál les parece más expuesto?}
+  \fuente{\FMI, secc.~2, pp.~11--13, tabla 1.}
+  \note{4 min. La transición también mueve la balanza: más exportaciones de metales para la transición, menos importaciones de combustibles fósiles y más importaciones de equipo para energía limpia (tabla 1). Seguros: los pagos privados bajan conforme suben las primas.}
+\end{frame}
+
+% 7 -----------------------------------------------------------------------
+\begin{frame}{Sector monetario: choques de oferta más frecuentes}
+  \opcional
+  \small
+  \begin{itemize}
+    \item<1-> Los desastres suben la inflación de alimentos y energía, pero el efecto no suele persistir (Beirne et al., 2024). El calentamiento promedio sí se asocia con presiones persistentes (Kotz et al., 2023).
+    \item<2-> El precio al carbono tiene efectos inflacionarios transitorios (Känzig, 2023), y la demanda de metales para la transición puede generar «greenflation».
+    \item<3-> El problema del banco central es doble: choques con colas más gruesas, y una inflación general tan volátil que cuesta más distinguir la subyacente, con riesgo de apretar cuando no hace falta o de no hacerlo cuando sí.
+  \end{itemize}
+  \onslide<4->{
+  \begin{block}{Enlace con la sesión anterior}
+    Si los choques de oferta se vuelven más frecuentes, estimar la tasa neutral, ya de por sí incierta, se vuelve más difícil.
+  \end{block}}
+  \fuente{\FMI, secc.~2, pp.~11 y 14; anexo 2, pp.~54--55. Sesión del 10 de noviembre, segunda parte, diap.~3.}
+  \note{3 min, opcional. Ante un desastre, el banco central puede priorizar la estabilidad de precios sobre el estímulo, sobre todo si la política fiscal ya es expansiva (Cantelmo et al., 2024, p.~14). Las tormentas afectan sobre todo vía capital; las olas de calor, vía productividad del trabajo y agrícola (anexo 2, p.~54).}
+\end{frame}
+
+% 8 -----------------------------------------------------------------------
+\begin{frame}{Sector financiero: el riesgo es que el seguro desaparezca}
+  \begin{itemize}
+    \item<1-> Los balances dañados de hogares y empresas suben la cartera vencida de los bancos, y las tasas de crédito más altas frenan la actividad.
+    \item<2-> En los países exportadores de combustibles fósiles, la transición puede dejar activos varados en el balance de los intermediarios.
+    \item<3-> Las aseguradoras renuevan contratos cada año y pueden subir primas rápido. El riesgo no es que acumulen pérdidas, sino que el seguro se vuelva impagable o que el mercado desaparezca; entonces el costo pasa a los hogares y al gobierno.
+    \item<4-> Basilea III, revisado en abril de 2024, no impone cargos de capital por riesgo climático; pide a los supervisores vigilarlo como cualquier otro riesgo.
+  \end{itemize}
+  \onslide<5->{
+  \begin{block}{Juicio sobrio}
+    Casi todos los ejercicios de supervisión son exploratorios: miden la exposición para entenderla, no para fijar requisitos de capital.
+  \end{block}}
+  \fuente{\FMI, secc.~2, pp.~11 y 14, fig.~4; recuadro 3, pp.~26--27.}
+  \note{4 min. El FMI hace cerca de cuatro programas de evaluación del sector financiero con análisis climático al año (recuadro 3). El «momento Minsky climático» es la caída rápida del valor de los activos contaminantes por un cambio súbito de expectativas; el FSAP de Reino Unido lo simuló (p.~34).}
+\end{frame}
+
+% 9 -----------------------------------------------------------------------
+\begin{frame}{Qué pesa en el corto plazo y qué en el largo}
+  \opcional
+  \small
+  \begin{tabular}{@{}p{3.2cm}p{4.9cm}p{4.9cm}@{}}
+    \toprule
+    & \textbf{Corto plazo (1 a 5 años)} & \textbf{Largo plazo (más de 10 años)} \\
+    \midrule
+    Real & Capital destruido, reconstrucción & Productividad, acumulación de capital \\
+    Fiscal & Gasto de emergencia, pasivos contingentes & Recaudación, adaptación, envejecimiento de la infraestructura \\
+    Externo & Exportaciones, turismo, importaciones & Inversión extranjera, competitividad \\
+    Monetario & Inflación de alimentos y energía & Tasa neutral, volatilidad \\
+    Financiero & Cartera vencida, seguros & Activos varados, salida de aseguradoras \\
+    \bottomrule
+  \end{tabular}
+  \medskip
+
+  \onslide<2->{Horizontes de proyección del FMI: 5 años en general, 20 en el marco de deuda de países de ingreso bajo y 30 en el módulo climático del marco soberano, frente a un cambio climático que se mide a fin de siglo.}
+  \fuente{\FMI, secc.~1, p.~5, nota 3; secc.~2, pp.~7--10; secc.~4, p.~35, fig.~12. Tabla propia con la asignación del documento.}
+  \note{2 min, opcional. El mediano plazo (5 a 10 años) queda en medio: es donde los eventos extremos más frecuentes ya se notan y las políticas de transición empiezan a pesar. El documento advierte que los cambios lentos suelen omitirse en las proyecciones de corto y mediano plazo (p.~5).}
+\end{frame}
+
+% 10 ----------------------------------------------------------------------
+\begin{frame}{Los impuestos verdes son política de transición con efectos macro}
+  \begin{itemize}
+    \item<1-> El precio al carbono baja el ingreso real y el consumo, pero su recaudación puede financiar la transición y la adaptación, y la inversión que paga cambia el acervo de capital.
+    \item<2-> El documento sostiene que los impuestos verdes y la eliminación de subsidios crean algo de espacio fiscal, aunque normalmente no alcanza para reconstruir y adaptar la infraestructura.
+    \item<3-> En México, el IEPS al carbono de 2026 es de 17.7591 centavos por litro de gasolina y 21.5491 por litro de diésel: un instrumento de transición que ya existe.
+    \item<4-> La herramienta del FMI para medir esto es CPAT, que se ha aplicado a México en la consulta del Artículo IV.
+  \end{itemize}
+  \onslide<5->{
+  \begin{block}{Para recordar del 12--13 de octubre}
+    El argumento de Pigou corrige una externalidad; el del doble dividendo usa la recaudación. Hoy añadimos un tercero: la recaudación como fuente de financiamiento de la adaptación.
+  \end{block}}
+  \fuente{\FMI, secc.~2, pp.~13--14; secc.~3, pp.~29--30, tabla 5. SHCP, Acuerdo 179/2025, DOF 22-12-2025. Sesión del 12--13 de octubre.}
+  \note{4 min. Nota 15 del documento: con políticas fiscal-climáticas bien diseñadas alrededor del precio al carbono, los efectos fiscales de la descarbonización van de moderadamente positivos a moderadamente negativos en países de ingreso alto, y suelen ser positivos y grandes en los de ingreso medio y bajo (Black et al., 2024).}
+\end{frame}
+
+% =========================================================================
+% III. DATOS, MODELOS Y ESCENARIOS · 20 min
+% =========================================================================
+\section{Datos, modelos y escenarios}
+
+% 11 ----------------------------------------------------------------------
+\begin{frame}{Qué datos se usan, y qué no dicen}
+  \small
+  \begin{tabular}{@{}p{3.4cm}p{4.6cm}p{5.0cm}@{}}
+    \toprule
+    \textbf{Fuente} & \textbf{Qué mide} & \textbf{Límite} \\
+    \midrule
+    EM-DAT & Daños, afectados y muertes por desastre, desde 1980 & Autorreportada, con error de medición; no mide el efecto sobre la actividad \\
+    \addlinespace
+    Modelos catastróficos & Daño al capital físico en eventos de 1 en 250 años o más & Hechos para aseguradoras; caros y de proveedores externos \\
+    \addlinespace
+    Variables meteorológicas diarias & Calor extremo, lluvias intensas y periodos secos en malla global & Hay que traducirlas a efectos económicos \\
+    \bottomrule
+  \end{tabular}
+  \medskip
+
+  \onslide<2->{Con datos de EM-DAT de 2000 a 2020, los países vulnerables a desastres no tienen muchos más eventos que los demás, pero sí más daño como proporción del PIB y más muertes por habitante.}
+  \fuente{\FMI, secc.~3, pp.~22--25, tabla 3 y fig.~10. Tabla propia.}
+  \note{3 min. EM-DAT cubre seis tipos de desastre ligados al clima: sequías, temperaturas extremas, inundaciones, deslizamientos, tormentas e incendios. Los datos anteriores a 2000 son menos confiables (nota 24). Akyapi et al.~(2022) construyen 164 variables a partir de miles de millones de observaciones diarias.}
+\end{frame}
+
+% 12 ----------------------------------------------------------------------
+\begin{frame}{Nivel o crecimiento: de eso depende el tamaño del daño}
+  \begin{columns}[T]
+    \begin{column}{0.46\textwidth}
+      \begin{tikzpicture}
+        \draw[eje] (0,0) -- (5.4,0) node[below left] {tiempo};
+        \draw[eje] (0,0) -- (0,4.2) node[above right] {log PIB};
+        \draw[guia] (0.2,1.0) -- (4.4,3.26);
+        \node[font=\small,anchor=east] at (4.4,3.55) {sin aumento};
+        \draw[thick,black!70] (0.2,1.0) -- (2.0,1.97);
+        \node[font=\small] at (2.0,0.6) {sube $T$};
+        \draw[guia] (2.0,0) -- (2.0,1.97);
+        \onslide<2->{\draw[thick,cTitulo] (2.0,1.97) -- (2.4,1.8) -- (4.4,2.88) node[right] {\small nivel};}
+        \onslide<3->{\draw[thick,cImpuesto] (2.0,1.97) -- (2.4,1.8) -- (4.4,2.3) node[right] {\small crecimiento};}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \small
+      \begin{itemize}
+        \item<2-> Si el aumento de temperatura afecta el \textbf{nivel}, el PIB vuelve a crecer a su tasa, pero desde más abajo: la pérdida es acotada.
+        \item<3-> Si afecta la \textbf{tasa de crecimiento}, la pérdida se acumula cada año. Burke et al.~(2015): el crecimiento se maximiza a 13\,°C de temperatura media, y sin mitigar el ingreso mundial caería 23\,\% para 2100.
+        \item<4-> Kahn et al.~(2021): un salto aislado de temperatura tiene efecto pasajero; un calentamiento persistente reduce el crecimiento mientras dure. Con emisiones altas, la pérdida mundial llega hasta 24\,\% (Mohaddes y Raissi, 2024).
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\FMI, secc.~3, pp.~20--22, figs.~7--9 y nota 22. Gráfica esquemática redibujada de la fig.~7.}
+  \note{5 min. El documento no escribe una función de daño: dice que en los modelos de evaluación integrada la función de daño traduce la temperatura en PIB o consumo perdido (p.~20). La mayoría de los modelos que relacionan temperatura con el nivel del PIB dan pérdidas chicas; la excepción es Kotz et al.~(2024). Tol (2024) y Nath, Ramey y Klenow (2024) sostienen que un salto aislado no puede cambiar la tasa de crecimiento para siempre (p.~21). La cifra de 24\,\% compara contra un escenario sin cambio climático y con adaptación muy lenta.}
+\end{frame}
+
+% 13 ----------------------------------------------------------------------
+\begin{frame}{Cada familia de modelos ve una parte del problema}
+  \small
+  \begin{tabular}{@{}p{3.3cm}p{4.9cm}p{4.9cm}@{}}
+    \toprule
+    \textbf{Familia} & \textbf{Para qué sirve} & \textbf{Qué no ve} \\
+    \midrule
+    Evaluación integrada & Sumar daños por sector y región con una función de daño & Precios y efectos entre sectores \\
+    Equilibrio general computable & Precios, comercio, efectos sectoriales de la mitigación & Daños catastróficos y fuera de mercado \\
+    Econométricos & Efecto histórico de la temperatura y los desastres & Puntos de inflexión; el futuro no repite el pasado \\
+    DSGE con desastres & Expectativas de choques recurrentes; capital resiliente & Detalle sectorial \\
+    \bottomrule
+  \end{tabular}
+  \medskip
+
+  \onslide<2->{
+  \textbf{Herramientas del FMI por propósito}: mitigación (CPAT, IMF-ENV, GMMET); adaptación (DIGNAD, el más usado); deuda y riesgos fiscales (módulos climáticos del marco de sostenibilidad de la deuda, ND\_DDT y Q-CRAFT, que proyecta la deuda a 2099).}
+  \fuente{\FMI, secc.~3, pp.~19--34, tablas 5--8; anexo 1, pp.~44--51. Tabla propia.}
+  \note{4 min. DIGNAD distingue capital público estándar, capital público resiliente (más caro, más duradero ante desastres) y capital privado (p.~30). CPAT es una hoja de cálculo para 200 países que se aprende rápido; IMF-ENV y GMMET requieren expertos (anexo 1, tabla 1). GMMET no incluye los beneficios de evitar emisiones: compara maneras de llegar a una meta, no metas.}
+\end{frame}
+
+% 14 ----------------------------------------------------------------------
+\begin{frame}{Un escenario no es un pronóstico: es una pregunta con supuestos a la vista}
+  \small
+  \begin{itemize}
+    \item<1-> \textbf{SSP-RCP} (IPCC): trayectorias socioeconómicas combinadas con concentraciones de gases; alimentan los modelos climáticos.
+    \item<2-> \textbf{NGFS} (bancos centrales): siete escenarios en cuatro grupos, ordenado, desordenado, «mundo invernadero» y «muy poco, muy tarde».
+    \item<3-> \textbf{AIE}: políticas vigentes (STEPS), compromisos anunciados (APS) y cero emisiones netas en 2050 (NZE), el que usó la OCDE.
+    \item<4-> \textbf{A la medida}, para un país o una región, como los del FSAP de México.
+  \end{itemize}
+  \onslide<5->{
+  \begin{block}{La recomendación del documento para riesgos físicos}
+    Escenario base SSP2-4.5: 2.7\,°C en 2100, con rango muy probable de 2.1 a 3.5. Dos alternativos: SSP1-2.6, compatible con París (menos de 2\,°C), y SSP3-7.0, con retrocesos de política y más calentamiento.
+  \end{block}}
+  \fuente{\FMI, secc.~2, pp.~15--18, recuadro 2 y fig.~5.}
+  \note{4 min. El base se elige porque es parecido a lo que darían las políticas actuales y las contribuciones nacionales (p.~16), y se revisa periódicamente. El documento dice que los escenarios son inciertos por naturaleza pero indispensables para la proyección de largo plazo y la deuda (p.~5). La frase del título es nuestra; la OCDE dice lo mismo de sus escenarios (GDR, p.~153).}
+\end{frame}
+
+% 15 ----------------------------------------------------------------------
+\begin{frame}{Incertidumbre y colas: lo que los modelos ven mal}
+  \begin{itemize}
+    \item<1-> Las estimaciones más citadas del daño difieren en un orden de magnitud, sobre todo por la discusión entre nivel y crecimiento.
+    \item<2-> Los modelos econométricos no captan puntos de inflexión, como el colapso de los mantos de hielo de Groenlandia y la Antártida occidental, el deshielo abrupto del permafrost o el colapso de la corriente del mar de Labrador.
+    \item<3-> Medir riesgos compuestos, varios eventos juntos o seguidos, es un área todavía incipiente.
+    \item<4-> Y el pasado predice cada vez peor, porque la frecuencia y la intensidad de los eventos extremos están cambiando.
+  \end{itemize}
+  \onslide<5->{
+  \begin{block}{Juicio sobrio}
+    La incertidumbre amplía los intervalos, no los vuelve infinitos. Para un ministerio de Hacienda, la respuesta es la de cualquier riesgo grande: escenarios, pruebas de estrés y reservas.
+  \end{block}}
+  \fuente{\FMI, secc.~1, p.~5, nota 4; secc.~3, pp.~20--21 y 27.}
+  \note{3 min. Los análisis del sistema financiero se concentran en eventos poco probables pero plausibles, de 1 en 100 a 1 en 500 años (p.~27), y suelen tratar un tipo de evento a la vez.}
+\end{frame}
+
+% 16 ----------------------------------------------------------------------
+\begin{frame}{Lo que recomienda el documento para el análisis por país}
+  \opcional
+  \small
+  \begin{enumerate}
+    \item<1-> Identificar los riesgos físicos principales del país y las políticas climáticas aprobadas, en curso o probables.
+    \item<2-> Identificar los canales por los que esos riesgos y políticas llegan a la macroeconomía.
+    \item<3-> Cuantificar con estimaciones, modelos y juicio, empezando por el efecto sobre el crecimiento.
+    \item<4-> Incluir en el escenario base solo lo macrocrítico; lo demás va a escenarios alternativos o pruebas de estrés.
+  \end{enumerate}
+  \onslide<5->{
+  \begin{block}{Una regla práctica}
+    Solo cuenta lo verdaderamente adicional: si una planta renovable sustituye una de gas ya programada, la inversión que sube es la diferencia, no el total.
+  \end{block}}
+  \onslide<6->{Lo que falta, según el propio documento: medir el efecto de los eventos extremos sobre el crecimiento, considerar la capacidad institucional y llevar el clima a las cuentas nacionales.}
+  \fuente{\FMI, secc.~4, pp.~35--41; secc.~5, pp.~42--43.}
+  \note{3 min, opcional. Sobre la capacidad institucional (p.~43): las evaluaciones de gestión de la inversión pública del FMI atribuyen dos tercios de la brecha de eficiencia entre países a diferencias de capacidad institucional.}
+\end{frame}
+
+% =========================================================================
+% IV. CLIMA Y SOSTENIBILIDAD DE LA DEUDA · 15 min
+% =========================================================================
+\section{Clima y deuda}
+
+% 17 ----------------------------------------------------------------------
+\begin{frame}{El clima mueve los cuatro términos de la ecuación de la deuda}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \[ \Delta b = \frac{(r\uncover<3->{{}+\rho}) - (g\uncover<2->{{}-\gamma})}{1+g\uncover<2->{{}-\gamma}}\; b_{-1} - (s\uncover<4->{{}-c}) \uncover<5->{{}+ a} \]
+      \small
+      \begin{itemize}
+        \item<2-> $\gamma$: menor crecimiento, por daños o por calentamiento persistente.
+        \item<3-> $\rho$: prima de riesgo de los países vulnerables.
+        \item<4-> $c$: gasto de reconstrucción y adaptación.
+        \item<5-> $a$: ajuste del saldo cuando se materializan pasivos contingentes.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \small
+      \onslide<6->{
+      \textbf{Lo que ya hace el FMI}
+      \begin{itemize}
+        \item Módulos climáticos a 30 años en su marco de sostenibilidad de la deuda.
+        \item Prueba de estrés por desastre si hay dos desastres en tres años con pérdidas de al menos 5\,\% del PIB.
+        \item Un supuesto discutible: la adaptación cancela exactamente el daño al crecimiento. El país que se adapta paga el costo y su riesgo no baja: sale penalizado.
+      \end{itemize}}
+    \end{column}
+  \end{columns}
+  \fuente{Ecuación propia sobre la de la sesión del 10 de noviembre (primera parte, diap.~10). Términos: \FMI, secc.~2, pp.~12, 14; secc.~3, pp.~20--21, 32--33; recuadro 5, p.~38.}
+  \note{5 min. El documento propone dejar de suponer un crecimiento de largo plazo sin cambios en las proyecciones de deuda (recuadro 5), porque convergen la transición energética, la demografía y el clima. Para países de ingreso bajo el horizonte es de 20 años y la prueba de estrés usa EM-DAT 1950--2015.}
+\end{frame}
+
+% 18 ----------------------------------------------------------------------
+\begin{frame}{Ejercicio ilustrativo: un desastre deja la deuda un punto más arriba}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \begin{tikzpicture}
+        \begin{axis}[estilo,width=7.6cm,height=5.4cm,xmin=2026,xmax=2036,ymin=52,ymax=56.5,
+          xtick={2026,2028,2030,2032,2034,2036},xticklabel style={/pgf/number format/1000 sep={}},
+          ylabel={\% del PIB},legend style={at={(0.02,0.02)},anchor=south west,fill=white}]
+          \addplot[cGris,dashed] coordinates {(2026,54.0) (2027,54.19) (2028,54.38) (2029,54.57) (2030,54.56) (2031,54.36) (2032,54.05) (2033,53.74) (2034,53.42) (2035,53.1) (2036,52.78)};
+          \addplot[cTitulo,visible on=<2->] coordinates {(2026,54.0) (2027,54.19) (2028,55.42) (2029,55.63) (2030,55.63) (2031,55.44) (2032,55.15) (2033,54.85) (2034,54.55) (2035,54.24) (2036,53.93)};
+          \addplot[cImpuesto,visible on=<3->] coordinates {(2026,54.0) (2027,54.19) (2028,55.42) (2029,55.68) (2030,55.75) (2031,55.61) (2032,55.37) (2033,55.13) (2034,54.89) (2035,54.64) (2036,54.39)};
+          \legend{sin choque,desastre en 2028,y crecimiento menor}
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \small
+      \textbf{Insumos} (CGPE 2027): deuda de 54.0\,\% del PIB en 2026; tasa real implícita de 3.4\,\%; crecimiento real de 2.1\,\%; balance primario de 0.5 a 1.0, según la senda de la SHCP.
+      \smallskip
+
+      \onslide<2->{\textbf{Choque ilustrativo}: en 2028, un punto menos de crecimiento y 0.5\,\% del PIB de reconstrucción.}
+      \smallskip
+
+      \onslide<3->{\textbf{Variante}: además, 0.1 puntos menos de crecimiento cada año desde 2029.}
+      \smallskip
+
+      \onslide<4->{\textbf{Para calibrar}: el umbral del FMI es 5\,\% del PIB en tres años; los daños de Otis (2023) fueron 84 mil millones de pesos.}
+    \end{column}
+  \end{columns}
+  \fuente{Ejercicio ilustrativo propio con $b_t = \frac{1+r}{1+g_t}b_{t-1} - (s_t - c_t)$. Insumos: SHCP, CGPE 2027, p.~47; sesión del 10 de noviembre. Otis: CENAPRED (2024), tabla 1.2. Umbral: \FMI, p.~38.}
+  \note{5 min. Resultados: el desastre sube la deuda 1.0 punto en 2028 y la diferencia sigue en 1.1 puntos en 2036; con la variante, la diferencia llega a 1.6 puntos. La trayectoria base no reproduce la de la SHCP (55.0 en 2027) porque la ecuación simple no tiene ajustes stock-flujo: lo vimos el 10 de noviembre (primera parte, diap.~13). La lección no depende del nivel, sino de la diferencia entre las líneas. Otis: 84,207 millones de pesos corrientes de daños y pérdidas, cifra preliminar de CENAPRED (tabla 1.2).}
+\end{frame}
+
+% 19 ----------------------------------------------------------------------
+\begin{frame}{México: expuesto a huracanes y sismos, con una protección financiera en capas}
+  \small
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \textbf{Exposición}
+      \begin{itemize}
+        \item<1-> El FSAP de México estudió ciclones e inundaciones, incluida una de 1 en 100 años, y la transición.
+        \item<2-> Huracán Otis (Acapulco, octubre de 2023): 84,207 millones de pesos de daños y pérdidas según CENAPRED; el plan federal de atención fue de 61,313 millones.
+        \item<3-> Pérdidas esperadas de la infraestructura protegida: 20.3 mil millones de pesos al año por eventos frecuentes; 62.1 mil millones para uno con probabilidad anual de 1\,\%.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{Protección}
+      \begin{itemize}
+        \item<4-> El FONDEN, como fideicomiso, dejó de contraer compromisos en 2021; su lugar lo ocupa una previsión anual en el presupuesto: 19,430 millones de pesos en el PEF 2026.
+        \item<5-> Seguro paramétrico de 10 mil millones de pesos, el doble que en 2025.
+        \item<6-> Bonos catastróficos por 595 millones de dólares en cuatro clases (dos de sismo y dos de huracán), emitidos a través del BIRF, del Grupo Banco Mundial.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\FMI, pp.~16, 28, 34. CENAPRED (2024), \emph{Impacto socioeconómico\ldots{} 2023}, tabla 1.2. SHCP, Comunicado 73 (2023); CGPE 2027, pp.~51, 60. DOF, 6-nov-2020. PEF 2026, anexo 20.}
+  \note{4 min. FONDEN: decreto publicado en el DOF el 6 de noviembre de 2020; transitorio décimo noveno: desde el 1 de enero de 2021 el fideicomiso no contrae compromisos adicionales y solo procede su extinción. El artículo 37 de la LFPRH reformado pide incluir en el presupuesto las previsiones para atender daños por fenómenos naturales. El anexo 20 del PEF 2026 todavía llama «FONDEN» al renglón (19,430,107,735 pesos), más 246.7 millones para prevención (FOPREDEN). El plan de 61,313 millones mezcla gasto, exenciones y diferimientos: no es una estimación de daños. Bonos: clase A sismo de baja frecuencia (225 millones de dólares), B sismo de alta frecuencia (70), C huracán del Atlántico (125), D huracán del Pacífico (175).}
+\end{frame}
+
+% 20 ----------------------------------------------------------------------
+\begin{frame}{Adaptar cuesta; no adaptar cuesta más}
+  \small
+  \begin{itemize}
+    \item<1-> En estudios sectoriales, la razón beneficio-costo de la adaptación va de 100 a 900\,\%.
+    \item<2-> A nivel macro, adaptar los activos públicos existentes costaría de 0.25 a 0.6\,\% del PIB al año sobre la inversión pública actual, y no reduciría los daños esperados en más de la mitad antes de que el costo supere al beneficio.
+    \item<3-> Costa Rica: con daños de 0.5 a 0.7\,\% del PIB al año (1998--2018), invertir 0.4\,\% del PIB adicional en infraestructura resiliente da 3\,\% más de PIB a largo plazo y una ganancia fiscal neta de 0.1\,\% del PIB al año.
+    \item<4-> Las reglas fiscales deberían fijar anclas de deuda más bajas donde la probabilidad de desastre es mayor.
+  \end{itemize}
+  \onslide<5->{
+  \begin{alertblock}{Pregunta}
+    ¿Debería el Paquete Económico incluir un escenario climático?
+  \end{alertblock}}
+  \fuente{\FMI, secc.~3, pp.~27 y 33; recuadro 6, p.~42 (Aligishiev et al., 2022; Hallegatte, Rentschler y Rozenberg, 2019).}
+  \note{4 min. Costa Rica: la inversión resiliente total es cerca de 1.6\,\% del PIB; la ganancia fiscal bruta es 0.5\,\% del PIB al año por menor reconstrucción, y la neta 0.1. Las proyecciones finales del FMI para Costa Rica incluyeron 1.4\,\% del PIB de gasto adicional, con juicio sobre el modelo. Para la pregunta: el CGPE 2027 ya trae desastres en su sección de riesgos fiscales (p.~51), pero como pérdidas esperadas, no como escenario macroeconómico.}
+\end{frame}
+
+% =========================================================================
+% V. CIERRE · 7 min
+% =========================================================================
+\section{Cierre}
+
+% 21 ----------------------------------------------------------------------
+\begin{frame}{Tres ideas que juntan las dos partes}
+  \begin{enumerate}
+    \item<1-> La deuda ya es cara y se refinancia a tasas más altas, y el clima mueve los cuatro términos de la misma ecuación: crecimiento, prima, balance primario y ajustes al saldo.
+    \item<2-> El riesgo climático se mide con escenarios e intervalos, no con una cifra. Lo que no se modela no desaparece del balance; aparece como pasivo contingente.
+    \item<3-> La adaptación es inversión con rendimiento, y los marcos de deuda todavía no lo reconocen del todo.
+  \end{enumerate}
+  \fuente{\GDR, resumen ejecutivo, pp.~12--14. \FMI, secc.~2 y recuadros 5--6.}
+  \note{4 min.}
+\end{frame}
+
+% 22 ----------------------------------------------------------------------
+\begin{frame}{Puente a la próxima sesión: el sistema fiscal mexicano y el Paquete Económico 2027}
+  \begin{itemize}
+    \item<1-> El 24 de noviembre leemos el Paquete Económico 2027 con lo de hoy en la mano.
+    \item<2-> Qué buscar: costo financiero, plan de financiamiento, balance primario y riesgos fiscales.
+    \item<3-> El CGPE ya trae los desastres naturales entre sus riesgos fiscales, con pérdidas esperadas. ¿Trae también un escenario climático para el crecimiento y la deuda?
+  \end{itemize}
+  \vfill
+  \begin{block}{Tarea}
+    Busquen en el CGPE 2027 cada término de la ecuación de la diapositiva 17 y anoten dónde aparece, o si no aparece.
+  \end{block}
+  \fuente{SHCP, CGPE 2027, secc.~4.3, p.~51.}
+  \note{3 min.}
+\end{frame}
+
+\end{document}

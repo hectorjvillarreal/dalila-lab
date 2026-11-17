@@ -1,0 +1,601 @@
+% Deuda cara, necesidades crecientes: ¿hay salida? · OCDE, Global Debt Report 2025 · Primera parte
+% Finanzas Públicas, Maestría en Economía Aplicada, Tec de Monterrey · sesión del 17 de noviembre de 2026
+% Esquema aprobado: esquema_deuda_p1.md (2026-11-17). Compilar con: latexmk -pdf deuda_p1.tex
+% Versión para repartir: deuda_p1_handout.tex (misma fuente, opción handout).
+% Las notas del presentador van en \note{}; para verlas, compilar con \setbeameroption{show notes}.
+% Fuente principal: OCDE (2025), Global Debt Report 2025, doi 10.1787/8ee42b13-en, en fuentes/. Páginas impresas.
+% Cifras de México: SHCP, CGPE 2027 (FISCUS/económicos_paquetes/2027). Verificación en reporte_final.md.
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\unaccentedoperators % la opción es-noaccentedoperators no existe en esta versión de babel
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{babel,arrows.meta,calc,positioning,decorations.pathreplacing,patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% ---------------------------------------------------------------------------
+% Tema sobrio (igual al de las sesiones anteriores)
+% ---------------------------------------------------------------------------
+\definecolor{cTitulo}{RGB}{0,55,100}
+\definecolor{cOferta}{RGB}{31,87,153}
+\definecolor{cDemanda}{RGB}{200,100,0}
+\definecolor{cImpuesto}{RGB}{175,30,30}
+\definecolor{cRecauda}{RGB}{40,130,80}
+\definecolor{cGris}{RGB}{110,110,110}
+
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{frametitle}{fg=cTitulo}
+\setbeamercolor{title}{fg=cTitulo}
+\setbeamercolor{structure}{fg=cTitulo}
+\setbeamercolor{block title}{bg=cTitulo!12,fg=cTitulo}
+\setbeamercolor{block body}{bg=cTitulo!4}
+\setbeamercolor{block title alerted}{bg=cImpuesto!12,fg=cImpuesto}
+\setbeamercolor{block body alerted}{bg=cImpuesto!4}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{blocks}[rounded]
+\setbeamersize{text margin left=0.7cm,text margin right=0.7cm}
+\setbeamertemplate{footline}{%
+  \hfill{\small\color{cGris}Déficits y deuda · Parte 1\quad\insertframenumber/\inserttotalframenumber}\hspace*{1em}\vspace{1.5mm}}
+
+% Fuente al pie de cada diapositiva
+\newcommand{\fuente}[1]{\par\vfill{\small\color{cGris}#1\par}}
+% Distintivo de diapositiva opcional
+\newcommand{\opcional}{\tikz[remember picture,overlay]\node[anchor=north east,font=\small,text=cGris] at ([xshift=-5mm,yshift=-3mm]current page.north east) {opcional};}
+% Abreviatura de la fuente principal
+\newcommand{\GDR}{OCDE (2025), \emph{Global Debt Report}}
+
+% ---------------------------------------------------------------------------
+% Estilo común de gráficas
+% ---------------------------------------------------------------------------
+\tikzset{
+  every node/.append style={font=\small},
+  eje/.style={-{Stealth[length=2mm]},thick,black!75},
+  flecha/.style={-{Stealth[length=2mm]},thick,cTitulo},
+  guia/.style={thin,dashed,black!45},
+  sincorte/.style={execute at begin node={\hyphenpenalty=10000\exhyphenpenalty=10000\relax}},
+  caja/.style={sincorte,draw=cTitulo,rounded corners,fill=cTitulo!5,align=center,inner sep=4pt},
+}
+\pgfplotsset{
+  estilo/.style={axis lines=left,tick label style={font=\small},label style={font=\small},
+    legend style={font=\small,draw=none,fill=none},every axis plot/.append style={thick}},
+  barras/.style={estilo,ybar,ymin=0,axis x line*=bottom,axis y line=none,
+    nodes near coords,nodes near coords style={font=\small},enlarge x limits=0.2,
+    xtick=data,symbolic x coords={#1},x tick label style={font=\small,align=center},
+    every axis plot/.append style={draw=none},area legend},
+}
+
+\title{Deuda cara, necesidades crecientes: ¿hay salida?}
+\subtitle{OCDE, \emph{Global Debt Report 2025} · Primera parte}
+\author{Héctor Juan Villarreal}
+\institute{Finanzas Públicas · Maestría en Economía Aplicada\\Escuela de Gobierno y Transformación Pública · Tec de Monterrey}
+\date{Noviembre de 2026}
+
+\begin{document}
+
+% =========================================================================
+% I. LA PREGUNTA DE LA SESIÓN · 5 min
+% =========================================================================
+\section{La pregunta}
+
+% 1 -----------------------------------------------------------------------
+\begin{frame}[plain]
+  \titlepage
+  \vspace{-4mm}
+  {\small\color{cGris}\centering OCDE (2025), \emph{Global Debt Report 2025: Financing Growth in a Challenging Debt Market Environment}, OECD Publishing, París. Datos a diciembre de 2024.\par}
+  \note{1 min. El informe es la segunda edición anual. Capítulos permanentes: 1 (endeudamiento soberano de la OCDE) y 2 (deuda corporativa); temáticos de este año: 3 (bonos soberanos de economías emergentes) y 4 (financiamiento de la transición climática con deuda). Las cifras de 2024 son estimaciones y las de 2025 proyecciones, ambas hechas en diciembre de 2024 (p.~18). Las rotulo así en cada diapositiva.}
+\end{frame}
+
+% 2 -----------------------------------------------------------------------
+\begin{frame}{Del modelo a los mercados}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Lo que vimos el 10 de noviembre}
+        \[ \Delta b = \frac{r-g}{1+g}\; b_{-1} - s \]
+        La deuda sube si la tasa real supera al crecimiento y el balance primario no compensa. De ahí salieron el balance primario que estabiliza la deuda y la tasa que la estabiliza.
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \onslide<2->{
+      \begin{block}{Lo que vemos hoy}
+        Qué está pasando con $r$ en los mercados donde esa deuda se refinancia, quién la compra y cuánto costará la inversión que viene.
+      \end{block}}
+    \end{column}
+  \end{columns}
+  \medskip
+  \onslide<3->{
+  La tesis del informe es que la combinación de más deuda y más costo reduce la capacidad de endeudarse justo cuando las necesidades de inversión son mayores que nunca. La pregunta de la sesión es si hay salida cuando los déficits son estructurales.}
+  \fuente{\GDR, resumen ejecutivo, p.~12. Sesión del 10 de noviembre, primera parte, diaps.~10--11; segunda parte, diap.~4.}
+  \note{4 min. Es la única ecuación de la presentación. El resto es de datos: cada cifra con su año y, si es del informe para 2024 o 2025, como estimación o proyección.}
+\end{frame}
+
+% =========================================================================
+% II. EL ENDEUDAMIENTO SOBERANO EN LA OCDE · 25 min
+% =========================================================================
+\section{Endeudamiento soberano en la OCDE}
+
+% 3 -----------------------------------------------------------------------
+\begin{frame}{Más deuda, y casi toda para refinanciar la que ya existe}
+  \begin{columns}[T]
+    \begin{column}{0.46\textwidth}
+      \begin{tikzpicture}
+        \begin{axis}[barras={2022,2023,2024e,2025p},width=6.4cm,height=5.4cm,bar width=0.8cm,
+          ymax=20,fill=cTitulo!70,
+          title={\small Emisión bruta (billones de dólares)},
+          nodes near coords={$\approx$\pgfmathprintnumber{\pgfplotspointmeta}},
+          xticklabels={2022,2023,2024\\estim.,2025\\proy.}]
+          \addplot[fill=cTitulo!70] coordinates {(2022,12) (2023,14) (2024e,16) (2025p,17)};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \begin{itemize}
+        \item<1-> La OCDE emitiría 17 billones de dólares de deuda soberana en 2025, un récord; de ellos, unos 13 son refinanciamiento, casi 80\,\%.
+        \item<2-> La emisión neta, unos 3 billones, sigue en el doble del promedio previo a la pandemia, porque el crecimiento es menor y pesan los intereses, la defensa, el envejecimiento y la transición energética.
+        \item<3-> La deuda negociable del gobierno central pasó de 82\,\% del PIB en 2023 a 84\,\% en 2024 y llegaría a 85\,\% en 2025: el primer aumento desde 2020.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\GDR, cap.~1, pp.~18--20; resumen ejecutivo, p.~12. 2024: estimación; 2025: proyección del informe (diciembre de 2024). Deuda negociable del gobierno central.}
+  \note{4 min. En 2022 la emisión fue de 12 billones, en 2023 de más de 14 y en 2024 de cerca de 16 (p.~19). La gráfica usa esos valores redondeados del texto: el informe no publica la serie. Las cinco mayores emisoras (EE.~UU., Japón, Francia, Italia y Reino Unido) suman más de 85\,\% de la emisión bruta de la OCDE; Estados Unidos solo, más de dos tercios (p.~20). La definición importa: es deuda negociable del gobierno central, no deuda bruta del gobierno general.}
+\end{frame}
+
+% 4 -----------------------------------------------------------------------
+\begin{frame}{El costo de la deuda llega con rezago, pero ya llegó}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{tikzpicture}
+        \begin{axis}[barras={2022--23,2024,2030p},width=6.6cm,height=5.4cm,bar width=0.55cm,
+          ymax=48,title={\small Deuda a tasa fija, \% del saldo, por rendimiento},
+          xticklabels={2022--23,2024,2030\\proy.},
+          nodes near coords={$\approx$\pgfmathprintnumber{\pgfplotspointmeta}},
+          legend style={at={(0.5,-0.32)},anchor=north,legend columns=2}]
+          \addplot[fill=cRecauda!70] coordinates {(2022--23,40) (2024,30) (2030p,17)};
+          \addplot[fill=cImpuesto!70] coordinates {(2022--23,5) (2024,13) (2030p,20)};
+          \legend{menor a 1\,\%,mayor a 4\,\%}
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \small
+      \begin{itemize}
+        \item<1-> Los intereses del gobierno general de la OCDE pasaron de 2.7\,\% del PIB en 2015--19 a 3.0 en 2023 y 3.3 en 2024: ya superan al gasto en defensa.
+        \item<2-> Un tercio de la deuda a tasa fija vence antes de 2027, y 60\,\% de esa parte, unos 9 billones de dólares, se emitió en 2021 o antes, con rendimiento promedio menor a 2\,\%; la tasa a diez años proyectada para 2025 es 3.6\,\%.
+        \item<3-> Refinanciarla elevaría los intereses en 0.2 puntos del PIB en promedio, y en 0.4 en Francia, España, Reino Unido y Estados Unidos.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\GDR, cap.~1, pp.~33--35 y fig.~1.13; resumen ejecutivo, p.~13. 2024: estimación; 2030: proyección del informe.}
+  \note{5 min. Por qué el rezago: los intereses reflejan el rendimiento de toda la deuda emitida durante décadas, y un alza de tasas solo entra al refinanciar o emitir. El mismo mecanismo funciona al revés: lo que se emita hoy a tasas altas queda fijo por la vida del bono (p.~35). La tasa efectiva sube aunque no se emita más, porque vence primero la deuda barata. Entre 2021 y 2024 los intereses pasaron del nivel más bajo al más alto en 20 años (p.~13).}
+\end{frame}
+
+% 5 -----------------------------------------------------------------------
+\begin{frame}{Bajan las tasas de política, pero las largas casi no se mueven}
+  \begin{itemize}
+    \item<1-> Una idea común es que, cuando el banco central baja su tasa, se abarata toda la deuda. En 2024 la tasa a dos años de los países de la OCDE cayó unos 50 puntos base en promedio, pero la de diez años bajó menos de 20.
+    \item<2-> Por eso la pendiente de la curva (diez años menos dos) subió 60 puntos base; aun así quedó por debajo de su nivel de 2015--19, que era de unos 100.
+    \item<3-> La tasa real a diez años estaba entre $-1$ y $1$\,\% antes de la pandemia y desde 2023 está entre 1 y 2\,\%. En 2024 fue mayor que en 2015--19 y que en 2023 en todos los países con bonos indexados, salvo Italia.
+    \item<4-> El informe lo atribuye a que el mercado espera una tasa neutral más alta y a primas por plazo mayores, en parte porque hay más bonos largos que colocar.
+  \end{itemize}
+  \onslide<5->{
+  \begin{block}{Para nuestra ecuación}
+    Lo que mueve la deuda es la tasa real. Si la tasa real sube y la inflación ya no licúa la deuda, el balance primario que la estabiliza tiene que subir.
+  \end{block}}
+  \fuente{\GDR, cap.~1, pp.~30--33 y 43; figs.~1.9--1.11.}
+  \note{5 min. El informe dice exactamente: «todo lo demás igual, tasas reales al alza elevarán el balance primario requerido para estabilizar la deuda en muchos países de la OCDE» (p.~33). En 2022--23 la deuda bajó como proporción del PIB por inflación; ese efecto se desvanece al converger la inflación a la meta (p.~32). Japón es la excepción: tasa real negativa, curva que se empina.}
+\end{frame}
+
+% 6 -----------------------------------------------------------------------
+\begin{frame}{Los bancos centrales se retiran y entran compradores más sensibles al precio}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{tikzpicture}
+        \begin{axis}[barras={Bancos centrales,Hogares,Extranjeros},width=6.9cm,height=5.4cm,bar width=0.55cm,
+          ymax=40,title={\small Tenencia de deuda soberana, \% del total},
+          xticklabels={Bancos\\centrales,Hogares,Inversionistas\\extranjeros},
+          legend style={at={(0.5,-0.36)},anchor=north,legend columns=2}]
+          \addplot[fill=cGris!60] coordinates {(Bancos centrales,29) (Hogares,5) (Extranjeros,29)};
+          \addplot[fill=cTitulo!70] coordinates {(Bancos centrales,19) (Hogares,11) (Extranjeros,34)};
+          \legend{2021,2024}
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \small
+      \begin{itemize}
+        \item<1-> Los bancos centrales tenían casi 16 billones de dólares de bonos de su gobierno en 2021 y poco más de 12 en 2024; se proyecta otro billón menos en 2025.
+        \item<2-> El mercado absorbería más de 3 billones de bonos a tasa fija por año en 2024--25, por primera vez; en 2015--19 la absorción neta promedió cero.
+        \item<3-> Un alza de un punto en las tasas habría restado 1 billón de dólares al valor de esos bonos en manos del mercado en 2015, y 1.75 billones en 2024.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\GDR, cap.~1, pp.~40--45, figs.~1.16--1.18; resumen ejecutivo, p.~13. Muestra de 25 países con 90\,\% de la deuda de la OCDE.}
+  \note{4 min. Hogares y extranjeros son más sensibles al precio: compran si el rendimiento relativo les conviene. Por eso suben las primas por plazo y se debilita el traspaso de los recortes de tasa a las tasas largas (p.~43). Los hogares entraron por programas de deuda al menudeo (Italia, Estados Unidos; recuadro 1.4); México tiene Cetesdirecto. Riesgo geopolítico: cerca de un tercio de la deuda de la zona euro en manos de extranjeros viene de países no alineados políticamente (p.~44).}
+\end{frame}
+
+% 7 -----------------------------------------------------------------------
+\begin{frame}{Más letras de corto plazo: más barato hoy, más riesgo mañana}
+  \small
+  \begin{itemize}
+    \item<1-> Las letras fueron 49\,\% de la emisión bruta de la OCDE en 2024, frente a 36\,\% antes de la pandemia. Sirven para absorber necesidades imprevistas sin alterar el calendario de bonos largos.
+    \item<2-> El costo está en otra parte: entre quienes emiten letras con regularidad, son 8\,\% del saldo pero 60\,\% de lo que hay que refinanciar cada año, porque se renuevan varias veces.
+    \item<3-> Con todo, el plazo promedio de la deuda de la OCDE subió de 7.7 años antes de la pandemia a 8.1 en 2024, y los vencimientos están repartidos: cerca de 10\,\% del saldo a tasa fija vence cada año hasta 2030.
+    \item<4-> Cerca de 45\,\% de la deuda soberana de la OCDE vence antes de 2027.
+  \end{itemize}
+  \onslide<5->{
+  \begin{block}{El dilema del administrador de la deuda}
+    Acortar plazos baja el costo esperado y sube el riesgo de refinanciar a tasas que no se conocen. Alargarlos hace lo contrario. No hay una respuesta única; hay una frontera de costo y riesgo.
+  \end{block}}
+  \fuente{\GDR, cap.~1, pp.~23--25, 29 y 35; resumen ejecutivo, p.~13. 2024: estimación.}
+  \note{3 min. En el informe (p.~24): las letras amplifican la volatilidad de los intereses porque una parte mayor de la deuda se refinancia cada año a la tasa de mercado. Un argumento a favor de los bonos indexados (Udibonos en México): bajan el costo esperado, diversifican la base de inversionistas y alargan plazos; en la OCDE su participación bajó tras la inflación de 2022--23 (p.~25).}
+\end{frame}
+
+% 8 -----------------------------------------------------------------------
+\begin{frame}{El informe hace nuestra descomposición: la tasa real ya juega en contra}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \small
+      \textbf{Qué movió la deuda de la OCDE}
+      \medskip
+
+      \begin{tabular}{@{}p{1.6cm}p{5.1cm}@{}}
+        \toprule
+        2015--19 & La tasa real casi no movía la deuda y el crecimiento compensaba el déficit primario. \\
+        \addlinespace
+        2021--23 & La inflación superó a la tasa y licuó la deuda, aunque el déficit era mayor. \\
+        \addlinespace
+        2024--25 & Tasa efectiva real positiva y déficit primario arriba del previo a la pandemia: la deuda sube. \\
+        \bottomrule
+      \end{tabular}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \small
+      \begin{itemize}
+        \item<2-> En $\Delta b = \frac{r-g}{1+g}\,b_{-1} - s$, el informe dice que $r$ sube y $s$ sigue negativo.
+        \item<3-> La tasa efectiva sube aunque no se emita más, porque vence primero la deuda contratada barata.
+        \item<4-> Con la fiscal r-star de la sesión anterior: si la tasa que paga la deuda converge a la de mercado, se cierra el margen entre la tasa que estabiliza la deuda y la que se paga.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \onslide<5->{
+  \begin{alertblock}{Pregunta}
+    ¿Qué tendría que pasar con el balance primario?
+  \end{alertblock}}
+  \fuente{\GDR, cap.~1, pp.~33--37 y fig.~1.14. Sesión del 10 de noviembre, primera parte, diaps.~11--12; segunda parte, diap.~4.}
+  \note{4 min. Datos de la fig.~1.14 en texto (p.~37): en los 23 países donde la razón subió en 2024, el balance primario sumó 1.6 puntos y la tasa nominal 1.2; en los 15 donde bajó, 0.4 y 1.0. El crecimiento y la inflación restaron 0.6 y cerca de 1.5 puntos en ambos grupos. México no entra en esta descomposición por falta de datos de intereses (anexo 1.A, p.~59). Respuesta esperada: sube el balance primario requerido, o hay que crecer más; sin eso, la deuda sube.}
+\end{frame}
+
+% 9 -----------------------------------------------------------------------
+\begin{frame}{Las empresas también refinanciarán más caro}
+  \opcional
+  \small
+  \begin{itemize}
+    \item<1-> A fin de 2024 había 35 billones de dólares de bonos corporativos, 25 de préstamos sindicados y al menos 1.6 de crédito privado.
+    \item<2-> 63\,\% de la deuda con grado de inversión y 74\,\% de la de alto rendimiento pagaban menos que la tasa de mercado; cerca de un tercio vence antes de 2027.
+    \item<3-> Entre 2009 y 2023 las empresas emitieron 12.9 billones de dólares más de lo que indicaba su tendencia previa a 2008, mientras su inversión quedó 8.4 billones por debajo.
+    \item<4-> El destino declarado fue sobre todo refinanciar deuda (72\,\% de los prospectos con uso específico) y pagar a los accionistas (9\,\%).
+  \end{itemize}
+  \onslide<5->{
+  \begin{block}{Lectura}
+    Si la deuda no financió capacidad productiva, no se va a pagar sola con el rendimiento de la inversión. Eso vale también para los gobiernos.
+  \end{block}}
+  \fuente{\GDR, cap.~2, p.~70; resumen ejecutivo, pp.~12--13.}
+  \note{3 min, opcional. Si un punto más de costo efectivo se aplicara a todo el saldo, el gasto anual en intereses de las empresas subiría 151 mil millones de dólares, a 784 mil millones (p.~70). La deuda que vence en 2025--29 paga en promedio 148 puntos base menos que la tasa de mercado de fines de 2024.}
+\end{frame}
+
+% =========================================================================
+% III. ECONOMÍAS EMERGENTES · 20 min
+% =========================================================================
+\section{Economías emergentes}
+
+% 10 ----------------------------------------------------------------------
+\begin{frame}{Las economías emergentes se endeudan cada vez más en el mercado}
+  \begin{columns}[T]
+    \begin{column}{0.46\textwidth}
+      \begin{tikzpicture}
+        \begin{axis}[barras={Saldo,Emisión},width=6.3cm,height=5.0cm,bar width=0.7cm,
+          ymax=14,title={\small Bonos soberanos emergentes\\(billones de dólares)},title style={align=center},
+          xticklabels={Saldo,Emisión anual},
+          nodes near coords={$\approx$\pgfmathprintnumber{\pgfplotspointmeta}},
+          legend style={at={(0.5,-0.25)},anchor=north,legend columns=2}]
+          \addplot[fill=cGris!60] coordinates {(Saldo,4) (Emisión,1)};
+          \addplot[fill=cDemanda!75] coordinates {(Saldo,12) (Emisión,3)};
+          \legend{2007,2024}
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \begin{itemize}
+        \item<1-> El saldo de bonos soberanos emergentes pasó de menos de 4 billones de dólares en 2007, cerca de 20\,\% de su PIB, a casi 12 en 2024, cerca de 30\,\%.
+        \item<2-> China explica 45\,\% de la emisión de 2024; en 2007--14 explicaba 17\,\%.
+        \item<3-> La deuda pública emergente pasó de 35\,\% del PIB en 2007 a 64\,\% a fines de 2021, justo antes del ciclo de alzas de la Reserva Federal.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\GDR, cap.~3, pp.~110--112 y 117; fig.~3.1. México: ingreso medio alto (anexo 3.A, p.~134).}
+  \note{3 min. La emisión creció casi 7\,\% al año en dólares, a pesar de que el dólar se apreció más de 80\,\% frente a las monedas emergentes en el periodo (p.~111). Los países de ingreso bajo multiplicaron por 12 su emisión entre 2007 y 2024, pero siguen con mercados chicos: 4\,\% del PIB de emisión bruta, la mitad que el promedio emergente (p.~112).}
+\end{frame}
+
+% 11 ----------------------------------------------------------------------
+\begin{frame}{El acceso al mercado es desigual: los de mayor riesgo se quedaron fuera}
+  \small
+  \begin{itemize}
+    \item<1-> El costo de emitir en dólares subió de cerca de 4\,\% en 2020 a más de 6\,\% en 2024 para el promedio emergente, y a más de 8\,\% para los países de calificación baja.
+    \item<2-> Entre 40 y 50 emergentes emitían cada año en mercados externos en 2015--21; en 2022 solo 29, y en 2024 volvieron a ser 42. Entre los de alto riesgo, el número pasó de 20 a 9 y en 2024 apenas llegó a 13.
+    \item<3-> Diez países están en riesgo muy alto o en impago, el máximo en 25 años, aunque en 2024 hubo 52 mejoras de calificación y 21 bajas.
+    \item<4-> La paradoja: cerca de 80\,\% de la deuda emergente tiene grado de inversión, porque crecieron los emisores grandes, mientras la proporción de países con grado de inversión bajó a 22\,\%.
+  \end{itemize}
+  \onslide<5->{
+  \begin{block}{Lectura}
+    El promedio emergente se ve sano porque lo dominan China, India y otros emisores grandes. El problema se concentra en países pequeños, de ingreso bajo y con deuda en moneda extranjera.
+  \end{block}}
+  \fuente{\GDR, cap.~3, pp.~118--125; figs.~3.5, 3.7 y 3.9.}
+  \note{4 min. Los emisores sin grado de inversión pagaron en dólares entre 7 y 8\,\% en promedio, cerca del umbral de 10\,\% que el informe asocia con tensión de mercado (p.~119). Los diez en riesgo muy alto o impago suman cerca de 1\,\% del PIB mundial (1.1 billones de dólares) pero 315 millones de habitantes (p.~123). En los ochenta y noventa, los que cayeron en impago sumaban 15 billones de dólares de PIB a precios de 2023.}
+\end{frame}
+
+% 12 ----------------------------------------------------------------------
+\begin{frame}{El «pecado original» sigue vigente para los países pequeños}
+  \begin{columns}[T]
+    \begin{column}{0.46\textwidth}
+      \begin{tikzpicture}
+        \begin{axis}[barras={OCDE,Emergentes,Pequeños},width=6.6cm,height=4.6cm,bar width=0.7cm,
+          ymax=48,title={\small Deuda en moneda extranjera, \% del total},
+          xticklabels={OCDE,Emergentes\\sin China\\ni India,Emergentes\\pequeños},enlarge x limits=0.28,
+          nodes near coords={$\approx$\pgfmathprintnumber{\pgfplotspointmeta}}]
+          \addplot[fill=cImpuesto!65] coordinates {(OCDE,6) (Emergentes,20) (Pequeños,40)};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \small
+      \begin{itemize}
+        \item<1-> El «pecado original» es no poder endeudarse a largo plazo en la moneda propia; México ya hizo esa transición.
+        \item<2-> Pesa más el tamaño que el ingreso: con PIB mayor a un billón de dólares, menos de 10\,\% de la deuda está en moneda extranjera.
+        \item<3-> La deuda en dólares parece barata por el cupón, pero cuesta más con la depreciación: en los países de alto riesgo, redimir un bono a 20 años de hacia 2000 costó cinco veces más.
+        \item<4-> Si los extranjeros compran bonos locales y se van en una crisis, el riesgo vuelve: es el «pecado original redux».
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\GDR, cap.~3, pp.~112--115; recuadro 3.2, pp.~119--120. Pequeños: PIB menor a 300 mil millones de dólares. Sesión del 10 de noviembre, primera parte, diap.~20.}
+  \note{4 min. El 6\,\% de la OCDE está en buena parte cubierto con derivados (p.~114). El «pecado original redux» es de Carstens y Shin (2019), citado en p.~115: salidas de extranjeros durante la crisis financiera y la pandemia por la combinación de riesgo de duración y de tipo de cambio. En los países de alto riesgo la moneda cayó cerca de 80\,\% frente al dólar entre 2000 y 2024, y el rendimiento ajustado por tipo de cambio de su deuda en dólares superó 15\,\% en este ciclo (p.~119).}
+\end{frame}
+
+% 13 ----------------------------------------------------------------------
+\begin{frame}{Un mercado local profundo amortigua, pero tiene sus propios riesgos}
+  \small
+  \begin{itemize}
+    \item<1-> Las economías grandes tienen inversionistas locales con horizontes distintos: bancos y fondos que compran plazos cortos, pensiones y aseguradoras que compran plazos largos. Esa variedad amortigua las ventas en una crisis.
+    \item<2-> Hay dos riesgos de concentración: depender de los extranjeros y depender de los bancos locales, porque entonces la salud del gobierno y la de los bancos se contagian.
+    \item<3-> El plazo promedio de la deuda emergente es de 3 a 5 años en los países de ingreso bajo, de 5 a 6 en los de ingreso medio bajo y de más de 7 en los de ingreso medio alto; todos por debajo de los 8 años de la OCDE.
+    \item<4-> Cerca de 4.5 billones de dólares, alrededor de 40\,\% del saldo emergente, vencen entre 2025 y 2027. En los países de ingreso bajo y alto riesgo vence más de la mitad.
+  \end{itemize}
+  \onslide<5->{
+  \begin{block}{Juicio sobrio}
+    Los emisores grandes con mercado local pasaron el ciclo de 2022--23 con más gasto en intereses, pero sin crisis: mucho menos dañino que en los ochenta y noventa, según el informe.
+  \end{block}}
+  \fuente{\GDR, cap.~3, pp.~115--116, 128--131; figs.~3.4 y 3.12.}
+  \note{3 min. Brasil, México y Perú cayeron en impago o reestructuraron en los ochenta, e Indonesia, Tailandia y Filipinas en los noventa; ninguno lo ha hecho desde 2022, en parte por su mercado en moneda local: en todos, salvo Perú, más de 90\,\% de la deuda es en moneda local (pp.~130--131). Con deuda en moneda local de plazo corto, los intereses suben rápido cuando suben las tasas: los países de ingreso bajo ya refinanciaron buena parte a tasas altas (p.~129).}
+\end{frame}
+
+% 14 ----------------------------------------------------------------------
+\begin{frame}{México en el mapa: deuda en pesos, a tasa fija y a plazos comparables con la OCDE}
+  \small
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \textbf{Gobierno Federal, 2025 (SHCP)}
+      \smallskip
+
+      \begin{tabular}{@{}p{5.6cm}r@{}}
+        \toprule
+        Deuda neta en moneda nacional, \% & 84.3 \\
+        Valores a tasa fija y largo plazo, \% & 80.0 \\
+        Plazo promedio, deuda interna & 7.9 años \\
+        Plazo, deuda externa de mercado & 16.5 años \\
+        Deuda que revisa tasa en el año, \% & 28.4 \\
+        \bottomrule
+      \end{tabular}
+      \medskip
+
+      \textbf{SHRFSP}, \% del PIB: 52.6 (2025), 54.0 (2026 estimado) y 55.0 (2027 propuesto).
+      \smallskip
+
+      \onslide<5->{\textbf{No residentes}: 11.0\,\% de los valores gubernamentales en octubre de 2026, frente a cerca de 39\,\% en enero de 2015 (Banxico).}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \textbf{Lo que dice el informe de México}
+      \begin{itemize}
+        \item<2-> En 2024 su costo de emisión subió, igual que el de Japón, mientras bajaba en 29 países de la OCDE.
+        \item<3-> En los ochenta cayó en impago y reestructuró su deuda.
+        \item<4-> Hoy está entre los tres mayores emisores emergentes de bonos sostenibles.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{SHCP, CGPE 2027, pp.~41, 47, 52. Banxico, SIE, cuadro CA138 (cálculo propio). \GDR, pp.~29, 130, 174.}
+  \note{4 min. El plazo de la deuda interna, 7.9 años, es parecido al promedio ponderado de la OCDE, 8.1 (p.~25); la comparación es aproximada porque las coberturas difieren. El 84.3\,\% es deuda neta del Gobierno Federal; el SHRFSP sigue teniendo cerca de 21\,\% de componente externo (sesión del 10 de noviembre, primera parte, diap.~20). Para 2027 la SHCP estima 84.8\,\% en moneda nacional y 79.6\,\% de valores a tasa fija y largo plazo (p.~40). Tenencia de no residentes: series SF65218 entre SF65219 del cuadro CA138 del SIE; 10.97\,\% al 30 de octubre de 2026, 11.44\,\% a fines de 2025 y 38.90\,\% el 26 de enero de 2015, el máximo de la serie desde 2013. Las Siefores tienen cerca de 30\,\% de los valores gubernamentales en el mismo cuadro: México pasó de depender de extranjeros a depender de inversionistas locales.}
+\end{frame}
+
+% 15 ----------------------------------------------------------------------
+\begin{frame}{¿Hay salida? Las que propone el informe son todas lentas}
+  \small
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \textbf{Lo que propone el informe}
+      \begin{itemize}
+        \item<1-> Prudencia fiscal, reformas para crecer y gasto más eficiente; deuda para lo que aumenta la capacidad productiva.
+        \item<2-> Gestión de la deuda flexible, sin cargar más riesgo de refinanciamiento. Es una palanca limitada: el costo depende sobre todo de cuánto se pide y de la tasa de mercado.
+        \item<3-> En emergentes, mercados locales más profundos.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \onslide<4->{
+      \textbf{Contraste con la sesión anterior}
+
+      De las cinco salidas históricas (ajustar, inflar, crecer, reprimir, no pagar), el informe discute ajustar y crecer. No menciona inflar ni reprimir.}
+      \medskip
+
+      \onslide<5->{
+      \textbf{Para México}: balance primario, crecimiento y manejo de pasivos.}
+    \end{column}
+  \end{columns}
+  \onslide<6->{
+  \begin{alertblock}{Pregunta}
+    ¿Cuál de estas salidas es políticamente viable en México?
+  \end{alertblock}}
+  \fuente{\GDR, p.~14; pp.~38--39, 129--131. Sesión del 10 de noviembre, primera parte, diap.~17.}
+  \note{5 min. Recuadro 1.3: a los administradores de deuda se les reprocha no haber alargado plazos cuando las tasas eran bajas; el informe responde que la emisión regular y predecible baja las primas de liquidez, y que cambiarla de golpe costaría credibilidad sin mover mucho el costo. Pedir respuestas concretas: qué partida de gasto, qué impuesto, qué reforma de crecimiento.}
+\end{frame}
+
+% 15b ---------------------------------------------------------------------
+\begin{frame}{Sin salida ordenada: reestructuras lentas}
+  \opcional
+  \small
+  \begin{itemize}
+    \item<1-> La deuda soberana en impago llegó a 530 mil millones de dólares en 2023, frente a 230 en promedio en 2011--20.
+    \item<2-> Los acreedores cambiaron: la parte del Club de París bajó a 15\,\%, la de China pasó de cero en 2011 a cerca de 9\,\% y la de acreedores privados, de una cuarta parte a casi la mitad. Con más acreedores distintos, las negociaciones son más largas.
+    \item<3-> El Marco Común del G20 (2020) coordina las reestructuras de los países de ingreso bajo; no hay uno equivalente para los de ingreso medio.
+    \item<4-> Los canjes de deuda por naturaleza existen desde 1987 y rara vez han pasado de 20 millones de dólares; en los 2020 el promedio es de unos 713 millones, con Ecuador (2023) y El Salvador (2024). Sin concesiones de los acreedores, no escalan.
+  \end{itemize}
+  \fuente{\GDR, cap.~3, recuadro 3.3 (p.~124) y recuadro 3.4 (p.~127).}
+  \note{3 min, opcional. Recuadro 3.3: en 200 años, una crisis de deuda soberana se ha resuelto en promedio con dos reestructuras, ocho años de impago y quitas de cerca de 45\,\% del principal. Recuadro 3.4: Ecuador canjeó 1.6 mil millones de dólares y El Salvador 1 mil millones.}
+\end{frame}
+
+% =========================================================================
+% IV. PUENTE AL CLIMA · 15 min
+% =========================================================================
+\section{Puente al clima}
+
+% 16 ----------------------------------------------------------------------
+\begin{frame}{Las necesidades de inversión que vienen duplican lo que hoy se invierte}
+  \begin{itemize}
+    \item<1-> La inversión mundial en energía limpia llegó a 2 billones de dólares en 2024, frente a 1.2 en 2019: creció 10\,\% al año, más del triple que el PIB.
+    \item<2-> La trayectoria compatible con el Acuerdo de París pide 4.1 billones al año en 2026--30. En las emergentes sin China la inversión tendría que quintuplicarse para 2035.
+    \item<3-> Si la inversión sigue su tendencia reciente, China se alinea con la trayectoria en 2028, las economías avanzadas en 2041 y las emergentes sin China acumulan un faltante de 10 billones de dólares para 2050.
+  \end{itemize}
+  \onslide<4->{
+  \begin{block}{Lo que el capítulo deja fuera}
+    Las cifras son de mitigación: reducir emisiones en energía, transporte e industria. El informe advierte que no cubre la adaptación ni las pérdidas y los daños. Esa es la segunda parte de hoy.
+  \end{block}}
+  \fuente{\GDR, cap.~4, pp.~140--141, 143, 155--156. Escenario de cero emisiones netas de la AIE. Los escenarios no son pronósticos (p.~153).}
+  \note{4 min. El informe pone las cifras en proporción: 4 billones al año frente a un PIB mundial de 110 billones, emisión soberana de 18 billones al año en 2020--24 y emisión corporativa de 6 (p.~141). Además las empresas energéticas reinvierten: tenían 777 mil millones de dólares disponibles en 2023, el equivalente a su depreciación.}
+\end{frame}
+
+% 17 ----------------------------------------------------------------------
+\begin{frame}{¿Deuda pública o privada? Ninguno de los dos extremos cabe solo}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{tikzpicture}
+        \begin{axis}[barras={Avanzadas,China,Emergentes},width=6.6cm,height=5.4cm,bar width=0.55cm,
+          ymax=160,title={\small Deuda pública, escenario público (\% del PIB)},
+          xticklabels={Avanzadas,China,Emergentes\\sin China},
+          legend style={at={(0.5,-0.3)},anchor=north,legend columns=2}]
+          \addplot[fill=cGris!60] coordinates {(Avanzadas,115) (China,90) (Emergentes,59)};
+          \addplot[fill=cImpuesto!65] coordinates {(Avanzadas,139) (China,131) (Emergentes,75)};
+          \legend{2024,2050 (emergentes: 2040)}
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \small
+      \begin{itemize}
+        \item<1-> Con financiamiento público, las emergentes sin China llegan en 2040 al tope de 75\,\% del escenario; las avanzadas tendrían que aportarles 1.6 billones de dólares en 2041--50.
+        \item<2-> Con financiamiento privado, los bonos de las energéticas emergentes crecerían 17\,\% al año hasta 2035 (China: 12\,\% en la década pasada), de 0.5 a 4.9 billones en 2050.
+        \item<3-> Hoy los bonos son 12\,\% del financiamiento de esas empresas, frente a 30\,\% en las avanzadas.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\GDR, cap.~4, pp.~140--142, 153--162. Deuda bruta del gobierno general, no comparable con la diap.~3 (p.~157). Escenarios, no pronósticos.}
+  \note{5 min. El escenario público supone que el gobierno financia con deuda toda la inversión adicional, sin subir impuestos (p.~156), y no incluye el envejecimiento ni la defensa (pp.~154 y 157). El escenario de mercados supone topes de deuda de 90\,\% (avanzadas), 80\,\% (China) y 60\,\% (emergentes), tomados de las reglas fiscales europeas, y que la inversión extranjera directa se triplica. La conclusión del informe (p.~154): depender en exceso de cualquiera de los dos es impracticable.}
+\end{frame}
+
+% 18 ----------------------------------------------------------------------
+\begin{frame}{Los bonos temáticos crecen, y México es uno de los emisores principales}
+  \small
+  \begin{itemize}
+    \item<1-> Los bonos temáticos destinan sus recursos a gastos verdes, sociales o a ambos (sostenibles); el emisor reporta en qué los gastó.
+    \item<2-> La emisión soberana de bonos sostenibles fue récord en 2024, 170 mil millones de dólares, frente a 132 en promedio en 2021--23. El saldo llegó a 600 mil millones, con 64 emisores; las emergentes tienen una cuarta parte.
+    \item<3-> En septiembre de 2020 México fue el primer país en emitir un bono soberano vinculado a los Objetivos de Desarrollo Sostenible: 750 millones de euros a siete años. Hoy tiene cerca de 3\,\% de su deuda así y, con Chile y Tailandia, suma la mitad del saldo emergente.
+    \item<4-> En el mercado interno, la SHCP coloca Bondes G y Bonos S y planea alinear sus gastos elegibles con la Taxonomía Sostenible de México.
+  \end{itemize}
+  \vspace{-2mm}
+  \onslide<5->{
+  \begin{block}{Juicio sobrio}
+    Un bono temático no cambia la aritmética de la deuda: es deuda. Cambia la base de inversionistas y obliga a rendir cuentas del destino.
+  \end{block}}
+  \fuente{\GDR, anexo 4.B, pp.~174--175. SHCP, Comunicado 071 (14-sep-2020); CGPE 2027, pp.~39--40.}
+  \note{4 min. En Chile, los bonos sostenibles financiaron la mitad de la emisión bruta de 2024 y son 40\,\% del saldo (p.~174). Las emisiones de bonos sostenibles en moneda extranjera de las emergentes subieron a cerca de 70\,\% en 2024 (p.~174). Bono ODS de 2020: cupón 1.350\,\%, rendimiento 1.603\,\%, vence en septiembre de 2027, demanda de 6.4 veces el monto (SHCP, Comunicado 071).}
+\end{frame}
+
+% =========================================================================
+% V. CIERRE · 10 min
+% =========================================================================
+\section{Cierre}
+
+% 19 ----------------------------------------------------------------------
+\begin{frame}{Déficits estructurales: lo que no se arregla con el ciclo}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{tikzpicture}[node distance=4mm]
+        \node[caja,text width=3.9cm] (a) {Intereses más altos\\{\small diaps.~4--8}};
+        \node[caja,text width=3.9cm,below=of a] (b) {Necesidades de inversión\\{\small diaps.~16--17}};
+        \node[caja,text width=3.9cm,below=of b] (c) {Envejecimiento\\{\small sesión del 2--3 de noviembre}};
+        \node[caja,draw=cImpuesto,fill=cImpuesto!6,right=6mm of b,text width=1.9cm] (d) {Balance primario};
+        \draw[flecha] (a.east) -- (d);
+        \draw[flecha] (b.east) -- (d);
+        \draw[flecha] (c.east) -- (d);
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{itemize}
+        \item<1-> Un déficit estructural es el que queda con la economía en su potencial: no lo cierra la recuperación.
+        \item<2-> El informe nombra las tres presiones como causa de que la emisión neta siga en el doble de antes de la pandemia.
+        \item<3-> Y en sus escenarios climáticos advierte que no incluye el envejecimiento. Sumarlo es tarea nuestra.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \fuente{\GDR, cap.~1, p.~19; cap.~4, pp.~154 y 157. Sesión del 2--3 de noviembre (Cuentas Nacionales de Transferencia).}
+  \note{4 min. Cerrar el bloque con la idea de que las tres presiones llegan al mismo tiempo y las tres son de décadas. El ciclo no las resuelve; las resuelve el balance primario, el crecimiento o una combinación.}
+\end{frame}
+
+% 20 ----------------------------------------------------------------------
+\begin{frame}{Cuatro ideas para llevarse}
+  \begin{enumerate}
+    \item<1-> La deuda se refinancia a tasas más altas y el costo llega con rezago: lo peor del aumento de intereses todavía no se ve en los presupuestos.
+    \item<2-> Los nuevos compradores, hogares y extranjeros, son más sensibles al precio que los bancos centrales; las tasas largas responden menos a los recortes.
+    \item<3-> En las emergentes, la moneda y la profundidad del mercado local deciden cuánto duele el ciclo. México está del lado de los que tienen mercado local.
+    \item<4-> Financiar la transición climática solo con deuda pública no cabe; solo con deuda privada exige mercados que hoy no existen en la mayoría de las emergentes.
+  \end{enumerate}
+  \fuente{\GDR, resumen ejecutivo, pp.~12--14.}
+  \note{3 min. Pedir a dos o tres alumnos que digan cuál de las cuatro cambia más su lectura del Paquete Económico.}
+\end{frame}
+
+% 21 ----------------------------------------------------------------------
+\begin{frame}{Para el Paquete Económico 2027: qué mirar el 24 de noviembre}
+  \opcional
+  \begin{itemize}
+    \item<1-> \textbf{Costo financiero}: 3.7\,\% del PIB estimado para 2026 y 4.0\,\% propuesto para 2027. ¿Qué parte es tasa y qué parte es saldo?
+    \item<2-> \textbf{Plan de financiamiento}: techo de endeudamiento interno neto del Gobierno Federal de 1,700 mil millones de pesos y externo de 13.5 mil millones de dólares (Iniciativa de Ley de Ingresos 2027).
+    \item<3-> \textbf{Balance primario y SHRFSP}: superávit primario de 0.5\,\% del PIB en 2027 y deuda de 55.0\,\% del PIB. ¿Alcanza para estabilizarla con las tasas de hoy?
+  \end{itemize}
+  \fuente{SHCP, CGPE 2027, pp.~39 y 47.}
+  \note{2 min, opcional. Con la aritmética de la sesión del 10 de noviembre (primera parte, diap.~13), la SHCP proyecta que la deuda sube 1 punto del PIB en 2027 con superávit primario de 0.5: el resto son ajustes que no están en la ecuación simple.}
+\end{frame}
+
+% 22 ----------------------------------------------------------------------
+\begin{frame}{Puente a la segunda parte}
+  \vfill
+  \begin{block}{}
+    \large Si el clima cambia las necesidades de financiamiento, también cambia el crecimiento, la recaudación y el riesgo: ¿cómo se mete eso en el análisis macroeconómico?
+  \end{block}
+  \vfill
+  \fuente{Segunda parte: FMI (2025), WP 25/170, «Integrating Climate Change into Macroeconomic Analysis».}
+  \note{1 min.}
+\end{frame}
+
+\end{document}
