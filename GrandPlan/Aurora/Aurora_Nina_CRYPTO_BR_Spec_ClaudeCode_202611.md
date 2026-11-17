@@ -209,4 +209,4 @@ Every result states how it can mislead:
 ---
 
 *Draft by Claude Code for Nina · Aurora · GrandPlan · November 2026*
-*Standalone exercise — not for integration into DSGE-OLG core pending OLG-ABM interface design. No build instruction filed yet; one should be filed under `_crossrefs/_build_instructions/` when Part A is approved.*
+*Standalone exercise — not for integration into DSGE-OLG core pending OLG-ABM interface design. Build instruction: `_crossrefs/_build_instructions/2026-11-16_aurora_crypto_board_and_abm_b0.md` (filed 2026-11-16).*

@@ -2,9 +2,9 @@
 
 *Document type: Design note (phase B0 of Part B) · Aurora Project*
 *Author: Nina (portfolio management & crypto strategy). Drafted by Claude Code in Nina's role at Héctor's request, 2026-11-16.*
-*Status: **v1.1, 2026-11-16.** Decisions D1–D6 ruled by Héctor (§10). v1.1 applies the required changes of both reviews (Cath and Fina, files `Aurora_Cath_Review_ABM_B0_202611.md` and `Aurora_Fina_Review_ABM_B0_202611.md`). **Endorsement of v1.1 by Cath and Fina is pending.** No code is written in B0. B1 waits for Héctor's go, the endorsement, and the branch ruling (§8).*
+*Status: **v1.1, 2026-11-16.** Decisions D1–D6 ruled by Héctor (§10). v1.1 applies the required changes of both reviews (Cath and Fina, files `Aurora_Cath_Review_ABM_B0_202611.md` and `Aurora_Fina_Review_ABM_B0_202611.md`). **Endorsement of v1.1 by Cath and Fina is pending.** No code is written in B0. B1 waits for Héctor's go and the endorsement. Branch ruled (§8).*
 *Parent spec: `Aurora_Nina_CRYPTO_BR_Spec_ClaudeCode_202611.md`, Part B (§5) and §5.7 (design for reuse). Precedent: `Aurora_Nina_MonetaryFoundation_202604.md` §10.*
-*Provenance: build instruction **pending the branch ruling** (proposed name `_crossrefs/_build_instructions/2026-11-16_aurora_crypto_board_and_abm_b0.md`).*
+*Provenance: build instruction `_crossrefs/_build_instructions/2026-11-16_aurora_crypto_board_and_abm_b0.md` (filed 2026-11-16 on main; B1 gets build instruction 2_of_2).*
 
 ### What changed from v1 (2026-11-16)
 
@@ -246,7 +246,7 @@ The spec carries a dated amendment line pointing to this table.
 
 ## 8. Implementation
 
-- **Location (Fina req. 7):** B1 is **not** developed or run in the sparse `Dalila-spcx` worktree. That worktree covers only the three monitor folders, has no `tests/`, and is `reset --hard main` daily at 18:00. **Branch and checkout: pending Héctor's ruling** (options set out 2026-11-16).
+- **Location (Fina req. 7):** B1 is **not** developed or run in the sparse `Dalila-spcx` worktree. That worktree covers only the three monitor folders, has no `tests/`, and is `reset --hard main` daily at 18:00. **Branch and checkout (ruled 2026-11-16, option C):** B1 code goes on a new branch `aurora-crypto-abm` cut from main, in its own full checkout `~/Dalila-abm`. It is merged into main when the §11 criteria are met. This note, the spec, the board and the build instruction stay on main.
 - **Folder:** `GrandPlan/Aurora/crypto_abm/` with its own `Project.toml` (Julia 1.11.7), `src/core/`, `src/adapters/crypto/`, `targets/` (the Appendix A computation plus a committed data snapshot with a SHA-256 checksum) and `experiments/`. Every module gets a `.md` companion.
 - **Technology (D2):** the engine core is plain Julia struct-of-arrays. Agents.jl is used only for prototyping and visual checks in B1a.
 - **CPU or GPU:**
@@ -296,7 +296,7 @@ This does **not** yet meet the Monetary Foundation §10 aim of an interface spec
 - **D5 — First asset.** BTC alone in B1; two-asset engine in B3.
 - **D6 — Review.** Cath reviews §2 and §9, **with Fina's help** (amended by Héctor). Both reviews are filed; v1.1 applies their required changes; their endorsement of v1.1 is pending.
 
-**New decision needed:** the branch and checkout for the build instruction and for B1 (§8).
+**Branch (ruled 2026-11-16):** option C — build record and documents on main; B1 on branch `aurora-crypto-abm` in `~/Dalila-abm` (§8).
 
 ---
 

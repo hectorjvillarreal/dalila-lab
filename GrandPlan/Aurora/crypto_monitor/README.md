@@ -3,6 +3,7 @@
 Aurora · standalone exercise · created 2026-11-16 at Héctor's request.
 Brief: [`../Aurora_Nina_CRYPTO_BR_Spec_ClaudeCode_202611.md`](../Aurora_Nina_CRYPTO_BR_Spec_ClaudeCode_202611.md), Part A.
 Adapted from the SPCX board (`../spcx_monitor/`). The code is copied, not imported, so the two boards change independently.
+Build instruction: `_crossrefs/_build_instructions/2026-11-16_aurora_crypto_board_and_abm_b0.md` (PROTO-RAG-001 provenance).
 
 ## What this is, and is not
 
