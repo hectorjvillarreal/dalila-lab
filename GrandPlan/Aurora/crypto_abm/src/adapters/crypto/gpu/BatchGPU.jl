@@ -40,8 +40,18 @@ struct GP
     K::Int32
 end
 
-"Convert a CPU `Params` (any struct with the CryptoAdapter.Params field names) to `GP`."
-gp_from(p) = GP(p.w_c, p.w_m, p.w_l, p.N_c, p.N_m, p.N_l, p.D_median, p.s_D, p.sell_frac, p.reentry,
+# Every behaviour parameter the kernel knows; a new Params field must be added here and
+# to the kernel, or the GPU would silently run a different model (Cath, B1b review fix 1).
+const KNOWN_PARAMS = (:K, :w_c, :w_m, :w_l, :N_c, :N_m, :N_l, :D_median, :s_D, :sell_frac, :reentry,
+    :β, :h_min, :h_max, :θ, :L_median, :s_L, :m0, :m1, :close_hazard, :reopen_delay, :β_l,
+    :funding_c, :funding_max, :σ_ε, :λ0, :κ, :λmax_mult, :φ, :ρ, :σbar, :impact, :q0)
+
+"Convert a CPU `Params` (CryptoAdapter.Params) to `GP`; errors if Params gained fields."
+function gp_from(p)
+    Set(fieldnames(typeof(p))) == Set(KNOWN_PARAMS) || error("Params changed; update BatchGPU before use")
+    _gp(p)
+end
+_gp(p) = GP(p.w_c, p.w_m, p.w_l, p.N_c, p.N_m, p.N_l, p.D_median, p.s_D, p.sell_frac, p.reentry,
                 p.β, p.h_min, p.h_max, p.θ, p.L_median, p.s_L, p.m0, p.m1, p.close_hazard, p.reopen_delay,
                 p.β_l, p.funding_c, p.funding_max, p.σ_ε, p.λ0, p.κ, p.λmax_mult * p.λ0, p.φ, p.ρ, p.σbar,
                 p.impact === :sqrt, p.q0, p.K)
@@ -275,9 +285,10 @@ end
 
 """
     simulate_batch_gpu(params::Vector{GP}, seeds::Vector{UInt64}; days = 1040, burnin = 120)
-        -> (closes::Matrix{Float32}, lows::Matrix{Float32}, cap_hit::Bool)
+        -> (closes::Matrix{Float32}, lows::Matrix{Float32})
 
-Each column is one simulation (daily close and daily low after burn-in).
+Each column is one simulation (daily close and daily low after burn-in). A binding
+cascade cap throws (a bug, never data; R4).
 """
 function simulate_batch_gpu(params::Vector{GP}, seeds::Vector{UInt64}; days::Int = 1040, burnin::Int = 120)
     n = length(params)
@@ -288,7 +299,8 @@ function simulate_batch_gpu(params::Vector{GP}, seeds::Vector{UInt64}; days::Int
     flag = CUDA.zeros(Int32, 1)
     @cuda threads = NT blocks = n kernel!(dC, dL, dP, dS, Int32(days + burnin), Int32(burnin), flag)
     CUDA.synchronize()
-    Array(dC), Array(dL), Array(flag)[1] != 0
+    Array(flag)[1] != 0 && error("cascade cap bound on the GPU (a bug, never data)")
+    Array(dC), Array(dL)
 end
 
 end # module

@@ -24,8 +24,8 @@ function cpu_batch(p, n; base = 0)
 end
 "GPU batch: simulate on device, moments on CPU threads."
 function gpu_batch(p, n; base = 0)
-    C, L, hit = simulate_batch_gpu(fill(gp_from(p), n), seeds(n; base))
-    hit && error("cascade cap bound on the GPU (a bug, never data)")
+    C, L = simulate_batch_gpu(fill(gp_from(p), n), seeds(n; base))
+    any(!isfinite, C) && error("non-finite GPU path")
     M = zeros(length(MD), n)
     Threads.@threads for i in 1:n
         c = Float64.(view(C, :, i)); l = Float64.(view(L, :, i))
@@ -50,6 +50,7 @@ end
 
 io = open(joinpath(RES, "b1b_timing.txt"), "w")
 println(io, "# B1b timing gate — $(now()) — CPU threads $(Threads.nthreads()) — GPU: $(CUDA.name(CUDA.device())), $(CUDA.attribute(CUDA.device(), CUDA.DEVICE_ATTRIBUTE_MULTIPROCESSOR_COUNT)) SMs")
+println(io, "# fits used: $(basename(fl)) (linear), $(basename(fs)) (square-root)")
 println(io, "# rule (fixed before measuring): keep GPU iff ≥ 3× faster end-to-end at 10,000 sims AND all |z| < 3 on 1,000-sim moment means under both impact laws")
 gpu_batch(PL, 64); gpu_batch(PS, 64); cpu_batch(PL, 32)          # warm-up / compilation
 okL = zcompare(io, "linear impact", cpu_batch(PL, 1000; base = 10_000), gpu_batch(PL, 1000; base = 20_000))

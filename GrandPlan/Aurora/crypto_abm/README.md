@@ -11,7 +11,8 @@ This model is a laboratory for mechanisms, not a forecaster. Nothing here reads 
 - **GPU batch path** (`src/adapters/crypto/gpu/BatchGPU.jl`, B1b, 2026-11-17): **kept** by the pre-stated gate (≥ 3× at 10,000 sims and moments within Monte Carlo error under both impact laws).
   - It measured **3.12×** (46.6 s against 145.5 s), with max |z| 2.74 / 1.71 (`experiments/results/B1b_report.md`).
   - The margin is thin.
-  - Results are equal in distribution, not path by path.
+  - GPU and CPU moment means agree within Monte Carlo error (all |z| < 3); spreads were not tested, and paths differ because the random streams differ.
+  - Each n was timed once, so a repeat could fall below 3×.
 - CUDA.jl 6.5.1 is in `Project.toml`. `tests/gpu_check.jl` passed in this environment (`experiments/results/gpu_check_crypto_abm_env.txt`).
 
 ## Layout

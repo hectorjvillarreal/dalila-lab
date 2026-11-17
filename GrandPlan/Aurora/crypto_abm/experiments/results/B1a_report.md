@@ -16,7 +16,7 @@ She also asked for the transient decay to enter σ̂. All fixes are in (6e32826)
 | 1 | Layout, `.md` companions, no crypto terms in `src/core/` | **Met** | `test/runtests.jl` §1; five companions, including `src/CryptoABM.md` |
 | 2 | Targets reproduce §1 from the committed snapshot | **Met** | §2 and §2b tests check 8 key §1.1 cells plus σ̄ (0.502 %/h), the intraday gap (−3.09 pts) and the within-window 3σ target (1.58 %). Fina recomputed σ̄, the gap and 1.58 % independently on 2026-11-17. SHA-256 verified. |
 | 3 | Null test: noise only, κ = 0 | **Met** | Test §3 at default parameters. `null_check_transient.txt` at the fitted parameters (see *Null at the fitted parameters*) |
-| 4 | Stylized facts inside 95 % block-bootstrap bands | **Met under square-root impact (10 of 10). Not met under linear impact (9 of 10)**: ACF\|r\| at lag 5 is −0.001 against a band floor of 0.0014 | `fit_linear_20261117_1239.txt`, `fit_sqrt_20261117_1318.txt` |
+| 4 | Stylized facts inside 95 % block-bootstrap bands | **Not met at 1,000 paths under either law** (restated after the B1b review, Fina, 2026-11-17). ACF\|r\|₅ is −0.025 (square-root) and −0.022 (linear) against a band floor of 0.0014 (`b1b_timing.txt`). The 10-path fit figures (10 of 10 square-root, 9 of 10 linear) are optimistically biased, because the fit selected the parameters on those paths. All other named moments are inside their bands at 1,000 paths. | `fit_*_2026111*.txt` (10 selected paths); `b1b_timing.txt` (1,000 independent paths) |
 | 5 | Ablations move moments materially | **Met** | `ablations_bestfit_linear.txt`, `ablations_bestfit_sqrt.txt` |
 | 6 | Parameter recovery, with non-identified parameters named | **Met, locally** | `recover_20261117_1303.txt`. κ cannot be told apart from zero under linear impact; starts were near the truth |
 | 7 | Determinism and conservation | **Met** | Bit-identical paths. Conservation to 1e-10 / 1e-9 with the cascade loop on and off (test §7, §7b) |
@@ -25,7 +25,7 @@ She also asked for the transient decay to enter σ̂. All fixes are in (6e32826)
 | 10 | Limitations and a clearing-rule alternative | **Met** | Square-root impact on cumulative flow, refit with ablations; limitations below |
 | 11 | Sign-off by Cath and Fina | **Given, with minor fixes; no re-check needed** | `reviews/Cath_signoff_B1a_20261117.md`, `reviews/Fina_signoff_B1a_20261117.md`; fixes applied here |
 
-Criterion 4 asks for at least one parameter vector with the named moments inside their bands. That holds under square-root impact. Under linear impact it misses at one lag; that miss is reported, not hidden.
+Criterion 4 asks for at least one parameter vector with the named moments inside their bands. On the 10 paths the fit selected on, that holds under square-root impact. On 1,000 independent paths it fails at one moment under both laws: ACF\|r\|₅, the persistence of volatility clustering beyond a day. See *Findings* 6.
 
 ## Data targets (post-ETF BTC, 2024-01-12 → 2026-11-16, 1,040 daily returns)
 
@@ -116,7 +116,7 @@ Box edges:
    - Under square-root impact, deferring *raises* volatility and fattens the tails (Hill 2.28, 10 % days 2.2 %), because the forced flow then clears together with the next batch.
    - "No leveraged traders" is the cleaner test of the cascade mechanism, and it gives the same answer under both laws (finding 1).
 5. **Parameter values depend on the impact law.** Median leverage is 11.3× (linear) against 7.0× (square-root); the leveraged share 0.16 against 0.28. λ₀ is not comparable across laws. No parameter value may be quoted without its law.
-6. **The linear fit's clustering decays too fast:** ACF|r| at lag 5 is ≈ 0 against 0.10 in the data. One untested candidate is the missing wealth dynamics (limitation 9).
+6. **The model's volatility clustering decays too fast, under both laws.** At 1,000 paths ACF|r| at lag 5 is about −0.02 against 0.10 in the data; the clustering lives within a day or two. One untested candidate is the missing wealth dynamics (limitation 9). This is the main miss of B1a.
 
 ## Null at the fitted parameters (criterion 3, supplement)
 
