@@ -30,6 +30,7 @@ function run(label, p; R = 10, cascade = true)
     end
     @printf(" exkurt=%.2f gap=%.4f maxrounds=%d\n", mean(getfield.(S, :exk)), mean(getfield.(S, :gap)), maximum(getfield.(S, :maxr)))
 end
+open(joinpath(@__DIR__, "results", "first_run_defaults.txt"), "w") do io; redirect_stdout(io) do
 @printf("%-28s", "TARGET post-ETF BTC")
 for (k, nm) in enumerate(MOMENT_NAMES); @printf(" %s=%.4f", nm, TGT.moments[k]); end
 @printf(" exkurt=%.2f gap=%.4f\n", TGT.exkurt, TGAP.gap)
@@ -39,3 +40,5 @@ run("ablation: no cascade loop", base; cascade = false)
 run("ablation: φ = 0", Params(σbar = SIGBAR, φ = 0.0))
 run("ablation: κ = 0", Params(σbar = SIGBAR, κ = 0.0))
 run("null: noise only, κ = 0", Params(σbar = SIGBAR, w_c = 0, w_m = 0, w_l = 0, κ = 0.0))
+end; end
+print(read(joinpath(@__DIR__, "results", "first_run_defaults.txt"), String))

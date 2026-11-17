@@ -9,8 +9,9 @@ adapters, which implement the agent-class interface below.
 
 Objects (note §2, Cath R5):
   (a) `Instrument` with a cash-flow schedule (`consol` = no cash flows)
-  (b) `Market` (log price = permanent f + transient u); several markets are allowed by
-      the `World`, B1 uses one
+  (b) `Market` (log price = permanent f + transient u). B1's `World` holds one market and
+      holdings are per-class vectors; several markets and an agents × instruments holdings
+      array enter at the start of B3
   (c) `EventCalendar`
   (d) `Issuer` and `primary_auction` (stub, unit-tested, unused by the first adapter)
   (e) `StateConstraint` (any state variable) and state-dependent parameters
@@ -117,10 +118,11 @@ mutable struct Market
     σhat::Float64
     impact::Symbol            # :linear (λ·x) or :sqrt (λ·sign(x)·√(|x|·q0)), note §6.3 alternative
     q0::Float64               # reference flow at which the two forms coincide
+    Xcum::Float64             # cumulative net flow cleared in the current sub-step
 end
 function Market(instr::Instrument; λ0, κ, λmax, σbar, φ, ρ, window::Int, impact::Symbol = :linear, q0::Float64 = 1.0)
     impact in (:linear, :sqrt) || error("unknown impact form $impact")
-    Market(instr, 0.0, 0.0, λ0, κ, λmax, σbar, φ, ρ, fill(σbar, window), 1, σbar, impact, q0)
+    Market(instr, 0.0, 0.0, λ0, κ, λmax, σbar, φ, ρ, fill(σbar, window), 1, σbar, impact, q0, 0.0)
 end
 logprice(m::Market) = m.f + m.u
 price(m::Market) = exp(m.f + m.u)
@@ -153,8 +155,13 @@ Ledger() = Ledger(0.0)
 Clear net agent flow `x` (share of float; buy > 0) against the liquidity provider,
 which takes −x into inventory. All fills of the batch execute at the post-impact price.
 """
+_g(m::Market, X::Float64) = m.impact === :sqrt ? sign(X) * sqrt(abs(X) * m.q0) : X
 function clear!(m::Market, lp::LiquidityProvider, x::Float64)
-    d = m.impact === :sqrt ? impact_lambda(m) * sign(x) * sqrt(abs(x) * m.q0) : impact_lambda(m) * x
+    # impact depends only on the sub-step's cumulative flow, so splitting a batch into
+    # rounds never changes the total move (Cath, B1a sign-off fix 1); linear is unchanged
+    X1 = m.Xcum + x
+    d = impact_lambda(m) * (_g(m, X1) - _g(m, m.Xcum))
+    m.Xcum = X1
     m.f += (1.0 - m.φ) * d
     m.u += m.φ * d
     p = price(m)
@@ -257,10 +264,13 @@ function simulate!(w::World, cfg::SimConfig, rng::AbstractRNG)
         for sub in 1:K
             ctx.step += 1; ctx.day = day; ctx.sub = sub
             lp0 = logprice(m)
+            m.Xcum = 0.0
             # ordinary orders
-            x = _sum(ordinary_flow!, cls, ctx) + deferred
-            deferred = 0.0
-            p = clear!(m, lp, x)
+            xo = _sum(ordinary_flow!, cls, ctx)
+            dflow = deferred; deferred = 0.0
+            p = clear!(m, lp, xo + dflow)
+            # deferred forced flow (ablation only) was already booked at the LP when it fired
+            dflow != 0.0 && (lp.inventory += dflow; lp.cash -= dflow * p)
             ctx.p = p
             _each(settle!, cls, p, ctx)
             dlo = min(dlo, p); dhi = max(dhi, p)
@@ -287,13 +297,13 @@ function simulate!(w::World, cfg::SimConfig, rng::AbstractRNG)
             maxr = max(maxr, rounds)
             day > cfg.burnin && push!(rounds_log, rounds)
             _each(substep_end!, cls, ctx)
-            # σ̂ update and transient decay, between sub-steps only
+            # transient decay, then σ̂ update (between sub-steps only; the decay move enters σ̂)
+            m.u *= (1.0 - m.ρ)
             r = logprice(m) - lp0
             m.window[m.widx] = r
             m.widx = m.widx == length(m.window) ? 1 : m.widx + 1
             m.σhat = sqrt(sum(abs2, m.window) / length(m.window))
             ctx.σhat = m.σhat
-            m.u *= (1.0 - m.ρ)
             ctx.p = price(m)
             dlo = min(dlo, ctx.p); dhi = max(dhi, ctx.p)
         end

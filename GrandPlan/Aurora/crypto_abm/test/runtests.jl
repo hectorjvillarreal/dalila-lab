@@ -73,6 +73,32 @@ logret(res) = diff(log.(res.close))
         @test isapprox(cash, 0.0; atol = 1e-9)
     end
 
+    @testset "7b conservation with the cascade loop off (ablation accounting)" begin
+        p = Params(σbar = SIGBAR)
+        w, _ = run_path(p; seed = 42, days = 300, cascade = false)
+        @test isapprox(sum(units_held, w.classes) + w.lp.inventory, p.w_c; atol = 1e-10)
+        @test isapprox(sum(cash_held, w.classes) + w.lp.cash + w.fund.balance - w.ledger.cash_in, 0.0; atol = 1e-9)
+    end
+
+    @testset "R3 impact depends only on a sub-step's cumulative flow (both laws)" begin
+        for form in (:linear, :sqrt)
+            mk() = Market(consol(:x); λ0 = 1.0, κ = 0.0, λmax = 10.0, σbar = 0.005, φ = 0.3, ρ = 0.2,
+                          window = 24, impact = form, q0 = 0.002)
+            m1 = mk(); lp1 = LiquidityProvider()
+            ABMCore.clear!(m1, lp1, 0.003); ABMCore.clear!(m1, lp1, 0.004); ABMCore.clear!(m1, lp1, -0.001)
+            m2 = mk(); lp2 = LiquidityProvider()
+            ABMCore.clear!(m2, lp2, 0.006)
+            @test isapprox(logprice(m1), logprice(m2); atol = 1e-14)
+        end
+    end
+
+    @testset "2b targets: σ̄, intraday gap, within-window 3σ share" begin
+        @test round(100 * Targets.sigma_bar_hourly().σbar; digits = 3) == 0.502
+        @test round(100 * Targets.intraday_gap().gap; digits = 2) == -3.09
+        s = Targets.window_stats("BTC-USD", Targets.POST...)
+        @test round(100 * s.moments[7]; digits = 2) == 1.58
+    end
+
     @testset "R4 cascade cap never binds; rounds recorded" begin
         p = Params(σbar = SIGBAR)
         w, res = run_path(p; seed = 7, days = 400)

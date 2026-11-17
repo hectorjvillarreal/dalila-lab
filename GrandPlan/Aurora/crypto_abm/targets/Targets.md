@@ -17,4 +17,4 @@ Companion to `Targets.jl` and `fetch_snapshot.py`.
 - `verify_snapshot()`: checks the SHA-256 sums.
 - `window_stats(product, a, b; exclude)`: reproduces every §1.1 cell. A test checks the key ones.
 - `sigma_bar_hourly()`: σ̄ = **0.502 % per hour**, the RMS of hourly log returns over the post-ETF window. It is a fixed constant per note §2 R2.
-- `intraday_gap(k = 10)`: on the 10 largest post-ETF down days, prior-close→low averages −11.0 % and close→close −7.9 % (simple). That is a gap of **−3.09 points**, the intraday target. *Finding:* the daily candle's open equals the prior close on only 5 of these 10 days. The target therefore measures from the prior close, never the open.
+- `intraday_gap(k = 10)`: on the 10 largest post-ETF down days, prior-close→low averages −11.0 % and close→close −7.9 % (simple). That is a gap of **−3.09 points**, the intraday target. The open equals the prior close within 1e-6 on 5 of 10 days, and within 0.006 % on all ten; the target measures from the prior close by definition (Fina, B1a sign-off fix 7).

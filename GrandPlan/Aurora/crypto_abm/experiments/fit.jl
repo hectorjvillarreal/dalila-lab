@@ -89,6 +89,7 @@ function objective(u, target; base = 0, log = nothing)
     m = try
         model_moments(p; base)
     catch e
+        e isa CascadeCapError && rethrow()       # a binding cap is a bug, never a data point (R4)
         log !== nothing && println(log, "aborted draw: ", sprint(showerror, e))
         return Inf, fill(NaN, length(MD))
     end
