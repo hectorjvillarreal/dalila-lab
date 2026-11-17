@@ -83,7 +83,7 @@ Mean |error| as a share of each range: λ₀ 0.02, ρ 0.03, L 0.06, φ 0.07, s_D
 ## Limitations (criterion 10)
 
 1. **Equifinality.** One acceptable vector is reported, not the acceptance set. Full SMM and the J-test set belong to B3.
-2. **Box edges.** σ_ε, median L, ρ and s_D sit near the bounds of the §4 box. The box may be binding. Widening it is a design choice to rule on, not a silent change.
+2. **Box edges.** σ_ε, median L, ρ and s_D sit near the bounds of the §4 box under linear impact. σ_ε stays at its upper bound under square-root impact too. Ruling 2026-11-17: the σ_ε bound is kept and noted, not widened.
 3. **Clearing rule (run 2026-11-17).** Under square-root impact the κ conclusion does not hold (see *Clearing-rule alternative*). Any statement about liquidity withdrawal must name the impact law. Fitted parameter values, including leverage, also depend on it.
 4. **Recovery is local.** Starts were within ±15 % of each range around the truth. A recovery from random starts would test global identification and is not done.
 5. **Perp = spot.** One price for both. Basis and funding dislocations cannot appear.
@@ -122,7 +122,7 @@ Best vector: λ₀ 1.29, σ_ε 0.048, w_m 0.039, β 2.40, w_l 0.254, median L 9.
 - **Robust.** The leveraged traders' cascade loop is needed for the fat tails, the 3σ days, the 10 % days and the intraday gap; switching it off makes returns Gaussian under both laws. Leveraged traders are needed. Transient impact is needed (φ = 0 makes returns trend under both).
 - **Not robust.** Under linear impact, liquidity withdrawal (κ) was needed for clustering. Under square-root impact the fit chooses κ ≈ 0, and removing κ changes little. With concave impact, large forced flows already have diminishing impact, which seems to stand in for the withdrawal channel; that reading is untested. The cost is weaker clustering at lags 1 and 5 than in the data.
 - **Parameter values move.** Median leverage is 18× (at the box edge) under linear and 9.4× (interior) under square-root. The leveraged share is 0.19 vs 0.25. No parameter value should be quoted without its impact law.
-- **One finding holds under both laws:** σ_ε sits at the upper edge of its box (0.96 and 0.99 of the range). The noise-scale bound is binding and needs a ruling.
+- **One finding holds under both laws:** σ_ε sits at the upper edge of its box (0.96 and 0.99 of the range). The noise-scale bound is binding. **RULED 2026-11-17 (Héctor): the bound stays as set in note §4 and is noted.** Fits are reported as constrained by it; widening it would be a separate, recorded decision.
 
 ## Not done in B1a
 
