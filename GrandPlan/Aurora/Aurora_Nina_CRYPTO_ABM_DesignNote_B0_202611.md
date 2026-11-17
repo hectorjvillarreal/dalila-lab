@@ -2,7 +2,7 @@
 
 *Document type: Design note (phase B0 of Part B) · Aurora Project*
 *Author: Nina (portfolio management & crypto strategy) — drafted by Claude Code in Nina's role at Héctor's request, 2026-11-16*
-*Status: DRAFT for Héctor's review. No code is written in B0. Decisions D1–D6 (§10) are open.*
+*Status: B0 APPROVED 2026-11-16 — decisions D1–D6 ruled (§10; D6 amended: Fina helps Cath). No code is written in B0; B1 waits for Héctor's go and the Cath/Fina review.*
 *Parent spec: `Aurora_Nina_CRYPTO_BR_Spec_ClaudeCode_202611.md`, Part B (§5) and §5.7 (design for reuse)*
 *Precedent: `Aurora_Nina_MonetaryFoundation_202604.md` §10 (design note before code)*
 
@@ -200,12 +200,14 @@ It is a conditional statement, never a forecast of spreads, under the same firew
 
 ## 10. Decisions for Héctor (proposed defaults in brackets)
 
+**RULED 2026-11-16 (Héctor): defaults D1–D5 accepted; D6 accepted with an amendment — Fina helps Cath with the review of §2 and §9.** B1 (code) still waits for Héctor's go.
+
 - **D1 — Calibration window.** [Post-ETF (2024-01-11 → present) for calibration; 2019–2023 as the regime-shift test.]
 - **D2 — Engine technology.** [Plain Julia struct-of-arrays for the core, with Agents.jl only for B1 prototyping and visual checks.]
 - **D3 — Tail moments.** [Hill index and 3σ-day frequency targeted; raw kurtosis reported, not targeted.]
 - **D4 — Intraday sub-steps.** [K = 24 per day, with hourly Coinbase candles as the intraday target data.]
 - **D5 — First asset.** [BTC alone in B1; two-asset engine in B3.]
-- **D6 — Review.** [Cath reviews §2 and §9 before B1 starts.]
+- **D6 — Review.** [Cath reviews §2 and §9 before B1 starts.] → RULED: Cath reviews, **with Fina's help** (cross-project coherence).
 
 ---
 
