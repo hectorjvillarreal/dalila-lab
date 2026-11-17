@@ -23,6 +23,13 @@
   - The calendar and the primary-market stub are not yet used by the simulation.
   - Holdings are per-class vectors in one market; agents × instruments arrives in B3.
 
+- **(f) Finding on liquidity withdrawal (κ), after the post-fix rerun.** κ is **not identified** by the B1a moments.
+  - Under linear impact the fit sets κ ≈ 0.03, and recovery cannot tell it from zero.
+  - Under square-root impact the fit sets κ = 0.32, and removing it thins the tails.
+  - The pre-fix results said the opposite and were shaped by implementation errors.
+
+  So no statement about liquidity withdrawal may be made without naming the impact law, and κ is carried to B3 as an open question. **Robust under both laws:** leveraged traders carry the tails, and transient impact is needed (B1a report, branch `aurora-crypto-abm`).
+
 ### What changed in v1.2 (2026-11-16, endorsement fixes)
 
 - **Cath:**
