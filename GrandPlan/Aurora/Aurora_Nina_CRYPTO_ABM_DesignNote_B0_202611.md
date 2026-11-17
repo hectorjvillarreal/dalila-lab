@@ -6,6 +6,23 @@
 *Parent spec: `Aurora_Nina_CRYPTO_BR_Spec_ClaudeCode_202611.md`, Part B (§5) and §5.7 (design for reuse). Precedent: `Aurora_Nina_MonetaryFoundation_202604.md` §10.*
 *Provenance: build instruction `_crossrefs/_build_instructions/2026-11-16_aurora_crypto_board_and_abm_b0.md` (filed 2026-11-16 on main; B1 gets build instruction 2_of_2, filed on main before the first commit on `aurora-crypto-abm`).*
 
+### Amendments from B1a (2026-11-17)
+
+*Dated amendments required by build instruction 2_of_2, §1. They came from the B1a build and from the Cath and Fina sign-off checks (`crypto_abm/reviews/` on branch `aurora-crypto-abm`).*
+
+- **(a) R2, σ̄.** σ̄ is the RMS of hourly BTC log returns over the post-ETF window, **0.502 %/h**, not the mean of σ̂ (which would be 0.445 %/h).
+- **(b) §5, 3σ share.** For calibration, the 3σ share uses a *within-window* trailing s.d. for both data and model: **1.58 %** for post-ETF BTC. The full-history value in §1.1 (1.92 %) is descriptive only.
+- **(c) §6.3 and §11.10, clearing-rule alternative.** The base rule is already linear in log price, so the alternative run is **square-root impact**, Δln p = λ·sign·(√(\|X₁\|q₀) − √(\|X₀\|q₀)) on the sub-step's *cumulative* flow X. q₀ = 0.002 of the float per sub-step is a normalisation choice. Impact depends only on cumulative flow, so splitting a batch into cascade rounds never changes the total move (Cath, sign-off fix 1).
+- **(d) §2, implementation details.**
+  - The transient decay is applied before the sub-step return enters σ̂.
+  - The "cascade loop off" ablation books forced orders at the current price and defers their impact to the next sub-step.
+  - A binding cascade cap aborts the evaluation in the fit too (R4).
+- **(e) Implementation limits in B1a**, to keep in mind when reading results:
+  - m₁ = 0 throughout, so the margin channel of the spiral is off.
+  - Leveraged traders re-enter with fixed size and fresh equity, so there are no wealth dynamics.
+  - The calendar and the primary-market stub are not yet used by the simulation.
+  - Holdings are per-class vectors in one market; agents × instruments arrives in B3.
+
 ### What changed in v1.2 (2026-11-16, endorsement fixes)
 
 - **Cath:**
@@ -214,7 +231,7 @@ The spec carries a dated amendment line pointing to this table.
 | L_i ~ LogNormal(μ_L, s_L), m₀, m₁ | Leverage; margin m(σ̂) = m₀ + m₁·σ̂ | median L 3–20×; m₀ 0.5–2 %; m₁ ≥ 0, range to be scaled in B1a (σ̂ in per-sub-step units) |
 | λ₀, κ, λ_max | Impact per unit of float, volatility sensitivity, cap | to be scaled in B1a |
 | φ, ρ | Transient share of impact, decay per sub-step | φ ∈ [0, 0.8], ρ ∈ [0.05, 0.5] |
-| σ_ε | Noise order-flow scale | free (unit scale fixed by R1) |
+| σ_ε | Noise order-flow scale | free (unit scale fixed by R1). *Amendment 2026-11-17 (B1a): searched on [0.002, 0.05]; the fit sits at the upper bound under both impact laws. RULED 2026-11-17 (Héctor): the bound stays and is noted; widening it is a separate recorded decision.* |
 | K | Sub-steps per day | 24 (D4), an instance parameter |
 
 ---
