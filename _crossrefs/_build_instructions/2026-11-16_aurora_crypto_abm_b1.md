@@ -1,11 +1,11 @@
 ---
 type: build_instruction
 build_type: expansion
-date: 2026-11-17
+date: 2026-11-16
 corpus_affected:
   - "branch aurora-crypto-abm (cut from main at 1cd7a84), checkout ~/Dalila-abm"
   - GrandPlan/Aurora/crypto_abm/
-triggered_by: "Héctor, 2026-11-16/17: 'go ahead with B1', after design note B0 v1.2 was endorsed by Cath and Fina (1cd7a84)."
+triggered_by: "Héctor, 2026-11-16: 'go ahead with B1', after design note B0 v1.2 was endorsed by Cath and Fina (1cd7a84)."
 agents_involved: [Nina, Cath, Fina, Claude Code]
 status: pending_execution
 sequence_position: "2_of_2"
@@ -16,7 +16,7 @@ notes: "Executes phase B1 of design note B0 v1.2 (GrandPlan/Aurora/Aurora_Nina_C
 
 **To:** provenance archive (Debb)
 **From:** Claude Code (execution), on design note B0 v1.2 authored in Nina's role and endorsed by Cath and Fina
-**Date:** 2026-11-17 (filed before the first commit on `aurora-crypto-abm`, per note §8)
+**Date:** 2026-11-16 (filed before the first commit on `aurora-crypto-abm`, per note §8)
 
 ## 1. What B1 builds
 
