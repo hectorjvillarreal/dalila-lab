@@ -11,6 +11,8 @@ corpus_affected:
   - GrandPlan/Aurora/Aurora_Nina_CRYPTO_ABM_DesignNote_B0_202611.md
   - GrandPlan/Aurora/Aurora_Cath_Review_ABM_B0_202611.md
   - GrandPlan/Aurora/Aurora_Fina_Review_ABM_B0_202611.md
+  - GrandPlan/Aurora/Aurora_Cath_Endorsement_ABM_B0_v1.1_202611.md
+  - GrandPlan/Aurora/Aurora_Fina_Endorsement_ABM_B0_v1.1_202611.md
   - "~/.local/bin/spcx_render.sh (outside the repo; step 3c; backup spcx_render.sh.bak-20261116)"
 triggered_by: "Héctor, 2026-11-16 session on the SPCX monitor: 'add Ethereum to the rotation gauge' → 'should we try modeling Bitcoin and Ethereum or that could break our discipline' → 'do 1 now and write the spec … imagine Nina developing some agent based model that we calibrate to have another tool in Dalila' → 'start with the crypto' → 'have Nina designing the model' → 'have Cath and Fina review Nina's note' → 'go ahead with v1.1'."
 agents_involved: [Nina, Cath, Fina, Claude Code]
@@ -52,6 +54,8 @@ Neither product is connected to the DSGE-OLG core. The OLG-ABM interface stays C
 | 69c9ec1 | D1–D6 ruled (D6 amended: Fina helps Cath) |
 | d867d28 | Cath and Fina reviews filed verbatim; both "approve B1 with required changes" |
 | 014e171 | Design note v1.1 applies all required changes; spec §5.6 amended (phase map) |
+| 3edcb0d | This build instruction filed; back-links from spec, board README and note |
+| (v1.2 commit) | Cath and Fina endorsement checks filed verbatim (`Aurora_Cath_Endorsement_ABM_B0_v1.1_202611.md`, `Aurora_Fina_Endorsement_ABM_B0_v1.1_202611.md`); design note v1.2 applies their minor fixes |
 
 ## 3. Rulings recorded (all Héctor, 2026-11-16)
 
@@ -70,7 +74,7 @@ Neither product is connected to the DSGE-OLG core. The OLG-ABM interface stays C
 
 - Board: Fire Sales question (l), whether a realised cascade counts after it ends and for how long; question (m), the debt-due horizon under mNAV ≤ 1.
 - Board numeric bands: stablecoin peg band, liquidation-volume bar, funding/open-interest "stretched" level.
-- Design note v1.1: endorsement by Cath and Fina.
+- ~~Design note v1.1: endorsement by Cath and Fina.~~ **Done 2026-11-16:** Cath and Fina each endorsed v1.1 with minor fixes (no re-review needed); applied as v1.2.
 - B1: Héctor's go, then build instruction 2_of_2.
 - The data snapshot behind note §1 sits in the session scratchpad. B1a commits it, with a SHA-256 checksum, under `crypto_abm/targets/`.
 

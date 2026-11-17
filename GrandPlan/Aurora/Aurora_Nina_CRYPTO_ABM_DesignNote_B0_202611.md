@@ -1,10 +1,26 @@
-# Design note B0 — Crypto agent-based model (mechanism laboratory) · v1.1
+# Design note B0 — Crypto agent-based model (mechanism laboratory) · v1.2
 
 *Document type: Design note (phase B0 of Part B) · Aurora Project*
 *Author: Nina (portfolio management & crypto strategy). Drafted by Claude Code in Nina's role at Héctor's request, 2026-11-16.*
-*Status: **v1.1, 2026-11-16.** Decisions D1–D6 ruled by Héctor (§10). v1.1 applies the required changes of both reviews (Cath and Fina, files `Aurora_Cath_Review_ABM_B0_202611.md` and `Aurora_Fina_Review_ABM_B0_202611.md`). **Endorsement of v1.1 by Cath and Fina is pending.** No code is written in B0. B1 waits for Héctor's go and the endorsement. Branch ruled (§8).*
+*Status: **v1.2, 2026-11-16.** Decisions D1–D6 ruled by Héctor (§10). v1.1 applied the required changes of both reviews (`Aurora_Cath_Review_ABM_B0_202611.md`, `Aurora_Fina_Review_ABM_B0_202611.md`). **Cath endorsed v1.1 with minor fixes, 2026-11-16** (`Aurora_Cath_Endorsement_ABM_B0_v1.1_202611.md`). **Fina endorsed v1.1 with minor fixes, 2026-11-16** (`Aurora_Fina_Endorsement_ABM_B0_v1.1_202611.md`). Both say no re-review is needed; v1.2 applies all their fixes. No code is written in B0. **B1 waits only for Héctor's go.** Branch ruled (§8).*
 *Parent spec: `Aurora_Nina_CRYPTO_BR_Spec_ClaudeCode_202611.md`, Part B (§5) and §5.7 (design for reuse). Precedent: `Aurora_Nina_MonetaryFoundation_202604.md` §10.*
-*Provenance: build instruction `_crossrefs/_build_instructions/2026-11-16_aurora_crypto_board_and_abm_b0.md` (filed 2026-11-16 on main; B1 gets build instruction 2_of_2).*
+*Provenance: build instruction `_crossrefs/_build_instructions/2026-11-16_aurora_crypto_board_and_abm_b0.md` (filed 2026-11-16 on main; B1 gets build instruction 2_of_2, filed on main before the first commit on `aurora-crypto-abm`).*
+
+### What changed in v1.2 (2026-11-16, endorsement fixes)
+
+- **Cath:**
+  - noise and identification wording (R1);
+  - σ̄ is a fixed constant (R2);
+  - the transient-impact equation, kept outside the cascade loop (R4b);
+  - a range for m₁;
+  - C2 wording in §9;
+  - the null test with κ = 0, plus a κ = 0 ablation (§11).
+- **Fina:**
+  - the 3σ-day convention is stated, with its alternatives (Appendix A, §1.1);
+  - wording in §0 and the §1 intro;
+  - where build instruction 2_of_2 is filed;
+  - common random numbers restored in criterion 7;
+  - endorsement recorded here, in the spec and in the build instruction.
 
 ### What changed from v1 (2026-11-16)
 
@@ -27,7 +43,7 @@
 
 ## 0. What this model is for, and the firewall
 
-The model is a **laboratory for mechanisms**. It must reproduce the statistical signature of crypto returns from agent behaviour alone. Then it asks **conditional** questions. For example: with this share of leveraged traders at this leverage, how often does a liquidation cascade turn a −3 % day into a −12 % intraday low? Returns throughout are simple, measured from the prior close.
+The model is a **laboratory for mechanisms**. It must reproduce the statistical signature of crypto returns from agent behaviour alone. Then it asks **conditional** questions. For example: with this share of leveraged traders at this leverage, how often does a liquidation cascade turn a −3 % day into a −12 % intraday low? Returns in examples, worst days and episodes are simple, measured from the prior close; moments use log returns (§1).
 
 It never says where bitcoin or ether will trade.
 
@@ -43,11 +59,11 @@ The target is an emergent coordination failure, the same kind Nina set for the m
 
 ## 1. What the data says the model must reproduce
 
-These figures come from Coinbase daily UTC closes for BTC-USD and ETH-USD, 2019-01-01 to 2026-11-16: 2,877 closes each, with no missing days. They are MARKET data, our computation, and were reproduced independently by Fina (whose own run also gives the Hill indices). Conventions:
+These figures come from Coinbase daily UTC closes for BTC-USD and ETH-USD, 2019-01-01 to 2026-11-16: 2,877 closes each, with no missing days. They are MARKET data, our computation, and were reproduced independently by Fina (review and endorsement check, 2026-11-16). Conventions:
 - Moments use log returns, formed *within* each window. The post-ETF window gives 1,040 returns and drops the 2024-01-11 return.
 - Standard deviations use ddof = 1. Skewness and kurtosis are standardised with that s.d.
 - Figures are rounded, not truncated.
-- The "3σ day" counts |r_t| above 3 times the s.d. of the previous 90 daily returns.
+- The "3σ day" counts |r_t| above 3 times the s.d. of the previous 90 daily returns, on the full return history (Appendix A).
 - Worst days and episodes are **simple** price changes.
 
 The method is in Appendix A.
@@ -69,7 +85,7 @@ The BTC–ETH correlation is 0.84 before and 0.83 after. ETH's beta to BTC rises
 
 Post-ETF maximum drawdowns: BTC −53.1 % ($124,720 on 2025-10-06 to $58,524 on 2026-06-30); ETH −67.6 % ($4,831 on 2025-08-22 to $1,565 on 2026-06-25). On 2026-11-16, BTC is 48.0 % and ETH 62.3 % below their post-ETF closing highs.
 
-**Reading (corrected in v1.1).** v1 said the ETF launch "splits the sample cleanly", including in tail shape. That was wrong. Without one day, 2020-03-12, the pre-ETF skewness and kurtosis are close to the post-ETF values. Neither robust tail measure moves materially across the periods: the Hill index is 3.43 vs 3.45 for BTC, and the 3σ-day share is about 1.9 % throughout. Volatility clustering (ACF of |r|) is also unchanged.
+**Reading (corrected in v1.1).** v1 said the ETF launch "splits the sample cleanly", including in tail shape. That was wrong. Without one day, 2020-03-12, the pre-ETF skewness and kurtosis are close to the post-ETF values. Neither robust tail measure moves materially across the periods: the Hill index is 3.43 vs 3.45 for BTC, and the 3σ-day share is 1.9–2.0 % for BTC and about 1.7 % for ETH in both periods (convention in Appendix A; with a within-window trailing s.d. the post-ETF shares are 1.58 % and 1.68 %, and the Hill index carries the conclusion under every variant). Volatility clustering (ACF of |r|) is also unchanged.
 
 What does differ:
 - the **level of volatility** (BTC annualised s.d. 65.9 % → 47.0 % excluding the crash day);
@@ -128,9 +144,9 @@ The **core knows nothing about crypto** (spec §5.7). A grep test enforces this 
 
   ln p_{s+1} − ln p_s = λ_s · x_s,  with λ_s = min{ λ₀ · exp(κ·(σ̂_s/σ̄ − 1)), λ_max }
 
-- **R1 (units).** x_s is net order flow in **units of the asset as a share of the float**. Depth is normalised to 1, so λ₀ alone carries price impact and the rule does not depend on the price level. Noise flow has a fixed unit scale, which leaves σ_ε and λ₀ identified separately.
-- **R2 (volatility input).** σ̂_s is realised volatility over the trailing 24 sub-steps, in per-sub-step units, and σ̄ is its post-ETF sample mean. λ is capped at λ_max, and σ̂_s is **frozen during the cascade loop**, so impact and volatility cannot feed each other without bound.
-- **R4b (transient impact).** A fraction φ of each sub-step's impact decays at rate ρ per sub-step, implemented as mean reversion in the liquidity provider's inventory. φ = 0 gives permanent impact, the v1 case, and is kept as an ablation. Without decay, the §1.3 intraday target cannot be met.
+- **R1 (units).** x_s is net order flow in **units of the asset as a share of the float**. Depth is normalised to 1, so λ₀ alone carries price impact and the rule does not depend on the price level. Noise flow is σ_ε·ε_s, with ε_s ~ N(0, 1/K) in float-share units. λ₀ and σ_ε are separately identified only through agent flows, whose scale is fixed because holdings and demands are fractions of each class's float share. Momentum demand is w_m·tanh(β·trend_h), with no free proportionality constant.
+- **R2 (volatility input).** σ̂_s is realised volatility over the trailing 24 sub-steps, in per-sub-step units, and σ̄ is a fixed constant computed once from the hourly data snapshot (its post-ETF mean); it is not estimated. λ is capped at λ_max, and σ̂_s is **frozen during the cascade loop**, so impact and volatility cannot feed each other without bound.
+- **R4b (transient impact).** A fraction φ of each sub-step's impact decays at rate ρ per sub-step, implemented as mean reversion in the liquidity provider's inventory. φ = 0 gives permanent impact, the v1 case, and is kept as an ablation. Without decay, the §1.3 intraday target cannot be met. Formally, log price is f_s + u_s. Each clearing adds (1−φ)·λ_s·x_s to the permanent part f and φ·λ_s·x_s to the transient part u. Between sub-steps, and never inside the cascade loop, u_{s+1} = (1−ρ)·u_s. The liquidity provider's inventory unwind is the accounting counterpart of this decay and is not routed back through λ, which preserves R3's order-independence.
 
 **Cascade loop (Cath R3, R4).** After each sub-step's ordinary clearing:
 - (a) **only forced orders act inside the loop**; momentum and noise orders act once per sub-step;
@@ -195,7 +211,7 @@ The spec carries a dated amendment line pointing to this table.
 | w_c, w_m, w_ℓ | Class shares | simplex, w_ℓ ∈ [0.02, 0.30] |
 | D_i ~ LogNormal(μ_D, s_D) | Conviction drawdown thresholds | median 15–50 % |
 | β, h | Momentum intensity, horizons | h ∈ [3, 60] days |
-| L_i ~ LogNormal(μ_L, s_L), m₀, m₁ | Leverage; margin m(σ̂) = m₀ + m₁·σ̂ | median L 3–20×; m₀ 0.5–2 % |
+| L_i ~ LogNormal(μ_L, s_L), m₀, m₁ | Leverage; margin m(σ̂) = m₀ + m₁·σ̂ | median L 3–20×; m₀ 0.5–2 %; m₁ ≥ 0, range to be scaled in B1a (σ̂ in per-sub-step units) |
 | λ₀, κ, λ_max | Impact per unit of float, volatility sensitivity, cap | to be scaled in B1a |
 | φ, ρ | Transient share of impact, decay per sub-step | φ ∈ [0, 0.8], ρ ∈ [0.05, 0.5] |
 | σ_ε | Noise order-flow scale | free (unit scale fixed by R1) |
@@ -267,7 +283,7 @@ This is for Cath to design. It records what the reviews established.
 - is closed (K = A_dom − B), with one riskless bond;
 - treats debt as a residual (B = primary / (r_n − n_p));
 - yields comparative steady states for 2020 and 2050;
-- under closure C2 with debt absorbing the gap, has no finite steady state.
+- under the "debt absorbs" reading of closure C2 (pension deficit routed to the general budget), has no finite steady state; the C2 that was shipped uses benefit scaling.
 
 It has no transition path, maturity structure, currency composition, holder split or spread. No DFD transition solver was found.
 
@@ -294,7 +310,7 @@ This does **not** yet meet the Monetary Foundation §10 aim of an interface spec
 - **D3 — Tail moments.** Hill index and 3σ-day share targeted; raw kurtosis reported, not targeted.
 - **D4 — Intraday sub-steps.** K = 24 per day, an instance parameter, with hourly Coinbase candles as intraday target data.
 - **D5 — First asset.** BTC alone in B1; two-asset engine in B3.
-- **D6 — Review.** Cath reviews §2 and §9, **with Fina's help** (amended by Héctor). Both reviews are filed; v1.1 applies their required changes; their endorsement of v1.1 is pending.
+- **D6 — Review.** Cath reviews §2 and §9, **with Fina's help** (amended by Héctor). Both reviews are filed; v1.1 applied their required changes; Cath and Fina each endorsed v1.1 with minor fixes on 2026-11-16, applied in v1.2.
 
 **Branch (ruled 2026-11-16):** option C — build record and documents on main; B1 on branch `aurora-crypto-abm` in `~/Dalila-abm` (§8).
 
@@ -304,11 +320,11 @@ This does **not** yet meet the Monetary Foundation §10 aim of an interface spec
 
 1. **Layout.** The §8 layout under Julia 1.11.7, with a `.md` companion per module. A grep test finds no crypto terms (funding, perp, BTC, Coinbase, UTC) in `src/core/`.
 2. **Reproducible targets.** `targets/` recomputes §1 from the committed snapshot, conventions stated, and matches this note.
-3. **Null test.** With noise only, excess kurtosis and the ACF of |r| are about zero.
+3. **Null test.** With noise only and κ = 0, excess kurtosis and the ACF of |r| are about zero.
 4. **Stylized facts.** At least one parameter vector puts post-ETF BTC moments inside block-bootstrap 95 % bands: ACF of r, ACF of |r| at lags 1/5/20, Hill index, 3σ share. Misses are listed.
-5. **Ablation.** Switching off the cascade loop, and separately setting φ = 0, moves the tail and intraday moments materially.
+5. **Ablation.** Switching off the cascade loop, and separately setting φ = 0, moves the tail and intraday moments materially; and, separately, setting κ = 0, so that the share of clustering and tails due to liquidity withdrawal alone is reported.
 6. **Parameter recovery.** On synthetic data, recover at least w_ℓ, median L, s_D and κ with stated coverage, using the §5 optimiser. Parameters that are not identified are named.
-7. **Determinism and conservation.** A fixed seed gives bit-identical runs, and units and cash are conserved across all agents, including the liquidity provider, to machine precision.
+7. **Determinism and conservation.** A fixed seed gives bit-identical runs, with common random numbers across draws, and units and cash are conserved across all agents, including the liquidity provider, to machine precision.
 8. **Timing and GPU.** The B1b timing table, plus `gpu_check.jl` if CUDA is used, or an explicit CPU-only statement.
 9. **Firewall.** A test that nothing under `crypto_abm/` reads or writes `crypto_monitor/`; the README restates the firewall.
 10. **Limitations.** Equifinality, a run with the linear-impact alternative, the perp = spot assumption, and regime dependence.
@@ -333,10 +349,10 @@ This does **not** yet meet the Monetary Foundation §10 aim of an interface spec
   - skewness and excess kurtosis = mean(z³) and mean(z⁴) − 3, with z standardised by the ddof = 1 s.d.;
   - ACF at lag k = Σ(x_t − x̄)(x_{t+k} − x̄) / Σ(x_t − x̄)²;
   - Hill index = 1 / mean(ln(a_(i) / a_(k+1))) over the k = ⌊0.05·n⌋ largest |r|;
-  - 3σ day: |r_t| > 3 × s.d.(r_{t−90..t−1});
+  - 3σ day: |r_t| > 3 × s.d.(r_{t−90..t−1}), where the trailing s.d. uses the full return history, including returns before the window opens. In the column that excludes 2020-03-12, that day is removed from the count but kept in the trailing s.d. Alternatives, reported for transparency: with a within-window trailing s.d., post-ETF BTC is 1.58 % and ETH 1.68 %; with 2020-03-12 dropped from the series, pre-ETF BTC is 2.08 % and ETH 1.79 %;
   - correlation and beta (cov(ETH, BTC) / var(BTC)) on daily log returns.
 - **Drawdown:** on closes, from the running maximum within the window.
 - **Windows:** 2019-01-01..2023-12-31 (1,825 returns; 1,824 excluding 2020-03-12) and 2024-01-11..2026-11-16 (1,040 returns).
 - **2025-10-10:** that day's Coinbase daily candle: open $121,714.51 = prior close; low $107,000; close $112,980.28.
 
-*Nina · Aurora · GrandPlan · November 2026 · design note v1.1; no code written in B0.*
+*Nina · Aurora · GrandPlan · November 2026 · design note v1.2; no code written in B0.*

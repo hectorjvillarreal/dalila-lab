@@ -3,7 +3,7 @@
 *Document type: Build specification / Knowledge File · Aurora Project*
 *Author: drafted by Claude Code at Héctor's request, for Nina (portfolio management & crypto strategy)*
 *Date: 16 November 2026*
-*Status: Part A APPROVED and built 2026-11-16 (rulings Q1–Q5, §7); Part B not started — B0 design note waits for Héctor's go. Nina's review pending.*
+*Status: Part A APPROVED and built 2026-11-16 (rulings Q1–Q5, §7); Part B: design note B0 filed 2026-11-16 (now v1.2), D1–D6 ruled, reviewed by Cath and Fina and endorsed by both with minor fixes (applied); B1 waits for Héctor's go.*
 *Companion to: `Aurora_Nina_SPCX_BR_Spec_ClaudeCode_202606.md` (the SPCX brief) and `Aurora_Nina_MonetaryFoundation_202604.md` §10 (Nina's ABM agenda)*
 
 ---
