@@ -1,0 +1,11 @@
+A: edades con YL > C (ambos sexos): [45]
+C: M edades con superávit: (33, 62) | mínimo LCD 25-59 = -22550 a 45
+C: F edades con superávit: ninguna | mínimo LCD 25-59 = 17612 a 45
+C: participación femenina en LCD agregado = 75.9 %
+D: 0-14 y 60+ en 2025/2050: {'0-14': {2025: 28.2, 2050: 16.5}, '60+': {2025: 19.2, 2050: 37.7}} | 60+ supera a 0-14 en 2031 | 60+ % 2025/2050: [14.7, 29.1]
+E: 0-14 participaciones %: {'pub_neta': np.float64(8.7), 'tau_priv': np.float64(31.0), 'tau_ext': np.float64(2.5), 'YA_minus_S': np.float64(57.7)} | suma componentes / LCD = 0.48
+E: 60+ participaciones %: {'pub_neta': np.float64(54.2), 'tau_priv': np.float64(-5.2), 'tau_ext': np.float64(8.0), 'YA_minus_S': np.float64(43.0)} | suma componentes / LCD = 2.18
+F: 60+ M [19438, 43778, 33090, 7101, -9082]
+F: 60+ F [42636, 33268, 27785, 4427, 748]
+G: central 2025/2050 tau_pub_net [-0.3812, 2.826] LCD [10.8704, 10.8659] razón de soporte [0.5864, 0.5903]
+G: C agregado 2024 (billones) = 25.93

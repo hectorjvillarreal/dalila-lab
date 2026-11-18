@@ -1,0 +1,572 @@
+% Presentación interna para la CIJUF, 20 de noviembre de 2026.
+% Cuentas Nacionales de Transferencia para México, 2016-2024 (NTA_ITED, versión de agosto de 2026).
+% Archivo único: compila directo con pdflatex (dos pasadas); no necesita archivos externos.
+% Coordenadas de las gráficas: datos/prep_cijuf.py -> datos/coordenadas.txt (corrida local de NTA_ITED badcf23
+% y motor demográfico nacional DFD). Cifras del texto: documento de agosto de 2026 (paper.tex de NTA_ITED).
+% Estilo: preámbulo de los decks CEESP (11-nov) y RIUSS (12-nov).
+\documentclass[aspectratio=169,10pt]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[spanish,es-nodecimaldot,es-noshorthands]{babel}
+\usepackage{graphicx,booktabs,array,tabularx,amsmath,amssymb}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{positioning,arrows.meta,calc}
+
+\definecolor{marino}{HTML}{18365C}
+\definecolor{oxido}{HTML}{B0541C}
+\definecolor{banda}{HTML}{EEF1F6}
+\definecolor{barra}{HTML}{AEB9C6}
+\definecolor{medio}{HTML}{5D728D}
+\definecolor{pie}{HTML}{787878}
+\definecolor{rejilla}{HTML}{E5E5E5}
+\definecolor{sombra}{HTML}{F6E3D8}
+
+\usetheme{default}
+\setbeamersize{text margin left=1cm,text margin right=1cm}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{structure}{fg=marino}
+\setbeamercolor{frametitle}{fg=marino}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamertemplate{frametitle}{\vspace*{0.9em}\insertframetitle\par\vspace{0.75em}{\color{black}\hrule height 0.4pt}\vspace{0.2em}}
+\setbeamertemplate{footline}{\hfill{\color{pie}\scriptsize\insertframenumber\,/\,\inserttotalframenumber}\hspace*{0.45cm}\vspace*{0.35cm}}
+\setbeamertemplate{itemize item}{\color{marino}--}
+\setbeamertemplate{itemize subitem}{\color{marino}--}
+\setbeamertemplate{enumerate item}{\color{marino}\insertenumlabel.}
+\setlength{\leftmargini}{1.3em}
+\setlength{\leftmarginii}{1.3em}
+
+\newcommand{\dest}[1]{{\color{oxido}\bfseries #1}}
+\newcommand{\clave}[1]{{\color{marino}\bfseries #1}}
+\newcommand{\fuente}[1]{\par\vspace{0.6em}{\color{pie}\scriptsize\raggedright #1\par}}
+\setbeamercolor{bandacolor}{bg=banda,fg=black}
+\newcommand{\banda}[1]{%
+  \par\vspace{0.6em}\noindent\makebox[\textwidth][c]{\begin{beamercolorbox}[wd=0.92\textwidth,sep=5pt,center]{bandacolor}\bfseries #1\end{beamercolorbox}}\par\vspace{0.6em}}
+\setbeamercolor{cajacolor}{bg=banda,fg=black}
+\newcommand{\caja}[2]{%
+  \begin{beamercolorbox}[wd=\linewidth,sep=5pt]{cajacolor}
+    {\color{marino}\bfseries #1}\par\vspace{0.25em}\footnotesize #2
+  \end{beamercolorbox}}
+% Etiquetas de solidez de cada resultado
+\newcommand{\etiqueta}[2]{{\setlength{\fboxsep}{2.5pt}\colorbox{#1}{\color{white}\tiny\bfseries #2}}}
+\newcommand{\solido}{\etiqueta{marino}{SÓLIDO}}
+\newcommand{\prelim}{\etiqueta{oxido}{PRELIMINAR}}
+
+\pgfplotsset{
+  base/.style={axis lines=left,axis line style={black},tick style={black},
+    tick label style={font=\tiny},label style={font=\tiny},
+    ymajorgrids,grid style={rejilla},
+    /pgf/number format/.cd,fixed,1000 sep={},/tikz/.cd,
+    legend style={font=\tiny,draw=none,fill=none},legend cell align=left},
+}
+
+\hypersetup{pdftitle={Quién consume, quién produce y quién paga la diferencia},pdfauthor={Juan Pablo López Reynosa; Héctor Juan Villarreal Páez},pdfcreator={},pdfproducer={},pdfsubject={},pdfkeywords={}}
+\pdfsuppressptexinfo=-1
+\pdfinfoomitdate=1
+
+\newcommand{\fuenteNTA}{Elaboración propia con ENIGH (INEGI) y Sistema de Cuentas Nacionales de México, metodología NTA. Versión de agosto de 2026. Pesos de 2024, trimestrales per cápita.}
+
+\begin{document}
+
+% ===== 1. Portada =====
+\begin{frame}[plain]
+  \centering
+  \vspace*{1.2em}
+  {\color{marino}\bfseries\Large Quién consume, quién produce\\[0.15em] y quién paga la diferencia\par}
+  \vspace{0.5em}
+  {\color{marino}\bfseries\normalsize Cuentas Nacionales de Transferencia para México, 2016--2024\par}
+  \vspace{1.6em}
+  {\normalsize Juan Pablo López Reynosa\enspace·\enspace Héctor Juan Villarreal Páez\par}
+  \vspace{0.8em}
+  {\scriptsize ITED · Escuela de Gobierno y Transformación Pública · Tecnológico de Monterrey\par}
+  \vspace{1.3em}
+  {\small Comisión Independiente para la Igualdad con Justicia Fiscal (CIJUF)\\[0.2em]
+  Sesión interna · 20 de noviembre de 2026\par}
+  \vspace{1.1em}
+  {\color{pie}\scriptsize Estudio realizado con el apoyo de la CIJUF. Los resultados son preliminares: la revisión metodológica está en curso.\par}
+\end{frame}
+
+% ===== 2. Ruta =====
+\begin{frame}{De qué vamos a hablar}
+  \vspace{0.3em}
+  \banda{El sistema fiscal no solo redistribuye entre ricos y pobres: también redistribuye entre edades, y la transición demográfica está cambiando esa cuenta.}
+  \vspace{0.2em}
+  \begin{enumerate}\setlength{\itemsep}{0.45em}
+    \item Por qué importa hablar de \clave{economía intergeneracional}, y por qué le importa a una comisión de justicia fiscal.
+    \item Qué son las \clave{Cuentas Nacionales de Transferencia}: la ecuación básica y su conexión con las cuentas nacionales.
+    \item Qué \clave{aporta} nuestra investigación.
+    \item Los \clave{resultados}, con una distinción explícita entre lo que ya es sólido y lo que todavía es preliminar.
+    \item Las \clave{líneas siguientes} de trabajo.
+  \end{enumerate}
+\end{frame}
+
+% =====================================================================
+% 1. Importancia
+% =====================================================================
+
+% ===== 3. El ciclo de vida económico =====
+\begin{frame}{El ciclo de vida económico}
+  \vspace{0.2em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.43\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item En la niñez y en la vejez consumimos más de lo que producimos con nuestro trabajo; en la edad activa ocurre lo contrario, o al menos debería ocurrir.
+        \item En México, en 2024, el ingreso laboral promedio apenas se acerca al consumo en la mitad de la vida activa.
+        \item La diferencia entre ambas curvas es el \dest{déficit del ciclo de vida}. Alguien tiene que financiarlo: las familias, el gobierno o los activos que se acumularon antes.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.53\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=5.2cm,xmin=0,xmax=90,ymin=0,ymax=80,
+            xtick={0,15,30,45,60,75,90},ytick={0,20,40,60,80},xlabel={edad},ylabel={miles de pesos de 2024 por trimestre},
+            legend style={at={(0.98,0.98)},anchor=north east}]
+          \addplot[name path=C,oxido,thick] coordinates {(0,11.30)(1,11.45)(2,11.94)(3,13.17)(4,14.62)(5,16.78)(6,18.71)(7,21.20)(8,23.74)(9,26.70)(10,29.64)(11,32.00)(12,34.58)(13,36.85)(14,39.86)(15,42.17)(16,44.84)(17,46.21)(18,48.72)(19,50.68)(20,53.53)(21,55.44)(22,56.67)(23,58.01)(24,59.50)(25,62.40)(26,64.59)(27,66.34)(28,67.48)(29,68.63)(30,70.30)(31,70.24)(32,70.74)(33,69.76)(34,68.82)(35,67.87)(36,67.21)(37,67.91)(38,66.27)(39,66.28)(40,64.66)(41,63.30)(42,60.31)(43,58.59)(44,56.43)(45,55.45)(46,54.58)(47,55.42)(48,55.72)(49,56.43)(50,57.08)(51,57.44)(52,56.85)(53,55.76)(54,54.44)(55,54.55)(56,53.92)(57,52.95)(58,51.38)(59,51.50)(60,52.27)(61,54.11)(62,53.74)(63,54.01)(64,51.84)(65,52.70)(66,53.14)(67,54.98)(68,54.96)(69,53.91)(70,52.43)(71,51.15)(72,47.89)(73,45.78)(74,44.04)(75,44.88)(76,44.85)(77,43.47)(78,42.92)(79,41.50)(80,45.29)(81,43.89)(82,43.13)(83,37.77)(84,34.65)(85,32.90)(86,29.50)(87,29.84)(88,28.25)(89,29.01)(90,28.45)};
+          \addlegendentry{Consumo}
+          \addplot[name path=YL,marino,thick] coordinates {(0,0.00)(1,0.00)(2,0.00)(3,0.00)(4,0.00)(5,0.01)(6,0.01)(7,0.02)(8,0.03)(9,0.04)(10,0.05)(11,0.11)(12,0.28)(13,0.66)(14,1.40)(15,2.50)(16,4.16)(17,7.23)(18,11.40)(19,15.78)(20,19.44)(21,22.37)(22,26.02)(23,30.06)(24,34.93)(25,38.87)(26,42.50)(27,45.43)(28,47.55)(29,49.57)(30,51.23)(31,52.12)(32,53.42)(33,54.00)(34,55.48)(35,55.93)(36,55.86)(37,56.02)(38,55.10)(39,55.35)(40,56.06)(41,56.18)(42,56.28)(43,54.40)(44,54.24)(45,52.78)(46,53.34)(47,52.09)(48,52.23)(49,50.39)(50,50.11)(51,49.61)(52,49.70)(53,48.32)(54,45.61)(55,44.30)(56,42.78)(57,40.57)(58,37.12)(59,36.16)(60,33.54)(61,38.94)(62,34.28)(63,31.51)(64,20.33)(65,18.84)(66,17.26)(67,16.04)(68,13.60)(69,12.12)(70,10.49)(71,9.49)(72,8.43)(73,8.81)(74,8.14)(75,7.66)(76,6.02)(77,5.80)(78,5.18)(79,4.29)(80,4.71)(81,3.82)(82,3.85)(83,2.31)(84,3.79)(85,3.33)(86,2.66)(87,1.23)(88,1.05)(89,0.78)(90,0.35)};
+          \addlegendentry{Ingreso laboral}
+          \addplot[sombra] fill between[of=C and YL];
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{\fuenteNTA{} 2024, ambos sexos; promedio móvil de tres edades. El consumo incluye el gasto de los hogares y el consumo de gobierno.}
+\end{frame}
+
+% ===== 4. La demografía =====
+\begin{frame}{La demografía cambia quién sostiene a quién}
+  \vspace{0.2em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.43\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item Con la fecundidad que registró la Encuesta Intercensal 2025, de \dest{1.23} hijos por mujer, la población de 60 años y más pasará de \dest{19.2} a \dest{37.7 millones} entre 2025 y 2050.
+        \item Los menores de 15 años bajarán de 28.2 a 16.5 millones, y hacia \dest{2031} ya serán menos que las personas de 60 y más.
+        \item La niñez se financia sobre todo dentro de los hogares y la vejez depende mucho más del presupuesto público, de modo que este cambio no se queda en las familias: llega a las finanzas públicas.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.53\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=5.2cm,xmin=2025,xmax=2050,ymin=0,ymax=42,
+            xtick={2025,2031,2040,2050},ytick={0,10,20,30,40},ylabel={millones de personas},
+            legend style={at={(0.5,1.02)},anchor=south,legend columns=2}]
+          \draw[dashed,pie] (axis cs:2031,0) -- (axis cs:2031,42);
+          \addplot[marino,thick] coordinates {(2025,28.2)(2026,27.3)(2027,26.3)(2028,25.4)(2029,24.5)(2030,23.6)(2031,22.7)(2032,22.0)(2033,21.3)(2034,20.6)(2035,20.1)(2036,19.8)(2037,19.5)(2038,19.2)(2039,18.9)(2040,18.6)(2041,18.5)(2042,18.4)(2043,18.2)(2044,18.0)(2045,17.8)(2046,17.6)(2047,17.4)(2048,17.1)(2049,16.8)(2050,16.5)};
+          \addlegendentry{0 a 14 años}
+          \addplot[oxido,thick] coordinates {(2025,19.2)(2026,20.0)(2027,20.6)(2028,21.4)(2029,22.1)(2030,22.9)(2031,23.7)(2032,24.7)(2033,25.6)(2034,26.4)(2035,27.3)(2036,28.0)(2037,28.7)(2038,29.4)(2039,30.2)(2040,30.9)(2041,31.6)(2042,32.4)(2043,33.1)(2044,33.8)(2045,34.4)(2046,35.1)(2047,35.7)(2048,36.4)(2049,37.0)(2050,37.7)};
+          \addlegendentry{60 años y más}
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{Proyección propia con el motor demográfico nacional (INEGI, Encuesta Intercensal 2025), escenario central.}
+\end{frame}
+
+% ===== 5. Por qué en la CIJUF =====
+\begin{frame}{Por qué esta conversación le toca a una comisión de justicia fiscal}
+  \vspace{0.3em}
+  \begin{itemize}\small\setlength{\itemsep}{0.65em}
+    \item La discusión fiscal suele medir la incidencia por decil de ingreso en un año dado. Esa mirada es indispensable, pero deja fuera una pregunta: \clave{qué edades pagan y qué edades reciben}.
+    \item El mismo sistema cobra sobre todo a la edad activa y gasta sobre todo en la niñez y en la vejez. Cuando cambia la estructura por edad, cambia el balance fiscal aunque ninguna ley se modifique.
+    \item La equidad también tiene edad y sexo. Dos personas con el mismo ingreso corriente pueden estar en posiciones muy distintas de su ciclo de vida, y el sistema no las trata igual.
+    \item Una reforma que busque progresividad tiene que preguntarse además a qué generación le cobra y a cuál le está haciendo promesas que otra tendrá que pagar.
+  \end{itemize}
+  \banda{El envejecimiento modifica el presupuesto aun cuando nadie lo decida; conviene medirlo antes de que decida por nosotros.}
+\end{frame}
+
+% =====================================================================
+% 2. Cuentas Nacionales de Transferencia
+% =====================================================================
+
+% ===== 6. La ecuación básica =====
+\begin{frame}{La ecuación básica de las Cuentas Nacionales de Transferencia}
+  \vspace{-0.3em}
+  \[
+  \underbrace{C(a) - Y_L(a)}_{\text{déficit del ciclo de vida}}
+  \;=\;
+  \underbrace{\tau^{+}_{g}(a) - \tau^{-}_{g}(a)}_{\text{transferencias públicas netas}}
+  \;+\;
+  \underbrace{\tau^{+}_{f}(a) - \tau^{-}_{f}(a)}_{\text{transferencias privadas netas}}
+  \;+\;
+  \underbrace{Y_A(a) - S(a)}_{\text{reasignación por activos}}
+  \]
+  \vspace{0.1em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.315\textwidth}
+      \caja{Transferencias públicas}{Lo que cada edad recibe del gobierno ---pensiones, programas, educación y salud públicas--- menos lo que le paga en impuestos y contribuciones.}
+    \end{column}
+    \begin{column}{0.315\textwidth}
+      \caja{Transferencias privadas}{Lo que se mueve dentro del hogar, entre hogares y desde el exterior: la manutención de los hijos, el apoyo a los padres, las remesas.}
+    \end{column}
+    \begin{column}{0.315\textwidth}
+      \caja{Reasignación por activos}{El rendimiento de lo acumulado ---vivienda, ahorro, negocio--- menos lo que cada edad vuelve a ahorrar.}
+    \end{column}
+  \end{columns}
+  \vspace{0.6em}
+  {\small La identidad se cumple para cada edad $a$ y para la economía en su conjunto. Es contabilidad, no un modelo de comportamiento: dice cómo se financió el ciclo de vida, no por qué.\par}
+\end{frame}
+
+% ===== 7. Conexión con cuentas nacionales =====
+\begin{frame}{La conexión con las cuentas nacionales}
+  \vspace{0.1em}
+  {\small Cada variable por edad tiene un agregado de control en el Sistema de Cuentas Nacionales, y la suma sobre todas las edades tiene que reproducirlo.\par}
+  \vspace{0.5em}
+  \begin{center}\footnotesize
+  \begin{tabular}{ll}
+    \toprule
+    Variable por edad & Agregado de control \\
+    \midrule
+    Ingreso laboral & Remuneración de asalariados $+\ \tfrac{2}{3}$ del ingreso mixto neto \\
+    Consumo, educación y salud & Consumo final de hogares y de gobierno \\
+    Transferencias públicas recibidas & Prestaciones sociales y transferencias sociales en especie \\
+    Impuestos y contribuciones pagados & Impuestos al ingreso y contribuciones sociales \\
+    Transferencias del exterior & Transferencias corrientes netas del exterior \\
+    Reasignación por activos & Ingreso de activos ampliado, neto de ahorro \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+  \vspace{0.3em}
+  \begin{itemize}\small\setlength{\itemsep}{0.35em}
+    \item El tamaño del déficit agregado lo fijan las cuentas nacionales, no los supuestos: el ingreso laboral es entre 39 y 44\,\% del PIB y el consumo entre 73 y 78\,\%, de modo que la diferencia equivale a \dest{entre 31.5 y 35.8\,\% del PIB}.
+    \item Lo que el ejercicio decide es cómo se distribuye ese déficit entre edades y entre sexos, que es justamente lo que importa para la política pública.
+  \end{itemize}
+  \fuente{La partición del ingreso mixto en dos tercios laborales y un tercio de capital es la convención del manual de Naciones Unidas (2013). Rangos para 2016--2024.}
+\end{frame}
+
+% ===== 8. Forma y nivel =====
+\begin{frame}{La encuesta da la forma; las cuentas nacionales dan el nivel}
+  \vspace{0.1em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.50\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item La ENIGH observa cómo se reparten por edad el ingreso y el gasto, pero capta solo entre \dest{10 y 53\,\%} del agregado correspondiente de cuentas nacionales, según la variable.
+        \item Las cuentas nacionales fijan el nivel, pero no tienen edad.
+        \item La conciliación usa un solo factor por variable y por año. Cierra el agregado de forma exacta, no cambia la forma por edad y no toca el factor de expansión de la encuesta.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}\centering
+      \[
+      \lambda_v(t) = \frac{V^{\text{macro}}_v(t)}{\sum_i x_{iv}(t)\, f_i}
+      \]
+      \[
+      x^{\text{ajustado}}_{iv}(t) = \lambda_v(t)\; x_{iv}(t)
+      \]
+      \vspace{0.3em}
+      {\footnotesize Los factores van de \dest{1.9} en el ingreso laboral a \dest{9.9} en las transferencias del exterior.\par}
+    \end{column}
+  \end{columns}
+  \banda{La pregunta metodológica central no es el nivel, sino si la forma por edad que da la encuesta es la correcta.}
+  \fuente{$x_{iv}$: variable $v$ de la persona $i$ en la encuesta; $f_i$: factor de expansión; $V^{\text{macro}}_v$: agregado de control anual.}
+\end{frame}
+
+% =====================================================================
+% 3. Contribución
+% =====================================================================
+
+% ===== 9. Qué aporta =====
+\begin{frame}{Qué aporta esta investigación}
+  \vspace{0.2em}
+  \begin{itemize}\small\setlength{\itemsep}{0.55em}
+    \item \clave{Una serie homogénea 2016--2024.} Son cinco levantamientos de la ENIGH y 1.46 millones de registros persona-año, conciliados año por año con el Sistema de Cuentas Nacionales. Los perfiles públicos previos para México son de 2004, 2010 y 2014.
+    \item \clave{Perfiles por sexo de la persona}, no del jefe del hogar. Eso permite ver que en México conviven dos ciclos de vida muy distintos.
+    \item \clave{El lado fiscal medido como en el análisis de incidencia.} Las contribuciones a la seguridad social y el ISR se imputan con las tarifas y las bases del Simulador Fiscal del CIEP.
+    \item \clave{Las transferencias dentro del hogar se construyen persona por persona}, en lugar de quedar como el residuo de la identidad.
+    \item \clave{Un procedimiento reproducible.} Código, parámetros y pruebas de cierre viven en un repositorio, y la diferencia que no cierra se reporta en lugar de forzarla a cero.
+  \end{itemize}
+  \fuente{Perfiles previos: base pública de la red National Transfer Accounts (ntaccounts.org). Antecedentes para México por grupo socioeconómico y sexo: Mejía-Guevara y Rivero (2024).}
+\end{frame}
+
+% ===== 10. Sólido y preliminar =====
+\begin{frame}{Antes de los resultados: qué es sólido y qué es preliminar}
+  \vspace{0.1em}
+  {\small En noviembre hicimos una revisión metodológica completa de la cadena, contra el manual de Naciones Unidas y contra el módulo NTA del Simulador Fiscal del CIEP. Ninguno de los problemas encontrados mueve los agregados, porque esos los fija el sistema de cuentas; varios mueven la forma por edad.\par}
+  \vspace{0.6em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \caja{\solido\enspace Lo que sostenemos}{%
+        \begin{itemize}\setlength{\itemsep}{0.25em}
+          \item El tamaño del déficit y su evolución agregada.
+          \item El ingreso laboral por edad y por sexo, y su convergencia.
+          \item Los dos ciclos de vida: el déficit se concentra en las mujeres.
+        \end{itemize}}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \caja{\prelim\enspace Lo que puede moverse}{%
+        \begin{itemize}\setlength{\itemsep}{0.25em}
+          \item Cómo se financian la niñez y la vejez.
+          \item Las transferencias públicas por sexo en la vejez.
+          \item El saldo entre la edad activa y las edades mayores.
+        \end{itemize}}
+    \end{column}
+  \end{columns}
+  \vspace{0.6em}
+  {\small Las cifras que siguen son las de la versión de agosto. Cada lámina lleva su etiqueta, y al final explico qué cambia con la revisión.\par}
+  \fuente{Los perfiles se presentan por edad y sexo, de acuerdo con la variable que registra la ENIGH. Las diferencias observadas permiten analizar, al menos en parte, desigualdades asociadas con los roles de género.}
+\end{frame}
+
+% =====================================================================
+% 4. Resultados
+% =====================================================================
+
+% ===== 11. Ingreso laboral por sexo =====
+\begin{frame}{Ingreso laboral: la brecha por sexo domina el perfil \hfill \solido}
+  \vspace{0.2em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.43\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item El ingreso laboral agregado creció \dest{22.1\,\%} real entre 2016 y 2024, de 12.2 a 14.9 billones de pesos de 2024.
+        \item El de las mujeres subió 25.1\,\% por persona y el de los hombres 8.6\,\%, de modo que la razón entre ambos pasó de \dest{41.6} a \dest{47.9\,\%}.
+        \item La brecha se cerró poco más de seis puntos sin cambiar de orden de magnitud: al final del periodo el ingreso laboral de las mujeres sigue por debajo de la mitad del de los hombres.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.53\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=5.2cm,xmin=0,xmax=90,ymin=0,ymax=85,
+            xtick={0,15,30,45,60,75,90},ytick={0,20,40,60,80},xlabel={edad},ylabel={miles de pesos de 2024 por trimestre},
+            legend style={at={(0.98,0.98)},anchor=north east}]
+          \addplot[marino,thick] coordinates {(0,0.00)(1,0.00)(2,0.00)(3,0.00)(4,0.00)(5,0.00)(6,0.01)(7,0.02)(8,0.03)(9,0.05)(10,0.06)(11,0.14)(12,0.43)(13,0.97)(14,2.06)(15,3.73)(16,6.16)(17,10.43)(18,15.90)(19,21.50)(20,26.49)(21,30.15)(22,34.98)(23,39.85)(24,45.79)(25,50.61)(26,55.68)(27,60.75)(28,64.20)(29,67.21)(30,69.59)(31,71.41)(32,73.83)(33,73.52)(34,75.43)(35,75.42)(36,76.29)(37,76.18)(38,74.67)(39,74.79)(40,77.20)(41,76.71)(42,76.93)(43,73.63)(44,75.23)(45,74.39)(46,75.53)(47,73.26)(48,74.15)(49,71.51)(50,72.59)(51,71.24)(52,72.21)(53,69.19)(54,65.75)(55,64.16)(56,63.84)(57,60.88)(58,56.43)(59,56.52)(60,53.55)(61,67.56)(62,60.26)(63,55.53)(64,32.87)(65,30.25)(66,28.36)(67,27.07)(68,22.48)(69,20.48)(70,17.35)(71,15.98)(72,13.38)(73,14.73)(74,13.57)(75,13.08)(76,10.29)(77,9.27)(78,8.64)(79,6.42)(80,8.69)(81,7.33)(82,7.83)(83,4.61)(84,8.03)(85,7.20)(86,6.00)(87,2.77)(88,2.14)(89,1.57)(90,0.51)};
+          \addlegendentry{Hombres}
+          \addplot[oxido,thick] coordinates {(0,0.00)(1,0.00)(2,0.00)(3,0.00)(4,0.00)(5,0.01)(6,0.01)(7,0.02)(8,0.02)(9,0.03)(10,0.04)(11,0.07)(12,0.12)(13,0.35)(14,0.70)(15,1.20)(16,2.06)(17,3.94)(18,6.85)(19,10.22)(20,12.77)(21,14.88)(22,17.38)(23,20.64)(24,24.84)(25,27.94)(26,30.59)(27,31.90)(28,33.17)(29,33.92)(30,34.92)(31,34.81)(32,35.50)(33,36.44)(34,37.83)(35,38.55)(36,38.57)(37,39.11)(38,38.85)(39,38.78)(40,38.61)(41,38.93)(42,38.39)(43,37.08)(44,35.86)(45,34.88)(46,34.85)(47,34.47)(48,33.31)(49,31.69)(50,30.68)(51,31.34)(52,31.28)(53,30.52)(54,28.70)(55,27.71)(56,25.14)(57,22.89)(58,20.42)(59,18.99)(60,17.31)(61,15.10)(62,12.82)(63,11.53)(64,10.29)(65,9.41)(66,7.76)(67,6.34)(68,5.70)(69,4.98)(70,4.64)(71,4.29)(72,4.34)(73,3.84)(74,3.40)(75,2.82)(76,2.35)(77,2.89)(78,2.51)(79,2.64)(80,1.47)(81,1.00)(82,0.68)(83,0.57)(84,0.64)(85,0.54)(86,0.34)(87,0.14)(88,0.25)(89,0.20)(90,0.25)};
+          \addlegendentry{Mujeres}
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{\fuenteNTA{} Gráfica: 2024, promedio móvil de tres edades. Sexo de la persona, no del jefe del hogar.}
+\end{frame}
+
+% ===== 12. Dos ciclos de vida =====
+\begin{frame}{Dos ciclos de vida distintos \hfill \solido}
+  \vspace{0.2em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.43\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.55em}
+        \item En 2024 los hombres producen más de lo que consumen entre los \dest{33 y los 62 años}; las mujeres no lo logran en ninguna edad de ningún levantamiento.
+        \item Las mujeres concentran el \dest{76.3\,\%} del déficit agregado. Financiar el ciclo de vida en México es, en su mayor parte, financiar el déficit de las mujeres.
+        \item La diferencia viene casi toda del ingreso laboral y responde, al menos en parte, a desigualdades de género. La medición solo registra el trabajo pagado; el cuidado no remunerado, que hacen sobre todo las mujeres, no aparece en estas curvas.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.53\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=5.2cm,xmin=0,xmax=90,ymin=-30,ymax=50,
+            xtick={0,15,30,45,60,75,90},ytick={-20,0,20,40},xlabel={edad},ylabel={consumo menos ingreso laboral, miles de pesos},
+            legend style={at={(0.5,1.02)},anchor=south,legend columns=2}]
+          \fill[banda] (axis cs:33,-30) rectangle (axis cs:62,50);
+          \draw[black,thin] (axis cs:0,0) -- (axis cs:90,0);
+          \addplot[marino,thick] coordinates {(0,11.26)(1,11.45)(2,11.69)(3,12.81)(4,14.45)(5,16.89)(6,18.87)(7,21.11)(8,23.99)(9,27.14)(10,29.74)(11,31.86)(12,34.20)(13,36.15)(14,37.97)(15,38.90)(16,38.79)(17,35.92)(18,33.01)(19,30.20)(20,27.86)(21,25.61)(22,21.99)(23,18.91)(24,14.47)(25,11.91)(26,9.13)(27,5.83)(28,4.40)(29,2.95)(30,3.13)(31,1.83)(32,0.47)(33,-0.30)(34,-3.49)(35,-4.91)(36,-6.90)(37,-6.04)(38,-6.39)(39,-6.79)(40,-11.08)(41,-12.31)(42,-15.47)(43,-13.02)(44,-17.00)(45,-16.97)(46,-19.63)(47,-16.52)(48,-16.84)(49,-14.10)(50,-13.72)(51,-12.41)(52,-13.75)(53,-12.59)(54,-10.97)(55,-9.29)(56,-9.17)(57,-6.71)(58,-4.72)(59,-5.09)(60,-1.74)(61,-13.61)(62,-6.62)(63,-2.74)(64,17.79)(65,19.45)(66,22.44)(67,26.69)(68,33.94)(69,34.98)(70,34.77)(71,32.58)(72,31.86)(73,28.46)(74,29.28)(75,29.00)(76,31.84)(77,31.12)(78,32.19)(79,31.51)(80,32.32)(81,34.75)(82,36.13)(83,34.63)(84,28.01)(85,25.11)(86,22.37)(87,24.90)(88,26.78)(89,29.62)(90,31.04)};
+          \addlegendentry{Hombres}
+          \addplot[oxido,thick] coordinates {(0,11.35)(1,11.45)(2,12.21)(3,13.54)(4,14.76)(5,16.62)(6,18.49)(7,21.25)(8,23.43)(9,26.14)(10,29.42)(11,31.92)(12,34.38)(13,36.18)(14,38.97)(15,40.46)(16,42.67)(17,42.14)(18,41.70)(19,39.45)(20,39.95)(21,40.25)(22,39.00)(23,36.66)(24,33.95)(25,34.36)(26,33.83)(27,34.26)(28,33.34)(29,33.33)(30,33.23)(31,32.75)(32,32.11)(33,30.23)(34,28.22)(35,26.96)(36,26.77)(37,26.92)(38,25.74)(39,26.04)(40,24.84)(41,23.45)(42,20.95)(43,19.75)(44,19.04)(45,18.93)(46,18.63)(47,19.83)(48,21.04)(49,23.87)(50,24.92)(51,24.98)(52,24.27)(53,24.52)(54,25.42)(55,26.55)(56,28.11)(57,28.99)(58,30.62)(59,32.55)(60,35.32)(61,39.13)(62,41.01)(63,43.45)(64,42.48)(65,45.82)(66,47.45)(67,49.75)(68,47.94)(69,47.47)(70,47.92)(71,48.95)(72,45.72)(73,44.10)(74,41.66)(75,44.73)(76,45.02)(77,43.41)(78,41.98)(79,41.72)(80,47.29)(81,44.65)(82,42.03)(83,36.23)(84,33.02)(85,32.67)(86,29.85)(87,31.11)(88,27.45)(89,27.27)(90,26.01)};
+          \addlegendentry{Mujeres}
+          \node[font=\tiny,color=medio] at (axis cs:47.5,-25) {superávit de los hombres};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{\fuenteNTA{} Gráfica: 2024, promedio móvil de tres edades. Valores negativos: superávit.}
+\end{frame}
+
+% ===== 13. El déficit no crece: se envejece =====
+\begin{frame}{El déficit no crece: se envejece \hfill \solido\ \prelim}
+  \vspace{0.2em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.45\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item El déficit agregado pasó de 11.0 a 10.9 billones de pesos de 2024. No creció en términos reales, y como proporción del consumo bajó de 47.4 a 42.2\,\%, porque el ingreso laboral creció al doble de velocidad que el consumo.
+        \item Lo que cambió es dónde está: el déficit por persona de 60 años o más subió \dest{71.7\,\%}, mientras el de la niñez bajó 20.5\,\%.
+        \item En el mismo periodo, la población de 60 años o más pasó de \dest{11.3} a \dest{15.1\,\%} del total.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.51\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,ymajorgrids=false,xmajorgrids,width=\linewidth,height=4.8cm,xbar,bar width=9pt,
+            xmin=-45,xmax=95,xtick={-25,0,25,50,75},bar shift=0pt,
+            symbolic y coords={60 y más,25 a 59,15 a 24,0 a 14},ytick={60 y más,25 a 59,15 a 24,0 a 14},
+            y tick label style={font=\scriptsize},
+            enlarge y limits=0.18,
+            xlabel={cambio real del déficit por persona, 2016--2024 (\%)},
+            point meta=x,
+            nodes near coords={\pgfmathprintnumber[fixed,fixed zerofill,precision=1,showpos]{\pgfplotspointmeta}},
+            nodes near coords style={font=\tiny}]
+          \addplot[fill=barra,draw=none] coordinates {(-20.5,0 a 14) (-17.9,15 a 24) (-5.9,25 a 59)};
+          \addplot[fill=oxido,draw=none] coordinates {(71.7,60 y más)};
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{\fuenteNTA{} El agregado es sólido; la distribución del consumo por edad depende de un punto de la revisión (punto 4).}
+\end{frame}
+
+% ===== 14. Financiamiento por grupo de edad =====
+\begin{frame}{Los dos extremos del ciclo se financian por vías opuestas \hfill \prelim}
+  \vspace{0.2em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.43\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.6em}
+        \item En la versión de agosto, la niñez se financia en \dest{88.6\,\%} con recursos privados (57.4\,\% activos y 31.2\,\% transferencias entre personas) y en 8.8\,\% con transferencias públicas netas.
+        \item La vejez se financia en \dest{54.5\,\%} con transferencias públicas netas y en 42.7\,\% con activos.
+        \item Es la lámina que más puede moverse: la educación y la salud públicas se repartieron con la forma de las pensiones, lo que sube el componente público de la vejez y baja el de la niñez.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.53\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,ymajorgrids=false,xmajorgrids,width=0.93\linewidth,height=5.2cm,xbar,bar width=6pt,
+            xmin=-10,xmax=65,xtick={0,20,40,60},
+            symbolic y coords={Activos,Exterior,Privadas,Públicas netas},ytick=data,
+            y tick label style={font=\scriptsize},
+            enlarge y limits=0.2,
+            xlabel={participación en el financiamiento, 2024 (\%)},
+            legend style={at={(0.5,1.02)},anchor=south,legend columns=2}]
+          \addplot[fill=barra,draw=none] coordinates {(8.7,Públicas netas) (31.0,Privadas) (2.5,Exterior) (57.7,Activos)};
+          \addlegendentry{0 a 14 años}
+          \addplot[fill=oxido,draw=none] coordinates {(54.2,Públicas netas) (-5.2,Privadas) (8.0,Exterior) (43.0,Activos)};
+          \addlegendentry{60 años y más}
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{\fuenteNTA{} Participación de cada canal en la suma de los componentes.}
+\end{frame}
+
+% ===== 15. Mujeres mayores =====
+\begin{frame}{Las mujeres mayores: más déficit y menos recursos públicos \hfill \prelim}
+  \vspace{0.2em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.43\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.55em}
+        \item El déficit de las mujeres de 60 años o más es de 42\,322 pesos por trimestre, \dest{2.2 veces} el de los hombres de la misma edad.
+        \item Reciben \dest{24\,\%} menos transferencias públicas netas que ellos y también menos por activos. El único canal que las favorece es el privado, y no alcanza a compensar.
+        \item La brecha en pensiones contributivas es real: traslada a la vejez trayectorias laborales desiguales por género. Su tamaño total está por confirmar, porque la salud y la educación públicas heredaron la forma de esas pensiones.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.53\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=5.2cm,ybar,bar width=7pt,
+            ymin=-12,ymax=50,ytick={-10,0,10,20,30,40,50},
+            symbolic x coords={Déficit,Públicas netas,Activos,Exterior,Privadas},xtick=data,
+            x tick label style={font=\tiny,text width=1.4cm,align=center},
+            enlarge x limits=0.15,extra y ticks={0},extra y tick labels={},extra y tick style={grid style={black,thin}},
+            ylabel={miles de pesos de 2024 por trimestre},
+            legend style={at={(0.98,0.98)},anchor=north east}]
+          \addplot[fill=marino,draw=none] coordinates {(Déficit,19.44) (Públicas netas,43.78) (Activos,33.09) (Exterior,7.10) (Privadas,-9.08)};
+          \addlegendentry{Hombres}
+          \addplot[fill=oxido,draw=none] coordinates {(Déficit,42.64) (Públicas netas,33.27) (Activos,27.79) (Exterior,4.43) (Privadas,0.75)};
+          \addlegendentry{Mujeres}
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{\fuenteNTA{} Población de 60 años o más, 2024, por sexo de la persona.}
+\end{frame}
+
+% ===== 16. Saldo intergeneracional =====
+\begin{frame}{El saldo intergeneracional \hfill \prelim}
+  \vspace{0.1em}
+  \begin{center}\footnotesize
+  \begin{tabular}{lrrr}
+    \toprule
+    Pesos de 2024, trimestrales per cápita & 2016 & 2024 & Cambio real \\
+    \midrule
+    Transferencia pública neta a personas de 60 años o más & 36\,543 & 37\,943 & $+3.8$\,\% \\
+    Pago público neto de la población de 25 a 59 años & 9\,317 & 12\,960 & $+39.1$\,\% \\
+    \addlinespace
+    Peso de la población de 60 años o más & 11.3\,\% & 15.1\,\% & $+3.8$ pp \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+  \vspace{0.3em}
+  \begin{itemize}\small\setlength{\itemsep}{0.45em}
+    \item El pago neto de la edad activa no subió porque le aumentaran los impuestos. Su pago bruto por persona creció 15\,\% real, pero su participación en lo que transfiere el gobierno bajó de 27.7 a 13.4\,\%.
+    \item Con la cifra de agosto, el sistema desplazó transferencias hacia las edades mayores mientras se estrechaba la base que las sostiene.
+    \item La lectura tiene una cautela: la estabilidad de la transferencia por adulto mayor y la caída de lo que recibe la edad activa reflejan en buena parte la expansión de la pensión no contributiva en la encuesta, cuya forma por edad hoy se aplica también al gasto en especie.
+  \end{itemize}
+  \fuente{\fuenteNTA}
+\end{frame}
+
+% ===== 17. Qué cambia con la revisión =====
+\begin{frame}{Qué cambia con la revisión}
+  \vspace{0.1em}
+  \begin{center}\scriptsize
+  \begin{tabularx}{\textwidth}{@{}p{0.30\textwidth}X p{0.25\textwidth}@{}}
+    \toprule
+    Punto & Qué ocurre hoy & Qué resultado toca \\
+    \midrule
+    1. Transferencias en especie & La educación y la salud públicas se reparten por edad con la forma de las pensiones y los programas en efectivo. & Financiamiento de la niñez y de la vejez; brecha por sexo en la vejez; saldo intergeneracional. \\
+    \addlinespace
+    2. Ahorro por edad & El ahorro no se asigna por edad. Por eso, por grupo, los componentes todavía no suman el déficit: en la niñez cubren cerca de la mitad y en la vejez más del doble. & Peso de los activos, sobre todo en la niñez. \\
+    \addlinespace
+    3. Transferencias en el hogar & Se calculan con los montos de la encuesta, antes de conciliar con las cuentas nacionales y antes de descontar impuestos. & Tamaño del bloque privado. \\
+    \addlinespace
+    4. Reparto del consumo & El algoritmo que reparte el gasto del hogar entre sus miembros pondera por el tamaño de cada cohorte. & Forma del consumo por edad. \\
+    \bottomrule
+  \end{tabularx}
+  \end{center}
+  \vspace{0.2em}
+  {\small Esperamos que la corrección suba el componente público de la niñez, baje el de la vejez y reduzca la brecha por sexo en las transferencias públicas a las personas mayores. Las correcciones se incorporan en la nueva versión, que se construye junto con el Simulador Fiscal del CIEP.\par}
+\end{frame}
+
+% =====================================================================
+% 5. Futuras líneas
+% =====================================================================
+
+% ===== 18. Proyección =====
+\begin{frame}{Lo que permite hacer: proyectar con nuestra demografía \hfill \prelim}
+  \vspace{0.2em}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.43\textwidth}\small
+      \begin{itemize}\setlength{\itemsep}{0.55em}
+        \item Con los perfiles de 2024 fijos y la población del motor demográfico nacional, el déficit agregado se mantiene en torno a \dest{10.9 billones} hasta 2050: hay menos niños, pero más personas mayores.
+        \item Lo que cambia es quién lo paga. Las transferencias públicas netas a los hogares pasan de $-0.4$ a \dest{2.8 billones} de pesos de 2024, unos 3.2 billones más, equivalentes al 12\,\% del consumo de 2024.
+        \item Es un ejercicio de conexión con perfiles preliminares; el punto 1 de la revisión probablemente exagera ese aumento.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.53\textwidth}\centering
+      \begin{tikzpicture}
+        \begin{axis}[base,width=\linewidth,height=5.2cm,xmin=2025,xmax=2050,ymin=-1,ymax=12.5,
+            xtick={2025,2030,2035,2040,2045,2050},ytick={0,2,4,6,8,10,12},
+            ylabel={billones de pesos de 2024 por año},
+            legend style={at={(0.5,0.55)},anchor=center}]
+          \draw[black,thin] (axis cs:2025,0) -- (axis cs:2050,0);
+          \addplot[marino,thick] coordinates {(2025,10.87)(2026,10.93)(2027,10.97)(2028,11.02)(2029,11.05)(2030,11.07)(2031,11.08)(2032,11.09)(2033,11.08)(2034,11.07)(2035,11.06)(2036,11.05)(2037,11.04)(2038,11.03)(2039,11.02)(2040,11.01)(2041,10.99)(2042,10.98)(2043,10.96)(2044,10.94)(2045,10.93)(2046,10.92)(2047,10.90)(2048,10.89)(2049,10.88)(2050,10.87)};
+          \addlegendentry{Déficit del ciclo de vida}
+          \addplot[oxido,thick] coordinates {(2025,-0.38)(2026,-0.27)(2027,-0.16)(2028,-0.05)(2029,0.08)(2030,0.19)(2031,0.32)(2032,0.44)(2033,0.56)(2034,0.69)(2035,0.81)(2036,0.94)(2037,1.07)(2038,1.21)(2039,1.35)(2040,1.48)(2041,1.61)(2042,1.73)(2043,1.86)(2044,1.99)(2045,2.13)(2046,2.26)(2047,2.41)(2048,2.54)(2049,2.69)(2050,2.83)};
+          \addlegendentry{Transferencias públicas netas}
+        \end{axis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \fuente{Perfiles NTA por edad y sexo de 2024 (versión de agosto), fijos en pesos de 2024, por la población proyectada con el motor demográfico nacional (INEGI), escenario central. Efecto demográfico puro: no incorpora crecimiento de la productividad ni cambios de política.}
+\end{frame}
+
+% ===== 19. Agenda =====
+\begin{frame}{Las líneas siguientes}
+  \vspace{0.2em}
+  \begin{itemize}\setlength{\itemsep}{0.45em}
+    \item \clave{Cerrar la revisión} y publicar la serie 2016--2024 corregida, con su repositorio y sus pruebas de cierre.
+    \item \clave{Integrar los perfiles a un laboratorio fiscal}, junto con el Simulador Fiscal del CIEP y un modelo de generaciones traslapadas, para evaluar reformas por edad y por sexo, y no solo por decil.
+    \item \clave{Medir el tiempo, no solo el dinero.} Las cuentas de transferencias de tiempo miden la distribución del trabajo no remunerado por sexo y permiten estudiar las brechas de género en los cuidados, la otra cara del déficit de las mujeres.
+    \item \clave{Cruzar edad con nivel de ingreso.} El ciclo de vida de un hogar pobre y el de uno rico no se financian igual, y la pregunta distributiva de la Comisión está en ese cruce.
+    \item \clave{Corregir las remesas}, repartiendo el ajuste entre el número de hogares que reciben y el monto que recibe cada uno.
+    \item \clave{Contabilidad generacional}: qué le promete el sistema actual a cada cohorte y quién terminará pagándolo.
+  \end{itemize}
+\end{frame}
+
+% ===== 20. Cierre =====
+\begin{frame}{Para llevarse}
+  \vspace{0.8em}
+  \begin{enumerate}\setlength{\itemsep}{0.9em}
+    \item El déficit del ciclo de vida de México equivale a cerca de un tercio del PIB, y ese tamaño lo fijan las cuentas nacionales. Lo que está en juego es cómo se reparte entre edades y entre sexos.
+    \item El déficit no crece, pero se envejece, y la vejez depende del presupuesto público mucho más que la niñez. La transición demográfica llega a las finanzas públicas aunque nadie la legisle.
+    \item El ciclo de vida de las mujeres no cierra en ninguna edad. Cualquier discusión sobre justicia fiscal que ignore esa asimetría está midiendo un promedio que no describe a nadie.
+  \end{enumerate}
+  \vspace{1.6em}
+  \begin{center}
+    {\color{marino}\bfseries\large Gracias\par}
+    \vspace{0.4em}
+    {\scriptsize Juan Pablo López Reynosa\enspace·\enspace Héctor Juan Villarreal Páez\enspace·\enspace ITED, Tecnológico de Monterrey\par}
+  \end{center}
+\end{frame}
+
+\end{document}
