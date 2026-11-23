@@ -22,8 +22,14 @@ Rulings of 2026-11-16 (Héctor accepted the proposed defaults, brief §7):
   out · Q3 AGGREGATOR-grade derivatives data may drive a Fire Sales leg when
   two independent sources agree (press still escalates nothing) · Q4 runs as a
   step inside the 18:00 SPCX cycle · Q5 board first, ABM design note after.
-Numeric bands (peg band, liquidation-volume bar, etc.) are NOT yet ruled; the
-threshold text below is qualitative until they are.
+Rulings of 2026-11-23 (Héctor accepted the proposed defaults):
+  P1 peg band: break = USDT or USDC daily close below 0.995 on two venues
+  (Kraken, Coinbase); a close below 0.998 on two venues supports AMBER ·
+  (l) a realised cascade above the volume bar counts toward Fire Sales AMBER
+  for 10 sessions after it ends · (m) 'debt coming due' = a holder put or a
+  maturity within 12 months.
+Still NOT ruled: the liquidation-volume bar and the funding/OI 'stretched'
+levels; that threshold text stays qualitative until they are.
 """
 
 # State vocabulary. Order matters for severity comparisons.
@@ -64,9 +70,10 @@ MECHANISMS = [
         "thresholds": {
             "GREEN": "ETF flows mixed; stablecoin pegs at par.",
             "AMBER": "Persistent ETF outflows on falling price, or a peg deviation "
-                     "beyond the ruled band (band not yet ruled).",
-            "RED": "Outflows accelerating together with a peg break or a halt on "
-                   "redemptions.",
+                     "beyond the ruled band (USDT/USDC close below 0.998 on two "
+                     "venues; P1, 2026-11-23).",
+            "RED": "Outflows accelerating together with a peg break (close below "
+                   "0.995 on two venues; P1) or a halt on redemptions.",
         },
     },
     {
@@ -97,7 +104,10 @@ MECHANISMS = [
         "thresholds": {
             "GREEN": "Leverage moderate; no treasury company near a financing wall.",
             "AMBER": "Elevated open interest with stretched funding, or a treasury "
-                     "company trading below its holdings with debt coming due.",
+                     "company trading below its holdings with debt coming due "
+                     "(put or maturity within 12 months; (m), 2026-11-23), or a "
+                     "realised cascade above the volume bar within the last 10 "
+                     "sessions ((l), 2026-11-23).",
             "RED": "A liquidation cascade in progress (volume bar not yet ruled), "
                    "or a filed forced sale by a treasury company.",
         },

@@ -23,7 +23,11 @@ It has no price target, no fair value, no buy/sell and no expected return. An ou
   - Q3: AGGREGATOR-grade derivatives data (open interest, funding, liquidations) may drive a Fire Sales leg when **two independent sources** agree; press still escalates nothing.
   - Q4: the board runs as step 3c inside `~/.local/bin/spcx_render.sh`, not on its own timer.
   - Q5: board first; the ABM design note (B0) comes after.
-- **Not yet ruled:** numeric bands. These are the stablecoin peg band (AMBER), the liquidation-volume bar (RED), and the funding/open-interest levels that count as "stretched". Until they are ruled, the threshold text is qualitative, and a pass that wants to escalate must propose the band as a question.
+- **2026-11-23 (Héctor, proposed defaults accepted):**
+  - P1 peg band: a break is a USDT or USDC daily close below 0.995 on two venues (Kraken, Coinbase); a close below 0.998 on two venues supports AMBER.
+  - (l): a realised liquidation cascade above the volume bar counts toward Fire Sales AMBER for 10 sessions after it ends (read as 10 UTC daily closes).
+  - (m): "debt coming due" under mNAV ≤ 1 means a holder put or a maturity within 12 months.
+- **Not yet ruled:** the liquidation-volume bar (RED, and the (l) trigger) and the funding/open-interest levels that count as "stretched". Until they are ruled, the threshold text is qualitative, and a pass that wants to escalate must propose the band as a question.
 
 ## Source grades
 
