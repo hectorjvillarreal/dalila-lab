@@ -3,9 +3,9 @@
   "carried_from": "2026-11-24",
   "analyst_note": "11-25 manual pass (covers 11-23..11-25 UTC; 11-25 UTC day not closed at the pass, 16:55-17:10 CST). States held: Runs AMBER (IBIT -2.3% and ETHA -3.4% shares outstanding since 11-20; Farside BTC complex -$669.2M / -$569.7M / -$231.4M on 11-20/23/24, six negative sessions; USDT closes ~0.9986, above the 0.998 support level), Fire Sales AMBER under (m) (Strategy basic mNAV ~0.66-0.68, holder put 2027-09-15), Interconnections GREEN (no node stress; Circle's October USDC report posted 11-25 with an unmodified opinion, so the ~11-30 delay watch is closed). No new cascade found; funding not stretched. No questions open. Spot stays at the 11-24 UTC close; the 18:00 cycle's fetch-spot fills 11-25.",
   "spot": {
-    "btc_usd": "$59,740.87 (2026-11-24 UTC close, Coinbase BTC-USD)",
-    "eth_usd": "$1,677.59 (2026-11-24 UTC close, Coinbase ETH-USD)",
-    "as_of": "2026-11-24 (Coinbase UTC daily close; MARKET grade)"
+    "btc_usd": "$60,383.51 (2026-11-25 UTC close, Coinbase BTC-USD)",
+    "eth_usd": "$1,690.38 (2026-11-25 UTC close, Coinbase ETH-USD)",
+    "as_of": "2026-11-25 (Coinbase UTC daily close; MARKET grade)"
   },
   "mechanisms": {
     "runs": {
